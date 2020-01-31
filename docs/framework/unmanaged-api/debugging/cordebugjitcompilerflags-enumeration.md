@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 65d7e830b82cc1780826517fe8cff1da0a7d6188
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097968"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793902"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>Enumeração CorDebugJITCompilerFlags
 Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.  
@@ -38,13 +38,13 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_DEFAULT`|Especifica que o compilador deve controlar os dados de compilação e permite otimizações.|  
 |`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Especifica que o compilador deve controlar os dados de compilação, mas desabilita otimizações.|  
 |`CORDEBUG_JIT_ENABLE_ENC`|Especifica que o compilador deve controlar os dados de compilação, desabilitar otimizações e habilitar as tecnologias editar e continuar.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -53,6 +53,6 @@ typedef enum CorDebugJITCompilerFlags {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Declarando enumerações](debugging-enumerations.md)

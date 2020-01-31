@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c33a868b643cb3e3fd5dfaf436e3078bc590705c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5822136eb1a7f582bcfae901a99775950e586198
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449811"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863173"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>Método ICorProfilerInfo10:: RequestReJITWithInliners
 
@@ -31,25 +31,29 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`dwRejitFlags` \
-no Um bitmask de [COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md).
+- `dwRejitFlags`
 
-`cFunctions` \
-no O número de funções a serem recompiladas.
+  \[em] um bitmask de [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md).
 
-`moduleIds` \
-no Especifica a parte `moduleId` dos pares (`module`, `methodDef`) que identificam as funções a serem recompiladas.
+- `cFunctions`
 
-`methodIds` \
-no Especifica a parte `methodId` dos pares (`module`, `methodDef`) que identificam as funções a serem recompiladas.
+  \[em] o número de funções a serem recompiladas.
+
+- `moduleIds`
+
+  \[em] Especifica a parte `moduleId` dos pares (`module`, `methodDef`) que identificam as funções a serem recompiladas.
+
+- `methodIds`
+
+  \[em] Especifica a parte `methodId` dos pares (`module`, `methodDef`) que identificam as funções a serem recompiladas.
 
 ## <a name="remarks"></a>Comentários
 
-O [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) não faz nenhum controle dos métodos embutidos. O criador de perfil era esperado para bloquear a inlinhação ou controlar o Intorno e chamar `RequestReJIT` para que todos os inlineers verifiquem se cada instância de um método embutido foi ReJITted. Isso representa um problema com o ReJIT na anexação, já que o criador de perfil não está presente para monitorar o inalinhamento. Esse método pode ser chamado para garantir que o conjunto completo de inlineers também será ReJITted.
+O [RequestReJIT](icorprofilerinfo4-requestrejit-method.md) não faz nenhum controle dos métodos embutidos. O criador de perfil era esperado para bloquear a inlinhação ou controlar o Intorno e chamar `RequestReJIT` para que todos os inlineers verifiquem se cada instância de um método embutido foi ReJITted. Isso representa um problema com o ReJIT na anexação, já que o criador de perfil não está presente para monitorar o inalinhamento. Esse método pode ser chamado para garantir que o conjunto completo de inlineers também será ReJITted.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -59,6 +63,6 @@ O [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofiler
 
 **Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interface ICorProfilerInfo10](icorprofilerinfo10-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfd54573-b7e6-4bd1-a184-7f08a8b39fae
 topic_type:
 - apiref
-ms.openlocfilehash: d310ad49debf69d1139f2286cb76e51e9b622ea9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c09d896e59a6c336fbe4923dbe85f30b039d8c36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445346"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866395"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionenter-method"></a>Método ICorProfilerCallback::ExceptionSearchFunctionEnter
 Notifica o criador de perfil de que a fase de pesquisa do tratamento de exceções começou a pesquisar uma função para localizar um manipulador para a exceção atual.  
@@ -32,11 +32,13 @@ HRESULT ExceptionSearchFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `functionId`  
- no A ID da função que foi inserida.  
+## <a name="parameters"></a>Parâmetros
+
+- `functionId`
+
+  \[em] a ID da função que foi inserida.
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -45,7 +47,7 @@ HRESULT ExceptionSearchFunctionEnter(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Método ExceptionSearchFunctionLeave](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Método ExceptionSearchFunctionLeave](icorprofilercallback-exceptionsearchfunctionleave-method.md)

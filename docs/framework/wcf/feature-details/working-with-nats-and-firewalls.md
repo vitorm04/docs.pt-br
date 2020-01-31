@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bfbff63c8c2cdb76d5f6d84424a9b03233744dae
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b8be10740c8e92d3dac7094f07b3372e8d78a3d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347112"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743866"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabalhando com NATs e firewalls
 O cliente e o servidor de uma conexão de rede geralmente não têm um caminho direto e aberto para comunicação. Os pacotes são filtrados, roteados, analisados e transformados nos computadores do ponto de extremidade e por máquinas intermediárias na rede. As NATs (conversões de endereço de rede) e os firewalls são exemplos comuns de aplicativos intermediários que podem participar da comunicação de rede.  
@@ -32,7 +32,8 @@ O cliente e o servidor de uma conexão de rede geralmente não têm um caminho d
  Uma configuração comum para um firewall de usuário inicial é proibir conexões de entrada, a menos que uma conexão de saída tenha sido feita anteriormente para esse computador. Uma configuração comum para um firewall de usuário de negócios é proibir conexões de entrada em todas as portas, exceto um grupo identificado especificamente. Um exemplo é um firewall que proíbe conexões em todas as portas, exceto as portas 80 e 443 para fornecer o serviço HTTP e HTTPS. Existem firewalls gerenciados para usuários domésticos e empresariais que permitem que um usuário ou processo confiável no computador altere a configuração do firewall. Os firewalls gerenciados são mais comuns para usuários domésticos em que não há nenhuma política corporativa controlando o uso da rede.  
   
 ## <a name="using-teredo"></a>Usando Teredo  
- O Teredo é uma tecnologia de transição IPv6 que permite a endereçamento direto de computadores por trás de um NAT. O Teredo conta com o uso de um servidor que pode ser roteado de forma pública e global para anunciar possíveis conexões. O servidor Teredo fornece ao cliente de aplicativo e ao servidor um ponto de reunião comum no qual eles podem trocar informações de conexão. Em seguida, os computadores solicitam um endereço Teredo temporário e os pacotes são encapsulados por meio da rede existente. O suporte a Teredo no WCF requer a habilitação do suporte a IPv6 e Teredo no sistema operacional. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e sistemas operacionais posteriores dão suporte a Teredo. O Windows Vista e sistemas operacionais posteriores dão suporte a IPv6 por padrão e só exigem que o usuário habilite o Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e o Windows Server 2003 exigem que o usuário habilite o IPv6 e o Teredo. Para obter mais informações, consulte a [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
+
+ O Teredo é uma tecnologia de transição IPv6 que permite a endereçamento direto de computadores por trás de um NAT. O Teredo conta com o uso de um servidor que pode ser roteado de forma pública e global para anunciar possíveis conexões. O servidor Teredo fornece ao cliente de aplicativo e ao servidor um ponto de reunião comum no qual eles podem trocar informações de conexão. Em seguida, os computadores solicitam um endereço Teredo temporário e os pacotes são encapsulados por meio da rede existente. O suporte a Teredo no WCF requer a habilitação do suporte a IPv6 e Teredo no sistema operacional. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e sistemas operacionais posteriores dão suporte a Teredo. O Windows Vista e sistemas operacionais posteriores dão suporte a IPv6 por padrão e só exigem que o usuário habilite o Teredo. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] e o Windows Server 2003 exigem que o usuário habilite o IPv6 e o Teredo. Para obter mais informações, consulte a [visão geral do Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Escolhendo um padrão de troca de mensagens e transporte  
  Selecionar um transporte e MEP é um processo de três etapas:  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3d9bc94d25ca70e0589e1beb86b8ef96807a71
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1e08d246136b33ffaaea91367d428e0bf2db99c1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448169"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864122"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>Método ICorProfilerInfo::GetAssemblyInfo
 Aceita uma ID de assembly e retorna o nome do assembly e a ID do seu módulo de manifesto.  
@@ -62,7 +62,7 @@ HRESULT GetAssemblyInfo(
   
  Como alternativa, você pode primeiro chamar `GetAssemblyInfo` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode ajustar o tamanho do buffer com base no valor retornado em `pcchName` e chamar `GetAssemblyInfo` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -71,8 +71,8 @@ HRESULT GetAssemblyInfo(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

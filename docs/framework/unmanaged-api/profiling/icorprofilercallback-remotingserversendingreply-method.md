@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5a0d20ee87fe4362016ed0d7fa29ef786460e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f77901623ef4df7b43276c18a910cf62fcc4451d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430721"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865968"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>Método ICorProfilerCallback::RemotingServerSendingReply
 Notifica o criador de perfil de que o processo concluiu o processamento de uma solicitação de invocação de método remoto e está prestes a transmitir a resposta por meio de um canal.  
@@ -35,7 +35,7 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCookie`  
- no Um ponteiro para um GUID que corresponderá com o valor fornecido em [ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) sob estas condições:  
+ no Um ponteiro para um GUID que corresponderá com o valor fornecido em [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md) sob estas condições:  
   
 - Os cookies de GUID de comunicação remota estão ativos.  
   
@@ -48,7 +48,7 @@ HRESULT RemotingServerSendingReply(
  `fIsAsync`  
  no Um valor que será `true` se a chamada for assíncrona; caso contrário, `false`.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -57,6 +57,6 @@ HRESULT RemotingServerSendingReply(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b159c712-00f4-4fc7-a990-40bf9f642e8f
 topic_type:
 - apiref
-ms.openlocfilehash: da81bd3e255898543c94d4ac64c6afbf39b6bdba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 296c3973403a5b09332efa24961d7a474d814aab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449873"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863342"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>Método ICorProfilerInfo::SetILFunctionBody
 Substitui o corpo da função especificada no módulo especificado.  
@@ -49,9 +49,9 @@ HRESULT SetILFunctionBody(
   
  O método `SetILFunctionBody` pode ser chamado somente nas funções que nunca foram compiladas por um compilador JIT (just-in-time).  
   
- Use o método [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) para alocar espaço para o novo método a fim de garantir que o buffer seja compatível.  
+ Use o método [ICorProfilerInfo:: GetILFunctionBodyAllocator](icorprofilerinfo-getilfunctionbodyallocator-method.md) para alocar espaço para o novo método a fim de garantir que o buffer seja compatível.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

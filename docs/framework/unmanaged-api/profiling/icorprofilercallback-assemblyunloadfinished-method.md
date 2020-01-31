@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 01404d23707be90b6b15cf741632400d49f164de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 734ae1d14d02d47c7d3126f1b4cf55dcb4ad151b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445142"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866618"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>Método ICorProfilerCallback::AssemblyUnloadFinished
 Notifica o criador de perfil de que um assembly foi descarregado.  
@@ -33,19 +33,22 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `assemblyId`  
- no Identifica o assembly que está sendo descarregado.  
-  
- `hrStatus`  
- no Um HRESULT que indica se o assembly foi descarregado com êxito.  
-  
+## <a name="parameters"></a>Parâmetros
+
+- `assemblyId`
+
+  \[em] identifica o assembly que está sendo descarregado.
+
+- `hrStatus`
+
+  \[em] um HRESULT que indica se o assembly foi descarregado com êxito.
+
 ## <a name="remarks"></a>Comentários  
- O valor de `assemblyId` não é válido para uma solicitação de informações depois que o método [ICorProfilerCallback:: AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md) retorna.  
+ O valor de `assemblyId` não é válido para uma solicitação de informações depois que o método [ICorProfilerCallback:: AssemblyUnloadStarted](icorprofilercallback-assemblyunloadstarted-method.md) retorna.  
   
  Algumas partes do descarregamento do assembly podem continuar após o retorno de chamada `AssemblyUnloadFinished`. Uma falha HRESULT no `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do descarregamento do assembly foi bem-sucedida.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -54,6 +57,6 @@ HRESULT AssemblyUnloadFinished(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

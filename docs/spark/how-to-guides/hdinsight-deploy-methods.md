@@ -4,12 +4,12 @@ description: Saiba como enviar um trabalho .NET para Apache Spark para o Azure H
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: cdd5e15ffde78ccb8b3156ee047b8ca98f7320b8
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74553007"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868012"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>Enviar um trabalho .NET para Apache Spark para o Azure HDInsight
 
@@ -28,7 +28,7 @@ Você pode usar o comando [spark-submit](https://spark.apache.org/docs/latest/su
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
@@ -54,7 +54,7 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 EOF
 ```
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 * [Introdução ao .NET para Apache Spark](../tutorials/get-started.md)
 * [Implantar um aplicativo .NET para Apache Spark no Azure HDInsight](../tutorials/hdinsight-deployment.md)

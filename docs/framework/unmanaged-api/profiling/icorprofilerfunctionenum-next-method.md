@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447782"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864460"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Método ICorProfilerFunctionEnum::Next
 Obtém o número especificado de funções contíguas de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.  
@@ -44,7 +44,7 @@ HRESULT Next([in]  ULONG      celt,
  `pceltFetched`  
  fora Um ponteiro para o número de funções realmente retornadas na matriz de `ids`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -52,7 +52,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Foram retornados menos de `celt` elementos, o que indica que a enumeração foi concluída.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerFunctionEnum](icorprofilerfunctionenum-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

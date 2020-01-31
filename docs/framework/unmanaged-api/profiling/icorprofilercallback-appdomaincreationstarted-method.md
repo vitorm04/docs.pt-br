@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a0f6dc9d2559bafed416d409063088d2f51c27d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445210"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866704"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>Método ICorProfilerCallback::AppDomainCreationStarted
 Notifica o criador de perfil de que um domínio de aplicativo está sendo criado.  
@@ -32,14 +32,16 @@ HRESULT AppDomainCreationStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `appDomainId`  
- no Identifica o domínio que está sendo criado.  
+## <a name="parameters"></a>Parâmetros
+
+- `appDomainId`
+
+  \[em] identifica o domínio que está sendo criado.
   
 ## <a name="remarks"></a>Comentários  
- A ID não é válida para nenhuma solicitação de informação até que o método [ICorProfilerCallback:: AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md) seja chamado.  
+ A ID não é válida para nenhuma solicitação de informação até que o método [ICorProfilerCallback:: AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) seja chamado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -48,6 +50,6 @@ HRESULT AppDomainCreationStarted(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

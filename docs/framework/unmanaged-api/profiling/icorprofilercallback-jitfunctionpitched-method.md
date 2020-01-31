@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cda629b7a6560ca5d731cd88cffc2cffd3486d8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448421"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866203"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>Método ICorProfilerCallback::JITFunctionPitched
 Notifica o criador de perfil de que uma função que foi compilada JIT (just-in-time) foi removida da memória.  
@@ -41,7 +41,7 @@ HRESULT JITFunctionPitched(
   
  O valor de `functionId` não é válido até que a função seja recompilada. Quando a função for recompilada, o mesmo valor de `functionId` será usado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -50,6 +50,6 @@ HRESULT JITFunctionPitched(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

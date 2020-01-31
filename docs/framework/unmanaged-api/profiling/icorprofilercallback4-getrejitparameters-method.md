@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-ms.openlocfilehash: d81d7275d197de1dfc99b135377459f509c2651f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 858d65783515a89a434cf719ef9d5a999643094c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439443"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865305"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>Método ICorProfilerCallback4::GetReJITParameters
 Permite que o criador de perfil de código defina sinalizadores de geração de código alternativos para um novo corpo de método recompilado.  
@@ -39,12 +39,12 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
  no O `MethodDef` do método para o qual o CLR precisa de parâmetros de recompilação JIT.  
   
  `pFunctionControl`  
- no Um ponteiro para uma interface [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) que o criador de perfil pode usar para fornecer informações de recompilação JIT para o método que está sendo recompilado.  
+ no Um ponteiro para uma interface [ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md) que o criador de perfil pode usar para fornecer informações de recompilação JIT para o método que está sendo recompilado.  
   
 ## <a name="remarks"></a>Comentários  
  O CLR emite um retorno de chamada `GetReJITParameters` para que o criador de perfil possa especificar os parâmetros para a recompilação de um determinado método. O retorno de chamada `GetReJITParameters` é emitido apenas uma vez por função; os parâmetros fornecidos pelo criador de perfil se aplicam a todas as instâncias dessa função.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -53,9 +53,9 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [Método JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [Método ReJITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)
+- [Método JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)
+- [Método ReJITCompilationStarted](icorprofilercallback4-rejitcompilationstarted-method.md)

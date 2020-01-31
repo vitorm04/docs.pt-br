@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: f5104c779f99ef9f26a9eccc00008ded62336d8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c875f6aae996271dee9ac193768ef6981efc19
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426965"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863030"
 ---
 # <a name="icorprofilerinfo10suspendruntime-method"></a>Método ICorProfilerInfo10:: SuspendRuntime
 
@@ -28,7 +28,7 @@ Suspende o tempo de execução sem executar um GC.
 HRESULT SuspendRuntime();
 ```
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -38,6 +38,6 @@ HRESULT SuspendRuntime();
 
 **Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [Interface ICorProfilerInfo10](icorprofilerinfo10-interface.md)

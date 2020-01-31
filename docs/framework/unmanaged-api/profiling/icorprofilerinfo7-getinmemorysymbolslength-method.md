@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a675cc301d2dd32f87e3864a3123e2044761ef91
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130339"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868350"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Método ICorProfilerInfo7:: GetInMemorySymbolsLength
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
@@ -37,7 +37,7 @@ HRESULT GetInMemorySymbolsLength(
  pCountSymbolBytes  
  fora Um ponteiro para um valor `DWORD` que, quando o método retorna, contém o comprimento do fluxo em bytes.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O método retornará `S_OK` se o comprimento do fluxo de memória puder ser determinado, mesmo se for zero (0).  
   
  O método retornará `CORPROF_E_MODULE_IS_DYNAMIC` se o método tiver sido criado usando <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
@@ -48,7 +48,7 @@ HRESULT GetInMemorySymbolsLength(
 > [!NOTE]
 > A implementação atual não oferece suporte a Reflection. Emit. Se o módulo foi criado usando Reflection. Emit, o método retornará `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -57,6 +57,6 @@ HRESULT GetInMemorySymbolsLength(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [Interface ICorProfilerInfo7](icorprofilerinfo7-interface.md)

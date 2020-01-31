@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c5182fd44f0cc2ad7b836bbcbddc469c89dbacb7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439565"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865695"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>Método ICorProfilerCallback2::ThreadNameChanged
 Notifica o criador de perfil de código de que o nome de um thread foi alterado.  
@@ -44,7 +44,7 @@ HRESULT ThreadNameChanged(
  `name`  
  no O novo nome do thread. O nome não é terminada em nulo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -53,7 +53,7 @@ HRESULT ThreadNameChanged(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)

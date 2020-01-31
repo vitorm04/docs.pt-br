@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445133"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866605"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>Método ICorProfilerCallback::AssemblyUnloadStarted
 Notifica o criador de perfil de que um assembly está sendo descarregado.  
@@ -32,14 +32,16 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `assemblyId`  
- no Identifica o assembly que está sendo descarregado.  
-  
+## <a name="parameters"></a>Parâmetros
+
+- `assemblyId`
+
+  \[em] identifica o assembly que está sendo descarregado.
+
 ## <a name="remarks"></a>Comentários  
  O valor de `assemblyId` não é válido para uma solicitação de informações após o retorno do método `AssemblyUnloadStarted` — essa é a última chance do criador de perfil obter informações sobre esse assembly.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -48,7 +50,7 @@ HRESULT AssemblyUnloadStarted(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Método AssemblyUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Método AssemblyUnloadFinished](icorprofilercallback-assemblyunloadfinished-method.md)

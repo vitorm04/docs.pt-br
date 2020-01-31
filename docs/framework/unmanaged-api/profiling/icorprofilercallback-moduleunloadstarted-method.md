@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: f0000e9b063022e828e52b9b940ec6f4e0ce4165
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e43f58f619aaa63fa2294dd3e989026dcdfc604
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445895"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866124"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>Método ICorProfilerCallback::ModuleUnloadStarted
 Notifica o criador de perfil de que um módulo está sendo descarregado.  
@@ -39,7 +39,7 @@ HRESULT ModuleUnloadStarted(
 ## <a name="remarks"></a>Comentários  
  O valor de `moduleId` não é válido para uma solicitação de informações após o retorno do método `ModuleUnloadStarted` — essa é a última chance do criador de perfil obter informações sobre esse módulo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -48,7 +48,7 @@ HRESULT ModuleUnloadStarted(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Método ModuleUnloadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Método ModuleUnloadFinished](icorprofilercallback-moduleunloadfinished-method.md)

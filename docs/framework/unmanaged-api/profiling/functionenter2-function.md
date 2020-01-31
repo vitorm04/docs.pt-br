@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440852"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866977"
 ---
 # <a name="functionenter2-function"></a>Função FunctionEnter2
-Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre o quadro de pilha e os argumentos de função. Essa função substitui a função [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) .  
+Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre o quadro de pilha e os argumentos de função. Essa função substitui a função [FunctionEnter](functionenter-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +35,28 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `funcId`  
- no O identificador da função à qual o controle é passado.  
+## <a name="parameters"></a>Parâmetros
+
+- `funcId`
+
+  \[em] o identificador da função para o qual o controle é passado.
+
+- `clientData`
+
+  \[em] o identificador da função remapeada, que o criador de perfil especificou anteriormente usando a função [FunctionIDMapper](functionidmapper-function.md) .
   
- `clientData`  
- no O identificador da função remapeada, que o criador de perfil especificou anteriormente usando a função [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) .  
+- `func`
+
+  \[em] um valor de `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.
   
- `func`  
- no Um valor `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.  
+  O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
- O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
- `argumentInfo`  
- no Um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md) que especifica os locais na memória dos argumentos da função.  
-  
- Para acessar informações de argumento, o sinalizador de `COR_PRF_ENABLE_FUNCTION_ARGS` deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.  
-  
+- `argumentInfo`
+
+  \[em] um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que especifica os locais na memória dos argumentos da função.
+
+  Para acessar informações de argumento, o sinalizador de `COR_PRF_ENABLE_FUNCTION_ARGS` deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.
+
 ## <a name="remarks"></a>Comentários  
  Os valores dos parâmetros `func` e `argumentInfo` não são válidos depois que a função `FunctionEnter2` retorna, pois os valores podem ser alterados ou destruídos.  
   
@@ -67,7 +72,7 @@ void __stdcall FunctionEnter2 (
   
  Além disso, a função `FunctionEnter2` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
@@ -76,9 +81,9 @@ void __stdcall FunctionEnter2 (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Função FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Função FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [Método SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Função FunctionLeave2](functionleave2-function.md)
+- [Função FunctionTailcall2](functiontailcall2-function.md)
+- [Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Criando perfil de funções estáticas globais](profiling-global-static-functions.md)

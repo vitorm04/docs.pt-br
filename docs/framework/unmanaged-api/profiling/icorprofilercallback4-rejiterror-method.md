@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430110"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865175"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Método ICorProfilerCallback4::ReJITError
 Notifica o criador de perfil de que o compilador JIT (just-in-time) encontrou um erro no processo de recompilação.  
@@ -48,7 +48,7 @@ HRESULT ReJITError(
  `hrStatus`  
  no Um HRESULT que indica a natureza da falha. Consulte a seção status HRESULTs para obter uma lista de valores.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Os valores retornados desse retorno de chamada são ignorados.  
   
 ## <a name="status-hresults"></a>Status HRESULTs  
@@ -59,10 +59,10 @@ HRESULT ReJITError(
 |CORPROF_E_DATAINCOMPLETE|O módulo ainda não está totalmente carregado ou está em processo de descarregamento.|  
 |CORPROF_E_MODULE_IS_DYNAMIC|O módulo especificado foi gerado dinamicamente (por exemplo, por `Reflection.Emit`) e, portanto, não é suportado por esse método.|  
 |CORPROF_E_FUNCTION_IS_COLLECTIBLE|O método é instanciado em um assembly de coleção e, portanto, não pode ser recompilado. Observe que os tipos e funções definidos em um contexto não-reflexão (por exemplo, `List<MyCollectibleStruct>`) podem ser instanciados em um assembly de coleção.|  
-|E_OUTOFMEMORY|O CLR ficou sem memória ao tentar marcar o método especificado para recompilação JIT.|  
+|{1&gt;E_OUTOFMEMORY&lt;1}|O CLR ficou sem memória ao tentar marcar o método especificado para recompilação JIT.|  
 |Outros|O sistema operacional retornou uma falha fora do controle do CLR. Por exemplo, se uma chamada do sistema para alterar a proteção de acesso de uma página de memória falhar, o erro do sistema operacional será exibido.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -71,7 +71,7 @@ HRESULT ReJITError(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)

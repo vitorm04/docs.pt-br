@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 8637be3c0a59676dc52aea985d7418bfd8f247bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7c1ee1c39fbf2dcc1f16df3bc94a235676a216dd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443109"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862562"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>Método ICorProfilerInfo2::GetThreadAppDomain
 Obtém a ID do domínio do aplicativo no qual o thread especificado está executando o código no momento.  
@@ -40,7 +40,7 @@ HRESULT GetThreadAppDomain(
  `pAppDomainId`  
  fora Um ponteiro para a ID do domínio do aplicativo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -49,7 +49,7 @@ HRESULT GetThreadAppDomain(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

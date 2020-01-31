@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-ms.openlocfilehash: 3178d099db96d52f0238cfcf7e055e761687ce30
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bec50183e6a8690cb02f3dc06d32b7449e055cea
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430089"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865162"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>Método ICorProfilerCallback4::SurvivingReferences2
-Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação. Esse método será chamado se o criador de perfil tiver implementado a interface [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) . Esse retorno de chamada substitui o método [ICorProfilerCallback2:: SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) , pois ele pode relatar intervalos maiores de objetos cujos comprimentos excedem o que pode ser expresso em ULONG.  
+Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação. Esse método será chamado se o criador de perfil tiver implementado a interface [ICorProfilerCallback4](icorprofilercallback4-interface.md) . Esse retorno de chamada substitui o método [ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md) , pois ele pode relatar intervalos maiores de objetos cujos comprimentos excedem o que pode ser expresso em ULONG.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,17 +57,17 @@ HRESULT SurvivingReferences2(
   
  Para qualquer valor de `i` que esteja no seguinte intervalo, o objeto tem sobreviveram a coleta de lixo:  
   
- 0 < = `i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  Uma coleta de lixo não compactada recupera a memória ocupada por objetos "inativos", mas não compacta esse espaço livre. Como resultado, a memória é retornada para o heap, mas nenhum objeto "ao vivo" é movido.  
   
- O Common Language Runtime (CLR) chama `SurvivingReferences2` para coletas de lixo sem compactação. Para compactar as coleções de lixo, [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um `SurvivingReferences2` retorno de chamada ou um retorno de chamada [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) , mas não ambos.  
+ O Common Language Runtime (CLR) chama `SurvivingReferences2` para coletas de lixo sem compactação. Para compactar as coleções de lixo, [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um `SurvivingReferences2` retorno de chamada ou um retorno de chamada [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) , mas não ambos.  
   
  Vários retornos de chamada de `SurvivingReferences2` podem ser recebidos durante uma coleta de lixo específica, devido ao buffer interno limitado, a vários retornos de chamada durante a coleta de lixo do servidor e por outros motivos. No caso de vários retornos de chamada durante uma coleta de lixo, as informações são cumulativas; todas as referências que são relatadas em qualquer `SurvivingReferences2` retorno de chamada sobrevivem à coleta de lixo.  
   
- Se o criador de perfil implementar as interfaces [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) , o método `SurvivingReferences2` será chamado antes do método [ICorProfilerCallback2:: SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md) , mas somente se `SurvivingReferences2` retornar com êxito. Os profileres podem retornar um HRESULT que indica falha do método `SurvivingReferences2` para evitar chamar o segundo método.  
+ Se o criador de perfil implementar as interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback4](icorprofilercallback4-interface.md) , o método `SurvivingReferences2` será chamado antes do método [ICorProfilerCallback2:: SurvivingReferences](icorprofilercallback2-survivingreferences-method.md) , mas somente se `SurvivingReferences2` retornar com êxito. Os profileres podem retornar um HRESULT que indica falha do método `SurvivingReferences2` para evitar chamar o segundo método.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -76,8 +76,8 @@ HRESULT SurvivingReferences2(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [Interface ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)
+- [Interface ICorProfilerCallback4](icorprofilercallback4-interface.md)

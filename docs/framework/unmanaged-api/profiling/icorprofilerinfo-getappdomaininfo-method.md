@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0407b7057753f7fdee6ea6b1d05144b135b6378a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448176"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864083"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Método ICorProfilerInfo::GetAppDomainInfo
 Aceita uma ID de domínio do aplicativo. Retorna um nome de domínio de aplicativo e a ID do processo que o contém.  
@@ -58,7 +58,7 @@ HRESULT GetAppDomainInfo(
   
  Como alternativa, você pode primeiro chamar `GetAppDomainInfo` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetAppDomainInfo` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -67,8 +67,8 @@ HRESULT GetAppDomainInfo(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

@@ -2,12 +2,12 @@
 title: 'Tutorial: criar uma solução do .NET Core no macOS usando Visual Studio Code'
 description: Este documento fornece as etapas e o fluxo de trabalho para criar uma Solução do .NET Core usando o Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715298"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741544"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: criar uma solução do .NET Core no macOS usando Visual Studio Code
 
@@ -28,7 +28,7 @@ Instale a extensão C# de Visual Studio Code abrindo Visual Studio Code e pressi
 
 Neste tutorial, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. Você pode [Exibir ou baixar a origem](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) deste artigo no repositório dotnet/Samples no github. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-Inicie o Visual Studio Code. Pressione <kbd>Ctrl</kbd>+<kbd>\`</kbd> (o caractere de backquot ou backtick) ou selecione **Exibir > Terminal** no menu para abrir um terminal inserido no Visual Studio Code. Você ainda pode abrir um shell externo com o comando **Abrir no Prompt de Comando** do Gerenciador (**Abrir no Terminal**, no Mac ou Linux), caso prefira trabalhar fora do Visual Studio Code.
+Inicie o Visual Studio Code. Pressione <kbd>Ctrl</kbd> <kbd>\`</kbd> (o caractere de backquot ou backtick) ou selecione **Exibir** > **terminal** no menu para abrir um terminal inserido no Visual Studio Code. Você ainda pode abrir um shell externo com o comando do Explorer **abrir no prompt de comando** (**abrir no terminal** no MacOS ou Linux) se preferir trabalhar fora do Visual Studio Code.
 
 Comece criando um arquivo de solução, que serve como um contêiner para um ou mais projetos do .NET Core. No terminal, execute o comando [`dotnet new`](../tools/dotnet-new.md) para criar uma nova solução *Golden. sln* dentro de uma nova pasta chamada *Golden*:
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 Defina um ponto de interrupção na instrução `WriteLine` no método `Main`. Faça isso pressionando a tecla <kbd>Fn</kbd>+<kbd>F9</kbd> quando o cursor estiver sobre a linha `WriteLine` ou clicando com o mouse na margem esquerda na linha em que você deseja definir o ponto de interrupção. Um círculo vermelho será exibido na margem ao lado da linha de código. Quando o ponto de interrupção for atingido, a execução do código será interrompida *antes* de a linha do ponto de interrupção ser executada.
 
-Abra a guia depurador selecionando o ícone de depuração na barra de ferramentas Visual Studio Code, selecionando **exibir > depurar** na barra de menus ou usando o <kbd>comando</kbd> de atalho de teclado+<kbd>Shift</kbd>+<kbd>D</kbd>:
+Abra a guia depurador selecionando o ícone de depuração na barra de ferramentas Visual Studio Code, selecionando **Exibir** > **depurar** na barra de menus ou usando o <kbd>&#8679;</kbd> <kbd>&#8984;</kbd>atalho de teclado <kbd>D</kbd>:
 
 ![Depurador do Visual Studio Code](./media/using-on-macos/visual-studio-code-debugger.png)
 

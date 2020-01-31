@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458746"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794299"
 ---
 # <a name="routed-events-overview"></a>Visão geral de eventos roteados
 
@@ -28,7 +28,7 @@ Este tópico descreve o conceito de eventos roteados no [!INCLUDE[TLA#tla_wincli
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Este tópico pressupõe que você tenha conhecimento básico do Common Language Runtime (CLR) e da programação orientada a objeto, bem como o conceito de como as relações entre elementos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] podem ser conceituadas como uma árvore. Para seguir os exemplos deste tópico, você também deve ter noções básicas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] e saber como escrever páginas ou aplicativos muito básicos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Para obter mais informações, consulte [Walkthrough: meu primeiro aplicativo de área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) e [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
@@ -64,7 +64,7 @@ Veja a seguir um breve resumo dos cenários que motivaram o conceito de evento r
 
 **Controlar a composição e encapsulamento:** vários controles no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] têm um modelo de conteúdo sofisticado. Por exemplo, você pode inserir uma imagem dentro de um <xref:System.Windows.Controls.Button>, que efetivamente estende a árvore visual do botão. No entanto, a imagem adicionada não deve interromper o comportamento de teste de colisão que faz com que um botão responda a uma <xref:System.Windows.Controls.Primitives.ButtonBase.Click> de seu conteúdo, mesmo se o usuário clicar em pixels que tecnicamente fazem parte da imagem.
 
-**Pontos de fixação única de manipulador:** em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], você precisa anexar o mesmo manipulador várias vezes para processar os eventos que pode sem acionados de vários elementos. Eventos roteados permitem que você anexe esse manipulador somente uma vez conforme mostrado no exemplo anterior, além de usarem a lógica de manipulador para determinar a origem do evento, se necessário. Por exemplo, esse pode ser o manipulador para o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mostrado anteriormente:
+**Pontos de anexo do manipulador singular:** Em Windows Forms, você teria que anexar o mesmo manipulador várias vezes para processar eventos que poderiam ser gerados de vários elementos. Eventos roteados permitem que você anexe esse manipulador somente uma vez conforme mostrado no exemplo anterior, além de usarem a lógica de manipulador para determinar a origem do evento, se necessário. Por exemplo, esse pode ser o manipulador para o [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mostrado anteriormente:
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Eventos roteados usam uma de três estratégias de roteamento:
 
 - **Propagação:** manipuladores de eventos na origem do evento são invocados. O roteamento do evento roteado ocorre então para sucessivos elementos pai até alcançar a raiz da árvore de elementos. A maioria dos eventos roteados usa a estratégia de roteamento por propagação. Eventos roteados por propagação geralmente são usados para relatar as alterações de entrada ou de estado de diferentes controles ou outros elementos de interface do usuário.
 
-- **Direto:** somente o próprio elemento de origem tem a oportunidade de invocar manipuladores em resposta. Isso é análogo ao "roteamento" que o [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usa para eventos. No entanto, diferentemente de um evento CLR padrão, os eventos roteados diretos dão suporte à manipulação de classe (a manipulação de classes é explicada em uma próxima seção) e pode ser usada por <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.
+- **Direto:** somente o próprio elemento de origem tem a oportunidade de invocar manipuladores em resposta. Isso é análogo ao "roteamento" que o Windows Forms usa para eventos. No entanto, diferentemente de um evento CLR padrão, os eventos roteados diretos dão suporte à manipulação de classe (a manipulação de classes é explicada em uma próxima seção) e pode ser usada por <xref:System.Windows.EventSetter> e <xref:System.Windows.EventTrigger>.
 
 - **Túnel:** inicialmente, os manipuladores de eventos na raiz da árvore de elementos são invocados. O evento roteado, em seguida, passa por sucessivos elementos filho ao longo de uma rota, em direção ao elemento de nó que é a origem do evento roteado (o elemento que acionou o evento roteado). Eventos roteados por túnel são frequentemente usados ou manipulados como parte da composição de um controle, de modo que eventos de partes compostas podem ser deliberadamente suprimidos ou substituídos por eventos que são específicos do controle completo. Eventos de entrada fornecidos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] geralmente vêm implementados como um par por túnel/propagação. Eventos por túnel também são chamados de eventos de Visualização, devido a uma convenção de nomenclatura que é usada para os pares.
 
@@ -257,7 +257,7 @@ Para obter mais informações sobre entrada e como entrada e eventos interagem e
 
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters e EventTriggers
 
-Em estilos, você pode incluir uma sintaxe de manipulação de eventos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] previamente declarada na marcação usando um <xref:System.Windows.EventSetter>. Quando o estilo é aplicado, o manipulador referenciado é adicionado à instância estilizada. Você pode declarar um <xref:System.Windows.EventSetter> apenas para um evento roteado. Confira o exemplo abaixo. Observe que o método `b1SetColor` referenciado aqui está em um arquivo code-behind.
+Em estilos, você pode incluir uma sintaxe de manipulação de eventos de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] previamente declarada na marcação usando um <xref:System.Windows.EventSetter>. Quando o estilo é aplicado, o manipulador referenciado é adicionado à instância estilizada. Você pode declarar um <xref:System.Windows.EventSetter> apenas para um evento roteado. Veja este exemplo: Observe que o método `b1SetColor` referenciado aqui está em um arquivo code-behind.
 
 [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]
 
@@ -271,14 +271,14 @@ Outra sintaxe especializada que combina o evento roteado e os recursos de anima�
 
 Este tópico aborda principalmente eventos roteados da perspectiva de descrever os conceitos básicos e oferecer diretrizes sobre como e quando responder a eventos roteados que já estão presentes nos diversos controles e elementos base. No entanto, você pode criar seu próprio evento roteado em sua classe personalizada juntamente com todo o suporte necessário, assim como delegados e classes de dados do evento especializado. O proprietário do evento roteado pode ser qualquer classe, mas eventos roteados devem ser gerados e manipulados por <xref:System.Windows.UIElement> ou <xref:System.Windows.ContentElement> classes derivadas para serem úteis. Para obter mais informações sobre eventos personalizados, consulte [Criar um evento roteado personalizado](how-to-create-a-custom-routed-event.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
 - [Marcando eventos roteados como manipulados e tratamento de classes](marking-routed-events-as-handled-and-class-handling.md)
 - [Visão geral da entrada](input-overview.md)
-- [Visão geral de comandos](commanding-overview.md)
-- [Propriedades de dependência personalizada](custom-dependency-properties.md)
+- [Visão geral dos comandos](commanding-overview.md)
+- [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 - [Árvores no WPF](trees-in-wpf.md)
 - [Padrões de evento fracos](weak-event-patterns.md)

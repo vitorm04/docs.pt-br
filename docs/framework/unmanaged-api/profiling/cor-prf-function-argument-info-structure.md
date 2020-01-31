@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c92ee580caed9f1fb87a31b676747769ad31a0e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447388"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867241"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_INFO
 Representa os argumentos de uma função, em ordem da esquerda para a direita.  
@@ -38,7 +38,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`numRanges`|O número de blocos de argumentos. Ou seja, esse valor é o número de estruturas de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) na matriz `ranges`.|  
+|`numRanges`|O número de blocos de argumentos. Ou seja, esse valor é o número de estruturas de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) na matriz `ranges`.|  
 |`totalArgumentSize`|O tamanho total de todos os argumentos. Em outras palavras, esse valor é a soma dos comprimentos dos argumentos.|  
 |`ranges`|Uma matriz de estruturas de `COR_PRF_FUNCTION_ARGUMENT_RANGE`, cada uma representando um bloco de argumentos de função.|  
   
@@ -49,7 +49,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  Os argumentos armazenados em registros são despejados na memória para criar as estruturas.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
@@ -58,6 +58,6 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Estruturas de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [Estruturas de criação de perfil](profiling-structures.md)

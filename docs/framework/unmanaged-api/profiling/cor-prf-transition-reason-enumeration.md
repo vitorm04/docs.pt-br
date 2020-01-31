@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: 6d8b408675127cde399a8346f2b9734a0e038cb5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1c3c311fd431b6c0b18af3d6516973b2471cfabd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427143"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867036"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>Enumeração COR_PRF_TRANSITION_REASON
 Indica o motivo para uma transição de código gerenciado para não gerenciado ou vice-versa.  
@@ -41,9 +41,9 @@ typedef enum {
 |`COR_PRF_TRANSITION_RETURN`|A transição é devido a um retorno de uma função.|  
   
 ## <a name="remarks"></a>Comentários  
- Quando ocorre uma transição, o criador de perfil recebe um retorno de chamada [ICorProfilerCallback:: ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) ou [ICorProfilerCallback:: UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) , o que fornece um valor da enumeração `COR_PRF_TRANSITION_REASON` para indicar o motivo da transição.  
+ Quando ocorre uma transição, o criador de perfil recebe um retorno de chamada [ICorProfilerCallback:: ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md) ou [ICorProfilerCallback:: UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md) , o que fornece um valor da enumeração `COR_PRF_TRANSITION_REASON` para indicar o motivo da transição.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

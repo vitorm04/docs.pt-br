@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440579"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866878"
 ---
 # <a name="functionleave-function"></a>Função FunctionLeave
 Notifica o criador de perfil de que uma função está prestes a retornar ao chamador.  
   
 > [!NOTE]
-> A função `FunctionLeave` foi preterida no .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
+> A função `FunctionLeave` foi preterida no .NET Framework 2,0. Ele continuará funcionando, mas incorrerá em uma penalidade de desempenho. Em vez disso, use a função [FunctionLeave2](functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `funcID`  
- no O identificador da função que está retornando.  
-  
+## <a name="parameters"></a>Parâmetros
+
+- `funcID`
+
+  \[em] o identificador da função que está retornando.
+
 ## <a name="remarks"></a>Comentários  
  A função `FunctionLeave` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o atributo de classe de armazenamento `__declspec`(`naked`).  
   
@@ -52,7 +54,7 @@ void __stdcall FunctionLeave (
   
  Além disso, a função `FunctionLeave` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
@@ -61,10 +63,10 @@ void __stdcall FunctionLeave (
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Função FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [Função FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Função FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [Método SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Função FunctionEnter2](functionenter2-function.md)
+- [Função FunctionLeave2](functionleave2-function.md)
+- [Função FunctionTailcall2](functiontailcall2-function.md)
+- [Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Criando perfil de funções estáticas globais](profiling-global-static-functions.md)

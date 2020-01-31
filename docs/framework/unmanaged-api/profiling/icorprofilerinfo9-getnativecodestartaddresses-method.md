@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444720"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868272"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Método ICorProfilerInfo9:: GetNativeCodeStartAddresses
 
@@ -32,28 +32,33 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>Parâmetros
 
-`functionId` \
-no A ID da função cujos endereços de início de código nativo devem ser retornados.
+- `functionId`
 
-`reJitId` \
-no A identidade da função de compilação JIT recompilada.
+  \[em] a ID da função cujos endereços de início de código nativo devem ser retornados.
 
-`cCodeStartAddresses` \
-no O tamanho máximo da matriz de `codeStartAddresses`.
+- `reJitId`
 
-`pcCodeStartAddresses` \
-fora O número de endereços disponíveis.
+  \[em] a identidade da função de compilação JIT recompilada.
 
-`codeStartAddresses` \
-fora Uma matriz de `UINT_PTR`, cada uma delas é o endereço inicial de um corpo nativo para a função especificada.
+- `cCodeStartAddresses`
+
+  \[em] o tamanho máximo da matriz de `codeStartAddresses`.
+
+- `pcCodeStartAddresses`
+
+  \[out] o número de endereços disponíveis.
+
+- `codeStartAddresses`
+
+  \[out] uma matriz de `UINT_PTR`, cada uma delas é o endereço inicial de um corpo nativo para a função especificada.
 
 ## <a name="remarks"></a>Comentários
 
 Quando a compilação em camadas está habilitada, uma função pode ter mais de um corpo de código nativo.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
@@ -63,6 +68,6 @@ Quando a compilação em camadas está habilitada, uma função pode ter mais de
 
 **Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Interface ICorProfilerInfo9](icorprofilerinfo9-interface.md)

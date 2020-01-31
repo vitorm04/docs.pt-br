@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-ms.openlocfilehash: a83f8566dfe8e1b612f67d95a0e69947b72704ce
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 798815c1122129395e57ff1274c23292696504f0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439601"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865708"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>Método ICorProfilerCallback2::SurvivingReferences
 Relata o layout dos objetos no heap como resultado de uma coleta de lixo sem compactação.  
@@ -53,7 +53,7 @@ HRESULT SurvivingReferences(
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> Esse método relata tamanhos como `MAX_ULONG` para objetos maiores que 4 GB em plataformas de 64 bits. Para objetos com mais de 4 GB, use o método [ICorProfilerCallback4:: SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) em vez disso.  
+> Esse método relata tamanhos como `MAX_ULONG` para objetos maiores que 4 GB em plataformas de 64 bits. Para objetos com mais de 4 GB, use o método [ICorProfilerCallback4:: SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md) em vez disso.  
   
  Os elementos das matrizes `objectIDRangeStart` e `cObjectIDRangeLength` devem ser interpretados da seguinte maneira para determinar se um objeto sobreviveram a coleta de lixo. Suponha que um valor de `ObjectID` (`ObjectID`) está dentro do seguinte intervalo:  
   
@@ -61,15 +61,15 @@ HRESULT SurvivingReferences(
   
  Para qualquer valor de `i` que esteja no seguinte intervalo, o objeto tem sobreviveram a coleta de lixo:  
   
- 0 < = `i` < `cSurvivingObjectIDRanges`  
+ 0 <= `i` < `cSurvivingObjectIDRanges`  
   
  Uma coleta de lixo não compactada recupera a memória ocupada por objetos "inativos", mas não compacta esse espaço livre. Como resultado, a memória é retornada para o heap, mas nenhum objeto "ao vivo" é movido.  
   
- O Common Language Runtime (CLR) chama `SurvivingReferences` para coletas de lixo sem compactação. Para compactar as coleções de lixo, [ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um retorno de chamada `SurvivingReferences` ou um `MovedReferences` retorno de chamada, mas não ambos.  
+ O Common Language Runtime (CLR) chama `SurvivingReferences` para coletas de lixo sem compactação. Para compactar as coleções de lixo, [ICorProfilerCallback:: MovedReferences](icorprofilercallback-movedreferences-method.md) é chamado em vez disso. Uma única coleta de lixo pode ser compactada para uma geração e não compactação para outra. Para uma coleta de lixo em qualquer geração específica, o criador de perfil receberá um retorno de chamada `SurvivingReferences` ou um `MovedReferences` retorno de chamada, mas não ambos.  
   
  Vários retornos de chamada de `SurvivingReferences` podem ser recebidos durante uma coleta de lixo específica, devido a buffers internos limitados, vários threads relatando no caso da coleta de lixo do servidor e por outros motivos. No caso de vários retornos de chamada durante uma coleta de lixo, as informações são cumulativas — todas as referências que são relatadas em qualquer `SurvivingReferences` retorno de chamada sobrevivem à coleta de lixo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -78,8 +78,8 @@ HRESULT SurvivingReferences(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [Método SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)
+- [Método SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md)

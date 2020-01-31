@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 0d34577f0f785bc851646423b8cd732ab4d1dae0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b5f6a830cbe601443f03cd91a356c7e49450e7f3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113857"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793725"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>Método ICLRDataTarget::GetThreadContext
 Obtém o contexto de execução atual para o thread determinado no processo de destino. Esse método é chamado pelo Common Language Runtime Data Access Services.  
@@ -55,7 +55,7 @@ HRESULT GetThreadContext (
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -64,6 +64,6 @@ HRESULT GetThreadContext (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interface ICLRDataTarget](iclrdatatarget-interface.md)

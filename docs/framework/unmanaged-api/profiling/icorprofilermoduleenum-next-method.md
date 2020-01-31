@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 695a4386d9399a079df41f11f52a3185083784ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442694"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861379"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>Método ICorProfilerModuleEnum::Next
 Obtém o número especificado de módulos contíguos de uma coleção sequencial de módulos, começando na posição atual do enumerador na sequência.  
@@ -44,7 +44,7 @@ HRESULT Next([in]  ULONG      celt,
  `pceltFetched`  
  fora Um ponteiro para o número de elementos realmente retornados na matriz de `ids`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -52,7 +52,7 @@ HRESULT Next([in]  ULONG      celt,
 |S_OK|`celt` elementos foram retornados.|  
 |S_FALSE|Foram retornados menos de `celt` elementos, o que indica que a enumeração foi concluída.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 66933b3778807b40f1d39d8b4c565c334328812f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fabbcd497dc2f321da90188cebbac6ed4e147492
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450394"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867081"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>Enumeração COR_PRF_REJIT_FLAGS
-Contém valores que indicam como a API [ICorProfilerInfo10:: RequestReJITWithInliners](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-requestrejitwithinliners-method.md) deve se comportar.  
+Contém valores que indicam como a API [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) deve se comportar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ typedef enum
 |`COR_PRF_REJIT_BLOCK_INLINING`| Os métodos ReJITted serão impedidos de serem embutidos em outros métodos. |  
 |`COR_PRF_REJIT_INLINING_CALLBACKS`| Receba `GetFunctionParameters` retornos de chamada para os métodos que embutiram os métodos solicitados a serem ReJITteddos. |  
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -51,6 +51,6 @@ typedef enum
   
  **Versões do .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Criando perfil de enumerações](profiling-enumerations.md)

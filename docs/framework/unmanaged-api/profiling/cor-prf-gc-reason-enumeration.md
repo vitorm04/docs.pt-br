@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: f10ec279e67b86448298745a488f5b3e833e8c39
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447375"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867173"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>Enumeração COR_PRF_GC_REASON
 Indica o motivo pelo qual essa coleta de lixo está ocorrendo.  
@@ -40,7 +40,7 @@ typedef enum {
 |`COR_PRF_GC_INDUCED`|A coleta de lixo foi induzida por um método de <xref:System.GC.Collect%2A>.|  
 |`COR_PRF_GC_OTHER`|O motivo não foi especificado.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -49,6 +49,6 @@ typedef enum {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Criando perfil de enumerações](profiling-enumerations.md)

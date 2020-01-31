@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a8a4277-345b-448b-a028-fc8cff9998aa
 topic_type:
 - apiref
-ms.openlocfilehash: fb09a9422f2aeec239f9aef25fb61c731e0aa2e9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 285bdd3f2a96d3c6cb0039382d9944e48c49971a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430614"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865903"
 ---
 # <a name="icorprofilercallbackruntimesuspendaborted-method"></a>Método ICorProfilerCallback::RuntimeSuspendAborted
 Notifica o criador de perfil de que o tempo de execução anulou a suspensão de tempo de execução que estava ocorrendo.  
@@ -34,11 +34,11 @@ HRESULT RuntimeSuspendAborted();
 ## <a name="remarks"></a>Comentários  
  A suspensão de tempo de execução poderá ser anulada se dois threads tentarem suspender simultaneamente o tempo de execução.  
   
- O retorno de chamada [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) ou o retorno de chamada de `RuntimeSuspendAborted` ocorrerá em um único thread após um retorno de chamada [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) .  
+ O retorno de chamada [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md) ou o retorno de chamada de `RuntimeSuspendAborted` ocorrerá em um único thread após um retorno de chamada [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md) .  
   
  É garantido que o retorno de chamada de `RuntimeSuspendAborted` ocorrerá no mesmo thread que o retorno de chamada `RuntimeSuspendStarted`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -47,6 +47,6 @@ HRESULT RuntimeSuspendAborted();
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
