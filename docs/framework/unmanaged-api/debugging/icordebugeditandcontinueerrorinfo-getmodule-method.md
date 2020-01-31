@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 292f1255-5dfd-427f-844e-781d4b938f9a
 topic_type:
 - apiref
-ms.openlocfilehash: d6a04bdb68149fcc659fa45acc5856c3cebc9a56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d55fd18b55f5387353e014b169633fc44dae3ad7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137008"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783387"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="e6d30-102">Método ICorDebugEditAndContinueErrorInfo::GetModule</span><span class="sxs-lookup"><span data-stu-id="e6d30-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
-<span data-ttu-id="e6d30-103">`GetModule` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="e6d30-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="e6d30-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="e6d30-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a><span data-ttu-id="c0ea9-102">Método ICorDebugEditAndContinueErrorInfo::GetModule</span><span class="sxs-lookup"><span data-stu-id="c0ea9-102">ICorDebugEditAndContinueErrorInfo::GetModule Method</span></span>
+<span data-ttu-id="c0ea9-103">`GetModule` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="c0ea9-103">`GetModule` is obsolete.</span></span> <span data-ttu-id="c0ea9-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="c0ea9-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6d30-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e6d30-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0ea9-105">Veja também</span><span class="sxs-lookup"><span data-stu-id="c0ea9-105">See also</span></span>
 
-- [<span data-ttu-id="e6d30-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="e6d30-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c0ea9-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="c0ea9-106">Debugging Interfaces</span></span>](debugging-interfaces.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d7e916a6-1c39-4676-972d-da3d8546044b
 topic_type:
 - apiref
-ms.openlocfilehash: 217c0ea3eea6ce7413028b9638dbaae66bd99452
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ebe07fc7cd963cbe9cae3cd8c3f7c0580dad5fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137418"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788818"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="61e41-102">Método ICorDebugEditAndContinueSnapshot::GetMvid</span><span class="sxs-lookup"><span data-stu-id="61e41-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-<span data-ttu-id="61e41-103">`GetMvid` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="61e41-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="61e41-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="61e41-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="8b0bb-102">Método ICorDebugEditAndContinueSnapshot::GetMvid</span><span class="sxs-lookup"><span data-stu-id="8b0bb-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="8b0bb-103">`GetMvid` é obsoleto.</span><span class="sxs-lookup"><span data-stu-id="8b0bb-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="8b0bb-104">Não chame esse método.</span><span class="sxs-lookup"><span data-stu-id="8b0bb-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="61e41-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="61e41-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b0bb-105">Veja também</span><span class="sxs-lookup"><span data-stu-id="8b0bb-105">See also</span></span>
 
-- [<span data-ttu-id="61e41-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="61e41-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="8b0bb-106">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="8b0bb-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
