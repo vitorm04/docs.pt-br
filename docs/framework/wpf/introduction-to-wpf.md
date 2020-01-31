@@ -1,17 +1,18 @@
 ---
 title: Introdução ao WPF
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454200"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744715"
 ---
 # <a name="wpf-overview"></a>Visão geral do WPF
 
@@ -182,7 +183,7 @@ Controles normalmente detectam e respondem a entradas do usuário. O [sistema de
 
 Aplicativos muitas vezes têm requisitos de entrada complexos. O WPF fornece um [sistema de comando](advanced/commanding-overview.md) que separa as ações de entrada do usuário do código que responde a essas ações.
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>{1&gt;{2&gt;Layout&lt;2}&lt;1}
 
 Quando você cria uma interface do usuário, você organiza os controles por local e tamanho para formar um layout. Um requisito chave de qualquer layout é se adaptar a alterações no tamanho da janela e exibir as configurações. Em vez de forçá-lo a escrever o código para adaptar um layout nessas circunstâncias, o WPF fornece um sistema de layout extensível e de primeira classe para você.
 
@@ -314,7 +315,7 @@ O WPF também inclui funcionalidades de renderização 3D que se integram com el
 
 Para obter mais informações, confira [Visão geral de elementos gráficos 3D](graphics-multimedia/3-d-graphics-overview.md).
 
-## <a name="animation"></a>Animação
+## <a name="animation"></a>{1&gt;Animação&lt;1}
 
 O suporte a animação do WPF permite que você faça os controles crescerem, tremerem, rodarem e esmaecerem, para criar transições de página interessantes e muito mais. Você pode animar a maioria das classes do WPF, até mesmo classes personalizadas. A figura a seguir mostra uma animação simples em ação:
 
@@ -649,21 +650,21 @@ Para obter mais informações sobre controles personalizados, confira [Visão ge
 
 ## <a name="wpf-best-practices"></a>Melhores práticas do WPF
 
-Assim como com qualquer plataforma de desenvolvimento, o WPF pode ser usado de várias maneiras para atingir o resultado desejado. Como uma maneira de garantir que os aplicativos WPF forneçam a experiência de usuário necessária e atendam às demandas do público em geral, há melhores práticas para acessibilidade, globalização e localização e desempenho. Para obter mais informações, consulte:
+Assim como com qualquer plataforma de desenvolvimento, o WPF pode ser usado de várias maneiras para atingir o resultado desejado. Como uma maneira de garantir que os aplicativos WPF forneçam a experiência de usuário necessária e atendam às demandas do público em geral, há melhores práticas para acessibilidade, globalização e localização e desempenho. Para obter mais informações, consulte .
 
 - [Acessibilidade](../ui-automation/accessibility-best-practices.md)
 - [Globalização e localização do WPF](advanced/wpf-globalization-and-localization-overview.md)
 - [Desempenho de aplicativo do WPF](advanced/optimizing-wpf-application-performance.md)
 - [Segurança do WPF](security-wpf.md)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Analisamos os principais recursos do WPF. Agora, é hora de criar seu primeiro aplicativo do WPF.
 
 > [!div class="nextstepaction"]
 > [Passo a passo: meu primeiro aplicativo da área de trabalho do WPF](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Introdução ao WPF](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

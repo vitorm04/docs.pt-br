@@ -12,12 +12,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: 823bc893c9384bb687e5f9a196abe497db14f4db
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7ab795cd4c6e0ff5e1451c05987848c41bd69577
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709472"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741743"
 ---
 # <a name="constructor-design"></a>Design do construtor
 
@@ -29,51 +29,51 @@ Construtores de tipo não podem usar parâmetros. Construtores de instância pod
 
 Os construtores são a maneira mais natural de criar instâncias de um tipo. A maioria dos desenvolvedores pesquisará e tentará usar um Construtor antes que eles considerem maneiras alternativas de criar instâncias (como métodos de fábrica).
 
-**✓ CONSIDER** fornecendo simples, idealmente padrão, construtores.
+✔️ Considere fornecer construtores simples, ideais, padrão.
 
 Um Construtor simples tem um número muito pequeno de parâmetros e todos os parâmetros são primitivos ou enums. Esses construtores simples aumentam a usabilidade da estrutura.
 
-**✓ CONSIDER** usando um método de fábrica estáticos em vez de um construtor, se a semântica da operação desejada não é mapeados diretamente para a construção de uma nova instância, ou se seguir as diretrizes de design do construtor parece não natural.
+✔️ Considere o uso de um método de fábrica estático em vez de um construtor se a semântica da operação desejada não for mapeada diretamente para a construção de uma nova instância ou se as diretrizes de design de Construtor a seguir não se sentirem naturais.
 
-**✓ DO** usar os parâmetros do construtor como atalhos para definir as propriedades principais.
+✔️ Use parâmetros de construtor como atalhos para definir propriedades principais.
 
 Não deve haver nenhuma diferença na semântica entre o uso do construtor vazio seguido por alguns conjuntos de propriedades e o uso de um construtor com vários argumentos.
 
-**✓ DO** usar o mesmo nome para os parâmetros do construtor e uma propriedade se os parâmetros do construtor são usados simplesmente definir a propriedade.
+✔️ usar o mesmo nome para parâmetros de construtor e uma propriedade se os parâmetros do Construtor forem usados para simplesmente definir a propriedade.
 
 A única diferença entre esses parâmetros e as propriedades deve estar entre maiúsculas e minúsculas.
 
-**✓ DO** mínimo de trabalho no construtor.
+✔️ EXECUTAR o mínimo de trabalho no construtor.
 
 Os construtores não devem fazer muito trabalho além de capturar os parâmetros do construtor. O custo de qualquer outro processamento deve ser atrasado até que seja necessário.
 
-**✓ DO** lançar exceções a partir de construtores de instância, se apropriado.
+✔️ gerar exceções de construtores de instância, se apropriado.
 
-**✓** Declare explicitamente o construtor público sem parâmetros em classes, se esse construtor for necessário.
+✔️ declarar explicitamente o construtor público sem parâmetros em classes, se esse construtor for necessário.
 
 Se você não declarar explicitamente nenhum construtor em um tipo, muitas linguagens (como C#) adicionarão automaticamente um construtor público sem parâmetros. (Classes abstratas obtêm um construtor protegido.)
 
 Adicionar um construtor com parâmetros a uma classe impede que o compilador adicione o construtor sem parâmetros. Isso geralmente causa alterações de interrupção acidentais.
 
-**X Evite** definir construtores sem parâmetros explicitamente em structs.
+❌ evitar definir explicitamente construtores sem parâmetros em structs.
 
 Isso torna a criação de matriz mais rápida, porque se o construtor sem parâmetros não estiver definido, ele não precisará ser executado em todos os slots na matriz. Observe que muitos compiladores, incluindo C#, não permitem que structs tenham construtores sem parâmetros por esse motivo.
 
-**X AVOID** chamando membros virtuais em um objeto dentro de seu construtor.
+❌ evitar chamar Membros virtuais em um objeto dentro de seu construtor.
 
 Chamar um membro virtual fará com que a substituição mais derivada seja chamada, mesmo que o construtor do tipo mais derivado ainda não tenha sido totalmente executado.
 
 ## <a name="type-constructor-guidelines"></a>Diretrizes de construtor de tipo
 
-**✓ DO** tornar construtores estáticos em particular.
+✔️ tornar os construtores estáticos privados.
 
 Um construtor estático, também chamado de construtor de classe, é usado para inicializar um tipo. O CLR chama o construtor estático antes que a primeira instância do tipo seja criada ou quaisquer membros estáticos nesse tipo sejam chamados. O usuário não tem controle sobre quando o construtor estático é chamado. Se um construtor estático não for privado, ele poderá ser chamado por um código diferente do CLR. Dependendo das operações executadas no construtor, isso pode causar um comportamento inesperado. O C# compilador força os construtores estáticos a serem privados.
 
-**X DO NOT** lançar exceções a partir de construtores estáticos.
+❌ não lançam exceções de construtores estáticos.
 
 Se uma exceção for gerada de um construtor de tipo, o tipo não poderá ser usado no domínio do aplicativo atual.
 
-**✓ CONSIDER** inicializar campos estáticos embutido em vez de usar explicitamente construtores estáticos, porque o tempo de execução é capaz de otimizar o desempenho de tipos que não tem um construtor estático definido explicitamente.
+✔️ Considere a inicialização de campos estáticos embutidos em vez de usar construtores estáticos explicitamente, pois o tempo de execução é capaz de otimizar o desempenho dos tipos que não têm um construtor estático explicitamente definido.
 
 *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
 

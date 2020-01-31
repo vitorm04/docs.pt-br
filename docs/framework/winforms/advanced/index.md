@@ -1,16 +1,16 @@
 ---
-title: Aprimorando aplicativos do Windows Forms
+title: Aprimorar aplicativos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c9287870d0a3852cf8dda21c4bd249eca09c114
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942903"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744831"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Aprimorando aplicativos do Windows Forms
 O Windows Forms contém muitos recursos que você pode usar para aprimorar seus aplicativos do Windows para atender às necessidades específicas dos seus usuários. Os tópicos a seguir descrevem esses recursos e como usá-los.  
@@ -31,7 +31,7 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Rede em Aplicativos dos Windows Forms](networking-in-windows-forms-applications.md)  
  Contém links para tópicos que descrevem e mostram como usar redes nos Windows Forms.  
   
- [Globalizando aplicativos dos Windows Forms](globalizing-windows-forms.md)  
+ [Globalizando aplicativos Windows Forms](globalizing-windows-forms.md)  
  Contém links para tópicos que mostram como globalizar aplicativos dos Windows Forms.  
   
  [Windows Forms e Aplicativos Não Gerenciados](windows-forms-and-unmanaged-applications.md)  
@@ -43,7 +43,7 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Gerenciamento de Energia nos Windows Forms](power-management-in-windows-forms.md)  
  Descreve como gerenciar o uso de energia em Aplicativos dos Windows Forms.  
   
- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)  
+ [Herança visual do Windows Forms](windows-forms-visual-inheritance.md)  
  Descreve como herdar de um formulário base.  
   
  [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)  
@@ -58,9 +58,9 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Usando Controles do WPF](using-wpf-controls.md)  
  Descreve como usar controles WPF em seus aplicativos dos Windows Forms.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Sistemas de Ajuda em Aplicativos dos Windows Forms](help-systems-in-windows-forms-applications.md)  
  Contém links para tópicos que descrevem e mostram como fornecer Ajuda do usuário em Aplicativos dos Windows Forms.  
   
- [Guia de introdução ao Windows Forms](../getting-started-with-windows-forms.md)  
+ [Introdução ao Windows Forms](../getting-started-with-windows-forms.md)  
  Contém links para tópicos que descrevem como usar os recursos básicos dos Windows Forms.

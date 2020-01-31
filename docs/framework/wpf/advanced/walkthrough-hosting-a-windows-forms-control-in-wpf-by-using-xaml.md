@@ -1,15 +1,16 @@
 ---
-title: 'Instruções passo a passo: hospedando um controle dos Windows Forms no WPF usando XAML'
+title: Hospedar um controle de Windows Forms no WPF usando XAML
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 3b4b743b07876f240366b2d2d19667405941a40b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: a0a88c39a25e5292365a6447cefdd8f31db5e5c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976546"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744927"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Instruções passo a passo: hospedando um controle dos Windows Forms no WPF usando XAML
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece muitos controles com um amplo conjunto de recursos. No entanto, às vezes, convém usar controles do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] em suas páginas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode ter um investimento substancial em controles existentes do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou pode ter um controle do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que fornece funcionalidade exclusiva.  
@@ -18,7 +19,7 @@ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
   
  Para uma listagem de código completa de todas as tarefas mostradas neste passo a passo, veja [Hospedando um controle dos Windows Forms no WPF usando exemplo XAML](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWpfWithXaml).
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}  
 
 É necessário o Visual Studio para concluir este passo a passo.  
   
@@ -50,7 +51,7 @@ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
   
 6. Pressione F5 para compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

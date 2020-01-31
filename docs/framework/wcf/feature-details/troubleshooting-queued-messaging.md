@@ -2,12 +2,12 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345584"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742674"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 
@@ -113,10 +113,6 @@ Para problemas de host da Web relacionados à não segurança, consulte: [hosped
 
 **R:** Defina preenchimento automático =`true` na operação que corresponde à última mensagem na sessão e defina AutoCompletar =`false` em todas as operações de serviço restantes.
 
-**P:** Onde posso encontrar respostas para perguntas comuns sobre o MSMQ?
-
-**R:** Para obter mais informações sobre o MSMQ, consulte [enfileiramento de mensagens da Microsoft](https://go.microsoft.com/fwlink/?LinkId=87810).
-
 **P:** Por que meu serviço lança um `ProtocolException` ao ler de uma fila que contém mensagens de sessão enfileiradas e mensagens de datagrama em fila?
 
 **R:** Há uma diferença fundamental no modo como as mensagens de sessão enfileiradas e as mensagens de datagrama em fila são compostas. Por isso, um serviço que está esperando ler uma mensagem de sessão em fila não pode receber uma mensagem de datagrama enfileirada e um serviço esperando ler uma mensagem de datagrama em fila não pode receber uma mensagem de sessão. A tentativa de ler os dois tipos de mensagens da mesma fila gera a seguinte exceção:
@@ -154,11 +150,11 @@ Outra solução alternativa é obter a <xref:System.ServiceModel.MsmqTransportSe
 
 Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
-**P:** Quando envio uma mensagem com associação padrão (segurança de transporte ativada) em Active Directory a uma fila, recebo uma mensagem "certificado interno não encontrado". Como corrijo isso?
+**P:** Quando envio uma mensagem com associação padrão (segurança de transporte ativada) em Active Directory a uma fila, recebo uma mensagem "certificado interno não encontrado". Como fazer corrigir isso?
 
 **R:** Isso significa que o certificado em Active Directory para o remetente deve ser renovado. Para fazer isso, abra **painel de controle**, **Ferramentas administrativas**, **Gerenciamento do computador**, clique com o botão direito do mouse em **MSMQ**e selecione **Propriedades**. Selecione a guia **certificado de usuário** e clique no botão **renovar** .
 
-**P:** Quando envio uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especifico o certificado a ser usado, recebo uma mensagem de "certificado inválido". Como corrijo isso?
+**P:** Quando envio uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especifico o certificado a ser usado, recebo uma mensagem de "certificado inválido". Como fazer corrigir isso?
 
 **R:** Você não pode usar um repositório de certificados do computador local com o modo de certificado. Você precisa copiar o certificado do repositório de certificados do computador para o repositório de usuários atual usando o snap-in de certificado. Para obter o snap-in de certificado:
 
@@ -174,19 +170,19 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 6. Em seguida, adicione um segundo snap-in de certificados usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **Avançar**.
 
-7. Selecione **Computador Local** e clique em **Concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
+7. Selecione **computador local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
 
 **P:** Quando meu serviço lê de uma fila em outro computador no modo de grupo de trabalho, obtenho uma exceção de "acesso negado".
 
 **R:** No modo de grupo de trabalho, para que um aplicativo remoto tenha acesso à fila, o aplicativo deve ter permissão para acessar a fila. Adicione "logon anônimo" à ACL (lista de controle de acesso) da fila e conceda a ela permissão de leitura.
 
-**P:** Quando um cliente de serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem em fila, o envio falha com um certificado inválido. Como corrijo isso?
+**P:** Quando um cliente de serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem em fila, o envio falha com um certificado inválido. Como fazer corrigir isso?
 
 **R:** Verifique a configuração de associação. A associação padrão tem a segurança de transporte MSMQ ativada para assinar a mensagem. Desative-o.
 
 ### <a name="remote-transacted-receives"></a>Recebimentos transacionados remotamente
 
-**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que fazer para corrigir isso?
+**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que posso fazer para corrigir isso?
 
 **R:** Há três motivos possíveis para isso:
 

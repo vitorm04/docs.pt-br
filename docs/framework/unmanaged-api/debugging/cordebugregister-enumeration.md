@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9af265144c9e38ffe132c16a318c374b08a920e3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132769"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778250"
 ---
 # <a name="cordebugregister-enumeration"></a>Enumeração CorDebugRegister
 Especifica os registros associados a uma determinada arquitetura de processador.  
@@ -114,7 +114,7 @@ typedef enum CorDebugRegister {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`REGISTER_INSTRUCTION_POINTER`|Um registro de ponteiro de instrução em qualquer processador.|  
 |`REGISTER_STACK_POINTER`|Um registro de ponteiro de pilha em qualquer processador.|  
@@ -198,7 +198,7 @@ typedef enum CorDebugRegister {
   
  Por exemplo, se for necessário especificar o registro de dados #83 no processador IA-64, use `REGISTER_IA64_R0` + 83.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -207,6 +207,6 @@ typedef enum CorDebugRegister {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Declarando enumerações](debugging-enumerations.md)

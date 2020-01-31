@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741312"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778763"
 ---
 # <a name="ui-automation-events-for-clients"></a>Automação de Eventos de Interface de Usuário para Clientes.
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "75741312"
  A eficiência também é aprimorada pela capacidade de escutar eventos somente dentro de um escopo definido. Por exemplo, um cliente pode escutar eventos de alteração de foco em todos os elementos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na árvore, ou em apenas um elemento e seus descendentes.  
   
 > [!NOTE]
-> Não presuma que todos os eventos possíveis sejam gerados por um provedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por exemplo, nem todas as alterações de propriedade fazem com que eventos sejam gerados pelos provedores de proxy padrão para controles [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e Win32.  
+> Não presuma que todos os eventos possíveis sejam gerados por um provedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por exemplo, nem todas as alterações de propriedade fazem com que eventos sejam gerados pelos provedores de proxy padrão para controles Windows Forms e Win32.  
   
  Para obter uma visão mais ampla de eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75741312"
 |Método|Tipo de Evento|Tipo de argumentos de evento|Tipo de delegado|  
 |------------|----------------|--------------------------|-------------------|  
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Alteração de foco|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Alteração da propriedade|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Alteração de propriedade|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Alteração de estrutura|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Todos os outros eventos, identificados por um <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> ou <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   

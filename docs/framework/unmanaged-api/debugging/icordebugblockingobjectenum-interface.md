@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 208e5c2d-3f3f-404e-8b3c-7cccc14ddb16
 topic_type:
 - apiref
-ms.openlocfilehash: bfd61d985eac3ab56d8a5df9474b2b1a9f641f3e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: be1e1cd0d38ad71de43478af5565bb1ac98a8c0d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122851"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778010"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>Interface ICorDebugBlockingObjectEnum
-Fornece um enumerador para uma lista de estruturas [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) . Essa interface é uma subclasse da interface ICorDebugEnum.  
+Fornece um enumerador para uma lista de estruturas [CorDebugBlockingObject](cordebugblockingobject-structure.md) . Essa interface é uma subclasse da interface ICorDebugEnum.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|Enumera por meio de uma lista de estruturas [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .|  
+|[Método Next](icordebugblockingobjectenum-next-method.md)|Enumera por meio de uma lista de estruturas [CorDebugBlockingObject](cordebugblockingobject-structure.md) .|  
   
 ## <a name="remarks"></a>Comentários  
  Cada estrutura de `CorDebugBlockingObject` representa um objeto que está bloqueando um thread.  
@@ -36,7 +36,7 @@ Fornece um enumerador para uma lista de estruturas [CorDebugBlockingObject](../.
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -45,7 +45,7 @@ Fornece um enumerador para uma lista de estruturas [CorDebugBlockingObject](../.
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Segurança parcialmente confiável do WPF
+title: Segurança de confiança parcial
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636543"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743335"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
 <a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, as linguagens de script HTML e do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, o WPF conta com a CAS (segurança de acesso do código) e o ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  

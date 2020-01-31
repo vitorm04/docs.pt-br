@@ -2,12 +2,12 @@
 title: Implementar conexões SQL resilientes com o Entity Framework Core
 description: Saiba como implementar conexões SQL resilientes com o Entity Framework Core. Essa técnica é importante principalmente ao usar o Banco de Dados SQL do Azure na nuvem.
 ms.date: 10/16/2018
-ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732731"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777057"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementar conexões SQL resilientes com o Entity Framework Core
 
@@ -41,7 +41,7 @@ public class Startup
 
 ## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>Estratégias de execução e transações explícitas que usam BeginTransaction e várias DbContexts
 
-Quando novas tentativas são habilitadas em conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada para `SaveChanges` serão repetidas como uma unidade se ocorrer uma falha transitória.
+Quando as repetições estão habilitadas nas conexões do EF Core, cada operação executada que usa o EF Core se torna sua própria operação repetível. Cada consulta e cada chamada para `SaveChanges` serão repetidas como uma unidade se ocorrer uma falha transitória.
 
 No entanto, se seu código iniciar uma transação usando `BeginTransaction`, você estará definindo seu próprio grupo de operações que precisam ser tratadas como uma unidade. Tudo dentro da transação deverá ser revertido se ocorrer uma falha.
 

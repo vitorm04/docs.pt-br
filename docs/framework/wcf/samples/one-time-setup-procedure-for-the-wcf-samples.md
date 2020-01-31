@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544657"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744780"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 
@@ -24,9 +24,9 @@ O diretório virtual **ServiceModelSamples** é usado para compilar e executar t
 
 2. Verifique se o .NET Framework 4 está instalado. Pesquise o seguinte diretório para o v 4.0 (ou posterior): **\Windows\Microsoft.NET\Framework**
 
-3. Se o Visual Studio 2012 não estiver instalado e seu sistema operacional não for o Windows Server 2008 SP2 ou posterior, instale o [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
+3. Verifique se você tem o Visual Studio 2012 ou posterior instalado ou se o seu sistema operacional é o Windows Server 2008 SP2 ou posterior.
 
-4. Execute os seguintes comandos. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [falha do IIS Hosted Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
+4. Execute os comandos a seguir. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [falha do IIS Hosted Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 
     > [!WARNING]
     > Se o IIS for reinstalado, os comandos a seguir precisarão ser executados novamente.
@@ -47,7 +47,7 @@ O diretório virtual **ServiceModelSamples** é usado para compilar e executar t
 
 8. Depois de instalar os exemplos, vá para: \<InstallDrive >: **\ WF_WCF_Samples \wcf\setup\\**
 
-9. Execute o arquivo em lotes **Setupvroot. bat** . As seguintes etapas são executadas:
+9. Execute o arquivo em lotes **Setupvroot. bat** . As etapas a seguir são executadas:
 
     - Um diretório virtual é criado no IIS chamado ServiceModelSamples.
 

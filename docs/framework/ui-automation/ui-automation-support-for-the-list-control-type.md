@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: d870452348f8837ec6773fc066ed52844f7acccd
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17c0116ba6610ef28e873696bbf3162175bc0601
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741615"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778614"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>Suporte de automação de interface do usuário para o tipo de controle List
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741615"
   
  O tipo de controle lista fornece uma maneira de organizar um grupo ou grupos de itens simples e permite que um usuário selecione um ou mais desses itens. O tipo de controle List tem uma restrição flexível sobre quais tipos de elementos filho ele pode conter. Isso permite que os provedores de automação da interface do usuário ofereçam suporte a um elemento bem conhecido para contêineres de seleção.  
   
- Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles que implementam o tipo de controle de lista, seja [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]. Controles de contêiner de lista são um exemplo de controles que implementam o tipo de controle de lista.  
+ Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles que implementam o tipo de controle de lista, seja [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms. Controles de contêiner de lista são um exemplo de controles que implementam o tipo de controle de lista.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -76,11 +76,11 @@ Um controle de lista não deve ter itens que tenham uma relação hierárquica d
 |Propriedade padrão de controle/padrão|Suporte/valor|{1&gt;Observações&lt;1}|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Necessário|Todos os controles que dão suporte ao tipo de controle List devem implementar `ISelectionProvider` quando um estado de seleção é mantido entre os itens contidos no controle. Se os itens dentro do contêiner não forem selecionáveis, o tipo de controle grupo deverá ser usado.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Depende|Os controles de lista nem sempre exigem que um item seja selecionado.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Depende|Os controles de lista podem ser contêineres de seleção única ou múltipla.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depende|Implemente esse padrão de controle se os itens no contêiner forem roláveis.|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Depende|Implemente esse padrão quando a navegação de grade precisar estar disponível em um item por item base.|  
-|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Depende|Implemente esse padrão de controle se o controle puder dar suporte a várias exibições dos itens no contêiner.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Dependem|Os controles de lista nem sempre exigem que um item seja selecionado.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Dependem|Os controles de lista podem ser contêineres de seleção única ou múltipla.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Dependem|Implemente esse padrão de controle se os itens no contêiner forem roláveis.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Dependem|Implemente esse padrão quando a navegação de grade precisar estar disponível em um item por item base.|  
+|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Dependem|Implemente esse padrão de controle se o controle puder dar suporte a várias exibições dos itens no contêiner.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|{1&gt;Nunca&lt;1}|`ITableProvider` nunca tem suporte para o tipo de controle de lista. Se o controle deve dar suporte a esse padrão de controle, o controle deve ser baseado no tipo de controle da grade de dados.|  
   
 <a name="Required_UI_Automation_Events"></a>   
@@ -89,18 +89,18 @@ Um controle de lista não deve ter itens que tenham uma relação hierárquica d
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte/valor|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

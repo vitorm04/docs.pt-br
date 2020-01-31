@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20cea94961a250c3981d892910da1dcee20a060b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122166"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783734"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>Método ICorDebugDataTarget::ReadVirtual
 Obtém um bloco de memória contígua a partir do endereço especificado e a retorna no buffer fornecido.  
@@ -52,7 +52,7 @@ HRESULT ReadVirtual(
 ## <a name="remarks"></a>Comentários  
  Se o primeiro byte (no endereço inicial especificado) puder ser lido, a chamada deverá retornar êxito (para dar suporte à leitura eficiente de estruturas de dados com comprimento autodescritivo, como cadeias de caracteres terminadas em nulo).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,8 +61,8 @@ HRESULT ReadVirtual(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugDataTarget](icordebugdatatarget-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando um controle dos Windows Forms que aproveite as funcionalidadesde tempo de design do Visual Studio'
+title: Criar um controle que aproveita os recursos de tempo de design do Visual Studio
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459529"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744081"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>Walkthrough: criar um controle que aproveita os recursos de tempo de design
 
@@ -36,7 +36,7 @@ Quando você terminar com este guia, o controle personalizado terá uma aparênc
 
 Para obter a listagem de códigos completa, consulte [Como criar um controle dos Windows Forms que aproveita funcionalidades de tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para concluir este passo a passos, você precisará do Visual Studio.
 
@@ -120,13 +120,13 @@ Você associa o controle a seu designer usando a classe <xref:System.ComponentMo
 
 3. Altere a declaração de `DemoMarqueeControl` para herdar da classe `MarqueeControl`.
 
-4. Compile o projeto.
+4. Crie o projeto.
 
 5. Abra o Form1 no Designer de Formulários do Windows.
 
 6. Localize a guia **Componentes MarqueeControlTest** na **Caixa de Ferramentas** e abra-a. Arraste um `DemoMarqueeControl` da **Caixa de Ferramentas** para seu formulário.
 
-7. Compile o projeto.
+7. Crie o projeto.
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>Configurar o projeto para depuração em tempo de design
 
@@ -486,7 +486,7 @@ A propriedade `MarqueeLightShape` dá suporte a dois tipos de formas de luz: `Sq
 
 1. Adicione um novo item de <xref:System.Windows.Forms.UserControl> ao projeto `MarqueeControlLibrary`. Dê ao novo arquivo de origem um nome de base de **LightShapeSelectionControl**.
 
-2. Arraste dois controles de <xref:System.Windows.Forms.Panel> da **caixa de ferramentas** para a `LightShapeSelectionControl`. Nomeie-os `squarePanel` e `circlePanel`. Posicione-os lado a lado. Defina a propriedade <xref:System.Windows.Forms.Control.Size%2A> de ambos os controles de <xref:System.Windows.Forms.Panel> como **(60, 60)** . Defina a propriedade <xref:System.Windows.Forms.Control.Location%2A> do controle de `squarePanel` como **(8, 10)** . Defina a propriedade <xref:System.Windows.Forms.Control.Location%2A> do controle de `circlePanel` como **(80, 10)** . Por fim, defina a propriedade <xref:System.Windows.Forms.Control.Size%2A> da `LightShapeSelectionControl` como **(150, 80)** .
+2. Arraste dois controles de <xref:System.Windows.Forms.Panel> da **caixa de ferramentas** para a `LightShapeSelectionControl`. Nomeie-os como `squarePanel` e `circlePanel`. Posicione-os lado a lado. Defina a propriedade <xref:System.Windows.Forms.Control.Size%2A> de ambos os controles de <xref:System.Windows.Forms.Panel> como **(60, 60)** . Defina a propriedade <xref:System.Windows.Forms.Control.Location%2A> do controle de `squarePanel` como **(8, 10)** . Defina a propriedade <xref:System.Windows.Forms.Control.Location%2A> do controle de `circlePanel` como **(80, 10)** . Por fim, defina a propriedade <xref:System.Windows.Forms.Control.Size%2A> da `LightShapeSelectionControl` como **(150, 80)** .
 
 3. Abra o arquivo de origem `LightShapeSelectionControl` no **Editor de Código**. Na parte superior do arquivo, importe o namespace <xref:System.Windows.Forms.Design?displayProperty=nameWithType>:
 
@@ -554,7 +554,7 @@ Neste ponto, você pode compilar o projeto `MarqueeControlLibrary`. Teste a impl
 
 4. Arraste uma instância do controle `MarqueeText` para a superfície de design `DemoMarqueeControl`.
 
-5. Compile a solução.
+5. {1&gt;Compile a solução.&lt;1}
 
 6. Clique com o botão direito do mouse no `DemoMarqueeControl` e, do menu de atalho, selecione a opção **Executar Teste** para iniciar a animação. Clique em **Parar Teste** para interromper a animação.
 
@@ -594,7 +594,7 @@ Neste ponto, você pode compilar o projeto `MarqueeControlLibrary`. Teste a impl
 
 13. Defina o projeto `MarqueeControlTest` como o projeto de inicialização e execute-o. Você verá o formulário exibindo seu `DemoMarqueeControl`. Selecione o botão **Iniciar** para iniciar a animação. Você deve ver o texto piscando e as luzes se movendo ao redor da borda.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 O `MarqueeControlLibrary` demonstra uma implementação simples de controles personalizados e designers associados. Você pode tornar esse exemplo mais sofisticado de várias maneiras:
 
@@ -608,7 +608,7 @@ O `MarqueeControlLibrary` demonstra uma implementação simples de controles per
 
 - Controle o modo como os controles são serializados e como o código é gerado para eles. Para obter mais informações, consulte [Geração e compilação de código-fonte dinâmico](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

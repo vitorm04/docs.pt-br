@@ -1,5 +1,5 @@
 ---
-title: Visão geral de renderização de gráficos do WPF
+title: Visão geral da renderização de gráficos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004172"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744799"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Visão geral de renderização de gráficos do WPF
 Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ele se concentra na função da classe <xref:System.Windows.Media.Visual> para suporte de renderização no modelo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -38,7 +38,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
 - Manipulação de eventos  
   
-- {1&gt;Layout&lt;1}  
+- {1&gt;{2&gt;Layout&lt;2}&lt;1}  
   
 - Estilos  
   
@@ -65,7 +65,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
 |Tipo de conteúdo de desenho|Descrição|  
 |--------------------------|-----------------|  
 |Gráficos vetoriais|Representa dados de gráficos vetoriais e quaisquer informações <xref:System.Windows.Media.Brush> e <xref:System.Windows.Media.Pen> associadas.|  
-|Imagem|Representa uma imagem em uma região definida por um <xref:System.Windows.Rect>.|  
+|Image|Representa uma imagem em uma região definida por um <xref:System.Windows.Rect>.|  
 |Glifo|Representa um desenho que renderiza um <xref:System.Windows.Media.GlyphRun>, que é uma sequência de glifos de um recurso de fonte especificado. Este é o modo pelo qual o texto é representado.|  
 |Vídeo|Representa um desenho que renderiza vídeo.|  
   
@@ -77,7 +77,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
  A ilustração a seguir mostra a ordem na qual <xref:System.Windows.Media.DrawingGroup> operações são aplicadas durante a sequência de renderização.  
   
- ![Ordem das operações do drawinggroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+ ![Ordem das operações do DrawingGroup](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 Ordem das operações do DrawingGroup  
   
  Para obter mais informações, consulte a [Visão geral de objetos de desenho](drawing-objects-overview.md).  
@@ -179,7 +179,7 @@ Diagrama de árvore lógica
 ### <a name="profiling-visual-performance"></a>Criação de perfil de desempenho Visual  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um pacote de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A ferramenta Visual Profiler fornece uma exibição gráfica sofisticada de dados de desempenho, por meio do mapeamento diretamente para a árvore visual do aplicativo. Nessa tela, a seção **Uso de CPU** do Visual Profiler lhe dá um detalhamento preciso do uso de um objeto de serviços do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], assim como renderização e layout.  
   
- (./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04") de ![saída de exibição do Visual Profiler]  
+ ![Saída de exibição do Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Saída de exibição do Visual Profiler  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Saída de exibição do Visual Profiler
   
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dá suporte ao dimensionamento automático usando o pixel independente de dispositivo como sua principal unidade de medida, em vez de pixels de hardware; texto e elementos gráficos são redimensionados adequadamente sem nenhum trabalho extra do desenvolvedor do aplicativo. A ilustração a seguir mostra um exemplo de como texto e elementos gráficos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparecem em diferentes configurações de DPI.  
   
- ![Gráficos e texto em diferentes configurações de DPI](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![Elementos gráficos e texto em diferentes configurações de DPI](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 Elementos gráficos e texto em diferentes configurações de DPI  
   
 <a name="visualtreehelper_class"></a>   
@@ -247,7 +247,7 @@ Elementos gráficos e texto em diferentes configurações de DPI
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

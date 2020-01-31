@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: realizando tarefas comuns usando smart tags em controles dos Windows Forms'
+title: Tarefas comuns de desempenho usando marcas inteligentes em controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
@@ -9,12 +9,12 @@ ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 826313d0a89410f62c034a5fba4dee32e90a1750
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459579"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744265"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>Walkthrough: executar tarefas comuns usando marcas inteligentes
 
@@ -54,7 +54,7 @@ Smart tags sempre estão disponíveis no tempo de design nos controles que as of
 
 6. Clique no glifo de marca inteligente. No menu de atalho que aparece ao lado do glifo, selecione o item **Orientação de divisor horizontal**. Observe que a barra de divisão do controle de <xref:System.Windows.Forms.SplitContainer> agora é orientada horizontalmente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

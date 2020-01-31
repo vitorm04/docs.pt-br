@@ -1,5 +1,6 @@
 ---
 title: Como configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MIME types [WPF], registering
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a731dc49556a73c585c6201a80ea3ea77c15cb11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d557ac6cd380edcbc93b5315f6356697817274bf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124423"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740413"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Como configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ac59d27-783f-4a87-b7a8-baa3ccc54582
 topic_type:
 - apiref
-ms.openlocfilehash: a72eabb1b405c67f5603164e56a589a237603d2f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 46c8b3fb2c9e7c353f74ef589e21f2a61df618fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130689"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777309"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>Método ICorDebugManagedCallback::LogSwitch
 Notifica o depurador de que um thread gerenciado Common Language Runtime (CLR) chamou um método na classe <xref:System.Diagnostics.Switch> para criar, modificar ou excluir uma opção de depuração/rastreamento.  
@@ -48,7 +48,7 @@ HRESULT LogSwitch (
  no Um valor que indica o nível de severidade da mensagem descritiva que foi gravada no log de eventos.  
   
  `ulReason`  
- no Um valor da enumeração [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) que indica a operação executada na opção de depuração/rastreamento.  
+ no Um valor da enumeração [LogSwitchCallReason](logswitchcallreason-enumeration.md) que indica a operação executada na opção de depuração/rastreamento.  
   
  `pLogSwitchName`  
  no Um ponteiro para o nome da opção de depuração/rastreamento.  
@@ -56,7 +56,7 @@ HRESULT LogSwitch (
  `pParentName`  
  no Um ponteiro para o nome do pai da opção de depuração/rastreamento.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -65,6 +65,6 @@ HRESULT LogSwitch (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635130"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742651"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Segurança de transporte com autenticação do Windows
-O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o cliente do Windows Communication Foundation (WCF). Para obter mais informações sobre a programação, consulte [como: Proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
+O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e um serviço protegido pela segurança do Windows. Para obter mais informações sobre programação, consulte [como proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
   
- Um serviço Web de intranet exibe informações de recursos humanos. O cliente é um aplicativo de formulário do Windows. O aplicativo é implantado em um domínio com um controlador de Kerberos a proteção do domínio.  
+ Um serviço Web de intranet exibe informações de recursos humanos. O cliente é um aplicativo do Windows Form. O aplicativo é implantado em um domínio com um controlador Kerberos protegendo o domínio.  
   
  ![Segurança de transporte com autenticação do Windows](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transporte|  
-|Interoperabilidade|Somente o WCF|  
+|Modo de segurança|Transport|  
+|Interoperabilidade|Somente WCF|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando a autenticação integrada do Windows)<br /><br /> Sim (usando a autenticação integrada do Windows)|  
-|Integridade|Sim|  
+|Verifica|Sim|  
 |Confidencialidade|Sim|  
-|Transporte|NET.TCP|  
-|Associação|<xref:System.ServiceModel.NetTcpBinding>|  
+|Transport|Virtual. Protocol|  
+|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Serviço  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+## <a name="service"></a>Service  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
-- Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem configuração.  
   
-- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade de serviço que usa uma segurança do Windows.  
@@ -42,7 +42,7 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configuração  
+### <a name="configuration"></a>Configuração do  
  A configuração a seguir pode ser usada em vez do código para configurar o ponto de extremidade de serviço:  
   
 ```xml  
@@ -74,22 +74,22 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
-- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- O código a seguir cria o cliente. A associação está configurada para usar a segurança de modo de transporte, com o transporte TCP, com o tipo de credencial de cliente definido como Windows.  
+ O código a seguir cria o cliente. A associação é configurada para usar a segurança do modo de transporte, com o transporte TCP, com o tipo de credencial do cliente definido como Windows.  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configuração  
+### <a name="configuration"></a>Configuração do  
  A configuração a seguir pode ser usada em vez do código para criar o cliente.  
   
 ```xml  
@@ -117,8 +117,8 @@ O cenário a seguir mostra um serviço protegidos pela segurança do Windows e o
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Como: Proteger um serviço com credenciais do Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Como proteger um serviço com credenciais Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

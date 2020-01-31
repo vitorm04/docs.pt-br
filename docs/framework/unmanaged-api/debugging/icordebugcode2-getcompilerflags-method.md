@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532e9dfd-d114-4c75-b952-1accce102643
 topic_type:
 - apiref
-ms.openlocfilehash: d948fda048e724ad11c59bf7d4776ee2ca6c8d58
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ad1fb1bcb43dda9796b54cbf868f89c001995da
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125551"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777897"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>Método ICorDebugCode2::GetCompilerFlags
 
@@ -37,9 +37,9 @@ HRESULT GetCompilerFlags (
 ## <a name="parameters"></a>Parâmetros
 
 `pdwFlags`  
-fora Um ponteiro para um valor da enumeração [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) que especifica o comportamento do compilador JIT ou do gerador de imagem nativa.
+fora Um ponteiro para um valor da enumeração [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) que especifica o comportamento do compilador JIT ou do gerador de imagem nativa.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 

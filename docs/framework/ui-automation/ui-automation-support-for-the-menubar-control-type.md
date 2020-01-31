@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: c82d0d1103d13da3da933ae4ecbb00d0618ad3c6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a6727b298c6289297fe049ffa4e64623bc9b711a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741590"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778449"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle MenuBar
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741590"
   
  Os controles de barra de menus são um exemplo de controles que implementam o tipo de controle MenuBar. As barras de menu fornecem um meio para os usuários ativarem comandos e opções contidas em um aplicativo.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle MenuBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle MenuBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -47,7 +47,7 @@ ms.locfileid: "75741590"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|verdadeiro|O controle de barra de menus sempre é incluído na exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle barra de menus sempre é incluído na exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Consulte observações.|O valor dessa propriedade depende de se o controle é visível na tela.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Depende|Essa propriedade expõe se o controle de barra de menus é horizontal ou vertical.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Dependem|Essa propriedade expõe se o controle de barra de menus é horizontal ou vertical.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|verdadeiro|Os controles de barra de menus têm foco no teclado, pois os controles que eles contêm podem ter o foco do teclado.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Consulte observações.|Nenhum cenário para quando o texto de ajuda é necessário para um controle de barra de menus.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|`Null`|Barras de menu nunca têm teclas de aceleração.|  
@@ -59,9 +59,9 @@ ms.locfileid: "75741590"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Depende|Se o controle puder ser expandido ou recolhido, implemente <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.|  
-|<xref:System.Windows.Automation.Provider.IDockProvider>|Depende|Se o controle puder ser encaixado em partes diferentes da tela, implemente <xref:System.Windows.Automation.Provider.IDockProvider>.|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|Depende|Se o controle puder ser redimensionado, girado ou movido, ele deverá implementar <xref:System.Windows.Automation.Provider.ITransformProvider>.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Dependem|Se o controle puder ser expandido ou recolhido, implemente <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.|  
+|<xref:System.Windows.Automation.Provider.IDockProvider>|Dependem|Se o controle puder ser encaixado em partes diferentes da tela, implemente <xref:System.Windows.Automation.Provider.IDockProvider>.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|Dependem|Se o controle puder ser redimensionado, girado ou movido, ele deverá implementar <xref:System.Windows.Automation.Provider.ITransformProvider>.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -72,7 +72,7 @@ ms.locfileid: "75741590"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

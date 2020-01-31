@@ -1,17 +1,17 @@
 ---
-title: Controle WebBrowser (Windows Forms)
+title: Controle WebBrowser
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebBrowser control [Windows Forms]
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: 34194bf707cd309768b00fd903d1f46aff7dd170
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2dc9d124623d8018356c147c34ac6bc8da82209
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759876"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740001"
 ---
 # <a name="webbrowser-control-windows-forms"></a>Controle WebBrowser (Windows Forms)
 O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recursos de navegação na Web para seu aplicativo.  
@@ -23,23 +23,23 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  [Segurança do WebBrowser](webbrowser-security.md)  
  Discute problemas de segurança relacionados ao controle.  
   
- [Como: Navegue até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Como navegar até uma URL com o controle WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  Demonstra como usar o controle para navegar até uma URL específica.  
   
- [Como: Imprimir com um controle WebBrowser](how-to-print-with-a-webbrowser-control.md)  
+ [Como imprimir com um controle WebBrowser](how-to-print-with-a-webbrowser-control.md)  
  Demonstra como imprimir uma página da Web sem exibi-la.  
   
- [Como: Adicionar recursos do navegador da Web a um aplicativo do Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Como adicionar recursos do navegador da Web a um Aplicativo dos Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Descreve como inicializar o controle para ser usado como um navegador da Web.  
   
- [Como: Criar um visualizador de documento HTML em um aplicativo do Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Como criar um visualizador de documento HTML em um Aplicativo dos Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  Descreve como inicializar o controle a ser usado como um visualizador HTML.  
   
- [Como: Implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](implement-two-way-com-between-dhtml-and-client.md)  
+ [Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](implement-two-way-com-between-dhtml-and-client.md)  
  Descreve como configurar a comunicação bidirecional entre o código do aplicativo e DHTML em uma página da Web hospedada pelo controle.  
   
- [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)  
- Fornece tópicos que descrevem como manipular ou criar páginas HTML hospedadas pelo <xref:System.Windows.Forms.WebBrowser> controle.  
+ [Usando o Modelo de Objeto do Documento de HTML gerenciado](using-the-managed-html-document-object-model.md)  
+ Fornece tópicos que descrevem como manipular ou criar páginas HTML hospedadas pelo controle de <xref:System.Windows.Forms.WebBrowser>.  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.WebBrowser>  
@@ -78,6 +78,6 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Descreve esta enumeração e todos os seus valores.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: imprimir elementos gráficos no Windows Forms'
+title: 'Como: imprimir gráficos'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052810"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740646"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>Como: imprimir elementos gráficos no Windows Forms
-Com frequência, convém imprimir elementos gráficos em seu aplicativo baseado em Windows. O <xref:System.Drawing.Graphics> classe fornece métodos para desenhar objetos em um dispositivo, como uma tela ou impressora.  
+# <a name="how-to-print-graphics-in-windows-forms"></a>Como imprimir elementos gráficos no Windows Forms
+Com frequência, você desejará imprimir elementos gráficos em seu aplicativo baseado no Windows. A classe <xref:System.Drawing.Graphics> fornece métodos para desenhar objetos em um dispositivo, como uma tela ou impressora.  
   
-### <a name="to-print-graphics"></a>Para imprimir elementos gráficos  
+### <a name="to-print-graphics"></a>Para imprimir gráficos  
   
-1. Adicionar um <xref:System.Drawing.Printing.PrintDocument> ao seu formulário.  
+1. Adicione um componente <xref:System.Drawing.Printing.PrintDocument> ao formulário.  
   
-2. No <xref:System.Drawing.Printing.PrintDocument.PrintPage> manipulador de eventos, use o <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> propriedade do <xref:System.Drawing.Printing.PrintPageEventArgs> classe para instruir a impressora sobre o tipo de gráfico para imprimir.  
+2. No manipulador de eventos <xref:System.Drawing.Printing.PrintDocument.PrintPage>, use a propriedade <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> da classe <xref:System.Drawing.Printing.PrintPageEventArgs> para instruir a impressora sobre o tipo de gráficos a serem impressos.  
   
-     O exemplo de código a seguir mostra um manipulador de eventos usado para criar uma elipse azul dentro de um retângulo delimitador. O retângulo tem as seguintes posição e dimensões: começando em 100, 150 com uma largura de 250 e uma altura de 250.  
+     O exemplo de código a seguir mostra um manipulador de eventos usado para criar uma elipse azul dentro de um retângulo delimitador. O retângulo tem o seguinte local e dimensões: começando em 100, 150 com uma largura de 250 e uma altura de 250.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -52,7 +52,7 @@ Com frequência, convém imprimir elementos gráficos em seu aplicativo baseado 
        }  
     ```  
   
-     (Visual C# e o Visual C++) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.  
+     (Visual C# e Visual C++) Coloque o código a seguir no construtor do formulário para registrar o manipulador de eventos.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -66,7 +66,7 @@ Com frequência, convém imprimir elementos gráficos em seu aplicativo baseado 
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

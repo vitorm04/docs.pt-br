@@ -1,5 +1,5 @@
 ---
-title: Namescopes XAML WPF
+title: Namescopes XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namescopes [WPF]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 97889b302aac06e118c93f2d000b0eeeed8b71bb
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 4383492157191f61cf04a2fdd6ce27e9183bda8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559931"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744411"
 ---
 # <a name="wpf-xaml-namescopes"></a>Namescopes XAML WPF
 Os namescopes de XAML são um conceito que identifica objetos que são definidos em XAML. Os nomes em um namescope de XAML podem ser usados para estabelecer relações entre os nomes de objetos definidos por XAML e seus equivalentes de instância em uma árvore de objetos. Normalmente, os namescopes de XAML no código gerenciado do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são criados ao carregar as raízes da página XAML individual de um aplicativo XAML. Os namescopes XAML como o objeto de programação são definidos pela interface <xref:System.Windows.Markup.INameScope> e também são implementados pela classe prática <xref:System.Windows.NameScope>.  

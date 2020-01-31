@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-ms.openlocfilehash: d1d9b0a4c61ce7c3f8f9792046fb4bddf0fdfa05
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20ee2a9e045d839aa8ac043e035c438986b987ef
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447436"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860860"
 ---
 # <a name="profiling-global-static-functions"></a>Criando perfil de funções estáticas globais
 Esta seção descreve as funções de API não gerenciadas que a API de criação de perfil usa.  
@@ -19,60 +19,60 @@ Esta seção descreve as funções de API não gerenciadas que a API de criaçã
 ## <a name="in-this-section"></a>Nesta seção  
   
 ## <a name="net-framework-version-1-profiling-functions"></a>Funções de criação de perfil .NET Framework versão 1  
- [Função FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)  
+ [Função FunctionEnter](functionenter-function.md)  
  Notifica o criador de perfil que o controle está sendo passado para uma função. Preterido no .NET Framework 2,0.  
   
- [Função FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)  
+ [Função FunctionLeave](functionleave-function.md)  
  Notifica o criador de perfil de que uma função está prestes a retornar ao chamador. Preterido no .NET Framework 2,0.  
   
- [Função FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)  
+ [Função FunctionTailcall](functiontailcall-function.md)  
  Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função. Preterido no .NET Framework 2,0.  
   
 ## <a name="net-framework-version-2-profiling-functions"></a>Funções de criação de perfil .NET Framework versão 2  
- [Função FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)  
- Notifica o criador de perfil de que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usada nos retornos de chamada [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)e [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) para essa função. Também permite que o criador de perfil indique se deseja receber retornos de chamada para essa função  
+ [Função FunctionIDMapper](functionidmapper-function.md)  
+ Notifica o criador de perfil de que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usada nos retornos de chamada [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md)e [FunctionTailcall2](functiontailcall2-function.md) para essa função. Também permite que o criador de perfil indique se deseja receber retornos de chamada para essa função  
   
- [Função FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
+ [Função FunctionEnter2](functionenter2-function.md)  
  Notifica o criador de perfil que o controle está sendo passado para uma função e fornece informações sobre o quadro de pilha e os argumentos de função. Preterido no .NET Framework 4.  
   
- [Função FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
+ [Função FunctionLeave2](functionleave2-function.md)  
  Notifica o criador de perfil de que uma função está prestes a retornar ao chamador e fornece informações sobre o quadro de pilha e o valor de retorno da função. Preterido no .NET Framework 4.  
   
- [Função FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
+ [Função FunctionTailcall2](functiontailcall2-function.md)  
  Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece informações sobre o registro de ativação. Preterido no .NET Framework 4.  
   
- [Função StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
- Fornece ao criador de perfil informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante uma movimentação de pilha, que é iniciada pelo método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .  
+ [Função StackSnapshotCallback](stacksnapshotcallback-function.md)  
+ Fornece ao criador de perfil informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados na pilha durante uma movimentação de pilha, que é iniciada pelo método [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .  
   
 ## <a name="net-framework-version-4-profiling-functions"></a>Funções de criação de perfil .NET Framework versão 4  
- [Função FunctionIDMapper2](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
- Notifica o criador de perfil de que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usada nos retornos de chamada [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md), [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)e [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)ou[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)e [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) para essa função. Também permite que o criador de perfil indique se deseja receber retornos de chamada para essa função.  
+ [Função FunctionIDMapper2](functionidmapper2-function.md)  
+ Notifica o criador de perfil de que o identificador fornecido de uma função pode ser remapeado para uma ID alternativa a ser usada nos retornos de chamada [FunctionEnter3](functionenter3-function.md), [FunctionLeave3](functionleave3-function.md)e [FunctionTailcall3](functiontailcall3-function.md)ou[FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md)e [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) para essa função. Também permite que o criador de perfil indique se deseja receber retornos de chamada para essa função.  
   
- `FunctionIDMapper2` estende a função [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) com um parâmetro `clientData`, que os profileres podem usar para fazer a ambiguidade entre os tempos de execução.  
+ `FunctionIDMapper2` estende a função [FunctionIDMapper](functionidmapper-function.md) com um parâmetro `clientData`, que os profileres podem usar para fazer a ambiguidade entre os tempos de execução.  
   
- [Função FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
+ [Função FunctionEnter3](functionenter3-function.md)  
  Notifica o criador de perfil que o controle está sendo passado para uma função.  
   
- [Função FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- Notifica o criador de perfil que o controle está sendo passado para uma função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar o quadro de pilha e os argumentos de função.  
+ [Função FunctionEnter3WithInfo](functionenter3withinfo-function.md)  
+ Notifica o criador de perfil que o controle está sendo passado para uma função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar o quadro de pilha e os argumentos de função.  
   
- [Função FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
+ [Função FunctionLeave3](functionleave3-function.md)  
  Notifica o criador de perfil que o controle está sendo retornado de uma função.  
   
- [Função FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- Notifica o criador de perfil que o controle está sendo retornado de uma função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) para recuperar o quadro de pilha e o valor de retorno.  
+ [Função FunctionLeave3WithInfo](functionleave3withinfo-function.md)  
+ Notifica o criador de perfil que o controle está sendo retornado de uma função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md) para recuperar o quadro de pilha e o valor de retorno.  
   
- [Função FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
+ [Função FunctionTailcall3](functiontailcall3-function.md)  
  Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função.  
   
- [Função FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionTailcall3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar o quadro de pilha.  
+ [Função FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)  
+ Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece um identificador que pode ser passado para [ICorProfilerInfo3:: GetFunctionTailcall3Info](icorprofilerinfo3-getfunctiontailcall3info-method.md) para recuperar o quadro de pilha.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
+## <a name="related-sections"></a>Seções Relacionadas  
+ [Visão geral da criação de perfil](profiling-overview.md)  
   
- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [Interfaces de criação de perfil](profiling-interfaces.md)  
   
- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
+ [Criando perfil de enumerações](profiling-enumerations.md)  
   
- [Estruturas de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+ [Estruturas de criação de perfil](profiling-structures.md)

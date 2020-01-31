@@ -1,5 +1,5 @@
 ---
-title: Guia de introdução ao Windows Forms
+title: Guia de Introdução
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-ms.openlocfilehash: 27c26d3575c2a931f407a475c655f29d042a8653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5ea75bf826aa658269ec983b60e9dd2eb520ce0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966890"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743474"
 ---
 # <a name="getting-started-with-windows-forms"></a>Guia de introdução ao Windows Forms
 Com o Windows Forms você pode criar aplicativos potentes baseados em Windows. Os tópicos a seguir mostram a fundo como aproveitar a capacidade dos Windows Forms para exibir dados, manipular entradas do usuário e implantar seus aplicativos com facilidade e maior segurança.  
@@ -34,8 +34,8 @@ Com o Windows Forms você pode criar aplicativos potentes baseados em Windows. O
  [Alterando a aparência dos Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Contém links para tópicos que mostram como mudar a aparência dos aplicativos dos Windows Forms.  
   
- [Controles dos Windows Forms](./controls/index.md)  
- Contém links para tópicos que descrevem e mostram como usar controles de formulários do Windows e componentes.  
+ [Controles do Windows Forms](./controls/index.md)  
+ Contém links para tópicos que descrevem e mostram como usar Windows Forms controles e componentes do.  
   
  [Entrada do usuário nos Windows Forms](user-input-in-windows-forms.md)  
  Contém links para tópicos que descrevem e mostram como administrar entradas do usuário nos aplicativos dos Windows Forms.  
@@ -52,9 +52,9 @@ Com o Windows Forms você pode criar aplicativos potentes baseados em Windows. O
  [Implantação do ClickOnce para Windows Forms](clickonce-deployment-for-windows-forms.md)  
  Contém links para tópicos que descrevem como implantar facilmente aplicativos para Windows Forms.  
   
- [Como: Coleções em formulários do Windows com chave de acesso](how-to-access-keyed-collections-in-windows-forms.md)  
+ [Como acessar coleções indexadas por chave nos Windows Forms](how-to-access-keyed-collections-in-windows-forms.md)  
  Demonstra como acessar coleções com chaves ao invés de índices.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Aprimorando Aplicativos dos Windows Forms](./advanced/index.md)  
  Contém links para tópicos que descrevem conceitos mais avançados para criar aplicativos para Windows Forms.

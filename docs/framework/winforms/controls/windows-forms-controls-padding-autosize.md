@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: projetando controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize'
+title: Dispor controles com preenchimento, margens e a propriedade AutoSize
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460605"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742375"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>Walkthrough: dispor controles com preenchimento, margens e a propriedade AutoSize
 
@@ -39,7 +39,7 @@ A ilustração a seguir mostra as propriedades <xref:System.Windows.Forms.Contro
 
 A propriedade <xref:System.Windows.Forms.Control.AutoSize%2A> informa um controle para se dimensionar automaticamente para seu conteúdo. Ele não será redimensionado para ser menor que o valor de sua propriedade de <xref:System.Windows.Forms.Control.Size%2A> original e considerará o valor de sua propriedade <xref:System.Windows.Forms.Control.Padding%2A>.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisará do Visual Studio para concluir este passo a passos.
 
@@ -164,7 +164,7 @@ Quando a propriedade <xref:System.Windows.Forms.Control.AutoSize%2A> for definid
 
    O controle de <xref:System.Windows.Forms.Panel> redimensiona para a nova posição do controle de <xref:System.Windows.Forms.Button>.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Há muitos outros recursos de layout para organizar controles em seus aplicativos dos Windows Forms. Aqui estão algumas combinações que você pode tentar:
 
@@ -174,7 +174,7 @@ Há muitos outros recursos de layout para organizar controles em seus aplicativo
 
 - Experimente o encaixe de controles filho em um controle <xref:System.Windows.Forms.Panel>. A propriedade <xref:System.Windows.Forms.Control.Padding%2A> é uma realização mais geral da propriedade <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>, e você pode se comportar de que esse é o caso colocando um controle filho em um controle de <xref:System.Windows.Forms.Panel> e definindo a propriedade <xref:System.Windows.Forms.Control.Dock%2A> do controle filho como <xref:System.Windows.Forms.DockStyle.Fill>. Defina a propriedade <xref:System.Windows.Forms.Control.Padding%2A> do controle de <xref:System.Windows.Forms.Panel> com vários valores e observe o efeito.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

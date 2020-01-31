@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715364"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741573"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publicar seu aplicativo .NET Core Olá, Mundo com o Visual Studio
 
@@ -68,7 +68,7 @@ Nas etapas a seguir, você examinará os arquivos criados pelo processo de publi
 
       * *HelloWorld.runtimeconfig.json*
 
-         Este é o arquivo de configuração de tempo de execução do aplicativo. Identifica a versão do .NET Core com base na qual o aplicativo foi criado para ser executado. Para obter mais informações, consulte [arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+         Este é o arquivo de configuração de tempo de execução do aplicativo. Identifica a versão do .NET Core com base na qual o aplicativo foi criado para ser executado. Você também pode adicionar opções de configuração a ela. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

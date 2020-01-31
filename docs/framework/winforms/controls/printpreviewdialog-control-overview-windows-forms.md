@@ -1,17 +1,17 @@
 ---
-title: Visão geral do controle PrintPreviewDialog (Windows Forms)
+title: Visão geral do controle PrintPreviewDialog
 ms.date: 01/08/2018
 f1_keywords:
 - PrintPreviewDialog
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6fb971493336cda1e04c720dd09147e650918c3a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141223"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741414"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Visão geral do controle PrintPreviewDialog (Windows Forms)
 
@@ -53,7 +53,7 @@ Se a opção não estiver presente ou se estiver definida como qualquer outro va
 
 Se você usar o evento <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> para modificar as configurações da impressora, o desempenho do controle de <xref:System.Windows.Forms.PrintPreviewDialog> não será melhorado mesmo se uma opção de configuração de otimização for definida.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Visão geral do controle PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)

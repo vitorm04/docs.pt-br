@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137633"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782981"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>Método ICorDebugEval2::CallParameterizedFunction
 Define uma chamada para o ICorDebugFunction especificado, que pode ser aninhado dentro de uma classe cujo construtor usa <xref:System.Type> parâmetros ou pode levar <xref:System.Type> parâmetros.  
@@ -54,13 +54,13 @@ HRESULT CallParameterizedFunction (
  no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugValue que representa um valor passado em um argumento de função.  
   
 ## <a name="remarks"></a>Comentários  
- `CallParameterizedFunction` é como [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , exceto que a função pode estar dentro de uma classe com parâmetros de tipo, ela própria pode pegar parâmetros de tipo ou ambos. Os argumentos de tipo devem ser fornecidos primeiro para a classe e, em seguida, para a função.  
+ `CallParameterizedFunction` é como [ICorDebugEval:: CallFunction](icordebugeval-callfunction-method.md) , exceto que a função pode estar dentro de uma classe com parâmetros de tipo, ela própria pode pegar parâmetros de tipo ou ambos. Os argumentos de tipo devem ser fornecidos primeiro para a classe e, em seguida, para a função.  
   
  Se a função estiver em um domínio de aplicativo diferente, ocorrerá uma transição. No entanto, todos os argumentos Type e Value devem estar no domínio do aplicativo de destino.  
   
  A avaliação de função pode ser executada somente em cenários limitados. Se `CallParameterizedFunction` ou `ICorDebugEval::CallFunction` falhar, o HRESULT retornado indicará o motivo mais geral possível para a falha.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

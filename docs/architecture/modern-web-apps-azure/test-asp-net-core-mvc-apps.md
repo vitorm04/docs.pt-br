@@ -4,23 +4,23 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738386"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777104"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
 > *"Se você não gostar de realizar o teste de unidade em seu produto, provavelmente, seus clientes não vão gostar de testá-lo também."*
  > \_ – Anônimo –
 
-Um software de qualquer complexidade pode falhar de maneiras inesperadas em resposta a alterações. Portanto, depois de fazer alterações, é necessário realizar um teste em todos os aplicativos, exceto os mais triviais (ou menos críticos). O teste manual é a maneira mais lenta, menos confiável e mais cara de testar um software. Se os aplicativos não forem projetados para serem testáveis, esse poderá ser o único meio disponível. Os aplicativos escritos de acordo com os princípios de arquitetura apresentados no [capítulo 4](architectural-principles.md) podem ser submetidos a um teste de unidade, além disso os aplicativos ASP.NET Core também são compatíveis com testes funcionais e de integração automatizados.
+Um software de qualquer complexidade pode falhar de maneiras inesperadas em resposta a alterações. Portanto, depois de fazer alterações, é necessário realizar um teste em todos os aplicativos, exceto os mais triviais (ou menos críticos). O teste manual é a maneira mais lenta, menos confiável e mais cara de testar um software. Se os aplicativos não forem projetados para serem testáveis, esse poderá ser o único meio disponível. Os aplicativos escritos para seguir os princípios arquitetônicos dispostos no [capítulo 4](architectural-principles.md) devem ser um teste de unidade. ASP.NET Core aplicativos dão suporte à integração automatizada e aos testes funcionais.
 
 ## <a name="kinds-of-automated-tests"></a>Tipos de testes automatizados
 
-Há muitos tipos de testes automatizados para aplicativos de software. O teste mais simples de nível mais baixo é o teste de unidade. Em um nível ligeiramente superior, há testes de integração e testes funcionais. Outros tipos de testes, como testes de interface do usuário, testes de carga, testes de estresse e smoke tests, estão além do escopo deste documento.
+Há muitos tipos de testes automatizados para aplicativos de software. O teste mais simples de nível mais baixo é o teste de unidade. Em um nível ligeiramente mais alto, há testes de integração e de funcionamento. Outros tipos de testes, como testes de interface do usuário, testes de carga, testes de estresse e testes de fumaça, estão além do escopo deste documento.
 
 ### <a name="unit-tests"></a>Testes de unidade
 
@@ -58,7 +58,7 @@ As diferentes camadas da pirâmide e seus tamanhos relativos representam tipos d
 
 ### <a name="what-to-test"></a>O que testar
 
-Um problema comum para os desenvolvedores que não têm experiência com a criação de testes automatizados é decidir o que testar. Um bom ponto de partida é testar a lógica condicional do teste. Sempre que você tiver um método com um comportamento que é alterado de acordo com uma instrução condicional (if-else, alternância, etc.), você deverá pensar em, pelo menos, dois testes que confirmem esse comportamento correto em determinadas condições. Se o código apresentar condições de erro, será melhor gravar, pelo menos, um teste para o "caminho certo" pelo código (sem erros) e, pelo menos, um teste para o "caminho errado" (com erros ou resultados atípicos) para confirmar que o aplicativo se comporta conforme esperado em caso de erros. Por fim, tente se concentrar no teste de coisas que podem falhar, em vez de se concentrar em métricas como cobertura de código. Em geral, mais cobertura de código é melhor do que menos. No entanto, é melhor utilizar o tempo criando mais alguns testes de um método muito complexo e comercialmente crítico do que criando testes para propriedades automáticas, apenas para melhorar as métricas de cobertura de código de teste.
+Um problema comum para os desenvolvedores que não têm experiência com a criação de testes automatizados é decidir o que testar. Um bom ponto de partida é testar a lógica condicional do teste. Em qualquer lugar, você tem um método com comportamento que se altera com base em uma instrução condicional (if-else, switch e assim por diante), você deve ser capaz de criar pelo menos alguns testes que confirmam o comportamento correto para determinadas condições. Se o código apresentar condições de erro, será melhor gravar, pelo menos, um teste para o "caminho certo" pelo código (sem erros) e, pelo menos, um teste para o "caminho errado" (com erros ou resultados atípicos) para confirmar que o aplicativo se comporta conforme esperado em caso de erros. Por fim, tente se concentrar no teste de coisas que podem falhar, em vez de se concentrar em métricas como cobertura de código. Em geral, mais cobertura de código é melhor do que menos. No entanto, escrever mais alguns testes de um método complexo e crítico para os negócios geralmente é um melhor uso do tempo do que escrever testes para propriedades automáticas apenas para melhorar as métricas de cobertura de código de teste.
 
 ## <a name="organizing-test-projects"></a>Organizando projetos de teste
 
@@ -102,7 +102,7 @@ Se você segue uma convenção de nomenclatura como a mostrada acima, que produz
 
 **Figura 9-4.** Organizando classes de teste por pasta com base na classe que está sendo testada.
 
-É claro que, se uma classe de aplicativo específica tiver muitos métodos que estão sendo testados (e, portanto, muitas classes de teste), talvez faça sentido colocá-los em uma pasta correspondente à classe de aplicativo. Essa organização não é diferente da forma como você pode organizar arquivos em pastas em outro lugar. Caso você tenha mais de três ou quatro arquivos relacionados em uma pasta que contém muitos outros arquivos, geralmente, é útil movê-los para sua própria subpasta.
+Se uma classe de aplicativo específica tiver muitos métodos sendo testados (e, portanto, muitas classes de teste), pode fazer sentido colocá-los em uma pasta correspondente à classe Application. Essa organização não é diferente da forma como você pode organizar arquivos em pastas em outro lugar. Caso você tenha mais de três ou quatro arquivos relacionados em uma pasta que contém muitos outros arquivos, geralmente, é útil movê-los para sua própria subpasta.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Realizando teste de unidade em aplicativos ASP.NET Core
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: depurando controles dos Windows Forms na hora do design'
+title: Depurar controles personalizados em tempo de design
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460621"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740190"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Walkthrough: Depurar controles de Windows Forms personalizados em tempo de design
 
@@ -45,7 +45,7 @@ No Visual Studio, crie um projeto de aplicativo do Windows e nomeie-o **Debuggin
 
 3. Em **Gerenciador de soluções**, exclua o controle padrão do projeto excluindo o arquivo de código com um nome base de UserControl1.
 
-4. Compile a solução.
+4. {1&gt;Compile a solução.&lt;1}
 
 ## <a name="checkpoint"></a>Ponto de verificação
 
@@ -91,7 +91,7 @@ Para demonstrar que o código de seu controle personalizado está sendo executad
     }
     ```
 
-2. Compile a solução.
+2. {1&gt;Compile a solução.&lt;1}
 
 ## <a name="add-your-custom-control-to-the-host-form"></a>Adicionar seu controle personalizado ao formulário do host
 
@@ -139,7 +139,7 @@ Agora, você está pronto para depurar o controle personalizado enquanto ele é 
 
 6. Para interromper a depuração, saia da instância hospedada do Visual Studio ou selecione o botão **parar depuração** na instância de depuração.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Agora que você pode depurar seus controles personalizados em tempo de design, há muitas possibilidades para expandir a interação do controle com o IDE do Visual Studio.
 
@@ -149,6 +149,6 @@ Agora que você pode depurar seus controles personalizados em tempo de design, h
 
 - Você pode escrever um designer personalizado para seu controle personalizado. Isso lhe dá controle total sobre a experiência de design usando a infra-estrutura de designer extensível exposta pelo Visual Studio. Para obter detalhes, consulte [Instruções passo a passo: criando um controle dos Windows Forms que aproveite os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Instruções passo a passo: criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Passo a passo: criando um controle dos Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)

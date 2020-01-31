@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Menu control type
 - Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
-ms.openlocfilehash: 24b80aadf2f2d49be18609878751ddc38726a303
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 1a315a8466e3f2f75e04d1fefd91a4077d28b08c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741629"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778546"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle Menu
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741629"
   
  Um controle de menu permite a organização hierárquica de elementos associados a comandos e manipuladores de eventos. Em um aplicativo típico do Microsoft Windows, uma barra de menus contém vários botões de menu (como **arquivo**, **Editar**e **janela**) e cada botão de menu exibe um menu. Um menu contém uma coleção de itens de menu (como **novo**, **aberto**e **fechado**), que pode ser expandida para exibir itens de menu adicionais ou para executar uma ação específica quando clicado.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de menu. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de menu. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  

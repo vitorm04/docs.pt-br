@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eace5ce9a84d99cb2526896cca36a9e2a13fd5f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962639"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742701"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Segurança de transporte com autenticação básica
-A ilustração a seguir mostra um serviço e cliente do Windows Communication Foundation (WCF). O servidor precisa de um certificado X. 509 válido que possa ser usado para protocolo SSL (SSL) e os clientes devem confiar no certificado do servidor. Além disso, o serviço Web já tem uma implementação SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Serviços de Informações da Internet (IIS <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>), consulte.  
+A ilustração a seguir mostra um serviço e cliente do Windows Communication Foundation (WCF). O servidor precisa de um certificado X. 509 válido que possa ser usado para protocolo SSL (SSL) e os clientes devem confiar no certificado do servidor. Além disso, o serviço Web já tem uma implementação SSL que pode ser usada. Para obter mais informações sobre como habilitar a autenticação básica no Serviços de Informações da Internet (IIS), consulte <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>.  
   
  ![Captura de tela que mostra a segurança de transporte com autenticação básica.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Porta|  
+|Modo de segurança|Transport|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando HTTPS)<br /><br /> Sim (por nome de usuário/senha)|  
 |Verifica|Sim|  
 |Confidencialidade|Sim|  
-|Porta|HTTPS|  
-|Associação|<xref:System.ServiceModel.WSHttpBinding>|  
+|Transport|HTTPS|  
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>Serviço  
- O código e a configuração a seguir devem ser executados de forma independente. Realize um dos seguintes procedimentos:  
+## <a name="service"></a>Service  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
 - Crie um serviço autônomo usando o código sem configuração.  
   
 - Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa um nome de usuário de domínio do Windows e uma senha para a segurança da transferência. Observe que o serviço requer um certificado X. 509 para autenticar no cliente. Para obter mais informações, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como: Configure uma porta com um certificado](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)SSL.  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa um nome de usuário de domínio do Windows e uma senha para a segurança da transferência. Observe que o serviço requer um certificado X. 509 para autenticar no cliente. Para obter mais informações, consulte [trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) e [como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>Configuração  
+## <a name="configuration"></a>Configuração do  
  O seguinte configura um serviço para usar a autenticação básica com segurança em nível de transporte:  
   
 ```xml  
@@ -80,7 +80,7 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuração  
+### <a name="configuration"></a>Configuração do  
  O código a seguir mostra a configuração do cliente.  
   
 > [!NOTE]
@@ -110,12 +110,12 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Como: Configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

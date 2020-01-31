@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741736"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778782"
 ---
 # <a name="ui-automation-providers-overview"></a>Visão Geral dos Provedores de Automação de Interface do Usuário
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "75741736"
   
  Provedores de automação de interface do usuário permitem que controles se comuniquem com aplicativos cliente de automação de interface Em geral, cada controle ou outro elemento distinto em um [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] é representado por um provedor. O provedor expõe informações sobre o elemento e, opcionalmente, implementa padrões de controle que permitem que o aplicativo cliente interaja com o controle.  
   
- Normalmente, os aplicativos cliente não precisam trabalhar diretamente com os provedores. A maioria dos controles padrão em aplicativos que usam as estruturas Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ou [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] são expostas automaticamente para o sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Os aplicativos que implementam controles personalizados também podem implementar provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para esses controles, e os aplicativos cliente não precisam realizar etapas especiais para obter acesso a eles.  
+ Normalmente, os aplicativos cliente não precisam trabalhar diretamente com os provedores. A maioria dos controles padrão em aplicativos que usam as estruturas Win32, Windows Forms ou [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] são expostas automaticamente para o sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Os aplicativos que implementam controles personalizados também podem implementar provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para esses controles, e os aplicativos cliente não precisam realizar etapas especiais para obter acesso a eles.  
   
- Este tópico fornece uma visão geral de como os desenvolvedores de controle implementam provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], especialmente para controles nas janelas [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e Win32.  
+ Este tópico fornece uma visão geral de como os desenvolvedores de controle implementam provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], especialmente para controles nas janelas Windows Forms e Win32.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Tipos de provedores  

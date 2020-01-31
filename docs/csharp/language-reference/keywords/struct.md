@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963119"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744653"
 ---
 # <a name="struct-c-reference"></a>struct (Referência de C#)
 
@@ -41,18 +41,16 @@ Para obter mais informações, consulte [Structs](../../programming-guide/classe
 
 Para obter exemplos e mais informações, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter exemplos, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
 ## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Tabela de tipos internos](built-in-types-table.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
-- [Tipos de valor](value-types.md)
+- [Tipos de valor](../builtin-types/value-types.md)
 - [class](class.md)
 - [interface](interface.md)
-- [Classes e Structs](../../programming-guide/classes-and-structs/index.md)
+- [Classes e structs](../../programming-guide/classes-and-structs/index.md)

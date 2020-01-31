@@ -1,25 +1,26 @@
 ---
-title: Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF
+title: Considerações de desempenho para a interoperabilidade do Direct3D9 e do WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: 02a91c1824c5d6374f37b0af66a3308d33210c4a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2445732c27d210a41da26303d6a9ce07ef6fcc94
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69932488"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743937"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF
-Você pode hospedar o conteúdo de Direct3D9 usando <xref:System.Windows.Interop.D3DImage> a classe. Hospedar conteúdo de Direct3D9 pode afetar o desempenho do seu aplicativo. Este tópico descreve as práticas recomendadas para otimizar o desempenho ao hospedar conteúdo de Direct3D9 em um aplicativo WPF (Windows Presentation Foundation). Essas práticas recomendadas incluem como usar <xref:System.Windows.Interop.D3DImage> e práticas recomendadas quando você estiver usando o Windows Vista, o Windows XP e monitores de vários monitores.  
+Você pode hospedar o conteúdo de Direct3D9 usando a classe <xref:System.Windows.Interop.D3DImage>. Hospedar conteúdo de Direct3D9 pode afetar o desempenho do seu aplicativo. Este tópico descreve as práticas recomendadas para otimizar o desempenho ao hospedar conteúdo de Direct3D9 em um aplicativo WPF (Windows Presentation Foundation). Essas práticas recomendadas incluem como usar <xref:System.Windows.Interop.D3DImage> e práticas recomendadas quando você estiver usando o Windows Vista, o Windows XP e monitores de vários monitores.  
   
 > [!NOTE]
 > Para ver exemplos de códigos que demonstram essas práticas recomendadas, consulte [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Use D3DImage com moderação  
- O conteúdo de Direct3D9 hospedado <xref:System.Windows.Interop.D3DImage> em uma instância não é renderizado tão rápido quanto em um aplicativo Direct3D puro. Copiar a superfície e liberar o buffer de comando podem ser operações dispendiosas. À medida que aumenta <xref:System.Windows.Interop.D3DImage> o número de instâncias, mais liberações ocorre e o desempenho é degradado. Portanto, você deve usar <xref:System.Windows.Interop.D3DImage> com moderação.  
+ O conteúdo de Direct3D9 hospedado em uma instância de <xref:System.Windows.Interop.D3DImage> não é renderizado tão rápido quanto em um aplicativo Direct3D puro. Copiar a superfície e liberar o buffer de comando podem ser operações dispendiosas. À medida que o número de instâncias de <xref:System.Windows.Interop.D3DImage> aumenta, mais liberações ocorre e o desempenho é degradado. Portanto, você deve usar <xref:System.Windows.Interop.D3DImage> com moderação.  
   
 ## <a name="best-practices-on-windows-vista"></a>Práticas recomendadas no Windows Vista  
  Para ter um melhor desempenho no Windows Vista com um visor configurado para usar o WDDM (Windows Display Driver Model), crie sua superfície de Direct3D9 em um dispositivo `IDirect3DDevice9Ex`. Isso permite o compartilhamento de superfície. A placa de vídeo deve dar suporte aos recursos de driver `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` e `D3DCAPS2_CANSHARERESOURCE` no Windows Vista. Qualquer outra configuração faz com que a superfície seja copiada por meio do software, o que reduz significativamente o desempenho.  
@@ -32,7 +33,7 @@ Você pode hospedar o conteúdo de Direct3D9 usando <xref:System.Windows.Interop
   
  Uma profundidade de exibição de área de trabalho de 16 bits pode reduzir significativamente o desempenho. Recomenda-se uma área de trabalho de 32 bits.  
   
- Se você estiver desenvolvendo para Windows Vista e Windows XP, teste o desempenho no Windows XP. A falta de memória de vídeo no Windows XP é uma preocupação. Além disso, <xref:System.Windows.Interop.D3DImage> o Windows XP usa mais memória de vídeo e largura de banda do que o Windows Vista WDDM, devido a uma cópia de memória de vídeo adicional necessária. Portanto, você pode esperar que o desempenho seja pior no Windows XP do que no Windows Vista para o mesmo hardware de vídeo.  
+ Se você estiver desenvolvendo para Windows Vista e Windows XP, teste o desempenho no Windows XP. A falta de memória de vídeo no Windows XP é uma preocupação. Além disso, <xref:System.Windows.Interop.D3DImage> no Windows XP usa mais memória de vídeo e largura de banda do que o Windows Vista WDDM, devido a uma cópia de memória de vídeo extra necessária. Portanto, você pode esperar que o desempenho seja pior no Windows XP do que no Windows Vista para o mesmo hardware de vídeo.  
   
 > [!NOTE]
 > O XDDM está disponível no Windows XP e Windows Vista. No entanto, o WDDM está disponível apenas no Windows Vista.  
@@ -42,7 +43,7 @@ Você pode hospedar o conteúdo de Direct3D9 usando <xref:System.Windows.Interop
   
  Se sua renderização for executada em um thread gerenciado do WPF, será altamente recomendável que você crie o dispositivo com o sinalizador de criação `D3DCREATE_FPU_PRESERVE`. Sem essa configuração, a renderização D3D pode reduzir a precisão das operações de precisão dupla do WPF e introduzir problemas de processamento.  
   
- A divisão <xref:System.Windows.Interop.D3DImage> a é rápida, a menos que você peça uma superfície não pow2 sem suporte de hardware, ou se <xref:System.Windows.Media.DrawingBrush> você <xref:System.Windows.Media.VisualBrush> colocar um ou <xref:System.Windows.Interop.D3DImage>que contenha um.  
+ A divisão de um <xref:System.Windows.Interop.D3DImage> é rápida, a menos que você peça uma superfície não pow2 sem suporte de hardware, ou se você colocar um <xref:System.Windows.Media.DrawingBrush> ou <xref:System.Windows.Media.VisualBrush> que contenha um <xref:System.Windows.Interop.D3DImage>.  
   
 ## <a name="best-practices-for-multi-monitor-displays"></a>Práticas recomendadas para visores com vários monitores  
  Se estiver usando um computador que tenha vários monitores, você deverá seguir as práticas recomendadas descritas anteriormente. Também há algumas considerações de desempenho adicionais para uma configuração com vários monitores.  
@@ -59,9 +60,9 @@ Você pode hospedar o conteúdo de Direct3D9 usando <xref:System.Windows.Interop
 |D3DFMT_A8R8G8B8 (não bloqueável)|**Atualização de hardware**|Atualização de software|Atualização de software|Atualização de software|  
 |D3DFMT_A8R8G8B8 (bloqueável)|**Atualização de hardware**|Atualização de software|**Atualização de hardware**|Atualização de software|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md)
-- [Passo a passo: Criando conteúdo de Direct3D9 para hospedagem no WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Passo a passo: Hospedando conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Passo a passo: criando conteúdo Direct3D9 para hospedar no WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Passo a passo: hospedando conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

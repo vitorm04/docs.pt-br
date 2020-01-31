@@ -2,12 +2,12 @@
 title: Rede peer-to-peer
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 74566d7bc7c8d817cedb0ff6f64590ba827ed4c4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2905a429e907f7e97c482c22229a6bc928c52243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837357"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744676"
 ---
 # <a name="peer-to-peer-networking"></a>Rede peer-to-peer
 O canal par é uma tecnologia de comunicação ponto a ponto (P2P) com multipartes no Windows Communication Foundation (WCF). Ele fornece um canal de comunicação P2P seguro e escalonável baseado em mensagens para desenvolvedores de aplicativos. Um exemplo comum de um aplicativo de multiparte que pode se beneficiar do canal de mesmo nível é um aplicativo de colaboração, como o chat, em que um grupo de pessoas se batem em um outro ponto, sem servidores. O Peer Channel permite a colaboração P2P, a distribuição de conteúdo, o balanceamento de carga e o processamento distribuído para cenários de consumidor e corporativo.  
@@ -27,4 +27,4 @@ O canal par é uma tecnologia de comunicação ponto a ponto (P2P) com multipart
  [Resolvedor de pares personalizado de canal par](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>Blog da equipe de canal par  
- [Blog da equipe de canal par](https://go.microsoft.com/fwlink/?LinkID=114530)
+ [Blog da equipe de canal par](https://docs.microsoft.com/archive/blogs/peerchan/)

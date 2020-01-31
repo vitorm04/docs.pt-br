@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e1f2c47-81df-4530-826d-96489cd68719
 topic_type:
 - apiref
-ms.openlocfilehash: e044b1a2ad777868e33cd64bc8d09a9b76d547aa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5d828b8252b47c2edddbe14713208ae8bc2d19d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130661"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777160"
 ---
 # <a name="icordebugmanagedcallbackstepcomplete-method"></a>Método ICorDebugManagedCallback::StepComplete
 Notifica o depurador de que uma etapa foi concluída.  
@@ -52,7 +52,7 @@ HRESULT StepComplete (
 ## <a name="remarks"></a>Comentários  
  O stepper pode ser usado para continuar a depuração, se desejado, a menos que a depuração seja encerrada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,6 +61,6 @@ HRESULT StepComplete (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

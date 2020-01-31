@@ -1,5 +1,5 @@
 ---
-title: Visão geral de manipuladores de eventos (Windows Forms)
+title: Visão geral de manipuladores de eventos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10ba458197973ede35849a86fec35003f139b8d2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966823"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743465"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Visão geral de manipuladores de eventos (Windows Forms)
-Um manipulador de eventos é um método que está associado a um evento. Quando o evento é gerado, o código no manipulador de eventos é executado. Cada manipulador de eventos fornece dois parâmetros que permitem manipular o evento corretamente. O exemplo a seguir mostra um manipulador de eventos para um <xref:System.Windows.Forms.Button> do controle <xref:System.Windows.Forms.Control.Click> eventos.  
+Um manipulador de eventos é um método que está associado a um evento. Quando o evento é gerado, o código no manipulador de eventos é executado. Cada manipulador de eventos fornece dois parâmetros que permitem manipular o evento corretamente. O exemplo a seguir mostra um manipulador de eventos para um evento de <xref:System.Windows.Forms.Control.Click> do controle de <xref:System.Windows.Forms.Button>.  
   
 ```vb  
 Private Sub button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles button1.Click  
@@ -44,11 +44,11 @@ private:
   
  No primeiro parâmetro, `sender`, fornece uma referência ao objeto que gerou o evento. No exemplo acima, o segundo parâmetro, `e`, passa um objeto específico para o evento que está sendo manipulado. Consultando as propriedades do objeto (e, às vezes, seus métodos), é possível obter informações como o local do mouse para eventos de mouse ou dados que estão sendo transferidos em eventos do tipo "arrastar e soltar".  
   
- Normalmente, cada evento produz um manipulador de eventos com um tipo de objeto de evento diferente para o segundo parâmetro. Alguns manipuladores de eventos, como aquelas para o <xref:System.Windows.Forms.Control.MouseDown> e <xref:System.Windows.Forms.Control.MouseUp> eventos, têm o mesmo tipo de objeto para o segundo parâmetro. Para esses tipos de eventos, você pode usar o mesmo manipulador de eventos para manipular ambos os eventos.  
+ Normalmente, cada evento produz um manipulador de eventos com um tipo de objeto de evento diferente para o segundo parâmetro. Alguns manipuladores de eventos, como aqueles para os eventos <xref:System.Windows.Forms.Control.MouseDown> e <xref:System.Windows.Forms.Control.MouseUp>, têm o mesmo tipo de objeto para o segundo parâmetro. Para esses tipos de eventos, você pode usar o mesmo manipulador de eventos para manipular ambos os eventos.  
   
- Você também pode usar o mesmo manipulador de eventos para manipular o mesmo evento em controles diferentes. Por exemplo, se você tiver um grupo de <xref:System.Windows.Forms.RadioButton> controles em um formulário, você pode criar um único manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos e ter cada controle <xref:System.Windows.Forms.Control.Click> evento associado ao manipulador de eventos único. Para obter mais informações, confira [Como: Conectar vários eventos a um único manipulador de eventos nos Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
+ Você também pode usar o mesmo manipulador de eventos para manipular o mesmo evento em controles diferentes. Por exemplo, se você tiver um grupo de controles de <xref:System.Windows.Forms.RadioButton> em um formulário, poderá criar um único manipulador de eventos para o evento <xref:System.Windows.Forms.Control.Click> e ter cada evento de <xref:System.Windows.Forms.Control.Click> de controle associado ao manipulador de eventos único. Para obter mais informações, consulte [Como conectar vários eventos a um único manipulador de eventos nos Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de eventos](events-overview-windows-forms.md)

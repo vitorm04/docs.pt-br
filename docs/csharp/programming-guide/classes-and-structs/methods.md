@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714767"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743911"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 
@@ -44,7 +44,7 @@ A definição do método especifica os nomes e tipos de quaisquer parâmetros ob
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Passando por referência vs. passando por valor
 
-Por padrão, quando um tipo de valor é passado para um método, uma cópia é passada em vez do objeto propriamente dito. Portanto, alterações no argumento não têm nenhum efeito sobre a cópia original no método de chamada. Você pode passar um tipo de valor por referência usando a palavra-chave ref. Para obter mais informações, consulte [Passando parâmetros de tipo de valor](./passing-value-type-parameters.md). Para obter uma lista de tipos de valor internos, consulte [Tabela de tipos de valor](../../language-reference/keywords/value-types-table.md).
+Por padrão, quando uma instância de um [tipo de valor](../../language-reference/builtin-types/value-types.md) é passada para um método, sua cópia é passada em vez da própria instância. Portanto, as alterações no argumento não têm efeito sobre a instância original no método de chamada. Para passar uma instância de tipo de valor por referência, use a palavra-chave `ref`. Para obter mais informações, consulte [Passando parâmetros de tipo de valor](./passing-value-type-parameters.md).
 
 Quando um objeto de tipo de referência é passado para um método, uma referência ao objeto é passada. Ou seja, o método recebe não o objeto em si, mas um argumento que indica o local do objeto. Se você alterar um membro do objeto usando essa referência, a alteração será refletida no argumento no método de chamada, ainda que você passe o objeto por valor.
 
@@ -161,7 +161,7 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

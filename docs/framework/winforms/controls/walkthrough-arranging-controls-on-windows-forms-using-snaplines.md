@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento'
+title: Organizando controles usando Snaplines
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460647"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740210"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Walkthrough: organizar controles em Windows Forms usando Snaplines
 
@@ -180,7 +180,7 @@ Nenhuma SnapLine é exibida e o controle não se ajusta a nenhuma posição de a
 
 4. Selecione um controle no formulário e mova-o em torno dos outros controles. Observe que as guias de alinhamento não aparecem.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 As guias de alinhamento oferecem uma forma intuitiva de alinhar controles no formulário. Sugestões para exploração adicional incluem:
 
@@ -188,7 +188,7 @@ As guias de alinhamento oferecem uma forma intuitiva de alinhar controles no for
 
 - Crie uma coluna de controles de <xref:System.Windows.Forms.TextBox> e uma coluna correspondente de controles de <xref:System.Windows.Forms.Label>. Defina o valor da propriedade <xref:System.Windows.Forms.Control.AutoSize%2A> dos controles de <xref:System.Windows.Forms.Label> como `true`. Use snaplines para mover os controles de <xref:System.Windows.Forms.Label> para que o texto exibido seja alinhado com o texto nos controles de <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
