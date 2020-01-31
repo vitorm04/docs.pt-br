@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15ce195af0c0e8f8777f6e5d02043e17e32308da
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445176"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866635"
 ---
-# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="11d1f-102">Método ICorProfilerCallback::AssemblyLoadFinished</span><span class="sxs-lookup"><span data-stu-id="11d1f-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
-<span data-ttu-id="11d1f-103">Notifica o criador de perfil que concluiu o carregamento de um assembly.</span><span class="sxs-lookup"><span data-stu-id="11d1f-103">Notifies the profiler that an assembly has finished loading.</span></span>  
+# <a name="icorprofilercallbackassemblyloadfinished-method"></a><span data-ttu-id="3d45b-102">Método ICorProfilerCallback::AssemblyLoadFinished</span><span class="sxs-lookup"><span data-stu-id="3d45b-102">ICorProfilerCallback::AssemblyLoadFinished Method</span></span>
+<span data-ttu-id="3d45b-103">Notifica o criador de perfil que concluiu o carregamento de um assembly.</span><span class="sxs-lookup"><span data-stu-id="3d45b-103">Notifies the profiler that an assembly has finished loading.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="11d1f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="11d1f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3d45b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3d45b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AssemblyLoadFinished(  
@@ -33,27 +33,30 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="11d1f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="11d1f-105">Parameters</span></span>  
- `assemblyId`  
- <span data-ttu-id="11d1f-106">no Identifica o assembly que foi carregado.</span><span class="sxs-lookup"><span data-stu-id="11d1f-106">[in] Identifies the assembly that was loaded.</span></span>  
-  
- `hrStatus`  
- <span data-ttu-id="11d1f-107">no Um HRESULT que indica se o assembly terminou de ser carregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="11d1f-107">[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="11d1f-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="11d1f-108">Remarks</span></span>  
- <span data-ttu-id="11d1f-109">O valor de `assemblyId` não é válido para uma solicitação de informações até que o método `AssemblyLoadFinished` seja chamado.</span><span class="sxs-lookup"><span data-stu-id="11d1f-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
-  
- <span data-ttu-id="11d1f-110">Algumas partes do carregamento do assembly podem continuar depois do `AssemblyLoadFinished` retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="11d1f-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="11d1f-111">Uma falha HRESULT no `hrStatus` indica uma falha.</span><span class="sxs-lookup"><span data-stu-id="11d1f-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="11d1f-112">No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do carregamento do assembly foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="11d1f-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="11d1f-113">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="11d1f-113">Requirements</span></span>  
- <span data-ttu-id="11d1f-114">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="11d1f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="11d1f-115">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="11d1f-115">**Header:** CorProf.idl, CorProf.h</span></span>  
-  
- <span data-ttu-id="11d1f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="11d1f-116">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="11d1f-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="11d1f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="11d1f-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="11d1f-118">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="3d45b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3d45b-105">Parameters</span></span>
 
-- [<span data-ttu-id="11d1f-119">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="11d1f-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- `assemblyId`
+
+  <span data-ttu-id="3d45b-106">\[em] identifica o assembly que foi carregado.</span><span class="sxs-lookup"><span data-stu-id="3d45b-106">\[in] Identifies the assembly that was loaded.</span></span>
+
+- `hrStatus`
+
+  <span data-ttu-id="3d45b-107">\[em] um HRESULT que indica se o assembly terminou de ser carregado com êxito.</span><span class="sxs-lookup"><span data-stu-id="3d45b-107">\[in] An HRESULT that indicates whether the assembly finished loading successfully.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="3d45b-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="3d45b-108">Remarks</span></span>  
+ <span data-ttu-id="3d45b-109">O valor de `assemblyId` não é válido para uma solicitação de informações até que o método `AssemblyLoadFinished` seja chamado.</span><span class="sxs-lookup"><span data-stu-id="3d45b-109">The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.</span></span>  
+  
+ <span data-ttu-id="3d45b-110">Algumas partes do carregamento do assembly podem continuar depois do `AssemblyLoadFinished` retorno de chamada.</span><span class="sxs-lookup"><span data-stu-id="3d45b-110">Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback.</span></span> <span data-ttu-id="3d45b-111">Uma falha HRESULT no `hrStatus` indica uma falha.</span><span class="sxs-lookup"><span data-stu-id="3d45b-111">A failure HRESULT in `hrStatus` indicates a failure.</span></span> <span data-ttu-id="3d45b-112">No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do carregamento do assembly foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="3d45b-112">However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="3d45b-113">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="3d45b-113">Requirements</span></span>  
+ <span data-ttu-id="3d45b-114">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d45b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="3d45b-115">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="3d45b-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+  
+ <span data-ttu-id="3d45b-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3d45b-116">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="3d45b-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d45b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="3d45b-118">Veja também</span><span class="sxs-lookup"><span data-stu-id="3d45b-118">See also</span></span>
+
+- [<span data-ttu-id="3d45b-119">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="3d45b-119">ICorProfilerCallback Interface</span></span>](icorprofilercallback-interface.md)

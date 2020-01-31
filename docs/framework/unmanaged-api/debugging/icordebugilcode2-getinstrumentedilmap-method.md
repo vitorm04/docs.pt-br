@@ -12,19 +12,19 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 7dede4e5af702f1b86b430450db4a669c326c062
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 728a6c83dc321fa28dc4ff84c4e874d886524b36
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131072"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788565"
 ---
-# <a name="icordebugilcode2getinstrumentedilmap-method"></a><span data-ttu-id="93526-102">ICorDebugILCode2::Método GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="93526-102">ICorDebugILCode2::GetInstrumentedILMap Method</span></span>
-<span data-ttu-id="93526-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="93526-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode2getinstrumentedilmap-method"></a><span data-ttu-id="1da00-102">ICorDebugILCode2::Método GetInstrumentedILMap</span><span class="sxs-lookup"><span data-stu-id="1da00-102">ICorDebugILCode2::GetInstrumentedILMap Method</span></span>
+<span data-ttu-id="1da00-103">[Com suporte no .NET Framework 4.5.2 e versões posteriores]</span><span class="sxs-lookup"><span data-stu-id="1da00-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="93526-104">Retorna um mapa dos deslocamentos da linguagem intermediária (IL) instrumentados pelo criador de perfis para os deslocamentos da IL do método original para esta instância.</span><span class="sxs-lookup"><span data-stu-id="93526-104">Returns a map from profiler-instrumented intermediate language (IL) offsets to original method IL offsets for this instance.</span></span>  
+ <span data-ttu-id="1da00-104">Retorna um mapa dos deslocamentos da linguagem intermediária (IL) instrumentados pelo criador de perfis para os deslocamentos da IL do método original para esta instância.</span><span class="sxs-lookup"><span data-stu-id="1da00-104">Returns a map from profiler-instrumented intermediate language (IL) offsets to original method IL offsets for this instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93526-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="93526-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1da00-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1da00-105">Syntax</span></span>  
   
 ```cpp
 HRESULT GetInstrumentedILMap(  
@@ -34,34 +34,34 @@ HRESULT GetInstrumentedILMap(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93526-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="93526-106">Parameters</span></span>  
- <span data-ttu-id="93526-107">cMap</span><span class="sxs-lookup"><span data-stu-id="93526-107">cMap</span></span>  
- <span data-ttu-id="93526-108">[in] A capacidade de armazenamento da matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="93526-108">[in] The storage capacity of the `map` array.</span></span> <span data-ttu-id="93526-109">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="93526-109">See the Remarks section for more information.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1da00-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1da00-106">Parameters</span></span>  
+ <span data-ttu-id="1da00-107">cMap</span><span class="sxs-lookup"><span data-stu-id="1da00-107">cMap</span></span>  
+ <span data-ttu-id="1da00-108">[in] A capacidade de armazenamento da matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="1da00-108">[in] The storage capacity of the `map` array.</span></span> <span data-ttu-id="1da00-109">Consulte a seção Comentários para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="1da00-109">See the Remarks section for more information.</span></span>  
   
- <span data-ttu-id="93526-110">pcMap</span><span class="sxs-lookup"><span data-stu-id="93526-110">pcMap</span></span>  
- <span data-ttu-id="93526-111">fora O número de valores de COR_IL_MAP gravados na matriz de mapa.</span><span class="sxs-lookup"><span data-stu-id="93526-111">[out] The number of COR_IL_MAP values written to the map array.</span></span>  
+ <span data-ttu-id="1da00-110">pcMap</span><span class="sxs-lookup"><span data-stu-id="1da00-110">pcMap</span></span>  
+ <span data-ttu-id="1da00-111">[out] O número dos valores COR_IL_MAP gravados na matriz de mapa.</span><span class="sxs-lookup"><span data-stu-id="1da00-111">[out] The number of COR_IL_MAP values written to the map array.</span></span>  
   
- <span data-ttu-id="93526-112">map</span><span class="sxs-lookup"><span data-stu-id="93526-112">map</span></span>  
- <span data-ttu-id="93526-113">fora Uma matriz de valores COR_IL_MAP que fornece informações sobre mapeamentos de IL instrumentado por Profiler para o IL do método original.</span><span class="sxs-lookup"><span data-stu-id="93526-113">[out] An array of COR_IL_MAP values that provide information on mappings from profiler-instrumented IL to the IL of the original method.</span></span>  
+ <span data-ttu-id="1da00-112">map</span><span class="sxs-lookup"><span data-stu-id="1da00-112">map</span></span>  
+ <span data-ttu-id="1da00-113">[out] Uma matriz de valores do COR_IL_MAP que fornece informações sobre mapeamentos da IL instrumentada pelo criador de perfis para a IL do método original.</span><span class="sxs-lookup"><span data-stu-id="1da00-113">[out] An array of COR_IL_MAP values that provide information on mappings from profiler-instrumented IL to the IL of the original method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="93526-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="93526-114">Remarks</span></span>  
- <span data-ttu-id="93526-115">Se o criador de perfil definir o mapeamento chamando o método [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , o depurador poderá chamar esse método para recuperar o mapeamento e usar o mapeamento internamente ao calcular deslocamentos Il para rastreamentos de pilha e variável vida.</span><span class="sxs-lookup"><span data-stu-id="93526-115">If the profiler sets the mapping by calling the [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) method, the debugger can call this method to retrieve the mapping and to use the mapping internally when calculating IL offsets for stack traces and variable lifetimes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1da00-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="1da00-114">Remarks</span></span>  
+ <span data-ttu-id="1da00-115">Se o criador de perfil definir o mapeamento chamando o método [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , o depurador poderá chamar esse método para recuperar o mapeamento e usar o mapeamento internamente ao calcular deslocamentos de Il para rastreamentos de pilha e tempos de vida variáveis.</span><span class="sxs-lookup"><span data-stu-id="1da00-115">If the profiler sets the mapping by calling the [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) method, the debugger can call this method to retrieve the mapping and to use the mapping internally when calculating IL offsets for stack traces and variable lifetimes.</span></span>  
   
- <span data-ttu-id="93526-116">Se `cMap` for 0 e `pcMap` for não**nulo**, `pcMap` será definido como o número de valores de COR_IL_MAP disponíveis.</span><span class="sxs-lookup"><span data-stu-id="93526-116">If `cMap` is 0 and `pcMap` is non-**null**, `pcMap` is set to the number of available COR_IL_MAP values.</span></span> <span data-ttu-id="93526-117">Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`.</span><span class="sxs-lookup"><span data-stu-id="93526-117">If `cMap` is non-zero, it represents the storage capacity of the `map` array.</span></span> <span data-ttu-id="93526-118">Quando o método retorna, `map` contém um máximo de `cMap` itens e `pcMap` é definido como o número de valores de COR_IL_MAP gravados na matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="93526-118">When the method returns, `map` contains a maximum of `cMap` items, and `pcMap` is set to the number of COR_IL_MAP values actually written to the `map` array.</span></span>  
+ <span data-ttu-id="1da00-116">Se `cMap` for 0 e `pcMap` for não**nulo**, `pcMap` será definido como o número de valores de COR_IL_MAP disponíveis.</span><span class="sxs-lookup"><span data-stu-id="1da00-116">If `cMap` is 0 and `pcMap` is non-**null**, `pcMap` is set to the number of available COR_IL_MAP values.</span></span> <span data-ttu-id="1da00-117">Se `cMap` for não zero, representará a capacidade de armazenamento da matriz do `map`.</span><span class="sxs-lookup"><span data-stu-id="1da00-117">If `cMap` is non-zero, it represents the storage capacity of the `map` array.</span></span> <span data-ttu-id="1da00-118">Quando o método retorna, `map` contém um máximo de `cMap` itens e `pcMap` é definido como o número de valores de COR_IL_MAP gravados na matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="1da00-118">When the method returns, `map` contains a maximum of `cMap` items, and `pcMap` is set to the number of COR_IL_MAP values actually written to the `map` array.</span></span>  
   
- <span data-ttu-id="93526-119">Se a IL não tiver sido instrumentada ou o mapeamento não tiver sido fornecido por um criador de perfil, esse método retorna `S_OK` e define `pcMap` para 0.</span><span class="sxs-lookup"><span data-stu-id="93526-119">If the IL hasn't been instrumented or the mapping wasn't provided by a profiler, this method returns `S_OK` and sets `pcMap` to 0.</span></span>  
+ <span data-ttu-id="1da00-119">Se a IL não tiver sido instrumentada ou o mapeamento não tiver sido fornecido por um criador de perfil, esse método retorna `S_OK` e define `pcMap` para 0.</span><span class="sxs-lookup"><span data-stu-id="1da00-119">If the IL hasn't been instrumented or the mapping wasn't provided by a profiler, this method returns `S_OK` and sets `pcMap` to 0.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93526-120">Requisitos</span><span class="sxs-lookup"><span data-stu-id="93526-120">Requirements</span></span>  
- <span data-ttu-id="93526-121">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93526-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1da00-120">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="1da00-120">Requirements</span></span>  
+ <span data-ttu-id="1da00-121">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1da00-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93526-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93526-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1da00-122">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1da00-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="93526-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93526-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1da00-123">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1da00-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93526-124">**Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93526-124">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="1da00-124">**Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1da00-124">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93526-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="93526-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1da00-125">Veja também</span><span class="sxs-lookup"><span data-stu-id="1da00-125">See also</span></span>
 
-- [<span data-ttu-id="93526-126">ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="93526-126">ICorProfilerInfo::SetILInstrumentedCodeMap</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
-- [<span data-ttu-id="93526-127">Interface ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="93526-127">ICorDebugILCode2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
-- [<span data-ttu-id="93526-128">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="93526-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1da00-126">ICorProfilerInfo::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="1da00-126">ICorProfilerInfo::SetILInstrumentedCodeMap</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [<span data-ttu-id="1da00-127">Interface ICorDebugILCode2</span><span class="sxs-lookup"><span data-stu-id="1da00-127">ICorDebugILCode2 Interface</span></span>](icordebugilcode2-interface.md)
+- [<span data-ttu-id="1da00-128">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="1da00-128">Debugging Interfaces</span></span>](debugging-interfaces.md)

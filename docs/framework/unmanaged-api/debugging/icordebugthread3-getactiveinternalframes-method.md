@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124341"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791405"
 ---
-# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="3e934-102">Método ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="3e934-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
-<span data-ttu-id="3e934-103">Retorna uma matriz de quadros internos (objetos[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) ) na pilha.</span><span class="sxs-lookup"><span data-stu-id="3e934-103">Returns an array of internal frames ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
+# <a name="icordebugthread3getactiveinternalframes-method"></a><span data-ttu-id="0f908-102">Método ICorDebugThread3::GetActiveInternalFrames</span><span class="sxs-lookup"><span data-stu-id="0f908-102">ICorDebugThread3::GetActiveInternalFrames Method</span></span>
+<span data-ttu-id="0f908-103">Retorna uma matriz de quadros internos (objetos[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) ) na pilha.</span><span class="sxs-lookup"><span data-stu-id="0f908-103">Returns an array of internal frames ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) on the stack.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3e934-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3e934-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f908-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0f908-104">Syntax</span></span>  
   
 ```cpp 
 HRESULT GetActiveInternalFrames  
@@ -37,46 +37,46 @@ HRESULT GetActiveInternalFrames
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3e934-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3e934-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0f908-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0f908-105">Parameters</span></span>  
  `cInternalFrames`  
- <span data-ttu-id="3e934-106">no O número de quadros internos esperados no `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="3e934-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="0f908-106">no O número de quadros internos esperados no `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="0f908-106">[in] The number of internal frames expected in `ppInternalFrames`.</span></span>  
   
  `pcInternalFrames`  
- <span data-ttu-id="3e934-107">fora Um ponteiro para um `ULONG32` que contém o número de quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="3e934-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
+ <span data-ttu-id="0f908-107">fora Um ponteiro para um `ULONG32` que contém o número de quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="0f908-107">[out] A pointer to a `ULONG32` that contains the number of internal frames on the stack.</span></span>  
   
  `ppInternalFrames`  
- <span data-ttu-id="3e934-108">[entrada, saída] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="3e934-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
+ <span data-ttu-id="0f908-108">[entrada, saída] Um ponteiro para o endereço de uma matriz de quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="0f908-108">[in, out] A pointer to the address of an array of internal frames on the stack.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3e934-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="3e934-109">Return Value</span></span>  
- <span data-ttu-id="3e934-110">Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.</span><span class="sxs-lookup"><span data-stu-id="3e934-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0f908-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="0f908-109">Return Value</span></span>  
+ <span data-ttu-id="0f908-110">Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.</span><span class="sxs-lookup"><span data-stu-id="0f908-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="3e934-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3e934-111">HRESULT</span></span>|<span data-ttu-id="3e934-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="3e934-112">Description</span></span>|  
+|<span data-ttu-id="0f908-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0f908-111">HRESULT</span></span>|<span data-ttu-id="0f908-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="0f908-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="3e934-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="3e934-113">S_OK</span></span>|<span data-ttu-id="3e934-114">O objeto [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) foi criado com êxito.</span><span class="sxs-lookup"><span data-stu-id="3e934-114">The [ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
-|<span data-ttu-id="3e934-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="3e934-115">E_INVALIDARG</span></span>|<span data-ttu-id="3e934-116">`cInternalFrames` não é zero e `ppInternalFrames` é `null`ou `pcInternalFrames` é `null`.</span><span class="sxs-lookup"><span data-stu-id="3e934-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
-|<span data-ttu-id="3e934-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="3e934-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="3e934-118">`ppInternalFrames` é menor do que a contagem de quadros internos.</span><span class="sxs-lookup"><span data-stu-id="3e934-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
+|<span data-ttu-id="0f908-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="0f908-113">S_OK</span></span>|<span data-ttu-id="0f908-114">O objeto [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) foi criado com êxito.</span><span class="sxs-lookup"><span data-stu-id="0f908-114">The [ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) object was successfully created.</span></span>|  
+|<span data-ttu-id="0f908-115">{1&gt;E_INVALIDARG&lt;1}</span><span class="sxs-lookup"><span data-stu-id="0f908-115">E_INVALIDARG</span></span>|<span data-ttu-id="0f908-116">`cInternalFrames` não é zero e `ppInternalFrames` é `null`ou `pcInternalFrames` é `null`.</span><span class="sxs-lookup"><span data-stu-id="0f908-116">`cInternalFrames` is not zero and `ppInternalFrames` is `null`, or `pcInternalFrames` is `null`.</span></span>|  
+|<span data-ttu-id="0f908-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span><span class="sxs-lookup"><span data-stu-id="0f908-117">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)</span></span>|<span data-ttu-id="0f908-118">`ppInternalFrames` é menor do que a contagem de quadros internos.</span><span class="sxs-lookup"><span data-stu-id="0f908-118">`ppInternalFrames` is smaller than the count of internal frames.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="3e934-119">Exceções</span><span class="sxs-lookup"><span data-stu-id="3e934-119">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="0f908-119">Exceções</span><span class="sxs-lookup"><span data-stu-id="0f908-119">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3e934-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="3e934-120">Remarks</span></span>  
- <span data-ttu-id="3e934-121">Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.</span><span class="sxs-lookup"><span data-stu-id="3e934-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0f908-120">Comentários</span><span class="sxs-lookup"><span data-stu-id="0f908-120">Remarks</span></span>  
+ <span data-ttu-id="0f908-121">Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.</span><span class="sxs-lookup"><span data-stu-id="0f908-121">Internal frames are data structures pushed onto the stack by the runtime to store temporary data.</span></span>  
   
- <span data-ttu-id="3e934-122">Quando você chama o `GetActiveInternalFrames`pela primeira vez, deve definir o parâmetro `cInternalFrames` como 0 (zero) e o parâmetro `ppInternalFrames` como NULL.</span><span class="sxs-lookup"><span data-stu-id="3e934-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="3e934-123">Quando `GetActiveInternalFrames` primeiro retorna, `pcInternalFrames` contém a contagem dos quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="3e934-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
+ <span data-ttu-id="0f908-122">Quando você chama o `GetActiveInternalFrames`pela primeira vez, deve definir o parâmetro `cInternalFrames` como 0 (zero) e o parâmetro `ppInternalFrames` como NULL.</span><span class="sxs-lookup"><span data-stu-id="0f908-122">When you first call `GetActiveInternalFrames`, you should set the `cInternalFrames` parameter to 0 (zero), and the `ppInternalFrames` parameter to null.</span></span> <span data-ttu-id="0f908-123">Quando `GetActiveInternalFrames` primeiro retorna, `pcInternalFrames` contém a contagem dos quadros internos na pilha.</span><span class="sxs-lookup"><span data-stu-id="0f908-123">When `GetActiveInternalFrames` first returns, `pcInternalFrames` contains the count of the internal frames on the stack.</span></span>  
   
- <span data-ttu-id="3e934-124">`GetActiveInternalFrames` deve ser chamado uma segunda vez.</span><span class="sxs-lookup"><span data-stu-id="3e934-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="3e934-125">Você deve passar a contagem correta (`pcInternalFrames`) no parâmetro `cInternalFrames` e especificar um ponteiro para uma matriz de tamanho apropriado em `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="3e934-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
+ <span data-ttu-id="0f908-124">`GetActiveInternalFrames` deve ser chamado uma segunda vez.</span><span class="sxs-lookup"><span data-stu-id="0f908-124">`GetActiveInternalFrames` should then be called a second time.</span></span> <span data-ttu-id="0f908-125">Você deve passar a contagem correta (`pcInternalFrames`) no parâmetro `cInternalFrames` e especificar um ponteiro para uma matriz de tamanho apropriado em `ppInternalFrames`.</span><span class="sxs-lookup"><span data-stu-id="0f908-125">You should pass the proper count (`pcInternalFrames`) in the `cInternalFrames` parameter, and specify a pointer to an appropriately sized array in `ppInternalFrames`.</span></span>  
   
- <span data-ttu-id="3e934-126">Use o método [ICorDebugStackWalk:: GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) para retornar os quadros de pilhas reais.</span><span class="sxs-lookup"><span data-stu-id="3e934-126">Use the [ICorDebugStackWalk::GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
+ <span data-ttu-id="0f908-126">Use o método [ICorDebugStackWalk:: GetFrame](icordebugthread3-getactiveinternalframes-method.md) para retornar os quadros de pilhas reais.</span><span class="sxs-lookup"><span data-stu-id="0f908-126">Use the [ICorDebugStackWalk::GetFrame](icordebugthread3-getactiveinternalframes-method.md) method to return actual stack frames.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3e934-127">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3e934-127">Requirements</span></span>  
- <span data-ttu-id="3e934-128">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3e934-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f908-127">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="0f908-127">Requirements</span></span>  
+ <span data-ttu-id="0f908-128">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f908-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3e934-129">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3e934-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0f908-129">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0f908-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3e934-130">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3e934-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0f908-130">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0f908-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3e934-131">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3e934-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0f908-131">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0f908-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3e934-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3e934-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f908-132">Veja também</span><span class="sxs-lookup"><span data-stu-id="0f908-132">See also</span></span>
 
-- [<span data-ttu-id="3e934-133">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="3e934-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="3e934-134">Depuração</span><span class="sxs-lookup"><span data-stu-id="3e934-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="0f908-133">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="0f908-133">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="0f908-134">Depuração</span><span class="sxs-lookup"><span data-stu-id="0f908-134">Debugging</span></span>](index.md)
