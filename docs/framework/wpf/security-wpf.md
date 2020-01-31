@@ -1,5 +1,5 @@
 ---
-title: Segurança (WPF)
+title: Segurança
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636764"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868038"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. Os aplicativos autônomos do WPF são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar um <xref:System.AppDomain> de confiança parcial usando o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
@@ -184,7 +184,7 @@ ms.locfileid: "75636764"
  Os controles de recurso são aplicados pelo processo instanciando o objeto ActiveX do WebBrowser. Portanto, se estiver criando um aplicativo autônomo capaz de navegar até o conteúdo não confiável, considere seriamente a possibilidade de habilitar controles de recurso adicionais.  
   
 > [!NOTE]
-> Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [as perguntas frequentes sobre segurança de host MSHTML: parte I de II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) e [as perguntas frequentes sobre segurança de host MSHTML: parte II de II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
+> Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [as perguntas frequentes sobre segurança de host MSHTML: parte I de II](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) e [as perguntas frequentes sobre segurança de host MSHTML: parte II de II](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/).  
   
  Para o executável, considere a possibilidade de habilitar os controles de recurso a seguir ao definir o valor de Registro como 1.  
   

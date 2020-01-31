@@ -1,18 +1,18 @@
 ---
-title: Processando o arquivo XML – Guia de Programação em C#
+title: Processando o guia de C# programação de arquivos XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696513"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793388"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XML (Guia de Programação em C#)
+# <a name="processing-the-xml-file-c-programming-guide"></a>Processando o arquivo XMLC# (guia de programação)
 
 O compilador gera uma cadeia de identificação para cada constructo no seu código marcado para gerar a documentação. (Para obter informações sobre como marcar seu código, consulte [marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md).) A cadeia de caracteres de ID identifica exclusivamente a construção. Programas que processam o arquivo XML podem usar a cadeia de identificação para identificar o item de metadados/reflexão do .NET Framework correspondente ao qual a documentação se aplica.
 
@@ -27,7 +27,7 @@ O compilador observa as seguintes regras quando gera as cadeias de identificaç�
     |Caractere|Descrição|
     |---------------|-----------------|
     |N|Namespace<br /><br /> Não é possível adicionar comentários de documentação a um namespace, mas será possível fazer referências cref a eles se houver suporte.|
-    |T|tipo: classe, interface, struct, enumeração, delegado|
+    |T|tipo: Class, interface, struct, enum ou delegate|
     |F|campo|
     |P|propriedade (incluindo indexadores ou outras propriedades indexadas)|
     |M|método (incluindo métodos especiais como construtores, operadores e assim por diante)|
@@ -84,6 +84,6 @@ Os exemplos a seguir mostram como as cadeias de identificação para uma classe 
 
 ## <a name="see-also"></a>Veja também
 
-- [Guia de Programação em C#](../index.md)
-- [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [Comentários da documentação XML](./index.md)
+- [Guia de programação em C#](../index.md)
+- [-Doc (C# opções do compilador)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentários de documentação XML](./index.md)

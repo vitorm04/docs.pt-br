@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318d7d1494b0cf4db54b92ff09775be5500bdb1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449896"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869550"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>Método ICorProfilerInfo::GetThreadInfo
 Obtém a identidade do Thread Win32 atual para o thread especificado.  
@@ -40,7 +40,7 @@ HRESULT GetThreadInfo(
  `pdwWin32ThreadId`  
  fora Um ponteiro para a ID de thread do Win32 atual do thread especificado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -49,6 +49,6 @@ HRESULT GetThreadInfo(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

@@ -2,18 +2,18 @@
 title: Usando WorkflowIdentity e controle de versão
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 97224caa24b38a00a1cbb4fa76781eea3a10faaf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142038"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787910"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Usando WorkflowIdentity e controle de versão
 
 O <xref:System.Activities.WorkflowIdentity> fornece uma maneira para que os desenvolvedores de aplicativos de fluxo de trabalho associem um nome e uma <xref:System.Version> com uma definição de fluxo de trabalho, e para que essas informações sejam associadas a uma instância de fluxo de trabalho persistida. Essas informações de identidade podem ser usadas por desenvolvedores de aplicativos de fluxo de trabalho para habilitar cenários como execução lado a lado de várias versões de uma definição de fluxo de trabalho, e fornece o pilar para outra funcionalidade como a atualização dinâmica. Este tópico fornece uma visão geral de como usar o <xref:System.Activities.WorkflowIdentity> com hospedagem <xref:System.Activities.WorkflowApplication>. Para obter informações sobre a execução lado a lado das definições de fluxo de trabalho em um serviço de fluxo de trabalho, consulte controle de versão lado a [lado no WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Para obter informações sobre a atualização dinâmica, consulte [atualização dinâmica](dynamic-update.md).
 
-## <a name="in-this-topic"></a>Neste tópico
+## <a name="in-this-topic"></a>{1&gt;Neste tópico&lt;1}
 
 - [Usando WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
@@ -78,7 +78,7 @@ wfApp.Load(instanceId);
 
 Quando o código anterior for executado, o <xref:System.Activities.VersionMismatchException> a seguir será gerado.
 
-```
+```output
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
@@ -150,7 +150,7 @@ Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade. SQL é fornec
 
 Se um aplicativo de fluxo de trabalho .NET Framework 4,5 tentar qualquer operação de persistência que use os novos recursos de controle de versão em um banco de dados de persistência que não tenha sido atualizado usando o script fornecido, uma <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> será lançada com uma mensagem semelhante à mensagem a seguir.
 
-```
+```output
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 

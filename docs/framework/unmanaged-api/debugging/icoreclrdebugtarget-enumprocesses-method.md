@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 4d1404e3f7565ee26edd94e059b7f01f8edd4dd6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11b1072b3467f7d0a3f223fbc2151ec9ccf461ad
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121844"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790799"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>Método ICoreClrDebugTarget::EnumProcesses
 Enumera os processos que estão sendo executados em um computador remoto.  
@@ -41,22 +41,22 @@ HRESULT EnumProcesses (
  fora O número de processos retornados em `ppProcs`. Esse valor pode ser 0 (zero).  
   
  `ppProcs`  
- fora Uma matriz de estruturas [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md) que representam os processos em execução no computador remoto.  
+ fora Uma matriz de estruturas [CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md) que representam os processos em execução no computador remoto.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
  Êxito.  
   
- E_OUTOFMEMORY  
+ {1&gt;E_OUTOFMEMORY&lt;1}  
  Não é possível alocar memória suficiente para `ppProcs`.  
   
  E_FAIL (ou outros códigos de retorno de E_)  
  Outras falhas.  
   
 ## <a name="remarks"></a>Comentários  
- Para liberar a memória que foi alocada por esse método, chame o método [ICoreClrDebugTarget:: freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) .  
+ Para liberar a memória que foi alocada por esse método, chame o método [ICoreClrDebugTarget:: freememory](icoreclrdebugtarget-freememory-method.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
@@ -65,6 +65,6 @@ HRESULT EnumProcesses (
   
  **Versões do .NET Framework:** 3,5 SP1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [Interface ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)

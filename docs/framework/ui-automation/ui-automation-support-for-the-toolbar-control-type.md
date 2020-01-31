@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Toolbar control type
 - ToolBar control type
 ms.assetid: 85152efd-f4c5-430c-8878-3371cc598616
-ms.openlocfilehash: 04adc801dfbf21132a176779aae02bc6ba6c0f93
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 155207cecf73beb4576fa8cd607f4c786ff10f7c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741445"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793966"
 ---
 # <a name="ui-automation-support-for-the-toolbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ToolBar
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "75741445"
   
  Este tópico fornece informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] suporte para o tipo de controle ToolBar. No [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], um tipo de controle é um conjunto de condições que um controle deve atender para usar a propriedade <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>. As condições incluem diretrizes específicas para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] valores de propriedade e padrões de controle. Os controles da barra de ferramentas permitem que os usuários finais ativem comandos e ferramentas contidos em um aplicativo.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ToolBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles da barra de ferramentas, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ToolBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles da barra de ferramentas, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -41,7 +41,7 @@ ms.locfileid: "75741445"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consulte observações.|O retângulo mais externo que contém o controle inteiro.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Consulte observações.|Com suporte se houver um retângulo delimitador. Se nem todos os pontos dentro do retângulo delimitador forem clicáveis e você executar um teste de clique especializado, substitua e forneça um ponto clicável.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Consulte observações.|Se o controle puder receber o foco do teclado, ele deverá dar suporte a essa propriedade.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Depende|O controle da barra de ferramentas não precisa de um nome, a menos que mais de um seja usado em um aplicativo. Se mais de um estiver presente, cada um deve ter um nome diferenciado (por exemplo, formatação ou estrutura de tópicos).|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Dependem|O controle da barra de ferramentas não precisa de um nome, a menos que mais de um seja usado em um aplicativo. Se mais de um estiver presente, cada um deve ter um nome diferenciado (por exemplo, formatação ou estrutura de tópicos).|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Os controles da barra de ferramentas nunca têm um rótulo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolBar|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"barra de ferramentas"|Cadeia de caracteres localizada correspondente ao tipo de controle ToolBar.|  
@@ -54,9 +54,9 @@ ms.locfileid: "75741445"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern>|Depende|Se a barra de ferramentas puder ser expandida e recolhida para mostrar mais itens, ela deverá dar suporte a esse padrão.|  
-|<xref:System.Windows.Automation.DockPattern>|Depende|Se a barra de ferramentas puder ser encaixada em partes diferentes da tela, ela deverá dar suporte a esse padrão.|  
-|<xref:System.Windows.Automation.TransformPattern>|Depende|Se a barra de ferramentas puder ser redimensionada, girada ou movida, ela deverá dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern>|Dependem|Se a barra de ferramentas puder ser expandida e recolhida para mostrar mais itens, ela deverá dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.DockPattern>|Dependem|Se a barra de ferramentas puder ser encaixada em partes diferentes da tela, ela deverá dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.TransformPattern>|Dependem|Se a barra de ferramentas puder ser redimensionada, girada ou movida, ela deverá dar suporte a esse padrão.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -67,7 +67,7 @@ ms.locfileid: "75741445"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

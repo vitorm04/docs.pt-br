@@ -5,16 +5,16 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340165"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787833"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: criar um pacote de modelos
 
-Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte três de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
+Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte três de uma série que ensina a criar, instalar e desinstalar modelos para uso com o comando `dotnet new`.
 
 Nesta parte da série, você aprenderá a:
 
@@ -49,7 +49,7 @@ No terminal, navegue até a pasta _working_. Crie um novo projeto, defina o nome
 dotnet new console -n templatepack -o .
 ```
 
-O parâmetro `-n` define o nome do arquivo _.csproj_ como _templatepack.csproj_ e os parâmetros `-o` criam os arquivos no diretório atual. Você verá um resultado semelhante à seguinte saída.
+O parâmetro `-n` define o nome de arquivo _. csproj_ como _templatepack. csproj_. O parâmetro `-o` cria os arquivos no diretório atual. Você verá um resultado semelhante à seguinte saída.
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Em seguida, abra o arquivo _templatepack.csproj_ em seu editor favorito e substi
 </Project>
 ```
 
-As configurações `<PropertyGroup>` no XML acima estão divididas em três grupos. O primeiro grupo lida com as propriedades necessárias para um pacote NuGet. As três configurações `<Package` têm a ver com as propriedades do pacote NuGet para identificar seu pacote em um feed do NuGet. Especificamente, o valor `<PacakgeId>` é usado para desinstalar o pacote de modelos com um único nome em vez de um caminho de diretório. Ele também pode ser usado para instalar o pacote de modelos de um feed do NuGet. As configurações restantes, como `<Title>` e `<Tags>`, têm a ver com os metadados exibidos no feed do NuGet. Para saber mais sobre as configurações do NuGet, confira [Propriedades do NuGet e do MSBuild](/nuget/reference/msbuild-targets).
+As configurações `<PropertyGroup>` no XML acima estão divididas em três grupos. O primeiro grupo lida com as propriedades necessárias para um pacote NuGet. As três configurações `<Package` têm a ver com as propriedades do pacote NuGet para identificar seu pacote em um feed do NuGet. Especificamente, o valor `<PackageId>` é usado para desinstalar o pacote de modelos com um único nome em vez de um caminho de diretório. Ele também pode ser usado para instalar o pacote de modelos de um feed do NuGet. As configurações restantes, como `<Title>` e `<PackageTags>`, têm a ver com os metadados exibidos no feed do NuGet. Para saber mais sobre as configurações do NuGet, confira [Propriedades do NuGet e do MSBuild](/nuget/reference/msbuild-targets).
 
 A configuração `<TargetFramework>` deve ser definida para que o MSBuild seja executado corretamente quando você executar o comando do pacote para compilar e empacotar o projeto.
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 Execute `dotnet new -u AdatumCorporation.Utility.Templates` para desinstalar o modelo. O comando `dotnet new` gerará informações de ajuda que devem omitir os modelos que você instalou anteriormente.
 
-Parabéns! você instalou e desinstalou um pacote de modelos. 
+Parabéns! você instalou e desinstalou um pacote de modelos.
 
 ## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 

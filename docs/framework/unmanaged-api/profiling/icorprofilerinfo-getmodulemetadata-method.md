@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: c7bf8e3ebedb17a4536b604909434c3e004fc828
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e787de6287dc5b3091d3671d3da2f2154b12e88
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439832"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869918"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Método ICorProfilerInfo::GetModuleMetaData
 Obtém uma instância de interface de metadados que mapeia para o módulo especificado.  
@@ -53,7 +53,7 @@ HRESULT GetModuleMetaData(
   
  Alguns módulos (como módulos de recurso) não têm metadados. Nesses casos, `GetModuleMetaData` retornará um valor HRESULT de S_FALSE e um nulo em *`ppOut`.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -62,6 +62,6 @@ HRESULT GetModuleMetaData(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

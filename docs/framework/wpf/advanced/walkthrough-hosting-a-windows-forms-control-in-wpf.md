@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: f7e925529f1bf194664c4f776bcc0322314f8857
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 5e994f65c0665a5726c4c8c19141da5ea3f5e6f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744906"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794177"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Instruções passo a passo: hospedando um controle dos Windows Forms no WPF
 
-O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece muitos controles com um amplo conjunto de recursos. No entanto, às vezes, convém usar controles do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] em suas páginas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode ter um investimento substancial em controles existentes do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou pode ter um controle do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que fornece funcionalidade exclusiva.
+O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece muitos controles com um amplo conjunto de recursos. No entanto, às vezes você pode querer usar controles de Windows Forms em suas páginas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode ter um investimento substancial em controles de Windows Forms existentes ou pode ter um controle de Windows Forms que fornece funcionalidade exclusiva.
 
-Este tutorial mostra como hospedar um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando código.
+Este tutorial mostra como hospedar um Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando código.
 
 Para obter uma listagem de código completa das tarefas mostradas neste passo a passos, consulte [hospedando um controle de Windows Forms no exemplo do WPF](https://go.microsoft.com/fwlink/?LinkID=160057).
 

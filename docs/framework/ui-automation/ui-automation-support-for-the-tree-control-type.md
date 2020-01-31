@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-ms.openlocfilehash: c0c184c250566b19098a8409ab0e92259f9763de
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3bc18ea1b2dcbaeda1a27bf129bea70d5c202430
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741425"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793943"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Tree
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741425"
   
  O tipo de controle de árvore é usado para contêineres cujo conteúdo tem relevância como uma hierarquia de nós, assim como no modo como os arquivos e pastas são exibidos no painel esquerdo do Microsoft Windows Explorer. Cada nó tem o potencial de conter outros nós, chamados de nós filho. Nós pai ou nós que contêm nós filhos podem ser exibidos como expandidos ou recolhidos.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de árvore. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de árvore, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de árvore. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de árvore, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -62,10 +62,10 @@ ms.locfileid: "75741425"
   
 |Propriedade padrão de controle/padrão|Suporte/valor|{1&gt;Observações&lt;1}|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Depende|Os controles de árvore que contêm um conjunto de itens selecionáveis devem implementar esse padrão de controle. Esse padrão de controle não precisa ser implementado se a seleção de um item não transmite informações significativas para o usuário.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Dependem|Os controles de árvore que contêm um conjunto de itens selecionáveis devem implementar esse padrão de controle. Esse padrão de controle não precisa ser implementado se a seleção de um item não transmite informações significativas para o usuário.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Consulte observações.|Implemente esta propriedade se o controle de árvore der suporte a seleção múltipla (a maioria dos controles de árvore não oferece suporte para seleção múltipla).|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Consulte observações.|O valor dessa propriedade será exposto se o controle exigir que um item seja selecionado.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depende|Implemente esse padrão de controle se o conteúdo do contêiner de árvore puder ser rolado.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Dependem|Implemente esse padrão de controle se o conteúdo do contêiner de árvore puder ser rolado.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -73,16 +73,16 @@ ms.locfileid: "75741425"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
 topic_type:
 - apiref
-ms.openlocfilehash: de6d46897f3d3266bf708528efd712ca7db8ea4a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b860cf6eb07c3f063e3e51514f8492cf4af9e8ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438831"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869666"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>Método ICorProfilerInfo::GetObjectSize
 Obtém o tamanho de um objeto especificado.  
@@ -43,7 +43,7 @@ HRESULT GetObjectSize(
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> Esse método é obsoleto. Ele retorna COR_E_OVERFLOW para objetos com mais de 4 GB em plataformas de 64 bits. Em vez disso, use o método [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) .  
+> Esse método é obsoleto. Ele retorna COR_E_OVERFLOW para objetos com mais de 4 GB em plataformas de 64 bits. Em vez disso, use o método [ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md) .  
   
  Objetos diferentes dos mesmos tipos geralmente têm o mesmo tamanho. No entanto, alguns tipos, como matrizes ou cadeias de caracteres, podem ter um tamanho diferente para cada objeto.  
   
@@ -53,7 +53,7 @@ HRESULT GetObjectSize(
   
 - No Windows de 64 bits, o alinhamento é sempre de 8 bytes.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -62,6 +62,6 @@ HRESULT GetObjectSize(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

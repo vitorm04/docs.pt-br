@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: 272856c7eedbdc577158edcc463535a7946bb060
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5093a5ba0afcccaf960e9b8776f93a061cc2f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122984"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785677"
 ---
 # <a name="_efn_stacktrace-function"></a>\_EFN\_a função StackTrace
 Fornece uma representação de texto de um rastreamento de pilha gerenciado e uma matriz de registros de `CONTEXT`, um para cada transição entre código gerenciado e não gerenciado.  
@@ -71,7 +71,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - Se `pTransitionContexts` for NULL e `puiTransitionContextCount` não for NULL, a função retornará o número necessário de entradas de contexto em `puiTransitionContextCount`.  
   
-- Se `pTransitionContexts` não for NULL, a função o tratará como uma matriz de estruturas de comprimento `puiTransitionContextCount`. O tamanho da estrutura é fornecido por `uiSizeOfContext`e deve ser o tamanho de [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) ou `CONTEXT` para a arquitetura.  
+- Se `pTransitionContexts` não for NULL, a função o tratará como uma matriz de estruturas de comprimento `puiTransitionContextCount`. O tamanho da estrutura é fornecido por `uiSizeOfContext`e deve ser o tamanho de [SimpleContext](stacktrace-simplecontext-structure.md) ou `CONTEXT` para a arquitetura.  
   
 - `wszTextOut` é gravado no seguinte formato:  
   
@@ -92,13 +92,13 @@ HRESULT CALLBACK _EFN_StackTrace(
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** SOS_Stacktrace. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Depurando funções estáticas globais](debugging-global-static-functions.md)

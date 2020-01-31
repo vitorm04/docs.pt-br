@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-ms.openlocfilehash: 5087e02db3a5a44ab2e2b97523e793e397a0a914
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e17a5d9278a235a5c25bb53c68f15b95d1d9177f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741299"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789590"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle Button
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741299"
   
  Um botão é um objeto com o qual um usuário interage para executar uma ação como os botões **OK** e **Cancelar** em uma caixa de diálogo. O controle de botão é um controle simples para expor porque ele é mapeado para um único comando que o usuário deseja concluir.  
   
- As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de botão. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de botão. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -72,8 +72,8 @@ ms.locfileid: "75741299"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|Se o controle der suporte ao padrão de controle Invoke, ele deverá dar suporte a esse evento.|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Depende|Se o controle der suporte ao padrão de controle Toggle, ele deverá dar suporte a esse evento.|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dependem|Se o controle der suporte ao padrão de controle Invoke, ele deverá dar suporte a esse evento.|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Dependem|Se o controle der suporte ao padrão de controle Toggle, ele deverá dar suporte a esse evento.|  
   
 ## <a name="see-also"></a>Veja também
 

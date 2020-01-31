@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131489"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793342"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>Método ICorDebugManagedCallback2::FunctionRemapOpportunity
 Notifica o depurador de que a execução de código atingiu um ponto de sequência em uma versão mais antiga de uma função editada.  
@@ -54,11 +54,11 @@ HRESULT FunctionRemapOpportunity (
  no O deslocamento da MSIL (Microsoft Intermediate Language) do ponteiro de instrução na versão antiga da função.  
   
 ## <a name="remarks"></a>Comentários  
- Esse retorno de chamada dá ao depurador uma oportunidade de remapear o ponteiro de instrução para seu local apropriado na nova versão da função especificada chamando o método [ICorDebugILFrame2:: RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) . Se o depurador não chamar `RemapFunction` antes de chamar o método [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , o tempo de execução continuará a executar o código antigo e acionará outro `FunctionRemapOpportunity` retorno de chamada no próximo ponto de sequência.  
+ Esse retorno de chamada dá ao depurador uma oportunidade de remapear o ponteiro de instrução para seu local apropriado na nova versão da função especificada chamando o método [ICorDebugILFrame2:: RemapFunction](icordebugilframe2-remapfunction-method.md) . Se o depurador não chamar `RemapFunction` antes de chamar o método [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) , o tempo de execução continuará a executar o código antigo e acionará outro `FunctionRemapOpportunity` retorno de chamada no próximo ponto de sequência.  
   
  Esse retorno de chamada será invocado para cada quadro que está executando uma versão mais antiga da função fornecida até que o depurador retorne S_OK.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -67,7 +67,7 @@ HRESULT FunctionRemapOpportunity (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

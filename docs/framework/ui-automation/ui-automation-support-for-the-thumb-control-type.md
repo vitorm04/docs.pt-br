@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Thumb control type
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
-ms.openlocfilehash: b795a216d0f32b3bd4014c884a061c0c2d4558a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7b7e2a8f65d76548a93b47688f2dbe2661cd6693
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741455"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793971"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Thumb
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741455"
   
  Os controles Thumb fornecem a funcionalidade que permite que um controle seja movido (ou arrastado), como um botão de barra de rolagem ou redimensionado, como um widget de redimensionamento de janela. Os controles Thumb também podem ser implementados como bordas móveis de painéis. Observe que ele não fornece funcionalidade de arrastar e soltar. Os controles Thumb podem receber o foco do mouse, mas geralmente não o foco do teclado. O desenvolvedor de controle deve implementar o controle para que ele atue adequadamente (pode ser arrastado ou redimensionado).  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Thumb. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Thumb, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Thumb. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Thumb, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  

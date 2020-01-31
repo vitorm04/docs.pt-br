@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 49b1769ade8e8b71c146a818523b124984c44ed6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936863"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868884"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
 Percorre os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
@@ -44,12 +44,12 @@ HRESULT DoStackSnapshot(
  Passar NULL em `thread` gera um instantâneo do thread atual. Se um `ThreadID` de um thread diferente for passado, o Common Language Runtime (CLR) suspenderá esse thread, executará o instantâneo e será retomado.  
   
  `callback`  
- no Um ponteiro para a implementação do método [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) , que é chamado pelo CLR para fornecer ao criador de perfil informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados.  
+ no Um ponteiro para a implementação do método [StackSnapshotCallback](stacksnapshotcallback-function.md) , que é chamado pelo CLR para fornecer ao criador de perfil informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados.  
   
  O método `StackSnapshotCallback` é implementado pelo gravador do criador de perfil.  
   
  `infoFlags`  
- no Um valor da enumeração [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) , que especifica a quantidade de dados a serem passados de volta para cada quadro por `StackSnapshotCallback`.  
+ no Um valor da enumeração [COR_PRF_SNAPSHOT_INFO](cor-prf-snapshot-info-enumeration.md) , que especifica a quantidade de dados a serem passados de volta para cada quadro por `StackSnapshotCallback`.  
   
  `clientData`  
  no Um ponteiro para os dados do cliente, que é passado diretamente para a função de retorno de chamada `StackSnapshotCallback`.  
@@ -78,12 +78,12 @@ HRESULT DoStackSnapshot(
 ## <a name="synchronous-stack-walk"></a>Movimentação de pilha síncrona  
  Uma movimentação de pilha síncrona envolve percorrer a pilha do thread atual em resposta a um retorno de chamada. Ele não requer propagação ou suspensão.  
   
- Você faz uma chamada síncrona quando, em resposta ao CLR chamando um dos métodos [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (ou [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) de seu criador de perfil, você chama `DoStackSnapshot` para percorrer a pilha do thread atual. Isso é útil quando você deseja ver qual é a aparência da pilha em uma notificação como [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Basta chamar `DoStackSnapshot` de dentro de seu método `ICorProfilerCallback`, passando NULL nos parâmetros `context` e `thread`.  
+ Você faz uma chamada síncrona quando, em resposta ao CLR chamando um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) (ou [ICorProfilerCallback2](icorprofilercallback2-interface.md)) de seu criador de perfil, você chama `DoStackSnapshot` para percorrer a pilha do thread atual. Isso é útil quando você deseja ver qual é a aparência da pilha em uma notificação como [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md). Basta chamar `DoStackSnapshot` de dentro de seu método `ICorProfilerCallback`, passando NULL nos parâmetros `context` e `thread`.  
   
 ## <a name="asynchronous-stack-walk"></a>Movimentação de pilha assíncrona  
  Uma movimentação de pilha assíncrona envolve a movimentação da pilha de um thread diferente ou a movimentação da pilha do thread atual, não em resposta a um retorno de chamada, mas ao seqüestrar o ponteiro de instrução do thread atual. Uma movimentação assíncrona exigirá uma semente se a parte superior da pilha for um código não gerenciado que não faz parte de uma chamada de plataforma (PInvoke) ou de chamadas COM, mas o código auxiliar no próprio CLR. Por exemplo, o código que faz compilação JIT (just-in-time) ou coleta de lixo é o código auxiliar.  
   
- Você Obtém uma semente suspendendo diretamente o thread-alvo e movimentando sua pilha por conta própria até encontrar o quadro gerenciado superior. Depois que o thread de destino for suspenso, obtenha o contexto de registro atual do thread de destino. Em seguida, determine se o contexto de registro aponta para código não gerenciado chamando [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — se ele retornar um `FunctionID` igual a zero, o quadro será um código não gerenciado. Agora, percorra a pilha até atingir o primeiro quadro gerenciado e, em seguida, calcule o contexto de semente com base no contexto de registro desse quadro.  
+ Você Obtém uma semente suspendendo diretamente o thread-alvo e movimentando sua pilha por conta própria até encontrar o quadro gerenciado superior. Depois que o thread de destino for suspenso, obtenha o contexto de registro atual do thread de destino. Em seguida, determine se o contexto de registro aponta para código não gerenciado chamando [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) — se ele retornar um `FunctionID` igual a zero, o quadro será um código não gerenciado. Agora, percorra a pilha até atingir o primeiro quadro gerenciado e, em seguida, calcule o contexto de semente com base no contexto de registro desse quadro.  
   
  Chame `DoStackSnapshot` com o contexto de semente para iniciar a movimentação de pilha assíncrona. Se você não fornecer uma semente, `DoStackSnapshot` poderá ignorar os quadros gerenciados na parte superior da pilha e, consequentemente, fornecerá uma movimentação de pilha incompleta. Se você fornecer uma semente, ele deverá apontar para código gerado por JIT ou gerador de imagem nativa (NGen. exe); caso contrário, `DoStackSnapshot` retornará o código de falha, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
@@ -91,9 +91,9 @@ HRESULT DoStackSnapshot(
   
 - Quando você suspende threads diretamente, lembre-se de que apenas um thread que nunca executou código gerenciado pode suspender outro thread.  
   
-- Bloquear sempre em seu retorno de chamada [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) até que a movimentação da pilha desse thread seja concluída.  
+- Bloquear sempre em seu retorno de chamada [ICorProfilerCallback:: ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md) até que a movimentação da pilha desse thread seja concluída.  
   
-- Não segure um bloqueio enquanto seu gerador de perfil chamar uma função CLR que possa disparar coleta de lixo. Ou seja, não mantenha um bloqueio se o thread de propriedade puder fazer uma chamada que dispara uma coleta de lixo.  
+- Não mantenha um bloqueio enquanto o criador de perfil chamar uma função CLR que possa disparar uma coleta de lixo. Ou seja, não mantenha um bloqueio se o thread de propriedade puder fazer uma chamada que dispara uma coleta de lixo.  
   
  Também há um risco de deadlock se você chamar `DoStackSnapshot` de um thread que seu criador de perfil criou para que você possa percorrer a pilha de um thread-alvo separado. Na primeira vez que o thread que você criou insere determinados métodos de `ICorProfilerInfo*` (incluindo `DoStackSnapshot`), o CLR executará a inicialização específica do CLR por thread nesse thread. Se o seu criador de perfil tiver suspenso o thread de destino cuja pilha você está tentando percorrer e se esse thread de destino tiver causado um bloqueio necessário para executar essa inicialização por thread, ocorrerá um deadlock. Para evitar esse deadlock, faça uma chamada inicial em `DoStackSnapshot` de seu thread criado pelo criador de perfil para percorrer um thread de destino separado, mas não suspenda o thread-alvo primeiro. Essa chamada inicial garante que a inicialização por thread possa ser concluída sem deadlock. Se `DoStackSnapshot` tiver sucesso e reportar pelo menos um quadro, depois desse ponto, será seguro que esse thread criado pelo criador de perfil suspenda qualquer thread de destino e chame `DoStackSnapshot` para percorrer a pilha do thread-alvo.  
   
@@ -108,5 +108,5 @@ HRESULT DoStackSnapshot(
   
 ## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

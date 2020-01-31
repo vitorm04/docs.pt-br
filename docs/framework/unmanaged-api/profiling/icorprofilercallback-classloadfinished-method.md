@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445122"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866592"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Método ICorProfilerCallback::ClassLoadFinished
 Notifica o criador de perfil que a conclusão do carregamento de uma classe.  
@@ -33,19 +33,22 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `classId`  
- no Identifica a classe que foi carregada.  
-  
- `hrStatus`  
- no Um HRESULT que indica se a classe foi carregada com êxito.  
-  
+## <a name="parameters"></a>Parâmetros
+
+- `classId`
+
+  \[em] identifica a classe que foi carregada.
+
+- `hrStatus`
+
+  \[em] um HRESULT que indica se a classe foi carregada com êxito.
+
 ## <a name="remarks"></a>Comentários  
  O valor de `classId` não é válido para uma solicitação de informações até que o método `ClassLoadFinished` seja chamado.  
   
  Algumas partes do carregamento da classe podem continuar após o retorno de chamada `ClassLoadFinished`. Uma falha HRESULT no `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do carregamento da classe foi bem-sucedida.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -54,7 +57,7 @@ HRESULT ClassLoadFinished(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Método ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Método ClassLoadStarted](icorprofilercallback-classloadstarted-method.md)

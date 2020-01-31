@@ -13,12 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a96385ccc6e7f9089365c19bb8f150015bba81c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090371"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788522"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>Método ICorDebugILFrame3::GetReturnValueForILOffset
 Obtém um objeto "ICorDebugValue" que encapsula o valor de retorno de uma função.  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueForILOffset(
  Um ponteiro para o endereço de um objeto de interface "ICorDebugValue" que fornece informações sobre o valor de retorno de uma chamada de função.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é usado junto com o método [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) para obter o valor de retorno de um método. Ele é particularmente útil no caso de métodos cujos valores de retorno são ignorados, como nos dois exemplos de código a seguir. O primeiro exemplo chama o método <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>, mas ignora o valor de retorno do método.  
+ Esse método é usado junto com o método [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) para obter o valor de retorno de um método. Ele é particularmente útil no caso de métodos cujos valores de retorno são ignorados, como nos dois exemplos de código a seguir. O primeiro exemplo chama o método <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>, mas ignora o valor de retorno do método.  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
@@ -50,18 +50,18 @@ HRESULT GetReturnValueForILOffset(
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- Se você passar o método [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) de um deslocamento IL para um site de chamada de função, ele retornará um ou mais deslocamentos nativos. O depurador pode então definir pontos de interrupção nesses deslocamentos nativos na função. Quando o depurador atinge um dos pontos de interrupção, você pode passar o mesmo deslocamento de IL passado para esse método para obter o valor de retorno. O depurador deve limpar todos os pontos de interrupção definidos por ele.  
+ Se você passar o método [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) de um deslocamento IL para um site de chamada de função, ele retornará um ou mais deslocamentos nativos. O depurador pode então definir pontos de interrupção nesses deslocamentos nativos na função. Quando o depurador atinge um dos pontos de interrupção, você pode passar o mesmo deslocamento de IL passado para esse método para obter o valor de retorno. O depurador deve limpar todos os pontos de interrupção definidos por ele.  
   
 > [!WARNING]
-> O [método ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) e os métodos `ICorDebugILFrame3::GetReturnValueForILOffset` permitem que você obtenha informações de valor de retorno somente para tipos de referência. Não há suporte para a recuperação de informações de valor de retorno de tipos de valor (ou seja, todos os tipos que derivam de <xref:System.ValueType>).  
+> O [método ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) e os métodos `ICorDebugILFrame3::GetReturnValueForILOffset` permitem que você obtenha informações de valor de retorno somente para tipos de referência. Não há suporte para a recuperação de informações de valor de retorno de tipos de valor (ou seja, todos os tipos que derivam de <xref:System.ValueType>).  
   
- O deslocamento de IL especificado pelo parâmetro `ILOffset` deve estar em um site de chamada de função e o depurado deve ser interrompido em um ponto de interrupção definido no deslocamento nativo retornado pelo método [ICorDebugCode3:: GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md) para o mesmo deslocamento de Il. Se o depurador não for interrompido no local correto para o deslocamento IL especificado, a API falhará.  
+ O deslocamento de IL especificado pelo parâmetro `ILOffset` deve estar em um site de chamada de função e o depurado deve ser interrompido em um ponto de interrupção definido no deslocamento nativo retornado pelo método [ICorDebugCode3:: GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md) para o mesmo deslocamento de Il. Se o depurador não for interrompido no local correto para o deslocamento IL especificado, a API falhará.  
   
  Se a chamada de função não retornar um valor, a API falhará.  
   
  O método `ICorDebugILFrame3::GetReturnValueForILOffset` só está disponível em sistemas baseados em x86 e AMD64.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -70,7 +70,7 @@ HRESULT GetReturnValueForILOffset(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Método GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
-- [Interface ICorDebugILFrame3](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [Método GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)
+- [Interface ICorDebugILFrame3](icordebugilframe3-interface.md)

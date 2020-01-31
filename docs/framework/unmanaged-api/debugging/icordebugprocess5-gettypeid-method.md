@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9153503fc114b0e4052265fca7c9399510d687ef
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121259"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792327"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>Método ICorDebugProcess5::GetTypeID
-Converte um endereço de objeto em um identificador [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) .  
+Converte um endereço de objeto em um identificador de [COR_TYPEID](cor-typeid-structure.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ HRESULT GetTypeID(
  no O endereço do objeto.  
   
  `pId`  
- Um ponteiro para o valor [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) que identifica o objeto.  
+ Um ponteiro para o valor de [COR_TYPEID](cor-typeid-structure.md) que identifica o objeto.  
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -54,7 +54,7 @@ HRESULT GetTypeID(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugProcess5](icordebugprocess5-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338709"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742560"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
 O exemplo de representação demonstra como representar o aplicativo chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando você executa o exemplo, as solicitações e respostas da operação são exibidas nas janelas do console do cliente e do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
 > [!NOTE]
-> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar o URI de `http://localhost:8000/ServiceModelSamples` com a camada HTTP. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](https://go.microsoft.com/fwlink/?LinkId=95012) usando a [ferramenta Httpcfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar o URI de `http://localhost:8000/ServiceModelSamples` com a camada HTTP. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](/windows/win32/http/namespace-reservations-registrations-and-routing) usando a [ferramenta Httpcfg. exe](/windows/win32/http/httpcfg-exe).  
   
 > [!NOTE]
 > Em computadores que executam o Windows Server 2003, haverá suporte para a representação apenas se o aplicativo host. exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário**e selecione **representar um cliente após a autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  

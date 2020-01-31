@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-ms.openlocfilehash: d0470f23942c7df868c6cc8fce158f1575c66bec
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 959ca9051a24bb5346687cefd9abc1df033e93c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741142"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794010"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle SplitButton
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741142"
   
  O controle botão de divisão habilita a capacidade de executar uma ação em um controle e expandir o controle para ver uma lista de outras ações possíveis que podem ser executadas.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle SplitButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão de divisão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle SplitButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão de divisão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
  A tabela a seguir descreve a exibição de controle e a exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertence aos controles de botão de divisão e descreve o que pode ser contido em cada exibição. Para obter mais informações sobre a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md).  

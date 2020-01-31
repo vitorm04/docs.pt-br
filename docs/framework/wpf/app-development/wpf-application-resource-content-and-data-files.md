@@ -1,5 +1,5 @@
 ---
-title: Arquivos de recurso, conteúdo e dados do aplicativo WPF
+title: Recurso de aplicativo, conteúdo e arquivos de dados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: ee636c49da64ad07ec5df2f11171b7f9aed713d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636257"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743359"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm dados não executáveis, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. O Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados de aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  

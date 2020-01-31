@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445861"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866063"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>Método ICorProfilerCallback::ObjectsAllocatedByClass
 Notifica o criador de perfil sobre o número de instâncias de cada classe especificada que foram criadas desde a coleta de lixo mais recente.  
@@ -47,11 +47,11 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>Comentários  
  As matrizes `classIds` e `cObjects` são matrizes paralelas. Por exemplo, `classIds[i]` e `cObjects[i]` referenciam a mesma classe. Se nenhuma instância de uma classe tiver sido criada desde a coleta de lixo anterior, a classe será omitida. O retorno de chamada `ObjectsAllocatedByClass` não relatará objetos alocados na heap de objeto grande.  
   
- Os números relatados por `ObjectsAllocatedByClass` são apenas estimativas. Para contagens exatas, use [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Os números relatados por `ObjectsAllocatedByClass` são apenas estimativas. Para contagens exatas, use [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md).  
   
  A matriz de `classIds` pode conter uma ou mais entradas nulas se a matriz de `cObjects` correspondente tiver tipos que estão descarregando.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

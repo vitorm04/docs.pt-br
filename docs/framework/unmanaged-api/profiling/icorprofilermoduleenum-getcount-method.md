@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0a4a5e0-4689-474b-b0f4-37ca0639c918
 topic_type:
 - apiref
-ms.openlocfilehash: 9aaf1a282435e3f52b2c2d8f3d17254b877e61cc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 772a7c08c934fda59a2764e1fbe22d3d2b08a620
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442773"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861496"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>Método ICorProfilerModuleEnum::GetCount
 Obtém o número de módulos gerenciados que foram carregados no aplicativo.  
@@ -35,7 +35,7 @@ HRESULT GetCount([out] ULONG * pcelt);
  `celt`  
  fora O número de módulos de tempo de execução na coleção.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -44,7 +44,7 @@ HRESULT GetCount([out] ULONG * pcelt);
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

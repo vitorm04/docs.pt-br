@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427430"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866876"
 ---
 # <a name="functiontailcall2-function"></a>Função FunctionTailcall2
 Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função e fornece informações sobre o registro de ativação.  
@@ -34,20 +34,24 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `funcId`  
- no O identificador da função atualmente em execução que está prestes a fazer uma chamada final.  
+## <a name="parameters"></a>Parâmetros
+
+- `funcId`
+
+  \[em] o identificador da função atualmente em execução que está prestes a fazer uma chamada final.
+
+- `clientData`
+
+  \[in] o identificador da função remapeada, que o criador de perfil especificou anteriormente via [FunctionIDMapper](functionidmapper-function.md), da função atualmente em execução que está prestes a fazer uma chamada final.
   
- `clientData`  
- no O identificador da função remapeada, que o criador de perfil especificou anteriormente via [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md), da função atualmente em execução que está prestes a fazer uma chamada final.  
-  
- `func`  
- no Um valor `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.  
-  
- O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
+- `func`
+
+  \[em] um valor de `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.
+
+  O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .
+
 ## <a name="remarks"></a>Comentários  
- A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez a chamada final. Isso significa que um retorno de chamada [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) não será emitido para uma função que seja o destino de uma chamada tail.  
+ A função de destino da chamada tail usará o quadro de pilhas atual e retornará diretamente para o chamador da função que fez a chamada final. Isso significa que um retorno de chamada [FunctionLeave2](functionleave2-function.md) não será emitido para uma função que seja o destino de uma chamada tail.  
   
  O valor do parâmetro `func` não é válido depois que a função `FunctionTailcall2` retorna, pois o valor pode ser alterado ou destruído.  
   
@@ -63,7 +67,7 @@ void __stdcall FunctionTailcall2 (
   
  Além disso, a função `FunctionTailcall2` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
@@ -72,9 +76,9 @@ void __stdcall FunctionTailcall2 (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Função FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [Função FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [Método SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Função FunctionEnter2](functionenter2-function.md)
+- [Função FunctionLeave2](functionleave2-function.md)
+- [Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Criando perfil de funções estáticas globais](profiling-global-static-functions.md)

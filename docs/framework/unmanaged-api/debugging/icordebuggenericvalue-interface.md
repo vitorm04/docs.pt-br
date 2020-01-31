@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 312b8b005998da44feb5ae24ab4a0a17bb948a3f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138564"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794464"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Interface ICorDebugGenericValue
 
 Uma subclasse de "ICorDebugValue" que se aplica a todos os valores. Essa interface fornece métodos Get e Set para o valor.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Copia o valor no buffer especificado.|  
-|[Método SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Copia um novo valor do buffer especificado.|  
+|[Método GetValue](icordebuggenericvalue-getvalue-method.md)|Copia o valor no buffer especificado.|  
+|[Método SetValue](icordebuggenericvalue-setvalue-method.md)|Copia um novo valor do buffer especificado.|  
   
 ## <a name="remarks"></a>Comentários  
  `ICorDebugGenericValue` é uma subinterface porque ela não é remota.  
@@ -42,7 +42,7 @@ Uma subclasse de "ICorDebugValue" que se aplica a todos os valores. Essa interfa
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -51,6 +51,6 @@ Uma subclasse de "ICorDebugValue" que se aplica a todos os valores. Essa interfa
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

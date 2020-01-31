@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dcd162aec12dc75585f1828cffdd4cdbedcf9988
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433185"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868654"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Método ICorProfilerInfo2::GetFunctionInfo2
 Obtém a classe pai, o token de metadados e a `ClassID` de cada argumento de tipo, se presente, de uma função.  
@@ -65,7 +65,7 @@ HRESULT GetFunctionInfo2(
  fora Uma matriz de valores `ClassID`, cada qual é a ID de um argumento de tipo da função. Quando o método retornar, `typeArgs` conterá alguns ou todos os valores de `ClassID`.  
   
 ## <a name="remarks"></a>Comentários  
- O código do criador de perfil pode chamar [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de [metadados](../../../../docs/framework/unmanaged-api/metadata/index.md) para um determinado módulo. O token de metadados que é retornado para o local referenciado por `pToken` pode ser usado para acessar os metadados para a função.  
+ O código do criador de perfil pode chamar [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de [metadados](../../../../docs/framework/unmanaged-api/metadata/index.md) para um determinado módulo. O token de metadados que é retornado para o local referenciado por `pToken` pode ser usado para acessar os metadados para a função.  
   
  Os argumentos ID de classe e tipo retornados por meio dos parâmetros `pClassId` e `typeArgs` dependem do valor que é passado no parâmetro `frameInfo`, conforme mostrado na tabela a seguir.  
   
@@ -79,7 +79,7 @@ HRESULT GetFunctionInfo2(
   
  Como alternativa, você pode primeiro chamar `GetFunctionInfo2` com um buffer de `pcTypeArgs` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcTypeArgs` dividido pelo tamanho de um valor de `ClassID` e chamar `GetFunctionInfo2` novamente.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -88,9 +88,9 @@ HRESULT GetFunctionInfo2(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

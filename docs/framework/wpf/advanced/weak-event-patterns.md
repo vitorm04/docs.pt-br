@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458488"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870734"
 ---
 # <a name="weak-event-patterns"></a>Padrões de evento fraco
 Em aplicativos, é possível que manipuladores que estão anexados a origens de eventos não sejam destruídos em coordenação com o objeto de ouvinte que anexou o manipulador à origem. Essa situação pode levar a vazamentos de memória. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] apresenta um padrão de design que pode ser usado para resolver esse problema, fornecendo uma classe de gerenciamento dedicada para determinados eventos e implementando uma interface em ouvintes para o evento. Esse padrão de design é conhecido como o *padrão de evento fraco*.  
@@ -36,7 +36,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
 |Usar uma classe existente de gerenciamento de evento fraco|Se o evento que você deseja assinar tiver um <xref:System.Windows.WeakEventManager>correspondente, use o Gerenciador de eventos fraco existente. Para obter uma lista de gerenciadores de eventos fracos que estão incluídos no WPF, consulte a hierarquia de herança na classe <xref:System.Windows.WeakEventManager>. Como os gerenciadores de eventos fracos inclusos são limitados, você provavelmente precisará escolher uma das outras abordagens.|  
 |Usar uma classe de gerenciador de evento fraco genérico|Use um <xref:System.Windows.WeakEventManager%602> genérico quando um <xref:System.Windows.WeakEventManager> existente não estiver disponível, você deseja uma maneira fácil de implementar e não está preocupado com a eficiência. O <xref:System.Windows.WeakEventManager%602> genérico é menos eficiente do que um Gerenciador de eventos fraco existente ou personalizado. Por exemplo, a classe genérica faz mais reflexão para descobrir o evento que recebeu o nome do evento. Além disso, o código para registrar o evento usando o <xref:System.Windows.WeakEventManager%602> genérico é mais detalhado do que usar um <xref:System.Windows.WeakEventManager>personalizado ou existente.|  
 |Criar uma classe de gerenciador de evento fraco personalizado|Crie um <xref:System.Windows.WeakEventManager> personalizado quando um <xref:System.Windows.WeakEventManager> existente não estiver disponível e você quiser a melhor eficiência. Usar um <xref:System.Windows.WeakEventManager> personalizado para assinar um evento será mais eficiente, mas você incorrerá no custo de escrever mais código no início.|  
-|Usar um Gerenciador de eventos fraco de terceiros|O NuGet tem [vários gerenciadores de eventos fracos](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) e muitas estruturas do WPF também dão suporte ao padrão (por exemplo, consulte a [documentação do Prism sobre a assinatura de evento menos rígida](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)).|
+|Usar um Gerenciador de eventos fraco de terceiros|O NuGet tem [vários gerenciadores de eventos fracos](https://www.nuget.org/packages?q=weak+event+manager&prerel=false) e muitas estruturas do WPF também dão suporte ao padrão (por exemplo, consulte a [documentação do Prism sobre a assinatura de evento menos rígida](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)).|
 
  As seções a seguir descrevem como implementar o padrão de evento fraco.  Para fins desta discussão, o evento que deve ser assinado tem as seguintes características.  
   
@@ -130,7 +130,7 @@ Em aplicativos, é possível que manipuladores que estão anexados a origens de 
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>

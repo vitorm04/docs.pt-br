@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131833"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791893"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>Método ICorDebugStackWalk::GetFrame
-Obtém o quadro atual no objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
+Obtém o quadro atual no objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +35,23 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
  `pFrame`  
  no Um ponteiro para o endereço do objeto frame criado que representa o quadro atual na pilha.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O tempo de execução retornou com êxito o quadro atual.|  
-|E_FAIL|O quadro atual não foi retornado.|  
+|{1&gt;E_FAIL&lt;1}|O quadro atual não foi retornado.|  
 |S_FALSE|O quadro atual é um quadro de ativação nativo.|  
-|E_INVALIDARG|`pFrame` é nulo.|  
+|{1&gt;E_INVALIDARG&lt;1}|`pFrame` é nulo.|  
 |CORDBG_E_PAST_END_OF_STACK|O ponteiro de quadro já está no final da pilha; Portanto, nenhum quadro adicional pode ser acessado.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- `ICorDebugStackWalk` retorna apenas os quadros de pilhas reais. Use o método [ICorDebugThread3:: GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md) para retornar quadros internos. (Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.)  
+ `ICorDebugStackWalk` retorna apenas os quadros de pilhas reais. Use o método [ICorDebugThread3:: GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md) para retornar quadros internos. (Os quadros internos são estruturas de dados enviadas por push para a pilha pelo tempo de execução para armazenar dados temporários.)  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -60,8 +60,8 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugStackWalk](icordebugstackwalk-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

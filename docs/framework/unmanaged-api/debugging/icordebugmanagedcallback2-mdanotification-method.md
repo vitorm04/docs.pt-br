@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131456"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793293"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>Método ICorDebugManagedCallback2::MDANotification
 Fornece uma notificação de que a execução de código encontrou um MDA (Assistente de depuração gerenciada) no aplicativo que está sendo depurado.  
@@ -49,10 +49,10 @@ HRESULT MDANotification(
  Você deve obter a ID do thread do sistema operacional (SO) do próprio objeto MDA.  
   
  `pMDA`  
- no Um ponteiro para uma interface [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) que expõe as informações de MDA.  
+ no Um ponteiro para uma interface [ICorDebugMDA](icordebugmda-interface.md) que expõe as informações de MDA.  
   
 ## <a name="remarks"></a>Comentários  
- Um MDA é um aviso heurístico e não requer nenhuma ação de depurador explícita, exceto para chamar [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
+ Um MDA é um aviso heurístico e não requer nenhuma ação de depurador explícita, exceto para chamar [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para retomar a execução do aplicativo que está sendo depurado.  
   
  O Common Language Runtime (CLR) pode determinar quais MDAs são disparadas e quais dados estão em qualquer MDA determinado em qualquer ponto. Portanto, os depuradores não devem criar nenhuma funcionalidade que exija padrões de MDA específicos.  
   
@@ -60,7 +60,7 @@ HRESULT MDANotification(
   
  Um depurador deve liberar a referência a uma instância de `ICorDebugMDA` imediatamente após retornar do `MDANotification` de retorno de chamada, para permitir que o CLR Recicle a memória consumida por um MDA. A liberação da instância pode melhorar o desempenho se muitas MDAs estiverem sendo acionadas.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -69,8 +69,8 @@ HRESULT MDANotification(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

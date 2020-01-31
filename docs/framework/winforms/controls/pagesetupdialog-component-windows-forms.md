@@ -1,5 +1,5 @@
 ---
-title: Componente PageSetupDialog (Windows Forms)
+title: Componente PageSetupDialog
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], page setup
@@ -19,33 +19,31 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012692"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868064"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>Componente PageSetupDialog (Windows Forms)
-Os formulários do Windows <xref:System.Windows.Forms.PageSetupDialog> componente é uma caixa de diálogo pré-configurada usada para definir os detalhes da página para impressão em aplicativos baseados no Windows. Use-o dentro de seu aplicativo com base em Windows, como uma solução simples para os usuários para definir preferências de página em vez de configurar sua própria caixa de diálogo. Você pode habilitar os usuários definam a borda e ajustes de margem, cabeçalhos e rodapés de páginas e retrato versus orientação paisagem. Com base nas caixas de diálogo padrão do Windows, crie aplicativos cuja funcionalidade básica é imediatamente familiar aos usuários.  
+O componente Windows Forms <xref:System.Windows.Forms.PageSetupDialog> é uma caixa de diálogo pré-configurada usada para definir detalhes da página para impressão em aplicativos baseados no Windows. Use-o em seu aplicativo baseado no Windows como uma solução simples para que os usuários definam preferências de página no lugar de configurar sua própria caixa de diálogo. Você pode permitir que os usuários definam ajustes de borda e margem, cabeçalhos e rodapés e orientação Retrato versus paisagem. Com base nas caixas de diálogo padrão do Windows, crie aplicativos cuja funcionalidade básica é imediatamente familiar aos usuários.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do componente PageSetupDialog](pagesetupdialog-component-overview-windows-forms.md)  
- Apresenta os conceitos gerais do <xref:System.Windows.Forms.PageSetupDialog> componente, que você pode usar para exibir uma caixa de diálogo pré-configurada que os usuários podem usar para manipular as configurações de página.  
+ Apresenta os conceitos gerais do componente <xref:System.Windows.Forms.PageSetupDialog>, que você pode usar para exibir uma caixa de diálogo pré-configurada que os usuários podem usar para manipular as configurações de página.  
   
- [Como: Determinar as propriedades de página usando o componente PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- Explica como definir propriedades de página por meio de uma instância da <xref:System.Windows.Forms.PageSetupDialog> componente em tempo de execução.  
+ [Como determinar propriedades de página usando o componente PageSetupDialog](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ Explica como definir propriedades de página usando uma instância do componente <xref:System.Windows.Forms.PageSetupDialog> em tempo de execução.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.PageSetupDialog>  
  Fornece informações de referência sobre a classe e seus membros.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  [Controles e componentes da caixa de diálogo](dialog-box-controls-and-components-windows-forms.md)  
- Descreve um conjunto de controles e componentes que permitem aos usuários executar interações padrão com o aplicativo ou sistema.  
-  
- [Caixas de diálogo de código essencial para o Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Discute os controles e componentes da caixa de diálogo dos Windows Forms e o código necessário para executar suas funções básicas. (Artigo técnico do MSDN Online Library)
+ Descreve um conjunto de controles e componentes que permitem que os usuários executem interações padrão com o aplicativo ou o sistema.
+ 

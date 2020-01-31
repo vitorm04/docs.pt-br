@@ -2,15 +2,15 @@
 title: Método ICorDebugProcess6::ProcessStateChanged
 ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
-ms.openlocfilehash: 3927e57883ebe282b262cb03ececc3b2cd96fd46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6665df550a2d07a3fa84c3f2b6bf07f459cd713
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123424"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792212"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>Método ICorDebugProcess6::ProcessStateChanged
-Notifica o [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) de que o processo está em execução.  
+Notifica o [ICorDebug](icordebug-interface.md) de que o processo está em execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -20,15 +20,15 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
 ## <a name="parameters"></a>Parâmetros  
  `change`  
- no Um membro da enumeração [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md)  
+ no Um membro da enumeração [ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)  
   
 ## <a name="remarks"></a>Comentários  
- O depurador chama esse método para notificar [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) que o processo está em execução.  
+ O depurador chama esse método para notificar [ICorDebug](icordebug-interface.md) que o processo está em execução.  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -37,7 +37,7 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugProcess6](icordebugprocess6-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

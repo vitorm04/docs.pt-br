@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137451"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781525"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>Método ICorDebugManagedCallback2::Exception
 Notifica o depurador de que uma pesquisa de um manipulador de exceção foi iniciada.  
@@ -55,7 +55,7 @@ HRESULT Exception (
  no Um valor da enumeração CorDebugExceptionCallbackType que especifica o tipo deste retorno de chamada de exceção.  
   
  `dwFlags`  
- no Um valor da enumeração [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção  
+ no Um valor da enumeração [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) que especifica informações adicionais sobre a exceção  
   
 ## <a name="remarks"></a>Comentários  
  O retorno de chamada `Exception` é chamado em vários pontos durante a fase de pesquisa do processo de tratamento de exceção. Ou seja, ele pode ser chamado mais de uma vez ao desenrolar uma exceção.  
@@ -71,7 +71,7 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|O quadro que contém o manipulador catch.|O deslocamento da MSIL (Microsoft Intermediate Language) do início do manipulador catch.|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|Indefinido.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -80,7 +80,7 @@ HRESULT Exception (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

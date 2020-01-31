@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740307"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794291"
 ---
 # <a name="printing-overview"></a>Visão geral da impressão
-Com o Microsoft .NET Framework, os desenvolvedores de aplicativos que usam o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de APIs de gerenciamento do sistema de impressão e impressão. Com o Windows Vista, alguns desses aprimoramentos do sistema de impressão também estão disponíveis para desenvolvedores que criam [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplicativos e desenvolvedores usando código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo XPS (XML Paper Specification) e o caminho de impressão XPS.  
+Com o Microsoft .NET Framework, os desenvolvedores de aplicativos que usam o Windows Presentation Foundation (WPF) têm um novo conjunto avançado de APIs de gerenciamento do sistema de impressão e impressão. Com o Windows Vista, alguns desses aprimoramentos do sistema de impressão também estão disponíveis para desenvolvedores que criam Windows Forms aplicativos e desenvolvedores usando código não gerenciado. No núcleo dessa nova funcionalidade está o novo formato de arquivo XPS (XML Paper Specification) e o caminho de impressão XPS.  
   
  Este tópico contém as seções a seguir.  
   
@@ -143,7 +143,7 @@ Para aplicativos que não exigem suporte ou funcionalidade XPS, o caminho de imp
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Tópicos explicativos](printing-how-to-topics.md)
+- [Tópicos de instruções](printing-how-to-topics.md)
 - [Documentos no WPF](documents-in-wpf.md)
 - [Documentos XPS](/windows/desktop/printdocs/documents)
 - [Serialização e armazenamento de documentos](document-serialization-and-storage.md)

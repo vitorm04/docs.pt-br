@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: 57ad0bd3ed76376421d22a84c0863d36ec2707c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a9ca2f4587c4881820e1aa3d4134f90ce47d557
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430275"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865890"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>Método ICorProfilerCallback::RuntimeThreadResumed
 Notifica o criador de perfil de que o thread especificado foi retomado após ser suspenso.  
@@ -36,7 +36,7 @@ HRESULT RuntimeThreadResumed(
  `threadId`  
  no A ID do thread que foi retomado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -45,7 +45,7 @@ HRESULT RuntimeThreadResumed(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Método RuntimeThreadSuspended](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Método RuntimeThreadSuspended](icorprofilercallback-runtimethreadsuspended-method.md)

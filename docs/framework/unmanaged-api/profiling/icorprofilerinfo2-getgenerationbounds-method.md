@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 11157bca2d0f0be2b9b9bc36c382188a43db22a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3cdc185408576f5679daacef4dde438d66e490ff
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433118"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862744"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>Método ICorProfilerInfo2::GetGenerationBounds
 Obtém as regiões de memória, que são segmentos do heap, que compõem as várias gerações de coleta de lixo.  
@@ -42,7 +42,7 @@ HRESULT GetGenerationBounds(
  fora Um ponteiro para um inteiro que especifica o número total de intervalos, alguns ou todos os quais serão retornados na matriz de `ranges`.  
   
  `ranges`  
- fora Uma matriz de estruturas [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) , cada uma delas descreve um intervalo (ou seja, bloco) de memória na geração que está passando pela coleta de lixo.  
+ fora Uma matriz de estruturas [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md) , cada uma delas descreve um intervalo (ou seja, bloco) de memória na geração que está passando pela coleta de lixo.  
   
 ## <a name="remarks"></a>Comentários  
  O método `GetGenerationBounds` pode ser chamado de qualquer retorno de chamada do criador de perfil, desde que a coleta de lixo não esteja em andamento.
@@ -53,7 +53,7 @@ HRESULT GetGenerationBounds(
   
  Essa função usa buffers alocados pelo chamador.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -62,9 +62,9 @@ HRESULT GetGenerationBounds(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 553a92812f009ca1033f1bdcda0ea3722c5f01e3
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937829"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790484"
 ---
 # <a name="ilcodekind-enumeration"></a>Enumeração ILCodeKind
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -41,7 +41,7 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|O depurador tem acesso a informações de instrumentação ReJIT.|  
   
 ## <a name="remarks"></a>Comentários  
- Um membro da enumeração `ILCodeKind` pode ser passado para os métodos [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) e [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) para determinar se o depurador pode acessar variáveis adicionadas na instrumentação ReJIT do Profiler e ao método [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) para determinar se o depurador pode acessar o Il instrumentado.  
+ Um membro da enumeração `ILCodeKind` pode ser passado para os métodos [EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md) e [GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md) para determinar se o depurador pode acessar variáveis adicionadas na instrumentação ReJIT do Profiler e ao método [GetCodeEx](icordebugilframe4-getcodeex-method.md) para determinar se o depurador pode acessar o Il instrumentado.  
   
 ## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,6 +54,6 @@ typedef enum ILCodeKind {
   
 ## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Interface ICorDebugILFrame4](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [Declarando enumerações](debugging-enumerations.md)
+- [Interface ICorDebugILFrame4](icordebugilframe4-interface.md)
 - [ReJIT: um guia de instruções](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449674"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862302"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>Método ICorProfilerInfo3::GetModuleInfo2
 Dada uma ID de módulo, retorna o nome do arquivo do módulo, a ID do assembly pai do módulo e um bitmask que descreve as propriedades do módulo.  
@@ -59,18 +59,18 @@ HRESULT GetModuleInfo2(
  fora Um ponteiro para a ID do assembly pai do módulo.  
   
  `pdwModuleFlags`  
- fora Uma bitmask de valores da enumeração [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) que especificam as propriedades do módulo.  
+ fora Uma bitmask de valores da enumeração [COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md) que especificam as propriedades do módulo.  
   
 ## <a name="remarks"></a>Comentários  
  Para módulos dinâmicos, o parâmetro `szName` é o nome de metadados do módulo e o endereço base é 0 (zero). O nome dos metadados é o valor na coluna nome da tabela de módulos dentro dos metadados. Isso também é exposto como a propriedade <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> para código gerenciado e como o parâmetro `szName` do método [IMetaDataImport:: GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) para o código de cliente de metadados não gerenciado.  
   
- Embora o método `GetModuleInfo2` possa ser chamado assim que a ID do módulo existir, a ID do assembly pai não estará disponível até que o criador de perfil receba o retorno de chamada [ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) .  
+ Embora o método `GetModuleInfo2` possa ser chamado assim que a ID do módulo existir, a ID do assembly pai não estará disponível até que o criador de perfil receba o retorno de chamada [ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md) .  
   
  Quando `GetModuleInfo2` retorna, você deve verificar se o buffer de `szName` era grande o suficiente para conter o nome de arquivo completo do módulo. Para fazer isso, compare o valor que `pcchName` aponta com o valor do parâmetro `cchName`. Se `pcchName` apontar para um valor maior que `cchName`, aloque um buffer de `szName` maior, atualize `cchName` com o tamanho novo, maior e chame `GetModuleInfo2` novamente.  
   
  Como alternativa, você pode primeiro chamar `GetModuleInfo2` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetModuleInfo2` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -79,8 +79,8 @@ HRESULT GetModuleInfo2(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

@@ -1,5 +1,5 @@
 ---
-title: Método IXCLRDataMethodDefinition::EndEnumInstances
+title: 'Método IXCLRDataMethodDefinition:: EndEnumInstances'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EndEnumInstances Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756310"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790457"
 ---
-# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Método IXCLRDataMethodDefinition::EndEnumInstances
+# <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>Método IXCLRDataMethodDefinition:: EndEnumInstances
 
-Libera os recursos usados pelos iteradores internos usados durante a enumeração de instância.
+Libera os recursos usados por iteradores internos usados durante a enumeração da instância.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,20 +39,20 @@ HRESULT EndEnumInstances(
 ## <a name="parameters"></a>Parâmetros
 
 `handle`\
-[out] Um identificador para enumerar as instâncias.
+fora Um identificador para enumerar as instâncias.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido é parte do `IXCLRDataMethodDefinition` de interface e corresponde ao slot quinto da tabela de método virtual.
+O método fornecido faz parte da interface de `IXCLRDataMethodDefinition` e corresponde ao quinto slot da tabela de métodos virtuais.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Interface IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
+- [Depuração](index.md)
+- [Interface IXCLRDataMethodDefinition](ixclrdatamethoddefinition-interface.md)

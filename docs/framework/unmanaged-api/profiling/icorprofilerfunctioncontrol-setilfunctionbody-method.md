@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: f6e2cfe47bdd212e39549544b06bf5b11033a956
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bebc0cf6ac7912ea3a6641e0c729b759e865dac3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429890"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864655"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>Método ICorProfilerFunctionControl::SetILFunctionBody
 Substitui o corpo CIL (Common Intermediate Language) do método.  
@@ -40,7 +40,7 @@ HRESULT SetILFunctionBody(
  `pbNewILMethodHeader`  
  [in] Um ponteiro para o novo cabeçalho CIL.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir.  
   
 |HRESULT|Descrição|  
@@ -48,9 +48,9 @@ HRESULT SetILFunctionBody(
 |S_OK|A substituição foi bem-sucedida.|  
   
 ## <a name="remarks"></a>Comentários  
- Ao contrário do método [ICorProfilerInfo:: SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) , o método `SetILFunctionBody` gerencia a memória necessária para o novo corpo cil. Isso significa que o corpo de CIL fornecido pelo criador de perfil não precisa ser alocado usando a interface [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) ou alocado em um intervalo específico. Ele pode ser alocado em qualquer heap. O criador de perfil pode liberar a memória usada para o corpo de CIL depois que `SetILFunctionBody` retorna.  
+ Ao contrário do método [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) , o método `SetILFunctionBody` gerencia a memória necessária para o novo corpo cil. Isso significa que o corpo de CIL fornecido pelo criador de perfil não precisa ser alocado usando a interface [IMethodMalloc](imethodmalloc-interface.md) ou alocado em um intervalo específico. Ele pode ser alocado em qualquer heap. O criador de perfil pode liberar a memória usada para o corpo de CIL depois que `SetILFunctionBody` retorna.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -59,6 +59,6 @@ HRESULT SetILFunctionBody(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [Interface ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)

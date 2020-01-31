@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: ee44c89ec30edcb6233081f0757fa0f7b7191178
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ebd1f2780ab25e01bcb384b38220f414d90292e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449650"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868532"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>Método ICorProfilerInfo3::GetThreadStaticAddress2
 Obtém o endereço do campo de thread estático especificado que está no escopo do thread e do domínio do aplicativo especificados.  
@@ -61,9 +61,9 @@ HRESULT GetThreadStaticAddress2(
   
  Antes de o construtor de classe de uma classe ser concluído, `GetThreadStaticAddress2` retornará CORPROF_E_DATAINCOMPLETE para todos os seus campos estáticos, embora alguns dos campos estáticos possam já estar inicializados e a raiz dos objetos de coleta de lixo.  
   
- O método [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) é semelhante ao método `GetThreadStaticAddress2`, mas não aceita um argumento de domínio de aplicativo.  
+ O método [ICorProfilerInfo2:: GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md) é semelhante ao método `GetThreadStaticAddress2`, mas não aceita um argumento de domínio de aplicativo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -72,8 +72,8 @@ HRESULT GetThreadStaticAddress2(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

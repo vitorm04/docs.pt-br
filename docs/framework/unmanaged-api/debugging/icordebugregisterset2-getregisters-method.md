@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131350"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792058"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>Método ICorDebugRegisterSet2::GetRegisters
 Obtém o valor de cada registro (para a plataforma em que o código está em execução no momento) que é especificado pela máscara de bits fornecida.  
@@ -56,9 +56,9 @@ HRESULT GetRegisters (
   
  O método `ICorDebugRegisterSet2::GetRegisters` é necessário para plataformas que têm mais de 64 registros. Por exemplo, IA64 tem 128 registros de uso geral e 128 registros de ponto flutuante, portanto, você precisa de mais de 64 bits na máscara de bits.  
   
- Se você não tiver mais de 64 registros, como é o caso em plataformas como o x86, o método `GetRegisters`, na verdade, converte os bytes na matriz de bytes de `mask` em um `ULONG64` e, em seguida, chama o método [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) , que usa a máscara de `ULONG64`.  
+ Se você não tiver mais de 64 registros, como é o caso em plataformas como o x86, o método `GetRegisters`, na verdade, converte os bytes na matriz de bytes de `mask` em um `ULONG64` e, em seguida, chama o método [ICorDebugRegisterSet:: GetRegisters](icordebugregisterset-getregisters-method.md) , que usa a máscara de `ULONG64`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -67,7 +67,7 @@ HRESULT GetRegisters (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [Interface ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Interface ICorDebugRegisterSet2](icordebugregisterset2-interface.md)
+- [Interface ICorDebugRegisterSet](icordebugregisterset-interface.md)

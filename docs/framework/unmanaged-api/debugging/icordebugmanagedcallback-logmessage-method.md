@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4306c4ae44b0ae1ade2bf374981492fa1a4df76f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130701"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788374"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>Método ICorDebugManagedCallback::LogMessage
 Notifica o depurador de que um thread gerenciado Common Language Runtime (CLR) chamou um método na classe <xref:System.Diagnostics.EventLog> para registrar um evento.  
@@ -45,7 +45,7 @@ HRESULT LogMessage (
  no Um ponteiro para um objeto ICorDebugThread que representa o thread gerenciado.  
   
  `lLevel`  
- no Um valor da enumeração [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md) que indica o nível de severidade da mensagem descritiva que foi gravada no log de eventos.  
+ no Um valor da enumeração [LoggingLevelEnum](logginglevelenum-enumeration.md) que indica o nível de severidade da mensagem descritiva que foi gravada no log de eventos.  
   
  `pLogSwitchName`  
  no Um ponteiro para o nome da opção de rastreamento.  
@@ -53,7 +53,7 @@ HRESULT LogMessage (
  `pMessage`  
  no Um ponteiro para a mensagem que foi gravada no log de eventos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -62,6 +62,6 @@ HRESULT LogMessage (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

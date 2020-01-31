@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetCodeRange'
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138914"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791647"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>Método ICorDebugSymbolProvider:: GetCodeRange
 Obtém o endereço inicial e o tamanho do método de acordo com um endereço virtual relativo (RVA) em um método.  
@@ -37,7 +37,7 @@ HRESULT GetCodeRange(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetCodeRange(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

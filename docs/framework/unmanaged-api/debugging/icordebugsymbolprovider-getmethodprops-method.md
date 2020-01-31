@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetMethodProps'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 58642d0a9b1cfe1fd969f39fa7e5ab22a8dbfa05
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138824"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791579"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>Método ICorDebugSymbolProvider:: GetMethodProps
 Retorna informações sobre as propriedades do método, como o token de metadados do método e informações sobre seus parâmetros genéricos, considerando um endereço virtual relativo (RVA) nesse método.  
@@ -50,7 +50,7 @@ HRESULT GetMethodProps(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -59,8 +59,8 @@ HRESULT GetMethodProps(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Método GetTypeProps](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
-- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Método GetTypeProps](icordebugsymbolprovider-gettypeprops-method.md)
+- [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

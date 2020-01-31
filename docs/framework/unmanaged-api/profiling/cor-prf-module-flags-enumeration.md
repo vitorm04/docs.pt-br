@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447327"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867107"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>Enumeração COR_PRF_MODULE_FLAGS
 Especifica as propriedades de um módulo.  
@@ -52,9 +52,9 @@ typedef enum
 |COR_PRF_MODULE_WINDOWS_RUNTIME|O sinalizador de tipo de conteúdo Windows Runtime é definido nos metadados para o assembly do módulo. Esse é o caso para todos os módulos de metadados do Windows (. winmd).|  
   
 ## <a name="remarks"></a>Comentários  
- Bits de COR_PRF_MODULE_FLAGS são retornados para o criador de perfil no parâmetro de saída `pdwModuleFlags` do método [ICorProfilerInfo3:: GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) . Algumas combinações de dois ou mais sinalizadores são possíveis, mas nem todas as combinações são possíveis.  
+ Bits de COR_PRF_MODULE_FLAGS são retornados para o criador de perfil no parâmetro de saída `pdwModuleFlags` do método [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) . Algumas combinações de dois ou mais sinalizadores são possíveis, mas nem todas as combinações são possíveis.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -63,6 +63,6 @@ typedef enum
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Criando perfil de enumerações](profiling-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9295ea8b22f72529f55cbe13f6a79a0aa34d2fa0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433292"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868757"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>Método ICorProfilerInfo2::GetCodeInfo2
 Obtém as extensões do código nativo associado ao `FunctionID`especificado.  
@@ -44,7 +44,7 @@ HRESULT GetCodeInfo2(
  no O tamanho da matriz de `codeInfos`.  
   
  `pcCodeInfos`  
- fora Um ponteiro para o número total de estruturas de [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) disponíveis.  
+ fora Um ponteiro para o número total de estruturas de [COR_PRF_CODE_INFO](cor-prf-code-info-structure.md) disponíveis.  
   
  `codeInfos`  
  fora Um buffer fornecido pelo chamador. Depois que o método retorna, ele contém uma matriz de estruturas `COR_PRF_CODE_INFO`, cada uma delas descreve um bloco de código nativo.  
@@ -56,7 +56,7 @@ HRESULT GetCodeInfo2(
   
  Como alternativa, você pode primeiro chamar `GetCodeInfo2` com um buffer de `codeInfos` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer de `codeInfos` para o valor retornado em `pcCodeInfos`, multiplicado pelo tamanho de uma estrutura de `COR_PRF_CODE_INFO` e chamar `GetCodeInfo2` novamente.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -65,9 +65,9 @@ HRESULT GetCodeInfo2(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Método GetCodeInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Método GetCodeInfo3](icorprofilerinfo4-getcodeinfo3-method.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

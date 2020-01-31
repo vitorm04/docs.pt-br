@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 67d4972ee38a54d43b4a096847cc61fa3402b042
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122577"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788430"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>Método ICorDebugManagedCallback::BreakpointSetError
 Notifica o depurador de que o Common Language Runtime não pôde ligar com precisão um ponto de interrupção definido antes que uma função tenha sido compilada JIT (just-in-time).  
@@ -52,7 +52,7 @@ HRESULT BreakpointSetError (
 ## <a name="remarks"></a>Comentários  
  O ponto de interrupção fornecido nunca será atingido. O depurador deve desativar e reassociá-lo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,6 +61,6 @@ HRESULT BreakpointSetError (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

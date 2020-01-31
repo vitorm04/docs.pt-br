@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976576"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794219"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Instruções passo a passo: associando a dados em aplicativos híbridos
 
-A associação de uma fonte de dados a um controle é essencial para fornecer aos usuários acesso aos dados subjacentes, independentemente de você estar usando [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tutorial mostra como você pode usar a associação de dados em aplicativos híbridos que incluem controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+A associação de uma fonte de dados a um controle é essencial para fornecer aos usuários acesso aos dados subjacentes, independentemente de você estar usando Windows Forms ou [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tutorial mostra como você pode usar a associação de dados em aplicativos híbridos que incluem controles Windows Forms e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 As tarefas ilustradas neste passo a passo incluem:
 
@@ -39,7 +39,7 @@ Para obter uma listagem de código completa das tarefas ilustradas neste passo a
 
 Quando tiver terminado, você terá um entendimento dos recursos de associação de dados em aplicativos híbridos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
@@ -61,7 +61,7 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
 3. Abra o MainWindow.xaml no WPF Designer.
 
-4. No elemento <xref:System.Windows.Window>, adicione o seguinte mapeamento de namespaces [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. No elemento <xref:System.Windows.Window>, adicione o seguinte mapeamento de namespaces Windows Forms.
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ Os detalhes de cada registro de cliente são exibidos em vários controles de <x
 
 ## <a name="displaying-data-by-using-interoperation"></a>Exibindo dados usando interoperação
 
-Os pedidos correspondentes ao cliente selecionado são exibidos em um controle de <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> chamado `dataGridView1`. O controle de `dataGridView1` está associado à fonte de dados no arquivo code-behind. Um controle de <xref:System.Windows.Forms.Integration.WindowsFormsHost> é o pai deste controle de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Os pedidos correspondentes ao cliente selecionado são exibidos em um controle de <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> chamado `dataGridView1`. O controle de `dataGridView1` está associado à fonte de dados no arquivo code-behind. Um controle de <xref:System.Windows.Forms.Integration.WindowsFormsHost> é o pai deste controle de Windows Forms.
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>Para exibir dados no controle DataGridView
 
@@ -181,7 +181,7 @@ O componente <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithTy
 
 10. Pressione F5 para compilar e executar o aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

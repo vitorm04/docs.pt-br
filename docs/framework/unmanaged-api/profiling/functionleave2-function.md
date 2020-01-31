@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446021"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866925"
 ---
 # <a name="functionleave2-function"></a>Função FunctionLeave2
 Notifica o criador de perfil de que uma função está prestes a retornar ao chamador e fornece informações sobre o quadro de pilha e o valor de retorno da função.  
@@ -35,23 +35,28 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `funcId`  
- no O identificador da função que está retornando.  
+## <a name="parameters"></a>Parâmetros
+
+- `funcId`
+
+  \[em] o identificador da função que está retornando.
+
+- `clientData`
+
+  \[em] o identificador da função remapeada, que o criador de perfil especificou anteriormente por meio da função [FunctionIDMapper](functionidmapper-function.md) .
+
+- `func`
+
+  \[em] um valor de `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.
+
+  O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
- `clientData`  
- no O identificador da função remapeada, que o criador de perfil especificou anteriormente por meio da função [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) .  
-  
- `func`  
- no Um valor `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.  
-  
- O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
-  
- `retvalRange`  
- no Um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) que especifica o local da memória do valor de retorno da função.  
-  
- Para acessar informações de valor de retorno, o sinalizador de `COR_PRF_ENABLE_FUNCTION_RETVAL` deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.  
-  
+- `retvalRange`
+
+  \[em] um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) que especifica o local da memória do valor de retorno da função.
+
+  Para acessar informações de valor de retorno, o sinalizador de `COR_PRF_ENABLE_FUNCTION_RETVAL` deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.
+
 ## <a name="remarks"></a>Comentários  
  Os valores dos parâmetros `func` e `retvalRange` não são válidos depois que a função `FunctionLeave2` retorna, pois os valores podem ser alterados ou destruídos.  
   
@@ -67,7 +72,7 @@ void __stdcall FunctionLeave2 (
   
  Além disso, a função `FunctionLeave2` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl  
@@ -76,9 +81,9 @@ void __stdcall FunctionLeave2 (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Função FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [Função FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [Método SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [Criando perfil de funções estáticas globais](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [Função FunctionEnter2](functionenter2-function.md)
+- [Função FunctionTailcall2](functiontailcall2-function.md)
+- [Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [Criando perfil de funções estáticas globais](profiling-global-static-functions.md)

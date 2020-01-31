@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-ms.openlocfilehash: aa06b7db6b7371e66853ed242f5e118fb5e5ff0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aeaa706ef35413a728f8b254cd325f0bcc83acd1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096195"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792709"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>Método ICorDebugNativeFrame2::IsMatchingParentFrame
 Determina se o quadro especificado é o pai do quadro atual.  
@@ -40,21 +40,21 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  `pIsParent`  
  [fora] `true` se `pPotentialParentFrame` for o pai do quadro atual; caso contrário, `false`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|O status pai foi retornado com êxito.|  
-|E_FAIL|Não foi possível retornar o status pai.|  
-|E_INVALIDARG|`pPotentialParentFrame` ou `pIsParent` é nulo.|  
+|{1&gt;E_FAIL&lt;1}|Não foi possível retornar o status pai.|  
+|{1&gt;E_INVALIDARG&lt;1}|`pPotentialParentFrame` ou `pIsParent` é nulo.|  
   
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
  `IsMatchingParentFrame` retornará `true` se o objeto de quadro passado para o método for o pai do objeto de quadro no qual o método foi chamado. Se você chamar o método em um quadro que não seja um filho do quadro especificado, ele retornará um erro.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -63,8 +63,8 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugNativeFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugNativeFrame2](icordebugnativeframe2-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

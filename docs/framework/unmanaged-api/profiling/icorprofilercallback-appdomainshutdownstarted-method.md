@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445187"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866657"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Método ICorProfilerCallback::AppDomainShutdownStarted
 Notifica o criador de perfil de que um domínio de aplicativo está sendo descarregado de um processo.  
@@ -32,14 +32,16 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
- `appDomainId`  
- no Identifica o domínio no qual os assemblies do aplicativo são armazenados.  
-  
+## <a name="parameters"></a>Parâmetros
+
+- `appDomainId`
+
+  \[em] identifica o domínio no qual os assemblies do aplicativo são armazenados.
+
 ## <a name="remarks"></a>Comentários  
  O valor de `appDomainId` não é válido para nenhuma solicitação de informações após o retorno do método `AppDomainShutdownStarted` — essa é a última chance do criador de perfil obter informações sobre esse domínio de aplicativo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -48,6 +50,6 @@ HRESULT AppDomainShutdownStarted(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)

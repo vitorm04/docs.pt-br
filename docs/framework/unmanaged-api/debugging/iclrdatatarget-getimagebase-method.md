@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-ms.openlocfilehash: fed643ae52f50b1b8cd134880c644c8941da6f56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fcf0ab73c79a5fa116a89cdfcc2e73b17d9eabfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122869"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785488"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>Método ICLRDataTarget::GetImageBase
 Obtém o endereço de memória base da imagem especificada.  
@@ -44,7 +44,7 @@ HRESULT GetImageBase (
 ## <a name="remarks"></a>Comentários  
  O nome do arquivo de imagem pode ou não ter um caminho. Se um caminho for especificado, a correspondência será feita no caminho inteiro; caso contrário, a correspondência será feita apenas no nome do arquivo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -53,6 +53,6 @@ HRESULT GetImageBase (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interface ICLRDataTarget](iclrdatatarget-interface.md)

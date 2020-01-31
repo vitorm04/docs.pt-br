@@ -2,12 +2,12 @@
 title: 'Método ICorDebugMergedAssemblyRecord:: getsimplesname'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 565e27b47f2454dec1e4c2b89ee46ac5279b08b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 21e8ebeabd3b082361ca3307240cfca58835b066
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130544"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793088"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>Método ICorDebugMergedAssemblyRecord:: getsimplesname
 Obtém o nome simples do assembly.  
@@ -38,7 +38,7 @@ HRESULT GetSimpleName(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -47,7 +47,7 @@ HRESULT GetSimpleName(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

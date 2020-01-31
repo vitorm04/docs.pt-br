@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc663e76-e23f-49a8-bdd5-52cdf1a3b2b3
 topic_type:
 - apiref
-ms.openlocfilehash: e74bab058adda759db1fb549022608eedfef5d80
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d30d0bc262d76cf8980f90d8384173d89baf92d5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432979"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862667"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Método ICorProfilerInfo2::GetStaticFieldInfo
 Obtém um valor que indica o tipo de estático que se aplica ao campo especificado.  
@@ -42,14 +42,14 @@ HRESULT GetStaticFieldInfo (
  no O token de metadados para o campo estático.  
   
  `pFieldInfo`  
- fora Um ponteiro para um valor da enumeração [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) que indica se o campo especificado é estático e, nesse caso, o tipo de estático que se aplica ao campo.  
+ fora Um ponteiro para um valor da enumeração [COR_PRF_STATIC_TYPE](cor-prf-static-type-enumeration.md) que indica se o campo especificado é estático e, nesse caso, o tipo de estático que se aplica ao campo.  
   
 ## <a name="remarks"></a>Comentários  
  Essas informações podem ser usadas para determinar qual função chamar para obter o endereço do campo estático.  
   
  O código do criador de perfil ainda deve verificar os metadados de um campo estático para garantir que ele realmente tenha um endereço. Literais estáticos (ou seja, constantes) existem somente nos metadados e não têm um endereço.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -58,7 +58,7 @@ HRESULT GetStaticFieldInfo (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo2](icorprofilerinfo2-interface.md)

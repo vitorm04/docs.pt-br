@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960120"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789913"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>Como habilitar estilos visuais em um aplicativo híbrido
-Este tópico mostra como habilitar estilos visuais em um controle de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hospedado em um aplicativo baseado em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+Este tópico mostra como habilitar estilos visuais em um controle de Windows Forms hospedado em um aplicativo baseado em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
- Se seu aplicativo chamar o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, a maioria dos seus controles de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] usará automaticamente estilos visuais. Saiba mais em [Renderizar controles com estilos visuais](../../winforms/controls/rendering-controls-with-visual-styles.md).  
+ Se seu aplicativo chamar o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>, a maioria dos seus controles de Windows Forms usará automaticamente estilos visuais. Saiba mais em [Renderizar controles com estilos visuais](../../winforms/controls/rendering-controls-with-visual-styles.md).  
   
  Para obter uma listagem de código completa das tarefas ilustradas neste tópico, consulte [habilitando estilos visuais em um exemplo de aplicativo híbrido](https://go.microsoft.com/fwlink/?LinkID=159986).  
   
@@ -51,7 +51,7 @@ Este tópico mostra como habilitar estilos visuais em um controle de [!INCLUDE[T
   
 9. Pressione F5 para compilar e executar o aplicativo.  
   
-     O controle [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] é pintado com estilos visuais.  
+     O controle Windows Forms é pintado com estilos visuais.  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>Desabilitando estilos visuais do Windows Forms  
  Para desabilitar os estilos visuais, basta remover a chamada para o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.  
@@ -64,9 +64,9 @@ Este tópico mostra como habilitar estilos visuais em um controle de [!INCLUDE[T
   
 3. Pressione F5 para compilar e executar o aplicativo.  
   
-     O controle de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] é pintado com o estilo de sistema padrão.  
+     O controle de Windows Forms é pintado com o estilo de sistema padrão.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>

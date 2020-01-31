@@ -9,15 +9,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 22eb323d1c1921832630d1d1b30463b4ecb7d1fd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745000"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794239"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Instruções passo a passo: hospedando um controle composto dos Windows Forms no WPF
-O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] código, pode ser mais eficiente reutilizar pelo menos um pouco esse código em seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em vez de regravá-lo do zero. O cenário mais comum é quando você tem controles de Windows Forms existentes. Em alguns casos, talvez você não tenha nem acesso ao código-fonte desses controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um procedimento direto para hospedar esses controles em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para a maior parte de sua programação enquanto hospeda seus controles de <xref:System.Windows.Forms.DataGridView> especializados.  
+O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial em Windows Forms código, pode ser mais eficiente reutilizar pelo menos um pouco esse código em seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em vez de regravá-lo do zero. O cenário mais comum é quando você tem controles de Windows Forms existentes. Em alguns casos, talvez você não tenha nem acesso ao código-fonte desses controles. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um procedimento direto para hospedar esses controles em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para a maior parte de sua programação enquanto hospeda seus controles de <xref:System.Windows.Forms.DataGridView> especializados.  
   
  Este passo a passos percorre um aplicativo que hospeda um controle de composição Windows Forms para executar a entrada de dados em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O controle composto é empacotado em uma DLL. Esse procedimento geral pode ser estendido para aplicativos e controles mais complexos. Este tutorial foi projetado para ser praticamente idêntico em aparência e funcionalidade para [passo a passos: hospedar um controle composto do WPF em Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). A principal diferença é que o cenário de hospedagem é invertido.  
   

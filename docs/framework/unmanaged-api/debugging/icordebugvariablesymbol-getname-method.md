@@ -2,12 +2,12 @@
 title: 'Método ICorDebugVariableSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: 9bc32d3372710b4c4e92aa89df5e6e7839ad3078
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 172eea452442aa94ea010e2c434908ab8d040a93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121011"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790919"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>Método ICorDebugVariableSymbol:: GetName
 Obtém o nome de uma variável.  
@@ -37,7 +37,7 @@ HRESULT GetName(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetName(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

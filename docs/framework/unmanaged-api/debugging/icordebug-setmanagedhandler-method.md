@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54ef1cab27a39de39b39996729be6b8160570745
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134060"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788965"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>Método ICorDebug::SetManagedHandler
 Especifica o objeto manipulador de eventos para eventos gerenciados.  
@@ -35,14 +35,14 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>Parâmetros  
  `pCallback`  
- no Um ponteiro para um objeto [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md) , que é o objeto manipulador de eventos.  
+ no Um ponteiro para um objeto [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) , que é o objeto manipulador de eventos.  
   
 ## <a name="remarks"></a>Comentários  
  `SetManagedHandler` deve ser chamado no momento da criação.  
   
  Se a implementação de `ICorDebugManagedCallback` não contiver interfaces suficientes para lidar com eventos de depuração para o aplicativo que está sendo depurado, `SetManagedHandler` retornará um HRESULT de E_NOINTERFACE.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -51,6 +51,6 @@ HRESULT SetManagedHandler (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interface ICorDebug](icordebug-interface.md)

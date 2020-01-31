@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742596"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789897"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -121,7 +121,7 @@ Quando TC está habilitado, o comportamento a seguir se aplica à compilação d
 - Se o método tiver código com compilação antecipada de tempo ou [ReadyToRun](#readytorun-images), o código gerado previamente será usado.
 - Caso contrário, o método é JIT. Normalmente, esses métodos são genéricos sobre tipos de valor.
   - O *Quick JIT* produz código mais rápido (ou menos otimizado) com mais rapidez. No .NET Core 3,0, o JIT rápido é habilitado por padrão para métodos que não contêm loops e são preferenciais durante a inicialização.
-  - O JIT totalmente otimizado produz um código de qualidade mais alta (ou mais otimizado) mais lentamente. Para métodos em que a JIT rápida não seria usada (por exemplo, se o método é atribuído com <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), o JIT com otimização total é usado.
+  - O JIT de Otimização total produz um código de qualidade mais alta (ou mais otimizado) mais lentamente. Para métodos em que a JIT rápida não seria usada (por exemplo, se o método é atribuído com <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), o JIT de Otimização total é usado.
 
 Para métodos chamados com frequência, o compilador just-in-time, eventualmente, cria código totalmente otimizado em segundo plano. Em seguida, o código otimizado substitui o código pré-compilado para esse método.
 

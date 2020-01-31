@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: ab5adabe868c245ed7a773d9b4206b25d9e9a4f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140252"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791113"
 ---
 # <a name="icordebugvalue2-interface"></a>Interface ICorDebugValue2
 Estende a interface "ICorDebugValue" para fornecer suporte para objetos "ICorDebugType".  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|Obtém um ponteiro de interface para um objeto `ICorDebugType` que representa a <xref:System.Type> desse valor.|  
+|[Método GetExactType](icordebugvalue2-getexacttype-method.md)|Obtém um ponteiro de interface para um objeto `ICorDebugType` que representa a <xref:System.Type> desse valor.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -44,8 +44,8 @@ Estende a interface "ICorDebugValue" para fornecer suporte para objetos "ICorDeb
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)
 
-- [Interface ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [Interface ICorDebugValue3](icordebugvalue3-interface.md)

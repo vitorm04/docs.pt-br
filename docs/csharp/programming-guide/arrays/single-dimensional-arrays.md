@@ -5,12 +5,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 07c6061bfc66b1640d0eacca217302feff1a390a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8f093d22da789c6df750475e47a3b4e4685c5651
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715026"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744204"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrizes unidimensionais (Guia de Programação em C#)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75715026"
   
  O resultado dessa instrução depende se `SomeType` é um tipo de valor ou um tipo de referência. Se for um tipo de valor, a instrução criará uma matriz de 10 elementos, cada um deles tem o tipo `SomeType`. Se `SomeType` for um tipo de referência, a instrução criará uma matriz de 10 elementos, cada um deles é inicializado com uma referência nula.  
   
-Para obter mais informações sobre tipos de valor e tipos de referência, consulte [tipos de valor](../../language-reference/keywords/value-types.md) e [tipos de referência](../../language-reference/keywords/reference-types.md).
+Para obter mais informações sobre tipos de valor e tipos de referência, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md) e [tipos de referência](../../language-reference/keywords/reference-types.md).
   
 ## <a name="see-also"></a>Veja também
 

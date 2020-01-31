@@ -4,12 +4,12 @@ description: Aprenda sem servidor com uma abordagem prática acessando exemplos 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522394"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787887"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Casos de uso e cenários de negócios sem servidor
 
@@ -33,7 +33,7 @@ O repositório completo e as instruções para criar o aplicativo lógico estão
 
 Veja como implementar uma função simples sem servidor do Azure no portal da Web do Azure ou no Visual Studio. Crie um cliente com o Xamarin. Forms que é executado em Android, iOS e Windows. O aplicativo é então refinado para usar JavaScript Object Notation (JSON) como uma mídia de comunicação entre o servidor e os clientes móveis com um back-end sem servidor.
 
-Para obter mais informações, consulte [implementando uma função simples do Azure com um cliente Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/).
+Para obter mais informações, consulte [implementando uma função simples do Azure com um cliente Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Gerar um mosaico de fotos com reconhecimento de imagem sem servidor
 
@@ -43,7 +43,7 @@ O exemplo usa Azure Functions e serviços cognitivas da Microsoft Serviço de Vi
 
 Por exemplo, você pode treinar seu modelo com pontos de referência Orlando, como o olho de Orlando. Visão Personalizada reconhecerá uma imagem do olho de Orlando e a função criará um mosaico de fotos composto pelos resultados da pesquisa de imagem do Bing para "olho de Orlando".
 
-Para obter mais informações, consulte [Azure Functions o gerador de mosaico de fotos](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/).
+Para obter mais informações, consulte [Azure Functions o gerador de mosaico de fotos](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Migrar um aplicativo existente para a nuvem
 
@@ -83,17 +83,17 @@ O repositório Shortener de link completo com instruções está disponível aqu
 
 O exemplo consiste em um hub IoT do Azure e uma função do Azure. Uma nova mensagem no Hub IoT dispara a função do Azure. O código sem servidor envia o mesmo conteúdo de mensagem de volta para o dispositivo que o enviou. O projeto tem todo o código e a configuração de implantação necessários para a solução.
 
-Para obter mais informações, consulte [ping do Hub IOT do Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
+Para obter mais informações, consulte [ping do Hub IOT do Azure](https://github.com/Azure-Samples/iot-hub-node-ping).
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Gerador de mosaico de fotos Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Ping do Hub IoT do Azure](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Gerador de mosaico de fotos Azure Functions](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Ping do Hub IoT do Azure](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [Laboratório de importação de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Implementando uma função simples do Azure com um cliente Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Implementando uma função simples do Azure com um cliente Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [Migrar e Shift com o Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [URL sem servidor Shortener](https://github.com/jeremylikness/serverless-url-shortener)
 

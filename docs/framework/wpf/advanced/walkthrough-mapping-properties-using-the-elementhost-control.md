@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197820"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794113"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Instruções passo a passo: mapeando propriedades usando o controle ElementHost
 
-Este passo a passos mostra como usar a propriedade <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> para mapear [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Propriedades para propriedades correspondentes em um elemento de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado.
+Este passo a passos mostra como usar a propriedade <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> para mapear Windows Forms Propriedades para propriedades correspondentes em um elemento de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado.
 
 As tarefas ilustradas neste passo a passo incluem:
 
@@ -31,9 +31,9 @@ As tarefas ilustradas neste passo a passo incluem:
 
 Para ver uma listagem de código completa de todas tarefas ilustradas nesta instrução passo a passo, consulte [Mapeando propriedades usando o exemplo de controle ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-Quando você terminar, poderá mapear propriedades [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] para as propriedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] correspondentes em um elemento hospedado.
+Quando terminar, você poderá mapear Windows Forms Propriedades para as propriedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] correspondentes em um elemento hospedado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
@@ -140,7 +140,7 @@ Você pode usar um mapeamento de propriedade padrão e também estendê-lo com s
 
 2. Pressione F5 para compilar e executar o aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>

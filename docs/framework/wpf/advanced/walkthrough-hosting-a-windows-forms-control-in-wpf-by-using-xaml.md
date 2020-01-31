@@ -5,15 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: a0a88c39a25e5292365a6447cefdd8f31db5e5c3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 2c5764ac2dfd9f5747087cc76e3971c002f12b90
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744927"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794198"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Instruções passo a passo: hospedando um controle dos Windows Forms no WPF usando XAML
-O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece muitos controles com um amplo conjunto de recursos. No entanto, às vezes, convém usar controles do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] em suas páginas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode ter um investimento substancial em controles existentes do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou pode ter um controle do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] que fornece funcionalidade exclusiva.  
+O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece muitos controles com um amplo conjunto de recursos. No entanto, às vezes você pode querer usar controles de Windows Forms em suas páginas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, você pode ter um investimento substancial em controles de Windows Forms existentes ou pode ter um controle de Windows Forms que fornece funcionalidade exclusiva.  
   
  Este tutorial mostra como hospedar um Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   

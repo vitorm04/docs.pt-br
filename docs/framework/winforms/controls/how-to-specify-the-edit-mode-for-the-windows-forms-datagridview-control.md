@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar o modo de edição do controle DataGridView do Windows Forms'
+title: Especificar o modo de edição para o controle DataGridView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: a999582aeb629646fa1843f973b10a039c29e1a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c0318202a80f9a43f1b656201732ef032f430b5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630537"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743771"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Como: Especificar o modo de edição do controle DataGridView do Windows Forms
-Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows.Forms.DataGridView> célula de caixa de texto digitando nela ou pressionando F2. Isso colocará a célula no modo de edição se todas as condições a seguir forem atendidas:  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Como especificar o modo de edição do controle DataGridView dos Windows Forms
+Por padrão, os usuários podem editar o conteúdo da célula da caixa de texto <xref:System.Windows.Forms.DataGridView> atual digitando-o ou pressionando F2. Isso colocará a célula no modo de edição se todas as condições a seguir forem atendidas:  
   
 - A fonte de dados subjacente der suporte à edição.  
   
-- O <xref:System.Windows.Forms.DataGridView> controle está habilitado.  
+- O controle <xref:System.Windows.Forms.DataGridView> está habilitado.  
   
 - O valor da propriedade <xref:System.Windows.Forms.DataGridView.EditMode%2A> não é <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
@@ -28,23 +28,23 @@ Por padrão, os usuários podem editar o conteúdo do atual <xref:System.Windows
   
  No modo de edição, o usuário pode alterar o valor da célula e pressionar ENTER para confirmar a alteração ou ESC para reverter a célula para seu valor original.  
   
- Você pode configurar um <xref:System.Windows.Forms.DataGridView> controlar de forma que uma célula entra no modo de edição assim que ele se torna a célula atual. O comportamento das teclas ENTER e ESC fica inalterado nesse caso, mas a célula permanece no modo de edição depois que o valor é confirmado ou revertido. Você também pode configurar o controle para que as células entrem no modo de edição somente quando os usuários digitam na célula ou quando pressionam F2. Por fim, você pode impedir que as células do modo de edição, exceto quando você chama o <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> método.  
+ Você pode configurar um controle de <xref:System.Windows.Forms.DataGridView> para que uma célula entre no modo de edição assim que se tornar a célula atual. O comportamento das teclas ENTER e ESC fica inalterado nesse caso, mas a célula permanece no modo de edição depois que o valor é confirmado ou revertido. Você também pode configurar o controle para que as células entrem no modo de edição somente quando os usuários digitam na célula ou quando pressionam F2. Por fim, você pode impedir que as células entrem no modo de edição, exceto quando chamar o método <xref:System.Windows.Forms.DataGridView.BeginEdit%2A>.  
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>Para alterar o modo de edição de um controle DataGridView  
   
-- Defina a <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> propriedade para apropriado <xref:System.Windows.Forms.DataGridViewEditMode> enumeração.  
+- Defina a propriedade <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> como a enumeração de <xref:System.Windows.Forms.DataGridViewEditMode> apropriada.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
 - Um controle <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`.  
   
 - Referências aos assemblies <xref:System> e <xref:System.Windows.Forms>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

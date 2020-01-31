@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00c9939b25f395010f6ea5832b405c3e9928a223
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131364"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792020"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>Método ICorDebugRegisterSet2::GetRegistersAvailable
 Obtém uma matriz de bytes que fornece um bitmap dos registros disponíveis.  
@@ -52,7 +52,7 @@ HRESULT GetRegistersAvailable (
   
      valor `CorDebugRegister` & 7  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -61,7 +61,7 @@ HRESULT GetRegistersAvailable (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugRegisterSet2](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [Interface ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [Interface ICorDebugRegisterSet2](icordebugregisterset2-interface.md)
+- [Interface ICorDebugRegisterSet](icordebugregisterset-interface.md)

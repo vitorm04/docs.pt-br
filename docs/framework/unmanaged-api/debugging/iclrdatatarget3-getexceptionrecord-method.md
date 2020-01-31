@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 037e216cb93e3aa6fce28966fc724498024abd52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111992"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789065"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>Método ICLRDataTarget3::GetExceptionRecord
 Chamado pelo serviço de acesso a dados do CLR (Common Language Runtime) para recuperar o registro de exceção associado ao processo de destino. Por exemplo, para um destino de despejo, isso seria equivalente ao registro de exceção passado por meio do argumento `ExceptionParam` para a função [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) na biblioteca de ajuda de depuração do Windows (dbghelp).  
@@ -40,9 +40,9 @@ HRESULT GetExceptionRecord(
  [out] Um ponteiro para um tipo `ULONG32` que recebe o número de bytes realmente gravados no buffer.  
   
  `buffer`  
- [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de exceção. O registro de exceção é retornado como um tipo [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) .  
+ [out] Um ponteiro para um buffer de memória que recebe uma cópia do registro de exceção. O registro de exceção é retornado como um tipo de [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) .  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  O valor retornado é `S_OK` em caso de êxito, ou um código de falha `HRESULT` em caso de falha. Os códigos `HRESULT` podem incluir, entre outros:  
   
 |Código de retorno|Descrição|  
@@ -56,7 +56,7 @@ HRESULT GetExceptionRecord(
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -65,8 +65,8 @@ HRESULT GetExceptionRecord(
   
  **Versões do .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRDataTarget3](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [Método GetExceptionContextRecord](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [Método GetExceptionThreadID](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [Interface ICLRDataTarget3](iclrdatatarget3-interface.md)
+- [Método GetExceptionContextRecord](iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [Método GetExceptionThreadID](iclrdatatarget3-getexceptionthreadid-method.md)

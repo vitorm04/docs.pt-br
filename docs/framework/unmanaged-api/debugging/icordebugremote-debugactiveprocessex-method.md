@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131282"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791970"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>Método ICorDebugRemote::DebugActiveProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -38,7 +38,7 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `pRemoteTarget`  
- no Ponteiro para uma [interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar o computador no qual o processo está em execução.  
+ no Ponteiro para uma [interface ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Esse parâmetro é usado para determinar o computador no qual o processo está em execução.  
   
  `id`  
  no A ID do processo ao qual o depurador deve ser anexado.  
@@ -49,7 +49,7 @@ HRESULT DebugActiveProcessEx (
  `ppProcess`  
  fora Um ponteiro para o endereço de um objeto "ICorDebugProcess" que representa o processo ao qual o depurador foi anexado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
  Anexado com êxito ao processo no computador remoto.  
   
@@ -59,7 +59,7 @@ HRESULT DebugActiveProcessEx (
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração de modo misto no Silverlight.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -68,9 +68,9 @@ HRESULT DebugActiveProcessEx (
   
  **Versões do .NET Framework:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interface ICorDebugRemote](icordebugremote-interface.md)
+- [Interface ICorDebug](icordebug-interface.md)
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

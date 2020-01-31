@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868441"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
 Retorna uma matriz de IDs que identifica todas as versões recompiladas por JIT da função especificada que ainda estão alocadas. Isso inclui versões recompiladas do JIT de funções que foram revertidas posteriormente, mas ainda não foram liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda estiver em uso).  
@@ -51,7 +51,7 @@ HRESULT GetReJITIDs (
 ## <a name="remarks"></a>Comentários  
  `GetReJITIDs` enumera as IDs de recompilação de JIT ativas para uma determinada instância de função. Ele segue o mesmo padrão de uso que outras funções `ICorProfilerInfo` que aceitam buffers alocados pelo chamador.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -60,8 +60,8 @@ HRESULT GetReJITIDs (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo4](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [Criação de perfil](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [Interface ICorProfilerInfo4](icorprofilerinfo4-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4382d3c9f69df2808f8cd0aaf7f8eaf19bc9891e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112746"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793671"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>Método ICLRDataTarget::WriteVirtual
 Grava dados do buffer especificado para o endereço de memória virtual especificado.  
@@ -50,7 +50,7 @@ HRESULT WriteVirtual (
  `bytesWritten`  
  fora Um ponteiro para o número real de bytes que foram gravados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -59,6 +59,6 @@ HRESULT WriteVirtual (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interface ICLRDataTarget](iclrdatatarget-interface.md)

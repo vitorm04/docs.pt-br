@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a1a616c1289867864eb9eb449c7d6f47f9a8352b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428262"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861275"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>Método ICorProfilerObjectEnum::GetCount
 Obtém o número total de objetos congelados na coleção.  
@@ -39,7 +39,7 @@ HRESULT GetCount (
   
  Esse método sempre retornará zero no .NET Framework versão 3,5 Service Pack 1 (SP1) e versões posteriores.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -48,6 +48,6 @@ HRESULT GetCount (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [Interface ICorProfilerObjectEnum](icorprofilerobjectenum-interface.md)

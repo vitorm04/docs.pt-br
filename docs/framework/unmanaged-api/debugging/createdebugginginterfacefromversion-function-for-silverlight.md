@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132198"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793834"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Função CreateDebuggingInterfaceFromVersion para Silverlight
-Aceita uma cadeia de caracteres de versão Common Language Runtime (CLR) retornada da [função CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)e retorna uma interface de depurador correspondente (normalmente, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).  
+Aceita uma cadeia de caracteres de versão Common Language Runtime (CLR) retornada da [função CreateVersionStringFromModule](createversionstringfrommodule-function.md)e retorna uma interface de depurador correspondente (normalmente, [ICorDebug](icordebug-interface.md)).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,16 +29,16 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>Parâmetros  
  `szDebuggeeVersion`  
- no Cadeia de caracteres da versão do CLR no depurador de destino, que é retornada pela [função CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).  
+ no Cadeia de caracteres da versão do CLR no depurador de destino, que é retornada pela [função CreateVersionStringFromModule](createversionstringfrommodule-function.md).  
   
  `ppCordb`  
- fora Ponteiro para um ponteiro para um objeto COM (`IUnknown`). Esse objeto será convertido em um objeto [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) antes de ser retornado.  
+ fora Ponteiro para um ponteiro para um objeto COM (`IUnknown`). Esse objeto será convertido em um objeto [ICorDebug](icordebug-interface.md) antes de ser retornado.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
- `ppCordb` faz referência a um objeto válido que implementa a interface de [interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) .  
+ `ppCordb` faz referência a um objeto válido que implementa a interface de [interface ICorDebug](icordebug-interface.md) .  
   
- E_INVALIDARG  
+ {1&gt;E_INVALIDARG&lt;1}  
  O `szDebuggeeVersion` ou `ppCordb` é nulo.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
@@ -48,12 +48,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  MSCorDbi. dll ou mscordaccore. dll não é a mesma versão que o CoreCLR. dll de destino.  
   
  E_FAIL (ou outros códigos de retorno de E_)  
- Não é possível retornar uma [interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).  
+ Não é possível retornar uma [interface ICorDebug](icordebug-interface.md).  
   
 ## <a name="remarks"></a>Comentários  
  A interface retornada fornece os recursos para anexar a um CLR em um processo de destino e depurar o código gerenciado que o CLR está executando.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim. h  

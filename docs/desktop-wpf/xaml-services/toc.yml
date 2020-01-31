@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: Genéricos em XAML
       href: generics.md
-    - name: Definindo tipos personalizados para uso com serviços XAML do .NET Framework
+    - name: Definir tipos personalizados para uso com os serviços XAML do .NET
       href: define-custom-types.md
       items:
         - name: Atributos CLR relacionados a XAML para tipos personalizados e bibliotecas

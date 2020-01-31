@@ -4,16 +4,16 @@ description: O ML.NET oferece a capacidade de adicionar aprendizado de máquina 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740087"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794568"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
-O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo.
+O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo. Os aplicativos de Machine Learning fazem uso de padrões nos dados para fazer previsões em vez de precisarem ser programados explicitamente.
 
 Central para o ML.NET é um **modelo**de aprendizado de máquina. O modelo especifica as etapas necessárias para transformar os dados de entrada em uma previsão. Com o ML.NET, você pode treinar um modelo personalizado especificando um algoritmo ou pode importar modelos TensorFlow e ONNX pré-treinados.
 
@@ -105,7 +105,7 @@ Vamos nos aprofundar um pouco mais nesses conceitos.
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
-### <a name="basic"></a>Básico
+### <a name="basic"></a>Basic
 
 O modelo mais básico é regressão linear bidimensional, em que uma quantidade contínua é proporcional a outro, como no exemplo de preço de residência acima.
 

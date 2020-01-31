@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: af87fefae8c6e0a8166d7cf02419282bc0661f35
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c66e5dd9b49f28d60fdec3563464bcb3a2fa8271
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741484"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793990"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle de Tabela
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741484"
   
  Os controles de tabela contêm linhas e colunas de texto e, opcionalmente, cabeçalhos de linha e cabeçalhos de coluna.  
   
- As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de tabela. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de tabela, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de tabela. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de tabela, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -46,7 +46,7 @@ ms.locfileid: "75741484"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Consulte observações.|O controle tabela normalmente obtém seu nome de um rótulo de texto estático. Se não houver nenhum rótulo de texto estático, você deverá atribuir uma propriedade Name que deve estar sempre disponível para explicar a finalidade da tabela.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Consulte observações.|Se houver um rótulo de texto estático, essa propriedade deverá expor uma referência ao elemento Automation do controle.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Table|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"table"|Cadeia de caracteres localizada correspondente ao tipo de controle de tabela.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|tabela|Cadeia de caracteres localizada correspondente ao tipo de controle de tabela.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|Consulte observações.|Mais detalhes sobre a finalidade da tabela devem ser expostos por meio dessa propriedade se não for suficientemente explicado acessando o NameProperty.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|verdadeiro|O controle tabela sempre deve ser conteúdo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle de tabela sempre deve ser um controle.|  

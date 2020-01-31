@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: 4eb6682ac5a8b7788d97f752f249d85886fba0b6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41b2e009f8f017a72147232015ea2357ae922ca1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111644"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793645"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>Método ICLRDebugging::CanUnloadNow
-Determina se uma biblioteca fornecida por uma interface [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) ainda está em uso ou pode ser descarregada.  
+Determina se uma biblioteca fornecida por uma interface [ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md) ainda está em uso ou pode ser descarregada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
  `hmodule`  
  no O endereço base de um módulo no processo de destino.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -47,9 +47,9 @@ HRESULT CanUnloadNow(HMODULE hModule);
 ## <a name="exceptions"></a>Exceções  
   
 ## <a name="remarks"></a>Comentários  
- Esse método verifica se todas as instâncias de interfaces de `ICorDebug*` foram liberadas e nenhum thread está em uma chamada no método [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) .  
+ Esse método verifica se todas as instâncias de interfaces de `ICorDebug*` foram liberadas e nenhum thread está em uma chamada no método [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -58,7 +58,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

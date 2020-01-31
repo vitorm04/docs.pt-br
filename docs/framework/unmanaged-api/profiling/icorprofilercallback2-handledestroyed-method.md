@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab4f4bbd-40c7-4667-bfde-60cd73803110
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad1eb765c435244389a671c74026539fa3590cf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2618da708a1c4351b56a15af9156a68392a0d59
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439748"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865740"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>Método ICorProfilerCallback2::HandleDestroyed
 Notifica o criador de perfil de código de que um identificador de coleta de lixo foi destruído.  
@@ -36,7 +36,7 @@ HRESULT HandleDestroyed(
  `handleId`  
  no A ID do identificador para a coleta de lixo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -45,7 +45,7 @@ HRESULT HandleDestroyed(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)

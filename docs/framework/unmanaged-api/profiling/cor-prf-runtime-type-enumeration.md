@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c1767e718e597918ef59b72a4b7acc3589421de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450376"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867049"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>Enumeração COR_PRF_RUNTIME_TYPE
 Contém valores que indicam a versão do Common Language Runtime (CLR): área de trabalho ou CoreCLR, que é usada no Silverlight.  
@@ -43,7 +43,7 @@ typedef enum
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -52,6 +52,6 @@ typedef enum
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Criando perfil de enumerações](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [Criando perfil de enumerações](profiling-enumerations.md)

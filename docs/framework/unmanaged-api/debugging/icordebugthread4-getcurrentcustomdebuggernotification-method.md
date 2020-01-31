@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a8a377074ca1005ad8089dfd8e2a6a464bb86f60
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122440"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791361"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>Método ICorDebugThread4::GetCurrentCustomDebuggerNotification
 
-Obtém o objeto [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) atual no thread atual.
+Obtém o objeto [ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md) atual no thread atual.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,7 +43,7 @@ fora Um ponteiro para o objeto de `ICorDebugManagedCallback3::CustomNotification
 
 O valor de `ppNotificationObject` será nulo se o método não for chamado de dentro de um retorno de chamada `ICorDebugManagedCallback3::CustomNotification` ou se não existir nenhum objeto de notificação atual.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -53,8 +53,8 @@ O valor de `ppNotificationObject` será nulo se o método não for chamado de de
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugThread4](icordebugthread4-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

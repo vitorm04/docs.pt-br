@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-ms.openlocfilehash: 504ef2e8ceb5a359ecb9ac74c5da5c8dfabccaa2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ffc6c047390eca4110201265207e25181ef7740d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741199"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789445"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Image
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741199"
   
  Os controles de imagem usados como ícones, gráficos informativos e gráficos terão suporte para o tipo de controle de imagem. Os controles usados como imagens de plano de fundo ou marca d' água não oferecerão suporte ao tipo de controle Image.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Image. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de imagem, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Image. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de imagem, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -56,8 +56,8 @@ ms.locfileid: "75741199"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|O controle de imagem dá suporte ao padrão de item de grade se o controle estiver dentro de um contêiner de grade.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Depende|O controle de imagem dá suporte ao padrão de item de tabela se o controle estiver dentro de um contêiner que tem controles de cabeçalho.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Dependem|O controle de imagem dá suporte ao padrão de item de grade se o controle estiver dentro de um contêiner de grade.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Dependem|O controle de imagem dá suporte ao padrão de item de tabela se o controle estiver dentro de um contêiner que tem controles de cabeçalho.|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|{1&gt;Nunca&lt;1}|Se o controle de imagem contiver uma imagem clicável, o controle deverá dar suporte a um tipo de controle que ofereça suporte ao padrão Invoke, como o tipo de controle Button.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|{1&gt;Nunca&lt;1}|Os controles de imagem não devem oferecer suporte ao padrão de item de seleção.|  
   

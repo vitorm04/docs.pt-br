@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133683"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789251"
 ---
 # <a name="cordebugstepreason-enumeration"></a>Enumeração CorDebugStepReason
 Indica o resultado de uma etapa individual.  
@@ -40,7 +40,7 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`STEP_NORMAL`|A etapa foi concluída normalmente, dentro da mesma função.|  
 |`STEP_RETURN`|A depuração continua normalmente, depois que a função é retornada.|  
@@ -50,7 +50,7 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|O controle foi passado para um interceptor.|  
 |`STEP_EXIT`|O thread saiu antes da conclusão da etapa.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -59,7 +59,7 @@ typedef enum CorDebugStepReason {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Método StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Método StepComplete](icordebugmanagedcallback-stepcomplete-method.md)
+- [Declarando enumerações](debugging-enumerations.md)

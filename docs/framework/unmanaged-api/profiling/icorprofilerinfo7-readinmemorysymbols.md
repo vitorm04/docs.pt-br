@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: ae51490be96f3eb6524831c93739c3befbc30b37
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53c01d2db44f4d0adf1ba5b9cc225ab49581aa5d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132032"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868337"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [Com suporte no .NET Framework 4.6.1 e versões posteriores]  
@@ -50,7 +50,7 @@ HRESULT ReadInMemorySymbols(
  `pCountSymbolBytesRead`  
  fora Quando o método retorna, contém o número real de bytes lidos.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  `S_OK`, se um número diferente de zero de bytes tiver sido lido.  
   
  `CORPROF_E_MODULE_IS_DYNAMIC`, se o módulo foi criado usando <xref:System.Reflection.Emit>.  
@@ -61,7 +61,7 @@ HRESULT ReadInMemorySymbols(
 > [!NOTE]
 > A implementação atual não oferece suporte a Reflection. Emit. Se o módulo foi criado usando Reflection. Emit, o método retornará `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -70,6 +70,6 @@ HRESULT ReadInMemorySymbols(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [Interface ICorProfilerInfo7](icorprofilerinfo7-interface.md)

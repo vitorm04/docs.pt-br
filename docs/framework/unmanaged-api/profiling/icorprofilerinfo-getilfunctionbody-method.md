@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e29b46bc-5fdc-4894-b0c2-619df4b65ded
 topic_type:
 - apiref
-ms.openlocfilehash: a7ec50c91ce02958d0d44643d4f79da1680532aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8160bb5b9ca5e0a4e22a1a831e978eaf125e7605
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450362"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870486"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Método ICorProfilerInfo::GetILFunctionBody
 Obtém um ponteiro para o corpo de um método no código da MSIL (Microsoft Intermediate Language), começando em seu cabeçalho.  
@@ -53,7 +53,7 @@ HRESULT GetILFunctionBody(
   
  `GetILFunctionBody` pode retornar um CORPROF_E_FUNCTION_NOT_IL HRESULT se o `methodId` aponta para um método sem qualquer código MSIL (como um método abstrato ou um método de invocação de plataforma (PInvoke)).  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -62,6 +62,6 @@ HRESULT GetILFunctionBody(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)

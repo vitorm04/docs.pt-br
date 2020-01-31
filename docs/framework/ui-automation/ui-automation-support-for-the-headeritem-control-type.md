@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-ms.openlocfilehash: c67c357a0447cfa7ff3769fff2f8a67f90171635
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 17b28e17690d5a05440cae6b969617de1528fb41
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741225"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778728"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle HeaderItem
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741225"
   
  O tipo de controle HeaderItem fornece um rótulo Visual para uma linha ou coluna de informações.  
   
- Controles de item de cabeçalho são exemplos de controles que implementam o tipo de controle HeaderItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles de cabeçalho, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Controles de item de cabeçalho são exemplos de controles que implementam o tipo de controle HeaderItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles de cabeçalho, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -55,8 +55,8 @@ ms.locfileid: "75741225"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|Depende|Implemente esse padrão de controle se o controle de item de cabeçalho puder ser redimensionado.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Implemente esse padrão de controle se o controle de item de cabeçalho puder ser clicado para classificar os dados.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|Dependem|Implemente esse padrão de controle se o controle de item de cabeçalho puder ser redimensionado.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Dependem|Implemente esse padrão de controle se o controle de item de cabeçalho puder ser clicado para classificar os dados.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -64,7 +64,7 @@ ms.locfileid: "75741225"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  

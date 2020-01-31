@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: 1e35031b-e095-4c14-9644-8deeb3081e0b
 topic_type:
 - apiref
-ms.openlocfilehash: b83706176091fd70d48e0f50a0fe5988c876f606
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9fb308f19ff09218c97b030296b9a3d4f0f2512
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447612"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868181"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>Interface ICorProfilerThreadEnum
 Fornece métodos para iterar em sequência por meio de uma coleção de threads no Common Language Runtime.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Clone](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|Obtém um ponteiro de interface para uma cópia desta `ICorProfilerThreadEnum` interface.|  
-|[Método GetCount](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|Obtém o número de threads que são usados pelo aplicativo.|  
-|[Método Next](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|Obtém o número especificado de threads contíguos de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.|  
-|[Método Reset](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|Move o cursor do enumerador para a posição inicial da sequência.|  
-|[Método Skip](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|Avança o cursor do enumerador de sua posição atual para ignorar o número especificado de elementos.|  
+|[Método Clone](icorprofilerthreadenum-clone-method.md)|Obtém um ponteiro de interface para uma cópia desta `ICorProfilerThreadEnum` interface.|  
+|[Método GetCount](icorprofilerthreadenum-getcount-method.md)|Obtém o número de threads que são usados pelo aplicativo.|  
+|[Método Next](icorprofilerthreadenum-next-method.md)|Obtém o número especificado de threads contíguos de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.|  
+|[Método Reset](icorprofilerthreadenum-reset-method.md)|Move o cursor do enumerador para a posição inicial da sequência.|  
+|[Método Skip](icorprofilerthreadenum-skip-method.md)|Avança o cursor do enumerador de sua posição atual para ignorar o número especificado de elementos.|  
   
 ## <a name="remarks"></a>Comentários  
  A interface `ICorProfilerThreadEnum` é um enumerador. Ele permite que o destinatário de uma matriz Extraia elementos do remetente a uma taxa apropriada para o destinatário. Em outras palavras, o receptor é capaz de controlar explicitamente o fluxo de elementos de matriz, evitando, assim, os problemas associados à passagem de matrizes grandes como parâmetros de método.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -46,7 +46,7 @@ Fornece métodos para iterar em sequência por meio de uma coleção de threads 
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerInfo](icorprofilerinfo-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

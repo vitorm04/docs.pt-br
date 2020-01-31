@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439851"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865797"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Método ICorProfilerCallback2::FinalizeableObjectQueued
 Notifica o criador de perfil de código de que um objeto com um finalizador foi enfileirado para o thread do finalizador para execução de seu método de `Finalize`.  
@@ -35,12 +35,12 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>Parâmetros  
  `finalizerFlags`  
- no Um valor da enumeração [COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md) que descreve os aspectos do finalizador.  
+ no Um valor da enumeração [COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md) que descreve os aspectos do finalizador.  
   
  `objectID`  
  no A ID do objeto que foi enfileirado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -49,7 +49,7 @@ HRESULT FinalizeableObjectQueued(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Interface ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
+- [Interface ICorProfilerCallback2](icorprofilercallback2-interface.md)

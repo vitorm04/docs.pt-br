@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 15900fab59d172ada67d8aefeab698e1b44f808e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121303"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794386"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>Método ICorDebugHeapValue3::GetMonitorEventWaitList
 Fornece uma lista ordenada de threads que são enfileirados no evento que está associado a um bloqueio de monitor.  
@@ -37,7 +37,7 @@ HRESULT GetMonitorEventWaitList (
  `ppThreadEnum`  
  fora O enumerador ICorDebugThreadEnum que fornece a lista ordenada de threads.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -58,7 +58,7 @@ HRESULT GetMonitorEventWaitList (
   
  Se ocorrer um erro de modo que não possa ser determinado que, se houver, os threads estão aguardando o monitor, o método retornará um HRESULT que indica falha.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -67,7 +67,7 @@ HRESULT GetMonitorEventWaitList (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

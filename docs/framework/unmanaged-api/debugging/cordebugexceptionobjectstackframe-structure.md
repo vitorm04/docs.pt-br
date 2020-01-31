@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2845c15d67e287d6efb0cd0a9c940b69de3a1c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132172"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789372"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>Estrutura CorDebugExceptionObjectStackFrame
 Representa informações de quadro de pilha de um objeto de exceção.  
@@ -37,7 +37,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`pModule`|Um ponteiro para o objeto ICorDebugModule para o quadro atual.|  
 |`ip`|O valor do ponteiro de instrução (EIP/RIP) para o quadro atual.|  
@@ -47,7 +47,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
 ## <a name="remarks"></a>Comentários  
  O chamador deve liberar o ponteiro para o objeto ICorDebugModule depois que ele não estiver mais em uso.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -56,7 +56,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

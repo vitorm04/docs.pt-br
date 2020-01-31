@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 796de687-7dd4-4b7b-a10b-8bf22dc7779f
 topic_type:
 - apiref
-ms.openlocfilehash: 6969c23bcf3ea19bf6e404996d477f669f0eee5b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6de2cb7c1a1423c5bd38a6f2e5d01c39166ab119
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122401"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791328"
 ---
 # <a name="icordebugthreadenum-interface"></a>Interface ICorDebugThreadEnum
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugThread.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugThread` da enumeração, começando na posição atual.|  
+|[Método Next](icordebugthreadenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugThread` da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -44,6 +44,6 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugThread.
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

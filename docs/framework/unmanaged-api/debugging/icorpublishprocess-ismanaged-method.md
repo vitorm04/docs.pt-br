@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-ms.openlocfilehash: ad3a357a98cb5ed28a34e4076b5e145903ceaf91
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68931ba16ea1f8f61176c6d6ed8300e762b61690
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103493"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790535"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>Método ICorPublishProcess::IsManaged
-Obtém um valor que indica se o processo referenciado por este [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) é conhecido por ter código gerenciado.  
+Obtém um valor que indica se o processo referenciado por este [ICorPublishProcess](icorpublishprocess-interface.md) é conhecido por ter código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ HRESULT IsManaged (
 ## <a name="remarks"></a>Comentários  
  Como a versão atual do `ICorPublishProcess` permite o acesso apenas a processos que têm código gerenciado, `IsManaged` sempre retorna `true`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
@@ -49,6 +49,6 @@ HRESULT IsManaged (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [Interface ICorPublishProcess](icorpublishprocess-interface.md)

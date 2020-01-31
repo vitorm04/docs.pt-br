@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6382bdf6-d488-4952-b653-cb09b6e1c6c2
 topic_type:
 - apiref
-ms.openlocfilehash: 1b2f3feca15bb8add17c9fe70805347b7c6a48ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7678c64a085a0d4951d398595b9be89af8eeb6b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133410"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791433"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>Método ICorDebugThread::SetDebugState
 Define sinalizadores que descrevem o estado de depuração deste ICorDebugThread.  
@@ -38,9 +38,9 @@ HRESULT SetDebugState (
  no Uma combinação de bits e valores de enumeração de CorDebugThreadState que especificam o estado de depuração desse thread.  
   
 ## <a name="remarks"></a>Comentários  
- `SetDebugState` define o estado de depuração atual do thread. (O "estado de depuração atual" representa o estado de depuração se o processo deveria ser continuado, não o estado atual real.) O valor normal para isso é THREAD_RUN. Somente o depurador pode afetar o estado de depuração de um thread. Os Estados de depuração fazem por último em continuar, portanto, se você quiser manter um thread THREAD_SUSPENDed sobre vários continuar, poderá defini-lo uma vez e depois não precisará se preocupar com ele. Suspender threads e retomar o processo pode causar deadlocks, embora normalmente seja improvável. Essa é uma qualidade intrínseca de threads e processos e é por design. Um depurador pode interromper e retomar de forma assíncrona os threads para interromper o deadlock. Se o estado do usuário do thread incluir USER_UNSAFE_POINT, o thread poderá bloquear uma coleta de lixo (GC). Isso significa que o thread suspenso tem uma chance muito maior de causar um deadlock. Isso pode não afetar os eventos de depuração já enfileirados. Portanto, um depurador deve drenar toda a fila de eventos (chamando [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender ou retomar os threads. Caso contrário, ele pode receber eventos em um thread que ele acredita que já foi suspenso.  
+ `SetDebugState` define o estado de depuração atual do thread. (O "estado de depuração atual" representa o estado de depuração se o processo deveria ser continuado, não o estado atual real.) O valor normal para isso é THREAD_RUN. Somente o depurador pode afetar o estado de depuração de um thread. Os Estados de depuração fazem a última vez em continuar, portanto, se você quiser manter um thread THREAD_SUSPENDed em várias vezes, poderá defini-lo uma vez e depois não precisará se preocupar com ele. Suspender threads e retomar o processo pode causar deadlocks, embora normalmente seja improvável. Essa é uma qualidade intrínseca de threads e processos e é por design. Um depurador pode interromper e retomar de forma assíncrona os threads para interromper o deadlock. Se o estado do usuário do thread incluir USER_UNSAFE_POINT, o thread poderá bloquear uma coleta de lixo (GC). Isso significa que o thread suspenso tem uma chance muito maior de causar um deadlock. Isso pode não afetar os eventos de depuração já enfileirados. Portanto, um depurador deve drenar toda a fila de eventos (chamando [ICorDebugController:: HasQueuedCallbacks](icordebugcontroller-hasqueuedcallbacks-method.md)) antes de suspender ou retomar os threads. Caso contrário, ele pode receber eventos em um thread que ele acredita que já foi suspenso.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

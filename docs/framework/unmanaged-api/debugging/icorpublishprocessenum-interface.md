@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 3a7267548a957d403cfe02aa3d800a410c14b82a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103424"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790502"
 ---
 # <a name="icorpublishprocessenum-interface"></a>Interface ICorPublishProcessEnum
-Uma subclasse da interface [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) que fornece métodos para atravessar uma coleção de objetos [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) .  
+Uma subclasse da interface [ICorPublishEnum](icorpublishenum-interface.md) que fornece métodos para atravessar uma coleção de objetos [ICorPublishProcess](icorpublishprocess-interface.md) .  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|Obtém o número especificado de instâncias de `ICorPublishProcess` da coleção, começando na posição atual.|  
+|[Método Next](icorpublishprocessenum-next-method.md)|Obtém o número especificado de instâncias de `ICorPublishProcess` da coleção, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
- A interface `ICorPublishProcessEnum` implementa os métodos da interface abstrata, [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md).  
+ A interface `ICorPublishProcessEnum` implementa os métodos da interface abstrata, [ICorPublishEnum](icorpublishenum-interface.md).  
   
- Uma instância de `ICorPublishProcessEnum` é criada pelo método [ICorPublish:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md) . A passagem da coleção de objetos de `ICorPublishProcess` é baseada nos critérios de filtro fornecidos no momento em que a instância de `ICorPublishProcessEnum` foi criada.  
+ Uma instância de `ICorPublishProcessEnum` é criada pelo método [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md) . A passagem da coleção de objetos de `ICorPublishProcess` é baseada nos critérios de filtro fornecidos no momento em que a instância de `ICorPublishProcessEnum` foi criada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
@@ -44,7 +44,7 @@ Uma subclasse da interface [ICorPublishEnum](../../../../docs/framework/unmanage
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Coclass CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Coclass CorpubPublish](corpubpublish-coclass.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Tab control type
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
-ms.openlocfilehash: 45a736d158c7b0cace19f6a47913bce428b8574c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6bbb6487db915d4544bdb7f0b584301b3b759bbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741109"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793997"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>Suporte de automação de interface do usuário para o tipo de controle de tabela
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741109"
   
  Um controle guia é análogo aos divisores em um bloco de anotações ou aos rótulos em um arquivo de gabinete. Usando um controle guia, um aplicativo pode definir várias páginas para a mesma área de uma janela ou caixa de diálogo.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle guia. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles guia, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle guia. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles guia, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -65,7 +65,7 @@ ms.locfileid: "75741109"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Sim|Todos os controles guia devem dar suporte ao padrão de seleção.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|verdadeiro|Controles de guia sempre exigem que uma seleção seja feita.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Os controles de guia são sempre contêineres de seleção única.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depende|O padrão de rolagem deve ter suporte no controle guia tem widgets que permitem que um conjunto de itens de guia seja rolado.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Dependem|O padrão de rolagem deve ter suporte no controle guia tem widgets que permitem que um conjunto de itens de guia seja rolado.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -76,12 +76,12 @@ ms.locfileid: "75741109"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

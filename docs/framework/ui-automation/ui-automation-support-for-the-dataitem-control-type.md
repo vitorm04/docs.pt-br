@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 8c2a1f70364380bb62cc1f60d3a5250041532ea9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d950783b91252f1bcbb1ff818aff5cf8472218b7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741678"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789523"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle DataItem
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741678"
   
  Uma entrada em uma lista de contatos é um exemplo de controle de item de dados. Um controle de item de dados contém informações de interesse de um usuário final. É mais complicado do que o item de lista simples, pois contém informações mais ricas.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle DataItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de item de dados, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle DataItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de item de dados, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
  A tabela a seguir descreve a exibição de controle e a exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertence a controles de item de dados e descreve o que pode ser contido em cada exibição. Para obter mais informações sobre a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md).  
@@ -55,13 +55,13 @@ ms.locfileid: "75741678"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Depende|Se o item de dados puder ser expandido ou recolhido para mostrar e ocultar informações, o padrão expandir recolhimento deverá ter suporte.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|Os itens de dados oferecerão suporte ao padrão de item de grade quando uma coleção de itens de dados estiver disponível dentro de um contêiner que pode ter uma navegação espacial de item para item.|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Depende|Todos os itens de dados dão suporte à capacidade de serem rolados para o modo de exibição com o padrão de item de rolagem quando o contêiner de dados tem mais itens do que pode caber na tela.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Dependem|Se o item de dados puder ser expandido ou recolhido para mostrar e ocultar informações, o padrão expandir recolhimento deverá ter suporte.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Dependem|Os itens de dados oferecerão suporte ao padrão de item de grade quando uma coleção de itens de dados estiver disponível dentro de um contêiner que pode ter uma navegação espacial de item para item.|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Dependem|Todos os itens de dados dão suporte à capacidade de serem rolados para o modo de exibição com o padrão de item de rolagem quando o contêiner de dados tem mais itens do que pode caber na tela.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Sim|Todos os itens de dados devem oferecer suporte ao padrão de item de seleção para indicar quando o item está selecionado.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Depende|Se o item de dados estiver contido em um tipo de controle de grade de dados, ele dará suporte a esse padrão.|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Depende|Se o item de dados contiver um estado que possa ser alternado por meio de.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Se o texto principal do item de dados for editável, o padrão de valor deverá ser suportado.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Dependem|Se o item de dados estiver contido em um tipo de controle de grade de dados, ele dará suporte a esse padrão.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Dependem|Se o item de dados contiver um estado que possa ser alternado por meio de.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Se o texto principal do item de dados for editável, o padrão de valor deverá ser suportado.|  
   
 ## <a name="working-with-data-items-in-large-lists"></a>Trabalhando com itens de dados em listas grandes  
  As listas grandes geralmente são dados virtualizados em estruturas [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] para auxiliar no desempenho. Devido a isso, um cliente de automação de interface do usuário não pode usar o recurso de consulta [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para refazer o conteúdo da árvore completa da mesma maneira que pode em outros contêineres de item. Um cliente deve rolar o item para a exibição (ou expandir o controle para mostrar todas as opções valiosas) antes de acessar o conjunto completo de informações do item de dados.  
@@ -79,13 +79,13 @@ ms.locfileid: "75741678"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
   
 ## <a name="dataitem-control-type-example"></a>Exemplo de tipo de controle DataItem  
  A imagem a seguir ilustra um tipo de controle DataItem em um controle de exibição de lista com suporte para informações avançadas para as colunas.  

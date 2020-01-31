@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344649"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867341"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>Suporte a DateTime e DateTimeOffset em System.Text.Json
 
@@ -199,4 +199,12 @@ Os seguintes níveis de granularidade são definidos para formatação:
 
         Usado para formatar um <xref:System.DateTime> ou <xref:System.DateTimeOffset> com segundos fracionários e com um deslocamento local.
 
-Se houver, um máximo de sete dígitos fracionários será gravado. Isso se alinha com a implementação de <xref:System.DateTime>, que é limitada a essa resolução.
+Se a representação de [formato de ida e volta](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) de uma instância de <xref:System.DateTime> ou <xref:System.DateTimeOffset> tiver zeros à direita em seus segundos fracionários, <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter> formatarão uma representação da instância sem zeros à direita.
+Por exemplo, uma instância de <xref:System.DateTime> cuja representação [de formato de viagem de ida e](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) volta é `2019-04-24T14:50:17.1010000Z`, será formatada como `2019-04-24T14:50:17.101Z` por <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter>.
+
+Se a representação de [formato de ida e volta](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) de uma instância de <xref:System.DateTime> ou <xref:System.DateTimeOffset> tiver todos os zeros em seus segundos fracionários, <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter> formatarão uma representação da instância sem segundos fracionários.
+Por exemplo, uma instância de <xref:System.DateTime> cuja representação [de formato de viagem de ida e](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier) volta é `2019-04-24T14:50:17.0000000+02:00`, será formatada como `2019-04-24T14:50:17+02:00` por <xref:System.Text.Json.JsonSerializer> e <xref:System.Text.Json.Utf8JsonWriter>.
+
+Truncar zeros em dígitos fracionários por segundo permite que a menor saída seja necessária para preservar as informações em uma viagem de ida e volta a ser gravada.
+
+Um máximo de 7 dígitos de fração de segundo são gravados. Isso se alinha com a implementação de <xref:System.DateTime>, que é limitada a essa resolução.

@@ -1,5 +1,5 @@
 ---
-title: Fontes internacionais em Windows Forms e controles
+title: Fontes internacionais em formulários e controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - fonts [Windows Forms], international
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: 0ddbd6d7a1b614d588a2572b410957a5ed3b768c
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 59dde6bb384d644321a8ff5674d735f8e6d36fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956912"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743515"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Fontes internacionais em Windows Forms e controles
 
@@ -84,6 +84,6 @@ TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
 textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
 ```
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando fontes e texto](using-fonts-and-text.md)
