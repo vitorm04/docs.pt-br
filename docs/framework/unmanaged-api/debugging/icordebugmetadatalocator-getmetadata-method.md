@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 43f3c1dd866b98bff51b375a11e28727e41d3ead
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136628"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793045"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Método ICorDebugMetaDataLocator::GetMetaData
 Solicita que o depurador retorne o caminho completo para um módulo cujos metadados são necessários para concluir uma operação solicitada pelo depurador.  
@@ -62,7 +62,7 @@ HRESULT GetMetaData(
   
  O sinalizador de `ofReadOnly` da enumeração [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) é usado para solicitar acesso somente leitura aos metadados nesse arquivo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método. Todos os outros HRESULTs de falha indicam que o arquivo não é recuperável.  
   
 |HRESULT|Descrição|  
@@ -73,7 +73,7 @@ HRESULT GetMetaData(
 ## <a name="remarks"></a>Comentários  
  Se `wszImagePath` contiver um caminho completo para um módulo de um despejo, ele especificará o caminho do computador em que o despejo foi coletado. O arquivo pode não existir neste local ou um arquivo incorreto com o mesmo nome pode ser armazenado no caminho.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -82,8 +82,8 @@ HRESULT GetMetaData(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugThread4](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugThread4](icordebugthread4-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)

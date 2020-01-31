@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: e0e68dba1f4d9ac5fa618aa842b823dcc046e70e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129673"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792425"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>Método ICorDebugProcess5::EnumerateHandles
 Obtém um enumerador para identificadores de objeto em um processo.  
@@ -34,15 +34,15 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 ## <a name="parameters"></a>Parâmetros  
  `types`  
- no Uma combinação bits de valores [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) que especifica o tipo de identificadores a serem incluídos na coleção.  
+ no Uma combinação bits de valores [CorGCReferenceType](corgcreferencetype-enumeration.md) que especifica o tipo de identificadores a serem incluídos na coleção.  
   
  `ppENum`  
- fora Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a serem coletados como lixo.  
+ fora Um ponteiro para o endereço de um [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) que é um enumerador para os objetos a serem coletados como lixo.  
   
 ## <a name="remarks"></a>Comentários  
- `EnumerateHandles` é uma função auxiliar que dá suporte à inspeção da tabela de identificadores. Ele é semelhante ao método [ICorDebugProcess5:: EnumerateGCReferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md) , exceto que, em vez de preencher uma coleção [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md) com todos os objetos a serem coletados pelo lixo, ele inclui somente objetos que têm identificadores de a tabela de identificadores.  
+ `EnumerateHandles` é uma função auxiliar que dá suporte à inspeção da tabela de identificadores. Ele é semelhante ao método [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md) , exceto que, em vez de preencher uma coleção [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md) com todos os objetos a serem coletados pelo lixo, ele inclui somente objetos que têm identificadores da tabela de identificadores.  
   
- O parâmetro `types` especifica os tipos de identificador a serem incluídos na coleção. `types` pode ser qualquer um dos três seguintes membros da enumeração [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) :  
+ O parâmetro `types` especifica os tipos de identificador a serem incluídos na coleção. `types` pode ser qualquer um dos três seguintes membros da enumeração [CorGCReferenceType](corgcreferencetype-enumeration.md) :  
   
 - `CorHandleStrongOnly` (trata apenas de referências fortes).  
   
@@ -50,7 +50,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
 - `CorHandleAll` (todos os identificadores).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -59,7 +59,7 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

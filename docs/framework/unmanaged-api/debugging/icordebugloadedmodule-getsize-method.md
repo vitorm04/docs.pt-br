@@ -2,12 +2,12 @@
 title: Método ICorDebugLoadedModule::GetSize
 ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-ms.openlocfilehash: 3f2f8a1721847b8f7b845c42aa3c91e032c2d474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f207cd1c612b6444a9512adaa356ac2d01de7b9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122641"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788461"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>Método ICorDebugLoadedModule::GetSize
 Obtém o tamanho em bytes do módulo carregado.  
@@ -29,7 +29,7 @@ HRESULT GetSize(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -38,7 +38,7 @@ HRESULT GetSize(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugLoadedModule](icordebugloadedmodule-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

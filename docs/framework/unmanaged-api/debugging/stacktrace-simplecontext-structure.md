@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c81a5787eb06971e3d52aff5d1c1154a72564daf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139124"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790328"
 ---
 # <a name="stacktrace_simplecontext-structure"></a>Estrutura StackTrace_SimpleContext
 Fornece um contexto simples que pode ser usado em lugar de uma estrutura `CONTEXT` completa.  
@@ -38,7 +38,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`StackOffset`|O ponteiro de pilha ou o ponteiro de pilha Enter (ESP) em plataformas x86.|  
 |`FrameOffset`|O deslocamento do quadro ou o EBP se registra em plataformas x86.|  
@@ -47,14 +47,14 @@ struct StackTrace_SimpleContext
 ## <a name="remarks"></a>Comentários  
  Como as funções de rastreamento de pilha normalmente precisam retornar apenas o endereço, o deslocamento do quadro e o endereço da pilha, você pode, opcionalmente, usar a estrutura de `SimpleContext` em vez de uma estrutura de `CONTEXT` grande.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** SOS_Stacktrace. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Estruturas de depuração](debugging-structures.md)
+- [Depuração](index.md)

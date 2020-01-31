@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: d79b642735543ff84f6211fe5ca2e5b424be1f2e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 084af87acd73ef65739ba69ef2bd66d10d7c27c2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103440"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790511"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>Método ICorPublishProcessEnum::Next
 Obtém o número especificado de processos da coleção, começando na posição atual do cursor.  
@@ -41,12 +41,12 @@ HRESULT Next (
  no O número de processos a serem recuperados.  
   
  `objects`  
- fora Um ponteiro para a matriz de objetos [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) recuperados, cada um deles representa um processo.  
+ fora Um ponteiro para a matriz de objetos [ICorPublishProcess](icorpublishprocess-interface.md) recuperados, cada um deles representa um processo.  
   
  `pceltFetched`  
  fora Aponta para o número de processos realmente retornados. Esse valor pode ser nulo se `celt` for um.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorPub. idl, CorPub. h  
@@ -55,6 +55,6 @@ HRESULT Next (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [Interface ICorPublishProcessEnum](icorpublishprocessenum-interface.md)

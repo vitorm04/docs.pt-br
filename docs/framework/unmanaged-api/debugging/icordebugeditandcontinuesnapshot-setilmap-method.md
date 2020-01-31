@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26c1bf4b-75ff-4c32-872c-3078ccdde04f
 topic_type:
 - apiref
-ms.openlocfilehash: f8b92bdb4ae53f48af9f74a0fe13fd4465e9a356
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 279c69bd38b5492d00b43e371ebec27997882857
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121187"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788793"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a>Método ICorDebugEditAndContinueSnapshot::SetILMap
 `SetILMap` é obsoleto. Não chame esse método.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

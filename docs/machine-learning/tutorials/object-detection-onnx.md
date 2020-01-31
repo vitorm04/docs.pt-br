@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345041"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794634"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -51,7 +51,7 @@ Alguns casos de uso para detecção de objetos incluem:
 
 - Carros autônomos
 - Robótica
-- Detecção facial
+- Detecção Facial
 - Segurança do local de trabalho
 - Contagem de objetos
 - Reconhecimento de atividades
@@ -213,7 +213,7 @@ A saída de dados pelo modelo contém coordenadas e dimensões das caixas delimi
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` conta com os seguintes `float` campos:
+    `DimensionsBase` tem as seguintes propriedades de `float`:
 
     - `X` contém a posição do objeto ao longo do eixo x.
     - `Y` contém a posição do objeto ao longo do eixo y.
@@ -237,7 +237,7 @@ Em seguida, crie uma classe para suas caixas delimitadoras.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` conta com os seguintes campos:
+    `YoloBoundingBox` tem as seguintes propriedades:
 
     - `Dimensions` contém as dimensões da caixa delimitadora.
     - `Label` contém a classe de objeto detectada na caixa delimitadora.
@@ -260,7 +260,7 @@ Agora que as classes para dimensões e caixas delimitadoras estão criadas, é h
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. Na definição de classe `YoloOutputParser`, adicione a constante e os campos a seguir.
+1. Dentro da definição de classe de `YoloOutputParser`, adicione as constantes e os campos a seguir.
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
@@ -448,7 +448,7 @@ Por fim, fora do loop for inicial do método `FilterBoundingBoxes`, retorne os r
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Ótimo! Agora é hora de usar esse código junto com o modelo de pontuação.
+Legal! Agora é hora de usar esse código junto com o modelo de pontuação.
 
 ## <a name="use-the-model-for-scoring"></a>Usar o modelo para pontuação
 

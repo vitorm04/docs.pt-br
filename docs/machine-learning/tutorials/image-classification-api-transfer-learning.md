@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348175"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794588"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: inspeção visual automatizada usando o aprendizado de transferência com a API de classificação de imagem ML.NET
 
@@ -41,7 +41,7 @@ A classificação de imagem é um problema de pesquisa Visual computacional. A c
 - Reconhecimento de rosto
 - Detecção de emoções
 - Diagnóstico médico
-- Detecção de monumentos
+- Detecção de ponto de referência
 
 Este tutorial treina um modelo de classificação de imagem personalizada para executar a inspeção visual automatizada de decks de ponte para identificar estruturas que estão danificadas por rachaduras.
 
@@ -76,7 +76,7 @@ Depois que os valores de saída da fase de afunilamento são computados, eles s�
 
 O modelo pretreinado usado neste tutorial é a variante de camada 101 do modelo de rede residual (ResNet) v2. O modelo original é treinado para classificar imagens em milhares de categorias. O modelo usa como entrada uma imagem de tamanho 224 x 224 e gera as probabilidades de classe para cada uma das classes em que é treinado. Parte desse modelo é usada para treinar um novo modelo usando imagens personalizadas para fazer previsões entre duas classes.
 
-## <a name="create-console-application"></a>Criar um aplicativo de console
+## <a name="create-console-application"></a>Criar aplicativo de console
 
 Agora que você tem uma compreensão geral do aprendizado de transferência e da API de classificação de imagem, é hora de criar o aplicativo.
 
@@ -140,10 +140,10 @@ Neste tutorial, somente imagens de baralho de ponte são usadas.
 
         `ModelInput` contém as seguintes propriedades:
 
-        - `ImagePath` é o caminho totalmente qualificado em que a imagem é armazenada.
-        - `Label` é a categoria à qual a imagem pertence. Esse é o valor a prever.
         - `Image` é a representação `byte[]` da imagem. O modelo espera que os dados de imagem sejam desse tipo para treinamento.
         - `LabelAsKey` é a representação numérica do `Label`.
+        - `ImagePath` é o caminho totalmente qualificado em que a imagem é armazenada.
+        - `Label` é a categoria à qual a imagem pertence. Esse é o valor a prever.
 
         Somente `Image` e `LabelAsKey` são usados para treinar o modelo e fazer previsões. As propriedades `ImagePath` e `Label` são mantidas por conveniência para acessar o nome e a categoria do arquivo de imagem original.
 
@@ -171,7 +171,7 @@ Quando os dados de treinamento e validação não são alterados com frequência
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. Em seguida, inicialize a variável `mlContext` com uma nova instância de [MLContext](xref:Microsoft.ML.MLContext).
+1. Inicialize a variável `mlContext` com uma nova instância de [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 

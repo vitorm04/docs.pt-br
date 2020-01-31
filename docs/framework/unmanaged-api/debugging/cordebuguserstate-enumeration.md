@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120197"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789233"
 ---
 # <a name="cordebuguserstate-enumeration"></a>Enumeração CorDebugUserState
 Indica o estado do usuário de um thread.  
@@ -42,7 +42,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Membros  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Foi solicitada uma terminação do thread.|  
 |`USER_SUSPEND_REQUESTED`|Uma suspensão do thread foi solicitada.|  
@@ -57,9 +57,9 @@ typedef enum CorDebugUserState {
 ## <a name="remarks"></a>Comentários  
  O estado do usuário de um thread é o estado que o thread tem quando o depurador o examina. Um thread pode ter uma combinação de Estados do usuário.  
   
- Use o método [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) para recuperar o estado do usuário de um thread.  
+ Use o método [ICorDebugThread:: GetUserState](icordebugthread-getuserstate-method.md) para recuperar o estado do usuário de um thread.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -68,6 +68,6 @@ typedef enum CorDebugUserState {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Declarando enumerações](debugging-enumerations.md)

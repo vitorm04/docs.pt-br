@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0dc301c67d09ebb15bf47cef15e642fb7c78fb9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128855"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792612"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>Método ICorDebugProcess::GetHelperThreadID
 Obtém a ID do thread do sistema operacional (SO) do thread auxiliar interno do depurador.  
@@ -42,12 +42,12 @@ HRESULT GetHelperThreadID (
   
  Não é possível armazenar em cache a ID do thread auxiliar, pois ela pode mudar ao longo do tempo. Você deve consultar novamente a ID do thread em cada evento de parada.  
   
- A ID de thread do thread auxiliar do depurador estará correta em cada evento [ICorDebugManagedCallback:: CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) não gerenciado, permitindo que um depurador determine a ID do thread do seu thread auxiliar e o oculte do usuário. Um thread que é identificado como um thread auxiliar durante um evento de `ICorDebugManagedCallback::CreateThread` não gerenciado nunca executará código de usuário gerenciado.  
+ A ID de thread do thread auxiliar do depurador estará correta em cada evento [ICorDebugManagedCallback:: CreateThread](icordebugmanagedcallback-createthread-method.md) não gerenciado, permitindo que um depurador determine a ID do thread do seu thread auxiliar e o oculte do usuário. Um thread que é identificado como um thread auxiliar durante um evento de `ICorDebugManagedCallback::CreateThread` não gerenciado nunca executará código de usuário gerenciado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorDebug. idl. CorDebug. h  
+ **Cabeçalho:** CorDebug. idl. CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   

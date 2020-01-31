@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 69288e995ec789091bf089368cd9a60f003df86e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122983"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789125"
 ---
 # <a name="enumerateclrs-function"></a>Função EnumerateCLRs
 Fornece um mecanismo para enumerar o CLRs em um processo.  
@@ -50,14 +50,14 @@ HRESULT EnumerateCLRs (
  `pdwArrayLengthOut`  
  fora Ponteiro para um DWORD que contém o comprimento do `ppHandleArrayOut` e `pdwArrayLengthOut`de tamanho uniforme.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
  O número de CLRs no processo foi determinado com êxito e as matrizes de identificador e caminho correspondentes foram preenchidas corretamente.  
   
- E_INVALIDARG  
+ {1&gt;E_INVALIDARG&lt;1}  
  `ppHandleArrayOut` ou `ppStringArrayOut` é nulo ou o `pdwArrayLengthOut` é nulo.  
   
- E_OUTOFMEMORY  
+ {1&gt;E_OUTOFMEMORY&lt;1}  
  A função não pode alocar memória suficiente para as matrizes de identificador e caminho.  
   
  E_FAIL (ou outros códigos de retorno de E_)  
@@ -68,11 +68,11 @@ HRESULT EnumerateCLRs (
   
  No sistema operacional Windows, o `debuggeePID` é mapeado para um identificador de processo do sistema operacional.  
   
- A memória para `ppHandleArrayOut` e `ppStringArrayOut` são alocadas por essa função. Para liberar a memória alocada, você deve chamar a [função CloseCLREnumeration](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md).  
+ A memória para `ppHandleArrayOut` e `ppStringArrayOut` são alocadas por essa função. Para liberar a memória alocada, você deve chamar a [função CloseCLREnumeration](closeclrenumeration-function.md).  
   
  Essa função pode ser chamada com ambos os parâmetros de matriz definidos como NULL para retornar a contagem de CLRs no processo de destino. A partir dessa contagem, um chamador pode inferir o tamanho do buffer que será criado: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim. h  

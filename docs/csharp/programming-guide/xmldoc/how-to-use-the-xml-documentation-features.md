@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696708"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789781"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Como usar as funcionalidades da documentação XML
 
@@ -20,7 +20,7 @@ O exemplo a seguir fornece uma visão geral básica de um tipo que foi documenta
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-O exemplo gera um arquivo .xml com o seguinte conteúdo:
+O exemplo gera um arquivo *. xml* com o conteúdo a seguir.
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ A documentação XML começa com ///. Quando você cria um novo projeto, os assi
 
 - A documentação deve ser em XML bem formado. Se o XML não estiver bem formado, um aviso será gerado e o arquivo de documentação conterá um comentário que diz que foi encontrado um erro.
 
-- Os desenvolvedores são livres para criar seu próprio conjunto de marcas. Há um conjunto de marcas recomendadas (confira [Marcas recomendadas para comentários da documentação](recommended-tags-for-documentation-comments.md)). Algumas das marcas recomendadas têm significado especial:
+- Os desenvolvedores são livres para criar seu próprio conjunto de marcas. Há um [conjunto recomendado de marcas](recommended-tags-for-documentation-comments.md). Algumas das marcas recomendadas têm significado especial:
 
   - A marca \<param> é usada para descrever parâmetros. Se ela é usada, o compilador verifica se o parâmetro existe e se todos os parâmetros são descritos na documentação. Se a verificação falhar, o compilador emitirá um aviso.
 
@@ -133,8 +133,8 @@ A documentação XML começa com ///. Quando você cria um novo projeto, os assi
 
 ## <a name="see-also"></a>Veja também
 
-- [Guia de Programação em C#](../index.md)
-- [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [Comentários da documentação XML](./index.md)
+- [Guia de programação em C#](../index.md)
+- [-Doc (C# opções do compilador)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentários de documentação XML](./index.md)
 - [Processador de documentação do DocFX](https://dotnet.github.io/docfx/)
 - [Processador de documentação do Sandcastle](https://github.com/EWSoftware/SHFB)

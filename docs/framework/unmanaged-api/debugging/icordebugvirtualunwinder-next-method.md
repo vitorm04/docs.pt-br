@@ -2,12 +2,12 @@
 title: 'Método ICorDebugVirtualUnwinder:: Next'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
-ms.openlocfilehash: ed80b7a630f78002ded14a1bec206cc8712bd504
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d5377ef123cc3f9c91fbfbcf0b0f17a14eb629
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121854"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790811"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>Método ICorDebugVirtualUnwinder:: Next
 Avança para o contexto do chamador.  
@@ -19,9 +19,9 @@ HRESULT Next();
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- nenhuma.  
+ Nenhuma.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  `S_OK` se o desenrolar tiver ocorrido com êxito ou `CORDBG_S_AT_END_OF_STACK` se o desenrolamento não puder ser concluído porque não há mais quadros.  
   
  Se um HRESULT com falha for retornado, as APIs ICorDebug retornarão `CORDBG_E_DATA_TARGET_ERROR`.  
@@ -32,7 +32,7 @@ HRESULT Next();
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -41,7 +41,7 @@ HRESULT Next();
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

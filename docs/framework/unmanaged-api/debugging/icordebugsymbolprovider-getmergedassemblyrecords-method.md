@@ -2,12 +2,12 @@
 title: 'Método ICorDebugSymbolProvider:: GetMergedAssemblyRecords'
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6faf8960c06488c8fff5a076aae375529e1d0260
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138867"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791618"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>Método ICorDebugSymbolProvider:: GetMergedAssemblyRecords
 Obtém os registros de símbolo de todos os assemblies mesclados.  
@@ -30,14 +30,14 @@ HRESULT GetMergedAssemblyRecords(
  fora Um ponteiro para o número de registros de símbolo recuperados pelo método.  
   
  `pRecords`  
- Um ponteiro para uma matriz de objetos [ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md) .  
+ Um ponteiro para uma matriz de objetos [ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md) .  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetMergedAssemblyRecords(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

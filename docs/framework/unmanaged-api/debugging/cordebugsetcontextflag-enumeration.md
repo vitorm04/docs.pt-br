@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097263"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789263"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Enumeração CorDebugSetContextFlag
 Indica se o contexto é do quadro ativo (ou folha) na pilha ou se foi computado pelo desenrolamento de outro quadro.  
@@ -36,15 +36,15 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|O contexto é o contexto ativo do thread.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|O contexto foi calculado com o desenrolamento de outro quadro.|  
   
 ## <a name="remarks"></a>Comentários  
- `CorDebugSetContextFlag` fornece valores que são usados pelo método [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
+ `CorDebugSetContextFlag` fornece valores que são usados pelo método [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -53,7 +53,7 @@ typedef enum CorDebugSetContextFlag
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Declarando enumerações](debugging-enumerations.md)
+- [Depuração](index.md)

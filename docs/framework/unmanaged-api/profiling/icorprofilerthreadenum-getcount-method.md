@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6dbdc4a-6115-455d-a3f3-704a81d3646b
 topic_type:
 - apiref
-ms.openlocfilehash: 695b720119854de4645b2f14dd55811f2465504a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 230b02b71abea48b1c3ad4094ea90812493149d1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447647"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860988"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>Método ICorProfilerThreadEnum::GetCount
 Obtém o número de threads que são usados pelo aplicativo.  
@@ -36,7 +36,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
  `celt`  
  fora O número de threads usados pelo aplicativo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -45,7 +45,7 @@ HRESULT GetCount (    [out] ULONG * pcelt
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

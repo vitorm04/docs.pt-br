@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: aaa8eaa2c4eb927a817425611f71e51c9f3d37af
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b08a501f7d55fbb193afd8c297ca7725348dac76
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447584"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860899"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>Método ICorProfilerThreadEnum::Skip
 Avança o cursor do enumerador de sua posição atual para ignorar o número especificado de elementos.  
@@ -36,7 +36,7 @@ HRESULT Skip (    [in] ULONG celt
  `celt`  
  no O número de elementos a serem ignorados.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
@@ -47,7 +47,7 @@ HRESULT Skip (    [in] ULONG celt
 ## <a name="remarks"></a>Comentários  
  A nova posição do cursor deste enumerador é (posição atual) + `celt`.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -56,7 +56,7 @@ HRESULT Skip (    [in] ULONG celt
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Interface ICorProfilerThreadEnum](icorprofilerthreadenum-interface.md)
+- [Interfaces de criação de perfil](profiling-interfaces.md)

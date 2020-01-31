@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125745"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784163"
 ---
 # <a name="icordebugclass-interface"></a>Interface ICorDebugClass
 
 Representa um tipo, que pode ser básico ou complexo (isto é, definido pelo usuário). Se o tipo for genérico, `ICorDebugClass` representará o tipo genérico sem instância.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Obtém o módulo que define essa classe.|  
-|[Método GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|Obtém o valor do campo estático especificado.|  
-|[Método GetToken](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Obtém o token de metadados `TypeDef` para esta classe.|  
+|[Método GetModule](icordebugclass-getmodule-method.md)|Obtém o módulo que define essa classe.|  
+|[Método GetStaticFieldValue](icordebugclass-getstaticfieldvalue-method.md)|Obtém o valor do campo estático especificado.|  
+|[Método GetToken](icordebugclass-gettoken-method.md)|Obtém o token de metadados `TypeDef` para esta classe.|  
   
 ## <a name="remarks"></a>Comentários  
  A interface `ICorDebugClass` representa um tipo genérico não instanciado. A interface ICorDebugType representa um tipo genérico instanciado. Por exemplo, `Hashtable<K, V>` seria representado por `ICorDebugClass`, enquanto `Hashtable<Int32, String>` seria representado por `ICorDebugType`.  
@@ -41,7 +41,7 @@ Representa um tipo, que pode ser básico ou complexo (isto é, definido pelo usu
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -50,6 +50,6 @@ Representa um tipo, que pode ser básico ou complexo (isto é, definido pelo usu
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

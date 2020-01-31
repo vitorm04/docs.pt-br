@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51d9f4a4-81a7-4527-8537-5212bdb05c70
 topic_type:
 - apiref
-ms.openlocfilehash: 1b4741b71521ab91152ce71d5b1b4a4c3fbd3629
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a274aaec4919b86f32f98e4d8278dc12748fb2b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113750"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785473"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>Método ICLRDataTarget::GetPointerSize
 Obtém o tamanho, em bytes, do tipo de ponteiro usado pelo processo de destino. Esse método é chamado pelo Common Language Runtime Data Access Services.  
@@ -40,7 +40,7 @@ HRESULT GetPointerSize (
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -49,6 +49,6 @@ HRESULT GetPointerSize (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [Interface ICLRDataTarget](iclrdatatarget-interface.md)

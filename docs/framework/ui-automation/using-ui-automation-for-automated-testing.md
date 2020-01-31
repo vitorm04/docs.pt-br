@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 5668e14cd0aed33a29fd43661363131879419e61
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741073"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793917"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -37,13 +37,13 @@ ms.locfileid: "75741073"
 > Com outros modelos de acessibilidade, os desenvolvedores devem reunir informações diretamente de botões, menus ou outros controles individuais. Infelizmente, cada tipo de controle vem em dezenas de pequenas variações. Em outras palavras, embora dez variações de um botão de pressão possam funcionar da mesma forma e executar a mesma função, todas elas devem ser tratadas como controles exclusivos. Não é possível saber que esses controles são funcionalmente equivalentes. Padrões de controle foram desenvolvidos para representar esses comportamentos de controle comuns. Para obter mais informações, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementando a automação da interface do usuário  
- Conforme mencionado anteriormente, sem o modelo unificado fornecido pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam conhecer informações específicas da estrutura para expor propriedades e comportamentos de controles nessa estrutura. Como pode haver várias estruturas de interface do usuário diferentes em um único momento dentro dos sistemas operacionais Windows, incluindo Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e Windows Presentation Foundation (WPF), pode ser uma tarefa assustadora para testar vários aplicativos com controles que parecem semelhantes. Por exemplo, a tabela a seguir descreve os nomes de propriedade específicos da estrutura necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a propriedade equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] única.  
+ Conforme mencionado anteriormente, sem o modelo unificado fornecido pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam conhecer informações específicas da estrutura para expor propriedades e comportamentos de controles nessa estrutura. Como pode haver várias estruturas de interface do usuário diferentes em um único momento dentro dos sistemas operacionais Windows, incluindo Win32, Windows Forms e Windows Presentation Foundation (WPF), pode ser uma tarefa assustadora para testar vários aplicativos com controles que parece semelhante. Por exemplo, a tabela a seguir descreve os nomes de propriedade específicos da estrutura necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a propriedade equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] única.  
   
 |Tipo de controle de automação da interface do usuário|Estrutura de interface do usuário|Propriedade específica da estrutura|Propriedade de automação da interface do usuário|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
 |Botão|Windows Presentation Foundation|Conteúdo|Nome da|  
 |Botão|Win32|Legenda|Nome da|  
-|Image|HTML|alt|Nome da|  
+|Image|HTML|pressionando|Nome da|  
   
  Provedores de automação de interface do usuário são responsáveis por mapear as propriedades específicas da estrutura de seus controles para as propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] equivalentes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "75741073"
   
  Uma complicação que surge de aplicativos automatizados é a dificuldade de sincronizar um teste com um destino dinâmico. Por exemplo, um controle de caixa de listagem, como um contido no Gerenciador de tarefas do Windows, que exibe uma lista de aplicativos em execução no momento. Como os itens na caixa de listagem são dinamicamente atualizados fora do controle do aplicativo de teste, a tentativa de repetir a seleção de um item específico na caixa de listagem com qualquer consistência é impossível. Problemas semelhantes também podem surgir ao tentar repetir alterações de foco simples em um [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que está fora do controle do aplicativo de teste.  
   
-### <a name="programmatic-access"></a>Acesso Programático  
+### <a name="programmatic-access"></a>Acesso programático  
  O acesso programático fornece a capacidade de imitar, por meio de código, qualquer interação e experiência exposta por entrada tradicional de mouse e teclado. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] habilita o acesso programático por meio de cinco componentes:  
   
 - A árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] facilita a navegação por meio da estrutura da [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. A árvore é criada a partir da coleção de hWnds. Para obter mais informações, consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md)  

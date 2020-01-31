@@ -2,12 +2,12 @@
 title: Método ICorDebugDataTarget2::CreateVirtualUnwinder
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-ms.openlocfilehash: f9a9038bd0d268e09d8518fa50534a9959b456de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fc4facda6253d0c68dcf89b2a1b06e639734efe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122180"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788847"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Método ICorDebugDataTarget2::CreateVirtualUnwinder
 Cria um novo unwinder de pilha que inicia o desenrolamento de um contexto inicial (que não é necessariamente folha de um thread).  
@@ -40,15 +40,15 @@ HRESULT CreateVirtualUnwinder(
  ppUnwinder  
  [out] Um ponteiro para o endereço de um objeto de interface ICorDebugVirtualUnwinder.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se bem-sucedido. Qualquer outro `HRESULT` indica uma falha. Qualquer `HRESULT` com falha recebido por MSCorDbi é considerado fatal e faz com que os métodos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) retornem `CORDBG_E_DATA_TARGET_ERROR`.  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se bem-sucedido. Qualquer outro `HRESULT` indica uma falha. Qualquer falha `HRESULT` recebida pelo MSCorDbi é considerada fatal e faz com que os métodos [ICorDebug](icordebug-interface.md) sejam retornados `CORDBG_E_DATA_TARGET_ERROR`.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -57,7 +57,7 @@ HRESULT CreateVirtualUnwinder(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

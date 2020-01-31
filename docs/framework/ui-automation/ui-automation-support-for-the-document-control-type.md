@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Document control type
 - UI Automation, Document control type
 ms.assetid: a79d594b-1ca0-4543-8dac-afd2c645201d
-ms.openlocfilehash: f3bff71509aaaec344ca64ffd6d7f09cef2b6a51
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0bac338ad06b3ddf76b2374ea2a3d954abb3cbc7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741539"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789514"
 ---
 # <a name="ui-automation-support-for-the-document-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Document
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741539"
   
  Os controles de documento permitem que um usuário exiba e manipule várias páginas de texto. Ao contrário dos controles de edição que oferecem suporte apenas a uma linha simples de texto não formatado, os controles de documento podem hospedar texto com estilo rico e formatado.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de documento. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de documento, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de documento. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de documento, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
  A tabela a seguir descreve a exibição de controle e a exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertence a controles de documento e descreve o que pode ser contido em cada exibição. Para obter mais informações sobre a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "75741539"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Depende|O controle de documento pode abranger maior do que aquele span do visor. O controle deve dar suporte ao padrão de controle Scroll se o conteúdo for rolável.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|Dependem|O controle de documento pode abranger maior do que aquele span do visor. O controle deve dar suporte ao padrão de controle Scroll se o conteúdo for rolável.|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|Necessário|O controle de documento pode abranger maior do que aquele span do visor. O controle deve dar suporte ao padrão de controle Scroll se o conteúdo for rolável.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|{1&gt;Nunca&lt;1}|O controle de documento não dá suporte a esse padrão de controle porque o conteúdo do controle geralmente abrange mais de uma página. Os clientes de automação da interface do usuário devem usar <xref:System.Windows.Automation.TextPattern> para obter informações de texto sobre um documento.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75741539"
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|Se o controle der suporte ao padrão de controle Selection, ele deverá dar suporte a esse evento.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Dependem|Se o controle der suporte ao padrão de controle Selection, ele deverá dar suporte a esse evento.|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: db9938f26f31506737eb0395fa389da01a1ee444
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 6d8dedafd4ffc582b529289d3583f90d81779762
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735072"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794034"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presentation Foundation (WPF). Ele cobre a maioria dos principais subsistemas do WPF e descreve como eles interagem. Ele também detalha algumas das opções feitas pelos arquitetos do WPF.  
@@ -116,7 +116,7 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
  As duas coisas mais importantes que <xref:System.Windows.FrameworkElement> introduz são vinculação de dados e estilos.  
   
- O subsistema de associação de dados no WPF deve ser relativamente familiar para qualquer pessoa que tenha usado [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou ASP.NET para criar um aplicativo [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Em cada um desses sistemas, há uma maneira simples de expressar se você deseja que uma ou mais propriedades de um determinado elemento seja associada a uma parte dos dados. O WPF tem suporte completo para associação de propriedade, transformação e Associação de lista.  
+ O subsistema de associação de dados no WPF deve ser relativamente familiar para qualquer pessoa que tenha usado Windows Forms ou ASP.NET para criar um aplicativo [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Em cada um desses sistemas, há uma maneira simples de expressar se você deseja que uma ou mais propriedades de um determinado elemento seja associada a uma parte dos dados. O WPF tem suporte completo para associação de propriedade, transformação e Associação de lista.  
   
  Um dos recursos mais interessantes da vinculação de dados no WPF é a introdução dos modelos de dados. Modelos de dados permitem que você especifique declarativamente como uma parte dos dados deve ser visualizada. Em vez de criar uma interface do usuário personalizada que pode ser associada a dados, você pode inverter o problema e permitir que os dados determinem a exibição que será criada.  
   
@@ -130,7 +130,7 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
  Essa divisão entre o modelo de dados (propriedades), o modelo de interação (comandos e eventos) e o modelo de exibição (modelos) permite a completa personalização da aparência e comportamento de um controle.  
   
- Um aspecto comum do modelo de dados dos controles é o modelo de conteúdo. Se você examinar um controle como <xref:System.Windows.Controls.Button>, verá que ele tem uma propriedade chamada "content" do tipo <xref:System.Object>. Em [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] e ASP.NET, essa propriedade normalmente seria uma cadeia de caracteres – no entanto, isso limita o tipo de conteúdo que você pode colocar em um botão. O conteúdo de um botão pode ser uma cadeia de caracteres simples, um objeto de dados complexo ou uma árvore de elementos inteira. No caso de um objeto de dados, o modelo de dados é usado para construir uma exibição.  
+ Um aspecto comum do modelo de dados dos controles é o modelo de conteúdo. Se você examinar um controle como <xref:System.Windows.Controls.Button>, verá que ele tem uma propriedade chamada "content" do tipo <xref:System.Object>. Em Windows Forms e ASP.NET, essa propriedade normalmente seria uma cadeia de caracteres – no entanto, isso limita o tipo de conteúdo que você pode colocar em um botão. O conteúdo de um botão pode ser uma cadeia de caracteres simples, um objeto de dados complexo ou uma árvore de elementos inteira. No caso de um objeto de dados, o modelo de dados é usado para construir uma exibição.  
   
 <a name="Summary"></a>   
 ## <a name="summary"></a>Resumo  
@@ -138,7 +138,7 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
  Aplicativos tradicionais criam uma exibição e, em seguida, associam a alguns dados. No WPF, tudo sobre o controle, todos os aspectos da exibição, é gerado por algum tipo de associação de dados. O texto encontrado em um botão é exibido por meio da criação de um controle composto dentro do botão e da associação de sua exibição à propriedade de conteúdo do botão.  
   
- Quando você começa a desenvolver aplicativos baseados em WPF, ele deve se sentir muito familiar. Você pode definir propriedades, usar objetos e associar dados da mesma maneira que você pode usar [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ou ASP.NET. Com uma investigação mais profunda sobre a arquitetura do WPF, você descobrirá que a possibilidade existe para criar aplicativos muito mais ricos que tratem fundamentalmente os dados como o principal driver do aplicativo.  
+ Quando você começa a desenvolver aplicativos baseados em WPF, ele deve se sentir muito familiar. Você pode definir propriedades, usar objetos e associar dados da mesma maneira que você pode usar Windows Forms ou ASP.NET. Com uma investigação mais profunda sobre a arquitetura do WPF, você descobrirá que a possibilidade existe para criar aplicativos muito mais ricos que tratem fundamentalmente os dados como o principal driver do aplicativo.  
   
 ## <a name="see-also"></a>Veja também
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131287"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791985"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>Método ICorDebugRemote::CreateProcessEx
 Inicia um processo em um computador remoto sob o depurador.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parâmetros  
  `pRemoteTarget`  
- no Ponteiro para uma [interface ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
+ no Ponteiro para uma [interface ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Usado para determinar o computador remoto no qual o processo será iniciado.  
   
  `lpApplicationName`  
  no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o módulo a ser executado pelo processo iniciado. O módulo é executado no contexto de segurança do processo de chamada.  
@@ -85,7 +85,7 @@ HRESULT CreateProcessEx (
  `ppProcess`  
  fora Um ponteiro para o endereço de um objeto "interface ICorDebugProcess" que representa o processo.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
  O processo foi iniciado com êxito no computador remoto e retornou uma "interface ICorDebugProcess" para depuração.  
   
@@ -95,7 +95,7 @@ HRESULT CreateProcessEx (
 ## <a name="remarks"></a>Comentários  
  Não há suporte para a depuração de modo misto no Silverlight.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl  
@@ -104,9 +104,9 @@ HRESULT CreateProcessEx (
   
  **Versões do .NET Framework:** 4,5, 4, 3,5 SP1  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugRemote](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Interface ICorDebugRemote](icordebugremote-interface.md)
+- [Interface ICorDebug](icordebug-interface.md)
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

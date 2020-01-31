@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0eed5a8-fa6d-4818-bd00-7babcea30325
 topic_type:
 - apiref
-ms.openlocfilehash: 39f5c1813b08f4d72c610820b1434e29eb4aec8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb25c9235e4fcded5c230d2d417b9d41bbdd9b19
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121271"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792334"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>Método ICorDebugProcess5::GetTypeForTypeID
 Converte um identificador de tipo em um valor ICorDebugType.  
@@ -44,7 +44,7 @@ HRESULT GetTypeForTypeID(
 ## <a name="remarks"></a>Comentários  
  Em alguns casos, os métodos que retornam um identificador de tipo podem retornar um valor de `COR_TYPEID` nulo. Se esse valor for passado como o argumento `id`, o método `GetTypeForTypeID` falhará e retornará `E_FAIL`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -53,7 +53,7 @@ HRESULT GetTypeForTypeID(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugProcess5](icordebugprocess5-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

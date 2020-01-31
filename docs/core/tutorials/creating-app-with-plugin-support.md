@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739705"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787849"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -20,7 +20,7 @@ Este tutorial mostra como criar um <xref:System.Runtime.Loader.AssemblyLoadConte
 - Usar o tipo <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> para permitir que os plug-ins tenham dependências.
 - Criar plug-ins que possam ser implantados facilmente apenas copiando os artefatos de build.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Instale o [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
@@ -250,15 +250,18 @@ Entre as marcas `<Project>`, adicione os seguintes elementos:
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 O elemento `<Private>false</Private>` é importante. Ele informa ao MSBuild que ele não deve copiar o *PluginBase.dll* para o diretório de saída do HelloPlugin. Se o assembly *PluginBase.dll* estiver presente no diretório de saída, o `PluginLoadContext` encontrará o assembly lá e o carregará ao carregar o assembly *HelloPlugin.dll*. Neste ponto, o tipo `HelloPlugin.HelloCommand` implementará a interface `ICommand` do *PluginBase.dll* no diretório de saída do projeto `HelloPlugin`, não a interface `ICommand` que é carregada no contexto de carregamento padrão. Como o tempo de execução vê esses dois tipos como tipos diferentes de assemblies diferentes, o método `AppWithPlugin.Program.CreateCommands` não encontrará os comandos. Como resultado, os metadados `<Private>false</Private>` serão necessários para a referência ao assembly que contém as interfaces de plug-in.
 
-Agora que o projeto `HelloPlugin` está concluído, devemos atualizar o projeto `AppWithPlugin` para saber onde o plug-in `HelloPlugin` pode ser encontrado. Após o comentário `// Paths to plugins to load`, adicione `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` como um elemento da matriz `pluginPaths`.
+Da mesma forma, o elemento `<ExcludeAssets>runtime</ExcludeAssets>` também será importante se o `PluginBase` fizer referência a outros pacotes. Essa configuração tem o mesmo efeito que `<Private>false</Private>`, mas funciona em referências de pacote que o projeto `PluginBase` ou uma de suas dependências pode incluir.
+
+Agora que o projeto `HelloPlugin` foi concluído, você deve atualizar o projeto `AppWithPlugin` para saber onde o plug-in `HelloPlugin` pode ser encontrado. Após o comentário `// Paths to plugins to load`, adicione `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` como um elemento da matriz `pluginPaths`.
 
 ## <a name="plugin-with-library-dependencies"></a>Plug-in com dependências de biblioteca
 
@@ -268,7 +271,7 @@ Quase todos os plug-ins são mais complexos do que um simples "Olá, Mundo", e m
 
 O código-fonte completo para este tutorial pode ser encontrado no [repositório dotnet/samples](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin). O exemplo completo inclui alguns outros exemplos do comportamento `AssemblyDependencyResolver`. Por exemplo, o objeto `AssemblyDependencyResolver` também pode resolver bibliotecas nativas, bem como assemblies satélites localizados incluídos em pacotes do NuGet. O `UVPlugin` e `FrenchPlugin` no repositório de amostras demonstram esses cenários.
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>Referenciar um plug-in de um pacote NuGet
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>Referenciar uma interface de plug-in de um pacote NuGet
 
 Vamos supor que haja um aplicativo A que tenha uma interface de plug-in definida no pacote NuGet chamado `A.PluginBase`. Como você referenciaria o pacote corretamente em seu projeto de plug-in? Para as referências do projeto, o uso dos metadados `<Private>false</Private>` no elemento `ProjectReference` no arquivo de projeto impediu que a dll fosse copiada para a saída.
 
