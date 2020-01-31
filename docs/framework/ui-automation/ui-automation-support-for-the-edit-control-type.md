@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: f51e55a8a87ad1112c1b752568220611b9bf70e8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: cdbb400d438231689fe35c4bff2bd2946b6bed80
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741659"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789501"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Edit
 
@@ -22,7 +22,7 @@ Este tópico fornece informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../
 
 Os controles de edição permitem que um usuário exiba e edite uma linha de texto simples sem suporte a formatação avançada.
 
-As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de edição. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de edição, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].
+As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de edição. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de edição, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -64,11 +64,11 @@ A tabela a seguir lista os padrões de controle necessários para serem suportad
 
 |Propriedade padrão de controle/padrão de controle|Suporte/valor|{1&gt;Observações&lt;1}|
 |-----------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.Provider.ITextProvider>|Depende|Os controles de edição devem dar suporte ao padrão de controle de texto porque as informações detalhadas do texto devem estar sempre disponíveis para os clientes.|
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Todos os controles de edição que usam uma cadeia de caracteres devem expor o padrão de valor.|
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Dependem|Os controles de edição devem dar suporte ao padrão de controle de texto porque as informações detalhadas do texto devem estar sempre disponíveis para os clientes.|
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Todos os controles de edição que usam uma cadeia de caracteres devem expor o padrão de valor.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|Consulte observações.|Essa propriedade deve ser definida para indicar se o controle pode ter um valor definido programaticamente ou é editável pelo usuário.|
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|Consulte observações.|Essa propriedade retornará o conteúdo textual do controle de edição. Se a `IsPasswordProperty` for definida como `true`, essa propriedade deverá gerar uma `InvalidOperationException` quando solicitado.|
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|Todos os controles de edição que usam um intervalo numérico devem expor o padrão de controle de valor de intervalo.|
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dependem|Todos os controles de edição que usam um intervalo numérico devem expor o padrão de controle de valor de intervalo.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|Consulte observações.|Essa propriedade deve ser o menor valor ao qual o conteúdo do controle de edição pode ser definido.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|Consulte observações.|Essa propriedade deve ser o maior valor ao qual o conteúdo do controle de edição pode ser definido.|
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|Consulte observações.|Essa propriedade deve indicar o número de casas decimais às quais o valor pode ser definido. Se a edição usar apenas inteiros, o `SmallChangeProperty` deverá ser 1. Se a edição levar um intervalo de 1,0 a 2,0, o `SmallChangeProperty` deverá ser 0,1. Se o controle de edição usa um intervalo de 1, 0 a 2, 0, o `SmallChangeProperty` deve ser 0, 1.|
@@ -90,14 +90,14 @@ A tabela a seguir lista os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> evento de alteração de propriedade.|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|Se o controle oferecer suporte ao padrão de controle de valor de intervalo, ele deverá dar suporte a esse evento.|
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|Se o controle oferecer suporte ao padrão de controle de valor de intervalo, ele deverá dar suporte a esse evento.|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|
 

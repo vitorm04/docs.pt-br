@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427059"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860973"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurando um ambiente de criação de perfil
 > [!NOTE]
@@ -55,23 +55,23 @@ ms.locfileid: "74427059"
   
 ## <a name="additional-considerations"></a>Considerações adicionais  
   
-- A classe Profiler implementa as interfaces [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . No .NET Framework versão 2,0, um criador de perfil deve implementar `ICorProfilerCallback2`. Se não tiver, `ICorProfilerCallback2` não será carregado.  
+- A classe Profiler implementa as interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2](icorprofilercallback2-interface.md) . No .NET Framework versão 2,0, um criador de perfil deve implementar `ICorProfilerCallback2`. Se não tiver, `ICorProfilerCallback2` não será carregado.  
   
 - Somente um criador de perfil pode criar um profile de um processo de uma vez em um determinado ambiente. Você pode registrar dois profileres diferentes em ambientes diferentes, mas cada um deve criar um perfil de processos separados. O criador de perfil deve ser implementado como uma DLL de servidor COM em processo, que é mapeada no mesmo espaço de endereço que o processo cujo perfil está sendo criado. Isso significa que o criador de perfil é executado em processo. O .NET Framework não oferece suporte a nenhum outro tipo de servidor COM. Por exemplo, se um criador de perfil quiser monitorar aplicativos de um computador remoto, ele deverá implementar agentes coletores em cada computador. Esses agentes resultarão em lote e os comunicarão com o computador de coleta de dados central.  
   
 - Como o criador de perfil é um objeto COM que é instanciado em processo, cada aplicativo de criação de perfil terá sua própria cópia do criador de perfis. Portanto, uma única instância do criador de perfil não precisa lidar com dados de vários aplicativos. No entanto, você precisará adicionar lógica ao código de log do criador de perfil para evitar que o arquivo de log seja sobregravado de outros aplicativos com criação de perfil.  
   
 ## <a name="initializing-the-profiler"></a>Inicializando o criador de perfil  
- Quando as duas verificações de variável de ambiente são aprovadas, o CLR cria uma instância do criador de perfil de maneira semelhante à função de `CoCreateInstance` COM. O criador de perfil não é carregado por meio de uma chamada direta para `CoCreateInstance`. Portanto, uma chamada para `CoInitialize`, que requer a definição do modelo de Threading, é evitada. Em seguida, o CLR chama o método [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) no criador de perfil. A assinatura desse método é a seguinte.  
+ Quando as duas verificações de variável de ambiente são aprovadas, o CLR cria uma instância do criador de perfil de maneira semelhante à função de `CoCreateInstance` COM. O criador de perfil não é carregado por meio de uma chamada direta para `CoCreateInstance`. Portanto, uma chamada para `CoInitialize`, que requer a definição do modelo de Threading, é evitada. Em seguida, o CLR chama o método [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) no criador de perfil. A assinatura desse método é a seguinte.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- O criador de perfil deve consultar `pICorProfilerInfoUnk` para um ponteiro de interface [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) ou [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) e salvá-lo para que possa solicitar mais informações posteriormente durante a criação de perfil.  
+ O criador de perfil deve consultar `pICorProfilerInfoUnk` para um ponteiro de interface [ICorProfilerInfo](icorprofilerinfo-interface.md) ou [ICorProfilerInfo2](icorprofilerinfo2-interface.md) e salvá-lo para que possa solicitar mais informações posteriormente durante a criação de perfil.  
   
 ## <a name="setting-event-notifications"></a>Definindo notificações de eventos  
- Em seguida, o criador de perfil chama o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para especificar em quais categorias de notificações ele está interessado. Por exemplo, se o criador de perfil estiver interessado apenas em funções Enter e sair de notificações e notificações de coleta de lixo, ele especificará o seguinte.  
+ Em seguida, o criador de perfil chama o método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para especificar em quais categorias de notificações ele está interessado. Por exemplo, se o criador de perfil estiver interessado apenas em funções Enter e sair de notificações e notificações de coleta de lixo, ele especificará o seguinte.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Observe que essas alterações habilitarão a criação de perfil em todo o sistema. Para impedir a execução de perfil de todos os aplicativos gerenciados que são executados posteriormente, você deve excluir as variáveis de ambiente do sistema depois de reiniciar o computador de destino.  
   
- Essa técnica também leva a todos os processos CLR que estão sendo Profiles. O criador de perfil deve adicionar lógica ao seu retorno de chamada [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) para detectar se o processo atual é de interesse. Se não for, o criador de perfil poderá falhar o retorno de chamada sem executar a inicialização.  
+ Essa técnica também leva a todos os processos CLR que estão sendo Profiles. O criador de perfil deve adicionar lógica ao seu retorno de chamada [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md) para detectar se o processo atual é de interesse. Se não for, o criador de perfil poderá falhar o retorno de chamada sem executar a inicialização.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Visão geral da criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [Visão geral da criação de perfil](profiling-overview.md)

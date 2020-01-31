@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23e168b0f322a580917c3fcfcb767a7d4d4628f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132740"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793880"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>Enumeração CorDebugUnmappedStop
 Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.  
@@ -40,7 +40,7 @@ typedef enum CorDebugUnmappedStop {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`STOP_NONE`|Não pare em nenhum tipo de código não mapeado.|  
 |`STOP_PROLOG`|Parar no código de prólogo.|  
@@ -51,9 +51,9 @@ typedef enum CorDebugUnmappedStop {
 |`STOP_ALL`|Parar em todos os tipos de código não mapeado.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o método [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) para definir os sinalizadores que especificam o código não mapeado no qual o stepper será interrompido.  
+ Use o método [ICorDebugStepper:: SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md) para definir os sinalizadores que especificam o código não mapeado no qual o stepper será interrompido.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -62,6 +62,6 @@ typedef enum CorDebugUnmappedStop {
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Declarando enumerações](debugging-enumerations.md)

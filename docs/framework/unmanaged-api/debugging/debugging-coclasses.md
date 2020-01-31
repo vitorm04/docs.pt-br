@@ -6,25 +6,25 @@ helpviewer_keywords:
 - debugging coclasses [.NET Framework]
 - coclasses [.NET Framework debugging]
 ms.assetid: 94f94159-108e-436c-99e7-dff3beeb2503
-ms.openlocfilehash: fc39b087e05a7770d88dd47123cd0d7a8e781cd0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8a78062f864767e2705bfc1b4b5bab67b533f7a0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124373"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793787"
 ---
 # <a name="debugging-coclasses"></a>Depurando coclasses
 Esta seção descreve as Coclasses não gerenciadas que a API de depuração usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Coclass CorpubPublish](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
+ [Coclass CorpubPublish](corpubpublish-coclass.md)  
  Fornece interfaces para publicar informações sobre processos e domínios de aplicativo.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+## <a name="related-sections"></a>Seções Relacionadas  
+ [Depurando interfaces](debugging-interfaces.md)  
   
- [Depurando funções estáticas globais](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [Depurando funções estáticas globais](debugging-global-static-functions.md)  
   
- [Declarando enumerações](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [Declarando enumerações](debugging-enumerations.md)  
   
- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+ [Estruturas de depuração](debugging-structures.md)

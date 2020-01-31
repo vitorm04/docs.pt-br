@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Spinner control type
 - control types, Spinner
 ms.assetid: 3a29d185-65d8-42e3-bcc3-7f43e96f40c5
-ms.openlocfilehash: 2a033719b8830e597eb0f15e78245c9e68c3171a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 189773525a448befe670e2a62a1ee4134ff71b0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741517"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785957"
 ---
 # <a name="ui-automation-support-for-the-spinner-control-type"></a>Suporte de automação de interface do usuário para o tipo de controle Spinner
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741517"
   
  Os controles Spinner são usados para selecionar de um domínio de itens ou um intervalo de números.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Spinner. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Spinner, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Spinner. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Spinner, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -64,10 +64,10 @@ ms.locfileid: "75741517"
   
 |Propriedade padrão de controle/padrão|Suporte/valor|{1&gt;Observações&lt;1}|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Depende|Os controles Spinner que têm uma lista de itens a serem selecionados devem dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Dependem|Os controles Spinner que têm uma lista de itens a serem selecionados devem dar suporte a esse padrão.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|Os controles Spinner são sempre contêineres de seleção única.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|Os controles Spinner que abrangem um intervalo numérico podem dar suporte a esse padrão.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Controles Spinner que abrangem um conjunto discreto de opções ou números podem dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dependem|Os controles Spinner que abrangem um intervalo numérico podem dar suporte a esse padrão.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Controles Spinner que abrangem um conjunto discreto de opções ou números podem dar suporte a esse padrão.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -75,12 +75,12 @@ ms.locfileid: "75741517"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

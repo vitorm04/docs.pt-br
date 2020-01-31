@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739188"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789204"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>Estrutura DacpGetModuleAddress
 
-Define o contêiner para uma solicitação de endereço do módulo.
+Define o contêiner para uma solicitação de endereço de módulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,27 +39,27 @@ struct DacpGetModuleAddress
 
 ## <a name="members"></a>Membros
 
-| Membro      | Descrição                |
+| {1&gt;Membro&lt;1}      | Descrição                |
 | ----------- | -------------------------- |
 | `ModulePtr` | O ponteiro para o módulo. |
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 | Método                                                                                               | Descrição                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [Solicitação](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | Executa uma solicitação para preencher a estrutura da estrutura de determinado tempo de execução. |
+| [Solicitação](dacpgetmoduleaddress-request-method.md) | Executa uma solicitação para popular a estrutura da estrutura de tempo de execução fornecida. |
 
 ## <a name="remarks"></a>Comentários
 
-Essa estrutura reside dentro do tempo de execução e não é exposta por meio de todos os cabeçalhos ou arquivos de biblioteca. Para usá-lo, definir a estrutura conforme especificado acima, onde `CLRDATA_ADDRESS` é um inteiro sem sinal de 64 bits.
+Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima, em que `CLRDATA_ADDRESS` é um inteiro sem sinal de 64 bits.
 
-## <a name="requirements"></a>Requisitos
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
+## <a name="requirements"></a>Requisitos do
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuração](index.md)
+- [Estruturas de depuração](debugging-structures.md)

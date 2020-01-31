@@ -1,5 +1,5 @@
 ---
-title: Componente NotifyIcon (Windows Forms)
+title: Componente NotifyIcon
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc4a53a16c3e7df8e0141cecb497a6a85fc5cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627805"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744954"
 ---
 # <a name="notifyicon-component-windows-forms"></a>Componente NotifyIcon (Windows Forms)
-Os formulários do Windows `NotifyIcon` componente exibe ícones na área de notificação de status da barra de tarefas para processos que são executados em segundo plano e não precisaria de outra forma têm interfaces do usuário. Por exemplo, um programa de proteção contra vírus que pode ser acessado clicando em um ícone na área de notificação de status da barra de tarefas.  
+O componente Windows Forms `NotifyIcon` exibe ícones na área de notificação de status da barra de tarefas para processos que são executados em segundo plano e, caso contrário, não teriam interfaces do usuário. Por exemplo, um programa de proteção contra vírus que pode ser acessado clicando em um ícone na área de notificação de status da barra de tarefas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do componente NotifyIcon](notifyicon-component-overview-windows-forms.md)  
- Apresenta os conceitos gerais do `NotifyIcon` componente, que permite que os usuários vejam os ícones para processos em execução em segundo plano que não têm uma interface do usuário.  
+ Apresenta os conceitos gerais do componente `NotifyIcon`, que permite aos usuários ver ícones para processos em execução em segundo plano que não têm uma interface do usuário.  
   
- [Como: Adicionar ícones de aplicativo ao TaskBar com o componente NotifyIcon dos Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- Fornece etapas para definir o ícone exibido pelo `NotifyIcon` componente.  
+ [Como adicionar ícones do aplicativo à TaskBar com o componente NotifyIcon dos Windows Forms](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ Fornece as etapas para definir o ícone exibido pelo componente `NotifyIcon`.  
   
- [Como: Associar um Menu de atalho um componente NotifyIcon dos Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- Fornece etapas para adicionar um menu de atalho para um `NotifyIcon` componente.  
+ [Como associar um menu de atalho a um componente NotifyIcon dos Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ Fornece etapas para adicionar um menu de atalho a um componente `NotifyIcon`.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.NotifyIcon>  
  Fornece informações de referência sobre a classe e seus membros.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

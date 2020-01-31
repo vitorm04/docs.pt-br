@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 2e27082ba4c35bc10eb65139b2af6c81c10d79a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739126"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793803"
 ---
 # <a name="dacpmoduledata-structure"></a>Estrutura DacpModuleData
 
-Define um buffer de transporte para obter informações de tempo de execução de um módulo.
+Define um buffer de transporte para as informações de tempo de execução de um módulo.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -42,24 +42,24 @@ struct DacpModuleData
 
 ## <a name="members"></a>Membros
 
-| Membro    | Descrição                                                             |
+| {1&gt;Membro&lt;1}    | Descrição                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Endereço do objeto de módulo.                                           |
 | `File`    | Um ponteiro para o arquivo executável portátil (PE).                       |
-| `ilBase`  | Base do endereço da imagem carregada.                                 |
-| `payLoad` | Um buffer de carga para obter informações adicionais de módulo usados pelo tempo de execução. |
+| `ilBase`  | O endereço da base da imagem carregada.                                 |
+| `payLoad` | Um buffer de carga para informações adicionais do módulo usadas pelo tempo de execução. |
 
 ## <a name="remarks"></a>Comentários
 
-Essa estrutura reside dentro do tempo de execução e não é exposta por meio de todos os cabeçalhos ou arquivos de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima.
+Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima.
 
-## <a name="requirements"></a>Requisitos
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhum  
-**Biblioteca:** Nenhum  
+## <a name="requirements"></a>Requisitos do
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Cabeçalho:** None  
+**Biblioteca:** None  
 **Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Estruturas de depuração](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Depuração](index.md)
+- [Estruturas de depuração](debugging-structures.md)

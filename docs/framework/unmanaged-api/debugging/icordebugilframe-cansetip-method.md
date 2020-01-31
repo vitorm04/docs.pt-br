@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 57d83d1f301cbfd43f8f553d9aef4beb3baf95f8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a02b080739d00667893008be4a19b4fa9a6ef2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131077"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788588"
 ---
 # <a name="icordebugilframecansetip-method"></a>Método ICorDebugILFrame::CanSetIP
 Obtém um HRESULT que indica se é seguro definir o ponteiro de instrução para o local de deslocamento especificado no código MSIL (Microsoft Intermediate Language).  
@@ -38,9 +38,9 @@ HRESULT CanSetIP (
  no A configuração desejada para o ponteiro de instrução.  
   
 ## <a name="remarks"></a>Comentários  
- Use o método `CanSetIP` antes de chamar o método [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) . Se `CanSetIP` retornar qualquer HRESULT diferente de S_OK, você ainda poderá invocar `ICorDebugILFrame::SetIP`, mas não haverá nenhuma garantia de que o depurador continuará a execução segura e correta do código que está sendo depurado.  
+ Use o método `CanSetIP` antes de chamar o método [ICorDebugILFrame:: SetIP](icordebugilframe-setip-method.md) . Se `CanSetIP` retornar qualquer HRESULT diferente de S_OK, você ainda poderá invocar `ICorDebugILFrame::SetIP`, mas não haverá nenhuma garantia de que o depurador continuará a execução segura e correta do código que está sendo depurado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug. idl, CorDebug, h  

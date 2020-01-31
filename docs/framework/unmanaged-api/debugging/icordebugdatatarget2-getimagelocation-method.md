@@ -2,12 +2,12 @@
 title: Método ICorDebugDataTarget2::GetImageLocation
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: 8b873e28bfab31ea18924f471f916475efd345d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba1cc8c91c53547c6ed4025ee67a69e253f3596d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122132"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783578"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>Método ICorDebugDataTarget2::GetImageLocation
 Retorna o caminho de um módulo de endereço base do módulo.  
@@ -24,7 +24,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
 ## <a name="parameters"></a>Parâmetros  
  `baseAddress`  
- no Um valor de [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) que representa o endereço base do módulo.  
+ no Um valor [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) que representa o endereço base do módulo.  
   
  `cchName`  
  [in] O número de caracteres no buffer que receberá o caminho do módulo.  
@@ -40,7 +40,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -49,7 +49,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

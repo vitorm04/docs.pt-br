@@ -2,12 +2,12 @@
 title: 'Método ICorDebugExceptionDebugEvent:: GetFlags'
 ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
-ms.openlocfilehash: 6c330ce5b375daacdf257eda16fd5e34012f5d69
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aaf137b1d851d0de86bde697c9e3a512f34d2aa9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084760"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782914"
 ---
 # <a name="icordebugexceptiondebugeventgetflags-method"></a>Método ICorDebugExceptionDebugEvent:: GetFlags
 Obtém um sinalizador que indica se a exceção pode ser interceptada.  
@@ -22,14 +22,14 @@ HRESULT GetFlags(
   
 ## <a name="parameters"></a>Parâmetros  
  `pdwFlags`  
- fora Um ponteiro para um valor [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) que indica se a exceção pode ser interceptada.  
+ fora Um ponteiro para um valor [CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md) que indica se a exceção pode ser interceptada.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -38,7 +38,7 @@ HRESULT GetFlags(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugExceptionDebugEvent](icordebugexceptiondebugevent-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

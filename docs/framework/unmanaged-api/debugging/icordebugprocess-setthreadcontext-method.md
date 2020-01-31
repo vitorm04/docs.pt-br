@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139678"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792565"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>Método ICorDebugProcess::SetThreadContext
 Define o contexto para o thread fornecido nesse processo.  
@@ -48,13 +48,13 @@ HRESULT SetThreadContext(
  O contexto especifica a arquitetura do processador no qual o thread está sendo executado.  
   
 ## <a name="remarks"></a>Comentários  
- O depurador deve chamar esse método em vez da função de `SetThreadContext` do Win32, porque o thread pode realmente estar em um estado "seqüestrado", no qual seu contexto foi alterado temporariamente. Esse método deve ser usado somente quando um thread estiver em código nativo. Use [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) para threads em código gerenciado. Nunca é necessário modificar o contexto de um thread durante um evento de depuração OOB (fora de banda).  
+ O depurador deve chamar esse método em vez da função de `SetThreadContext` do Win32, porque o thread pode realmente estar em um estado "seqüestrado", no qual seu contexto foi alterado temporariamente. Esse método deve ser usado somente quando um thread estiver em código nativo. Use [ICorDebugRegisterSet](icordebugregisterset-interface.md) para threads em código gerenciado. Nunca é necessário modificar o contexto de um thread durante um evento de depuração OOB (fora de banda).  
   
  Os dados passados devem ser uma estrutura de contexto para a plataforma atual.  
   
  Esse método pode corromper o tempo de execução se for usado de forma inadequada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  

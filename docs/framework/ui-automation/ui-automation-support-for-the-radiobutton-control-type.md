@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-ms.openlocfilehash: 416d6d6b9d8e7fbd3b3bb5483ddd8dc22380166c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 037f237537980f1c68855decf468da54e9a22d14
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741563"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786109"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle RadioButton
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741563"
   
  Um botão de opção consiste em um botão redondo e um texto definido pelo aplicativo (um rótulo), um ícone ou um bitmap que indica uma opção que o usuário pode fazer selecionando o botão. Um aplicativo geralmente usa botões de opção em uma caixa de grupo para permitir que o usuário escolha entre um conjunto de opções relacionadas, mas mutuamente exclusivas. Por exemplo, o aplicativo pode apresentar um grupo de botões de opção do qual o usuário pode selecionar uma preferência de formato para o texto selecionado na área cliente. O usuário pode selecionar um formato alinhado à esquerda, alinhado à direita ou centralizado selecionando o botão de opção correspondente. Normalmente, o usuário pode selecionar apenas uma opção por vez de um conjunto de botões de opção.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle RadioButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle RadioButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  

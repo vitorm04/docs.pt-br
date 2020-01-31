@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Text control type
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
-ms.openlocfilehash: 5703f5236cd8347b2c6947f9988c9da4ef31b1e7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 857606bd0b759bd1283b5abcb3f70914a48014a7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741474"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785841"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>Suporte da automação de interface do usuário para o tipo de controle Text
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741474"
   
  Os controles de texto são o item básico da interface do usuário que representa uma parte do texto na tela.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de texto. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de texto, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de texto. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de texto, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -54,8 +54,8 @@ ms.locfileid: "75741474"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Consulte observações.|O nome do controle da barra de texto sempre é o txt exibido.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Os controles de texto não têm um rótulo de texto estático.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Texto|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"texto"|Cadeia de caracteres localizada correspondente ao tipo de controle de texto.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Depende|O controle de texto será Content se ele contiver informações não expostas em NameProperty de outro controle.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|texto|Cadeia de caracteres localizada correspondente ao tipo de controle de texto.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Dependem|O controle de texto será Content se ele contiver informações não expostas em NameProperty de outro controle.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle de texto sempre deve ser um controle.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
@@ -65,9 +65,9 @@ ms.locfileid: "75741474"
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|{1&gt;Nunca&lt;1}|O texto nunca dá suporte a ValuePattern. Se o texto for editável, ele será o tipo de controle de edição.|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|Depende|O texto deve dar suporte ao padrão de controle de texto para melhor acessibilidade; no entanto, isso não é necessário. O padrão de controle de texto é útil quando o texto tem estilo e atributos avançados (por exemplo, cor, negrito e itálico). Depende da estrutura.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Depende|Se o elemento Text estiver contido em um controle Table, isso deverá ter suporte.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|Se o elemento Text estiver contido em um controle Table, isso deverá ter suporte.|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Dependem|O texto deve dar suporte ao padrão de controle de texto para melhor acessibilidade; no entanto, isso não é necessário. O padrão de controle de texto é útil quando o texto tem estilo e atributos avançados (por exemplo, cor, negrito e itálico). Depende da estrutura.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Dependem|Se o elemento Text estiver contido em um controle Table, isso deverá ter suporte.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dependem|Se o elemento Text estiver contido em um controle Table, isso deverá ter suporte.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  

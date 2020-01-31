@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: 7f96143edcd24b6daa7a86723493b5d09727d040
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ce1a3fa79c9e0074b3e0f7bfe5aa316fd0d28426
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741095"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785730"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ToolTip
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741095"
   
  Os controles de dica de ferramenta são janelas pop-up que contêm texto.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ToolTip. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de dica de ferramenta, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ToolTip. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de dica de ferramenta, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -49,7 +49,7 @@ ms.locfileid: "75741095"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|Os controles de dica de ferramenta sempre são autorotulados por seu conteúdo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ToolTip|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"dica de ferramenta"|Cadeia de caracteres localizada correspondente ao tipo de controle ToolTip.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Depende|Se o controle de dica de ferramenta puder receber o foco do teclado, ele deverá estar na exibição de conteúdo da árvore. Se for somente texto, ele estará disponível como o HelpTextproperty do controle que o gerou.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Dependem|Se o controle de dica de ferramenta puder receber o foco do teclado, ele deverá estar na exibição de conteúdo da árvore. Se for somente texto, ele estará disponível como o HelpTextproperty do controle que o gerou.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle de dica de ferramenta sempre deve ser um controle.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
@@ -58,8 +58,8 @@ ms.locfileid: "75741095"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|Depende|Dicas de ferramenta que podem ser fechadas clicando em um item de interface do usuário devem dar suporte a WindowPattern para que possam ser fechadas automaticamente.|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|Depende|Para melhor acessibilidade, um controle de dica de ferramenta pode dar suporte ao padrão de controle de texto, embora não seja necessário. O padrão de controle de texto é útil quando o texto tem estilo e atributos avançados (por exemplo, cor, negrito e itálico).|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|Dependem|Dicas de ferramenta que podem ser fechadas clicando em um item de interface do usuário devem dar suporte a WindowPattern para que possam ser fechadas automaticamente.|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|Dependem|Para melhor acessibilidade, um controle de dica de ferramenta pode dar suporte ao padrão de controle de texto, embora não seja necessário. O padrão de controle de texto é útil quando o texto tem estilo e atributos avançados (por exemplo, cor, negrito e itálico).|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -69,17 +69,17 @@ ms.locfileid: "75741095"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

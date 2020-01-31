@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ProgressBar control type
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-ms.openlocfilehash: adad35dda464e5fcd47849228dbfae22938e3bf3
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b066aef5e716683503210ca20721cfaf3e0492d9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741174"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794031"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ProgressBar
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741174"
   
  Os controles de barra de progresso são um exemplo de controles que implementam o tipo de controle ProgressBar. Os controles de barra de progresso são usados para indicar o progresso de uma operação demorada. O controle consiste em um retângulo que é gradualmente preenchido com a cor de realce do sistema conforme uma operação progride.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ProgressBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ProgressBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -56,10 +56,10 @@ ms.locfileid: "75741174"
   
 |Propriedade padrão de controle/padrão|Suporte/valor|{1&gt;Observações&lt;1}|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Os controles de barra de progresso que fornecem uma indicação textual do progresso devem implementar <xref:System.Windows.Automation.Provider.IValueProvider>.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Os controles de barra de progresso que fornecem uma indicação textual do progresso devem implementar <xref:System.Windows.Automation.Provider.IValueProvider>.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|verdadeiro|O valor dessa propriedade é sempre verdadeiro.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|Consulte observações.|Essa propriedade expõe o progresso textual de um controle de barra de progresso.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|Os controles de barra de progresso que usam um intervalo numérico devem implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dependem|Os controles de barra de progresso que usam um intervalo numérico devem implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|O valor dessa propriedade é o menor valor para o qual o controle pode ser definido.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|O valor dessa propriedade é o maior valor para o qual o controle pode ser definido.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|{1&gt;NaN&lt;1}|Essa propriedade não é necessária porque os controles de barra de progresso são somente leitura.|  
@@ -75,7 +75,7 @@ ms.locfileid: "75741174"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

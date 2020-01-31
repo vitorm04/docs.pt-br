@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122661"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782222"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>Método ICorDebugInternalFrame2::IsCloserToLeaf
 Verifica se o quadro interno `this` está mais próximo da folha do que o objeto ICorDebugFrame especificado.  
@@ -39,19 +39,19 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
  `pIsCloser`  
  [fora] `true` se o quadro interno `this` está mais próximo da folha do que o quadro especificado por `pFrameToCompare`; caso contrário, `false`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A comparação foi executada com êxito.|  
-|E_FAIL|Não foi possível executar a comparação.|  
-|E_INVALIDARG|`pFrameToCompare` ou `pIsCloser` é nulo.|  
+|{1&gt;E_FAIL&lt;1}|Não foi possível executar a comparação.|  
+|{1&gt;E_INVALIDARG&lt;1}|`pFrameToCompare` ou `pIsCloser` é nulo.|  
   
 ## <a name="remarks"></a>Comentários  
  `IsCloserToLeaf` pode ser usado para implementar uma política para intercalar quadros internos com outros quadros na pilha.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -60,8 +60,8 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [Depuração](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [Interface ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)
+- [Depuração](index.md)
