@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 8637be3c0a59676dc52aea985d7418bfd8f247bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7c1ee1c39fbf2dcc1f16df3bc94a235676a216dd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443109"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862562"
 ---
-# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="1b01c-102">Método ICorProfilerInfo2::GetThreadAppDomain</span><span class="sxs-lookup"><span data-stu-id="1b01c-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
-<span data-ttu-id="1b01c-103">Obtém a ID do domínio do aplicativo no qual o thread especificado está executando o código no momento.</span><span class="sxs-lookup"><span data-stu-id="1b01c-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
+# <a name="icorprofilerinfo2getthreadappdomain-method"></a><span data-ttu-id="d69a7-102">Método ICorProfilerInfo2::GetThreadAppDomain</span><span class="sxs-lookup"><span data-stu-id="d69a7-102">ICorProfilerInfo2::GetThreadAppDomain Method</span></span>
+<span data-ttu-id="d69a7-103">Obtém a ID do domínio do aplicativo no qual o thread especificado está executando o código no momento.</span><span class="sxs-lookup"><span data-stu-id="d69a7-103">Gets the ID of the application domain in which the specified thread is currently executing code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b01c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1b01c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d69a7-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d69a7-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadAppDomain(  
@@ -33,23 +33,23 @@ HRESULT GetThreadAppDomain(
     [out] AppDomainID *pAppDomainId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1b01c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1b01c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d69a7-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d69a7-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="1b01c-106">no A ID que especifica o thread.</span><span class="sxs-lookup"><span data-stu-id="1b01c-106">[in] The ID specifying the thread.</span></span>  
+ <span data-ttu-id="d69a7-106">no A ID que especifica o thread.</span><span class="sxs-lookup"><span data-stu-id="d69a7-106">[in] The ID specifying the thread.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="1b01c-107">fora Um ponteiro para a ID do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="1b01c-107">[out] A pointer to the ID of the application domain.</span></span>  
+ <span data-ttu-id="d69a7-107">fora Um ponteiro para a ID do domínio do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d69a7-107">[out] A pointer to the ID of the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b01c-108">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="1b01c-108">Requirements</span></span>  
- <span data-ttu-id="1b01c-109">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b01c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d69a7-108">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="d69a7-108">Requirements</span></span>  
+ <span data-ttu-id="d69a7-109">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d69a7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b01c-110">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="1b01c-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d69a7-110">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="d69a7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1b01c-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b01c-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d69a7-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d69a7-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b01c-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b01c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d69a7-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d69a7-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b01c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1b01c-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d69a7-113">Veja também</span><span class="sxs-lookup"><span data-stu-id="d69a7-113">See also</span></span>
 
-- [<span data-ttu-id="1b01c-114">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="1b01c-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="1b01c-115">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="1b01c-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="d69a7-114">Interface ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="d69a7-114">ICorProfilerInfo Interface</span></span>](icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d69a7-115">Interface ICorProfilerInfo2</span><span class="sxs-lookup"><span data-stu-id="d69a7-115">ICorProfilerInfo2 Interface</span></span>](icorprofilerinfo2-interface.md)
