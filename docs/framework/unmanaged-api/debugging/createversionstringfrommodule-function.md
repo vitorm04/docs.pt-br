@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 609d6e47c951aa104cb23084b65e98827a6851f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132080"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789171"
 ---
 # <a name="createversionstringfrommodule-function"></a>Função CreateVersionStringFromModule
 Cria uma cadeia de caracteres de versão de um caminho Common Language Runtime (CLR) em um processo de destino.  
@@ -55,11 +55,11 @@ HRESULT CreateVersionStringFromModule (
  `pdwLength`  
  fora Comprimento da cadeia de caracteres de versão retornada por `pBuffer`.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  S_OK  
  A cadeia de caracteres de versão para o CLR de destino foi retornada com êxito no `pBuffer`.  
   
- E_INVALIDARG  
+ {1&gt;E_INVALIDARG&lt;1}  
  o `szModuleName` é nulo ou `pBuffer` ou `cchBuffer` é nulo. `pBuffer` e `cchBuffer` devem ser nulos ou não nulos.  
   
  HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)  
@@ -72,11 +72,11 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` não se refere a um processo válido ou a outra falha.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função aceita um processo CLR identificado por `pidDebuggee` e um caminho de cadeia de caracteres especificado por `szModuleName`. A cadeia de caracteres de versão é retornada no buffer ao qual `pBuffer` aponta. Essa cadeia de caracteres é opaca para o usuário da função; ou seja, não há nenhum significado intrínseco na própria cadeia de caracteres de versão. Ele é usado unicamente no contexto dessa função e da [função CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+ Essa função aceita um processo CLR identificado por `pidDebuggee` e um caminho de cadeia de caracteres especificado por `szModuleName`. A cadeia de caracteres de versão é retornada no buffer ao qual `pBuffer` aponta. Essa cadeia de caracteres é opaca para o usuário da função; ou seja, não há nenhum significado intrínseco na própria cadeia de caracteres de versão. Ele é usado unicamente no contexto dessa função e da [função CreateDebuggingInterfaceFromVersion](createdebugginginterfacefromversion-function-for-silverlight.md).  
   
  Essa função deve ser chamada duas vezes. Quando você o chama pela primeira vez, passe NULL para `pBuffer` e `cchBuffer`. Quando você fizer isso, o tamanho do buffer necessário para `pBuffer` será retornado em `pdwLength`. Em seguida, você pode chamar a função uma segunda vez e passar o buffer em `pBuffer` e seu tamanho em `cchBuffer`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim. h  

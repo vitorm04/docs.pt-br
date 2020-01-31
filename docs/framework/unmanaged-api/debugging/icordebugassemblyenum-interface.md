@@ -14,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: 891ceb43-5161-421e-a0bf-299962fd7efd
 topic_type:
 - apiref
-ms.openlocfilehash: aa0bc34c3cb3ac330582cee0843022e913376fc2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1893f1f08d727606fecda7669719760179bb76f9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73192168"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778054"
 ---
 # <a name="icordebugassemblyenum-interface"></a>Interface ICorDebugAssemblyEnum
 
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugAssembly` na enumeração, começando da posição atual.|  
+|[Método Next](icordebugassemblyenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugAssembly` na enumeração, começando da posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -45,6 +45,6 @@ Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugAssembly.
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

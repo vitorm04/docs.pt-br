@@ -4,12 +4,12 @@ description: Descubra como executar um aplicativo .NET para Apache Spark usando 
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 679ee7660e96504768a781e1e384acab80362736
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337598"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743206"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: introdução ao .NET para Apache Spark
 
@@ -23,7 +23,7 @@ Neste tutorial, você aprenderá como:
 > * Escreva seu primeiro .NET para Apache Spark aplicativo
 > * Crie e execute seu aplicativo .NET simples para Apache Spark
 
-## <a name="prepare-your-environment"></a>Prepare o ambiente
+## <a name="prepare-your-environment"></a>Preparar seu ambiente
 
 Antes de começar a escrever seu aplicativo, você precisa configurar algumas dependências de pré-requisito. Se você puder executar `dotnet`, `java`, `mvn``spark-shell` de seu ambiente de linha de comando, seu ambiente já estará preparado e você poderá pular para a próxima seção. Se você não puder executar um ou todos os comandos, execute as etapas a seguir.
 
@@ -94,7 +94,7 @@ Se você receber um erro de `'spark-submit' is not recognized as an internal or 
 
 ### <a name="5-install-net-for-apache-spark"></a>5. instalar o .NET para Apache Spark
 
-Baixe a versão [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) do .net para Apache Spark github. Por exemplo, se você estiver em um computador Windows e planeja usar o .NET Core, [Baixe a versão Windows x64 netcoreapp 2.1](https://github.com/dotnet/spark/releases/download/v0.5.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
+Baixe a versão [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) do .net para Apache Spark github. Por exemplo, se você estiver em um computador Windows e planeja usar o .NET Core, [Baixe a versão Windows x64 netcoreapp 2.1](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.win-x64-0.6.0.zip).
 
 Para extrair o Microsoft. Spark. Worker:
 

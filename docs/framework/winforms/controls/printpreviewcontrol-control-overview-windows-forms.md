@@ -1,5 +1,5 @@
 ---
-title: Visão geral do controle PrintPreviewControl (Windows Forms)
+title: Visão geral do controle PrintPreviewControl
 ms.date: 03/30/2017
 f1_keywords:
 - PrintPreviewControl
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - print preview
 - PrintPreviewControl control
 ms.assetid: 4513c6c7-5e9b-4f4c-82ca-00f993a26955
-ms.openlocfilehash: e9f1c2ae912b6beeba70c318b94a3052e2f99acb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8dfe5802a24d5ec85ed908fd04c5550e1fbec012
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012588"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741443"
 ---
 # <a name="printpreviewcontrol-control-overview-windows-forms"></a>Visão geral do controle PrintPreviewControl (Windows Forms)
-Os formulários do Windows <xref:System.Windows.Forms.PrintPreviewControl> é usado para exibir um [PrintDocument](printdocument-component-windows-forms.md) como ele aparecerá quando impresso. Esse controle não tem botões nem outros elementos de interface do usuário, normalmente você usa o <xref:System.Windows.Forms.PrintPreviewControl> somente se você quiser escrever sua própria interface do usuário de visualização de impressão. Se você deseja que a interface de usuário padrão, use uma <xref:System.Windows.Forms.PrintPreviewDialog> controlar; consulte [visão geral do controle PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md) para uma visão geral.  
+O <xref:System.Windows.Forms.PrintPreviewControl> de Windows Forms é usado para exibir um [documento](printdocument-component-windows-forms.md) impresso, pois ele será exibido quando impressa. Esse controle não tem botões ou outros elementos de interface do usuário, portanto, normalmente, você usa o <xref:System.Windows.Forms.PrintPreviewControl> apenas se desejar escrever sua própria interface do usuário de visualização de impressão. Se você quiser a interface do usuário padrão, use um controle de <xref:System.Windows.Forms.PrintPreviewDialog>; consulte [visão geral do controle PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md) para obter uma visão geral.  
   
 ## <a name="key-properties"></a>Propriedades da chave  
- Propriedade de chave do controle é <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, que define o documento a ser visualizado. O documento deve ser um <xref:System.Drawing.Printing.PrintDocument> objeto. Para obter uma visão geral da criação de documentos para impressão, confira [Visão geral do componente PrintDocument](printdocument-component-overview-windows-forms.md) e [Suporte à impressão nos Windows Forms](../advanced/windows-forms-print-support.md). O <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> e <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> propriedades determinam o número de páginas exibidas horizontal e verticalmente no controle. A suavização pode tornar o texto mais suave, mas também pode tornar a exibição mais lenta; para usá-lo, defina as <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> propriedade para `true`.  
+ A propriedade de chave do controle é <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, que define o documento a ser visualizado. O documento deve ser um objeto <xref:System.Drawing.Printing.PrintDocument>. Para obter uma visão geral da criação de documentos para impressão, confira [Visão geral do componente PrintDocument](printdocument-component-overview-windows-forms.md) e [Suporte à impressão nos Windows Forms](../advanced/windows-forms-print-support.md). As propriedades <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> e <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> determinam o número de páginas exibidas horizontal e verticalmente no controle. A suavização pode fazer com que o texto pareça mais suave, mas também pode tornar a tela mais lenta; para usá-lo, defina a propriedade <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> como `true`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [Visão geral do controle PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0624b547ee2586334ac35d366ae3c8dfd14963ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712852"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742767"
 ---
 # <a name="void-c-reference"></a>void (Referência de C#)
 
@@ -31,16 +31,15 @@ public void SampleMethod()
 
 `void` é um alias para o tipo <xref:System.Void?displayProperty=nameWithType> do .NET Framework.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Tipos de referência](reference-types.md)
-- [Tipos de valor](value-types.md)
+- [Tipos de valor](../builtin-types/value-types.md)
 - [Métodos](../../programming-guide/classes-and-structs/methods.md)
-- [Código não seguro e ponteiros](../../programming-guide/unsafe-code-pointers/index.md)
+- [Código e ponteiros inseguros](../../programming-guide/unsafe-code-pointers/index.md)

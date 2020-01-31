@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122921"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789096"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>Interface ICLRDataEnumMemoryRegions
 Fornece um método para enumerar as regiões da memória que são especificadas por chamadores.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera áreas especificadas de memória.|  
+|[Método EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)|Enumera áreas especificadas de memória.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
@@ -39,6 +39,6 @@ Fornece um método para enumerar as regiões da memória que são especificadas 
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Depurando interfaces](debugging-interfaces.md)

@@ -1,21 +1,23 @@
 ---
 title: interface – Referência de C#
-ms.date: 07/20/2015
+ms.date: 01/17/2020
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 19ca4b8a490dc85de0d0e2be6d3ca8fa7982fc14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713446"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744682"
 ---
-# <a name="interface-c-reference"></a>interface (Referência de C#)
+# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# referência)
 
-Uma interface contém apenas as assinaturas de [métodos](../../programming-guide/classes-and-structs/methods.md), [propriedades](../../programming-guide/classes-and-structs/properties.md), [eventos](../../programming-guide/events/index.md) ou [indexadores](../../programming-guide/indexers/index.md). Uma classe ou struct que implementa a interface deve implementar os membros da interface que estão especificados na definição de interface. No exemplo a seguir, a classe `ImplementationClass` deve implementar um método chamado `SampleMethod` que não tem parâmetros e retorna `void`.
+Uma interface define um contrato. Qualquer [`class`](class.md) ou [`struct`](struct.md) que implemente esse contrato deve fornecer uma implementação dos membros definidos na interface. A partir C# do 8,0, uma interface pode definir uma implementação padrão para membros. Ele também pode definir [`static`](static.md) Membros para fornecer uma única implementação para a funcionalidade comum.
+
+No exemplo a seguir, a classe `ImplementationClass` deve implementar um método chamado `SampleMethod` que não tem parâmetros e retorna `void`.
 
 Para obter mais informações e exemplos, consulte [Interfaces](../../programming-guide/interfaces/index.md).
 
@@ -23,23 +25,39 @@ Para obter mais informações e exemplos, consulte [Interfaces](../../programmin
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
-Uma interface pode ser um membro de um namespace ou de uma classe e pode conter assinaturas dos seguintes membros:
+Uma interface pode ser membro de um namespace ou de uma classe. Uma declaração de interface pode conter declarações (assinaturas sem qualquer implementação) dos seguintes membros:
 
 - [Métodos](../../programming-guide/classes-and-structs/methods.md)
-
 - [Propriedades](../../programming-guide/classes-and-structs/using-properties.md)
-
 - [Indexadores](../../programming-guide/indexers/using-indexers.md)
-
 - [Eventos](event.md)
 
-Uma interface pode herdar de uma ou mais interfaces base.
+Essas declarações de membro anteriores normalmente não contêm um corpo. A partir C# do 8,0, um membro de interface pode declarar um corpo. Isso é chamado de *implementação padrão*. Os membros com corpos permitem que a interface forneça uma implementação "padrão" para classes e estruturas que não fornecem uma implementação de substituição. Além disso, a partir C# do 8,0, uma interface pode incluir:
+
+- [Constantes](const.md)
+- [Operadores](../operators/operator-overloading.md)
+- [Construtor estático](../../programming-guide/classes-and-structs/constructors.md#static-constructors).
+- [Tipos aninhados](../../programming-guide/classes-and-structs/nested-types.md)
+- [Campos, métodos, propriedades, indexadores e eventos estáticos](static.md)
+- Declarações de membro usando a sintaxe de implementação de interface explícita.
+- Modificadores de acesso explícitos (o acesso padrão é [`public`](access-modifiers.md)).
+
+As interfaces não podem conter o estado da instância. Embora os campos estáticos agora sejam permitidos, os campos de instância não são permitidos em interfaces. Não há suporte para [Propriedades automáticas de instância](../../programming-guide/classes-and-structs/auto-implemented-properties.md) em interfaces, pois elas declarariam implicitamente um campo oculto. Essa regra tem um efeito sutil nas declarações de propriedade. Em uma declaração de interface, o código a seguir não declara uma propriedade implementada automaticamente como faz em uma `class` ou `struct`. Em vez disso, ele declara uma propriedade que não tem uma implementação padrão, mas que deve ser implementada em qualquer tipo que implemente a interface:
+
+```csharp
+public interface INamed
+{
+  public string Name {get; set;}
+}
+```
+
+Uma interface pode herdar de uma ou mais interfaces base. Quando uma interface [substitui um método](override.md) implementado em uma interface base, ela deve usar a sintaxe de [implementação de interface explícita](../../programming-guide/interfaces/explicit-interface-implementation.md) .
 
 Quando uma lista de tipos base contém uma classe base e interfaces, a classe base deve vir em primeiro na lista.
 
-Uma classe que implementa uma interface pode implementar membros dessa interface explicitamente. Um membro implementado explicitamente não pode ser acessado por meio de uma instância da classe, mas apenas por meio de uma instância da interface.
+Uma classe que implementa uma interface pode implementar membros dessa interface explicitamente. Um membro implementado explicitamente não pode ser acessado por meio de uma instância da classe, mas apenas por meio de uma instância da interface. Além disso, os membros de interface padrão só podem ser acessados por meio de uma instância da interface.
 
-Para obter mais detalhes e exemplos de código sobre a implementação explícita da interface, consulte [Implementação explícita da interface](../../programming-guide/interfaces/explicit-interface-implementation.md).
+Para obter mais informações sobre implementação de interface explícita, consulte [implementação de interface explícita](../../programming-guide/interfaces/explicit-interface-implementation.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -47,9 +65,9 @@ O exemplo a seguir demonstra a implementação da interface. Neste exemplo, a in
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para obter mais informações, consulte a seção [interfaces](~/_csharplang/spec/interfaces.md) da [ C# especificação de linguagem](~/_csharplang/spec/introduction.md) e a especificação de recurso para [membros de C# interface padrão-8,0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
 ## <a name="see-also"></a>Veja também
 

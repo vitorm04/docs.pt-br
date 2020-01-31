@@ -1,20 +1,20 @@
 ---
-title: Propriedades em controles dos Windows Forms
+title: Propriedades de controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], properties overview (using code)
 - controls [Windows Forms], properties
 - properties [Windows Forms]
 ms.assetid: 2785279b-fb57-4937-8f6b-2050e475db6f
-ms.openlocfilehash: e531b80cffabb94d2589383936a425b740c9cc07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82bfab15cef4946661a37d2d88fbe1b797f3d816
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012497"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741174"
 ---
 # <a name="properties-in-windows-forms-controls"></a>Propriedades em controles dos Windows Forms
-Um controle dos Windows Forms herda muitas propriedades da classe base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Estas incluem propriedades como <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>e muitos outros. Para obter detalhes sobre as propriedades herdadas, consulte <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+Um controle de Windows Forms herda muitas propriedades que formam a classe base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Isso inclui propriedades como <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>e muitos outros. Para obter detalhes sobre as propriedades herdadas, consulte <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  Você pode substituir as propriedades herdadas em seu controle, bem como definir novas propriedades.  
   
@@ -28,7 +28,7 @@ Um controle dos Windows Forms herda muitas propriedades da classe base <xref:Sys
  [Eventos alterados por propriedade](property-changed-events.md)  
  Descreve como habilitar as notificações de alteração de propriedade quando um valor da propriedade for alterado.  
   
- [Como: Expor as propriedades de controles constituintes](how-to-expose-properties-of-constituent-controls.md)  
+ [Como expor as propriedades de controles constituintes](how-to-expose-properties-of-constituent-controls.md)  
  Mostra como expor as propriedades de controles constituintes em um controle de composição o personalizado.  
   
  [Implementação do método em controles personalizados](method-implementation-in-custom-controls.md)  
@@ -44,8 +44,8 @@ Um controle dos Windows Forms herda muitas propriedades da classe base <xref:Sys
  <xref:System.ComponentModel.EditorAttribute>  
  Documenta o atributo que especifica o <xref:System.Drawing.Design.UITypeEditor> a ser usado para uma propriedade personalizada.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)  
+## <a name="related-sections"></a>Seções Relacionadas  
+ [Atributos em controles do Windows Forms](attributes-in-windows-forms-controls.md)  
  Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus componentes e controles personalizados.  
   
  [Atributos de tempo de design para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  

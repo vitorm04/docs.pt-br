@@ -2,12 +2,12 @@
 title: Pontos de extremidade de serviço e endereçamento de fila
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837981"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744624"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Pontos de extremidade de serviço e endereçamento de fila
 Este tópico discute como os clientes atendem aos serviços que lêem de filas e como os pontos de extremidade de serviço são mapeados para filas. Como lembrete, a ilustração a seguir mostra a implantação do aplicativo em fila do WCF (Windows Communication Foundation clássico).  
@@ -21,7 +21,7 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  Os nomes de caminho são mapeados para "Formatnames" para determinar aspectos adicionais do endereço, incluindo o roteamento e o protocolo de transferência do Gerenciador de filas. O Gerenciador de filas dá suporte a dois protocolos de transferência: protocolo MSMQ nativo e SRMP (protocolo de mensagens confiáveis SOAP).  
   
- Para obter mais informações sobre nomes de formato e caminho do MSMQ, consulte [sobre o enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ Para obter mais informações sobre nomes de formato e caminho do MSMQ, consulte [sobre o enfileiramento de mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding e endereçamento de serviço  
  Ao endereçar uma mensagem a um serviço, o esquema no URI é escolhido com base no transporte usado para comunicação. Cada transporte no WCF tem um esquema exclusivo. O esquema deve refletir a natureza do transporte usado para comunicação. Por exemplo, net. TCP, net. pipe, HTTP e assim por diante.  
@@ -96,7 +96,7 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- O nome de formato MSMQ é o formato especificado pelo MSMQ no [enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94837).  
+ O nome de formato MSMQ é o formato especificado pelo MSMQ no [enfileiramento de mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que você só pode usar nomes de formato diretos e nomes de formato público e privado (requer integração de Active Directory) ao receber mensagens de uma fila usando `MsmqIntegrationBinding`. No entanto, é recomendável que você use nomes de formato diretos. Por exemplo, no Windows Vista, o uso de qualquer outro nome de formato causa um erro porque o sistema tenta abrir uma subfila, que só pode ser aberta com nomes de formato diretos.  
   
@@ -104,6 +104,6 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
  Observe que você não pode usar net. MSMQ://endereçamento com `MsmqIntegrationBinding`. Como o `MsmqIntegrationBinding` dá suporte ao endereçamento de nome de formato MSMQ de forma livre, você pode usar um serviço WCF que usa essa associação para usar recursos de lista de distribuição e multicast no MSMQ. Uma exceção é especificar `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar no formato net. MSMQ://, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

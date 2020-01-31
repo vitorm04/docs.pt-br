@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951638"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743350"
 ---
 # <a name="wcf-security-terminology"></a>Terminologia de segurança do WCF
 Parte da terminologia usada para discutir a segurança pode não ser familiar. Este tópico fornece breves explicações de alguns termos de segurança, mas não pretende fornecer uma documentação abrangente para cada item.  
@@ -56,7 +56,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  assinatura digital  
  Dados que associam a identidade de um remetente às informações que estão sendo enviadas. Uma assinatura digital pode ser agrupada com qualquer mensagem, arquivo ou outra informação codificada digitalmente ou transmitida separadamente. As assinaturas digitais são usadas em ambientes de chave pública e fornecem serviços de autenticação e integridade.  
   
- encoding  
+ {1&gt;encoding&lt;1}  
  O processo de transformar dados em um fluxo de bits. A codificação faz parte do processo de serialização que converte dados em um fluxo de uns e zeros.  
   
  par de chaves do Exchange  
@@ -75,7 +75,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  Um subsistema protegido que autentica e faz logon de usuários no sistema local. O LSA também mantém informações sobre todos os aspectos da segurança local em um sistema, coletivamente conhecido como a diretiva de segurança local do sistema.  
   
  Negotiate  
- Um SSP (provedor de suporte de segurança) que atua como uma camada de aplicativo entre a interface do provedor de suporte de segurança (SSPI) e os outros SSPs. Quando um aplicativo chama o SSPI para fazer logon em uma rede, ele pode especificar um SSP para processar a solicitação. Se o aplicativo especificar `Negotiate`, `Negotiate` o analisará a solicitação e escolherá o melhor SSP para lidar com a solicitação com base na política de segurança configurada pelo cliente.  
+ Um SSP (provedor de suporte de segurança) que atua como uma camada de aplicativo entre a interface do provedor de suporte de segurança (SSPI) e os outros SSPs. Quando um aplicativo chama o SSPI para fazer logon em uma rede, ele pode especificar um SSP para processar a solicitação. Se o aplicativo especificar `Negotiate`, `Negotiate` analisará a solicitação e escolherá o melhor SSP para lidar com a solicitação com base na política de segurança configurada pelo cliente.  
   
  momentos  
  Um valor gerado aleatoriamente usado para anular ataques de "reprodução".  
@@ -90,15 +90,15 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  O padrão de sintaxe de mensagem criptográfica. Uma sintaxe geral de dados para os quais a criptografia pode ser aplicada, como assinaturas digitais e criptografia. Ele também fornece a sintaxe para a disseminação de certificados ou listas de certificados revogados e outros atributos de mensagem, como carimbos de data/hora, para a mensagem.  
   
  comum  
- Uma mensagem que não está criptografada. As mensagens em texto não criptografado são, às vezes, chamadas de mensagens não criptografadas  
+ Uma mensagem que não está criptografada. As mensagens em texto não criptografado são, às vezes, chamadas de mensagens não *criptografadas*  
   
- privilégio  
+ privilege  
  O direito de um usuário executar várias operações relacionadas ao sistema, como desligar o sistema, carregar drivers de dispositivo ou alterar a hora do sistema. O token de acesso de um usuário contém uma lista dos privilégios que o usuário ou os grupos do usuário mantêm.  
   
  chave privada  
  A metade secreta de um par de chaves usado em um algoritmo de chave pública. As chaves privadas normalmente são usadas para criptografar uma chave de sessão simétrica, assinar digitalmente uma mensagem ou descriptografar uma mensagem que foi criptografada com a chave pública correspondente. Consulte também "chave pública".  
   
- process  
+ processo  
  O contexto de segurança no qual um aplicativo é executado. Normalmente, o contexto de segurança é associado a um usuário, de modo que todos os aplicativos em execução em um determinado processo assumem as permissões e os privilégios do usuário proprietário.  
   
  par de chaves pública/privada  
@@ -137,13 +137,13 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  SSPI (interface do provedor de suporte de segurança)  
  Uma interface comum entre aplicativos de nível de transporte, como a RPC (chamada de procedimento remoto) da Microsoft e provedores de segurança, como a segurança distribuída do Windows. O SSPI permite que um aplicativo de transporte chame um de vários provedores de segurança para obter uma conexão autenticada. Essas chamadas não exigem conhecimento extensivo dos detalhes do protocolo de segurança.  
   
- serviço de token de segurança  
+ Serviço de token de segurança  
  Serviços projetados para emitir e gerenciar tokens de segurança personalizados (tokens emitidos) em um cenário de multiatendimento. Os tokens personalizados geralmente são tokens SAML (Security Asserties Markup Language) que incluem uma credencial personalizada.  
   
  certificado do servidor  
  Refere-se a um certificado usado para autenticação de servidor, como autenticar um servidor Web em um navegador da Web. Quando um cliente de navegador da Web tenta acessar um servidor Web seguro, o servidor envia seu certificado ao navegador para permitir que ele verifique a identidade do servidor.  
   
- sessão  
+ privado  
  Uma troca de mensagens sob a proteção de uma única peça do material de chaveamento. Por exemplo, as sessões SSL usam uma única chave para enviar várias mensagens por essa chave.  
   
  chave de sessão  
@@ -181,8 +181,8 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  X.509  
  Um padrão reconhecido internacionalmente para certificados que define suas partes necessárias.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Conceitos fundamentais do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

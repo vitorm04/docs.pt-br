@@ -2,12 +2,12 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283300"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739904"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação HTTP WEB do Windows Communication Foundation (WCF) fornece os elementos básicos necessários para criar serviços HTTP WEB com o WCF. Os serviços HTTP WEB do WCF são projetados para serem acessados pela mais ampla variedade de clientes possíveis, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>URLs e parâmetros de cadeia de consulta do UriTemplate  
  Os serviços de estilo da Web podem ser chamados de um navegador da Web, digitando uma URL associada a uma operação de serviço. Essas operações de serviço podem pegar parâmetros de cadeia de caracteres de consulta que devem ser especificados em um formulário de cadeia de caracteres dentro da URL. A tabela a seguir mostra os tipos que podem ser passados dentro de uma URL e o formato usado.  
   
-|Tipo|Formatar|  
+|{1&gt;Tipo&lt;1}|Formato|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -127,7 +127,7 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Formatos e o modelo de programação WEB HTTP do WCF  
  O modelo de programação WEB HTTP do WCF tem novos recursos para trabalhar com vários formatos de dados diferentes. Na camada de associação, o <xref:System.ServiceModel.WebHttpBinding> pode ler e gravar os seguintes tipos diferentes de dados:  
   
-- XML  
+- {1&gt;XML&lt;1}  
   
 - JSON  
   
@@ -138,12 +138,13 @@ interface ICustomer
  .NET Framework 3,5 fornece suporte para dados JSON (AJAX), bem como feeds de distribuição (incluindo ATOM e RSS). Para obter mais informações sobre esses recursos, consulte [WCF Web http Formatting](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) and [Ajax Integration and JSON support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>Segurança e modelo de programação do WCF WEB HTTP  
- Como o modelo de programação WEB HTTP do WCF não dá suporte aos protocolos WS-*, a única maneira de proteger um serviço WEB HTTP WCF é expor o serviço por HTTPS usando SSL. Para obter mais informações sobre como configurar o SSL com o IIS 7,0, consulte [como implementar o SSL no IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+
+Como o modelo de programação WEB HTTP do WCF não dá suporte aos protocolos WS-*, a única maneira de proteger um serviço WEB HTTP WCF é expor o serviço por HTTPS usando SSL. Para obter mais informações sobre como configurar o SSL com o IIS 7,0, consulte [como implementar o SSL no IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solução de problemas do modelo de programação WEB HTTP do WCF  
  Ao chamar WCF WEB HTTP Services usando um <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para criar um canal, o <xref:System.ServiceModel.Description.WebHttpBehavior> usa o <xref:System.ServiceModel.EndpointAddress> definido no arquivo de configuração, mesmo que um <xref:System.ServiceModel.EndpointAddress> diferente seja passado para o <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

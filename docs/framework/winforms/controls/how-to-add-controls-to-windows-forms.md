@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar Controles ao Windows Forms'
+title: adicionar controles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: bfe9449ecc862c361719d27dba2f5ed9af563957
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 560089a23fbcccb0f0d5683a95ad06dd9c59556d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046058"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743962"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Como: Adicionar Controles ao Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Como adicionar controles aos Windows Forms
 
 A maioria dos formulários é projetada adicionando controles à superfície do formulário para definir uma interface do usuário (IU). Um *controle* é um componente em um formulário usado para exibir informações ou aceitar a entrada do usuário. Para obter mais informações sobre controles, consulte [Controles do Windows Forms](index.md).
 
 ## <a name="to-draw-a-control-on-a-form"></a>Desenhar um controle em um formulário
 
-1. Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. Na **Caixa de ferramentas**, clique no controle que você deseja adicionar ao formulário.
 
@@ -35,7 +35,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
 
 ## <a name="to-drag-a-control-to-a-form"></a>Arrastar um controle para um formulário
 
-1. Abra o formulário. Para obter mais informações, confira [Como: Exibir Windows Forms no designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Abra o formulário. Para obter mais informações, consulte [Como exibir Windows Forms no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. Na **Caixa de ferramentas**, clique no controle que você deseja e arraste-o para o formulário.
 
@@ -44,7 +44,7 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     > [!NOTE]
     > Você pode clicar duas vezes em um controle na **Caixa de ferramentas** para adicioná-lo ao canto superior esquerdo do formulário com seu tamanho padrão.
 
-    Você também pode adicionar controles dinamicamente a um formulário no tempo de execução. No exemplo de código a seguir, <xref:System.Windows.Forms.TextBox> um controle será adicionado ao formulário quando um <xref:System.Windows.Forms.Button> controle for clicado.
+    Você também pode adicionar controles dinamicamente a um formulário no tempo de execução. No exemplo de código a seguir, um controle <xref:System.Windows.Forms.TextBox> será adicionado ao formulário quando um controle de <xref:System.Windows.Forms.Button> for clicado.
 
     > [!NOTE]
     > O procedimento a seguir requer a existência de um formulário com um controle **Botão**, `Button1`, já inserido nele.
@@ -87,9 +87,9 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     > [!IMPORTANT]
     > Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um `UserControl` mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
-- [Como: Redimensionar controles em Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Como: Definir o texto exibido por um controle de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Controles do Windows Forms](index.md)
+- [Como redimensionar controles no Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)

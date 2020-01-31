@@ -2,12 +2,12 @@
 title: 'Método ICorDebugInstanceFieldSymbol:: GetName'
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: d88e18b8d6d497098e340b396972f9ead28dbaf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 05914863dfbc2aca608a5d74f298f81c64345fe8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139047"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782384"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>Método ICorDebugInstanceFieldSymbol:: GetName
 Obtém o nome do campo de instância.  
@@ -37,7 +37,7 @@ HRESULT GetName(
 > [!NOTE]
 > Esse método está disponível somente com .NET Native.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -46,7 +46,7 @@ HRESULT GetName(
   
  **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Interface ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Depurando interfaces](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Interface ICorDebugInstanceFieldSymbol](icordebuginstancefieldsymbol-interface.md)
+- [Depurando interfaces](debugging-interfaces.md)

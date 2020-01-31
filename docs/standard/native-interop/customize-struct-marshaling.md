@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706342"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741525"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
 
@@ -20,11 +20,11 @@ ms.locfileid: "75706342"
 
 O .NET fornece o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> e a enumeração <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> para permitir que você personalize como os campos são colocados na memória. As diretrizes a seguir ajudarão a evitar problemas comuns.
 
-**✔️ CONSIDERE** usar `LayoutKind.Sequential` sempre que possível.
+✔️ Considere o uso de `LayoutKind.Sequential` sempre que possível.
 
-**✔️ USE** somente `LayoutKind.Explicit` no marshaling quando seu struct nativo também tiver um layout explícito, como uma união.
+✔️ Só use `LayoutKind.Explicit` no marshaling quando o struct nativo também tiver um layout explícito, como uma Union.
 
-**❌ Evite** usar `LayoutKind.Explicit` ao realizar o marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
+❌ Evite usar `LayoutKind.Explicit` ao realizar o marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .NET Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalização do marshaling de campo booliano
 

@@ -1,5 +1,5 @@
 ---
-title: Configurações do aplicativo para o Windows Forms
+title: Configurações do Aplicativo
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: d64aebb1cb84b39a2e2fb9a6a8375c52d58699df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8a6a1ab69754d48017059d547a1f9e5e3889a606
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963238"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739725"
 ---
 # <a name="application-settings-for-windows-forms"></a>Configurações do aplicativo para o Windows Forms
 O recurso Configurações de aplicativo dos Windows Forms facilita a criação, o repositório e a manutenção de aplicativos personalizados e preferências do usuário no cliente. Com as Configurações de aplicativo, é possível armazenar não apenas dados do aplicativo, como cadeias de conexão de banco de dados, mas também dados específicos do usuário, como posições da barra de ferramentas e as listas mais recentemente usadas.  
@@ -30,10 +30,10 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
  [Configurações do Aplicativo para Controles Personalizados](application-settings-for-custom-controls.md)  
  Discute o que deve ser realizado para oferecer a seus controles personalizados a capacidade de persistir as configurações de aplicativo quando estiverem hospedados em aplicativos de terceiros.  
   
- [Como: Criar configurações de aplicativo](how-to-create-application-settings.md)  
+ [Como criar configurações de aplicativo](how-to-create-application-settings.md)  
  Demonstra como criar novas configurações do aplicativo que persistem entre sessões do aplicativo.  
   
- [Como: Validar configurações do aplicativo](how-to-validate-application-settings.md)  
+ [Como Validar Configurações do Aplicativo](how-to-validate-application-settings.md)  
  Demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
   
 ## <a name="related-topics"></a>Tópicos relacionados
@@ -41,6 +41,6 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
 [Windows Forms seção de configuração](../../configure-apps/file-schema/winforms/index.md)    
 Documenta as configurações para habilitar o suporte a alto DPI no aplicativo Windows Forms a partir do .NET Framework 4,7.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Windows Forms](../index.md)

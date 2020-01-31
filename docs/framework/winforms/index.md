@@ -1,33 +1,34 @@
 ---
 title: Windows Forms
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd3a71b406f1f0ae2afa1e1b3982c27f4db21a4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583428"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739190"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para ajudar a escrever código, bem como um controle sofisticado conjunto escrito com o .NET Framework. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
+Como os formulários são a unidade base do seu aplicativo, é essencial dedicar certo planejamento às suas funções e design. Um formulário é basicamente uma tela em branco que você, como desenvolvedor, aprimora com controles para criar uma interface do usuário e com código para manipular os dados. Para esse fim, o Visual Studio fornece um ambiente de desenvolvimento integrado (IDE) para auxiliar na escrita de código, bem como um conjunto de controle rico escrito com o .NET Framework. Complementando a funcionalidade desses controles com seu código, você poderá desenvolver as soluções que precisa com rapidez e facilidade.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)  
+ [Introdução ao Windows Forms](getting-started-with-windows-forms.md)  
  Fornece links para tópicos sobre como aproveitar a capacidade dos Windows Forms para exibir dados, manipular entradas do usuário e implantar seus aplicativos com facilidade e com uma segurança mais robusta.  
   
- [Aprimorando aplicativos do Windows Forms](./advanced/index.md)  
+ [Aprimorando Aplicativos dos Windows Forms](./advanced/index.md)  
  Fornece links para tópicos sobre como aprimorar seu Windows Forms com uma variedade de recursos.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Controles dos Windows Forms](./controls/index.md)  
+## <a name="related-sections"></a>Seções Relacionadas  
+ [Controles do Windows Forms](./controls/index.md)  
  Contém links para tópicos que descrevem os controles de Windows Forms e mostram como implementá-los.  
   
- [Associação de dados do Windows Forms](windows-forms-data-binding.md)  
+ [Vinculação de dados dos Windows Forms](windows-forms-data-binding.md)  
  Contém links para tópicos que descrevem a arquitetura de associação de dados dos Windows Forms.  
   
  [Visão geral de elementos gráficos](./advanced/graphics-overview-windows-forms.md)  
@@ -45,8 +46,8 @@ Como os formulários são a unidade base do seu aplicativo, é essencial dedicar
  [Aplicativos dos Windows Forms](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Discute o processo de depuração para aplicativos criados com o modelo de projeto de Aplicativos do Windows, bem como alterar as configurações de Depuração e Versão.  
   
- [Introdução à implantação no Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
+ [Primeira olhada na implantação no Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
  Descreve o processo pelo qual você distribui um componente ou aplicativo concluído para ser instalado em outros computadores.  
   
  [Compilando aplicativos de console](../../standard/building-console-apps.md)  
- Descreve os conceitos básicos da criação de um aplicativo de console usando o <xref:System.Console> classe.
+ Descreve as noções básicas de criação de um aplicativo de console usando a classe <xref:System.Console>.

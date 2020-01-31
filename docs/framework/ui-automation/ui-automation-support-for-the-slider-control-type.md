@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-ms.openlocfilehash: 24de9d504055da788ceee46a26e493a9c6989202
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 34a093fa0be68ddab75d78c0113fe110d4332773
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741155"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786062"
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Deslizante
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741155"
   
  O controle deslizante é um controle composto com botões que permitem que um usuário com um mouse defina um intervalo numérico ou selecione um conjunto de itens.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Slider. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Slider, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Slider. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles Slider, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -54,9 +54,9 @@ ms.locfileid: "75741155"
   
 |Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Depende|Um controle deslizante deve dar suporte ao padrão de controle de seleção se o conteúdo representar um valor entre um conjunto discreto de opções. Quando há suporte para o padrão de controle de seleção, a seleção correspondente deve ser exposta como um ou mais itens de lista filho do controle deslizante.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Depende|Um controle deslizante deve dar suporte ao padrão de controle RangeValue se o conteúdo puder ser definido como um valor dentro de um intervalo numérico.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Um controle deslizante deve dar suporte ao padrão de controle de valor se o conteúdo representar um valor entre um conjunto discreto de opções.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Dependem|Um controle deslizante deve dar suporte ao padrão de controle de seleção se o conteúdo representar um valor entre um conjunto discreto de opções. Quando há suporte para o padrão de controle de seleção, a seleção correspondente deve ser exposta como um ou mais itens de lista filho do controle deslizante.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Dependem|Um controle deslizante deve dar suporte ao padrão de controle RangeValue se o conteúdo puder ser definido como um valor dentro de um intervalo numérico.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Um controle deslizante deve dar suporte ao padrão de controle de valor se o conteúdo representar um valor entre um conjunto discreto de opções.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
@@ -66,11 +66,11 @@ ms.locfileid: "75741155"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Dependem|{1&gt;Nenhum&lt;1}|  
 |evento de <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> de alteração de propriedade|Necessário|{1&gt;Nenhum&lt;1}|  
 |evento de <xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> de alteração de propriedade|Necessário|{1&gt;Nenhum&lt;1}|  
 |evento de <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> de alteração de propriedade|Necessário|{1&gt;Nenhum&lt;1}|  
-|evento de <xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> de alteração de propriedade|Depende|{1&gt;Nenhum&lt;1}|  
+|evento de <xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> de alteração de propriedade|Dependem|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   

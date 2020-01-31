@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicar atributos a controles do Windows Forms'
+title: Aplicar atributos em controles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 273d32927582f4467a92cd3b8f87e699c1f167d7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b8ecd516cf6bb189c6ad1b208dd8e3a5444f001c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922790"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741485"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Como: Aplicar atributos a controles do Windows Forms
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Como aplicar atributos em controles dos Windows Forms
 Para desenvolver componentes e controles que interagem corretamente com o ambiente de design e são executados corretamente no tempo de execução, você precisa aplicar atributos corretamente a classes e membros.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como usar vários atributos em um controle personalizado. O controle demonstra um recurso de funcionalidade em log simples. Quando o controle está associado a uma fonte de dados, ele exibe os valores enviados pela fonte de dados em <xref:System.Windows.Forms.DataGridView> um controle. Se um valor exceder o valor especificado pela propriedade `Threshold`, um evento `ThresholdExceeded` será gerado.  
+ O exemplo de código a seguir demonstra como usar vários atributos em um controle personalizado. O controle demonstra um recurso de funcionalidade em log simples. Quando o controle está associado a uma fonte de dados, ele exibe os valores enviados pela fonte de dados em um controle de <xref:System.Windows.Forms.DataGridView>. Se um valor exceder o valor especificado pela propriedade `Threshold`, um evento `ThresholdExceeded` será gerado.  
   
  O `AttributesDemoControl` registra valores com uma classe `LogEntry`. A classe `LogEntry` é uma classe de modelo, o que significa que ela é parametrizada pelo tipo abordado pelo registro em log. Por exemplo, se o `AttributesDemoControl` registrar em log os valores do tipo `float`, cada instância `LogEntry` será declarada e usada da seguinte maneira.  
   
@@ -28,9 +28,9 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
  [!code-vb[System.ComponentModel.AttributesDemoControl#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/form1.vb#110)]  
   
 > [!NOTE]
-> Como `LogEntry` é parametrizado por um tipo arbitrário, ele deve usar a reflexão para operar no tipo de parâmetro. Para que o recurso de limite funcione, o tipo `T` de parâmetro deve <xref:System.IComparable> implementar a interface.  
+> Como `LogEntry` é parametrizado por um tipo arbitrário, ele deve usar a reflexão para operar no tipo de parâmetro. Para que o recurso de limite funcione, o tipo de parâmetro `T` deve implementar a interface <xref:System.IComparable>.  
   
- O formulário que hospeda o `AttributesDemoControl` consulta um contador de desempenho periodicamente. Cada valor é empacotado em um `LogEntry` do tipo apropriado e adicionado ao. <xref:System.Windows.Forms.BindingSource> O `AttributesDemoControl` recebe o valor por meio de sua vinculação de dados e exibe o <xref:System.Windows.Forms.DataGridView> valor em um controle.  
+ O formulário que hospeda o `AttributesDemoControl` consulta um contador de desempenho periodicamente. Cada valor é empacotado em uma `LogEntry` do tipo apropriado e adicionado à <xref:System.Windows.Forms.BindingSource>do formulário. O `AttributesDemoControl` recebe o valor por meio de sua associação de dados e exibe o valor em um controle de <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#1)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#1)]  
@@ -47,7 +47,7 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>Atributo TypeConverter  
- <xref:System.ComponentModel.TypeConverterAttribute>é outro atributo de nível de classe usado com frequência. O exemplo de código a seguir mostra seu uso para a classe `LogEntry`. Este exemplo também mostra uma implementação de <xref:System.ComponentModel.TypeConverter> para o `LogEntry` tipo, chamado `LogEntryTypeConverter`.  
+ <xref:System.ComponentModel.TypeConverterAttribute> é outro atributo de nível de classe usado com frequência. O exemplo de código a seguir mostra seu uso para a classe `LogEntry`. Este exemplo também mostra uma implementação de um <xref:System.ComponentModel.TypeConverter> para o tipo `LogEntry`, chamado `LogEntryTypeConverter`.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
@@ -59,13 +59,13 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
  [!code-vb[System.ComponentModel.AttributesDemoControl#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#21)]  
   
 ### <a name="ambientvalue-attribute"></a>Atributo AmbientValue  
- O exemplo a seguir demonstra <xref:System.ComponentModel.AmbientValueAttribute> o e mostra o código que dá suporte à sua interação com o ambiente de design. Essa interação é chamada *ambiente*.  
+ O exemplo a seguir demonstra o <xref:System.ComponentModel.AmbientValueAttribute> e mostra o código que dá suporte à sua interação com o ambiente de design. Essa interação é chamada *ambiente*.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#23)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#23)]  
   
 ### <a name="databinding-attributes"></a>Atributos de associação de dados  
- Os exemplos a seguir demonstram uma implementação da associação de dados complexos. O nível <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>de classe, mostrado anteriormente, especifica as `DataSource` propriedades `DataMember` e a serem usadas para a vinculação de dados. Especifica o tipo ao qual a `DataSource` propriedade será associada. <xref:System.ComponentModel.AttributeProviderAttribute>  
+ Os exemplos a seguir demonstram uma implementação da associação de dados complexos. A <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>no nível de classe, mostrada anteriormente, especifica as propriedades `DataSource` e `DataMember` a serem usadas para a vinculação de dados. O <xref:System.ComponentModel.AttributeProviderAttribute> especifica o tipo ao qual a propriedade de `DataSource` será associada.  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#25)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#25](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#25)]  
@@ -73,14 +73,14 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
   
 - O formulário que hospeda o `AttributesDemoControl` requer uma referência ao assembly `AttributesDemoControl` para compilar.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)
-- [Como: Serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [Atributos em controles do Windows Forms](attributes-in-windows-forms-controls.md)
+- [Como serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
