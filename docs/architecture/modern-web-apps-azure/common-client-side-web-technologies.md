@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 4dd747293fba4c18c2d10738d36f4d98cfd3f5b9
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926494"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920993"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
 
@@ -24,7 +24,7 @@ Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das 
 
 A linguagem HTML é a linguagem de marcação padrão usada para criar páginas da Web e aplicativos Web. Seus elementos formam os blocos de construção de páginas, representando o texto formatado, imagens, entradas de formulário e outras estruturas. Quando um navegador faz uma solicitação para uma URL, independentemente se ele está buscando uma página ou um aplicativo, a primeira coisa retornada é um documento HTML. Esse documento HTML pode referenciar ou incluir informações adicionais sobre sua aparência e o layout na forma de CSS ou sobre seu comportamento na forma de JavaScript.
 
-## <a name="css"></a>CSS
+## <a name="css"></a>{1&gt;CSS&lt;1}
 
 O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o layout de elementos HTML. Os estilos CSS podem ser aplicados diretamente a um elemento HTML, definidos separadamente na mesma página ou definidos em um arquivo separado e referenciados pela página. Os estilos são aplicados em cascata de acordo com a forma como são usados para selecionar determinado elemento HTML. Por exemplo, um estilo pode se aplicar a um documento inteiro, mas ser substituído por um estilo aplicado a um elemento específico. Da mesma forma, um estilo específico a um elemento é substituído por um estilo aplicado a uma classe CSS que foi aplicada ao elemento, que, por sua vez, é substituído por um estilo direcionado a uma instância específica desse elemento (por meio de sua ID). Figura 6-1
 
@@ -98,7 +98,7 @@ Os componentes são definidos com a função de decorador @Component, que usa me
 
 Trabalhando com componentes e modelos, em vez de elementos DOM, os aplicativos do Angular podem operar em um nível superior de abstração e com menos código geral comparado aos aplicativos escritos apenas com JavaScript (também chamado "JS baunilha") ou com o jQuery. O Angular também impõe uma ordem de como organizar os arquivos de script do lado do cliente. Por convenção, os aplicativos do Angular usam uma estrutura de pastas comum, com arquivos de script de módulo e componente localizados em uma pasta do aplicativo. Os scripts do Angular referentes à criação, à implantação e ao teste do aplicativo geralmente estão localizados em uma pasta de nível superior.
 
-O Angular também faz intenso uso de ferramentas de CLI (interface de linha de comando). Para começar o desenvolvimento local com o Angular (supondo que você já tenha instalado o GIT e o npm) basta clonar um repositório do GitHub e executar `npm install` e `npm start`. Além disso, o Angular fornece sua própria ferramenta de CLI que pode criar projetos, adicionar arquivos e ajudar com tarefas de teste, agrupamento e implantação. Essa facilidade de utilização das ferramentas de CLI tornam o Angular especialmente compatível com o ASP.NET Core, que também apresenta compatibilidade excelente com a CLI.
+Você pode desenvolver aplicativos angulares usando uma CLI. Para começar o desenvolvimento local com o Angular (supondo que você já tenha instalado o GIT e o npm) basta clonar um repositório do GitHub e executar `npm install` e `npm start`. Além disso, o angular envia sua própria CLI, que pode criar projetos, adicionar arquivos e ajudar com tarefas de teste, agrupamento e implantação. Essa amigável de CLI torna o angular especialmente compatível com ASP.NET Core, que também oferece excelente suporte à CLI.
 
 A Microsoft desenvolveu um aplicativo de referência, o [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), que inclui uma implementação SPA do Angular. Esse aplicativo inclui módulos do Angular para gerenciar a cesta de compras da loja online, carregar e exibir itens do catálogo e manipular a criação de ordens. Exiba e baixe o aplicativo de exemplo no [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 

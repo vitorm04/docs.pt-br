@@ -2,12 +2,12 @@
 title: O que é o Docker?
 description: Obtenha um pouco mais de conhecimento sobre o Docker, uma analogia simples aqui pode ajudá-lo.
 ms.date: 02/15/2019
-ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e3b3685f2fc6d5a9d33bb176d04ca910f0289344
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738162"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919874"
 ---
 # <a name="what-is-docker"></a>O que é o Docker?
 
@@ -19,7 +19,7 @@ O [Docker](https://www.docker.com/) é um [projeto de software livre](https://gi
 
 Conforme mostrado no diagrama acima, os contêineres do Docker podem ser executados em qualquer lugar, local no datacenter do cliente, em um provedor de serviços externo ou na nuvem, no Azure. Os contêineres de imagem do Docker também podem ser executados nativamente no Linux e no Windows. No entanto, imagens do Windows podem executar somente em hosts do Windows e imagens do Linux podem executar em hosts do Linux e hosts do Windows (usando uma VM do Linux do Hyper-V, até o momento), em que o host significa um servidor ou uma VM.
 
-Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar código ou executar a interface de linha de comando (CLI) do Docker a partir do macOS, mas no momento da redação deste artigo, os contêineres não são executados diretamente no macOS.) Os desenvolvedores que trabalham no Windows podem criar imagens para contêineres do Linux ou do Windows.
+Os desenvolvedores podem usar ambientes de desenvolvimento no Windows, Linux ou macOS. No computador de desenvolvimento, o desenvolvedor executa um host Docker em que as imagens do Docker são implantadas, incluindo o aplicativo e suas dependências. Os desenvolvedores que trabalham no Linux ou no Mac usam um host do Docker que é baseado no Linux e eles podem criar imagens apenas para contêineres do Linux. (Os desenvolvedores que trabalham no Mac podem editar código ou executar a CLI do Docker do macOS, mas no momento da redação deste artigo, os contêineres não são executados diretamente no macOS.) Os desenvolvedores que trabalham no Windows podem criar imagens para contêineres do Linux ou do Windows.
 
 Para hospedar contêineres em ambientes de desenvolvimento e fornecer ferramentas para desenvolvedores adicionais, o Docker envia o [Docker Community Edition (CE)](https://www.docker.com/community-edition) para Windows ou para o macOS. Esses produtos instalam a VM necessária (o host do Docker) para hospedar os contêineres. O Docker também disponibiliza o [Docker Enterprise Edition (EE)](https://www.docker.com/enterprise-edition), que foi projetado para desenvolvimento empresarial e é usado por equipes de TI que criam, enviam e executam aplicativos de grande porte críticos para os negócios em produção.
 

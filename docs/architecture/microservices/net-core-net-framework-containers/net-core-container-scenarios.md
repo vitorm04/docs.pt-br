@@ -2,12 +2,12 @@
 title: Quando escolher o .NET Core para os contêineres do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Quando escolher o .NET Core para os contêineres do Docker
 ms.date: 09/11/2018
-ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675723"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920989"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando escolher o .NET Core para os contêineres do Docker
 
@@ -27,9 +27,9 @@ O [Visual Studio](https://www.visualstudio.com/vs/) fornece um IDE (ambiente de 
 
 O [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) é um IDE, a evolução do Xamarin Studio, que é executada em macOS e dá suporte ao desenvolvimento de aplicativos baseados em Docker. Essa deve ser a opção preferencial para desenvolvedores que trabalham em computadores Mac que queiram usar um IDE avançado.
 
-Também é possível usar o [Visual Studio Code](https://code.visualstudio.com/) (VS Code) no macOS, Linux e Windows. O VS Code é totalmente compatível com o .NET Core, incluindo IntelliSense e depuração. Como o VS Code é um editor leve, é possível usá-lo para desenvolver aplicativos em contêineres no Mac em conjunto com a CLI do Docker e com a [CLI (interface de linha de comando) do .NET Core](../../../core/tools/index.md). Também é possível direcionar o .NET Core com a maioria dos editores de terceiros, como Sublime, Emacs, vi e o projeto OmniSharp de software livre, que também fornece suporte ao IntelliSense.
+Você também pode usar [Visual Studio Code](https://code.visualstudio.com/) no MacOS, Linux e Windows. Visual Studio Code oferece suporte total ao .NET Core, incluindo IntelliSense e depuração. Como VS Code é um editor leve, você pode usá-lo para desenvolver aplicativos em contêineres no Mac em conjunto com a CLI do Docker e o [CLI do .NET Core](../../../core/tools/index.md). Também é possível direcionar o .NET Core com a maioria dos editores de terceiros, como Sublime, Emacs, vi e o projeto OmniSharp de software livre, que também fornece suporte ao IntelliSense.
 
-Além dos IDEs e dos editores, é possível usar a [CLI do .NET Core](../../../core/tools/index.md) para todas as plataformas compatíveis.
+Além dos IDEs e editores, você pode usar o [CLI do .NET Core](../../../core/tools/index.md) para todas as plataformas com suporte.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Usando contêineres para novos projetos ("campo verde")
 
@@ -49,7 +49,7 @@ Uma arquitetura de microsserviços também permite uma combinação de tecnologi
 
 Quando seu sistema baseado em contêiner precisar da melhor densidade, granularidade e desempenho possíveis, o .NET Core e o ASP.NET Core são suas melhores opções. O ASP.NET Core é até dez vezes mais rápido do que o ASP.NET no .NET Framework tradicional e lidera outras tecnologias populares do setor para microsserviços, como Java servlets, Go e Node.js.
 
-Isso é especialmente relevante para arquiteturas de microsserviços, em que você poderia ter centenas de microsserviços (contêineres) em execução. Com imagens do ASP.NET Core (baseadas no tempo de execução do .NET Core) no Linux ou Windows Nano, é possível executar seu sistema com um número muito menor de servidores ou VMs, economizando custos em infraestrutura e hospedagem.
+Isso é especialmente relevante para arquiteturas de microsserviços, em que você poderia ter centenas de microsserviços (contêineres) em execução. Com imagens do ASP.NET Core (baseadas no runtime do .NET Core) no Linux ou Windows Nano, é possível executar seu sistema com um número muito menor de servidores ou VMs, economizando custos em infraestrutura e hospedagem.
 
 >[!div class="step-by-step"]
 >[Anterior](general-guidance.md)
