@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], concepts
 - WF [WF], concepts
 ms.assetid: 2a5c0ac2-813f-4a7b-83ac-9e5cb85e0640
-ms.openlocfilehash: 17d9561af4d6c7f58b294b906ab14bb5d31b85a3
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: ef1b93c804d6eabeee7e59957cad349d1ec85faa
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544770"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921243"
 ---
-# <a name="windows-workflow-conceptual-overview"></a><span data-ttu-id="c180b-102">Visão geral conceitual de fluxo de trabalho do Windows</span><span class="sxs-lookup"><span data-stu-id="c180b-102">Windows Workflow Conceptual Overview</span></span>
-<span data-ttu-id="c180b-103">Esta seção contém um conjunto de tópicos que abordam os conceitos maiores por trás do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="c180b-103">This section contains a set of topics discussing the larger concepts behind Windows Workflow Foundation (WF).</span></span>  
+# <a name="windows-workflow-conceptual-overview"></a><span data-ttu-id="9b968-102">Visão geral conceitual de fluxo de trabalho do Windows</span><span class="sxs-lookup"><span data-stu-id="9b968-102">Windows Workflow Conceptual Overview</span></span>
+<span data-ttu-id="9b968-103">Esta seção contém um conjunto de tópicos que abordam os conceitos maiores por trás do Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="9b968-103">This section contains a set of topics discussing the larger concepts behind Windows Workflow Foundation (WF).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c180b-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="c180b-104">In This Section</span></span>  
- [<span data-ttu-id="c180b-105">Visão geral do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="c180b-105">Windows Workflow Overview</span></span>](overview.md)  
- <span data-ttu-id="c180b-106">Descreve a base que permite que os usuários criem fluxos de trabalho do sistema ou humanos em seus aplicativos escritos para os sistemas operacionais Windows Vista, [!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003 e Windows Server 2008.</span><span class="sxs-lookup"><span data-stu-id="c180b-106">Describes the foundation that enables users to create system or human workflows in their applications written for Windows Vista, [!INCLUDE[wxp](../../../includes/wxp-md.md)], Windows Server 2003, and Windows Server 2008 operating systems.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="9b968-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="9b968-104">In This Section</span></span>  
+ [<span data-ttu-id="9b968-105">Visão geral do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="9b968-105">Windows Workflow Overview</span></span>](overview.md)  
+ <span data-ttu-id="9b968-106">Descreve a base que permite que os usuários criem fluxos de trabalho do sistema ou humanos em seus aplicativos escritos para os sistemas operacionais Windows Vista, Windows XP, Windows Server 2003 e Windows Server 2008.</span><span class="sxs-lookup"><span data-stu-id="9b968-106">Describes the foundation that enables users to create system or human workflows in their applications written for Windows Vista, Windows XP, Windows Server 2003, and Windows Server 2008 operating systems.</span></span>  
   
- [<span data-ttu-id="c180b-107">Conceitos fundamentais do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="c180b-107">Fundamental Windows Workflow Concepts</span></span>](fundamental-concepts.md)  
- <span data-ttu-id="c180b-108">Descreve os conceitos fundamentais usados no desenvolvimento de Windows Workflow Foundation que podem ser novos para alguns desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="c180b-108">Describes fundamental concepts used in Windows Workflow Foundation development that may be new to some developers.</span></span>  
+ [<span data-ttu-id="9b968-107">Conceitos fundamentais do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="9b968-107">Fundamental Windows Workflow Concepts</span></span>](fundamental-concepts.md)  
+ <span data-ttu-id="9b968-108">Descreve os conceitos fundamentais usados no desenvolvimento de Windows Workflow Foundation que podem ser novos para alguns desenvolvedores.</span><span class="sxs-lookup"><span data-stu-id="9b968-108">Describes fundamental concepts used in Windows Workflow Foundation development that may be new to some developers.</span></span>  
   
- [<span data-ttu-id="c180b-109">Arquitetura do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="c180b-109">Windows Workflow Architecture</span></span>](architecture.md)  
- <span data-ttu-id="c180b-110">Descreve os componentes usados no desenvolvimento de Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="c180b-110">Describes components used in Windows Workflow Foundation development.</span></span>
+ [<span data-ttu-id="9b968-109">Arquitetura do Windows Workflow</span><span class="sxs-lookup"><span data-stu-id="9b968-109">Windows Workflow Architecture</span></span>](architecture.md)  
+ <span data-ttu-id="9b968-110">Descreve os componentes usados no desenvolvimento de Windows Workflow Foundation.</span><span class="sxs-lookup"><span data-stu-id="9b968-110">Describes components used in Windows Workflow Foundation development.</span></span>
