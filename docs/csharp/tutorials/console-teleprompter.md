@@ -4,18 +4,18 @@ description: Este tutorial ensina vários recursos no .NET Core e da linguagem C
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714597"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921132"
 ---
 # <a name="console-app"></a>Aplicativo de console
 
 Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você aprenderá:
 
-- As noções básicas da CLI (Interface de Linha de Comando) do .NET Core
+- As noções básicas do CLI do .NET Core
 - A estrutura de um aplicativo de console C#
 - E/S do Console
 - Fundamentos das APIs de E/S de arquivo no .NET
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>Conclusão
 
-Este tutorial mostrou a você alguns recursos da linguagem C# e as bibliotecas .NET Core relacionadas ao trabalho em aplicativos de Console. Use esse conhecimento como base para explorar mais sobre a linguagem e sobre as classes apresentadas aqui. Você viu as noções básicas de e/s de arquivo e console, bloqueio e uso sem bloqueio da programação assíncrona baseada em tarefas, um tour pelo C# idioma e como C# os programas são organizados e a interface de linha de comando e as ferramentas do .NET Core.
+Este tutorial mostrou a você alguns recursos da linguagem C# e as bibliotecas .NET Core relacionadas ao trabalho em aplicativos de Console. Use esse conhecimento como base para explorar mais sobre a linguagem e sobre as classes apresentadas aqui. Você viu as noções básicas de e/s de arquivo e console, bloqueio e uso sem bloqueio da programação assíncrona baseada em tarefas, um tour pelo C# idioma e como C# os programas são organizados e o CLI do .NET Core.
 
 Para obter mais informações sobre E/S de arquivo, consulte o tópico [E/S de arquivo e de fluxo](../../standard/io/index.md). Para obter mais informações sobre o modelo de programação assíncrona usado neste tutorial, consulte os tópicos [Programação assíncrona controlada por tarefas](../..//standard/parallel-programming/task-based-asynchronous-programming.md) e [Programação assíncrona](../async.md).

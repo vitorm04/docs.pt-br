@@ -1,20 +1,20 @@
 ---
-title: Publicar aplicativos .NET Core com a CLI
-description: Saiba como publicar um aplicativo .NET Core com as ferramentas da CLI (interface de linha de comando) do SDK do .NET Core.
+title: Publicar aplicativos com o CLI do .NET Core
+description: Aprenda a publicar um aplicativo .NET Core usando os comandos CLI do .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740848"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920903"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>Publicar aplicativos .NET Core com a CLI
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>Publicar aplicativos .NET Core com o CLI do .NET Core
 
 Este artigo demonstra como você pode publicar seu aplicativo .NET Core por meio da linha de comando. O .NET Core fornece três maneiras de publicar seus aplicativos. A implantação dependente de estrutura produz um arquivo .dll multiplataforma que usa o runtime do .NET Core instalado localmente. O executável dependente de estrutura produz um executável específico da plataforma que usa o runtime do .NET Core instalado localmente. O executável autossuficiente produz um executável específico da plataforma e inclui uma cópia local do runtime do .NET Core.
 

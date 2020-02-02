@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 578957888daf7be20ab7418a46c533a011b3d2ac
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3fd90cde16afdfe32b9bd0533ba04e35928d2706
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964158"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920197"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegação e representação com o WCF
 A *representação* é uma técnica comum que os serviços usam para restringir o acesso do cliente aos recursos de um domínio de serviço. Os recursos de domínio de serviço podem ser recursos de máquina, como arquivos locais (representação) ou um recurso em outra máquina, como um compartilhamento de arquivos (delegação). Para um aplicativo de exemplo, consulte [personificando o cliente](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obter um exemplo de como usar a representação, consulte [como: representar um cliente em um serviço](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -71,7 +71,7 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
  A infraestrutura do WCF pode representar o chamador somente se o chamador for autenticado com credenciais que podem ser mapeadas para uma conta de usuário do Windows. Se o serviço estiver configurado para autenticar usando uma credencial que não pode ser mapeada para uma conta do Windows, o método de serviço não será executado.  
   
 > [!NOTE]
-> Em [!INCLUDE[wxp](../../../../includes/wxp-md.md)], a representação falhará se um SCT com estado for criado, resultando em um <xref:System.InvalidOperationException>. Para obter mais informações, consulte [cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
+> No Windows XP, a representação falhará se um SCT com estado for criado, resultando em um <xref:System.InvalidOperationException>. Para obter mais informações, consulte [cenários sem suporte](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>Representação em um método de serviço: modelo imperativo  
  Às vezes, um chamador não precisa representar o método de serviço inteiro para funcionar, mas apenas para uma parte dele. Nesse caso, obtenha a identidade do Windows do chamador dentro do método de serviço e execute imperativamente a representação. Faça isso usando a propriedade <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> da <xref:System.ServiceModel.ServiceSecurityContext> para retornar uma instância da classe <xref:System.Security.Principal.WindowsIdentity> e chamar o método <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> antes de usar a instância.  
@@ -93,8 +93,8 @@ A *representação* é uma técnica comum que os serviços usam para restringir 
 |`ImpersonationOption`|`ImpersonateCallerForAllServiceOperations`|Comportamento|  
 |---------------------------|------------------------------------------------|--------------|  
 |Necessário|N/D|O WCF representa o chamador|  
-|Permitido|false|O WCF não representa o chamador|  
-|Permitido|true|O WCF representa o chamador|  
+|Permitidos|false|O WCF não representa o chamador|  
+|Permitidos|true|O WCF representa o chamador|  
 |NotAllowed|false|O WCF não representa o chamador|  
 |NotAllowed|true|Permitida. (Um <xref:System.InvalidOperationException> é lançado.)|  
   

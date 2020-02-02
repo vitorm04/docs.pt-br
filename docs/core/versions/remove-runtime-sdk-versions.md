@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713995"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920410"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Como remover o SDK e o Runtime do .NET Core
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>Desinstalando o .NET Core
+## <a name="uninstall-net-core"></a>Desinstalar o .NET Core
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -220,7 +220,7 @@ Antes do Visual Studio 2019 versão 16,3, os instaladores do Visual Studio chama
 | Visual Studio 2017 versão 15,9 | SDK do .NET Core 2.2.1 XX, 2.1.5 XX |
 | Visual Studio 2017 versão 15.8 | SDK do .NET Core 2.1.4 XX |
 
-A partir do Visual Studio 2019 16,3, o Visual Studio é responsável por sua própria cópia do SDK do .NET Core. Por esse motivo, você não vê mais essas versões do SDK na caixa de diálogo **Adicionar ou remover programas** .
+A partir do Visual Studio 2019 versão 16,3, o Visual Studio é responsável por sua própria cópia do SDK do .NET Core. Por esse motivo, você não vê mais essas versões do SDK na caixa de diálogo **Adicionar ou remover programas** .
 
 ## <a name="remove-the-nuget-fallback-folder"></a>Remover a pasta de fallback do NuGet
 

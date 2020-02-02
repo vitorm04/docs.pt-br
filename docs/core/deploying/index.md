@@ -2,12 +2,12 @@
 title: Implantação do .NET Core Application
 description: Conheça maneiras de implantar um aplicativo .NET Core.
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740814"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920882"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -91,11 +91,11 @@ Contudo, também há algumas desvantagens:
 
 ## <a name="step-by-step-examples"></a>Exemplos passo a passo
 
-Para obter exemplos passo a passo de como implantar aplicativos .NET Core com ferramentas da CLI, confira o artigo [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). 
+Para obter exemplos passo a passo de implantação de aplicativos .NET Core com o CLI do .NET Core, consulte [publicar aplicativos .NET Core com o CLI do .NET Core](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>Veja também
 
-- [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)
+- [Publicar aplicativos .NET Core com o CLI do .NET Core](deploy-with-cli.md)
 - [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)
 - [Pacotes, Metapacotes e Estruturas](../packages.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

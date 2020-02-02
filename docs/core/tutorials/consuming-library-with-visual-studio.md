@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714063"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920451"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Consumir uma biblioteca .NET Standard no Visual Studio
 
@@ -86,4 +86,4 @@ Você pode fazer com que sua biblioteca de classes esteja amplamente disponível
    > [!TIP]
    > Se o diretório que contém *dotnet.exe* não está no seu PATH, você pode encontrar seu local digitando `where dotnet.exe` na janela do console.
 
-Para obter mais informações sobre a criação de pacotes do NuGet, consulte [Como criar um pacote do NuGet com ferramentas de plataforma cruzada](../deploying/creating-nuget-packages.md).
+Para obter mais informações sobre como criar pacotes NuGet, consulte [como criar um pacote NuGet com o CLI do .NET Core](../deploying/creating-nuget-packages.md).

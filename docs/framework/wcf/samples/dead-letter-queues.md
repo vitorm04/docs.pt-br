@@ -2,12 +2,12 @@
 title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344534"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921429"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
 Este exemplo demonstra como tratar e processar mensagens que falharam na entrega. Ele se baseia no exemplo de [associação MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este exemplo usa a associação de `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
@@ -16,7 +16,7 @@ Este exemplo demonstra como tratar e processar mensagens que falharam na entrega
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 > [!NOTE]
-> Este exemplo demonstra cada fila de mensagens mortas do aplicativo que está disponível apenas no Windows Vista. O exemplo pode ser modificado para usar as filas padrão de todo o sistema para o MSMQ 3,0 no Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este exemplo demonstra cada fila de mensagens mortas do aplicativo que está disponível apenas no Windows Vista. O exemplo pode ser modificado para usar as filas padrão de todo o sistema para o MSMQ 3,0 no Windows Server 2003 e no Windows XP.
 
  Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.
 

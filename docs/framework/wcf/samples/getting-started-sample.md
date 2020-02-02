@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347047"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921315"
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
 
@@ -34,7 +34,7 @@ O serviço descreve as operações que ele realiza em um contrato de serviço qu
 
 O cliente contém uma definição do contrato de serviço e uma classe de proxy para acessar o serviço. O código do proxy é gerado a partir dos metadados de serviço usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-No Windows Vista, o serviço está hospedado no WAS (serviço de ativação do Windows). No [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e no Windows Server 2003, ele é hospedado pelo Serviços de Informações da Internet (IIS) e ASP.NET. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando é acessado pela primeira vez.
+No Windows Vista, o serviço está hospedado no WAS (serviço de ativação do Windows). No Windows XP e no Windows Server 2003, ele é hospedado por Serviços de Informações da Internet (IIS) e ASP.NET. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando é acessado pela primeira vez.
 
 > [!NOTE]
 > Se você preferir começar com um exemplo que hospede o serviço em um aplicativo de console em vez de IIS, consulte o exemplo de hospedagem [interna](../../../../docs/framework/wcf/samples/self-host.md) .

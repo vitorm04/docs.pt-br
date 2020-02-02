@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964707"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921405"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema do Windows e podem ser examinados usando o Visualizador de Eventos.  
@@ -32,7 +32,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
   
  Para gravar no log de segurança, é necessário o `SeAuditPrivilege`. Por padrão, somente as contas do sistema local e do serviço de rede têm esse privilégio. Para gerenciar as funções de log de segurança `read` e `delete` requer o `SeSecurityPrivilege`. Por padrão, somente os administradores têm esse privilégio.  
   
- Por outro lado, os usuários autenticados podem ler e gravar no log do aplicativo. o [!INCLUDE[wxp](../../../../includes/wxp-md.md)] grava eventos de auditoria no log do aplicativo por padrão. O log também pode conter informações pessoais que são visíveis para todos os usuários autenticados.  
+ Por outro lado, os usuários autenticados podem ler e gravar no log do aplicativo. Por padrão, o Windows XP grava eventos de auditoria no log do aplicativo. O log também pode conter informações pessoais que são visíveis para todos os usuários autenticados.  
   
 ## <a name="suppressing-audit-failures"></a>Suprimindo falhas de auditoria  
  Outra opção durante a auditoria é a possibilidade de suprimir qualquer falha de auditoria. Por padrão, uma falha de auditoria não afeta um aplicativo. Se necessário, no entanto, você pode definir a opção como `false`, o que faz com que uma exceção seja gerada.  
@@ -78,7 +78,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 ## <a name="security-considerations"></a>considerações sobre segurança  
  Se um usuário mal-intencionado sabe que a auditoria está habilitada, esse invasor pode enviar mensagens inválidas que fazem com que as entradas de auditoria sejam gravadas. Se o log de auditoria for preenchido dessa maneira, o sistema de auditoria falhará. Para atenuar isso, defina a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true` e use as propriedades da Visualizador de Eventos para controlar o comportamento de auditoria.  
   
- Eventos de auditoria que são gravados no log do aplicativo em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] são visíveis para qualquer usuário autenticado.  
+ Eventos de auditoria que são gravados no log do aplicativo no Windows XP são visíveis para qualquer usuário autenticado.  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>Escolhendo entre logs de eventos de segurança e de aplicativo  
  As tabelas a seguir fornecem informações para ajudá-lo a escolher entre fazer logon no aplicativo ou no log de eventos de segurança.  
@@ -87,13 +87,13 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
   
 |System|Log do aplicativo|Log de segurança|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ou posterior|Com suporte|Sem suporte|  
+|Windows XP SP2 ou posterior|Com suporte|Sem suporte|  
 |Windows Server 2003 SP1 e Windows Vista|Com suporte|O contexto do thread deve ter `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Outros fatores  
  Além do sistema operacional, a tabela a seguir descreve outras configurações que controlam a habilitação do registro em log.  
   
-|Fator|Log do aplicativo|Log de segurança|  
+|Multi-fator|Log do aplicativo|Log de segurança|  
 |------------|---------------------|------------------|  
 |Gerenciamento de política de auditoria|{1&gt;Não aplicável.&lt;1}|Juntamente com a configuração, o log de segurança também é controlado pela política da autoridade de segurança local (LSA). A categoria "acesso ao objeto de auditoria" também deve ser habilitada.|  
 |Experiência do usuário padrão|Todos os usuários autenticados podem gravar no log do aplicativo, portanto, nenhuma etapa de permissão adicional é necessária para processos de aplicativo.|O processo do aplicativo (contexto) deve ter `SeAuditPrivilege`.|  

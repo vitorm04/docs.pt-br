@@ -4,14 +4,14 @@ description: Este artigo ensina você a habilitar o preenchimento com TAB na CLI
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739304"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920528"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Como habilitar o preenchimento com TAB para a CLI do .NET Core
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Como habilitar o preenchimento com TAB na CLI do .NET Core
 
 Começando no SDK do .NET Core 2.0, a CLI do .NET Core dá suporte ao preenchimento com TAB. Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh. Outros shells podem ter suporte para preenchimento automático. Veja a documentação deles para saber como configurar o preenchimento automático. As etapas devem ser semelhantes às etapas descritas neste artigo.
 
@@ -34,7 +34,7 @@ Se esse comando não funcionar, verifique se esse SDK do .NET Core 2.0 ou superi
 
 Estes são alguns exemplos do que o preenchimento com TAB fornece:
 
-Entrada                                | se torna                                                                     | porque
+Entrada                                | se transforma em                                                                     | porque
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` é o primeiro subcomando, em ordem alfabética.
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | O preenchimento com TAB faz a correspondência de subcadeias de caracteres e `--help` vem em primeiro lugar em ordem alfabética.
@@ -58,7 +58,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a>Raso
+## <a name="bash"></a>bash
 
 Para adicionar o preenchimento com TAB ao shell do **Bash** na CLI do .NET Core, adicione o seguinte código ao arquivo `.bashrc`:
 

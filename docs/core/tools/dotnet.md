@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet
-description: Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso.
+description: Saiba mais sobre o comando dotNet (o Driver genérico para o CLI do .NET Core) e seu uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734071"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920545"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 

@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2019
-ms.openlocfilehash: 25c670694ed2d9e89fe37cedf0b06efd8bc93293
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116962"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920778"
 ---
 # <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 Package Manager-instalar o .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "76116962"
 
 Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Fedora 31. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
+
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+
+### <a name="failed-to-fetch"></a>Falha ao buscar
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

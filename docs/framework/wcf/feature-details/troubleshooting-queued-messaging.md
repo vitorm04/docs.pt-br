@@ -2,12 +2,12 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742674"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921262"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 
@@ -25,7 +25,7 @@ Esta seção contém perguntas comuns e ajuda de solução de problemas para usa
 
 **P:** É necessário atualizar o MSMQ para usar as associações de <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** não. Ambas as associações funcionam com o MSMQ 3,0 no [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e no Windows Server 2003. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no Windows Vista.
+**R:** não. Ambas as associações funcionam com o MSMQ 3,0 no Windows XP e no Windows Server 2003. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no Windows Vista.
 
 **P:** Quais recursos das associações de <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> estão disponíveis no MSMQ 4,0, mas não no MSMQ 3,0?
 

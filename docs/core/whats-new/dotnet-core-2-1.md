@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 603e7ae4ffb9e6a4bb477af9597d6948bd63f55e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100746"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920389"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -91,7 +91,7 @@ No SDK do .NET Core 2.1, todas as operações de ferramentas usam o comando `dot
 
 Do .NET Core 2.0 em diante, todos os aplicativos .NET Core efetuam roll forward automaticamente para a última *versão secundária* instalada em um sistema.
 
-A partir do .NET Core 2.0, se a versão do .NET Core com a qual um aplicativo foi criado não estiver presente no tempo de execução, o aplicativo será executado automaticamente com a *versão secundária* do .NET Core instalada mais recente. Em outras palavras, se um aplicativo for criado com o .NET Core 2.0, e o .NET Core 2.0 não estiver presente no sistema do host, mas o .NET Core 2.1 estiver, o aplicativo será executado com o .NET Core 2.1.
+A partir do .NET Core 2.0, se a versão do .NET Core com a qual um aplicativo foi criado não estiver presente no runtime, o aplicativo será executado automaticamente com a *versão secundária* do .NET Core instalada mais recente. Em outras palavras, se um aplicativo for criado com o .NET Core 2.0, e o .NET Core 2.0 não estiver presente no sistema do host, mas o .NET Core 2.1 estiver, o aplicativo será executado com o .NET Core 2.1.
 
 > [!IMPORTANT]
 > Esse comportamento de roll-forward não se aplica a versões prévias. Por padrão, ele também não se aplica a versões principais, mas isso pode ser alterado com as configurações abaixo.
@@ -112,7 +112,7 @@ Modifique essa configuração de uma das três maneiras:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Ao usar as [ferramentas da CLI do .NET Core](../tools/index.md), adicione a seguinte opção com o valor desejado a um comando do .NET Core como `run`:
+- Ao usar o [CLI do .NET Core](../tools/index.md), adicione a opção a seguir com o valor desejado a um comando do .NET Core, como `run`:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,13 +124,13 @@ O roll forward da versão de patch é independente dessa configuração e é fei
 
 ### <a name="self-contained-application-servicing"></a>Serviço de aplicativo autocontido
 
-`dotnet publish` agora publica aplicativos autocontidos com uma versão de tempo de execução atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de runtime atendido conhecida por esse SDK. Quando você faz upgrade para o SDK mais recente, publica com a versão mais recente do runtime do .NET Core. Isso se aplica aos runtimes do .NET Core 1.0 e posteriores.
+`dotnet publish` agora publica aplicativos autocontidos com uma versão de runtime atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de runtime atendido conhecida por esse SDK. Quando você faz upgrade para o SDK mais recente, publica com a versão mais recente do runtime do .NET Core. Isso se aplica aos runtimes do .NET Core 1.0 e posteriores.
 
 A publicação independente depende das versões de tempo de execução no NuGet.org. Você não precisa ter o tempo de execução de serviço em seu computador.
 
-Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o tempo de execução do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de runtime maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
+Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o runtime do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de runtime maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
 
-Veja mais informações em [Efetuar roll forward de tempo de execução de implantação autossuficiente](../deploying/runtime-patch-selection.md).
+Veja mais informações em [Efetuar roll forward de runtime de implantação autossuficiente](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pacote de Compatibilidade do Windows
 
 Ao transmitir código existente do .NET Framework para o .NET Core, você pode usar o [Pacote de Compatibilidade do Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Ele fornece acesso 20.000 APIs a mais do que as disponíveis no .NET Core. Essas APIs incluem tipos no namespace <xref:System.Drawing?displayProperty=nameWithType>, a classe <xref:System.Diagnostics.EventLog>, WMI, contadores de desempenho, Windows Services e os tipos de registro e membros do Windows.
@@ -245,7 +245,7 @@ No Windows, você também pode escolher usar <xref:System.Net.Http.WinHttpHandle
 
 No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClient> por processo. No Linux, você precisa implantar [libcurl](https://curl.haxx.se/libcurl/) se quiser usar a implementação <xref:System.Net.Http.HttpClient> antiga. (Ele é instalado com .NET Core 2.0.)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Novidades do .NET Core](index.md)
 - [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)

@@ -1,19 +1,19 @@
 ---
-title: Ferramentas adicionais da CLI
+title: Ferramentas adicionais
 description: Uma visão geral das ferramentas adicionais que você pode instalar que oferecem suporte e estendem a funcionalidade do .NET Core.
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23b94ceef729cdc3d83032e3897312eb1d1afd79
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740715"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920926"
 ---
 # <a name="net-core-additional-tools-overview"></a>Visão geral das ferramentas adicionais do .NET Core
 
-Esta seção compila uma lista de ferramentas de suporte e estender a funcionalidade do .NET Core, além das ferramentas da [CLI (interface de linha de comando) do .NET Core](../tools/index.md).
+Esta seção compila uma lista de ferramentas que dão suporte e ampliam a funcionalidade do .NET Core, além da CLI do .NET Core.
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[Ferramenta de desinstalação do .NET Core](uninstall-tool.md)
 
@@ -25,9 +25,9 @@ O WCF (Windows Communication Foundation) Web Service Reference é um provedor de
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[Ferramenta dotnet-svcutil do WCF](dotnet-svcutil-guide.md)
 
-A ferramenta dotnet-SvcUtil do WCF (Windows Communication Foundation) é uma ferramenta de CLI do .NET Core que recupera metadados de um serviço Web em um local de rede ou em um arquivo WSDL. Ele gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy WCF com métodos que você pode usar para acessar as operações do serviço Web.
+A ferramenta dotnet-SvcUtil do WCF (Windows Communication Foundation) é uma ferramenta .NET que recupera metadados de um serviço Web em um local de rede ou em um arquivo WSDL. Ele gera um arquivo de origem compatível com o .NET Core, definindo uma classe proxy WCF com métodos que você pode usar para acessar as operações do serviço Web.
 
-A ferramenta **dotnet-SvcUtil** é uma opção alternativa para o provedor de serviços conectados do Visual Studio [**Web Service Reference**](wcf-web-service-reference-guide.md) , que foi enviado pela primeira vez com o visual Studio 2017 versão 15,5. A ferramenta **dotnet-SvcUtil** , como uma ferramenta de CLI do .NET Core, está disponível para várias plataformas no Linux, no MacOS e no Windows.
+A ferramenta **dotnet-SvcUtil** é uma opção alternativa para o provedor de serviços conectados do Visual Studio [**Web Service Reference**](wcf-web-service-reference-guide.md) , que foi enviado pela primeira vez com o visual Studio 2017 versão 15,5. A ferramenta **dotnet-SvcUtil** , como uma ferramenta .net, está disponível para várias plataformas no Linux, MacOS e Windows.
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[Ferramenta dotnet-svcutil.xmlserializer da WCF](dotnet-svcutil.xmlserializer-guide.md)
 

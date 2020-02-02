@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 71dbf395f43c8028a703a342c032f2b8d022a61c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347079"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921289"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Como criar certificados X.509 que podem ser acessados pelo WCF
 Para tornar um certificado X. 509 acessível a Windows Communication Foundation (WCF), o código do aplicativo deve especificar o nome e o local do repositório de certificados. Em determinadas circunstâncias, a identidade do processo deve ter acesso ao arquivo que contém a chave privada associada ao certificado X. 509. Para obter a chave privada associada a um certificado X. 509 em um repositório de certificados, o WCF deve ter permissão para fazer isso. Por padrão, somente o proprietário e a conta do sistema podem acessar a chave privada de um certificado.  
@@ -27,7 +27,7 @@ Para tornar um certificado X. 509 acessível a Windows Communication Foundation 
   
          A tabela a seguir detalha se uma chave privada deve estar disponível ao usar um certificado X. 509.  
   
-        |Uso do certificado X. 509|Chave privada|  
+        |Uso do certificado X. 509|chave privada|  
         |---------------------------|-----------------|  
         |Assinando digitalmente uma mensagem SOAP de saída.|Sim|  
         |Verificando a assinatura de uma mensagem SOAP de entrada.|Não|  
@@ -60,7 +60,7 @@ Para tornar um certificado X. 509 acessível a Windows Communication Foundation 
         |Cliente (aplicativo de console ou WinForms).|Usuário conectado no momento.|  
         |Serviço que é auto-hospedado.|Usuário conectado no momento.|  
         |Serviço hospedado no IIS 6,0 (Windows Server 2003) ou IIS 7,0 (Windows Vista).|SERVIÇO DE REDE|  
-        |Serviço hospedado no IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controlado pelo elemento `<processModel>` no arquivo Machine. config. A conta padrão é ASPNET.|  
+        |Serviço hospedado no IIS 5. X (Windows XP).|Controlado pelo elemento `<processModel>` no arquivo Machine. config. A conta padrão é ASPNET.|  
   
     5. Conceda acesso de leitura ao arquivo que contém a chave privada para a conta em que o WCF está sendo executado, usando uma ferramenta como icacls. exe.  
   

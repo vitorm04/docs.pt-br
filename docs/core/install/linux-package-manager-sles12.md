@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a40180881ec0962d89f03c2c9d7aad9bbb052d2a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740656"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920720"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>Gerenciador de pacotes SLES 12 – instalar o .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "75740656"
 
 Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no SLES 12. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -60,3 +60,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
+
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+
+### <a name="failed-to-fetch"></a>Falha ao buscar
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

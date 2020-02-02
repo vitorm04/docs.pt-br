@@ -1,17 +1,17 @@
 ---
-title: Criar um pacote NuGet com CLI do .NET Core
+title: Criar um pacote NuGet com o CLI do .NET Core
 description: Saiba como criar um pacote do NuGet com o comando 'dotnet pack'.
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740869"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920915"
 ---
-# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Como criar um pacote NuGet com ferramentas da interface de linha de comando (CLI) do .NET Core
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>Como criar um pacote NuGet com o CLI do .NET Core
 
 > [!NOTE]
 > Veja a seguir exemplos de linha de comando usando o Unix. O comando `dotnet pack` mostrado aqui funciona da mesma maneira no Windows.

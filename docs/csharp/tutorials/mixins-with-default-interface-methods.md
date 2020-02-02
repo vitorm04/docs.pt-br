@@ -3,12 +3,12 @@ title: Criar tipos mescla usando métodos de interface padrão
 description: Usando membros de interface padrão, você pode estender interfaces com implementações padrão opcionais para implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140850"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921452"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: misturar funcionalidade no ao criar classes usando interfaces com métodos de interface padrão
 
@@ -22,9 +22,9 @@ Neste tutorial, você aprenderá a:
 > * Crie classes que usam as implementações padrão.
 > * Crie classes que substituem algumas ou todas as implementações padrão.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8,0 está disponível a partir do [Visual Studio 2019, 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core) ou posterior.
+Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8,0 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core) ou posterior.
 
 ## <a name="limitations-of-extension-methods"></a>Limitações dos métodos de extensão
 
@@ -45,7 +45,7 @@ Considere um aplicativo de automação inicial. Você provavelmente tem muitos t
 
 Alguns desses recursos estendidos podem ser emulados em dispositivos que dão suporte ao conjunto mínimo. Isso indica fornecer uma implementação padrão. Para os dispositivos que têm mais recursos internos, o software do dispositivo usaria os recursos nativos. Para outras luzes, eles poderiam optar por implementar a interface e usar a implementação padrão.
 
-Membros de interface padrão é uma solução melhor para esse cenário do que métodos de extensão. Os autores de classe podem controlar quais interfaces eles optam por implementar. Essas interfaces que eles escolhem estão disponíveis como métodos. Além disso, como os métodos de interface padrão são virtuais por padrão, a expedição do método sempre escolhe a implementação na classe. 
+Membros de interface padrão é uma solução melhor para esse cenário do que métodos de extensão. Os autores de classe podem controlar quais interfaces eles optam por implementar. Essas interfaces que eles escolhem estão disponíveis como métodos. Além disso, como os métodos de interface padrão são virtuais por padrão, a expedição do método sempre escolhe a implementação na classe.
 
 Vamos criar o código para demonstrar essas diferenças.
 
@@ -79,7 +79,7 @@ Um tipo de luz diferente pode dar suporte a um protocolo mais sofisticado. Ele p
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-Ao contrário da substituição de métodos de classe virtual, a declaração de `TurnOnFor` na classe `HalogenLight` não usa a palavra-chave `override`. 
+Ao contrário da substituição de métodos de classe virtual, a declaração de `TurnOnFor` na classe `HalogenLight` não usa a palavra-chave `override`.
 
 ## <a name="mix-and-match-capabilities"></a>Recursos de combinação e correspondência
 

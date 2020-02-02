@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134170"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921202"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Como: gravar um loop Parallel. ForEach simples
 
@@ -47,7 +47,7 @@ Você pode compilar o código como um aplicativo de console do .NET Framework ou
 
 No Visual Studio, há modelos de aplicativo de console do Visual Basic e do C# para a área de trabalho do Windows e o .NET Core.
 
-Na linha de comando, você pode usar o .NET Core e as ferramentas da CLI dele (por exemplo, `dotnet new console` ou `dotnet new console -lang vb`) ou criar o arquivo e usar o compilador de linha de comando para um aplicativo do .NET Framework.
+Na linha de comando, você pode usar os comandos de CLI do .NET Core (por exemplo, `dotnet new console` ou `dotnet new console -lang vb`) ou pode criar o arquivo e usar o compilador de linha de comando para um aplicativo .NET Framework.
 
 Para um projeto do .NET Core, você precisa referenciar o pacote **System.Drawing.Common** do NuGet. No Visual Studio, use o Gerenciador de Pacotes do NuGet para instalar o pacote. Como alternativa, você pode adicionar uma referência ao pacote no arquivo \*.csproj* ou \*.vbproj*:
  
@@ -61,7 +61,7 @@ Para executar um aplicativo de console do .NET Core na linha de comando, use `do
 
 Para executar o aplicativo de console do Visual Studio, pressione **F5**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programação paralela](../../../docs/standard/parallel-programming/index.md)

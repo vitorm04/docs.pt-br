@@ -1,18 +1,18 @@
 ---
-title: Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
-description: Saiba como criar bibliotecas do .NET Core usando ferramentas da CLI do .NET Core. Você criará uma biblioteca que dá suporte a várias estruturas.
+title: Desenvolver bibliotecas com o CLI do .NET Core
+description: Saiba como criar bibliotecas do .NET Core usando o CLI do .NET Core. Você criará uma biblioteca que dá suporte a várias estruturas.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714023"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920440"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>Desenvolver bibliotecas com ferramentas multiplataforma
+# <a name="develop-libraries-with-the-net-core-cli"></a>Desenvolver bibliotecas com o CLI do .NET Core
 
-Esse artigo aborda como escrever bibliotecas para .NET usando as ferramentas de plataforma cruzada da CLI. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](library-with-visual-studio.md).
+Este artigo aborda como gravar bibliotecas para .NET usando o CLI do .NET Core. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](library-with-visual-studio.md).
 
 ## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
@@ -216,7 +216,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
 É importante ser capaz de testar em várias plataformas. Você pode usar o [xUnit](https://xunit.github.io/) ou MSTest pronto para uso. Ambos são perfeitamente adequados para realizar o teste da unidade de biblioteca no .NET Core. A maneira de configurar sua solução com projetos de teste dependerá da [estrutura da sua solução](#structuring-a-solution). O exemplo a seguir pressupõe que os diretórios de origem e de teste estão no mesmo diretório de nível superior.
 
 > [!NOTE]
-> Ele usa alguns [comandos da CLI do .NET Core](../tools/index.md). Consulte [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md) para obter mais informações.
+> Isso usa alguns comandos [CLI do .NET Core](../tools/index.md) . Consulte [dotnet new](../tools/dotnet-new.md) e [dotnet sln](../tools/dotnet-sln.md) para obter mais informações.
 
 1. Configure sua solução. Você pode fazer isso usando os seguintes comandos:
 

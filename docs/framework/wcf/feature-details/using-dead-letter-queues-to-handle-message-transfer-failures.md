@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345565"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921150"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 As mensagens em fila podem ser entregues com falha. Essas mensagens com falha são registradas em uma fila de mensagens mortas. A entrega com falha pode ser causada por motivos como falhas de rede, uma fila excluída, uma falha de autenticação completa ou uma falha de entrega no prazo.  
@@ -23,7 +23,7 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
  A fila de mensagens mortas personalizada fornece isolamento entre clientes que compartilham o mesmo serviço MSMQ para enviar mensagens.  
   
- No Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], o Windows Communication Foundation (WCF) fornece uma fila de mensagens mortas de todo o sistema para todos os aplicativos cliente em fila. No Windows Vista, o WCF fornece uma fila de mensagens mortas para cada aplicativo cliente em fila.  
+ No Windows Server 2003 e no Windows XP, Windows Communication Foundation (WCF) fornece uma fila de mensagens mortas em todo o sistema para todos os aplicativos cliente em fila. No Windows Vista, o WCF fornece uma fila de mensagens mortas para cada aplicativo cliente em fila.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Especificando o uso da fila de mensagens mortas  
  Uma fila de mensagens mortas está no Gerenciador de filas do aplicativo de envio. Ele armazena mensagens que expiraram ou que falharam na transferência ou entrega.  

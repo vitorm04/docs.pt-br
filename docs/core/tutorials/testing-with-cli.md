@@ -1,16 +1,16 @@
 ---
-title: Organizando e testando projetos com a linha de comando do .NET Core
+title: Organizando e testando projetos com o CLI do .NET Core
 description: Este tutorial explica como organizar e testar projetos do .NET Core por meio da linha de comando.
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715336"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920417"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizando e testando projetos com a linha de comando do .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizando e testando projetos com o CLI do .NET Core
 
 Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS, usando a linha de comando](cli-create-console-app.md), e leva você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).
 

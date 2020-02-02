@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Previsão de aluguel de bicicletas de solicitação-série temporal'
+title: 'Tutorial: Previsão de pressão de bicicletas – série temporal'
 description: Este tutorial mostra como prever a demanda por um serviço de aluguel de bicicletas usando análise de série temporal monovariável e ML.NET.
 ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978194"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921251"
 ---
-# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
+# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
 
 Saiba como prever a demanda por um serviço de aluguel de bicicletas usando a análise de série temporal monovariável nos dados armazenados em um banco de dados SQL Server com ML.NET.
 
@@ -27,9 +27,9 @@ Neste tutorial, você aprenderá como:
 > * Salvar um modelo de previsão
 > * Usar um modelo de previsão
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-- [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
+- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Visão geral de exemplo de previsão de série temporal
 
@@ -64,9 +64,9 @@ O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http
 
 O conjunto de conteúdo original contém várias colunas correspondentes ao sazonalidade e ao clima. Para resumir e como o algoritmo usado neste tutorial requer apenas os valores de uma única coluna numérica, o conjunto de um original foi condensado para incluir apenas as seguintes colunas:
 
-- **dteday**: A data da observação.
-- **ano**: O ano codificado da observação (0 = 2011, 1 = 2012).
-- **CNT**: O número total de locações de bicicletas para esse dia.
+- **dteday**: a data da observação.
+- **year**: o ano codificado da observação (0 = 2011, 1 = 2012).
+- **CNT**: o número total de locações de bicicletas para esse dia.
 
 O DataSet original é mapeado para uma tabela de banco de dados com o esquema a seguir em um banco de dados SQL Server.
 
@@ -80,7 +80,7 @@ CREATE TABLE [Rentals] (
 
 Veja a seguir um exemplo dos dados:
 
-| RentalDate | Year | TotalRentals |
+| RentalDate | Ano | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -98,9 +98,9 @@ Veja a seguir um exemplo dos dados:
 
     A classe `ModelInput` contém as seguintes colunas:
 
-    - **RentalDate**: A data da observação.
-    - **Ano**: O ano codificado da observação (0 = 2011, 1 = 2012).
-    - **TotalRentals**: O número total de locações de bicicletas para esse dia.
+    - **RentalDate**: a data da observação.
+    - **Year**: o ano codificado da observação (0 = 2011, 1 = 2012).
+    - **TotalRentals**: o número total de locações de bicicletas para esse dia.
 
 1. Crie `ModelOutput` classe abaixo da classe de `ModelInput` recém-criada.
 
@@ -108,9 +108,9 @@ Veja a seguir um exemplo dos dados:
 
     A classe `ModelOutput` contém as seguintes colunas:
 
-    - **ForecastedRentals**: Os valores previstos para o período previsto.
-    - **LowerBoundRentals**: Os valores mínimos previstos para o período previsto.
-    - **UpperBoundRentals**: Os valores máximos previstos para o período previsto.
+    - **ForecastedRentals**: os valores previstos para o período previsto.
+    - **LowerBoundRentals**: os valores mínimos previstos para o período previsto.
+    - **UpperBoundRentals**: os valores máximos previstos para o período previsto.
 
 ### <a name="define-paths-and-initialize-variables"></a>Definir caminhos e inicializar variáveis
 
@@ -199,8 +199,8 @@ Avalie como o modelo é executado prevendo os dados do próximo ano e comparando
 
     Para avaliar o desempenho, as seguintes métricas são usadas:
 
-    - **Erro de Média Absoluta**: Mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
-    - **Erro de Raiz do Valor Quadrático Médio**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de média absoluta**: mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de raiz quadrada média**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
 
 1. Gere as métricas para o console.
 
@@ -284,7 +284,7 @@ Parabéns! Agora você criou com êxito um modelo de aprendizado de máquina de 
 
 Você pode encontrar o código-fonte deste tutorial no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) .
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 - [Tarefas de Machine Learning no ML.NET](../resources/tasks.md)
 - [Melhorar a precisão do modelo](../resources/improve-machine-learning-model-ml-net.md)

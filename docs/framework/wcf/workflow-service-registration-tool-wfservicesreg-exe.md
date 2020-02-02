@@ -2,12 +2,12 @@
 title: Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346583"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921225"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)
 A ferramenta de registro de serviços de fluxo de trabalho (WFServicesReg. exe) é uma ferramenta autônoma que pode ser usada para adicionar, remover ou reparar os elementos de configuração para os serviços Windows Workflow Foundation (WF).  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  A ferramenta também registra mapas de ferramentas e manipuladores. xoml e. Rules na metabase do IIS.  
   
- No Windows Server 2003 e computadores [!INCLUDE[wxp](../../../includes/wxp-md.md)] (IIS 5,1 e IIS 6,0), um conjunto de mapas de registro. xoml e. Rules é registrado.  
+ Em computadores com Windows Server 2003 e Windows XP (IIS 5,1 e IIS 6,0), um conjunto de mapas de registro. xoml e. Rules é registrado.  
   
  Em computadores de 64 bits, a ferramenta registra os ScriptMaps do modo WOW se a opção `Enable32BitAppOnWin64` estiver habilitada, ou mapas de bits 64 nativos se a opção `Enable32BitAppOnWin64` estiver desabilitada.  
   

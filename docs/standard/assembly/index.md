@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900589"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921366"
 ---
 # <a name="assemblies-in-net"></a>Assemblies no .NET
 
@@ -63,7 +63,7 @@ Assemblies podem ser estáticos ou dinâmicos. Assemblies estáticos são armaze
 
 Existem várias maneiras de criar assemblies. Você pode usar as ferramentas de desenvolvimento, como o Visual Studio, que podem criar arquivos *. dll* ou *. exe* . Você pode usar ferramentas no SDK do Windows para criar assemblies com módulos de outros ambientes de desenvolvimento. Você também pode usar APIs do Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, a fim de criar assemblies dinâmicos.
 
-Compile assemblies Criando-os no Visual Studio, criando-os com ferramentas de interface de linha de comando do .NET Core ou compilando assemblies de .NET Framework com um compilador de linha de comando. Para obter mais informações sobre como criar assemblies usando as ferramentas de interface de linha de comando do .NET Core, consulte [ferramentas de interface de linha de comando do .NET Core](../../core/tools/index.md). Para compilar assemblies com os compiladores de linha de comando, consulte [compilação de linha de comando com CSC. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) para C#, ou [Build da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) para Visual Basic.
+Compile assemblies Criando-os no Visual Studio, criando-os com ferramentas de interface de linha de comando do .NET Core ou compilando assemblies de .NET Framework com um compilador de linha de comando. Para obter mais informações sobre como criar assemblies usando CLI do .NET Core, consulte [CLI do .NET Core visão geral](../../core/tools/index.md). Para compilar assemblies com os compiladores de linha de comando, consulte [compilação de linha de comando com CSC. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) para C#, ou [Build da linha de comando](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) para Visual Basic.
 
 > [!NOTE]
 > Para criar um assembly no Visual Studio, no menu **Compilar** , selecione **Compilar**.
