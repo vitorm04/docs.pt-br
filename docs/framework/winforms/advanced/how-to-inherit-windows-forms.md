@@ -42,10 +42,10 @@ Para mais informações sobre herdar formulários em tempo de design usando a ca
 
  Ao herdar formulários, tenha em mente que podem surgir problemas em relação a manipuladores de eventos sendo chamado duas vezes, porque cada evento está sendo manipulado pela classe base e pela classe herdada. para mais informações sobre como evitar esse problema, consulte [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Instrução Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](../../../csharp/language-reference/keywords/using.md)
 - [Efeitos da Modificação da Aparência de um Formulário Base](effects-of-modifying-base-form-appearance.md)
-- [Herança visual do Windows Forms](windows-forms-visual-inheritance.md)
+- [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)

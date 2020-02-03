@@ -21,13 +21,13 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transport|  
+|Modo de segurança|Transporte|  
 |Interoperabilidade|Somente WCF|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando a autenticação integrada do Windows)<br /><br /> Sim (usando a autenticação integrada do Windows)|  
-|Verifica|Sim|  
+|Integridade|Sim|  
 |Confidencialidade|Sim|  
-|Transport|Virtual. Protocol|  
-|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
+|Transporte|Virtual. Protocol|  
+|Associação|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Service  
  O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
@@ -42,7 +42,7 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>Configuração do  
+### <a name="configuration"></a>Configuração  
  A configuração a seguir pode ser usada em vez do código para configurar o ponto de extremidade de serviço:  
   
 ```xml  
@@ -89,7 +89,7 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>Configuração do  
+### <a name="configuration"></a>Configuração  
  A configuração a seguir pode ser usada em vez do código para criar o cliente.  
   
 ```xml  
@@ -117,7 +117,7 @@ O cenário a seguir mostra um cliente Windows Communication Foundation (WCF) e u
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Como proteger um serviço com credenciais Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)

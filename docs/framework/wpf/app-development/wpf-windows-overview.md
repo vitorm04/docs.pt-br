@@ -325,13 +325,13 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
  Se você quiser que a largura e a altura da janela tenham um tamanho que se ajuste ao tamanho do conteúdo da janela, você poderá usar a propriedade <xref:System.Windows.Window.SizeToContent%2A>, que tem os seguintes valores:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Sem efeito (padrão).  
+- <xref:System.Windows.SizeToContent.Manual> Sem efeito (padrão).  
   
-- <xref:System.Windows.SizeToContent.Width>. Ajustar à largura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> à largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Width> Ajustar à largura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> à largura do conteúdo.  
   
-- <xref:System.Windows.SizeToContent.Height>. Ajustar à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> a altura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Height> Ajustar à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> a altura do conteúdo.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. Ajustar à largura e à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo, e definir ambos <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> como a largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight> Ajustar à largura e à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo, e definir ambos <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> como a largura do conteúdo.  
   
  O exemplo a seguir mostra uma janela que se dimensiona automaticamente para ajustar-se ao próprio conteúdo, verticalmente e horizontalmente, quando mostrada pela primeira vez.  
   
@@ -479,7 +479,7 @@ A aparência padrão de uma janela inclui um botão da barra de tarefas, como aq
   
  Caixas de diálogo são janelas que geralmente são usadas para coletar informações de um usuário para concluir uma função. Por exemplo, quando um usuário deseja abrir um arquivo, a caixa de diálogo **Abrir arquivo** geralmente é exibida por um aplicativo para obter o nome do arquivo do usuário. Para obter mais informações, consulte [Visão geral das caixas de diálogo](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

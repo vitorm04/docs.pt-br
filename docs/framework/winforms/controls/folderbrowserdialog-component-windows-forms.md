@@ -32,5 +32,5 @@ O componente Windows Forms `FolderBrowserDialog` exibe uma interface com a qual 
  [Caixas de diálogo nos Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Fornece uma lista de tarefas para caixas de diálogo, que geralmente exibem guias.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

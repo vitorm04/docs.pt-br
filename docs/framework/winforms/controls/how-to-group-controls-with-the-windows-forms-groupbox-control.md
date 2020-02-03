@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para ag
   
 3. Defina a propriedade <xref:System.Windows.Forms.GroupBox.Text%2A> da caixa de grupo como uma legenda apropriada.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.GroupBox>
 - [Controle GroupBox](groupbox-control-windows-forms.md)

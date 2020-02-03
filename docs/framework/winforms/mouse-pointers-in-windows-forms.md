@@ -30,8 +30,8 @@ O *ponteiro* do mouse, que às vezes é conhecido como o cursor, é um bitmap qu
   
  A principal maneira de alterar o ponteiro do mouse é definindo a propriedade <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> ou <xref:System.Windows.Forms.Control.DefaultCursor%2A> de um controle para uma nova <xref:System.Windows.Forms.Cursor>. Para obter exemplos de alteração do ponteiro do mouse, consulte o exemplo de código na classe <xref:System.Windows.Forms.Cursor>. Além disso, a classe <xref:System.Windows.Forms.Cursors> expõe um conjunto de objetos <xref:System.Windows.Forms.Cursor> para muitos tipos diferentes de ponteiros, como um ponteiro que se assemelha a uma mão. Para exibir o ponteiro de espera, que se assemelha a uma ampulheta, sempre que o ponteiro do mouse estiver no controle, use a propriedade <xref:System.Windows.Forms.Control.UseWaitCursor%2A> da classe <xref:System.Windows.Forms.Control>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Cursor>
-- [Entrada do mouse em um aplicativo dos Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Funcionalidade do tipo "arrastar e soltar" nos Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Funcionalidade do tipo "arrastar e soltar" no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

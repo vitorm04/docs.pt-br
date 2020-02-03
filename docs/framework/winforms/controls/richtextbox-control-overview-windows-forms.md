@@ -24,7 +24,7 @@ O controle <xref:System.Windows.Forms.RichTextBox> dos Windows Forms é usado pa
   
  Você pode desfazer e refazer a maioria das operações de edição em um controle de <xref:System.Windows.Forms.RichTextBox> chamando os métodos <xref:System.Windows.Forms.TextBoxBase.Undo%2A> e <xref:System.Windows.Forms.RichTextBox.Redo%2A>. O método <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> permite que você determine se a última operação que o usuário desfez pode ser reaplicada ao controle.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)

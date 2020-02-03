@@ -20,7 +20,7 @@ O controle de <xref:System.Windows.Forms.CheckedListBox> de Windows Forms estend
   
  As caixas de listagem marcadas podem ter itens adicionados em tempo de design usando o **Editor de coleção de cadeia de caracteres** ou seus itens podem ser adicionados dinamicamente de uma coleção em tempo de execução, usando a propriedade <xref:System.Windows.Forms.CheckedListBox.Items%2A>. Para obter mais informações, veja [Como adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms](add-and-remove-items-from-a-wf-combobox.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: Instruções passo a passo
+title: Passo a passo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - walkthroughs [WPF]
@@ -19,7 +19,7 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 
 ## <a name="wpf-designer-walkthroughs"></a>Instruções passo a passo do WPF Designer
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Instruções passo a passo: compilando um aplicativo WPF simples com o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Demonstra como criar um aplicativo simples do WPF com o designer do WPF.|
 |[Passo a passo: construindo um layout dinâmico](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Demonstra como criar um layout dinâmico usando um controle do painel de <xref:System.Windows.Controls.Grid>.|
@@ -29,7 +29,7 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 
 ## <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](walkthrough-my-first-wpf-desktop-application.md)|Demonstra como criar um aplicativo WPF usando muitos dos recursos comuns do WPF, incluindo controles, layout e associação de dados.|
 |[Criar um botão usando XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Demonstra como criar um botão animado.|
@@ -38,7 +38,7 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 
 ## <a name="migration-and-interoperability-in-wpf"></a>Migração e interoperabilidade no WPF
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Passo a passo: hospedando um controle do Windows Forms no WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Demonstra como hospedar um controle de <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> de Windows Forms em um aplicativo WPF.|
 |[Passo a passo: hospedando um controle composto do Windows Forms no WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Demonstra como hospedar um Windows Forms controle composto de entrada de dados em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|
@@ -48,6 +48,6 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 
 ## <a name="related-sections"></a>Seções Relacionadas
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Instruções passo a passo do Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/szatc41e(v=vs.100))|Fornece uma lista relacionada de instruções passo a passo para todas as áreas de programação no Visual Studio.|

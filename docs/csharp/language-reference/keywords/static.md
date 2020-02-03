@@ -16,9 +16,9 @@ ms.locfileid: "76744667"
 ---
 # <a name="static-c-reference"></a>static (Referência de C#)
 
-Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador de `static` pode ser usado para declarar `static` classes. Em classes, interfaces e structs, você pode adicionar o modificador de `static` a campos, métodos, propriedades, operadores, eventos e construtores. O modificador de `static` não pode ser usado com indexadores ou finalizadores. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador de `static` pode ser usado para declarar `static` classes. Em classes, interfaces e structs, você pode adicionar o modificador de `static` a campos, métodos, propriedades, operadores, eventos e construtores. O modificador de `static` não pode ser usado com indexadores ou finalizadores. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 A seguinte classe é declarada como `static` e contém apenas métodos `static`:
 
@@ -47,23 +47,23 @@ Classes, interfaces e classes de `static` podem ter construtores de `static`. Um
 
 Para demonstrar `static` Membros, considere uma classe que representa um funcionário da empresa. Suponha que a classe contém um método para contar funcionários e um campo para armazenar o número de funcionários. O método e o campo não pertencem a uma instância de funcionário. Em vez disso, eles pertencem à classe de funcionários como um todo. Eles devem ser declarados como membros `static` da classe.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este exemplo lê o nome e a ID de um novo funcionário, incrementa o contador de funcionário em um e exibe as informações do novo funcionário e do novo número de funcionários. Este programa lê o número atual de funcionários do teclado.
 
 [!code-csharp[csrefKeywordsModifiers#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#20)]  
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este exemplo mostra que você pode inicializar um campo de `static` usando outro campo de `static` que ainda não está declarado. Os resultados serão indefinidos até que você atribua explicitamente um valor ao campo `static`.
 
 [!code-csharp[csrefKeywordsModifiers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#21)]  
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

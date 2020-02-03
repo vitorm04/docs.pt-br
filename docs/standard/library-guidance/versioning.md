@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745021"
 ---
-# <a name="versioning"></a>{1&gt;Controle de versão&lt;1}
+# <a name="versioning"></a>Controle de versão
 
 Uma biblioteca de software raramente está completa na versão 1.0. Boas bibliotecas evoluem com o tempo, adicionando recursos, corrigindo bugs e melhorando o desempenho. É importante que você possa liberar novas versões de uma biblioteca do .NET, fornecendo valor adicional a cada versão, sem interromper os usuários existentes.
 

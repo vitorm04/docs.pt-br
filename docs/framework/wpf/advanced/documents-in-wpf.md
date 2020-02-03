@@ -135,7 +135,7 @@ o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 - Roteamento de documentos diretamente para uma impressora compatível com XPS.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -146,5 +146,5 @@ o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 - <xref:System.Windows.Controls.DocumentViewer>
 - [Texto](optimizing-performance-text.md)
 - [Visão geral do documento de fluxo](flow-document-overview.md)
-- [Visão Geral da Impressão](printing-overview.md)
-- [Serialização e armazenamento de documentos](document-serialization-and-storage.md)
+- [Visão geral da impressão](printing-overview.md)
+- [Serialização e armazenamento do documento](document-serialization-and-storage.md)

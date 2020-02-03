@@ -58,7 +58,7 @@ Explica como adicionar e remover itens de menu de atalho no Windows Forms.
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     - ou -  
+     -ou-  
   
 2. Use o método `Clear` da coleção `MenuItems` do componente <xref:System.Windows.Forms.ContextMenu> para remover todos os itens do menu.  
   
@@ -74,7 +74,7 @@ Explica como adicionar e remover itens de menu de atalho no Windows Forms.
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [Componente ContextMenu](contextmenu-component-windows-forms.md)

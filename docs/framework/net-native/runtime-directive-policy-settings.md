@@ -115,7 +115,7 @@ Arquivos de diretivas de runtime reconhecem três categorias de tipos de políti
 
 Cada tipo de política pode ser definido como um dos valores listados na tabela a seguir. Observe que elementos que representam os membros do tipo oferece suporte a um conjunto diferente de configurações de política que outros elementos.
 
-|Configurações de política|Descrição|Elementos `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|
+|Configuração de política|Descrição|Elementos `Assembly`, `Namespace`, `Type` e `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` e `Property`|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|Habilita a política para todos os tipos e membros que a cadeia de ferramentas do .NET Nativo não remover.|✔️||
 |`Auto`|Especifica que a política padrão deve ser usada para o tipo de política desse elemento de programa. Isso é idêntico a omitir uma política para esse tipo de política. O `Auto` geralmente é usado para indicar que a diretiva é herdada de um elemento pai.|✔️|✔️|
@@ -128,7 +128,7 @@ Cada tipo de política pode ser definido como um dos valores listados na tabela 
 |`Required PublicAndInternal`|Habilita a política para tipos ou membros públicos e internos e garante que os metadados para tipos e membros públicos e internos estejam sempre disponíveis. Essa configuração é diferente de `PublicAndInternal`, disponibilizando metadados para tipos e membros públicos e internos somente se a cadeia de ferramentas determinar que é necessário.|✔️||
 |`Required All`|Necessita da cadeia de ferramentas para manter todos os tipos e membros, sejam usados ou não, e habilita a política para eles.|✔️||
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)

@@ -26,11 +26,11 @@ O modelo de compilação e implantação fornece a capacidade de criar e implant
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)  
- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)  
- [Tópicos de instruções](build-and-deploy-how-to-topics.md)  
+ [Implantando um aplicativo do WPF](deploying-a-wpf-application-wpf.md)  
+ [Tópicos explicativos](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
- {1&gt;MSBuild&lt;1}  
+ MSBuild  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
  [Visão geral do gerenciamento de aplicativos](application-management-overview.md)  

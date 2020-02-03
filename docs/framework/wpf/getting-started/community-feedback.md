@@ -101,7 +101,7 @@ Os bugs podem pertencer às ferramentas usadas para desenvolver e compilar seus 
   - Aplicativos instalados autônomos
   - Aplicativos autônomos implantados por ClickOnce
 - A ferramenta de desenvolvimento, como:
-  - {1&gt;MSBuild&lt;1}
+  - MSBuild
   - Designer de gráfico de expressão
   - Designer interativo de expressão
   - {1&gt;Visual Studio&lt;1}
@@ -118,6 +118,6 @@ Forneça informações sobre o cenário que manifesta o bug e seu impacto. Essas
 
 Normalmente, os cenários de perda de dados e de falhas são de alto impacto e, portanto, os mais fáceis de priorizar. Alguns bugs, no entanto, só aparecem em situações incomuns, que também podem ser cenários principais em alguns casos. Fornecer contexto em relação ao cenário e ao impacto ajuda a equipe do WPF a tomar a decisão certa.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como relatar um problema com o Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

@@ -111,6 +111,6 @@ Ao apresentar dados em um Windows Forms <xref:System.Windows.Forms.CheckedListBo
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)

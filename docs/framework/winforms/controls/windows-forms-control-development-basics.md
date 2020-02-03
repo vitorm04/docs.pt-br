@@ -18,7 +18,7 @@ Um controle de Windows Forms é uma classe que deriva direta ou indiretamente de
   
 - Combinando controles existentes para criar um controle composto.  
   
-     Controles compostos encapsulam uma interface do usuário que pode ser reutilizada como um controle. Um exemplo de um controle composto é um controle que consiste em uma caixa de texto e um botão de redefinição. Designers visuais dão suporte avançado para a criação de controles compostos. Para criar um controle composto, derive de <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. A classe base <xref:System.Windows.Forms.UserControl> fornece roteamento de teclado para controles filho e permite que controles filho funcionem como um grupo. Para obter mais informações, consulte [Desenvolvendo um controle dos Windows Forms de composição](developing-a-composite-windows-forms-control.md).  
+     Controles compostos encapsulam uma interface do usuário que pode ser reutilizada como um controle. Um exemplo de um controle composto é um controle que consiste em uma caixa de texto e um botão de redefinição. Designers visuais dão suporte avançado para a criação de controles compostos. Para criar um controle composto, derive de <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. A classe base <xref:System.Windows.Forms.UserControl> fornece roteamento de teclado para controles filho e permite que controles filho funcionem como um grupo. Para obter mais informações, consulte [Desenvolvendo um controle composto do Windows Forms](developing-a-composite-windows-forms-control.md).  
   
 - Estendendo um controle existente para personalizá-la ou aumentar sua funcionalidade.  
   
@@ -28,11 +28,11 @@ Um controle de Windows Forms é uma classe que deriva direta ou indiretamente de
   
      Nesse cenário, derive seu controle da classe base <xref:System.Windows.Forms.Control>. Você pode adicionar e substituir propriedades, métodos e eventos da classe base. Para começar, consulte [Como desenvolver um controle simples do Windows Forms](how-to-develop-a-simple-windows-forms-control.md).  
   
- A classe base para controles de Windows Forms, <xref:System.Windows.Forms.Control>, fornece o direcionamento necessário para a exibição Visual em aplicativos baseados no Windows no lado do cliente. o <xref:System.Windows.Forms.Control> fornece um identificador de janela, manipula o roteamento de mensagens e fornece eventos de mouse e teclado, bem como muitos outros eventos de interface do usuário. Ele fornece layout avançado e tem propriedades específicas para a exibição Visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e muitos outros. Além disso, ele fornece segurança, suporte a threading e interoperabilidade com controles ActiveX. Como grande parte da infraestrutura é fornecida pela classe base, é relativamente fácil desenvolver seus próprios controles dos Windows Forms.  
+ A classe base para controles de Windows Forms, <xref:System.Windows.Forms.Control>, fornece o direcionamento necessário para a exibição Visual em aplicativos baseados no Windows no lado do cliente. o <xref:System.Windows.Forms.Control> fornece um identificador de janela, manipula o roteamento de mensagens e fornece eventos de mouse e teclado, bem como muitos outros eventos de interface do usuário. Ele fornece layout avançado e tem propriedades específicas para a exibição Visual, como <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>e muitos outros. Além disso, ele fornece segurança, suporte a threading e interoperabilidade com controles ActiveX. Como grande parte da infraestrutura é fornecida pela classe base, é relativamente fácil desenvolver seus próprios controles do Windows Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como desenvolver um controle simples dos Windows Forms](how-to-develop-a-simple-windows-forms-control.md)
 - [Desenvolvendo um controle de composição dos Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Como criar um controle dos Windows Forms que mostre o progresso](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)
+- [Como criar um controle do Windows Forms que mostre o progresso](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

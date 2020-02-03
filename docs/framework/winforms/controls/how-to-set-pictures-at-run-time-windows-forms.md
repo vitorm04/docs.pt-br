@@ -97,7 +97,7 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
   
      Esse código limpará a imagem mesmo que um gráfico tenha sido carregado no controle em tempo de design.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

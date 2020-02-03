@@ -19,7 +19,7 @@ ms.locfileid: "76745305"
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Colocando controles nos Windows Forms](putting-controls-on-windows-forms.md)\
+[Colocando controles em Windows Forms](putting-controls-on-windows-forms.md)\
 Fornece links relacionados à colocação de controles em formulários.
 
 [Organizando controles no Windows Forms](how-to-align-multiple-controls-on-windows-forms.md)\
@@ -31,10 +31,10 @@ Descreve os usos dos atalhos de teclado, rótulos de texto em controles e teclas
 [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)\
 Lista os controles que funcionam com o Windows Forms e tarefas básicas que você pode realizar com cada controle.
 
-[Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desenvolvendo controles do Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
 Fornece informações básicas e exemplos para ajudar os usuários a desenvolver controles personalizados dos Windows Forms.
 
-[Desenvolvendo controles do Windows Forms no tempo de design](developing-windows-forms-controls-at-design-time.md)\
+[Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)\
 Descreve técnicas para criar controles personalizados por meio de herança e design.
 
 ## <a name="related-sections"></a>Seções relacionadas

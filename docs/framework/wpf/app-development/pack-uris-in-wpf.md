@@ -52,7 +52,7 @@ Para identificar partes, a especificação OPC aproveita a extensibilidade do RF
 
 O esquema especificado por um URI é definido por seu prefixo; http, FTP e arquivo são exemplos bem conhecidos. O esquema de URI de pacote usa "Pack" como seu esquema e contém dois componentes: autoridade e caminho. A seguir está o formato de um pacote URI.
 
-pack://*authority*/*path*
+*caminho* de/de*autoridade* Pack://
 
 A *autoridade* especifica o tipo de pacote no qual uma parte está contida, enquanto o *caminho* especifica o local de uma parte dentro de um pacote.
 
@@ -115,7 +115,7 @@ O pacote URI para um arquivo de recurso que é compilado em um assembly referenc
 
 - **Caminho**: o nome de um arquivo de recurso compilado em um assembly referenciado. O caminho deve estar de acordo com o seguinte formato:
 
-  *AssemblyShortName*{ *;Version*]{ *;PublicKey*];component/*Path*
+  *AssemblyShortName*{ *; Versão*] { *; PublicKey*]; componente/*caminho*
 
   - **AssemblyShortName**: o nome curto do assembly referenciado.
 
@@ -305,7 +305,7 @@ A tabela 1 ilustra os vários URIs de pacote absolutos que você pode especifica
 
 Tabela 1: URIs de pacote absolutos em marcação
 
-|File|URI de pacote absoluto|
+|Arquivo|URI de pacote absoluto|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Arquivo de recurso - assembly local|`"pack://application:,,,/ResourceFile.xaml"`|
 |Arquivo de recurso em subpasta - assembly local|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ A tabela 2 ilustra os vários URIs de pacote relativos que você pode especifica
 
 Tabela 2: URIs de pacote relativos em marcação
 
-|File|URI de pacote relativo|
+|Arquivo|URI de pacote relativo|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Arquivo de recurso em assembly local|`"/ResourceFile.xaml"`|
 |Arquivo de recurso em subpasta de assembly local|`"/Subfolder/ResourceFile.xaml"`|
@@ -368,7 +368,7 @@ A tabela 3 ilustra os vários URIs de pacote relativos que você pode especifica
 
 Tabela 3: URIs de pacote absolutos em código
 
-|File|URI de pacote absoluto|
+|Arquivo|URI de pacote absoluto|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Arquivo de recurso - assembly local|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |Arquivo de recurso em subpasta - assembly local|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ A tabela 4 ilustra os vários URIs de pacote relativos que você pode especifica
 
 Tabela 4: URIs de pacote relativos em código
 
-|File|URI de pacote relativo|
+|Arquivo|URI de pacote relativo|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |Arquivo de recurso - assembly local|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |Arquivo de recurso em subpasta - assembly local|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -459,6 +459,6 @@ Os dicionários de recursos (<xref:System.Windows.ResourceDictionary>) podem ser
 
 Para obter uma visão geral dos temas no WPF, consulte [estilização e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)

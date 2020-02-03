@@ -25,7 +25,7 @@ ms.locfileid: "76742869"
   
  Você pode exibir uma única mensagem na barra de status definindo a propriedade <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> como `false` (o padrão) e definindo a propriedade <xref:System.Windows.Forms.StatusBar.Text%2A> da barra de status como o texto que você deseja que apareça na barra de status. Você pode dividir a barra de status em painéis para exibir mais de um tipo de informação, definindo a propriedade <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> como `true` e usando o método <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

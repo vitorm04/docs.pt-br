@@ -42,7 +42,7 @@ Há vários valores de atraso que podem ser definidos para um componente Windows
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do componente ToolTip](tooltip-component-overview-windows-forms.md)
 - [Como definir ToolTips para controles em um Windows Form no tempo de design](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

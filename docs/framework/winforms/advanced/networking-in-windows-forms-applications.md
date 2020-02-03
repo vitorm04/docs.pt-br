@@ -1,5 +1,5 @@
 ---
-title: Rede do
+title: Rede
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -32,5 +32,5 @@ O .NET Framework fornece classes para exibir páginas da Web, baixar conteúdo d
  [Programação de rede no .NET Framework](../../network-programming/index.md)  
  Uma introdução ao sistema de rede no .NET Framework.  
   
- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../windows-forms-data-binding.md)  
  Descreve como exibir o conteúdo do banco de dados em seu aplicativo, de um armazenamento de dados local ou de um banco de dados localizado em uma rede.

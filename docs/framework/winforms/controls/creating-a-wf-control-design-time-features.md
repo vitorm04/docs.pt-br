@@ -233,7 +233,7 @@ Para implementar o recurso de animação periódica, você usará <xref:System.C
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
-10. Implementar a interface `IMarqueeWidget`.
+10. Implemente a interface `IMarqueeWidget`.
 
     Os métodos `StartMarquee` e `StopMarquee` invocam os métodos <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> e <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> do componente <xref:System.ComponentModel.BackgroundWorker> para iniciar e parar a animação.
 
@@ -261,7 +261,7 @@ Para implementar o recurso de animação periódica, você usará <xref:System.C
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. Pressione **F6** para compilar a solução.
+14. Pressione **F6** para criar a solução.
 
 ## <a name="create-the-marqueeborder-child-control"></a>Criar o controle filho MarqueeBorder
 
@@ -299,7 +299,7 @@ Como o controle de `MarqueeBorder` pode ter controles filho, ele precisa estar c
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
-9. Implementar a interface `IMarqueeWidget`.
+9. Implemente a interface `IMarqueeWidget`.
 
     Os métodos `StartMarquee` e `StopMarquee` invocam os métodos <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> e <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> do componente <xref:System.ComponentModel.BackgroundWorker> para iniciar e parar a animação.
 
@@ -608,7 +608,7 @@ O `MarqueeControlLibrary` demonstra uma implementação simples de controles per
 
 - Controle o modo como os controles são serializados e como o código é gerado para eles. Para obter mais informações, consulte [Geração e compilação de código-fonte dinâmico](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

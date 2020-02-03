@@ -25,42 +25,42 @@ O controle `ListView` do Windows Forms exibe uma lista de itens com ícones. É 
  [Visão geral do controle ListView](listview-control-overview-windows-forms.md)  
  Descreve esse controle e seus principais recursos e propriedades.  
   
- [Como Adicionar e Remover Itens com o Controle ListView dos Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Como adicionar e remover itens com o controle ListView do Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  Descreve como adicionar ou remover itens de uma exibição de lista.  
   
- [Como adicionar colunas ao controle ListView do Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [Como Adicionar Colunas ao Controle ListView dos Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)  
  Descreve como criar colunas para exibir informações sobre cada item de lista.  
   
- [Como Exibir Ícones do Controle ListView dos Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [Como exibir ícones do controle ListView do Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)  
  Descreve como associar uma exibição de lista com uma lista de imagens apropriada para exibir ícones grandes ou pequenos.  
   
- [Como Exibir Subitens em Colunas com o Controle ListView dos Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [Como exibir subitens em colunas com o controle ListView do Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
  Descreve como exibir informações sobre cada item de lista nas colunas.  
   
- [Como Selecionar um Item no Controle ListView dos Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ [Como selecionar um item no controle ListView do Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
  Descreve como selecionar um item com programação.  
   
- [Como agrupar itens em um controle ListView dos Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)  
+ [Como agrupar itens em um controle ListView do Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)  
  Descreve como criar grupos para exibição categorizada e como atribuir itens a cada grupo.  
   
- [Como habilitar a exibição lado a lado em um controle ListView dos Windows Forms](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ [Como habilitar a exibição de bloco em um controle ListView do Windows Forms](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
  Descreve como exibir os itens lado a lado, cada um deles composto por um ícone grande e várias linhas de texto.  
   
- [Como Exibir uma Marca de Inserção em um Controle ListView dos Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ [Como exibir uma marca de inserção em um controle ListView do Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
  Descreve como implementar os comentários do usuário para operações do tipo "arrastar e soltar" na qual uma marca de inserção indica o local de destino para cada posição do ponteiro do mouse.  
   
- [Como Adicionar Recursos de Pesquisa a um Controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+ [Como adicionar recursos de pesquisa a um controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
  Descreve como localizar um item com programação usando as coordenadas de tela ou pesquisa de texto.  
   
-- [Como habilitar o modo de exibição lado a lado em um controle ListView dos Windows Forms usando o Designer](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Como habilitar exibição de bloco em um controle ListView do Windows Forms usando o Designer](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
-- [Como adicionar e remover itens com o controle ListView dos Windows Forms usando o Designer](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Como adicionar e remover itens com o controle ListView do Windows Forms usando o Designer](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
-- [Como adicionar colunas ao controle ListView dos Windows Forms usando o Designer](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Como adicionar colunas ao controle ListView do Windows Forms usando o Designer](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
-- [Como agrupar itens em um controle ListView dos Windows Forms usando o Designer](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Como agrupar itens em um controle ListView do Windows Forms usando o Designer](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
-- [Passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [Instruções passo a passo: criando uma interface no estilo do Explorer com os controles ListView e TreeView usando o Designer](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Referência  
  Classe <xref:System.Windows.Forms.ListView>  
@@ -73,9 +73,9 @@ O controle `ListView` do Windows Forms exibe uma lista de itens com ícones. É 
  [Componente ImageList](imagelist-component-windows-forms.md)  
  Explica o que é uma lista de imagens e seus principais recursos e propriedades.  
   
- [Como Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Como criar uma interface do usuário multipainel com o Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Fornece instruções para dispor um Windows Form com vários painéis.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

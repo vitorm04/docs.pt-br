@@ -38,7 +38,7 @@ O controle <xref:System.Windows.Forms.ListView> do Windows Forms exibe uma lista
 |Método <xref:System.Windows.Forms.ListView.FindNearestItem%2A>|<xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.LargeIcon>|  
 |Método <xref:System.Windows.Forms.ListView.GetItemAt%2A>|<xref:System.Windows.Forms.View.Details> ou <xref:System.Windows.Forms.View.Tile>|  
 |Propriedade <xref:System.Windows.Forms.ListView.Groups%2A>|Todas as exibições, exceto <xref:System.Windows.Forms.View.List>|  
-|Propriedade <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
+|Propriedade <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>|  
 |Propriedade <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon> ou <xref:System.Windows.Forms.View.Tile>|  
   
  A propriedade de chave do controle de <xref:System.Windows.Forms.ListView> é <xref:System.Windows.Forms.ListView.Items%2A>, que contém os itens exibidos pelo controle. A propriedade <xref:System.Windows.Forms.ListView.SelectedItems%2A> contém uma coleção dos itens selecionados atualmente no controle. O usuário pode selecionar vários itens, por exemplo, para arrastar e soltar vários itens por vez para outro controle, se a propriedade <xref:System.Windows.Forms.ListView.MultiSelect%2A> estiver definida como `true`. O controle <xref:System.Windows.Forms.ListView> pode exibir caixas de seleção ao lado dos itens, se a propriedade <xref:System.Windows.Forms.ListView.CheckBoxes%2A> estiver definida como `true`.  
@@ -47,17 +47,17 @@ O controle <xref:System.Windows.Forms.ListView> do Windows Forms exibe uma lista
   
  O controle de <xref:System.Windows.Forms.ListView> também dá suporte aos estilos visuais e outros recursos disponíveis na plataforma Windows XP, incluindo agrupamento, exibição de bloco e marcas de inserção.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView>
 - [Controle ListView](listview-control-windows-forms.md)
-- [Como Adicionar e Remover Itens com o Controle ListView dos Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Como adicionar colunas ao controle ListView do Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Como Exibir Ícones do Controle ListView dos Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Como Exibir Subitens em Colunas com o Controle ListView dos Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Como Selecionar um Item no Controle ListView dos Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Como agrupar itens em um controle ListView dos Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Como Exibir uma Marca de Inserção em um Controle ListView dos Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [Como Adicionar Recursos de Pesquisa a um Controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)
+- [Como adicionar e remover itens com o controle ListView do Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Como Adicionar Colunas ao Controle ListView dos Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Como exibir ícones do controle ListView do Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Como exibir subitens em colunas com o controle ListView do Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Como selecionar um item no controle ListView do Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Como agrupar itens em um controle ListView do Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Como exibir uma marca de inserção em um controle ListView do Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Como adicionar recursos de pesquisa a um controle ListView](how-to-add-search-capabilities-to-a-listview-control.md)
 - [Como adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Como Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Como criar uma interface do usuário multipainel com o Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)

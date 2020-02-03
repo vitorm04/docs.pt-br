@@ -25,7 +25,7 @@ Este tópico demonstra como estender o quadro de vidro do Windows Vista para a �
 > [!NOTE]
 > Este exemplo só funcionará em um computador com Windows Vista executando o Gerenciador de Janelas da Área de Trabalho (DWM) com o vidro habilitado. O Windows Vista Home Basic Edition não dá suporte ao efeito de vidro transparente. As áreas que normalmente renderizariam com o efeito de vidro transparente em outras edições do Windows Vista são processadas de forma opaca.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 A imagem a seguir ilustra o quadro de vidro estendido na barra de endereços do Internet Explorer 7:
 
@@ -65,7 +65,7 @@ End Function
 
 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) é a função de DWM que estende o quadro para a área de cliente. Ela recebe dois parâmetros: um identificador de janela e uma estrutura [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins). [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) é usado para instruir o DWM sobre quanto a mais o quadro deve ser estendido para a área de cliente.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. No WPF, o identificador de janela pode ser obtido na propriedade <xref:System.Windows.Interop.HwndSource.Handle%2A> de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área do cliente no evento <xref:System.Windows.FrameworkElement.Loaded> da janela.
 
@@ -110,7 +110,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra uma janela simples em que o quadro é estendido para a área de cliente. O quadro é estendido para trás da borda superior que contém os dois objetos <xref:System.Windows.Controls.TextBox>.
 
@@ -150,7 +150,7 @@ A imagem a seguir ilustra o quadro de vidro estendido em um aplicativo WPF:
 
 ![Captura de tela mostrando um quadro de vidro estendido em um aplicativo WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/dwm-overview)
 - [Visão geral do Desfoque Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/blur-ovw)

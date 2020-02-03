@@ -21,7 +21,7 @@ Você pode personalizar a aparência de qualquer célula manipulando o evento <x
   
  No exemplo de código a seguir, você irá pintar todas as células em uma `ContactName` coluna usando o esquema de cores do controle de <xref:System.Windows.Forms.DataGridView>. O conteúdo de texto de cada célula é pintado em <xref:System.Drawing.Color.Crimson%2A>e um retângulo de inserção é desenhado na mesma cor que a propriedade <xref:System.Windows.Forms.DataGridView.GridColor%2A> do controle de <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/CS/form1.cs#10)]
  [!code-vb[System.Windows.Forms.DataGridViewCellPainting#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCellPainting/VB/form1.vb#10)]  
   
@@ -32,7 +32,7 @@ Você pode personalizar a aparência de qualquer célula manipulando o evento <x
   
 - Referências aos assemblies System, System.Windows.Forms e System.Drawing.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellPainting>

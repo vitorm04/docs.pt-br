@@ -1,5 +1,5 @@
 ---
-title: Tree
+title: Árvores
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
@@ -84,7 +84,7 @@ Em muitas tecnologias, elementos e componentes são organizados em uma estrutura
   
  No entanto, a pesquisa de recursos também pode se estender além da árvore lógica imediata. Para marcação de aplicativo, a pesquisa de recurso pode seguir adiante até dicionários de recursos no nível do aplicativo e, a seguir, até valores de suporte e sistema de tema que são referenciados como propriedades estáticas ou chaves. Os próprios temas também poderão fazer referência a valores do sistema fora da árvore lógica de tema se as referências de recurso forem dinâmicas. Para obter mais informações sobre dicionários de recursos e lógica de pesquisa, consulte [Recursos de XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral da entrada](input-overview.md)
 - [Visão geral de renderização de gráficos do WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)

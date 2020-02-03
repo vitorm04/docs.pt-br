@@ -19,7 +19,7 @@ ms.locfileid: "76746667"
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Como associar controles dos Windows Forms a valores de banco de dados DBNull
 Quando você associa Windows Forms controles a uma fonte de dados e a fonte de dados retorna um valor de <xref:System.DBNull>, você pode substituir um valor apropriado sem manipular, formatar ou analisar eventos. A propriedade <xref:System.Windows.Forms.Binding.NullValue%2A> converterá <xref:System.DBNull> em um objeto especificado ao Formatar ou analisar os valores da fonte de dados.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir demonstra como associar um valor de <xref:System.DBNull> em duas situações diferentes. O primeiro demonstra como definir o <xref:System.Windows.Forms.Binding.NullValue%2A> para uma propriedade de cadeia de caracteres; o segundo demonstra como definir o <xref:System.Windows.Forms.Binding.NullValue%2A> para uma propriedade de imagem.  
   
  [!code-csharp[System.Windows.Forms.BindingDBNull#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingDBNull/CS/form1.cs#1)]
@@ -32,8 +32,8 @@ Quando você associa Windows Forms controles a uma fonte de dados e a fonte de d
   
 - Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como identificar erros e exceções que ocorram na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como tratar erros e exceções que ocorram na associação de dados](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

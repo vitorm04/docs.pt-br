@@ -82,7 +82,7 @@ Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Como carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)

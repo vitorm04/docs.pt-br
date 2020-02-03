@@ -28,7 +28,7 @@ Para conectar um controle DataGridView aos dados:
 
 2. No manipulador de eventos de <xref:System.Windows.Forms.Form.Load> do formulário, associe o controle de <xref:System.Windows.Forms.DataGridView> à <xref:System.Windows.Forms.BindingSource>e chame o método `GetData` para recuperar os dados.  
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este exemplo de código completo recupera dados de um banco de dado para preencher um controle DataGridView em um Windows Form. O formulário também tem botões para recarregar os dados e enviar as alterações para ele.  
 
@@ -45,7 +45,7 @@ Preencha a variável `connectionString` no exemplo com os valores de sua conexã
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

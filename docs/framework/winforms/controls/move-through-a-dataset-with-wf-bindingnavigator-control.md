@@ -19,7 +19,7 @@ ms.locfileid: "76742157"
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Como avançar em um DataSet com o controle BindingNavigator dos Windows Forms
 Ao criar aplicativos controlados por dados, muitas vezes você precisará exibir coleções de dados aos usuários. O controle de <xref:System.Windows.Forms.BindingNavigator>, em conjunto com o componente <xref:System.Windows.Forms.BindingSource>, fornece uma solução conveniente e extensível para a movimentação de uma coleção e a exibição de itens em sequência.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra como usar um controle de <xref:System.Windows.Forms.BindingNavigator> para percorrer os dados. O conjunto está contido em um <xref:System.Data.DataView>, que está associado a um controle de <xref:System.Windows.Forms.TextBox> com um componente <xref:System.Windows.Forms.BindingSource>.  
   
 > [!NOTE]
@@ -33,11 +33,11 @@ Ao criar aplicativos controlados por dados, muitas vezes você precisará exibir
   
 - Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

@@ -22,7 +22,7 @@ Por padrão, o controle de <xref:System.Windows.Forms.RichTextBox> de Windows Fo
   
 2. Defina a propriedade <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> como um valor apropriado da enumeração <xref:System.Windows.Forms.RichTextBoxScrollBars>.  
   
-    |Value|Descrição|  
+    |{1&gt;Valor&lt;1}|Descrição|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (padrão)|Exibe barras de rolagem horizontal, vertical ou ambas, mas apenas quando o texto excede a largura ou o comprimento do controle.|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|Nunca exibe nenhum tipo de barra de rolagem.|  
@@ -34,14 +34,14 @@ Por padrão, o controle de <xref:System.Windows.Forms.RichTextBox> de Windows Fo
   
 3. Defina a propriedade <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> com um valor apropriado.  
   
-    |Value|Descrição|  
+    |{1&gt;Valor&lt;1}|Descrição|  
     |-----------|-----------------|  
     |`false`|O texto do controle não é ajustado automaticamente para caber na largura do controle, por isso rolará para a direita até atingir uma quebra de linha. Use esse valor se você escolher barras de rolagem horizontal ou ambas acima.|  
     |`true` (padrão)|O texto do controle é ajustado automaticamente para caber na largura do controle. A barra de rolagem horizontal não será exibida. Use esse valor se você escolher as barras de rolagem vertical ou nenhuma acima para exibir um ou mais parágrafos acima.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

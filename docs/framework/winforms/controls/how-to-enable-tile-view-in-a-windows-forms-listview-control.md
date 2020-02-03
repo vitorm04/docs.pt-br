@@ -39,7 +39,7 @@ Com o recurso exibição de bloco do controle de <xref:System.Windows.Forms.List
     listView1.View = View.Tile;  
     ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código completo a seguir demonstra a exibição lado a lado com blocos modificados para mostrar as três linhas de texto. O tamanho de bloco foi ajustado para evitar encapsulamento de linha.  
   
  [!code-cpp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CPP/listviewtilingexample.cpp#1)]
@@ -49,11 +49,11 @@ Com o recurso exibição de bloco do controle de <xref:System.Windows.Forms.List
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
 - Um arquivo de ícone denominado book.ico no mesmo diretório do arquivo executável.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>

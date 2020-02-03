@@ -136,7 +136,7 @@ O controle de <xref:System.Windows.Forms.DataGridView> e suas classes relacionad
   
  Se você habilitar a propriedade <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> do controle de <xref:System.Windows.Forms.DataGridView>, uma linha especial para adicionar novas linhas será exibida como a última linha. Essa linha faz parte da coleção de <xref:System.Windows.Forms.DataGridView.Rows%2A>, mas tem uma funcionalidade especial que pode exigir sua atenção. Para obter mais informações, consulte [Usando a linha para novos registros no controle DataGridView dos Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle DataGridView](datagridview-control-overview-windows-forms.md)
 - [Personalizando o controle DataGridView do Windows Forms](customizing-the-windows-forms-datagridview-control.md)

@@ -75,7 +75,7 @@ Você pode controlar se o texto e as imagens são exibidos em um <xref:System.Wi
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)

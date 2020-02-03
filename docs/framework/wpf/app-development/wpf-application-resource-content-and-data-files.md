@@ -237,6 +237,6 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 ## <a name="rebuilding-after-changing-build-type"></a>Recompilando após modificar o tipo de build  
  Depois de alterar o tipo de build de um arquivo de dados do aplicativo, você precisa recompilar o aplicativo inteiro para garantir que essas alterações sejam aplicadas. Se você apenas compilar o aplicativo, as alterações não serão aplicadas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)

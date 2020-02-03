@@ -73,7 +73,7 @@ Além de criar eventos usando o Designer de Formulários do Windows no Visual St
 
      O método <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> demonstrado no código de Visual Basic acima estabelece um manipulador de eventos de clique para o botão.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

@@ -39,7 +39,7 @@ Os procedimentos a seguir demonstram alguns cenários comuns que personalizam ou
      [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#30)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código completo a seguir fornece um aplicativo de demonstração que pode ajudá-lo a entender as opções de dimensionamento descritas neste tópico.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
@@ -49,14 +49,14 @@ Os procedimentos a seguir demonstram alguns cenários comuns que personalizam ou
   
 - Altere o tamanho do formulário. Observe como as colunas de modo de preenchimento alteram suas larguras enquanto retém as proporções indicadas pelos valores de propriedade de <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>. Observe como a <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> de uma coluna impede que ela seja alterada quando o formulário é muito pequeno.  
   
-- Altere os tamanhos das colunas, arrastando os divisores de coluna com o mouse. Observe como algumas colunas não podem ser redimensionadas e como as colunas redimensionáveis não podem ficar mais estreitas do que suas larguras mínimas.  
+- Altere os tamanhos das colunas arrastando os divisores de coluna com o mouse. Observe como algumas colunas não podem ser redimensionadas e como as colunas redimensionáveis não podem ficar mais estreitas do que suas larguras mínimas.  
   
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>

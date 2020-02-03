@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;{2&gt;Atributos&lt;2}&lt;1}'
+title: Atributos
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741793"
 ---
-# <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}
+# <a name="attributes"></a>Atributos
 <xref:System.Attribute?displayProperty=nameWithType> é uma classe base usada para definir atributos personalizados.
 
  Atributos são anotações que podem ser adicionadas a elementos de programação, como assemblies, tipos, membros e parâmetros. Eles são armazenados nos metadados do assembly e podem ser acessados em tempo de execução usando as APIs de reflexão. Por exemplo, a estrutura define o <xref:System.ObsoleteAttribute>, que pode ser aplicado a um tipo ou um membro para indicar que o tipo ou o membro foi preterido.
@@ -48,7 +48,7 @@ ms.locfileid: "76741793"
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

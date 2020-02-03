@@ -13,7 +13,7 @@ ms.locfileid: "76733057"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet store` – Armazena os assemblies especificados no [repositório de pacotes de runtime](../deploying/runtime-store.md).
 
@@ -79,6 +79,6 @@ Armazene os pacotes especificados no *packages.csproj* sem otimização:
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Repositório de pacote de runtime](../deploying/runtime-store.md)

@@ -22,7 +22,7 @@ ms.locfileid: "76745917"
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Como exibir uma página da Web a partir de um controle LinkLabel dos Windows Forms (Visual Basic)
 Este exemplo exibe uma página da Web no navegador padrão quando um usuário clica em um Windows Forms <xref:System.Windows.Forms.LinkLabel> controle.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  A chamada para o método <xref:System.Diagnostics.Process.Start%2A> requer confiança total. Para obter mais informações, consulte <xref:System.Security.SecurityException>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Controle LinkLabel](linklabel-control-windows-forms.md)

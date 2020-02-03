@@ -66,7 +66,7 @@ Com frequência, você desejará imprimir elementos gráficos em seu aplicativo 
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

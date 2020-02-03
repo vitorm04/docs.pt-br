@@ -38,5 +38,5 @@ O controle de `CheckedListBox` de Windows Forms exibe uma lista de itens, como o
  [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)  
  Fornece uma lista de coisas que você pode fazer com caixas de listagem, caixas de combinação e caixas de listagem marcadas.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

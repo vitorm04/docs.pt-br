@@ -37,10 +37,10 @@ HRESULT ForwardTranslateAccelerator(
  appUnhandled  
  `true` quando o aplicativo já tem a oportunidade de lidar com a mensagem de entrada, mas não a tratou; caso contrário, `false`.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
  No .NET Framework 3,0 e 3,5: PresentationHostDLL. dll  
   
@@ -48,6 +48,6 @@ HRESULT ForwardTranslateAccelerator(
   
  **Versão do .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

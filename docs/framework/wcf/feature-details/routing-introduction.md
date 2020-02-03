@@ -15,7 +15,7 @@ O serviço de roteamento fornece um intermediário SOAP conectável genérico qu
 
 Este tópico destina-se a novos para o serviço de roteamento e aborda a configuração básica e a hospedagem do serviço de roteamento.
 
-## <a name="configuration"></a>Configuração do
+## <a name="configuration"></a>Configuração
 
 O serviço de roteamento é implementado como um serviço WCF que expõe um ou mais pontos de extremidade de serviço que recebem mensagens de aplicativos cliente e roteiam as mensagens para um ou mais pontos de extremidade de destino. O serviço fornece um <xref:System.ServiceModel.Routing.RoutingBehavior>, que é aplicado aos pontos de extremidade de serviço expostos pelo serviço. Esse comportamento é usado para configurar vários aspectos de como o serviço opera. Para facilitar a configuração ao usar um arquivo de configuração, os parâmetros são especificados no **RoutingBehavior**. Em cenários baseados em código, esses parâmetros seriam especificados como parte de um objeto <xref:System.ServiceModel.Routing.RoutingConfiguration>, que pode ser passado para um **RoutingBehavior**.
 
@@ -156,7 +156,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 > Por padrão, o serviço de roteamento avalia apenas os cabeçalhos da mensagem. Para permitir que os filtros acessem o corpo da mensagem, você deve definir <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> como `false`.
 
-**Multicast**
+**Seletiva**
 
 Embora muitas configurações de serviço de roteamento usem lógica de filtro exclusivo que roteia mensagens para apenas um ponto de extremidade específico, talvez seja necessário rotear uma determinada mensagem para vários pontos de extremidades de destino. Para multicast de uma mensagem para vários destinos, as seguintes condições devem ser verdadeiras:
 
@@ -364,7 +364,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 
 A tabela a seguir descreve os padrões que são compatíveis com o uso de listas de pontos de extremidade de backup, juntamente com observações que descrevem os detalhes da manipulação de erros para padrões específicos.
 
-|Padrão|Sessão|Transação|Contexto de recebimento|Lista de backup com suporte|{1&gt;Observações&lt;1}|
+|Padrão|Session|Transação|Contexto de recebimento|Lista de backup com suporte|{1&gt;Observações&lt;1}|
 |-------------|-------------|-----------------|---------------------|---------------------------|-----------|
 |Uma via||||Sim|Tenta reenviar a mensagem em um ponto de extremidade de backup. Se essa mensagem estiver sendo multicast, somente a mensagem no canal com falha será movida para seu destino de backup.|
 |Uma via||✔️||Não|Uma exceção é lançada e a transação é revertida.|
@@ -413,7 +413,7 @@ Para usar a representação ASP.NET com o serviço de roteamento, habilite o mod
 
 Para usar a representação de credencial do Windows com o serviço de roteamento, você precisa configurar as credenciais e o serviço. O objeto de credenciais do cliente (<xref:System.ServiceModel.Security.WindowsClientCredential>, acessável da <xref:System.ServiceModel.ChannelFactory>) define uma propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> que deve ser definida para permitir a representação. Por fim, no serviço, você precisa configurar o comportamento de <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> para definir `ImpersonateCallerForAllOperations` como `true`. O serviço de roteamento usa esse sinalizador para decidir se os clientes devem ser criados para encaminhar mensagens com representação habilitada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Filtros de mensagem](message-filters.md)
 - [Roteando contratos](routing-contracts.md)

@@ -85,10 +85,10 @@ Você pode atribuir conteúdo diferente do WPF a um controle <xref:System.Window
 
 9. O controle `elementHost2` agora hospeda uma instância do tipo `UserControl1`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migração e Interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
+- [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
 - [Usando Controles do WPF](using-wpf-controls.md)
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

@@ -22,7 +22,7 @@ Por padrão, os usuários podem classificar os dados em um controle de <xref:Sys
 [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 Descreve as opções para classificar os dados no controle.
 
-[Como definir os modos de classificação para colunas no controle DataGridView do Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[Como definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 Descreve como habilitar usuários para classificar por colunas que não são classificáveis por padrão.
 
 [Como personalizar a classificação no controle DataGridView dos Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
@@ -42,7 +42,7 @@ Fornece documentação de referência para a propriedade <xref:System.Windows.Fo
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 Fornece documentação de referência para a enumeração de <xref:System.Windows.Forms.DataGridViewColumnSortMode>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

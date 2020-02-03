@@ -135,7 +135,7 @@ End Namespace
   
  O BAML compilado (gerado por meio de PresentationBuildTask) usa todas as etapas, embora o BAML também não deva conter nomes de assembly não qualificados.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Noções básicas sobre namespaces XML](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

@@ -20,7 +20,7 @@ ms.locfileid: "76743286"
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>Como criar um layout dos Windows Forms que responda bem à localização
 Criar formulários que estão prontos para serem localizados acelera bastante o desenvolvimento para mercados internacionais. Você pode usar o controle de <xref:System.Windows.Forms.TableLayoutPanel> para implementar layouts que respondem normalmente à medida que os controles são redimensionados devido a alterações em seus valores de propriedade <xref:System.Windows.Forms.Control.Text%2A>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Este formulário demonstra como criar um layout que se ajusta proporcionalmente ao converter valores de cadeia de caracteres exibidos em outros idiomas. Esse processo de conversão é chamado de *localização*. Para obter mais informações, consulte [localização](../../../standard/globalization-localization/localization.md).  
   
  Há um suporte abrangente para esta tarefa no Visual Studio.  Consulte também [Walkthrough: Criando um layout que ajusta a proporção para localização](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
@@ -42,7 +42,7 @@ Criar formulários que estão prontos para serem localizados acelera bastante o 
   
 6. [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)  
+7. [Instruções passo a passo: projetando controles do Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)  
   
 8. [Como: dar suporte à localização em Windows Forms usando AutoSize e o controle TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
@@ -53,7 +53,7 @@ Criar formulários que estão prontos para serem localizados acelera bastante o 
   
 - Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

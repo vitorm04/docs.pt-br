@@ -55,8 +55,8 @@ Um controle cuja propriedade <xref:System.Windows.Forms.Control.TabStop%2A> foi 
 > [!NOTE]
 > Um grupo de botões de opção tem uma única parada de tabulação no tempo de execução. O botão selecionado (ou seja, o botão com sua propriedade <xref:System.Windows.Forms.RadioButton.Checked%2A> definida como `true`) tem sua propriedade <xref:System.Windows.Forms.Control.TabStop%2A> definida automaticamente como `true`, enquanto os outros botões têm sua propriedade <xref:System.Windows.Forms.Control.TabStop%2A> definida como `false`. Para obter mais informações sobre como agrupar controles de <xref:System.Windows.Forms.RadioButton>, consulte [grouping Windows Forms controles RadioButton para funcionar como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles do Windows Forms](index.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles dos Windows Forms](index.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

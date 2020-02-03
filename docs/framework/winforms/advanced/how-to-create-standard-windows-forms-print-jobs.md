@@ -76,7 +76,7 @@ A base da impressão no Windows Forms é o componente <xref:System.Drawing.Print
   
      Para obter mais informações sobre as especificidades de Windows Forms trabalhos de impressão, incluindo como criar um trabalho de impressão programaticamente, consulte <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)

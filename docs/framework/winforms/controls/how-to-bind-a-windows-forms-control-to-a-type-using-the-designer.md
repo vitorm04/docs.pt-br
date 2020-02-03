@@ -52,8 +52,8 @@ Quando estiver compilando controles que interagem com os dados, pode ser necess�
 
 4. No **Editor de tipo de interface do usuário do DataSource**, expanda o nó para o <xref:System.Windows.Forms.BindingSource> adicionado anteriormente e selecione a propriedade do tipo vinculado que você deseja associar à propriedade <xref:System.Windows.Forms.TextBox.Text%2A> da <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

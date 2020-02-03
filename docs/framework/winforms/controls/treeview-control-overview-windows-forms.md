@@ -21,7 +21,7 @@ Com o controle de <xref:System.Windows.Forms.TreeView> de Windows Forms, você p
 
 As propriedades de chave do controle de <xref:System.Windows.Forms.TreeView> são <xref:System.Windows.Forms.TreeView.Nodes%2A> e <xref:System.Windows.Forms.TreeView.SelectedNode%2A>. A propriedade <xref:System.Windows.Forms.TreeView.Nodes%2A> contém a lista de nós de nível superior no modo de exibição de árvore. A propriedade <xref:System.Windows.Forms.TreeView.SelectedNode%2A> define o nó selecionado no momento. Você pode exibir ícones ao lado de nós. O controle usa imagens do <xref:System.Windows.Forms.ImageList> nomeados na propriedade <xref:System.Windows.Forms.TreeView.ImageList%2A> da exibição de árvore. A propriedade <xref:System.Windows.Forms.TreeView.ImageIndex%2A> define a imagem padrão para nós no modo de exibição de árvore. Para obter mais informações sobre como exibir imagens, veja [Como definir ícones para o controle TreeView dos Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md). Se você estiver usando o Visual Studio 2005, terá acesso a uma grande biblioteca de imagens padrão que você pode usar com o controle de <xref:System.Windows.Forms.TreeView>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TreeView>
 - [Controle TreeView](treeview-control-windows-forms.md)

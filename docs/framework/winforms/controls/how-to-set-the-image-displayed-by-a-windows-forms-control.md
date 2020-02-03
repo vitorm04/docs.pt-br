@@ -23,7 +23,7 @@ ms.locfileid: "76746878"
 
 Vários controles de Windows Forms podem exibir imagens. Essas imagens podem ser ícones que esclarecem a finalidade do controle, como um ícone de disquete em um botão que indica o comando salvar. Como alternativa, os ícones podem ser imagens de plano de fundo para dar ao controle a aparência e o comportamento que você deseja.
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programático
 
 Defina a propriedade `Image` ou `BackgroundImage` do controle como um objeto do tipo <xref:System.Drawing.Image>. Em geral, você carregará a imagem de um arquivo usando o método <xref:System.Drawing.Image.FromFile%2A>.
 
@@ -60,7 +60,7 @@ pictureBox1->Image = Image::FromFile(String::Concat
 
 2. Selecione a imagem que você deseja exibir.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

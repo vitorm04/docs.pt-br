@@ -21,9 +21,9 @@ O pacote principal Microsoft. Data. sqlite traz SQLitePCLRaw. bundle_e_sqlite3 p
 
 Para usar um pacote diferente, instale o pacote de `Microsoft.Data.Sqlite.Core`, juntamente com o pacote de pacotes que você deseja usar. Os grupos são inicializados automaticamente pelo Microsoft. Data. sqlite.
 
-| Commons | Descrição |
+| Pacote | Descrição |
 | --- | --- |
-| SQLitePCLRaw. bundle_e_sqlite3 | Fornece uma versão consistente do SQLite em todas as plataformas. Inclui as extensões de árvore FTS4, FTS5, JSON1 e R *. Este é o padrão. |
+| SQLitePCLRaw. bundle_e_sqlite3 | Fornece uma versão consistente do SQLite em todas as plataformas. Inclui as extensões de árvore FTS4, FTS5, JSON1 e R *. Esse é o padrão. |
 | SQLitePCLRaw. bundle_green | O mesmo que bundle_e_sqlite3, exceto no iOS, em que ele usa a biblioteca SQLite do sistema. |
 | SQLitePCLRaw. bundle_zetetic | Usa as compilações oficiais do sqlcipher de Zetetic (não incluído). |
 | SQLitePCLRaw. bundle_winsqlite3 | Usa winsqlite3. dll, a biblioteca SQLite do sistema no Windows 10. |

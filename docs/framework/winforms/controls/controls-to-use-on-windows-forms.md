@@ -188,7 +188,7 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  [Componente Timer](timer-component-windows-forms.md)  
  Gera um evento em intervalos regulares.  
   
- [Controle de barra de ferramentas](toolbar-control-windows-forms.md)  
+ [Controle ToolBar](toolbar-control-windows-forms.md)  
  Exibe os menus e botões de bitmap que ativam comandos. Você pode estender a funcionalidade do controle e modificar sua aparência e comportamento. Embora <xref:System.Windows.Forms.ToolStrip> substitua e adicione funcionalidade ao controle <xref:System.Windows.Forms.ToolBar> de versões anteriores, <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
   
  [Controle ToolStrip](toolstrip-control-windows-forms.md)  
@@ -222,7 +222,7 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  Descreve um conjunto de controles usados para fornecer aos usuários uma lista de opções de escolha.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles do Windows Forms](index.md)  
+ [Controles dos Windows Forms](index.md)  
  Explica o uso de controles dos Windows Forms e descreve conceitos importantes para trabalhar com eles.  
   
  [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)  

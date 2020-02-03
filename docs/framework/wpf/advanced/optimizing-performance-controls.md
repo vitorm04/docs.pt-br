@@ -74,7 +74,7 @@ A tabela a seguir lista os controles comuns para exibir dados e seu suporte a re
 > [!NOTE]
 > Para obter um exemplo de como habilitar a virtualização e a reciclagem de contêineres em um <xref:System.Windows.Controls.TreeView>, consulte [melhorar o desempenho de um TreeView](../controls/how-to-improve-the-performance-of-a-treeview.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Layout](layout.md)
 - [Layout e design](optimizing-performance-layout-and-design.md)

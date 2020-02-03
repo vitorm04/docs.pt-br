@@ -19,10 +19,10 @@ ms.locfileid: "76737914"
 ## <a name="in-this-section"></a>Nesta seção  
  [Recursos de fonte OpenType](opentype-font-features.md)  
  [Empacotando fontes com aplicativos](packaging-fonts-with-applications.md)  
- [Pacote de fontes OpenType de amostra](sample-opentype-font-pack.md)  
- [Tópicos de instruções](fonts-how-to-topics.md)  
+ [Pacote de fontes OpenType de exemplo](sample-opentype-font-pack.md)  
+ [Tópicos explicativos](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

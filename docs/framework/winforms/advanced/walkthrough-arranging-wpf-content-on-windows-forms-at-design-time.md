@@ -129,13 +129,13 @@ Um controle WPF hospedado em um formulário tem o mesmo comportamento de ancorag
 
     Para obter mais informações, consulte [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Como alinhar um controle às bordas de formulários no tempo de design](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Migração e Interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
+- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
 - [Usando Controles do WPF](using-wpf-controls.md)
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

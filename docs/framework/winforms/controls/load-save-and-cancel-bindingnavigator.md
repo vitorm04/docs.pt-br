@@ -51,7 +51,7 @@ No procedimento a seguir, um controle de <xref:System.Windows.Forms.TextBox> est
 
     5. Clique em **OK** para fechar a caixa de diálogo. Os botões são adicionados à <xref:System.Windows.Forms.ToolStrip>.
 
-8. Clique com o botão direito do mouse no formulário e escolha **Exibir Código**.
+8. Clique com o botão direito do mouse do formulário e escolha **Exibir código**.
 
 9. No Editor de Códigos, localize a linha de código que carrega dados no adaptador de tabela. Esse código foi gerado quando você configura a vinculação de dados na etapa 2. O código deve ser semelhante ao seguinte: `TableAdapterName.Fill(DataSetName.TableName)`. Isso provavelmente estará no evento de <xref:System.Windows.Forms.Form.Load> do formulário.
 
@@ -110,7 +110,7 @@ No procedimento a seguir, um controle de <xref:System.Windows.Forms.TextBox> est
     > [!NOTE]
     > O método de <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> tem como escopo a linha de dados. Salve as alterações feitas ao exibir um registro individual antes de navegar até o próximo registro.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

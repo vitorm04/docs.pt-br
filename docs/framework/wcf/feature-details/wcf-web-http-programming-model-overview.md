@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>URLs e parâmetros de cadeia de consulta do UriTemplate  
  Os serviços de estilo da Web podem ser chamados de um navegador da Web, digitando uma URL associada a uma operação de serviço. Essas operações de serviço podem pegar parâmetros de cadeia de caracteres de consulta que devem ser especificados em um formulário de cadeia de caracteres dentro da URL. A tabela a seguir mostra os tipos que podem ser passados dentro de uma URL e o formato usado.  
   
-|{1&gt;Tipo&lt;1}|Formato|  
+|Tipo|Formato|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -144,7 +144,7 @@ Como o modelo de programação WEB HTTP do WCF não dá suporte aos protocolos W
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solução de problemas do modelo de programação WEB HTTP do WCF  
  Ao chamar WCF WEB HTTP Services usando um <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para criar um canal, o <xref:System.ServiceModel.Description.WebHttpBehavior> usa o <xref:System.ServiceModel.EndpointAddress> definido no arquivo de configuração, mesmo que um <xref:System.ServiceModel.EndpointAddress> diferente seja passado para o <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Sindicalização do WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Modelo de objeto de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

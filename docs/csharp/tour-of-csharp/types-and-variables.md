@@ -93,7 +93,7 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
   - Um valor de tipo exato
 - Tipos de valor anulável
   - Um valor `null` ou um valor do tipo exato
-- Objeto do
+- objeto
   - Uma referência `null`, uma referência a um objeto de qualquer tipo de referência ou uma referência a um valor de qualquer tipo de valor demarcado
 - Tipo de classe
   - Uma referência `null`, uma referência a uma instância desse tipo de classe ou uma referência a uma instância de uma classe derivada desse tipo de classe

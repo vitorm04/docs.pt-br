@@ -49,10 +49,10 @@ O controle `DataGridView` oferece vários recursos que permitem a você alterar 
  Fornece documentação de referência para o evento <xref:System.Windows.Forms.DataGridView.CellValidating>.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem como preencher o controle com os dados manualmente ou de uma fonte de dados externa.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

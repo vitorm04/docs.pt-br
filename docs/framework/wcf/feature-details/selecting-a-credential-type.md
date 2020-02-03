@@ -25,12 +25,12 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|{1&gt;Nenhum&lt;1}|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
+|Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
 |Basic|Especifica a autenticação básica para o cliente. Para obter informações adicionais, consulte RFC2617 –[autenticação http: autenticação básica e resumida](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
 |Digest|Especifica a autenticação Digest para o cliente. Para obter informações adicionais, consulte RFC2617 –[autenticação http: autenticação básica e resumida](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
-|NTLM|Especifica a autenticação NTLM (NT LAN Manager). Isso é usado quando você não pode usar a autenticação Kerberos por algum motivo. Você também pode desabilitar seu uso como um fallback definindo a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false`, o que faz com que o WCF faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade como `false` não pode impedir que credenciais NTLM sejam enviadas pela conexão.|  
+|Ntlm|Especifica a autenticação NTLM (NT LAN Manager). Isso é usado quando você não pode usar a autenticação Kerberos por algum motivo. Você também pode desabilitar seu uso como um fallback definindo a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false`, o que faz com que o WCF faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade como `false` não pode impedir que credenciais NTLM sejam enviadas pela conexão.|  
 |Portal|Especifica autenticação do Windows. Para especificar apenas o protocolo Kerberos em um domínio do Windows, defina a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false` (o padrão é `true`).|  
-|Certificado|Executa a autenticação de cliente usando um certificado X. 509.|  
+|Certificate|Executa a autenticação de cliente usando um certificado X. 509.|  
 |Senha|O usuário deve fornecer um nome de usuário e senha. Valide o par de nome de usuário/senha usando a autenticação do Windows ou outra solução personalizada.|  
   
 ### <a name="message-client-credential-types"></a>Tipos de credencial do cliente da mensagem  
@@ -38,10 +38,10 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|{1&gt;Nenhum&lt;1}|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
+|Nenhum|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
 |Portal|Permite que as trocas de mensagens SOAP ocorram sob o contexto de segurança estabelecido com uma credencial do Windows.|  
-|Nome de usuário|Permite que o serviço exija que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite nenhuma operação criptográfica com nomes de usuário, como gerar uma assinatura ou criptografar dados. O WCF garante que o transporte seja protegido ao usar credenciais de nome de usuário.|  
-|Certificado|Permite que o serviço exija que o cliente seja autenticado usando um certificado X. 509.|  
+|Nome de Usuário|Permite que o serviço exija que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite nenhuma operação criptográfica com nomes de usuário, como gerar uma assinatura ou criptografar dados. O WCF garante que o transporte seja protegido ao usar credenciais de nome de usuário.|  
+|Certificate|Permite que o serviço exija que o cliente seja autenticado usando um certificado X. 509.|  
 |Token emitido|Um tipo de token personalizado configurado de acordo com uma política de segurança. O tipo de token padrão é SAML (Security Asserties Markup Language). O token é emitido por um serviço de token seguro. Para obter mais informações, consulte [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modelo de negociação de credenciais de serviço  
@@ -97,7 +97,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
  Para obter mais informações sobre credenciais e sessões seguras, consulte [considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>

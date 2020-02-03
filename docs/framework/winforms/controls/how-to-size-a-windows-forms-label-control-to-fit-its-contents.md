@@ -24,7 +24,7 @@ O controle de <xref:System.Windows.Forms.Label> de Windows Forms pode ser de lin
   
  Se <xref:System.Windows.Forms.Label.AutoSize%2A> for definido como `false`, as palavras especificadas na propriedade <xref:System.Windows.Forms.Label.Text%2A> serão encapsuladas na próxima linha, se possível, mas o controle não será aumentado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como criar teclas de acesso com controles de rótulo dos Windows Forms](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Visão geral do controle Label](label-control-overview-windows-forms.md)

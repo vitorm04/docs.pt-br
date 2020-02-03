@@ -86,7 +86,7 @@ Com o controle <xref:System.Windows.Forms.DataGridView>, você pode exibir dados
   
 - Você pode implementar suas próprias classes de célula e de coluna para hospedar controles diferentes daqueles fornecidos pelos tipos de coluna internos. Para obter mais informações, consulte [Como hospedar controles em células DataGridView dos Windows Forms](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Visão geral do controle DataGridView](datagridview-control-overview-windows-forms.md)

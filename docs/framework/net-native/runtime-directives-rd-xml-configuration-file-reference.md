@@ -132,43 +132,43 @@ A política que pode ser expressa pelos elementos [Application](application-elem
 
 Os elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) dão suporte aos seguintes tipos de política:
 
-- `Activate`. Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.
+- `Activate` Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.
 
-- `Browse`. Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do runtime.
+- `Browse` Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do runtime.
 
-- `Dynamic`. Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
+- `Dynamic` Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
 
-- `Serialize`. Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
+- `Serialize` Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
 
-- `DataContractSerializer`. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer` Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer`. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer` Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer`. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer` Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject`. Controla a política de marshaling de tipos de referência do WinRT e COM.
+- `MarshalObject` Controla a política de marshaling de tipos de referência do WinRT e COM.
 
-- `MarshalDelegate`. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.
+- `MarshalDelegate` Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.
 
 - `MarshalStructure` . Controla a política de estruturas de marshaling para código nativo.
 
 As configurações associadas a esses tipos de política são:
 
-- `All`. Habilite a política para todos os tipos e membros que a cadeia de ferramentas não remover.
+- `All` Habilite a política para todos os tipos e membros que a cadeia de ferramentas não remover.
 
-- `Auto`. Use o comportamento padrão. (Não especificar uma política é equivalente à configurar a política para `Auto`, a menos que essa política seja substituída, por exemplo, por um elemento pai.)
+- `Auto` Use o comportamento padrão. (Não especificar uma política é equivalente à configurar a política para `Auto`, a menos que essa política seja substituída, por exemplo, por um elemento pai.)
 
-- `Excluded`. Desabilite a política para o elemento de programa.
+- `Excluded` Desabilite a política para o elemento de programa.
 
-- `Public`. Habilite a política para tipos públicos ou membros, a menos que a cadeia de ferramentas determine que o membro é desnecessário e, portanto, remove-o. (No segundo caso, você deve usar `Required Public` para garantir que o membro é mantido e tem recursos de reflexão.)
+- `Public` Habilite a política para tipos públicos ou membros, a menos que a cadeia de ferramentas determine que o membro é desnecessário e, portanto, remove-o. (No segundo caso, você deve usar `Required Public` para garantir que o membro é mantido e tem recursos de reflexão.)
 
-- `PublicAndInternal`. Habilite a política para tipos ou membros internos e públicos se a cadeia de ferramenta não removê-los.
+- `PublicAndInternal` Habilite a política para tipos ou membros internos e públicos se a cadeia de ferramenta não removê-los.
 
-- `Required Public`. Necessita da cadeia de ferramentas para manter os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
+- `Required Public` Necessita da cadeia de ferramentas para manter os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
 
-- `Required PublicAndInternal`. Necessita da cadeia de ferramentas para manter os tipos e membros públicos e internos, sejam usados ou não, e habilita a política para eles.
+- `Required PublicAndInternal` Necessita da cadeia de ferramentas para manter os tipos e membros públicos e internos, sejam usados ou não, e habilita a política para eles.
 
-- `Required All`. Necessita da cadeia de ferramentas para manter todos os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
+- `Required All` Necessita da cadeia de ferramentas para manter todos os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
 
 Por exemplo, o seguinte arquivo de diretivas de runtime define a política para todos os tipos e membros no assembly DataClasses.dll. Ele habilita a reflexão para serialização de todas as propriedades públicas, permite procurar todos os tipos e membros de tipo, permite a ativação de todos os tipos de (devido ao atributo `Dynamic`) e permite a reflexão para todos os tipos e membros públicos.
 
@@ -453,7 +453,7 @@ Essas políticas não têm efeito nos campos ou métodos.
 
 Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Reflexão e .NET Native](reflection-and-net-native.md)

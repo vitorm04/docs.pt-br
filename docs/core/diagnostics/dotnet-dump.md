@@ -34,7 +34,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 A ferramenta global `dotnet-dump` é uma maneira de coletar e analisar despejos do Windows e do Linux sem nenhum depurador nativo envolvido como `lldb` no Linux. Essa ferramenta é importante em plataformas como o Alpine Linux, em que um `lldb` totalmente funcional não está disponível. A ferramenta `dotnet-dump` permite executar comandos SOS para analisar falhas e o GC (coletor de lixo), mas não é um depurador nativo, de modo que não haja suporte para a exibição de quadros de pilha nativos.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`--version`**
 
@@ -44,7 +44,7 @@ A ferramenta global `dotnet-dump` é uma maneira de coletar e analisar despejos 
 
   Mostra a ajuda da linha de comando.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 | {1&gt;Comando&lt;1}                                     |
 | ------------------------------------------- |
@@ -61,7 +61,7 @@ Captura um despejo de um processo.
 dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 
@@ -105,13 +105,13 @@ Inicia um shell interativo para explorar um despejo. O Shell aceita vários [com
 dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumentos
 
 - **`<dump_path>`**
 
   Especifica o caminho para o arquivo de despejo a ser analisado.
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-c|--command <debug_command>`**
 
@@ -156,7 +156,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `syncblk <arguments>`               | Exibe as informações do SyncBlock de suporte.                                                           |
 | `threads|setthread <threadid>`      | Define ou exibe a ID de thread atual para os comandos SOS.                                  |
 
-## <a name="using-dotnet-dump"></a>Usando `dotnet-dump`
+## <a name="using-dotnet-dump"></a>Usando o `dotnet-dump`
 
 A primeira etapa é coletar um despejo. Esta etapa poderá ser ignorada se um dump principal já tiver sido gerado. O sistema operacional ou o [recurso de geração de despejo](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) interno do tempo de execução do .NET Core pode criar dumps de núcleo.
 

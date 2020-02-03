@@ -82,7 +82,7 @@ Você pode usar o controle de <xref:System.Windows.Forms.PrintPreviewDialog> par
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Componente PrintDocument](printdocument-component-windows-forms.md)
 - [Controle PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)

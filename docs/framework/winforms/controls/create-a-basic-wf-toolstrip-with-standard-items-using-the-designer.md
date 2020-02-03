@@ -25,7 +25,7 @@ O procedimento a seguir demonstra como criar um <xref:System.Windows.Forms.ToolS
 
 3. No painel **tarefas de ToolStrip** , escolha **Inserir itens padrão**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [Visão geral do controle ToolStrip](toolstrip-control-overview-windows-forms.md)

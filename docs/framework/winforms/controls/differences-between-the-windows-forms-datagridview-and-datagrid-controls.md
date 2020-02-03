@@ -32,7 +32,7 @@ O controle de <xref:System.Windows.Forms.DataGridView> é um novo controle que s
   
  Como o controle de <xref:System.Windows.Forms.DataGridView> tem uma arquitetura totalmente nova, não há nenhum caminho de conversão direto que permitirá que você use <xref:System.Windows.Forms.DataGrid> personalizações com o controle de <xref:System.Windows.Forms.DataGridView>. Muitas <xref:System.Windows.Forms.DataGrid> personalizações são desnecessárias com o controle de <xref:System.Windows.Forms.DataGridView>, no entanto, devido aos recursos internos disponíveis no novo controle. Se você tiver criado tipos de coluna personalizados para o controle de <xref:System.Windows.Forms.DataGrid> que deseja usar com o controle de <xref:System.Windows.Forms.DataGridView>, precisará implementá-los novamente usando a nova arquitetura. Para obter mais informações, consulte [Personalizando o controle DataGridView dos Windows Forms](customizing-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
@@ -40,10 +40,10 @@ O controle de <xref:System.Windows.Forms.DataGridView> é um novo controle que s
 - [Controle DataGridView](datagridview-control-windows-forms.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Componente BindingSource](bindingsource-component.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Estilos de Célula no Controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Modos de exibição de dados no controle DataGridView dos Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Formatação de dados no controle DataGridView dos Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Modos de exibição dos dados no controle DataGridView do Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Formatação de dados no controle DataGridView do Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Sizing Options in the Windows Forms DataGridView Control](sizing-options-in-the-windows-forms-datagridview-control.md) (Opções de dimensionamento no controle DataGridView dos Windows Forms)
 - [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Modos de seleção no controle DataGridView dos Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)

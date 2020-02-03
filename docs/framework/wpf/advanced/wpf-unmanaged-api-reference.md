@@ -22,6 +22,6 @@ As bibliotecas do Windows Presentation Foundation (WPF) expõem várias funçõe
  [Função SaveToHistory](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [Função SetFakeActiveWindow](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Avançado](index.md)

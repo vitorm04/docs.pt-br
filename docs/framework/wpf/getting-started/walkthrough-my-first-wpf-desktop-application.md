@@ -474,7 +474,7 @@ A ilustração a seguir mostra as duas páginas do aplicativo `ExpenseIt` com co
 > Este exemplo demonstra um recurso específico do WPF e não segue todas as práticas recomendadas para coisas como segurança, localização e acessibilidade. Para obter uma cobertura abrangente do WPF e as práticas recomendadas de desenvolvimento de aplicativos .NET, consulte os seguintes tópicos:
 >
 > - [Acessibilidade](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [Segurança](../security-wpf.md)
 > - [Globalização e localização do WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Desempenho do WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -495,7 +495,7 @@ Para obter mais informações sobre como criar aplicativos, consulte os seguinte
 - [Gráficos e multimídia](../graphics-multimedia/index.md)
 - [Documentos no WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral dos painéis](../controls/panels-overview.md)
 - [Visão geral de modelagem de dados](../data/data-templating-overview.md)

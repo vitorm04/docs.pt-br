@@ -26,7 +26,7 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  [Acesso mais seguro a arquivos e a dados nos Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)  
  Descreve como acessar arquivos e dados em um ambiente de confiança parcial.  
   
- [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)  
+ [Impressão mais segura nos Windows Forms](more-secure-printing-in-windows-forms.md)  
  Descreve como acessar recursos de impressão em um ambiente de confiança parcial.  
   
  [Considerações adicionais sobre segurança nos Windows Forms](additional-security-considerations-in-windows-forms.md)  

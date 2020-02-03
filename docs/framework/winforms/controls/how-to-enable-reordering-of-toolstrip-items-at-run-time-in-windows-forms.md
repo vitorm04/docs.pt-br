@@ -34,7 +34,7 @@ Você pode habilitar o usuário a reorganizar <xref:System.Windows.Forms.ToolStr
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

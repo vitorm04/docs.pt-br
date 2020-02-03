@@ -35,7 +35,7 @@ Há dois tipos em C#: tipos de referência e valor. Variáveis de tipos de refer
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

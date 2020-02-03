@@ -32,17 +32,17 @@ HRESULT CreateIDispatchSTAForwarder(
   
 ## <a name="parameters"></a>Parâmetros  
   
-## <a name="property-valuereturn-value"></a>Valor de propriedade/Valor de retorno  
+## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  pDispatchDelegate  
  Um ponteiro para uma interface `IDispatch`.  
   
  ppForwarder  
  Um ponteiro para o endereço de uma interface de `IDispatch`.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).  
   
- **DLL:**  
+ **DLL**  
   
  No .NET Framework 3,0 e 3,5: PresentationHostDLL. dll  
   
@@ -50,6 +50,6 @@ HRESULT CreateIDispatchSTAForwarder(
   
  **Versão do .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

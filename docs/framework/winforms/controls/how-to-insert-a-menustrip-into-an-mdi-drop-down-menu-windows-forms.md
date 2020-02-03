@@ -17,7 +17,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736407"
 ---
 # <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Como inserir um MenuStrip um menu suspenso MDI (Windows Forms)
-Em alguns aplicativos, o tipo de uma janela filho MDI (interface de vários documentos) pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu do MDI pai com o conteúdo do menu do MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
+Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos) filho pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu da MDI pai com o conteúdo do menu da MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
   
  O procedimento a seguir usa as propriedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para inserir um grupo de itens de menu do menu filho MDI na parte suspensa do menu pai MDI. Fechar a janela MDI filho remove os itens de menu inseridos do MDI pai.  
   
@@ -43,7 +43,7 @@ Em alguns aplicativos, o tipo de uma janela filho MDI (interface de vários docu
   
     |Item de menu Form2|Valor de MergeAction|Valor de MergeIndex|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
+    |Arquivo|MatchOnly|-1|  
     |Separador|Inserir|2|  
     |Salvar|Inserir|3|  
     |Salvar e Fechar|Inserir|4|  
@@ -95,7 +95,7 @@ Em alguns aplicativos, o tipo de uma janela filho MDI (interface de vários docu
   
 - Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Como criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)

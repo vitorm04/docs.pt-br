@@ -49,9 +49,9 @@ ms.locfileid: "76743392"
 
     2. Selecione a relação (por exemplo, "Customers. CustOrd") entre as tabelas mestre e de detalhes da lista suspensa na propriedade <xref:System.Windows.Forms.DataGrid.DataMember%2A>. Para ver a relação, expanda o nó clicando no sinal de mais ( **+** ) ao lado da tabela mestre na lista suspensa.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Como associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -67,7 +67,7 @@ Você pode selecionar o texto programaticamente no controle de <xref:System.Wind
     }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

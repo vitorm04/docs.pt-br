@@ -46,7 +46,7 @@ O controle de <xref:System.Windows.Forms.DataGridView> de Windows Forms fornece 
   
 - Classifica automaticamente as linhas com base nos dados subjacentes quando o usuário clica em um cabeçalho de coluna.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Controle DataGridView](datagridview-control-windows-forms.md)

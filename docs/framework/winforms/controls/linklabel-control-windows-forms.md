@@ -36,5 +36,5 @@ O controle de `LinkLabel` de Windows Forms permite que você adicione links de e
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa de controles de Windows Forms, com links para informações sobre seu uso.

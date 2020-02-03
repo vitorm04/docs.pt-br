@@ -15,7 +15,7 @@ O Windows Presentation Foundation (WPF) tem suporte interno para processar a ent
   
  Para desabilitar a escuta do WPF à entrada por caneta, remova o suporte a tablet adicionado pela janela do WPF.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O código de exemplo a seguir mostra como remover o suporte da plataforma do tablet padrão usando reflexão.  
   
 ```csharp  
@@ -53,6 +53,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Interceptando entrada na caneta](intercepting-input-from-the-stylus.md)
+- [Interceptando entrada da caneta](intercepting-input-from-the-stylus.md)

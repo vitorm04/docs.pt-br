@@ -24,7 +24,7 @@ O controle `MonthCalendar` dos Windows Forms apresenta uma interface gráfica in
  [Como alterar a aparência do controle MonthCalendar dos Windows Forms](how-to-change-monthcalendar-control-appearance.md)  
  Descreve como personalizar a aparência do controle `MonthCalendar`.  
   
- [Como exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)  
+ [Como exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)  
  Descreve como configurar o controle `MonthCalendar` para exibir vários meses simultaneamente.  
   
  [Como exibir dias específicos em negrito com o controle MonthCalendar dos Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
@@ -38,7 +38,7 @@ O controle `MonthCalendar` dos Windows Forms apresenta uma interface gráfica in
  Fornece informações de referência sobre a classe e seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  [Controle DateTimePicker](datetimepicker-control-windows-forms.md)  

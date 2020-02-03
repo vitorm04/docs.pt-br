@@ -28,7 +28,7 @@ ms.locfileid: "76743170"
      [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewObjectBinding#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/VB/datagridviewobjectbinding.vb#10)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código completo inclui uma implementação simples de `Customer` e associa o <xref:System.Windows.Forms.DataGridView> a um <xref:System.Collections.ArrayList> contendo alguns objetos `Customer`. O manipulador de eventos <xref:System.Windows.Forms.Control.Click> da <xref:System.Windows.Forms.Button?displayProperty=nameWithType> deve acessar os objetos `Customer` por meio das linhas, porque a coleção Customer não está acessível fora do manipulador de eventos <xref:System.Windows.Forms.Form.Load?displayProperty=nameWithType>.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewObjectBinding#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewObjectBinding/CS/datagridviewobjectbinding.cs#00)]
@@ -37,12 +37,12 @@ ms.locfileid: "76743170"
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como associar objetos a controles DataGridView dos Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como associar objetos a controles DataGridView do Windows Forms](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

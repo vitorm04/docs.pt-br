@@ -43,7 +43,7 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
 
 Neste ponto no desenvolvimento de aplicativos, você criou uma interface do usuário sofisticada. A próxima etapa é prosseguir com a programação do próprio aplicativo, talvez conectando o controle de <xref:System.Windows.Forms.TreeView> e <xref:System.Windows.Forms.ListView> controles a algum tipo de fonte de dados. Para obter mais informações sobre como conectar controles a dados, consulte [Vinculação de dados e Windows Forms](../data-binding-and-windows-forms.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)

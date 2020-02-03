@@ -41,13 +41,13 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  repositório de certificados  
  Normalmente, um armazenamento permanente em que certificados, CRLs (listas de certificados revogados) e listas de certificados confiáveis (CTLs) são armazenados. No entanto, é possível criar e abrir um repositório de certificados somente na memória ao trabalhar com certificados que não precisam ser colocados no armazenamento permanente.  
   
- claims  
+ declarações  
  Informações passadas de uma entidade para outra usada para estabelecer a identidade do remetente. Por exemplo, um token de nome de usuário e senha ou um certificado X. 509.  
   
  certificado do cliente  
  Refere-se a um certificado usado para autenticação de cliente, como autenticar um navegador da Web em um servidor Web. Quando um cliente de navegador da Web tenta acessar um servidor Web seguro, o cliente envia seu certificado ao servidor para permitir que ele verifique a identidade do cliente.  
   
- fornecidas  
+ credenciais  
  Os dados de logon autenticados anteriormente que uma entidade de segurança usa para estabelecer sua própria identidade, como uma senha ou um tíquete de protocolo Kerberos. As credenciais são usadas para controlar o acesso aos recursos.  
   
  dados resumidos  
@@ -74,10 +74,10 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  autoridade de segurança local (LSA)  
  Um subsistema protegido que autentica e faz logon de usuários no sistema local. O LSA também mantém informações sobre todos os aspectos da segurança local em um sistema, coletivamente conhecido como a diretiva de segurança local do sistema.  
   
- Negotiate  
+ Negociar  
  Um SSP (provedor de suporte de segurança) que atua como uma camada de aplicativo entre a interface do provedor de suporte de segurança (SSPI) e os outros SSPs. Quando um aplicativo chama o SSPI para fazer logon em uma rede, ele pode especificar um SSP para processar a solicitação. Se o aplicativo especificar `Negotiate`, `Negotiate` analisará a solicitação e escolherá o melhor SSP para lidar com a solicitação com base na política de segurança configurada pelo cliente.  
   
- momentos  
+ nonce  
  Um valor gerado aleatoriamente usado para anular ataques de "reprodução".  
   
  Não-repúdio  
@@ -89,7 +89,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  #7 PKCS  
  O padrão de sintaxe de mensagem criptográfica. Uma sintaxe geral de dados para os quais a criptografia pode ser aplicada, como assinaturas digitais e criptografia. Ele também fornece a sintaxe para a disseminação de certificados ou listas de certificados revogados e outros atributos de mensagem, como carimbos de data/hora, para a mensagem.  
   
- comum  
+ texto não criptografado  
  Uma mensagem que não está criptografada. As mensagens em texto não criptografado são, às vezes, chamadas de mensagens não *criptografadas*  
   
  privilege  
@@ -122,7 +122,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  SHA (algoritmo de hash seguro)  
  Um algoritmo de hash que gera um resumo de mensagem. O SHA é usado com o algoritmo de assinatura digital (DSA) no padrão de assinatura digital (DSS), entre outros locais. Há quatro variedades de SHA: SHA-1, SHA-256, SHA-384 e SHA-512. O SHA-1 gera um resumo de mensagens de 160 bits. SHA-256, SHA-384 e SHA-512 geram resumos de mensagens de 256 bits, de 384 bits e de 512 bits, respectivamente. O SHA foi desenvolvido pelo National Institute of Standards and Technology (NIST) e pela NSA (National Security Agency).  
   
- Protocolo SSL (SSL)  
+ protocolo SSL  
  Um protocolo para comunicações de rede seguras usando uma combinação de tecnologia de chave pública e secreta.  
   
  contexto de segurança  
@@ -181,7 +181,7 @@ Parte da terminologia usada para discutir a segurança pode não ser familiar. E
  X.509  
  Um padrão reconhecido internacionalmente para certificados que define suas partes necessárias.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Conceitos fundamentais do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)

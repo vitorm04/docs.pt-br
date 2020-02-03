@@ -90,7 +90,7 @@ O exemplo usa o manipulador de eventos <xref:System.ComponentModel.BackgroundWor
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Como executar uma operação em segundo plano](how-to-run-an-operation-in-the-background.md)

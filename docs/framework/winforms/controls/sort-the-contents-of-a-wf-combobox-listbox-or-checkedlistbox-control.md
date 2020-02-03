@@ -26,12 +26,12 @@ Os controles de Windows Forms não são classificados quando eles são associado
   
      Essa configuração reposiciona todos os itens de lista existentes na ordem classificada.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)
+- [Associação de dados do Windows Forms](../windows-forms-data-binding.md)
 - [Como adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
 - [Quando usar um ComboBox dos Windows Forms em vez de um ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)

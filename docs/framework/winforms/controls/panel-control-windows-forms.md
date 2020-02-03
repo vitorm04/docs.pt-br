@@ -34,7 +34,7 @@ Windows Forms `Panel` controles são usados para fornecer um agrupamento identif
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  [Como adicionar a ou remover de uma coleção de controles em tempo de execução](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  

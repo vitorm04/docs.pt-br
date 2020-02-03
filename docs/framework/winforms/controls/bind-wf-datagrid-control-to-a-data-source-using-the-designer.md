@@ -66,10 +66,10 @@ ms.locfileid: "76744093"
 
 3. Grave código para preencher o conjunto de dados.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como Adicionar Tabelas e Colunas ao Controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)
+- [Associação de dados do Windows Forms](../windows-forms-data-binding.md)
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

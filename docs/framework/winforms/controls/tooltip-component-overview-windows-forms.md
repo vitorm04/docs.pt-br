@@ -22,7 +22,7 @@ O componente Windows Forms <xref:System.Windows.Forms.ToolTip> exibe texto quand
   
  Os principais métodos do componente <xref:System.Windows.Forms.ToolTip> são <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> e <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>. Você pode usar o método <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> para definir as dicas de ferramenta exibidas para controles. Para obter mais informações, consulte [Como definir ToolTips para controles em um Windows Form no tempo de design](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md). As propriedades de chave são <xref:System.Windows.Forms.ToolTip.Active%2A>, que devem ser definidas como `true` para que a dica de ferramenta apareça e <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>, que define o período de tempo que a cadeia de caracteres de dica de ferramenta é mostrada, por quanto tempo o usuário deve apontar para o controle para que a dica de ferramenta apareça e quanto tempo leva para que janelas de dica de ferramenta subsequentes apareçam. Para obter mais informações, consulte [Como alterar o atraso do componente ToolTip dos Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolTip>
 - [Como definir ToolTips para controles em um Windows Form no tempo de design](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

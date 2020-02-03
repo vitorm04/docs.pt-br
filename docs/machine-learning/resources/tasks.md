@@ -94,7 +94,7 @@ A coluna de recursos deve ser um vetor de tamanho fixo de <xref:System.Single>.
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
+| Nome de saída | Tipo | Descrição|
 | -- | -- | -- |
 | `Score` | Vetor de <xref:System.Single> | As pontuações de todas as classes. Um valor mais alto significa maior probabilidade de se enquadrar na classe associada. Se o elemento iº elemento tiver o maior valor, o índice de rótulo previsto será i. Observe que i é o índice baseado em zero. |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do rótulo previsto. Se seu valor for i, o rótulo real será a iº categoria no tipo de rótulo de entrada com valor de chave. |
@@ -127,7 +127,7 @@ Os dados da coluna de rótulo de entrada devem ser <xref:System.Single>.
 
 Os treinadores para esta tarefa produzem a seguinte saída:
 
-| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
+| Nome de saída | Tipo | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação bruta prevista pelo modelo |
 
@@ -151,7 +151,7 @@ Os dados de recursos de entrada devem ser <xref:System.Single>. Nenhum rótulo �
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
+| Nome de saída | Tipo | Descrição|
 | -- | -- | -- |
 | `Score` | vetor de <xref:System.Single> | As distâncias do ponto de dados fornecido para todos os centroides |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do cluster mais próximo previsto pelo modelo. |
@@ -183,7 +183,7 @@ Os recursos de entrada devem ser um vetor de tamanho fixo de <xref:System.Single
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
+| Nome de saída | Tipo | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não negativa não associada calculada pelo modelo de detecção de anomalias |
 | `PredictedLabel` | <xref:System.Boolean> | Um valor true/false que representa se a entrada é uma anomalia (PredictedLabel = true) ou não (PredictedLabel = false) |
@@ -207,7 +207,7 @@ Os dados do recurso devem ser um vetor de tamanho fixo de <xref:System.Single> e
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
+| Nome de saída | Tipo | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não associada calculada pelo modelo para determinar a previsão |
 

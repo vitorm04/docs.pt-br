@@ -65,7 +65,7 @@ Um controle de <xref:System.Windows.Forms.CheckBox> Windows Forms é usado para 
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)

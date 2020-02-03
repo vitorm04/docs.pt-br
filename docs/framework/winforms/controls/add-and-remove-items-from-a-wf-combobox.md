@@ -136,7 +136,7 @@ Itens podem ser adicionados a uma caixa de combinação dos Windows Forms, caixa
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

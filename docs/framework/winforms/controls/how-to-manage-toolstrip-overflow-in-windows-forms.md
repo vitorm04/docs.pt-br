@@ -43,7 +43,7 @@ Quando você adiciona <xref:System.Windows.Forms.ToolStripItem>s que exigem mais
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

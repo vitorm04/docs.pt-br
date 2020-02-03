@@ -21,7 +21,7 @@ No exemplo a seguir, a classe `ImplementationClass` deve implementar um método 
 
 Para obter mais informações e exemplos, consulte [Interfaces](../../programming-guide/interfaces/index.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
@@ -59,17 +59,17 @@ Uma classe que implementa uma interface pode implementar membros dessa interface
 
 Para obter mais informações sobre implementação de interface explícita, consulte [implementação de interface explícita](../../programming-guide/interfaces/explicit-interface-implementation.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir demonstra a implementação da interface. Neste exemplo, a interface contém a declaração de propriedade e a classe contém a implementação. Qualquer instância de uma classe que implementa `IPoint` tem propriedades de inteiro `x` e `y`.
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [interfaces](~/_csharplang/spec/interfaces.md) da [ C# especificação de linguagem](~/_csharplang/spec/introduction.md) e a especificação de recurso para [membros de C# interface padrão-8,0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

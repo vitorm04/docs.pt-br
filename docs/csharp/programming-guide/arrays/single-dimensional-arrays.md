@@ -56,7 +56,7 @@ ms.locfileid: "76744204"
   
 Para obter mais informações sobre tipos de valor e tipos de referência, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md) e [tipos de referência](../../language-reference/keywords/reference-types.md).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Array>
 - [Guia de Programação em C#](../index.md)

@@ -22,7 +22,7 @@ Um controle de <xref:System.Windows.Forms.ListBox> de Windows Forms exibe uma li
   
  Para adicionar ou excluir itens de um controle de <xref:System.Windows.Forms.ListBox>, use o método <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> ou <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A>. Como alternativa, você pode adicionar itens à lista usando a propriedade <xref:System.Windows.Forms.ListBox.Items%2A> em tempo de design.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListBox>
 - [Como adicionar e remover itens de um controle ComboBox, ListBox ou CheckedListBox dos Windows Forms](add-and-remove-items-from-a-wf-combobox.md)

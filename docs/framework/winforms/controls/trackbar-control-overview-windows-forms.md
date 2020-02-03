@@ -23,7 +23,7 @@ O controle de <xref:System.Windows.Forms.TrackBar> de Windows Forms (também cha
   
  Duas outras propriedades importantes são <xref:System.Windows.Forms.TrackBar.SmallChange%2A> e <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. O valor da propriedade <xref:System.Windows.Forms.TrackBar.SmallChange%2A> é o número de posições que o Thumb move em resposta a ter a tecla de seta para a esquerda ou para a direita pressionada. O valor da propriedade <xref:System.Windows.Forms.TrackBar.LargeChange%2A> é o número de posições que o Thumb move em resposta a ter a tecla PAGE UP ou PAGE DOWN pressionada ou em resposta a cliques do mouse na barra de controle em qualquer lado do polegar.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TrackBar>
 - [Controle TrackBar](trackbar-control-windows-forms.md)

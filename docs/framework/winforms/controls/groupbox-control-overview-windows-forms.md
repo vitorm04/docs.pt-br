@@ -22,6 +22,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> controles são usados para fo
 ## <a name="groupbox-and-panel"></a>GroupBox e painel  
  O controle de <xref:System.Windows.Forms.GroupBox> é semelhante ao controle de <xref:System.Windows.Forms.Panel>; no entanto, somente o controle <xref:System.Windows.Forms.GroupBox> exibe uma legenda, e somente o controle <xref:System.Windows.Forms.Panel> pode ter barras de rolagem.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle GroupBox](groupbox-control-windows-forms.md)

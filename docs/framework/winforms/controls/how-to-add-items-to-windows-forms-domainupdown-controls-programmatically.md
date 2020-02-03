@@ -35,7 +35,7 @@ Você pode adicionar itens ao controle de <xref:System.Windows.Forms.DomainUpDow
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     - ou -  
+     -ou-  
   
 2. Use o método <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> para inserir um item na lista em uma posição especificada.  
   
@@ -54,7 +54,7 @@ Você pode adicionar itens ao controle de <xref:System.Windows.Forms.DomainUpDow
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

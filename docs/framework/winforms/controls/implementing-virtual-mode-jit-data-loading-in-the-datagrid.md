@@ -70,11 +70,11 @@ Um motivo para implementar o modo virtual no controle de <xref:System.Windows.Fo
   
  Para melhorar o desempenho de rolagem do seu aplicativo, você pode aumentar a quantidade de dados armazenados localmente. Para melhorar o tempo de inicialização, no entanto, você deve evitar o carregamento de muitos dados inicialmente. Talvez você queira modificar a classe `Cache` para aumentar o número de páginas de dados que ela pode armazenar. Usar mais páginas de dados pode melhorar a eficiência de rolagem, mas você precisará determinar o número ideal de linhas em uma página de dados, dependendo da largura de banda disponível e da latência do servidor. Com páginas menores, o servidor será acessado com mais frequência, mas levará menos tempo para retornar os dados solicitados. Se a latência for mais importante que a largura de banda, talvez você queira usar páginas de dados maiores.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Modo virtual no controle DataGridView dos Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)

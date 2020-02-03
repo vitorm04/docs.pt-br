@@ -24,14 +24,14 @@ Quando você coloca um controle de <xref:System.Windows.Forms.TabControl> no for
 
 - Na marca inteligente do controle, clique em **Adicionar guia** ou **Remover guia**
 
-     - ou -
+     -ou-
 
      Na janela **Propriedades** , clique no botão de **reticências** (![botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A> para abrir o **Editor de coleção TabPage**. Clique no botão **Adicionar** ou **remover** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Como adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

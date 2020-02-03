@@ -30,7 +30,7 @@ Ao implantar trabalhadores e escrever UDFs, há algumas variáveis de ambiente u
 ### <a name="parameter-options"></a>Opções de parâmetro
 Depois que o aplicativo Spark for [agrupado](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies), você poderá iniciá-lo usando `spark-submit`. A tabela a seguir mostra algumas das opções mais usadas: 
 
-| Nome do Parâmetro        | Descrição
+| Nome do parâmetro        | Descrição
 | :---------------------| :---------- 
 | --classe               | O ponto de entrada para seu aplicativo.</br>_por exemplo, org. Apache. Spark. Deploy. dotnet. DotnetRunner_
 | --Mestre              | A <a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">URL mestra</a> do cluster.</br>_por exemplo, yarn_

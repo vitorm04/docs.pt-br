@@ -41,11 +41,11 @@ Para obter mais informações, consulte [Structs](../../programming-guide/classe
 
 Para obter exemplos e mais informações, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter exemplos, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

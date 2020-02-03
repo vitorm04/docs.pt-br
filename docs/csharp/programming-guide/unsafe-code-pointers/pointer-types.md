@@ -35,7 +35,7 @@ Um ponteiro não pode apontar para uma referência ou um [struct](../../language
 
 O valor da variável de ponteiro do tipo `myType*` é o endereço de uma variável do tipo `myType`. Estes são exemplos de declarações de tipos de ponteiro:
 
-|Exemplo|Descrição|
+|{1&gt;Exemplo&lt;1}|Descrição|
 |-------------|-----------------|
 |`int* p`|`p` é um ponteiro para um inteiro.|
 |`int** p`|`p` é um ponteiro para um ponteiro para um inteiro.|
@@ -63,7 +63,7 @@ Passar ponteiros entre métodos pode causar um comportamento indefinido. Conside
 
 A tabela a seguir lista os operadores e as instruções que podem operar em ponteiros em um contexto inseguro:
 
-|Operador/Instrução|Uso|
+|Operador/Instrução|Use|
 |-------------------------|---------|
 |`*`|Executa indireção de ponteiro.|
 |`->`|Acessa um membro de um struct através de um ponteiro.|
@@ -77,11 +77,11 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)

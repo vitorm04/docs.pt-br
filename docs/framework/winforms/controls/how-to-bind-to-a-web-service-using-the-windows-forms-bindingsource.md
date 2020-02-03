@@ -56,7 +56,7 @@ Se você quiser associar um controle de formulário do Windows aos resultados ob
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#3)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra como associar um componente <xref:System.Windows.Forms.BindingSource> a um serviço Web e como associar uma caixa de texto ao componente <xref:System.Windows.Forms.BindingSource>. Ao clicar no botão, um método de serviço Web será chamado e os resultados serão exibidos no `textbox1`.  
   
  [!code-cpp[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#1)]
@@ -70,7 +70,7 @@ Se você quiser associar um controle de formulário do Windows aos resultados ob
   
 - Referências aos assemblies System, System.Drawing, System.Web.Services, System.Windows.Forms e System.Xml.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

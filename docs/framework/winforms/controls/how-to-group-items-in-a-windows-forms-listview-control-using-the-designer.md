@@ -41,11 +41,11 @@ Para habilitar o agrupamento, você deve primeiro criar um ou mais objetos <xref
 
 3. Selecione a propriedade <xref:System.Windows.Forms.ListViewItem.Group%2A> e escolha um grupo na lista suspensa.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [Controle ListView](listview-control-windows-forms.md)
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)
-- [Como Adicionar e Remover Itens com o Controle ListView dos Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Como adicionar e remover itens com o controle ListView do Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

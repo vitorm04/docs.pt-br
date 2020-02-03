@@ -22,7 +22,7 @@ Windows Forms controles de `RadioButton` apresentam um conjunto de duas ou mais 
  [Visão geral do controle RadioButton](radiobutton-control-overview-windows-forms.md)  
  Explica o que é esse controle e seus principais recursos e propriedades.  
   
- [Como agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [Como agrupar controles RadioButton dos Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
  Explica como agrupar botões de opção como um conjunto, do qual apenas um pode ser selecionado.  
   
 ## <a name="reference"></a>Referência  
@@ -30,5 +30,5 @@ Windows Forms controles de `RadioButton` apresentam um conjunto de duas ou mais 
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

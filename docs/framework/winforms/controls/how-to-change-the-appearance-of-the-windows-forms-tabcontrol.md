@@ -65,7 +65,7 @@ Você pode alterar a aparência das guias em Windows Forms usando as propriedade
   
 - Defina a propriedade <xref:System.Windows.Forms.TabControl.Appearance%2A> da <xref:System.Windows.Forms.TabControl> como <xref:System.Windows.Forms.TabAppearance.Buttons> ou <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)

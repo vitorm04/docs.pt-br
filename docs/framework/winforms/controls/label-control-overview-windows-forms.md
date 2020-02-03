@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles são usados para exibi
   
  A legenda exibida no rótulo está contida na propriedade <xref:System.Windows.Forms.Label.Text%2A>. A propriedade <xref:System.Windows.Forms.Label.TextAlign%2A> permite definir o alinhamento do texto dentro do rótulo. Para obter mais informações, consulte [Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Label>
 - [Como dimensionar um controle de rótulo dos Windows Forms para ajustar-se ao seu conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

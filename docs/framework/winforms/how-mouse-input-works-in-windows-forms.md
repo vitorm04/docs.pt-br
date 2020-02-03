@@ -38,7 +38,7 @@ Receber e manipular entradas de mouse é uma parte importante qualquer aplicativ
 ## <a name="changing-mouse-input-and-detecting-system-settings"></a>Alterando a entrada do mouse e detectando as configurações do sistema  
  Você pode detectar e alterar a maneira como um controle manipula a entrada do mouse derivando do controle e usando os métodos <xref:System.Windows.Forms.Control.GetStyle%2A> e <xref:System.Windows.Forms.Control.SetStyle%2A>. O método <xref:System.Windows.Forms.Control.SetStyle%2A> usa uma combinação bit a bit de valores de <xref:System.Windows.Forms.ControlStyles> para determinar se o controle terá comportamento padrão ou de clique duplo ou se o controle manipulará seu próprio processamento de mouse. Além disso, a classe <xref:System.Windows.Forms.SystemInformation> inclui propriedades que descrevem os recursos do mouse e especificam como o mouse interage com o sistema operacional. A tabela a seguir resume essas propriedades.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>|Obtém as dimensões, em pixels, da área em que o usuário deve clicar duas vezes para que o sistema operacional considere os dois cliques um clique duplo.|  
 |<xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A>|Obtém o número máximo de milissegundos que pode decorrer entre um primeiro clique e um segundo clique para que o sistema operacional considere a ação do mouse um clique duplo.|  
@@ -52,8 +52,8 @@ Receber e manipular entradas de mouse é uma parte importante qualquer aplicativ
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|Obtém o valor delta do incremento de uma única rotação da roda do mouse.|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Obtém o número de linhas a rolar quando o botão de rolagem do mouse é girado.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Entrada do mouse em um aplicativo dos Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)
 - [Captura do mouse nos Windows Forms](mouse-capture-in-windows-forms.md)
 - [Ponteiros do mouse nos Windows Forms](mouse-pointers-in-windows-forms.md)

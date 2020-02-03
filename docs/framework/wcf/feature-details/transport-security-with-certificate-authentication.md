@@ -23,13 +23,13 @@ Este artigo discute o uso de certificados X. 509 para autenticação de servidor
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transport|  
+|Modo de segurança|Transporte|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes.|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando um certificado SSL)<br /><br /> Sim (usando um certificado X. 509)|  
 |Integridade dos Dados|Sim|  
 |Confidencialidade dos dados|Sim|  
-|Transport|HTTPS|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Transporte|HTTPS|  
+|Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurar o serviço  
  Como o serviço nesse cenário é hospedado no IIS, ele é configurado com um arquivo Web. config. O Web. config a seguir mostra como configurar o <xref:System.ServiceModel.WSHttpBinding> para usar a segurança de transporte e as credenciais de cliente X. 509.  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

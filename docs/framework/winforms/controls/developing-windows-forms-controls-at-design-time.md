@@ -48,16 +48,16 @@ Mostra como depurar o comportamento de tempo de design de um controle dos Window
 [Passo a passo: criando um controle dos Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)\
 Mostra como integrar fortemente um controle de composição ao ambiente de design.
 
-[Como criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)\
+[Como Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)\
 Apresenta uma visão geral de considerações para implementar um controle dos Windows Forms.
 
-[Como criar controles de composição](how-to-author-composite-controls.md)\
+[Como criar controles compostos](how-to-author-composite-controls.md)\
 Mostra como criar um controle herdando de um controle de composição.
 
 [Como herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)\
 Fornece uma visão geral do procedimento para criar um controle de composição.
 
-[Como herdar de controles dos Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
+[Como herdar de controles do Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
 Mostra como criar um controle estendido herdando da classe de controle <xref:System.Windows.Forms.Button>.
 
 [Como herdar da classe de controle](how-to-inherit-from-the-control-class.md)\
@@ -89,7 +89,7 @@ Mostra como diagnosticar e corrigir problemas comuns que podem ocorrer quando vo
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
+[Desenvolvendo controles do Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)\
 Discute como criar seus próprios controles personalizados com o .NET Framework.
 
 [Independência de linguagem e componentes independentes de linguagem](../../../standard/language-independence-and-language-independent-components.md)\

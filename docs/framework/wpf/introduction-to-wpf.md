@@ -58,7 +58,7 @@ O exemplo a seguir usa XAML para implementar a aparência de uma janela que cont
 </Window>
 ```
 
-Especificamente, esse XAML define uma janela e um botão usando os elementos `Window` e `Button`, respectivamente. Cada elemento é configurado com atributos, como o atributo `Title` do elemento `Window` para especificar o texto da barra de título da janela. Em tempo de execução, o WPF converte os elementos e atributos que estão definidos na marcação para instâncias de classes do WPF. Por exemplo, o elemento `Window` é convertido em uma instância da classe <xref:System.Windows.Window>, cuja propriedade <xref:System.Windows.Window.Title%2A> é o valor do atributo `Title`.
+Especificamente, esse XAML define uma janela e um botão usando os elementos `Window` e `Button`, respectivamente. Cada elemento é configurado com atributos, como o atributo `Window` do elemento `Title` para especificar o texto da barra de título da janela. Em tempo de execução, o WPF converte os elementos e atributos que estão definidos na marcação para instâncias de classes do WPF. Por exemplo, o elemento `Window` é convertido em uma instância da classe <xref:System.Windows.Window>, cuja propriedade <xref:System.Windows.Window.Title%2A> é o valor do atributo `Title`.
 
 A figura a seguir mostra a interface do usuário (IU) que é definida pelo XAML no exemplo anterior:
 
@@ -183,7 +183,7 @@ Controles normalmente detectam e respondem a entradas do usuário. O [sistema de
 
 Aplicativos muitas vezes têm requisitos de entrada complexos. O WPF fornece um [sistema de comando](advanced/commanding-overview.md) que separa as ações de entrada do usuário do código que responde a essas ações.
 
-## <a name="layout"></a>{1&gt;{2&gt;Layout&lt;2}&lt;1}
+## <a name="layout"></a>{1&gt;Layout&lt;1}
 
 Quando você cria uma interface do usuário, você organiza os controles por local e tamanho para formar um layout. Um requisito chave de qualquer layout é se adaptar a alterações no tamanho da janela e exibir as configurações. Em vez de forçá-lo a escrever o código para adaptar um layout nessas circunstâncias, o WPF fornece um sistema de layout extensível e de primeira classe para você.
 
@@ -315,7 +315,7 @@ O WPF também inclui funcionalidades de renderização 3D que se integram com el
 
 Para obter mais informações, confira [Visão geral de elementos gráficos 3D](graphics-multimedia/3-d-graphics-overview.md).
 
-## <a name="animation"></a>{1&gt;Animação&lt;1}
+## <a name="animation"></a>Animação
 
 O suporte a animação do WPF permite que você faça os controles crescerem, tremerem, rodarem e esmaecerem, para criar transições de página interessantes e muito mais. Você pode animar a maioria das classes do WPF, até mesmo classes personalizadas. A figura a seguir mostra uma animação simples em ação:
 
@@ -650,7 +650,7 @@ Para obter mais informações sobre controles personalizados, confira [Visão ge
 
 ## <a name="wpf-best-practices"></a>Melhores práticas do WPF
 
-Assim como com qualquer plataforma de desenvolvimento, o WPF pode ser usado de várias maneiras para atingir o resultado desejado. Como uma maneira de garantir que os aplicativos WPF forneçam a experiência de usuário necessária e atendam às demandas do público em geral, há melhores práticas para acessibilidade, globalização e localização e desempenho. Para obter mais informações, consulte .
+Assim como com qualquer plataforma de desenvolvimento, o WPF pode ser usado de várias maneiras para atingir o resultado desejado. Como uma maneira de garantir que os aplicativos WPF forneçam a experiência de usuário necessária e atendam às demandas do público em geral, há melhores práticas para acessibilidade, globalização e localização e desempenho. Para obter mais informações, consulte:
 
 - [Acessibilidade](../ui-automation/accessibility-best-practices.md)
 - [Globalização e localização do WPF](advanced/wpf-globalization-and-localization-overview.md)
@@ -664,7 +664,7 @@ Analisamos os principais recursos do WPF. Agora, é hora de criar seu primeiro a
 > [!div class="nextstepaction"]
 > [Passo a passo: meu primeiro aplicativo da área de trabalho do WPF](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Introdução ao WPF](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

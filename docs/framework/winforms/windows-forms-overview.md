@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;Visão Geral&lt;1}'
+title: Visão geral
 ms.date: 03/30/2017
 helpviewer_keywords:
 - smart clients
@@ -66,7 +66,7 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 |Descrição|Tópico da ajuda|
 |-----------------|----------------|
 |Usando o componente <xref:System.Windows.Forms.BindingSource>|[Como associar controles dos Windows Forms ao componente BindingSource usando o designer](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabalhando com fontes de dados ADO.NET|[Como classificar e filtrar dados ADO.NET com o componente BindingSource do Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Trabalhando com fontes de dados ADO.NET|[Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Usando a janela de Fontes de Dados|[Associando controles do Windows Forms a dados no Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Usando configurações de aplicativo|[Como criar configurações de aplicativo](./advanced/how-to-create-application-settings.md)|
 
@@ -101,7 +101,7 @@ Para obter informações passo a passo sobre como usar esses recursos, consulte 
 |Imprimindo o conteúdo de um formulário|[Como Imprimir Elementos Gráficos nos Windows Forms](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Como Imprimir um Arquivo de Texto de Várias Páginas nos Windows Forms](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Saiba mais sobre a segurança dos Windows Forms|[Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Introdução ao Windows Forms](getting-started-with-windows-forms.md)
 - [Criando um novo Windows Form](creating-a-new-windows-form.md)

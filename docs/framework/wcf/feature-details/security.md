@@ -69,6 +69,6 @@ Os tópicos nesta seção descrevem os recursos de segurança do Windows Communi
   
  [Visão geral conceitual](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Configurar seu aplicativo](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

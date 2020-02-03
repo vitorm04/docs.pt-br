@@ -25,7 +25,7 @@ Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core
 
 - [Baixe e comece a usar o .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1) no Windows, no MacOS ou no Linux.
 
-## <a name="long-term-support"></a>Suporte a longo prazo
+## <a name="long-term-support"></a>Suporte de longo prazo
 
 O .NET Core 3,1 é uma versão LTS com suporte da Microsoft nos próximos três anos. É altamente recomendável que você mova seus aplicativos para o .NET Core 3,1. O ciclo de vida atual de outras versões principais é o seguinte:
 

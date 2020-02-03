@@ -21,7 +21,7 @@ Quando estiver criando controles que interagem com os dados, às vezes, achará 
   
  Você pode associar facilmente um controle a um tipo com o componente <xref:System.Windows.Forms.BindingSource>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra como associar um controle de <xref:System.Windows.Forms.DataGridView> a um tipo personalizado usando um componente <xref:System.Windows.Forms.BindingSource>. Ao executar o exemplo, você observará que o <xref:System.Windows.Forms.DataGridView> tem colunas rotuladas que refletem as propriedades de um objeto `Customer`, antes que o controle seja preenchido com dados. O exemplo tem um botão Adicionar cliente para adicionar dados ao controle de <xref:System.Windows.Forms.DataGridView>. Quando você clica no botão, um novo objeto `Customer` é adicionado à <xref:System.Windows.Forms.BindingSource>. Em um cenário do mundo real, os dados podem ser obtidos por uma chamada para um serviço Web ou outra fonte de dados.  
   
  [!code-csharp[System.Windows.Forms.DataConnector.BindingToType#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindingToType/CS/form1.cs#1)]
@@ -30,9 +30,9 @@ Quando estiver criando controles que interagem com os dados, às vezes, achará 
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>

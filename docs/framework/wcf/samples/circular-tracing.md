@@ -24,7 +24,7 @@ O conceito por trás da implementação do ouvinte de rastreamento de buffer cir
 
 Esse ouvinte deriva da `XmlWriteTraceListener` e permite que os logs sejam exibidos com a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ao tentar exibir os logs, os dois arquivos de log podem ser facilmente recombinados abrindo-se ambos os arquivos de log ao mesmo tempo na ferramenta do Visualizador de rastreamento de serviço. A ferramenta Visualizador de rastreamento de serviço cuida automaticamente da classificação dos rastreamentos para que eles apareçam na ordem correta.
 
-## <a name="configuration"></a>Configuração do
+## <a name="configuration"></a>Configuração
 
 Um serviço pode ser configurado para usar o ouvinte de rastreamento de buffer circular adicionando o código a seguir para um ouvinte e elementos de origem. O tamanho máximo do arquivo é especificado definindo o atributo `maxFileSizeKB` na configuração do ouvinte de rastreamento circular. Isso é demonstrado no código a seguir.
 
@@ -62,6 +62,6 @@ Um serviço pode ser configurado para usar o ouvinte de rastreamento de buffer c
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

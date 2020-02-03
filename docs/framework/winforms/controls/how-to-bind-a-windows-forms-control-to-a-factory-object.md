@@ -23,7 +23,7 @@ Quando você estiver criando controles que interagem com os dados, às vezes, se
   
  Você pode associar facilmente um controle a um objeto de fábrica usando o controle de <xref:System.Windows.Forms.BindingSource>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir demonstra como associar um controle de <xref:System.Windows.Forms.DataGridView> a um método de fábrica usando um controle de <xref:System.Windows.Forms.BindingSource>. O método de fábrica chama-se `GetOrdersByCustomerId` e retorna todos os pedidos para determinado cliente no banco de dados Northwind.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.BindToFactory#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.BindToFactory/CPP/form1.cpp#1)]
@@ -35,10 +35,10 @@ Quando você estiver criando controles que interagem com os dados, às vezes, se
   
 - Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

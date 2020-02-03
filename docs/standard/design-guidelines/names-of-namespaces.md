@@ -34,7 +34,7 @@ Assim como acontece com outras diretrizes de nomenclatura, a meta ao nomear name
 
  ✔️ Considere o uso de nomes de namespace do plural quando apropriado.
 
- Por exemplo, use `System.Collections` em vez de `System.Collection`. No entanto, os nomes e acrônimos de marca são exceções a essa regra. Por exemplo, use `System.IO` em vez de `System.IOs`.
+ Por exemplo, use `System.Collections` ao invés de `System.Collection`. No entanto, os nomes e acrônimos de marca são exceções a essa regra. Por exemplo, use `System.IO` ao invés de `System.IOs`.
 
  ❌ não use o mesmo nome para um namespace e um tipo nesse namespace.
 
@@ -81,7 +81,7 @@ Assim como acontece com outras diretrizes de nomenclatura, a meta ao nomear name
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

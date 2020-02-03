@@ -18,7 +18,7 @@ ms.locfileid: "76745045"
   
  A tabela a seguir lista os atalhos de teclado que podem ser usados para navegação dentro do controle de <xref:System.Windows.Forms.DataGrid> de Windows Forms:  
   
-|Action|Atalho|  
+|Ação|Atalho|  
 |------------|--------------|  
 |Concluir uma entrada de célula e avance para a próxima célula abaixo.<br /><br /> Se o foco estiver em um link da tabela filho, navegue para essa tabela.|ENTER|  
 |Cancelar a edição de célula se estiver no modo de edição de célula.<br /><br /> Se estiver na seleção de letreiro, cancele a edição na linha.|{1&gt;ESC&lt;1}|  
@@ -42,7 +42,7 @@ ms.locfileid: "76745045"
 |Estender a seleção para a linha superior.|CTRL+SHIFT+HOME|  
 |Estender a seleção para a linha inferior.|CTRL+SHIFT+END|  
 |Selecionar a linha atual (exceto por links da tabela filho).|SHIFT+BARRA DE ESPAÇOS|  
-|Selecionar toda a grade (exceto por links da tabela filho).|CTRL+A|  
+|Selecionar toda a grade (exceto por links da tabela filho).|Ctrl+A|  
 |Exibir a linha pai quando estiver em uma tabela filho.|CTRL+PAGE DOWN|  
 |Ocultar a linha pai quando estiver em uma tabela filho.|CTRL+PAGE UP|  
 |Estender a seleção para baixo uma tela (exceto por links da tabela filho).|SHIFT + PAGE DOWN|  
@@ -50,7 +50,7 @@ ms.locfileid: "76745045"
 |Chame o método <xref:System.Windows.Forms.DataGrid.EndEdit%2A> para a linha atual.|CTRL+ENTER|  
 |Insira um valor <xref:System.DBNull.Value?displayProperty=nameWithType> em uma célula quando estiver no modo de edição.|CTRL+0|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)

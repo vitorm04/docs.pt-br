@@ -36,7 +36,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>Codificação
  A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -103,7 +103,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 - Tâmil
 
-- Telugu
+- Télugo
 
 - Thaana
 
@@ -133,7 +133,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ### <a name="international-layout"></a>Layout internacional
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece uma forma muito conveniente de dar suporte para layouts horizontais, bidirecionais e verticais. No Framework de apresentação, a propriedade <xref:System.Windows.FrameworkElement.FlowDirection%2A> pode ser usada para definir o layout. Os padrões de direção de fluxo são:
 
-- *LeftToRight* -layout horizontal para latim, Leste Asiático e assim por diante.
+- *LeftToRight* -layout horizontal para latim, Leste da Ásia e assim por diante.
 
 - *RightToLeft* -bidirecional para árabe, hebraico e assim por diante.
 
@@ -178,6 +178,6 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de globalização e localização do WPF](wpf-globalization-and-localization-overview.md)

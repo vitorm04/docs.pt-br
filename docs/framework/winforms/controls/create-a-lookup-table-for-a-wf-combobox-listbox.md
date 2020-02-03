@@ -33,7 +33,7 @@ ms.locfileid: "76737373"
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|Name|  
+|ID|{1&gt;Nome&lt;1}|  
 |--------|----------|  
 |12|Batata|  
 |13|Frango|  
@@ -54,7 +54,7 @@ ms.locfileid: "76737373"
   
 4. Defina as propriedades a seguir. Elas podem ser definidos no código ou no designer.  
   
-    |propriedade|Configuração|  
+    |Propriedade|Configuração|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|A tabela que contém informações sobre qual número de ID é equivalente a qual item. No cenário anterior, isso é `ItemTable`.|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|A coluna da tabela de fonte de dados a ser exibida no controle. No cenário anterior, isso é `"Name"` (para definir no código, use aspas).|  
@@ -70,9 +70,9 @@ ms.locfileid: "76737373"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Vinculação de dados e os Windows Forms](../data-binding-and-windows-forms.md)
+- [Associação de dados e o Windows Forms](../data-binding-and-windows-forms.md)
 - [Visão geral do controle ListBox](listbox-control-overview-windows-forms.md)
 - [Visão geral do controle ComboBox](combobox-control-overview-windows-forms.md)
 - [Visão geral do controle CheckedListBox](checkedlistbox-control-overview-windows-forms.md)

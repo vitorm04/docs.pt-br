@@ -24,7 +24,7 @@ Use o método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> para exibir
 
 Quando ele é adicionado a um formulário, o componente <xref:System.Windows.Forms.PrintDialog> aparece na bandeja na parte inferior da Designer de Formulários do Windows no Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PrintDialog>
 - [Componente PrintDialog](printdialog-component-windows-forms.md)

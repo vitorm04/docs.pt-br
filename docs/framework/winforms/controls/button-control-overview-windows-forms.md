@@ -21,11 +21,11 @@ O controle <xref:System.Windows.Forms.Button> dos Windows Forms permite que o us
   
  O controle de <xref:System.Windows.Forms.Button> também pode exibir imagens usando as propriedades <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Para obter mais informações, consulte [Como definir a imagem exibida por um controle dos Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Button>
 - [Como responder a cliques no botão dos Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
 - [Formas de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Como designar um botão do Windows Forms como o botão Aceitar usando o Designer](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [Como projetar um botão do Windows Forms como o botão Cancelar usando o Designer](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Como designar um botão dos Windows Forms como o botão Aceitar usando o Designer](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Como designar um botão dos Windows Forms como o botão Cancelar usando o Designer](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Controle de botão](button-control-windows-forms.md)

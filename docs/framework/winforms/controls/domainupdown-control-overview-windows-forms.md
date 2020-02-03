@@ -27,7 +27,7 @@ O controle de <xref:System.Windows.Forms.DomainUpDown> de Windows Forms é essen
   
  Este controle exibe somente sequências de texto. Se você quiser um controle que exiba valores numéricos, use o controle <xref:System.Windows.Forms.NumericUpDown>. Para mais informação, consulte [Visão geral do controle NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [Controle DomainUpDown](domainupdown-control-windows-forms.md)

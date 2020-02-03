@@ -58,6 +58,6 @@ Ao trabalhar com o controle de <xref:System.Windows.Forms.TreeView> de Windows F
     > [!NOTE]
     > Como alternativa, você pode usar a <xref:System.Windows.Forms.MouseEventArgs> do evento <xref:System.Windows.Forms.Control.MouseDown> ou <xref:System.Windows.Forms.Control.MouseUp> para obter os valores <xref:System.Drawing.Point.X%2A> e <xref:System.Drawing.Point.Y%2A> coordenada do <xref:System.Drawing.Point> em que o clique ocorreu. Em seguida, use o método <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> do controle de <xref:System.Windows.Forms.TreeView> para determinar qual nó foi clicado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
