@@ -17,7 +17,7 @@ ms.locfileid: "76734383"
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet build-server` – interage com servidores iniciados por um build.
 
@@ -29,13 +29,13 @@ dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
 ```
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 - **`shutdown`**
 
   Desliga servidores de build iniciados por meio do dotnet. Por padrão, todos os servidores estão desligados.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 

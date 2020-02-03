@@ -36,7 +36,7 @@ A ferramenta de `dotnet-trace`:
 * O é criado em relação à tecnologia de `EventPipe` entre plataformas do tempo de execução do .NET Core.
 * Oferece a mesma experiência no Windows, Linux ou macOS.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`--version`**
 
@@ -46,7 +46,7 @@ A ferramenta de `dotnet-trace`:
 
   Mostra a ajuda da linha de comando.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 | {1&gt;Comando&lt;1}                                                     |
 | ----------------------------------------------------------- |
@@ -66,7 +66,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
     [--providers] [--profile <profile-name>] [--format]
 ```
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-p|--process-id <PID>`**
 
@@ -108,13 +108,13 @@ Converte `nettrace` rastreamentos em formatos alternativos para uso com ferramen
 dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Argumentos
 
 - **`<input-filename>`**
 
   Arquivo de rastreamento de entrada a ser convertido. O padrão é *trace. NetTrace*.
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`--format <NetTrace|Speedscope>`**
 
@@ -208,7 +208,7 @@ O comando anterior desabilita os eventos de tempo de execução e o profiler de 
 
 O tempo de execução do .NET Core dá suporte aos provedores .NET a seguir. O .NET Core usa as mesmas palavras-chave para habilitar rastreamentos `Event Tracing for Windows (ETW)` e `EventPipe`.
 
-| Nome do provedor                            | Informações do |
+| Nome do provedor                            | {1&gt;Informações&lt;1} |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [O provedor de tempo de execução](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palavras-chave de tempo de execução CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [O provedor de encerramento](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palavras-chave de resumo do CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

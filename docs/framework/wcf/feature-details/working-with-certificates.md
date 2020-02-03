@@ -72,7 +72,7 @@ Os certificados digitais são usados para autenticar uma entidade confiando ness
 
 Ao criar um novo serviço, você pode usar um certificado que não seja emitido por um certificado raiz confiável ou o próprio certificado de emissão pode não estar no repositório das Autoridades de Certificação Confiáveis. Somente para a finalidade de desenvolvimento, você pode desativar temporariamente o mecanismo que verifica a cadeia de confiança para um certificado. Para fazer isso, defina a propriedade `CertificateValidationMode` para `PeerTrust` ou `PeerOrChainTrust`. Qualquer um dos modos especifica que o certificado pode ser emitido por conta própria (confiança de par) ou parte de uma cadeia de confiança. Você pode definir a propriedade em qualquer uma das seguintes classes.
 
-|Classe|propriedade|
+|Classe|Propriedade|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -188,7 +188,7 @@ Ao usar o .NET Framework 3,5 ou versões posteriores, o WCF garante que o certif
 
 Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

@@ -57,9 +57,9 @@ Quando você usa um <xref:System.Windows.Forms.DataGridView> para editar dados e
 ## <a name="virtual-mode"></a>Modo virtual  
  Se estiver implementando o modo virtual, você precisará monitorar quando uma linha de novos registros é necessária no modelo de dados e o momento para reverter a adição da linha. A implementação exata dessa funcionalidade depende da implementação do modelo de dados e de sua semântica de transação, por exemplo, se o escopo de confirmação está no nível da célula ou da linha. Para obter mais informações, consulte [Modo virtual no controle DataGridView dos Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Entrada de Dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de dados no controle DataGridView do Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
 - [Como especificar valores padrão para novas linhas no controle DataGridView dos Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

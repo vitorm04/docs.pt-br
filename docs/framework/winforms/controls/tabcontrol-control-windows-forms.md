@@ -30,7 +30,7 @@ O Windows Forms `TabControl` exibe várias guias, como os divisores em um bloco 
  [Como adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Fornece instruções para adicionar e remover guias no designer ou no código.  
   
- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [Como alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  Fornece instruções para ajustar propriedades que afetam a aparência de guias individuais.  
   
  [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)  
@@ -46,5 +46,5 @@ O Windows Forms `TabControl` exibe várias guias, como os divisores em um bloco 
  [Caixas de diálogo nos Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Fornece uma lista de tarefas para caixas de diálogo, que geralmente exibem guias.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

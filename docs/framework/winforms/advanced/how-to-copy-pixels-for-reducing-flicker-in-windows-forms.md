@@ -30,7 +30,7 @@ Ao animar um gráfico simples, os usuários podem encontrar cintilação ou outr
 > [!NOTE]
 > Definir a propriedade <xref:System.Windows.Forms.Control.DoubleBuffered%2A> do formulário como `true` fará com que o código baseado em gráficos no evento <xref:System.Windows.Forms.Control.Paint> seja armazenado em buffer duplo. Embora isso não tenha nenhum ganho de desempenho de discerníveis ao usar o código abaixo, é algo a ter em mente ao trabalhar com um código de manipulação de gráficos mais complexo.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>Compilando o Código  
  O código acima é executado no manipulador de eventos de <xref:System.Windows.Forms.Control.Paint> do formulário para que os elementos gráficos persistam quando o formulário é redesenhado. Dessa forma, não chame métodos relacionados a gráficos no manipulador de eventos <xref:System.Windows.Forms.Form.Load>, pois o conteúdo desenhado não será redesenhado se o formulário for redimensionado ou obscurecido por outro formulário.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

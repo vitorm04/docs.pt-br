@@ -96,7 +96,7 @@ Você pode exibir dados no Windows Forms <xref:System.Windows.Forms.DataGrid> co
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

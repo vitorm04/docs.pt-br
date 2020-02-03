@@ -38,7 +38,7 @@ Uma variável de [tipo de valor](../../language-reference/builtin-types/value-ty
   
  [!code-csharp[csProgGuideParameters#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#6)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Passando parâmetros](./passing-parameters.md)

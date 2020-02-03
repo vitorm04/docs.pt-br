@@ -38,7 +38,7 @@ Você pode hospedar o conteúdo de Direct3D9 usando a classe <xref:System.Window
 > [!NOTE]
 > O XDDM está disponível no Windows XP e Windows Vista. No entanto, o WDDM está disponível apenas no Windows Vista.  
   
-## <a name="general-best-practices"></a>Práticas recomendadas gerais  
+## <a name="general-best-practices"></a>Melhores práticas gerais  
  Ao criar o dispositivo, use o sinalizador de criação `D3DCREATE_MULTITHREADED`. Isso reduz o desempenho, mas o sistema de renderização do WPF chama métodos neste dispositivo de outro thread. Certifique-se de seguir o protocolo de bloqueio corretamente, para que dois threads não acessem o dispositivo ao mesmo tempo.  
   
  Se sua renderização for executada em um thread gerenciado do WPF, será altamente recomendável que você crie o dispositivo com o sinalizador de criação `D3DCREATE_FPU_PRESERVE`. Sem essa configuração, a renderização D3D pode reduzir a precisão das operações de precisão dupla do WPF e introduzir problemas de processamento.  
@@ -60,9 +60,9 @@ Você pode hospedar o conteúdo de Direct3D9 usando a classe <xref:System.Window
 |D3DFMT_A8R8G8B8 (não bloqueável)|**Atualização de hardware**|Atualização de software|Atualização de software|Atualização de software|  
 |D3DFMT_A8R8G8B8 (bloqueável)|**Atualização de hardware**|Atualização de software|**Atualização de hardware**|Atualização de software|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Interoperação Direct3D9 e WPF](wpf-and-direct3d9-interoperation.md)
 - [Passo a passo: criando conteúdo Direct3D9 para hospedar no WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Passo a passo: hospedando conteúdo de Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Instruções Passo a Passo: Hospedando Conteúdo Direct3D9 no WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -81,9 +81,9 @@ O controle de <xref:System.Windows.Forms.RichTextBox> de Windows Forms pode exib
     > [!IMPORTANT]
     > Para executar esse processo, seu assembly pode exigir um nível de privilégio concedido pela classe <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

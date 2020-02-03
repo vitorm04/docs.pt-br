@@ -88,10 +88,10 @@ ms.locfileid: "76739813"
   
  A permissão para chamar código não gerenciado permite que um aplicativo execute a maioria de qualquer coisa. Portanto, a permissão para chamar código não gerenciado só deve ser concedida para aplicativos provenientes de uma fonte confiável. Como alternativa, dependendo do aplicativo, a parte da funcionalidade do aplicativo que faz a chamada para código não gerenciado poderia ser opcional ou habilitada somente no ambiente de confiança total. Para obter mais informações sobre permissões perigosas, consulte [permissões perigosas e administração de diretivas](../misc/dangerous-permissions-and-policy-administration.md). Para obter mais informações sobre como elevar permissões, consulte [Administração de política de segurança geral](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100)).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Acesso mais seguro a arquivos e a dados nos Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
-- [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Impressão mais segura nos Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
 - [Segurança do Windows Forms](windows-forms-security.md)
 - [Protegendo aplicativos ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

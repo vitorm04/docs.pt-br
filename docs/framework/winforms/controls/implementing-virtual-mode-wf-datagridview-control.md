@@ -116,7 +116,7 @@ Quando você quiser exibir quantidades muito grandes de dados tabulares em um co
   
      Você verá um controle de <xref:System.Windows.Forms.DataGridView> populado com três registros de cliente. É possível modificar os valores de várias células em uma linha e pressionar ESC duas vezes no modo de edição e uma vez fora do modo de edição para reverter a linha inteira para seus valores originais. Quando você modifica, adiciona ou exclui linhas no controle, objetos `Customer` no armazenamento de dados também são modificados, adicionados ou excluídos.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}  
  Esse aplicativo fornece uma compreensão básica dos eventos que você deve manipular para implementar o modo virtual no controle de <xref:System.Windows.Forms.DataGridView>. É possível aprimorar esse aplicativo básico de várias maneiras:  
   
 - Implemente um armazenamento de dados que armazena em cache os valores de um banco de dados externo. O cache deve recuperar e descartar valores conforme necessário, de modo que ele contenha apenas o que é necessário para exibição enquanto consome uma quantidade pequena de memória no computador cliente.  
@@ -125,7 +125,7 @@ Quando você quiser exibir quantidades muito grandes de dados tabulares em um co
   
  Para obter mais informações armazenar em cache valores de um banco de dados externo, consulte [Como implementar o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
@@ -136,7 +136,7 @@ Quando você quiser exibir quantidades muito grandes de dados tabulares em um co
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
 - [Como implementar o modo virtual no controle DataGridView dos Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

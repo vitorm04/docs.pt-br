@@ -29,7 +29,7 @@ Nesta instrução passo a passo, as seguintes tarefas serão executadas:
 
 ## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Visual Studio.
 
@@ -77,7 +77,7 @@ Por fim, use a classe <xref:System.Windows.Interop.D3DImage> para hospedar o con
 
     O conteúdo Direct3D9 aparece dentro do aplicativo do WPF.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.D3DImage>
-- [Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
+- [Considerações sobre Desempenho para Interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

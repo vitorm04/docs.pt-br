@@ -44,7 +44,7 @@ Este tópico mostra como adicionar uma janela de inicialização ou *tela inicia
 
 Em **Gerenciador de soluções**, exclua a imagem da tela inicial.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.SplashScreen>
 - [Como: adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

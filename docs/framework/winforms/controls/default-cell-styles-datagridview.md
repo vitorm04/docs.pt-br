@@ -57,7 +57,7 @@ Os procedimentos a seguir exigem um projeto de **aplicativo do Windows** com um 
 
 4. Se você estiver associando o controle de <xref:System.Windows.Forms.DataGridView> a uma fonte de dados que provavelmente conterá valores nulos, preencha a caixa de texto **valor nulo** . Esse valor é exibido quando o valor da célula é igual a uma referência nula (`Nothing` em Visual Basic) ou <xref:System.DBNull.Value?displayProperty=nameWithType>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
@@ -65,7 +65,7 @@ Os procedimentos a seguir exigem um projeto de **aplicativo do Windows** com um 
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Estilos de Célula no Controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Como definir estilos de linhas alternados para o controle DataGridView dos Windows Forms usando o designer](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [Como criar um projeto de aplicativo Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [Como Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)

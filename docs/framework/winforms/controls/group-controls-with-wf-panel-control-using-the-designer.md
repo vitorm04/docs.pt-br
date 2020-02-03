@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para agrup
 
 3. Adicional Se você quiser adicionar uma borda a um painel, defina sua propriedade <xref:System.Windows.Forms.BorderStyle>. Há três opções: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>e <xref:System.Windows.Forms.BorderStyle.None>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle de painel](panel-control-windows-forms.md)
 - [Visão geral do controle Panel](panel-control-overview-windows-forms.md)

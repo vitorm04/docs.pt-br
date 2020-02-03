@@ -30,6 +30,6 @@ Conforme você se torna usado para trabalhar no ambiente de desenvolvimento do V
 
    No painel direito, sob o título **Configurações de Layout**, você pode configurar as configurações de grade padrão para todos os novos formulários criados. Essas configurações incluem o tamanho da grade, se os controles se ajustam a ela e se ela é ativada por padrão. Além disso, você pode selecionar entre os modos de layout **SnapToGrid** e **SnapLines**. Para obter mais informações sobre guias de alinhamento, veja [Instruções passo a passo: organizando controles nos Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Opções: Designer de Formulários do Windows](/visualstudio/ide/reference/options-windows-forms-designer)

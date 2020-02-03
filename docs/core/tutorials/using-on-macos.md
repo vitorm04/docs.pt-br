@@ -20,7 +20,7 @@ Este documento fornece as etapas e o fluxo de trabalho para criar uma solução 
 
 Instalar o [SDK do .NET Core](https://dotnet.microsoft.com/download). O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do runtime.
 
-Instalar o [Visual Studio Code](https://code.visualstudio.com). No decorrer deste artigo, você vai instalar as extensões do Visual Studio Code que melhoram a experiência de desenvolvimento do .NET Core.
+Instale o [Visual Studio Code](https://code.visualstudio.com). No decorrer deste artigo, você vai instalar as extensões do Visual Studio Code que melhoram a experiência de desenvolvimento do .NET Core.
 
 Instale a extensão C# de Visual Studio Code abrindo Visual Studio Code e pressionando <kbd>FN</kbd>+<kbd>F1</kbd> para abrir a paleta de Visual Studio Code. Digite **ext install** para ver a lista de extensões. Selecione a extensão de C#. Reinicie o Visual Studio Code para ativar a extensão. Para obter mais informações, consulte a [Documentação da Extensão de C# do Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

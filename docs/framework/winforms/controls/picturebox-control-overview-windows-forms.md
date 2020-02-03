@@ -18,10 +18,10 @@ ms.locfileid: "76744247"
 # <a name="picturebox-control-overview-windows-forms"></a>Visão geral do controle PictureBox (Windows Forms)
 O controle de <xref:System.Windows.Forms.PictureBox> de Windows Forms é usado para exibir gráficos no formato bitmap, GIF, JPEG, metarquivo ou ícone.  
   
-## <a name="key-properties-and-methods"></a>Propriedades e métodos de tecla  
+## <a name="key-properties-and-methods"></a>Propriedades e métodos de chave  
  A imagem exibida é determinada pela propriedade <xref:System.Windows.Forms.PictureBox.Image%2A>, que pode ser definida em tempo de execução ou em tempo de design. Como alternativa, você pode especificar a imagem definindo a propriedade <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> e, em seguida, carregar a imagem de forma síncrona usando o método <xref:System.Windows.Forms.PictureBox.Load%2A> ou assincronamente usando o método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>. A propriedade <xref:System.Windows.Forms.PictureBox.SizeMode%2A> controla como a imagem e o controle se ajustam entre si. Para obter mais informações, consulte [como modificar o tamanho ou o posicionamento de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Como carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)

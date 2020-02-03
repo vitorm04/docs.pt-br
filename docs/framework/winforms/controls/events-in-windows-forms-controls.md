@@ -17,7 +17,7 @@ Um controle de Windows Forms herda mais de 60 eventos de <xref:System.Windows.Fo
   
  Se o seu controle personalizado precisar substituir a funcionalidade de evento herdado, substitua o método herdado `On`*eventoname* em vez de anexar um delegado. Se você não estiver familiarizado com o modelo de evento no .NET Framework, consulte [gerando eventos de um componente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Substituindo o método OnPaint](overriding-the-onpaint-method.md)
 - [Manipulando a entrada do usuário](handling-user-input.md)

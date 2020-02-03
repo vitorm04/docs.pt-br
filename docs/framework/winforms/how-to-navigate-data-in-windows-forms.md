@@ -50,9 +50,9 @@ Em um aplicativo do Windows, a maneira mais fácil de navegar pelos registros em
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Fontes de dados com suporte no Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Notificação de alteração na associação de dados do Windows Forms](change-notification-in-windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
-- [Vinculação de dados dos Windows Forms](windows-forms-data-binding.md)
+- [Fontes de dados com suporte nos Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Notificação de alteração na vinculação de dados dos Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)

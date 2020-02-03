@@ -144,7 +144,7 @@ As duas primeiras colunas em que o rótulo **abrir:** e <xref:System.Windows.Con
 
 Observe que o exemplo usa o recurso de dimensionamento compartilhado do <xref:System.Windows.Controls.Grid>. As três últimas colunas aproveitam isso colocando-se na mesma <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Como normalmente se esperaria do nome da propriedade, isso permite que as colunas compartilhem o mesmo tamanho. Então, quando o botão "procurar..." é localizado para a cadeia de caracteres mais longa "Durchsuchen...", todos os botões crescem em largura, em vez de ter um botão pequeno "OK" e um "Durchsuchen..." desproporcional. Button.
 
-**xml:lang**
+**XML: lang**
 
 `xml:lang="en-US"`
 
@@ -178,19 +178,19 @@ Depois de criar o aplicativo, a primeira etapa da localização é analisar os r
 
 Use seu editor de CSV favorito que dá suporte a Unicode para editar esse arquivo. Filtre todas as entradas com a categoria de localização “Nenhum”. Você deverá ver as seguintes entradas:
 
-|Chave de Recurso|Categoria de Localização|Value|
+|Chave de Recurso|Categoria de Localização|{1&gt;Valor&lt;1}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Botão|Cancel|
+|Button_2:System.Windows.Controls.Button.$Content|Botão|Cancelar|
 |Button_3:System.Windows.Controls.Button.$Content|Botão|Procurar...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Digite o nome de um programa, uma pasta, um documento ou recurso da Internet e o Windows o abrirá para você.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
-|Window_1:System.Windows.Window.Title|Cargo|Execute|
+|Window_1:System.Windows.Window.Title|{1&gt;Título&lt;1}|Executar|
 
 A localização do aplicativo para o alemão exigirá as seguintes traduções:
 
-|Chave de Recurso|Categoria de Localização|Value|
+|Chave de Recurso|Categoria de Localização|{1&gt;Valor&lt;1}|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botão|Abbrechen|
@@ -198,7 +198,7 @@ A localização do aplicativo para o alemão exigirá as seguintes traduções:
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
-|Window_1:System.Windows.Window.Title|Cargo|Execute|
+|Window_1:System.Windows.Window.Title|{1&gt;Título&lt;1}|Executar|
 
 **Gerar**
 
@@ -267,7 +267,7 @@ Há muitos casos em que o conteúdo pode ser ambíguo e difícil de ser traduzid
 
 Esse comentário se torna associado ao conteúdo de TextBlock_1 e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha de TextBlock_1 no arquivo de saída. csv:
 
-|Chave de Recurso|Categoria|Legível|Modificável|Comentário|Value|
+|Chave de Recurso|Categoria|Legível|Modificável|Comentário|{1&gt;Valor&lt;1}|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|TRUE|TRUE|Esse caractere é usado como uma regra decorativa.|&#124;|
 

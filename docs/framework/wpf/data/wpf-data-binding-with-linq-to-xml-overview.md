@@ -85,7 +85,7 @@ Para obter mais informações, consulte [Propriedades dinâmicas LINQ to XML](li
 
 Para implementar a associação dinâmica de WPF, as propriedades dinâmicas serão usadas com os recursos fornecidos pelo namespace <xref:System.Windows.Data>, especialmente a classe <xref:System.Windows.Data.Binding>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Vinculação de dados de WPF com LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Propriedades dinâmicas LINQ to XML](linq-to-xml-dynamic-properties.md)

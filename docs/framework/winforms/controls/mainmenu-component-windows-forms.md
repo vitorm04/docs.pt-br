@@ -25,7 +25,7 @@ ms.locfileid: "76747145"
  <xref:System.Windows.Forms.MainMenu>  
  Descreve essa classe e tem links para todos os seus membros.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -1,5 +1,5 @@
 ---
-title: Pré-atomização de objetos XName (LINQ to XML)
+title: A pré-compilação atomização de XName objetos (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
 ms.openlocfilehash: c0e75afa797d2b20f32fc55e6c19d0c1593d174c
@@ -17,7 +17,7 @@ Isso melhora o desempenho quando você cria uma grande árvore XML em que os nom
 
 Você deve testar a pré-compilação atomização com seu cenário para decidir se você usar o.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir demonstra este:
 
@@ -93,7 +93,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Desempenho (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)
 - [Objetos XName e XNamespace (LINQ to XML) atomáveis (Visual Basic)](atomized-xname-and-xnamespace-objects-linq-to-xml.md)

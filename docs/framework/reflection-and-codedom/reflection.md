@@ -71,11 +71,11 @@ Essas classes de runtime são `internal` (`Friend` no Visual Basic). Elas não s
 
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Cargo|Descrição|  
+|{1&gt;Título&lt;1}|Descrição|  
 |-----------|-----------------|  
 |[Exibindo informações de tipo](viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|  
 |[Reflexão e tipos genéricos](reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  
-|[Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
+|[Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão)|Descreve as regras que determinam até que nível a reflexão pode ser usada para descobrir informações de tipo e tipos de acesso.|  
 |[Dynamically Loading and Using Types](dynamically-loading-and-using-types.md) (Carregando e usando tipos dinamicamente)|Descreve a interface de associação personalizada de reflexão que dá suporte à associação tardia.|  
 |[Como carregar assemblies no contexto somente reflexão](how-to-load-assemblies-into-the-reflection-only-context.md)|Descreve o contexto de carregamento de somente reflexão. Mostra como carregar um assembly, como testar o contexto e como examinar os atributos aplicados a um assembly no contexto de somente reflexão.|  
 |[Acessando atributos personalizados](accessing-custom-attributes.md)|Demonstra o uso de reflexão para consultar a existência do atributo e os valores.|  

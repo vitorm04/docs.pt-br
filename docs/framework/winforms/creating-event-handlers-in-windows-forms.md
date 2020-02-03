@@ -43,5 +43,5 @@ Um manipulador de eventos é um procedimento no seu código que determina quais 
  [Eventos](../../standard/events/index.md)\
  Fornece links para tópicos sobre como manipular e gerar eventos usando o .NET Framework.
 
- [Solução de problemas de manipuladores de eventos herdados no Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
+ [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)\
  Lista problemas comuns que ocorrem com os manipuladores de eventos em componentes herdados.

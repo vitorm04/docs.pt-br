@@ -43,7 +43,7 @@ Esta seção destina-se a ser uma referência para os desenvolvedores de aplicat
   
  [Tempo de inicialização do aplicativo](application-startup-time.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

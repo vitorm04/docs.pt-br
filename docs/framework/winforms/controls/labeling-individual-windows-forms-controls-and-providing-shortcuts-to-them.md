@@ -20,7 +20,7 @@ Os controles adicionados a Windows Forms têm propriedades e métodos que são u
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
+[Como definir o texto exibido por um controle do Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
 Descreve como atribuir um rótulo de texto a um controle.
 
 [Como definir a imagem exibida por um controle de Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
@@ -34,5 +34,5 @@ Fornece informações sobre como habilitar seus controles para trabalhar com aux
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Controles do Windows Forms](index.md)\
+[Controles dos Windows Forms](index.md)\
 Links para outras coisas básicas que você pode fazer com controles.

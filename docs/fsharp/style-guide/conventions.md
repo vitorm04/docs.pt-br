@@ -415,7 +415,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 Essa técnica não deve ser aplicada universalmente a toda a base de código, mas é uma boa maneira de reduzir o texto clichê para os internos complicados e os testes de unidade desses elementos internos.
 
-## <a name="access-control"></a>{1&gt;Controle de acesso&lt;1}
+## <a name="access-control"></a>Controle de acesso
 
 F#tem várias opções para o [controle de acesso](../language-reference/access-control.md), herdadas do que está disponível no tempo de execução do .net. Eles não são apenas utilizáveis para tipos – você também pode usá-los para funções.
 
@@ -672,7 +672,7 @@ F#tem suporte completo para objetos e conceitos orientados a objeto (OO). Embora
 * Propriedades automáticas
 * Implementando `IDisposable` e `IEnumerable`
 * Extensões de tipo
-* Events
+* Eventos
 * Structs
 * Delegados
 * Enums

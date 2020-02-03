@@ -23,7 +23,7 @@ O exemplo de código a seguir demonstra como gerenciar grandes conjuntos de dado
   
  Para obter uma explicação completa deste exemplo de código, consulte [Walkthrough: Implementando o modo virtual no controle Windows Forms DataGridView](implementing-virtual-mode-wf-datagridview-control.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
  [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#000)]  
@@ -31,9 +31,9 @@ O exemplo de código a seguir demonstra como gerenciar grandes conjuntos de dado
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
@@ -45,5 +45,5 @@ O exemplo de código a seguir demonstra como gerenciar grandes conjuntos de dado
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
 - [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Modo virtual no controle DataGridView dos Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)

@@ -19,7 +19,7 @@ ms.locfileid: "76741485"
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Como aplicar atributos em controles dos Windows Forms
 Para desenvolver componentes e controles que interagem corretamente com o ambiente de design e são executados corretamente no tempo de execução, você precisa aplicar atributos corretamente a classes e membros.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra como usar vários atributos em um controle personalizado. O controle demonstra um recurso de funcionalidade em log simples. Quando o controle está associado a uma fonte de dados, ele exibe os valores enviados pela fonte de dados em um controle de <xref:System.Windows.Forms.DataGridView>. Se um valor exceder o valor especificado pela propriedade `Threshold`, um evento `ThresholdExceeded` será gerado.  
   
  O `AttributesDemoControl` registra valores com uma classe `LogEntry`. A classe `LogEntry` é uma classe de modelo, o que significa que ela é parametrizada pelo tipo abordado pelo registro em log. Por exemplo, se o `AttributesDemoControl` registrar em log os valores do tipo `float`, cada instância `LogEntry` será declarada e usada da seguinte maneira.  
@@ -77,10 +77,10 @@ Para desenvolver componentes e controles que interagem corretamente com o ambien
   
 - O formulário que hospeda o `AttributesDemoControl` requer uma referência ao assembly `AttributesDemoControl` para compilar.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Atributos em controles do Windows Forms](attributes-in-windows-forms-controls.md)
+- [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)
 - [Como serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

@@ -63,7 +63,7 @@ O controle de <xref:System.Windows.Forms.DateTimePicker> de Windows Forms oferec
   
      Dependendo da configuração de cultura, todos os caracteres que não estiverem entre aspas simples poderão ser alterados. Por exemplo, a cadeia de formato acima exibe a data atual com o formato "hoje é: 05:30:31 sexta-feira 02 de março de 2012" em inglês (Estados Unidos). Observe que a primeira vírgula é colocada entre aspas simples, porque não se pretende que ela seja um caractere delimitador como em "hh:mm:ss". Em outra cultura, o formato pode ser exibido como "hoje é: 05.30.31 sexta-feira, 02 de março de 2012".  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DateTimePicker](datetimepicker-control-windows-forms.md)
 - [Como definir e retornar datas com o controle DateTimePicker dos Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

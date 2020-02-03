@@ -19,17 +19,17 @@ ms.locfileid: "76746705"
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Como associar objetos a controles DataGridView dos Windows Forms
 O exemplo de código a seguir demonstra como associar uma coleção de objetos a um controle de <xref:System.Windows.Forms.DataGridView> para que cada objeto seja exibido como uma linha separada. Este exemplo também ilustra como exibir uma propriedade com um tipo de enumeração em um <xref:System.Windows.Forms.DataGridViewComboBoxColumn> para que a lista suspensa caixa de combinação contenha os valores de enumeração.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Windows.Forms.DataGridView._CollectionBound#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/CS/collectionbound.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridView._CollectionBound#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView._CollectionBound/VB/collectionbound.vb#00)]  
   
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências aos assemblies System e System.Windows.Forms.  
+- Referências aos assemblies Sistema e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como acessar objetos associados às linhas de DataGridView dos Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como acessar objetos associados a linhas DataGridView do Windows Forms](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

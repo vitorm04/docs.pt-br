@@ -192,7 +192,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
 - ❌ não **permitido: acionamento de um evento existente quando ele nunca foi acionado antes**
 
-## <a name="behavioral-changes"></a>Alterações comportamentais
+## <a name="behavioral-changes"></a>Alterações de comportamento
 
 ### <a name="assemblies"></a>Assemblies
 
@@ -260,7 +260,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
 - ❌ **não permitido: removendo uma exceção em qualquer outro caso não listado acima**
 
-### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}
+### <a name="attributes"></a>Atributos
 
 - ✔️ **permitido: alterar o valor de um atributo que *não* é observável**
 

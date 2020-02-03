@@ -40,7 +40,7 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
 
 5. Se uma pintura personalizada for necessária para o controle, adicione código a ele. Para obter detalhes, consulte [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md).
 
-6. Se o controle for herdado de <xref:System.Windows.Forms.UserControl>, você poderá testar seu comportamento de tempo de execução criando o projeto de controle e executando-o no **contêiner de teste de UserControl**. Para obter mais informações, consulte [Como testar o comportamento em tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
+6. Se o controle for herdado de <xref:System.Windows.Forms.UserControl>, você poderá testar seu comportamento de tempo de execução criando o projeto de controle e executando-o no **contêiner de teste de UserControl**. Para obter mais informações, consulte [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md) (Como testar o comportamento de tempo de execução de um UserControl).
 
 7. Também é possível testar e depurar o controle criando um novo projeto, como um Aplicativo do Windows, e colocá-lo em um contêiner. Esse processo é demonstrado como parte do [passo a passos: criar um controle composto](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
@@ -50,10 +50,10 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
 
 10. Empacote e implante o controle. Para obter detalhes, consulte [primeira olhada na implantação no Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Como herdar da classe de controle](how-to-inherit-from-the-control-class.md)
 - [Como herdar de controles dos Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
 - [Como testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

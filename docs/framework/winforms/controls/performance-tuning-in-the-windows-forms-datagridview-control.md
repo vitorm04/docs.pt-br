@@ -36,7 +36,7 @@ Ao trabalhar com grandes quantidades de dados, o controle `DataGridView` pode co
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  Fornece documentação de referência para a propriedade <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Modos de exibição de dados no controle DataGridView dos Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Modos de exibição dos dados no controle DataGridView do Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

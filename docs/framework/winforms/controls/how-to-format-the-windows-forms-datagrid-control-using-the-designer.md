@@ -35,13 +35,13 @@ Como uma etapa inicial na formatação de uma grade de dados, você pode definir
 
 O procedimento a seguir requer um projeto de **aplicativo do Windows** com um formulário que contém um controle <xref:System.Windows.Forms.DataGrid>. Para obter informações sobre como configurar esse projeto, consulte [como: criar um projeto de aplicativo Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md). No Visual Studio 2005, o controle <xref:System.Windows.Forms.DataGrid> não está na **caixa de ferramentas** por padrão. Para obter mais informações, consulte [Como adicionar itens à Caixa de ferramentas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).
 
-### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Estabelecer um estilo padrão para o controle DataGrid
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Para estabelecer um estilo padrão para o controle DataGrid
 
 1. Selecione o controle <xref:System.Windows.Forms.DataGrid>.
 
 2. Na janela **Propriedades**, defina as seguintes propriedades, conforme adequado.
 
-    |propriedade|Descrição|
+    |Propriedade|Descrição|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|A propriedade `BackColor` define a cor das linhas de numeração par da grade. Quando você define a propriedade <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> com uma cor diferente, todas as outras linhas são definidas com essa nova cor (linhas 1, 3, 5 e assim por diante).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|A cor da tela de fundo das linhas de numeração par da grade (linhas 0, 2, 4, 6 e assim por diante).|
@@ -95,10 +95,10 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
     > [!NOTE]
     > Para obter mais informações sobre as cadeias de caracteres de formatação, consulte [Tipos de formatação](../../../standard/base-types/formatting-types.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)

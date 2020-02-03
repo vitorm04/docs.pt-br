@@ -103,9 +103,9 @@ ms.locfileid: "76746690"
   
 3. (Opcional) Adicione os estilos apropriados de tabela e coluna à grade. Se não houver nenhum estilo de tabela, a tabela ainda será vista, mas com formatação mínima e todas as colunas visíveis.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como Adicionar Tabelas e Colunas ao Controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)
+- [Associação de dados do Windows Forms](../windows-forms-data-binding.md)

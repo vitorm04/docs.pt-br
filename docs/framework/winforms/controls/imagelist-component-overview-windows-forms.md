@@ -27,7 +27,7 @@ Você pode usar uma lista de imagens com qualquer controle que tenha uma proprie
 
 A propriedade de chave do componente <xref:System.Windows.Forms.ImageList> é <xref:System.Windows.Forms.ImageList.Images%2A>, que contém as imagens a serem usadas pelo controle associado. Cada imagem individual pode ser acessada pelo seu valor de índice ou por sua chave. A propriedade <xref:System.Windows.Forms.ImageList.ColorDepth%2A> determina o número de cores com as quais as imagens são renderizadas. As imagens serão exibidas no mesmo tamanho, definidas pela propriedade <xref:System.Windows.Forms.ImageList.ImageSize%2A>. Imagens maiores terão a escala ajustada para caber.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ImageList>
 - [Como adicionar ou remover imagens com o componente ImageList dos Windows Forms](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -17,7 +17,7 @@ ms.locfileid: "76734320"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet build` – Compila um projeto e todas as suas dependências.
 
@@ -59,7 +59,7 @@ O fato de o projeto ser executável ou não é determinado pela propriedade `<Ou
 
 Para produzir uma biblioteca, omita a propriedade `<OutputType>` ou altere seu valor para `Library`. A DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
 
-### <a name="msbuild"></a>{1&gt;MSBuild&lt;1}
+### <a name="msbuild"></a>MSBuild
 
 O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
 
@@ -67,13 +67,13 @@ Além das próprias opções, o comando `dotnet build` também aceita opções d
 
 A execução de `dotnet build` é equivalente à execução de `dotnet msbuild -restore`; no entanto, o detalhamento padrão da saída é diferente.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `PROJECT | SOLUTION`
 
 O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou projeto não for especificado, o MSBuild pesquisará o diretório de trabalho atual em busca de um arquivo que tenha uma extensão terminada em *proj* ou *sln* e usará esse arquivo.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-c|--configuration {Debug|Release}`**
 

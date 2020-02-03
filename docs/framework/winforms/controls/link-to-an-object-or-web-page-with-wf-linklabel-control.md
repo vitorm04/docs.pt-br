@@ -180,7 +180,7 @@ O controle de <xref:System.Windows.Forms.LinkLabel> também pode ser usado para 
        }
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [Visão geral do controle LinkLabel](linklabel-control-overview-windows-forms.md)

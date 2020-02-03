@@ -94,6 +94,6 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 - [Anatomia de um arquivo de WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)
 - [Introdução a WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)

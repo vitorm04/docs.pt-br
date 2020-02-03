@@ -18,7 +18,7 @@ ms.locfileid: "76742848"
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Como alongar um ToolStripTextBox para preencher a largura restante de um ToolStrip (Windows Forms)
 Quando você define a propriedade <xref:System.Windows.Forms.ToolStrip.Stretch%2A> de um controle de <xref:System.Windows.Forms.ToolStrip> como `true`, o controle preenche seu contêiner de ponta a ponta e redimensiona quando seu contêiner é redimensionado. Nessa configuração, você pode achar útil alongar um item no controle, como um <xref:System.Windows.Forms.ToolStripTextBox>, para preencher o espaço disponível e redimensionar quando o controle é redimensionado. Esse alongamento será útil, por exemplo, se você desejar obter aparência e comportamento semelhantes para a barra de endereços do Microsoft® Internet Explorer.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir fornece uma classe derivada de <xref:System.Windows.Forms.ToolStripTextBox> chamada `ToolStripSpringTextBox`. Essa classe substitui o método <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> para calcular a largura disponível do controle de <xref:System.Windows.Forms.ToolStrip> pai após a largura combinada de todos os outros itens ter sido subtraída. Este exemplo de código também fornece uma classe <xref:System.Windows.Forms.Form> e uma classe `Program` para demonstrar o novo comportamento.  
   
  [!code-csharp[ToolStripSpringTextBox#00](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
@@ -29,7 +29,7 @@ Quando você define a propriedade <xref:System.Windows.Forms.ToolStrip.Stretch%2
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>

@@ -31,7 +31,7 @@ No modo de preenchimento de coluna, o controle de <xref:System.Windows.Forms.Dat
 ## <a name="content-based-fillweight-adjustment"></a>Ajuste de FillWeight baseado em conteúdo  
  Você pode inicializar valores de <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> para colunas de modo de preenchimento usando os métodos de redimensionamento automático <xref:System.Windows.Forms.DataGridView>, como o método <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>. Esse método primeiro calcula as larguras necessárias por colunas para exibir seu conteúdo. Em seguida, o controle ajusta os valores de <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> para todas as colunas de modo de preenchimento para que suas proporções correspondam às proporções das larguras calculadas. Por fim, o controle redimensiona as colunas de modo de preenchimento usando as novas proporções <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> para que todas as colunas no controle preencham o espaço horizontal disponível.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
   
 ### <a name="description"></a>Descrição  
  Usando os valores apropriados para as propriedades <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>e <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>, você pode personalizar os comportamentos de dimensionamento de coluna para vários cenários diferentes.  
@@ -47,7 +47,7 @@ No modo de preenchimento de coluna, o controle de <xref:System.Windows.Forms.Dat
   
 - Altere o tamanho do formulário. Observe como as colunas alteram suas larguras enquanto retém as proporções indicadas pelos valores da propriedade <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>.  
   
-- Altere os tamanhos das colunas, arrastando os divisores de coluna com o mouse. Observe como os valores de <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> mudam.  
+- Altere os tamanhos das colunas arrastando os divisores de coluna com o mouse. Observe como os valores de <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> mudam.  
   
 - Altere o valor de <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> para uma coluna e, em seguida, arraste para redimensionar o formulário. Observe como, quando você torna o formulário pequeno o suficiente, os valores de <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> não ficam abaixo dos valores de <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
   
@@ -60,7 +60,7 @@ No modo de preenchimento de coluna, o controle de <xref:System.Windows.Forms.Dat
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
@@ -75,4 +75,4 @@ No modo de preenchimento de coluna, o controle de <xref:System.Windows.Forms.Dat
 - <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
-- [Redimensionando colunas e linhas no controle DataGridView dos Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Redimensionamento de colunas e linhas no controle DataGridView do Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

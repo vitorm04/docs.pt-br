@@ -65,7 +65,7 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
 3. Clique na seta ao lado da caixa suspensa **Fonte de Dados**. Se uma fonte de dados foi configurada anteriormente para o projeto ou formulário, ela aparecerá; caso contrário, siga as seguintes etapas (Este exemplo usa as tabelas Clientes e Pedidos do banco de dados de amostra Northwind e refere-se a elas nos parênteses).  
   
-    1. Clique em **Adicionar Fonte de Dados do Projeto** para conectar-se aos dados e criar uma fonte de dados.  
+    1. Clique em **Adicionar fonte de dados do projeto** para conectar aos dados e criar uma fonte de dados.  
   
     2. Na página de boas-vindas do **Assistente de Configuração de Fonte de Dados**, clique em **Avançar**.  
   
@@ -79,7 +79,7 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
     7. Substitua o nome do conjunto de dados padrão, se quiser.  
   
-    8. Clique em **Finalizar**.  
+    8. Clique em **Concluir**.  
   
 4. Na caixa suspensa **Exibir Membro**, selecione o nome da coluna (por exemplo, ContactName) a ser exibida na caixa de combinação.  
   
@@ -91,7 +91,7 @@ A tabela de pesquisa é uma tabela de dados que tem uma coluna que exibe dados d
   
 8. Vincule os controles diferentes dos controles <xref:System.Windows.Forms.ComboBox> e <xref:System.Windows.Forms.BindingNavigator> aos campos de detalhes do <xref:System.Windows.Forms.BindingSource> da tabela filho (Por exemplo, `OrdersBindingSource`) que você deseja exibir.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)

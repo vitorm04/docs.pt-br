@@ -358,9 +358,9 @@ public void Write()
   
  Como você não pode acessar o Registro sob confiança parcial, você precisará encontrar outros métodos para armazenar seus dados. Quando você armazena configurações do aplicativo, use o armazenamento isolado em vez de no Registro. Armazenamento isolado também pode ser usado para armazenar outros arquivos específicos do aplicativo. Você também pode armazenar informações globais do aplicativo sobre o servidor ou site de origem, porque, por padrão, um aplicativo recebe o direito de acessar o seu site de origem.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Impressão mais segura nos Windows Forms](more-secure-printing-in-windows-forms.md)
 - [Considerações adicionais sobre segurança nos Windows Forms](additional-security-considerations-in-windows-forms.md)
 - [Visão geral da segurança dos Windows Forms](security-in-windows-forms-overview.md)
 - [Segurança do Windows Forms](windows-forms-security.md)

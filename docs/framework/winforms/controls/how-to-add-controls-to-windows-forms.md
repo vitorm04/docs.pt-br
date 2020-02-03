@@ -87,9 +87,9 @@ A maioria dos formulários é projetada adicionando controles à superfície do 
     > [!IMPORTANT]
     > Você poderia expor seu computador local a um risco de segurança por meio da rede referenciando um `UserControl` mal-intencionado. Isso seria um problemas apenas no caso de uma pessoa mal-intencionada criar um controle personalizado prejudicial e você adicioná-lo por engano ao seu projeto.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles do Windows Forms](index.md)
-- [Como redimensionar controles no Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Controles dos Windows Forms](index.md)
+- [Como redimensionar controles nos Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

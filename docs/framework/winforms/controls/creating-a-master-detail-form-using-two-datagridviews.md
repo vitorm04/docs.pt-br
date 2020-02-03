@@ -65,7 +65,7 @@ Agora, é possível testar o formulário para garantir que ele se comporta da fo
 
   Você verá dois controles de <xref:System.Windows.Forms.DataGridView>, um acima do outro. Na parte superior estão os clientes da tabela `Customers` Northwind e na parte inferior estão os `Orders` correspondentes ao cliente selecionado. À medida que você seleciona linhas diferentes no <xref:System.Windows.Forms.DataGridView>superior, o conteúdo do <xref:System.Windows.Forms.DataGridView> menor é alterado de acordo.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Esse aplicativo oferece uma compreensão básica dos recursos do controle de <xref:System.Windows.Forms.DataGridView>. Você pode personalizar a aparência e o comportamento do controle de <xref:System.Windows.Forms.DataGridView> de várias maneiras:
 
@@ -75,14 +75,14 @@ Esse aplicativo oferece uma compreensão básica dos recursos do controle de <xr
 
 - Valide a entrada do usuário para o controle de <xref:System.Windows.Forms.DataGridView>. Para obter mais informações, consulte [Passo a passo: validando dados no controle DataGridView dos Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).
 
-- Manipule grandes conjuntos de dados usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).
+- Manipule conjuntos de dados muito grandes usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).
 
 - Personalize a aparência das células. Para obter mais informações, consulte [Como personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [Como definir estilos de célula padrão no controle DataGridView dos Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Como criar um formulário mestre/detalhado usando dois controles DataGridView dos Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
 - [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md)

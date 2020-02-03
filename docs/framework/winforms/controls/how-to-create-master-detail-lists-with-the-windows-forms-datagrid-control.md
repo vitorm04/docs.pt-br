@@ -70,8 +70,8 @@ ms.locfileid: "76730988"
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
 - [Visão geral do controle DataGrid](datagrid-control-overview-windows-forms.md)
-- [Como associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

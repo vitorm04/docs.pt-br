@@ -45,7 +45,7 @@ ms.locfileid: "76743335"
 |------------------|-------------|  
 |Geral|Janela do Navegador<br /><br /> Local do acesso de origem<br /><br /> IsolatedStorage (limite de 512KB)<br /><br /> Provedores de UIAutomation<br /><br /> Comando<br /><br /> IMEs (Editores de Método de Entrada)<br /><br /> Tinta e caneta eletrônica<br /><br /> Simulação de arrastar/soltar usando eventos de movimento e captura do Mouse<br /><br /> OpenFileDialog<br /><br /> Desserialização de XAML (via XamlReader)|  
 |Integração da Web|Caixa de diálogo de download do Navegador<br /><br /> Navegação iniciada pelo usuário de nível superior<br /><br /> mailto:links<br /><br /> Parâmetros do Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Conteúdo do WPF hospedado em um IFRAME<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o quadro<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o navegador da Web<br /><br /> Serviços Web (ASMX)<br /><br /> Serviços Web (usando o Windows Communication Foundation)<br /><br /> {1&gt;Script&lt;1}<br /><br /> Document Object Model|  
-|Visuais|2D e 3D<br /><br /> {1&gt;Animação&lt;1}<br /><br /> Mídia (Site de origem e entre domínios)<br /><br /> Geração de imagens/áudio/vídeo|  
+|Visuais|2D e 3D<br /><br /> Animação<br /><br /> Mídia (Site de origem e entre domínios)<br /><br /> Geração de imagens/áudio/vídeo|  
 |Lendo|FlowDocuments<br /><br /> Documentos XPS<br /><br /> Fontes internas e do sistema<br /><br /> Fontes CFF e TrueType|  
 |Edição|Verificação de ortografia<br /><br /> RichTextBox<br /><br /> Texto sem formatação e suporte à área de transferência de tinta<br /><br /> Colar iniciado pelo usuário<br /><br /> Copiando conteúdo selecionado|  
 |Controles|Controles gerais|  
@@ -72,7 +72,7 @@ ms.locfileid: "76743335"
   
 |Área do recurso|Recurso|  
 |------------------|-------------|  
-|Geral|Janela (Caixas de diálogo e janelas definidas pelo aplicativo)<br /><br /> SaveFileDialog<br /><br /> Sistema de arquivos<br /><br /> Acesso ao Registro<br /><br /> Arrastar e soltar<br /><br /> Serialização de XAML (via XamlWriter.Save)<br /><br /> Clientes de UIAutomation<br /><br /> Acesso à fonte de janela (HwndHost)<br /><br /> Suporte completo à fala<br /><br /> Interoperabilidade dos Windows Forms|  
+|Geral|Janela (Caixas de diálogo e janelas definidas pelo aplicativo)<br /><br /> SaveFileDialog<br /><br /> Sistema de Arquivos<br /><br /> Acesso ao Registro<br /><br /> Arrastar e soltar<br /><br /> Serialização de XAML (via XamlWriter.Save)<br /><br /> Clientes de UIAutomation<br /><br /> Acesso à fonte de janela (HwndHost)<br /><br /> Suporte completo à fala<br /><br /> Interoperabilidade dos Windows Forms|  
 |Visuais|Efeitos de bitmap<br /><br /> Codificação de imagem|  
 |Edição|Área de transferência do formato Rich Text<br /><br /> Suporte completo para XAML|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "76743335"
 |-------------------|--------------|------------------------|  
 |Computador local|Confiança total automática|Nenhuma ação é necessária.|  
 |Intranet e sites confiáveis|Aviso para confiança total|Assinar o XBAP com um certificado para que o usuário veja o código-fonte no aviso.|  
-|Internet|Falha com "Confiança não concedida"|Assinar o XBAP com um certificado.|  
+|Internet|Falha com "Confiança não concedida"|Assine XBAP com um certificado.|  
   
 > [!NOTE]
 > O comportamento descrito na tabela anterior é de confiança total XBAPs que não seguem o modelo de implantação do ClickOnce confiáveis.  
@@ -132,7 +132,7 @@ ms.locfileid: "76743335"
 |----------------|---------------|-------------------|--------------|  
 |DNS|Acessar Servidores DNS|Sim|Não|  
 |Variáveis de ambiente|Ler|Sim|Não|  
-|Caixas de diálogo de arquivo|Open|Sim|Sim|  
+|Caixas de diálogo de arquivo|Abrir|Sim|Sim|  
 |Caixas de diálogo de arquivo|Irrestrito|Sim|Não|  
 |Armazenamentos isolado|Isolamento de assembly por usuário|Sim|Não|  
 |Armazenamentos isolado|Isolamento desconhecido|Sim|Sim|  
@@ -163,8 +163,8 @@ ms.locfileid: "76743335"
   
  Como alternativa, você pode usar o modelo de implantação do ClickOnce confiáveis para implantação de confiança total de qualquer zona de segurança. Para obter mais informações, consulte Visão geral e [segurança](security-wpf.md)da [implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview) .  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Security](security-wpf.md)
+- [Segurança](security-wpf.md)
 - [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
 - [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)

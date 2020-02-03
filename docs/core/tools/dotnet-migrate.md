@@ -13,7 +13,7 @@ ms.locfileid: "76734148"
 
 **Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x ✔️ SDK do .NET Core 2. x
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet migrate` – Migrar um projeto do .NET Core Versão Prévia 2 para um projeto no estilo do SDK do .NET Core.
 
@@ -43,7 +43,7 @@ Por padrão, a operação de migração produzirá o estado do processo de migra
 
 O comando `dotnet migrate` dá suporte apenas a projetos com base em *project.json* da Visualização 2. Isso significa que você não pode usá-lo para migrar projetos com base em *project.json* de DNX ou Visualização 1 diretamente para projetos de MSBuild/csproj. Primeiro, você precisa migrar manualmente o projeto para um projeto com base em *project.json* de Visualização 2 e, em seguida, usar o comando `dotnet migrate` para migrar o projeto.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 
@@ -56,7 +56,7 @@ O caminho até um dos seguintes:
 
 Se nada for especificado, o padrão será o diretório atual.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 `--format-report-file-json <REPORT_FILE>`
 

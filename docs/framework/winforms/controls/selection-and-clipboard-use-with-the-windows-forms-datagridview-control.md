@@ -51,7 +51,7 @@ O controle `DataGridView` oferece uma variedade de opções para configurar como
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  Fornece documentação de referência para a classe <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Manipulação de teclado e mouse padrão no controle DataGridView dos Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Tratamento de teclado e mouse padrão no controle DataGridView do Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

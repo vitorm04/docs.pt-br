@@ -25,17 +25,17 @@ Este tópico resume as informações sobre o controle `DataGridView` e as classe
   
  <xref:System.Data?displayProperty=nameWithType>  
   
-## <a name="related-technologies"></a>Tecnologias Relacionadas  
+## <a name="related-technologies"></a>Tecnologias relacionadas  
  `BindingSource`  
   
-## <a name="background"></a>Segundo Plano  
+## <a name="background"></a>Tela de fundo  
  Designers de interface do usuário com frequência consideram necessário exibir dados tabulares para os usuários. O .NET Framework fornece várias maneiras de mostrar dados em uma tabela ou grade. O controle `DataGridView` representa a mais recente evolução dessa tecnologia para aplicativos dos Windows Forms.  
   
  O controle `DataGridView` pode exibir linhas de dados de um armazenamento de dados. Há suporte para muitos tipos de armazenamentos de dados. O armazenamento de dados pode conter dados simples e não tipados, como uma matriz unidimensional, ou pode conter dados digitados, como um <xref:System.Data.DataSet>. Para obter mais informações, consulte [Como associar dados ao controle DataGridView dos Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   
  O controle de `DataGridView` fornece uma maneira poderosa e flexível para exibir dados em um formato de tabela. Você pode usar o controle para mostrar exibições editáveis ou somente leitura de conjuntos de dados pequenos a muito grandes.  
   
- Você pode estender o controle `DataGridView` de várias maneiras para integrar comportamento personalizado em seus aplicativos. Por exemplo, você pode especificar seus próprios algoritmos de classificação com programação, podendo também criar seus próprios tipos de células. É possível personalizar facilmente a aparência do controle `DataGridView` escolhendo dentre várias propriedades. Muitos tipos de armazenamentos de dados podem ser usados como uma fonte de dados ou o controle `DataGridView` pode operar sem nenhuma fonte de dados associada.  
+ Você pode estender o controle `DataGridView` de várias maneiras para integrar comportamento personalizado em seus aplicativos. Por exemplo, você pode especificar programaticamente seus próprios algoritmos de classificação e criar seus próprios tipos de células. É possível personalizar facilmente a aparência do controle `DataGridView` escolhendo entre várias propriedades. Muitos tipos de armazenamentos de dados podem ser usados como uma fonte de dados ou o controle `DataGridView` pode operar sem nenhuma fonte de dados associada.  
   
 ## <a name="implementing-datagridview-classes"></a>Implementando classes de DataGridView  
  Há várias maneiras de aproveitar os recursos de extensibilidade do controle `DataGridView`. Você pode personalizar vários aspectos do controle por meio de propriedades e eventos, mas algumas personalizações requerem a criação de novas classes derivadas de classes `DataGridView` existentes.  
@@ -55,12 +55,12 @@ Este tópico resume as informações sobre o controle `DataGridView` e as classe
 |Apresentação de dados|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> e classes derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> e classes derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> e classes derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
 |Extensibilidade de <xref:System.Windows.Forms.DataGridView>|<xref:System.Windows.Forms.DataGridViewCell> e classes derivadas<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> e classes derivadas<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
-## <a name="whats-new"></a>O Que Há de Novo  
+## <a name="whats-new"></a>Novidades  
  O controle <xref:System.Windows.Forms.DataGridView> foi projetado para ser uma solução completa para exibir dados tabulares com Windows Forms. Você deve considerar o uso do controle de <xref:System.Windows.Forms.DataGridView> antes de outras soluções, como <xref:System.Windows.Forms.DataGrid>, quando você estiver criando um novo aplicativo. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
  O controle de <xref:System.Windows.Forms.DataGridView> pode funcionar em conjunto próximo com o componente <xref:System.Windows.Forms.BindingSource>. Esse componente é projetado para ser a fonte de dados principal de um formulário. Ele pode gerenciar a interação entre um controle de <xref:System.Windows.Forms.DataGridView> e sua fonte de dados, independentemente do tipo de fonte de dados.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle DataGridView](datagridview-control-overview-windows-forms.md)
 - [Arquitetura de controle DataGridView](datagridview-control-architecture-windows-forms.md)

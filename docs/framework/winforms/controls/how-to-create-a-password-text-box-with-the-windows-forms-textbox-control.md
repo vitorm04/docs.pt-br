@@ -72,7 +72,7 @@ Uma caixa de senha é uma caixa de texto do Windows Forms que exibe caracteres d
        }
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

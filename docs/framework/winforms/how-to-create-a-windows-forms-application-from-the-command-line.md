@@ -104,17 +104,17 @@ As etapas do procedimento anterior demonstraram como criar um formulário básic
   
 7. Compile e execute o aplicativo, conforme descrito no procedimento anterior.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  
 O exemplo de código a seguir é o exemplo completo dos procedimentos anteriores:
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
 - [Alterando a aparência dos Windows Forms](changing-the-appearance-of-windows-forms.md)
-- [Aprimorando Aplicativos dos Windows Forms](./advanced/index.md)
+- [Aprimorando aplicativos do Windows Forms](./advanced/index.md)
 - [Introdução ao Windows Forms](getting-started-with-windows-forms.md)

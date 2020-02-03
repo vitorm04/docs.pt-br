@@ -48,7 +48,7 @@ A PKI (infraestrutura de chave pública) é um sistema de certificados digitais,
   
  Para obter mais informações sobre esses tópicos, consulte [mecanismos de controle de acesso](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

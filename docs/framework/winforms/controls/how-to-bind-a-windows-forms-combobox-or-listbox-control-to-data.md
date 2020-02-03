@@ -53,10 +53,10 @@ Você pode associar os <xref:System.Windows.Forms.ComboBox> e <xref:System.Windo
     > [!NOTE]
     > Se você estiver associado a uma fonte de dados que não implementa a interface <xref:System.ComponentModel.IBindingList>, como uma <xref:System.Collections.ArrayList>, os dados do controle associado não serão atualizados quando a fonte de dados for atualizada. Por exemplo, se você tiver uma caixa de combinação vinculada a um <xref:System.Collections.ArrayList> e os dados forem adicionados à <xref:System.Collections.ArrayList>, esses novos itens não aparecerão na caixa de combinação. No entanto, você pode forçar a atualização da caixa de combinação chamando os métodos <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> e <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> na instância da classe <xref:System.Windows.Forms.BindingContext> à qual o controle está associado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)
-- [Vinculação de dados e os Windows Forms](../data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](../windows-forms-data-binding.md)
+- [Associação de dados e o Windows Forms](../data-binding-and-windows-forms.md)
 - [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)

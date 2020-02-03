@@ -32,11 +32,11 @@ Um dos conceitos mais importantes da Associação de dados de Windows Forms é a
 ## <a name="change-notification-for-custom-controls"></a>Alterar notificação para controles personalizados  
  Por fim, no lado do controle, você deve expor um evento *PropertyName*Changed para cada propriedade criada para ser associada aos dados. As alterações na propriedade de controle são propagadas para a fonte de dados ligada. Para obter mais informações, consulte [como aplicar o padrão PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Vinculação de dados dos Windows Forms](windows-forms-data-binding.md)
-- [Fontes de dados com suporte no Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Vinculação de dados e os Windows Forms](data-binding-and-windows-forms.md)
+- [Associação de dados do Windows Forms](windows-forms-data-binding.md)
+- [Fontes de dados com suporte nos Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Associação de dados e o Windows Forms](data-binding-and-windows-forms.md)

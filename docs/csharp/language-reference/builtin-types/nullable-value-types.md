@@ -120,7 +120,7 @@ Você pode usar o código apresentado no exemplo a seguir para determinar se uma
 > [!NOTE]
 > Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anuláveis](../../nullable-references.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -130,7 +130,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Conversões anuláveis explícitas](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [Operadores de conversão levantados](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [O que exatamente "levantado" significa?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

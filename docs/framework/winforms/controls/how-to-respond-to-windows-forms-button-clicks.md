@@ -55,7 +55,7 @@ O uso mais básico de um controle de <xref:System.Windows.Forms.Button> de Windo
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle de botão](button-control-overview-windows-forms.md)
 - [Formas de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)

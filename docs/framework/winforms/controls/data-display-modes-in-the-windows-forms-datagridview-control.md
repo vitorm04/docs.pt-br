@@ -41,16 +41,16 @@ O controle de <xref:System.Windows.Forms.DataGridView> pode exibir dados em trê
   
  Para obter mais informações sobre o modo virtual, consulte [Como implementar o modo virtual no controle DataGridView dos Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Para obter um exemplo que mostra como usar os eventos de modo virtual, consulte [Instruções passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Instruções passo a passo: criando um controle DataGridView não associado do Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Como associar dados ao controle DataGridView do Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Passo a passo: criando um controle DataGridView não associado dos Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Como associar dados ao controle DataGridView dos Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Modo virtual no controle DataGridView dos Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
 - [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)

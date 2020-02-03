@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777104"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965770"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -78,7 +78,7 @@ Você pode usar qualquer estrutura de teste que preferir. A estrutura xUnit func
 
 ### <a name="test-naming"></a>Nomenclatura de testes
 
-Você deve nomear os testes de maneira consistente, com nomes que indicam o que cada teste faz. Uma abordagem na qual tive grande sucesso é nomear as classes de teste de acordo com a classe e o método que elas estão testando. Isso resulta em muitas classes de teste pequenas, mas deixa extremamente claro pelo que é responsável cada teste. Com o nome da classe de teste configurado para identificar a classe e o método a serem testados, o nome do método de teste pode ser usado para especificar o comportamento que está sendo testado. Isso deve incluir o comportamento esperado e as entradas ou suposições que devem gerar esse comportamento. Alguns nomes de teste de exemplo:
+Nomeie seus testes de maneira consistente, com nomes que indicam o que cada teste faz. Uma abordagem na qual tive grande sucesso é nomear as classes de teste de acordo com a classe e o método que elas estão testando. Isso resulta em muitas classes de teste pequenas, mas deixa extremamente claro pelo que é responsável cada teste. Com o nome da classe de teste configurado para identificar a classe e o método a serem testados, o nome do método de teste pode ser usado para especificar o comportamento que está sendo testado. Isso deve incluir o comportamento esperado e as entradas ou suposições que devem gerar esse comportamento. Alguns nomes de teste de exemplo:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-O \_agente e o \_imageService são injetados como dependências. Agora você pode testar se a mesma ID passada para o método de ação é passada para o \_imageService, e se os bytes resultantes são retornados como parte do FileResult. Você também pode testar se o log de erros ocorre conforme esperado e se um resultado NotFound é retornado caso a imagem esteja ausente, supondo que esse seja um comportamento importante do aplicativo (ou seja, não apenas um código temporário adicionado pelo desenvolvedor para diagnosticar um problema). A lógica real do arquivo foi movida para um serviço de implementação separado e foi aumentada para retornar uma exceção específica do aplicativo para o caso de um arquivo ausente. Você pode testar essa implementação de forma independente, usando um teste de integração.
+`_logger` e `_imageService` são injetados como dependências. Agora você pode testar se a mesma ID passada para o método de ação é passada para `_imageService`e se os bytes resultantes são retornados como parte do FileResult. Você também pode testar se o log de erros está acontecendo conforme o esperado e se um resultado de `NotFound` é retornado se a imagem estiver ausente, supondo que esse é um comportamento de aplicativo importante (ou seja, não apenas código temporário que o desenvolvedor adicionou para diagnosticar um problema). A lógica real do arquivo foi movida para um serviço de implementação separado e foi aumentada para retornar uma exceção específica do aplicativo para o caso de um arquivo ausente. Você pode testar essa implementação de forma independente, usando um teste de integração.
 
 Na maioria dos casos, será melhor usar manipuladores de exceção globais em seus controladores, portanto, a quantidade de lógica contida neles será mínima e provavelmente não valerá a pena usar testes de unidade. Você deve executar a maior parte dos testes de ações do controlador usando testes funcionais e a classe `TestServer` descrita abaixo.
 
@@ -153,7 +153,7 @@ A maioria dos testes de integração em seus aplicativos ASP.NET Core deve testa
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Realizando teste funcional em aplicativos ASP.NET Core
 
-Para os aplicativos ASP.NET Core, a classe `TestServer` facilita bastante a escrita de testes funcionais. Você configura um `TestServer` usando um `WebHostBuilder` diretamente (como faz normalmente com seu aplicativo) ou com o tipo `WebApplicationFactory` (disponível desde a versão 2.1). Você deve tentar corresponder o host de teste ao host de produção o máximo possível, para que seus testes tenham um comportamento semelhante ao que o aplicativo terá em produção. A classe `WebApplicationFactory` é útil para a configuração de ContentRoot do TestServer, que é usada pelo ASP.NET Core para localizar recursos estáticos, como Exibições.
+Para os aplicativos ASP.NET Core, a classe `TestServer` facilita bastante a escrita de testes funcionais. Você configura um `TestServer` usando um `WebHostBuilder` diretamente (como faria normalmente para seu aplicativo) ou com o tipo de `WebApplicationFactory` (disponível desde a versão 2,1). Tente fazer com que o seu host de teste corresponda ao seu host de produção o mais próximo possível, de modo que seus testes irão exercer comportamento semelhante ao que o aplicativo fará na produção. A classe `WebApplicationFactory` é útil para a configuração de ContentRoot do TestServer, que é usada pelo ASP.NET Core para localizar recursos estáticos, como Exibições.
 
 Você pode criar testes funcionais simples criando uma classe de teste que implementa IClassFixture\<WebApplicationFactory\<TEntry>>, em que TEntry é a classe de inicialização do aplicativo Web. Com isso em vigor, o acessório de teste pode criar um cliente usando o método CreateClient do alocador:
 

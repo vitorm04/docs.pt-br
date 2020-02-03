@@ -36,8 +36,8 @@ Esta seção explica brevemente os conceitos associados à segurança do Windows
 ## <a name="related-sections"></a>Seções Relacionadas  
  [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [Segurança](../../../../docs/framework/wcf/feature-details/security.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

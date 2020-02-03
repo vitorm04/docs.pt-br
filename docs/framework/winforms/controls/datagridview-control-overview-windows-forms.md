@@ -66,22 +66,22 @@ ms.locfileid: "76742488"
  Fornece links para exemplos de código na documentação para várias tarefas de <xref:System.Windows.Forms.DataGridView>. Esses exemplos são categorizados por tipo de tarefa.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
  Discute os tipos de coluna no controle de <xref:System.Windows.Forms.DataGridView> Windows Forms usado para exibir informações e permitir que os usuários modifiquem ou adicionem informações.  
   
- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem como preencher o controle com os dados manualmente ou de uma fonte de dados externa.  
   
  [Personalizando o controle DataGridView do Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem a pintura personalizada de células e linhas <xref:System.Windows.Forms.DataGridView>, bem como a criação de tipos de célula, coluna e linha derivados.  
   
- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Apresenta tópicos que descrevem como usar o controle com eficiência para evitar problemas de desempenho ao trabalhar com grandes volumes de dados.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Funcionalidade padrão no controle DataGridView dos Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Manipulação de teclado e mouse padrão no controle DataGridView dos Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Funcionalidade padrão no controle DataGridView do Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [Tratamento de teclado e mouse padrão no controle DataGridView do Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

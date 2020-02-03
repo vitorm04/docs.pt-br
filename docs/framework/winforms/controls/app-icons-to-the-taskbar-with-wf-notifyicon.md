@@ -35,7 +35,7 @@ O componente Windows Forms <xref:System.Windows.Forms.NotifyIcon> exibe um únic
 
 3. Defina a propriedade <xref:System.Windows.Forms.NotifyIcon.Text%2A> como uma cadeia de dica de ferramenta apropriada.
 
-     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem o aplicativo com mais segurança. O exemplo a seguir requer um formulário com um controle <xref:System.Windows.Forms.NotifyIcon> já adicionado. Ele também requer um arquivo de ícone denominado `Icon.ico`.
+     No exemplo de código a seguir, o caminho definido para o local do ícone é a pasta **Meus Documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows incluem essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem o aplicativo com mais segurança. O exemplo a seguir requer um formulário com um controle <xref:System.Windows.Forms.NotifyIcon> já adicionado. Ele também requer um arquivo de ícone denominado `Icon.ico`.
 
     ```vb
     ' You should replace the bold icon in the sample below
@@ -72,7 +72,7 @@ O componente Windows Forms <xref:System.Windows.Forms.NotifyIcon> exibe um únic
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

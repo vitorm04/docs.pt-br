@@ -16,31 +16,31 @@ ms.locfileid: "76746005"
 Os controles do Windows Forms são componentes reutilizáveis que encapsulam a funcionalidade de interface do usuário e são usados em aplicativos Windows do lado do cliente. O Windows Forms não só fornece vários controles prontos para usar como também proporciona a infraestrutura para desenvolver seus próprios controles. É possível combinar os controles existentes, ampliar os controles existentes e fazer seus controles personalizados. Esta seção fornece informações básicas e exemplos para ajudar a desenvolver controles do Windows Forms.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral do uso de controles dos Windows Forms](overview-of-using-controls-in-windows-forms.md)  
+ [Visão geral do uso de controles no Windows Forms](overview-of-using-controls-in-windows-forms.md)  
  Destaca os elementos essenciais do uso de controles em aplicativos do Windows Forms.  
   
- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)  
+ [Variedades de controles personalizados](varieties-of-custom-controls.md)  
  Descreve os diferentes tipos de controles personalizados que você pode criar com o namespace <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
- [Noções básicas sobre o desenvolvimento de controle do Windows Forms](windows-forms-control-development-basics.md)  
+ [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](windows-forms-control-development-basics.md)  
  Fala sobre os primeiros passos no desenvolvimento de um controle do Windows Forms.  
   
- [Propriedades em controles do Windows Forms](properties-in-windows-forms-controls.md)  
+ [Propriedades em controles dos Windows Forms](properties-in-windows-forms-controls.md)  
  Mostra como adicionar propriedades aos controles do Windows Forms.  
   
- [Eventos em controles do Windows Forms](events-in-windows-forms-controls.md)  
+ [Eventos em controles dos Windows Forms](events-in-windows-forms-controls.md)  
  Descreve como manipular e definir eventos nos controles do Windows Forms.  
   
- [Atributos em controles do Windows Forms](attributes-in-windows-forms-controls.md)  
- Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus componentes e controles personalizados.  
+ [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)  
+ Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus controles e componentes personalizados.  
   
  [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md)  
  Mostra como personalizar a aparência de seus controles.  
   
- [Layout em controles dos Windows Forms](layout-in-windows-forms-controls.md)  
+ [Layout em controles do Windows Forms](layout-in-windows-forms-controls.md)  
  Mostra como criar layouts para seus controles e formulários.  
   
- [Multithreading em controles dos Windows Forms](multithreading-in-windows-forms-controls.md)  
+ [Multithreading em controles do Windows Forms](multithreading-in-windows-forms-controls.md)  
  Mostra como implementar controles multithreaded.  
   
 ## <a name="reference"></a>Referência  
@@ -55,7 +55,7 @@ Os controles do Windows Forms são componentes reutilizáveis que encapsulam a f
  Lista atributos de metadados para aplicar a componentes e controles para que eles sejam exibidos corretamente em tempo de design em designers visuais.  
   
  [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
- Descreve como implementar classes como editores e designers que fornecem suporte ao tempo de design.  
+ Descreve como implementar classes como editores e designers que oferecem suporte a tempo de design.  
   
  [Como licenciar componentes e controles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))  
  Descreve como implementar licenciamento em seus controles e componentes.  

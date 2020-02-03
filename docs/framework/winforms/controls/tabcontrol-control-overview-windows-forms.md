@@ -22,11 +22,11 @@ O Windows Forms <xref:System.Windows.Forms.TabControl> exibe várias guias, como
 ## <a name="working-with-tabcontrol"></a>Trabalhando com TabControl  
  A propriedade mais importante da <xref:System.Windows.Forms.TabControl> é <xref:System.Windows.Forms.TabControl.TabPages%2A>, que contém as guias individuais. Cada guia individual é um objeto <xref:System.Windows.Forms.TabPage>. Quando uma guia é clicada, ela gera o evento <xref:System.Windows.Forms.Control.Click> para esse objeto <xref:System.Windows.Forms.TabPage>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TabControl>
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
-- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [Como adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como adicionar e remover guias com o TabControl dos Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
 - [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)

@@ -38,7 +38,7 @@ O controle `Button` dos Windows Forms permite que o usuário clique nele para re
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  Consulte também [Entrada do usuário em caixas de diálogo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1s9ws53w(v=vs.100)) e [Como fechar caixas de diálogo e manter a entrada do usuário](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/65ad5907(v=vs.100)).

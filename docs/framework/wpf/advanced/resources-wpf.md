@@ -20,7 +20,7 @@ Um recurso é um objeto que pode ser reutilizado em locais diferentes do aplicat
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../app-development/wpf-application-resource-content-and-data-files.md)  
  [URIs "pack://" no WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Referência  

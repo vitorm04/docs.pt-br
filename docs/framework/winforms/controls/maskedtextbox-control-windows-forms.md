@@ -20,7 +20,7 @@ ms.locfileid: "76744962"
 Este tópico fornece links para outras pessoas sobre o controle de `MaskedTextBox`.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Passo a passo: trabalhando com o controle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
+ [Instruções passo a passo: trabalhando com o controle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)  
  Demonstra os principais recursos do controle de `MaskedTextBox`.  
   
  [Como associar dados ao controle MaskedTextBox](how-to-bind-data-to-the-maskedtextbox-control.md)  
@@ -31,5 +31,5 @@ Este tópico fornece links para outras pessoas sobre o controle de `MaskedTextBo
  A classe primária para a implementação do controle de caixa de texto mascarado.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

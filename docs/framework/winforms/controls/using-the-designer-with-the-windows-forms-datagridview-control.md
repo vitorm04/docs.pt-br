@@ -54,6 +54,6 @@ O Visual Studio dá suporte de designer ao controle `DataGridView` que permite q
  <xref:System.Windows.Forms.DataGridView>  
  Fornece documentação de referência para o controle de <xref:System.Windows.Forms.DataGridView>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)

@@ -17,7 +17,7 @@ ms.locfileid: "76734240"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet help` – mostra uma documentação mais detalhada online para o comando especificado.
 
@@ -29,13 +29,13 @@ ms.locfileid: "76734240"
 
 O comando `dotnet help` abre a página de referência para oferecer informações mais detalhadas sobre o comando especificado em docs.microsoft.com.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 * **`COMMAND_NAME`**
 
   Nome do comando da CLI do .NET Core. Para obter uma lista dos comandos válidos da CLI, consulte [CLI commands](index.md#cli-commands) (Comandos da CLI).
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 * **`-h|--help`**
 

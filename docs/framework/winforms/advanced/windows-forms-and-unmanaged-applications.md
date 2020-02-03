@@ -25,7 +25,7 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
  [Como dar suporte à interoperabilidade COM exibindo um Windows Form com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)  
  Fornece um exemplo de código que mostra como usar o método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para executar um formulário do Windows em um aplicativo não gerenciado.  
   
- [Como dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [Como Dar Suporte à Interoperabilidade COM Exibindo Cada Formulário dos Windows Forms em um Thread Separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Fornece um exemplo de código que mostra como executar um formulário do Windows em seu próprio thread.  
   
  Consulte também [Instruções passo a passo: dando suporte à interoperabilidade COM exibindo cada Windows Form no próprio thread](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  

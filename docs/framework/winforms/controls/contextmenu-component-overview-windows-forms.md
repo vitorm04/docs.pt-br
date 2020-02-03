@@ -26,7 +26,7 @@ ms.locfileid: "76746190"
   
  A propriedade de chave do componente <xref:System.Windows.Forms.ContextMenu> é a propriedade <xref:System.Windows.Forms.Menu.MenuItems%2A>. Você pode adicionar itens de menu criando programaticamente <xref:System.Windows.Forms.MenuItem> objetos e adicionando-os à <xref:System.Windows.Forms.Menu.MenuItemCollection> do menu de atalho. Como os itens em um menu de atalho geralmente são retirados de outros menus, você provavelmente adicionará itens ao menu de atalho copiando-os.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

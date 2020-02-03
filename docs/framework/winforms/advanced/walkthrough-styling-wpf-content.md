@@ -134,11 +134,11 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
 
 1. Clique nos botões **OK** e **Cancelar** e exiba as diferenças.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migração e Interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
+- [Migração e interoperabilidade](../../wpf/advanced/migration-and-interoperability.md)
 - [Usando Controles do WPF](using-wpf-controls.md)
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Visão geral de XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)

@@ -40,13 +40,13 @@ A propriedade <xref:System.Windows.Forms.Control.Dock%2A> interage com a proprie
    > [!NOTE]
    > Controles herdados devem ser `Protected` para poderem ser encaixados. Para alterar o nível de acesso de um controle, defina sua propriedade **modificador** na janela **Propriedades** .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles do Windows Forms](index.md)
+- [Controles dos Windows Forms](index.md)
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)
 - [Como ancorar e encaixar controles filho em um controle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como ancorar controles no Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Como ancorar controles nos Windows Forms](how-to-anchor-controls-on-windows-forms.md)

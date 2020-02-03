@@ -30,7 +30,7 @@ O exemplo de código a seguir demonstra como implementar um manipulador para o e
   
  As células na coluna `Priority` exibem imagens no lugar de valores de células textuais correspondentes. A propriedade <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> da <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> é usada para obter o valor da célula textual e para definir o valor de exibição da imagem correspondente.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
   
@@ -41,14 +41,14 @@ O exemplo de código a seguir demonstra como implementar um manipulador para o e
   
 - <xref:System.Drawing.Bitmap> imagens nomeadas `highPri.bmp`, `mediumPri.bmp`e `lowPri.bmp` que residem no mesmo diretório que o arquivo executável.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Drawing.Bitmap>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Como formatar dados no controle DataGridView dos Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Estilos de Célula no Controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formatação de dados no controle DataGridView dos Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Como formatar dados no controle DataGridView do Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formatação de dados no controle DataGridView do Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

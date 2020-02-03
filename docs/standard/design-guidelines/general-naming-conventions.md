@@ -68,7 +68,7 @@ Esta seção descreve as convenções de nomenclatura gerais relacionadas à esc
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
 |**float**|**Simples**|**float**|**Simples**|
-|**double**|**Duplo**|**double**|**Duplo**|
+|**double**|**Double**|**double**|**Double**|
 |**bool**|**Booliano**|**bool**|**Booliano**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**Cadeia de caracteres**|**Cadeia de caracteres**|**Cadeia de caracteres**|
@@ -97,7 +97,7 @@ Esta seção descreve as convenções de nomenclatura gerais relacionadas à esc
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

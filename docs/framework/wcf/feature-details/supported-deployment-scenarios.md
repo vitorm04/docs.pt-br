@@ -43,7 +43,7 @@ Algumas precauções de segurança devem ser tomadas durante o download e a exec
 
 O WCF pode ser usado para se comunicar com servidores remotos de dentro de aplicativos parcialmente confiáveis implantados pela [implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) ou XBAP. O conjunto de permissões de zona da Internet inclui <xref:System.Net.WebPermission> para o host de origem, que permite que esses aplicativos se comuniquem com seu servidor de origem usando qualquer uma das associações do WCF com suporte descritas em [compatibilidade de recursos de confiança parcial](partial-trust-feature-compatibility.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Segurança de acesso do código](../../misc/code-access-security.md)
 - [Visão geral de aplicativos hospedados Windows Presentation Foundation navegador](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)

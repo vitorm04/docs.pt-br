@@ -62,10 +62,10 @@ Este tópico descreve como implementar um loop de mensagem para interoperação 
   
  Uma mensagem que vai para o coletor de teclado pode não ser enviada para o HWND se você adicionou ganchos para essa mensagem usando o método <xref:System.Windows.Interop.HwndSource.AddHook%2A>. A mensagem pode ser sido tratada no nível de bomba de mensagens diretamente e não enviada para a função `DispatchMessage`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
 - [Modelo de threading](threading-model.md)
 - [Visão geral da entrada](input-overview.md)

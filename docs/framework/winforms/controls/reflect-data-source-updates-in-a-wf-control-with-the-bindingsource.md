@@ -22,7 +22,7 @@ ms.locfileid: "76742442"
 # <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>Como refletir atualizações feitas na fonte de dados em um controle dos Windows Forms com o BindingSource
 Ao usar controles vinculados a dados, às vezes você precisa responder às alterações na fonte de dados quando a fonte de dados não gerar eventos de alteração de lista. Ao usar o componente <xref:System.Windows.Forms.BindingSource> para associar a fonte de dados a um controle de Windows Forms, você pode notificar o controle de que sua fonte de dados foi alterada chamando o método <xref:System.Windows.Forms.BindingSource.ResetBindings%2A>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra o uso do método <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> para notificar um controle ligado sobre uma atualização na fonte de dados.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CPP/form1.cpp#1)]
@@ -34,10 +34,10 @@ Ao usar controles vinculados a dados, às vezes você precisa responder às alte
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

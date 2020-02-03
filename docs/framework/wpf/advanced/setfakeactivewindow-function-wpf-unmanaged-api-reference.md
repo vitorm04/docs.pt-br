@@ -33,13 +33,13 @@ void __stdcall SetFakeActiveWindow(
  HWND  
  Um identificador de janela.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Dll:** PresentationHost_v0400. dll  
   
  **Versão do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

@@ -12,7 +12,7 @@ ms.locfileid: "76742721"
 # <a name="transaction-protocols"></a>Protocolos de transação
 Windows Communication Foundation (WCF) implementa os protocolos WS-Atomic Transaction e WS-Coordination.  
   
-|Especificação/documento|Versão do|Link|  
+|Especificação/documento|{1&gt;Version&lt;1}|Link|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) implementa os protocolos WS-Atomic Transa
   
  Os namespaces XML e os prefixos associados a seguir são usados em todo este documento.  
   
-|Prefixo|Versão do|URI de namespace|  
+|Prefixo|{1&gt;Version&lt;1}|URI de namespace|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
 |wsa|Pré-1,0<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  

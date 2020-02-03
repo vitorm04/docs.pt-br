@@ -24,7 +24,7 @@ O controle de <xref:System.Windows.Forms.CheckBox> de Windows Forms indica se um
   
  O controle <xref:System.Windows.Forms.CheckBox> tem duas propriedades importantes, <xref:System.Windows.Forms.CheckBox.Checked%2A> e <xref:System.Windows.Forms.CheckBox.CheckState%2A>. A propriedade <xref:System.Windows.Forms.CheckBox.Checked%2A> retorna `true` ou `false`. A propriedade <xref:System.Windows.Forms.CheckBox.CheckState%2A> retorna <xref:System.Windows.Forms.CheckState.Checked> ou <xref:System.Windows.Forms.CheckState.Unchecked>; ou, se a propriedade <xref:System.Windows.Forms.CheckBox.ThreeState%2A> for definida como `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> também poderá retornar <xref:System.Windows.Forms.CheckState.Indeterminate>. No estado indeterminado, a caixa é mostrada com uma aparência esmaecida para indicar que a opção não está disponível.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Como definir opções com os controles CheckBox dos Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)

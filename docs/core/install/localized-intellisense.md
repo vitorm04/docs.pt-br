@@ -51,7 +51,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
 
 1. Crie uma subpasta dentro da pasta moniker que você acabou de abrir. O nome da pasta indica qual linguagem você deseja usar. A tabela a seguir especifica as diferentes opções:
 
-   | {1&gt;Idioma&lt;1}              | Nome da pasta |
+   | Linguagem              | Nome da pasta |
    | --------------------- | ----------- |
    | Português do Brasil  | *pt-br*     |
    | Chinês (simplificado)  | *zh-hans*   |
@@ -102,7 +102,7 @@ Se você não instalou o pacote de idiomas desejado durante a instalação, atua
 
    ![Guia de pacotes de idiomas do Visual Studio](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. Escolha **Modificar**. A atualização é iniciada.
+1. Escolha **Modificar**. A atualização será iniciada.
 
 ### <a name="modify-language-settings-in-visual-studio"></a>Modificar as configurações de idioma no Visual Studio
 
@@ -116,14 +116,14 @@ Depois de instalar os pacotes de idiomas desejados, modifique suas configuraçõ
 
 1. No nó **ambiente** , escolha **configurações internacionais**.
 
-1. No menu suspenso **Idioma**, selecione o idioma desejado. Clique em **OK**. 
+1. No menu suspenso **Idioma**, selecione o idioma desejado. Escolha **OK**. 
 
-1. Uma caixa de diálogo informa que você precisa reiniciar o Visual Studio para que as alterações entrem em vigor. Clique em **OK**.
+1. Uma caixa de diálogo informa que você precisa reiniciar o Visual Studio para que as alterações entrem em vigor. Escolha **OK**.
 
 1. Reinicie o Visual Studio.
 
 Depois disso, seu IntelliSense deverá funcionar conforme o esperado quando você abrir um projeto do .NET Core que direciona a versão dos arquivos do IntelliSense que você acabou de instalar.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [IntelliSense no Visual Studio](/visualstudio/ide/using-intellisense)

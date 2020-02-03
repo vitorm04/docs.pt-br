@@ -38,7 +38,7 @@ O controle de <xref:System.Windows.Forms.DataGridView> de Windows Forms deve con
 
 3. Clique no botão **Remover** para excluir a coluna, fazendo com que ela desapareça do designer.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Como criar um projeto de aplicativo Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)

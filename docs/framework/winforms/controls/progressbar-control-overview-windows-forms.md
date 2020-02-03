@@ -23,7 +23,7 @@ ms.locfileid: "76741286"
 > [!NOTE]
 > O controle de <xref:System.Windows.Forms.ProgressBar> só pode ser orientado horizontalmente no formulário.  
   
-## <a name="key-properties-and-methods"></a>Propriedades e métodos de tecla  
+## <a name="key-properties-and-methods"></a>Propriedades e métodos de chave  
  As propriedades de chave do controle de <xref:System.Windows.Forms.ProgressBar> são <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>e <xref:System.Windows.Forms.ProgressBar.Maximum%2A>. As propriedades <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> definem os valores máximo e mínimo que a barra de progresso pode exibir. A propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> representa o progresso que foi feito para concluir a operação. Como a barra exibida no controle é composta de blocos, o valor exibido pelo controle de <xref:System.Windows.Forms.ProgressBar> aproxima-se apenas do valor atual da propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A>. Com base no tamanho do controle de <xref:System.Windows.Forms.ProgressBar>, a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> determina quando exibir o próximo bloco.  
   
  A maneira mais comum de atualizar o valor de progresso atual é escrever o código para definir a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A>. No exemplo de carregamento de um arquivo grande, você pode definir o máximo para o tamanho do arquivo em quilobytes. Por exemplo, se a propriedade <xref:System.Windows.Forms.ProgressBar.Maximum%2A> for definida como 100, a propriedade <xref:System.Windows.Forms.ProgressBar.Minimum%2A> será definida como 10 e a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> será definida como 50, serão exibidos 5 retângulos. Isso é metade do número que pode ser exibido.  
@@ -35,7 +35,7 @@ ms.locfileid: "76741286"
 > [!IMPORTANT]
 > Os controles <xref:System.Windows.Forms.StatusStrip> e <xref:System.Windows.Forms.ToolStripStatusLabel> substituem e adicionam funcionalidade aos controles <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel>; no entanto, os controles <xref:System.Windows.Forms.StatusBar> e <xref:System.Windows.Forms.StatusBarPanel> são mantidos para compatibilidade com versões anteriores e uso futuro, se você escolher.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ProgressBar>
 - [Controle ProgressBar](progressbar-control-windows-forms.md)

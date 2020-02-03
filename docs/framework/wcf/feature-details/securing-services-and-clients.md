@@ -52,7 +52,7 @@ As informações contidas nesta seção concentram-se na segurança de programa�
   
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

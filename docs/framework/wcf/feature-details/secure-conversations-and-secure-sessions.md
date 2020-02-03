@@ -16,7 +16,7 @@ Um recurso do Windows Communication Foundation (WCF) é a capacidade de estabele
   
  Para obter mais informações sobre sessões, consulte [usando sessões](../../../../docs/framework/wcf/using-sessions.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Sessões, instanciação e simultaneidade](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [Como criar um serviço que requer sessões](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

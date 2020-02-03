@@ -114,7 +114,7 @@ As tabelas a seguir descrevem como os usuários podem interagir com o controle d
   
  Se <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> for definido como `true` e <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> estiver definido como <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> ou <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>, clicar em uma célula enquanto pressiona SHIFT ou CTRL se comparará da mesma forma, exceto que somente as linhas e colunas completas serão afetadas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Controle DataGridView](datagridview-control-windows-forms.md)

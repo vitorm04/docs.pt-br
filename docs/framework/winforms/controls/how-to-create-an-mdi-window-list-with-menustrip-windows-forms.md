@@ -81,7 +81,7 @@ Use a interface MDI para criar aplicativos que podem abrir vários documentos no
   
 - Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como criar formulários pai MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Como criar formulários filho MDI](../advanced/how-to-create-mdi-child-forms.md)

@@ -60,7 +60,7 @@ Console.WriteLine(doubleType.FullName);
 // System.Double
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

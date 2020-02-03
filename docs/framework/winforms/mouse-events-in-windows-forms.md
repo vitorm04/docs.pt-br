@@ -40,31 +40,31 @@ Como algumas informações de localização do mouse estão em coordenadas de cl
 
 Se quiser manipular eventos de clique do mouse na ordem correta, você precisará conhecer a ordem em que os eventos de clique são gerados em controles dos Windows Forms. Todos os controles dos Windows Forms geram eventos de clique na mesma ordem quando um botão do mouse é pressionado e liberado (independentemente de qual botão do mouse), exceto onde é indicado na lista a seguir de controles individuais. A lista a seguir mostra a ordem dos eventos gerados por um único clique do botão do mouse:
 
-1. <xref:System.Windows.Forms.Control.MouseDown> evento.
+1. <xref:System.Windows.Forms.Control.MouseDown> .
 
-2. <xref:System.Windows.Forms.Control.Click> evento.
+2. <xref:System.Windows.Forms.Control.Click> .
 
-3. <xref:System.Windows.Forms.Control.MouseClick> evento.
+3. <xref:System.Windows.Forms.Control.MouseClick> .
 
-4. <xref:System.Windows.Forms.Control.MouseUp> evento.
+4. <xref:System.Windows.Forms.Control.MouseUp> .
 
 A seguir está a ordem dos eventos gerados para um clique duplo com botão do mouse:
 
-1. <xref:System.Windows.Forms.Control.MouseDown> evento.
+1. <xref:System.Windows.Forms.Control.MouseDown> .
 
-2. <xref:System.Windows.Forms.Control.Click> evento.
+2. <xref:System.Windows.Forms.Control.Click> .
 
-3. <xref:System.Windows.Forms.Control.MouseClick> evento.
+3. <xref:System.Windows.Forms.Control.MouseClick> .
 
-4. <xref:System.Windows.Forms.Control.MouseUp> evento.
+4. <xref:System.Windows.Forms.Control.MouseUp> .
 
-5. <xref:System.Windows.Forms.Control.MouseDown> evento.
+5. <xref:System.Windows.Forms.Control.MouseDown> .
 
-6. <xref:System.Windows.Forms.Control.DoubleClick> evento. (Isso pode variar, dependendo se o controle em questão tem o conjunto de bits <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> de estilo definido como `true`. Para obter mais informações sobre como definir um bit de <xref:System.Windows.Forms.ControlStyles>, consulte o método <xref:System.Windows.Forms.Control.SetStyle%2A>.)
+6. <xref:System.Windows.Forms.Control.DoubleClick> . (Isso pode variar, dependendo se o controle em questão tem o conjunto de bits <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> de estilo definido como `true`. Para obter mais informações sobre como definir um bit de <xref:System.Windows.Forms.ControlStyles>, consulte o método <xref:System.Windows.Forms.Control.SetStyle%2A>.)
 
-7. <xref:System.Windows.Forms.Control.MouseDoubleClick> evento.
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> .
 
-8. <xref:System.Windows.Forms.Control.MouseUp> evento.
+8. <xref:System.Windows.Forms.Control.MouseUp> .
 
 Para ver um exemplo de código que mostra a ordem dos eventos de clique do mouse, consulte [Como manipular eventos de entrada do usuário em controles dos Windows Forms](how-to-handle-user-input-events-in-windows-forms-controls.md).
 
@@ -150,6 +150,6 @@ Os controles de alternância, como os controles derivados da classe <xref:System
     > [!NOTE]
     > Se o usuário mover o ponteiro para fora do controle de alternância enquanto o botão do mouse estiver inoperante (como mover o mouse para fora do controle de <xref:System.Windows.Forms.Button> enquanto ele é pressionado), o controle de alternância será pintado no estado gerado e somente o evento de <xref:System.Windows.Forms.Control.MouseUp> ocorrerá. Os eventos de <xref:System.Windows.Forms.Control.Click> ou <xref:System.Windows.Forms.Control.MouseClick> não ocorrerão nessa situação.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Entrada do mouse em um aplicativo dos Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

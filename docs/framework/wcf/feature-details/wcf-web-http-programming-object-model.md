@@ -100,7 +100,7 @@ O modelo de programação WEB HTTP do WCF permite que os desenvolvedores exponha
 
 Como o modelo de programação do WCF WEB HTTP não dá suporte aos protocolos WS-*, a única maneira de proteger um serviço Web criado no modelo de programação do WCF WEB HTTP é expor seu serviço usando SSL. Para obter mais informações sobre como configurar o SSL com o IIS 7,0, consulte [como implementar o SSL no IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

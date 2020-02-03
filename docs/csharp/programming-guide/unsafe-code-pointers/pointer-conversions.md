@@ -16,7 +16,7 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
 ## <a name="implicit-pointer-conversions"></a>Conversões de ponteiro implícitas  
   
-|Do|{1&gt;Para&lt;1}|  
+|De|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|void*|  
 |{1&gt;nulo&lt;1}|Qualquer tipo de ponteiro|  
@@ -25,20 +25,20 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
 ## <a name="explicit-pointer-conversions"></a>Conversões de ponteiro explícitas  
   
-|Do|{1&gt;Para&lt;1}|  
+|De|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|Qualquer outro tipo de ponteiro|  
 |sbyte, byte, short, ushort, int, uint, long ou ulong|Qualquer tipo de ponteiro|  
 |Qualquer tipo de ponteiro|sbyte, byte, short, ushort, int, uint, long ou ulong|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  No exemplo a seguir, um ponteiro para `int` é convertido em um ponteiro para `byte`. Observe que o ponteiro aponta para o menor byte endereçado da variável. Quando você incrementar sucessivamente o resultado, até o tamanho de `int` (4 bytes), você poderá exibir os bytes restantes da variável.  
   
  [!code-csharp[csProgGuidePointers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#3)]  
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Tipos de ponteiro](pointer-types.md)

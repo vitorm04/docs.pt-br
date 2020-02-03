@@ -32,7 +32,7 @@ Um dos recursos das estruturas orientadas a objeto é que os desenvolvedores pod
 
 - A classe herda muitos membros virtuais e o custo de lacre deles individualmente superaria os benefícios de deixar a classe sem lacre.
 
-- A classe é um atributo que requer pesquisa de tempo de execução muito rápida. Os atributos lacrados têm níveis de desempenho ligeiramente mais altos do que os sem lacre. Consulte [atributos](../../../docs/standard/design-guidelines/attributes.md).
+- A classe é um atributo que requer pesquisa de tempo de execução muito rápida. Os atributos lacrados têm níveis de desempenho ligeiramente mais altos do que os sem lacre. consulte [atributos](../../../docs/standard/design-guidelines/attributes.md).
 
  ❌ não declare membros protegidos ou virtuais em tipos lacrados.
 
@@ -46,7 +46,7 @@ Um dos recursos das estruturas orientadas a objeto é que os desenvolvedores pod
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

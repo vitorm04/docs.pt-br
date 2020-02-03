@@ -188,9 +188,9 @@ As guias de alinhamento oferecem uma forma intuitiva de alinhar controles no for
 
 - Crie uma coluna de controles de <xref:System.Windows.Forms.TextBox> e uma coluna correspondente de controles de <xref:System.Windows.Forms.Label>. Defina o valor da propriedade <xref:System.Windows.Forms.Control.AutoSize%2A> dos controles de <xref:System.Windows.Forms.Label> como `true`. Use snaplines para mover os controles de <xref:System.Windows.Forms.Label> para que o texto exibido seja alinhado com o texto nos controles de <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)
+- [Instruções passo a passo: projetando controles do Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

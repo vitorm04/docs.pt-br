@@ -80,9 +80,9 @@ Um uso comum do controle de <xref:System.Windows.Forms.RichTextBox> de Windows F
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

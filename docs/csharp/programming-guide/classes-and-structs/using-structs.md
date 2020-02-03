@@ -47,8 +47,8 @@ Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um obje
 
 [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](index.md)
-- [Estruturas](structs.md)
+- [Structs](structs.md)

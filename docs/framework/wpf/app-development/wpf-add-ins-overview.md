@@ -308,11 +308,11 @@ Além dos benefícios que o WPF adiciona aos comportamentos padrão fornecidos p
 
 Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies de .NET Framework exigidos por cada aplicativo são carregados no domínio desse aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, a .NET Framework fornece uma maneira de reduzir os tempos de início ao instruir os aplicativos a compartilharem assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o atributo <xref:System.LoaderOptimizationAttribute>, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](application-management-overview.md)).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domínios do aplicativo](../../app-domains/application-domains.md)
 - [Visão geral de .NET Framework comunicação remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tornando objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Tópicos de instruções](how-to-topics.md)
+- [Tópicos explicativos](how-to-topics.md)

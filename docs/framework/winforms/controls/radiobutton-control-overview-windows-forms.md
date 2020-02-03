@@ -24,7 +24,7 @@ Windows Forms controles de <xref:System.Windows.Forms.RadioButton> apresentam um
   
  O controle <xref:System.Windows.Forms.RadioButton> pode aparecer como um botão de comando, que parece ter sido pressionado, se selecionado, se a propriedade <xref:System.Windows.Forms.RadioButton.Appearance%2A> estiver definida como <xref:System.Windows.Forms.Appearance.Button>. Os botões de opção também podem exibir imagens usando as propriedades <xref:System.Windows.Forms.ButtonBase.Image%2A> e <xref:System.Windows.Forms.ButtonBase.ImageList%2A>. Para obter mais informações, consulte [Como definir a imagem exibida por um controle dos Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Visão geral do controle Panel](panel-control-overview-windows-forms.md)
@@ -32,5 +32,5 @@ Windows Forms controles de <xref:System.Windows.Forms.RadioButton> apresentam um
 - [Visão geral do controle CheckBox](checkbox-control-overview-windows-forms.md)
 - [Como criar teclas de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
 - [Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Como agrupar controles RadioButton do Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Como agrupar controles RadioButton dos Windows Forms para funcionarem como um conjunto](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [Controle RadioButton](radiobutton-control-windows-forms.md)

@@ -34,5 +34,5 @@ O <xref:System.Windows.Forms.Timer> de Windows Forms é um componente que gera u
  Fornece informações de referência sobre a classe <xref:System.Timers.Timer?displayProperty=nameWithType> que é usada por temporizadores baseados em servidor.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  

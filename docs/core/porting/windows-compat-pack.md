@@ -24,18 +24,18 @@ Ele fornece cerca de 20.000 APIs, incluindo APIs somente Windows, bem como APIs 
 
 - Páginas de código
 - CodeDom
-- Configuração do
+- Configuração
 - Serviços de Diretório
 - Desenho
-- ODBC
+- ODBCODBC
 - Permissões
 - Portas
 - ACL (Listas de Controle de Acesso) do Windows
-- {1&gt;{2&gt;Windows Communication Foundation (WCF)&lt;2}&lt;1}
+- Windows Communication Foundation (WCF)
 - Criptografia do Windows
 - EventLog do Windows
 - WMI (Instrumentação de Gerenciamento do Windows)
-- Contadores de Desempenho do Windows
+- Contadores de desempenho do Windows
 - Registro do Windows
 - Cache do Windows Runtime
 - Serviços do Windows

@@ -346,7 +346,7 @@ Arquivo de projeto:
 | - | - | - | - |
 | **runtimeconfig. JSON** | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} |
 | **Variável de ambiente** | `COMPlus_gcAllowVeryLargeObjects` | habilitado para `1`<br/> `0`-desabilitado | .NET Core 1.0 |
-| **App. config para .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | habilitado para `1`<br/> `0`-desabilitado | {1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1} |
+| **App. config para .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | habilitado para `1`<br/> `0`-desabilitado | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Limite de heap de objeto grande
 

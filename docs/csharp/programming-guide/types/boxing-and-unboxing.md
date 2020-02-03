@@ -60,7 +60,7 @@ Também é possível executar a conversão boxing explicitamente como no exemplo
 
 Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a conversão boxing. Em seguida, o valor armazenado na variável `i` é alterado de `123` para `456`. O exemplo mostra que o tipo do valor original e o objeto submetido à conversão boxing usa locais de memória separados e, portanto, pode armazenar valores diferentes.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]
 
@@ -82,7 +82,7 @@ A figura a seguir demonstra o resultado das instruções anteriores:
 
 Para a conversão unboxing de tipos de valor ter êxito em tempo de execução, o item sendo submetido à conversão unboxing deve ser uma referência para um objeto que foi criado anteriormente ao realizar a conversão boxing de uma instância desse tipo de valor. Tentar realizar a conversão unboxing de `null` causa uma <xref:System.NullReferenceException>. Tentar realizar a conversão unboxing de uma referência para um tipo de valor incompatível causa uma <xref:System.InvalidCastException>.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir demonstra um caso de conversão unboxing inválida e o `InvalidCastException` resultante. Usando `try` e `catch`, uma mensagem de erro é exibida quando o erro ocorre.
 
@@ -108,11 +108,11 @@ a conversão será executada e você receberá a saída:
 
 `Unboxing OK.`
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de programação em C#](../index.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)

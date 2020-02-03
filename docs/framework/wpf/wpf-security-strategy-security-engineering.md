@@ -89,9 +89,9 @@ A Computação Confiável é uma iniciativa da Microsoft para garantir a produç
 ### <a name="critical-code-management"></a>Gerenciamento de código crítico  
  Para aplicativos de navegador XAML (XBAPs), o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] cria uma área restrita de segurança usando .NET Framework suporte para marcação e acompanhamento de código de segurança crítica que eleva privilégios (consulte **metodologia de segurança crítica** na [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Considerando os altos requisitos de qualidade da segurança em códigos críticos para a segurança, esse código recebe um nível adicional de auditoria de segurança e controle de gerenciamento de código-fonte. Aproximadamente 5% a 10% do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] consiste em código crítico para a segurança, que é revisado por uma equipe de revisão dedicada. O código-fonte e o processo de check-in são gerenciados acompanhando o código crítico para segurança e mapeando cada entidade crítica (isto é, um método que contém código crítico) quanto ao seu estado de aprovação. O estado de aprovação inclui os nomes de um ou mais revisores. Cada build diária de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] compara o código crítico com o dos builds anteriores para verificar se há alterações não aprovadas. Se um engenheiro modificar o código crítico sem a aprovação da equipe de revisão, isso será identificado e corrigido imediatamente. Esse processo permite a aplicação e a manutenção de um nível especialmente alto de investigação do código na área restrita [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Security](security-wpf.md)
+- [Segurança](security-wpf.md)
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
 - [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
 - [Computação confiável](https://www.microsoft.com/mscorp/twc/default.mspx)

@@ -247,6 +247,6 @@ TextBlock que tem uma borda
 ## <a name="classes-that-format-your-text"></a>Classes que formatam seu texto  
  <xref:System.Windows.Documents.TextElement> e suas classes relacionadas permitem que você formate o texto. <xref:System.Windows.Documents.TextElement> objetos contêm e formatam texto em objetos <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Documents.FlowDocument>. Os dois tipos principais de objetos <xref:System.Windows.Documents.TextElement> são elementos de <xref:System.Windows.Documents.Block> e elementos de <xref:System.Windows.Documents.Inline>. Um elemento <xref:System.Windows.Documents.Block> representa um bloco de texto, como um parágrafo ou uma lista. Um elemento <xref:System.Windows.Documents.Inline> representa uma parte do texto em um bloco. Muitas classes de <xref:System.Windows.Documents.Inline> especificam a formatação para o texto ao qual elas são aplicadas. Cada <xref:System.Windows.Documents.TextElement> tem seu próprio modelo de conteúdo. Para obter mais informações, consulte [Visão geral do modelo de conteúdo TextElement](../advanced/textelement-content-model-overview.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Avançado](../advanced/index.md)

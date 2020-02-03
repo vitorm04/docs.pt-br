@@ -25,7 +25,7 @@ Um controle de Windows Forms herda muitas propriedades que formam a classe base 
  [Definindo valores padrão com os métodos ShouldSerialize e Reset](defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  Mostra como definir valores de propriedade padrão para um controle ou componente personalizado.  
   
- [Eventos alterados por propriedade](property-changed-events.md)  
+ [Eventos com propriedade alterada](property-changed-events.md)  
  Descreve como habilitar as notificações de alteração de propriedade quando um valor da propriedade for alterado.  
   
  [Como expor as propriedades de controles constituintes](how-to-expose-properties-of-constituent-controls.md)  
@@ -45,11 +45,11 @@ Um controle de Windows Forms herda muitas propriedades que formam a classe base 
  Documenta o atributo que especifica o <xref:System.Drawing.Design.UITypeEditor> a ser usado para uma propriedade personalizada.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Atributos em controles do Windows Forms](attributes-in-windows-forms-controls.md)  
- Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus componentes e controles personalizados.  
+ [Atributos em controles dos Windows Forms](attributes-in-windows-forms-controls.md)  
+ Descreve os atributos que você pode aplicar a propriedades ou outros membros de seus controles e componentes personalizados.  
   
  [Atributos de tempo de design para componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  Lista atributos de metadados para aplicar a componentes e controles para que eles sejam exibidos corretamente em tempo de design em designers visuais.  
   
  [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))  
- Descreve como implementar classes como editores e designers que fornecem suporte ao tempo de design.
+ Descreve como implementar classes como editores e designers que oferecem suporte a tempo de design.

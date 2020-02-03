@@ -46,7 +46,7 @@ O controle de <xref:System.Windows.Forms.ToolStrip> Windows Forms e suas classes
   
 ### <a name="important-toolstrip-members"></a>Membros importantes do ToolStrip  
   
-|Name|Descrição|  
+|{1&gt;Nome&lt;1}|Descrição|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Obtém ou define a qual borda do contêiner pai um <xref:System.Windows.Forms.ToolStrip> está encaixado.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Obtém ou define um valor que indica se a operação do tipo "arrastar e soltar" e a reordenação de itens são manipulados pela classe <xref:System.Windows.Forms.ToolStrip> de forma privada.|  
@@ -62,7 +62,7 @@ O controle de <xref:System.Windows.Forms.ToolStrip> Windows Forms e suas classes
   
 ### <a name="important-toolstrip-companion-classes"></a>Classes complementares importantes do ToolStrip  
   
-|Name|Descrição|  
+|{1&gt;Nome&lt;1}|Descrição|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Substitui e adiciona funcionalidade à classe <xref:System.Windows.Forms.MainMenu>.|  
 |<xref:System.Windows.Forms.StatusStrip>|Substitui e adiciona funcionalidade à classe <xref:System.Windows.Forms.StatusBar>.|  
@@ -79,7 +79,7 @@ O controle de <xref:System.Windows.Forms.ToolStrip> Windows Forms e suas classes
   
  Para obter mais informações, consulte [Resumo da tecnologia de ToolStrip](toolstrip-technology-summary.md) e [Arquitetura de controle ToolStrip](toolstrip-control-architecture.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

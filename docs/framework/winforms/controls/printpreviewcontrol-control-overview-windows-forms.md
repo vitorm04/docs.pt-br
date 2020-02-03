@@ -20,7 +20,7 @@ O <xref:System.Windows.Forms.PrintPreviewControl> de Windows Forms é usado para
 ## <a name="key-properties"></a>Propriedades da chave  
  A propriedade de chave do controle é <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>, que define o documento a ser visualizado. O documento deve ser um objeto <xref:System.Drawing.Printing.PrintDocument>. Para obter uma visão geral da criação de documentos para impressão, confira [Visão geral do componente PrintDocument](printdocument-component-overview-windows-forms.md) e [Suporte à impressão nos Windows Forms](../advanced/windows-forms-print-support.md). As propriedades <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> e <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> determinam o número de páginas exibidas horizontal e verticalmente no controle. A suavização pode fazer com que o texto pareça mais suave, mas também pode tornar a tela mais lenta; para usá-lo, defina a propriedade <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> como `true`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [Visão geral do controle PrintPreviewDialog](printpreviewdialog-control-overview-windows-forms.md)

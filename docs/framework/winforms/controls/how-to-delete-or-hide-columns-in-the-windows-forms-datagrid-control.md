@@ -124,7 +124,7 @@ ms.locfileid: "76743301"
     }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como alterar dados exibidos no tempo de execução no controle DataGrid do Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como Adicionar Tabelas e Colunas ao Controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

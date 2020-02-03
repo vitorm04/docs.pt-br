@@ -30,7 +30,7 @@ O .NET Framework fornece uma variedade de atributos que podem se aplicados aos m
 |<xref:System.ComponentModel.DisplayNameAttribute>|Especifica o nome de exibição de uma propriedade, evento ou método `public void` que não usa argumentos.|  
 |<xref:System.ComponentModel.EditorAttribute>|Especifica o editor que deve ser usado para alterar uma propriedade.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Especifica que uma propriedade ou método é visível em um editor.|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Especifica a palavra-chave de contexto de uma classe ou membro.|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Especifica a palavra-chave de contexto para uma classe ou membro.|  
 |<xref:System.ComponentModel.LocalizableAttribute>|Especifica se uma propriedade deve ser localizada.|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|Indica que a representação de texto de um objeto é obscurecida por caracteres como asteriscos.|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|Especifica se a propriedade à qual esse atributo está associado é somente leitura ou leitura/gravação no tempo de design.|  
@@ -60,7 +60,7 @@ O .NET Framework fornece uma variedade de atributos que podem se aplicados aos m
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Representa um atributo de um item de caixa de ferramentas.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Especifica a cadeia de caracteres de filtro e o tipo de filtro para um item de Caixa de ferramentas.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Attribute>
 - [Como aplicar atributos a controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)

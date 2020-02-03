@@ -20,7 +20,7 @@ ms.locfileid: "76736123"
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Como manipular bandas no controle DataGridView dos Windows Forms
 O exemplo de código a seguir mostra várias maneiras de manipular <xref:System.Windows.Forms.DataGridView> linhas e colunas usando as propriedades da classe <xref:System.Windows.Forms.DataGridViewBand> da qual derivam as classes <xref:System.Windows.Forms.DataGridViewRow> e <xref:System.Windows.Forms.DataGridViewColumn>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-cpp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CPP/DataGridViewBandDemo.cpp#0)]
  [!code-csharp[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/CS/DataGridViewBandDemo.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.ButtonDemos#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.ButtonDemos/VB/datagridviewbanddemo.vb#0)]  
@@ -30,10 +30,10 @@ O exemplo de código a seguir mostra várias maneiras de manipular <xref:System.
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Programando com células, linhas e colunas no controle DataGridView do Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

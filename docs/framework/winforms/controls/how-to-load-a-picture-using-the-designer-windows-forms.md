@@ -19,10 +19,10 @@ ms.locfileid: "76736333"
 
 Com o controle de <xref:System.Windows.Forms.PictureBox> de Windows Forms, você pode carregar e exibir uma imagem em um formulário em tempo de design, definindo a propriedade <xref:System.Windows.Forms.PictureBox.Image%2A> como uma imagem válida. A tabela a seguir mostra os tipos de arquivo disponíveis.
 
-|{1&gt;Tipo&lt;1}|Extensão de nome de arquivo|
+|Tipo|Extensão de nome de arquivo|
 |---|---|
 |Bitmap|.bmp|
-|Ícone|.ico|
+|ícone|.ico|
 |GIF|.gif|
 |Metarquivo|.wmf|
 |JPEG|.jpg|
@@ -41,7 +41,7 @@ Com o controle de <xref:System.Windows.Forms.PictureBox> de Windows Forms, você
 
 1. Na janela **Propriedades** , selecione a propriedade <xref:System.Windows.Forms.PictureBox.Image%2A>. Clique com o botão direito do mouse na pequena imagem em miniatura que aparece à esquerda do nome do objeto de imagem e escolha **Redefinir**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)

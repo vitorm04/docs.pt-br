@@ -17,7 +17,7 @@ ms.locfileid: "76735219"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interoperação Win32 e WPF
 
-Este tópico fornece uma visão geral de como interoperar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e código Win32. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente reutilizar parte desse código.
+Este tópico fornece uma visão geral de como interoperar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e código Win32. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente reutilizar parte desse código.
 
 <a name="basics"></a>
 
@@ -169,10 +169,10 @@ As classes <xref:System.Windows.Interop.HwndHost> e <xref:System.Windows.Interop
 
 As interfaces fornecem suporte apenas para o que acontece na transição entre as regiões [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e Win32. Na região Win32, o comportamento de tabulação é totalmente controlado pela lógica implementada pelo Win32 para tabulação, se houver.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
 - [Passo a passo: hospedando um controle Win32 no WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [Passo a passo: hospedando conteúdo do WPF em Win32](walkthrough-hosting-wpf-content-in-win32.md)
+- [Passo a passo: hospedando conteúdo do WPF no Win32](walkthrough-hosting-wpf-content-in-win32.md)

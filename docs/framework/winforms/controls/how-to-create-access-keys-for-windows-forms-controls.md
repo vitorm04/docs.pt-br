@@ -33,7 +33,7 @@ Uma *chave de acesso* é um caractere de sublinhado no texto de um menu, item de
 
 Controles que não podem receber foco não podem ter chaves de acesso.
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programático
 
 Defina a propriedade `Text` como uma cadeia de caracteres que inclua um e comercial (&) antes da letra que será o atalho.
 
@@ -59,7 +59,7 @@ button1->Text = "&Print";
 
 Na janela **Propriedades** do Visual Studio, defina a propriedade **Text** como uma cadeia de caracteres que inclua um e comercial (' & ') antes da letra que será a chave de acesso. Por exemplo, para definir a letra "P" como a chave de acesso, insira **& imprimir**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Button>
 - [Como responder a cliques no botão dos Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

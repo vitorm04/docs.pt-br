@@ -1,24 +1,24 @@
 ---
-title: Tecnologias da Web comuns do lado do cliente
-description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Tecnologias da Web comuns do lado do cliente
+title: Tecnologias da Web comuns no lado do cliente
+description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Tecnologias da Web comuns no lado do cliente
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: bf346825c7e29831111fc11c836ca6b4a05a18ce
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920993"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965744"
 ---
-# <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns do lado do cliente
+# <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns no lado do cliente
 
 > "Os sites devem ter uma bela aparência em todo lugar."  
 > _- Paul Cookson_
 
 Os aplicativos ASP.NET Core são aplicativos Web e normalmente se baseiam em tecnologias da Web do lado do cliente como HTML, CSS e JavaScript. Ao separar o conteúdo da página (o HTML) de seu layout e estilo (o CSS) e seu comportamento (por meio do JavaScript), os aplicativos Web complexos podem aproveitar o princípio da Separação de Interesses. As alterações futuras na estrutura, no design ou no comportamento do aplicativo podem ser feitas com mais facilidade quando esses interesses não são entrelaçados.
 
-Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo examina algumas maneiras pelas quais o JavaScript é usado por desenvolvedores da Web como parte do desenvolvimento de aplicativos, além de fornecer uma visão geral de alto nível das bibliotecas do lado do cliente Angular e React.
+Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo analisa algumas maneiras como o JavaScript é usado por desenvolvedores da Web como parte do desenvolvimento de aplicativos, como fornece uma visão geral de alto nível das bibliotecas angulares e reajam do lado do cliente.
 
 ## <a name="html"></a>HTML
 
@@ -26,7 +26,7 @@ A linguagem HTML é a linguagem de marcação padrão usada para criar páginas 
 
 ## <a name="css"></a>{1&gt;CSS&lt;1}
 
-O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o layout de elementos HTML. Os estilos CSS podem ser aplicados diretamente a um elemento HTML, definidos separadamente na mesma página ou definidos em um arquivo separado e referenciados pela página. Os estilos são aplicados em cascata de acordo com a forma como são usados para selecionar determinado elemento HTML. Por exemplo, um estilo pode se aplicar a um documento inteiro, mas ser substituído por um estilo aplicado a um elemento específico. Da mesma forma, um estilo específico a um elemento é substituído por um estilo aplicado a uma classe CSS que foi aplicada ao elemento, que, por sua vez, é substituído por um estilo direcionado a uma instância específica desse elemento (por meio de sua ID). Figura 6-1
+O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o layout de elementos HTML. Os estilos CSS podem ser aplicados diretamente a um elemento HTML, definidos separadamente na mesma página ou definidos em um arquivo separado e referenciados pela página. Os estilos são aplicados em cascata de acordo com a forma como são usados para selecionar determinado elemento HTML. Por exemplo, um estilo pode se aplicar a um documento inteiro, mas ser substituído por um estilo aplicado a um elemento específico. Da mesma forma, um estilo específico de elemento seria substituído por um estilo aplicado a uma classe CSS que foi aplicada ao elemento, que, por sua vez, seria substituído por um estilo direcionado a uma instância específica desse elemento (por meio de sua ID). Figura 6-1
 
 ![Regras de especificidade de CSS](./media/image6-1.png)
 
@@ -38,7 +38,7 @@ O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o la
 
 As folhas de estilos CSS não têm suporte para lógica condicional, variáveis e outros recursos de linguagem de programação. Portanto, folhas de estilos grandes geralmente incluem um lote de repetição, pois a mesma cor, fonte ou outra configuração é aplicada a muitas variações diferentes de elementos HTML e classes CSS. Os pré-processadores do CSS podem ajudar as folhas de estilos a seguirem o [princípio DRY](https://deviq.com/don-t-repeat-yourself/), com a adição de suporte para variáveis e lógica.
 
-Os pré-processadores do CSS mais populares são o Sass e LESS. Ambos estendem o CSS e são compatíveis com versões anteriores dele, o que significa que um arquivo CSS simples é um arquivo do Sass ou LESS válido. O Sass é baseado em Ruby e o LESS é baseado em JavaScript e ambos costumam ser executados como parte do processo de desenvolvimento local. Os dois têm ferramentas de linha de comando disponíveis, bem como suporte interno no Visual Studio para executá-las com tarefas do Gulp ou Grunt.
+Os pré-processadores do CSS mais populares são o Sass e LESS. Ambos estendem o CSS e são compatíveis com versões anteriores dele, o que significa que um arquivo CSS simples é um arquivo do Sass ou LESS válido. O Sass é baseado em Ruby e o LESS é baseado em JavaScript e ambos costumam ser executados como parte do processo de desenvolvimento local. Ambos têm ferramentas de linha de comando disponíveis, bem como suporte interno no Visual Studio para executá-las usando tarefas Gulp ou Grunt.
 
 ## <a name="javascript"></a>JavaScript
 
@@ -58,9 +58,9 @@ Você pode executar todas essas tarefas apenas com o JavaScript, mas muitas bibl
 
 ### <a name="legacy-web-apps-with-jquery"></a>Aplicativos Web herdados com jQuery
 
-Embora seja antigo de acordo com os padrões de estrutura do JavaScript, o jQuery continua sendo uma biblioteca muito usada para trabalhar com HTML/CSS e criar aplicativos que fazem chamadas AJAX a APIs Web. No entanto, o jQuery opera no nível do DOM (Modelo de Objeto do Documento) do navegador e, por padrão, oferece apenas um modelo de imperativo, em vez de declarativo.
+Embora o antigo dos padrões de estrutura do JavaScript, o jQuery continua sendo uma biblioteca comumente usada para trabalhar com HTML/CSS e criar aplicativos que fazem chamadas AJAX para APIs da Web. No entanto, o jQuery opera no nível do DOM (Modelo de Objeto do Documento) do navegador e, por padrão, oferece apenas um modelo de imperativo, em vez de declarativo.
 
-Por exemplo, imagine que, se o valor da caixa de texto exceder 10, um elemento na página precisará ficar visível. No jQuery, isso normalmente será implementado com a escrita de um manipulador de eventos com um código que inspecionará o valor da caixa de texto e definirá a visibilidade do elemento de destino com base nesse valor. Essa é uma abordagem imperativa, baseada em código. Em vez disso, outra estrutura poderá usar a associação de dados para associar a visibilidade do elemento ao valor da caixa de texto de forma declarativa. Isso não exige nenhuma codificação, mas apenas a decoração dos elementos envolvidos com atributos de associação de dados. Conforme os comportamentos do lado do cliente ficam mais complexos, as abordagens de associação de dados frequentemente resultam em soluções mais simples com menos código e complexidade condicional.
+Por exemplo, imagine que, se o valor da caixa de texto exceder 10, um elemento na página precisará ficar visível. No jQuery, isso normalmente será implementado com a escrita de um manipulador de eventos com um código que inspecionará o valor da caixa de texto e definirá a visibilidade do elemento de destino com base nesse valor. Essa é uma abordagem imperativa, baseada em código. Em vez disso, outra estrutura poderá usar a associação de dados para associar a visibilidade do elemento ao valor da caixa de texto de forma declarativa. Isso não exige nenhuma codificação, mas apenas a decoração dos elementos envolvidos com atributos de associação de dados. À medida que os comportamentos do lado do cliente crescem mais complexos, as abordagens de ligação de dados frequentemente resultam em soluções mais simples com menos código e complexidade condicional.
 
 ### <a name="jquery-vs-a-spa-framework"></a>jQuery vs. uma estrutura de SPA
 
@@ -73,7 +73,7 @@ Por exemplo, imagine que, se o valor da caixa de texto exceder 10, um elemento n
 | Modelagem | **No** | **Sim** |
 | Roteamento de link profundo | **No** | **Sim** |
 
-A maioria dos recursos que o jQuery não tem intrinsecamente pode ser adicionada com a adição de outras bibliotecas. No entanto, uma estrutura de SPA como o Angular fornece esses recursos de forma mais integrada, pois foi projetado com todos eles em mente, desde o início. Além disso, o jQuery é uma biblioteca imperativa, o que significa que você precisa chamar funções do jQuery para fazer qualquer coisa com o jQuery. Grande parte do trabalho e da funcionalidade fornecida pelas estruturas de SPA pode ser feita de forma declarativa, sem a necessidade de codificação real.
+A maioria dos recursos que o jQuery não tem intrinsecamente pode ser adicionada com a adição de outras bibliotecas. No entanto, uma estrutura de SPA como o Angular fornece esses recursos de forma mais integrada, pois foi projetado com todos eles em mente, desde o início. Além disso, o jQuery é uma biblioteca imperativa, o que significa que você precisa chamar o jQuery Functions para fazer qualquer coisa com o jQuery. Grande parte do trabalho e da funcionalidade fornecida pelas estruturas de SPA pode ser feita de forma declarativa, sem a necessidade de codificação real.
 
 A associação de dados é um ótimo exemplo disso. No jQuery, geralmente, é necessário apenas uma linha de código para obter o valor de um elemento DOM ou para definir o valor de um elemento. No entanto, você precisa escrever esse código sempre que precisa alterar o valor do elemento e, às vezes, isso acontecerá em várias funções em uma página. Outro exemplo comum é a visibilidade do elemento. No jQuery, pode haver muitos lugares diferentes em que você codificará para controlar se determinados elementos eram visíveis. Em cada um desses casos, ao usar a associação de dados, nenhuma codificação precisa ser feita. Você apenas vincula o valor ou a visibilidade dos elementos em questão a um *modelo de exibição* na página e as alterações nesse modelo de exibição são refletidas automaticamente nos elementos associados.
 
@@ -94,7 +94,7 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Os componentes são definidos com a função de decorador @Component, que usa metadados sobre o componente. A propriedade de seletor identifica a ID do elemento na página na qual esse componente será exibido. A propriedade de modelo é um modelo HTML simples que inclui um espaço reservado que corresponde à propriedade de nome do componente, definida na última linha.
+Os componentes são definidos com a função de decorador @Component, que usa metadados sobre o componente. A propriedade selector identifica a ID do elemento na página em que este componente será exibido. A propriedade de modelo é um modelo HTML simples que inclui um espaço reservado que corresponde à propriedade de nome do componente, definida na última linha.
 
 Trabalhando com componentes e modelos, em vez de elementos DOM, os aplicativos do Angular podem operar em um nível superior de abstração e com menos código geral comparado aos aplicativos escritos apenas com JavaScript (também chamado "JS baunilha") ou com o jQuery. O Angular também impõe uma ordem de como organizar os arquivos de script do lado do cliente. Por convenção, os aplicativos do Angular usam uma estrutura de pastas comum, com arquivos de script de módulo e componente localizados em uma pasta do aplicativo. Os scripts do Angular referentes à criação, à implantação e ao teste do aplicativo geralmente estão localizados em uma pasta de nível superior.
 
@@ -132,9 +132,9 @@ Ao considerar qual estrutura de JavaScript funcionará melhor para dar suporte a
 
 - Ela (ou uma biblioteca complementar) inclui todos os recursos necessários para seu aplicativo?
 
-- Ela está bem documentada?
+- Está bem documentado?
 
-- Quão ativa é sua comunidade? A criação de novos projetos é feita com ela?
+- Quão ativa é sua comunidade? Novos projetos estão sendo compilados com ele?
 
 - Quão ativa é sua equipe principal? Os problemas estão sendo resolvidos e novas versões são fornecidas regularmente?
 

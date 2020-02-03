@@ -35,6 +35,6 @@ O controle de `ComboBox` de Windows Forms é usado para exibir dados em uma caix
  [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)  
  Fornece uma lista de coisas que você pode fazer com caixas de listagem, caixas de combinação e caixas de listagem marcadas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

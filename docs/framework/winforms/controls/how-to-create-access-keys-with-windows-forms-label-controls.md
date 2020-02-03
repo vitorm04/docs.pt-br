@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
   
 1. Desenhe o rótulo primeiro e, em seguida, desenhe o outro controle.  
   
-     - ou -  
+     -ou-  
   
      Desenhe os controles em qualquer ordem e defina a propriedade <xref:System.Windows.Forms.Control.TabIndex%2A> do rótulo para um menor que o outro controle.  
   
@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.Label> controles podem ser usados para 
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como dimensionar um controle de rótulo dos Windows Forms para ajustar-se ao seu conteúdo](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Visão geral do controle Label](label-control-overview-windows-forms.md)

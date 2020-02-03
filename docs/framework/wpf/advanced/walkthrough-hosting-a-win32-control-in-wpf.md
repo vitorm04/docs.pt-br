@@ -22,7 +22,7 @@ O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a cri
  Este tópico orienta você por um aplicativo, [hospedando um controle ListBox do Win32 no exemplo do WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), que hospeda um controle de caixa de listagem do Win32. Esse procedimento geral pode ser estendido para hospedar qualquer janela Win32.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  Este tópico pressupõe uma familiaridade básica com a programação do WPF e da API do Windows. Para obter uma introdução básica à programação do WPF, consulte [introdução](../getting-started/index.md). Para obter uma introdução à programação da API do Windows, confira qualquer um dos vários livros sobre o assunto, em particular, as *janelas de programação* , de Charles Petzold.  
   
  Como o exemplo que acompanha este tópico é implementado no C#, ele faz uso de PInvoke (serviços de invocação de plataforma) para acessar a API do Windows. Alguma familiaridade com o PInvoke é útil, mas não essencial.  
@@ -153,8 +153,8 @@ O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a cri
   
  Por fim, defina `handled` como `true` para indicar que a mensagem foi tratada.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.HwndHost>
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
 - [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

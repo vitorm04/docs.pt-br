@@ -34,7 +34,7 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
   
  A tabela a seguir mostra as propriedades personalizadas definidas por `FlashTrackBar`.  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |`AllowUserEdit`|Indica se o usuário pode alterar o valor da barra de acompanhamento dinâmica clicando nela e arrastando-a.|  
 |`EndColor`|Especifica a cor final da barra de acompanhamento.|  
@@ -77,7 +77,7 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
   
 - <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O controle `FlashTrackBar` define dois editores de tipo de interface do usuário, `FlashTrackBarValueEditor` e `FlashTrackBarDarkenByEditor`, que são mostrados nas listagens de código a seguir. A classe `HostApp` usa o controle `FlashTrackBar` em um Windows Form.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
@@ -92,7 +92,7 @@ O exemplo de código a seguir mostra um controle personalizado chamado `FlashTra
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Noções básicas sobre o desenvolvimento de controle do Windows Forms](windows-forms-control-development-basics.md)
+- [Noções básicas sobre o desenvolvimento de controles dos Windows Forms](windows-forms-control-development-basics.md)

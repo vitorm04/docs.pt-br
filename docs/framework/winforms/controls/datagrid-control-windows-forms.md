@@ -30,13 +30,13 @@ ms.locfileid: "76742518"
  [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms usando o Designer](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
  Descreve como adicionar tabelas e colunas ao controle `DataGrid` usando o designer.  
   
- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [Como Adicionar Tabelas e Colunas ao Controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  Descreve como adicionar tabelas e colunas ao controle `DataGrid` com programação.  
   
- [Como associar o controle DataGrid do Windows Forms a uma fonte de dados usando o Designer](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados usando o Designer](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
  Descreve como associar um conjunto de ADO.NET ao controle de `DataGrid` usando o designer.  
   
- [Como associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  Descreve como associar um conjunto de ADO.NET ao controle de `DataGrid`.  
   
  [Como alterar dados exibidos no tempo de execução no controle DataGrid do Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)  
@@ -48,22 +48,22 @@ ms.locfileid: "76742518"
  Como criar listas mestre/detalhes com o controle DataGrid do Windows Forms  
  Descreve como exibir duas tabelas reunidas com uma relação pai/filho em dois controles `DataGrid` separados.  
   
- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  Descreve como remover colunas no controle `DataGrid`.  
   
- [Como formatar o controle DataGrid do Windows Forms usando o Designer](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
+ [Como formatar o controle DataGrid dos Windows Forms usando o Designer](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
  Descreve como alterar as propriedades relacionadas à aparência do controle `DataGrid` usando o designer.  
   
  [Como formatar o controle DataGrid do Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)  
  Descreve como alterar as propriedades relacionadas à aparência do controle `DataGrid`.  
   
- [Atalhos de teclado para o controle DataGrid do Windows Forms](keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
+ [Atalhos de teclado para o controle DataGrid dos Windows Forms](keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
  Lista atalhos para navegarem por meio do controle `DataGrid`.  
   
- [Como responder a cliques no controle DataGrid do Windows Forms](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
+ [Como responder a cliques no controle DataGrid dos Windows Forms](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
  Descreve como determinar em qual célula um usuário clicou no controle `DataGrid`.  
   
- [Como validar a entrada com o controle DataGrid do Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
+ [Como validar a entrada com o controle DataGrid dos Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Descreve como validar a entrada no conjunto de dados associado ao controle `DataGrid`.  
   
 ## <a name="reference"></a>Referência  
@@ -74,10 +74,10 @@ ms.locfileid: "76742518"
  Fornece detalhes sobre como usar essa propriedade para associar o controle de <xref:System.Windows.Forms.DataGrid> aos dados.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Vinculação de dados dos Windows Forms](../windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](../windows-forms-data-binding.md)  
  Fornece links para tópicos sobre a associação de dados no Windows Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Diferenças entre os controles DataGridView e DataGrid dos Windows Forms ](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)
+- [Diferenças entre os controles DataGridView e DataGrid do Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

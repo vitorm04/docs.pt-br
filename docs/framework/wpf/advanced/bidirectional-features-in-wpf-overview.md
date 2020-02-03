@@ -134,7 +134,7 @@ O exemplo a seguir desenha um <xref:System.Windows.FlowDirection.RightToLeft><xr
 
 Há alguns casos em que <xref:System.Windows.FlowDirection> não se comporta conforme o esperado. Esta seção aborda duas dessas exceções.
 
-**Image**
+**Imagem**
 
 Um <xref:System.Windows.Controls.Image> representa um controle que exibe uma imagem. Em XAML, ele pode ser usado com uma propriedade <xref:System.Windows.Controls.Image.Source%2A> que define o URI (Uniform Resource Identifier) do <xref:System.Windows.Controls.Image> a ser exibido.
 
@@ -198,7 +198,7 @@ A propriedade <xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A> 
 
 Essa propriedade especifica o tipo de substituição de números a ser executado. Ele usa um dos seguintes <xref:System.Windows.Media.NumberSubstitutionMethod> valores de enumeração:
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: o método de substituição é determinado com base na propriedade <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> da cultura do número. Este é o padrão.
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: o método de substituição é determinado com base na propriedade <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> da cultura do número. Esse é o padrão.
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: se a cultura do número for uma cultura árabe ou persa, ela especificará que os dígitos dependem do contexto.
 

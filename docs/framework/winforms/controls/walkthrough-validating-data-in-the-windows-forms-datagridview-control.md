@@ -78,7 +78,7 @@ Agora, é possível testar o formulário para garantir que ele se comporta da fo
 
   Você verá uma <xref:System.Windows.Forms.DataGridView> preenchida com dados da tabela `Customers`. Ao clicar duas vezes em uma célula da coluna `CompanyName`, é possível editar o valor. Se você excluir todos os caracteres e pressionar a tecla TAB para sair da célula, a <xref:System.Windows.Forms.DataGridView> impedirá que você saia. Quando você digita uma cadeia de caracteres não vazia na célula, o controle de <xref:System.Windows.Forms.DataGridView> permite sair da célula.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Esse aplicativo oferece uma compreensão básica dos recursos do controle de <xref:System.Windows.Forms.DataGridView>. Você pode personalizar a aparência e o comportamento do controle de <xref:System.Windows.Forms.DataGridView> de várias maneiras:
 
@@ -88,15 +88,15 @@ Esse aplicativo oferece uma compreensão básica dos recursos do controle de <xr
 
 - Verifique a entrada do usuário para erros relacionados ao banco de dados. Para obter mais informações, consulte [Instruções passo a passo: identificando erros que ocorrem durante a entrada de dados no controle DataGridView do Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).
 
-- Manipule grandes conjuntos de dados usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).
+- Manipule conjuntos de dados muito grandes usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).
 
 - Personalize a aparência das células. Para obter mais informações, consulte [Como Personalizar a Aparência de Células no Controle DataGridView do Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [Como Definir Estilos de Fonte e Cor no Controle DataGridView do Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Entrada de Dados no controle DataGridView dos Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Entrada de dados no controle DataGridView do Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
 - [Como validar dados no controle DataGridView dos Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
 - [Passo a passo: manipulando erros que ocorrem durante a entrada de dados no controle DataGridView dos Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Protegendo informações de conexão](../../data/adonet/protecting-connection-information.md)

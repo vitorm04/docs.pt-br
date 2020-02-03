@@ -55,9 +55,9 @@ Um recurso importante do controle de <xref:System.Windows.Forms.MonthCalendar> d
        SelectionRange(projectStart, projectEnd);  
     ```  
   
-     – ou –  
+     –ou–  
   
-     Defina as propriedades <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
+     Definir as propriedades <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> e <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A>.  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,9 +74,9 @@ Um recurso importante do controle de <xref:System.Windows.Forms.MonthCalendar> d
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Como alterar a aparência do controle MonthCalendar dos Windows Forms](how-to-change-monthcalendar-control-appearance.md)
 - [Como exibir dias específicos em negrito com o controle MonthCalendar dos Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Como exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Como exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

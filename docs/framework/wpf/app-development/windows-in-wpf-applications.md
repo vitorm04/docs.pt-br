@@ -21,7 +21,7 @@ Os usuários interagem com aplicativos por meio do Windows. A finalidade fundame
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral das janelas do WPF](wpf-windows-overview.md)  
  [Visão geral das caixas de diálogo](dialog-boxes-overview.md)  
- [Tópicos de instruções](window-management-how-to-topics.md)  
+ [Tópicos explicativos](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Window>  

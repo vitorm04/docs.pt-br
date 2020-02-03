@@ -62,7 +62,7 @@ Você pode usar o componente Windows Forms <xref:System.Windows.Forms.ErrorProvi
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do componente ErrorProvider](errorprovider-component-overview-windows-forms.md)
 - [Como exibir ícones de erro para validação do formulário com o componente ErrorProvider dos Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

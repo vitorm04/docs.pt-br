@@ -43,7 +43,7 @@ Fornece documentação de referência para o controle de <xref:System.Windows.Fo
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 Fornece documentação de referência para o controle de <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como ancorar e encaixar controles filho em um controle FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

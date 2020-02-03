@@ -53,7 +53,7 @@ ms.locfileid: "76740611"
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
@@ -62,8 +62,8 @@ ms.locfileid: "76740611"
   
 - Referências aos assemblies System, System.Windows.Forms e System.Drawing.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como Imprimir um Arquivo de Texto de Várias Páginas nos Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)
-- [Impressão mais segura no Windows Forms](../more-secure-printing-in-windows-forms.md)
+- [Impressão mais segura nos Windows Forms](../more-secure-printing-in-windows-forms.md)

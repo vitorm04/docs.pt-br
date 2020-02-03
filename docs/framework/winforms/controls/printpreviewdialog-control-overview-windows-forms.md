@@ -53,7 +53,7 @@ Se a opção não estiver presente ou se estiver definida como qualquer outro va
 
 Se você usar o evento <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> para modificar as configurações da impressora, o desempenho do controle de <xref:System.Windows.Forms.PrintPreviewDialog> não será melhorado mesmo se uma opção de configuração de otimização for definida.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Visão geral do controle PrintPreviewControl](printpreviewcontrol-control-overview-windows-forms.md)

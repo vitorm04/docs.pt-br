@@ -24,7 +24,7 @@ O Windows Forms inclui um modelo de entrada do usuário com base em eventos que 
  [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)  
  Fornece informações sobre a manipulação de mensagens do teclado, os diferentes tipos de teclas e os eventos de teclado.  
   
- [Entrada do mouse em um aplicativo dos Windows Forms](mouse-input-in-a-windows-forms-application.md)  
+ [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)  
  Fornece informações sobre os eventos do mouse e outros recursos relacionados ao mouse, incluindo cursores e captura do mouse.  
   
  [Como simular eventos de mouse e teclado no código](how-to-simulate-mouse-and-keyboard-events-in-code.md)  

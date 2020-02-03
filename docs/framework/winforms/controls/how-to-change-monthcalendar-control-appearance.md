@@ -103,9 +103,9 @@ O controle de <xref:System.Windows.Forms.MonthCalendar> de Windows Forms permite
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Como selecionar um intervalo de datas no controle MonthCalendar dos Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
 - [Como exibir dias específicos em negrito com o controle MonthCalendar dos Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Como exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Como exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

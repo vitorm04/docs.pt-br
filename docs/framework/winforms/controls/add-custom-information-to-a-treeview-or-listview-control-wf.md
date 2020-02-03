@@ -130,7 +130,7 @@ Você pode criar um nó derivado em um Windows Forms <xref:System.Windows.Forms.
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Controle ListView](listview-control-windows-forms.md)

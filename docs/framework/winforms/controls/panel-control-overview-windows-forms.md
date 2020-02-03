@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> controles são usados para forne
 ## <a name="key-properties"></a>Propriedades da chave  
  Para exibir barras de rolagem, defina a propriedade <xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> como `true`. Você também pode personalizar a aparência do painel definindo as propriedades <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>e <xref:System.Windows.Forms.Panel.BorderStyle%2A>. Para obter mais informações sobre as propriedades <xref:System.Windows.Forms.Control.BackColor%2A> e <xref:System.Windows.Forms.Control.BackgroundImage%2A>, consulte [como: definir o plano de fundo de um painel](how-to-set-the-background-of-a-windows-forms-panel.md). A propriedade <xref:System.Windows.Forms.Panel.BorderStyle%2A> determina se o painel é descrito sem nenhuma borda visível (<xref:System.Windows.Forms.BorderStyle.None>), uma linha simples (<xref:System.Windows.Forms.BorderStyle.FixedSingle>) ou uma linha sombreada (<xref:System.Windows.Forms.BorderStyle.Fixed3D>).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Panel>
 - [Controle GroupBox](groupbox-control-windows-forms.md)

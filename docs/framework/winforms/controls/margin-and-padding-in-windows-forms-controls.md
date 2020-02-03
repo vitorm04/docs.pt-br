@@ -27,7 +27,7 @@ O posicionamento exato dos controles no formulário é uma prioridade alta para 
   
  Há suporte para o tempo de design para esse recurso no Visual Studio. Além disso, veja [o passo a passos: dispor Windows Forms controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

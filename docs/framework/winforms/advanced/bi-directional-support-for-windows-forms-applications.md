@@ -76,7 +76,7 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
 |<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; usar um <xref:System.Windows.Forms.TableLayoutPanel>|Não|
 |<xref:System.Windows.Forms.VScrollBar>|Exibido no lado esquerdo em vez do lado direito de controles roláveis|Sem efeito|Não|
 
-## <a name="encoding"></a>Encoding
+## <a name="encoding"></a>Codificação
  Windows Forms oferece suporte a Unicode, para que você possa incluir qualquer caractere definido quando você cria seus aplicativos bi-direcionais. No entanto, nem todos os controles dos Windows Forms oferecem suporte a Unicode em todas as plataformas.
 
 ## <a name="gdi"></a>GDI+
@@ -115,6 +115,6 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
 
  Alguns controles são lacrados. Portanto, você não pode derivar um novo controle deles. Isso inclui os controles <xref:System.Windows.Forms.ImageList> e <xref:System.Windows.Forms.ProgressBar>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Suporte bidirecional para aplicativos Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))

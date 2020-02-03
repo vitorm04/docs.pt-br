@@ -16,7 +16,7 @@ ms.locfileid: "76746382"
 A funcionalidade de acessibilidade do Windows Forms permite disponibilizar seu aplicativo para uma ampla variedade de usuários.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Instruções Passo a Passo: Criar um Aplicativo Baseado no Windows Acessível](walkthrough-creating-an-accessible-windows-based-application.md)  
+ [Instruções passo a passo: criando um aplicativo acessível baseado no Windows](walkthrough-creating-an-accessible-windows-based-application.md)  
  Descreve todos os recursos para os quais você deve dar suporte para aumentar a acessibilidade.  
   
 ## <a name="reference"></a>Referência  

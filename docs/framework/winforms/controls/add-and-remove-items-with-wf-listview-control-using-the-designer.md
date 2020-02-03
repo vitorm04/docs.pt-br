@@ -30,11 +30,11 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
 
 4. Para remover um item, selecione-o e clique no botão **Remover**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)
-- [Como adicionar colunas ao controle ListView do Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Como Exibir Subitens em Colunas com o Controle ListView dos Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Como Exibir Ícones do Controle ListView dos Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Como Adicionar Colunas ao Controle ListView dos Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Como exibir subitens em colunas com o controle ListView do Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Como exibir ícones do controle ListView do Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
 - [Como adicionar informações personalizadas a um controle TreeView ou ListView (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Como agrupar itens em um controle ListView dos Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Como agrupar itens em um controle ListView do Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)

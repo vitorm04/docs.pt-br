@@ -17,7 +17,7 @@ ms.locfileid: "76734109"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet run` – Executa o código-fonte sem qualquer comando de compilação ou inicialização explícito.
 
@@ -78,7 +78,7 @@ Para executar o aplicativo, o comando `dotnet run` resolve as dependências do a
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 

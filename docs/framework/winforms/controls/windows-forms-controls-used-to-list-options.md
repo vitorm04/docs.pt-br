@@ -54,5 +54,5 @@ Você pode adicionar uma variedade de controles a um Windows Form para fornecer 
  [Visão geral do controle ListBox](listbox-control-overview-windows-forms.md)  
  Explica o que é esse controle e seus principais recursos e propriedades.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

@@ -42,5 +42,5 @@ ms.locfileid: "76742854"
  Substitui e adiciona funcionalidade ao controle de <xref:System.Windows.Forms.StatusBar>.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

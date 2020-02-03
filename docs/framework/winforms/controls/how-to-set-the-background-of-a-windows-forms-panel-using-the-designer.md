@@ -34,7 +34,7 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
 
 6. Na caixa de diálogo **Abrir**, selecione o arquivo que deseja exibir.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

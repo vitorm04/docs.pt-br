@@ -31,8 +31,8 @@ No Windows Forms, a entrada do usuário é enviada para aplicativos na forma de 
   
  Mensagens de teclado e mouse também são processadas por um conjunto adicional de métodos substituíveis específicos para esses tipos de mensagens. Para obter mais informações, consulte [Como a Entrada do Teclado Funciona](how-keyboard-input-works.md) e [Como a Entrada do Mouse Funciona no Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Entrada do usuário nos Windows Forms](user-input-in-windows-forms.md)
+- [Entrada do usuário no Windows Forms](user-input-in-windows-forms.md)
 - [Entrada do teclado em um aplicativo dos Windows Forms](keyboard-input-in-a-windows-forms-application.md)
-- [Entrada do mouse em um aplicativo dos Windows Forms](mouse-input-in-a-windows-forms-application.md)
+- [Entrada do mouse em um Aplicativo do Windows Forms](mouse-input-in-a-windows-forms-application.md)

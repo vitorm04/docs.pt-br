@@ -30,7 +30,7 @@ ms.locfileid: "76737138"
     > [!NOTE]
     > A propriedade `ColumnType` é uma propriedade somente em tempo de design que indica a classe que representa o tipo de coluna. Não é uma propriedade real definida em uma classe de coluna.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>

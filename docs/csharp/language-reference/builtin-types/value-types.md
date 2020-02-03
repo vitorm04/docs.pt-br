@@ -58,7 +58,7 @@ Todos os tipos simples são tipos de estrutura e diferem de outros tipos de estr
 
 A partir C# do 7,0 C# , o dá suporte a [tuplas de valor](../../tuples.md). Uma tupla de valor é um tipo de valor, mas não um tipo simples.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -66,7 +66,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Tipos simples](~/_csharplang/spec/types.md#simple-types)
 - [Variáveis](~/_csharplang/spec/variables.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>

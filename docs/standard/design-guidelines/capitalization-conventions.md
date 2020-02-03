@@ -47,14 +47,14 @@ As diretrizes neste capítulo destacam um método simples para usar o caso, quan
 
  A tabela a seguir descreve as regras de capitalização para diferentes tipos de identificadores.
 
-|Identifier|Maiúsculas|Exemplo|
+|Identifier|Maiúsculas|{1&gt;Exemplo&lt;1}|
 |----------------|------------|-------------|
-|Namespace|Pascal|`namespace System.Security { ... }`|
-|{1&gt;Tipo&lt;1}|Pascal|`public class StreamReader { ... }`|
+|{1&gt;Namespace&lt;1}|Pascal|`namespace System.Security { ... }`|
+|Tipo|Pascal|`public class StreamReader { ... }`|
 |Interface|Pascal|`public interface IEnumerable { ... }`|
 |Método|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|propriedade|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|Propriedade|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|{1&gt;Evento&lt;1}|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |Campo|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |Valor de enumeração|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |Parâmetro|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
@@ -103,7 +103,7 @@ As diretrizes neste capítulo destacam um método simples para usar o caso, quan
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)

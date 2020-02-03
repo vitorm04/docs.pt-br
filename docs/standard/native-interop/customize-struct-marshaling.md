@@ -12,7 +12,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741525"
 ---
-# <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
+# <a name="customizing-structure-marshaling"></a>Como personalizar o marshaling de estrutura
 
 Às vezes, as regras de marshaling padrão para estruturas não são exatamente o que você precisa. Os runtimes do .NET fornecem alguns pontos de extensão para você personalizar o layout de sua estrutura e como os campos têm o marshaling realizado.
 

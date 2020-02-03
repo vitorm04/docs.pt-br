@@ -38,7 +38,7 @@ O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Propriedades, métodos e eventos normalmente usados  
   
-|Name|Descrição|  
+|{1&gt;Nome&lt;1}|Descrição|  
 |----------|-----------------|  
 |Propriedade <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Determina qual painel permanecerá com o mesmo tamanho depois que o controle de <xref:System.Windows.Forms.SplitContainer> for redimensionado.|  
 |Propriedade <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Determina se o divisor pode ser movido com o teclado ou mouse.|  
@@ -49,7 +49,7 @@ O controle <xref:System.Windows.Forms.SplitContainer> dos Windows Forms pode ser
 |Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoving>|Ocorre quando o separador está sendo movido.|  
 |Evento <xref:System.Windows.Forms.SplitContainer.SplitterMoved>|Ocorre quando o separador foi movido.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)

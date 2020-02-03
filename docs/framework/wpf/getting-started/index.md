@@ -1,5 +1,5 @@
 ---
-title: Guia de Introdução
+title: Introdução
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
@@ -26,8 +26,8 @@ O Windows Presentation Foundation (WPF) é uma estrutura de interface do usuári
 |Quero saber mais sobre o WPF…|[Introdução ao WPF no Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Visão geral de XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Controles](../controls/index.md)<br /><br /> [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)|  
 |Você é um desenvolvedor de Windows Forms?|[Controles dos Windows Forms e controles WPF equivalentes](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interoperação do WPF e do Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Biblioteca de classes](../class-library-wpf.md)
-- [Desenvolvimento de aplicativos](../app-development/index.md)
+- [Desenvolvimento de Aplicativos](../app-development/index.md)
 - [Central de desenvolvedores do .NET Framework](https://www.microsoft.com/net)

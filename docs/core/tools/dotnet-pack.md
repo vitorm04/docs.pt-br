@@ -17,7 +17,7 @@ ms.locfileid: "76734116"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet pack` – Empacota o código em um pacote NuGet.
 
@@ -55,13 +55,13 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `PROJECT | SOLUTION`
 
   O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), um arquivo de solução ou um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-c|--configuration {Debug|Release}`**
 

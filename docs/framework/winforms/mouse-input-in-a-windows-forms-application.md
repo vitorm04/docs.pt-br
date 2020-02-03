@@ -30,7 +30,7 @@ O Windows Forms inclui uma variedade de eventos de mouse e suporte adicional par
  [Captura do mouse nos Windows Forms](mouse-capture-in-windows-forms.md)  
  Descreve como um controle pode capturar o mouse.  
   
- [Funcionalidade do tipo "arrastar e soltar" nos Windows Forms](drag-and-drop-functionality-in-windows-forms.md)  
+ [Funcionalidade do tipo "arrastar e soltar" no Windows Forms](drag-and-drop-functionality-in-windows-forms.md)  
  Descreve como implementar o comportamento de arrastar e soltar.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  

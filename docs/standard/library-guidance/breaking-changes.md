@@ -96,7 +96,7 @@ public class Document
 
 > Remover APIs é uma alteração da falha binária. Considere a possibilidade de manter métodos e tipos obsoletos se mantê-los tem baixo custo e não adiciona muitas dívidas técnicas à sua biblioteca. Não remover tipos e métodos pode ajudar a evitar os piores cenários mencionados acima.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Considerações sobre versão e atualização para os desenvolvedores de C#](../../csharp/whats-new/version-update-considerations.md)
 - [Um guia definitivo para as alterações da falha de API no .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)

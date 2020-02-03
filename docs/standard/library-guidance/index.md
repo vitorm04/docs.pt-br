@@ -47,4 +47,4 @@ Por fim, as recomendações **Não fazer** indicam algo que você quase nunca de
 ❌ não publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
->[Avançar](get-started.md)
+>[Próximo](get-started.md)

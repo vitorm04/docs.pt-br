@@ -41,11 +41,11 @@ Por padrão, as dicas de ferramenta são usadas para exibir os valores de <xref:
 ## <a name="robust-programming"></a>Programação Robusta  
  Ao associar o controle de <xref:System.Windows.Forms.DataGridView> a uma fonte de dados externa ou fornecer sua própria fonte de dados implementando o modo virtual, você pode encontrar problemas de desempenho. Para evitar uma penalidade de desempenho ao trabalhar com grandes quantidades de dados, manipule o evento <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> em vez de definir a propriedade <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> de várias células. Quando você manipula esse evento, obter o valor de uma célula <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> propriedade gera o evento e retorna o valor da propriedade <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> conforme especificado no manipulador de eventos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType>
-- [Programando com células, linhas e colunas no controle DataGridView do Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programando com células, linhas e colunas no controle DataGridView dos Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

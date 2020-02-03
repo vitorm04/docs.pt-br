@@ -22,7 +22,7 @@ No projeto do seu aplicativo, talvez seja necessário usar um único manipulador
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Conectar vários eventos a um único manipulador de eventos no Visual Basic  
   
-1. Clique com o botão direito do mouse no formulário e escolha **Exibir Código**.  
+1. Clique com o botão direito do mouse do formulário e escolha **Exibir código**.  
   
 2. Na caixa suspensa **Nome de Classe**, selecione um dos controles que você deseja que o manipulador de eventos trate.  
   
@@ -60,7 +60,7 @@ No projeto do seu aplicativo, talvez seja necessário usar um único manipulador
   
      O código será adicionado ao formulário para associar o evento ao manipulador de eventos existente.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

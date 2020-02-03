@@ -25,7 +25,7 @@ Os artigos nesta seção apresentam orientações e itens a serem considerados a
  [Considerações sobre desempenho](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  Contém entradas relacionadas ao desempenho e à segurança.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

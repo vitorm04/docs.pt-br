@@ -31,5 +31,5 @@ O Windows Forms <xref:System.Windows.Forms.FontDialog> componente é uma caixa d
  [Controles e componentes da caixa de diálogo](dialog-box-controls-and-components-windows-forms.md)  
  Descreve um conjunto de controles e componentes que permitem que os usuários executem interações padrão com o aplicativo ou o sistema.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa de controles de Windows Forms, com links para informações sobre seu uso.

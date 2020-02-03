@@ -30,7 +30,7 @@ O recurso de exibição de bloco do controle de <xref:System.Windows.Forms.ListV
 
 2. Na janela **Propriedades** , selecione a propriedade <xref:System.Windows.Forms.ListView.View%2A> e escolha **bloco**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)

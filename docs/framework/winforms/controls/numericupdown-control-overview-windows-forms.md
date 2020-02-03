@@ -20,10 +20,10 @@ O controle <xref:System.Windows.Forms.NumericUpDown> se parece com uma combinaç
   
  Devido à sua funcionalidade versátil, esse controle é uma opção óbvia, por exemplo, se você quiser criar um controle de volume para aplicativo de player de música. O controle <xref:System.Windows.Forms.NumericUpDown> é usado em muitos aplicativos do painel de controle do Windows.  
   
-## <a name="key-properties-and-methods"></a>Propriedades e métodos de tecla  
+## <a name="key-properties-and-methods"></a>Propriedades e métodos de chave  
  Os números exibidos na caixa de texto do controle podem estar em uma variedade de formatos, incluindo hexadecimais. Para obter mais informações, consulte [Como definir o formato para o controle NumericUpDown dos Windows Forms](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md). As propriedades de chave do controle são <xref:System.Windows.Forms.NumericUpDown.Value%2A>, <xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (valor padrão 100), <xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (valor padrão 0) e <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (valor padrão 1). A propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> define o número atual selecionado no controle. A propriedade <xref:System.Windows.Forms.NumericUpDown.Increment%2A> define o valor pelo qual o número é ajustado quando o usuário clica em uma seta para cima ou para baixo. Quando o foco é movido para fora do controle, qualquer entrada digitada será validada em relação aos valores numéricos mínimo e máximo. Você pode aumentar a velocidade com que o controle se move por números, quando o usuário pressiona continuamente a seta para cima ou para baixo, com a propriedade <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>. Os principais métodos do controle são <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [Controle NumericUpDown](numericupdown-control-windows-forms.md)

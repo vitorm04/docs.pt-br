@@ -80,6 +80,6 @@ A ordem na qual os eventos são gerados em aplicativos do Windows Forms é de in
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)

@@ -46,7 +46,7 @@ Para salvar um arquivo, chame o método <xref:System.Windows.Forms.RichTextBox.S
 
 2. Chame o método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> do controle <xref:System.Windows.Forms.RichTextBox>, especificando o arquivo a ser salvo e, opcionalmente, um tipo de arquivo. Se você chamar o método com um nome de arquivo como seu único argumento, o arquivo será salvo como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da enumeração <xref:System.Windows.Forms.RichTextBoxStreamType> como seu segundo argumento.
 
-    No exemplo de código a seguir, o caminho definido para o do arquivo rich-text é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.RichTextBox> já adicionado.
+    No exemplo de código a seguir, o caminho definido para o do arquivo rich-text é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows incluem essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.RichTextBox> já adicionado.
 
     ```vb
     Public Sub SaveFile()
@@ -88,9 +88,9 @@ Para salvar um arquivo, chame o método <xref:System.Windows.Forms.RichTextBox.S
     > [!IMPORTANT]
     > Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, essa aplicativo precisará de acesso Criar para a pasta. As permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisará apenas de acesso Gravar, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso de leitura a um único arquivo, em vez de acesso Criar a uma pasta. Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

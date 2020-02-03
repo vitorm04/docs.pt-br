@@ -32,7 +32,7 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
 
 4. Para excluir nós, selecione o nó a ser excluído e clique no botão **Excluir**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Visão geral do controle TreeView](treeview-control-overview-windows-forms.md)

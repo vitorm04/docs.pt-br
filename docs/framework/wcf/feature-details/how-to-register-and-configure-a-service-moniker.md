@@ -96,6 +96,6 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
 
      Isso modifica as definições de interface importadas para que todos os métodos retornem um `HResult`. Quaisquer outros valores de retorno são convertidos em parâmetros de saída. A execução geral dos métodos permanece a mesma. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade só está disponível no C++ código.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -54,7 +54,7 @@ Os procedimentos a seguir exigem um projeto de **aplicativo do Windows** com um 
 
 5. Na caixa **Propriedades** do editor de coleção, selecione o valor <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> para a coluna que você deseja exibir.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

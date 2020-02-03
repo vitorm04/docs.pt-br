@@ -17,7 +17,7 @@ ms.locfileid: "76733226"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet list reference` – lista as referências projeto a projeto.
 
@@ -29,13 +29,13 @@ ms.locfileid: "76733226"
 
 O comando `dotnet list reference` fornece uma opção conveniente para listar as referências de projeto de determinado projeto ou solução.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 * **`PROJECT | SOLUTION`**
 
   Especifica o arquivo de solução ou de projeto para usar para listar referências. Se não é especificado, o comando pesquisa um arquivo de projeto no diretório atual.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 * **`-h|--help`**
 

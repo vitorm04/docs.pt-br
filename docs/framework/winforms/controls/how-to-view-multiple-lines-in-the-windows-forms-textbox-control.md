@@ -33,7 +33,7 @@ Por padrão, o controle de <xref:System.Windows.Forms.TextBox> de Windows Forms 
   
 2. Defina a propriedade <xref:System.Windows.Forms.TextBox.ScrollBars%2A> com um valor apropriado.  
   
-    |Value|Descrição|  
+    |{1&gt;Valor&lt;1}|Descrição|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|Use esse valor se o texto será um parágrafo que quase sempre se ajusta ao controle. O usuário poderá usar o ponteiro do mouse para mover-se dentro do controle se o texto for grande demais para ser exibido totalmente ao mesmo tempo.|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Use esse valor se desejar exibir uma lista de linhas, algumas das quais podem ser maiores que a largura do controle de <xref:System.Windows.Forms.TextBox>.|  
@@ -41,12 +41,12 @@ Por padrão, o controle de <xref:System.Windows.Forms.TextBox> de Windows Forms 
   
 3. Defina a propriedade <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> com um valor apropriado.  
   
-    |Value|Descrição|  
+    |{1&gt;Valor&lt;1}|Descrição|  
     |-----------|-----------------|  
     |`false`|O texto no controle não será encapsulado automaticamente, portanto ele rolará para a direita até atingir uma quebra de linha. Use esse valor se você escolher <xref:System.Windows.Forms.ScrollBars.Horizontal> barras de rolagem ou <xref:System.Windows.Forms.ScrollBars.Both>, acima.|  
     |`true` (padrão)|A barra de rolagem horizontal não será exibida. Use esse valor se você escolher <xref:System.Windows.Forms.ScrollBars.Vertical> barras de rolagem ou <xref:System.Windows.Forms.ScrollBars.None>, acima, para exibir um ou mais parágrafos.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

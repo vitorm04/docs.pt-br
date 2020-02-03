@@ -36,7 +36,7 @@ Depois de adicionar controles ao formulário e determinar a interface do usuári
 
          Se uma fonte de dados tiver sido configurada anteriormente para o projeto ou formulário, ela será exibida.
 
-3. Clique em **Adicionar Fonte de Dados do Projeto** para conectar-se aos dados e criar uma fonte de dados.
+3. Clique em **Adicionar fonte de dados do projeto** para conectar aos dados e criar uma fonte de dados.
 
 4. Na página de boas-vindas do **Assistente de Configuração de Fonte de Dados**, clique em **Avançar**.
 
@@ -50,13 +50,13 @@ Depois de adicionar controles ao formulário e determinar a interface do usuári
 
 9. Substitua o nome do conjunto de dados padrão, se quiser.
 
-10. Clique em **Finalizar**.
+10. Clique em **Concluir**.
 
 11. Na janela **Propriedades** , clique na seta ao lado da propriedade <xref:System.Windows.Forms.TextBox.Text%2A> novamente. No editor de tipo de interface do usuário do **DataSource** , selecione o nome do campo ao qual associar o <xref:System.Windows.Forms.TextBox>.
 
      O editor de tipo de interface do usuário da **fonte** de dados é fechado e o conjunto <xref:System.Windows.Forms.BindingSource> e o adaptador de tabela específico para essa conexão de dados são adicionados ao formulário.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

@@ -14,11 +14,11 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
   
 - [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md).  
   
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
+- [\<clientcredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md).  
   
-- [\<serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
+- [> de\<de autorização](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md).  
   
-- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md).  
   
 - [\<> de metadados](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md), que também permite especificar um ponto de extremidade seguro que os clientes podem acessar para metadados.  
   
@@ -92,7 +92,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 ## <a name="client-credentials"></a>Credenciais do cliente  
  As credenciais do cliente são usadas para autenticar o cliente para serviços em casos em que a autenticação mútua é necessária. Você pode usar a seção para especificar certificados de serviço para cenários em que o cliente deve proteger mensagens para um serviço com o certificado do serviço.  
   
- Você também pode configurar um cliente como parte de um cenário de Federação para usar tokens emitidos de um serviço de token seguro ou um emissor local de tokens. Para obter mais informações sobre cenários federados, consulte [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Todas as credenciais do cliente são encontradas no [\<EndpointBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), conforme mostrado no código a seguir.  
+ Você também pode configurar um cliente como parte de um cenário de Federação para usar tokens emitidos de um serviço de token seguro ou um emissor local de tokens. Para obter mais informações sobre cenários federados, consulte [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Todas as credenciais do cliente são encontradas no [>\<EndpointBehaviors](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md), conforme mostrado no código a seguir.  
   
 ```xml  
 <behaviors>  
@@ -117,13 +117,13 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 #### <a name="clientcertificate-element"></a>\<elemento de > clientCertificate  
  Defina o certificado usado para autenticar o cliente com este elemento. Para obter mais informações, consulte [como especificar valores de credenciais de cliente](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
-#### <a name="httpdigest"></a>\<httpDigest>  
+#### <a name="httpdigest"></a>\<httpDigest >  
  Esse recurso deve ser habilitado com Active Directory no Windows e no Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [autenticação Digest no IIS 6,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10)).  
   
 #### <a name="issuedtoken-element"></a>\<elemento de > issuedToken  
  O [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) contém os elementos usados para configurar um emissor local de tokens ou os comportamentos usados com um serviço de token de segurança. Para obter instruções sobre como configurar um cliente para usar um emissor local, consulte [como: configurar um emissor local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
-#### <a name="localissueraddress"></a>\<localIssuerAddress>  
+#### <a name="localissueraddress"></a>\<localIssuerAddress >  
  Especifica um endereço de serviço de token de segurança padrão. Isso é usado quando o <xref:System.ServiceModel.WSFederationHttpBinding> não fornece uma URL para o serviço de token de segurança ou quando o endereço do emissor de uma associação federada é `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`. Nesses casos, o <xref:System.ServiceModel.Description.ClientCredentials> deve ser configurado com o endereço do emissor local e a associação a ser usada para se comunicar com esse emissor.  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
@@ -140,9 +140,9 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 #### <a name="servicecertificate-element"></a>Elemento de > de \<de certificados  
  Use este elemento para controlar a autenticação de certificados de serviço.  
   
- O elemento [\<DefaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) pode armazenar um único certificado usado quando o serviço especifica que não há nenhum certificado.  
+ O elemento [>\<DefaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) pode armazenar um único certificado usado quando o serviço especifica que não há nenhum certificado.  
   
- Use o [\<scopedCertificates](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) e [\<Adicionar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) para definir certificados de serviço associados a serviços específicos. O elemento `<add>` inclui um atributo `targetUri` que é usado para associar o certificado ao serviço.  
+ Use o [>\<scopedCertificates](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) e [\<Adicionar >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md) para definir certificados de serviço associados a serviços específicos. O elemento `<add>` inclui um atributo `targetUri` que é usado para associar o certificado ao serviço.  
   
  O elemento de [> de autenticação\<](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) especifica o nível de confiança usado para autenticar certificados. Por padrão, o nível é definido como "ChainTrust", que especifica que cada certificado deve ser encontrado em uma hierarquia de certificados que terminam em uma autoridade de certificação confiável na parte superior da cadeia. Esse é o modo mais seguro. Você também pode definir o valor como "PeerOrChainTrust", que especifica que os certificados emitidos por conta própria (peer Trust) são aceitos, bem como os certificados que estão em uma cadeia confiável. Esse valor é usado ao desenvolver e depurar clientes e serviços porque certificados emitidos por conta própria não precisam ser comprados de uma autoridade confiável. Ao implantar um cliente, use o valor "ChainTrust" em seu lugar. Você também pode definir o valor como "Custom" ou "None". Para usar o valor "Custom", você também deve definir o atributo `CustomCertificateValidatorType` como um assembly e o tipo usado para validar o certificado. Para criar seu próprio validador personalizado, você deve herdar da classe abstrata <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Para obter mais informações, consulte [como: criar um serviço que emprega um validador de certificado personalizado](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
@@ -217,7 +217,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

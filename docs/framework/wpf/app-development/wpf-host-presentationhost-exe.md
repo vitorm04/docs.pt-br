@@ -30,14 +30,14 @@ Windows Presentation Foundation (WPF) host (PresentationHost. exe) é o aplicati
   
  Este tópico descreve os parâmetros de linha de comando que podem ser usados com PresentationHost.exe.  
   
-## <a name="usage"></a>Medição de  
+## <a name="usage"></a>Uso  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>Parâmetros  
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|{1&gt;filename&lt;1}|O caminho do arquivo a ser ativado. Também pode ser um URI.|  
+|filename|O caminho do arquivo a ser ativado. Também pode ser um URI.|  
 |-debug|Ao ativar um aplicativo, não o confirme, nem o execute por meio do repositório. Isso só funciona quando um arquivo local é ativado.|  
 |-debugSecurityZoneURL \<url>|Usado com um valor de URL para indicar ao PresentationHost. exe que um aplicativo deve ser depurado como se fosse implantado a partir da URL especificada. Isso determina a zona de implantação e o site de origem.|  
 |-embedding|Exigido pelo OLE. Se o parâmetro `-event` ou `-debug` estiver especificado, não será necessário especificar o parâmetro `-embedding`, já que esse parâmetro é definido internamente.|  
@@ -58,6 +58,6 @@ Windows Presentation Foundation (WPF) host (PresentationHost. exe) é o aplicati
 ### <a name="visual-studio-debugging-in-zone"></a>Depuração do Visual Studio na Zona  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Security](../security-wpf.md)
+- [Segurança](../security-wpf.md)

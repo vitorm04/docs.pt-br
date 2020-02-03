@@ -121,7 +121,7 @@ Depois que os aplicativos do Windows Presentation Foundation (WPF) são criados,
   
  Para obter mais informações, consulte [Implantando o .NET Framework e aplicativos](../../deployment/index.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Compilar um aplicativo WPF](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [Segurança](../security-wpf.md)

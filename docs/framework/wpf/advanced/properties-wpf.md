@@ -23,18 +23,18 @@ ms.locfileid: "76731841"
 
 - [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [Visão geral das propriedades anexadas](attached-properties-overview.md)
-- [Propriedades de dependência personalizadas](custom-dependency-properties.md)
+- [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Metadados de propriedade da dependência](dependency-property-metadata.md)
 - [Retornos de chamada da propriedade de dependência e validação](dependency-property-callbacks-and-validation.md)
-- [Metadados de propriedade de Framework](framework-property-metadata.md)
+- [Metadados de propriedade de estrutura](framework-property-metadata.md)
 - [Precedência do valor da propriedade da dependência](dependency-property-value-precedence.md)
 - [Propriedades de dependência somente leitura](read-only-dependency-properties.md)
 - [Herança do valor da propriedade](property-value-inheritance.md)
 - [Segurança de propriedade da dependência](dependency-property-security.md)
-- [Padrões de construtor seguros para DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
+- [Padrões de construtor seguro para DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
 - [Propriedades de dependência do tipo de coleção](collection-type-dependency-properties.md)
 - [Carregamento de XAML e propriedades da dependência](xaml-loading-and-dependency-properties.md)
-- [Tópicos de instruções](properties-how-to-topics.md)
+- [Tópicos explicativos](properties-how-to-topics.md)
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.DependencyProperty>  

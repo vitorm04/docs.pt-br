@@ -29,7 +29,7 @@ ms.locfileid: "76743415"
   
 1. Estenda a classe <xref:System.Windows.Forms.ToolStripRenderer>.  
   
-2. Implemente a renderização personalizada desejada substituindo o *On...* adequado Membros do  
+2. Implemente a renderização personalizada desejada substituindo o *On...* adequado membros  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ ms.locfileid: "76743415"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

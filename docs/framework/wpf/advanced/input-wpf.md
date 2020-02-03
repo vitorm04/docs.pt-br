@@ -23,7 +23,7 @@ O Windows Presentation Foundation (WPF) inclui suporte para vários tipos de ent
  [Visão geral do foco](focus-overview.md)  
  [Estilos para foco em controles e FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [Passo a passo: criando o primeiro aplicativo sensível ao toque](walkthrough-creating-your-first-touch-application.md)  
- [Tópicos de instruções](input-and-commands-how-to-topics.md)  
+ [Tópicos explicativos](input-and-commands-how-to-topics.md)  
  [Tinta digital](digital-ink.md)  
   
 ## <a name="reference"></a>Referência  

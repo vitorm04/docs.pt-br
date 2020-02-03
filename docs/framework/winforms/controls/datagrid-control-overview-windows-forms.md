@@ -114,8 +114,8 @@ Uma coleção de tipos de coluna estende a classe <xref:System.Windows.Forms.Dat
 
 |Tipo de coluna|Descrição|
 |-----------------|-----------------|
-|<xref:System.Windows.Forms.DataGridTextBoxColumn>|Aceita e exibe os dados como cadeias de caracteres formatadas ou não formatadas. Os recursos de edição são os mesmos que são para editar dados em um <xref:System.Windows.Forms.TextBox>simples. Herda de <xref:System.Windows.Forms.DataGridColumnStyle>.|
-|<xref:System.Windows.Forms.DataGridBoolColumn>|Aceita e exibe `true`, `false` e valores nulos. Herda de <xref:System.Windows.Forms.DataGridColumnStyle>.|
+|<xref:System.Windows.Forms.DataGridTextBoxColumn>|Aceita e exibe os dados como cadeias de caracteres formatadas ou não formatadas. Os recursos de edição são os mesmos que são para editar dados em um <xref:System.Windows.Forms.TextBox>simples. Herdada de <xref:System.Windows.Forms.DataGridColumnStyle>.|
+|<xref:System.Windows.Forms.DataGridBoolColumn>|Aceita e exibe `true`, `false` e valores nulos. Herdada de <xref:System.Windows.Forms.DataGridColumnStyle>.|
 
 Ao clicar duas vezes na borda direita de uma coluna, a coluna é redimensionada para exibir a legenda completa e a maior entrada.
 
@@ -142,14 +142,14 @@ Como as colunas que serão incluídas na grade de dados são especificadas por m
 
 A formatação que pode ser aplicada ao controle de <xref:System.Windows.Forms.DataGrid> inclui estilos de borda, estilos de linha de grade, fontes, propriedades de legendas, alinhamento de dados e cores de plano de fundo alternadas entre linhas. Para obter mais informações, consulte [Como formatar o controle DataGrid dos Windows Forms](how-to-format-the-windows-forms-datagrid-control.md).
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Além dos eventos de controle comuns, como <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>e <xref:System.Windows.Forms.DataGrid.Scroll>, o controle de <xref:System.Windows.Forms.DataGrid> dá suporte a eventos associados à edição e navegação dentro da grade. A propriedade <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> determina qual célula está selecionada. O evento <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> é gerado quando o usuário navega para uma nova célula. Quando o usuário navega para uma nova tabela por meio de relações pai/filho, o evento <xref:System.Windows.Forms.DataGrid.Navigate> é gerado. O evento <xref:System.Windows.Forms.DataGrid.BackButtonClick> é gerado quando o usuário clica no botão voltar quando o usuário está exibindo uma tabela filho e o evento <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> é gerado quando o ícone Mostrar/Ocultar linhas pai é clicado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como associar o controle DataGrid do Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Como adicionar tabelas e colunas ao controle DataGrid do Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Como Adicionar Tabelas e Colunas ao Controle DataGrid dos Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Como excluir ou ocultar colunas no controle DataGrid dos Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Como formatar o controle DataGrid do Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)

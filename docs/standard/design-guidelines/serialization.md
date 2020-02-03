@@ -1,5 +1,5 @@
 ---
-title: '{1&gt;Serialização&lt;1}'
+title: Serialization
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
@@ -10,12 +10,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743639"
 ---
-# <a name="serialization"></a>{1&gt;Serialização&lt;1}
+# <a name="serialization"></a>Serialization
 A serialização é o processo de converter um objeto em um formato que pode ser prontamente persistente ou transportado. Por exemplo, você pode serializar um objeto, transportá-lo pela Internet usando HTTP e desserializado no computador de destino.
 
  O .NET Framework oferece três tecnologias de serialização principais otimizadas para vários cenários de serialização. A tabela a seguir lista essas tecnologias e os principais tipos de estrutura relacionados a elas.
 
-|**Nome da tecnologia**|**Tipos principais**|**Exemplos**|
+|**Nome da tecnologia**|**Tipos principais**|**Cenários**|
 |-------------------------|--------------------|-------------------|
 |**Serialização de contrato de dados**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Persistência geral<br />Serviços Web<br />JSON|
 |**Serialização de XML**|<xref:System.Xml.Serialization.XmlSerializer>|Formato XML com controle total sobre a forma do XML|
@@ -102,7 +102,7 @@ public class Person : ISerializable
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)

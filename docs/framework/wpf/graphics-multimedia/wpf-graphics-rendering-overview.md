@@ -38,7 +38,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
   
 - Manipulação de eventos  
   
-- {1&gt;{2&gt;Layout&lt;2}&lt;1}  
+- {1&gt;Layout&lt;1}  
   
 - Estilos  
   
@@ -65,7 +65,7 @@ Este tópico fornece uma visão geral da camada visual do [!INCLUDE[TLA2#tla_win
 |Tipo de conteúdo de desenho|Descrição|  
 |--------------------------|-----------------|  
 |Gráficos vetoriais|Representa dados de gráficos vetoriais e quaisquer informações <xref:System.Windows.Media.Brush> e <xref:System.Windows.Media.Pen> associadas.|  
-|Image|Representa uma imagem em uma região definida por um <xref:System.Windows.Rect>.|  
+|Imagem|Representa uma imagem em uma região definida por um <xref:System.Windows.Rect>.|  
 |Glifo|Representa um desenho que renderiza um <xref:System.Windows.Media.GlyphRun>, que é uma sequência de glifos de um recurso de fonte especificado. Este é o modo pelo qual o texto é representado.|  
 |Vídeo|Representa um desenho que renderiza vídeo.|  
   
@@ -177,7 +177,7 @@ Diagrama de árvore lógica
  Observe como os controles <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>e <xref:System.Windows.Controls.Button> exibem uma hierarquia de objetos visuais separada no painel do **Visual Tree Explorer** do XamlPad. Isso ocorre porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] controles têm uma <xref:System.Windows.Controls.ControlTemplate> que contém a árvore visual desse controle. Quando você referencia um controle explicitamente, você referencia implicitamente sua hierarquia visual.  
   
 ### <a name="profiling-visual-performance"></a>Criação de perfil de desempenho Visual  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um pacote de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A ferramenta Visual Profiler fornece uma exibição gráfica sofisticada de dados de desempenho, por meio do mapeamento diretamente para a árvore visual do aplicativo. Nessa tela, a seção **Uso de CPU** do Visual Profiler lhe dá um detalhamento preciso do uso de um objeto de serviços do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], assim como renderização e layout.  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um conjunto de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A ferramenta Visual Profiler fornece uma exibição gráfica sofisticada de dados de desempenho, por meio do mapeamento diretamente para a árvore visual do aplicativo. Nessa tela, a seção **Uso de CPU** do Visual Profiler lhe dá um detalhamento preciso do uso de um objeto de serviços do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], assim como renderização e layout.  
   
  ![Saída de exibição do Visual Profiler](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Saída de exibição do Visual Profiler  
@@ -247,7 +247,7 @@ Elementos gráficos e texto em diferentes configurações de DPI
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

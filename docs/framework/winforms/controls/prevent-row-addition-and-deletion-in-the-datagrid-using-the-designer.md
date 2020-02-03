@@ -23,7 +23,7 @@ ms.locfileid: "76728715"
     > [!NOTE]
     > Para tornar o controle somente leitura inteiramente, desmarque também a caixa de seleção **Habilitar Edição**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>

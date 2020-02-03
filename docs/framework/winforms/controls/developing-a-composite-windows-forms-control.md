@@ -24,7 +24,7 @@ O designer de Windows Forms no Visual Studio fornece suporte avançado ao tempo 
 
 - [Passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)
 
-- [Passo a passo: herdando um controle dos Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Instruções passo a passo: herança de um controle do Windows Forms com Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
 - [Como fornecer um bitmap da caixa de ferramentas para um controle](how-to-provide-a-toolbox-bitmap-for-a-control.md)
 
@@ -46,12 +46,12 @@ O designer de Windows Forms no Visual Studio fornece suporte avançado ao tempo 
 
 - [Passo a passo: criando um controle de composição com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
-- [Passo a passo: criando um controle dos Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Instruções passo a passo: criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
 
 - [Como criar um controle dos Windows Forms que aproveita recursos de tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como aplicar atributos a controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)
-- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)

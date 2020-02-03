@@ -40,7 +40,7 @@ Com o modo virtual, você pode gerenciar a interação entre o controle de <xref
   
  Os eventos a seguir ocorrem somente quando a propriedade <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> é definida como `true`.  
   
-|Event|Descrição|  
+|{1&gt;Evento&lt;1}|Descrição|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|Usado pelo controle para recuperar um valor de célula do cache de dados para exibição. Esse evento ocorre somente para células em colunas não associadas.|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|Usado pelo controle para confirmar a entrada do usuário de uma célula para o cache de dados. Esse evento ocorre somente para células em colunas não associadas.<br /><br /> Chame o método <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> ao alterar um valor em cache fora de um manipulador de eventos <xref:System.Windows.Forms.DataGridView.CellValuePushed> para garantir que o valor atual seja exibido no controle e aplique todos os modos de dimensionamento automático atualmente em vigor.|  
@@ -50,7 +50,7 @@ Com o modo virtual, você pode gerenciar a interação entre o controle de <xref
   
  Os eventos a seguir são úteis no modo virtual, mas podem ser usados independentemente da configuração da propriedade <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>.  
   
-|Events|Descrição|  
+|Eventos|Descrição|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|Usado pelo controle para indicar quando as linhas são excluídas ou adicionadas, permitindo a atualização do cache de dados adequadamente.|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|Usado pelo controle para formatar valores de célula para exibição e para analisar e validar a entrada do usuário.|  
@@ -62,11 +62,11 @@ Com o modo virtual, você pode gerenciar a interação entre o controle de <xref
 ## <a name="best-practices-in-virtual-mode"></a>Melhores práticas para o modo virtual  
  Se estiver implementando o modo virtual para trabalhar com eficiência com grandes quantidades de dados, você também desejará garantir que esteja trabalhando com eficiência com o próprio controle de <xref:System.Windows.Forms.DataGridView>. Para mais informações sobre o uso eficiente dos estilos de célula, dimensionamento automático, seleções e compartilhamento de linhas, consulte [Melhores práticas para dimensionamento do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Ajuste de desempenho no controle DataGridView dos Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Ajuste de desempenho no controle DataGridView do Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Práticas recomendadas para colocação em escala do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
 - [Implementando o modo virtual com carregamento de dados Just-In-Time no controle DataGridView dos Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

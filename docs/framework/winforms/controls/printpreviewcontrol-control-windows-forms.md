@@ -29,5 +29,5 @@ O `PrintPreviewControl` de Windows Forms é usado para exibir um documento, pois
  [Controle PrintPreviewDialog](printpreviewdialog-control-windows-forms.md)  
  Descreve uma maneira alternativa de criar a funcionalidade de visualização de impressão.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

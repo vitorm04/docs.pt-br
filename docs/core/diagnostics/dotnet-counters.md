@@ -31,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 `dotnet-counters` é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da API <xref:System.Diagnostics.Tracing.EventCounter>. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando `PerfView` ou `dotnet-trace`.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`--version`**
 
@@ -41,7 +41,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
   Mostra a ajuda da linha de comando.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 | {1&gt;Comando&lt;1}                                             |
 | --------------------------------------------------- |
@@ -58,7 +58,7 @@ Exibe uma lista de nomes e descrições de contadores, agrupados por provedor.
 dotnet-counters list [-h|--help]
 ```
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```console
 > dotnet-counters list
@@ -84,7 +84,7 @@ Exibe a atualização periódica de valores dos contadores selecionados.
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
 ```
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-p|--process-id <PID>`**
 

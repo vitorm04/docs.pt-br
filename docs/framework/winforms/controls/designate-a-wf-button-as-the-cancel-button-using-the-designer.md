@@ -21,11 +21,11 @@ Em qualquer formulário do Windows, você pode designar um controle de <xref:Sys
 
 2. Na janela **Propriedades** , defina a propriedade <xref:System.Windows.Forms.Form.CancelButton%2A> do formulário como o nome do controle de <xref:System.Windows.Forms.Button>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Visão geral do controle de botão](button-control-overview-windows-forms.md)
 - [Formas de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)
 - [Como responder a cliques no botão dos Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Como designar um botão do Windows Forms como o botão Aceitar usando o Designer](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Como designar um botão dos Windows Forms como o botão Aceitar usando o Designer](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
 - [Controle de botão](button-control-windows-forms.md)

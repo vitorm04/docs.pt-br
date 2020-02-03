@@ -49,7 +49,7 @@ Em qualquer formulário do Windows, você pode designar um controle de <xref:Sys
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Visão geral do controle de botão](button-control-overview-windows-forms.md)

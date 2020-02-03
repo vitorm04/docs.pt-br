@@ -94,7 +94,7 @@ Os namescopes de XAML são um conceito que identifica objetos que são definidos
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Namespaces XAML e mapeamento de namespace para XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [Diretiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md)

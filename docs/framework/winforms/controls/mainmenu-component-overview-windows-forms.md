@@ -24,7 +24,7 @@ ms.locfileid: "76745121"
 ## <a name="key-properties"></a>Propriedades da chave  
  Um item de menu pode ser designado como o item padrão definindo a propriedade <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> como `true`. O item padrão é exibido em negrito quando o menu é clicado. A propriedade <xref:System.Windows.Forms.MenuItem.Checked%2A> do item de menu é `true` ou `false`e indica se o item de menu está selecionado. A propriedade <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> do item de menu personaliza a aparência do item selecionado: se <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> for definido como `true`, um botão de opção aparecerá ao lado do item; se <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> for definido como `false`, uma marca de seleção aparecerá ao lado do item.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

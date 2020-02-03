@@ -43,7 +43,7 @@ Essas classes podem ser associadas a um único método ou a vários métodos, o 
 
  O mecanismo de associação usado com essas classes é dinâmico: uma classe delegate pode ser associada em tempo de execução a qualquer método cuja assinatura corresponda à assinatura do manipulador de eventos. Com esse recurso, você pode configurar ou alterar o método associado de acordo com uma condição e anexar dinamicamente um manipulador de eventos a um controle.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

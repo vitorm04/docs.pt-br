@@ -175,7 +175,7 @@ O controle <xref:System.Windows.Forms.TableLayoutPanel> permite que você troque
 
 - Arraste um dos controles <xref:System.Windows.Forms.Button> de uma célula ocupada e solte-o em outra célula ocupada. Observe que os dois controles são movidos de uma célula para a outra.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Você pode obter um layout complexo usando uma combinação de controles e painéis de layout. Sugestões para exploração adicional incluem:
 
@@ -187,16 +187,16 @@ Você pode obter um layout complexo usando uma combinação de controles e pain�
 
 - Encaixe o controle de <xref:System.Windows.Forms.TableLayoutPanel> no formulário pai. Redimensione o formulário e observe o efeito no layout.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Walkthrough: Criando um formulário redimensionável do Windows para entrada de dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Walkthrough: Criando um formulário do Windows localizável](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Práticas recomendadas para o controle TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como encaixar controles no Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Como ancorar controles no Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)
+- [Como encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como ancorar controles nos Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Instruções passo a passo: projetando controles do Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

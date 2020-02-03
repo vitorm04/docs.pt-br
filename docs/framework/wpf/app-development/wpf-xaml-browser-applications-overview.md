@@ -45,7 +45,7 @@ ms.locfileid: "76742285"
 ## <a name="deploying-an-xbap"></a>Implantando um XBAP
  Quando você compila um XBAP, a saída inclui os três arquivos a seguir:
 
-|File|Descrição|
+|Arquivo|Descrição|
 |----------|-----------------|
 |Executável (.exe)|Este arquivo contém o código compilado e tem uma extensão .exe.|
 |Manifesto do aplicativo (.manifest)|Este arquivo contém os metadados associados ao aplicativo e tem uma extensão .manifest.|
@@ -101,7 +101,7 @@ ms.locfileid: "76742285"
 
 1. No Visual Studio, abra as propriedades do projeto.
 
-2. Na guia **Segurança**, clique em **Avançada**.
+2. Na guia **Segurança**, clique em **Avançado**.
 
      A caixa de diálogo Configurações Avançadas de Segurança é exibida.
 
@@ -113,7 +113,7 @@ ms.locfileid: "76742285"
 
      É exibida a caixa de diálogo Opções da Internet.
 
-6. Clique na aba **Avançado**.
+6. Clique na guia **Avançado**.
 
 7. Na lista **Configurações** em **Segurança**, marque a caixa de seleção **Permitir que o conteúdo ativo seja executado em arquivos no Meu Computador**.
 
@@ -126,11 +126,11 @@ ms.locfileid: "76742285"
 
 <a name="xbap_security_considerations"></a>
 ## <a name="xbap-security-considerations"></a>Considerações sobre segurança de XBAP
- Os XBAPs normalmente são executados em uma área restrita de segurança de confiança parcial, que é restrita ao conjunto de permissões da zona da Internet. Consequentemente, sua implementação deve dar suporte ao subconjunto de elementos do WPF que têm suporte na zona da Internet ou você deve elevar as permissões do seu aplicativo. Para obter mais informações, consulte [Segurança](../security-wpf.md).
+ Os XBAPs normalmente são executados em uma área restrita de segurança de confiança parcial, que é restrita ao conjunto de permissões da zona da Internet. Consequentemente, sua implementação deve dar suporte ao subconjunto de elementos do WPF que têm suporte na zona da Internet ou você deve elevar as permissões do seu aplicativo. Para saber mais, consulte [Segurança](../security-wpf.md).
 
  Quando você usa um controle de <xref:System.Windows.Controls.WebBrowser> em seu aplicativo, o WPF cria uma instância interna do controle ActiveX do WebBrowser nativo. Quando seu aplicativo é um XBAP de confiança parcial em execução no Internet Explorer, o controle ActiveX é executado em um thread dedicado do processo do Internet Explorer. Portanto, as seguintes limitações se aplicam:
 
-- O controle de <xref:System.Windows.Controls.WebBrowser> deve fornecer um comportamento semelhante ao navegador de host, incluindo restrições de segurança. Algumas dessas restrições de segurança podem ser controladas por meio das configurações de segurança do Internet Explorer. Para obter mais informações, consulte [Segurança](../security-wpf.md).
+- O controle de <xref:System.Windows.Controls.WebBrowser> deve fornecer um comportamento semelhante ao navegador de host, incluindo restrições de segurança. Algumas dessas restrições de segurança podem ser controladas por meio das configurações de segurança do Internet Explorer. Para saber mais, consulte [Segurança](../security-wpf.md).
 
 - Uma exceção é lançada quando um XBAP é carregado entre domínios em uma página HTML.
 
@@ -170,7 +170,7 @@ ms.locfileid: "76742285"
 |-------------------|--------------|------------------------|
 |Computador local|Confiança total automática|Nenhuma ação é necessária.|
 |Intranet e sites confiáveis|Aviso para confiança total|Assinar o XBAP com um certificado para que o usuário veja o código-fonte no aviso.|
-|Internet|Falha com "Confiança não concedida"|Assinar o XBAP com um certificado.|
+|Internet|Falha com "Confiança não concedida"|Assine XBAP com um certificado.|
 
 > [!NOTE]
 > O comportamento descrito na tabela anterior é para XBAPs de confiança total que não seguem o modelo de implantação confiável do ClickOnce.
@@ -185,7 +185,7 @@ ms.locfileid: "76742285"
 
  Além disso, a simultaneidade aprimorada da sequência de download do ClickOnce melhora a hora de início em até dez por cento. Depois que o ClickOnce baixa e valida os manifestos, o download do aplicativo é iniciado e a barra de progresso começa a ser atualizada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Configurar o Visual Studio para depurar um aplicativo de navegador XAML para chamar um serviço Web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
+- [Implantando um aplicativo do WPF](deploying-a-wpf-application-wpf.md)

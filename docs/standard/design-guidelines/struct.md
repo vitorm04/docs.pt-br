@@ -45,7 +45,7 @@ O tipo de valor de uso geral é geralmente referido como struct, sua C# palavra-
 
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

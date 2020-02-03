@@ -26,7 +26,7 @@ Há uma grande variedade de controles que você pode colocar em Windows Forms, d
  [Como adicionar a ou remover de uma coleção de controles em tempo de execução](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
  Explica como adicionar e remover controles em um painel em tempo de execução.  
   
- [Passo a passo: preenchendo automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  Demonstra como você pode fazer com que um componente personalizado apareça automaticamente na **Caixa de Ferramentas** depois que o componente é criado.  
   
  [Como adicionar controles do ActiveX ao Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
@@ -36,7 +36,7 @@ Há uma grande variedade de controles que você pode colocar em Windows Forms, d
  Descreve o que ter em mente ao planejar um aplicativo que usa controles ActiveX.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles do Windows Forms](index.md)  
+ [Controles dos Windows Forms](index.md)  
  Fornece links para tópicos introdutórios sobre controles e o que você pode fazer com eles.  
   
  [Validação da entrada do usuário nos Windows Forms](../user-input-validation-in-windows-forms.md)  

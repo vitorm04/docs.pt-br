@@ -45,7 +45,7 @@ O IdentityServer fornece middleware que é executado em um aplicativo ASP.NET Co
 
 O IdentityServer4 é de código-fonte aberto e gratuito para uso. Você pode adicioná-lo aos seus aplicativos usando seus pacotes NuGet. O pacote principal é [IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) que foi baixado em mais de 4 milhões vezes. O pacote base não inclui nenhum código de interface do usuário e só dá suporte à configuração da memória. Para usá-lo com um banco de dados, você também desejará um provedor de data como o [IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) que usa Entity Framework Core para armazenar a configuração e os dados operacionais do IdentityServer. Para a interface do usuário, você pode copiar arquivos do [repositório de IU de início rápido](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI) para seu aplicativo ASP.NET Core MVC para adicionar suporte para entrar e sair usando o middleware IdentityServer.
 
-## <a name="configuration"></a>Configuração do
+## <a name="configuration"></a>Configuração
 
 O IdentityServer dá suporte a diferentes tipos de protocolos e provedores de autenticação social que podem ser configurados como parte de cada instalação personalizada. Isso normalmente é feito na classe `Startup` do aplicativo ASP.NET Core no método `ConfigureServices`. A configuração envolve especificar os protocolos com suporte e os caminhos para os servidores e pontos de extremidade que serão usados. A Figura 8-2 mostra uma configuração de exemplo obtida do projeto de interface do usuário do IdentityServer4 QuickStart:
 

@@ -44,9 +44,9 @@ O controle de <xref:System.Windows.Forms.DataGridView> fornece classificação a
   
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Classificando dados no controle DataGridView dos Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Classificando dados no controle DataGridView do Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
 - [Modos de classificação da coluna no controle DataGridView dos Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Como definir os modos de classificação para colunas no controle DataGridView do Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Como definir os modos de classificação para colunas no controle DataGridView dos Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)

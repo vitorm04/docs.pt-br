@@ -34,7 +34,7 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Globalizando aplicativos Windows Forms](globalizing-windows-forms.md)  
  Contém links para tópicos que mostram como globalizar aplicativos dos Windows Forms.  
   
- [Windows Forms e Aplicativos Não Gerenciados](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms e aplicativos não gerenciados](windows-forms-and-unmanaged-applications.md)  
  Contém links para tópicos que descrevem e mostram como acessar componentes COM de Aplicativos do Windows Form.  
   
  [Informações do Sistema e o Windows Forms](system-information-and-windows-forms.md)  
@@ -43,7 +43,7 @@ O Windows Forms contém muitos recursos que você pode usar para aprimorar seus 
  [Gerenciamento de Energia nos Windows Forms](power-management-in-windows-forms.md)  
  Descreve como gerenciar o uso de energia em Aplicativos dos Windows Forms.  
   
- [Herança visual do Windows Forms](windows-forms-visual-inheritance.md)  
+ [Herança Visual dos Windows Forms](windows-forms-visual-inheritance.md)  
  Descreve como herdar de um formulário base.  
   
  [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)  

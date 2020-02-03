@@ -106,7 +106,7 @@ Para executar operações de arrastar e soltar em aplicativos baseados no Window
     > [!NOTE]
     > Além disso, você pode trabalhar com a propriedade <xref:System.Windows.Forms.DragEventArgs.KeyState%2A>, de modo que, dependendo das chaves pressionadas durante a operação de arrastar e soltar, certos efeitos ocorram (por exemplo, é padrão copiar os dados arrastados quando a tecla CTRL é pressionada).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como Adicionar Dados à Área de Transferência](how-to-add-data-to-the-clipboard.md)
 - [Como Recuperar Dados da Área de Transferência](how-to-retrieve-data-from-the-clipboard.md)

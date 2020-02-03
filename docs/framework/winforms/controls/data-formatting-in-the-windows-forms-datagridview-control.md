@@ -31,11 +31,11 @@ O controle de <xref:System.Windows.Forms.DataGridView> fornece conversão autom�
   
  Se a análise padrão de valores especificados pelo usuário não atender às suas necessidades, você poderá manipular o evento <xref:System.Windows.Forms.DataGridView.CellParsing> do controle de <xref:System.Windows.Forms.DataGridView> para fornecer análise personalizada.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Estilos de Célula no Controle DataGridView dos Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Como formatar dados no controle DataGridView dos Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Como personalizar a formatação de dados no controle DataGridView dos Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Estilos de célula no controle DataGridView do Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Como formatar dados no controle DataGridView do Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Como personalizar a formatação de dados no controle DataGridView do Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

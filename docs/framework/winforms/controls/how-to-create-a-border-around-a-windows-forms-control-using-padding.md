@@ -24,11 +24,11 @@ ms.locfileid: "76742193"
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Como criar uma borda em torno de um controle dos Windows Forms usando preenchimento
 O exemplo de código a seguir demonstra como criar uma borda ou um contorno em torno de um controle de <xref:System.Windows.Forms.RichTextBox>. O exemplo define o valor de uma propriedade <xref:System.Windows.Forms.Padding> do controle de <xref:System.Windows.Forms.Panel> como 5 e define a propriedade <xref:System.Windows.Forms.Control.Dock%2A> de um controle filho <xref:System.Windows.Forms.RichTextBox> como <xref:System.Windows.Forms.DockStyle.Fill>. O <xref:System.Windows.Forms.Control.BackColor%2A> do controle de <xref:System.Windows.Forms.Panel> é definido como <xref:System.Drawing.Color.Blue%2A>, que cria uma borda azul em torno do controle de <xref:System.Windows.Forms.RichTextBox>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Padding>
 - [Margem e preenchimento em controles dos Windows Forms](margin-and-padding-in-windows-forms-controls.md)

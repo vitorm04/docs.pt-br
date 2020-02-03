@@ -55,7 +55,7 @@ Você pode obter as células, linhas ou colunas selecionadas de um controle de <
 ## <a name="robust-programming"></a>Programação Robusta  
  As coleções descritas neste tópico não são executadas com eficiência quando uma grande quantidade de células, linhas ou colunas for selecionada. Para obter mais informações sobre como usar essas coleções com grandes quantidades de dados, consulte [Práticas recomendadas para dimensionamento do controle DataGridView dos Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
@@ -63,4 +63,4 @@ Você pode obter as células, linhas ou colunas selecionadas de um controle de <
 - <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>
-- [Seleção e uso da Área de Transferência com o controle DataGridView dos Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Seleção e uso da Área de Transferência com o controle DataGridView do Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

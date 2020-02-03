@@ -123,7 +123,7 @@ ms.locfileid: "76736373"
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Procedimentos Recursivos](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

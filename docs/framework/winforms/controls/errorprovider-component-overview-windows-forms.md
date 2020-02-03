@@ -26,7 +26,7 @@ O componente [ErrorProvider](errorprovider-component-windows-forms.md) dos Windo
 > [!NOTE]
 > O componente <xref:System.Windows.Forms.ErrorProvider> não fornece suporte interno para clientes de acessibilidade. Para tornar seu aplicativo acessível ao usar esse componente, você deve fornecer um mecanismo de comentários acessível adicional.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [Como exibir erros dentro de um DataSet com o componente ErrorProvider dos Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

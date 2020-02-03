@@ -51,10 +51,10 @@ Esta seção fornece tópicos que demonstram várias tarefas de programação en
  Fornece documentação de referência para a classe <xref:System.Windows.Forms.DataGridViewColumn>.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Recursos básicos de coluna, linha e célula no controle DataGridView dos Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Funcionalidades de coluna, linha e célula básicas no controle DataGridView do Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Fornece tópicos que descrevem as propriedades da célula, linha e coluna mais usados.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

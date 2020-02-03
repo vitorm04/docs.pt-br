@@ -186,9 +186,9 @@ Os seguintes cenários de recompilação são possíveis:
 
 - Nada é recompilado (se nada no projeto tiver sido alterado).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
+- [Implantando um aplicativo do WPF](deploying-a-wpf-application-wpf.md)
 - [Referência do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)
-- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)

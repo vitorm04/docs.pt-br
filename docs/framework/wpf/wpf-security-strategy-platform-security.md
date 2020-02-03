@@ -186,9 +186,9 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  O Internet Explorer 7 incorpora e estende os recursos de segurança do IE6 SP2 como parte de um compromisso contínuo com a segurança.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Segurança de acesso do código](../misc/code-access-security.md)
-- [Security](security-wpf.md)
+- [Segurança](security-wpf.md)
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
 - [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)

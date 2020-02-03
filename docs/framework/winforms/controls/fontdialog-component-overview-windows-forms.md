@@ -23,7 +23,7 @@ O Windows Forms <xref:System.Windows.Forms.FontDialog> componente é uma caixa d
 ## <a name="key-properties"></a>Propriedades da chave  
  O componente tem inúmeras propriedades que configuram sua aparência. As propriedades que definem as seleções da caixa de diálogo são <xref:System.Windows.Forms.FontDialog.Font%2A> e <xref:System.Windows.Forms.FontDialog.Color%2A>. A propriedade <xref:System.Windows.Forms.FontDialog.Font%2A> define a fonte, o estilo, o tamanho, o script e os efeitos; por exemplo, `Arial, 10pt, style=Italic, Strikeout`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FontDialog>
 - [Componente FontDialog](fontdialog-component-windows-forms.md)

@@ -28,7 +28,7 @@ Dois dos principais cenários que envolvem o componente <xref:System.Drawing.Pri
 
 Quando ele é adicionado a um formulário, o componente <xref:System.Drawing.Printing.PrintDocument> aparece na bandeja na parte inferior da Designer de Formulários do Windows no Visual Studio.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>

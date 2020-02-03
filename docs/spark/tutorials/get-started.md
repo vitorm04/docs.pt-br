@@ -23,7 +23,7 @@ Neste tutorial, você aprenderá como:
 > * Escreva seu primeiro .NET para Apache Spark aplicativo
 > * Crie e execute seu aplicativo .NET simples para Apache Spark
 
-## <a name="prepare-your-environment"></a>Preparar seu ambiente
+## <a name="prepare-your-environment"></a>Prepare o seu ambiente
 
 Antes de começar a escrever seu aplicativo, você precisa configurar algumas dependências de pré-requisito. Se você puder executar `dotnet`, `java`, `mvn``spark-shell` de seu ambiente de linha de comando, seu ambiente já estará preparado e você poderá pular para a próxima seção. Se você não puder executar um ou todos os comandos, execute as etapas a seguir.
 

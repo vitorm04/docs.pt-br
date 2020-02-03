@@ -13,7 +13,7 @@ ms.locfileid: "76733201"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet msbuild` – Compila um projeto e todas as suas dependências.
 

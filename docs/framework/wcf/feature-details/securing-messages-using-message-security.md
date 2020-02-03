@@ -34,7 +34,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
   
  Esta seção explica os diferentes tipos de credenciais e como usá-los com filas do.  
   
-### <a name="certificate"></a>Certificado  
+### <a name="certificate"></a>Certificate  
  O tipo de credencial do certificado usa um certificado X. 509 para identificar o serviço e o cliente.  
   
  Em um cenário típico, o cliente e o serviço são emitidos um certificado válido por uma autoridade de certificação confiável. Em seguida, a conexão é estabelecida, o cliente autentica a validade do serviço usando o certificado do serviço para decidir se ele pode confiar no serviço. Da mesma forma, o serviço usa o certificado do cliente para validar a relação de confiança do cliente.  
@@ -63,7 +63,7 @@ Esta seção aborda a segurança de mensagens do WCF ao usar o <xref:System.Serv
 ## <a name="using-transport-and-message-security"></a>Usando segurança de mensagens e transporte  
  Ao usar a segurança de transporte e a segurança de mensagem, o certificado usado para proteger a mensagem no transporte e o nível de mensagem SOAP deve ser o mesmo.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Protegendo mensagens usando a segurança do transporte](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Segurança de mensagem através do enfileiramento de mensagem](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

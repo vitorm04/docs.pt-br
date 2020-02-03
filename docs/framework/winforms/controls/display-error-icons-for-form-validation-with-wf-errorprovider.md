@@ -92,7 +92,7 @@ Você pode usar um componente Windows Forms <xref:System.Windows.Forms.ErrorProv
   
 4. Execute o projeto. Digite dados inválidos (neste exemplo, não numéricos) no primeiro controle e alterne para o segundo. Quando o ícone de erro for exibido, aponte para ele com o ponteiro do mouse para ver o texto do erro.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Visão geral do componente ErrorProvider](errorprovider-component-overview-windows-forms.md)

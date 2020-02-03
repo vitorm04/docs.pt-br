@@ -164,9 +164,9 @@ Operações de arrastar e soltar com o Windows Forms controle de <xref:System.Wi
   
      Quando você libera o botão do mouse, o texto selecionado é Descartado (ou seja, o <xref:System.Windows.Forms.RichTextBox.DragDrop> evento é gerado) e é inserido no controle de <xref:System.Windows.Forms.RichTextBox>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [Como Executar Operações de do Tipo "Arrastar e Soltar" entre Aplicativos](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [Controle RichTextBox](richtextbox-control-windows-forms.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

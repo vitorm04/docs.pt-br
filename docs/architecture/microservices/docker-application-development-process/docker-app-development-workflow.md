@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920333"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965783"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -442,7 +442,7 @@ Se seu aplicativo tem apenas um contêiner, você pode executá-lo implantando-o
 Você pode executar um contêiner do Docker usando o comando `docker run`, conforme mostrado na Figura 5-9:
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
 O comando acima criará uma instância de contêiner da imagem especificada, cada vez que for executado. Você pode usar o parâmetro `--name` para dar um nome ao contêiner e, em seguida, usar `docker start {name}` (ou usar a ID do contêiner ou o nome automático) para executar uma instância de contêiner existente.
@@ -453,7 +453,7 @@ O comando acima criará uma instância de contêiner da imagem especificada, cad
 
 Nesse caso, o comando associa a porta interna 5000 do contêiner à porta 80 do computador host. Isso significa que o host está escutando na porta 80 e encaminhando para a porta 5000 no contêiner.
 
-O hash mostrado é a ID do contêiner e também recebe um nome legível aleatório quando a opção `--name` não é usada.
+O hash mostrado é a ID do contêiner e também é atribuído um nome legível aleatório se a opção `--name` não for usada.
 
 #### <a name="using-visual-studio"></a>Usando o Visual Studio
 
@@ -500,7 +500,7 @@ O ponto importante aqui é que, conforme mostrado na Figura 5-12, há um comando
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Uma observação sobre teste e implantação com orquestradores
 
-Os comandos docker-compose up e docker run (ou executar e depurar os contêineres no Visual Studio) são adequados para contêineres de teste em seu ambiente de desenvolvimento. Mas você não deve usar essa abordagem para implantações de produção, com orquestradores de destino como [Kubernetes](https://kubernetes.io/) ou [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Se você estiver usando o Kubernetes, use [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) para organizar os contêineres e [serviços](https://kubernetes.io/docs/concepts/services-networking/service/) para colocá-los em rede. Você também pode usar [implantações](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para organizar a criação e a modificação de pods.
+Os comandos docker-compose up e docker run (ou executar e depurar os contêineres no Visual Studio) são adequados para contêineres de teste em seu ambiente de desenvolvimento. Mas você não deve usar essa abordagem para implantações de produção, com orquestradores de destino como [Kubernetes](https://kubernetes.io/) ou [Service Fabric](https://azure.microsoft.com/services/service-fabric/). Se você estiver usando o kubernetes, precisará usar [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/) para organizar contêineres e [Serviços](https://kubernetes.io/docs/concepts/services-networking/service/) para agrupá-los. Você também pode usar [implantações](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para organizar a criação e a modificação de pods.
 
 ![Imagem da etapa 6.](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

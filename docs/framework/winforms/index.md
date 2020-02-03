@@ -21,14 +21,14 @@ Como os formulários são a unidade base do seu aplicativo, é essencial dedicar
  [Introdução ao Windows Forms](getting-started-with-windows-forms.md)  
  Fornece links para tópicos sobre como aproveitar a capacidade dos Windows Forms para exibir dados, manipular entradas do usuário e implantar seus aplicativos com facilidade e com uma segurança mais robusta.  
   
- [Aprimorando Aplicativos dos Windows Forms](./advanced/index.md)  
+ [Aprimorando aplicativos do Windows Forms](./advanced/index.md)  
  Fornece links para tópicos sobre como aprimorar seu Windows Forms com uma variedade de recursos.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles do Windows Forms](./controls/index.md)  
+ [Controles dos Windows Forms](./controls/index.md)  
  Contém links para tópicos que descrevem os controles de Windows Forms e mostram como implementá-los.  
   
- [Vinculação de dados dos Windows Forms](windows-forms-data-binding.md)  
+ [Associação de dados do Windows Forms](windows-forms-data-binding.md)  
  Contém links para tópicos que descrevem a arquitetura de associação de dados dos Windows Forms.  
   
  [Visão geral de elementos gráficos](./advanced/graphics-overview-windows-forms.md)  

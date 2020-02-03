@@ -50,10 +50,10 @@ O controle `DataGridView` fornece várias propriedades que podem ser usadas para
  Fornece documentação de referência para a interface <xref:System.Windows.Forms.IDataGridViewEditingControl>.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Formatação e estilos básicos no controle DataGridView do Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Formatação e definição de estilos básicas no controle DataGridView dos Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  Fornece tópicos que descrevem como modificar a aparência básica do controle e a formatação de exibição de dados da célula.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle DataGridView](datagridview-control-windows-forms.md)
-- [Tipos de coluna no controle DataGridView dos Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Tipos de coluna no controle DataGridView do Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)

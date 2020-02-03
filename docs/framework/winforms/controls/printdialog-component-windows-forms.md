@@ -30,5 +30,5 @@ O componente Windows Forms `PrintDialog` é uma caixa de diálogo pré-configura
  Fornece informações de referência sobre a classe e seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

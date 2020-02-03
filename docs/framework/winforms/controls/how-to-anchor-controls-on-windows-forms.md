@@ -54,11 +54,11 @@ Quando o formulário é exibido em tempo de execução, o controle é redimensio
 
 Controles herdados devem ser `Protected` para serem ancorados. Para alterar o nível de acesso de um controle, defina sua propriedade `Modifiers` na janela **Propriedades**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles do Windows Forms](index.md)
+- [Controles dos Windows Forms](index.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como encaixar controles no Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)
+- [Instruções passo a passo: projetando controles do Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

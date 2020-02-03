@@ -16,7 +16,7 @@ ms.locfileid: "76735458"
 > [!NOTE]
 > O controle <xref:System.Windows.Forms.ToolStrip> substitui e adiciona funcionalidade ao controle `ToolBar`, no entanto, o controle `ToolBar` é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.  
   
- O controle `ToolBar` dos Windows Forms é usado em formulários como uma barra de controle que exibe uma linha de menus suspensos e botões de bitmap que ativam comandos. Portanto, clicar em um botão de barra de ferramentas é equivalente a escolher um comando de menu. Os botões podem ser configurados para parecer e se comportar como botões de push, menus suspensos ou separadores. Normalmente, uma barra de ferramentas contém botões e menus que correspondem aos itens na estrutura do menu do aplicativo, fornecendo acesso rápido às funções e comandos do aplicativo usados com mais frequência.  
+ O controle `ToolBar` dos Windows Forms é usado em formulários como uma barra de controle que exibe uma linha de menus suspensos e botões de bitmap que ativam comandos. Portanto, clicar em um botão de barra de ferramentas é equivalente a escolher um comando de menu. Os botões podem ser configurados para parecer e se comportar como botões de push, menus suspensos ou separadores. Normalmente, uma barra de ferramentas contém botões e menus que correspondem aos itens na estrutura do menu do aplicativo, fornecendo acesso rápido a funções e comandos usados com mais frequência do aplicativo.  
   
 > [!NOTE]
 > A propriedade <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> do controle de `ToolBar` usa uma instância da classe <xref:System.Windows.Forms.ContextMenu> como uma referência. Considere cuidadosamente a referência que você passa ao implementar esse tipo de botão em barras de ferramentas em seu aplicativo, pois a propriedade aceitará qualquer objeto herdado da classe <xref:System.Windows.Forms.Menu>.  
@@ -41,7 +41,7 @@ ms.locfileid: "76735458"
  Fornece informações de referência sobre a classe e seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.  
   
  [Controle ToolStrip](toolstrip-control-windows-forms.md)  

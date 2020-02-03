@@ -17,7 +17,7 @@ ms.locfileid: "76733074"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet sln` – modifica um arquivo de solução do .NET Core.
 
@@ -37,19 +37,19 @@ Para usar o comando `dotnet sln`, o arquivo de solução já deve existir. Se vo
 dotnet new sln
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 - **`SOLUTION_FILE`**
 
   O arquivo de solução a ser usado. Se não for especificado, o comando pesquisará um no diretório atual. Se houver vários arquivos de solução no diretório, um deles deverá ser especificado.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 ### `add`
 
@@ -62,7 +62,7 @@ dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PAT
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Argumentos
 
 - **`SOLUTION_FILE`**
 
@@ -72,7 +72,7 @@ dotnet sln add [-h|--help]
 
   O caminho para o projeto a ser adicionado à solução. Adicione vários projetos adicionando um após o outro separado por espaços. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
 
-#### <a name="options"></a>Opções
+#### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 
@@ -97,7 +97,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Argumentos
 
 - **`SOLUTION_FILE`**
 
@@ -107,7 +107,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
   O caminho para o projeto a ser removido da solução. Remova vários projetos adicionando um após o outro separado por espaços. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
 
-#### <a name="options"></a>Opções
+#### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 
@@ -123,13 +123,13 @@ Lista todos os projetos em um arquivo de solução.
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>Argumentos
 
 - **`SOLUTION_FILE`**
 
   O arquivo de solução a ser usado. Se não for especificado, o comando pesquisará um no diretório atual. Se houver vários arquivos de solução no diretório, um deles deverá ser especificado.
 
-#### <a name="options"></a>Opções
+#### <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 

@@ -39,7 +39,7 @@ Você pode usar o controle de <xref:System.Windows.Forms.WebBrowser> para exibir
   
 - Referências aos assemblies `System` e `System.Windows.Forms`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>

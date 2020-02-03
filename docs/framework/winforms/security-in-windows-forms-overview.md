@@ -85,7 +85,7 @@ Para obter mais informações sobre os aspectos de segurança do ClickOnce e a e
 
 Se você tiver implantado seu aplicativo Windows Forms usando o Visual Studio, poderá habilitar a depuração em confiança parcial ou um conjunto de permissões restritos do ambiente de desenvolvimento.  Consulte também [como: Depurar um aplicativo ClickOnce com permissões restritas](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Segurança do Windows Forms](windows-forms-security.md)
 - [Noções Básicas da Segurança de Acesso do Código](../misc/code-access-security-basics.md)

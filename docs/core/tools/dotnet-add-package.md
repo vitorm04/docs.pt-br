@@ -17,7 +17,7 @@ ms.locfileid: "76733320"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet add package` – adiciona uma referência de pacote a um arquivo de projeto.
 
@@ -52,7 +52,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 - **`PROJECT`**
 
@@ -62,7 +62,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
 
   A referência de pacote a ser adicionada.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -112,7 +112,7 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como gerenciar as pastas de pacotes globais, de cache e temporárias no NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [Controle de versão do pacote NuGet](https://docs.microsoft.com/nuget/reference/package-versioning)

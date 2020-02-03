@@ -24,7 +24,7 @@ Ao usar um componente de <xref:System.Windows.Forms.BindingSource> para associar
 > [!NOTE]
 > Quando um item é adicionado manipulando o evento <xref:System.Windows.Forms.BindingSource.AddingNew>, a adição não pode ser cancelada.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir demonstra como associar um controle de <xref:System.Windows.Forms.DataGridView> a uma fábrica de classes usando um componente <xref:System.Windows.Forms.BindingSource>. Quando o usuário clica na nova linha do controle de <xref:System.Windows.Forms.DataGridView>, o evento <xref:System.Windows.Forms.BindingSource.AddingNew> é gerado. O manipulador de eventos cria um novo objeto `DemoCustomer`, que é atribuído à propriedade <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A?displayProperty=nameWithType>. Isso faz com que o novo objeto `DemoCustomer` seja adicionado à lista do componente de <xref:System.Windows.Forms.BindingSource> e seja exibido na nova linha do controle de <xref:System.Windows.Forms.DataGridView>.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#1)]
@@ -36,10 +36,10 @@ Ao usar um componente de <xref:System.Windows.Forms.BindingSource> para associar
   
 - Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Componente BindingSource](bindingsource-component.md)
-- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

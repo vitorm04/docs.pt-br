@@ -47,7 +47,7 @@ Em ambos os casos, e em classes e estruturas, sua implementação deve seguir as
   
  O primeiro exemplo a seguir mostra uma implementação da classe. O segundo exemplo mostra uma implementação de struct.  
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
  O exemplo a seguir mostra como implementar a igualdade de valor em uma classe (tipo de referência).  
   
@@ -57,7 +57,7 @@ Em ambos os casos, e em classes e estruturas, sua implementação deve seguir as
   
  Os operadores `==` e `!=` podem ser usados com classes, mesmo se a classe não sobrecarregá-los. No entanto, o comportamento padrão é executar uma verificação de igualdade de referência. Em uma classe, se você sobrecarregar o método `Equals`, você deverá sobrecarregar os operadores `==` e `!=`, mas isso não é necessário.  
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
  O exemplo a seguir mostra como implementar a igualdade de valor em um struct (tipo de valor):  
   
@@ -67,7 +67,7 @@ Em ambos os casos, e em classes e estruturas, sua implementação deve seguir as
   
  Os operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) e [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) não podem operar em um struct a menos que o struct explicitamente os sobrecarregue.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Comparações de igualdade](equality-comparisons.md)
 - [Guia de programação em C#](../index.md)

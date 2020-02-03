@@ -2,14 +2,14 @@
 title: Projetando um aplicativo orientado a microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os benefícios e as desvantagens de um aplicativo orientado a microsserviços, para que você possa tomar uma decisão informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921018"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965757"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
+# <a name="design-a-microservice-oriented-application"></a>Criar um aplicativo orientado por microatendimento
 
 Esta seção se concentra no desenvolvimento de um aplicativo empresarial hipotético do lado do servidor.
 
@@ -96,7 +96,7 @@ Portanto, as unidades de implantação para os microsserviços (e até mesmo par
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços
 
-Uma solução de baseada em microsserviços tem muitos benefícios:
+Uma solução baseada em microserviço como essa tem muitos benefícios:
 
 **Cada microsserviço é relativamente pequeno, fácil de gerenciar e desenvolver**. Especificamente:
 
@@ -118,7 +118,7 @@ Uma solução de baseada em microsserviços tem muitos benefícios:
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>Desvantagens de uma solução baseada em microsserviços
 
-Uma solução com base em microsserviços como essa também apresenta algumas desvantagens:
+Uma solução baseada em microserviço como essa também tem algumas desvantagens:
 
 **Aplicativo distribuído**. A distribuição do aplicativo cria complexidades para os desenvolvedores ao projetar e criar os serviços. Por exemplo, os desenvolvedores devem implementar a comunicação entre serviços usando protocolos como HTTP ou AMPQ, que adiciona complexidade para teste e manipulação de exceção. Isso também adiciona latência ao sistema.
 
@@ -180,7 +180,7 @@ Os microsserviços poliglotas e de padrão de várias arquiteturas significam qu
 
 Por exemplo, em um aplicativo CRUD simples de manutenção, não faz sentido projetar e implementar padrões de DDD. Mas, para seu negócio principal ou domínio principal, é interessante aplicar padrões mais avançados para lidar com a complexidade dos negócios e com as regras de negócio em constante mudança.
 
-Especialmente ao lidar com grandes aplicativos compostos por vários subsistemas, você não deve aplicar uma única arquitetura de alto nível com base em um único padrão de arquitetura. Por exemplo, a CQRS não deve ser aplicada como uma arquitetura de alto nível para um aplicativo inteiro, mas pode ser útil para um conjunto específico de serviços.
+Especialmente quando você lida com aplicativos grandes compostos por vários subsistemas, não deve aplicar uma única arquitetura de nível superior com base em um padrão de arquitetura única. Por exemplo, a CQRS não deve ser aplicada como uma arquitetura de alto nível para um aplicativo inteiro, mas pode ser útil para um conjunto específico de serviços.
 
 Não há solução definitiva nem um padrão de arquitetura correto para cada caso específico. Você não pode ter "um padrão de arquitetura para controlar tudo". Dependendo das prioridades de cada microsserviço, você deverá escolher uma abordagem diferente para cada um deles, conforme explicado nas seções a seguir.
 

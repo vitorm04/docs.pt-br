@@ -28,7 +28,7 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
 
 1. No menu **Projeto**, escolha **Adicionar Novo Item**.
 
-    A caixa de diálogo **Adicionar Novo Item** é exibida.
+    A caixa de diálogo **Adicionar Novo Item** aparecerá.
 
 1. Na caixa de diálogo **Adicionar Novo Item**, clique duas vezes em **Controle personalizado**.
 
@@ -85,9 +85,9 @@ Se você quiser estender a funcionalidade de um controle existente, poderá cria
 
 1. Salve e teste seu controle.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)
+- [Variedades de controles personalizados](varieties-of-custom-controls.md)
 - [Como herdar da classe de controle](how-to-inherit-from-the-control-class.md)
 - [Como herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Como Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)

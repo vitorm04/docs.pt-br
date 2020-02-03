@@ -34,7 +34,7 @@ Os controles de Windows Forms geralmente exibem algum texto relacionado à funç
 
 Você também pode definir o texto usando o [Designer](#designer).
 
-## <a name="programmatic"></a>Program
+## <a name="programmatic"></a>Programático
 
 1. Defina a propriedade <xref:System.Windows.Forms.Control.Text%2A> como uma cadeia de caracteres.
 
@@ -82,7 +82,7 @@ Você também pode definir o texto usando o [Designer](#designer).
 
    Na caixa de diálogo de fonte padrão, escolha a fonte, o estilo da fonte, o tamanho, efeitos (como riscado ou sublinhado) e o script que você deseja.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [Como criar teclas de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)

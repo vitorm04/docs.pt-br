@@ -72,9 +72,9 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
   
 |Endereço de fila baseado em URI do WCF|Usar a propriedade Active Directory|Propriedade do protocolo de transferência de fila|Nomes de formato MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private $/abc|  
-|Net.msmq://\<machine-name>/private/abc|verdadeiro|Nativo|PUBLIC = algum GUID (o GUID da fila)|  
+|NET. MSMQ://\<nome da máquina >/Private/ABC|False (padrão)|Nativo (padrão)|DIRECT=OS:machine-name\private$\abc|  
+|NET. MSMQ://\<nome da máquina >/Private/ABC|False|SRMP|DIRECT =http://machine/msmq/private$/ABC|  
+|NET. MSMQ://\<nome da máquina >/Private/ABC|True|Nativo|PUBLIC = algum GUID (o GUID da fila)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Lendo mensagens da fila de mensagens mortas ou da fila de mensagem suspeita  
  Para ler mensagens de uma fila de mensagens suspeitas que é uma subfila da fila de destino, abra o `ServiceHost` com o endereço da subfila.  
@@ -94,16 +94,16 @@ Este tópico discute como os clientes atendem aos serviços que lêem de filas e
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding e endereçamento de serviço  
  O `MsmqIntegrationBinding` é usado para comunicação com aplicativos MSMQ tradicionais. Para facilitar a interoperação com um aplicativo MSMQ existente, o WCF dá suporte apenas ao endereçamento de nome de formato. Portanto, as mensagens enviadas usando essa associação devem estar de acordo com o esquema de URI:  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ MSMQ. FormatName:\<*MSMQ-Format-name*>>  
   
  O nome de formato MSMQ é o formato especificado pelo MSMQ no [enfileiramento de mensagens](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que você só pode usar nomes de formato diretos e nomes de formato público e privado (requer integração de Active Directory) ao receber mensagens de uma fila usando `MsmqIntegrationBinding`. No entanto, é recomendável que você use nomes de formato diretos. Por exemplo, no Windows Vista, o uso de qualquer outro nome de formato causa um erro porque o sistema tenta abrir uma subfila, que só pode ser aberta com nomes de formato diretos.  
   
- Ao endereçar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito para adicionar/MSMQ/no nome de formato direto para ajudar a Serviços de Informações da Internet (IIS) com expedição. Por exemplo: ao endereçar uma fila ABC usando o protocolo SRMP, em vez de DIRECT =http://adatum.com/msmq/private $/ABC, você deve usar DIRECT =http://adatum.com/private $/ABC.  
+ Ao endereçar SRMP usando `MsmqIntegrationBinding`, não há nenhum requisito para adicionar/MSMQ/no nome de formato direto para ajudar a Serviços de Informações da Internet (IIS) com expedição. Por exemplo: ao endereçar uma fila ABC usando o protocolo SRMP, em vez de DIRECT =http://adatum.com/msmq/private$/ABC, você deve usar DIRECT =http://adatum.com/private$/ABC.  
   
  Observe que você não pode usar net. MSMQ://endereçamento com `MsmqIntegrationBinding`. Como o `MsmqIntegrationBinding` dá suporte ao endereçamento de nome de formato MSMQ de forma livre, você pode usar um serviço WCF que usa essa associação para usar recursos de lista de distribuição e multicast no MSMQ. Uma exceção é especificar `CustomDeadLetterQueue` ao usar o `MsmqIntegrationBinding`. Ele deve estar no formato net. MSMQ://, semelhante a como ele é especificado usando o `NetMsmqBinding`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Hospedagem na Web de um aplicativo na fila](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

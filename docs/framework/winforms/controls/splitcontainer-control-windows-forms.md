@@ -30,7 +30,7 @@ O controle `SplitContainer` dos Windows Forms pode ser considerado uma composiç
  [Como dividir uma janela horizontalmente](how-to-split-a-window-horizontally.md)  
  Descreve como controlar a orientação do separador dentro do controle `SplitContainer`.  
   
- [Como Criar uma Interface do Usuário com Vários Painéis nos Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Como criar uma interface do usuário multipainel com o Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Cria uma interface do usuário em vários painéis que é semelhante à usada no Microsoft Outlook.  
   
  Consulte também [Como dividir uma janela horizontalmente usando o Designer](how-to-split-a-window-horizontally-using-the-designer.md), [Como criar uma Interface no estilo Windows Explorer em um Windows Form](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md), [Como criar uma Interface do usuário multipainéis com Windows Forms usando o Designer](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
@@ -40,8 +40,8 @@ O controle `SplitContainer` dos Windows Forms pode ser considerado uma composiç
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções Relacionadas  
- [Controles do Windows Forms](index.md)  
+ [Controles dos Windows Forms](index.md)  
  Fornece links para tópicos sobre os controles projetados especificamente para funcionar com o Windows Forms.  
   
- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

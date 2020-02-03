@@ -70,7 +70,7 @@ Os procedimentos a seguir descrevem como implementar isso e funcionalidade adici
      [!code-csharp[ToolStripRadioButtonMenuItem#180](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo de código a seguir fornece a classe completa `ToolStripRadioButtonMenuItem` e uma classe <xref:System.Windows.Forms.Form> e `Program` classe para demonstrar o comportamento de botão de opção.
 
@@ -83,7 +83,7 @@ Este exemplo requer:
 
 - Referências aos assemblies System, System.Drawing e System.Windows.Forms.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>

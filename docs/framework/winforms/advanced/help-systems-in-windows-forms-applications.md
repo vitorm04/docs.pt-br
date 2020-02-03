@@ -23,7 +23,7 @@ Uma das cortesias mais importantes que você, como desenvolvedor de aplicativos,
   
  Você pode gerar arquivos da Ajuda HTML 1.x com o HTML Help Workshop. Para obter mais informações sobre a Ajuda HTML, veja o "HTML Help Workshop" ou outros tópicos de "Ajuda HTML" no MSDN.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Integrando a Ajuda do Usuário nos Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Componente HelpProvider](../controls/helpprovider-component-windows-forms.md)

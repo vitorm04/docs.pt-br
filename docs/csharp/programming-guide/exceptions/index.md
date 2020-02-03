@@ -54,7 +54,7 @@ Consulte os artigos a seguir para obter mais informações sobre exceções e ma
 
 Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.SystemException>
 - [Guia de Programação em C#](../index.md)

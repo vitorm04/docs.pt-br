@@ -36,10 +36,10 @@ No Visual Studio, selecione o controle a ser redimensionado e arraste um dos oit
 
 2. No menu **Formato**, selecione **Igualar tamanho** e selecione uma das quatro opções. Os três primeiros comandos alteram as dimensões dos controles para corresponder ao controle selecionado primeiro.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles do Windows Forms](index.md)
+- [Controles dos Windows Forms](index.md)
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)
 - [Como redimensionar Windows Forms usando o designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

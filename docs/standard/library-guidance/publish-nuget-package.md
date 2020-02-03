@@ -32,7 +32,7 @@ Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embor
 
 É importante que os invasores não possam acessar sua conta do NuGet e carregar uma versão mal-intencionado da sua biblioteca. O NuGet.org oferece autenticação de dois fatores e notificações por email quando um pacote é publicado. Habilite esses recursos após fazer logon no NuGet.org, na página **Configurações de conta**.
 
-![texto alt](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
+![alt text](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
 
 ✔️ usar um conta Microsoft para entrar no NuGet.
 

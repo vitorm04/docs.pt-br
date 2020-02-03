@@ -67,7 +67,7 @@ Muitas vezes, dentro de aplicativos do Windows que você criou, será necessári
 
 Para obter informações sobre como salvar arquivos, consulte [Como salvar arquivos usando o componente SaveFileDialog](how-to-save-files-using-the-savefiledialog-component.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [Visão geral do componente FolderBrowserDialog (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)

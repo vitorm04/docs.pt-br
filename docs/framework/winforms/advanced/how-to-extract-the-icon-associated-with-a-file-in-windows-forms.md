@@ -19,7 +19,7 @@ ms.locfileid: "76742549"
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Como extrair o ícone associado a um arquivo no Windows Forms
 Muitos arquivos têm ícones inseridos que fornecem uma representação visual do tipo de arquivo associado. Por exemplo, documentos do Microsoft Word contêm um ícone que os identifica como documentos do Word. Ao exibir os arquivos em um controle de lista ou um controle de tabela, talvez você queira exibir o ícone que representa o tipo de arquivo ao lado de cada nome de arquivo. Você pode fazer isso facilmente usando o método <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A>.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir demonstra como extrair o ícone associado a um arquivo e exibir o nome do arquivo e seu ícone associado em um controle de <xref:System.Windows.Forms.ListView>.  
   
  [!code-csharp[System.Drawing.Icon.ExtractAssociatedIconEx#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Icon.ExtractAssociatedIconEx/CS/Form1.cs#1)]
@@ -32,7 +32,7 @@ Muitos arquivos têm ícones inseridos que fornecem uma representação visual d
   
      Você precisará certificar-se de que seu formulário importa o namespace <xref:System.IO>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Imagens, bitmaps e metarquivos](images-bitmaps-and-metafiles.md)
 - [Controle ListView](../controls/listview-control-windows-forms.md)

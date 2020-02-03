@@ -34,14 +34,14 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
  As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
- Nenhuma.  
+### <a name="attributes"></a>Atributos  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<cryptoClass>](cryptoclass-element.md)|Contém uma classe de criptografia que tem um mapeamento para um nome amigável no elemento **\<nameEntry>** .|  
+|[\<cryptoClass >](cryptoclass-element.md)|Contém uma classe de criptografia que tem um mapeamento para um nome amigável no elemento **\<nameEntry>** .|  
   
 ### <a name="parent-elements"></a>Elementos Pai  
   
@@ -52,7 +52,7 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 |`cryptoNameMapping`|Contém mapeamentos de classes para nomes amigáveis.|  
 |`mscorlib`|Contém o elemento `cryptographySettings`.|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra como usar o elemento **\<cryptoClass >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
   
 ```xml  
@@ -76,11 +76,11 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Security.Cryptography>
 - [Esquema de arquivos de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
 - [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [System. Security. Cryptography. CryptoConfig. CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

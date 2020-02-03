@@ -79,7 +79,7 @@ Você pode querer exibir com frequência dados tabulares que não se originam de
   
      Você verá um controle de <xref:System.Windows.Forms.DataGridView> que exibe as músicas listadas em `PopulateDataGridView`. Você pode adicionar novas linhas com o botão **Adicionar Linha** e excluir linhas selecionadas com o botão **Excluir Linha**. O controle de <xref:System.Windows.Forms.DataGridView> não associado é o armazenamento de dados e seus dados são independentes de qualquer fonte externa, como um <xref:System.Data.DataSet> ou uma matriz.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}  
  Esse aplicativo oferece uma compreensão básica dos recursos do controle de <xref:System.Windows.Forms.DataGridView>. Você pode personalizar a aparência e o comportamento do controle de <xref:System.Windows.Forms.DataGridView> de várias maneiras:  
   
 - Alterar estilos de borda e cabeçalho. Para obter mais informações, consulte [Como alterar os estilos de borda e linha de grade no controle DataGridView dos Windows Forms](change-the-border-and-gridline-styles-in-the-datagrid.md).  
@@ -88,13 +88,13 @@ Você pode querer exibir com frequência dados tabulares que não se originam de
   
 - Verifique a entrada do usuário para erros relacionados ao banco de dados. Para obter mais informações, consulte [Instruções passo a passo: identificando erros que ocorrem durante a entrada de dados no controle DataGridView do Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md).  
   
-- Manipule grandes conjuntos de dados usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
+- Manipule conjuntos de dados muito grandes usando o modo virtual. Para obter mais informações, consulte [Passo a passo: implementando o modo virtual no controle DataGridView dos Windows Forms](implementing-virtual-mode-wf-datagridview-control.md).  
   
 - Personalize a aparência das células. Para obter mais informações, consulte [Como personalizar a aparência de células no controle DataGridView dos Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) e [Como definir estilos de célula padrão no controle DataGridView dos Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Exibindo dados no controle DataGridView dos Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Exibindo dados no controle DataGridView do Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Como criar um controle DataGridView não associado dos Windows Forms](how-to-create-an-unbound-windows-forms-datagridview-control.md)
-- [Modos de exibição de dados no controle DataGridView dos Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Modos de exibição dos dados no controle DataGridView do Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)

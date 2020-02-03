@@ -141,7 +141,7 @@ No menu **Compilar**, clique em **Compilar Solução**. O build deve ser bem-suc
 
      O numeral "5" é exibido em `label1`, demonstrando que a propriedade `ButtonValue` de seu controle herdado foi passada para `label1` por meio do método `valueButton1_Click`. Portanto, seu controle `ValueButton` herda todas as funcionalidades do botão padrão dos Windows Forms, mas expõe uma propriedade adicional personalizada.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Passo a passo: criando um controle de composição com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

@@ -80,7 +80,7 @@ Frequentemente, processadores de texto e outros aplicativos que envolvem impress
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)

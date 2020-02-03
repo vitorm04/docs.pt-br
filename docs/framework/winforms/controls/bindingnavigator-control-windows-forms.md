@@ -28,7 +28,7 @@ O controle de `BindingNavigator` é a interface do usuário de navegação e man
  [Como navegar em um DataSet com o controle BindingNavigator dos Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Demonstra o uso de um controle `BindingNavigator` para percorrer os registros em um <xref:System.Data.DataSet>.  
   
- Consulte também [Como adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms](load-save-and-cancel-bindingnavigator.md).  
+ Consulte também [Como adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator dos Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.BindingNavigator>  

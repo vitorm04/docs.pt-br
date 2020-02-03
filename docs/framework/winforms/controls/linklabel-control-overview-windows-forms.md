@@ -23,7 +23,7 @@ O controle de <xref:System.Windows.Forms.LinkLabel> de Windows Forms permite adi
   
  O uso mais simples do controle de <xref:System.Windows.Forms.LinkLabel> é exibir um único link usando a propriedade <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, mas você também pode exibir vários hiperlinks usando a propriedade <xref:System.Windows.Forms.LinkLabel.Links%2A>. A propriedade <xref:System.Windows.Forms.LinkLabel.Links%2A> permite que você acesse uma coleção de links. Você também pode especificar dados na propriedade <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> de cada objeto <xref:System.Windows.Forms.LinkLabel.Link> individual. O valor da propriedade <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> pode ser usado para armazenar o local de um arquivo a ser exibido ou o endereço de um site da Web.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Visão geral do controle Label](label-control-overview-windows-forms.md)

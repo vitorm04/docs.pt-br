@@ -19,7 +19,7 @@ O Windows Forms <xref:System.Windows.Forms.ColorDialog> componente é uma caixa 
   
  A cor selecionada na caixa de diálogo é retornada na propriedade <xref:System.Windows.Forms.ColorDialog.Color%2A>. Se a propriedade <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> for definida como `false`, o botão "definir cores personalizadas" será desabilitado e o usuário será restrito às cores predefinidas na paleta. Se a propriedade <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> for definida como `true`, o usuário não poderá selecionar cores diquerdas. Para exibir a caixa de diálogo, você deve chamar seu método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [Componente ColorDialog](colordialog-component-windows-forms.md)

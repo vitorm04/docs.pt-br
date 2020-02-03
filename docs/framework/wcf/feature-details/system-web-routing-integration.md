@@ -69,7 +69,7 @@ Ao hospedar um serviço de Windows Communication Foundation (WCF) no serviço de
     }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Roteamento de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

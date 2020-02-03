@@ -174,7 +174,7 @@ Há muitos outros recursos de layout para organizar controles em seus aplicativo
 
 - Experimente o encaixe de controles filho em um controle <xref:System.Windows.Forms.Panel>. A propriedade <xref:System.Windows.Forms.Control.Padding%2A> é uma realização mais geral da propriedade <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>, e você pode se comportar de que esse é o caso colocando um controle filho em um controle de <xref:System.Windows.Forms.Panel> e definindo a propriedade <xref:System.Windows.Forms.Control.Dock%2A> do controle filho como <xref:System.Windows.Forms.DockStyle.Fill>. Defina a propriedade <xref:System.Windows.Forms.Control.Padding%2A> do controle de <xref:System.Windows.Forms.Panel> com vários valores e observe o efeito.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
@@ -183,4 +183,4 @@ Há muitos outros recursos de layout para organizar controles em seus aplicativo
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

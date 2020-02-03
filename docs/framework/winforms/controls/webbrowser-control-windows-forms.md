@@ -38,7 +38,7 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  [Como implementar a comunicação bidirecional entre o código DHTML e o código do aplicativo cliente](implement-two-way-com-between-dhtml-and-client.md)  
  Descreve como configurar a comunicação bidirecional entre o código do aplicativo e DHTML em uma página da Web hospedada pelo controle.  
   
- [Usando o Modelo de Objeto do Documento de HTML gerenciado](using-the-managed-html-document-object-model.md)  
+ [Usando o Modelo de Objeto do Documento HTML gerenciado](using-the-managed-html-document-object-model.md)  
  Fornece tópicos que descrevem como manipular ou criar páginas HTML hospedadas pelo controle de <xref:System.Windows.Forms.WebBrowser>.  
   
 ## <a name="reference"></a>Referência  
@@ -78,6 +78,6 @@ O controle `WebBrowser` dos Windows Forms hospeda páginas da Web e fornece recu
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  Descreve esta enumeração e todos os seus valores.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

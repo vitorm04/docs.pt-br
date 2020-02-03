@@ -24,7 +24,7 @@ O Windows Presentation Foundation (WPF) tem um recurso de tinta que facilita a i
 
 Para usar os exemplos a seguir, primeiro instale o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda sobre como começar a usar o WPF, consulte [Walkthrough: meu primeiro aplicativo de área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Início rápido do
+## <a name="quick-start"></a>Início Rápido
 
 Esta seção ajuda você a escrever um aplicativo simples do WPF que coleta tinta.
 
@@ -108,7 +108,7 @@ Você pode acessar todos os recursos do WPF do código de procedimento. Siga est
 
 1. Crie o aplicativo pressionando **F5**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Tinta digital](digital-ink.md)
 - [Coletando tinta](collecting-ink.md)

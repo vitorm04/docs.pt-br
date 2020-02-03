@@ -18,7 +18,7 @@ ms.locfileid: "76734084"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet nuget locals`-Limpa ou lista os recursos locais do NuGet.
 
@@ -33,7 +33,7 @@ dotnet nuget locals [-h|--help]
 
 O comando `dotnet nuget locals` limpa ou lista os recursos locais do NuGet no cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 * **`CACHE_LOCATION`**
 
@@ -44,7 +44,7 @@ O comando `dotnet nuget locals` limpa ou lista os recursos locais do NuGet no ca
   * `global-packages` – Indica que a operação especificada aplica-se apenas ao cache de pacotes globais. Os outros locais do cache não são afetados.
   * `temp` – Indica que a operação especificada aplica-se apenas ao cache temporário. Os outros locais do cache não são afetados.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 * **`--force-english-output`**
 

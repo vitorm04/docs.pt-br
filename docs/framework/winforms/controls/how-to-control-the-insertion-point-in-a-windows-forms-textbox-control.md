@@ -61,7 +61,7 @@ Quando um Windows Forms controle de <xref:System.Windows.Forms.TextBox> recebe p
   
 - Defina a propriedade <xref:System.Windows.Forms.Control.TabIndex%2A> do controle de <xref:System.Windows.Forms.TextBox> como `0`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

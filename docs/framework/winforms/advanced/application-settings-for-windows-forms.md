@@ -21,7 +21,7 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
  [Visão Geral das Configurações do Aplicativo](application-settings-overview.md)  
  Discute como criar e armazenar dados de configuração em nome de seu aplicativo e seus usuários.  
   
- [Arquitetura das Configurações do Aplicativo](application-settings-architecture.md)  
+ [Arquitetura das configurações de aplicativo](application-settings-architecture.md)  
  Descreve como o recurso de Configurações de aplicativo funciona e explora recursos avançados da arquitetura, como as configurações agrupadas e as chaves de configurações.  
   
  [Atributos de Configurações de Aplicativo](application-settings-attributes.md)  
@@ -33,7 +33,7 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
  [Como criar configurações de aplicativo](how-to-create-application-settings.md)  
  Demonstra como criar novas configurações do aplicativo que persistem entre sessões do aplicativo.  
   
- [Como Validar Configurações do Aplicativo](how-to-validate-application-settings.md)  
+ [Como validar configurações de aplicativo](how-to-validate-application-settings.md)  
  Demonstra como validar configurações do aplicativo antes que elas sejam persistentes.  
   
 ## <a name="related-topics"></a>Tópicos relacionados
@@ -41,6 +41,6 @@ O recurso Configurações de aplicativo dos Windows Forms facilita a criação, 
 [Windows Forms seção de configuração](../../configure-apps/file-schema/winforms/index.md)    
 Documenta as configurações para habilitar o suporte a alto DPI no aplicativo Windows Forms a partir do .NET Framework 4,7.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Windows Forms](../index.md)

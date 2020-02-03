@@ -20,7 +20,7 @@ ms.locfileid: "76743236"
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>Como selecionar um item no controle ListView dos Windows Forms
 Este exemplo demonstra como selecionar programaticamente um item em um controle de <xref:System.Windows.Forms.ListView> de Windows Forms. Selecionar um item programaticamente não altera automaticamente o foco para o controle de <xref:System.Windows.Forms.ListView>. Por esse motivo, normalmente você também desejará definir o item como focado ao selecionar um item.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
@@ -31,7 +31,7 @@ Este exemplo demonstra como selecionar programaticamente um item em um controle 
   
 - Referências aos namespaces <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

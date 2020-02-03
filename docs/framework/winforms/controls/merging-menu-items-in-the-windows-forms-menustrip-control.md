@@ -37,7 +37,7 @@ Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu 
   
  A tabela a seguir descreve o significado e o uso típico das ações de mesclagem disponíveis.  
   
-|Valor de MergeAction|Descrição|Uso típico|  
+|Valor de MergeAction|Descrição|Usos comum|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|(Padrão) Adiciona o item de origem ao final da coleção do item de destino.|Adicionar itens de menu no final do menu quando alguma parte do programa é ativada.|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|Adiciona o item de origem à coleção do item de destino, no local especificado pela propriedade <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> definida no item de origem.|Adicionar itens de menu no início ou no meio do menu quando alguma parte do programa é ativada.<br /><br /> Se o valor de <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> for o mesmo para ambos os itens de menu, eles serão adicionados na ordem inversa. Defina <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> adequadamente para preservar o pedido original.|  
@@ -53,7 +53,7 @@ Se tiver um aplicativo de interface MDI, você poderá mesclar os itens de menu 
   
  Você pode disparar a mesclagem automática ativando o <xref:System.Windows.Forms.MenuStrip> na origem MDI. Após a ativação, o <xref:System.Windows.Forms.MenuStrip> de origem é mesclado no destino MDI. Quando um novo formulário se torna ativo, a mesclagem é revertida no último formulário e acionada no novo formulário. Você pode controlar esse comportamento definindo a propriedade <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> conforme necessário em cada <xref:System.Windows.Forms.ToolStripItem>e definindo a propriedade <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> em cada <xref:System.Windows.Forms.MenuStrip>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

@@ -24,7 +24,7 @@ Você pode transformar uma caixa de texto Windows Forms editável em um controle
     > [!NOTE]
     > A propriedade <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> afeta apenas a interação do usuário em tempo de execução. Você ainda pode alterar o conteúdo da caixa de texto programaticamente em tempo de execução alterando a propriedade <xref:System.Windows.Forms.TextBox.Text%2A> da caixa de texto.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)

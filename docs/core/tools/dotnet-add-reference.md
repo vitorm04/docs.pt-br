@@ -17,7 +17,7 @@ ms.locfileid: "76733278"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet add reference` – Adiciona as referências P2P (projeto a projeto).
 
@@ -37,7 +37,7 @@ O comando `dotnet add reference` fornece uma opção conveniente para adicionar 
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 - **`PROJECT`**
 
@@ -47,7 +47,7 @@ O comando `dotnet add reference` fornece uma opção conveniente para adicionar 
 
   Referências P2P (projeto a projeto) a serem adicionadas. Especifique um ou mais projetos. Os [padrões Glob](https://en.wikipedia.org/wiki/Glob_(programming)) são compatíveis com sistemas baseados em Unix/Linux.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`-h|--help`**
 

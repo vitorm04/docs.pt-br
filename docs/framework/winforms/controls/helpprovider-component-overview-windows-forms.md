@@ -36,6 +36,6 @@ O componente [HelpProvider](helpprovider-component-windows-forms.md) dos Windows
 > [!NOTE]
 > Você pode encontrar problemas ao usar o caminho relativo ao especificar o caminho para o arquivo de ajuda no método <xref:System.Windows.Forms.Help.ShowHelp%2A> ou <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Propriedade do controle de <xref:System.Windows.Forms.HelpProvider>. Por isso, verifique se você usou o caminho de arquivo absoluto para especificar o arquivo de Ajuda.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Sistemas de Ajuda em Aplicativos dos Windows Forms](../advanced/help-systems-in-windows-forms-applications.md)

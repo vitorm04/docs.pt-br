@@ -48,7 +48,7 @@ private:
   
  Você também pode usar o mesmo manipulador de eventos para manipular o mesmo evento em controles diferentes. Por exemplo, se você tiver um grupo de controles de <xref:System.Windows.Forms.RadioButton> em um formulário, poderá criar um único manipulador de eventos para o evento <xref:System.Windows.Forms.Control.Click> e ter cada evento de <xref:System.Windows.Forms.Control.Click> de controle associado ao manipulador de eventos único. Para obter mais informações, consulte [Como conectar vários eventos a um único manipulador de eventos nos Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de eventos](events-overview-windows-forms.md)

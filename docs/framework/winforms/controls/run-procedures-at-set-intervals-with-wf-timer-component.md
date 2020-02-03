@@ -43,7 +43,7 @@ ms.locfileid: "76743116"
   
 5. No momento apropriado, defina a propriedade <xref:System.Windows.Forms.Timer.Enabled%2A> como `false` para impedir que o procedimento seja executado novamente. Definir o intervalo como `0` não faz o temporizador parar.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Esse primeiro exemplo de código rastreia a hora do dia em incrementos de um segundo. Ele usa um <xref:System.Windows.Forms.Button>, um <xref:System.Windows.Forms.Label>e um componente de <xref:System.Windows.Forms.Timer> em um formulário. A propriedade <xref:System.Windows.Forms.Timer.Interval%2A> é definida como 1000 (igual a um segundo). No evento <xref:System.Windows.Forms.Timer.Tick>, a legenda do rótulo é definida como a hora atual. Quando o botão é clicado, a propriedade <xref:System.Windows.Forms.Timer.Enabled%2A> é definida como `false`, interrompendo o timer de atualizar a legenda do rótulo. O exemplo de código a seguir requer que você tenha um formulário com um controle de <xref:System.Windows.Forms.Button> chamado `Button1`, um controle de <xref:System.Windows.Forms.Timer> chamado `Timer1`e um controle de <xref:System.Windows.Forms.Label> chamado `Label1`.  
   
 ```vb  
@@ -148,7 +148,7 @@ private:
    }  
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Este segundo exemplo de código executa um procedimento a cada 600 milissegundos até que um loop seja concluído. O exemplo de código a seguir requer que você tenha um formulário com um controle de <xref:System.Windows.Forms.Button> chamado `Button1`, um controle de <xref:System.Windows.Forms.Timer> chamado `Timer1`e um controle de <xref:System.Windows.Forms.Label> chamado `Label1`.  
   
 ```vb  
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.Timer>
 - [Componente Timer](timer-component-windows-forms.md)

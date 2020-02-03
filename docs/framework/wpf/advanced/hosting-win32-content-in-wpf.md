@@ -368,6 +368,6 @@ O que fornece:
 
 ![Captura de tela do aplicativo WPF em execução.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)

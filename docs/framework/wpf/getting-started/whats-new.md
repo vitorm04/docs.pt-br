@@ -126,6 +126,6 @@ ms.locfileid: "76746926"
 ## <a name="markup-extensions-for-events"></a>Extensões de marcação para eventos  
  WPF 4.5 dá suporte a extensões de marcação de eventos.  Embora o WPF não define uma extensão de marcação a ser usado para eventos, terceiros são capazes de criar uma extensão de marcação que pode ser usada com eventos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Novidades no .NET Framework](../../whats-new/index.md)

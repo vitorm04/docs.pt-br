@@ -51,13 +51,13 @@ Há basicamente três plataformas que dão suporte à tinta digital: a plataform
   
  A tabela a seguir compara como realizar algumas tarefas comuns na plataforma WPF e nas plataformas Windows Forms e COM.  
   
-|Tarefa|Windows Presentation Foundation|Windows Forms e COM|  
+|{1&gt;Tarefa&lt;1}|Windows Presentation Foundation|Windows Forms e COM|  
 |----------|-------------------------------------|---------------------------|  
-|Salvar tinta|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft.Ink.Ink.Save](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
-|Carregar tinta|Crie um <xref:System.Windows.Ink.StrokeCollection> com o Construtor <xref:System.Windows.Ink.StrokeCollection.%23ctor%2A>.|[Microsoft.Ink.Ink.Load](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  
-|Teste de clique|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
-|Copiar tinta|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
-|Colar tinta|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571318(v=vs.90))|  
+|Salvar tinta|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft. Ink. Ink. Save](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
+|Carregar tinta|Crie um <xref:System.Windows.Ink.StrokeCollection> com o Construtor <xref:System.Windows.Ink.StrokeCollection.%23ctor%2A>.|[Microsoft. Ink. Ink. Load](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  
+|Teste de clique|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft. Ink. Ink. HitTest](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
+|Copiar tinta|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft. Ink. Ink. ClipboardCopy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
+|Colar tinta|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft. Ink. Ink. ClipboardPaste](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571318(v=vs.90))|  
 |Acessar propriedades personalizadas em uma coleção de traços|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (as propriedades são armazenadas internamente e acessadas por meio de <xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>, <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>e <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|Usar [Microsoft. Ink. Ink. ExtendedProperties](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms582214(v=vs.90))|  
   
 ### <a name="sharing-ink-between-platforms"></a>Compartilhando tinta entre plataformas  

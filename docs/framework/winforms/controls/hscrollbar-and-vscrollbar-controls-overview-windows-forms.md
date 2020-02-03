@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> controles são usados para f
   
  Quando o usuário pressiona uma das teclas de direção ou clica em um dos botões da barra de rolagem, a propriedade <xref:System.Windows.Forms.ScrollBar.Value%2A> muda de acordo com o valor definido na propriedade <xref:System.Windows.Forms.ScrollBar.SmallChange%2A>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
+- [Controles a serem usados no Windows Forms](controls-to-use-on-windows-forms.md)

@@ -88,7 +88,7 @@ Depois de copiar esse código, pressione **F5** no Visual Studio para executar o
 
 Observe como o <xref:System.Windows.Controls.StackPanel> coloca os botões na parte superior do <xref:System.Windows.Controls.InkCanvas>. Se você tentar passar a tinta sobre a parte superior dos botões, a <xref:System.Windows.Controls.InkCanvas> coleta e renderiza a tinta por trás dos botões. Isso ocorre porque os botões são irmãos da <xref:System.Windows.Controls.InkCanvas> em vez de filhos. Além disso, os botões estão mais altos na ordem z, de modo que a tinta é renderizada atrás deles.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

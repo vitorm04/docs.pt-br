@@ -48,7 +48,7 @@ ms.locfileid: "76735904"
        }  
     ```  
   
-     - ou -  
+     -ou-  
   
 2. Insira o caractere ASCII ou Unicode para aspas. Em Visual Basic, use o caractere ASCII (34). No Visual C#, use o caractere Unicode (\u0022).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76735904"
     > [!NOTE]
     > Neste exemplo, não é possível usar \u0022 porque você não pode usar um nome de caractere universal que designa um caractere no conjunto de caracteres básicos. Caso contrário, você produz C3851. Para obter mais informações, consulte [Erro do compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
-     - ou -  
+     -ou-  
   
 3. Você também pode definir uma constante para o caractere e usá-la quando necessário.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "76735904"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>

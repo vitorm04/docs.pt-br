@@ -106,6 +106,6 @@ Geralmente, os usuários escolhem uma impressora diferente da impressora padrão
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Suporte à impressão nos Windows Forms](windows-forms-print-support.md)

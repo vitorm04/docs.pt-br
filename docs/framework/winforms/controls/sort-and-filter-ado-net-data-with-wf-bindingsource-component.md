@@ -44,7 +44,7 @@ Você pode expor o recurso de classificação e filtragem do controle de <xref:S
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir carrega dados da tabela Customers do banco de dados de exemplo Northwind em um controle <xref:System.Windows.Forms.DataGridView> e filtra e classifica os dados exibidos.  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
@@ -53,7 +53,7 @@ Você pode expor o recurso de classificação e filtragem do controle de <xref:S
 ## <a name="compiling-the-code"></a>Compilando o Código  
  Para executar este exemplo, Cole o código em um formulário que contenha um <xref:System.Windows.Forms.BindingSource> chamado `BindingSource1` e um <xref:System.Windows.Forms.DataGridView> chamado `dataGridView1`. Manipule o evento <xref:System.Windows.Forms.Form.Load> para o formulário e chame `InitializeSortedFilteredBindingSource` no método Carregar manipulador de eventos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

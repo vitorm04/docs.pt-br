@@ -93,7 +93,7 @@ Dim [ WithEvents ] variablelist
 
 - `variablelist`
 
-  Necessária. Lista de variáveis que estão sendo declaradas nesta instrução.
+  Obrigatório. Lista de variáveis que estão sendo declaradas nesta instrução.
 
   `variable [ , variable ... ]`
 
@@ -103,7 +103,7 @@ Dim [ WithEvents ] variablelist
 
   |Parte|Descrição|
   |---|---|
-  |`variablename`|Necessária. O nome da variável. Consulte [nomes de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+  |`variablename`|Obrigatório. Nome da variável. Consulte [nomes de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
   |`boundslist`|Opcional. Lista de limites de cada dimensão de uma variável de matriz.|
   |`New`|Opcional. Cria uma nova instância da classe quando a instrução `Dim` é executada.|
   |`datatype`|Opcional. Tipo de dados da variável.|
@@ -255,7 +255,7 @@ Para obter mais informações sobre literais de matriz, consulte [matrizes](../.
 
 A tabela a seguir descreve os resultados de várias combinações de especificar o tipo de dados e o inicializador em uma instrução `Dim`.
 
-|Tipo de dados especificado?|Inicializador especificado?|Exemplo|Resultado|
+|Tipo de dados especificado?|Inicializador especificado?|{1&gt;Exemplo&lt;1}|Resultado|
 |---|---|---|---|
 |Não|Não|`Dim qty`|Se [Option Strict](option-strict-statement.md) for OFF (o padrão), a variável será definida como `Nothing`.<br /><br /> Se `Option Strict` estiver ativado, ocorre um erro de tempo de compilação.|
 |Não|Sim|`Dim qty = 5`|Se [Option Infer](option-infer-statement.md) estiver on (o padrão), a variável usará o tipo de dados do inicializador. Consulte [inferência de tipo local](../../programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Se `Option Infer` estiver desativado e `Option Strict` estiver desativado, a variável usa o tipo de dados do `Object`.<br /><br /> Se `Option Infer` estiver desativado e `Option Strict` estiver ativado, ocorre um erro de tempo de compilação.|
@@ -305,19 +305,19 @@ Se uma classe se mantiver em um recurso especialmente valioso e escasso (como um
 
 A instrução `Using` automatiza o processo de aquisição de um recurso, a execução de um conjunto de instruções e a descarta do recurso. No entanto, o recurso deve implementar a interface <xref:System.IDisposable>. Para obter mais informações, consulte [Instrução using](using-statement.md).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir declara variáveis usando a instrução `Dim` com várias opções.
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir lista os números primos entre 1 e 30. O escopo de variáveis locais é descrito em comentários de código.
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 No exemplo a seguir, a variável `speedValue` é declarada no nível de classe. A palavra-chave `Private` é usada para declarar a variável. A variável pode ser acessada por qualquer procedimento na classe `Car`.
 
@@ -325,7 +325,7 @@ No exemplo a seguir, a variável `speedValue` é declarada no nível de classe. 
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Instrução Const](const-statement.md)
 - [Instrução ReDim](redim-statement.md)

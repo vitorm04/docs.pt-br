@@ -49,7 +49,7 @@ Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois 
   
 - Para remover as guias selecionadas, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
-     - ou -  
+     -ou-  
   
 - Para remover todas as guias, use o método <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A>.  
   
@@ -74,9 +74,9 @@ Por padrão, um controle de <xref:System.Windows.Forms.TabControl> contém dois 
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
 - [Como adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
 - [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)
-- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como alterar a aparência do TabControl do Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

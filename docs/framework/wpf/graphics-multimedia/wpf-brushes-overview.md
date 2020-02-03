@@ -54,7 +54,7 @@ Um retângulo pintado usando um SolidColorBrush
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>Pintar com um gradiente linear  
- Um <xref:System.Windows.Media.LinearGradientBrush> pinta uma área com um gradiente linear. Um gradiente linear combina duas ou mais cores em uma linha, o eixo de gradiente. Você usa <xref:System.Windows.Media.GradientStop> objetos para especificar as cores no gradiente e suas posições.  
+ Um <xref:System.Windows.Media.LinearGradientBrush> paints an area with a linear gradient. Um gradiente linear combina duas ou mais cores em uma linha, o eixo de gradiente. Você usa <xref:System.Windows.Media.GradientStop> objetos para especificar as cores no gradiente e suas posições.  
   
  O exemplo a seguir usa um <xref:System.Windows.Media.LinearGradientBrush> para pintar a <xref:System.Windows.Shapes.Shape.Fill%2A> de um <xref:System.Windows.Shapes.Rectangle>. A ilustração a seguir mostra o retângulo pintado.  
   
@@ -160,7 +160,7 @@ Um retângulo pintado usando um VisualBrush
   
  Para obter mais informações sobre por que <xref:System.Windows.Media.VisualBrush> objetos não podem ser congelados, consulte a página tipo de <xref:System.Windows.Media.VisualBrush>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ Um retângulo pintado usando um VisualBrush
 - [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Exemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Tópicos de instruções](brushes-how-to-topics.md)
+- [Tópicos explicativos](brushes-how-to-topics.md)
 - [Outras recomendações de desempenho](../advanced/optimizing-performance-other-recommendations.md)

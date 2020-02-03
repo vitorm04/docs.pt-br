@@ -171,7 +171,7 @@ Quando terminar, você terá uma compreensão da função desempenhada por esses
 
 6. Solte o botão do mouse. Observe que os três controles de <xref:System.Windows.Forms.Button> são inseridos no controle de <xref:System.Windows.Forms.FlowLayoutPanel>.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
  Você pode obter um layout complexo usando uma combinação de controles e painéis de layout. Sugestões para exploração adicional incluem:
 
 - Redimensione um dos controles de <xref:System.Windows.Forms.Button> para um tamanho maior e observe o efeito no layout.
@@ -182,13 +182,13 @@ Quando terminar, você terá uma compreensão da função desempenhada por esses
 
 - Defina a propriedade <xref:System.Windows.Forms.Control.Visible%2A> de um dos controles como `false` e observe como o <xref:System.Windows.Forms.FlowLayoutPanel> reflui em resposta.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Passo a passo: organizando controles nos Windows Forms usando linhas de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como encaixar controles no Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Como ancorar controles no Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)
+- [Como encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como ancorar controles nos Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Instruções passo a passo: projetando controles do Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

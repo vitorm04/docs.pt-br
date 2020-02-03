@@ -128,7 +128,7 @@ Você também pode verificar a versão do .NET Framework em que o aplicativo foi
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Windows Forms adicionar elemento de configuração](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Ajustando o tamanho e a escala dos Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

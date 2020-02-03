@@ -40,7 +40,7 @@ O advento do controle de <xref:System.Windows.Forms.BindingNavigator> no Windows
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo de código a seguir é o exemplo completo para as etapas listadas anteriormente.  
   
  [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
@@ -51,7 +51,7 @@ O advento do controle de <xref:System.Windows.Forms.BindingNavigator> no Windows
   
 - Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)

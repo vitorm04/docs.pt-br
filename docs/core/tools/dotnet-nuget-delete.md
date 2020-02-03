@@ -18,7 +18,7 @@ ms.locfileid: "76733125"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet nuget delete` – Exclui ou retira da lista um pacote do servidor.
 
@@ -34,7 +34,7 @@ dotnet nuget delete [-h|--help]
 
 O comando `dotnet nuget delete` exclui ou retira da lista um pacote do servidor. Para [nuget.org](https://www.nuget.org/), a ação é remover o pacote da lista.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 * **`PACKAGE_NAME`**
 
@@ -44,7 +44,7 @@ O comando `dotnet nuget delete` exclui ou retira da lista um pacote do servidor.
 
   Versão do pacote a ser excluído.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 * **`--force-english-output`**
 

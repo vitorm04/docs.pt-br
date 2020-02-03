@@ -143,7 +143,7 @@ A versão da dependência indicada no manifesto deve corresponder à versão da 
 
 Quando a implantação é *cortada* na publicação, somente as versões específicas dos pacotes de manifesto indicadas são retidas na saída publicada. Os pacotes nas versões indicadas devem estar presentes no host do aplicativo a ser iniciado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

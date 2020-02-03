@@ -18,7 +18,7 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
   
 ## <a name="performance-impact-high"></a>Impacto de desempenho: alto  
   
-|propriedade|Recomendação|  
+|Propriedade|Recomendação|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|Velocidade do pincel (mais rápida para mais lenta):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (em cache)<br /><br /> <xref:System.Windows.Media.VisualBrush> (em cache)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (não armazenado em cache)<br /><br /> <xref:System.Windows.Media.VisualBrush> (não armazenado em cache)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|Defina `Viewport3D.ClipToBounds` como false sempre que não for necessário [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] cortar explicitamente o conteúdo de um <xref:System.Windows.Controls.Viewport3D> para o retângulo Viewport3D's. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] recorte AntiAlias pode ser muito lento e `ClipToBounds` está habilitado (lento) por padrão em <xref:System.Windows.Controls.Viewport3D>.|  
@@ -32,7 +32,7 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
   
 ## <a name="performance-impact-medium"></a>Impacto de desempenho: médio  
   
-|propriedade|Recomendação|  
+|Propriedade|Recomendação|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Quando uma malha é definida como triângulos adjacentes com vértices compartilhados e esses vértices têm a mesma posição, normal e coordenadas de textura, defina cada vértice compartilhado apenas uma vez e, em seguida, defina os triângulos por índice com <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>.|  
 |<xref:System.Windows.Media.ImageBrush>|Tente minimizar os tamanhos de textura quando você tiver controle explícito sobre o tamanho (quando estiver usando um <xref:System.Windows.Media.Imaging.RenderTargetBitmap> e/ou um <xref:System.Windows.Media.ImageBrush>).  Observe que texturas de resolução inferior podem diminuir a qualidade visual, então tente determinar o equilíbrio correto entre desempenho e qualidade.|  
@@ -50,7 +50,7 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
   
 ## <a name="performance-impact-low"></a>Impacto de desempenho: baixo  
   
-|propriedade|Recomendação|  
+|Propriedade|Recomendação|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|Quando você não precisa de animação ou vinculação de dados, em vez de usar um grupo de transformação que contém várias transformações, use uma única <xref:System.Windows.Media.Media3D.MatrixTransform3D>, definindo-a como o produto de todas as transformações que, de outra forma, existiriam independentemente no grupo de transformação.|  
 |<xref:System.Windows.Media.Media3D.Light>|Minimize o número de luzes na sua cena. Ter muitas luzes em uma cena forçará [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] a recuar para a renderização de software.  Os limites são aproximadamente 110 <xref:System.Windows.Media.Media3D.DirectionalLight> objetos, 70 <xref:System.Windows.Media.Media3D.PointLight> objetos ou 40 <xref:System.Windows.Media.Media3D.SpotLight> objetos.|  
@@ -59,6 +59,6 @@ Ao usar o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclien
 |Luz|As luzes pretas não serão visíveis, mas aumentarão o tempo de renderização. Considere omiti-las.|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Para minimizar o tempo de construção de grandes coleções no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], como um MeshGeometry3D's <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>e <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, predimensione as coleções antes da população de valores. Se possível, passe as estruturas de dados pré-preenchidas dos construtores das coleções como matrizes ou listas.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)

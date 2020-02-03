@@ -59,7 +59,7 @@ O controle de <xref:System.Windows.Forms.MonthCalendar> de Windows Forms pode ex
     monthCalendar1->AddBoldedDate(myVacation2);  
     ```  
   
-     – ou –  
+     –ou–  
   
      Crie um conjunto de datas em negrito ao mesmo tempo criando uma matriz de objetos <xref:System.DateTime> e atribuindo-o a uma das propriedades.  
   
@@ -97,7 +97,7 @@ O controle de <xref:System.Windows.Forms.MonthCalendar> de Windows Forms pode ex
     monthCalendar1->RemoveBoldedDate(myVacation2);  
     ```  
   
-     – ou –  
+     –ou–  
   
      Remova todas as datas em negrito de uma das três listas chamando o método <xref:System.Windows.Forms.MonthCalendar.RemoveAllBoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAllAnnuallyBoldedDates%2A>ou <xref:System.Windows.Forms.MonthCalendar.RemoveAllMonthlyBoldedDates%2A>.  
   
@@ -127,9 +127,9 @@ O controle de <xref:System.Windows.Forms.MonthCalendar> de Windows Forms pode ex
     monthCalendar1->UpdateBoldedDates();  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)
 - [Como selecionar um intervalo de datas no controle MonthCalendar dos Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
 - [Como alterar a aparência do controle MonthCalendar dos Windows Forms](how-to-change-monthcalendar-control-appearance.md)
-- [Como exibir mais de um mês no controle MonthCalendar dos Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Como exibir mais de um mês no controle MonthCalendar do Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

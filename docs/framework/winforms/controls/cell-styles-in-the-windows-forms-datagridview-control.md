@@ -48,7 +48,7 @@ Cada célula dentro do controle de <xref:System.Windows.Forms.DataGridView> pode
   
  A tabela a seguir lista as propriedades primárias que Obtém ou define <xref:System.Windows.Forms.DataGridViewCellStyle> objetos.  
   
-|propriedade|Classes|Descrição|  
+|Propriedade|Classes|Descrição|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.DataGridViewColumn>, <xref:System.Windows.Forms.DataGridViewRow>e classes derivadas|Obtém ou define estilos padrão usados por todas as células em todo o controle (incluindo células de cabeçalho), em uma coluna ou em uma linha.|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|Obtém ou define os estilos de célula padrão usados por todas as linhas no controle. Isso não inclui as células de cabeçalho.|  
@@ -144,7 +144,7 @@ Cada célula dentro do controle de <xref:System.Windows.Forms.DataGridView> pode
 > [!NOTE]
 > Armazenar em cache os valores armazenados na propriedade <xref:System.Windows.Forms.DataGridViewCell.Style%2A> da célula é importante, independentemente de um determinado valor de estilo ser definido. Se você substituir temporariamente uma configuração de estilo, restaurá-la ao seu estado original de "não definido" garantirá que a célula voltará a herdar a configuração de estilo de um nível mais alto. Se você precisar determinar o estilo real em vigor para uma célula, independentemente de o estilo ser herdado, use a propriedade de <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> da célula.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
@@ -163,6 +163,6 @@ Cada célula dentro do controle de <xref:System.Windows.Forms.DataGridView> pode
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Formatação e estilos básicos no controle DataGridView do Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Como definir estilos de célula padrão para o controle DataGridView dos Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Formatação de dados no controle DataGridView dos Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Formatação e definição de estilos básicas no controle DataGridView dos Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Como definir estilos de célula padrão para o controle DataGridView do Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Formatação de dados no controle DataGridView do Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)

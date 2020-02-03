@@ -94,10 +94,10 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
   
  No WCF, os recursos de controle de acesso são fornecidos por meio da integração com o Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e por meio de um conjunto de APIs conhecido como *modelo de identidade*. Para obter detalhes sobre o controle de acesso e autorização baseada em declarações, consulte [estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>Auditoria do  
+### <a name="auditing"></a>Auditoria  
  A *auditoria* é o log de eventos de segurança no log de eventos do Windows. Você pode registrar eventos relacionados à segurança, como falhas de autenticação (ou êxitos). Para obter mais informações, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obter detalhes de programação, consulte [como: auditar eventos de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)

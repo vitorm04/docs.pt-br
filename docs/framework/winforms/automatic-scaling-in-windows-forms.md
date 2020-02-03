@@ -98,7 +98,7 @@ O Windows Forms agora usa a seguinte lógica para dimensionar automaticamente os
 
     - O método <xref:System.Windows.Forms.Control.ScaleControl%2A> pode ser substituído para alterar a lógica de dimensionamento do controle atual.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>

@@ -51,7 +51,7 @@ O acesso a itens específicos em um Windows Forms caixa de combinação, caixa d
        }  
     ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

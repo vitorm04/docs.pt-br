@@ -25,7 +25,7 @@ O controle <xref:System.Windows.Forms.MonthCalendar> dos Windows Forms apresenta
   
  A propriedade de chave do controle de <xref:System.Windows.Forms.MonthCalendar> é <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, o intervalo de datas selecionado no controle. O valor de <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> não pode exceder o número máximo de dias que podem ser selecionados, definido na propriedade <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>. As datas mais antigas e mais recentes que o usuário pode selecionar são determinadas pelas propriedades <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> e <xref:System.Windows.Forms.MonthCalendar.MinDate%2A>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [Controle MonthCalendar](monthcalendar-control-windows-forms.md)

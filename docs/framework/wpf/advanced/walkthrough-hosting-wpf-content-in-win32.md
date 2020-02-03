@@ -15,12 +15,12 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735316"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Instruções passo a passo: hospedando conteúdo do WPF em Win32
-O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo direto para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela do Win32.  
+O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo direto para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela do Win32.  
   
  Este tutorial descreve como escrever um aplicativo de exemplo, [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela do Win32. Você pode estender esse exemplo para hospedar qualquer janela Win32. Como ele envolve a combinação de código gerenciado e não gerenciado, o aplicativo é escrito C++em/CLI.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  Este tutorial pressupõe uma familiaridade básica com a programação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e Win32. Para obter uma introdução básica à programação de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [introdução](../getting-started/index.md). Para obter uma introdução à programação do Win32, você deve fazer referência a qualquer um dos vários livros sobre o assunto, em particular as *janelas de programação* de Charles Petzold.  
   
  Como o exemplo que acompanha este tutorial é implementado na C++/CLI, este tutorial pressupõe familiaridade com o uso do C++ para programar a API do Windows mais uma compreensão da programação de código gerenciado. A familiaridade C++com a/CLI é útil, mas não essencial.  
@@ -176,7 +176,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 - [Definindo as propriedades do WPF](#set_page_properties)
 
 <a name="page_layout"></a>
-### <a name="layout"></a>{1&gt;{2&gt;Layout&lt;2}&lt;1}
+### <a name="layout"></a>{1&gt;Layout&lt;1}
  Os elementos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consistem em cinco controles de <xref:System.Windows.Controls.TextBox>, com controles <xref:System.Windows.Controls.Label> associados: nome, endereço, cidade, estado e CEP. Também há dois controles <xref:System.Windows.Controls.Button>, **OK** e **Cancelar**
 
  O conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado na classe `WPFPage`. O layout é manipulado com um elemento de layout <xref:System.Windows.Controls.Grid>. A classe herda de <xref:System.Windows.Controls.Grid>, o que efetivamente o torna o elemento de raiz de conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -225,7 +225,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.HwndSource>
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)

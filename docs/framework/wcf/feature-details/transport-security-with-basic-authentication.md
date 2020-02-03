@@ -19,13 +19,13 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Transport|  
+|Modo de segurança|Transporte|  
 |Interoperabilidade|Com serviços e clientes de serviços Web existentes|  
 |Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim (usando HTTPS)<br /><br /> Sim (por nome de usuário/senha)|  
-|Verifica|Sim|  
+|Integridade|Sim|  
 |Confidencialidade|Sim|  
-|Transport|HTTPS|  
-|Binding|<xref:System.ServiceModel.WSHttpBinding>|  
+|Transporte|HTTPS|  
+|Associação|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Service  
  O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
@@ -40,7 +40,7 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>Configuração do  
+## <a name="configuration"></a>Configuração  
  O seguinte configura um serviço para usar a autenticação básica com segurança em nível de transporte:  
   
 ```xml  
@@ -80,7 +80,7 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>Configuração do  
+### <a name="configuration"></a>Configuração  
  O código a seguir mostra a configuração do cliente.  
   
 > [!NOTE]
@@ -110,12 +110,12 @@ A ilustração a seguir mostra um serviço e cliente do Windows Communication Fo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Como configurar uma porta com um certificado SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

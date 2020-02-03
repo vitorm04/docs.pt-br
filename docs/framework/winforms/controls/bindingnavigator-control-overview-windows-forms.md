@@ -40,9 +40,9 @@ Você pode usar o controle de <xref:System.Windows.Forms.BindingNavigator> para 
   
  Para cada controle nesta coleção, há um membro correspondente do componente <xref:System.Windows.Forms.BindingSource> que fornece programaticamente a mesma funcionalidade. Por exemplo, o botão de <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> corresponde ao método <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> do componente <xref:System.Windows.Forms.BindingSource>, o botão <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corresponde ao método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> e assim por diante.  
   
- Se os botões padrão não forem adequados ao seu aplicativo, ou se você precisar de botões adicionais para dar suporte a outros tipos de funcionalidade, você poderá fornecer seus próprios botões de <xref:System.Windows.Forms.ToolStrip>. Consulte também [Como adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator do Windows Forms](load-save-and-cancel-bindingnavigator.md).  
+ Se os botões padrão não forem adequados ao seu aplicativo, ou se você precisar de botões adicionais para dar suporte a outros tipos de funcionalidade, você poderá fornecer seus próprios botões de <xref:System.Windows.Forms.ToolStrip>. Consulte também [Como adicionar botões Carregar, Salvar e Cancelar ao controle BindingNavigator dos Windows Forms](load-save-and-cancel-bindingnavigator.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
