@@ -14,19 +14,19 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727847"
 ---
-# <a name="input-wpf"></a><span data-ttu-id="0b523-102">Entrada (WPF)</span><span class="sxs-lookup"><span data-stu-id="0b523-102">Input (WPF)</span></span>
-<span data-ttu-id="0b523-103">O Windows Presentation Foundation (WPF) inclui suporte para vários tipos de entrada.</span><span class="sxs-lookup"><span data-stu-id="0b523-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="0b523-104">Essa entrada inclui texto, toque, mouse, comandos, foco, toque, arrastar e soltar e tinta digital.</span><span class="sxs-lookup"><span data-stu-id="0b523-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="0b523-105">Esta seção descreve os tópicos relacionados à entrada no WPF.</span><span class="sxs-lookup"><span data-stu-id="0b523-105">This section describes topics related to input in WPF.</span></span>  
+# <a name="input-wpf"></a><span data-ttu-id="95a23-102">Entrada (WPF)</span><span class="sxs-lookup"><span data-stu-id="95a23-102">Input (WPF)</span></span>
+<span data-ttu-id="95a23-103">O Windows Presentation Foundation (WPF) inclui suporte para vários tipos de entrada.</span><span class="sxs-lookup"><span data-stu-id="95a23-103">Windows Presentation Foundation (WPF) includes support for several types of input.</span></span> <span data-ttu-id="95a23-104">Essa entrada inclui texto, toque, mouse, comandos, foco, toque, arrastar e soltar e tinta digital.</span><span class="sxs-lookup"><span data-stu-id="95a23-104">This input includes text, touch, mouse, commands, focus, touch, drag-and-drop, and digital ink.</span></span> <span data-ttu-id="95a23-105">Esta seção descreve os tópicos relacionados à entrada no WPF.</span><span class="sxs-lookup"><span data-stu-id="95a23-105">This section describes topics related to input in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0b523-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="0b523-106">In This Section</span></span>  
- [<span data-ttu-id="0b523-107">Visão geral da entrada</span><span class="sxs-lookup"><span data-stu-id="0b523-107">Input Overview</span></span>](input-overview.md)  
- [<span data-ttu-id="0b523-108">Visão geral dos comandos</span><span class="sxs-lookup"><span data-stu-id="0b523-108">Commanding Overview</span></span>](commanding-overview.md)  
- [<span data-ttu-id="0b523-109">Visão geral do foco</span><span class="sxs-lookup"><span data-stu-id="0b523-109">Focus Overview</span></span>](focus-overview.md)  
- [<span data-ttu-id="0b523-110">Estilos para foco em controles e FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="0b523-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [<span data-ttu-id="0b523-111">Passo a passo: criando o primeiro aplicativo sensível ao toque</span><span class="sxs-lookup"><span data-stu-id="0b523-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
- [<span data-ttu-id="0b523-112">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="0b523-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
- [<span data-ttu-id="0b523-113">Tinta digital</span><span class="sxs-lookup"><span data-stu-id="0b523-113">Digital Ink</span></span>](digital-ink.md)  
+## <a name="in-this-section"></a><span data-ttu-id="95a23-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="95a23-106">In This Section</span></span>  
+ [<span data-ttu-id="95a23-107">Visão geral da entrada</span><span class="sxs-lookup"><span data-stu-id="95a23-107">Input Overview</span></span>](input-overview.md)  
+ [<span data-ttu-id="95a23-108">Visão geral dos comandos</span><span class="sxs-lookup"><span data-stu-id="95a23-108">Commanding Overview</span></span>](commanding-overview.md)  
+ [<span data-ttu-id="95a23-109">Visão geral do foco</span><span class="sxs-lookup"><span data-stu-id="95a23-109">Focus Overview</span></span>](focus-overview.md)  
+ [<span data-ttu-id="95a23-110">Estilos para foco em controles e FocusVisualStyle</span><span class="sxs-lookup"><span data-stu-id="95a23-110">Styling for Focus in Controls, and FocusVisualStyle</span></span>](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [<span data-ttu-id="95a23-111">Passo a passo: criando o primeiro aplicativo sensível ao toque</span><span class="sxs-lookup"><span data-stu-id="95a23-111">Walkthrough: Creating Your First Touch Application</span></span>](walkthrough-creating-your-first-touch-application.md)  
+ [<span data-ttu-id="95a23-112">Tópicos explicativos</span><span class="sxs-lookup"><span data-stu-id="95a23-112">How-to Topics</span></span>](input-and-commands-how-to-topics.md)  
+ [<span data-ttu-id="95a23-113">Tinta digital</span><span class="sxs-lookup"><span data-stu-id="95a23-113">Digital Ink</span></span>](digital-ink.md)  
   
-## <a name="reference"></a><span data-ttu-id="0b523-114">Referência</span><span class="sxs-lookup"><span data-stu-id="0b523-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="95a23-114">Referência</span><span class="sxs-lookup"><span data-stu-id="95a23-114">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -41,6 +41,6 @@ ms.locfileid: "76727847"
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="0b523-115">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="0b523-115">Related Sections</span></span>  
- [<span data-ttu-id="0b523-116">Controles</span><span class="sxs-lookup"><span data-stu-id="0b523-116">Controls</span></span>](../controls/index.md)  
-  [<span data-ttu-id="0b523-117">Eventos</span><span class="sxs-lookup"><span data-stu-id="0b523-117">Events</span></span>](events-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="95a23-115">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="95a23-115">Related Sections</span></span>  
+ [<span data-ttu-id="95a23-116">Controles</span><span class="sxs-lookup"><span data-stu-id="95a23-116">Controls</span></span>](../controls/index.md)  
+  [<span data-ttu-id="95a23-117">Eventos</span><span class="sxs-lookup"><span data-stu-id="95a23-117">Events</span></span>](events-wpf.md)

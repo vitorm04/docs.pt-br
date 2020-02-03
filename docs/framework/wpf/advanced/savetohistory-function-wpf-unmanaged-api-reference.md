@@ -16,12 +16,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731754"
 ---
-# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="545d9-102">Função SaveToHistory (referência de API não gerenciada do WPF)</span><span class="sxs-lookup"><span data-stu-id="545d9-102">SaveToHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="545d9-103">Esta API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usada diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="545d9-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="savetohistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="ef120-102">Função SaveToHistory (referência de API não gerenciada do WPF)</span><span class="sxs-lookup"><span data-stu-id="ef120-102">SaveToHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="ef120-103">Esta API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usada diretamente do seu código.</span><span class="sxs-lookup"><span data-stu-id="ef120-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="545d9-104">Usado pela infraestrutura do Windows Presentation Foundation (WPF) para o gerenciamento do Windows.</span><span class="sxs-lookup"><span data-stu-id="545d9-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="ef120-104">Usado pela infraestrutura do Windows Presentation Foundation (WPF) para o gerenciamento do Windows.</span><span class="sxs-lookup"><span data-stu-id="ef120-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="545d9-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="545d9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef120-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ef120-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SaveToHistory(  
@@ -29,23 +29,23 @@ HRESULT SaveToHistory(
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="545d9-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="545d9-106">Parameters</span></span>  
- <span data-ttu-id="545d9-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="545d9-107">pHistoryStream</span></span>  
- <span data-ttu-id="545d9-108">Um ponteiro para o fluxo de histórico.</span><span class="sxs-lookup"><span data-stu-id="545d9-108">A pointer to the history stream.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef120-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ef120-106">Parameters</span></span>  
+ <span data-ttu-id="ef120-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="ef120-107">pHistoryStream</span></span>  
+ <span data-ttu-id="ef120-108">Um ponteiro para o fluxo de histórico.</span><span class="sxs-lookup"><span data-stu-id="ef120-108">A pointer to the history stream.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="545d9-109">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="545d9-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef120-109">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="ef120-109">Requirements</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="545d9-110">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="545d9-110">Requirements</span></span>  
- <span data-ttu-id="545d9-111">**Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="545d9-111">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ef120-110">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="ef120-110">Requirements</span></span>  
+ <span data-ttu-id="ef120-111">**Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ef120-111">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="545d9-112">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="545d9-112">**DLL:**</span></span>  
+ <span data-ttu-id="ef120-112">**DLL**</span><span class="sxs-lookup"><span data-stu-id="ef120-112">**DLL:**</span></span>  
   
- <span data-ttu-id="545d9-113">No .NET Framework 3,0 e 3,5: PresentationHostDLL. dll</span><span class="sxs-lookup"><span data-stu-id="545d9-113">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="ef120-113">No .NET Framework 3,0 e 3,5: PresentationHostDLL. dll</span><span class="sxs-lookup"><span data-stu-id="ef120-113">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="545d9-114">No .NET Framework 4 e posterior: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="545d9-114">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="ef120-114">No .NET Framework 4 e posterior: PresentationHost_v0400. dll</span><span class="sxs-lookup"><span data-stu-id="ef120-114">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="545d9-115">**Versão do .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="545d9-115">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="ef120-115">**Versão do .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ef120-115">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="545d9-116">Veja também</span><span class="sxs-lookup"><span data-stu-id="545d9-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ef120-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ef120-116">See also</span></span>
 
-- [<span data-ttu-id="545d9-117">Referência de API não gerenciada do WPF</span><span class="sxs-lookup"><span data-stu-id="545d9-117">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="ef120-117">Referência de API não gerenciada do WPF</span><span class="sxs-lookup"><span data-stu-id="ef120-117">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

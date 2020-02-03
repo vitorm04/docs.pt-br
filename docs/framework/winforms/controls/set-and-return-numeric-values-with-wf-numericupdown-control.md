@@ -18,12 +18,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743026"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="ad5aa-102">Como definir e retornar valores numéricos com o controle NumericUpDown dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ad5aa-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
-<span data-ttu-id="ad5aa-103">O valor numérico do controle de <xref:System.Windows.Forms.NumericUpDown> de Windows Forms é determinado por sua propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="ad5aa-104">Você pode escrever testes condicionais para o valor do controle, assim como ocorre com qualquer outra propriedade.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="ad5aa-105">Depois que a propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> é definida, você pode ajustá-la diretamente escrevendo código para executar operações ou pode chamar os métodos <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a><span data-ttu-id="4d161-102">Como definir e retornar valores numéricos com o controle NumericUpDown dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="4d161-102">How to: Set and Return Numeric Values with the Windows Forms NumericUpDown Control</span></span>
+<span data-ttu-id="4d161-103">O valor numérico do controle de <xref:System.Windows.Forms.NumericUpDown> de Windows Forms é determinado por sua propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d161-103">The numeric value of the Windows Forms <xref:System.Windows.Forms.NumericUpDown> control is determined by its <xref:System.Windows.Forms.NumericUpDown.Value%2A> property.</span></span> <span data-ttu-id="4d161-104">Você pode escrever testes condicionais para o valor do controle, assim como ocorre com qualquer outra propriedade.</span><span class="sxs-lookup"><span data-stu-id="4d161-104">You can write conditional tests for the control's value just as with any other property.</span></span> <span data-ttu-id="4d161-105">Depois que a propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> é definida, você pode ajustá-la diretamente escrevendo código para executar operações ou pode chamar os métodos <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> e <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d161-105">Once the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property is set, you can adjust it directly by writing code to perform operations on it, or you can call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> and <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> methods.</span></span>  
   
-### <a name="to-set-the-numeric-value"></a><span data-ttu-id="ad5aa-106">Para definir o valor numérico</span><span class="sxs-lookup"><span data-stu-id="ad5aa-106">To set the numeric value</span></span>  
+### <a name="to-set-the-numeric-value"></a><span data-ttu-id="4d161-106">Para definir o valor numérico</span><span class="sxs-lookup"><span data-stu-id="4d161-106">To set the numeric value</span></span>  
   
-1. <span data-ttu-id="ad5aa-107">Atribua um valor à propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> no código ou na janela Propriedades.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
+1. <span data-ttu-id="4d161-107">Atribua um valor à propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> no código ou na janela Propriedades.</span><span class="sxs-lookup"><span data-stu-id="4d161-107">Assign a value to the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code or in the Properties window.</span></span>  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -37,9 +37,9 @@ ms.locfileid: "76743026"
     numericUpDown1->Value = 55;  
     ```  
   
-     <span data-ttu-id="ad5aa-108">- ou -</span><span class="sxs-lookup"><span data-stu-id="ad5aa-108">-or-</span></span>  
+     <span data-ttu-id="4d161-108">-ou-</span><span class="sxs-lookup"><span data-stu-id="4d161-108">-or-</span></span>  
   
-2. <span data-ttu-id="ad5aa-109">Chame o método <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ou <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> para aumentar ou diminuir o valor pelo valor especificado na propriedade <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
+2. <span data-ttu-id="4d161-109">Chame o método <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> ou <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> para aumentar ou diminuir o valor pelo valor especificado na propriedade <xref:System.Windows.Forms.NumericUpDown.Increment%2A>.</span><span class="sxs-lookup"><span data-stu-id="4d161-109">Call the <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> or <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> method to increase or decrease the value by the amount specified in the <xref:System.Windows.Forms.NumericUpDown.Increment%2A> property.</span></span>  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -53,9 +53,9 @@ ms.locfileid: "76743026"
     numericUpDown1->UpButton();  
     ```  
   
-### <a name="to-return-the-numeric-value"></a><span data-ttu-id="ad5aa-110">Para retornar o valor numérico</span><span class="sxs-lookup"><span data-stu-id="ad5aa-110">To return the numeric value</span></span>  
+### <a name="to-return-the-numeric-value"></a><span data-ttu-id="4d161-110">Para retornar o valor numérico</span><span class="sxs-lookup"><span data-stu-id="4d161-110">To return the numeric value</span></span>  
   
-- <span data-ttu-id="ad5aa-111">Acesse a propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> no código.</span><span class="sxs-lookup"><span data-stu-id="ad5aa-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
+- <span data-ttu-id="4d161-111">Acesse a propriedade <xref:System.Windows.Forms.NumericUpDown.Value%2A> no código.</span><span class="sxs-lookup"><span data-stu-id="4d161-111">Access the <xref:System.Windows.Forms.NumericUpDown.Value%2A> property in code.</span></span>  
   
     ```vb  
     If NumericUpDown1.Value >= 65 Then  
@@ -89,12 +89,12 @@ ms.locfileid: "76743026"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad5aa-112">Veja também</span><span class="sxs-lookup"><span data-stu-id="ad5aa-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d161-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4d161-112">See also</span></span>
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="ad5aa-113">Controle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="ad5aa-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
-- [<span data-ttu-id="ad5aa-114">Visão geral do controle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="ad5aa-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)
+- [<span data-ttu-id="4d161-113">Controle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="4d161-113">NumericUpDown Control</span></span>](numericupdown-control-windows-forms.md)
+- [<span data-ttu-id="4d161-114">Visão geral do controle NumericUpDown</span><span class="sxs-lookup"><span data-stu-id="4d161-114">NumericUpDown Control Overview</span></span>](numericupdown-control-overview-windows-forms.md)
