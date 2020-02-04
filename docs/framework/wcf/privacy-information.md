@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347789"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919327"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando Windows Communication Foundation (WCF), versão 3,0, seu aplicativo pode afetar a privacidade dos usuários finais. Por exemplo, seu aplicativo pode coletar explicitamente as informações de contato do usuário ou pode solicitar ou enviar informações pela Internet para seu site. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia poderá ter seu próprio comportamento que pode afetar a privacidade. O WCF não envia nenhuma informação à Microsoft do seu aplicativo, a menos que você ou o usuário final opte por enviá-lo para nós.  
@@ -51,10 +51,10 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 |Informações de identidade sobre o serviço usado para autenticar o serviço para clientes.|Endereço do ponto de extremidade do serviço.|  
 |Informações do chamador.|Logs de auditoria.|  
   
-## <a name="auditing"></a>Auditoria  
+## <a name="auditing"></a>Auditoria do  
  A auditoria registra o êxito e a falha de eventos de autenticação e autorização. Os registros de auditoria contêm os seguintes dados: URI de serviço, URI de ação e identificação do chamador.  
   
- A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Por [!INCLUDE[wxp](../../../includes/wxp-md.md)], um registro é registrado no log de eventos do aplicativo. Para o Windows Vista e o Windows Server 2003, um registro é registrado no log de eventos de segurança.  
+ A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Para o Windows XP, um registro é registrado no log de eventos do aplicativo. Para o Windows Vista e o Windows Server 2003, um registro é registrado no log de eventos de segurança.  
   
 ## <a name="transactions"></a>Transações  
  O recurso de transações fornece serviços transacionais para um aplicativo WCF.  
@@ -95,7 +95,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ### <a name="tracing"></a>Rastreamento  
  O recurso de diagnóstico da infraestrutura do WCF registra as mensagens que passam pelas camadas de modelo de serviço e transporte, bem como as atividades e os eventos associados a essas mensagens. Esse recurso está desativado por padrão. Ele é habilitado usando o arquivo de configuração do aplicativo e o comportamento de rastreamento pode ser modificado usando o provedor WMI WCF em tempo de execução. Quando habilitada, a infraestrutura de rastreamento emite um rastreamento de diagnóstico que contém mensagens, atividades e eventos de processamento para os ouvintes configurados. O formato e o local da saída são determinados pelas opções de configuração de ouvinte do administrador, mas normalmente é um arquivo formatado XML. O administrador é responsável por definir a ACL (lista de controle de acesso) nos arquivos de rastreamento. Em particular, quando hospedado pelo WAS (sistema de ativação do Windows), o administrador deve verificar se os arquivos não são atendidos do diretório raiz virtual público, se isso não for desejado.  
   
- Há dois tipos de rastreamento: O log de mensagens e o rastreamento de diagnóstico do modelo de serviço, descritos na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas as fontes de rastreamento de log capturam dados que são locais para o aplicativo.  
+ Há dois tipos de rastreamento: log de mensagens e rastreamento de diagnóstico do modelo de serviço, descritos na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas as fontes de rastreamento de log capturam dados que são locais para o aplicativo.  
   
 ### <a name="message-logging"></a>Registro em log de mensagens  
  A fonte de rastreamento de log de mensagens (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite que um administrador Registre as mensagens que fluem pelo sistema. Por meio da configuração, o usuário pode decidir registrar somente mensagens inteiras ou cabeçalhos de mensagem, se deseja registrar nas camadas de modelo de transporte e/ou serviço e se deseja incluir mensagens malformadas. Além disso, o usuário pode configurar a filtragem para restringir quais mensagens são registradas.  
@@ -127,13 +127,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Chaves que são removidas:  
   
- \- para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- para xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: senha  
   
@@ -141,7 +141,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Informações potencialmente pessoais que são removidas:  
   
- \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: nome de usuário  
   
@@ -287,7 +287,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Action Namespace="[uri]">[string]\</Action>+  
   
- Evidência de \<>  
+ Evidência de \<  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
@@ -304,7 +304,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Para os seguintes namespaces:  
   
- xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (por exemplo, se nenhuma ação estiver disponível)  
+ >xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (por exemplo, se nenhuma ação estiver disponível)  
   
  As informações são removidas para esses elementos do corpo, que envolvem a troca de chaves:  
   
@@ -404,4 +404,4 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ## <a name="see-also"></a>Veja também
 
 - [Windows Communication Foundation](index.md)
-- [Segurança](./feature-details/security.md)
+- [Security](./feature-details/security.md)

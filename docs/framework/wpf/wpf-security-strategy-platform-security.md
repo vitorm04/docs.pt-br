@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741855"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979866"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer ao WPF um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
@@ -35,14 +35,14 @@ Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviç
 O núcleo do Windows fornece vários recursos de segurança que formam a base de segurança para todos os aplicativos do Windows, incluindo os criados com o WPF. Este tópico aborda a amplitude desses recursos de segurança que são importantes para o WPF, além de como o WPF se integra a eles para fornecer mais proteção aprofundada.  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>SP2 (Microsoft Windows XP Service Pack 2)  
- Além de uma revisão geral e o fortalecimento do Windows, há três recursos principais do [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] que discutiremos neste tópico:  
+ Além de uma revisão geral e o fortalecimento do Windows, há três recursos principais do Windows XP SP2 que discutiremos neste tópico:  
   
 - Compilação com /GS  
   
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Compilação com /GS  
- o [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fornece proteção recompilando muitas bibliotecas principais do sistema, incluindo todas as dependências do WPF, como o CLR, para ajudar a mitigar estouros de buffer. Isso é feito pelo uso do parâmetro /GS com o compilador de linha de comando C/C++. Embora seja necessário evitar estouros de buffer explicitamente, a compilação com /GS fornece um exemplo de uma proteção extensa contra possíveis vulnerabilidades que são criadas de maneira inadvertida ou mal-intencionada por eles.  
+ O Windows XP SP2 fornece proteção recompilando muitas bibliotecas principais do sistema, incluindo todas as dependências do WPF, como o CLR, para ajudar a mitigar estouros de buffer. Isso é feito pelo uso do parâmetro /GS com o compilador de linha de comando C/C++. Embora seja necessário evitar estouros de buffer explicitamente, a compilação com /GS fornece um exemplo de uma proteção extensa contra possíveis vulnerabilidades que são criadas de maneira inadvertida ou mal-intencionada por eles.  
   
  Historicamente, os estouros de buffer tem sido a causa de diversas explorações de segurança de alto impacto. Um estouro de buffer ocorre quando um invasor aproveita uma vulnerabilidade de código que permite a injeção de um código mal-intencionado escrito além dos limites de um buffer. Em seguida, isso permite que um invasor sequestre o processo no qual o código está em execução, substituindo o endereço de retorno de uma função para fazer com que o código do invasor seja executado. O resultado é um código mal-intencionado que executa um código arbitrário com os mesmos privilégios do processo sequestrado.  
   
@@ -163,12 +163,12 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  A metodologia de segurança crítica permite que a organização do código do WPF que eleva o privilégio em *kernel de segurança crítica*, com o restante sendo transparente. Isolar o código de segurança crítica permite que a equipe de engenharia do WPF focalize uma análise de segurança adicional e um controle do código-fonte no kernel crítico de segurança acima e além das práticas de segurança padrão (consulte [estratégia de segurança do WPF – engenharia de segurança](wpf-security-strategy-security-engineering.md)).  
   
- Observe que .NET Framework permite que o código confiável estenda a área restrita da zona da Internet do XBAP, permitindo que os desenvolvedores gravem assemblies gerenciados marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implantados no GAC (cache de assembly global) do usuário. Marcar um assembly com um APTCA é uma operação de segurança altamente confidencial, pois permite que qualquer código chame esse assembly, incluindo um código mal-intencionado da Internet. Deve-se ter extremo cuidado e usar as melhores práticas ao fazer isso e os usuários devem optar por confiar nesse software para que ele seja instalado.  
+ Note that .NET Framework permits trusted code to extend the XBAP Internet zone sandbox by allowing developers to write managed assemblies that are marked with <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) and deployed to the user's Global Assembly Cache (GAC). Marcar um assembly com um APTCA é uma operação de segurança altamente confidencial, pois permite que qualquer código chame esse assembly, incluindo um código mal-intencionado da Internet. Deve-se ter extremo cuidado e usar as melhores práticas ao fazer isso e os usuários devem optar por confiar nesse software para que ele seja instalado.  
   
 ## <a name="microsoft-internet-explorer-security"></a>Segurança do Microsoft Internet Explorer  
- Além de reduzir os problemas de segurança e simplificar a configuração de segurança, o Microsoft Internet Explorer 6 (SP2) contém vários recursos que aprimoram a segurança para usuários de aplicativos de navegador XAML (XBAPs). O foco desses recursos tenta permitir aos usuários um maior controle sobre sua experiência de navegação.  
+ Beyond reducing security issues and simplifying security configuration, Microsoft Internet Explorer 6 (SP2) contains several features that security improvements that enhance security for users of XAML browser applications (XBAPs). O foco desses recursos tenta permitir aos usuários um maior controle sobre sua experiência de navegação.  
   
- Antes do IE6 SP2, os usuários podem estar sujeitos a qualquer um dos seguintes:  
+ Prior to IE6 SP2, users could be subject to any of the following:  
   
 - Janelas pop-up aleatórias.  
   
@@ -176,19 +176,19 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
 - Várias caixas de diálogo de segurança em alguns sites.  
   
- Em alguns casos, sites não confiáveis tentam enganar os usuários por meio da falsificação da instalação [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] ou mostrando repetidamente uma caixa de diálogo de instalação do Microsoft ActiveX, embora o usuário possa tê-lo cancelado. Usando essas técnicas, é possível que um número significativo de usuários tenha sido levado a tomar decisões erradas que resultaram na instalação de aplicativos spyware.  
+ In some cases, untrustworthy Web sites would try to trick users by spoofing installation [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] or repeatedly showing a Microsoft ActiveX installation dialog box, even though the user may have canceled it. Usando essas técnicas, é possível que um número significativo de usuários tenha sido levado a tomar decisões erradas que resultaram na instalação de aplicativos spyware.  
   
- O IE6 SP2 inclui vários recursos para atenuar esses tipos de problemas, que giram em volta do conceito de iniciação do usuário. O IE6 SP2 detecta quando um usuário clicou em um elemento link ou Page antes de uma ação, que é conhecida como *inicialização do usuário*, e o trata de forma diferente de quando uma ação semelhante é disparada pelo script em uma página. Por exemplo, o IE6 SP2 incorpora um **bloqueador de pop-ups** que detecta quando um usuário clica em um botão antes da página que cria um pop-up. Isso permite que o IE6 SP2 permita os pop-ups mais inofensivos enquanto impede pop-ups que os usuários não pedem nem desejam. Os pop-ups bloqueados são interceptados na nova **barra de informações**, que permite ao usuário substituir manualmente o bloco e exibir o pop-up.  
+ IE6 SP2 includes several features to mitigate these types of issues, which revolve around the concept of user initiation. IE6 SP2 detects when a user has clicked on a link or page element prior to an action, which is known as *user initiation*, and treats it differently than when a similar action is instead triggered by the script on a page. As an example, IE6 SP2 incorporates a **Pop-Up Blocker** that detects when a user clicks a button prior to the page creating a pop-up. This enables IE6 SP2 to allow most innocuous pop-ups while preventing pop-ups that users neither ask for nor want. Blocked pop-ups are trapped under the new **Information Bar**, which allows the user to manually override the block and view the pop-up.  
   
- A mesma lógica de inicialização do usuário também é aplicada para **abrir**/**salvar** prompts de segurança. As caixas de diálogo de instalação do ActiveX são sempre interceptadas na barra de informações, a menos que elas representem uma atualização de um controle instalado anteriormente. Essas medidas são combinadas para fornecer aos usuários uma experiência do usuário mais segura e mais controlada, já que eles estão protegidos contra sites que os induzem a instalar software indesejado ou mal-intencionado.  
+ The same user-initiation logic is also applied to **Open**/**Save** security prompts. ActiveX installation dialog boxes are always trapped under the Information Bar unless they represent an upgrade from a previously installed control. Essas medidas são combinadas para fornecer aos usuários uma experiência do usuário mais segura e mais controlada, já que eles estão protegidos contra sites que os induzem a instalar software indesejado ou mal-intencionado.  
   
- Esses recursos também protegem os clientes que usam o IE6 SP2 para navegar para sites que permitem que eles baixem e instalem aplicativos do WPF. Em particular, isso ocorre porque o IE6 SP2 oferece uma experiência de usuário melhor que reduz a chance de os usuários instalarem aplicativos mal-intencionados ou espertodos independentemente de qual tecnologia foi usada para compilá-lo, incluindo o WPF. O WPF adiciona essas proteções usando o ClickOnce para facilitar o download de seus aplicativos pela Internet. Como os aplicativos de navegador XAML (XBAPs) são executados em uma área restrita de segurança de zona da Internet, eles podem ser iniciados diretamente. Por outro lado, os aplicativos autônomos do WPF exigem confiança total para serem executados. Para esses aplicativos, o ClickOnce exibirá uma caixa de diálogo de segurança durante o processo de inicialização para notificar o uso dos requisitos de segurança adicionais do aplicativo. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
+ These features also protect customers who use IE6 SP2 to browse to web sites that allow them to download and install WPF applications. In particular, this is because IE6 SP2 offers a better user experience that reduces the chance for users to install malicious or devious applications irrespective of what technology was used to build it, including WPF. WPF adds to these protections by using ClickOnce to facilitate downloading of its applications over the Internet. Since XAML browser applications (XBAPs) execute within an Internet zone security sandbox, they can be seamlessly launched. On the other hand, standalone WPF applications require full trust to execute. For these applications, ClickOnce will display a security dialog box during the launch process to notify the use of the application's additional security requirements. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
   
- O Internet Explorer 7 incorpora e estende os recursos de segurança do IE6 SP2 como parte de um compromisso contínuo com a segurança.  
+ Internet Explorer 7 incorporates and extends the security capabilities of IE6 SP2 as part of an ongoing commitment to security.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança de acesso do código](../misc/code-access-security.md)
-- [Segurança](security-wpf.md)
+- [Security](security-wpf.md)
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
 - [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)

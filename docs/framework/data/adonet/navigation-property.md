@@ -1,13 +1,13 @@
 ---
-title: Propriedade de navegação-ADO.NET
+title: Propriedade de navegação
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: afb2043abf70fa92ea7cdf8d1e8246d5cdfdba74
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738392"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980152"
 ---
 # <a name="navigation-property"></a>Propriedade de navegação
 
@@ -15,11 +15,11 @@ Uma *propriedade de navegação* é uma propriedade opcional em [um tipo de enti
 
 Uma definição de propriedade de navegação inclui o seguinte:
 
-- Um nome. (Necessário)
+- Um nome. (Obrigatório)
 
-- A associação que navega. (Necessário)
+- A associação que navega. (Obrigatório)
 
-- Termina de associação que navega. (Necessário)
+- Termina de associação que navega. (Obrigatório)
 
 Observe que as propriedades de navegação são opcionais em ambos os tipos de entidade termina de uma associação. Se você definir uma propriedade de navegação em um tipo de entidade no final de uma associação, você não precisa definir uma propriedade de navegação no tipo de entidade no outro extremo de associação.
 
@@ -37,7 +37,7 @@ O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica d
 
 Observe que os atributos XML são usados para comunicar informações necessárias para definir uma propriedade de navegação: O atributo `Name` contém o nome da propriedade, `Relationship` contém o nome da associação que navega, e `FromRole` e `ToRole` contêm terminar a associação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Principais conceitos do Modelo de Dados de Entidade](entity-data-model-key-concepts.md)
 - [Modelo de Dados de Entidade](entity-data-model.md)

@@ -1,16 +1,16 @@
 ---
-title: Segurança de acesso do código e o ADO.NET
+title: Segurança de acesso do código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040159"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980256"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -136,7 +136,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitando a confiança parcial com um conjunto de permissões personalizado  
- Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para o código que tem um <xref:System.Security.Policy.Zone> de `LocalIntranet`, um administrador do sistema pode copiar o conjunto de permissões para `LocalIntranet`, renomeá-lo como "CustomLocalIntranet", adicionar as permissões de <xref:System.Data.SqlClient>, importar o CustomLocalIntranet conjunto de permissões usando [Caspol. exe (ferramenta de política de segurança de acesso do código)](../../tools/caspol-exe-code-access-security-policy-tool.md)e defina o conjunto de permissões de `LocalIntranet_Zone` como CustomLocalIntranet.  
+ Para habilitar o uso de permissões <xref:System.Data.SqlClient> para uma zona específica, um administrador de sistema deve criar um conjunto de permissões personalizado e configurá-lo como o conjunto de permissões para uma zona específica. Os conjuntos de permissões padrão, como `LocalIntranet`, não podem ser modificados. Por exemplo, para incluir <xref:System.Data.SqlClient> permissões para código que tenha um <xref:System.Security.Policy.Zone> de `LocalIntranet`, um administrador do sistema pode copiar o conjunto de permissões para `LocalIntranet`, renomeá-lo como "CustomLocalIntranet", adicionar as permissões de <xref:System.Data.SqlClient>, importar o conjunto de permissões CustomLocalIntranet usando [Caspol. exe (ferramenta de política de segurança de acesso a código)](../../tools/caspol-exe-code-access-security-policy-tool.md)e definir o conjunto de permissões de `LocalIntranet_Zone` como CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permissões de exemplo  
  A seguir está um conjunto de permissões de exemplo para o Provedor de Dados .NET Framework para SQL Server em um cenário parcialmente confiável. Para obter informações sobre como criar conjuntos de permissões personalizados, consulte [Configurando conjuntos de permissões usando Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -194,7 +194,7 @@ Failed, as expected: Request failed.
   
  O .NET Framework também oferece suporte à compatibilidade com versões anteriores a componentes COM existentes fornecendo acesso por meio da interoperabilidade COM. Você pode incorporar componentes COM em um aplicativo .NET Framework usando ferramentas de interoperabilidade COM para importar os tipos COM relevantes. Uma vez importados, os tipos COM estão prontos para uso. A interoperabilidade COM também permite que clientes COM acessem o código gerenciado exportando metadados do assembly para uma biblioteca de tipos e registrando o componente gerenciado como um componente COM. Para obter mais informações, consulte [interoperabilidade com avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Segurança em código nativo e .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))

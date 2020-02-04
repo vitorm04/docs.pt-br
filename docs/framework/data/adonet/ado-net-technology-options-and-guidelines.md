@@ -1,13 +1,13 @@
 ---
-title: Opções e diretrizes da tecnologia ADO.NET
+title: Opções e diretrizes de tecnologia
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9be44a5b9c06a310581aee57cdb6a304127f8a12
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569429"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980269"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opções e diretrizes da tecnologia ADO.NET
 A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para diminuir a quantidade de codificação e de manutenção necessária para habilitar os desenvolvedores para programarem com modelos de dados de entidade conceituais. Essa plataforma inclui o ADO.NET Entity Framework e as tecnologias relacionadas.  
@@ -39,7 +39,7 @@ A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para dim
 ## <a name="wcf-data-services"></a>{1&gt;{2&gt;WCF Data Services&lt;2}&lt;1}  
  WCF Data Services implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4,5](../wcf/index.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
 - [What's New in ADO.NET](whats-new.md) (Novidades no ADO.NET)

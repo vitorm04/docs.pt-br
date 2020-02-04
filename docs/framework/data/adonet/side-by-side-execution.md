@@ -1,13 +1,13 @@
 ---
-title: Execução lado a lado no ADO.NET
+title: Execução lado a lado
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 0355f375de678b2a74f8fdf58e2c58cc0bdf10ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a624aac2ed1f3ab124973c84bc74e39297600c8b
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348002"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980009"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Execução lado a lado no ADO.NET
 A execução lado a lado no .NET Framework é a capacidade de executar um aplicativo em um computador que tenha várias versões do .NET Framework instaladas, exclusivamente usando a versão para a qual o aplicativo foi compilado. Para obter informações detalhadas sobre como configurar a execução lado a lado, consulte [execução lado a lado](../../deployment/side-by-side-execution.md).  

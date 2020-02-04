@@ -2,18 +2,18 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713869"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980126"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
 O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de runtime que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
 
-As regras deste artigo se aplicam ao compilador fornecido com o Visual Studio 2019 ou o SDK do .NET Core 3.0. Os compiladores do C# que fazem parte da instalação do Visual Studio 2017 ou de versões anteriores do SDK do .NET Core são direcionados ao C# 7.0 por padrão. 
+As regras neste artigo se aplicam ao compilador fornecido com o Visual Studio 2019 ou o SDK do .NET Core 3,0. Os compiladores do C# que fazem parte da instalação do Visual Studio 2017 ou de versões anteriores do SDK do .NET Core são direcionados ao C# 7.0 por padrão. 
 
 ## <a name="defaults"></a>Padrão
 
@@ -21,7 +21,7 @@ O compilador determina um padrão com base nestas regras:
 
 |Estrutura de destino|versão|Padrão da versão da linguagem C#|
 |----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
+|.NET Core|Win|C# 8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
 |.NET Standard|2.0|C# 7.3|
@@ -54,7 +54,7 @@ O valor `preview` usa a versão prévia mais recente da linguagem C# compatível
 
 ### <a name="configure-multiple-projects"></a>Configurar vários projetos
 
-Crie um arquivo **Directory.Build.props** que contém o elemento `<LangVersion>` para configurar vários diretórios. Normalmente, você faz isso no diretório da solução. Adicione o seguinte a um arquivo **Directory.Build.props** no diretório de solução:
+Para configurar vários projetos, você pode criar um arquivo **Directory. Build. props** que contém o elemento `<LangVersion>`. Normalmente, você faz isso no diretório da solução. Adicione o seguinte a um arquivo **Directory.Build.props** no diretório de solução:
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilado
 |5|O compilador aceita somente a sintaxe incluída no C# 5.0 ou inferior.|
 |4|O compilador aceita somente a sintaxe incluída no C# 4.0 ou inferior.|
 |3|O compilador aceita somente a sintaxe incluída no C# 3.0 ou inferior.|
-|ISO-2|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2006 C# (2.0) |
-|ISO-1|O compilador aceita somente a sintaxe incluída no ISO/IEC 23270:2003 C# (1.0/1.2) |
+|ISO-2|O compilador aceita apenas a sintaxe que está incluída no ISO/IEC C# 23270:2006 (2,0). |
+|ISO-1|O compilador aceita apenas a sintaxe que está incluída no ISO/IEC C# 23270:2003 (1.0/1.2). |

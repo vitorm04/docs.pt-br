@@ -1,13 +1,13 @@
 ---
-title: Visão geral do ADO.NET
+title: '{1&gt;Visão Geral&lt;1}'
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785101"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980334"
 ---
 # <a name="adonet-overview"></a>Visão geral do ADO.NET
 O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML, e a fontes de dados expostas através do OLE DB e do ODBC. Os aplicativos do consumidor de compartilhamento de dados podem usar o ADO.NET para se conectar a essas fontes de dados, e para recuperar, manipular e atualizar os dados nelas contidos.  
@@ -20,7 +20,7 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
   
  O ADO.NET fornece o método mais direto de acesso a dados no .NET Framework. Para uma abstração de nível superior que permite que os aplicativos funcionem em um modelo conceitual em vez do modelo de armazenamento subjacente, consulte o [Entity Framework ADO.net](./ef/index.md).  
   
- **Política de privacidade**: Os assemblies System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SqlXml. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll e System. Data. DataSetExtensions. dll não fazem distinção entre o usuário dados privados e dados não privados.  Esses assemblies não coletam, não armazenam nem transmitem dados privados de nenhum usuário. No entanto, os aplicativos de terceiros podem coletar, armazenar ou transmitir dados privados de um usuário usando esses assemblies.  
+ **Política de privacidade**: os assemblies System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SQLXML. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll e System. Data. DataSetExtensions. dll não fazem distinção entre os dados privados de um usuário e os dados não privados.  Esses assemblies não coletam, não armazenam nem transmitem dados privados de nenhum usuário. No entanto, os aplicativos de terceiros podem coletar, armazenar ou transmitir dados privados de um usuário usando esses assemblies.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Arquitetura do ADO.NET](ado-net-architecture.md)  
@@ -44,7 +44,7 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Exemplos de código do ADO.NET](ado-net-code-examples.md)  
  Fornece exemplos de código que recuperam dados usando os provedores de dados ADO.NET.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [What's New in ADO.NET](whats-new.md) (Novidades no ADO.NET)  
  Apresenta recursos que são novos no ADO.NET.  
   
@@ -57,7 +57,7 @@ O ADO.NET fornece acesso consistente a fontes de dados como o SQL Server e o XML
  [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
  Descreve como conectar-se a uma fonte de dados, recuperar dados e modificar dados. Isso inclui `DataReaders` e `DataAdapters`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET](index.md)
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

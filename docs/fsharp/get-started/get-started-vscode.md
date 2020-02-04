@@ -2,12 +2,12 @@
 title: Introdução ao F# no Visual Studio Code
 description: Saiba como usar F# o com Visual Studio Code e o pacote de plug-in Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559658"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980347"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introdução ao F# no Visual Studio Code
 
@@ -42,7 +42,7 @@ Primeiro, verifique se o script do .NET Core é o seu ambiente de script padrão
 
 Isso é necessário no momento devido a alguns comportamentos herdados em scripts baseados em .NET Framework que não funcionam com o script do .NET Core e o Ionide está se empenhando atualmente para a compatibilidade com versões anteriores. No futuro, o script do .NET Core se tornará o padrão.
 
-### <a name="write-your-first-script"></a>Escrever seu primeiro script
+### <a name="write-your-first-script"></a>Escreva seu primeiro script
 
 Depois de configurar Visual Studio Code para usar o script do .NET Core, navegue até o modo de exibição do Explorer em Visual Studio Code e crie um novo arquivo. Nomeie-o como *MyFirstScript. fsx*.
 
@@ -68,7 +68,7 @@ Como o que você enviou foi uma [função](../language-reference/functions/index
 toPigLatin "banana";;
 ```
 
-Você deverá ver o resultado a seguir:
+Você deverá ver o seguinte resultado:
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ Agora, vamos tentar com uma vogal como a primeira letra. Insira o seguinte:
 toPigLatin "apple";;
 ```
 
-Você deverá ver o resultado a seguir:
+Você deverá ver o seguinte resultado:
 
 ```fsharp
 val it : string = "appleyay"
@@ -121,7 +121,7 @@ O fluxo de `toPigLatin` é assim:
 
 Verifique se o primeiro caractere da palavra de entrada é uma vogal. Se for, anexe "Sim" ao final da palavra. Caso contrário, mova esse primeiro caractere para o final da palavra e adicione "
 
-Há uma coisa final a ser observada sobre isso: não há nenhuma instrução explícita para retornar da função, ao contrário de muitas outras linguagens. Isso ocorre porque F# o é baseado em expressão e a última expressão no corpo de uma função é o valor de retorno. Como `if..then..else` é, em si, uma expressão, o corpo do bloco de `then` ou o corpo do bloco de `else` será retornado dependendo do valor de entrada.
+Há uma coisa final a ser observada sobre isso: F#em, não há nenhuma instrução explícita para retornar da função. Isso ocorre porque F# o é baseado em expressão e a última expressão avaliada no corpo de uma função determina o valor de retorno dessa função. Como `if..then..else` é, em si, uma expressão, a avaliação do corpo do bloco de `then` ou o corpo do bloco de `else` determina o valor retornado pela função `toPigLatin`.
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>Transforme o aplicativo de console em um gerador de Pig Latin
 

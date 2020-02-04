@@ -1,22 +1,22 @@
 ---
-title: Contadores de desempenho no ADO.NET
+title: Contadores de Desempenho
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: a529cae724d24b47d856f86744eebe87d68cb158
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783307"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980061"
 ---
 # <a name="performance-counters-in-adonet"></a>Contadores de desempenho no ADO.NET
-O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que <xref:System.Data.SqlClient> incluem <xref:System.Data.OracleClient>suporte para o e o. Os <xref:System.Data.SqlClient> contadores de desempenho disponíveis nas versões anteriores do ADO.net foram preteridos e substituídos pelos novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Os contadores <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> de desempenho podem ser monitorados usando o monitor de desempenho do Windows ou podem ser acessados programaticamente usando a classe no namespace.  
+O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que incluem suporte para <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>. Os contadores de desempenho <xref:System.Data.SqlClient> disponíveis nas versões anteriores do ADO.NET foram preteridos e substituídos pelos novos contadores de desempenho discutidos neste tópico. Você pode usar contadores de desempenho ADO.NET para monitorar o status do seu aplicativo e os recursos de conexão que ele usa. Os contadores de desempenho podem ser monitorados usando o monitor de desempenho do Windows ou podem ser acessados programaticamente usando a classe <xref:System.Diagnostics.PerformanceCounter> no namespace <xref:System.Diagnostics>.  
   
 ## <a name="available-performance-counters"></a>Contadores de desempenho disponíveis  
- Atualmente, há 14 diferentes contadores de desempenho disponíveis <xref:System.Data.SqlClient> para <xref:System.Data.OracleClient> o e conforme descrito na tabela a seguir. Observe que os nomes dos contadores individuais não são localizados em versões regionais do Microsoft .NET Framework.  
+ Atualmente, há 14 contadores de desempenho diferentes disponíveis para <xref:System.Data.SqlClient> e <xref:System.Data.OracleClient>, conforme descrito na tabela a seguir. Observe que os nomes dos contadores individuais não são localizados em versões regionais do Microsoft .NET Framework.  
   
 |Contador de desempenho|Descrição|  
 |-------------------------|-----------------|  
@@ -30,17 +30,17 @@ O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que <xr
 |`NumberOfInactiveConnectionPools`|O número de pools de conexão inativos que não tiveram nenhuma atividade recente e que estão aguardando para serem descartados.|  
 |`NumberOfNonPooledConnections`|O número de conexões ativas que não estão em pool.|  
 |`NumberOfPooledConnections`|O número de conexões ativas que estão sendo gerenciadas pela infraestrutura de pooling de conexão.|  
-|`NumberOfReclaimedConnections`|O número de conexões que foram recuperadas por meio da coleta de lixo `Close` onde `Dispose` ou não foi chamado pelo aplicativo. Não fechar ou descartar explicitamente as conexões afeta o desempenho.|  
+|`NumberOfReclaimedConnections`|O número de conexões que foram recuperadas por meio da coleta de lixo em que `Close` ou `Dispose` não foi chamado pelo aplicativo. Não fechar ou descartar explicitamente as conexões afeta o desempenho.|  
 |`NumberOfStasisConnections`|O número de conexões que estão aguardando a conclusão de uma ação e que, portanto, não estão disponíveis para uso pelo seu aplicativo.|  
 |`SoftConnectsPerSecond`|O número de conexões ativas sendo extraídas do pool de conexões. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
 |`SoftDisconnectsPerSecond`|O número de conexões ativas que estão sendo retornadas para o pool de conexões. **Observação:**  Esse contador de desempenho não está habilitado por padrão. Para habilitar esse contador de desempenho, consulte [ativando contadores desativados por padrão](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Grupos de pools de conexão e pools de conexão  
- Ao usar a autenticação do Windows (segurança integrada), você deve monitorar `NumberOfActiveConnectionPoolGroups` os `NumberOfActiveConnectionPools` contadores de desempenho e. O motivo é que os grupos do pool de conexões são mapeados para cadeias de conexão exclusivas. Quando a segurança integrada é usada, os pools de conexão são mapeados para cadeias de conexão e também criam pools separados para identidades individuais do Windows. Por exemplo, se Fred e Julie, cada um dentro do mesmo AppDomain, ambos usam a cadeia `"Data Source=MySqlServer;Integrated Security=true"`de conexão, um grupo de pools de conexão é criado para a cadeia de conexão e dois pools adicionais são criados, um para Fred e outro para Julie. Se João e Martha usarem uma cadeia de conexão com um logon de `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`SQL Server idêntico, apenas um único pool será criado para a identidade **lowPrivUser** .  
+ Ao usar a autenticação do Windows (segurança integrada), você deve monitorar os contadores de desempenho `NumberOfActiveConnectionPoolGroups` e `NumberOfActiveConnectionPools`. O motivo é que os grupos do pool de conexões são mapeados para cadeias de conexão exclusivas. Quando a segurança integrada é usada, os pools de conexão são mapeados para cadeias de conexão e também criam pools separados para identidades individuais do Windows. For example, if Fred and Julie, each within the same AppDomain, both use the connection string `"Data Source=MySqlServer;Integrated Security=true"`, a connection pool group is created for the connection string, and two additional pools are created, one for Fred and one for Julie. If John and Martha use a connection string with an identical SQL Server login, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, then only a single pool is created for the **lowPrivUser** identity.  
   
 <a name="ActivatingOffByDefault"></a>   
-### <a name="activating-off-by-default-counters"></a>Ativando contadores desativados por padrão  
- Os contadores `NumberOfFreeConnections`de desempenho `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, e `SoftConnectsPerSecond` estão desativados por padrão. Adicione as seguintes informações ao arquivo de configuração do aplicativo para habilitá-las:  
+### <a name="activating-off-by-default-counters"></a>Activating Off-By-Default Counters  
+ The performance counters `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, and `SoftConnectsPerSecond` are off by default. Add the following information to the application's configuration file to enable them:  
   
 ```xml  
 <system.diagnostics>  
@@ -51,11 +51,11 @@ O ADO.NET 2,0 introduziu suporte expandido para contadores de desempenho que <xr
 </system.diagnostics>  
 ```  
   
-## <a name="retrieving-performance-counter-values"></a>Recuperando valores do contador de desempenho  
- O aplicativo de console a seguir mostra como recuperar valores de contador de desempenho em seu aplicativo. As conexões devem estar abertas e ativas para que as informações sejam retornadas para todos os contadores de desempenho ADO.NET.  
+## <a name="retrieving-performance-counter-values"></a>Retrieving Performance Counter Values  
+ The following console application shows how to retrieve performance counter values in your application. Connections must be open and active for information to be returned for all of the ADO.NET performance counters.  
   
 > [!NOTE]
-> Este exemplo usa o banco de dados **AdventureWorks** de exemplo incluído com SQL Server. As cadeias de conexão fornecidas no código de exemplo pressupõem que o banco de dados está instalado e disponível no computador local com um nome de instância de SQLExpress e que você criou SQL Server logons que correspondem àqueles fornecidos nas cadeias de conexão. Talvez seja necessário habilitar os logons SQL Server se o servidor estiver configurado usando as configurações de segurança padrão que permitem apenas a autenticação do Windows. Modifique as cadeias de conexão conforme necessário para se adequar ao seu ambiente.  
+> This example uses the sample **AdventureWorks** database included with SQL Server. The connection strings provided in the sample code assume that the database is installed and available on the local computer with an instance name of SqlExpress, and that you have created SQL Server logins that match those supplied in the connection strings. You may need to enable SQL Server logins if your server is configured using the default security settings which allow only Windows Authentication. Modify the connection strings as necessary to suit your environment.  
   
 ### <a name="example"></a>Exemplo  
   
@@ -394,11 +394,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Conectando a uma fonte de dados](connecting-to-a-data-source.md)
 - [Conexão do Oracle, ODBC e OLE DB Pooling](ole-db-odbc-and-oracle-connection-pooling.md)
-- [Contadores de desempenho para ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Criação de perfil do tempo de execução](../../debug-trace-profile/runtime-profiling.md)
-- [Introdução ao monitoramento de limites de desempenho](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Performance Counters for ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [Criação de perfil do runtime](../../debug-trace-profile/runtime-profiling.md)
+- [Introduction to Monitoring Performance Thresholds](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

@@ -1,16 +1,16 @@
 ---
-title: Recuperando e modificando dados no ADO.NET
+title: Recuperando e modificando dados
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782854"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980048"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperando e modificando dados no ADO.NET
-A função principal de qualquer aplicativo de banco de dados é conectar-se a uma fonte de dados e recuperar os dados que ele contém. Os .NET Framework provedores de dados do ADO.NET servem como uma ponte entre um aplicativo e uma fonte de dados, permitindo que você execute comandos, bem como recuperar dados usando um **DataReader** ou um **DataAdapter**. A função principal de qualquer aplicativo de banco de dados é a capacidade de atualizar os dados que estão armazenados no banco de dados. No ADO.net, a atualização de dados envolve o uso <xref:System.Data.DataSet>de DataAdapter e e de objetos **Command** ; e também pode envolver o uso de transações.  
+A função principal de qualquer aplicativo de banco de dados é conectar-se a uma fonte de dados e recuperar os dados que ele contém. Os .NET Framework provedores de dados do ADO.NET servem como uma ponte entre um aplicativo e uma fonte de dados, permitindo que você execute comandos, bem como recuperar dados usando um **DataReader** ou um **DataAdapter**. A função principal de qualquer aplicativo de banco de dados é a capacidade de atualizar os dados que estão armazenados no banco de dados. No ADO.NET, a atualização de dados envolve o uso de **DataAdapter** e <xref:System.Data.DataSet>e de objetos de **comando** ; e também pode envolver o uso de transações.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conectando a uma fonte de dados](connecting-to-a-data-source.md)  
@@ -35,7 +35,7 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  Fornece um exemplo de mapeamento dos valores gerados para uma coluna de **identidade** em uma tabela SQL Server ou para um campo **AutoNumeração** em uma tabela do Microsoft Access, para uma coluna de uma linha inserida em uma tabela. Discute como mesclar valores de identidade em `DataTable`.  
   
  [Recuperando dados binários](retrieving-binary-data.md)  
- Descreve como recuperar dados binários ou estruturas de dados grandes `CommandBehavior`usando o.`SequentialAccess` para modificar o comportamento padrão de um `DataReader`.  
+ Descreve como recuperar dados binários ou estruturas de dados grandes usando `CommandBehavior`.`SequentialAccess` para modificar o comportamento padrão de um `DataReader`.  
   
  [Modificando dados com procedimentos armazenados](modifying-data-with-stored-procedures.md)  
  Descreve como usar parâmetros de entrada e de saída de procedimentos armazenados para inserir uma linha em um banco de dados, retornando um novo valor de identidade.  
@@ -58,7 +58,7 @@ A função principal de qualquer aplicativo de banco de dados é conectar-se a u
  [Suporte de Streaming do SqlClient](sqlclient-streaming-support.md)  
  Discute como escrever aplicativos que transmitem dados de SQL Server sem tê-los totalmente carregados na memória.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Data Type Mappings in ADO.NET](data-type-mappings-in-ado-net.md) (Mapeamentos de tipo de dados no ADO.NET)
 - [DataSets, DataTables, and DataViews](./dataset-datatable-dataview/index.md) (DataSets, DataTables e DataViews)

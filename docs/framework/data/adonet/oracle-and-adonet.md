@@ -1,26 +1,27 @@
 ---
 title: Oracle e ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a49634f712e32f873df8e47fbcb0c91dbe33fa94
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 5683f2b4ba57021ff6dda3a51baca016f886b605
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039833"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980074"
 ---
 # <a name="oracle-and-adonet"></a>Oracle e ADO.NET
 > [!NOTE]
 > Os tipos em <xref:System.Data.OracleClient> são preteridos. Os tipos permanecem com suporte na versão atual do .NET Framework, mas serão removidos em uma versão futura. A Microsoft recomenda que você use um provedor Oracle de terceiros.  
   
- Esta seção descreve os recursos e comportamentos específicos para o .NET Framework Provedor de Dados para Oracle.  
+ This section describes features and behaviors that are specific to the .NET Framework Data Provider for Oracle.  
   
- O .NET Framework Provedor de Dados para Oracle fornece acesso a um banco de dados Oracle usando a interface de chamada Oracle (OCI), conforme fornecido pelo software cliente Oracle. A funcionalidade do provedor de dados foi projetada para ser semelhante à do .NET Framework provedores de dados para SQL Server, OLE DB e ODBC.  
+ The .NET Framework Data Provider for Oracle provides access to an Oracle database using the Oracle Call Interface (OCI) as provided by Oracle Client software. The functionality of the data provider is designed to be similar to that of the .NET Framework data providers for SQL Server, OLE DB, and ODBC.  
   
- Para usar o .NET Framework Provedor de Dados para Oracle, um aplicativo deve fazer referência ao namespace <xref:System.Data.OracleClient> da seguinte maneira:  
+ To use the .NET Framework Data Provider for Oracle, an application must reference the <xref:System.Data.OracleClient> namespace as follows:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +39,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Requisitos do sistema](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Descreve os requisitos para usar o .NET Framework Provedor de Dados para Oracle e descreve uma série de problemas que você deve saber ao usá-lo.  
+ Describes requirements for using the .NET Framework Data Provider for Oracle, and describes a number of issues to be aware when using it.  
   
  [Oracle BFILEs](oracle-bfiles.md)  
  Descreve a classe <xref:System.Data.OracleClient.OracleBFile>, que é usada no trabalho com o tipo de dados Oracle BFILE.  
@@ -61,7 +62,7 @@ csc /r:System.Data.OracleClient.dll
  [Transações distribuídas do Oracle](oracle-distributed-transactions.md)  
  Descreve como o objeto <xref:System.Data.OracleClient.OracleConnection> automaticamente se inscreve em uma transação distribuída existente caso determine que uma transação está ativa.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)  
  Descreve práticas seguras de codificação ao usar o ADO.NET.  
   
@@ -75,9 +76,9 @@ csc /r:System.Data.OracleClient.dll
  Descreve como trabalhar com recursos e funcionalidades que são específicos ao SQL Server.  
   
  [DbProviderFactories](dbproviderfactories.md)  
- Descreve classes genéricas que permitem que você grave código independente de provedor em ADO.NET.  
+ Describes generic classes that allow you to write provider-independent code in ADO.NET.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET](index.md)
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

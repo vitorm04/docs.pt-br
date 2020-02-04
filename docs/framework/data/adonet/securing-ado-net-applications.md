@@ -1,13 +1,13 @@
 ---
-title: Protegendo aplicativos ADO.NET
+title: Protegendo aplicativos
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196723"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980022"
 ---
 # <a name="securing-adonet-applications"></a>Protegendo aplicativos ADO.NET
 Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas comuns de codificação como não validar a entrada do usuário. Um aplicativo que acessa dados tem vários pontos possíveis de falha que um invasor pode explorar para recuperar, manipular ou destruir dados confidenciais. Portanto, é importante compreender todos os aspectos de segurança, do processo de modelagem de ameaças durante a fase de projeto do aplicativo até a sua eventual implantação e manutenção contínua.  
@@ -32,7 +32,7 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  [Privacidade e segurança de dados](privacy-and-data-security.md)  
  Descreve as opções de criptografia para aplicativos ADO.NET.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)  
  Descreve os recursos de segurança do SQL Server da perspectiva de um desenvolvedor.  
   
@@ -51,7 +51,7 @@ Escrever um aplicativo seguro do ADO.NET envolve mais do que evitar armadilhas c
  [Bibliografia de segurança](/visualstudio/ide/securing-applications)  
  Fornece links para recursos externos disponíveis online e em cópia impressa.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET](index.md)
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

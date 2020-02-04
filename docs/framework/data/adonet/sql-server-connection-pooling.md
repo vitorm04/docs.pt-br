@@ -1,16 +1,16 @@
 ---
-title: Pool de conexões do SQL Server (ADO.NET)
+title: Pool de conexões SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bf0ce98b9b16b8d698a814f3bf2c4f442f3bf06
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794321"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980035"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Pool de conexões do SQL Server (ADO.NET)
 Para se conectar a um servidor de banco de dados, existem, normalmente, várias etapas demoradas. Um canal físico, como um soquete ou um pipe nomeado, deve ser estabelecido, o handshake inicial com o servidor deve ocorrer, informações de cadeia de conexão devem ser analisadas, a conexão deve ser autenticada pelo servidor, verificações devem ser realizadas para a inscrição na transação atual e assim por diante.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  O pool de conexões atende às solicitações de conexões realocando-as à medida que são retornadas ao pool. Se o tamanho máximo de pool for atingido e nenhuma conexão útil estiver disponível, a solicitação será colocada na fila. Em seguida, o pooler tentará recuperar conexões até que o tempo limite seja esgotado (o padrão é de 15 segundos). Se o pooler não puder atender à solicitação antes que se esgote o tempo limite de conexão, uma exceção será gerada.  
   
 > [!CAUTION]
-> É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando os `Close` métodos ou `Dispose` do `Connection` objeto ou abrindo todas as conexões dentro de uma `using` instrução no C#, ou uma `Using` instrução em Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte usando a [instrução](../../../csharp/language-reference/keywords/using-statement.md) ou [como: Descarte de um recurso](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) do sistema para Visual Basic.  
+> É altamente recomendável sempre fechar a conexão quando você terminar de usá-la para que a conexão seja retornada ao pool. Você pode fazer isso usando os métodos `Close` ou `Dispose` do objeto `Connection` ou abrindo todas as conexões dentro de uma instrução `using` no C#ou uma instrução `Using` no Visual Basic. As conexões que não são fechadas explicitamente não podem ser adicionadas nem retornadas ao pool. Para obter mais informações, consulte [usando a instrução](../../../csharp/language-reference/keywords/using-statement.md) ou [como: descartar um recurso do sistema](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) para Visual Basic.  
   
 > [!NOTE]
 > Não chame `Close` nem `Dispose` em um objeto `Connection`, em um `DataReader` nem em nenhum outro objeto gerenciado no método `Finalize` de sua classe. Em um finalizador, libere somente recursos não gerenciados que sua classe possui diretamente. Se a classe não tiver nenhum recurso não gerenciado, não inclua um método `Finalize` em sua definição de classe. Para obter mais informações, consulte [coleta de lixo](../../../standard/garbage-collection/index.md).  
@@ -80,7 +80,7 @@ Para obter mais informações sobre os eventos associados às conexões de abert
  Se uma conexão com um servidor desapareceu, ela pode ser removida do pool mesmo se o pooler de conexões não tiver detectado a conexão interrompida e a marcado como inválida. Este é o caso porque a sobrecarga de verificar se a conexão ainda é válida eliminaria os benefícios de se ter um pooler, provocando outra viagem de ida e volta ao servidor. Quando isso ocorrer, a primeira tentativa de usar a conexão detectará que a conexão foi interrompida e uma exceção será gerada.  
   
 ## <a name="clearing-the-pool"></a>Limpando o pool  
- O ADO.NET 2,0 introduziu dois novos métodos para limpar o <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> pool <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>: e. `ClearAllPools` limpa os pools de conexões de um provedor específico e `ClearPool` limpa o pool de conexões associado a uma conexão específica. Se houver conexões em uso no momento da chamada, elas serão devidamente marcadas. Quando fechadas, serão descartadas, em vez de retornadas ao pool.  
+ O ADO.NET 2,0 introduziu dois novos métodos para limpar o pool: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> e <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` limpa os pools de conexões de um provedor específico e `ClearPool` limpa o pool de conexões associado a uma conexão específica. Se houver conexões em uso no momento da chamada, elas serão devidamente marcadas. Quando fechadas, serão descartadas, em vez de retornadas ao pool.  
   
 ## <a name="transaction-support"></a>Suporte a transações  
  As conexões são removidas do pool e atribuídas com base no contexto de transação. A menos que `Enlist=false` seja especificado na cadeia de conexão, o pool de conexões verifica se a conexão está inscrita no contexto de <xref:System.Transactions.Transaction.Current%2A>. Quando uma conexão é fechada e retornada ao pool com uma transação `System.Transactions` inscrita, ela é reservada para que a próxima solicitação desse pool de conexões com a mesma transação `System.Transactions` seja retornada à mesma conexão, se disponível. Se uma solicitação desse tipo for emitida, e não houver conexões agrupadas disponíveis, uma conexão será removida da parte não transacionada do pool e depois inscrita. Se não houver conexões disponíveis em nenhuma área do pool, uma nova conexão será criada e inscrita.  
@@ -129,7 +129,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="application-role-alternatives"></a>Alternativas a funções de aplicativo  
  Recomendamos que você aproveite todas as vantagens dos mecanismos de segurança que podem ser usados no lugar de funções de aplicativo. Para obter mais informações, consulte [criando funções de aplicativo no SQL Server](./sql/creating-application-roles-in-sql-server.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Pooling de Conexão](connection-pooling.md)
 - [SQL Server and ADO.NET](./sql/index.md) (SQL Server e ADO.NET)

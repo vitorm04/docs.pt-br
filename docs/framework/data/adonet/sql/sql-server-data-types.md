@@ -1,13 +1,14 @@
 ---
 title: Tipos de dados do SQL Server e ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 642fe0d541aca01d6ffb2d9279c4d0fa91eadb63
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9baffc7a439c851ead7ec0e12899adf418174e22
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780852"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979853"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de dados do SQL Server e ADO.NET
 O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o que pode resultar em potencial perda de dados. Para preservar a integridade dos dados, o provedor de dados .NET Framework para SQL Server (<xref:System.Data.SqlClient>) fornece métodos tipados acessadores para trabalhar com dados do SQL Server. É possível usar enumerações nas classes <xref:System.Data.SqlDbType> para especificar tipos de dados <xref:System.Data.SqlClient.SqlParameter>.  
@@ -54,7 +55,7 @@ O SQL Server e o .NET Framework são baseados em diferentes tipos de sistema, o 
  <xref:System.Data.DbType>  
  Descreve a enumeração `DbType` e todos os seus membros.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Mapeamentos de tipo de dados do SQL Server](../sql-server-data-type-mappings.md)
 - [Configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)

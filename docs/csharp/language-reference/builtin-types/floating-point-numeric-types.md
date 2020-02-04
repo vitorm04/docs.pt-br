@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552273"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980165"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 Há apenas uma conversão implícita entre tipos numéricos de ponto flutuante: de `float` para `double`. No entanto, você pode converter qualquer tipo de ponto flutuante para qualquer outro tipo de ponto flutuante com a [conversão explícita](../operators/type-testing-and-cast.md#cast-operator-). Para obter mais informações, consulte [conversões numéricas internas](numeric-conversions.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -115,12 +115,11 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [O tipo decimal](~/_csharplang/spec/types.md#the-decimal-type)
 - [Literais reais](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Tabela de tipos internos](../keywords/built-in-types-table.md)
 - [Tipos integrais](integral-numeric-types.md)
-- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
 - [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numéricos no .NET](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

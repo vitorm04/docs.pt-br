@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715079"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980113"
 ---
 # <a name="---string-interpolation-c-reference"></a>interpolação de $-C# String (referência)
 
@@ -92,7 +92,7 @@ Se uma cadeia de caracteres interpolada tiver o tipo `string`, ela normalmente s
 
 Se uma cadeia de caracteres interpolada tiver o tipo <xref:System.IFormattable> ou <xref:System.FormattableString>, o compilador gerará uma chamada para o método <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [cadeias de caracteres interpoladas](~/_csharplang/spec/expressions.md#interpolated-strings) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -101,6 +101,6 @@ Para obter mais informações, consulte a seção [cadeias de caracteres interpo
 - [Referência de C#](../index.md)
 - [Caracteres especiais do C#](index.md)
 - [Cadeias de Caracteres](../../programming-guide/strings/index.md)
-- [Tabela de formatação de resultados numéricos](../keywords/formatting-numeric-results-table.md)
+- [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Formatação de composição](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
