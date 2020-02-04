@@ -49,7 +49,7 @@ Lembre-se de marcar `[DllImport]` como `Charset.Unicode`, a menos que você quei
    1. Aloca um buffer nativo **{2}**
    2. Copia o conteúdo se `[In]` _(o padrão para um parâmetro `StringBuilder`)_
    3. Copia o buffer nativo em uma matriz gerenciada alocada recentemente se `[Out]` **{3}** _(também o padrão para `StringBuilder`)_
-3. `ToString()` aloca outra matriz gerenciada **{4}**
+3. `ToString()` aloca outra matriz gerenciada **** **
 
 Ou seja, *{4}* alocações para obter uma cadeia de caracteres fora do código nativo. O melhor que você pode fazer para limitar isso é reutilizar o `StringBuilder` em outra chamada, mas isso economiza apenas *1* alocação. É muito melhor usar e armazenar em cache um buffer de caractere de `ArrayPool` - você pode então reduzir para apenas a alocação para `ToString()` nas chamadas subsequentes.
 
@@ -120,7 +120,7 @@ Você pode verificar se um tipo é blittable pela tentativa de criar um `GCHandl
 
 ✔️ tornar suas estruturas blittable quando possível.
 
-Para obter mais informações, consulte .
+Para obter mais informações, consulte:
 
 - [Tipos blittable e não blittable](../../framework/interop/blittable-and-non-blittable-types.md)
 - [Marshaling de Tipo](type-marshaling.md)
