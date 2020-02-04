@@ -3,12 +3,12 @@ title: Instalar o .NET Framework no Windows Vista
 description: Saiba como instalar o .NET Framework no Windows Vista.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716328"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965874"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalar o .NET Framework no Windows Vista e Windows Server 2008
 
@@ -20,9 +20,9 @@ Essas instruções ajudarão você a instalar as versões do .NET Framework nece
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-O [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) é a última versão do .NET Framework com suporte no Windows Vista e Windows Server 2008.
+O [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) é a última versão do .NET Framework com suporte no Windows Vista e Windows Server 2008.
 
-O [.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) dá suporte a aplicativos criados para o .NET Framework 4.0 a 4.6.
+O [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) dá suporte a aplicativos criados para o .NET Framework 4.0 a 4.6.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

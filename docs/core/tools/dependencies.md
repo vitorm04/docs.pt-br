@@ -2,12 +2,12 @@
 title: Gerenciamento de dependências das ferramentas do .NET Core
 description: Explica como gerenciar suas dependências com as ferramentas do .NET Core.
 ms.date: 03/06/2017
-ms.openlocfilehash: 28280dc05e746cdef4e90870cd4cb528382c45bd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 916daca0240c10dc63ca96048590a426bc51d450
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787868"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965614"
 ---
 # <a name="manage-dependencies-with-net-core-sdk-10"></a>Gerenciar dependências com o SDK do .NET Core 1,0
 
@@ -26,21 +26,21 @@ O `<PackageReference>` tem a estrutura básica mostrada a seguir:
 Se você estiver familiarizado com o MSBuild, ele será parecido com outros tipos de referência que já existem. A chave é a instrução `Include`, que especifica a ID do pacote que você deseja adicionar ao projeto. O elemento filho `<Version>` especifica a versão obtida. As versões são especificadas por [Regras de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges).
 
 > [!NOTE]
-> Se você não está familiarizado com a sintaxe `csproj` geral, é possível usar a documentação de [referência de projeto MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) para mais informações.
+> Se você não estiver familiarizado com a sintaxe Project-File, consulte a documentação de [referência do projeto MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) para obter mais informações.
 
-Pode-se adicionar uma dependência disponível somente em um destino específico usando condições como no exemplo a seguir:
+Use condições para adicionar uma dependência que está disponível somente em um destino específico, conforme mostrado no exemplo a seguir:
 
 ```xml
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-Isso significa que a dependência só será válida se o build estiver ocorrendo para esse destino específico. O `$(TargetFramework)` na condição é uma propriedade do MSBuild que está sendo definida no projeto. Para aplicativos .NET Core mais comuns, não será necessário fazer isso.
+A dependência só será válida se a compilação estiver acontecendo para o destino fornecido. O `$(TargetFramework)` na condição é uma propriedade do MSBuild que está sendo definida no projeto. Para aplicativos .NET Core mais comuns, não será necessário fazer isso.
 
 ## <a name="add-a-dependency-to-the-project"></a>Adicionar uma dependência ao projeto
 
 Adicionar uma dependência ao projeto é simples. Veja um exemplo de como adicionar a versão `9.0.1` do Json.NET ao seu projeto. Obviamente, isso se aplica a qualquer outra dependência NuGet.
 
-Ao abrir o arquivo de projeto, você verá dois ou mais nós `<ItemGroup>`. Você perceberá que um dos nós já tem elementos `<PackageReference>` contidos nele. Você pode adicionar sua nova dependência a este nó ou criar uma nova; cabe a você, pois o resultado será o mesmo.
+O arquivo de projeto tem dois ou mais nós de `<ItemGroup>`. Um dos nós já tem `<PackageReference>` elementos. Você pode adicionar sua nova dependência a este nó ou criar uma nova; o resultado será o mesmo.
 
 O exemplo a seguir usa o modelo padrão Descartado pelo `dotnet new console`. Este é um aplicativo de console simples. Ao abrir o projeto, você encontrará o `<ItemGroup>` já existente `<PackageReference>` nele. Adicione o seguinte a ele:
 

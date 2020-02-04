@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860953"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966004"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -46,9 +46,9 @@ O .NET Framework 4.8 baseia-se nas versões anteriores do .NET Framework 4.x, ad
 
 Você pode baixar o .NET Framework 4.8 nos seguintes locais:
 
-- [Instalador Web do .NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [Instalador Web do .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [Instalador Offline do .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [Instalador Offline do .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 O .NET Framework 4.8 pode ser instalado nos sistemas operacionais Windows 10, Windows 8.1, Windows 7 SP1 e nas plataformas de servidor correspondentes, a partir do Windows Server 2008 R2 SP1. É possível instalar o .NET Framework 4.8 usando o instalador Web ou o instalador offline. A maneira recomendada para a maioria dos usuários é usar o instalador da Web.
 
@@ -2132,3 +2132,4 @@ O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões p
 - [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Novidades do C++ no Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

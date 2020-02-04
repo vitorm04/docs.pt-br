@@ -6,18 +6,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706221"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965952"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 
 O .NET Framework fornece implementações de muitos algoritmos criptográficos padrão. Esses algoritmos são fáceis de usar e têm as propriedades padrão mais seguras possíveis. Além disso, o modelo de criptografia .NET Framework de herança de objeto, design de fluxo e configuração é extremamente extensível.
 
-## <a name="object-inheritance"></a>Herança de objetos
+## <a name="object-inheritance"></a>Herança de objeto
 
 O sistema de segurança .NET Framework implementa um padrão extensível de herança de classe derivada. A hierarquia é a seguinte:
 
@@ -33,15 +33,11 @@ Usando esse padrão de classes derivadas, é fácil adicionar um novo algoritmo 
 
 Como um exemplo das diferentes implementações disponíveis para um algoritmo, considere algoritmos simétricos. A base para todos os algoritmos simétricos é <xref:System.Security.Cryptography.SymmetricAlgorithm>, que é herdada pelos seguintes algoritmos:
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> é herdado por duas classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. A classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> é um wrapper em relação à implementação da CAPI (API de criptografia do Windows) do AES, enquanto a classe <xref:System.Security.Cryptography.AesManaged> é totalmente escrita em código gerenciado. Também há um terceiro tipo de implementação, CNG (Cryptography Next Generation), além das implementações gerenciadas e CAPI. Um exemplo de um algoritmo CNG é <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Os algoritmos CNG estão disponíveis no Windows Vista e versões posteriores.
 
@@ -62,35 +58,22 @@ Você pode selecionar um algoritmo por diferentes motivos: por exemplo, para a i
 Aqui está uma lista de algoritmos recomendados por aplicativo:
 
 - Privacidade de dados:
-
   - <xref:System.Security.Cryptography.Aes>
-
 - Integridade dos dados:
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - Assinatura digital:
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Troca de chaves:
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - Geração de número aleatório:
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - Gerando uma chave a partir de uma senha:
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>Veja também
 
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
+- [Protocolos de criptografia, algoritmos e código-fonte aplicados em C, de Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

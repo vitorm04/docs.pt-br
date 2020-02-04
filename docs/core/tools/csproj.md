@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787873"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965601"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -145,7 +145,7 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 
 #### <a name="version"></a>Versão do
 
-O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
+O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma versão mínima, uma correspondência inclusiva. Por exemplo, especificar `Version="1.2.3"` é equivalente ao `[1.2.3, )` de notação do NuGet e significa que o pacote resolvido terá a versão 1.2.3, se disponível ou maior caso contrário.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets e PrivateAssets
 
@@ -184,7 +184,7 @@ Observe que `DotNetCliToolReference` [agora é preterido](https://github.com/dot
 
 #### <a name="version"></a>Versão do
 
-`Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
+`Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma versão mínima, uma correspondência inclusiva. Por exemplo, especificar `Version="1.2.3"` é equivalente ao `[1.2.3, )` de notação do NuGet e significa que o pacote resolvido terá a versão 1.2.3, se disponível ou maior caso contrário.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 

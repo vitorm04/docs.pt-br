@@ -2,12 +2,12 @@
 title: Solução de problemas ' este aplicativo não pôde ser iniciado '
 description: Saiba o que fazer se você vir uma caixa de diálogo ' este aplicativo não pôde ser iniciado '.
 ms.date: 09/05/2019
-ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092045"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965900"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>Solução de problemas de uma mensagem de erro "este aplicativo não pôde ser iniciado"
 
@@ -44,11 +44,11 @@ Para resolver esse problema para que você possa executar o aplicativo, faça o 
    |Versão do Windows|Instalação do .NET Framework|
    |---|---|
    |Atualização de aniversário do Windows 10 e versões posteriores|[Tempo de execução do .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 10, atualização de novembro do Windows 10|[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)|
+   |Windows 10, atualização de novembro do Windows 10|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
    |Windows 8.1|[Tempo de execução do .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
+   |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 SP1|[Tempo de execução do .NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4,6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista SP2|[.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > .NET Framework 4,8 é pré-instalado no Windows 10 pode ser 2019 atualização.
@@ -59,7 +59,7 @@ Para resolver esse problema para que você possa executar o aplicativo, faça o 
 
    ![Não é possível resolver o problema](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Requisitos do sistema do .NET Framework](../get-started/system-requirements.md)
 - [Guia de instalação do .NET Framework](index.md)

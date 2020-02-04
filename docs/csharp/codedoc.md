@@ -4,18 +4,18 @@ description: Saiba como documentar seu código com comentários de documentaçã
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787829"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965926"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documente seu código com comentários XML
 
 Comentários em documentação XML são um tipo especial de comentário, adicionados acima da definição de qualquer membro ou tipo definido pelo usuário.
 Eles são especiais porque podem ser processados pelo compilador para gerar um arquivo de documentação XML em tempo de compilação.
-O arquivo XML gerado pelo compilador pode ser distribuído em conjunto com seu assembly .NET para que o Visual Studio e outros IDEs possam usar o IntelliSense para mostrar informações rápidas sobre os tipos ou membros. Além disso, o arquivo XML pode ser executado por ferramentas como [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) para gerar sites de referência de API.
+O arquivo XML gerado pelo compilador pode ser distribuído junto com seu assembly .NET para que o Visual Studio e outros IDEs possam usar o IntelliSense para mostrar informações rápidas sobre tipos ou membros. Além disso, o arquivo XML pode ser executado por ferramentas como [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) para gerar sites de referência de API.
 
 Comentários de documentação XML, como todos os outros comentários, são ignorados pelo compilador.
 
@@ -49,7 +49,7 @@ Este é o código para a biblioteca de matemática simples:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-A biblioteca de exemplo dá suporte a quatro operações aritméticas principais, `add`, `subtract`, `multiply` e `divide`, nos tipos de dados `int` e `double`.
+A biblioteca de exemplo dá suporte a quatro operações aritméticas principais (`add`, `subtract`, `multiply`e `divide`) nos tipos de dados `int` e `double`.
 
 Agora você deseja poder criar um documento de referência de API do seu código para desenvolvedores de terceiros que usam sua biblioteca, mas não têm acesso ao código-fonte.
 Como já foi mencionado, as marcas da documentação XML podem ser usadas para isso. Agora, você será apresentado às marcas XML padrão que têm suporte do compilador de C#.
@@ -61,7 +61,7 @@ Vou demonstrar seu uso adicionando-a à definição de classe `Math` e ao primei
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-A marca `<summary>` é muito importante e é recomendável inclui-la, porque seu conteúdo é a principal fonte de informações sobre o tipo ou membro no IntelliSense ou em um documento de referência de API.
+A marca `<summary>` é importante e é recomendável incluí-la porque seu conteúdo é a fonte primária do tipo ou informações de membro no IntelliSense ou em um documento de referência de API.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -150,7 +150,7 @@ Adicione um método genérico rápido à sua classe `Math` para verificar se uma
 
 ## <a name="paramref"></a>\<paramref>
 
-Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Assim como a marca de `<param>`, o nome do parâmetro é especificado no atributo **obrigatório** `name`.
+Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Como a marca de `<param>`, o nome do parâmetro é especificado no atributo **obrigatório** `name`.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,8 +163,7 @@ Use a marca `<typeparamref>` exatamente como a marca `<paramref>`, mas para decl
 
 ## <a name="list"></a>\<list>
 
-Use a marca `<list>` para formatar informações de documentação como uma lista ordenada, uma lista não ordenada ou uma tabela.
-Crie uma lista não ordenada de cada operação matemática a que sua biblioteca `Math` dá suporte.
+Você usa a marca de `<list>` para formatar informações de documentação como uma lista ordenada, lista não ordenada ou tabela. Crie uma lista não ordenada de cada operação matemática a que sua biblioteca `Math` dá suporte.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
@@ -207,7 +206,7 @@ O atributo `path` representa uma consulta [XPath](../standard/data/xml/xpath-que
 
 O atributo `name` representa o especificador de nome na marca que precede os comentários.
 
-O atributo `id` que pode ser usado no lugar de `name` representa a ID da marca que precede os comentários.
+O atributo `id`, que pode ser usado no lugar de `name`, representa a ID da marca que precede os comentários.
 
 ### <a name="user-defined-tags"></a>Marcas definidas pelo usuário
 
