@@ -1365,8 +1365,6 @@
               items:
                 - name: Tabela de tipos internos
                   href: language-reference/keywords/built-in-types-table.md
-                - name: Tabela de formatação de resultados numéricos
-                  href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modificadores
           items:
             - name: Modificadores de acesso
