@@ -1398,15 +1398,15 @@
               displayName: await
             - name: const
               href: language-reference/keywords/const.md
-            - name: evento
+            - name: event
               href: language-reference/keywords/event.md
             - name: extern
               href: language-reference/keywords/extern.md
-            - name: em (modificador genérico)
+            - name: in (modificador genérico)
               href: language-reference/keywords/in-generic-modifier.md
-            - name: novo (modificador de membro)
+            - name: new (modificador de membro)
               href: language-reference/keywords/new-modifier.md
-            - name: saída (modificador genérico)
+            - name: out (modificador genérico)
               href: language-reference/keywords/out-generic-modifier.md
             - name: override
               href: language-reference/keywords/override.md
@@ -1511,7 +1511,7 @@
           items:
             - name: nova restrição
               href: language-reference/keywords/new-constraint.md
-            - name: onde
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: Palavras-chave de acesso
           items:
@@ -1521,7 +1521,7 @@
               href: language-reference/keywords/this.md
         - name: Palavras-chave literais
           items:
-            - name: nulo
+            - name: 'null'
               href: language-reference/keywords/null.md
             - name: true e false
               href: language-reference/builtin-types/bool.md
@@ -1532,7 +1532,7 @@
             - name: Referência rápida
               displayName: contextual keywords
               href: language-reference/keywords/contextual-keywords.md
-            - name: adicionar
+            - name: add
               href: language-reference/keywords/add.md
             - name: get
               href: language-reference/keywords/get.md
@@ -1546,7 +1546,7 @@
               href: language-reference/keywords/set.md
             - name: when (condição de filtro)
               href: language-reference/keywords/when.md
-            - name: Valor
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1575,13 +1575,13 @@
               href: language-reference/keywords/ascending.md
             - name: descending
               href: language-reference/keywords/descending.md
-            - name: em
+            - name: 'on'
               href: language-reference/keywords/on.md
-            - name: é igual a
+            - name: equals
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: em
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'Operadores C#'
       items:
@@ -1642,10 +1642,10 @@
         - name: operador await
           href: language-reference/operators/await.md
           displayName: async
-        - name: operador padrão
+        - name: operador default
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
-        - name: operador de representante
+        - name: operador delegate
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
         - name: operador nameof
