@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457865"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094469"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mitigação: suporte a toque e caneta com base em ponteiro
 
-Os aplicativos do WPF que se destinam ao .NET Framework 4.7 e estão em execução em sistemas Windows a partir da Atualização do Windows 10 para Criadores podem habilitar uma pilha opcional de toque/caneta do WPF com base em `WM_POINTER`.
+Os aplicativos do WPF direcionados para o .NET Framework 4,7 e que estão em execução no Windows a partir da atualização do Windows 10 para criadores podem habilitar uma pilha opcional de toque/caneta do WPF baseada em `WM_POINTER`.
 
 ## <a name="impact"></a>Impacto
 
@@ -40,7 +40,7 @@ A seguir estão os problemas conhecidos no momento com a pilha de toque/caneta c
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>Optar pelo suporte a toque/caneta com base em WM_POINTER
 
-Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte ao arquivo app.config do aplicativo:
+Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte ao arquivo *app. config* do aplicativo.
 
 ```xml
 <configuration>
@@ -52,6 +52,6 @@ Os desenvolvedores que desejam habilitar essa pilha podem adicionar o seguinte a
 
 Remover esta entrada ou definir seu valor como `false` desabilita essa pilha opcional.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

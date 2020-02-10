@@ -1,13 +1,13 @@
 ---
 title: Extensões de tipo
 description: Saiba como F# as extensões de tipo permitem adicionar novos membros a um tipo de objeto definido anteriormente.
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341564"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092675"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 Quando usado, esse código fará com que ele apareça como se `Sum` estiver definido em <xref:System.Collections.Generic.IEnumerable%601>, desde que `Extensions` tenha sido aberto ou esteja no escopo.
+
+Para que a extensão esteja disponível para o código VB.NET, é necessário um `ExtensionAttribute` extra no nível do assembly:
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>Outros comentários
 
@@ -166,7 +176,7 @@ As seguintes limitações também existem para extensões de tipo:
 
 Por fim, se existirem várias extensões de tipo intrínsecos para um tipo, todos os membros deverão ser exclusivos. Para extensões de tipo opcionais, os membros em extensões de tipo diferentes para o mesmo tipo podem ter os mesmos nomes. Os erros de ambiguidade ocorrem somente se o código do cliente abrir dois escopos diferentes que definem os mesmos nomes de membro.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência da Linguagem F#](index.md)
 - [Membros](./members/index.md)

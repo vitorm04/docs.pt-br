@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965744"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093117"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns no lado do cliente
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965744"
 
 Os aplicativos ASP.NET Core são aplicativos Web e normalmente se baseiam em tecnologias da Web do lado do cliente como HTML, CSS e JavaScript. Ao separar o conteúdo da página (o HTML) de seu layout e estilo (o CSS) e seu comportamento (por meio do JavaScript), os aplicativos Web complexos podem aproveitar o princípio da Separação de Interesses. As alterações futuras na estrutura, no design ou no comportamento do aplicativo podem ser feitas com mais facilidade quando esses interesses não são entrelaçados.
 
-Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo analisa algumas maneiras como o JavaScript é usado por desenvolvedores da Web como parte do desenvolvimento de aplicativos, como fornece uma visão geral de alto nível das bibliotecas angulares e reajam do lado do cliente.
+Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo analisa algumas maneiras como o JavaScript é usado por desenvolvedores da Web e fornece uma visão geral de alto nível das bibliotecas angulares e reajam do lado do cliente.
 
 ## <a name="html"></a>HTML
 
@@ -68,14 +68,14 @@ Por exemplo, imagine que, se o valor da caixa de texto exceder 10, um elemento n
 |--------------------------|------------|-------------|
 | Abstrai o DOM | **Sim** | **Sim** |
 | Suporte do AJAX | **Sim** | **Sim** |
-| Associação de dados declarativa | **No** | **Sim** |
-| Roteamento no estilo MVC | **No** | **Sim** |
-| Modelagem | **No** | **Sim** |
-| Roteamento de link profundo | **No** | **Sim** |
+| Associação de dados declarativa | **Não** | **Sim** |
+| Roteamento no estilo MVC | **Não** | **Sim** |
+| Modelagem | **Não** | **Sim** |
+| Roteamento de link profundo | **Não** | **Sim** |
 
 A maioria dos recursos que o jQuery não tem intrinsecamente pode ser adicionada com a adição de outras bibliotecas. No entanto, uma estrutura de SPA como o Angular fornece esses recursos de forma mais integrada, pois foi projetado com todos eles em mente, desde o início. Além disso, o jQuery é uma biblioteca imperativa, o que significa que você precisa chamar o jQuery Functions para fazer qualquer coisa com o jQuery. Grande parte do trabalho e da funcionalidade fornecida pelas estruturas de SPA pode ser feita de forma declarativa, sem a necessidade de codificação real.
 
-A associação de dados é um ótimo exemplo disso. No jQuery, geralmente, é necessário apenas uma linha de código para obter o valor de um elemento DOM ou para definir o valor de um elemento. No entanto, você precisa escrever esse código sempre que precisa alterar o valor do elemento e, às vezes, isso acontecerá em várias funções em uma página. Outro exemplo comum é a visibilidade do elemento. No jQuery, pode haver muitos lugares diferentes em que você codificará para controlar se determinados elementos eram visíveis. Em cada um desses casos, ao usar a associação de dados, nenhuma codificação precisa ser feita. Você apenas vincula o valor ou a visibilidade dos elementos em questão a um *modelo de exibição* na página e as alterações nesse modelo de exibição são refletidas automaticamente nos elementos associados.
+A associação de dados é um ótimo exemplo disso. No jQuery, normalmente só usa uma linha de código para obter o valor de um elemento DOM ou para definir um valor de elemento. No entanto, você precisa escrever esse código sempre que precisar alterar o valor do elemento e, às vezes, isso ocorrerá em várias funções em uma página. Outro exemplo comum é a visibilidade do elemento. No jQuery, pode haver muitos locais diferentes em que você escreveria código para controlar se determinados elementos estavam visíveis. Em cada um desses casos, ao usar a associação de dados, nenhuma codificação precisa ser feita. Você simplesmente associaria o valor ou a visibilidade dos elementos em questão a um *ViewModel* na página e as alterações feitas nesse ViewModel seriam refletidas automaticamente nos elementos associados.
 
 ### <a name="angular-spas"></a>SPAs do Angular
 

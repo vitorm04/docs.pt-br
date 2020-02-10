@@ -3,24 +3,24 @@ title: Introdução ao armazenamento de Blobs do Azure usando F#
 description: Armazene dados não estruturados na nuvem com o armazenamento de BLOBs do Azure.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935511"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092623"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introdução ao armazenamento de BLOBs do Azure usando o F\#
 
-O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode armazenar qualquer tipo de texto ou dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é conhecido como armazenamento de objeto.
+O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode conter qualquer tipo de texto ou de dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é chamado de armazenamento de objeto.
 
 Este artigo mostra como executar tarefas comuns usando o armazenamento de BLOBs. Os exemplos são escritos usando F# o uso da biblioteca de cliente de armazenamento do Azure para .net. As tarefas abordadas incluem como carregar, listar, baixar e excluir BLOBs.
 
-Para obter uma visão geral conceitual do armazenamento de BLOBs, consulte [o guia .net para armazenamento de BLOBs](/azure/storage/storage-dotnet-how-to-use-blobs).
+Para obter uma visão geral conceitual do armazenamento de BLOBs, consulte [o guia .net para armazenamento de BLOBs](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account). Você também precisa da sua chave de acesso de armazenamento para essa conta.
+Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/common/storage-account-create). Você também precisa da sua chave de acesso de armazenamento para essa conta.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Criar um F# script e iniciar F# interativo
 
@@ -28,13 +28,13 @@ Os exemplos neste artigo podem ser usados em um F# aplicativo ou um F# script. P
 
 Em seguida, use um [Gerenciador de pacotes](package-management.md) como [paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar os pacotes `WindowsAzure.Storage` e `Microsoft.WindowsAzure.ConfigurationManager` e `WindowsAzure.Storage.dll` de referência e `Microsoft.WindowsAzure.Configuration.dll` em seu script usando uma diretiva `#r`.
 
-### <a name="add-namespace-declarations"></a>Adicionar declarações de namespace
+### <a name="add-namespace-declarations"></a>Adicionar declarações do namespace
 
 Adicione as seguintes instruções `open` à parte superior do arquivo `blobs.fsx`:
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Obter a cadeia de conexão
+### <a name="get-your-connection-string"></a>Obter sua cadeia de conexão
 
 Você precisa de uma cadeia de conexão de armazenamento do Azure para este tutorial. Para obter mais informações sobre cadeias de conexão, consulte [Configurar cadeias de conexão de armazenamento](/azure/storage/storage-configure-connection-string).
 
@@ -102,14 +102,14 @@ Você também pode nomear BLOBs com informações de caminho em seus nomes. Isso
 
 Por exemplo, considere o seguinte conjunto de blobs de blocos em um contêiner chamado `photos`:
 
-*photo1.jpg*\
-*2015/architecture/description.txt*\
-*2015/architecture/photo3.jpg*\
-*2015/architecture/photo4.jpg*\
-*2016/architecture/photo5.jpg*\
-*2016/architecture/photo6.jpg*\
-*2016/architecture/description.txt*\
-*2016/photo7.jpg*\
+*photo1. jpg*\
+*2015/arquitetura/descrição. txt*\
+*2015/arquitetura/photo3. jpg*\
+*2015/arquitetura/photo4. jpg*\
+*2016/Architecture/photo5. jpg*\
+*2016/Architecture/photo6. jpg*\
+*2016/Architecture/Description. txt*\
+*2016/photo7. jpg*\
 
 Quando você chama `ListBlobs` em um contêiner (como no exemplo acima), uma listagem hierárquica é retornada. Se ele contiver objetos `CloudBlobDirectory` e `CloudBlockBlob`, representando os diretórios e blobs no contêiner, respectivamente, a saída resultante será semelhante a esta:
 
@@ -196,8 +196,8 @@ Para obter mais informações, consulte [Gerenciando a simultaneidade no armazen
 
 Todos os blobs no armazenamento do Azure devem residir em um contêiner. O contêiner faz parte do nome do blob. Por exemplo, `mydata` é o nome do contêiner nesses URIs do blob de exemplo:
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 Um nome de contêiner deve ser um nome DNS válido e estar em conformidade com as seguintes regras de nomenclatura:
 
@@ -220,7 +220,7 @@ Por padrão, os dados de blob em sua conta de armazenamento só podem ser acessa
 
 O armazenamento do Azure dá suporte à criptografia de dados de blob no cliente e no servidor.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Agora que você aprendeu os conceitos básicos do armazenamento de Blobs, siga estes links para saber mais.
 
@@ -229,7 +229,7 @@ Agora que você aprendeu os conceitos básicos do armazenamento de Blobs, siga e
 - [ F#\ AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)
 Um F# provedor de tipos que pode ser usado para explorar os ativos de armazenamento de BLOB, tabela e fila do Azure e aplicar facilmente as operações CRUD neles.
 
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+- [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
 Uma F# API para usar Microsoft Azure serviço de armazenamento de tabelas
 
 - [Gerenciador de armazenamento do Microsoft Azure (Mase)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
@@ -237,14 +237,13 @@ Um aplicativo autônomo e gratuito da Microsoft que permite que você trabalhe v
 
 ### <a name="blob-storage-reference"></a>Referência do Armazenamento de Blobs
 
-- [APIs do Armazenamento do Microsoft Azure para .NET](/dotnet/api/overview/azure/storage)
-- [Referência de API REST dos Serviços de Armazenamento do Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [APIs de armazenamento do Azure para .NET](/dotnet/api/overview/azure/storage)
+- [Referência de API REST nos serviços de armazenamento do Azure](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>Guias relacionados
 
-- [Introdução com o armazenamento de BLOBs do Azure noC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Transferir dados com o utilitário de linha de comando AzCopy no Windows](/azure/storage/common/storage-use-azcopy)
-- [Transferir dados com o utilitário de linha de comando AzCopy no Linux](/azure/storage/common/storage-use-azcopy-linux)
+- [Exemplos de armazenamento de Blobs do Azure para .NET](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [Introdução ao AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Configurar cadeias de conexão do Armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
 - [Blog da equipe de Armazenamento do Azure](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [Início rápido: usar o .NET para criar um blob no armazenamento de objetos](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

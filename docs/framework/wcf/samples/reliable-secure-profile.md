@@ -2,15 +2,16 @@
 title: Perfil seguro confiável
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716498"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094937"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiável
-Este exemplo demonstra como compor o WCF e um [perfil seguro confiável](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este exemplo demonstra a implementação de um canal de [conexão de make](https://go.microsoft.com/fwlink/?LinkId=178141) que pode ser composto junto com mensagens confiáveis e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação rsp.  
+
+Este exemplo demonstra como compor o WCF e um [perfil seguro confiável (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). Este exemplo demonstra a implementação de um canal de [conexão de make](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , que pode ser composto junto com mensagens confiáveis e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação rsp.  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  

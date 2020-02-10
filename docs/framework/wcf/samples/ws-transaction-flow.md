@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714594"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094742"
 ---
 # <a name="ws-transaction-flow"></a>Fluxo de transação WS
 Este exemplo demonstra o uso de uma transação coordenada pelo cliente e as opções de cliente e servidor para o fluxo de transações usando a transação WS-Atomic ou o protocolo OleTransactions. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora, mas as operações são atribuídas para demonstrar o uso do `TransactionFlowAttribute` com a enumeração **TransactionFlowOption** para determinar para qual grau o fluxo de transações está habilitado. Dentro do escopo da transação fluida, um log das operações solicitadas é gravado em um banco de dados e persiste até que a transação coordenada do cliente seja concluída – se a transação do cliente não for concluída, a transação do serviço Web garantirá que o as atualizações apropriadas para o banco de dados não são confirmadas.  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    > Para configuração entre computadores, habilite o Coordenador de Transações Distribuídas usando as instruções abaixo e use a ferramenta WsatConfig. exe da SDK do Windows para habilitar o suporte à rede de transações do WCF. Consulte [Configurando o suporte à transação WS-Atomic](https://go.microsoft.com/fwlink/?LinkId=190370) para obter informações sobre como configurar o WsatConfig. exe.  
+    > Para configuração entre computadores, habilite o Coordenador de Transações Distribuídas usando as instruções abaixo e use a ferramenta WsatConfig. exe da SDK do Windows para habilitar o suporte à rede de transações do WCF. Para obter informações sobre como configurar o WsatConfig. exe, consulte [Configuring WS-Atomic Transaction support](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
  Se você executar o exemplo no mesmo computador ou em computadores diferentes, deverá configurar o Microsoft Coordenador de Transações Distribuídas (MSDTC) para habilitar o fluxo de transações de rede e usar a ferramenta WsatConfig. exe para habilitar o suporte à rede de transações do WCF.  
   

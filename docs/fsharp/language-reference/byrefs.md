@@ -2,12 +2,12 @@
 title: Byrefs
 description: Saiba mais sobre tipos ByRef e ByRef no F#, que são usados para programação de baixo nível.
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965809"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092782"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -121,10 +121,10 @@ A tabela a seguir mostra F# o que são emitidos:
 
 |F#construir|Construção emitida|
 |------------|-----------------|
-|`inref<'T>` argumento|atributo de `[In]` no argumento|
+|Argumento `inref<'T>`|atributo de `[In]` no argumento|
 |`inref<'T>` retornar|`modreq` atributo no valor|
 |`inref<'T>` no slot abstrato ou na implementação|`modreq` no argumento ou retorno|
-|`outref<'T>` argumento|atributo de `[Out]` no argumento|
+|Argumento `outref<'T>`|atributo de `[Out]` no argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferência de tipos e regras de sobrecarga
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 Para retornar um valor ByRef, a variável que contém o valor deve residir mais tempo do que o escopo atual.
-Além disso, para retornar ByRef, use & valor (em que value é uma variável que permanece mais longa do que o escopo atual).
+Além disso, para retornar ByRef, use `&value` (em que value é uma variável que permanece mais longa do que o escopo atual).
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-Isso impede que você obtenha resultados diferentes dependendo de se você compilar com otimizações ativadas ou desativadas.
+Isso impede que você obtenha resultados diferentes dependendo de se você compilar com otimizações ou não.

@@ -1,20 +1,20 @@
 ---
-title: Explicar previsões do modelo usando Importância do Recurso de Permutação
+title: Interpretar modelos de ML.NET com importância de recurso de permuta
 description: Entender a importância de recursos de modelos com a Importância de recursos de permutação no ML.NET
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976681"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092610"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>Explicar previsões do modelo usando Importância do Recurso de Permutação
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Interpretar previsões de modelo usando a importância do recurso de permuta
 
-Aprenda a explicar as previsões de modelo de machine learning do ML.NET compreendendo a contribuição que os recursos dão para previsões usando PFI (Importância de Recurso de Permutação).
+Usando a importância do recurso de permutação (PFI), saiba como interpretar previsões de modelo de aprendizado de máquina ML.NET. PFI fornece a contribuição relativa que cada recurso faz a uma previsão.
 
 Modelos de machine learning geralmente são considerados caixas pretas que pegam entradas e geram uma saída. As etapas intermediárias ou as interações entre os recursos que influenciam a saída raramente são compreendidas. Conforme o aprendizado de máquina é introduzido em mais aspectos da vida diária, como serviços de saúde, é de extrema importância entender por que um modelo de machine learning toma as decisões que ele toma. Por exemplo, se os diagnósticos forem feitos por um modelo de machine learning, os profissionais de saúde precisarão de uma maneira de examinar os fatores que contribuíram para esse diagnóstico. Fornecer o diagnóstico certo pode fazer uma grande diferença em se um paciente tem uma recuperação rápida ou não. Portanto, quanto maior o nível de capacidade de explicação de um modelo, mais confiança os profissionais de saúde terão em aceitar ou rejeitar as decisões tomadas pelo modelo.
 
@@ -26,7 +26,7 @@ Além disso, ao realçar os recursos mais importantes, construtores de modelo po
 
 Os recursos no conjunto de dados que está sendo usado para este exemplo estão nas colunas 1 a 12. A meta é prever `Price`.
 
-| Column | Recurso | Descrição
+| Coluna | Recurso | DESCRIÇÃO
 | --- | --- | --- |
 | 1 | CrimeRate | Taxa de criminalidade per capita
 | 2 | ResidentialZones | Zonas residenciais da cidade
@@ -40,7 +40,7 @@ Os recursos no conjunto de dados que está sendo usado para este exemplo estão 
 | 10 | TaxRate | Taxa de imposto sobre propriedade
 | 11 | StudentTeacherRatio | Taxa de alunos para professores
 | 12 | PercentPopulationBelowPoverty | Percentual da população vivendo abaixo da linha de pobreza
-| 13 | Preço | Preço da casa
+| 13 | Price | Preço da casa
 
 Um exemplo do conjunto de dados é mostrado abaixo:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: c786137a471e0199a8ac60f8d82b4ce440e33b7e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f23f54283849ddaa827a98f0f28a39a72305dc1d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740404"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095223"
 ---
 # <a name="drawing-formatted-text"></a>Desenhando texto formatado
 Este tópico fornece uma visão geral dos recursos do objeto <xref:System.Windows.Media.FormattedText>. Este objeto fornece controle de baixo nível para desenhar texto em aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -33,7 +33,7 @@ Este tópico fornece uma visão geral dos recursos do objeto <xref:System.Window
   
  O objeto <xref:System.Windows.Media.FormattedText> fornece mais recursos de formatação de texto do que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] controles de texto e pode ser útil em casos em que você deseja usar texto como um elemento decorativo. Para obter mais informações, consulte a seção a seguir [Convertendo texto formatado em uma geometria](#converting_formatted_text).  
   
- Além disso, o objeto <xref:System.Windows.Media.FormattedText> é útil para criar objetos derivados de texto <xref:System.Windows.Media.DrawingVisual>. <xref:System.Windows.Media.DrawingVisual> é uma classe leve de desenho que é usada para renderizar formas, imagens ou texto. Para obter mais informações, consulte [Teste de clique usando uma amostra de DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994).  
+ Além disso, o objeto <xref:System.Windows.Media.FormattedText> é útil para criar objetos derivados de texto <xref:System.Windows.Media.DrawingVisual>. <xref:System.Windows.Media.DrawingVisual> é uma classe leve de desenho que é usada para renderizar formas, imagens ou texto. Para obter mais informações, consulte [Teste de clique usando uma amostra de DrawingVisuals](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual).  
   
 ## <a name="using-the-formattedtext-object"></a>Usando o objeto FormattedText  
  Para criar texto formatado, chame o Construtor <xref:System.Windows.Media.FormattedText.%23ctor%2A> para criar um objeto <xref:System.Windows.Media.FormattedText>. Após ter criado a cadeia de caracteres de texto formatado inicial, você poderá aplicar uma variedade de estilos de formatação.  
@@ -88,34 +88,34 @@ Esfera seguindo a geometria de caminho do texto
 ## <a name="win32-migration"></a>Migração do Win32  
  Os recursos de <xref:System.Windows.Media.FormattedText> para o texto de desenho são semelhantes aos recursos da função DrawText do Win32. Para os desenvolvedores que estão migrando da API do Win32, a tabela a seguir lista os sinalizadores de DrawText do Win32 e o equivalente aproximado no [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
-|Sinalizador DrawText|Equivalente ao WPF|{1&gt;Observações&lt;1}|  
+|Sinalizador DrawText|Equivalente ao WPF|Observações|  
 |-------------------|--------------------|-----------|  
 |DT_BOTTOM|<xref:System.Windows.Media.FormattedText.Height%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.Height%2A> para calcular uma posição ' y ' apropriada do DrawText do Win32.|  
 |DT_CALCRECT|<xref:System.Windows.Media.FormattedText.Height%2A>, <xref:System.Windows.Media.FormattedText.Width%2A>|Use as propriedades <xref:System.Windows.Media.FormattedText.Height%2A> e <xref:System.Windows.Media.FormattedText.Width%2A> para calcular o retângulo de saída.|  
 |DT_CENTER|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.TextAlignment%2A> com o valor definido como <xref:System.Windows.TextAlignment.Center>.|  
-|DT_EDITCONTROL|{1&gt;Nenhum&lt;1}|Não obrigatório. A largura do espaço e a renderização da última linha são iguais aos valores no controle de edição da estrutura.|  
+|DT_EDITCONTROL|Nenhum|Não obrigatório. A largura do espaço e a renderização da última linha são iguais aos valores no controle de edição da estrutura.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.Trimming%2A> com o valor <xref:System.Windows.TextTrimming.CharacterEllipsis>.<br /><br /> Use <xref:System.Windows.TextTrimming.WordEllipsis> para obter DT_END_ELLIPSIS do Win32 com DT_WORD_ELIPSIS reticências de término — nesse caso, reticências de caractere só ocorrem em palavras que não se ajustam em uma única linha.|  
-|DT_EXPAND_TABS|{1&gt;Nenhum&lt;1}|Não obrigatório. As guias são expandidas automaticamente para paradas a cada 4 ems, o que é aproximadamente a largura de 8 caracteres independentes do idioma.|  
-|DT_EXTERNALLEADING|{1&gt;Nenhum&lt;1}|Não obrigatório. O entrelinhamento externo sempre é incluído no espaçamento entre linhas. Use a propriedade <xref:System.Windows.Media.FormattedText.LineHeight%2A> para criar espaçamento de linha definido pelo usuário.|  
-|DT_HIDEPREFIX|{1&gt;Nenhum&lt;1}|{1&gt;Sem suporte.&lt;1} Remova o ' & ' da cadeia de caracteres antes de construir o objeto <xref:System.Windows.Media.FormattedText>.|  
+|DT_EXPAND_TABS|Nenhum|Não obrigatório. As guias são expandidas automaticamente para paradas a cada 4 ems, o que é aproximadamente a largura de 8 caracteres independentes do idioma.|  
+|DT_EXTERNALLEADING|Nenhum|Não obrigatório. O entrelinhamento externo sempre é incluído no espaçamento entre linhas. Use a propriedade <xref:System.Windows.Media.FormattedText.LineHeight%2A> para criar espaçamento de linha definido pelo usuário.|  
+|DT_HIDEPREFIX|Nenhum|Sem suporte. Remova o ' & ' da cadeia de caracteres antes de construir o objeto <xref:System.Windows.Media.FormattedText>.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Este é o alinhamento de texto padrão. Use a propriedade <xref:System.Windows.Media.FormattedText.TextAlignment%2A> com o valor definido como <xref:System.Windows.TextAlignment.Left>. (Somente WPF)|  
-|DT_MODIFYSTRING|{1&gt;Nenhum&lt;1}|{1&gt;Sem suporte.&lt;1}|  
+|DT_MODIFYSTRING|Nenhum|Sem suporte.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|O recorte não acontece automaticamente. Se você quiser recortar o texto, use a propriedade <xref:System.Windows.Media.Visual.VisualClip%2A>.|  
-|DT_NOFULLWIDTHCHARBREAK|{1&gt;Nenhum&lt;1}|{1&gt;Sem suporte.&lt;1}|  
-|DT_NOPREFIX|{1&gt;Nenhum&lt;1}|Não obrigatório. O caractere "&" nas cadeias de caracteres sempre é tratado como um caractere normal.|  
-|DT_PATHELLIPSIS|{1&gt;Nenhum&lt;1}|Use a propriedade <xref:System.Windows.Media.FormattedText.Trimming%2A> com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
-|DT_PREFIX|{1&gt;Nenhum&lt;1}|{1&gt;Sem suporte.&lt;1} Se você quiser usar sublinhados para texto, como uma tecla aceleradora ou link, use o método <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
-|DT_PREFIXONLY|{1&gt;Nenhum&lt;1}|{1&gt;Sem suporte.&lt;1}|  
+|DT_NOFULLWIDTHCHARBREAK|Nenhum|Sem suporte.|  
+|DT_NOPREFIX|Nenhum|Não obrigatório. O caractere "&" nas cadeias de caracteres sempre é tratado como um caractere normal.|  
+|DT_PATHELLIPSIS|Nenhum|Use a propriedade <xref:System.Windows.Media.FormattedText.Trimming%2A> com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
+|DT_PREFIX|Nenhum|Sem suporte. Se você quiser usar sublinhados para texto, como uma tecla aceleradora ou link, use o método <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>.|  
+|DT_PREFIXONLY|Nenhum|Sem suporte.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.TextAlignment%2A> com o valor definido como <xref:System.Windows.TextAlignment.Right>. (Somente WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Defina a propriedade <xref:System.Windows.Media.FormattedText.FlowDirection%2A> como <xref:System.Windows.FlowDirection.RightToLeft>.|  
-|DT_SINGLELINE|{1&gt;Nenhum&lt;1}|Não obrigatório. <xref:System.Windows.Media.FormattedText> objetos se comportam como um controle de linha única, a menos que a propriedade <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> seja definida ou o texto contenha uma CR/LF (retorno de carro/alimentação de linha).|  
-|DT_TABSTOP|{1&gt;Nenhum&lt;1}|Não há suporte para posições de parada de tabulação definidas pelo usuário.|  
+|DT_SINGLELINE|Nenhum|Não obrigatório. <xref:System.Windows.Media.FormattedText> objetos se comportam como um controle de linha única, a menos que a propriedade <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> seja definida ou o texto contenha uma CR/LF (retorno de carro/alimentação de linha).|  
+|DT_TABSTOP|Nenhum|Não há suporte para posições de parada de tabulação definidas pelo usuário.|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|Não obrigatório. A justificação superior é o padrão. Outros valores de posicionamento vertical podem ser definidos usando a propriedade <xref:System.Windows.Media.FormattedText.Height%2A> para calcular uma posição ' y ' apropriada do DrawText do Win32.|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.Height%2A> para calcular uma posição ' y ' apropriada do DrawText do Win32.|  
-|DT_WORDBREAK|{1&gt;Nenhum&lt;1}|Não obrigatório. A quebra de palavras ocorre automaticamente com <xref:System.Windows.Media.FormattedText> objetos. Não é possível desabilitá-la.|  
+|DT_WORDBREAK|Nenhum|Não obrigatório. A quebra de palavras ocorre automaticamente com <xref:System.Windows.Media.FormattedText> objetos. Não é possível desabilitá-la.|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Use a propriedade <xref:System.Windows.Media.FormattedText.Trimming%2A> com o valor <xref:System.Windows.TextTrimming.WordEllipsis>.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Media.FormattedText>
 - [Documentos no WPF](documents-in-wpf.md)

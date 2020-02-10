@@ -4,16 +4,16 @@ description: Saiba mais C# sobre os tipos de valor anulável e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740940"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093182"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valores anuláveis (C# referência)
 
-Um tipo de valor anulável `T?` representa todos os valores de seu [tipo de valor](value-types.md) subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Por exemplo, você pode atribuir qualquer um dos três valores a seguir a uma `bool?` variável: `true`, `false`ou `null`. Um tipo de valor subjacente `T` não pode ser um tipo de valor anulável em si.
+Um *tipo de valor anulável* `T?` representa todos os valores de seu [tipo de valor](value-types.md) subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Por exemplo, você pode atribuir qualquer um dos três valores a seguir a uma `bool?` variável: `true`, `false`ou `null`. Um tipo de valor subjacente `T` não pode ser um tipo de valor anulável em si.
 
 > [!NOTE]
 > C#8,0 apresenta o recurso de tipos de referência anulável. Para obter mais informações, consulte [tipos de referência anuláveis](../../nullable-references.md). Os tipos de valor anulável estão disponíveis a C# partir de 2.
@@ -68,7 +68,7 @@ Um tipo de valor não anulável `T` é implicitamente conversível para o tipo d
 
 ## <a name="lifted-operators"></a>Operadores levantados
 
-Os operadores unários e binários predefinidos ou quaisquer operadores sobrecarregados com suporte de um tipo de valor `T` também são suportados pelo tipo de valor anulável correspondente `T?`. Esses operadores, também conhecidos como *operadores levantados*, produzem `null` se um ou ambos os operandos forem `null`; caso contrário, o operador usa os valores contidos de seus operandos para calcular o resultado. Por exemplo:
+Os [operadores](../operators/index.md) unários e binários predefinidos ou quaisquer operadores sobrecarregados com suporte de um tipo de valor `T` também são suportados pelo tipo de valor anulável correspondente `T?`. Esses operadores, também conhecidos como *operadores levantados*, produzem `null` se um ou ambos os operandos forem `null`; caso contrário, o operador usa os valores contidos de seus operandos para calcular o resultado. Por exemplo:
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ Para os [operadores de comparação](../operators/comparison-operators.md) `<`, 
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-O exemplo anterior também mostra que uma comparação de igualdade de duas instâncias de tipo de valor anulável que são `null` são avaliadas como `true`.
+Para o [operador de igualdade](../operators/equality-operators.md#equality-operator-) `==`, se ambos os operandos forem `null`, o resultado será `true`, se apenas um dos operandos for `null`, o resultado será `false`; caso contrário, os valores contidos dos operandos serão comparados.
+
+Para o [operador de desigualdade](../operators/equality-operators.md#inequality-operator-) `!=`, se ambos os operandos forem `null`, o resultado será `false`, se apenas um dos operandos for `null`, o resultado será `true`; caso contrário, os valores contidos dos operandos serão comparados.
 
 Se existir uma [conversão definida pelo usuário](../operators/user-defined-conversion-operators.md) entre dois tipos de valor, a mesma conversão também poderá ser usada entre os tipos de valores anuláveis correspondentes.
 
@@ -120,7 +122,7 @@ Você pode usar o código apresentado no exemplo a seguir para determinar se uma
 > [!NOTE]
 > Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anuláveis](../../nullable-references.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -130,7 +132,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Conversões anuláveis explícitas](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [Operadores de conversão levantados](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [O que exatamente "levantado" significa?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

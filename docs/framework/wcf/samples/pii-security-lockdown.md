@@ -2,12 +2,12 @@
 title: Bloqueio de segurança PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714624"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094963"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueio de segurança PII
 Este exemplo demonstra como controlar vários recursos relacionados à segurança de um serviço Windows Communication Foundation (WCF) da seguinte maneira:  
@@ -47,7 +47,7 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
 3. Criptografe as definições de configuração appSettings na pasta Web. config emitindo o seguinte comando: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Mais informações sobre como criptografar seções de arquivos de configuração podem ser encontradas lendo um instruções sobre DPAPI na configuração do ASP.NET ([compilando aplicativos seguros do ASP.net: autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)) e um "como" na configuração do ASP.net ([como: criptografar seções de configuração no ASP.NET 2,0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Mais informações sobre como criptografar seções de arquivos de configuração podem ser encontradas lendo um instruções sobre DPAPI na configuração do ASP.NET ([compilando aplicativos seguros do ASP.net: autenticação, autorização e comunicação segura](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))) e um "como" na configuração do ASP.net ([como: criptografar seções de configuração no ASP.NET 2,0 usando RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))).  
   
 ## <a name="locking-configuration-file-elements"></a>Elementos do arquivo de configuração de bloqueio  
  Em cenários hospedados na Web, é possível ter serviços em subdiretórios de serviços. Nessas situações, os valores de configuração para o serviço no subdiretório são calculados examinando os valores em Machine. config e mesclando sucessivamente com quaisquer arquivos Web. config em diretórios pai que se movem para baixo na árvore de diretórios e, por fim, mesclam o Arquivo Web. config no diretório que contém o serviço. O comportamento padrão para a maioria dos elementos de configuração é permitir que os arquivos de configuração em subdiretórios substituam os valores definidos em diretórios pai. Em determinadas situações, pode ser desejável impedir que arquivos de configuração em subdiretórios substituam valores definidos na configuração de diretório pai.  
@@ -122,11 +122,11 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
 > [!IMPORTANT]
 > Para executar este exemplo envolve a modificação manual de Machine. config. Deve-se ter cuidado ao modificar Machine. config como valores incorretos ou a sintaxe pode impedir a execução de todos os aplicativos .NET Framework.  
   
- Também é possível criptografar os elementos do arquivo de configuração usando DPAPI e RSA. Para obter mais informações, consulte os seguintes links sobre:  
+ Também é possível criptografar os elementos do arquivo de configuração usando DPAPI e RSA. Para obter mais informações, consulte os seguintes links:  
   
-- [Criando aplicativos ASP.NET seguros: autenticação, autorização e comunicação segura](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Criando aplicativos ASP.NET seguros: autenticação, autorização e comunicação segura](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [Como: criptografar seções de configuração no ASP.NET 2,0 usando RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Como: criptografar seções de configuração no ASP.NET 2,0 usando RSA](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar e executar o exemplo  
   
@@ -142,6 +142,6 @@ Este exemplo demonstra como controlar vários recursos relacionados à seguranç
   
 1. Edite Machine. config para definir o atributo `enableLoggingKnownPii` como `false`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

@@ -1,23 +1,18 @@
 ---
-title: Usar Modelos aditivos generalizados e funções de forma para explicação do modelo
-description: Usar Modelos aditivos generalizados e funções de forma para explicação do modelo no ML.NET
-ms.date: 03/05/2019
+title: Interpretar modelos ML.NET com modelos aditivos generalizados
+description: Use modelos aditivos generalizados e funções de forma para a interpretação de modelo no ML.NET
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: c58cf823007196c35da093fab7423c1e40ba1158
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855608"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092467"
 ---
-# <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>Usar Modelos aditivos generalizados e funções de forma para explicação do modelo no ML.NET
+# <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>Use modelos aditivos generalizados e funções de forma para a interpretação de modelo no ML.NET
 
-> [!NOTE]
-> Este tópico se refere ao ML.NET, que está atualmente na Versão Prévia, e o material pode estar sujeito a alterações. Para obter mais informações, visite a página [ml.net](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) .
-
-Esta instrução e a amostra relacionada estão usando o **ML.NET versão 0.10** no momento. Saiba mais nas notas de versão no [repositório do GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
-
-Ao criar modelos de aprendizado de máquina, muitas vezes não é suficiente simplesmente fazer previsões. Frequentemente, os desenvolvedores de aprendizado de máquina, os tomadores de decisão e aqueles que são afetados pelos modelos precisam entender como os modelos de aprendizado de máquina tomam decisões e quais recursos contribuem para seu desempenho. Os **Modelos aditivos generalizados (GAMs)** são usados internamente na Microsoft para explicar o modelo e ajudar os desenvolvedores de aprendizado de máquina a criar modelos de alta capacidade que podem ser facilmente interpretados por outras pessoas.
+Ao criar modelos de aprendizado de máquina, muitas vezes não é suficiente simplesmente fazer previsões. Frequentemente, os desenvolvedores de aprendizado de máquina, os tomadores de decisão e aqueles que são afetados pelos modelos precisam entender como os modelos de aprendizado de máquina tomam decisões e quais recursos contribuem para seu desempenho. Os **modelos aditivos generalizados (Gams)** são usados internamente na Microsoft para a interpretação de modelo para ajudar os desenvolvedores de aprendizado de máquina a criarem modelos de alta capacidade que podem ser facilmente interpretados por outras pessoas.
 
 Os GAMs são uma classe de **modelos interpretáveis**, ou seja, modelos lineares em que os termos são funções não lineares, chamadas de "funções de forma" de uma única variável. Como modelos lineares, eles são facilmente interpretados. No entanto, como os modelos aprendem funções de recursos em vez de um único peso, eles podem modelar relacionamentos mais complexos do que um modelo linear simples. A previsão resultante do GAM possui um termo de interceptação que representa a previsão média sobre o conjunto de treinamento e as funções de forma que representam o desvio da previsão média. As funções de forma podem ser visualmente inspecionadas para ver a resposta do modelo em relação a valores diferentes de um recurso e visualizadas como o gráfico a seguir criado no final do exemplo de código. O instrutor do GAM no ML.NET é implementado usando árvores superficiais de gradiente aumentado (por exemplo, tocos de árvores) para aprender funções não paramétricas de forma e se baseia no método descrito em [Modelos inteligentes para classificação e regressão](https://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf) de Lou, Caruana e Gehrke.
 

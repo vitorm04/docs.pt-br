@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787901"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095145"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Considerações sobre o layout do elemento WindowsFormsHost
 Este tópico descreve como o elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> interage com o sistema de layout de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -28,7 +28,7 @@ Este tópico descreve como o elemento <xref:System.Windows.Forms.Integration.Win
   
  O layout em Windows Forms depende do dispositivo e tem mais probabilidade de ser estático. Normalmente, os controles de Windows Forms são posicionados absolutamente em um formulário usando dimensões especificadas em pixels de hardware. No entanto, o Windows Forms oferece suporte a alguns recursos de layout dinâmico, conforme resumido na tabela a seguir.  
   
-|Recurso de layout|Descrição|  
+|Recurso de layout|DESCRIÇÃO|  
 |--------------------|-----------------|  
 |Dimensionamento automático|Alguns controles de Windows Forms se redimensionam para exibir seu conteúdo corretamente. Para obter mais informações, consulte [Visão Geral da Propriedade AutoSize](../../winforms/controls/autosize-property-overview.md).|  
 |Ancoragem e encaixe|Os controles de Windows Forms dão suporte ao posicionamento e dimensionamento com base no contêiner pai. Para obter mais informações, consulte <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
@@ -67,7 +67,7 @@ Este tópico descreve como o elemento <xref:System.Windows.Forms.Integration.Win
   
  Além do dimensionamento, o elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> manipula casos de arredondamento e de estouro, conforme descrito na tabela a seguir.  
   
-|Tipo de conversão|Descrição|  
+|Tipo de conversão|DESCRIÇÃO|  
 |----------------------|-----------------|  
 |Rounding|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] as dimensões de pixel independentes de dispositivo são especificadas como `double`e Windows Forms as dimensões de pixel de hardware são especificadas como `int`. Nos casos em que as dimensões baseadas em `double`são convertidas em dimensões baseadas em `int`, o elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> usa o arredondamento padrão, para que os valores fracionários menores que 0,5 sejam arredondados para baixo para 0.|  
 |Estouro|Quando o elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> converte de valores de `double` em valores `int`, o estouro é possível. Valores maiores que <xref:System.Int32.MaxValue> são definidos como <xref:System.Int32.MaxValue>.|  
@@ -98,11 +98,11 @@ Este tópico descreve como o elemento <xref:System.Windows.Forms.Integration.Win
   
 - Se a propriedade <xref:System.Windows.Forms.Control.Size%2A> retornar um tamanho menor do que a restrição especificada, <xref:System.Windows.Forms.Integration.WindowsFormsHost> aceitará esse valor de tamanho e retornará o valor para o sistema de layout de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Passo a passo: organizando controles do Windows Forms no WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [Organizando Windows Forms controles no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Organizando Windows Forms controles no WPF de exemplo](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Windows Forms e mapeamento de propriedade do WPF](windows-forms-and-wpf-property-mapping.md)
-- [Migração e Interoperabilidade](migration-and-interoperability.md)
+- [Migração e interoperabilidade](migration-and-interoperability.md)

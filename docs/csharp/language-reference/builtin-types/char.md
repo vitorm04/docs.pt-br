@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3952e9e30706a8cd362ef248955918de5dacf4a3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787815"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093234"
 ---
 # <a name="char-c-reference"></a>Char (C# referência)
 
 A palavra-chave Type de `char` é um alias para o tipo de estrutura .NET <xref:System.Char?displayProperty=nameWithType> que representa um caractere Unicode UTF-16.
 
-|{1&gt;Tipo&lt;1}|Intervalo|Tamanho|Tipo .NET|
+|Type|Intervalo|Tamanho|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|16 bits|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -26,7 +26,7 @@ O valor padrão do tipo de `char` é `\0`, ou seja, U + 0000.
 
 O tipo de [cadeia de caracteres](reference-types.md#the-string-type) representa o texto como uma sequência de valores de `char`.
 
-## <a name="literals"></a>{1&gt;Literais&lt;1}
+## <a name="literals"></a>Literais
 
 Você pode especificar um valor de `char` com:
 
@@ -53,9 +53,9 @@ Não há conversões implícitas de outros tipos para o tipo de `char`. No entan
 
 Para obter mais informações, consulte a seção [tipos integrais](~/_csharplang/spec/types.md#integral-types) da [ C# especificação da linguagem](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Tabela de tipos internos](../keywords/built-in-types-table.md)
+- [Tipos de valor](value-types.md)
 - [Cadeias de Caracteres](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>

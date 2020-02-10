@@ -1,13 +1,14 @@
 ---
 title: Alterações recentes – .NET Framework para o .NET Core
+titleSuffix: ''
 description: Lista as alterações significativas de .NET Framework para o .NET Core.
 ms.date: 12/18/2019
-ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116495"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093052"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Alterações recentes de migração do .NET Framework para o .NET Core
 
@@ -110,7 +111,7 @@ Windows Forms suporte foi adicionado ao .NET Core na versão 3,0. Se você estiv
 
 ***
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [APIs que sempre lançam exceções no .NET Core](unsupported-apis.md)
 - [.NET Framework tecnologias não disponíveis no .NET Core](../porting/net-framework-tech-unavailable.md)

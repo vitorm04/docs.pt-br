@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72bc867bf0a789279da9a01f97c85d96b78684ed
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75444343"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093221"
 ---
 # <a name="enumeration-types-c-reference"></a>Tipos de enumeraçãoC# (referência)
 
-Um tipo de enumeração (ou tipo de enumeração) é um tipo de valor definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de enumeração, use a palavra-chave `enum` e especifique os nomes dos *membros de enumeração*:
+Um *tipo de enumeração* (ou *tipo*de enumeração) é um [tipo de valor](value-types.md) definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de enumeração, use a palavra-chave `enum` e especifique os nomes dos *membros de enumeração*:
 
 ```csharp
 enum Season
@@ -85,7 +85,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Conversões de enumeração explícitas](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [Conversões implícitas de enumeração](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Cadeias de caracteres de formato de enumeração](../../../standard/base-types/enumeration-format-strings.md)

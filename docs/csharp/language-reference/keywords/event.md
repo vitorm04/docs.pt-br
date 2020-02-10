@@ -16,11 +16,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75713565"
 ---
-# <a name="event-c-reference"></a>evento (C# referência)
+# <a name="event-c-reference"></a>event (C# referência)
 
 A palavra-chave `event` é usada para declarar um evento em uma classe publicadora.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra como declarar e acionar um evento que usa o <xref:System.EventHandler> como o tipo delegado subjacente. Para obter o exemplo de código completo que também mostra como usar o tipo de delegado de <xref:System.EventHandler%601> genérico e como assinar um evento e criar um método de manipulador de eventos, consulte [como publicar eventos que estão em conformidade com as diretrizes de .NET Framework](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 
@@ -41,7 +41,7 @@ As palavras-chave a seguir aplicam-se a eventos.
 |[sealed](./sealed.md)|Especifica que, para classes derivadas, o evento não é mais virtual.||
 |[abstract](./abstract.md)|O compilador não gerará mais os blocos de acessador de evento `add` e `remove`, portanto, as classes derivadas devem fornecer sua própria implementação.||
 
-Um evento pode ser declarado como um evento estático, usando apalavra-chave [static](./static.md). Isso torna o evento disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+Um evento pode ser declarado como um evento estático, usando apalavra-chave [static](./static.md). Isso torna o evento disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
 Um evento pode ser marcado como um evento virtual, usando a palavra-chave [virtual](./virtual.md). Isso habilita as classes derivadas a substituírem o comportamento do evento, usando a palavra-chave [override](./override.md). Para obter mais informações, consulte [Herança](../../programming-guide/classes-and-structs/inheritance.md). Um evento que substitui um evento virtual também pode ser [sealed](./sealed.md), o que especifica que ele não é mais virtual para classes derivadas. Por fim, um evento pode ser declarado [abstract](./abstract.md), o que significa que o compilador não gerará os blocos de acessador de evento `add` e `remove`. Portanto, classes derivadas devem fornecer sua própria implementação.
 

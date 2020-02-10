@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: categorizar problemas de suporte-classificação multiclasse'
 description: Descubra como usar o ML.NET em um cenário de classificação multiclasse para classificar os problemas do GitHub a fim de atribuí-los a uma determinada área.
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d5d397cfa6475574b6d6cc6d8cbb48b51c2d0af1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739649"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092519"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML .NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML.NET
 
 Este tutorial de exemplo ilustra o uso do ML.NET para criar uma classificação de problema do GitHub para treinar um modelo que classifica e prevê o rótulo de área de um problema do GitHub por meio de um aplicativo de console do .NET Core usando C# no Visual Studio.
 
@@ -21,15 +21,15 @@ Neste tutorial, você aprenderá como:
 > * Preparar seus dados
 > * Transformar os dados
 > * Treinar o modelo
-> * Avaliar o modelo
+> * Avalie o modelo
 > * Prever com o modelo treinado
 > * Implantar e prever com um modelo carregado
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 * O [arquivo de problemas do Github separados por tabulação (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * O [arquivo de testes de problemas do Github separados por tabulação (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
@@ -42,7 +42,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 2. Crie um diretório chamado *Data* no seu projeto para salvar seus arquivos do conjunto de dados:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
 
 3. Crie um diretório chamado *Modelos* em seu projeto para salvar seu modelo:
 
@@ -238,7 +238,7 @@ Retorne o modelo no final do método `BuildAndTrainModel`.
 
 [!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#ReturnModel)]
 
-## <a name="evaluate-the-model"></a>Avaliar o modelo
+## <a name="evaluate-the-model"></a>Avalie o modelo
 
 Agora que você criou e treinou o modelo, precisa avaliá-lo com um conjunto de dados diferente para garantia de qualidade e validação. No método `Evaluate`, o modelo criado em `BuildAndTrainModel` é passado para ser avaliado. Crie o método `Evaluate` , logo após `BuildAndTrainModel`, como no código a seguir:
 
@@ -288,7 +288,7 @@ Use o código a seguir para exibir as métricas, compartilhar os resultados e, e
 
 ### <a name="save-the-model-to-a-file"></a>Salvar o modelo em um arquivo
 
-Quando estiver satisfeito com seu modelo, salve-o em um arquivo para fazer previsões posteriormente ou em outro aplicativo. Adicione o seguinte código ao método de `Evaluate` .
+Quando estiver satisfeito com seu modelo, salve-o em um arquivo para fazer previsões posteriormente ou em outro aplicativo. Adicione o seguinte código ao `Evaluate` método.
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
@@ -374,15 +374,15 @@ Seus resultados devem ser semelhantes aos seguintes. Conforme o pipeline process
 
 Parabéns! Agora você criou com sucesso um modelo de machine learning para classificar e prever um rótulo de Área para um problema do GitHub. Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 >
 > * Preparar seus dados
 > * Transformar os dados
 > * Treinar o modelo
-> * Avaliar o modelo
+> * Avalie o modelo
 > * Prever com o modelo treinado
 > * Implantar e prever com um modelo carregado
 

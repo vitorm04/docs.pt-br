@@ -6,18 +6,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965952"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095262"
 ---
 # <a name="net-framework-cryptography-model"></a>Modelo de Criptografia do .NET Framework
 
 O .NET Framework fornece implementações de muitos algoritmos criptográficos padrão. Esses algoritmos são fáceis de usar e têm as propriedades padrão mais seguras possíveis. Além disso, o modelo de criptografia .NET Framework de herança de objeto, design de fluxo e configuração é extremamente extensível.
 
-## <a name="object-inheritance"></a>Herança de objeto
+## <a name="object-inheritance"></a>Herança de objetos
 
 O sistema de segurança .NET Framework implementa um padrão extensível de herança de classe derivada. A hierarquia é a seguinte:
 
@@ -41,7 +41,7 @@ Como um exemplo das diferentes implementações disponíveis para um algoritmo, 
 
 <xref:System.Security.Cryptography.Aes> é herdado por duas classes: <xref:System.Security.Cryptography.AesCryptoServiceProvider> e <xref:System.Security.Cryptography.AesManaged>. A classe <xref:System.Security.Cryptography.AesCryptoServiceProvider> é um wrapper em relação à implementação da CAPI (API de criptografia do Windows) do AES, enquanto a classe <xref:System.Security.Cryptography.AesManaged> é totalmente escrita em código gerenciado. Também há um terceiro tipo de implementação, CNG (Cryptography Next Generation), além das implementações gerenciadas e CAPI. Um exemplo de um algoritmo CNG é <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Os algoritmos CNG estão disponíveis no Windows Vista e versões posteriores.
 
-Você pode escolher qual implementação é a melhor para você.  As implementações gerenciadas estão disponíveis em todas as plataformas que dão suporte ao .NET Framework.  As implementações de CAPI estão disponíveis em sistemas operacionais mais antigos e não são mais desenvolvidas. A CNG é a implementação mais recente em que o novo desenvolvimento ocorrerá. No entanto, as implementações gerenciadas não são certificadas pelo FIPS (Federal Information Processing Standards) e podem ser mais lentas do que as classes de wrapper.
+Você pode escolher qual implementação é a melhor para você. As implementações gerenciadas estão disponíveis em todas as plataformas que dão suporte a .NET Framework. As implementações de CAPI estão disponíveis em sistemas operacionais mais antigos e não são mais desenvolvidas. A CNG é a implementação mais recente em que o novo desenvolvimento ocorrerá. No entanto, as implementações gerenciadas não são certificadas pelo FIPS (Federal Information Processing Standards) e podem ser mais lentas do que as classes de wrapper.
 
 ## <a name="stream-design"></a>Design de fluxo
 
@@ -73,7 +73,7 @@ Aqui está uma lista de algoritmos recomendados por aplicativo:
 - Gerando uma chave a partir de uma senha:
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)
 - [Protocolos de criptografia, algoritmos e código-fonte aplicados em C, de Bruce Schneier](https://www.schneier.com/books/applied_cryptography/)

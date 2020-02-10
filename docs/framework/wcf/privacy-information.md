@@ -6,15 +6,15 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919327"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094976"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
-A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando Windows Communication Foundation (WCF), versão 3,0, seu aplicativo pode afetar a privacidade dos usuários finais. Por exemplo, seu aplicativo pode coletar explicitamente as informações de contato do usuário ou pode solicitar ou enviar informações pela Internet para seu site. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia poderá ter seu próprio comportamento que pode afetar a privacidade. O WCF não envia nenhuma informação à Microsoft do seu aplicativo, a menos que você ou o usuário final opte por enviá-lo para nós.  
+A Microsoft está comprometida em proteger a privacidade do usuário final. Quando você cria um aplicativo usando Windows Communication Foundation (WCF), versão 3,0, seu aplicativo pode afetar a privacidade dos usuários finais. Por exemplo, seu aplicativo pode coletar explicitamente as informações de contato do usuário ou pode solicitar ou enviar informações pela Internet para seu site. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia poderá ter seu próprio comportamento que pode afetar a privacidade. O WCF não envia nenhuma informação à Microsoft do seu aplicativo, a menos que você ou o usuário final opte por enviá-lo para nós.  
   
 ## <a name="wcf-in-brief"></a>WCF em resumo  
  O WCF é uma estrutura de mensagens distribuídas usando o Microsoft .NET Framework que permite aos desenvolvedores criar aplicativos distribuídos. As mensagens comunicadas entre dois aplicativos contêm informações de cabeçalho e corpo.  
@@ -28,7 +28,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  A camada de mensagens do WCF não grava nenhuma informação pessoal no computador local. No entanto, ele poderá propagar informações pessoais no nível da rede se um desenvolvedor de serviço tiver criado um serviço que expõe essas informações (por exemplo, usando o nome de uma pessoa em um nome de ponto de extremidade ou incluindo informações pessoais na Web do ponto de extremidade Linguagem de descrição de serviços, mas não requer que os clientes usem HTTPS para acessar o WSDL). Além disso, se um desenvolvedor executar a ferramenta de [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) em um ponto de extremidade que expõe informações pessoais, a saída da ferramenta poderá conter essas informações e o arquivo de saída será gravado no disco rígido local.  
   
-## <a name="hosting"></a>Hospedagem  
+## <a name="hosting"></a>Hosting  
  O recurso de hospedagem no WCF permite que os aplicativos iniciem sob demanda ou habilitem o compartilhamento de porta entre vários aplicativos. Um aplicativo WCF pode ser hospedado em Serviços de Informações da Internet (IIS), semelhante ao ASP.NET.  
   
  A hospedagem não expõe nenhuma informação específica na rede e não mantém os dados no computador.  
@@ -44,19 +44,19 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  A autenticação pode resultar em uma sessão segura estabelecida entre os pontos de extremidade de comunicação. A sessão é identificada por um GUID que dura o tempo de vida da sessão de segurança. A tabela a seguir mostra o que é mantido e onde.  
   
-|Dados|Armazenamento|  
+|data|Armazenamento|  
 |----------|-------------|  
 |As credenciais de apresentação, como nome de usuário, certificados X. 509, tokens Kerberos e referências a credenciais.|Mecanismos padrão de gerenciamento de credenciais do Windows, como o repositório de certificados do Windows.|  
 |Informações de associação de usuários, como nomes de usuário e senhas.|Provedores de associação do ASP.NET.|  
 |Informações de identidade sobre o serviço usado para autenticar o serviço para clientes.|Endereço do ponto de extremidade do serviço.|  
 |Informações do chamador.|Logs de auditoria.|  
   
-## <a name="auditing"></a>Auditoria do  
+## <a name="auditing"></a>Auditoria  
  A auditoria registra o êxito e a falha de eventos de autenticação e autorização. Os registros de auditoria contêm os seguintes dados: URI de serviço, URI de ação e identificação do chamador.  
   
  A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Para o Windows XP, um registro é registrado no log de eventos do aplicativo. Para o Windows Vista e o Windows Server 2003, um registro é registrado no log de eventos de segurança.  
   
-## <a name="transactions"></a>Transações  
+## <a name="transactions"></a>Transactions  
  O recurso de transações fornece serviços transacionais para um aplicativo WCF.  
   
  Os cabeçalhos de transação usados na propagação da transação podem conter IDs de transação ou IDs de inscrição, que são GUIDs.  
@@ -70,14 +70,14 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  As sessões confiáveis são implementadas usando o protocolo WS-ReliableMessaging (WS-RM). Eles adicionam cabeçalhos WS-RM que contêm informações de sessão, que são usadas para identificar todas as mensagens associadas a uma sessão confiável específica. Cada sessão WS-RM tem um identificador, que é um GUID.  
   
- Nenhuma informação pessoal é mantida no computador do usuário final.  
+ Nenhuma informação pessoal é mantida na máquina do usuário final.  
   
 ## <a name="queued-channels"></a>Canais em fila  
  As filas armazenam mensagens de um aplicativo de envio em nome de um aplicativo de recebimento e encaminham essas mensagens posteriormente para o aplicativo de recebimento. Eles ajudam a garantir que a transferência de mensagens envie aplicativos para o recebimento de aplicativos quando, por exemplo, o aplicativo receptor é transitório. O WCF dá suporte para enfileiramento usando o MSMQ (enfileiramento de mensagens da Microsoft) como um transporte.  
   
  O recurso de canais em fila não adiciona cabeçalhos a uma mensagem. Em vez disso, ele cria uma mensagem de enfileiramento de mensagens com as propriedades de mensagem do enfileiramento de mensagens apropriadas definidas e invoca métodos de enfileiramento de mensagens para colocar a mensagem na fila do enfileiramento O enfileiramento de mensagens é um componente opcional fornecido com o Windows.  
   
- Nenhuma informação é mantida no computador do usuário final pelo recurso de canais em fila, pois usa o enfileiramento de mensagens como a infraestrutura de enfileiramento.  
+ Nenhuma informação é retida na máquina do usuário final pelo recurso de canais em fila, pois usa o enfileiramento de mensagens como a infraestrutura de enfileiramento.  
   
 ## <a name="com-integration"></a>Integração de COM+  
  Esse recurso encapsula a funcionalidade COM e COM+ existente para criar serviços que são compatíveis com os serviços WCF. Esse recurso não usa cabeçalhos específicos e não retém dados no computador do usuário final.  
@@ -88,7 +88,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ## <a name="peer-channel"></a>Canal par  
  Um canal de mesmo nível permite o desenvolvimento de aplicativos com multipartes usando o WCF. As mensagens multipartes ocorrem no contexto de uma malha. As malhas são identificadas por um nome que os nós podem unir. Cada nó no canal de mesmo nível cria um ouvinte TCP em uma porta especificada pelo usuário e estabelece conexões com outros nós na malha para garantir a resiliência. Para se conectar a outros nós na malha, os nós também trocam alguns dados, incluindo o endereço do ouvinte e os endereços IP do computador, com outros nós na malha. As mensagens enviadas na malha podem conter informações de segurança relacionadas ao remetente para evitar falsificação e adulteração de mensagens.  
   
- Nenhuma informação pessoal é armazenada no computador do usuário final.  
+ Nenhuma informação pessoal é armazenada na máquina do usuário final.  
   
 ## <a name="it-professional-experience"></a>Experiência profissional de ti  
   
@@ -127,13 +127,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Chaves que são removidas:  
   
- \- para xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: senha  
   
@@ -141,7 +141,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Informações potencialmente pessoais que são removidas:  
   
- \- para xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse: nome de usuário  
   
@@ -163,13 +163,13 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  >  
   
- \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
+ \<condições não antes de = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
   
- \<AudienceRestrictionCondition>  
+ \<AudienceRestrictionCondition >  
   
  \<público > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition>*  
+ \</AudienceRestrictionCondition > *  
   
  \<DoNotCacheCondition/> *  
   
@@ -183,7 +183,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<conselhos >  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>*  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > *  
   
  \<asserção > [asserção]\</Assertion > *  
   
@@ -211,17 +211,17 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation>  
+ \<SubjectConfirmation >  
   
  \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<DS: KeyInfo >...\</DS: KeyInfo >?  
   
- \</SubjectConfirmation>?  
+ \</SubjectConfirmation >?  
   
- \</Subject>  
+ \</Subject >  
   
  \</SubjectStatement > *  
   
@@ -255,7 +255,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</AuthenticationStatement > *  
   
  \<AttributeStatement >  
   
@@ -273,7 +273,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \</attribute > +  
   
- \</AttributeStatement>*  
+ \</AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -285,26 +285,26 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  Subjetiva  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<o namespace da ação = "[URI]" > [String]\</Action > +  
   
- Evidência de \<  
+ Evidência de \<>  
   
- \<AssertionIDReference>[ID]\</AssertionIDReference>+  
+ \<AssertionIDReference > [ID]\</AssertionIDReference > +  
   
  \<asserção > [asserção]\</Assertion > +  
   
  \</Evidence >?  
   
- \</AuthorizationDecisionStatement>*  
+ \</AuthorizationDecisionStatement > *  
   
- \</Assertion>  
+ \</Assertion >  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informações removidas de corpos de mensagens ao registrar em log mensagens descriptografadas/sem criptografia  
  Conforme descrito anteriormente, o WCF remove as chaves e as informações potencialmente pessoais conhecidas dos cabeçalhos de mensagem para mensagens descriptografadas/descriptografadas registradas. Além disso, o WCF remove as chaves e as informações potencialmente pessoais conhecidas dos corpos de mensagens para os elementos e ações do corpo na lista a seguir, que descrevem as mensagens de segurança envolvidas na troca de chaves.  
   
  Para os seguintes namespaces:  
   
- >xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (por exemplo, se nenhuma ação estiver disponível)  
+ xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust" (por exemplo, se nenhuma ação estiver disponível)  
   
  As informações são removidas para esses elementos do corpo, que envolvem a troca de chaves:  
   
@@ -359,17 +359,17 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Nenhuma informação é removida dos cabeçalhos e dos dados de corpo específicos do aplicativo  
  O WCF não rastreia informações pessoais em cabeçalhos específicos do aplicativo (por exemplo, cadeias de caracteres de consulta) ou dados de corpo (por exemplo, número de cartão de crédito).  
   
- Quando o log de mensagens está ativado, informações pessoais em cabeçalhos específicos do aplicativo e informações de corpo podem estar visíveis nos logs. Novamente, o implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de log. Ele também pode desativar o registro em log se ele não quiser que essas informações fiquem visíveis ou se ele puder filtrar essas informações dos arquivos de log depois que ele for registrado.  
+ Quando o log de mensagens está ativado, informações pessoais em cabeçalhos específicos do aplicativo e informações de corpo podem estar visíveis nos logs. Novamente, o implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de log. Eles também poderão desativar o registro em log se não quiserem que essas informações fiquem visíveis ou filtrar essas informações dos arquivos de log depois de serem registradas.  
   
 ### <a name="service-model-tracing"></a>Rastreamento do modelo de serviço  
  A fonte de rastreamento do modelo de serviço (<xref:System.ServiceModel>) permite o rastreamento de atividades e eventos relacionados ao processamento de mensagens. Esse recurso usa a funcionalidade de diagnóstico .NET Framework da <xref:System.Diagnostics>. Assim como com a propriedade <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, o local e sua ACL são configuráveis pelo usuário usando .NET Framework arquivos de configuração de aplicativo. Assim como ocorre com o log de mensagens, o local do arquivo é sempre configurado quando o administrador habilita o rastreamento; Portanto, o administrador controla a ACL.  
   
- Os rastreamentos contêm cabeçalhos de mensagem quando uma mensagem está no escopo. As mesmas regras para ocultar informações potencialmente pessoais em cabeçalhos de mensagens na seção anterior se aplicam: as informações pessoais identificadas anteriormente são removidas por padrão dos cabeçalhos em rastreamentos. Tanto o administrador do computador quanto o implantador de aplicativos devem modificar a configuração para registrar informações potencialmente pessoais. No entanto, as informações pessoais contidas em cabeçalhos específicos do aplicativo são registradas em rastreamentos. O implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de rastreamento. Ele também poderá desativar o rastreamento se ele não quiser que essas informações fiquem visíveis ou se ele puder filtrar essas informações dos arquivos de rastreamento depois que ele for registrado.  
+ Os rastreamentos contêm cabeçalhos de mensagem quando uma mensagem está no escopo. As mesmas regras para ocultar informações potencialmente pessoais em cabeçalhos de mensagens na seção anterior se aplicam: as informações pessoais identificadas anteriormente são removidas por padrão dos cabeçalhos em rastreamentos. Tanto o administrador do computador quanto o implantador de aplicativos devem modificar a configuração para registrar informações potencialmente pessoais. No entanto, as informações pessoais contidas em cabeçalhos específicos do aplicativo são registradas em rastreamentos. O implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de rastreamento. Eles também podem desativar o rastreamento para ocultar essas informações ou filtrar essas informações dos arquivos de rastreamento depois de serem registrados.  
   
  Como parte do rastreamento de ServiceModel, as IDs exclusivas (chamadas de IDs de atividade e, normalmente, um GUID) vinculam diferentes atividades em conjunto como uma mensagem fluindo por diferentes partes da infraestrutura.  
   
 #### <a name="custom-trace-listeners"></a>Ouvintes de rastreamento personalizados  
- Para o log de mensagens e o rastreamento, um ouvinte de rastreamento personalizado pode ser configurado, o que pode enviar rastreamentos e mensagens na transmissão (por exemplo, para um banco de dados remoto). O implantador de aplicativos é responsável por configurar ouvintes personalizados ou permitir que os usuários façam isso. Ele também é responsável por qualquer informação pessoal exposta no local remoto e para aplicar ACLs adequadamente a esse local.  
+ Para o log de mensagens e o rastreamento, um ouvinte de rastreamento personalizado pode ser configurado, o que pode enviar rastreamentos e mensagens na transmissão (por exemplo, para um banco de dados remoto). O implantador de aplicativos é responsável por configurar ouvintes personalizados ou permitir que os usuários façam isso. Eles também são responsáveis por qualquer informação pessoal exposta no local remoto e para aplicar as ACLs adequadamente a esse local.  
   
 ### <a name="other-features-for-it-professionals"></a>Outros recursos para profissionais de ti  
  O WCF tem um provedor WMI que expõe as informações de configuração de infraestrutura do WCF por meio do WMI (fornecido com o Windows). Por padrão, a interface WMI está disponível para administradores.  
@@ -401,7 +401,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  O WSDL (Web Services Description Language) contém uma definição da porta. Cada porta tem um endereço de ponto de extremidade e uma associação que representa os serviços usados pelo aplicativo. Expor o WSDL pode ser desativado usando a configuração. Nenhuma informação é mantida no computador.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [Segurança](./feature-details/security.md)

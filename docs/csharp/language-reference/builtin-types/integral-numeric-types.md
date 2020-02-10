@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980139"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093195"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos integrais (Referência C#)
 
-Os **tipos numéricos integrais** são um subconjunto de **tipos simples** e podem ser inicializados com [*literais*](#integer-literals). Todos os tipos integrais também são tipos de valor. Todos os tipos numéricos integrais dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos](../operators/bitwise-and-shift-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
+Os *tipos numéricos integrais* representam números inteiros. Todos os tipos numéricos integrais são [tipos de valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#integer-literals). Todos os tipos numéricos integrais dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos](../operators/bitwise-and-shift-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-integral-types"></a>Características dos tipos integrais
 
@@ -53,9 +53,9 @@ O C# é compatível com os seguintes tipos integrais predefinidos:
 |`byte`|0 a 255|Inteiro de 8 bits sem sinal|<xref:System.Byte?displayProperty=nameWithType>|
 |`short`|-32.768 a 32.767|Inteiro de 16 bits com sinal|<xref:System.Int16?displayProperty=nameWithType>|
 |`ushort`|0 a 65.535|Inteiro de 16 bits sem sinal|<xref:System.UInt16?displayProperty=nameWithType>|
-|`int`|-2.147.483.648 a 2.147.483.647|Inteiro de 32 bits com sinal|<xref:System.Int32?displayProperty=nameWithType>|
+|`int`|-2.147.483.648 a 2.147.483.647|Inteiro assinado de 32 bits|<xref:System.Int32?displayProperty=nameWithType>|
 |`uint`|0 a 4.294.967.295|Inteiro de 32 bits sem sinal|<xref:System.UInt32?displayProperty=nameWithType>|
-|`long`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro de 64 bits com sinal|<xref:System.Int64?displayProperty=nameWithType>|
+|`long`|-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro assinado de 64 bits|<xref:System.Int64?displayProperty=nameWithType>|
 |`ulong`|0 a 18.446.744.073.709.551.615|Inteiro de 64 bits sem sinal|<xref:System.UInt64?displayProperty=nameWithType>|
 
 Na tabela anterior, cada palavra-chave do tipo C# da coluna mais à esquerda é um alias do tipo .NET correspondente. Eles são intercambiáveis. Por exemplo, as declarações a seguir declaram variáveis do mesmo tipo:
@@ -127,10 +127,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Tipos integrais](~/_csharplang/spec/types.md#integral-types)
 - [Literais inteiros](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Tabela de tipos internos](../keywords/built-in-types-table.md)
+- [Tipos de valor](value-types.md)
 - [Tipos de ponto flutuante](floating-point-numeric-types.md)
 - [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numéricos no .NET](../../../standard/numerics.md)

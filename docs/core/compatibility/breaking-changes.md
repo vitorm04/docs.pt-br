@@ -1,13 +1,13 @@
 ---
-title: Alterações significativas no .NET Core
+title: Alterações de quebra
 description: Saiba mais sobre as alterações significativas em cada versão do .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937342"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093065"
 ---
 # <a name="breaking-change-selectors"></a>Seletores de alteração de interrupção
 
@@ -33,6 +33,6 @@ Você também pode exibir problemas individuais que detalham as alterações sig
 - Por ASP.NET Core, o repositório [ASPNET/comunicados](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
 - Por Entity Framework Core, o repositório [dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Migrar do .NET Framework para o .NET Core](../porting/index.md)

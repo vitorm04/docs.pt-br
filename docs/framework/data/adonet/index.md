@@ -3,14 +3,15 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980100"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094391"
 ---
 # <a name="adonet"></a>ADO.NET
+
 O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para desenvolvedores do .NET Framework. O ADO.NET fornece um conjunto rico de componentes para criar aplicativos distribuídos e de compartilhamento de dados. Faz parte do .NET Framework, fornecendo acesso a dados de aplicativo relacionais e XML. O ADO.NET oferece suporte a uma variedade de necessidades de desenvolvimento, incluindo a criação de clientes front-end de banco de dados e objetos comerciais de camada intermediária usados por aplicativos, ferramentas, linguagens ou navegadores da Internet.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -36,15 +37,15 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  Fornece informações sobre LINQ to DataSet, incluindo exemplos de programação.  
   
  [Retrieving and Modifying Data in ADO.NET](retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)  
- Descreve como conectar-se a uma fonte de dados e como recuperar e modificar dados usando `Commands`, `DataReaders` e `DataAdapters`.  
+ Descreve como se conectar a uma fonte de dados e como recuperar e modificar dados usando `Commands`, `DataReaders`e `DataAdapters`.  
   
- [SQL Server and ADO.NET](./sql/index.md) (SQL Server e ADO.NET)  
+ [SQL Server e ADO.NET](./sql/index.md)  
  Descreve como trabalhar com recursos e funcionalidades que são específicos ao SQL Server.  
   
  [Oracle and ADO.NET](oracle-and-adonet.md) (Oracle e ADO.NET)  
  Descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para Oracle.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [LINQ (consulta integrada à linguagem) – C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  Fornece links para tópicos e exemplos do LINQ C#usando o.  
   
@@ -60,7 +61,7 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)  
  Fornece uma lista de exemplos e tutoriais do .NET.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Acessando dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

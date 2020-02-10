@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: detectar objetos usando o aprendizado profundo com ONNX e ML.NET'
+title: 'Tutorial: detectar objetos usando um modelo de aprendizado profundo do ONNX'
 description: Este tutorial mostra como usar um modelo de aprendizado profundo ONNX pré-treinado no ML.NET para detectar objetos em imagens.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794634"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092714"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -30,7 +30,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="pre-requisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
+- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 - [Pacote NuGet do Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Pacote NuGet Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Pacote NuGet Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -448,7 +448,7 @@ Por fim, fora do loop for inicial do método `FilterBoundingBoxes`, retorne os r
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Legal! Agora é hora de usar esse código junto com o modelo de pontuação.
+Ótimo! Agora é hora de usar esse código junto com o modelo de pontuação.
 
 ## <a name="use-the-model-for-scoring"></a>Usar o modelo para pontuação
 
@@ -665,7 +665,7 @@ Após a instrução try-catch, adicione a lógica complementar para indicar que 
 
 [!code-csharp [EndProcessLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L62-L63)]
 
-É só isso!
+É isso!
 
 ## <a name="results"></a>Resultados
 
@@ -709,7 +709,7 @@ Parabéns! Você criou com êxito um modelo de machine learning para detecção 
 
 Você pode encontrar o código-fonte deste tutorial no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx) .
 
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 >
 > - Compreender o problema

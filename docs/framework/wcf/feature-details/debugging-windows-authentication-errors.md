@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920226"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095028"
 ---
-# <a name="debugging-windows-authentication-errors"></a>Depurando erros de autenticação do Windows
+# <a name="debug-windows-authentication-errors"></a>Depurar erros de autenticação do Windows
+
 Ao usar a autenticação do Windows como um mecanismo de segurança, a interface de provedor de suporte de segurança (SSPI) lida com processos de segurança. Quando ocorrem erros de segurança na camada SSPI, eles são exibidos por Windows Communication Foundation (WCF). Este tópico fornece uma estrutura e um conjunto de perguntas para ajudar a diagnosticar os erros.  
   
  Para obter uma visão geral do protocolo Kerberos, consulte [Kerberos explicou](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10)); para obter uma visão geral do SSPI, consulte [SSPI](/windows/win32/secauthn/sspi).  
@@ -36,16 +37,16 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
   
  Os cabeçalhos de tabela mostram possíveis tipos de conta usados pelo servidor. A coluna à esquerda mostra os possíveis tipos de conta usados pelo cliente.  
   
-||Usuário local|Sistema local|Usuário de domínio|Computador de domínio|  
+||Usuário local|Sistema Local|Usuário de domínio|Computador de domínio|  
 |-|----------------|------------------|-----------------|--------------------|  
 |Usuário local|NTLM|NTLM|NTLM|NTLM|  
-|Sistema local|NTLM anônima|NTLM anônima|NTLM anônima|NTLM anônima|  
+|Sistema Local|NTLM anônima|NTLM anônima|NTLM anônima|NTLM anônima|  
 |Usuário de domínio|NTLM|NTLM|Kerberos|Kerberos|  
 |Computador de domínio|NTLM|NTLM|Kerberos|Kerberos|  
   
  Especificamente, os quatro tipos de conta incluem:  
   
-- Usuário local: perfil de usuário somente máquina. Por exemplo `MachineName\Administrator` ou `MachineName\ProfileName`.  
+- Usuário local: perfil de usuário somente máquina. Por exemplo: `MachineName\Administrator` ou `MachineName\ProfileName`.  
   
 - Sistema local: o sistema de conta interno em um computador que não está ingressado em um domínio.  
   
@@ -98,7 +99,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 ### <a name="ntlm-protocol"></a>Protocolo NTLM  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>Negociar o SSP volta para o NTLM, mas o NTLM está desabilitado  
- A propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> é definida como `false`, o que faz com que o Windows Communication Foundation (WCF) faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade como `false` não pode impedir que credenciais NTLM sejam enviadas pela conexão.  
+ A propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> é definida como `false`, o que faz com que o Windows Communication Foundation (WCF) faça um melhor esforço para gerar uma exceção se o NTLM for usado. Definir essa propriedade como `false` pode não impedir que credenciais NTLM sejam enviadas pela conexão.  
   
  O seguinte mostra como desabilitar o fallback para NTLM.  
   
@@ -144,7 +145,7 @@ Ao usar a autenticação do Windows como um mecanismo de segurança, a interface
 #### <a name="developing-and-deploying-with-different-identities"></a>Desenvolvendo e implantando com identidades diferentes  
  Se você desenvolver seu aplicativo em um computador e implantá-lo em outro e usar tipos de conta diferentes para autenticar em cada computador, poderá ocorrer um comportamento diferente. Por exemplo, suponha que você desenvolva seu aplicativo em um computador Windows XP Pro usando o modo de autenticação `SSPI Negotiated`. Se você usar uma conta de usuário local para autenticar com o, o protocolo NTLM será usado. Depois que o aplicativo é desenvolvido, você implanta o serviço em um computador com Windows Server 2003 em que ele é executado em uma conta de domínio. Neste ponto, o cliente não poderá autenticar o serviço, pois ele usará o Kerberos e um controlador de domínio.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>

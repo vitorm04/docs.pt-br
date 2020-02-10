@@ -2,12 +2,12 @@
 title: 'Transporte: interoperabilidade de TCP de WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8166e1c378bc745eb8c9f37d6982642e754813cb
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 8e95d7e75ac49aea4b823ee3434f53ed5df11fb0
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544627"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094846"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidade de TCP de WSE 3.0
 O exemplo de transporte de interoperabilidade TCP do WSE 3,0 demonstra como implementar uma sessão TCP duplex como um transporte de Windows Communication Foundation (WCF) personalizado. Ele também demonstra como você pode usar a extensibilidade da camada de canal para a interface sobre a conexão com os sistemas implantados existentes. As etapas a seguir mostram como criar esse transporte do WCF personalizado:  
@@ -37,7 +37,7 @@ O exemplo de transporte de interoperabilidade TCP do WSE 3,0 demonstra como impl
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Depois que o <xref:System.ServiceModel.Channels.Message> é codificado em bytes, ele deve ser transmitido na transmissão. Isso requer um sistema para definir limites de mensagens. O WSE 3,0 usa uma versão de [Dime](https://go.microsoft.com/fwlink/?LinkId=94999) como seu protocolo de enquadramento. `WriteData` encapsula a lógica de enquadramento para encapsular um byte [] em um conjunto de registros DIME.  
+ Depois que o <xref:System.ServiceModel.Channels.Message> é codificado em bytes, ele deve ser transmitido na transmissão. Isso requer um sistema para definir limites de mensagens. O WSE 3,0 usa uma versão de [Dime](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) como seu protocolo de enquadramento. `WriteData` encapsula a lógica de enquadramento para encapsular um byte [] em um conjunto de registros DIME.  
   
  A lógica para receber mensagens é muito semelhante. A principal complexidade é lidar com o fato de que uma leitura de soquete pode retornar menos bytes do que o necessário. Para receber uma mensagem, `WseTcpDuplexSessionChannel` lê os bytes de transmissão, decodifica o enquadramento DIME e, em seguida, usa o <xref:System.ServiceModel.Channels.MessageEncoder> para transformar o byte [] em um <xref:System.ServiceModel.Channels.Message>.  
   

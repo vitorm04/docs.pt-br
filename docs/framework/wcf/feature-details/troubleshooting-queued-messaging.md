@@ -2,12 +2,12 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921262"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095002"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 
@@ -25,7 +25,7 @@ Esta seção contém perguntas comuns e ajuda de solução de problemas para usa
 
 **P:** É necessário atualizar o MSMQ para usar as associações de <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** não. Ambas as associações funcionam com o MSMQ 3,0 no Windows XP e no Windows Server 2003. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no Windows Vista.
+**R:** Não. Ambas as associações funcionam com o MSMQ 3,0 no Windows XP e no Windows Server 2003. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no Windows Vista.
 
 **P:** Quais recursos das associações de <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> estão disponíveis no MSMQ 4,0, mas não no MSMQ 3,0?
 
@@ -45,15 +45,15 @@ Para obter mais informações, consulte [diferenças em recursos de enfileiramen
 
 **P:** Quero integrar os aplicativos MSMQ existentes a novos clientes ou servidores WCF. É necessário atualizar ambos os lados da minha infraestrutura do MSMQ?
 
-**R:** não. Não é necessário atualizar para o MSMQ 4,0 em ambos os lados.
+**R:** Não. Não é necessário atualizar para o MSMQ 4,0 em ambos os lados.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Esta seção contém respostas para os problemas mais comuns de solução de problemas. Alguns problemas que são limitações conhecidas também são descritos nas notas de versão.
 
 **P:** Estou tentando usar uma fila particular e obtenho a seguinte exceção: `System.InvalidOperationException`: a URL é inválida. A URL da fila não pode conter o caractere ' $ '. Use a sintaxe em net. MSMQ://machine/private/queueName para endereçar uma fila privada.
 
-**R:** Verifique a Uniform Resource Identifier da fila (URI) em sua configuração e código. Não use o caractere "$" no URI. Por exemplo, para endereçar uma fila particular chamada OrdersQueue, especifique o URI como net. MSMQ://localhost/private/ordersQueue.
+**R:** Verifique a Uniform Resource Identifier da fila (URI) em sua configuração e código. Não use o caractere "$" no URI. Por exemplo, para endereçar uma fila particular chamada OrdersQueue, especifique o URI como `net.msmq://localhost/private/ordersQueue`.
 
 **P:** Chamar `ServiceHost.Open()` em meu aplicativo em fila gera a seguinte exceção: `System.ArgumentException`: um endereço base não pode conter uma cadeia de caracteres de consulta de URI. Por quê?
 
@@ -89,7 +89,7 @@ Se as garantias forem nenhuma (<xref:System.ServiceModel.MsmqBindingBase.Exactly
 
 **P:** Meu serviço é acionado em SvcHost. Open com uma mensagem "os requisitos de EndpointListener não podem ser atendidos pelo ListenerFactory". Por quê?
 
-R. Verifique seu contrato de serviço. Você pode ter esquecido de colocar "IsOneWay =`true`" em todas as operações de serviço. As filas dão suporte apenas a operações de serviço unidirecionais.
+a. Verifique seu contrato de serviço. Você pode ter esquecido de colocar "IsOneWay =`true`" em todas as operações de serviço. As filas dão suporte apenas a operações de serviço unidirecionais.
 
 **P:** Há mensagens na fila, mas nenhuma operação de serviço é invocada. Qual é o problema?
 
@@ -170,7 +170,7 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 6. Em seguida, adicione um segundo snap-in de certificados usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **Avançar**.
 
-7. Selecione **computador local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
+7. Selecione **Computador Local** e clique em **Concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
 
 **P:** Quando meu serviço lê de uma fila em outro computador no modo de grupo de trabalho, obtenho uma exceção de "acesso negado".
 
@@ -182,7 +182,7 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 ### <a name="remote-transacted-receives"></a>Recebimentos transacionados remotamente
 
-**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que posso fazer para corrigir isso?
+**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que fazer para corrigir isso?
 
 **R:** Há três motivos possíveis para isso:
 
@@ -208,4 +208,4 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Usando associações MSMQ personalizadas com ReceiveContext habilitado
 
-Ao usar uma associação do MSMQ personalizada com o <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, o processamento de uma mensagem de entrada usará um thread do pool de threads porque o MSMQ nativo não dá suporte à conclusão de e/s para O recebimento assíncrono de <xref:System.ServiceModel.Channels.ReceiveContext>. Isso ocorre porque o processamento dessa mensagem usa transações internas para <xref:System.ServiceModel.Channels.ReceiveContext> e o MSMQ não oferece suporte ao processamento assíncrono. Para contornar esse problema, você pode adicionar um <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ao ponto de extremidade para forçar o processamento síncrono ou definir <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> como 1.
+Ao usar uma associação do MSMQ personalizada com o <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, o processamento de uma mensagem de entrada usa um thread do pool de threads porque o MSMQ nativo não dá suporte à conclusão de e/s para O recebimento assíncrono de <xref:System.ServiceModel.Channels.ReceiveContext>. Isso ocorre porque o processamento dessa mensagem usa transações internas para <xref:System.ServiceModel.Channels.ReceiveContext> e o MSMQ não dá suporte ao processamento assíncrono. Para contornar esse problema, você pode adicionar um <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ao ponto de extremidade para forçar o processamento síncrono ou definir <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> como 1.

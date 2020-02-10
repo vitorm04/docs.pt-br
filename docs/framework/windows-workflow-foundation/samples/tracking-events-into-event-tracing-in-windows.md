@@ -2,12 +2,12 @@
 title: Eventos de rastreamento no rastreamento de evento no Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715925"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094573"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Eventos de rastreamento no rastreamento de evento no Windows
 
@@ -19,7 +19,7 @@ O fluxo de trabalho no exemplo recebe uma solicitação, atribui o recíproco de
 
 Windows Workflow Foundation fornece uma infraestrutura de controle para acompanhar a execução de uma instância de fluxo de trabalho. O runtime de rastreamento cria uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
 
-|Componente|Descrição|
+|Componente|DESCRIÇÃO|
 |---------------|-----------------|
 |runtime de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
 |Participantes de rastreamento|Acessa os registros de rastreamento. vem de[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] com um participante de rastreamento que grava registros de rastreamento como o rastreamento de evento para eventos do Windows (ETW).|
@@ -27,7 +27,7 @@ Windows Workflow Foundation fornece uma infraestrutura de controle para acompanh
 
 A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.
 
-|Controlando o registro|Descrição|
+|Controlando o registro|DESCRIÇÃO|
 |---------------------|-----------------|
 |Registros de rastreamento de instância de fluxo de trabalho.|Descreve o ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro de instância é emitida quando o fluxo de trabalho inicia ou termina.|
 |Estado da atividade que acompanha registros.|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada ou quando a atividade completa ou quando uma falha é lançada.|
@@ -138,7 +138,7 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 > [!NOTE]
 > Há um problema conhecido em Visualizador de Eventos onde pode não decodifica eventos de ETW. Você pode ver a uma mensagem de erro semelhante ao seguinte.
 >
-> A descrição para a ID de evento \<ID > da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local.
+> A descrição para a ID de evento \<ID > da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local.
 >
 > Se você encontrar esse erro, atualização de clique no painel ações. O evento agora deve decodificar corretamente.
 
@@ -151,6 +151,6 @@ O perfil de acompanhamento de monitoramento de integridade emite-se registros de
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

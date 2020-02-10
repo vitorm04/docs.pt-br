@@ -3,19 +3,19 @@ title: Definições de configuração de compilação
 description: Saiba mais sobre as configurações de tempo de execução que configuram como o compilador JIT funciona para aplicativos .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0dab3b7b7726a232cf293e338308cf898b370759
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733530"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092883"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opções de configuração de tempo de execução para compilação
 
 ## <a name="tiered-compilation"></a>Compilação em camadas
 
 - Configura se o compilador JIT (just-in-time) usa compilação em [camadas](../whats-new/dotnet-core-3-0.md#tiered-compilation). A compilação em camadas faz a transição de métodos por meio de duas camadas:
-  - A primeira camada gera código mais rapidamente ([JIT rápido](#quick-jit)) ou carrega código pré-compilado ([ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)).
+  - A primeira camada gera código mais rapidamente ([JIT rápido](#quick-jit)) ou carrega código pré-compilado ([ReadyToRun](#readytorun)).
   - A segunda camada gera código otimizado em segundo plano ("Otimizando JIT").
 - No .NET Core 3,0 e posterior, a compilação em camadas está habilitada por padrão.
 - No .NET Core 2,1 e 2,2, a compilação em camadas está desabilitada por padrão.
@@ -57,7 +57,7 @@ Arquivo de projeto:
 
 - Configura se o compilador JIT usa o *JIT rápido*. Para métodos que não contêm loops e para os quais o código pré-compilado não está disponível, o JIT rápido compila-os mais rapidamente, mas sem otimizações.
 - Habilitar o JIT rápido diminui o tempo de inicialização, mas pode produzir código com características de desempenho degradadas. Por exemplo, o código pode usar mais espaço de pilha, alocar mais memória e executar mais lentamente.
-- Se o JIT rápido estiver desabilitado, mas a [compilação em camadas](#tiered-compilation) estiver habilitada, somente o código pré-compilado participará da compilação em camadas. Se um método não for compilado previamente com [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images), o comportamento de JIT será o mesmo que se a [compilação em camadas](#tiered-compilation) fosse desabilitada.
+- Se o JIT rápido estiver desabilitado, mas a [compilação em camadas](#tiered-compilation) estiver habilitada, somente o código pré-compilado participará da compilação em camadas. Se um método não for compilado previamente com [ReadyToRun](#readytorun), o comportamento de JIT será o mesmo que se a [compilação em camadas](#tiered-compilation) fosse desabilitada.
 - No .NET Core 3,0 e posterior, o Quick JIT é habilitado por padrão.
 - No .NET Core 2,1 e 2,2, o Quick JIT é desabilitado por padrão.
 
@@ -131,3 +131,13 @@ Arquivo de projeto:
 
 </Project>
 ```
+
+## <a name="readytorun"></a>ReadyToRun
+
+- Configura se o tempo de execução do .NET Core usa código pré-compilado para imagens com dados ReadyToRun disponíveis. Desabilitar essa opção força o tempo de execução para o código de estrutura JIT-compile.
+- Para obter mais informações, consulte [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
+- Padrão: habilitado (`1`).
+
+| | Nome da configuração | Valores |
+| - | - | - |
+| **Variável de ambiente** | `COMPlus_ReadyToRun` | habilitado para `1`<br/>`0`-desabilitado |

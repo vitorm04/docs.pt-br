@@ -1,13 +1,13 @@
 ---
-title: Tipos de alterações significativas – .NET Core
+title: Tipos de alterações da falha
 description: Saiba como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET e que tipo de alteração é considerada uma alteração significativa.
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738578"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092974"
 ---
 # <a name="changes-that-affect-compatibility"></a>Alterações que afetam a compatibilidade
 
@@ -270,7 +270,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
   Na maioria dos casos, a remoção de um atributo (como <xref:System.NonSerializedAttribute>) é uma alteração significativa.
 
-## <a name="platform-support"></a>Suporte de plataforma
+## <a name="platform-support"></a>Suporte a plataforma
 
 - ✔️ **permitido: suporte a uma operação em uma plataforma que não era suportada anteriormente**
 

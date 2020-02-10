@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 14abb5bd181f401a4e6834d110e20fa920566580
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789730"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093468"
 ---
 # <a name="permission-c-programming-guide"></a>> de permissão \<C# (guia de programação)
 
@@ -23,13 +23,13 @@ ms.locfileid: "76789730"
 <permission cref="member">description</permission>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - cref = " `member`"
 
   Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída. *member* deve ser exibido entre aspas duplas (" ").
 
-  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [\<consulte>](./see.md).
+  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [atributo cref](./cref-attribute.md).
 
 - `description`
 
@@ -45,7 +45,7 @@ Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option
 
 [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

@@ -1313,7 +1313,7 @@
         - name: Visão geral
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: Tipos internos
+        - name: Tipos
           items:
             - name: Tipos de valor
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: Tipos internos
+              href: language-reference/builtin-types/built-in-types.md
             - name: Tipos não gerenciados
               href: language-reference/builtin-types/unmanaged-types.md
             - name: Valores padrão
               href: language-reference/builtin-types/default-values.md
-            - name: Tabelas de referência de tipos
-              items:
-                - name: Tabela de tipos internos
-                  href: language-reference/keywords/built-in-types-table.md
         - name: Modificadores
           items:
             - name: Modificadores de acesso

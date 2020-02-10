@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794241"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095093"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Instruções passo a passo: organizando controles dos Windows Forms no WPF
 
@@ -37,11 +37,11 @@ As tarefas ilustradas neste passo a passo incluem:
 - Margens e preenchimento de configuração.
 - Usando contêineres de layout dinâmico.
 
-Para obter uma listagem de código completa das tarefas ilustradas neste passo a passos, consulte [organizando Windows Forms controles no WPF Sample](https://go.microsoft.com/fwlink/?LinkID=159971).
+Para obter uma listagem de código completa das tarefas ilustradas neste passo a passos, consulte [organizando Windows Forms controles no WPF Sample](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml).
 
 Quando tiver terminado, você terá uma compreensão dos recursos de layout de Windows Forms em aplicativos baseados em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -195,7 +195,7 @@ Para hospedar um controle que não se estende, siga estas etapas:
 
 2. Pressione <kbd>F5</kbd> para compilar e executar o aplicativo. O elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> é centralizado na linha de grade, mas não é ampliado para preencher o espaço disponível. Se a janela for grande o suficiente, você poderá ver dois ou mais meses exibidos pelo controle de <xref:System.Windows.Forms.MonthCalendar> hospedado, mas eles são centralizados na linha. O mecanismo de layout de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] centraliza os elementos que não podem ser dimensionados para preencher o espaço disponível.
 
-## <a name="scaling"></a>Dimensionamento
+## <a name="scaling"></a>Scaling
 
 Ao contrário dos elementos do WPF, a maioria dos controles de Windows Forms não são continuamente escalonáveis. Para fornecer o dimensionamento personalizado, você substitui o método <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
 
@@ -256,12 +256,12 @@ Para usar um contêiner de layout dinâmico, siga estas etapas:
 
 4. Pressione <kbd>F5</kbd> para compilar e executar o aplicativo. O elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> preenche a <xref:System.Windows.Controls.DockPanel>e <xref:System.Windows.Forms.FlowLayoutPanel> organiza seus controles filho no <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>padrão.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Considerações sobre o layout do elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
-- [Organizando Windows Forms controles no WPF de exemplo](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [Organizando Windows Forms controles no WPF de exemplo](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Passo a passo: hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: hospedando um controle composto do WPF no Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

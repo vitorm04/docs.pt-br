@@ -2,20 +2,20 @@
 title: Atividade exteriorizada de política no .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710921"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094625"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Atividade exteriorizada de política no .NET Framework 4.5
 
-Este exemplo demonstra como a atividade ExternalizedPolicy4 permite a execução de objetos existentes do .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) diretamente usando o mecanismo de regras que é enviado no WF 3,5. Usando esta atividade, você pode abrir e executar qualquer WF existente <xref:System.Workflow.Activities.Rules.RuleSet>3,5. Para obter mais informações sobre o mecanismo de regras do WF 3,5 incluído como parte do Windows Workflow Foundation, leia [introdução ao mecanismo de regras de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Para obter mais informações sobre como migrar regras para [!INCLUDE[wf1](../../../../includes/wf1-md.md)] no [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], consulte as [diretrizes de migração](../migration-guidance.md).
+Este exemplo demonstra como a atividade ExternalizedPolicy4 permite a execução de objetos existentes do .NET Framework 3,5 Windows Workflow Foundation (WF 3,5) <xref:System.Workflow.Activities.Rules.RuleSet> no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4,5) diretamente usando o mecanismo de regras que é enviado no WF 3,5. Usando esta atividade, você pode abrir e executar qualquer WF existente <xref:System.Workflow.Activities.Rules.RuleSet>3,5. Para obter mais informações sobre o mecanismo de regras do WF 3,5 incluído como parte do Windows Workflow Foundation, leia [introdução ao mecanismo de regras de Windows Workflow Foundation](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10)). Para obter mais informações sobre como migrar regras para [!INCLUDE[wf1](../../../../includes/wf1-md.md)] no [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], consulte as [diretrizes de migração](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projetos nisso exemplo
 
-|Nome do Projeto|Descrição|Arquivos de chave|
+|Nome do projeto|DESCRIÇÃO|Arquivos de chave|
 |-|-|-|
 |ExternalizedPolicy4|Contém a atividade ExternalizedPolicy4 e o designer de WF 4,5.|**ExternalizedPolicy4.cs**: definição da atividade.<br /><br /> **ExternalizedPolicy4Designer. XAML**: designer personalizado para atividade ExternalizedPolicy4. Usar o editor das regras (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) do mecanismo de regras WF 3,5.|
 |ImperativeCodeClientSample|Aplicativo cliente de exemplo que configura e executa um fluxo de trabalho usando um aplicativo ExternalizedPolicy4 usando o código em c obrigatório (nenhum designer usado).|**ApplyDiscount. Rules**: File com [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definições de regra.<br /><br /> **Order.cs**: tipo que representa uma ordem de cliente. As regras são aplicadas a objetos desse tipo.<br /><br /> **Program.cs**: configura e executa um fluxo de trabalho que tem uma atividade Policy4 para aplicar regras definidas em ApplyDiscount. Rules a instâncias de objetos Order.<br /><br /> App.config: O arquivo de configuração com o caminho do arquivo de regras.|
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|propriedade|Descrição|
+|Propriedade|DESCRIÇÃO|
 |-|-|
 |RuleSetFilePath|Caminho para o arquivo do .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> a ser avaliado quando a atividade é executada.|
 |RuleSetName|Nome de <xref:System.Workflow.Activities.Rules.RuleSet> a ser usado dentro do arquivo de .rules.|

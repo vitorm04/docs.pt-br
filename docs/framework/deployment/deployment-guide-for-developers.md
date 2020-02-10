@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965822"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094131"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -24,7 +24,7 @@ Você pode baixar os pacotes redistribuíveis e os pacotes de idiomas para .NET 
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -245,7 +245,7 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Versão do|Valor da liberação de DWORD|
+|Versão|Valor da liberação de DWORD|
 |-------------|--------------------------------|
 |.NET Framework 4.8 instalado na Atualização de maio de 2019 para Windows 10|528040|
 |.NET Framework 4.8 instalado em todas as versões do sistema operacional diferentes da Atualização de maio de 2019 para Windows 10|528049|
@@ -264,7 +264,7 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 |.NET Framework 4.5.2|379893|
 |.NET Framework 4.5.1 instalado com Windows 8.1 ou Windows Server 2012 R2|378675|
 |.NET Framework 4.5.1 instalado no Windows 8, Windows 7|378758|
-|{1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1}|378389|
+|.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>Detectando os pacotes de idiomas
 
@@ -275,8 +275,8 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 | | |
 |-|-|
 | Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Versão |
-| {1&gt;Tipo&lt;1} | DWORD |
+| Nome | Versão |
+| Type | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -292,7 +292,7 @@ O .NET Framework oferece um conjunto de arquivos executáveis de pacotes de idio
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4,6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -310,17 +310,17 @@ Não é necessário encadear os pacotes de idiomas se você utilizar o instalado
 
 Para obter uma lista completa de opções da linha de comando, consulte a seção [Opções da linha de comando](#command-line-options).
 
-### <a name="troubleshooting"></a>Solução de problemas
+### <a name="troubleshooting"></a>solução de problemas
 
 #### <a name="return-codes"></a>Códigos de retorno
 
 A tabela a seguir lista os códigos de retorno mais comuns do instalador redistribuível do .NET Framework. Os códigos de retorno são os mesmos para todas as versões do instalador. Para obter links com informações detalhadas, consulte a próxima seção.
 
-|Código de retorno|Descrição|
+|Código de retorno|DESCRIÇÃO|
 |-----------------|-----------------|
 |0|A instalação foi concluída com êxito.|
 |1602|O usuário cancelou a instalação.|
-|1603|Ocorreu um erro fatal durante a instalação.|
+|1603|Um erro fatal ocorreu durante a instalação.|
 |1641|É necessário reiniciar para concluir a instalação. Esta mensagem indica êxito.|
 |3010|É necessário reiniciar para concluir a instalação. Esta mensagem indica êxito.|
 |5100|O computador do usuário não atende aos requisitos do sistema.|
@@ -350,20 +350,20 @@ A partir do Windows 8, você pode desinstalar o .NET Framework 4,5 ou versões p
 > [!IMPORTANT]
 > Para sistemas operacionais Windows 7 e versões anteriores, desinstalar o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8 não restaura arquivos do .NET Framework 4.5, e desinstalar o .NET Framework 4.5 não restaura arquivos do .NET Framework 4. Se quiser retornar à versão mais antiga, você deverá reinstalá-lo e todas as suas atualizações.
 
-## <a name="appendix"></a>Anexo
+## <a name="appendix"></a>Apêndice
 
 ### <a name="command-line-options"></a>Opções de linha de comando
 
 A tabela a seguir lista opções que podem ser incluídas ao encadear o redistribuível do .NET Framework 4.5 para a instalação do seu aplicativo.
 
-|Opção|Descrição|
+|Opção|DESCRIÇÃO|
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
-|`packageName` **/chainingpackage**|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"** . Para obter um exemplo de pacote de encadeamento, consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=181926) na Biblioteca MSDN.|
+|`packageName` **/chainingpackage**|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"** . Para obter um exemplo de um pacote de encadeamento, consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |`LCID` **/LCID**<br /><br /> em que `LCID` especifica um identificador de localidade (consulte os [idiomas com suporte](#supported-languages))|Instala o pacote de idiomas especificado por `LCID` e faz com que a interface do usuário exibida seja mostrada nesse idioma, a menos que o modo silencioso seja configurado.<br /><br /> No caso do instalador da Web, essa opção instala de maneira encadeada o pacote de idiomas da Web. **Observação:** use essa opção somente com o instalador da Web.|
 |**/log** `file` &#124; `folder`|Especifica o local do arquivo de log. O padrão é a pasta temporária do processo, e o nome do arquivo padrão baseia-se no pacote. Se a extensão do arquivo for .txt, é produzido um log de texto. Se qualquer outra extensão ou nenhuma extensão for especificada, é criado um log HTML.|
 |**/msioptions**|Especifica opções a serem transmitidas para itens .msi e .msp, por exemplo: `/msioptions "PROPERTY1='Value'"`.|
-|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se essa opção for usada, o aplicativo de encadeamento precisa capturar o código de retorno e lidar com a reinicialização (consulte [Obtendo informações do progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606) na Biblioteca MSDN).|
+|**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o aplicativo de encadeamento precisará capturar o código de retorno e manipular a reinicialização (consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
 |**/passive**|Define o modo passivo. Exibe a barra de progresso para indicar se a instalação está em progresso, mas não exibe nenhuma solicitação ou mensagem de erro ao usuário. Nesse modo, quando encadeado por um programa de instalação, o pacote de encadeamento deve lidar com [códigos de retorno](#return-codes).|
 |**/pipe**|Cria um canal de comunicação para permitir que um pacote de encadeamento obtenha o progresso.|
 |**/promptrestart**|Somente modo passivo; se o programa de instalação exigir reinicialização, o usuário será avisado. Essa opção exigirá a interação do usuário se uma reinicialização for necessária.|
@@ -381,10 +381,10 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |LCID|Idioma – país/região|Cultura|
 |----------|--------------------------------|-------------|
 |1025|Árabe - Arábia Saudita|ar|
-|1028|Chinês – Tradicional|zh-Hant|
+|1028|Chinês – Tradicional|zh-Hans|
 |1029|Tcheco|cs|
 |1030|Dinamarquês|da|
-|1031|Alemão – Alemanha|{1&gt;{2&gt;de&lt;2}&lt;1}|
+|1031|Alemão – Alemanha|de|
 |1032|Grego|el|
 |1035|Finlandês|fi|
 |1036|Francês – França|fr|
@@ -393,8 +393,8 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |1040|Italiano – Itália|it|
 |1041|Japonês|ja|
 |1042|Coreano|ko|
-|1043|Holandês – Holanda|nl|
-|1044|Norueguês (Bokmål)|no|
+|1043|Holandês – Países Baixos|nl|
+|1044|Norueguês (Bokmål)|não|
 |1045|Polonês|pl|
 |1046|Português – Brasil|pt-BR|
 |1049|Russo|ru|
@@ -404,7 +404,7 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |2070|Português – Portugal|pt-PT|
 |3082|Espanhol - Espanha (Moderno)|es|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de implantação para administradores](guide-for-administrators.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)

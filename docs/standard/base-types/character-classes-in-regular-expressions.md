@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711448"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095041"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 
@@ -27,7 +27,7 @@ Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais po
   
 - Grupo de caracteres negativos. Um caractere na cadeia de caracteres de entrada não deve corresponder a um de um conjunto especificado de caracteres. Para obter mais informações, consulte [Negative Character Group (Grupo de caracteres negativos)](#NegativeGroup).  
   
-- Caractere qualquer. O `.` (ponto) em uma expressão regular é um caractere curinga que corresponde a qualquer caractere, exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
+- Qualquer caractere. O `.` (ponto) em uma expressão regular é um caractere curinga que corresponde a qualquer caractere, exceto `\n`. Para obter mais informações, consulte [Qualquer caractere](#AnyCharacter).  
   
 - Uma categoria geral de Unicode ou bloco nomeado. Um caractere na cadeia de caracteres de entrada deve ser um membro de uma categoria de Unicode específica ou deve estar dentro de um intervalo contíguo de caracteres Unicode para que uma correspondência seja bem-sucedida. Para obter mais informações, consulte [Unicode Category or Unicode Block](#CategoryOrBlock) (Bloco de Unicode ou Categoria de Unicode).  
   
@@ -71,7 +71,7 @@ Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais po
 
 Alguns padrões de expressões regulares comuns que contêm classes de caracteres positivos são listados na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`[aeiou]`|Corresponder a todas as vogais.|  
 |`[\p{P}\d]`|Corresponder a todos os caracteres de pontuação e dígitos decimais.|  
@@ -84,7 +84,7 @@ Alguns padrões de expressões regulares comuns que contêm classes de caractere
   
  A expressão regular `gr[ae]y\s\S+?[\s|\p{P}]` é definida da seguinte forma:  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`gr`|Corresponder aos caracteres literais “gr”.|  
 |`[ae]`|Corresponder a um "a" ou "e".|  
@@ -99,7 +99,7 @@ Alguns padrões de expressões regulares comuns que contêm classes de caractere
   
  A expressão regular `\b[A-Z]\w*\b` é definida conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`[A-Z]`|Corresponder a qualquer caractere maiúsculo de A a Z.|  
@@ -127,14 +127,14 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  Dois ou mais intervalos de caracteres podem ser concatenados. Por exemplo, para especificar o intervalo de dígitos decimais de "0 " a "9", o intervalo de letras minúsculas de "a" a "f" e o intervalo de letras maiúsculas "A" a "F", use `[0-9a-fA-F]`.  
   
- O caractere de circunflexo à esquerda (`^`) em um grupo de caracteres negativos é obrigatório e indica que o grupo de caracteres é um grupo de caracteres negativos, e não um grupo de caracteres positivos.  
+ O caractere de cursor à esquerda (`^`) em um grupo de caracteres negativo é obrigatório e indica que o grupo de caracteres é um grupo de caracteres negativo em vez de um grupo de caracteres positivo.  
   
 > [!IMPORTANT]
 > Um grupo de caracteres negativos em uma expressão regular maior não é uma asserção de largura zero. Ou seja, depois de avaliar o grupo de caracteres negativos, o mecanismo de expressões regulares avança um caractere na cadeia de caracteres de entrada.  
   
  Alguns padrões de expressões regulares comuns que contêm grupos de caracteres negativos são listados na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`[^aeiou]`|Corresponder a todos os caracteres, exceto vogais.|  
 |`[^\p{P}\d]`|Corresponder a todos os caracteres, exceto de pontuação e dígitos decimais.|  
@@ -146,12 +146,12 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A expressão regular `\bth[^o]\w+\b` é definida conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`th`|Corresponder aos caracteres literais “th”.|  
 |`[^o]`|Corresponder a qualquer caractere que não seja um “o”.|  
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
 |`\b`|Terminar em um limite de palavra.|  
   
 <a name="AnyCharacter"></a>   
@@ -193,7 +193,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A expressão regular `\b(\p{IsGreek}+(\s)?)+\p{Pd}\s(\p{IsBasicLatin}+(\s)?)+` é definida conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`\p{IsGreek}+`|Corresponder a um ou mais caracteres gregos.|  
@@ -226,7 +226,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 ## <a name="word-character-w"></a>Caractere de palavra: \w  
  `\w` corresponde a qualquer caractere de palavra. Um caractere de palavra é um membro de qualquer uma das categorias Unicode listadas na tabela a seguir.  
   
-|Categoria|Descrição|  
+|Categoria|DESCRIÇÃO|  
 |--------------|-----------------|  
 |LI|Letra, minúscula|  
 |Lu|Letra, maiúscula|  
@@ -244,7 +244,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir usa o elemento de linguagem `\w` para corresponder a caracteres duplicados em uma palavra. O exemplo define um padrão de expressão regular, `(\w)\1`, que pode ser interpretado como a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |(\w)|Corresponder a um caractere de palavra. Este é o primeiro grupo de captura.|  
 |\1|Corresponder ao valor da primeira captura.|  
@@ -260,7 +260,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  Em outras palavras, ele corresponde a qualquer caractere, com exceção dos listados nas categorias de Unicode na tabela a seguir.  
   
-|Categoria|Descrição|  
+|Categoria|DESCRIÇÃO|  
 |--------------|-----------------|  
 |LI|Letra, minúscula|  
 |Lu|Letra, maiúscula|  
@@ -278,10 +278,10 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir ilustra a classe de caracteres `\W`.  Ele define um padrão de expressão regular, `\b(\w+)(\W){1,2}`, que corresponde a uma palavra seguida por um ou dois caracteres não pertencentes a palavras, como espaço em branco ou pontuação. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
-|\b|Começar a correspondência em um limite de palavra.|  
-|(\w+)|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|\b|Começa a correspondência em um limite de palavra.|  
+|(\w+)|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |(\W){1,2}|Corresponde a um caractere não pertencente a palavras uma ou duas vezes. Este é o segundo grupo de captura.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
@@ -293,7 +293,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 ## <a name="whitespace-character-s"></a>Caractere de espaço em branco: \s  
  `\s` corresponde a um caractere de espaço em branco. É equivalente às sequências de escape e às categorias de Unicode listadas na tabela a seguir.  
   
-|Categoria|Descrição|  
+|Categoria|DESCRIÇÃO|  
 |--------------|-----------------|  
 |`\f`|O caractere de avanço de página, \u000C.|  
 |`\n`|O caractere de nova linha, \u000A.|  
@@ -307,10 +307,10 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir ilustra a classe de caracteres `\s`. Ele define um padrão de expressão regular, `\b\w+(e)?s(\s|$)`, que corresponde a uma palavra que termina em “s” ou em “es” seguida por um caractere de espaço em branco ou pelo final da cadeia de caracteres de entrada. A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
-|\b|Começar a correspondência em um limite de palavra.|  
-|\w+|Fazer a correspondência a um ou mais caracteres de palavra.|  
+|\b|Começa a correspondência em um limite de palavra.|  
+|\w+|Corresponde a um ou mais caracteres de palavra.|  
 |(e)?|Corresponder a um “e” zero ou uma vez.|  
 |s|Corresponder a um “s”.|  
 |(\s&#124;$)|Corresponder a um caractere de espaço em branco ou ao fim da cadeia de caracteres de entrada.|  
@@ -326,9 +326,9 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir ilustra o elemento de linguagem `\S`. O padrão de expressão regular `\b(\S+)\s?` corresponde a cadeias de caracteres que são delimitadas por caracteres de espaço em branco. O segundo elemento no objeto <xref:System.Text.RegularExpressions.GroupCollection> da correspondência contém a cadeia de caracteres correspondida. A expressão regular pode ser interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
-|`\b`|Começar a correspondência em um limite de palavra.|  
+|`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\S+)`|Corresponder a um ou mais caracteres diferentes de espaço em branco. Este é o primeiro grupo de captura.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
   
@@ -343,7 +343,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir ilustra o elemento de linguagem `\d`. Ele testa se uma cadeia de caracteres de entrada representa um número de telefone válido nos Estados Unidos e no Canadá. O padrão de expressão regular `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` é definido conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`\(?`|Corresponder a zero ou a um caractere "(" literal.|  
@@ -365,7 +365,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O exemplo a seguir ilustra o elemento de linguagem \D. Ele testa se uma cadeia de caracteres, como um número de peça, consiste na combinação apropriada de caracteres decimais e não decimais. O padrão de expressão regular `^\D\d{1,5}\D*$` é definido conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`\D`|Corresponder a um caractere que não seja um dígito.|  
@@ -380,7 +380,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 ## <a name="supported-unicode-general-categories"></a>Categorias gerais Unicode com suporte  
  O Unicode define as categorias gerais listadas na tabela a seguir. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](https://www.unicode.org/reports/tr44/).  
   
-|Categoria|Descrição|  
+|Categoria|DESCRIÇÃO|  
 |--------------|-----------------|  
 |`Lu`|Letra, maiúscula|  
 |`Ll`|Letra, minúscula|  
@@ -439,7 +439,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> - ou -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> -ou-<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - ou -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> -ou-<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -558,7 +558,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
   
  O exemplo a seguir define uma expressão regular, `^[0-9-[2468]]+$`, que corresponde aos dígitos zero e ímpares em uma cadeia de caracteres de entrada.  A expressão regular é interpretada conforme mostrado na tabela a seguir.  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |^|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`[0-9-[2468]]+`|Corresponder a uma ou mais ocorrências de qualquer caractere de 0 a 9, com exceção de 2, 4, 6 e 8. Em outras palavras, corresponder a uma ou mais ocorrências de zero ou de um dígito ímpar.|  
@@ -567,7 +567,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

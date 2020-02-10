@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789688"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093455"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seeAlso > (C# guia de programação)
 
@@ -27,13 +27,13 @@ ms.locfileid: "76789688"
 <seealso cref="member"/>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - cref = " `member`"
 
   Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e passa `member` para o nome de elemento no XML de saída.`member` deve ser exibido entre aspas duplas (" ").
 
-  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [\<consulte>](./see.md).
+  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [atributo cref](./cref-attribute.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -45,7 +45,7 @@ Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option
 
 Consulte [\<summary>](./summary.md) para obter um exemplo sobre o uso de \<seealso>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

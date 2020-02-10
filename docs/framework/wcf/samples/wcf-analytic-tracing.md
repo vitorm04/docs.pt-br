@@ -2,22 +2,22 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715298"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094820"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
 Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que Windows Communication Foundation (WCF) grava no ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Os rastreamentos analíticos destinam-se a facilitar a visibilidade de seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar as APIs de <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para gravar eventos que se integram aos serviços WCF.  
   
  Para obter mais informações sobre as APIs de <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
- Para saber mais sobre o rastreamento de eventos no Windows, consulte [melhorar a depuração e o ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Para saber mais sobre o rastreamento de eventos no Windows, consulte [melhorar a depuração e o ajuste de desempenho com o ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).  
   
 ## <a name="disposing-eventprovider"></a>Descartando EventProvider  
- Este exemplo usa a classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para um serviço WCF, é provável que você possa usar os recursos do <xref:System.Diagnostics.Eventing.EventProvider>durante o tempo de vida do serviço. Por esse motivo, e para facilitar a leitura, esse exemplo nunca descarta o <xref:System.Diagnostics.Eventing.EventProvider>encapsulado. Se, por algum motivo, seu serviço tiver requisitos diferentes para rastreamento e você precisar descartar esse recurso, você deverá modificar esse exemplo de acordo com as práticas recomendadas para descartar recursos não gerenciados. Para obter mais informações sobre como descartar recursos não gerenciados, consulte [implementando um método Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
+ Este exemplo usa a classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para um serviço WCF, é provável que você possa usar os recursos do <xref:System.Diagnostics.Eventing.EventProvider>durante o tempo de vida do serviço. Por esse motivo, e para facilitar a leitura, esse exemplo nunca descarta o <xref:System.Diagnostics.Eventing.EventProvider>encapsulado. Se, por algum motivo, seu serviço tiver requisitos diferentes para rastreamento e você precisar descartar esse recurso, você deverá modificar esse exemplo de acordo com as práticas recomendadas para descartar recursos não gerenciados. Para obter mais informações sobre como descartar recursos não gerenciados, consulte [implementando um método Dispose](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).  
   
 ## <a name="self-hosting-vs-web-hosting"></a>Hospedagem interna versus hospedagem na Web  
  Para serviços hospedados na Web, os rastreamentos analíticos do WCF fornecem um campo, chamado "HostReference", que é usado para identificar o serviço que está emitindo os rastreamentos. Os rastreamentos extensível de usuário podem participar desse modelo e este exemplo demonstra as práticas recomendadas para fazer isso. O formato de uma referência de host Web quando o caractere&#124;do pipe ' ' realmente aparece na cadeia de caracteres resultante pode ser qualquer um dos seguintes:  
@@ -35,7 +35,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 ## <a name="custom-event-details"></a>Detalhes do evento personalizado  
  O manifesto do provedor de eventos do ETW do WCF define três eventos que são criados para serem emitidos por autores de serviço do WCF de dentro do código de serviço. A tabela a seguir mostra uma divisão dos três eventos.  
   
-|Event|Descrição|ID do evento|  
+|Evento|DESCRIÇÃO|ID do evento|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Emita esse evento quando algo de observação acontecer em seu serviço que não é um problema. Por exemplo, você pode emitir um evento depois de fazer uma chamada com êxito para um banco de dados.|301|  
 |UserDefinedWarningOccurred|Emita esse evento quando ocorrer um problema que possa resultar em uma falha no futuro. Por exemplo, você pode emitir um evento de aviso quando uma chamada a um banco de dados falha, mas você conseguiu recuperar-se voltando a um armazenamento de dados redundante.|302|  
@@ -59,7 +59,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      Adicione o endereço do ponto de extremidade na caixa de entrada.  
   
-6. Clique em **OK** para fechar a caixa de diálogo.  
+6. Clique em **OK** para fechar o diálogo.  
   
      O serviço ICalculator é adicionado no painel esquerdo em **meus projetos de serviço**.  
   
@@ -97,7 +97,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 #### <a name="to-clean-up-optional"></a>Para limpar (opcional)  
   
-1. Abra **Visualizador de eventos**.  
+1. Abra o **Visualizador de Eventos**.  
   
 2. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, aplicativos **-Server-** Applications. Clique com o botão direito do mouse em **analítica** e selecione **desabilitar log**.  
   
@@ -106,7 +106,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 4. Clique em **limpar** para limpar os eventos.  
   
 ## <a name="known-issue"></a>Problema conhecido  
- Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "a descrição para a ID do evento \<ID > da origem Microsoft-Windows-Application Server-aplicativos não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
+ Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "a descrição para a ID do evento \<ID > da origem Microsoft-Windows-Application Server-aplicativos não podem ser encontrados. O componente que gera esse evento não está instalado no computador local ou a instalação está corrompida. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
@@ -117,6 +117,6 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

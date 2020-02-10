@@ -2,28 +2,28 @@
 title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921201"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094989"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode surgir quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anular a transação na qual uma mensagem em fila foi recebida deixa a mensagem na fila para que a mensagem seja repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor poderá ficar preso em um loop recebendo e anulando a mesma mensagem até que o número máximo de tentativas de entrega tenha sido excedido e uma mensagem suspeita resulte.  
   
- Uma mensagem pode se tornar uma mensagem suspeita por vários motivos. As razões mais comuns são específicas do aplicativo. Por exemplo, se um aplicativo lê uma mensagem de uma fila e executa algum processamento de banco de dados, o aplicativo pode falhar ao obter um bloqueio no banco de dados, fazendo com que ele anule a transação. Como a transação do banco de dados foi anulada, a mensagem permanece na fila, o que faz com que o aplicativo leia novamente a mensagem uma segunda vez e faça outra tentativa de adquirir um bloqueio no banco de dados. As mensagens também podem se tornar suspeitas se contiverem informações inválidas. Por exemplo, uma ordem de compra pode conter um número de cliente inválido. Nesses casos, o aplicativo pode, voluntariamente, anular a transação e forçar a mensagem a se tornar uma mensagem suspeita.  
+ Uma mensagem pode se tornar uma mensagem suspeita por vários motivos. Os motivos mais comuns são específicos do aplicativo. Por exemplo, se um aplicativo lê uma mensagem de uma fila e executa algum processamento de banco de dados, o aplicativo pode falhar ao obter um bloqueio no banco de dados, fazendo com que ele anule a transação. Como a transação do banco de dados foi anulada, a mensagem permanece na fila, o que faz com que o aplicativo leia novamente a mensagem uma segunda vez e faça outra tentativa de adquirir um bloqueio no banco de dados. As mensagens também podem se tornar suspeitas se contiverem informações inválidas. Por exemplo, uma ordem de compra pode conter um número de cliente inválido. Nesses casos, o aplicativo pode, voluntariamente, anular a transação e forçar a mensagem a se tornar uma mensagem suspeita.  
   
  Em raras ocasiões, as mensagens podem falhar ao serem expedidas para o aplicativo. A camada Windows Communication Foundation (WCF) pode encontrar um problema com a mensagem, como se a mensagem tem o quadro incorreto, credenciais de mensagem inválidas anexadas a ela ou um cabeçalho de ação inválido. Nesses casos, o aplicativo nunca recebe a mensagem; no entanto, a mensagem ainda pode se tornar uma mensagem suspeita e ser processada manualmente.  
   
 ## <a name="handling-poison-messages"></a>Tratando de mensagens suspeitas  
- No WCF, a manipulação de mensagens suspeitas fornece um mecanismo para um aplicativo de recebimento lidar com mensagens que não podem ser expedidas para o aplicativo ou mensagens que são expedidas para o aplicativo, mas que não são processadas devido a aplicativos específicos do aplicativo motivos. A manipulação de mensagens suspeitas é configurada pelas seguintes propriedades em cada uma das associações em fila disponíveis:  
+ No WCF, a manipulação de mensagens suspeitas fornece um mecanismo para um aplicativo de recebimento lidar com mensagens que não podem ser expedidas para o aplicativo ou mensagens que são expedidas para o aplicativo, mas que não são processadas devido a aplicativos específicos do aplicativo motivos. Configure a manipulação de mensagens suspeitas com as seguintes propriedades em cada uma das associações em fila disponíveis:  
   
 - `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de vezes para repetir a entrega de uma mensagem da fila do aplicativo para o aplicativo. O valor padrão é 5. Isso é suficiente nos casos em que uma repetição imediata corrige o problema, como com um deadlock temporário em um banco de dados.  
   
 - `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Um ciclo de repetição consiste em transferir uma mensagem da fila do aplicativo para a subfila de repetição e, após um atraso configurável, da subfila de repetição para a fila do aplicativo para tentar a entrega novamente. O valor padrão é 2. No Windows Vista, a mensagem é tentada no máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado no Windows Server 2003 e no Windows XP.  
   
-- `RetryCycleDelay`. O intervalo de tempo entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma nova tentativa após um atraso periódico corrige o problema. Por exemplo, isso manipula um conjunto de linhas bloqueado em SQL Server confirmação de transação pendente.  
+- `RetryCycleDelay`. O intervalo de tempo entre os ciclos de repetição. O valor padrão é de 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma nova tentativa após um atraso periódico corrige o problema. Por exemplo, isso manipula um conjunto de linhas bloqueado em SQL Server confirmação de transação pendente.  
   
 - `ReceiveErrorHandling`. Uma enumeração que indica a ação a ser tomada para uma mensagem com falha na entrega após o número máximo de repetições ter sido tentada. Os valores podem ser falha, soltar, rejeitar e mover. A opção padrão é Fault.  
   
@@ -35,7 +35,7 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
   
 - Prosseguir. Essa opção só está disponível no Windows Vista. Isso move a mensagem suspeita para uma fila de mensagens suspeitas para processamento posterior por um aplicativo de manipulação de mensagens suspeitas. A fila de mensagens suspeitas é uma subfila da fila de aplicativos. Um aplicativo de manipulação de mensagens suspeitas pode ser um serviço WCF que lê mensagens da fila de suspeitas. A fila de suspeitas é uma subfila da fila de aplicativos e pode ser tratada como net. MSMQ://\<*nome da máquina*>/*applicationQueue*;p Oison, em que *Machine-Name* é o nome do computador no qual a fila reside e o *applicationQueue* é o nome da fila específica do aplicativo.  
   
- Veja a seguir o número máximo de tentativas de entrega feitas para uma mensagem:  
+Veja a seguir o número máximo de tentativas de entrega feitas para uma mensagem:  
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) no Windows Vista.  
   
@@ -103,7 +103,7 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
   
 - O enfileiramento de mensagens no Windows Vista dá suporte a uma propriedade Message que mantém a contagem do número de vezes que a entrega de mensagens é tentada. Essa propriedade de anulação de contagem não está disponível no Windows Server 2003 e no Windows XP. O WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não contenha um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

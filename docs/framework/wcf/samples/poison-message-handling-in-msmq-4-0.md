@@ -2,28 +2,28 @@
 title: Tratamento de mensagens suspeitas no MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919390"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094950"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
 Este exemplo demonstra como executar a manipulação de mensagens suspeitas em um serviço. Este exemplo é baseado no exemplo de [associação MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
 
  Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.
 
- Uma mensagem suspeita é uma mensagem que é lida repetidamente de uma fila quando o serviço que lê a mensagem não pode processar a mensagem e, portanto, encerra a transação sob a qual a mensagem é lida. Nesses casos, a mensagem é repetida novamente. Teoricamente, isso pode ser usado para sempre se houver um problema com a mensagem. Observe que isso só pode ocorrer quando você usa transações para ler da fila e invocar a operação de serviço.
+ Uma mensagem suspeita é uma mensagem que é lida repetidamente de uma fila quando o serviço que lê a mensagem não pode processar a mensagem e, portanto, encerra a transação sob a qual a mensagem é lida. Nesses casos, a mensagem é repetida novamente. Teoricamente, isso pode ser usado para sempre se houver um problema com a mensagem. Isso só pode ocorrer quando você usa transações para ler da fila e invocar a operação de serviço.
 
  Com base na versão do MSMQ, o NetMsmqBinding dá suporte à detecção limitada para detecção completa de mensagens suspeitas. Depois que a mensagem for detectada como inviabilizada, ela poderá ser tratada de várias maneiras. Novamente, com base na versão do MSMQ, o NetMsmqBinding dá suporte ao tratamento limitado para o tratamento total de mensagens suspeitas.
 
- Este exemplo ilustra as instalações suspeitas limitadas fornecidas no Windows Server 2003 e na plataforma Windows XP e as instalações completas suspeitas fornecidas no Windows Vista. Em ambos os exemplos, o objetivo é mover a mensagem suspeita para fora da fila para outra fila que pode ser atendida por um serviço de mensagens suspeitas.
+ Este exemplo ilustra as instalações suspeitas limitadas fornecidas no Windows Server 2003 e na plataforma Windows XP e as instalações completas suspeitas fornecidas no Windows Vista. Em ambos os exemplos, o objetivo é mover a mensagem suspeita para fora da fila para outra fila. Essa fila pode então ser atendida por um serviço de mensagens suspeitas.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Exemplo de tratamento inviabilizado do MSMQ v 4.0
- No Windows Vista, o MSMQ fornece um recurso de subfilas suspeitas que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando o Windows Vista.
+ No Windows Vista, o MSMQ fornece um recurso de subfila de suspeita que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando o Windows Vista.
 
- A detecção de mensagens suspeitas no Windows Vista é bastante sofisticada. Há três propriedades que ajudam na detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é relida da fila e despachada para o aplicativo para processamento. Uma mensagem é relida da fila quando é colocada de volta na fila porque a mensagem não pode ser expedida para o aplicativo ou o aplicativo reverte a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem é movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> for atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o intervalo de tempo após o qual a mensagem é movida da fila de repetição de volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem será marcada como inviabilizada.
+ A detecção de mensagens suspeitas no Windows Vista é sofisticada. Há três propriedades que ajudam na detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é relida da fila e despachada para o aplicativo para processamento. Uma mensagem é relida da fila quando é colocada de volta na fila porque a mensagem não pode ser expedida para o aplicativo ou o aplicativo reverte a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem é movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> for atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o intervalo de tempo após o qual a mensagem é movida da fila de repetição de volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem será marcada como inviabilizada.
 
  Depois que a mensagem é marcada como inviabilizada, a mensagem é tratada de acordo com as configurações na enumeração <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Para reiterar os valores possíveis:
 
@@ -35,7 +35,7 @@ Este exemplo demonstra como executar a manipulação de mensagens suspeitas em u
 
 - Rejeitar: para rejeitar a mensagem, enviar a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor está disponível apenas no Windows Vista.
 
- O exemplo demonstra o uso da disposição `Move` para a mensagem suspeita. `Move` faz com que a mensagem seja movida para a subfila de envenenamento.
+ O exemplo demonstra o uso da disposição `Move` para a mensagem suspeita. `Move` faz com que a mensagem seja movida para a subfila de suspeitas.
 
  O contrato de serviço é `IOrderProcessor`, que define um serviço unidirecional que é adequado para uso com filas.
 
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- Ao contrário do serviço de processamento de pedidos que lê mensagens da fila de pedidos, o serviço de mensagens suspeitas lê as mensagens da subfila de suspeita. A fila de suspeitas é uma subfila da fila principal, denominada "suspeita" e é gerada automaticamente pelo MSMQ. Para acessá-lo, forneça o nome da fila principal seguido por um ";" e o nome da subfila, neste caso, "suspeita", conforme mostrado na seguinte configuração de exemplo.
+ Ao contrário do serviço de processamento de pedidos que lê mensagens da fila de pedidos, o serviço de mensagens suspeitas lê mensagens da subfila suspeita. A fila de suspeitas é uma subfila da fila principal, denominada "suspeita" e é gerada automaticamente pelo MSMQ. Para acessá-lo, forneça o nome da fila principal seguido por um ";" e o nome da subfila, neste caso, "suspeita", conforme mostrado na seguinte configuração de exemplo.
 
 > [!NOTE]
 > No exemplo do MSMQ v 3.0, o nome da fila suspeita não é uma subfila, e sim a fila para a qual movemos a mensagem.

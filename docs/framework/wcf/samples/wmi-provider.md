@@ -1,15 +1,15 @@
 ---
-title: Provedor de WMI
+title: Provedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 4db8873397b0136de88d00ebe62c429aee260911
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a170a20212791d789af589c1ff99dcd1abad1c9e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715003"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094768"
 ---
-# <a name="wmi-provider"></a>Provedor de WMI
+# <a name="wmi-provider"></a>Provedor WMI
 Este exemplo demonstra como coletar dados de serviços Windows Communication Foundation (WCF) em tempo de execução usando o provedor de Instrumentação de Gerenciamento do Windows (WMI) que é incorporado ao WCF. Além disso, este exemplo demonstra como adicionar um objeto WMI definido pelo usuário a um serviço. O exemplo ativa o provedor WMI para o [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e demonstra como coletar dados do serviço `ICalculator` em tempo de execução.  
   
  O WMI é a implementação do padrão Web-Based Enterprise Management (WBEM) da Microsoft. Para obter mais informações sobre o SDK do WMI, consulte [Instrumentação de gerenciamento do Windows](/windows/desktop/WmiSdk/wmi-start-page). O WBEM é um padrão do setor para a forma como os aplicativos expõem a instrumentação de gerenciamento para ferramentas de gerenciamento externas.  
@@ -32,7 +32,8 @@ Este exemplo demonstra como coletar dados de serviços Windows Communication Fou
  Adicionar objetos WMI a um serviço torna possível revelar informações definidas pelo usuário juntamente com as informações internas do provedor WMI. Isso é feito por meio da publicação do esquema do serviço no WMI usando o aplicativo InstallUtil. exe. Instruções para fazer isso, juntamente com mais detalhes, podem ser encontradas nas instruções de instalação no final do tópico.  
   
 ## <a name="accessing-wmi-information"></a>Acessando informações do WMI  
- Os dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece APIs WMI para scripts, Visual Basic aplicativos C++ , aplicativos e o .NET Framework (https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi).  
+
+Os dados do WMI podem ser acessados de várias maneiras diferentes. A Microsoft fornece APIs WMI para scripts, Visual Basic aplicativos C++ , aplicativos e .NET Framework. Para obter mais informações, consulte [usando o WMI](/windows/desktop/wmisdk/using-wmi).
   
  Este exemplo usa dois scripts java: um para enumerar serviços em execução no computador junto com algumas de suas propriedades e o segundo para exibir dados WMI definidos pelo usuário. O script abre uma conexão com o provedor WMI, analisa dados e exibe os dados coletados.  
   
@@ -143,6 +144,6 @@ cscript EnumerateCustomObjects.js
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

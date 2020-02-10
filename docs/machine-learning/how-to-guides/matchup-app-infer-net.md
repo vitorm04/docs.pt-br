@@ -1,14 +1,14 @@
 ---
-title: Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
-description: Descubra como usar a programação probabilística com o Infern.NET para criar um aplicativo de lista de campeonato com base em uma versão simplificada do TrueSkill.
-ms.date: 05/06/2019
+title: Correspondência de jogos Infer.NET-probabilística programação de aplicativo
+description: Descubra como usar a programação probabilística com o Infer.NET para criar um aplicativo de lista de correspondência de jogos com base em uma versão simplificada do TrueSkill.
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774539"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092597"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Criar um aplicativo de lista de campeonato com o Infer.NET e a programação probabilística
 
@@ -24,7 +24,7 @@ A programação probabilística nos permite criar modelos estatísticos de proce
 
   Este guia de instruções supõe que você tenha um computador que possa ser usado para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no MacOS, Windows ou Linux.
 
-## <a name="create-your-app"></a>Criar seu aplicativo
+## <a name="create-your-app"></a>Criar o aplicativo
 
 1. Abra um prompt de comando e execute os seguintes comandos:
 

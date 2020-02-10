@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636101"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095236"
 ---
 # <a name="advanced-text-formatting"></a>Formatação de texto avançada
 O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para incluir texto em seu aplicativo. As APIs de layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como <xref:System.Windows.Controls.TextBlock>, fornecem os elementos mais comuns e de uso geral para a apresentação de texto. As APIs de desenho, como <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, fornecem um meio para incluir texto formatado em desenhos. No nível mais avançado, o WPF fornece um mecanismo de formatação de texto extensível para controlar cada aspecto da apresentação de texto, como gerenciamento de armazenamento de texto, gerenciamento de formatação de execução de texto e gerenciamento de objetos incorporados.  
@@ -22,10 +22,10 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
  Este tópico fornece uma introdução à formatação de texto do WPF. Ele se concentra na implementação do cliente e no uso do mecanismo de formatação de texto do WPF.  
   
 > [!NOTE]
-> Todos os exemplos de código dentro deste documento podem ser encontrados no [exemplo de formatação de texto avançado](https://go.microsoft.com/fwlink/?LinkID=159965).  
+> Todos os exemplos de código dentro deste documento podem ser encontrados no [exemplo de formatação de texto avançado](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting).  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}  
+## <a name="prerequisites"></a>Prerequisites  
  Este tópico pressupõe que você esteja familiarizado com as APIs de nível superior usadas para a apresentação de texto. A maioria dos cenários de usuário não exigirá as APIs avançadas de formatação de texto discutidas neste tópico. Para obter uma introdução às diferentes APIs de texto, consulte [documentos no WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
   
  A tabela a seguir mostra alguns dos objetos <xref:System.Windows.Media.TextFormatting.TextRun> predefinidos.  
   
-|Tipo de TextRun|Medição de|  
+|Tipo de TextRun|Uso|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|A execução de texto especializado para passar uma representação de glifos de caractere de volta para o formatador de texto.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|A execução de texto especializado usada para fornecer conteúdo no qual a medição, o teste de hit e o desenho são feitos no todo, como um botão ou imagem dentro do texto.|  
@@ -91,7 +91,7 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
 ## <a name="specifying-formatting-properties"></a>Especificando propriedades de formatação  
  <xref:System.Windows.Media.TextFormatting.TextRun> objetos são formatados usando as propriedades fornecidas pelo armazenamento de texto. Essas propriedades são fornecidas em dois tipos, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> manipular propriedades inclusivas de parágrafo, como <xref:System.Windows.TextAlignment> e <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> são propriedades que podem ser diferentes para cada execução de texto dentro de um parágrafo, como o pincel de primeiro plano, o <xref:System.Windows.Media.Typeface>e o tamanho da fonte. Para implementar um parágrafo personalizado e tipos de propriedade de execução de texto personalizado, seu aplicativo deve criar classes que derivam de <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>, respectivamente.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Tipografia no WPF](typography-in-wpf.md)
 - [Documentos no WPF](documents-in-wpf.md)

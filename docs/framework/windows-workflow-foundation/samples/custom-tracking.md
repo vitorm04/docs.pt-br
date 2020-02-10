@@ -2,12 +2,12 @@
 title: Rastreamento personalizada
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 0d9bd9262c6fc13a36fb7736245fa244ee61d8c3
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 9a2ad2004c47ce76dcc35baf4ca28aa174409581
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710867"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094651"
 ---
 # <a name="custom-tracking"></a>Rastreamento personalizada
 Este exemplo demonstra como criar um participante personalizado de rastreamento e gravar o conteúdo dos dados de acompanhamento no console. Além disso, o exemplo demonstra como emitir os objetos de <xref:System.Activities.Tracking.CustomTrackingRecord> preenchido com dados definidos pelo usuário. O participante controlando console- base filtra os objetos de <xref:System.Activities.Tracking.TrackingRecord> emissores pelo fluxo de trabalho usando um objeto de perfil de rastreamento criado em código.
@@ -15,7 +15,7 @@ Este exemplo demonstra como criar um participante personalizado de rastreamento 
 ## <a name="sample-details"></a>Detalhes de exemplo
  Windows Workflow Foundation (WF) fornece uma infraestrutura de controle para controlar a execução de uma instância de fluxo de trabalho. O runtime de rastreamento implementa uma instância de fluxo de trabalho para emitir os eventos relacionados ao ciclo de vida de fluxo de trabalho, os eventos de atividades de fluxo de trabalho e eventos personalizados de rastreamento. A tabela a seguir detalha os componentes principais de infraestrutura de rastreamento.
 
-|Componente|Descrição|
+|Componente|DESCRIÇÃO|
 |---------------|-----------------|
 |runtime de rastreamento|Fornece a infraestrutura para emitir registros de rastreamento.|
 |Participantes de rastreamento|Consome os registros de rastreamento. O .NET Framework 4 é fornecido com um participante de controle que grava registros de rastreamento como eventos de ETW (rastreamento de eventos para Windows).|
@@ -23,7 +23,7 @@ Este exemplo demonstra como criar um participante personalizado de rastreamento 
 
  A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.
 
-|Registro de Rastreamento|Descrição|
+|Registro de Rastreamento|DESCRIÇÃO|
 |---------------------|-----------------|
 |Registros de rastreamento de instância de fluxo de trabalho.|Descreve o ciclo de vida de instância de fluxo de trabalho. Por exemplo, um registro de instância é emitida quando o fluxo de trabalho inicia ou termina.|
 |Estado da atividade que acompanha registros.|Detalha a execução da atividade. Esses registros indicam o estado de uma atividade de fluxo de trabalho como quando uma atividade é agendada ou quando a atividade completa ou quando uma falha é lançada.|
@@ -148,6 +148,6 @@ context.Track(customRecord);
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

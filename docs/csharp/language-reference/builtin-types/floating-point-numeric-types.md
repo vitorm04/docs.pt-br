@@ -18,24 +18,24 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980165"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093208"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
-Os **tipos de ponto flutuante** são um subconjunto dos **tipos simples** e podem ser inicializados com [*literais*](#real-literals). Todos os tipos de ponto flutuante também são tipos de valor. Todos os tipos numéricos de ponto flutuante dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
+Os *tipos numéricos de ponto flutuante* representam números reais. Todos os tipos numéricos de ponto flutuante são [tipos de valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#real-literals). Todos os tipos numéricos de ponto flutuante dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Características dos tipos de ponto flutuante
 
 O C# é compatível com os seguintes tipos de pontos flutuantes predefinidos:
   
-|palavra-chave/tipo C#|Intervalo aproximado|Precision|Tamanho|Tipo .NET|
+|palavra-chave/tipo C#|Intervalo aproximado|Precisão|Tamanho|Tipo .NET|
 |----------|-----------------------|---------------|--------------|--------------|
-|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|~6 a 9 dígitos|4 bytes|<xref:System.Single?displayProperty=nameWithType>|
+|`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|Aproximadamente de 6 a 9 dígitos|4 bytes|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|~15 a 17 dígitos|8 bytes|<xref:System.Double?displayProperty=nameWithType>|
 |`decimal`|±1,0 x 10<sup>-28</sup> para ±7,9228 x 10<sup>28</sup>|28 a 29 dígitos|16 bytes|<xref:System.Decimal?displayProperty=nameWithType>|
 
@@ -115,10 +115,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [O tipo decimal](~/_csharplang/spec/types.md#the-decimal-type)
 - [Literais reais](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
-- [Tabela de tipos internos](../keywords/built-in-types-table.md)
+- [Tipos de valor](value-types.md)
 - [Tipos integrais](integral-numeric-types.md)
 - [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numéricos no .NET](../../../standard/numerics.md)

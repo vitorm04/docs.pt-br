@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794219"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095067"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Instruções passo a passo: associando a dados em aplicativos híbridos
 
@@ -35,13 +35,13 @@ As tarefas ilustradas neste passo a passo incluem:
 
 - Criar uma associação à fonte de dados.
 
-Para obter uma listagem de código completa das tarefas ilustradas neste passo a passos, consulte [exemplo de vinculação de dados em aplicativos híbridos](https://go.microsoft.com/fwlink/?LinkID=159983).
+Para obter uma listagem de código completa das tarefas ilustradas neste passo a passos, consulte [exemplo de vinculação de dados em aplicativos híbridos](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding).
 
 Quando tiver terminado, você terá um entendimento dos recursos de associação de dados em aplicativos híbridos.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
+Você precisará dos seguintes componentes para concluir este passo a passo:
 
 - Visual Studio.
 
@@ -181,11 +181,11 @@ O componente <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithTy
 
 10. Pressione F5 para compilar e executar o aplicativo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [Exemplo de associação de dados em aplicativos híbridos](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Exemplo de associação de dados em aplicativos híbridos](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [Passo a passo: hospedando um controle composto do Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: hospedando um controle composto do WPF no Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Instruções passo a passo: hospedando um controle de composição do WPF nos Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: analisar o sentimentos das análises de filmes usando um modelo de TensorFlow pré-treinado'
+title: 'Tutorial: analisar as opiniões de revisão usando um modelo TensorFlow'
 description: Este tutorial mostra como usar um modelo de TensorFlow pré-treinado para classificar as opiniões nos comentários do site. O classificador de sentimentos binário C# é um aplicativo de console desenvolvido usando o Visual Studio.
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738689"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092389"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>Tutorial: analisar o sentimentos das análises de filmes usando um modelo de TensorFlow pré-treinado no ML.NET
 
@@ -26,11 +26,11 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
-## <a name="setup"></a>Configuração
+## <a name="setup"></a>Instalação
 
 ### <a name="create-the-application"></a>Criar o aplicativo
 
@@ -79,16 +79,16 @@ As revisões de filme são texto de forma livre. Seu aplicativo converte o texto
 
 A primeira é dividir o texto em palavras separadas e usar o arquivo de mapeamento fornecido para mapear cada palavra em uma codificação de número inteiro. O resultado dessa transformação é uma matriz de inteiro de comprimento variável com um comprimento correspondente ao número de palavras na sentença.
 
-|propriedade| Value|{1&gt;Tipo&lt;1}|
+|Propriedade| Valor|Type|
 |-------------|-----------------------|------|
-|ReviewText|Esse filme é realmente bom|cadeia de caracteres|
+|ReviewText|Esse filme é realmente bom|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 
 Em seguida, a matriz de recursos de comprimento variável é redimensionada para um comprimento fixo de 600. Esse é o comprimento esperado pelo modelo TensorFlow.
 
-|propriedade| Value|{1&gt;Tipo&lt;1}|
+|Propriedade| Valor|Type|
 |-------------|-----------------------|------|
-|ReviewText|Esse filme é realmente bom|cadeia de caracteres|
+|ReviewText|Esse filme é realmente bom|string|
 |VariableLengthFeatures|14, 22, 9, 66, 78,... |int []|
 |Recursos|14, 22, 9, 66, 78,... |int [600]|
 
@@ -130,7 +130,7 @@ A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para to
 
 1. Crie um dicionário para codificar palavras como inteiros usando o método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) para carregar dados de mapeamento de um arquivo, como mostrado na tabela a seguir:
 
-    |Word     |Index    |
+    |Word     |Índice    |
     |---------|---------|
     |Kids     |  362    |
     |desejar     |  181    |
@@ -224,7 +224,7 @@ A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para to
 
 1. A função [Predict ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) faz uma previsão em uma única linha de dados:
 
-    |propriedade| Value|{1&gt;Tipo&lt;1}|
+    |Propriedade| Valor|Type|
     |-------------|-----------------------|------|
     |Previsão|[0,5459937, 0,454006255]|float []|
 
@@ -251,7 +251,7 @@ Parabéns! Agora você criou com êxito um modelo de aprendizado de máquina par
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF).
 
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 >
 > * Carregar um modelo de TensorFlow pré-treinado

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460842"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095158"
 ---
 # <a name="how-to-localize-an-application"></a>Como localizar um aplicativo
 Esse tutorial explica como criar um aplicativo localizado usando a ferramenta LocBaml.  
@@ -23,7 +23,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 > A ferramenta LocBaml não é um aplicativo pronto para produção. Ela é apresentada como um exemplo que usa algumas das APIs de localização e ilustra como você pode escrever uma ferramenta de localização.  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>Visão geral  
  Esta discussão oferece uma abordagem passo a passo para a localização de um aplicativo. Primeiro, você preparará o seu aplicativo para que o texto que será convertido possa ser extraído. Depois que o texto for traduzido, você o mesclará em uma nova cópia do aplicativo original.  
   
 <a name="Requirements"></a>   
@@ -64,7 +64,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 <a name="create_dll"></a>   
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Criar o assembly satélite de recursos de idioma neutro  
- Depois que o aplicativo está configurado para gerar um assembly satélite de recursos de idioma neutro, você compila o aplicativo. Isso gera o assembly principal do aplicativo, bem como o assembly satélite de recursos de idioma neutro exigido pela LocBaml para a localização. Para compilar o aplicativo:  
+ Depois que o aplicativo está configurado para gerar um assembly satélite de recursos de idioma neutro, você compila o aplicativo. Isso gera o assembly principal do aplicativo, bem como o assembly satélite de recursos de idioma neutro exigido pela LocBaml para a localização. Para criar o aplicativo:  
   
 1. Compile HelloApp para criar uma DLL (biblioteca de vínculo dinâmico):  
   
@@ -81,7 +81,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Compilar a ferramenta LocBaml  
   
-1. Todos os arquivos necessários para compilar LocBaml estão localizados nos exemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Baixe os C# arquivos do [exemplo da ferramenta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Todos os arquivos necessários para compilar LocBaml estão localizados nos exemplos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Baixe os C# arquivos do [exemplo da ferramenta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 2. Na linha de comando, execute o arquivo de projeto (locbaml.csproj) para compilar a ferramenta:  
   
@@ -151,8 +151,8 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
    |Nome BAML|Chave de recurso|Categoria|Legibilidade|Modificabilidade|Comentários|Valor|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||#Text1; #Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Olá, Mundo|
    |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Nenhum|TRUE|TRUE||Goodbye World|
   
    Observe que todos os valores do campo **comentários** não contêm valores; se um campo não tiver um valor, ele estará vazio. Observe também que o item na primeira linha não é legível nem modificável e tem "ignorar" como seu valor de **categoria** , que indica que o valor não é localizável.  
@@ -186,7 +186,7 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
   
 6. Copie o assembly satélite gerado para a nova pasta.  
   
-7. Para testar o novo assembly satélite, você precisa alterar a cultura na qual o aplicativo será executado. Você pode fazer isso de duas maneiras:  
+7. Para testar o novo assembly satélite, você precisa alterar a cultura na qual o aplicativo será executado. É possível fazer isso de duas formas:  
   
     - Altere as configurações regionais do seu sistema operacional (**inicie** &#124; **as opções regionais e de idioma**do painel &#124; de **controle** ).  
   
@@ -206,10 +206,10 @@ Esse tutorial explica como criar um aplicativo localizado usando a ferramenta Lo
 - A versão da DLL de recurso localizado precisa ser sincronizada com o assembly principal.  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>Novidades  
+## <a name="whats-next"></a>E agora?  
  Agora você deve ter um entendimento básico de como usar a ferramenta LocBaml.  Você deve ser capaz de criar um arquivo que contém Uids. Ao usar a ferramenta LocBaml, você deverá ser capaz de analisar um arquivo para extrair o conteúdo localizável e, depois que o conteúdo for traduzido, você deverá ser capaz de gerar um arquivo .resources.dll que mescla o conteúdo traduzido. Este tópico não inclui todos os detalhes possíveis, mas agora você tem o conhecimento necessário para usar a LocBaml na localização de seus aplicativos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização para WPF](globalization-for-wpf.md)
 - [Visão geral do uso de layout automático](use-automatic-layout-overview.md)

@@ -2,12 +2,12 @@
 title: Acessando OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 83f3a6cacd3ee86050f65a886d446ab8da7d3690
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715097"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094703"
 ---
 # <a name="accessing-operationcontext"></a>Acessando OperationContext
 Este exemplo demonstra como as atividades de mensagens (<xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.Send>) podem ser usadas com uma atividade de escopo personalizada para acessar <xref:System.ServiceModel.OperationContext.Current%2A> e anexar ou recuperar um cabeçalho de mensagem personalizado em uma mensagem de saída ou de entrada.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como as atividades de mensagens (<xref:System.ServiceMode
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Este exemplo exibe um serviço de fluxo de trabalho usando pontos de extremidade HTTP. Para executar esse exemplo, as ACLs de URL adequadas devem ser adicionadas (consulte [Configurando http e HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obter detalhes), seja executando o Visual Studio como administrador ou executando o comando a seguir em um prompt elevado para adicionar as ACLs apropriadas. Certifique-se de que seu domínio e nome de usuário são substituídos.  
+1. Este exemplo exibe um serviço de fluxo de trabalho usando pontos de extremidade HTTP. Para executar esse exemplo, as ACLs de URL adequadas devem ser adicionadas (consulte [Configurando http e HTTPS](../../wcf/feature-details/configuring-http-and-https.md) para obter detalhes), seja executando o Visual Studio como administrador ou executando o comando a seguir em um prompt elevado para adicionar as ACLs apropriadas. Certifique-se de que seu domínio e nome de usuário são substituídos.  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -28,7 +28,7 @@ Este exemplo demonstra como as atividades de mensagens (<xref:System.ServiceMode
   
 2. Uma vez que o URL ACLs é adicionado, use as seguintes etapas.  
   
-    1. {1&gt;Compile a solução.&lt;1}  
+    1. Compile a solução.  
   
     2. Defina vários projetos de inicialização clicando com o botão direito do mouse na solução e selecionando **definir projetos de inicialização**.  
   

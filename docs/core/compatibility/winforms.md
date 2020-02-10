@@ -1,13 +1,13 @@
 ---
-title: Windows Forms alterações significativas-.NET Core
+title: Windows Forms alterações significativas
 description: Lista as alterações significativas no Windows Forms para .NET Core.
 ms.date: 01/08/2020
-ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116450"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093013"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
 
@@ -95,6 +95,6 @@ As seguintes alterações significativas estão documentadas nesta página:
 
 ***
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Porta um aplicativo de Windows Forms para o .NET Core](../porting/winforms.md)

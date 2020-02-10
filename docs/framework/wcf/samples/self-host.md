@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 9077f2b00c97ae2a2106a50780cfd2cd9596c1ec
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5a94eff021074a24df5b8891fe7b418b1fcf3c35
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716314"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094911"
 ---
 # <a name="self-host"></a>Self-Host
 Este exemplo demonstra como implementar um serviço hospedado automaticamente em um aplicativo de console. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). O arquivo de configuração de serviço foi renomeado de Web. config para app. config e foi modificado para configurar um endereço base, que o host usa. O código-fonte do serviço foi modificado para implementar uma função `Main` estática que cria e abre um host de serviço que fornece o endereço base configurado. A implementação do serviço foi modificada para gravar a saída no console para cada operação. O cliente não foi modificado, exceto para configurar o endereço do ponto de extremidade correto do serviço.  
@@ -41,7 +41,7 @@ public static void Main()
 }  
 ```  
   
- Quando um serviço é hospedado no Serviços de Informações da Internet (IIS) ou no WAS (serviço de ativação de processos do Windows), o endereço base do serviço é fornecido pelo ambiente de hospedagem. No caso do auto-hospedado, você deve especificar o endereço base por conta própria. Isso é feito usando o elemento `add`, filho de [\<baseaddresss >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), filho de [\<host](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), filho do\<[serviço >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) conforme demonstrado na seguinte configuração de exemplo.  
+ Quando um serviço é hospedado no Serviços de Informações da Internet (IIS) ou no WAS (serviço de ativação de processos do Windows), o endereço base do serviço é fornecido pelo ambiente de hospedagem. No caso do auto-hospedado, você deve especificar o endereço base por conta própria. Isso é feito usando o elemento `add`, filho de [\<baseaddresss >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), filho de [>\<host](../../../../docs/framework/configure-apps/file-schema/wcf/host.md), filho do\<[serviço >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) conforme demonstrado na seguinte configuração de exemplo.  
   
 ```xml  
 <service   
@@ -75,6 +75,6 @@ public static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplos de persistência e de hospedagem do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Exemplos de persistência e de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

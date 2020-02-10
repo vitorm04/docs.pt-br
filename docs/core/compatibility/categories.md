@@ -1,13 +1,13 @@
 ---
-title: Categorias de alteração da falha – .NET Core
+title: Categorias de alteração significativa
 description: Saiba mais sobre as maneiras como as alterações da falha são categorizadas no .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343593"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093039"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
@@ -52,6 +52,6 @@ Manter a compatibilidade com versões posteriores praticamente impede alteraçõ
 
 Manter a compatibilidade com versões futuras não é uma meta do .NET Core.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Avaliar alterações da falha no .NET Core](index.md)
