@@ -2,15 +2,14 @@
 title: Analisador de API do .NET
 description: Saiba como o analisador de API do .NET pode ajudar a detectar problemas de compatibilidade de plataforma e de APIs preteridas.
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929361"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124241"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -21,7 +20,7 @@ O Analisador de API é fornecido como um pacote NuGet [Microsoft.DotNet.Analyzer
 > [!NOTE]
 > O analisador do .NET API ainda é uma versão de pré-lançamento.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Visual Studio 2017 e versões posteriores ou Visual Studio para Mac (todas as versões).
 
@@ -45,7 +44,7 @@ Quando uma API preterida, como <xref:System.Net.WebClient>, é usada em um códi
 
 A janela **Lista de Erros** contém avisos com uma ID exclusiva por API preterida, conforme mostrado no seguinte exemplo (`DE004`): 
 
-!["Captura de tela da janela Lista de Erros mostrando a ID e a descrição do aviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Janela Lista de Erros, que inclui avisos.")
+!["Captura de tela da janela de Lista de Erros mostrando a ID e a descrição do aviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Lista de Erros janela que inclui avisos.")
 
 Clicando na ID, você vai para uma página da Web com informações detalhadas sobre por que a API foi preterida e sugestões sobre APIs alternativas que podem ser usadas.
 
@@ -56,7 +55,7 @@ Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro 
 
 ### <a name="suppressing-warnings-locally"></a>Como suprimir avisos localmente
 
-Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico* \<ID de diagnóstico >**  > **na Fonte**. A diretiva de pré-processador de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela do código enquadrado com o aviso #pragma desabilitado"](media/api-analyzer/suppress-in-source.jpg)
+Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico*\<ID de diagnóstico >**  > **na Fonte**. A política de pré-processamento de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela de código enquadrado com #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>Como suprimir avisos globalmente
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790826"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123631"
 ---
 # <a name="textbox"></a>TextBox
-O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada de texto básico em aplicativos WPF.  
+O controle <xref:System.Windows.Controls.TextBox> fornece suporte para entrada de texto básica em aplicativos do WPF.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de TextBox](textbox-overview.md)  
- [Tópicos de instruções](textbox-how-to-topics.md)  
+ [Tópicos explicativos](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,5 +32,5 @@ O <xref:System.Windows.Controls.TextBox> controle oferece suporte para entrada d
   
 ## <a name="see-also"></a>Consulte também
 
-- [Exemplo da galeria de controles de WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Estilos e modelos TextBox](textbox-styles-and-templates.md)
+- [Exemplo da galeria de controles de WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [Estilos e modelos de TextBox](textbox-styles-and-templates.md)

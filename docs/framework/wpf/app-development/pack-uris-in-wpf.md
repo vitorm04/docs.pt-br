@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739164"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124475"
 ---
 # <a name="pack-uris-in-wpf"></a>URIs "pack://" no WPF
 
@@ -44,7 +44,7 @@ Para fornecer um mecanismo consistente para identificar e carregar esses tipos d
 
 ## <a name="the-pack-uri-scheme"></a>O esquema de URI de pacote
 
-O esquema de URI de pacote é usado pela especificação OPC ( [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) ), que descreve um modelo para organizar e identificar conteúdo. Os principais elementos desse modelo são pacotes e partes, onde um *pacote* é um contêiner lógico para uma ou mais *partes*lógicas. A imagem a seguir ilustra esse conceito.
+O esquema de URI de pacote é usado pela especificação OPC ( [Open Packaging Conventions](https://www.ecma-international.org/publications/standards/Ecma-376.htm) ), que descreve um modelo para organizar e identificar conteúdo. Os principais elementos desse modelo são pacotes e partes, onde um *pacote* é um contêiner lógico para uma ou mais *partes*lógicas. A imagem a seguir ilustra esse conceito.
 
 ![Diagrama de partes e pacote](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 

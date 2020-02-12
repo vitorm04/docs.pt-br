@@ -1,16 +1,14 @@
 ---
 title: Bem-vindo ao .NET
 description: Introdução à família de tecnologias do .NET.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838124"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124215"
 ---
 # <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
@@ -22,7 +20,7 @@ Crie vários tipos de aplicativos com o .NET, como nuvem, IoT e jogos usando fer
 
 Para obter notícias sobre o .NET, verifique os seguintes blogs:
 
-- [Blog do .NET](https://devblogs.microsoft.com/dotnet/)
+- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
 - [Blog do ASP.NET](https://devblogs.microsoft.com/aspnet/)
 - [O blog do Visual Studio](https://devblogs.microsoft.com/visualstudio/)
 - [A equipe do Visual Basic](https://devblogs.microsoft.com/vbteam/)
@@ -48,7 +46,7 @@ Esta documentação abrange a extensão do .NET entre plataformas e linguagens. 
 - [Guia do .NET Core](core/index.md)
 - [Guia do .NET Framework](framework/index.md)
 - [Guia do C#](csharp/index.yml)
-- [Guia do F#](fsharp/index.yml)
+- [Guia de F#](fsharp/index.yml)
 - [Guia do Visual Basic](visual-basic/index.yml)
 - [Guia do ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
@@ -56,13 +54,13 @@ Esta documentação abrange a extensão do .NET entre plataformas e linguagens. 
 
 Além disso, você pode procurar a [referência da API .NET](/dotnet/api).
 
-## <a name="videos"></a>Vídeos
+## <a name="videos"></a>vídeos
 
 Explore vídeos em Web, móveis, desktops C#, aprendizado de máquina, contêineres/Docker, acesso a dados e muito mais:
 
 [Série de vídeos do .NET 101](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>Código Aberto
+## <a name="open-source"></a>Código-fonte aberto
 
 Esta documentação é totalmente de [software livre](https://github.com/dotnet/docs). É possível contribuir da maneira que você desejar, desde criar problemas até escrever a documentação. Além disso, grande parte do próprio .NET também é de software livre. A lista a seguir mostra os principais repositórios do GitHub sobre o .NET:
 

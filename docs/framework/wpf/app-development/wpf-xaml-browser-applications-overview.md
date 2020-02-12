@@ -10,17 +10,17 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742285"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124202"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>Os aplicativos de navegador XAML (XBAPs) combinam recursos de aplicativos Web e aplicativos cliente avançados. Assim como aplicativos Web, os XBAPs podem ser implantados em um servidor Web e iniciados no Internet Explorer ou no Firefox. Como aplicativos de cliente avançado, os XBAPs podem aproveitar os recursos do WPF. O desenvolvimento de XBAPs também é semelhante ao desenvolvimento de cliente avançado. Este tópico fornece uma introdução simples e de alto nível ao desenvolvimento de XBAP e descreve em que o desenvolvimento XBAP difere do desenvolvimento padrão de cliente avançado.
 
- Esse tópico contém as seguintes seções:
+ Este tópico contém as seguintes seções:
 
 - [Criando um novo aplicativo de navegador XAML (XBAP)](#creating_a_new_xaml_browser_application_xbap)
 
@@ -91,7 +91,7 @@ ms.locfileid: "76742285"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Comunicando-se com a página da Web de host
- Quando o aplicativo é hospedado em um quadro HTML, você pode se comunicar com a página da Web que contém o XBAP. Você faz isso recuperando a propriedade <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> de <xref:System.Windows.Interop.BrowserInteropHelper>. Essa propriedade retorna um objeto de script que representa a janela do HTML. Assim, você poderá acessar as propriedades, os métodos e os eventos no [objeto de janela](https://go.microsoft.com/fwlink/?LinkId=160274), usando a sintaxe de ponto regular. Você também pode acessar os métodos de script e as variáveis globais. O exemplo a seguir mostra como recuperar o objeto de script e fechar o navegador.
+ Quando o aplicativo é hospedado em um quadro HTML, você pode se comunicar com a página da Web que contém o XBAP. Você faz isso recuperando a propriedade <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> de <xref:System.Windows.Interop.BrowserInteropHelper>. Essa propriedade retorna um objeto de script que representa a janela do HTML. Assim, você poderá acessar as propriedades, os métodos e os eventos no [objeto de janela](https://developer.mozilla.org/en-US/docs/Web/API/Window), usando a sintaxe de ponto regular. Você também pode acessar os métodos de script e as variáveis globais. O exemplo a seguir mostra como recuperar o objeto de script e fechar o navegador.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742285"
 > [!NOTE]
 > O comportamento descrito na tabela anterior é para XBAPs de confiança total que não seguem o modelo de implantação confiável do ClickOnce.
 
- É recomendável que você use o modelo de implantação confiável do ClickOnce para implantar um XBAP de confiança total. Esse modelo permite que seu XBAP receba a confiança total automaticamente, independentemente da zona de segurança, de forma que o usuário não receba um aviso. Como parte desse modelo, você deve assinar o aplicativo com um certificado de um fornecedor confiável. Para obter mais informações, consulte [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview) e [Introdução à assinatura de código](https://go.microsoft.com/fwlink/?LinkId=166327).
+ É recomendável que você use o modelo de implantação confiável do ClickOnce para implantar um XBAP de confiança total. Esse modelo permite que seu XBAP receba a confiança total automaticamente, independentemente da zona de segurança, de forma que o usuário não receba um aviso. Como parte desse modelo, você deve assinar o aplicativo com um certificado de um fornecedor confiável. Para obter mais informações, consulte [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview) e [Introdução à assinatura de código](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)).
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>Considerações sobre desempenho de tempo de início de XBAP

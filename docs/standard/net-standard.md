@@ -1,18 +1,16 @@
 ---
 title: .NET Standard
 description: Saiba mais sobre o .NET Standard, suas versões e as implementações de .NET que dão suporte a ele.
-author: mairaw
-ms.author: mairaw
 ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 6a4406775056b76dfa789911b8bb14e84dbc8eea
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738650"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124631"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -86,9 +84,9 @@ O meio de distribuição principal dos assemblies de referência do .NET Standar
 
 Pacotes NuGet são direcionados a uma ou mais [estruturas](frameworks.md). Os pacotes do .NET Standard são direcionados à estrutura do ".NET Standard". Você pode direcionar a estrutura de .NET Standard usando o `netstandard` [Compact TFM](frameworks.md) (por exemplo, `netstandard1.4`). Bibliotecas destinadas a execução em vários runtimes devem ter essa estrutura como alvo. Para obter o mais amplo conjunto de APIs, direcione `netstandard2.0`, pois o número de APIs disponíveis mais do que dobrou entre o .NET Standard 1.6 e 2.0.
 
-O metapacote [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) referencia o conjunto completo de pacotes NuGet que definem o .NET Standard.  A maneira mais comum de apontar `netstandard` é fazer referência a esse metapacote. Ele descreve e fornece acesso às ~40 bibliotecas .NET e APIs associadas, que definem a .NET Standard. Você pode referenciar pacotes adicionais destinados a `netstandard` para obter acesso a APIs adicionais.
+O metapacote [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) referencia o conjunto completo de pacotes NuGet que definem o .NET Standard.  A maneira mais comum de apontar `netstandard` é fazer referência a esse metapacote. Ele descreve e fornece acesso às ~40 bibliotecas .NET e APIs associadas, que definem a .NET Standard. Você pode referenciar outros pacotes destinados a `netstandard` para obter acesso a APIs adicionais.
 
-### <a name="versioning"></a>{1&gt;Controle de versão&lt;1}
+### <a name="versioning"></a>Controle de versão
 
 A especificação não é única, mas um conjunto de versões de APIs de crescimento incremental e linear. A primeira versão do padrão estabelece um conjunto de linhas de base de APIs. As versões subsequentes adicionam APIs e herdam APIs definidas por versões anteriores. Não há nenhuma provisão estabelecido para remoção de APIs do padrão.
 
@@ -161,7 +159,7 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standar
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Versões do .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Criar uma biblioteca de .NET Standard](../core/tutorials/library-with-visual-studio.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744223"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124501"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>APIs de suporte à hospedagem de navegador do WPF nativa
 A hospedagem de aplicativos do WPF em navegadores da Web é facilitada por um servidor de documentos ativo (também conhecido como DocObject) registrado fora do host do WPF. O Internet Explorer pode ativar e integrar diretamente com um documento ativo. Para hospedagem de XBAPs e documentos XAML soltos em navegadores Mozilla, o WPF fornece um plug-in NPAPI, que fornece um ambiente de hospedagem semelhante ao servidor de documentos ativo do WPF como o Internet Explorer. Entretanto, a maneira mais fácil de hospedar documentos XBAPs e XAML em outros navegadores e aplicativos independentes é através do controle do navegador da Web do Internet Explorer. O controle do Navegador da Web fornece o complexo ambiente de hospedagem do servidor de documento ativo, mas permite que seu próprio host personalize e amplie esse ambiente e se comunique diretamente com o servidor de documento ativo atual.  
   
- O servidor de documentos ativo do WPF implementa várias interfaces de hospedagem comuns, incluindo [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Quando hospedada no controle do navegador da Web, essas interfaces podem ser consultas do objeto retornadas pela propriedade [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048).  
+ O servidor de documentos ativo do WPF implementa várias interfaces de hospedagem comuns, incluindo [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject), [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument), [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject), [IPersistMoniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85)), [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget). Quando hospedada no controle do navegador da Web, essas interfaces podem ser consultas do objeto retornadas pela propriedade [IWebBrowser2::Document](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85)).  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- A implementação do [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) do servidor de documento ativo do WPF dá suporte a vários comandos relacionados à navegação e ao navegador do grupo de comandos OLE padrão (com um GUID de grupo de comandos nulo). Além disso, reconhece um grupo de comando personalizado chamado CGID_PresentationHost. Atualmente, só há um comando definido neste grupo.  
+ A implementação do [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget) do servidor de documento ativo do WPF dá suporte a vários comandos relacionados à navegação e ao navegador do grupo de comandos OLE padrão (com um GUID de grupo de comandos nulo). Além disso, reconhece um grupo de comando personalizado chamado CGID_PresentationHost. Atualmente, só há um comando definido neste grupo.  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

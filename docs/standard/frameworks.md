@@ -1,17 +1,15 @@
 ---
 title: Estruturas de destino em projetos em estilo SDK-.NET
 description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838203"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124592"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Estruturas de destino em projetos no estilo SDK
 
@@ -32,8 +30,8 @@ A tabela a seguir define as estruturas de destino mais comuns, como elas são re
 | Estrutura de Destino      | Última <br/> Versão estável | TFM (Moniker de Estrutura de Destino) | Implementado <br/> Versão do .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.1                         | netstandard 2.1                 | {1&gt;N/A&lt;1}                                     |
-| .NET Core             | 3,1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
+| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
+| {1&gt;.NET Framework&lt;1}        | 4.8                         | net48                          | 2,0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte
 
@@ -43,7 +41,7 @@ Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seg
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
+| {1&gt;.NET Framework&lt;1}             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |

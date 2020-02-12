@@ -2,16 +2,15 @@
 title: Bibliotecas de classes do .NET
 description: Saiba como as bibliotecas de classes do .NET permitem que você agrupe funcionalidades úteis em módulos que podem ser usados por vários aplicativos.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664596"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124579"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
 
@@ -50,11 +49,11 @@ O .NET Standard não expõe toda a funcionalidade do .NET Framework (isso nem é
 As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standard:
 
 * .NET Core
-* .NET Framework
+* {1&gt;.NET Framework&lt;1}
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * UWP (Plataforma Universal do Windows)
-* Windows
+* Portal
 * Windows Phone
 * Windows Phone Silverlight
 
@@ -62,4 +61,4 @@ Para obter mais informações, consulte o tópico [.NET Standard](net-standard.m
 
 ## <a name="mono-class-libraries"></a>Bibliotecas de classes do Mono
 
-Há suporte para as bibliotecas de classe no Mono, incluindo os três tipos de bibliotecas descritas acima. Mono era geralmente visto (corretamente) como uma implementação de plataforma cruzada do Microsoft .NET Framework. Em parte, isso acontecia porque bibliotecas do .NET Framework específicas da plataforma podiam ser executadas no tempo de execução do Mono sem modificação ou recompilação. Essa característica estava em vigor antes da criação de bibliotecas de classes portáteis, portanto, era uma opção óbvia para habilitar a portabilidade binária entre o .NET Framework e o Mono (embora ele funcionasse apenas em uma direção).
+Há suporte para as bibliotecas de classe no Mono, incluindo os três tipos de bibliotecas descritas acima. Mono era geralmente visto (corretamente) como uma implementação de plataforma cruzada do Microsoft .NET Framework. Em parte, isso acontecia porque bibliotecas do .NET Framework específicas da plataforma podiam ser executadas no runtime Mono sem modificação ou recompilação. Essa característica estava em vigor antes da criação de bibliotecas de classes portáteis, portanto, era uma opção óbvia para habilitar a portabilidade binária entre o .NET Framework e o Mono (embora ele funcionasse apenas em uma direção).

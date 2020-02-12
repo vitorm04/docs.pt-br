@@ -2,15 +2,14 @@
 title: Componentes de arquitetura do .NET
 description: Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os runtimes do .NET e as ferramentas.
 author: cartermp
-ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348055"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124384"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -41,7 +40,7 @@ O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar
 
 Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
-### <a name="net-framework"></a>.NET Framework
+### <a name="net-framework"></a>{1&gt;.NET Framework&lt;1}
 
 O.NET Framework é a implementação original do .NET que existe desde 2002. É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram. As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework. Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF. O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
 
@@ -104,12 +103,12 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - **Tecnologia da informação — partições de Common Language Infrastructure (CLI) I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
 - [Guia do .NET Core](../core/index.md)
 - [Guia do .NET Framework](../framework/index.md)
 - [Guia do C#](../csharp/index.yml)
-- [Guia do F#](../fsharp/index.yml)
+- [Guia de F#](../fsharp/index.yml)
 - [Guia do Visual Basic](../visual-basic/index.yml)

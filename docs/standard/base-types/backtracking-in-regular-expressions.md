@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7922294db1236e697df80203583b2dbb3e41a01
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711513"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124436"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
@@ -33,7 +33,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 ## <a name="linear-comparison-without-backtracking"></a>Comparação linear sem retrocesso  
  Se um padrão de expressão regular não tem quantificadores ou constructos de alternância opcionais, o mecanismo de expressões regulares é executado em tempo linear. Ou seja, depois que o mecanismo de expressões regulares corresponde o primeiro elemento de linguagem no padrão com o texto da cadeia de caracteres de entrada, ele tenta corresponder o elemento de linguagem seguinte no padrão com o próximo caractere ou grupo de caracteres na cadeia de caracteres de entrada. Esse processo continuará até que a correspondência obtenha êxito ou falhe. Em ambos os casos, o mecanismo de expressões regulares avança um caractere de cada vez na cadeia de caracteres de entrada.  
   
- O exemplo a seguir fornece uma ilustração. A expressão regular `e{2}\w\b` procura duas ocorrências da letra “e” seguidas por qualquer caractere de palavra seguido por um limite de palavra.  
+ O exemplo a seguir ilustra esse cenário. A expressão regular `e{2}\w\b` procura duas ocorrências da letra “e” seguidas por qualquer caractere de palavra seguido por um limite de palavra.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking1.cs#1)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking1.vb#1)]  
@@ -42,22 +42,22 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
 |Operação|Posição no padrão|Posição na cadeia de caracteres|Resultado|  
 |---------------|-------------------------|------------------------|------------|  
-|1|{1&gt;e&lt;1}|"needing a reed" (índice 0)|Nenhuma correspondência.|  
-|2|{1&gt;e&lt;1}|"eeding a reed" (índice 1)|Possível correspondência.|  
+|1|e|"needing a reed" (índice 0)|Nenhuma correspondência.|  
+|2|e|"eeding a reed" (índice 1)|Possível correspondência.|  
 |3|e{2}|"eding a reed" (índice 2)|Possível correspondência.|  
 |4|\w|"ding a reed" (índice 3)|Possível correspondência.|  
 |5|\b|"ing a reed" (índice 4)|Possível falha de correspondência.|  
-|6|{1&gt;e&lt;1}|"eding a reed" (índice 2)|Possível correspondência.|  
+|6|e|"eding a reed" (índice 2)|Possível correspondência.|  
 |7|e{2}|"ding a reed" (índice 3)|Possível falha de correspondência.|  
-|8|{1&gt;e&lt;1}|"ding a reed" (índice 3)|Falha de correspondência.|  
-|9|{1&gt;e&lt;1}|"ing a reed" (índice 4)|Nenhuma correspondência.|  
-|10|{1&gt;e&lt;1}|"ng a reed" (índice 5)|Nenhuma correspondência.|  
-|11|{1&gt;e&lt;1}|"g a reed" (índice 6)|Nenhuma correspondência.|  
-|12|{1&gt;e&lt;1}|" a reed" (índice 7)|Nenhuma correspondência.|  
-|13|{1&gt;e&lt;1}|"a reed" (índice 8)|Nenhuma correspondência.|  
-|14|{1&gt;e&lt;1}|" reed" (índice 9)|Nenhuma correspondência.|  
-|15|{1&gt;e&lt;1}|"reed" (índice 10)|Nenhuma correspondência|  
-|16|{1&gt;e&lt;1}|"eed" (índice 11)|Possível correspondência.|  
+|8|e|"ding a reed" (índice 3)|Falha de correspondência.|  
+|9|e|"ing a reed" (índice 4)|Nenhuma correspondência.|  
+|10|e|"ng a reed" (índice 5)|Nenhuma correspondência.|  
+|11|e|"g a reed" (índice 6)|Nenhuma correspondência.|  
+|12|e|" a reed" (índice 7)|Nenhuma correspondência.|  
+|13|e|"a reed" (índice 8)|Nenhuma correspondência.|  
+|14|e|" reed" (índice 9)|Nenhuma correspondência.|  
+|15|e|"reed" (índice 10)|Nenhuma correspondência|  
+|16|e|"eed" (índice 11)|Possível correspondência.|  
 |17|e{2}|"ed" (índice 12)|Possível correspondência.|  
 |18|\w|"d" (índice 13)|Possível correspondência.|  
 |19|\b|"" (índice 14)|Correspondência.|  
@@ -103,7 +103,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
  A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2<sup>n</sup>) ou uma operação exponencial, em que *n* é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular. 
 
 ## <a name="controlling-backtracking"></a>Controlando o retrocesso  
- O retrocesso permite a você criar expressões regulares avançadas e flexíveis. No entanto, conforme mostrado na seção anterior, esses benefícios podem estar associados a um baixo desempenho inaceitável. Para evitar o retrocesso excessivo, você deve definir um intervalo de tempo limite no qual você criará uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ou chamará um método de correspondência de expressão regular estático. Isso é abordado na próxima seção. Além disso, o .NET dá suporte a três elementos de linguagem de expressão regular que limitam ou suprimem o retrocesso e que dão suporte a expressões regulares complexas com pouca ou nenhuma penalidade de desempenho: [subexpressões sem retrocesso](#nonbacktracking-subexpression), [asserções lookbehind](#lookbehind-assertions) e [asserções lookahead](#lookahead-assertions). Para saber mais sobre cada elemento de linguagem, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ O retrocesso permite a você criar expressões regulares avançadas e flexíveis. No entanto, conforme mostrado na seção anterior, esses benefícios podem estar associados a um baixo desempenho inaceitável. Para evitar o retrocesso excessivo, você deve definir um intervalo de tempo limite no qual você criará uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ou chamará um método de correspondência de expressão regular estático. Isso é abordado na próxima seção. Além disso, o .NET dá suporte a três elementos de linguagem de expressão regular que limitam ou suprimem o retrocesso e que dão suporte a expressões regulares complexas com pouca ou nenhuma penalidade de desempenho: [grupos atômicos](#atomic-groups), [asserções lookbehind](#lookbehind-assertions)e [declarações de lookahead](#lookahead-assertions). Para saber mais sobre cada elemento de linguagem, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definindo um intervalo de tempo limite  
  Do .NET Framework 4.5 em diante, você pode definir um valor de tempo limite que representa o intervalo mais longo durante o qual o mecanismo de expressão regular pesquisará uma única correspondência antes de abandonar a tentativa e gerar uma exceção <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Você especifica o intervalo de tempo limite ao fornecer um valor de <xref:System.TimeSpan> para o construtor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> para instanciar expressões regulares. Além disso, cada método de correspondência de padrão estático tem uma sobrecarga com um parâmetro <xref:System.TimeSpan> que permite a você especificar um valor de tempo limite. Por padrão, o intervalo de tempo limite é definido para <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, o que significa que o mecanismo de expressões regulares nunca excede o tempo limite.  
@@ -118,8 +118,8 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
-### <a name="nonbacktracking-subexpression"></a>Subexpressões sem retrocesso  
- O elemento de linguagem de *subexpressão*`)` `(?>` suprime a retrocesso em uma subexpressão. Ele é útil para evitar problemas de desempenho associados a correspondências com falha.  
+### <a name="atomic-groups"></a>Grupos atômicos
+ O elemento de linguagem de *subexpressão*`)` `(?>` suprime a retrocesso na subexpressão. Depois que ele for correspondido com êxito, ele não resultará em nenhuma parte de sua correspondência para o retrocesso posterior. Por exemplo, no `(?>\w*\d*)1`de padrões, se o `1` não puder ser correspondido, o `\d*` não desistirá de nenhuma de sua correspondência, mesmo que isso signifique que o `1` seria correspondido com êxito. Os grupos atômicos podem ajudar a evitar os problemas de desempenho associados às correspondências com falha.
   
  O exemplo a seguir ilustra como suprimir o retrocesso melhora o desempenho quando quantificadores aninhados são usados. Ele mede o tempo necessário para que o mecanismo de expressão regular determine que uma cadeia de caracteres de entrada não corresponde a duas expressões regulares. A primeira expressão regular usa o retrocesso para tentar corresponder uma cadeia de caracteres que contém uma ou mais ocorrências de um ou mais dígitos hexadecimais, seguidos por dois-pontos, seguido por um ou mais dígitos hexadecimais, seguidos por dois dois-pontos. A segunda expressão regular é idêntica à primeira, exceto que ela desabilita o retrocesso. Como a saída do exemplo mostra, a melhora do desempenho resultante da desabilitação do retrocesso é significativa.  
   
@@ -188,7 +188,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 |`[A-Z]\w*`|Corresponder a um caractere alfabético seguido por zero ou mais caracteres de palavra.|  
 |`$`|Finalizar a correspondência no final da cadeia de caracteres de entrada.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

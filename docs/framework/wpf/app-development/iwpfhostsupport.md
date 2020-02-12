@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 4855fae2954e5650d8c9bbb81153ebe64249a867
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e3edd7f7080562d03453898dba7a9326561803b5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740186"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124189"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Aplicativos que hospedam conteúdo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] via PresentationHost.exe implementam essa interface para fornecer um ponto de integração entre o host e PresentationHost.exe.  
   
 ## <a name="remarks"></a>Comentários  
- Aplicativos Win32, como navegadores da Web, podem hospedar conteúdo WPF, incluindo aplicativos de navegador XAML (XBAPs) e XAML flexível. Para hospedar o conteúdo do WPF, os aplicativos Win32 criam uma instância do [controle WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911). Para ser hospedado, o WPF cria uma instância de PresentationHost. exe, que fornece o conteúdo WPF hospedado para o host para exibição no [controle WebBrowser](https://go.microsoft.com/fwlink/?LinkId=97911).  
+ Aplicativos Win32, como navegadores da Web, podem hospedar conteúdo WPF, incluindo aplicativos de navegador XAML (XBAPs) e XAML flexível. Para hospedar o conteúdo do WPF, os aplicativos Win32 criam uma instância do [controle WebBrowser](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85)). Para ser hospedado, o WPF cria uma instância de PresentationHost. exe, que fornece o conteúdo WPF hospedado para o host para exibição no [controle WebBrowser](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85)).  
   
  A integração habilitada por `IWpfHostSupport` permite ao PresentationHost.exe:  
   

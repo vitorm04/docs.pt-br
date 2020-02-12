@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204748"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123656"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
 Você pode usar o .NET Framework tipo de projeto de [biblioteca de classes portátil](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) para garantir que os recursos em suas bibliotecas de classes possam ser acessados de várias plataformas. Esse tipo de projeto está disponível no Visual Studio 2012 e tem como alvo o subconjunto portátil da biblioteca de classes de .NET Framework. O uso de uma biblioteca de classes portátil garante que sua biblioteca possa ser acessada de aplicativos da área de trabalho, aplicativos do Silverlight, Windows Phone aplicativos e aplicativos da loja do Windows 8. x.
@@ -35,7 +33,7 @@ Você pode usar o .NET Framework tipo de projeto de [biblioteca de classes port�
 
  O projeto de biblioteca de classes portátil inclui os quatro membros <xref:System.Resources.ResourceManager> listados na tabela a seguir. Esses construtores e métodos permitem que você crie uma instância de um objeto <xref:System.Resources.ResourceManager> e recupere recursos de cadeia de caracteres.
 
-|`ResourceManager` membro|Descrição|
+|Membro do `ResourceManager`|Descrição|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Cria uma instância de <xref:System.Resources.ResourceManager> para acessar o arquivo de recurso nomeado encontrado no assembly especificado.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Cria uma instância de <xref:System.Resources.ResourceManager> que corresponde ao tipo especificado.|
@@ -65,7 +63,7 @@ Você pode usar o .NET Framework tipo de projeto de [biblioteca de classes port�
 |ID.Length|12|
 |{1&gt;Nome&lt;1}|{1&gt;Nome&lt;1}|
 |NameLength|25|
-|Title|Employee Database|
+|{1&gt;Título&lt;1}|Employee Database|
 
  O código a seguir define uma classe `UILibrary` que usa o wrapper do Resource Manager chamado `resources` gerado pelo Visual Studio quando o **modificador de acesso** do arquivo é alterado para **público**. A classe UILibrary analisa os dados de cadeia de caracteres conforme o necessário. . Observe que a classe está no namespace `MyCompany.Employees`.
 
@@ -92,7 +90,7 @@ Você pode usar o .NET Framework tipo de projeto de [biblioteca de classes port�
 |HiredLength|16|
 |ID|ID|
 |{1&gt;Nome&lt;1}|Nom|
-|Title|Base de données des employés|
+|{1&gt;Título&lt;1}|Base de données des employés|
 
  O código a seguir ilustra como a classe `UILibrary` e seus recursos podem ser acessados de um aplicativo no modo de console. Ele requer uma referência a UILibrary. dll a ser adicionada ao projeto de aplicativo de console.
 

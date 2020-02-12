@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424636"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123708"
 ---
 # <a name="dialog-boxes-overview"></a>Visão geral das caixas de diálogo
 Os aplicativos autônomos normalmente têm uma janela principal que exibe os dados principais sobre os quais o aplicativo opera e expõe a funcionalidade para processar esses dados por meio de mecanismos de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como barras de menus, barras de ferramentas e barras de status. Um aplicativo não trivial também pode exibir janelas adicionais para fazer o seguinte:  
@@ -32,7 +32,7 @@ Os aplicativos autônomos normalmente têm uma janela principal que exibe os dad
   
  Uma caixa de diálogo *sem janela restrita* , por outro lado, não impede que um usuário ative outras janelas enquanto ele está aberto. Por exemplo, se um usuário desejar localizar ocorrências de uma palavra específica em um documento, uma janela principal geralmente abrirá uma caixa de diálogo para solicitar a um usuário qual palavra ele está procurando. No entanto, como a localização de uma palavra não impede que um usuário edite o documento, a caixa de diálogo não precisa ser restrita. Uma caixa de diálogo sem janela restrita, pelo menos, fornece um botão **fechar** para fechar a caixa de diálogo e pode fornecer botões adicionais para executar funções específicas, como um botão **Localizar próximo** para localizar a próxima palavra que corresponde aos critérios de localização de uma pesquisa do Word.  
   
- O Windows Presentation Foundation (WPF) permite que você crie vários tipos de caixas de diálogo, incluindo caixas de mensagens, caixas de diálogo comuns e caixas de diálogo personalizadas. Este tópico aborda cada um deles, e o [exemplo da caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) fornece exemplos correspondentes.  
+ O Windows Presentation Foundation (WPF) permite que você crie vários tipos de caixas de diálogo, incluindo caixas de mensagens, caixas de diálogo comuns e caixas de diálogo personalizadas. Este tópico aborda cada um deles, e o [exemplo da caixa de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox) fornece exemplos correspondentes.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Caixas de mensagens  
@@ -55,9 +55,9 @@ Os aplicativos autônomos normalmente têm uma janela principal que exibe os dad
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Para obter mais informações sobre como usar caixas de mensagens, consulte o exemplo <xref:System.Windows.MessageBox>, [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023)e [caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Para obter mais informações sobre como usar caixas de mensagens, consulte o exemplo <xref:System.Windows.MessageBox>, [MessageBox Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)e [caixa de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox).  
   
- Embora <xref:System.Windows.MessageBox> possa oferecer uma experiência de usuário simples de caixa de diálogo, a vantagem de usar <xref:System.Windows.MessageBox> é que é o único tipo de janela que pode ser mostrado por aplicativos executados em uma área restrita de segurança de confiança parcial (consulte [segurança](../security-wpf.md)), como o navegador XAML aplicativos (XBAPs).  
+ Embora <xref:System.Windows.MessageBox> possa oferecer uma experiência de usuário de caixa de diálogo simples, a vantagem de usar <xref:System.Windows.MessageBox> é que é o único tipo de janela que pode ser mostrado por aplicativos executados em uma área restrita de segurança de confiança parcial (consulte [segurança](../security-wpf.md)), como aplicativos de navegador XAML (XBAPs).  
   
  A maioria das caixas de diálogo exibe e coleta dados mais complexos que o resultado de uma caixa de mensagem, incluindo texto, seleção (caixas de seleção), seleção mutuamente exclusiva (botões de opção) e seleção de lista (caixas de listagem, caixas de combinação, caixas de listagem suspensas). Para isso, Windows Presentation Foundation (WPF) fornece várias caixas de diálogo comuns e permite que você crie suas próprias caixas de diálogo, embora o uso de seja limitado a aplicativos executados com confiança total.  
   
@@ -118,7 +118,7 @@ Embora as caixas de diálogo comuns sejam úteis e devam ser usadas quando poss�
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>Criando uma caixa de diálogo personalizada modal
 
-Este tópico mostra como usar <xref:System.Windows.Window> para criar uma implementação de caixa de diálogo modal típica, usando a caixa de diálogo `Margins` como um exemplo (consulte a [caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)de exemplo). A caixa de diálogo `Margins` é mostrada na figura a seguir.  
+Este tópico mostra como usar <xref:System.Windows.Window> para criar uma implementação de caixa de diálogo modal típica, usando a caixa de diálogo `Margins` como um exemplo (consulte a [caixa de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)de exemplo). A caixa de diálogo `Margins` é mostrada na figura a seguir.  
   
  ![Uma caixa de diálogo margens com campos para definir a margem esquerda, a margem superior, a margem direita e a margem inferior.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -307,4 +307,4 @@ Como alternativa, seu código pode chamar <xref:System.Windows.Window.Close%2A> 
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral do pop-up](../controls/popup-overview.md)
-- [Exemplo de caixa de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [Exemplo de caixa de diálogo](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

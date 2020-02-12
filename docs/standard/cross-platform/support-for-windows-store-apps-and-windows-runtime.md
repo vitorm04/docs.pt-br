@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802746"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123695"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime
 
@@ -112,7 +110,7 @@ Outros tipos de Windows Runtime básicos, comumente usados que aparecem no códi
 
 ### <a name="other-differences"></a>Outras diferenças
 
-Em alguns casos, o fato de que .NET Framework tipos aparecem em seu código em vez de Windows Runtime tipos requer ação de sua parte. Por exemplo, a classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> aparece como <xref:System.Uri?displayProperty=nameWithType> no código .NET Framework. <xref:System.Uri?displayProperty=nameWithType> permite um URI relativo, mas <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requer um URI absoluto. Portanto, ao passar um URI para um método Windows Runtime, você deve garantir que ele seja absoluto. Consulte [Passando um URI para o Tempo de Execução do Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
+Em alguns casos, o fato de que .NET Framework tipos aparecem em seu código em vez de Windows Runtime tipos requer ação de sua parte. Por exemplo, a classe <xref:Windows.Foundation.Uri?displayProperty=nameWithType> aparece como <xref:System.Uri?displayProperty=nameWithType> no código .NET Framework. <xref:System.Uri?displayProperty=nameWithType> permite um URI relativo, mas <xref:Windows.Foundation.Uri?displayProperty=nameWithType> requer um URI absoluto. Portanto, ao passar um URI para um método Windows Runtime, você deve garantir que ele seja absoluto. Consulte [passando um URI para a Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -155,9 +153,9 @@ Você pode empacotar um conjunto de controles de interface do usuário relaciona
 
 Você pode empacotar o código gerenciado de seus aplicativos de área de trabalho existentes como um componente Windows Runtime autônomo. Isso permite que você use o componente no Windows 8. x aplicativos da loja criados C++ usando o ou o JavaScript, bem como em aplicativos da loja do Windows 8 C# . x criados usando ou Visual Basic. O controle de versão é uma opção se houver vários cenários de reutilização para o código.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Descreve os tipos de .NET Framework e os membros que você pode usar para criar aplicativos de armazenamento do Windows 8. x e do Windows RuntimeComponents. (No centro de desenvolvimento do Windows.)|
 |[Roteiro para aplicativos da Windows Store C# usando ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Fornece os principais recursos para ajudá-lo a começar a desenvolver aplicativos da loja do Windows C# 8. x usando o ou Visual Basic, incluindo vários tópicos de início rápido, diretrizes e práticas recomendadas. (No centro de desenvolvimento do Windows.)|

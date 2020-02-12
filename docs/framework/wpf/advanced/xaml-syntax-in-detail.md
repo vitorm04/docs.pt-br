@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559827"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124488"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -43,7 +43,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
 ## <a name="the-xaml-language-specification"></a>Especificação da Linguagem XAML  
  A terminologia de sintaxe XAML definida aqui também é definida ou referenciada dentro da especificação da linguagem XAML. XAML é uma linguagem baseada em XML e segue ou expande regras estruturais do XML. Parte da terminologia é compartilhada com ou se baseia na terminologia usada com frequência ao descrever a linguagem XML ou o modelo de objeto do documento XML.  
   
- Para obter mais informações sobre a especificação da linguagem XAML, baixe [\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525) do Centro de Download da Microsoft.  
+ Para obter mais informações sobre a especificação da linguagem XAML, baixe [\[MS-XAML\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf) do Centro de Download da Microsoft.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML e CLR  
@@ -313,7 +313,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Mas assim como o formato *typeName*.*memberName* para atributos, *baseTypeName*.*memberName* é um estilo ruim de marcação e você deve evitá-lo.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Recursos da linguagem (x:) do namespace de XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)

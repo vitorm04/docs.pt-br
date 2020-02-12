@@ -2,18 +2,17 @@
 title: Escolher entre .NET Core e .NET Framework para aplicativos de servidor
 description: Um guia sobre qual implementação de .NET você deve considerar ao compilar um aplicativo de servidor no .NET.
 author: cartermp
-ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921426"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124618"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
-Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo diretrizes sobre quando usar cada um.
+Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo fornece diretrizes sobre quando usar cada uma.
 
 Use o .NET Core para o aplicativo para servidores se:
 
@@ -101,7 +100,7 @@ Além do roteiro oficial, há outras estruturas a serem transferidas para o .NET
 
 Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Core. Alguns serviços do Azure fornecem um SDK que ainda não está disponível para ser consumido no .NET Core. Esta é uma circunstância transitória, pois todos os serviços do Azure usam o .NET Core. Enquanto isso, você sempre pode usar a API REST equivalente em vez do SDK do cliente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Escolher entre o ASP.NET e o ASP.NET Core](/aspnet/core/choose-aspnet-framework)
 - [ASP.NET Core direcionado para o .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)

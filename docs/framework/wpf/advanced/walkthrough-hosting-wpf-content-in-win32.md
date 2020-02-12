@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735316"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124540"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Instruções passo a passo: hospedando conteúdo do WPF em Win32
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo direto para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela do Win32.  
   
- Este tutorial descreve como escrever um aplicativo de exemplo, [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela do Win32. Você pode estender esse exemplo para hospedar qualquer janela Win32. Como ele envolve a combinação de código gerenciado e não gerenciado, o aplicativo é escrito C++em/CLI.  
+ Este tutorial descreve como escrever um aplicativo de exemplo, [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela do Win32. Você pode estender esse exemplo para hospedar qualquer janela Win32. Como ele envolve a combinação de código gerenciado e não gerenciado, o aplicativo é escrito C++em/CLI.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
@@ -26,7 +26,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  Como o exemplo que acompanha este tutorial é implementado na C++/CLI, este tutorial pressupõe familiaridade com o uso do C++ para programar a API do Windows mais uma compreensão da programação de código gerenciado. A familiaridade C++com a/CLI é útil, mas não essencial.  
   
 > [!NOTE]
-> Este tutorial inclui vários exemplos de código da amostra associada. No entanto, para facilitar a leitura, não inclui o código de exemplo completo. Para obter o código de exemplo completo, consulte [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Este tutorial inclui vários exemplos de código da amostra associada. No entanto, para facilitar a leitura, não inclui o código de exemplo completo. Para obter o código de exemplo completo, consulte [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>O procedimento básico  

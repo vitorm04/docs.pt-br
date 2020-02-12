@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794153"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123773"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>Walkthrough: hospedar um relógio do WPF no Win32
 
@@ -24,7 +24,7 @@ Consulte [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md).
 
 ## <a name="how-to-use-this-tutorial"></a>Como usar este tutorial
 
-Este tutorial mostra as etapas importantes de produção de um aplicativo de interoperação. O tutorial é apoiado por um exemplo de exemplo de [interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051), mas esse exemplo é refletido do produto final. Este tutorial documenta as etapas como se você estivesse começando com um projeto Win32 existente, talvez um projeto pré-existente, e estivesse adicionando um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado ao seu aplicativo. Você pode comparar seu produto final com o [exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
+Este tutorial mostra as etapas importantes de produção de um aplicativo de interoperação. O tutorial é apoiado por um exemplo de exemplo de [interoperação de relógio do Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock), mas esse exemplo é refletido do produto final. Este tutorial documenta as etapas como se você estivesse começando com um projeto Win32 existente, talvez um projeto pré-existente, e estivesse adicionando um [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hospedado ao seu aplicativo. Você pode comparar seu produto final com o [exemplo de interoperação de relógio do Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Um passo a passo do Windows Presentation Framework no Win32 (HwndSource)
 
@@ -232,10 +232,10 @@ O resultado final se parece com:
 
 ![Caixa de diálogo Propriedades da data e hora final do resultado](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-Para comparar o resultado final ao código que produziu esta captura de tela, consulte [exemplo de interoperação de relógio Win32](https://go.microsoft.com/fwlink/?LinkID=160051).
+Para comparar o resultado final ao código que produziu esta captura de tela, consulte [exemplo de interoperação de relógio Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Interop.HwndSource>
-- [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)
-- [Exemplo de interoperação de relógio do Win32](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Interoperação do WPF e do Win32](wpf-and-win32-interoperation.md)
+- [Exemplo de interoperação de relógio do Win32](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)

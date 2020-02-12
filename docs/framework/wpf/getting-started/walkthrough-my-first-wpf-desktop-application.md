@@ -11,14 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bc47405636c4727f502caf1f6e27050367eda74a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746980"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124332"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: criar seu primeiro aplicativo do WPF no Visual Studio 2019
 
@@ -215,7 +213,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
     2. Na caixa de diálogo **Adicionar item existente** , defina o filtro de arquivo como **todos os** arquivos ou **arquivos de imagem**, navegue até o arquivo de imagem que deseja usar e, em seguida, selecione **Adicionar**.
 
-## <a name="build-and-run-the-application"></a>Compilar e executar o aplicativo
+## <a name="build-and-run-the-application"></a>Compile e execute o aplicativo
 
 1. Para compilar e executar o aplicativo, pressione **F5** ou selecione **Iniciar Depuração** no menu **depurar** .
 
@@ -283,7 +281,7 @@ Cada controle é colocado em uma linha do <xref:System.Windows.Controls.Grid> Co
    > [!TIP]
    > Você também pode criar os controles arrastando-os da janela **caixa de ferramentas** para a janela de design e, em seguida, definindo suas propriedades na janela **Propriedades** .
 
-2. Crie e execute o aplicativo.
+2. Criar e executar o aplicativo.
 
     A ilustração a seguir mostra os controles que você criou:
 
@@ -317,7 +315,7 @@ Nesta seção, você atualizará a interface do usuário do home page com uma im
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-7. Crie e execute o aplicativo.
+7. Criar e executar o aplicativo.
 
 A ilustração a seguir mostra os resultados do que você acabou de adicionar:
 
@@ -348,7 +346,7 @@ A ilustração a seguir mostra os resultados do que você acabou de adicionar:
 
     Essa interface do usuário é semelhante à *`ExpenseItHome.xaml`* , exceto que os dados do relatório são exibidos em um <xref:System.Windows.Controls.DataGrid>.
 
-3. Crie e execute o aplicativo.
+3. Criar e executar o aplicativo.
 
 4. Selecione o botão **Exibir** .
 
@@ -398,7 +396,7 @@ A aparência de vários elementos é geralmente a mesma para todos os elementos 
 
     Esse XAML adiciona estilos aos elementos <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.Border>.
 
-6. Crie e execute o aplicativo. A aparência da janela é a mesma que a anterior.
+6. Criar e executar o aplicativo. A aparência da janela é a mesma que a anterior.
 
     ![Captura de tela de amostra ExpenseIt com a mesma aparência da última seção.](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
@@ -462,7 +460,7 @@ Nesta seção, você atualizará a interface do usuário para cada item nas list
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
-5. Crie e execute o aplicativo.
+5. Criar e executar o aplicativo.
 
 6. Selecione uma pessoa e, em seguida, selecione o botão **Exibir** .
 

@@ -1,23 +1,23 @@
 ---
-title: 'Como: Detectar se o .NET Framework 3.0 está instalado'
+title: Como detectar se o .NET Framework 3.0 está instalado
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WinFX Runtime user-agent string
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: c68daf2cb5687497e66ad3022ce42352a17ae0f7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053444"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124449"
 ---
-# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Como: Detectar se o .NET Framework 3.0 está instalado
+# <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Como detectar se o .NET Framework 3.0 está instalado
 Antes que os administradores possam implantar aplicativos Microsoft .NET Framework em um sistema, eles devem primeiro confirmar que o tempo de execução .NET Framework está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework está presente em um sistema.  
   
 > [!NOTE]
-> Para obter informações mais detalhadas sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão em [implantando o Microsoft .NET Framework versão 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Para obter informações mais detalhadas sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão em [implantando o Microsoft .NET Framework versão 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>Detectar a cadeia de caracteres de agente de usuário ".NET CLR"  

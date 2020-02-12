@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac9e028d8804c4fdadf4e6be8d7650afa1406969
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741829"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124462"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
@@ -137,5 +137,5 @@ End Namespace
   
 ## <a name="see-also"></a>Consulte também
 
-- [Noções básicas sobre namespaces XML](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [Noções básicas sobre namespaces XML](https://docs.microsoft.com/previous-versions/aa468565(v=msdn.10))
 - [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

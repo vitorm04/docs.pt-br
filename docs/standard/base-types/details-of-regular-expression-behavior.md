@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348277"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124345"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 
@@ -46,7 +46,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      As versões Greedy e lenta dessa expressão regular são definidas como mostrado na tabela a seguir:
 
-    |Pattern|Descrição|
+    |Padrão|Descrição|
     |-------------|-----------------|
     |`.+` (quantificador Greedy)|Corresponder a pelo menos uma ocorrência de qualquer caractere. Isso faz com que o mecanismo de expressões regulares corresponda à cadeia de caracteres inteira e, em seguida, retroceda da forma necessária para corresponder ao restante do padrão.|
     |`.+?` (quantificador lento)|Corresponder a pelo menos uma ocorrência de qualquer caractere, mas ao menor número possível.|
@@ -62,7 +62,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      A expressão regular `\b[A-Z]+\b(?=\P{P})` é definida conforme mostrado na tabela a seguir.
 
-    |Pattern|Descrição|
+    |Padrão|Descrição|
     |-------------|-----------------|
     |`\b`|Começa a correspondência em um limite de palavra.|
     |`[A-Z]+`|Corresponder a qualquer caractere alfabético uma ou mais vezes. Como o método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, essa comparação não diferencia maiúsculas de minúsculas.|
@@ -78,7 +78,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      O padrão de expressão regular `\b(?!non)\w+\b` é definido conforme mostrado na tabela a seguir.
 
-    |Pattern|Descrição|
+    |Padrão|Descrição|
     |-------------|-----------------|
     |`\b`|Começa a correspondência em um limite de palavra.|
     |`(?!non)`|Antecipar para garantir que a cadeia de caracteres atual não comece com “non”. Se isso acontecer, a correspondência falha.|
@@ -94,7 +94,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      O padrão de expressão regular é definido como mostra a tabela a seguir.
 
-    |Pattern|Descrição|
+    |Padrão|Descrição|
     |-------------|-----------------|
     |`^`|Começar a correspondência no início de uma linha.|
     |`(?<Pvt>\<PRIVATE\>\s)?`|Corresponder a zero ou uma ocorrência da cadeia de caracteres `<PRIVATE>` seguida para um caractere de espaço em branco. Atribuir a correspondência a um grupo de captura chamado `Pvt`.|
@@ -106,7 +106,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
 - Balanceamento de definições de Grupo: `(?<`*nome1*`-`*nome2*`>` *subexpressão*`)`. Esse recurso permite que o mecanismo de expressões regulares controle constructos aninhados, como parênteses ou colchetes de abertura e fechamento. Para ver um exemplo, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Subexpressões sem retrocesso (também conhecidas como subexpressões Greedy): `(?>`*subexpression*`)`. Esse recurso permite que o mecanismo de retrocesso assegure que uma subexpressão corresponda apenas à primeira correspondência encontrada para ela, como se a expressão estivesse sendo executada independentemente da expressão que a contém. Se você não usar esse constructo, as pesquisas de retrocesso de expressões maiores poderão alterar o comportamento de uma subexpressão. Por exemplo, a expressão regular `(a+)\w` corresponde um ou mais caracteres “a”, juntamente com um caractere de palavra que segue a cadeia de caracteres “a”, e atribui a cadeia de caracteres “a” para o primeiro grupo de captura. Contudo, se o caractere final da cadeia de caracteres de entrada também for um “a”, corresponderá ao elemento de linguagem `\w` e não estará incluído no grupo capturado.
+- Grupos atômicos: `(?>`*subexpressão*`)`. Esse recurso permite que o mecanismo de retrocesso assegure que uma subexpressão corresponda apenas à primeira correspondência encontrada para ela, como se a expressão estivesse sendo executada independentemente da expressão que a contém. Se você não usar esse constructo, as pesquisas de retrocesso de expressões maiores poderão alterar o comportamento de uma subexpressão. Por exemplo, a expressão regular `(a+)\w` corresponde a um ou mais caracteres "a", juntamente com um caractere de palavra que segue a sequência de caracteres "a" e atribui a sequência de caracteres "a" para o primeiro grupo de captura. No entanto, se o caractere final da cadeia de caracteres de entrada também for um "a", ele será correspondido pelo elemento de linguagem `\w` e não será incluído no grupo capturado.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     Para obter mais informações sobre as subexpressões sem retrocesso, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
+     Para obter mais informações sobre grupos atômicos, consulte [agrupando construções](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
 - Correspondência da direita para a esquerda, que é especificada fornecendo a opção <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> para um construtor de classe <xref:System.Text.RegularExpressions.Regex> ou um método de correspondência de instância estática. Esse recurso é útil durante a pesquisa da direita para a esquerda em vez da esquerda para direita ou nos casos em que é mais eficiente iniciar uma correspondência na parte direita do padrão em vez de à esquerda. Como mostra o exemplo a seguir, o uso da correspondência da direita para esquerda pode alterar o comportamento de quantificadores Greedy. O exemplo realiza duas pesquisas por uma frase que termina em número. A pesquisa da esquerda para a direita que usa o quantificador Greedy `+` corresponde a um dos seis dígitos na frase, enquanto a pesquisa da direita para a esquerda corresponde a todos os seis dígitos. Para obter uma descrição do padrão de expressão regular, consulte o exemplo que ilustra quantificadores lentos anteriormente nesta seção.
 
@@ -125,14 +125,14 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      Para obter mais informações sobre a correspondência da direita para a esquerda, consulte [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).
 
-- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` para lookbehind positivo e `(?<!`*subexpression*`)` para lookbehind negativo. Esse recurso é semelhante ao lookahead, que é discutido neste tópico. Como o mecanismo de expressões regulares possibilita uma correspondência completa da direita para a esquerda, expressões regulares permitem lookbehinds irrestritos. O lookbehind positivo e negativo também pode ser usado para evitar o aninhamento de quantificadores quando a subexpressão aninhada é um superconjunto de uma expressão externa. Expressões regulares com tais quantificadores aninhados geralmente oferecem um desempenho ruim. Por exemplo, o exemplo a seguir verifica se uma cadeia de caracteres começa e termina com um caractere alfanumérico e se qualquer outro caractere na cadeia de caracteres faz parte de um subconjunto maior. Faz parte da expressão regular usada para validar endereços de email. Para obter mais informações, veja [Como: verificar se as cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+- Lookbehind positivo e negativo: `(?<=`*subexpression*`)` para lookbehind positivo e `(?<!`*subexpression*`)` para lookbehind negativo. Esse recurso é semelhante ao lookahead, que é discutido neste tópico. Como o mecanismo de expressões regulares possibilita uma correspondência completa da direita para a esquerda, expressões regulares permitem lookbehinds irrestritos. O lookbehind positivo e negativo também pode ser usado para evitar o aninhamento de quantificadores quando a subexpressão aninhada é um superconjunto de uma expressão externa. Expressões regulares com tais quantificadores aninhados geralmente oferecem um desempenho ruim. Por exemplo, o exemplo a seguir verifica se uma cadeia de caracteres começa e termina com um caractere alfanumérico e se qualquer outro caractere na cadeia de caracteres faz parte de um subconjunto maior. Faz parte da expressão regular usada para validar endereços de email. Para obter mais informações, consulte [Como verificar se cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
 
      A expressão regular ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` é definida conforme mostrado na tabela a seguir.
 
-    |Pattern|Descrição|
+    |Padrão|Descrição|
     |-------------|-----------------|
     |`^`|Começar a correspondência no início da cadeia de caracteres.|
     |`[A-Z0-9]`|Corresponder a qualquer caractere numérico ou alfanumérico. (A comparação não diferencia maiúsculas de minúsculas.)|
@@ -142,9 +142,9 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      Para obter mais informações sobre lookbehind positivo e negativo, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-## <a name="related-articles"></a>Artigos relacionados
+## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
 
-|Título|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Fornece informações sobre como o retrocesso de expressões regulares se ramifica para encontrar correspondências alternativas.|
 |[Compilação e reutilização](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Fornece informações sobre a compilação e a reutilização de expressões regulares para aumentar o desempenho.|

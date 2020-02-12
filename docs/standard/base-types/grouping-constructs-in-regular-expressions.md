@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140120"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124319"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Agrupando construtores em expressões regulares
 As construções de agrupamento delineiam as subexpressões de uma expressão regular e capturam a subcadeia de caracteres de uma cadeia de caracteres de entrada. Você pode usar construções de agrupamento para fazer isto:  
@@ -44,7 +44,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |[Asserções lookahead negativas de largura zero](#zerowidth_negative_lookahead_assertion)|Não captura|  
 |[Asserções lookbehind positivas de largura zero](#zerowidth_positive_lookbehind_assertion)|Não captura|  
 |[Asserções lookbehind negativas de largura zero](#zerowidth_negative_lookbehind_assertion)|Não captura|  
-|[Subexpressões sem retrocesso](#nonbacktracking_subexpression)|Não captura|  
+|[Grupos atômicos](#atomic_groups)|Não captura|  
   
  Para saber mais sobre grupos e modelos de objetos de expressão regular, veja [Constructos de agrupamento e objetos de expressão regular](#Objects).  
   
@@ -52,7 +52,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="matched-subexpressions"></a>Subexpressões Coincidentes  
  O constructo de agrupamento a seguir captura uma subexpressão correspondente:  
   
- `(` *subexpressão* `)`  
+ *subexpressão* de `(` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular válido. As capturas que usam parênteses são numeradas automaticamente, da esquerda para a direita, com base na ordem do parêntese de abertura na expressão regular, começando em um. A captura que recebe o número zero é o texto que coincide com todo o padrão da expressão regular.  
   
@@ -118,7 +118,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  Um padrão de expressão regular simples mostra como os grupos numerados (sem nome) e nomeados podem ser usados como referência de forma programática ou usando sintaxe de linguagem de expressão regular. A expressão regular `((?<One>abc)\d+)?(?<Two>xyz)(.*)` gera os seguintes grupos de captura por número e nome. O primeiro grupo de captura (o número 0) sempre faz referência a todo o padrão.  
   
-|Número|Name|Padrão|  
+|Número|{1&gt;Nome&lt;1}|Padrão|  
 |------------|----------|-------------|  
 |0|0 (nome padrão)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (nome padrão)|`((?<One>abc)\d+)`|  
@@ -264,7 +264,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="group-options"></a>Opções de Grupo  
  O constructo de agrupamento a seguir aplica ou desabilita as opções especificadas em uma subexpressão:  
   
- `(?imnsx-imnsx:` *subexpressão* `)`  
+ *subexpressão* de `(?imnsx-imnsx:` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular válido. Por exemplo, `(?i-s:)` ativa a diferenciação de maiúsculas e minúsculas e desabilita o modo de linha única. Para saber mais sobre as opções embutidas que você pode especificar, veja [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -288,7 +288,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="zero-width-positive-lookahead-assertions"></a>Asserções Lookahead Positivas de Largura Zero  
  O constructo de agrupamento a seguir define uma asserção lookahead positiva de largura zero:  
   
- `(?=` *subexpressão* `)`  
+ *subexpressão* de `(?=` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada deve corresponder ao padrão de expressão regular na *subexpression*, embora a subcadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado. A asserção lookahead positiva de largura zero não retrocede.  
   
@@ -311,7 +311,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="zero-width-negative-lookahead-assertions"></a>Asserções Lookahead Negativas de Largura Zero  
  O constructo de agrupamento a seguir define uma asserção lookahead negativa de largura zero:  
   
- `(?!` *subexpressão* `)`  
+ *subexpressão* de `(?!` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a cadeia de caracteres de entrada não deve corresponder ao padrão de expressão regular na *subexpression*, embora a cadeia de caracteres com a qual a correspondência foi estabelecida não conste no resultado.  
   
@@ -349,7 +349,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Asserções Lookbehind Positivas de Largura Zero  
  O constructo de agrupamento a seguir define uma asserção lookbehind positiva de largura zero:  
   
- `(?<=` *subexpressão* `)`  
+ *subexpressão* de `(?<=` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a *subexpressão* deve ocorrer na cadeia de caracteres de entrada à esquerda da posição atual, embora `subexpression` não conste no resultado. A asserção lookbehind positiva de largura zero não retrocede.  
   
@@ -374,7 +374,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Asserções Lookbehind Negativas de Largura Zero  
  O constructo de agrupamento a seguir define uma asserção lookbehind negativa de largura zero:  
   
- `(?<!` *subexpressão* `)`  
+ *subexpressão* de `(?<!` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular. Para que a correspondência seja executada com êxito, a *subexpressão* não deve ocorrer na cadeia de caracteres de entrada à esquerda da posição atual. No entanto, todas as subcadeias de caracteres que não corresponderem a `subexpression`, não serão incluídas no resultado.  
   
@@ -395,11 +395,11 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
 |`\d{4}\b`|Corresponde a quatro dígitos decimais e encerra a correspondência em um limite de palavra.|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Se a correspondência for precedida por algo que não seja as cadeias de caracteres "Sábado" ou "Domingo" seguidas por um espaço, a correspondência é realizada com êxito.|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>Subexpressões sem retrocesso  
- O constructo de agrupamento a seguir representa uma subexpressão sem retrocesso, também conhecida como subexpressão "greedy":  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>Grupos atômicos  
+ A construção de agrupamento a seguir representa um grupo atômico (conhecido em alguns outros mecanismos de expressão regular como uma subexpressão sem retrocesso, uma subexpressão atômica ou uma subexpressão somente uma vez):
   
- `(?>` *subexpressão* `)`  
+ *subexpressão* de `(?>` `)`  
   
  em que *subexpression* é qualquer padrão de expressão regular.  
   
@@ -409,7 +409,7 @@ As construções de agrupamento delineiam as subexpressões de uma expressão re
   
  Essa opção é recomendada quando você sabe que o retrocesso não terá êxito. Evitar que o mecanismo de expressão regular faça pesquisas desnecessárias, melhora o desempenho.  
   
- O exemplo a seguir mostra como uma subexpressão sem retrocesso modifica os resultados de uma correspondência padrão. A expressão regular de retrocesso estabelece a correspondência de diversos caracteres repetidos, seguidos por outra ocorrência do mesmo caractere de um limite de palavra, mas a expressão regular sem retrocesso não faz isso.  
+ O exemplo a seguir ilustra como um grupo atômico modifica os resultados de uma correspondência de padrão. A expressão regular de retrocesso estabelece a correspondência de diversos caracteres repetidos, seguidos por outra ocorrência do mesmo caractere de um limite de palavra, mas a expressão regular sem retrocesso não faz isso.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  

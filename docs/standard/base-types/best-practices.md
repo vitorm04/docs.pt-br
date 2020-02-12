@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938007"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124416"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 
@@ -125,11 +125,11 @@ O padrão de expressão regular usado neste exemplo, `\b(\w+((\r?\n)|,?\s))*\w+[
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começar a correspondência em um limite de palavra.|
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
+|`\b`|Começa a correspondência em um limite de palavra.|
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|
 |<code>(\r?\n)&#124;,?\s)</code>|Corresponde a um zero ou um retorno de carro seguido por um caractere de nova linha, ou zero ou uma vírgula seguida por um caractere de espaço em branco.|
 |<code>(\w+((\r?\n)&#124;,?\s))*</code>|Corresponde a zero ou mais ocorrências de um ou mais caracteres de palavra que são seguidos por zero ou por retornos de carro e por um caractere de nova linha ou por zero ou uma vírgula seguida por um caractere de espaço em branco.|
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|
 |`[.?:;!]`|Corresponde a um ponto, um ponto de interrogação, dois-pontos, ponto-e-vírgula ou ponto de exclamação.|
 
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>Expressões regulares: compiladas para um assembly
@@ -169,14 +169,14 @@ Frequentemente, os aplicativos pagam uma penalidade de desempenho por usar o ret
 
 |Padrão|Descrição|
 |-|-|
-|`\b`|Começar a correspondência em um limite de palavra.|
+|`\b`|Começa a correspondência em um limite de palavra.|
 |`\p{Lu}`|Corresponder a um caractere maiúsculo.|
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|
 |`\b`|Termina a correspondência em um limite de palavra.|
 
 Como um limite de palavra não é o mesmo que ou um subconjunto de, um caractere de palavra, não há nenhuma possibilidade de o mecanismo de expressões regulares cruzar um limite de palavra ao corresponder caracteres de palavra. Isso significa que, para esta expressão regular, o retrocesso nunca pode contribuir para o êxito total de qualquer correspondência – ele só pode prejudicar o desempenho, pois o mecanismo de expressões regulares é forçado a salvar o estado para cada correspondência preliminar bem-sucedida de um caractere de palavra.
 
-Se você determinar que o retrocesso não é necessário, poderá desativá-lo usando o elemento de linguagem `(?>subexpression)`. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.
+Se você determinar que o retrocesso não é necessário, poderá desabilitá-lo usando o elemento de linguagem `(?>subexpression)`, conhecido como um grupo atômico. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -242,8 +242,8 @@ Muitas vezes, os construtores de agrupamento são usados somente em uma express�
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começar a correspondência em um limite de palavra.|
-|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
+|`\b`|Começa a correspondência em um limite de palavra.|
+|`\w+`|Corresponde a um ou mais caracteres de palavra.|
 |`[;,]?`|Corresponde a zero ou uma vírgula ou ponto e vírgula.|
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|
 |`(\w+[;,]?\s?)+`|Corresponde a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por uma vírgula opcional ou por ponto-e-vírgula seguido por um caractere de espaço em branco opcional. Isso define o primeiro grupo de captura, que é necessário para que a combinação de vários caracteres de palavra (ou seja, uma palavra) seguido por um símbolo de pontuação opcional seja repetida até que o mecanismo de expressões regulares atinja o final de uma sentença.|
@@ -271,7 +271,7 @@ Quando você usa subexpressões apenas para aplicar quantificadores a elas e nã
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Cargo|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Detalhes do comportamento da expressão regular](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina a implementação do mecanismo de expressões regulares no .NET. O tópico concentra-se na flexibilidade de expressões regulares e explica a responsabilidade do desenvolvedor para garantir o funcionamento eficiente e robusto do mecanismo de expressões regulares.|
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica o que é o retrocesso é como ele afeta o desempenho da expressão regular e examina os elementos de linguagem que fornecem alternativas ao retrocesso.|
