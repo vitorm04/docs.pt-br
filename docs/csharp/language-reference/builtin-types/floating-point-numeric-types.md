@@ -1,7 +1,7 @@
 ---
 title: Tipos numéricos de ponto flutuante – Referência de C#
-description: Visão geral sobre os tipos de ponto flutuante internos do C#
-ms.date: 10/22/2019
+description: 'Saiba mais sobre os tipos de C# ponto flutuante internos: float, Double e decimal'
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093208"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215248"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
@@ -50,19 +50,21 @@ O valor padrão de cada tipo de ponto flutuante é zero, `0`. Cada um dos tipos 
 
 Como o tipo `decimal` tem mais precisão e um intervalo menor que `float` e `double`, ele é apropriado para cálculos financeiros e monetários.
 
-É possível misturar tipos [integrais](integral-numeric-types.md) e de ponto flutuante em uma expressão. Nesse caso, os tipos integrais são convertidos em tipos de ponto flutuante. A avaliação da expressão é executada de acordo com as regras a seguir:
+Você pode misturar tipos [integrais](integral-numeric-types.md) e os tipos `float` e `double` em uma expressão. Nesse caso, os tipos integrais são convertidos implicitamente em um dos tipos de ponto flutuante e, se necessário, o tipo de `float` é implicitamente convertido em `double`. A expressão é avaliada como segue:
 
-- Se um dos tipos de ponto flutuante for `double`, a expressão será avaliada como `double`ou [bool](bool.md) em comparações relacionais e de igualdade.
-- Se não houver nenhum tipo de `double` na expressão, a expressão será avaliada como `float`ou [bool](bool.md) em comparações relacionais e de igualdade.
+- Se houver `double` tipo na expressão, a expressão será avaliada como `double`ou para [`bool`](bool.md) em comparações relacionais e de igualdade.
+- Se não houver nenhum tipo de `double` na expressão, a expressão será avaliada como `float`ou para `bool` em comparações relacionais e de igualdade.
 
-Uma expressão de ponto flutuante pode conter os seguintes conjuntos de valores:
+Você também pode misturar tipos integrais e o tipo de `decimal` em uma expressão. Nesse caso, os tipos integrais são convertidos implicitamente no tipo de `decimal` e a expressão é avaliada como `decimal`ou para `bool` em comparações relacionais e de igualdade.
 
-- Zero positivo e negativo
-- Infinito positivo e negativo
-- Valor NaN (não é um número)
-- O conjunto finito de valores diferentes de zero
+Não é possível misturar o tipo de `decimal` com os tipos `float` e `double` em uma expressão. Nesse caso, se você quiser executar operações aritméticas, de comparação ou de igualdade, deverá converter explicitamente os operandos de ou para o tipo de `decimal`, como mostra o exemplo a seguir:
 
-Para obter mais informações sobre esses valores, consulte o padrão IEEE para Aritmética de ponto flutuante binário, disponível no site do [IEEE](https://www.ieee.org).
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 É possível usar [cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md) ou [cadeias de caracteres de formato numérico personalizado](../../../standard/base-types/custom-numeric-format-strings.md) para formatar um valor de ponto flutuante.
 

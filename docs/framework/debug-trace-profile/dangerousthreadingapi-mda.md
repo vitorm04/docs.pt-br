@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 860f524820e6b92e58f4a593e2ddf651a5e7094d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052905"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216678"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA dangerousThreadingAPI
 O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativado quando o método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> é chamado em um thread que não seja o thread atual.  
@@ -35,7 +33,7 @@ O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativad
 ## <a name="resolution"></a>Resolução  
  Evite designs que exigem o uso de <xref:System.Threading.Thread.Suspend%2A> e <xref:System.Threading.Thread.Resume%2A>. Para cooperação entre threads, use primitivos de sincronização como <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex> ou a instrução `lock` do C#. Se você precisar usar esses métodos, reduza a janela de tempo e minimize a quantidade de código que é executada enquanto o thread está em um estado suspenso.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR. Ele relata apenas os dados sobre operações de threading perigosas.  
   
 ## <a name="output"></a>Saída  
@@ -67,7 +65,7 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 444b0d33-67ea-4c36-9e94-79c50f839025
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 752a6a5f9608aa260f192ee3e9e0709b7a10e27e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a51c046a296fbb62d21c7784cf7c1e78b700f3e9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052279"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216117"
 ---
 # <a name="trace-listeners"></a>Ouvintes de rastreamento
 Ao usar **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, você deve ter um mecanismo para coletar e registrar as mensagens que são enviadas. As mensagens de rastreamento são recebidas por *ouvintes*. A finalidade de um ouvinte é coletar, armazenar e rotear mensagens de rastreamento. Os ouvintes direcionam a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
@@ -40,7 +38,7 @@ Ao usar **Trace**, **Debug** e <xref:System.Diagnostics.TraceSource>, você deve
   
 - Um <xref:System.Diagnostics.XmlWriterTraceListener> direciona a saída de rastreamento ou de depuração como dados codificados em XML para um <xref:System.IO.TextWriter> ou <xref:System.IO.Stream>, como um <xref:System.IO.FileStream>.  
   
- Se você deseja que qualquer ouvinte além do <xref:System.Diagnostics.DefaultTraceListener> receba a saída **Debug**, **Trace** e <xref:System.Diagnostics.TraceSource>, adicione-o à coleção `Listeners`. Para obter mais informações, confira [Como: Criar e inicializar ouvintes](how-to-create-and-initialize-trace-listeners.md) de rastreamento e [como: Use rastreamento e filtros com ouvintes](how-to-use-tracesource-and-filters-with-trace-listeners.md)de rastreamento. Qualquer ouvinte da coleção **Listeners** obtém as mesmas mensagens dos métodos de saída de rastreamento. Por exemplo, suponha que você configure dois ouvintes: um **TextWriterTraceListener** e um **EventLogTraceListener**. Cada ouvinte recebe a mesma mensagem. O **TextWriterTraceListener** direcionará sua saída para um fluxo e o **EventLogTraceListener** direcionará sua saída para um log de eventos.  
+ Se você deseja que qualquer ouvinte além do <xref:System.Diagnostics.DefaultTraceListener> receba a saída **Debug**, **Trace** e <xref:System.Diagnostics.TraceSource>, adicione-o à coleção `Listeners`. Para obter mais informações, consulte [Como criar e inicializar ouvintes de rastreamento](how-to-create-and-initialize-trace-listeners.md) e [Como usar TraceSource e filtros com ouvintes de rastreamento](how-to-use-tracesource-and-filters-with-trace-listeners.md). Qualquer ouvinte da coleção **Listeners** obtém as mesmas mensagens dos métodos de saída de rastreamento. Por exemplo, suponha que você configure dois ouvintes: um **TextWriterTraceListener** e um **EventLogTraceListener**. Cada ouvinte recebe a mesma mensagem. O **TextWriterTraceListener** direcionará sua saída para um fluxo e o **EventLogTraceListener** direcionará sua saída para um log de eventos.  
   
  O exemplo a seguir mostra como enviar a saída para a coleção **Listeners**.  
   
@@ -76,7 +74,7 @@ System.Diagnostics.Trace.Listeners.Add(
 ## <a name="developer-defined-listeners"></a>Ouvintes definidos pelo desenvolvedor  
  Você pode definir seus próprios ouvintes herdando a classe base **TraceListener** e substituindo seus métodos por métodos personalizados. Para obter mais informações sobre como criar ouvintes definidos pelo desenvolvedor, consulte <xref:System.Diagnostics.TraceListener> na referência do .NET Framework.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>

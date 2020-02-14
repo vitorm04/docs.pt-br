@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052956"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217590"
 ---
 # <a name="asynchronousthreadabort-mda"></a>MDA asynchronousThreadAbort
 O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativado quando um thread tenta introduzir uma anulação assíncrona em outro thread. Anulações de thread síncronas não ativam o MDA `asynchronousThreadAbort`.
@@ -39,7 +37,7 @@ O MDA (assistente para depuração gerenciada) `asynchronousThreadAbort` é ativ
 ## <a name="resolution"></a>Resolução
  Evite o design de código que exige o uso de anulações de thread assíncronas. Há várias abordagens mais apropriadas para a interrupção de um thread de destino que não exigem uma chamada a <xref:System.Threading.Thread.Abort%2A>. A mais segura é introduzir um mecanismo, como uma propriedade comum, que sinaliza o thread de destino a solicitar uma interrupção. O thread de destino verifica o sinal em determinados pontos de verificação seguros. Se ele observa que uma interrupção foi solicitada, ele pode ser desligado normalmente.
 
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime
  Esse MDA não tem efeito sobre o CLR. Ele apenas relata dados sobre as anulações de thread assíncronas.
 
 ## <a name="output"></a>Saída
@@ -70,7 +68,7 @@ void FireMda()
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

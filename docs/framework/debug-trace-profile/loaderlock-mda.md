@@ -10,14 +10,12 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c3e8769ec972ec76d04d2f22368fdde99de9c6de
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cd77640a6566f3fd94631dac184ae5bc3ffab5d1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052538"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217347"
 ---
 # <a name="loaderlock-mda"></a>MDA loaderLock
 O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas de executar código gerenciado em um thread que mantém o bloqueio do carregador do sistema operacional Microsoft Windows.  Qualquer execução desse tipo é inválida porque pode levar a deadlocks e ao uso de DLLs antes de elas terem sido inicializadas pelo carregador do sistema operacional.  
@@ -37,7 +35,7 @@ O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas 
 ## <a name="resolution"></a>Resolução  
  No Visual C++ .NET 2002 e Visual C++ .NET 2003, DLLs compiladas com a opção do compilador `/clr` podem enfrentar um deadlock de forma não determinística quando carregadas; esse problema foi chamado de problema de carregamento de DLLs mistas ou de bloqueio do carregador. No Visual C++ 2005 e posterior, quase todo o não determinismo foi removido do processo de carregamento de DLLs mistas. No entanto, existem alguns cenários restantes para os quais o bloqueio de carregador pode ocorrer (de forma determinística). Para obter detalhes das causas e resoluções para os problemas de bloqueio do carregador restantes, consulte [Inicialização de assemblies mistos](/cpp/dotnet/initialization-of-mixed-assemblies). Se esse tópico não identifica o seu problema de bloqueio do carregador, você precisa examinar a pilha do thread para determinar por que o bloqueio do carregador está ocorrendo e como corrigir o problema. Examine o rastreamento de pilha do thread que ativou esse MDA.  O thread está tentando ilegalmente chamar código gerenciado, mantendo o bloqueio do carregador do sistema operacional.  Você provavelmente verá um `DllMain` da DLL ou um ponto de entrada equivalente na pilha.  As regras do sistema operacional para o que você pode fazer legalmente de dentro de um ponto de entrada desse tipo são muito limitadas.  Essas regras impedem qualquer execução gerenciada.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Normalmente, vários threads dentro do processo enfrentarão deadlock.  Um desses threads provavelmente será um thread responsável pela execução de uma coleta de lixo, portanto, esse deadlock poderá ter um impacto significativo em todo o processo.  Além disso, ele impedirá todas as operações adicionais que exijam o bloqueio do carregador do sistema operacional, tais como carregar e descarregar assemblies ou DLLs e iniciar ou interromper threads.  
   
  Em alguns casos incomuns, também é possível que violações de acesso ou problemas semelhantes sejam disparados em DLLs que são chamadas antes de terem inicializadas.  
@@ -55,6 +53,6 @@ O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

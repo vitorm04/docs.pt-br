@@ -7,14 +7,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089012"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215258"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<elemento > de seção para \<configSections >
 
@@ -34,19 +32,19 @@ Define um namespace para seções de configuração.
 
 ## <a name="attribute"></a>Atributo
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
 | **name**  | Atributo obrigatório.<br><br>Especifica o nome do grupo de seções que você está definindo. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<configsections >** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
 ## <a name="child-elements"></a>Elementos filho
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<seção >** ](section-element.md) | Contém uma declaração de seção de configuração. |
 
@@ -74,10 +72,10 @@ O exemplo a seguir mostra como declarar um grupo de seções e declarar seções
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

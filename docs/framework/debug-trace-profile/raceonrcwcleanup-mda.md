@@ -9,14 +9,12 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 07b6c674e2608ac46bf9870ae26afc2fc1ec99ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052344"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216189"
 ---
 # <a name="raceonrcwcleanup-mda"></a>MDA raceOnRCWCleanup
 O MDA (Assistente de Depuração Gerenciado) de `raceOnRCWCleanup` é ativado quando o CLR (Common Language Runtime) detecta que um [RCW](../../standard/native-interop/runtime-callable-wrapper.md) (Runtime Callable Wrapper) está em uso quando uma chamada para liberá-lo é feita usando um comando, assim como o método <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>.  
@@ -30,7 +28,7 @@ O MDA (Assistente de Depuração Gerenciado) de `raceOnRCWCleanup` é ativado qu
 ## <a name="resolution"></a>Resolução  
  Não libere um RCW que possa estar em uso no thread atual ou em outros.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -46,7 +44,7 @@ O MDA (Assistente de Depuração Gerenciado) de `raceOnRCWCleanup` é ativado qu
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

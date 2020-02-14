@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975577"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217452"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
@@ -73,7 +71,7 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 1. Digite a instrução apropriada para a linguagem de programação na parte superior do arquivo de código-fonte.  
   
-    |Idioma|Instrução|Resultado|  
+    |Linguagem|de|Result|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|Habilita o rastreamento|  
     ||**#CONST TRACE = false**|Desabilita o rastreamento|  
@@ -88,14 +86,14 @@ Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saí
   
 Exclua a diretiva do compilador do código-fonte.  
   
-\- ou -  
+\- ou –  
   
 Comente a diretiva do compilador.  
   
 > [!NOTE]
 > Quando você estiver pronto para compilar, escolha **Compilar** no menu **Compilar** ou use o método de linha de comando, mas sem digitar o **d:** para definir símbolos de compilação condicional.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
 - [Como criar, inicializar e configurar as opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)

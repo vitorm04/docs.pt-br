@@ -7,15 +7,13 @@ helpviewer_keywords:
 - .NET Framework out-of-band releases
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
-author: mairaw
-ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: e1e2af584c73b1c0b2548cdd3fcbd8517dfa330d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3a5134aa4407598e223fd2c938bfaac02cf9178c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429342"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215550"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Bibliotecas de classes e APIs adicionais
 
@@ -25,7 +23,7 @@ Além disso, algumas bibliotecas são direcionadas a plataformas específicas ou
   
 ## <a name="oob-projects"></a>Projetos OOB
   
-| {1&gt;Projeto&lt;1} | Descrição |  
+| Project | DESCRIÇÃO |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Fornece coleções que são thread-safe e têm garantias de que seu conteúdo nunca será alterado. |
 | <xref:System.Net.Http.WinHttpHandler> | Fornece um manipulador de mensagens para <xref:System.Net.Http.HttpClient> com base na interface WinHTTP do Windows. |
@@ -34,7 +32,7 @@ Além disso, algumas bibliotecas são direcionadas a plataformas específicas ou
 
 ## <a name="platform-specific-libraries"></a>Bibliotecas específicas da plataforma
   
-| {1&gt;Projeto&lt;1} | Descrição |  
+| Project | DESCRIÇÃO |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Estende a classe <xref:System.Text.EncodingProvider> para disponibilizar codificações de página de código para aplicativos direcionados ao Plataforma Universal do Windows. |  
   
@@ -92,6 +90,6 @@ Essas APIs dão suporte à infraestrutura de produto e não se destinam/não tê
 * [stdole. Interface StdFont](stdole.stdfont.md)
 * [stdole. Interface StdPicture](stdole.stdpicture.md)
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)

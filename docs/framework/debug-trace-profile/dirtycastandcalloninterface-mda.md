@@ -10,14 +10,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), early bound calls AutoDispatch
 - EarlyBoundCallOnAutorDispatchClassInteface MDA
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ac43f6b92198fec03e722b6cf5e12b86df6f4b8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6e4f0074958e8a6a8ca322968e9c29e89481c0c8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052875"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216507"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>MDA dirtyCastAndCallOnInterface
 O MDA (assistente para depuração gerenciada) `dirtyCastAndCallOnInterface` é ativado quando há uma tentativa de realizar uma chamada de associação inicial por meio de uma vtable em uma interface de classe que foi marcada como somente associação tardia.  
@@ -33,7 +31,7 @@ O MDA (assistente para depuração gerenciada) `dirtyCastAndCallOnInterface` é 
   
  Por fim, é possível identificar a classe como <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> (`[ClassInterface(ClassInterfaceType.AutoDual)]`) para permitir que as chamadas de associação inicial sejam feitas por meio do COM; no entanto, o uso de <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual> não é recomendado devido às limitações de controle de versão descritas no <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR. Ele apenas relata dados sobre chamadas de associação inicial em interfaces de associação tardia.  
   
 ## <a name="output"></a>Saída  
@@ -49,7 +47,7 @@ O MDA (assistente para depuração gerenciada) `dirtyCastAndCallOnInterface` é 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

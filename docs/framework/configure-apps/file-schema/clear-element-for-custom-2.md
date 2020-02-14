@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fff5a5c2a523480f2eaebb127ec98ff6e9908acf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f6d860f35d22002030ffa3d09dd0d8a96116bf5e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088708"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214751"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<limpar > elemento para NameValueSectionHandler e DictionarySectionHandler
 
@@ -36,7 +34,7 @@ Nenhum
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ------------|
 | [ **\<sectionname >** Elementos](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam as classes <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>. |
 
@@ -78,10 +76,10 @@ O código do arquivo de configuração de aplicativo a seguir remove todas as co
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

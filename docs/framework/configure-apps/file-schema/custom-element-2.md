@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118538"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215491"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Elemento personalizado para NameValueSectionHandler e DictionarySectionHandler
 
@@ -28,13 +26,13 @@ Nenhum
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
 ## <a name="child-elements"></a>Elementos filho
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<adicionar >** ](add-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>  | Adiciona configurações de aplicativo personalizadas. |
 | [ **\<remover >** ](remove-element-for-custom-2.md) para <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler> | Remove uma configuração definida anteriormente. |
@@ -42,7 +40,7 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-O elemento **\<sectionname >** é um elemento personalizado definido por uma **seção\<** marca no elemento **\<configSections >** .
+O elemento **\<sectionname >** é um elemento personalizado definido por uma **seção\<>** marca no elemento **\<configSections >** .
 
 A tabela a seguir mostra o tipo de objeto que o método ConfigurationSettings. GetConfig retorna para cada manipulador de seção de configuração:
 
@@ -76,10 +74,10 @@ O primeiro elemento personalizado é **\<dictionarySample >** , que contém as c
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

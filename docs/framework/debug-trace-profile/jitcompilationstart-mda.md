@@ -7,14 +7,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d3832dcd842631d290e046b5e32908ce4bb7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052534"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216254"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA jitCompilationStart
 O MDA (Assistente de Depuração Gerenciado) de `jitCompilationStart` é ativado para relatar quando o compilador JIT (Just-In-Time) começa a compilar uma função.  
@@ -28,7 +26,7 @@ O MDA (Assistente de Depuração Gerenciado) de `jitCompilationStart` é ativado
 ## <a name="resolution"></a>Resolução  
  Habilitar esse MDA permite que você determine qual função está sendo compilada via JIT. Determine se o assembly que contém a função é gerado no formato nativo e registrado corretamente.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA registra uma mensagem logo antes de um método ser compilado via JIT, então habilitar esse MDA tem um impacto significativo no desempenho. Observe que, se um método é embutido, esse MDA não gerará uma mensagem separada.  
   
 ## <a name="output"></a>Saída  
@@ -39,7 +37,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Configuração  
- O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados definindo o valor do atributo name \*como.  
+ O arquivo de configuração a seguir mostra uma variedade de filtros que podem ser utilizados para filtrar quais métodos são relatados quando eles são compilados via JIT pela primeira vez. Você pode especificar que todos os métodos sejam relatados definindo o valor do atributo Name como \*.  
   
 ```xml  
 <mdaConfig>  
@@ -157,7 +155,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

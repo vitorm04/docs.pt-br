@@ -13,14 +13,12 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052332"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217229"
 ---
 # <a name="reentrancy-mda"></a>MDA reentrancy
 O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando é feita uma tentativa de transição de código nativo para gerenciado em casos nos quais um comutador anterior do código gerenciado para nativo não foi executado por meio de uma transição ordenada.  
@@ -42,7 +40,7 @@ O MDA (Assistente de Depuração Gerenciado) de `reentrancy` é ativado quando �
   
  Neste exemplo, a resolução correta é implementar o manipulador de exceção em vetor completamente em código não gerenciado.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -104,6 +102,6 @@ public class Reenter
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

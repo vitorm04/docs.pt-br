@@ -8,14 +8,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c36ec514645a38ef1228e76bdf6dbd06e886bae
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052791"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217502"
 ---
 # <a name="failedqi-mda"></a>MDA failedQI
 O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o tempo de execução chama `QueryInterface` em um ponteiro de interface COM em nome de um RCW (Runtime Callable Wrapper) e a chamada `QueryInterface` falha.  
@@ -34,7 +32,7 @@ O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o te
 ## <a name="resolution"></a>Resolução  
  Consulte a documentação do MSDN sobre as regras do COM.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Se uma chamada `QueryInterface` falhar, o contexto será alternado e haverá uma tentativa de realizar a chamada `QueryInterface` novamente para ver se um contexto incorreto estava com uma falha.  
   
 ## <a name="output"></a>Saída  
@@ -50,7 +48,7 @@ O MDA (assistente para depuração gerenciada) `failedQI` é ativado quando o te
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

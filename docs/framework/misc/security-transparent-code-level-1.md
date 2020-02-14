@@ -9,14 +9,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efd3954b63a6683e04bd9143ca3523cdbace506d
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 8f232a7724ad831818627cbfc2845ea808a3fcfd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894530"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215799"
 ---
 # <a name="security-transparent-code-level-1"></a>Segurança-código Transparent, nível 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -24,9 +22,9 @@ ms.locfileid: "70894530"
  A transparência ajuda os desenvolvedores a escreverem bibliotecas de .NET Framework mais seguras que expõem a funcionalidade a código parcialmente confiável. A transparência de nível 1 foi introduzida na versão .NET Framework 2,0 e foi usada principalmente apenas dentro da Microsoft. Começando com o .NET Framework 4, você pode usar a [transparência de nível 2](security-transparent-code-level-2.md). No entanto, a transparência de nível 1 foi mantida para que você possa identificar o código herdado que deve ser executado com as regras de segurança anteriores.  
   
 > [!IMPORTANT]
-> Você deve especificar a transparência de nível 1 somente para fins de compatibilidade; ou seja, especifique o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3,5 ou anterior que <xref:System.Security.AllowPartiallyTrustedCallersAttribute> usa ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies .NET Framework 2,0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência nível 2.  
+> Você deve especificar a transparência de nível 1 somente para fins de compatibilidade; ou seja, especifique o nível 1 somente para o código que foi desenvolvido com o .NET Framework 3,5 ou anterior que usa o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> ou não usa o modelo de transparência. Por exemplo, use a transparência de nível 1 para assemblies .NET Framework 2,0 que permitem chamadas de chamadores parcialmente confiáveis (APTCA). Para o código que é desenvolvido para o .NET Framework 4, sempre use a transparência nível 2.  
   
- Esse tópico contém as seguintes seções:  
+ Este tópico contém as seguintes seções:  
   
 - [O modelo de transparência nível 1](#the_level_1_transparency_model)  
   
@@ -40,11 +38,11 @@ ms.locfileid: "70894530"
   
  Você pode marcar um assembly inteiro, algumas classes em um assembly ou alguns métodos em uma classe como segurança transparente. O código de segurança transparente não pode elevar privilégios. Essa restrição tem três consequências:  
   
-- O código de segurança transparente não <xref:System.Security.Permissions.SecurityAction.Assert> pode executar ações.  
+- O código de segurança transparente não pode executar <xref:System.Security.Permissions.SecurityAction.Assert> ações.  
   
 - Qualquer demanda de link que seria satisfeita pelo código de segurança transparente se torna uma demanda completa.  
   
-- Qualquer código não seguro (não verificável) que deve ser executado em código de segurança transparente causa uma demanda total para <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> a permissão de segurança.  
+- Qualquer código não seguro (não verificável) que deve ser executado em código de segurança transparente causa uma demanda total para a permissão de segurança de <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Essas regras são impostas durante a execução pelo Common Language Runtime (CLR). O código de segurança transparente passa todos os requisitos de segurança do código que ele chama de volta para seus chamadores. As demandas que fluem pelo código de segurança transparente não podem elevar privilégios. Se um aplicativo de baixa confiança chamar o código de segurança transparente e causar uma demanda por alto privilégio, a demanda fluirá de volta para o código de baixa confiança e falhará. O código de segurança transparente não pode interromper a demanda porque não pode executar ações Assert. O mesmo código transparente de segurança chamado do código de confiança total resulta em uma demanda bem-sucedida.  
   
@@ -61,13 +59,13 @@ ms.locfileid: "70894530"
 ## <a name="transparency-attributes"></a>Atributos de transparência  
  A tabela a seguir descreve os três atributos que você usa para anotar seu código em busca de transparência.  
   
-|Atributo|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |<xref:System.Security.SecurityTransparentAttribute>|Permitido somente no nível do assembly. Identifica todos os tipos e membros no assembly como segurança transparente. O assembly não pode conter nenhum código crítico de segurança.|  
-|<xref:System.Security.SecurityCriticalAttribute>|Quando usado no nível de assembly sem a <xref:System.Security.SecurityCriticalAttribute.Scope%2A> Propriedade, identifica todo o código no assembly como segurança transparente por padrão, mas indica que o assembly pode conter código de segurança crítica.<br /><br /> Quando usado no nível de classe, identifica a classe ou o método como segurança crítica, mas não os membros da classe. Para tornar todos os membros de segurança crítica, defina a <xref:System.Security.SecurityCriticalAttribute.Scope%2A> Propriedade como <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Quando usado no nível de membro, o atributo aplica-se somente a esse membro.<br /><br /> A classe ou o membro identificado como segurança crítica pode executar elevações de privilégio. **Importante:**  Na transparência de nível 1, os tipos de segurança crítica e os membros são tratados como de segurança crítica quando são chamados de fora do assembly. Você deve proteger tipos e membros com segurança crítica com uma demanda de link para confiança total para evitar elevação de privilégio não autorizada.|  
+|<xref:System.Security.SecurityCriticalAttribute>|Quando usado no nível de assembly sem a propriedade <xref:System.Security.SecurityCriticalAttribute.Scope%2A>, identifica todo o código no assembly como segurança transparente por padrão, mas indica que o assembly pode conter código de segurança crítica.<br /><br /> Quando usado no nível de classe, identifica a classe ou o método como segurança crítica, mas não os membros da classe. Para tornar todos os membros de segurança crítica, defina a propriedade <xref:System.Security.SecurityCriticalAttribute.Scope%2A> como <xref:System.Security.SecurityCriticalScope.Everything>.<br /><br /> Quando usado no nível de membro, o atributo aplica-se somente a esse membro.<br /><br /> A classe ou o membro identificado como segurança crítica pode executar elevações de privilégio. **Importante:**  Na transparência de nível 1, os tipos de segurança crítica e os membros são tratados como de segurança crítica quando são chamados de fora do assembly. Você deve proteger tipos e membros com segurança crítica com uma demanda de link para confiança total para evitar elevação de privilégio não autorizada.|  
 |<xref:System.Security.SecuritySafeCriticalAttribute>|Identifica o código de segurança crítica que pode ser acessado pelo código de segurança transparente no assembly. Caso contrário, o código de segurança transparente não poderá acessar membros críticos de segurança privada ou interna no mesmo assembly. Isso influenciaria o código de segurança crítica e tornaria as elevações inesperadas de privilégio possível. Segurança-o código crítico deve passar por uma auditoria de segurança rigorosa. **Observação:**  Os membros e tipos com segurança crítica devem validar as permissões de chamadores para determinar se o chamador tem autoridade para acessar recursos protegidos.|  
   
- O <xref:System.Security.SecuritySafeCriticalAttribute> atributo permite que o código de segurança transparente acesse membros de segurança crítica no mesmo assembly. Considere o código de segurança transparente e com segurança crítica em seu assembly, como separado em dois assemblies. O código de segurança transparente não seria capaz de ver os membros privados ou internos do código de segurança crítica. Além disso, o código de segurança crítica geralmente é auditado para acesso à sua interface pública. Você não esperaria que um estado privado ou interno fosse acessível fora do assembly; Você desejaria manter o estado isolado. O <xref:System.Security.SecuritySafeCriticalAttribute> atributo mantém o isolamento do estado entre o código de segurança transparente e de segurança crítica e, ao mesmo tempo, fornece a capacidade de substituir o isolamento quando necessário. O código de segurança transparente não pode acessar código crítico de segurança particular ou interno, a menos que esses <xref:System.Security.SecuritySafeCriticalAttribute>Membros tenham sido marcados com. Antes de aplicar <xref:System.Security.SecuritySafeCriticalAttribute>o, audite esse membro como se ele estivesse publicamente exposto.  
+ O atributo <xref:System.Security.SecuritySafeCriticalAttribute> permite que o código de segurança transparente acesse os membros de segurança crítica no mesmo assembly. Considere o código de segurança transparente e com segurança crítica em seu assembly, como separado em dois assemblies. O código de segurança transparente não seria capaz de ver os membros privados ou internos do código de segurança crítica. Além disso, o código de segurança crítica geralmente é auditado para acesso à sua interface pública. Você não esperaria que um estado privado ou interno fosse acessível fora do assembly; Você desejaria manter o estado isolado. O atributo <xref:System.Security.SecuritySafeCriticalAttribute> mantém o isolamento do estado entre o código de segurança transparente e de segurança crítica, fornecendo a capacidade de substituir o isolamento quando necessário. O código de segurança transparente não pode acessar código crítico de segurança particular ou interno, a menos que esses membros tenham sido marcados com <xref:System.Security.SecuritySafeCriticalAttribute>. Antes de aplicar o <xref:System.Security.SecuritySafeCriticalAttribute>, faça auditoria desse membro como se ele estivesse publicamente exposto.  
   
 ### <a name="assembly-wide-annotation"></a>Anotação em todo o assembly  
  A tabela a seguir descreve os efeitos do uso de atributos de segurança no nível do assembly.  
@@ -94,13 +92,13 @@ ms.locfileid: "70894530"
 [assembly: SecurityTransparent]  
 ```  
   
- Se você quiser misturar código crítico e transparente no mesmo assembly, comece marcando o assembly com o <xref:System.Security.SecurityCriticalAttribute> atributo para indicar que o assembly pode conter código crítico, da seguinte maneira:  
+ Se você quiser misturar código crítico e transparente no mesmo assembly, comece marcando o assembly com o atributo <xref:System.Security.SecurityCriticalAttribute> para indicar que o assembly pode conter código crítico, da seguinte maneira:  
   
 ```csharp  
 [assembly: SecurityCritical]  
 ```  
   
- Se você quiser executar ações de segurança crítica, deverá marcar explicitamente o código que executará a ação crítica com outro <xref:System.Security.SecurityCriticalAttribute> atributo, conforme mostrado no exemplo de código a seguir:  
+ Se você quiser executar ações de segurança crítica, deverá marcar explicitamente o código que executará a ação crítica com outro atributo <xref:System.Security.SecurityCriticalAttribute>, conforme mostrado no exemplo de código a seguir:  
   
 ```csharp  
 [assembly: SecurityCritical]  
@@ -128,9 +126,9 @@ public class B
 }  
 ```  
   
- O código anterior é transparente, exceto `Critical` pelo método, que é explicitamente marcado como Security-Critical. Transparência é a configuração padrão, mesmo com o atributo de nível <xref:System.Security.SecurityCriticalAttribute> de assembly.  
+ O código anterior é transparente, exceto pelo método `Critical`, que é explicitamente marcado como Security-Critical. Transparência é a configuração padrão, mesmo com o atributo de <xref:System.Security.SecurityCriticalAttribute> no nível do assembly.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Segurança-código Transparent, nível 2](security-transparent-code-level-2.md)
 - [Alterações de segurança](../security/security-changes.md)

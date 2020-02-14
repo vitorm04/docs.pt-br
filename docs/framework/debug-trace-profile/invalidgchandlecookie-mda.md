@@ -8,14 +8,12 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7452ae28d63c89845b45bf500c02e771f0b8f4df
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052605"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216316"
 ---
 # <a name="invalidgchandlecookie-mda"></a>MDA invalidGCHandleCookie
 O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativado quando há uma tentativa de conversão de um cookie <xref:System.IntPtr> inválido em um <xref:System.Runtime.InteropServices.GCHandle>.  
@@ -29,7 +27,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativa
 ## <a name="resolution"></a>Resolução  
  Especifique um cookie <xref:System.IntPtr> válido para o <xref:System.Runtime.InteropServices.GCHandle>.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Quando esse MDA está habilitado, o depurador não é capaz de rastrear as raízes de volta para seus objetos porque os valores de cookie passados de volta são diferentes daqueles retornados quando o MDA não está habilitado.  
   
 ## <a name="output"></a>Saída  
@@ -45,7 +43,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativa
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>

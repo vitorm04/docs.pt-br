@@ -7,14 +7,12 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89605a119e8251ffd577ff402366dff0fd4af4d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052514"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216166"
 ---
 # <a name="loadfromcontext-mda"></a>MDA loadFromContext
 O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se um assembly é carregado no contexto `LoadFrom`. Essa situação pode ocorrer como resultado da chamar <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> ou outros métodos semelhantes.  
@@ -36,7 +34,7 @@ O MDA (Assistente de Depuração Gerenciado) de `loadFromContext` é ativado se 
   
  Em cada caso, o código pode ser alterado para usar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  O MDA não tem nenhum efeito no CLR. Informa o contexto que foi usado como resultado de uma solicitação de carregamento.  
   
 ## <a name="output"></a>Saída  
@@ -72,6 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

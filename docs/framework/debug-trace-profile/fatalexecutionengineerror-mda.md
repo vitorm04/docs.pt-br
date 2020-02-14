@@ -12,14 +12,12 @@ helpviewer_keywords:
 - FatalExecutionEngineError MDA
 - managed debugging assistants (MDAs), fatal errors
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fd58ae8f73fd932df641ea96a44ff618dd139e2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e25c9ef6ec43089f1d85479d1afe301232ed1d4f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052802"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217497"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>MDA fatalExecutionEngineError
 O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é ativado quando um erro fatal no CLR (Common Language Runtime) é detectado. O processo será terminado.  
@@ -57,8 +55,8 @@ O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é at
   
 - [invalidGCHandleCookie](invalidgchandlecookie-mda.md)  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Esse MDA não tem nenhum efeito sobre o comportamento do tempo de execução.  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
+ Esse MDA não tem nenhum efeito sobre o comportamento do runtime.  
   
 ## <a name="output"></a>Saída  
  O endereço da função CLR que causou o erro fatal, a ID do thread em que ocorreu o erro e o código de erro.  
@@ -73,7 +71,7 @@ O MDA (assistente para depuração gerenciada) `fatalExecutionEngineError` é at
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>

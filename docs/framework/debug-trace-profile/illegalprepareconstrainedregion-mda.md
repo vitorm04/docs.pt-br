@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 623aff91eb801b4b32fc180bd97ed3822ad7f163
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052672"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216469"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>MDA illegalPrepareConstrainedRegion
 O MDA (Assistente de Depuração Gerenciado) de `illegalPrepareConstrainedRegion` é ativado quando uma chamada de método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> não precede imediatamente a instrução `try` do manipulador de exceção. Essa restrição é em nível de MSIL, portanto, é possível ter uma origem não geradora de código entre a chamada e o `try`, assim como comentários.  
@@ -24,12 +22,12 @@ O MDA (Assistente de Depuração Gerenciado) de `illegalPrepareConstrainedRegion
  Uma região de execução restrita (CER) que nunca é tratada como tal, mas como uma bloco de tratamento de exceção simples (`finally` ou `catch`). Como consequência, a região não é executada no caso de uma condição de falta de memória ou uma anulação de thread.  
   
 ## <a name="cause"></a>Causa  
- O padrão de preparação para uma CER não é seguido corretamente.  Isso é um evento de erro. A <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> chamada de método usada para marcar manipuladores de exceção como introdução a uma `catch` CER em seus `fault` `filter` / `finally` / / blocos deve ser usada imediatamente antes do `try` instrução.  
+ O padrão de preparação para uma CER não é seguido corretamente.  Isso é um evento de erro. A chamada de método de <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> usada para marcar manipuladores de exceção como introdução a uma CER em seus `catch`/`finally`/`fault`os blocos /devem ser usados imediatamente antes da instrução de `filter`.`try`  
   
 ## <a name="resolution"></a>Resolução  
  Certifique-se de que a chamada para <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ocorre imediatamente antes da instrução `try`.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -64,7 +62,7 @@ void MethodWithInvalidPCR()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>

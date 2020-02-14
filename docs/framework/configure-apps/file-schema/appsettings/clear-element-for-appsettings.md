@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088730"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214794"
 ---
 # <a name="clear-element-for-appsettings"></a>\<limpar > elemento para \<appSettings >
 
@@ -38,7 +36,7 @@ Nenhum
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço Web XML ou qualquer outra informação de configuração de aplicativo personalizada. |
 
@@ -56,6 +54,6 @@ O exemplo a seguir mostra como limpar as definições de configuração personal
 </appSettings>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](../index.md)

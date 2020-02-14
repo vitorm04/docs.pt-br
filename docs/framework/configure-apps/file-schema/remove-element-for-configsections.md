@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc7208aa51cbf6abdb2fe151d48071c0aa95b5c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089048"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215384"
 ---
 # <a name="remove-element-for-configsections"></a>\<remover > elemento para \<configSections >
 
@@ -32,13 +30,13 @@ Remove uma seção ou um grupo de seções predefinido.
 
 ## <a name="attribute"></a>Atributo
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
 | **name**  | Atributo obrigatório.<br><br>Especifica o nome da seção ou do grupo de seções a ser removido. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<configsections >** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
@@ -80,10 +78,10 @@ O código do arquivo de configuração de aplicativo a seguir remove a seção *
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

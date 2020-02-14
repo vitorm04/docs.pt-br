@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 41f6b67ff63d096cc1fa2c599abb06c9c1129952
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052305"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216126"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA releaseHandleFailed
 O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado é notificar os desenvolvedores quando o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> retorna `false`.  
@@ -35,7 +33,7 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
 - Qualquer falha que ocorra durante a execução de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, impedindo a liberação do recurso, é um bug na implementação do método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> em si. É responsabilidade do programador garantir que o contrato seja atendido, mesmo que esse código, para executar sua função, chame código criado por outra pessoa.  
   
 ## <a name="resolution"></a>Resolução  
- O código que usa o tipo <xref:System.Runtime.InteropServices.SafeHandle> específico (ou <xref:System.Runtime.InteropServices.CriticalHandle>) que gerou a notificação de MDA deve ser revisado, procurando os locais em que o valor do identificador bruto é extraído do <xref:System.Runtime.InteropServices.SafeHandle> e copiado em outro lugar. Essa é a causa comum de falhas em implementações de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle>, porque o uso do valor do identificador bruto não é mais controlado pelo tempo de execução. Se a cópia de identificador bruto subsequentemente for fechada, isso poderá causar falha em uma chamada <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> posterior porque a tentativa de fechar ocorrerá no mesmo identificador, que será então inválido.  
+ O código que usa o tipo <xref:System.Runtime.InteropServices.SafeHandle> específico (ou <xref:System.Runtime.InteropServices.CriticalHandle>) que gerou a notificação de MDA deve ser revisado, procurando os locais em que o valor do identificador bruto é extraído do <xref:System.Runtime.InteropServices.SafeHandle> e copiado em outro lugar. Essa é a causa comum de falhas em implementações de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle>, porque o uso do valor do identificador bruto não é mais controlado pelo runtime. Se a cópia de identificador bruto subsequentemente for fechada, isso poderá causar falha em uma chamada <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> posterior porque a tentativa de fechar ocorrerá no mesmo identificador, que será então inválido.  
   
  Há várias maneiras em que a duplicação de identificador incorreto pode ocorrer:  
   
@@ -49,7 +47,7 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
   
 - Observe que alguns tipos de identificador nativo que podem ser liberados por meio da função `CloseHandle`, tais como Win32, compartilham o mesmo namespace de identificador. Uma liberação incorreta de um tipo de identificador pode causar problemas com outro. Por exemplo, fechar acidentalmente um identificador de evento Win32 duas vezes pode resultar no fechamento prematuro de um identificador de arquivo aparentemente não relacionado. Isso ocorre quando o identificador é liberado e o valor dele se torna disponível para ser usado para acompanhar outro recurso, potencialmente de outro tipo. Se isso ocorre e é seguido por uma segunda liberação errônea, o identificador de um thread não relacionado pode invalidado.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -90,7 +88,7 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

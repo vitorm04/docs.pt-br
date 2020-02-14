@@ -9,14 +9,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052950"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216927"
 ---
 # <a name="bindingfailure-mda"></a>MDA bindingFailure
 
@@ -28,11 +26,11 @@ O código tentou carregar um assembly usando uma referência estática ou um dos
 
 ## <a name="cause"></a>Causa
 
-Uma falha de associação ocorre quando o tempo de execução não pode carregar um assembly. Uma falha de associação pode ser o resultado de uma das seguintes situações:
+Uma falha de associação ocorre quando o runtime não pode carregar um assembly. Uma falha de associação pode ser o resultado de uma das seguintes situações:
 
 - O CLR (Common Language Runtime) não pode localizar o assembly solicitado. Há muitos motivos para que isso ocorra, como o assembly não está sendo instalado ou o aplicativo não está sendo configurado corretamente para localizar o assembly.
 
-- Um cenário comum de problema é a passagem de um tipo para outro domínio do aplicativo, que exige que o CLR carregue o assembly que contém esse tipo no outro domínio do aplicativo. Talvez não seja possível que o tempo de execução carregue o assembly se o domínio do aplicativo estiver configurado de maneira diferente do domínio do aplicativo original. Por exemplo, os dois domínios do aplicativo podem ter valores de propriedade <xref:System.AppDomain.BaseDirectory%2A> diferentes.
+- Um cenário comum de problema é a passagem de um tipo para outro domínio do aplicativo, que exige que o CLR carregue o assembly que contém esse tipo no outro domínio do aplicativo. Talvez não seja possível que o runtime carregue o assembly se o domínio do aplicativo estiver configurado de maneira diferente do domínio do aplicativo original. Por exemplo, os dois domínios do aplicativo podem ter valores de propriedade <xref:System.AppDomain.BaseDirectory%2A> diferentes.
 
 - O assembly solicitado está corrompido ou não é um assembly.
 
@@ -42,7 +40,7 @@ Uma falha de associação ocorre quando o tempo de execução não pode carregar
 
 ## <a name="resolution"></a>Resolução
 
-A primeira etapa é determinar por que o CLR não pôde ser associado ao assembly solicitado. Há muitas razões pelas quais o tempo de execução pode não ter encontrado ou não pôde carregar o assembly solicitado, como os cenários listados na seção Causa. As seguintes ações são recomendadas para eliminar a causa da falha de associação:
+A primeira etapa é determinar por que o CLR não pôde ser associado ao assembly solicitado. Há muitas razões pelas quais o runtime pode não ter encontrado ou não pôde carregar o assembly solicitado, como os cenários listados na seção Causa. As seguintes ações são recomendadas para eliminar a causa da falha de associação:
 
 - Determine a causa usando os dados fornecidos pelo MDA `bindingFailure`:
 
@@ -60,7 +58,7 @@ A primeira etapa é determinar por que o CLR não pôde ser associado ao assembl
 
   - Altere a lista de controle de acesso do arquivo para permitir que o usuário conectado leia o arquivo.
 
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime
 
 Esse MDA não tem efeito sobre o CLR. Ele relata apenas os dados sobre falhas de associação.
 
@@ -68,7 +66,7 @@ Esse MDA não tem efeito sobre o CLR. Ele relata apenas os dados sobre falhas de
 
 O MDA relata o assembly que falhou ao ser carregado, incluindo o caminho solicitado e/ou nome de exibição, o contexto de associação, o domínio do aplicativo no qual a carga foi solicitada e o motivo da falha.
 
-O nome de exibição ou o caminho solicitado pode ficar em branco se esses dados não estavam disponíveis para o CLR. Se a chamada que falhou era para o método <xref:System.Reflection.Assembly.Load%2A>, é provável que o tempo de execução não pôde determinar o nome de exibição do assembly.
+O nome de exibição ou o caminho solicitado pode ficar em branco se esses dados não estavam disponíveis para o CLR. Se a chamada que falhou era para o método <xref:System.Reflection.Assembly.Load%2A>, é provável que o runtime não pôde determinar o nome de exibição do assembly.
 
 ## <a name="configuration"></a>Configuração
 
@@ -105,6 +103,6 @@ namespace ConsoleApplication1
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

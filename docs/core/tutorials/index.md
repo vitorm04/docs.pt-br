@@ -4,12 +4,12 @@ description: Siga os tutoriais para aprender como criar aplicativos e biblioteca
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920434"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215176"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Aprenda sobre o .NET Core e as ferramentas de SDK do .NET Core explorando estes tutoriais
 
@@ -47,6 +47,6 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Teste de unidade com o MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](libraries.md)
 - [Hospedando o .NET Core do código nativo](netcore-hosting.md)
-- [Create a custom template for dotnet new](cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new)
+- [Criar modelos para a CLI](cli-templates-create-item-template.md)
 
 Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).

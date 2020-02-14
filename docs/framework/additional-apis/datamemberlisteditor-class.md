@@ -11,18 +11,16 @@ api_type:
 ms.assetid: c11d5231-78f2-45a7-9210-3b2d0969370e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0f8063dd85537f81a1ae145b4526e10ad90b77e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675384"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215604"
 ---
 # <a name="datamemberlisteditor-class"></a>Classe DataMemberListEditor
 
-Fornece uma interface do usuário da lista suspensa para editar as propriedades dos objetos de associação de dados (objetos que têm nulos `DataSource` propriedade), listando todas as propriedades do `DataSource` objeto para selecionar a origem do valor de.  
+Fornece uma interface do usuário suspensa para editar propriedades de objetos vinculados a dados (objetos que têm Propriedade `DataSource` não nula), listando todas as propriedades do objeto `DataSource` para selecionar a origem do valor.  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -31,18 +29,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> O `DataMemberListEditor` classe é interno e não se destina a ser usado diretamente em seu código.
+> A classe `DataMemberListEditor` é interna e não deve ser usada diretamente no seu código.
 > 
-> Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
   
 ## <a name="requirements"></a>Requisitos
 
 **Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System (em dll)  
+**Assembly:** System. Design (em System. Design. dll)  
   
-**Versões do .NET framework:** Disponível desde o 2.0.  
+**.NET Framework versões:** Disponível desde 2,0.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

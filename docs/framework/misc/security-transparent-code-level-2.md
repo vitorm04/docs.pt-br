@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974940"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217005"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente de segurança, nível 2
 
@@ -179,7 +177,7 @@ Você pode ignorar a verificação de assemblies transparentes totalmente confi�
 
 A propriedade <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> é `false` por padrão, portanto, a propriedade deve ser definida como `true` para ignorar a verificação. Isso deve ser feito apenas para fins de otimização. Você deve garantir que o código transparent no assembly seja verificável usando a opção `transparent` na [ferramenta PEVerify](../tools/peverify-exe-peverify-tool.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Segurança-código Transparent, nível 1](security-transparent-code-level-1.md)
 - [Alterações de segurança](../security/security-changes.md)

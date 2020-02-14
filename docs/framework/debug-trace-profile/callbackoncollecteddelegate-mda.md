@@ -14,14 +14,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052929"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217577"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>MDA callbackOnCollectedDelegate
 O MDA (assistente para depuração gerenciada) `callbackOnCollectedDelegate` é ativado se um representante tem o marshaling realizado de um código gerenciado para um código não gerenciado como um ponteiro de função e um retorno de chamada é colocado nesse ponteiro de função depois que o representante foi coletado como lixo.  
@@ -39,10 +37,10 @@ O MDA (assistente para depuração gerenciada) `callbackOnCollectedDelegate` é 
  A probabilidade da falha depende do tempo entre o marshaling do representante e o retorno de chamada no ponteiro de função, bem como a frequência das coletas de lixo. A falha é esporádica se o tempo entre o marshaling do representante e o retorno de chamada resultante é curto. Esse geralmente é o caso se o método não gerenciado que recebe o ponteiro de função não salva o ponteiro de função para uso posterior, mas em vez disso, realiza uma chamada novamente no ponteiro de função imediatamente para concluir sua operação antes de retornar. Da mesma forma, mais coletas de lixo ocorrem quando um sistema está sob carga pesada, o que torna mais provável que ocorra uma coleta de lixo antes do retorno de chamada.  
   
 ## <a name="resolution"></a>Resolução  
- Depois que um representante tem o marshaling realizado como um ponteiro de função não gerenciada, o coletor de lixo não pode acompanhar seu tempo de vida. Em vez disso, o código deve manter uma referência ao representante durante o tempo de vida do ponteiro de função não gerenciada. Porém, antes de poder fazer isso, primeiro você deve identificar qual representante foi coletado. Quando o MDA é ativado, ele fornece o nome do tipo do representante. Use esse nome para pesquisar o código em busca da invocação de plataforma ou de assinaturas COM que passam o representante para o código não gerenciado. O representante inválido é passado por meio de um desses sites de chamada. Você também pode habilitar o MDA `gcUnmanagedToManaged` a forçar uma coleta de lixo antes de cada retorno de chamada no tempo de execução. Isso removerá a incerteza introduzida pela coleta de lixo, garantindo que uma coleta de lixo sempre ocorra antes do retorno de chamada. Depois de saber qual representante foi coletado, altere o código para manter uma referência ao representante no lado gerenciado durante o tempo de vida do ponteiro de função não gerenciada com marshaling.  
+ Depois que um representante tem o marshaling realizado como um ponteiro de função não gerenciada, o coletor de lixo não pode acompanhar seu tempo de vida. Em vez disso, o código deve manter uma referência ao representante durante o tempo de vida do ponteiro de função não gerenciada. Porém, antes de poder fazer isso, primeiro você deve identificar qual representante foi coletado. Quando o MDA é ativado, ele fornece o nome do tipo do representante. Use esse nome para pesquisar o código em busca da invocação de plataforma ou de assinaturas COM que passam o representante para o código não gerenciado. O representante inválido é passado por meio de um desses sites de chamada. Você também pode habilitar o MDA `gcUnmanagedToManaged` a forçar uma coleta de lixo antes de cada retorno de chamada no runtime. Isso removerá a incerteza introduzida pela coleta de lixo, garantindo que uma coleta de lixo sempre ocorra antes do retorno de chamada. Depois de saber qual representante foi coletado, altere o código para manter uma referência ao representante no lado gerenciado durante o tempo de vida do ponteiro de função não gerenciada com marshaling.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Quando os representantes têm o marshaling realizado como ponteiros de função, o tempo de execução aloca uma conversão que faz a transição do não gerenciado para o gerenciado. Essa conversão é o que o código não gerenciado, na verdade, chama antes que o representante gerenciado seja finalmente invocado. Sem o MDA `callbackOnCollectedDelegate` habilitado, o código de marshaling não gerenciado é excluído quando o representante é coletado. Com o MDA `callbackOnCollectedDelegate` habilitado, o código de marshaling não gerenciado não é excluído imediatamente quando o representante é coletado. Em vez disso, as últimas 1.000 instâncias são mantidas ativas por padrão e alteradas para ativar o MDA quando chamadas. A conversão é, no final das contas, excluída depois que 1.001 representantes com marshaling são coletados.  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
+ Quando os representantes têm o marshaling realizado como ponteiros de função, o runtime aloca uma conversão que faz a transição do não gerenciado para o gerenciado. Essa conversão é o que o código não gerenciado, na verdade, chama antes que o representante gerenciado seja finalmente invocado. Sem o MDA `callbackOnCollectedDelegate` habilitado, o código de marshaling não gerenciado é excluído quando o representante é coletado. Com o MDA `callbackOnCollectedDelegate` habilitado, o código de marshaling não gerenciado não é excluído imediatamente quando o representante é coletado. Em vez disso, as últimas 1.000 instâncias são mantidas ativas por padrão e alteradas para ativar o MDA quando chamadas. A conversão é, no final das contas, excluída depois que 1.001 representantes com marshaling são coletados.  
   
 ## <a name="output"></a>Saída  
  O MDA relata o nome do tipo do representante que foi coletado antes da tentativa de um retorno de chamada em seu ponteiro de função não gerenciada.  
@@ -111,7 +109,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

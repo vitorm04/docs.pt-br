@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar e inicializar ouvintes de rastreamento'
+title: Como criar e inicializar ouvintes de rastreamento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052723"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217439"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Como: criar e inicializar ouvintes de rastreamento
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Como criar e inicializar ouvintes de rastreamento
 
 As classes <xref:System.Diagnostics.Debug?displayProperty=nameWithType> e <xref:System.Diagnostics.Trace?displayProperty=nameWithType> enviam mensagens para objetos chamados ouvintes, que recebem e processam essas mensagens. Um ouvinte desse tipo, o <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, é criado e inicializado automaticamente quando a depuração ou o rastreamento é habilitado. Se você desejar que a saída <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.Debug> seja direcionada para outras fontes, crie e inicialize ouvintes de rastreamento adicionais.
 
@@ -77,7 +75,7 @@ Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](..
     Trace.Flush();
     ```
 
-    \- ou -
+    \- ou –
 
 - Se você não desejar que o ouvinte receba a saída de rastreamento, não adicione-a à coleção <xref:System.Diagnostics.Trace.Listeners%2A>. Emita a saída por meio de um ouvinte independente da coleção <xref:System.Diagnostics.Trace.Listeners%2A> chamando os próprios métodos de saída do ouvinte. O exemplo a seguir mostra como gravar uma linha em um ouvinte que não está na coleção <xref:System.Diagnostics.Trace.Listeners%2A>.
 
@@ -95,9 +93,9 @@ Crie ouvintes de rastreamento em um [arquivo de configuração de aplicativo](..
     myListener.Flush();
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ouvintes de rastreamento](trace-listeners.md)
 - [Opções de rastreamento](trace-switches.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
 - [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)

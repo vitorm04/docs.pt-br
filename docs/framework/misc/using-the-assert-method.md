@@ -16,19 +16,17 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f43ba2963ec447e5193da73452537b2539c51857
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2bc46714a508990c5ae31b50e7d19a287da2c5c0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206044"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215814"
 ---
 # <a name="using-the-assert-method"></a>Usando o método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A>é um método que pode ser chamado em classes de permissão de acesso ao código <xref:System.Security.PermissionSet> e na classe. Você pode usar **Assert** para habilitar seu código (e chamadores downstream) para executar ações que seu código tem permissão para fazer, mas seus chamadores podem não ter permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele diz ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> é um método que pode ser chamado nas classes de permissão de acesso ao código e na classe <xref:System.Security.PermissionSet>. Você pode usar **Assert** para habilitar seu código (e chamadores downstream) para executar ações que seu código tem permissão para fazer, mas seus chamadores podem não ter permissão para fazer. Uma asserção de segurança altera o processo normal que o tempo de execução executa durante uma verificação de segurança. Quando você declara uma permissão, ele diz ao sistema de segurança para não verificar os chamadores do seu código para a permissão declarada.  
   
 > [!CAUTION]
 > Use as asserções com cuidado porque elas podem abrir brechas de segurança e prejudicar o mecanismo do tempo de execução para impor restrições de segurança.  
@@ -39,7 +37,7 @@ ms.locfileid: "70206044"
   
  A asserção afetará a movimentação da pilha somente se a permissão declarada e uma permissão exigida por um chamador downstream forem do mesmo tipo e se a permissão solicitada for um subconjunto da permissão declarada. Por exemplo, se você declarar **FileIOPermission** para ler todos os arquivos na unidade C e uma demanda de downstream for feita para **FileIOPermission** ler arquivos em C:\temp, a asserção poderá afetar a movimentação da pilha; no entanto, se a demanda fosse para **FileIOPermission** gravar na unidade C, a asserção não teria nenhum efeito.  
   
- Para executar asserções, seu código deve receber a permissão que você está declarando e o <xref:System.Security.Permissions.SecurityPermission> que representa o direito de fazer asserções. Embora você possa declarar uma permissão de que seu código não foi concedido, a asserção seria inútil, pois a verificação de segurança falharia antes que a asserção pudesse ser bem-sucedida.  
+ Para executar asserções, seu código deve receber a permissão que você está declarando e a <xref:System.Security.Permissions.SecurityPermission> que representa o direito de fazer asserções. Embora você possa declarar uma permissão de que seu código não foi concedido, a asserção seria inútil, pois a verificação de segurança falharia antes que a asserção pudesse ser bem-sucedida.  
   
  A ilustração a seguir mostra o que acontece quando você usa **Assert**. Suponha que as instruções a seguir sejam verdadeiras sobre assemblies A, B, C, e e F e duas permissões, P1 e P1A:  
   
@@ -63,14 +61,14 @@ ms.locfileid: "70206044"
   
  Se você projetar uma biblioteca de classes e uma classe acessar um recurso protegido, você deverá, na maioria dos casos, fazer uma demanda de segurança exigindo que os chamadores da classe tenham a permissão apropriada. Se a classe executar uma operação para a qual você sabe que a maioria de seus chamadores não terá permissão e, se você estiver disposto a assumir a responsabilidade de permitir que esses chamadores chamem seu código, poderá declarar a permissão chamando o método **Assert** em um objeto de permissão que representa a operação que o código está executando. Usar **Assert** dessa maneira permite que os chamadores que normalmente não podiam fazer isso chamem seu código. Portanto, se você declarar uma permissão, deverá ter certeza de executar as verificações de segurança apropriadas antecipadamente para impedir que o componente seja usado incorretamente.  
   
- Por exemplo, suponha que sua classe de biblioteca altamente confiável tenha um método que exclui arquivos. Ele acessa o arquivo chamando uma função Win32 não gerenciada. Um chamador invoca o método **delete** de seu código, passando o nome do arquivo a ser excluído, C:\test.txt. Dentro do método **delete** , seu código cria um <xref:System.Security.Permissions.FileIOPermission> objeto que representa o acesso de gravação para C:\test.txt. (É necessário acesso de gravação para excluir um arquivo.) Em seguida, seu código invoca uma verificação de segurança imperativa chamando o método de **demanda** do objeto **FileIOPermission** . Se um dos chamadores na pilha de chamadas não tiver essa permissão, um <xref:System.Security.SecurityException> será gerado. Se nenhuma exceção for gerada, você saberá que todos os chamadores têm o direito de acessar o C:\Test.txt. Como você acredita que a maioria dos seus chamadores não terá permissão para acessar o código não gerenciado, seu código cria um <xref:System.Security.Permissions.SecurityPermission> objeto que representa o direito de chamar o código não gerenciado e chama o método **Assert** do objeto. Por fim, ele chama a função Win32 não gerenciada para excluir C:\Text.txt e retorna o controle para o chamador.  
+ Por exemplo, suponha que sua classe de biblioteca altamente confiável tenha um método que exclui arquivos. Ele acessa o arquivo chamando uma função Win32 não gerenciada. Um chamador invoca o método **delete** de seu código, passando o nome do arquivo a ser excluído, C:\test.txt. Dentro do método **delete** , seu código cria um objeto <xref:System.Security.Permissions.FileIOPermission> que representa acesso de gravação para C:\test.txt. (É necessário acesso de gravação para excluir um arquivo.) Em seguida, seu código invoca uma verificação de segurança imperativa chamando o método de **demanda** do objeto **FileIOPermission** . Se um dos chamadores na pilha de chamadas não tiver essa permissão, um <xref:System.Security.SecurityException> será gerado. Se nenhuma exceção for gerada, você saberá que todos os chamadores têm o direito de acessar o C:\Test.txt. Como você acredita que a maioria dos seus chamadores não terá permissão para acessar código não gerenciado, seu código cria um objeto <xref:System.Security.Permissions.SecurityPermission> que representa o direito de chamar código não gerenciado e chama o método **Assert** do objeto. Por fim, ele chama a função Win32 não gerenciada para excluir C:\Text.txt e retorna o controle para o chamador.  
   
 > [!CAUTION]
 > Você deve ter certeza de que seu código não usa declarações em situações em que seu código pode ser usado por outro código para acessar um recurso protegido pela permissão que você está declarando. Por exemplo, no código que grava em um arquivo cujo nome é especificado pelo chamador como um parâmetro, você não deve declarar o **FileIOPermission** para gravar em arquivos porque seu código estaria aberto para uso indevido de terceiros.  
   
  Quando você usa a sintaxe de segurança imperativa, chamar o método **Assert** em várias permissões no mesmo método faz com que uma exceção de segurança seja gerada. Em vez disso, você deve criar um objeto **PermissionSet** , passá-lo para as permissões individuais que deseja invocar e, em seguida, chamar o método **Assert** no objeto **PermissionSet** . Você pode chamar o método **Assert** mais de uma vez ao usar a sintaxe de segurança declarativa.  
   
- O exemplo a seguir mostra a sintaxe declarativa para substituir verificações de segurança usando o método **Assert** . Observe que a sintaxe **FileIOPermissionAttribute** usa dois valores: uma <xref:System.Security.Permissions.SecurityAction> enumeração e o local do arquivo ou diretório ao qual a permissão deve ser concedida. A chamada para **Assert** faz com que as demandas de acesso `C:\Log.txt` tenham sucesso, mesmo que os chamadores não sejam verificados quanto à permissão para acessar o arquivo.  
+ O exemplo a seguir mostra a sintaxe declarativa para substituir verificações de segurança usando o método **Assert** . Observe que a sintaxe **FileIOPermissionAttribute** usa dois valores: uma enumeração <xref:System.Security.Permissions.SecurityAction> e o local do arquivo ou diretório ao qual a permissão deve ser concedida. A chamada para **Assert** faz com que as demandas de acesso a `C:\Log.txt` tenham sucesso, mesmo que os chamadores não sejam verificados quanto à permissão para acessar o arquivo.  
   
 ```vb  
 Option Explicit  
@@ -167,7 +165,7 @@ namespace LogUtil
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>

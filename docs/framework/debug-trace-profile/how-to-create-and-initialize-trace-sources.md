@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar e inicializar fontes de rastreamento'
+title: Como criar e inicializar fontes de rastreamento
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cab9cc33bd5a4697cac5de85de8aa72e7eb4d6c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052697"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217433"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Como: criar e inicializar fontes de rastreamento
+# <a name="how-to-create-and-initialize-trace-sources"></a>Como criar e inicializar fontes de rastreamento
 A classe <xref:System.Diagnostics.TraceSource> é usada por aplicativos para produzir rastreamentos que podem ser associados ao aplicativo. <xref:System.Diagnostics.TraceSource> fornece métodos de rastreamento que permitem rastrear eventos com facilidade, rastrear dados e emitir rastreamentos informativos. A saída de rastreamento de <xref:System.Diagnostics.TraceSource> pode ser criada e inicializada com ou sem o uso de arquivos de configuração. Este tópico fornece instruções para ambas as opções. No entanto, recomendamos o uso de arquivos de configuração para facilitar a reconfiguração dos rastreamentos produzidos por origens de rastreamento em tempo de execução.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Para criar e inicializar uma origem de rastreamento usando um arquivo de configuração  
@@ -78,7 +76,7 @@ A classe <xref:System.Diagnostics.TraceSource> é usada por aplicativos para pro
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

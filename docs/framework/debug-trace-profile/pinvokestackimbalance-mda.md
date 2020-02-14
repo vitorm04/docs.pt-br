@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802001"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217251"
 ---
 # <a name="pinvokestackimbalance-mda"></a>MDA PInvokeStackImbalance
 
@@ -50,7 +48,7 @@ A mensagem MDA fornece o nome da chamada de método de invocação de plataforma
 
 **Uma chamada para a função PInvoke ' SampleMethod ' desbalanceou a pilha. Isso é provável porque a assinatura do PInvoke gerenciada não corresponde à assinatura de destino não gerenciada. Verifique se a Convenção de chamada e os parâmetros da assinatura PInvoke correspondem à assinatura não gerenciada de destino.**
 
-## <a name="configuration"></a>Configuração do
+## <a name="configuration"></a>Configuração
 
 ```xml
 <mdaConfig>
@@ -60,7 +58,7 @@ A mensagem MDA fornece o nome da chamada de método de invocação de plataforma
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

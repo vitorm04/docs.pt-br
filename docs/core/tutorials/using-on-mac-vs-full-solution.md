@@ -1,14 +1,13 @@
 ---
 title: Criar uma solução completa do .NET Core usando o Visual Studio para Mac
 description: Este artigo orienta você pela criação de uma solução .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
-author: mairaw
 ms.date: 12/19/2019
-ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715359"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215201"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Criar uma solução completa do .NET Core no macOS usando Visual Studio para Mac
 
@@ -22,7 +21,7 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 > - No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 - [SDK do .NET Core 3,1 ou posterior](https://dotnet.microsoft.com/download)
 - [Visual Studio 2019 para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
@@ -208,6 +207,6 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 Você pode usar o mesmo processo para depurar o código usando seu projeto de teste de unidade. Em vez de iniciar o projeto de aplicativo WordCount, pressione CTRL para o projeto de **biblioteca de teste** e selecione **Iniciar Depuração de projeto** no menu de contexto. Visual Studio para Mac inicia o projeto de teste com o depurador anexado. A execução será interrompida em qualquer ponto de interrupção que você adicionou ao projeto de teste ou no código de biblioteca subjacente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Notas sobre a versão do Visual Studio 2019 para Mac](/visualstudio/releasenotes/vs2019-mac-relnotes)

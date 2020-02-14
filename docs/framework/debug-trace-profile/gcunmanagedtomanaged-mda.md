@@ -12,14 +12,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - unmanaged to managed garbage collection
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679f87276262a08f5717ea81d263f4600542971
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dd4080870ae88da8d4e2055369cd36f3981f2eac
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052771"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216451"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>MDA gcUnmanagedToManaged
 O MDA (assistente para depuração gerenciada) `gcUnmanagedToManaged` causa uma coleta de lixo sempre que um thread faz a transição de código não gerenciado para código gerenciado.  
@@ -33,7 +31,7 @@ O MDA (assistente para depuração gerenciada) `gcUnmanagedToManaged` causa uma 
 ## <a name="resolution"></a>Resolução  
  A habilitação desse assistente reduz o tempo entre o período em que o componente não gerenciado corrompe o heap coletado como lixo e o período em que ocorre a violação de acesso, forçando uma coleta de lixo antes de cada transição gerenciada.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Causa uma coleta de lixo sempre que um thread faz a transição de código não gerenciado para código gerenciado.  
   
 ## <a name="output"></a>Saída  
@@ -49,7 +47,7 @@ O MDA (assistente para depuração gerenciada) `gcUnmanagedToManaged` causa uma 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1679e283a801044ad5a0baed89f17e6acc74259c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65bbdfec2d7050d1b474a8186a9ea6e9bb93bd9e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052452"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216179"
 ---
 # <a name="moduloobjecthashcode-mda"></a>MDA moduloObjectHashcode
 O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o comportamento da classe <xref:System.Object> para executar uma operação de módulo no código hash retornado pelo método <xref:System.Object.GetHashCode%2A>. O módulo padrão para esse MDA é 1, o que faz com que <xref:System.Object.GetHashCode%2A> retorne 0 para todos os objetos.  
@@ -34,16 +32,16 @@ O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o 
 - Dois objetos que costumavam não ser iguais agora o são.  
   
 ## <a name="cause"></a>Causa  
- Seu programa pode estar obtendo o objeto errado de um <xref:System.Collections.Hashtable> porque a implementação do método <xref:System.Object.Equals%2A> na classe para a chave no <xref:System.Collections.Hashtable> testa a igualdade de objetos ao comparar os resultados da chamada para o método <xref:System.Object.GetHashCode%2A>. Códigos hash não devem ser usados para testar a igualdade de objetos porque os dois objetos podem ter o mesmo código hash, mesmo que seus respectivos campos tenham valores diferentes. Esses conflitos de código hash, embora raros na prática, ocorrem. O efeito disso em uma pesquisa <xref:System.Collections.Hashtable> é que duas chaves que não são iguais parecem ser e o objeto errado é retornado do <xref:System.Collections.Hashtable>. Por motivos de desempenho, a implementação de <xref:System.Object.GetHashCode%2A> pode variar entre as versões de tempo de execução, então colisões que podem não ocorrer em uma versão podem ocorrer em versões subsequentes. Quando códigos hash entrarem em conflito, habilite esse MDA para testar se o seu código tem bugs. Quando habilitado, esse MDA faz com que o método <xref:System.Object.GetHashCode%2A> retorne 0, resultando em uma colisão de todos os códigos hash. O único efeito que habilitar esse MDA deve ter em seu programa é tornar a execução dele mais lenta.  
+ Seu programa pode estar obtendo o objeto errado de um <xref:System.Collections.Hashtable> porque a implementação do método <xref:System.Object.Equals%2A> na classe para a chave no <xref:System.Collections.Hashtable> testa a igualdade de objetos ao comparar os resultados da chamada para o método <xref:System.Object.GetHashCode%2A>. Códigos hash não devem ser usados para testar a igualdade de objetos porque os dois objetos podem ter o mesmo código hash, mesmo que seus respectivos campos tenham valores diferentes. Esses conflitos de código hash, embora raros na prática, ocorrem. O efeito disso em uma pesquisa <xref:System.Collections.Hashtable> é que duas chaves que não são iguais parecem ser e o objeto errado é retornado do <xref:System.Collections.Hashtable>. Por motivos de desempenho, a implementação de <xref:System.Object.GetHashCode%2A> pode variar entre as versões de runtime, então colisões que podem não ocorrer em uma versão podem ocorrer em versões subsequentes. Quando códigos hash entrarem em conflito, habilite esse MDA para testar se o seu código tem bugs. Quando habilitado, esse MDA faz com que o método <xref:System.Object.GetHashCode%2A> retorne 0, resultando em uma colisão de todos os códigos hash. O único efeito que habilitar esse MDA deve ter em seu programa é tornar a execução dele mais lenta.  
   
- A ordem de enumeração de um <xref:System.Collections.Hashtable> poderá variar de uma versão de tempo de execução para outra se o algoritmo usado para calcular os códigos hash para a chave for alterado. Para testar se o seu programa obteve uma dependência na ordem de enumeração de chaves ou valores de uma tabela de hash, você pode habilitar esse MDA.  
+ A ordem de enumeração de um <xref:System.Collections.Hashtable> poderá variar de uma versão de runtime para outra se o algoritmo usado para calcular os códigos hash para a chave for alterado. Para testar se o seu programa obteve uma dependência na ordem de enumeração de chaves ou valores de uma tabela de hash, você pode habilitar esse MDA.  
   
 ## <a name="resolution"></a>Resolução  
  Nunca use códigos hash como um substituto para a identidade do objeto. Implemente a substituição do método <xref:System.Object.Equals%2A?displayProperty=nameWithType> para não comparar códigos hash.  
   
  Não crie dependências na ordem das enumerações de chaves ou valores em tabelas de hash.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Os aplicativos são executados mais lentamente quando esse MDA está habilitado. Esse MDA simplesmente usa o código hash que teria sido retornado e em vez disso, retorna o resto quando dividido por um módulo.  
   
 ## <a name="output"></a>Saída  
@@ -60,7 +58,7 @@ O MDA (Assistente de Depuração Gerenciado) de `moduloObjectHashcode` altera o 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

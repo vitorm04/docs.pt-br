@@ -11,14 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ed4933ae59223c0674d2e36428894cbc3a07933f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8acafcc2fba9a7d30cc77f25f06adaca7c79db32
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052660"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217410"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA invalidApartmentStateChange
 O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é ativado por qualquer um de dois problemas:  
@@ -44,7 +42,7 @@ O MDS (Assistente de Depuração Gerenciado) de `invalidApartmentStateChange` é
   
  Para a segunda causa, idealmente, o código que chama o método `CoUninitialize` deve ser modificado para atrasar a chamada até que o thread esteja prestes a ser encerrado e que não exista nenhum RCW nem componentes COM subjacentes que ainda estejam em uso pelo thread. No entanto, se não é possível modificar o código que chama o método `CoUninitialize`, então nenhum RCWs devem ser usado de threads cuja inicialização é cancelada dessa maneira.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -77,7 +75,7 @@ namespace ApartmentStateMDA
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

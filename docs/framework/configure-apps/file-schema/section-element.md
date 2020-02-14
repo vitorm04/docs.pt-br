@@ -1,5 +1,5 @@
 ---
-title: <section> Elemento
+title: <section> elemento
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -8,14 +8,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089025"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215724"
 ---
 # <a name="section-element"></a>elemento de > de seção \<
 
@@ -28,7 +26,7 @@ Contém uma declaração de seção de configuração.
 [ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp;[ **\<configsections >** ](configsections-element-for-configuration.md)\
 &nbsp;&nbsp;[ **&nbsp;&nbsp;\<o >\** ](sectiongroup-element-for-configsections.md)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**seção**\<
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**seção**\<>
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,25 +37,25 @@ Contém uma declaração de seção de configuração.
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>Atributos necessários
+## <a name="required-attributes"></a>Atributos obrigatórios
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
 | **name**  | Especifica o nome da seção de configuração. |
-| **type**  | Especifica o nome da classe de manipulador da seção de configuração que lê a seção do arquivo de configuração. O valor do tipo tem a sintaxe "totalmente qualificado-section-Handle-Class-Name, Simple-Assembly-Name". O nome do assembly simples é o nome de arquivo raiz sem a extensão de arquivos *. dll* . |
+| **tipo**  | Especifica o nome da classe de manipulador da seção de configuração que lê a seção do arquivo de configuração. O valor do tipo tem a sintaxe "totalmente qualificado-section-Handle-Class-Name, Simple-Assembly-Name". O nome do assembly simples é o nome de arquivo raiz sem a extensão de arquivos *. dll* . |
 
 ## <a name="optional-attributes"></a>Atributos opcionais
 
 Os atributos a seguir são aplicáveis somente para aplicativos ASP.NET. O sistema de configuração ignora esses atributos para outros tipos de aplicativos.
 
-|                     | Descrição |
+|                     | DESCRIÇÃO |
 | ------------------- | ----------- |
 | **allowDefinition** | Especifica em qual arquivo de configuração a seção pode ser usada. Use um dos seguintes valores:<br><br>**Parte**<br>Permite que a seção seja usada em qualquer arquivo de configuração. Esse é o padrão.<br>**MachineOnly**<br>Permite que a seção seja usada somente no arquivo de configuração da máquina (*Machine. config*).<br>**MachineToApplication**<br>Permite que a seção seja usada no arquivo de configuração do computador ou no arquivo de configuração do aplicativo. |
 | **allowLocation**   | Determina se a seção pode ser usada dentro do elemento **\<local >** . Use um dos seguintes valores:<br><br>**true**<br>Permite que a seção seja usada dentro do elemento **\<local >** . Esse é o padrão.<br>**false**<br>Não permite que a seção seja usada dentro do elemento **\<local >** . |
 
 ## <a name="parent-elements"></a>Elementos pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<configsections >** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 | [ **\<> de seção** Elementos](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
@@ -92,10 +90,10 @@ O exemplo a seguir mostra como definir uma seção de configuração e definir a
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9563dae9ba5d144300549e7f33f5f5a9feb1d410
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 949739b3336a9182eef583cc405e60e09d7ec09d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205643"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217156"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidade de políticas de segurança de acesso de código e migração
 
@@ -24,11 +22,11 @@ Você pode evitar os avisos e erros de uma das opções:
 
 - [Migrar](#migration) para as .NET Framework 4 substituições para as chamadas obsoletas.
 
-   \- ou -
+   \- ou –
 
-- Usando o [ \<elemento de configuração NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para aceitar o comportamento da política CAS herdada.
+- Usando o [elemento de configuração\<NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para aceitar o comportamento da política CAS herdada.
 
-Esse tópico contém as seguintes seções:
+Este tópico contém as seguintes seções:
 
 - [Uso explícito](#explicit_use)
 
@@ -36,9 +34,9 @@ Esse tópico contém as seguintes seções:
 
 - [Erros e avisos](#errors_and_warnings)
 
-- [As Substituição de chamadas obsoletas](#migration)
+- [Migração: substituição de chamadas obsoletas](#migration)
 
-- [Compatibilidade Usando a opção herdada da política CAS](#compatibility)
+- [Compatibilidade: usando a opção herdada da política CAS](#compatibility)
 
 <a name="explicit_use"></a>
 
@@ -46,7 +44,7 @@ Esse tópico contém as seguintes seções:
 
 Os membros que manipulam diretamente a política de segurança ou exigem que a política de CAS para a área restrita sejam obsoletos e produzirão erros por padrão.
 
-Os exemplos são:
+São exemplos:
 
 - <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>
 
@@ -72,9 +70,9 @@ Os exemplos são:
 
 ## <a name="implicit-use"></a>Uso implícito
 
-Várias sobrecargas de carregamento de assembly geram erros devido ao uso implícito da política de CAS. Essas sobrecargas usam um <xref:System.Security.Policy.Evidence> parâmetro que é usado para resolver a política de CAS e fornecem um conjunto de concessão de permissão para um assembly.
+Várias sobrecargas de carregamento de assembly geram erros devido ao uso implícito da política de CAS. Essas sobrecargas usam um parâmetro <xref:System.Security.Policy.Evidence> que é usado para resolver a política CAS e fornecer uma concessão de permissão definida para um assembly.
 
-Aqui estão alguns exemplos. As sobrecargas obsoletas são as que <xref:System.Security.Policy.Evidence> usam como um parâmetro:
+Veja alguns exemplos. As sobrecargas obsoletas são aquelas que levam <xref:System.Security.Policy.Evidence> como um parâmetro:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -96,9 +94,9 @@ Aqui estão alguns exemplos. As sobrecargas obsoletas são as que <xref:System.S
 
 <a name="errors_and_warnings"></a>
 
-## <a name="errors-and-warnings"></a>Erros e Avisos
+## <a name="errors-and-warnings"></a>Erros e avisos
 
-Os tipos e membros obsoletos produzem as seguintes mensagens de erro quando são usadas. Observe que o <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> tipo em si não é obsoleto.
+Os tipos e membros obsoletos produzem as seguintes mensagens de erro quando são usadas. Observe que o tipo de <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> em si não é obsoleto.
 
 Aviso de tempo de compilação:
 
@@ -110,7 +108,7 @@ Exceção de tempo de execução:
 
 <a name="migration"></a>
 
-## <a name="migration-replacement-for-obsolete-calls"></a>As Substituição de chamadas obsoletas
+## <a name="migration-replacement-for-obsolete-calls"></a>Migração: substituição de chamadas obsoletas
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinando o nível de confiança de um assembly
 
@@ -126,23 +124,23 @@ A política de CAS é geralmente usada para determinar o nível de confiança ou
 
 ### <a name="application-domain-sandboxing"></a>Área restrita do domínio do aplicativo
 
-Normalmente <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> , o método é usado para proteger os assemblies em um domínio de aplicativo. O .NET Framework 4 expõe Membros que não precisam ser usados <xref:System.Security.Policy.PolicyLevel> para essa finalidade. Para obter mais informações, confira [Como: Executar o código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md).
+O método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> normalmente é usado para proteger os assemblies em um domínio de aplicativo. O .NET Framework 4 expõe Membros que não precisam usar <xref:System.Security.Policy.PolicyLevel> para essa finalidade. Para obter mais informações, consulte [como: executar código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinando um conjunto de permissões seguro ou razoável para código parcialmente confiável
 
-Geralmente, os hosts precisam determinar as permissões apropriadas para o código hospedado de área restrita. Antes da .NET Framework 4, a política de CAS forneceu uma maneira de fazer <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> isso com o método. Como uma substituição, o .NET Framework 4 fornece <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> o método, que retorna um conjunto de permissões seguro e padrão para a evidência fornecida.
+Geralmente, os hosts precisam determinar as permissões apropriadas para o código hospedado de área restrita. Antes da .NET Framework 4, a política de CAS fornecia uma maneira de fazer isso com o método <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>. Como uma substituição, o .NET Framework 4 fornece o método <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>, que retorna um conjunto de permissões seguro e padrão para a evidência fornecida.
 
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Cenários que não são de área restrita: Sobrecargas para cargas de assembly
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Cenários que não são de área restrita: sobrecargas para cargas de assembly
 
-O motivo para usar uma sobrecarga de carga de assembly pode ser usar parâmetros que não estão disponíveis de outra forma, em vez de colocar o assembly em área restrita. Começando com o .NET Framework 4, as sobrecargas de carregamento de assembly que não <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> exigem um objeto como parâmetro, por <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>exemplo, habilitam esse cenário.
+O motivo para usar uma sobrecarga de carga de assembly pode ser usar parâmetros que não estão disponíveis de outra forma, em vez de colocar o assembly em área restrita. A partir do .NET Framework 4, as sobrecargas de carregamento de assembly que não exigem um objeto <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> como um parâmetro, por exemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitam esse cenário.
 
-Se você quiser colocar um assembly em área restrita, <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> use a sobrecarga.
+Se você quiser colocar um assembly em área restrita, use a sobrecarga de <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.
 
 <a name="compatibility"></a>
 
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidade Usando a opção herdada da política CAS
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidade: usando a opção herdada da política CAS
 
-O [ \<elemento de configuração de > NetFx40_LegacySecurityPolicy](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite especificar que um processo ou uma biblioteca usa uma política CAS herdada. Quando você habilitar esse elemento, as sobrecargas de política e evidência funcionarão como faziam em versões anteriores do Framework.
+O [elemento de configuração\<NetFx40_LegacySecurityPolicy >](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) permite especificar que um processo ou uma biblioteca usa uma política CAS herdada. Quando você habilitar esse elemento, as sobrecargas de política e evidência funcionarão como faziam em versões anteriores do Framework.
 
 > [!NOTE]
 > O comportamento da política de CAS é especificado em uma base de versão de tempo de execução, portanto, a modificação da política de CAS para uma versão de tempo de execução não afeta a política CAS de outra versão.
@@ -155,7 +153,7 @@ O [ \<elemento de configuração de > NetFx40_LegacySecurityPolicy](../configure
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: Executar o código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Como executar código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

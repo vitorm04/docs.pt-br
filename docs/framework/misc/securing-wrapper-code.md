@@ -7,14 +7,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206110"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215841"
 ---
 # <a name="securing-wrapper-code"></a>Protegendo código de wrapper
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -23,22 +21,22 @@ ms.locfileid: "70206110"
   
  Nunca habilite algo por meio do wrapper que o chamador não podia fazer em si mesmo. Esse é um perigo especial ao fazer algo que envolve uma verificação de segurança limitada, em oposição a uma demanda completa de movimentação de pilha. Quando as verificações de nível único estão envolvidas, a interposição do código do wrapper entre o chamador real e o elemento de API em questão pode fazer com que a verificação de segurança tenha sucesso quando não deveria, diminuindo assim a segurança.  
   
-## <a name="delegates"></a>Delegados  
+## <a name="delegates"></a>Delega  
  A segurança de delegado difere entre as versões do .NET Framework.  Esta seção descreve os diferentes comportamentos de delegado e as considerações de segurança associadas.  
   
 ### <a name="in-version-10-and-11-of-the-net-framework"></a>Na versão 1,0 e 1,1 do .NET Framework  
  A versão 1,0 e 1,1 do .NET Framework executar as seguintes ações de segurança em relação a um criador delegado e um chamador delegado.  
   
-- Quando um delegado é criado, as demandas de link de segurança no método de destino delegado são executadas em relação ao conjunto de concessão do criador delegado.  Falha ao satisfazer os resultados da ação de segurança <xref:System.Security.SecurityException>em um.  
+- Quando um delegado é criado, as demandas de link de segurança no método de destino delegado são executadas em relação ao conjunto de concessão do criador delegado.  A falha ao atender à ação de segurança resulta em um <xref:System.Security.SecurityException>.  
   
 - Quando o delegado é invocado, todas as demandas de segurança existentes no chamador delegado são executadas.  
   
- Sempre que seu código usa <xref:System.Delegate> um código de menos confiável que pode chamá-lo, certifique-se de que você não está habilitando o código menos confiável para escalonar suas permissões. Se você pegar um delegado e usá-lo mais tarde, o código que criou o delegado não estará na pilha de chamadas e suas permissões não serão testadas se o código em ou sob o delegado tentar uma operação protegida. Se o código e o código do chamador tiverem privilégios mais altos do que o criador, o criador poderá orquestrar o caminho de chamada sem fazer parte da pilha de chamadas.  
+ Sempre que seu código usa um <xref:System.Delegate> de código menos confiável que pode chamá-lo, certifique-se de que você não está habilitando o código menos confiável para escalonar suas permissões. Se você pegar um delegado e usá-lo mais tarde, o código que criou o delegado não estará na pilha de chamadas e suas permissões não serão testadas se o código em ou sob o delegado tentar uma operação protegida. Se o código e o código do chamador tiverem privilégios mais altos do que o criador, o criador poderá orquestrar o caminho de chamada sem fazer parte da pilha de chamadas.  
   
 ### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>Na versão 2,0 e versões posteriores do .NET Framework  
  Diferentemente das versões anteriores, a versão 2,0 e versões posteriores do .NET Framework executa a ação de segurança no criador de delegado quando o delegado é criado e chamado.  
   
-- Quando um delegado é criado, as demandas de link de segurança no método de destino delegado são executadas em relação ao conjunto de concessão do criador delegado.  Falha ao satisfazer os resultados da ação de segurança <xref:System.Security.SecurityException>em um.  
+- Quando um delegado é criado, as demandas de link de segurança no método de destino delegado são executadas em relação ao conjunto de concessão do criador delegado.  A falha ao atender à ação de segurança resulta em um <xref:System.Security.SecurityException>.  
   
 - O conjunto de concessão do criador delegado também é capturado durante a criação de delegado e armazenado com o delegado.  
   
@@ -66,28 +64,28 @@ ms.locfileid: "70206110"
   
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
-## <a name="demand-vs-linkdemand"></a>Demanda vs. LinkDemand  
+## <a name="demand-vs-linkdemand"></a>Demand versus LinkDemand  
  A segurança declarativa oferece dois tipos de verificações de segurança que são semelhantes, mas que executam verificações muito diferentes. Você deve compreender os dois formulários, pois a escolha errada pode resultar em perda de segurança ou de desempenho fraca.  
   
  A segurança declarativa oferece as seguintes verificações de segurança:  
   
-- <xref:System.Security.Permissions.SecurityAction.Demand>Especifica a movimentação da pilha de segurança de acesso ao código. Todos os chamadores na pilha devem ter a permissão ou a identidade especificada para passar. A **demanda** ocorre em cada chamada porque a pilha pode conter chamadores diferentes. Se você chamar um método repetidamente, essa verificação de segurança ocorrerá a cada vez. A **demanda** é uma boa proteção contra ataques chamariz; o código não autorizado que está tentando passar por ele será detectado.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> especifica a movimentação da pilha de segurança de acesso ao código. Todos os chamadores na pilha devem ter a permissão ou a identidade especificada para passar. A **demanda** ocorre em cada chamada porque a pilha pode conter chamadores diferentes. Se você chamar um método repetidamente, essa verificação de segurança ocorrerá a cada vez. A **demanda** é uma boa proteção contra ataques chamariz; o código não autorizado que está tentando passar por ele será detectado.  
   
 - [LinkDemand](link-demands.md) ocorre no tempo de compilação JIT (just-in-time) e verifica apenas o chamador imediato. Essa verificação de segurança não verifica o chamador do chamador. Quando essa verificação é aprovada, não há nenhuma sobrecarga de segurança adicional, não importa quantas vezes o chamador pode chamar. No entanto, também não há nenhuma proteção contra ataques chamariz. Com **LinkDemand**, qualquer código que passa pelo teste e pode fazer referência a seu código pode potencialmente interromper a segurança, permitindo que o código mal-intencionado chame usando o código autorizado. Portanto, não use **LinkDemand** , a menos que todos os possíveis pontos fracos possam ser totalmente evitados.  
   
     > [!NOTE]
-    > No .NET Framework 4, as <xref:System.Security.SecurityCriticalAttribute> demandas de link foram substituídas pelo atributo em <xref:System.Security.SecurityRuleSet.Level2> assemblies. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, ele também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código de segurança transparente, nível 2](security-transparent-code-level-2.md).  
+    > No .NET Framework 4, as demandas de link foram substituídas pelo atributo <xref:System.Security.SecurityCriticalAttribute> em assemblies <xref:System.Security.SecurityRuleSet.Level2>. O <xref:System.Security.SecurityCriticalAttribute> é equivalente a uma demanda de link para confiança total; no entanto, ele também afeta as regras de herança. Para obter mais informações sobre essa alteração, consulte [código de segurança transparente, nível 2](security-transparent-code-level-2.md).  
   
  As precauções extras necessárias ao usar **LinkDemand** devem ser programadas individualmente; o sistema de segurança pode ajudar na imposição. Qualquer erro abre uma vulnerabilidade de segurança. Todo o código autorizado que usa seu código deve ser responsável por implementar segurança adicional fazendo o seguinte:  
   
 - Restringir o acesso do código de chamada à classe ou ao assembly.  
   
-- Colocar as mesmas verificações de segurança no código de chamada que aparecem no código que está sendo chamado e obligating seus chamadores para fazer isso. Por exemplo, se você escrever código que chama um método que é protegido com um **LinkDemand** para o <xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> sinalizador especificado, o método também deve fazer um **LinkDemand** (ou **demanda**, que é mais forte) para isso permissão. A exceção é se o seu código usa o método protegido por **LinkDemand**de uma maneira limitada que você decide que é seguro, dado a outros mecanismos de proteção de segurança (como demandas) em seu código. Nesse caso excepcional, o chamador assume a responsabilidade de enfraquecer a proteção de segurança no código subjacente.  
+- Colocar as mesmas verificações de segurança no código de chamada que aparecem no código que está sendo chamado e obligating seus chamadores para fazer isso. Por exemplo, se você escrever código que chama um método que é protegido com um **LinkDemand** para o <xref:System.Security.Permissions.SecurityPermission> com o sinalizador de <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado, o método também deve fazer um **LinkDemand** (ou **demanda**, que é mais forte) para essa permissão. A exceção é se o seu código usa o método protegido por **LinkDemand**de uma maneira limitada que você decide que é seguro, dado a outros mecanismos de proteção de segurança (como demandas) em seu código. Nesse caso excepcional, o chamador assume a responsabilidade de enfraquecer a proteção de segurança no código subjacente.  
   
 - Garantir que os chamadores de seu código não possam enganar seu código para chamar o código protegido em seu nome. Em outras palavras, os chamadores não podem forçar o código autorizado a passar parâmetros específicos para o código protegido ou para obter os resultados de volta dele.  
   
 ### <a name="interfaces-and-link-demands"></a>Interfaces e demandas de link  
- Se um método virtual, uma propriedade ou um evento com **LinkDemand** substituir um método de classe base, o método de classe base também deverá ter o mesmo **LinkDemand** para o método substituído a fim de entrar em vigor. É possível que o código mal-intencionado seja convertido no tipo base e chame o método da classe base. Observe também que as demandas de link podem ser adicionadas implicitamente a assemblies que <xref:System.Security.AllowPartiallyTrustedCallersAttribute> não têm o atributo de nível de assembly.  
+ Se um método virtual, uma propriedade ou um evento com **LinkDemand** substituir um método de classe base, o método de classe base também deverá ter o mesmo **LinkDemand** para o método substituído a fim de entrar em vigor. É possível que o código mal-intencionado seja convertido no tipo base e chame o método da classe base. Observe também que as demandas de link podem ser adicionadas implicitamente a assemblies que não têm o atributo de nível de assembly <xref:System.Security.AllowPartiallyTrustedCallersAttribute>.  
   
  É uma boa prática proteger as implementações de método com demandas de link quando métodos de interface também têm demandas de link. Observe o seguinte sobre o uso de demandas de link com interfaces:  
   
@@ -101,6 +99,6 @@ ms.locfileid: "70206110"
   
 - Tipos e as interfaces que eles implementam. Eles devem usar as demandas de link de forma consistente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

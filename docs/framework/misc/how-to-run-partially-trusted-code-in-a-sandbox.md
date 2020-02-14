@@ -1,5 +1,5 @@
 ---
-title: 'Como: Executar o código parcialmente confiável em uma área restrita.'
+title: Como executar código parcialmente confiável em uma área restrita
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,25 +8,23 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894555"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215856"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Como: Executar o código parcialmente confiável em uma área restrita.
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Como executar código parcialmente confiável em uma área restrita
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- A área restrita é a prática de executar código em um ambiente de segurança restrito, que limita as permissões de acesso concedidas ao código. Por exemplo, se você tiver uma biblioteca gerenciada de uma fonte que não confia completamente, não deverá executá-la como totalmente confiável. Em vez disso, você deve colocar o código em uma área restrita que limita suas permissões para aqueles que você espera que sejam necessários ( <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> por exemplo, permissão).  
+ A área restrita é a prática de executar código em um ambiente de segurança restrito, que limita as permissões de acesso concedidas ao código. Por exemplo, se você tiver uma biblioteca gerenciada de uma fonte que não confia completamente, não deverá executá-la como totalmente confiável. Em vez disso, você deve colocar o código em uma área restrita que limita suas permissões para aqueles que você espera que sejam necessários (por exemplo, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> permissão).  
   
  Você também pode usar a área restrita para testar o código que será distribuído e que será executado em ambientes parcialmente confiáveis.  
   
- Um <xref:System.AppDomain> é uma maneira eficaz de fornecer uma área restrita para aplicativos gerenciados. Os domínios de aplicativo que são usados para executar código parcialmente confiável têm permissões que definem os recursos protegidos que estão disponíveis durante <xref:System.AppDomain>a execução dentro dele. O código que é executado <xref:System.AppDomain> dentro do é associado pelas permissões associadas <xref:System.AppDomain> ao e tem permissão para acessar apenas os recursos especificados. O <xref:System.AppDomain> também inclui uma <xref:System.Security.Policy.StrongName> matriz que é usada para identificar assemblies que devem ser carregados como totalmente confiáveis. Isso permite que o criador de <xref:System.AppDomain> um inicie um novo domínio em área restrita que permite que assemblies auxiliares específicos sejam totalmente confiáveis. Outra opção para carregar assemblies como totalmente confiável é colocá-los no cache de assembly global; no entanto, isso carregará os assemblies como totalmente confiáveis em todos os domínios de aplicativo criados nesse computador. A lista de nomes fortes dá suporte a uma<xref:System.AppDomain> por decisão que fornece uma determinação mais restritiva.  
+ Uma <xref:System.AppDomain> é uma maneira eficaz de fornecer uma área restrita para aplicativos gerenciados. Os domínios de aplicativo usados para executar código parcialmente confiável têm permissões que definem os recursos protegidos que estão disponíveis durante a execução dentro desse <xref:System.AppDomain>. O código que é executado dentro do <xref:System.AppDomain> é associado pelas permissões associadas ao <xref:System.AppDomain> e tem permissão para acessar apenas os recursos especificados. O <xref:System.AppDomain> também inclui uma matriz de <xref:System.Security.Policy.StrongName> que é usada para identificar assemblies que devem ser carregados como totalmente confiáveis. Isso permite que o criador de um <xref:System.AppDomain> inicie um novo domínio em área restrita que permite que assemblies auxiliares específicos sejam totalmente confiáveis. Outra opção para carregar assemblies como totalmente confiável é colocá-los no cache de assembly global; no entanto, isso carregará os assemblies como totalmente confiáveis em todos os domínios de aplicativo criados nesse computador. A lista de nomes fortes dá suporte a uma decisão por<xref:System.AppDomain> que fornece uma determinação mais restritiva.  
   
- Você pode usar a <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> sobrecarga do método para especificar o conjunto de permissões para aplicativos que são executados em uma área restrita. Essa sobrecarga permite que você especifique o nível exato de segurança de acesso do código desejado. Os assemblies que são carregados em <xref:System.AppDomain> um usando essa sobrecarga podem ter apenas o Grant Set especificado ou podem ser totalmente confiáveis. O assembly terá confiança total se estiver no cache de assembly global ou listado no `fullTrustAssemblies` parâmetro de matriz (o <xref:System.Security.Policy.StrongName>). Somente os `fullTrustAssemblies` assemblies conhecidos como totalmente confiáveis devem ser adicionados à lista.  
+ Você pode usar a sobrecarga do método de <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> para especificar o conjunto de permissões para aplicativos que são executados em uma área restrita. Essa sobrecarga permite que você especifique o nível exato de segurança de acesso do código desejado. Os assemblies que são carregados em um <xref:System.AppDomain> usando essa sobrecarga podem ter apenas o Grant Set especificado ou podem ser totalmente confiáveis. O assembly terá confiança total se estiver no cache de assembly global ou listado no parâmetro de matriz `fullTrustAssemblies` (<xref:System.Security.Policy.StrongName>). Somente os assemblies conhecidos como totalmente confiáveis devem ser adicionados à lista de `fullTrustAssemblies`.  
   
  A sobrecarga tem a seguinte assinatura:  
   
@@ -38,17 +36,17 @@ AppDomain.CreateDomain( string friendlyName,
                         params StrongName[] fullTrustAssemblies);  
 ```  
   
- Os parâmetros para a <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> sobrecarga do método especificam o nome <xref:System.AppDomain>do, a evidência para <xref:System.AppDomain>o, <xref:System.AppDomainSetup> o objeto que identifica a base do aplicativo para a área restrita, o conjunto de permissões a ser usado e os nomes fortes para assemblies totalmente confiáveis.  
+ Os parâmetros para a sobrecarga do método de <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> especificam o nome do <xref:System.AppDomain>, a evidência para o <xref:System.AppDomain>, o objeto <xref:System.AppDomainSetup> que identifica a base do aplicativo para a área restrita, o conjunto de permissões a ser usado e os nomes fortes para assemblies totalmente confiáveis.  
   
- Por motivos de segurança, a base do aplicativo especificada `info` no parâmetro não deve ser a base do aplicativo para o aplicativo de hospedagem.  
+ Por motivos de segurança, a base do aplicativo especificada no parâmetro `info` não deve ser a base do aplicativo para o aplicativo de hospedagem.  
   
- Para o `grantSet` parâmetro, você pode especificar um conjunto de permissões que você criou explicitamente ou um conjunto de permissões padrão criado <xref:System.Security.SecurityManager.GetStandardSandbox%2A> pelo método.  
+ Para o parâmetro `grantSet`, você pode especificar um conjunto de permissões que você criou explicitamente ou um conjunto de permissões padrão criado pelo método <xref:System.Security.SecurityManager.GetStandardSandbox%2A>.  
   
- Ao contrário <xref:System.AppDomain> da maioria das cargas, a <xref:System.AppDomain> evidência para o ( `securityInfo` que é fornecida pelo parâmetro) não é usada para determinar o conjunto de concessão para os assemblies parcialmente confiáveis. Em vez disso, ele é especificado independentemente `grantSet` pelo parâmetro. No entanto, a evidência pode ser usada para outras finalidades, como determinar o escopo de armazenamento isolado.  
+ Ao contrário da maioria das cargas de <xref:System.AppDomain>, a evidência da <xref:System.AppDomain> (que é fornecida pelo parâmetro `securityInfo`) não é usada para determinar o conjunto de concessão para os assemblies parcialmente confiáveis. Em vez disso, ele é especificado de forma independente pelo parâmetro `grantSet`. No entanto, a evidência pode ser usada para outras finalidades, como determinar o escopo de armazenamento isolado.  
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>Para executar um aplicativo em uma área restrita  
   
-1. Crie o conjunto de permissões a ser concedido ao aplicativo não confiável. A permissão mínima que você pode conceder <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> é a permissão. Você também pode conceder permissões adicionais que você ache que podem ser seguras para código não confiável; por exemplo, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. O código a seguir cria um novo conjunto de permissões <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> com apenas a permissão.  
+1. Crie o conjunto de permissões a ser concedido ao aplicativo não confiável. A permissão mínima que você pode conceder é <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> permissão. Você também pode conceder permissões adicionais que você ache que podem ser seguras para código não confiável; por exemplo, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. O código a seguir cria um novo conjunto de permissões com apenas <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> permissão.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -63,9 +61,9 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     O <xref:System.Security.SecurityManager.GetStandardSandbox%2A> método retorna um `Internet` conjunto de permissões ou um `LocalIntranet` conjunto de permissões dependendo da zona na evidência. <xref:System.Security.SecurityManager.GetStandardSandbox%2A>também constrói permissões de identidade para alguns dos objetos de evidência passados como referências.  
+     O método <xref:System.Security.SecurityManager.GetStandardSandbox%2A> retorna um conjunto de permissões `Internet` ou um conjunto de permissões `LocalIntranet` dependendo da zona na evidência. o <xref:System.Security.SecurityManager.GetStandardSandbox%2A> também constrói permissões de identidade para alguns dos objetos de evidência passados como referências.  
   
-2. Assine o assembly que contém a classe de hospedagem ( `Sandboxer` denominada neste exemplo) que chama o código não confiável. Adicione o <xref:System.Security.Policy.StrongName> usado para assinar o assembly <xref:System.Security.Policy.StrongName> à matriz <xref:System.AppDomain.CreateDomain%2A> do `fullTrustAssemblies` parâmetro da chamada. A classe de hospedagem deve ser executada como totalmente confiável para habilitar a execução do código de confiança parcial ou para oferecer serviços ao aplicativo de confiança parcial. É assim que você lê o <xref:System.Security.Policy.StrongName> de um assembly:  
+2. Assine o assembly que contém a classe de hospedagem (chamada `Sandboxer` neste exemplo) que chama o código não confiável. Adicione o <xref:System.Security.Policy.StrongName> usado para assinar o assembly para a matriz de <xref:System.Security.Policy.StrongName> do parâmetro `fullTrustAssemblies` da chamada <xref:System.AppDomain.CreateDomain%2A>. A classe de hospedagem deve ser executada como totalmente confiável para habilitar a execução do código de confiança parcial ou para oferecer serviços ao aplicativo de confiança parcial. É assim que você lê o <xref:System.Security.Policy.StrongName> de um assembly:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +71,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      .NET Framework assemblies como mscorlib e System. dll não precisam ser adicionados à lista de confiança total porque eles são carregados como totalmente confiáveis do cache de assembly global.  
   
-3. Inicialize o <xref:System.AppDomainSetup> parâmetro <xref:System.AppDomain.CreateDomain%2A> do método. Com esse parâmetro, você pode controlar muitas das configurações do novo <xref:System.AppDomain>. A <xref:System.AppDomainSetup.ApplicationBase%2A> propriedade é uma configuração importante e deve ser diferente <xref:System.AppDomainSetup.ApplicationBase%2A> da propriedade para o <xref:System.AppDomain> do aplicativo de hospedagem. Se as <xref:System.AppDomainSetup.ApplicationBase%2A> configurações forem as mesmas, o aplicativo de confiança parcial poderá fazer com que o aplicativo de hospedagem seja carregado (como totalmente confiável) uma exceção que ele define, explorando-o. Essa é outra razão pela qual uma captura (exceção) não é recomendada. Definir a base de aplicativos do host de forma diferente da base de aplicativos do aplicativo de área restrita reduz o risco de explorações.  
+3. Inicialize o parâmetro <xref:System.AppDomainSetup> do método <xref:System.AppDomain.CreateDomain%2A>. Com esse parâmetro, você pode controlar muitas das configurações do novo <xref:System.AppDomain>. A propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> é uma configuração importante e deve ser diferente da propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> para o <xref:System.AppDomain> do aplicativo de hospedagem. Se as configurações de <xref:System.AppDomainSetup.ApplicationBase%2A> forem as mesmas, o aplicativo de confiança parcial poderá fazer com que o aplicativo de hospedagem seja carregado (como totalmente confiável) uma exceção que ele define, explorando-o. Essa é outra razão pela qual uma captura (exceção) não é recomendada. Definir a base de aplicativos do host de forma diferente da base de aplicativos do aplicativo de área restrita reduz o risco de explorações.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4. Chame a <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> sobrecarga do método para criar o domínio do aplicativo usando os parâmetros que especificamos.  
+4. Chame a sobrecarga do método de <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> para criar o domínio do aplicativo usando os parâmetros que especificamos.  
   
      A assinatura para esse método é:  
   
@@ -92,13 +90,13 @@ AppDomain.CreateDomain( string friendlyName,
   
      Informações adicionais:  
   
-    - Essa é a única sobrecarga do <xref:System.AppDomain.CreateDomain%2A> método que usa um <xref:System.Security.PermissionSet> como parâmetro e, portanto, a única sobrecarga que permite carregar um aplicativo em uma configuração de confiança parcial.  
+    - Essa é a única sobrecarga do método <xref:System.AppDomain.CreateDomain%2A> que usa um <xref:System.Security.PermissionSet> como um parâmetro e, portanto, a única sobrecarga que permite carregar um aplicativo em uma configuração de confiança parcial.  
   
-    - O `evidence` parâmetro não é usado para calcular um conjunto de permissões; ele é usado para identificação por outros recursos do .NET Framework.  
+    - O parâmetro `evidence` não é usado para calcular um conjunto de permissões; Ele é usado para identificação por outros recursos do .NET Framework.  
   
-    - A definição <xref:System.AppDomainSetup.ApplicationBase%2A> da propriedade `info` do parâmetro é obrigatória para essa sobrecarga.  
+    - Definir a propriedade <xref:System.AppDomainSetup.ApplicationBase%2A> do parâmetro `info` é obrigatório para essa sobrecarga.  
   
-    - O `fullTrustAssemblies` parâmetro tem a `params` palavra-chave, o que significa que não é necessário criar <xref:System.Security.Policy.StrongName> uma matriz. Passar 0, 1 ou nomes mais fortes como parâmetros é permitido.  
+    - O parâmetro `fullTrustAssemblies` tem a palavra-chave `params`, o que significa que não é necessário criar uma matriz <xref:System.Security.Policy.StrongName>. Passar 0, 1 ou nomes mais fortes como parâmetros é permitido.  
   
     - O código para criar o domínio do aplicativo é:  
   
@@ -106,13 +104,13 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. Carregue o código na área restrita <xref:System.AppDomain> que você criou. Isso pode ser feito de duas maneiras:  
+5. Carregue o código no <xref:System.AppDomain> de área restrita que você criou. Isso pode ser feito de duas maneiras:  
   
-    - Chame o <xref:System.AppDomain.ExecuteAssembly%2A> método para o assembly.  
+    - Chame o método <xref:System.AppDomain.ExecuteAssembly%2A> para o assembly.  
   
-    - Use o <xref:System.Activator.CreateInstanceFrom%2A> método para criar uma instância de uma classe derivada de <xref:System.MarshalByRefObject> no novo <xref:System.AppDomain>.  
+    - Use o método <xref:System.Activator.CreateInstanceFrom%2A> para criar uma instância de uma classe derivada de <xref:System.MarshalByRefObject> no novo <xref:System.AppDomain>.  
   
-     O segundo método é preferível, pois torna mais fácil passar parâmetros para a nova <xref:System.AppDomain> instância. O <xref:System.Activator.CreateInstanceFrom%2A> método fornece dois recursos importantes:  
+     O segundo método é preferível, pois torna mais fácil passar parâmetros para a nova instância de <xref:System.AppDomain>. O método <xref:System.Activator.CreateInstanceFrom%2A> fornece dois recursos importantes:  
   
     - Você pode usar uma base de código que aponta para um local que não contém seu assembly.  
   
@@ -124,7 +122,7 @@ AppDomain.CreateDomain( string friendlyName,
            typeof(Sandboxer).FullName );  
     ```  
   
-     Observe que para criar uma instância de uma classe em um novo domínio, a classe deve estender a <xref:System.MarshalByRefObject> classe  
+     Observe que para criar uma instância de uma classe em um novo domínio, a classe deve estender a classe de <xref:System.MarshalByRefObject>  
   
     ```csharp
     class Sandboxer:MarshalByRefObject  
@@ -136,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. Chame o `ExecuteUntrustedCode` método na instância `Sandboxer` da classe que você acabou de criar.  
+7. Chame o método `ExecuteUntrustedCode` na instância da classe `Sandboxer` que você acabou de criar.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -167,18 +165,18 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection>é usado para obter um identificador de um método no assembly parcialmente confiável. O identificador pode ser usado para executar código de forma segura com permissões mínimas.  
+     <xref:System.Reflection> é usado para obter um identificador de um método no assembly parcialmente confiável. O identificador pode ser usado para executar código de forma segura com permissões mínimas.  
   
-     No código anterior, observe o <xref:System.Security.PermissionSet.Assert%2A> para a permissão de confiança total antes de imprimir o. <xref:System.Security.SecurityException>  
+     No código anterior, observe o <xref:System.Security.PermissionSet.Assert%2A> para a permissão de confiança total antes de imprimir o <xref:System.Security.SecurityException>.  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     A declaração de confiança total é usada para obter informações estendidas do <xref:System.Security.SecurityException>. Sem o <xref:System.Security.PermissionSet.Assert%2A>, o <xref:System.Security.SecurityException.ToString%2A> método do <xref:System.Security.SecurityException> irá descobrir que há código parcialmente confiável na pilha e restringirá as informações retornadas. Isso pode causar problemas de segurança se o código de confiança parcial pudesse ler essas informações, mas o risco é mitigado não concedendo <xref:System.Security.Permissions.UIPermission>. A declaração de confiança total deve ser usada com moderação e somente quando você tiver certeza de que não está permitindo que o código de confiança parcial eleve a confiança total. Como regra, não chame o código que você não confia na mesma função e depois de chamar uma declaração para confiança total. É recomendável sempre reverter a declaração quando terminar de usá-la.  
+     A declaração de confiança total é usada para obter informações estendidas do <xref:System.Security.SecurityException>. Sem o <xref:System.Security.PermissionSet.Assert%2A>, o método <xref:System.Security.SecurityException.ToString%2A> de <xref:System.Security.SecurityException> descobrirá que há código parcialmente confiável na pilha e restringirá as informações retornadas. Isso poderá causar problemas de segurança se o código de confiança parcial pudesse ler essas informações, mas o risco for mitigado não concedendo <xref:System.Security.Permissions.UIPermission>. A declaração de confiança total deve ser usada com moderação e somente quando você tiver certeza de que não está permitindo que o código de confiança parcial eleve a confiança total. Como regra, não chame o código que você não confia na mesma função e depois de chamar uma declaração para confiança total. É recomendável sempre reverter a declaração quando terminar de usá-la.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir implementa o procedimento na seção anterior. No exemplo, um projeto chamado `Sandboxer` em uma solução do Visual Studio também contém um projeto chamado `UntrustedCode`, que implementa a classe. `UntrustedClass` Esse cenário pressupõe que você tenha baixado um assembly de biblioteca que contém um método que deve retornar `true` ou `false` para indicar se o número fornecido é um número Fibonacci. Em vez disso, o método tenta ler um arquivo do seu computador. O exemplo a seguir mostra o código não confiável.  
+ O exemplo a seguir implementa o procedimento na seção anterior. No exemplo, um projeto chamado `Sandboxer` em uma solução do Visual Studio também contém um projeto chamado `UntrustedCode`, que implementa a classe `UntrustedClass`. Esse cenário pressupõe que você tenha baixado um assembly de biblioteca que contém um método que deve retornar `true` ou `false` para indicar se o número fornecido é um número Fibonacci. Em vez disso, o método tenta ler um arquivo do seu computador. O exemplo a seguir mostra o código não confiável.  
   
 ```csharp
 using System;  
@@ -198,7 +196,7 @@ namespace UntrustedCode
 }  
 ```  
   
- O exemplo a seguir mostra `Sandboxer` o código do aplicativo que executa o código não confiável.  
+ O exemplo a seguir mostra o código do aplicativo `Sandboxer` que executa o código não confiável.  
   
 ```csharp
 using System;  
@@ -273,6 +271,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

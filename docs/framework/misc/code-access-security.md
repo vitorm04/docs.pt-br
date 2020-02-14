@@ -1,5 +1,5 @@
 ---
-title: Segurança de acesso do código
+title: Segurança de Acesso do Código
 ms.date: 03/30/2017
 helpviewer_keywords:
 - named permission sets, code access security
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: a8021fade8df2c8bee5e3bf26da784a91526540f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205651"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215893"
 ---
-# <a name="code-access-security"></a>Segurança de acesso do código
+# <a name="code-access-security"></a>Segurança de Acesso do Código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Os sistemas de computador altamente conectados de hoje são frequentemente expostos ao código proveniente de várias fontes possivelmente desconhecidas. O código pode ser anexado a email, contido em documentos ou baixado pela Internet. Infelizmente, muitos usuários de computadores experimentaram em primeira mão os efeitos do código móvel mal-intencionado, incluindo vírus e worms, que podem danificar ou destruir dados e o tempo de custo e dinheiro.  
@@ -36,7 +34,7 @@ ms.locfileid: "70205651"
 > [!NOTE]
 > Alterações importantes foram feitas na segurança de acesso ao código no .NET Framework 4. A alteração mais notável foi a [transparência da segurança](security-transparent-code.md), mas também há outras alterações significativas que afetam a segurança de acesso do código. Para obter informações sobre essas alterações, consulte [Security Changes](../security/security-changes.md).  
   
- A segurança de acesso ao código afeta principalmente o código da biblioteca e os aplicativos parcialmente confiáveis. Os desenvolvedores de biblioteca devem proteger seu código contra o acesso não autorizado de aplicativos parcialmente confiáveis. Aplicativos parcialmente confiáveis são aplicativos que são carregados de fontes externas, como a Internet. Os aplicativos instalados em sua área de trabalho ou na intranet local são executados com confiança total. Os aplicativos de confiança total não são afetados pela segurança de acesso ao código, a menos que estejam marcados como de [segurança transparente](security-transparent-code.md), pois são totalmente confiáveis. A única limitação para aplicativos de confiança total é que os aplicativos marcados com o <xref:System.Security.SecurityTransparentAttribute> atributo não podem chamar o código marcado com o <xref:System.Security.SecurityCriticalAttribute> atributo. Aplicativos parcialmente confiáveis devem ser executados em uma área restrita (por exemplo, no Internet Explorer) para que a segurança de acesso ao código possa ser aplicada. Se você baixar um aplicativo da Internet e tentar executá-lo na área de trabalho, receberá um <xref:System.NotSupportedException> com a mensagem: "Foi feita uma tentativa de carregar um assembly a partir de um local de rede, o que faria com que o assembly estivesse em área restrita em versões anteriores do .NET Framework. Essa versão do .NET Framework não habilita a política de CAS por padrão, portanto, essa carga pode ser perigosa. " Se você tiver certeza de que o aplicativo pode ser confiável, poderá habilitá-lo para ser executado como confiança total usando o [ \<elemento de > loadFromRemoteSources](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obter informações sobre como executar um aplicativo em uma área [restrita, consulte Como: Executar o código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ A segurança de acesso ao código afeta principalmente o código da biblioteca e os aplicativos parcialmente confiáveis. Os desenvolvedores de biblioteca devem proteger seu código contra o acesso não autorizado de aplicativos parcialmente confiáveis. Aplicativos parcialmente confiáveis são aplicativos que são carregados de fontes externas, como a Internet. Os aplicativos instalados em sua área de trabalho ou na intranet local são executados com confiança total. Os aplicativos de confiança total não são afetados pela segurança de acesso ao código, a menos que estejam marcados como de [segurança transparente](security-transparent-code.md), pois são totalmente confiáveis. A única limitação para aplicativos de confiança total é que os aplicativos marcados com o atributo <xref:System.Security.SecurityTransparentAttribute> não podem chamar o código marcado com o atributo <xref:System.Security.SecurityCriticalAttribute>. Aplicativos parcialmente confiáveis devem ser executados em uma área restrita (por exemplo, no Internet Explorer) para que a segurança de acesso ao código possa ser aplicada. Se você baixar um aplicativo da Internet e tentar executá-lo na área de trabalho, obterá uma <xref:System.NotSupportedException> com a mensagem: "foi feita uma tentativa de carregar um assembly a partir de um local de rede, o que faria com que o assembly estivesse na área restrita em versões anteriores do .NET Framework. Essa versão do .NET Framework não habilita a política de CAS por padrão, portanto, essa carga pode ser perigosa. " Se você tiver certeza de que o aplicativo pode ser confiável, poderá habilitá-lo para ser executado como confiança total usando o [elemento\<loadFromRemoteSources >](../configure-apps/file-schema/runtime/loadfromremotesources-element.md). Para obter informações sobre como executar um aplicativo em uma área restrita, consulte [como: executar código parcialmente confiável em uma área restrita](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
  Todo o código gerenciado que tem como alvo o Common Language Runtime recebe os benefícios da segurança de acesso ao código, mesmo que esse código não faça uma chamada de segurança de acesso de código única. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md).  
   
@@ -62,9 +60,9 @@ ms.locfileid: "70205651"
 Movimentação da pilha de segurança  
   
 <a name="related_topics"></a>   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Título|Descrição|  
+|Title|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Noções Básicas da Segurança de Acesso do Código](code-access-security-basics.md)|Descreve a segurança de acesso do código e seus usos mais comuns.|  
 |[Segurança-código Transparent, nível 2](security-transparent-code-level-2.md)|Descreve o modelo de transparência de segurança no .NET Framework 4.|  

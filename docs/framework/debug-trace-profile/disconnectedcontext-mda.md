@@ -9,14 +9,12 @@ helpviewer_keywords:
 - context disconnections
 - managed debugging assistants (MDAs), disconnected context
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 670a32b4d198d2762e0bb51e41297836e471e05b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3d04e304a6b30fe6fd4deeda5a97007f11ee7b13
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052838"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216544"
 ---
 # <a name="disconnectedcontext-mda"></a>MDA disconnectedContext
 O MDA (Assistente para depuração gerenciada) `disconnectedContext` é ativado quando o CLR tenta realizar a transição para um apartment ou contexto desconectado durante a manutenção de uma solicitação sobre um objeto COM.  
@@ -30,7 +28,7 @@ O MDA (Assistente para depuração gerenciada) `disconnectedContext` é ativado 
 ## <a name="resolution"></a>Resolução  
  Para evitar esse problema, garanta que o thread que possui o STA não termine antes de o aplicativo ter concluído todos os objetos que residem no apartment. O mesmo se aplica a contextos; garanta que os contextos não desliguem antes de o aplicativo ser totalmente encerrado com qualquer componente COM que resida dentro do contexto.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR. Apenas relata dados sobre o contexto desconectado.  
   
 ## <a name="output"></a>Saída  
@@ -46,7 +44,7 @@ O MDA (Assistente para depuração gerenciada) `disconnectedContext` é ativado 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

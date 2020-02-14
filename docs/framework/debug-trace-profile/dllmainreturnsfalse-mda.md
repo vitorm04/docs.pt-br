@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: adc05ae9bd357c142ff09de069aff446b5ea60e8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052851"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216439"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>MDA dllMainReturnsFalse
 O MDA (assistente para depuração gerenciada) `dllMainReturnsFalse` é ativado se a função `DllMain` gerenciada de um assembly de usuário, chamada com o motivo DLL_PROCESS_ATTACH, retorna FALSE.  
@@ -28,7 +26,7 @@ O MDA (assistente para depuração gerenciada) `dllMainReturnsFalse` é ativado 
 ## <a name="resolution"></a>Resolução  
  Analise o código da função `DllMain` da DLL com falha e identifique a causa da falha de inicialização.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR. Ele apenas relata dados sobre o valor retornado de `DllMain`.  
   
 ## <a name="output"></a>Saída  
@@ -44,6 +42,6 @@ O MDA (assistente para depuração gerenciada) `dllMainReturnsFalse` é ativado 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -12,19 +12,17 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b796d79fc6acf7d54aac7c69d376e587144d14d1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052256"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217206"
 ---
 # <a name="trace-switches"></a>Opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento. Elas são objetos que existem no código e podem ser configuradas externamente por meio do arquivo .config. Há três tipos de opções de rastreamento fornecidas no .NET Framework: a classe <xref:System.Diagnostics.BooleanSwitch>, a classe <xref:System.Diagnostics.TraceSwitch> e a classe <xref:System.Diagnostics.SourceSwitch>. A classe <xref:System.Diagnostics.BooleanSwitch> atua como uma opção de alternância, habilitando ou desabilitando uma variedade de instruções de rastreamento. As classes <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> permitem habilitar uma opção de rastreamento para um nível de rastreamento específico, de modo que as mensagens <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.TraceSource> especificadas para o nível e todos os níveis inferiores a ele sejam exibidas. Se você desabilitar a opção, as mensagens de rastreamento não serão exibidas. Todas essas classes são derivadas da classe **Switch** abstrata (**MustInherit**), assim como todas as opções desenvolvidas pelo usuário.  
   
- As opções de rastreamento podem ser úteis para a filtragem de informações. Por exemplo, talvez você deseje ver todas as mensagens de rastreamento em um módulo de acesso a dados, mas somente as mensagens de erro no restante do aplicativo. Nesse caso, você usará uma opção de rastreamento para o módulo de acesso a dados e uma opção para o restante do aplicativo. Usando o arquivo .config para definir as opções com as configurações apropriadas, você pode controlar quais tipos de mensagem de rastreamento foram recebidas. Para obter mais informações, confira [Como: Criar, inicializar e configurar opções](how-to-create-initialize-and-configure-trace-switches.md)de rastreamento.  
+ As opções de rastreamento podem ser úteis para a filtragem de informações. Por exemplo, talvez você deseje ver todas as mensagens de rastreamento em um módulo de acesso a dados, mas somente as mensagens de erro no restante do aplicativo. Nesse caso, você usará uma opção de rastreamento para o módulo de acesso a dados e uma opção para o restante do aplicativo. Usando o arquivo .config para definir as opções com as configurações apropriadas, você pode controlar quais tipos de mensagem de rastreamento foram recebidas. Para obter mais informações, consulte [Como criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md).  
   
  Normalmente, um aplicativo implantado é executado com suas opções desabilitadas, de modo que os usuários não precisem observar muitas mensagens de rastreamento irrelevantes exibidas em uma tela ou enchendo um arquivo de log conforme o aplicativo é executado. Se surgir um problema durante a execução do aplicativo, pare o aplicativo, habilite as opções e reinicie o aplicativo. Em seguida, as mensagens de rastreamento serão exibidas.  
   
@@ -49,10 +47,10 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
 |Valor enumerado|Valor inteiro|Tipo de mensagem exibido (ou gravado em um destino de saída especificado)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Off|0|Nenhum|  
+|Desativado|0|Nenhum|  
 |Erro|1|Somente mensagens de erro|  
 |Aviso|2|Mensagens de aviso e mensagens de erro|  
-|Info|3|Mensagens informativas, mensagens de aviso e mensagens de erro|  
+|Informações|3|Mensagens informativas, mensagens de aviso e mensagens de erro|  
 |Detalhado|4|Mensagens detalhadas, mensagens informativas, mensagens de aviso e mensagens de erro|  
   
  As propriedades **TraceSwitch** indicam o nível máximo de rastreamento da opção. Ou seja, as informações de rastreamento são gravadas para o nível especificado, bem como para todos os níveis inferiores. Por exemplo, se **TraceInfo** for **true**, **TraceError** e **TraceWarning** também serão **true**, mas **TraceVerbose** poderá ser **false**.  
@@ -83,8 +81,8 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="developer-defined-switches"></a>Opções definidas pelo desenvolvedor  
  Além de fornecer **BooleanSwitch** e **TraceSwitch**, você pode definir suas próprias opções herdando da classe **Switch** e substituindo os métodos da classe base por métodos personalizados. Para obter mais informações sobre como criar opções definidas pelo desenvolvedor, consulte a classe <xref:System.Diagnostics.Switch> na referência do .NET Framework.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ouvintes de rastreamento](trace-listeners.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
 - [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)

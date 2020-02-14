@@ -10,19 +10,17 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5d083af6abc91121ebbc9554d03c635cabe2bbd9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971050"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217133"
 ---
 # <a name="securing-method-access"></a>Protegendo o acesso dos métodos
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Alguns métodos podem não ser adequados para permitir que um código não confiável arbitrário chame. Esses métodos apresentam vários riscos: O método pode fornecer algumas informações restritas; pode acreditar que todas as informações sejam passadas para ele; Ele pode não fazer a verificação de erro nos parâmetros; ou com os parâmetros errados, ele pode não funcionar ou fazer algo prejudicial. Você deve estar atento a esses casos e tomar medidas para ajudar a proteger o método.  
+ Alguns métodos podem não ser adequados para permitir que um código não confiável arbitrário chame. Esses métodos apresentam vários riscos: o método pode fornecer algumas informações restritas; pode acreditar que todas as informações sejam passadas para ele; Ele pode não fazer a verificação de erro nos parâmetros; ou com os parâmetros errados, ele pode não funcionar ou fazer algo prejudicial. Você deve estar atento a esses casos e tomar medidas para ajudar a proteger o método.  
   
  Em alguns casos, talvez seja necessário restringir métodos que não são destinados ao uso público, mas que ainda devem ser públicos. Por exemplo, você pode ter uma interface que precisa ser chamada em suas próprias DLLs e, portanto, deve ser pública, mas você não deseja expô-las publicamente para impedir que os clientes as usem ou para impedir que códigos mal-intencionados explorem o ponto de entrada em seu componente. Outro motivo comum para restringir um método não destinado ao uso público (mas que deve ser público) é evitar ter que documentar e dar suporte ao que pode ser uma interface muito interna.  
   
@@ -60,9 +58,9 @@ public class Class1
  Use as declarações mostradas nesta seção para impedir que classes e métodos específicos, bem como propriedades e eventos, sejam usados pelo código parcialmente confiável. Aplicando essas declarações a uma classe, você aplica a proteção a todos os seus métodos, propriedades e eventos; no entanto, observe que o acesso ao campo não é afetado pela segurança declarativa. Observe também que as demandas de link ajudam a proteger contra apenas os chamadores imediatos e podem ainda estar sujeitos a ataques chamariz.  
   
 > [!NOTE]
-> Um novo modelo de transparência foi introduzido no .NET Framework 4. O [código de segurança transparente, modelo de nível 2,](security-transparent-code-level-2.md) identifica o código <xref:System.Security.SecurityCriticalAttribute> seguro com o atributo. O código de segurança crítica exige que os chamadores e os herdeiros sejam totalmente confiáveis. Os assemblies que estão em execução nas regras de segurança de acesso ao código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
+> Um novo modelo de transparência foi introduzido no .NET Framework 4. O [código de segurança transparente, modelo de nível 2,](security-transparent-code-level-2.md) identifica o código seguro com o atributo <xref:System.Security.SecurityCriticalAttribute>. O código de segurança crítica exige que os chamadores e os herdeiros sejam totalmente confiáveis. Os assemblies que estão em execução nas regras de segurança de acesso ao código de versões anteriores do .NET Framework podem chamar assemblies de nível 2. Nesse caso, os atributos de segurança crítica serão tratados como demandas de link para confiança total.  
   
- Em assemblies de nome forte, um [LinkDemand](link-demands.md) é aplicado a todos os métodos, propriedades e eventos publicamente acessíveis para restringir seu uso a chamadores totalmente confiáveis. Para desabilitar esse recurso, você deve aplicar o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Portanto, marcar explicitamente as classes para excluir chamadores não confiáveis é necessário apenas para assemblies não assinados ou assemblies com esse atributo; Você pode usar essas declarações para marcar um subconjunto de tipos que não se destinam a chamadores não confiáveis.  
+ Em assemblies de nome forte, um [LinkDemand](link-demands.md) é aplicado a todos os métodos, propriedades e eventos publicamente acessíveis para restringir seu uso a chamadores totalmente confiáveis. Para desabilitar esse recurso, você deve aplicar o atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Portanto, marcar explicitamente as classes para excluir chamadores não confiáveis é necessário apenas para assemblies não assinados ou assemblies com esse atributo; Você pode usar essas declarações para marcar um subconjunto de tipos que não se destinam a chamadores não confiáveis.  
   
  Os exemplos a seguir mostram como impedir que classes e membros sejam usados por código não confiável.  
   
@@ -234,12 +232,12 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Substituições com virtual internal ou Overloads Overridable Friend  
   
 > [!NOTE]
-> Esta seção avisa sobre um problema de segurança ao declarar um método como `virtual` e `internal` (`Overloads` `Overridable` `Friend` em Visual Basic). Esse aviso se aplica somente às versões 1,0 e 1,1 do .NET Framework e não se aplica a versões posteriores.  
+> Esta seção avisa sobre um problema de segurança ao declarar um método como `virtual` e `internal` (`Overloads` `Overridable` `Friend` no Visual Basic). Esse aviso se aplica somente às versões 1,0 e 1,1 do .NET Framework e não se aplica a versões posteriores.  
   
  No .NET Framework versões 1,0 e 1,1, você deve estar ciente de uma nuance do tipo acessibilidade do sistema ao confirmar que seu código não está disponível para outros assemblies. Um método declarado **virtual** e **interno** (**sobrecargas Friend presubstituíveis** em Visual Basic) pode substituir a entrada vtable da classe pai e pode ser usado somente de dentro do mesmo assembly porque ele é interno. No entanto, a acessibilidade para substituição é determinada pela palavra-chave **virtual** , e isso pode ser substituído de outro assembly, desde que o código tenha acesso à própria classe. Se a possibilidade de uma substituição apresentar um problema, use a segurança declarativa para corrigi-lo ou remova a palavra-chave **virtual** se ela não for estritamente necessária.  
   
  Observe que, mesmo que um compilador de linguagem impeça essas substituições com um erro de compilação, é possível que o código escrito com outros compiladores substitua.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../standard/security/secure-coding-guidelines.md)

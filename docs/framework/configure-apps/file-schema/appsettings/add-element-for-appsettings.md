@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088753"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214806"
 ---
 # <a name="add-element-for-appsettings"></a>\<Adicionar > elemento para \<appSettings >
 
@@ -34,14 +32,14 @@ Adiciona uma configuração de aplicativo personalizada.
 
 ## <a name="attributes"></a>Atributos
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
-| **key**   | Atributo obrigatório.<br><br>Especifica o nome da chave a ser adicionada. |
+| **chave**   | Atributo obrigatório.<br><br>Especifica o nome da chave a ser adicionada. |
 | **value** | Atributo obrigatório.<br><br>Especifica o valor da chave a ser adicionada. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contém configurações de aplicativo personalizadas, como caminhos de arquivo, URLs de serviço da Web em XML ou qualquer outra informação de configuração personalizada para um aplicativo. |
 
@@ -68,6 +66,6 @@ O exemplo a seguir usa o elemento `<add>` para definir duas configurações de c
 </appSettings>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](../index.md)

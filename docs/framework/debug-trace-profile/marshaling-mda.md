@@ -7,19 +7,17 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f7bb630d3a1e832cf6bf083ce4cf603034248ceb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052496"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217330"
 ---
 # <a name="marshaling-mda"></a>MDA marshaling
 O MDA (Assistente de Depuração Gerenciado) de `marshaling` é ativado quando o CLR define informações de marshaling para um parâmetro de método ou um campo de uma estrutura. Esse MDA não funciona para assemblies compilados por JIT.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -31,7 +29,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Configuração  
- A configuração de MDA permite que você filtre as informações de marshaling relatadas com base no campo envolvido ou em nomes de método.  O exemplo a seguir mostra o uso dos elementos `methodFilter`, `fieldFilter` e `match` para especificar filtros.  A definição `name` do atributo como um asterisco\*() corresponderá a tudo.  
+ A configuração de MDA permite que você filtre as informações de marshaling relatadas com base no campo envolvido ou em nomes de método.  O exemplo a seguir mostra o uso dos elementos `methodFilter`, `fieldFilter` e `match` para especificar filtros.  Definir o atributo `name` como um asterisco (\*) corresponderá a tudo.  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +48,7 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

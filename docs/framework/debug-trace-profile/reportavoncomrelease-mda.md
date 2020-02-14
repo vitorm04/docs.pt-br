@@ -11,14 +11,12 @@ helpviewer_keywords:
 - report access violation on Com release
 - reference counting errors
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bea73a30cb103f0e72caf73a633229a0719dc6c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fca6b209e6432678a264f10762adb3871e3596ce
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052321"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217216"
 ---
 # <a name="reportavoncomrelease-mda"></a>MDA reportAvOnComRelease
 O MDA (Assistente para Depuração Gerenciada) do `reportAvOnComRelease` é ativado quando as exceções são lançadas por causa da contagem de erros pela referência do usuário durante a realização da interoperabilidade COM e do uso do método <xref:System.Runtime.InteropServices.Marshal.Release%2A> ou <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> combinado com chamadas COM brutas.  
@@ -32,8 +30,8 @@ O MDA (Assistente para Depuração Gerenciada) do `reportAvOnComRelease` é ativ
 ## <a name="resolution"></a>Resolução  
  Examine o código de contagem de referência e procure erros, também examine os clientes nativos do objeto em busca de erros de contagem de referência.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Há dois modos disponíveis. Se o atributo `allowAv` for `true`, o assistente evitará que o tempo de execução descarte a violação de acesso. Se `allowAv` for `false` (o padrão), o tempo de execução descartará a violação de acesso, mas uma mensagem de aviso será relatada ao usuário para indicar que uma exceção foi lançada e descartada.  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
+ Há dois modos disponíveis. Se o atributo `allowAv` for `true`, o assistente evitará que o runtime descarte a violação de acesso. Se `allowAv` for `false` (o padrão), o runtime descartará a violação de acesso, mas uma mensagem de aviso será relatada ao usuário para indicar que uma exceção foi lançada e descartada.  
   
 ## <a name="output"></a>Saída  
  Se possível, a saída contém a vtable original do ponteiro da interface COM. Do contrário, é exibida uma mensagem informativa.  
@@ -48,7 +46,7 @@ O MDA (Assistente para Depuração Gerenciada) do `reportAvOnComRelease` é ativ
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

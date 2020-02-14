@@ -1,14 +1,13 @@
 ---
 title: CI (integração contínua) com SDK do .NET Core e ferramentas
 description: Saiba como usar o SDK do .NET Core e suas ferramentas no servidor de compilação com integração contínua.
-author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714113"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215228"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
 
@@ -174,6 +173,6 @@ A maior parte deste documento descreve como adquirir as ferramentas do .NET Core
 
 Duas abordagens gerais para a estruturação do processo de build para o código do .NET Core usando as ferramentas do .NET Core estão usando o MSBuild diretamente ou estão usando os comandos da linha de comando do .NET Core. A abordagem que você usará é determinada pelo seu nível de conforto e pelas vantagens e desvantagens de acordo com a complexidade. O MSBuild fornece a capacidade de expressar o processo de build como destinos e tarefas, embora apresente uma complexidade acrescida na aprendizagem da sintaxe de arquivo de projeto do MSBuild. Usando as ferramentas de linha de comando do .NET Core talvez seja mais simples, mas exige gravar a lógica de orquestração em uma linguagem de scripts, como `bash` ou PowerShell.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Downloads do .NET: Linux](https://dotnet.microsoft.com/download?initial-os=linux)

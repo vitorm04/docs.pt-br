@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089033"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214764"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<remover > elemento para NameValueSectionHandler e DictionarySectionHandler
 
@@ -32,13 +30,13 @@ Remove uma configuração definida anteriormente.
 
 ## <a name="attribute"></a>Atributo
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
-| **key**   | Atributo obrigatório.<br><br>Especifica o nome da configuração a ser removida. |
+| **chave**   | Atributo obrigatório.<br><br>Especifica o nome da configuração a ser removida. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-| Elemento | Descrição |
+| Elemento | DESCRIÇÃO |
 | ------- | ------------|
 | [ **\<sectionname >** Elementos](custom-element-2.md) | Define as configurações para seções de configuração personalizadas que usam as classes <xref:System.Configuration.NameValueSectionHandler> e <xref:System.Configuration.DictionarySectionHandler>. |
 
@@ -80,10 +78,10 @@ O código do arquivo de configuração de aplicativo a seguir remove a configura
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](index.md)

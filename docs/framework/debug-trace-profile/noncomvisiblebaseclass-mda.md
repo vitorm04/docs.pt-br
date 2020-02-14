@@ -9,28 +9,26 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4340dd75e24ddeb01428159d5532b86e76fd8b4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b46d5c6ffbf12efbae113a95bbfccd5742ec9ec9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052435"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217296"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>MDA nonComVisibleBaseClass
 O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativado quando uma chamada `QueryInterface` é feita por código não gerenciado ou nativo no CCW (COM Callable Wrapper) de uma classe gerenciada visível em COM derivada de uma classe base que não é visível em COM.  A chamada `QueryInterface` faz com que o MDA seja ativado apenas em casos nos quais a chamada solicita a interface de classe ou o `IDispatch` padrão da classe gerenciada visível em COM.  O MDA não é ativado quando o `QueryInterface` é para uma interface explícita que tem o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> aplicado e é implementado explicitamente pela classe visível em COM.  
   
 ## <a name="symptoms"></a>Sintomas  
- Uma chamada `QueryInterface` feita por meio do código nativo que está falhando com um HRESULT COR_E_INVALIDOPERATION.  O HRESULT pode ser devido ao tempo de execução não permitir chamadas `QueryInterface` que causariam a ativação desse MDA.  
+ Uma chamada `QueryInterface` feita por meio do código nativo que está falhando com um HRESULT COR_E_INVALIDOPERATION.  O HRESULT pode ser devido ao runtime não permitir chamadas `QueryInterface` que causariam a ativação desse MDA.  
   
 ## <a name="cause"></a>Causa  
- O tempo de execução não pode permitir chamadas `QueryInterface` para a interface de classe ou a interface `IDispatch` padrão de uma classe visível em COM que deriva de uma classe não visível em COM devido a possíveis problemas de controle de versão.  Por exemplo, se os membros públicos foram adicionados à a classe base que não é visível em COM, os clientes COM existentes usando a classe derivada podem ser interrompidos porque a vtable da classe derivada, que contém os membros da classe base, seria modificada por uma alteração desse tipo.  Interfaces explícitas expostas a COM não têm esse problema porque elas não incluem os membros base das interfaces na vtable.  
+ O runtime não pode permitir chamadas `QueryInterface` para a interface de classe ou a interface `IDispatch` padrão de uma classe visível em COM que deriva de uma classe não visível em COM devido a possíveis problemas de controle de versão.  Por exemplo, se os membros públicos foram adicionados à a classe base que não é visível em COM, os clientes COM existentes usando a classe derivada podem ser interrompidos porque a vtable da classe derivada, que contém os membros da classe base, seria modificada por uma alteração desse tipo.  Interfaces explícitas expostas a COM não têm esse problema porque elas não incluem os membros base das interfaces na vtable.  
   
 ## <a name="resolution"></a>Resolução  
  Não expor a interface de classe. Definir uma interface explícita e aplicar o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> a ele.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -54,7 +52,7 @@ constrained by the COM versioning rules.
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32217b9e681179c246560ff5b51b65b4f4e044d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2fdace8a9c7bcc090fd801be3bd717e4a2b34a87
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052878"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217545"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>MDA dateTimeInvalidLocalFormat
 O MDA `dateTimeInvalidLocalFormat` é ativado quando uma instância <xref:System.DateTime> que é armazenada como um UTC (Horário Coordenado Universal) é formatada com um formato que se destina a ser usado apenas em instâncias <xref:System.DateTime> locais. Esse MDA não é ativado em instâncias <xref:System.DateTime> não especificadas ou padrão.  
@@ -50,8 +48,8 @@ DateTime myDateTime = DateTime.UtcNow;
 Serialize(myDateTime.ToString("o"));  
 ```  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Esse MDA não afeta o tempo de execução.  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
+ Esse MDA não afeta o runtime.  
   
 ## <a name="output"></a>Saída  
  Não há nenhuma saída especial como resultado da ativação desse MDA. No entanto, a pilha de chamadas pode ser usada para determinar o local da chamada <xref:System.DateTime.ToString%2A> que ativou o MDA.  
@@ -86,7 +84,7 @@ String serialized = XmlConvert.ToString(myDateTime,
     XmlDateTimeSerializationMode.RoundtripKind);  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

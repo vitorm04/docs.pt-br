@@ -2,14 +2,12 @@
 title: 'Como: migrar código gerenciador do DCOM para o WCF'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fdd5c9b285bdc948af876c72e85590500dd41c8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039588"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217187"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Como: migrar código gerenciador do DCOM para o WCF
 O WCF (Windows Communication Foundation) é a opção recomendada e uma escolha segura no lugar do DCOM (Distributed Component Object Model) para chamadas de código gerenciado entre servidores e clientes em um ambiente distribuído. Este artigo mostra como migrar código de DCOM para o WCF para os cenários a seguir.  
@@ -422,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação básica do WCF](../wcf/basic-wcf-programming.md)
 - [Serviços de design e implantação](../wcf/designing-and-implementing-services.md)

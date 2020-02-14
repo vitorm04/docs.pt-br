@@ -11,14 +11,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052423"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217280"
 ---
 # <a name="notmarshalable-mda"></a>MDA notMarshalable
 O MDA (Assistente de Depuração Gerenciado) de `notMarshalable` é ativado quando o CLR (Common Language Runtime) encontra um ponteiro de interface COM sem um proxy/stub registrado válido ou uma implementação incorreta da interface `IMarshal` ao tentar realizar marshaling da interface entre contextos.  
@@ -32,8 +30,8 @@ O MDA (Assistente de Depuração Gerenciado) de `notMarshalable` é ativado quan
 ## <a name="resolution"></a>Resolução  
  Verifique se você tem um stub de proxy registrado e que a implementação `IMarshal` é válida.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
- Esse MDA não tem nenhum efeito sobre o tempo de execução.  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
+ Esse MDA não tem nenhum efeito sobre o runtime.  
   
 ## <a name="output"></a>Saída  
  Uma mensagem que descreve o problema.  
@@ -48,7 +46,7 @@ O MDA (Assistente de Depuração Gerenciado) de `notMarshalable` é ativado quan
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

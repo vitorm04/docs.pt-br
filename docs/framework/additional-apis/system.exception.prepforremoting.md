@@ -1,7 +1,5 @@
 ---
 title: Método Exception. PrepForRemoting (sistema)
-author: mairaw
-ms.author: mairaw
 ms.date: 10/08/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - mscorlib.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 057390d64f70d3cb8eba7d4b29b94570fdca77e3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: ce1c24578690a1643b7f5af0e44eaae95ed7b0a2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72405028"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214893"
 ---
-# <a name="exceptionprepforremoting-method"></a>Método Exception. PrepForRemoting
+# <a name="exceptionprepforremoting-method"></a>Método Exception.PrepForRemoting
 
 Preserva o rastreamento de pilha do lado do servidor anexando-o à mensagem antes que a exceção seja relançada no site de chamada do cliente.
 
@@ -26,7 +24,7 @@ Preserva o rastreamento de pilha do lado do servidor anexando-o à mensagem ante
 internal Exception PrepForRemoting();
 ```
 
-## <a name="returns"></a>Retorna
+## <a name="returns"></a>Retornos
 
 <xref:System.Exception>  
 Esta instância <xref:System.Exception>.

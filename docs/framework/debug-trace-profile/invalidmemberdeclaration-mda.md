@@ -8,14 +8,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), marshaling
 - MDAs (managed debugging assistants), marshaling
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe15d718a9c5f91bfae4f37c04e726990e2fbd45
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6033cd4178b2bc493794b5dcc527bc543ba24284
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052581"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216293"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>MDA invalidMemberDeclaration
 O MDA (Assistente de Depuração Gerenciado) de `invalidMemberDeclaration` é ativado para relatar um erro que ocorre ao determinar como realizar marshaling dos parâmetros de um membro a ser chamado do COM.  
@@ -29,7 +27,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidMemberDeclaration` é at
 ## <a name="resolution"></a>Resolução  
  Especifique atributos <xref:System.Runtime.InteropServices.MarshalAsAttribute> válidos nos parâmetros.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -45,7 +43,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidMemberDeclaration` é at
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

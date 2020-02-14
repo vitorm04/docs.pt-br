@@ -7,21 +7,19 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119275"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214731"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > elemento para \<configuração >
 
 Contém configurações de aplicativo personalizadas. Esta é uma seção de configuração predefinida fornecida pelo .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appsettings >**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -33,19 +31,19 @@ Contém configurações de aplicativo personalizadas. Esta é uma seção de con
 
 ## <a name="attribute"></a>Atributo
 
-|           | Descrição |
+|           | DESCRIÇÃO |
 | --------- | ----------- |
 | **file**  | Atributo opcional.<br><br>Especifica um caminho relativo para um arquivo externo que contém definições de configuração de aplicativo personalizadas. O arquivo especificado contém o mesmo tipo de configurações especificadas no **\<adicionar >** , **\<remover >** e\<elementos de **> Clear** e usa o mesmo formato de par de chave/valor que esses elementos.<br><br>O caminho especificado é relativo ao arquivo de configuração principal. Para um aplicativo Windows Forms, essa é a pasta binária (como */bin/Debug*), não o local do arquivo de configuração do aplicativo. Para aplicativos Web Forms, o caminho é relativo à raiz do aplicativo, em que o arquivo *Web. config* está localizado.<br><br>Observe que o tempo de execução ignora o atributo se o arquivo especificado não puder ser encontrado. |
 
 ## <a name="parent-element"></a>Elemento pai
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **> de configuração de\<** Elementos](../configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
-## <a name="child-elements"></a>Child elements
+## <a name="child-elements"></a>Elementos filho
 
-|     | Descrição |
+|     | DESCRIÇÃO |
 | --- | ----------- |
 | [ **\<add>** ](add-element-for-appsettings.md) | Adiciona uma configuração de aplicativo personalizada. |
 | [ **\<clear>** ](clear-element-for-appsettings.md) | Limpa todas as configurações de aplicativo definidas anteriormente. |
@@ -59,7 +57,7 @@ Você pode usar o atributo **File** no elemento **\<appSettings >** dos arquivos
 
 Os arquivos de configuração especificados pelo atributo de **arquivo** devem ter um nó raiz de **\<appSettings >** em vez de **\<> de configuração**.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O exemplo a seguir mostra um arquivo de configurações de aplicativo externo (*custom.config*) que define uma configuração de aplicativo personalizada:
 
@@ -80,10 +78,10 @@ O exemplo a seguir mostra um arquivo de configuração de aplicativo que consome
 </configuration>
 ```
 
-## <a name="configuration-file"></a>arquivo de configuração
+## <a name="configuration-file"></a>Arquivo de configuração
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo, no arquivo de configuração do computador (*Machine. config*) e nos arquivos *Web. config* que não estão no nível do diretório do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema do arquivo de configuração para o .NET Framework](../index.md)

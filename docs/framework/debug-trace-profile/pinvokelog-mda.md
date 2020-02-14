@@ -9,19 +9,17 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0883849eee12922601e50c2337bb0048d77cab68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052373"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216123"
 ---
 # <a name="pinvokelog-mda"></a>MDA pInvokeLog
 O MDA (Assistente de Depuração Gerenciado) de `pInvokeLog` é ativado para cada assinatura de invocação de plataforma exclusiva usada durante a execução.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -43,7 +41,7 @@ O MDA (Assistente de Depuração Gerenciado) de `pInvokeLog` é ativado para cad
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Consumindo funções de DLL não gerenciadas](../interop/consuming-unmanaged-dll-functions.md)

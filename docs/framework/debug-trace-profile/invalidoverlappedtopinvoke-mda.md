@@ -9,14 +9,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e9c7e1038591e5e8ea6f62b37ff4d02b2b6a9c5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f557cc370d5c6121b0ad9a4528bd75dcb70a93c
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052552"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216285"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA invalidOverlappedToPinvoke
 O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é ativado quando um ponteiro sobreposto que não foi criado no heap de coleta de lixo é passado para funções específicas do Win32.  
@@ -54,7 +52,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é 
 ## <a name="resolution"></a>Resolução  
  Use um objeto <xref:System.Threading.Overlapped>, chamando o método <xref:System.Threading.Overlapped.Pack%2A> para obter uma estrutura <xref:System.Threading.NativeOverlapped> que pode ser passada para a função. Se o <xref:System.AppDomain> for descarregado, o CLR aguardará até que a operação assíncrona seja concluída antes de liberar o ponteiro.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não teve efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -72,7 +70,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidOverlappedToPinvoke` é 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), exceptions
 - ExceptionSwallowedOnCallFromCOM MDA
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3a49bdce78c1445cd25de8755ded0f27a4902937
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ccb03c9a8a473c10f15b00e64810b04f21504c9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052812"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217518"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>MDA exceptionSwallowedOnCallFromCom
 O `exceptionSwallowedOnCallFromCOM` MDA (assistente para depuração gerenciada) é ativado quando uma exceção é lançada do código do CLR (Common Language Runtime) chamado do COM por meio de um método que não tem um tipo de retorno HRESULT não gerenciado.  
@@ -30,7 +28,7 @@ O `exceptionSwallowedOnCallFromCOM` MDA (assistente para depuração gerenciada)
 ## <a name="resolution"></a>Resolução  
  Somente informativo, não indica necessariamente um bug.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR. Ele apenas relata dados sobre exceções capturadas silenciosamente.  
   
 ## <a name="output"></a>Saída  
@@ -46,7 +44,7 @@ O `exceptionSwallowedOnCallFromCOM` MDA (assistente para depuração gerenciada)
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)

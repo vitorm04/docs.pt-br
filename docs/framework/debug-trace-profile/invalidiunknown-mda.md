@@ -8,14 +8,12 @@ helpviewer_keywords:
 - IUnknown pointers
 - managed debugging assistants (MDAs), invalid IUnknown pointer
 ms.assetid: c7924771-a16b-40fe-b337-ce51dcdf6a12
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea7f48ab61c16cb0430717074f1b1feab4827763
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 5df9a3f506d8c2de6f1a3125459adc2d59d510bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052602"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217360"
 ---
 # <a name="invalidiunknown-mda"></a>MDA invalidIUnknown
 O MDA (Assistente de Depuração Gerenciado) de `invalidIUnknown` é ativado quando um ponteiro `IUnknown` inválido é passado do código nativo para o código gerenciado. O `IUnknown` falha em retornar êxito quando consultado para a interface `IUnknown`.  
@@ -29,7 +27,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidIUnknown` é ativado qua
 ## <a name="resolution"></a>Resolução  
  Corrija a implementação de `QueryInterface`.  
   
-## <a name="effect-on-the-runtime"></a>Efeito sobre o tempo de execução  
+## <a name="effect-on-the-runtime"></a>Efeito sobre o runtime  
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
@@ -45,7 +43,7 @@ O MDA (Assistente de Depuração Gerenciado) de `invalidIUnknown` é ativado qua
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
