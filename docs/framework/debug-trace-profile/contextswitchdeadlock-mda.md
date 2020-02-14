@@ -12,57 +12,55 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052920"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217554"
 ---
-# <a name="contextswitchdeadlock-mda"></a><span data-ttu-id="c3d35-102">MDA contextSwitchDeadlock</span><span class="sxs-lookup"><span data-stu-id="c3d35-102">contextSwitchDeadlock MDA</span></span>
+# <a name="contextswitchdeadlock-mda"></a><span data-ttu-id="de865-102">MDA contextSwitchDeadlock</span><span class="sxs-lookup"><span data-stu-id="de865-102">contextSwitchDeadlock MDA</span></span>
 
-<span data-ttu-id="c3d35-103">O MDA (assistente para depuração gerenciada) `contextSwitchDeadlock` é ativado quando um deadlock é detectado durante uma tentativa de transição de contexto COM.</span><span class="sxs-lookup"><span data-stu-id="c3d35-103">The `contextSwitchDeadlock` managed debugging assistant (MDA) is activated when a deadlock is detected during an attempted COM context transition.</span></span>
+<span data-ttu-id="de865-103">O MDA (assistente para depuração gerenciada) `contextSwitchDeadlock` é ativado quando um deadlock é detectado durante uma tentativa de transição de contexto COM.</span><span class="sxs-lookup"><span data-stu-id="de865-103">The `contextSwitchDeadlock` managed debugging assistant (MDA) is activated when a deadlock is detected during an attempted COM context transition.</span></span>
 
-## <a name="symptoms"></a><span data-ttu-id="c3d35-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="c3d35-104">Symptoms</span></span>
+## <a name="symptoms"></a><span data-ttu-id="de865-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="de865-104">Symptoms</span></span>
 
-<span data-ttu-id="c3d35-105">O sintoma mais comum é que uma chamada em um componente COM não gerenciado de um código gerenciado não retorna.</span><span class="sxs-lookup"><span data-stu-id="c3d35-105">The most common symptom is that a call on an unmanaged COM component from managed code does not return.</span></span>  <span data-ttu-id="c3d35-106">Outro sintoma é que o uso da memória aumenta com o tempo.</span><span class="sxs-lookup"><span data-stu-id="c3d35-106">Another symptom is memory usage increasing over time.</span></span>
+<span data-ttu-id="de865-105">O sintoma mais comum é que uma chamada em um componente COM não gerenciado de um código gerenciado não retorna.</span><span class="sxs-lookup"><span data-stu-id="de865-105">The most common symptom is that a call on an unmanaged COM component from managed code does not return.</span></span>  <span data-ttu-id="de865-106">Outro sintoma é que o uso da memória aumenta com o tempo.</span><span class="sxs-lookup"><span data-stu-id="de865-106">Another symptom is memory usage increasing over time.</span></span>
 
-## <a name="cause"></a><span data-ttu-id="c3d35-107">Causa</span><span class="sxs-lookup"><span data-stu-id="c3d35-107">Cause</span></span>
+## <a name="cause"></a><span data-ttu-id="de865-107">Causa</span><span class="sxs-lookup"><span data-stu-id="de865-107">Cause</span></span>
 
-<span data-ttu-id="c3d35-108">A causa mais provável é que um thread de STA (single-threaded apartment) não está bombeando as mensagens.</span><span class="sxs-lookup"><span data-stu-id="c3d35-108">The most probable cause is that a single-threaded apartment (STA) thread is not pumping messages.</span></span> <span data-ttu-id="c3d35-109">O thread de STA está esperando sem bombear as mensagens ou está realizando operações longas e não está permitindo o bombeamento da fila de mensagens.</span><span class="sxs-lookup"><span data-stu-id="c3d35-109">The STA thread is either waiting without pumping messages or is performing lengthy operations and is not allowing the message queue to pump.</span></span>
+<span data-ttu-id="de865-108">A causa mais provável é que um thread de STA (single-threaded apartment) não está bombeando as mensagens.</span><span class="sxs-lookup"><span data-stu-id="de865-108">The most probable cause is that a single-threaded apartment (STA) thread is not pumping messages.</span></span> <span data-ttu-id="de865-109">O thread de STA está esperando sem bombear as mensagens ou está realizando operações longas e não está permitindo o bombeamento da fila de mensagens.</span><span class="sxs-lookup"><span data-stu-id="de865-109">The STA thread is either waiting without pumping messages or is performing lengthy operations and is not allowing the message queue to pump.</span></span>
 
-<span data-ttu-id="c3d35-110">O aumento do uso da memória com o tempo é causado por uma tentativa do thread do finalizador de chamar `Release` em um componente COM não gerenciado e pela falta de retorno desse componente.</span><span class="sxs-lookup"><span data-stu-id="c3d35-110">Memory usage increasing over time is caused by the finalizer thread attempting to call `Release` on an unmanaged COM component and that component is not returning.</span></span>  <span data-ttu-id="c3d35-111">Isso impede que o finalizador recupere outros objetos.</span><span class="sxs-lookup"><span data-stu-id="c3d35-111">This prevents the finalizer from reclaiming other objects.</span></span>
+<span data-ttu-id="de865-110">O aumento do uso da memória com o tempo é causado por uma tentativa do thread do finalizador de chamar `Release` em um componente COM não gerenciado e pela falta de retorno desse componente.</span><span class="sxs-lookup"><span data-stu-id="de865-110">Memory usage increasing over time is caused by the finalizer thread attempting to call `Release` on an unmanaged COM component and that component is not returning.</span></span>  <span data-ttu-id="de865-111">Isso impede que o finalizador recupere outros objetos.</span><span class="sxs-lookup"><span data-stu-id="de865-111">This prevents the finalizer from reclaiming other objects.</span></span>
 
-<span data-ttu-id="c3d35-112">Por padrão, STA é o modelo de threading para o thread principal dos aplicativos do console do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c3d35-112">By default, the threading model for the main thread of Visual Basic console applications is STA.</span></span> <span data-ttu-id="c3d35-113">Esse MDA é ativado se um thread de STA usar a interoperabilidade de COM direta ou indiretamente por meio do Common Language Runtime ou de um controle de terceiros.</span><span class="sxs-lookup"><span data-stu-id="c3d35-113">This MDA is activated if an STA thread uses COM interoperability either directly or indirectly through the common language runtime or a third-party control.</span></span>  <span data-ttu-id="c3d35-114">Para evitar a ativação desse MDA em um aplicativo do console do Visual Basic, aplique o atributo <xref:System.MTAThreadAttribute> ao método principal ou modifique o aplicativo para bombear as mensagens.</span><span class="sxs-lookup"><span data-stu-id="c3d35-114">To avoid activating this MDA in a Visual Basic console application, apply the <xref:System.MTAThreadAttribute> attribute to the main method or modify the application to pump messages.</span></span>
+<span data-ttu-id="de865-112">Por padrão, STA é o modelo de threading para o thread principal dos aplicativos do console do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="de865-112">By default, the threading model for the main thread of Visual Basic console applications is STA.</span></span> <span data-ttu-id="de865-113">Esse MDA é ativado se um thread de STA usar a interoperabilidade de COM direta ou indiretamente por meio do Common Language Runtime ou de um controle de terceiros.</span><span class="sxs-lookup"><span data-stu-id="de865-113">This MDA is activated if an STA thread uses COM interoperability either directly or indirectly through the common language runtime or a third-party control.</span></span>  <span data-ttu-id="de865-114">Para evitar a ativação desse MDA em um aplicativo do console do Visual Basic, aplique o atributo <xref:System.MTAThreadAttribute> ao método principal ou modifique o aplicativo para bombear as mensagens.</span><span class="sxs-lookup"><span data-stu-id="de865-114">To avoid activating this MDA in a Visual Basic console application, apply the <xref:System.MTAThreadAttribute> attribute to the main method or modify the application to pump messages.</span></span>
 
-<span data-ttu-id="c3d35-115">É possível que esse MDA seja ativado erroneamente quando todas as condições a seguir forem atendidas:</span><span class="sxs-lookup"><span data-stu-id="c3d35-115">It is possible for this MDA to be falsely activated when all of the following conditions are met:</span></span>
+<span data-ttu-id="de865-115">É possível que esse MDA seja ativado erroneamente quando todas as condições a seguir forem atendidas:</span><span class="sxs-lookup"><span data-stu-id="de865-115">It is possible for this MDA to be falsely activated when all of the following conditions are met:</span></span>
 
-- <span data-ttu-id="c3d35-116">Um aplicativo cria componentes COM de threads de STA direta ou indiretamente por meio das bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="c3d35-116">An application creates COM components from STA threads either directly or indirectly through libraries.</span></span>
+- <span data-ttu-id="de865-116">Um aplicativo cria componentes COM de threads de STA direta ou indiretamente por meio das bibliotecas.</span><span class="sxs-lookup"><span data-stu-id="de865-116">An application creates COM components from STA threads either directly or indirectly through libraries.</span></span>
 
-- <span data-ttu-id="c3d35-117">O aplicativo foi interrompido no depurador e o usuário continuou o aplicativo ou realizou uma operação de etapa.</span><span class="sxs-lookup"><span data-stu-id="c3d35-117">The application was stopped in the debugger and the user either continued the application or performed a step operation.</span></span>
+- <span data-ttu-id="de865-117">O aplicativo foi interrompido no depurador e o usuário continuou o aplicativo ou realizou uma operação de etapa.</span><span class="sxs-lookup"><span data-stu-id="de865-117">The application was stopped in the debugger and the user either continued the application or performed a step operation.</span></span>
 
-- <span data-ttu-id="c3d35-118">A depuração não gerenciada não está habilitada.</span><span class="sxs-lookup"><span data-stu-id="c3d35-118">Unmanaged debugging is not enabled.</span></span>
+- <span data-ttu-id="de865-118">A depuração não gerenciada não está habilitada.</span><span class="sxs-lookup"><span data-stu-id="de865-118">Unmanaged debugging is not enabled.</span></span>
 
-<span data-ttu-id="c3d35-119">Para determinar se o MDA está sendo ativado erroneamente, desabilite todos os pontos de interrupção, reinicie o aplicativo e permita que ele seja executado sem parar.</span><span class="sxs-lookup"><span data-stu-id="c3d35-119">To determine if the MDA is being falsely activated, disable all breakpoints, restart the application, and allow it to run without stopping.</span></span> <span data-ttu-id="c3d35-120">Se o MDA não for ativado, é provável que a ativação inicial era falsa.</span><span class="sxs-lookup"><span data-stu-id="c3d35-120">If the MDA is not activated, it is likely the initial activation was false.</span></span> <span data-ttu-id="c3d35-121">Nesse caso, desabilite o MDA para evitar interferências na sessão de depuração.</span><span class="sxs-lookup"><span data-stu-id="c3d35-121">In this case, disable the MDA to avoid interference with the debugging session.</span></span>
+<span data-ttu-id="de865-119">Para determinar se o MDA está sendo ativado erroneamente, desabilite todos os pontos de interrupção, reinicie o aplicativo e permita que ele seja executado sem parar.</span><span class="sxs-lookup"><span data-stu-id="de865-119">To determine if the MDA is being falsely activated, disable all breakpoints, restart the application, and allow it to run without stopping.</span></span> <span data-ttu-id="de865-120">Se o MDA não for ativado, é provável que a ativação inicial era falsa.</span><span class="sxs-lookup"><span data-stu-id="de865-120">If the MDA is not activated, it is likely the initial activation was false.</span></span> <span data-ttu-id="de865-121">Nesse caso, desabilite o MDA para evitar interferências na sessão de depuração.</span><span class="sxs-lookup"><span data-stu-id="de865-121">In this case, disable the MDA to avoid interference with the debugging session.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c3d35-122">Este MDA está no conjunto padrão para o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c3d35-122">This MDA is in the default set for Visual Studio.</span></span> <span data-ttu-id="c3d35-123">Para obter informações sobre como desabilitar o MDAs, consulte [diagnosticando erros com assistentes de depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span><span class="sxs-lookup"><span data-stu-id="c3d35-123">For information about how to disable MDAs, see [Diagnosing Errors with Managed Debugging Assistants](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span></span>
+> <span data-ttu-id="de865-122">Este MDA está no conjunto padrão para o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="de865-122">This MDA is in the default set for Visual Studio.</span></span> <span data-ttu-id="de865-123">Para obter informações sobre como desabilitar o MDAs, consulte [diagnosticando erros com assistentes de depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span><span class="sxs-lookup"><span data-stu-id="de865-123">For information about how to disable MDAs, see [Diagnosing Errors with Managed Debugging Assistants](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas).</span></span>
 
-## <a name="resolution"></a><span data-ttu-id="c3d35-124">Resolução</span><span class="sxs-lookup"><span data-stu-id="c3d35-124">Resolution</span></span>
+## <a name="resolution"></a><span data-ttu-id="de865-124">Resolução</span><span class="sxs-lookup"><span data-stu-id="de865-124">Resolution</span></span>
 
-<span data-ttu-id="c3d35-125">Siga as regras de COM em relação ao bombeamento das mensagens de STA.</span><span class="sxs-lookup"><span data-stu-id="c3d35-125">Follow COM rules regarding STA message pumping.</span></span>
+<span data-ttu-id="de865-125">Siga as regras de COM em relação ao bombeamento das mensagens de STA.</span><span class="sxs-lookup"><span data-stu-id="de865-125">Follow COM rules regarding STA message pumping.</span></span>
 
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="c3d35-126">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="c3d35-126">Effect on the Runtime</span></span>
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="de865-126">Efeito sobre o runtime</span><span class="sxs-lookup"><span data-stu-id="de865-126">Effect on the Runtime</span></span>
 
-<span data-ttu-id="c3d35-127">Esse MDA não tem efeito sobre o CLR.</span><span class="sxs-lookup"><span data-stu-id="c3d35-127">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="c3d35-128">Ele apenas relata dados sobre contextos de COM.</span><span class="sxs-lookup"><span data-stu-id="c3d35-128">It only reports data about COM contexts.</span></span>
+<span data-ttu-id="de865-127">Esse MDA não tem efeito sobre o CLR.</span><span class="sxs-lookup"><span data-stu-id="de865-127">This MDA has no effect on the CLR.</span></span> <span data-ttu-id="de865-128">Ele apenas relata dados sobre contextos de COM.</span><span class="sxs-lookup"><span data-stu-id="de865-128">It only reports data about COM contexts.</span></span>
 
-## <a name="output"></a><span data-ttu-id="c3d35-129">Saída</span><span class="sxs-lookup"><span data-stu-id="c3d35-129">Output</span></span>
+## <a name="output"></a><span data-ttu-id="de865-129">Saída</span><span class="sxs-lookup"><span data-stu-id="de865-129">Output</span></span>
 
-<span data-ttu-id="c3d35-130">Uma mensagem descrevendo o contexto atual e o contexto de destino.</span><span class="sxs-lookup"><span data-stu-id="c3d35-130">A message describing the current context and the target context.</span></span>
+<span data-ttu-id="de865-130">Uma mensagem descrevendo o contexto atual e o contexto de destino.</span><span class="sxs-lookup"><span data-stu-id="de865-130">A message describing the current context and the target context.</span></span>
 
-## <a name="configuration"></a><span data-ttu-id="c3d35-131">Configuração</span><span class="sxs-lookup"><span data-stu-id="c3d35-131">Configuration</span></span>
+## <a name="configuration"></a><span data-ttu-id="de865-131">Configuração</span><span class="sxs-lookup"><span data-stu-id="de865-131">Configuration</span></span>
 
 ```xml
 <mdaConfig>
@@ -72,8 +70,8 @@ ms.locfileid: "71052920"
 </mdaConfig>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c3d35-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c3d35-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de865-132">Confira também</span><span class="sxs-lookup"><span data-stu-id="de865-132">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="c3d35-133">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="c3d35-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="c3d35-134">Marshaling de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="c3d35-134">Interop Marshaling</span></span>](../interop/interop-marshaling.md)
+- [<span data-ttu-id="de865-133">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="de865-133">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="de865-134">Marshaling de interoperabilidade</span><span class="sxs-lookup"><span data-stu-id="de865-134">Interop Marshaling</span></span>](../interop/interop-marshaling.md)

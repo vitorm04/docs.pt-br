@@ -8,34 +8,32 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7452ae28d63c89845b45bf500c02e771f0b8f4df
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052605"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216316"
 ---
-# <a name="invalidgchandlecookie-mda"></a><span data-ttu-id="0c09a-102">MDA invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="0c09a-102">invalidGCHandleCookie MDA</span></span>
-<span data-ttu-id="0c09a-103">O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativado quando há uma tentativa de conversão de um cookie <xref:System.IntPtr> inválido em um <xref:System.Runtime.InteropServices.GCHandle>.</span><span class="sxs-lookup"><span data-stu-id="0c09a-103">The `invalidGCHandleCookie` managed debugging assistant (MDA) is activated when a conversion from an invalid <xref:System.IntPtr> cookie to a <xref:System.Runtime.InteropServices.GCHandle> is attempted.</span></span>  
+# <a name="invalidgchandlecookie-mda"></a><span data-ttu-id="edc4a-102">MDA invalidGCHandleCookie</span><span class="sxs-lookup"><span data-stu-id="edc4a-102">invalidGCHandleCookie MDA</span></span>
+<span data-ttu-id="edc4a-103">O MDA (Assistente de Depuração Gerenciado) de `invalidGCHandleCookie` é ativado quando há uma tentativa de conversão de um cookie <xref:System.IntPtr> inválido em um <xref:System.Runtime.InteropServices.GCHandle>.</span><span class="sxs-lookup"><span data-stu-id="edc4a-103">The `invalidGCHandleCookie` managed debugging assistant (MDA) is activated when a conversion from an invalid <xref:System.IntPtr> cookie to a <xref:System.Runtime.InteropServices.GCHandle> is attempted.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="0c09a-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="0c09a-104">Symptoms</span></span>  
- <span data-ttu-id="0c09a-105">Um comportamento indefinido, tal como violações de acesso e corrupção de memória, durante a tentativa de usar ou recuperar um <xref:System.Runtime.InteropServices.GCHandle> de um <xref:System.IntPtr>.</span><span class="sxs-lookup"><span data-stu-id="0c09a-105">Undefined behavior such as access violations and memory corruption while attempting to use or retrieve a <xref:System.Runtime.InteropServices.GCHandle> from an <xref:System.IntPtr>.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="edc4a-104">Sintomas</span><span class="sxs-lookup"><span data-stu-id="edc4a-104">Symptoms</span></span>  
+ <span data-ttu-id="edc4a-105">Um comportamento indefinido, tal como violações de acesso e corrupção de memória, durante a tentativa de usar ou recuperar um <xref:System.Runtime.InteropServices.GCHandle> de um <xref:System.IntPtr>.</span><span class="sxs-lookup"><span data-stu-id="edc4a-105">Undefined behavior such as access violations and memory corruption while attempting to use or retrieve a <xref:System.Runtime.InteropServices.GCHandle> from an <xref:System.IntPtr>.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="0c09a-106">Causa</span><span class="sxs-lookup"><span data-stu-id="0c09a-106">Cause</span></span>  
- <span data-ttu-id="0c09a-107">O cookie é provavelmente inválido porque ele não foi criado originalmente de um <xref:System.Runtime.InteropServices.GCHandle>, representa um <xref:System.Runtime.InteropServices.GCHandle> que já foi liberado, é um cookie para um <xref:System.Runtime.InteropServices.GCHandle> em um domínio do aplicativo diferente ou então realizou-se marshaling dele para código nativo como um <xref:System.Runtime.InteropServices.GCHandle> mas ele foi passado de volta para o CLR como um <xref:System.IntPtr>, ponto em que foi tentada uma conversão.</span><span class="sxs-lookup"><span data-stu-id="0c09a-107">The cookie is probably invalid because it was not originally created from a <xref:System.Runtime.InteropServices.GCHandle>, represents a <xref:System.Runtime.InteropServices.GCHandle> that has already been freed, is a cookie to a <xref:System.Runtime.InteropServices.GCHandle> in a different application domain, or was marshaled to native code as a <xref:System.Runtime.InteropServices.GCHandle> but passed back into the CLR as an <xref:System.IntPtr>, where a cast was attempted.</span></span>  
+## <a name="cause"></a><span data-ttu-id="edc4a-106">Causa</span><span class="sxs-lookup"><span data-stu-id="edc4a-106">Cause</span></span>  
+ <span data-ttu-id="edc4a-107">O cookie é provavelmente inválido porque ele não foi criado originalmente de um <xref:System.Runtime.InteropServices.GCHandle>, representa um <xref:System.Runtime.InteropServices.GCHandle> que já foi liberado, é um cookie para um <xref:System.Runtime.InteropServices.GCHandle> em um domínio do aplicativo diferente ou então realizou-se marshaling dele para código nativo como um <xref:System.Runtime.InteropServices.GCHandle> mas ele foi passado de volta para o CLR como um <xref:System.IntPtr>, ponto em que foi tentada uma conversão.</span><span class="sxs-lookup"><span data-stu-id="edc4a-107">The cookie is probably invalid because it was not originally created from a <xref:System.Runtime.InteropServices.GCHandle>, represents a <xref:System.Runtime.InteropServices.GCHandle> that has already been freed, is a cookie to a <xref:System.Runtime.InteropServices.GCHandle> in a different application domain, or was marshaled to native code as a <xref:System.Runtime.InteropServices.GCHandle> but passed back into the CLR as an <xref:System.IntPtr>, where a cast was attempted.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="0c09a-108">Resolução</span><span class="sxs-lookup"><span data-stu-id="0c09a-108">Resolution</span></span>  
- <span data-ttu-id="0c09a-109">Especifique um cookie <xref:System.IntPtr> válido para o <xref:System.Runtime.InteropServices.GCHandle>.</span><span class="sxs-lookup"><span data-stu-id="0c09a-109">Specify a valid <xref:System.IntPtr> cookie for the <xref:System.Runtime.InteropServices.GCHandle>.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="edc4a-108">Resolução</span><span class="sxs-lookup"><span data-stu-id="edc4a-108">Resolution</span></span>  
+ <span data-ttu-id="edc4a-109">Especifique um cookie <xref:System.IntPtr> válido para o <xref:System.Runtime.InteropServices.GCHandle>.</span><span class="sxs-lookup"><span data-stu-id="edc4a-109">Specify a valid <xref:System.IntPtr> cookie for the <xref:System.Runtime.InteropServices.GCHandle>.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="0c09a-110">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="0c09a-110">Effect on the Runtime</span></span>  
- <span data-ttu-id="0c09a-111">Quando esse MDA está habilitado, o depurador não é capaz de rastrear as raízes de volta para seus objetos porque os valores de cookie passados de volta são diferentes daqueles retornados quando o MDA não está habilitado.</span><span class="sxs-lookup"><span data-stu-id="0c09a-111">When this MDA is enabled, the debugger is no longer able to trace the roots back to their objects because the cookie values passed back are different from the ones returned when the MDA is not enabled.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="edc4a-110">Efeito sobre o runtime</span><span class="sxs-lookup"><span data-stu-id="edc4a-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="edc4a-111">Quando esse MDA está habilitado, o depurador não é capaz de rastrear as raízes de volta para seus objetos porque os valores de cookie passados de volta são diferentes daqueles retornados quando o MDA não está habilitado.</span><span class="sxs-lookup"><span data-stu-id="edc4a-111">When this MDA is enabled, the debugger is no longer able to trace the roots back to their objects because the cookie values passed back are different from the ones returned when the MDA is not enabled.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="0c09a-112">Saída</span><span class="sxs-lookup"><span data-stu-id="0c09a-112">Output</span></span>  
- <span data-ttu-id="0c09a-113">O valor do cookie <xref:System.IntPtr> inválido é relatado.</span><span class="sxs-lookup"><span data-stu-id="0c09a-113">The invalid <xref:System.IntPtr> cookie value is reported.</span></span>  
+## <a name="output"></a><span data-ttu-id="edc4a-112">Saída</span><span class="sxs-lookup"><span data-stu-id="edc4a-112">Output</span></span>  
+ <span data-ttu-id="edc4a-113">O valor do cookie <xref:System.IntPtr> inválido é relatado.</span><span class="sxs-lookup"><span data-stu-id="edc4a-113">The invalid <xref:System.IntPtr> cookie value is reported.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="0c09a-114">Configuração</span><span class="sxs-lookup"><span data-stu-id="0c09a-114">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="edc4a-114">Configuração</span><span class="sxs-lookup"><span data-stu-id="edc4a-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -45,8 +43,8 @@ ms.locfileid: "71052605"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0c09a-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0c09a-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="edc4a-115">Confira também</span><span class="sxs-lookup"><span data-stu-id="edc4a-115">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
-- [<span data-ttu-id="0c09a-116">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="0c09a-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="edc4a-116">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="edc4a-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](diagnosing-errors-with-managed-debugging-assistants.md)
