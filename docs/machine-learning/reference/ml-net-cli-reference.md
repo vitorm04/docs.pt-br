@@ -2,21 +2,21 @@
 title: Referência de comando da CLI ML.NET
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636114"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449693"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>A referência de comando da CLI ML.NET
 
-O comando `auto-train` é o principal comando fornecido pela ferramenta de CLI do ML.NET. O comando permite gerar um bom modelo de ML.NET de qualidade usando o AutoML (Machine Learning automatizado), bem como o C# código de exemplo para executar/pontuar esse modelo. Além disso, o C# código para treinar o modelo é gerado para você pesquisar o algoritmo e as configurações do modelo.
+O comando `auto-train` é o principal comando fornecido pela ferramenta de CLI do ML.NET. O comando permite gerar um bom modelo de ML.NET de qualidade usando o AutoML (Machine Learning automatizado), bem como C# o código de exemplo para executar/pontuar esse modelo. Além disso, o C# código para treinar o modelo é gerado para você pesquisar o algoritmo e as configurações do modelo.
 
 > [!NOTE]
 > Este tópico refere-se à CLI do ML.NET e ao AutoML do ML.NET, que estão atualmente em Versão Prévia. O material pode estar sujeito a alterações.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Exemplo de uso:
 
@@ -106,7 +106,7 @@ Uma única cadeia de caracteres fornecendo o problema de ML a resolver. Por exem
 
 Uma tarefa de ML deve ser fornecida neste argumento.
 
-## <a name="dataset"></a>Conjunto de Dados
+## <a name="dataset"></a>Dataset
 
 `--dataset | -d` (string)
 
@@ -188,7 +188,7 @@ Exemplo:
 `--has-header | -h` (bool)
 
 Especifique se os arquivos de conjunto de dados têm uma linha de cabeçalho.
-Os possíveis valores são:
+Os valores possíveis são:
 
 - `true`
 - `false`
@@ -217,7 +217,7 @@ Para conjuntos de dados pequenos e médios, usar o cache pode melhorar drasticam
 
 No entanto, para grandes conjuntos de dados, carregar todos os dados na memória pode ter um efeito negativo, pois você poderá ficar com memória insuficiente. Ao treinar com arquivos de conjunto de dados grandes sem usar o cache, o ML.NET transmitirá partes de dados da unidade quando ele precisar carregar mais dados durante o treinamento.
 
-Você pode especificar os seguintes valores:
+É possível especificar os seguintes valores:
 
 `on`: força o cache a ser usado durante o treinamento.
 `off`: força o cache a não ser usado durante o treinamento.
@@ -225,7 +225,7 @@ Você pode especificar os seguintes valores:
 
 Se você não especificar o parâmetro `--cache`, a configuração de cache `auto` será usada por padrão.
 
-## <a name="name"></a>Name
+## <a name="name"></a>Nome
 
 `--name | -N` (string)
 
@@ -245,7 +245,7 @@ Local/pasta raiz para colocar a saída gerada. O padrão é o diretório atual.
 
 Define o nível de detalhamento da saída padrão.
 
-Os valores permitidos são:
+Valores permitidos são:
 
 - `q[uiet]`
 - `m[inimal]` (por padrão)
@@ -259,7 +259,7 @@ Por padrão, a ferramenta da CLI deve mostrar alguns comentários mínimos (mín
 
 Imprime uma ajuda para o comando com uma descrição para o parâmetro de cada comando.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como instalar a ferramenta de CLI do ML.NET](../how-to-guides/install-ml-net-cli.md)
 - [Visão geral da CLI do ML.NET](../automate-training-with-cli.md)

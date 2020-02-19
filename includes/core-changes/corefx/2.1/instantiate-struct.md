@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: f09a593160b21a9a22a8e7c7faeffdaaab41db85
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344867"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449538"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Campos privados adicionados aos tipos de struct internos
 
 Campos privados foram adicionados a tipos de struct internos em [assemblies de referência](../../../../docs/standard/assembly/reference-assemblies.md). Como resultado, no, C#os tipos de struct devem sempre ser instanciados usando o [novo operador](../../../../docs/csharp/language-reference/operators/new-operator.md) ou o [literal padrão](../../../../docs/csharp/language-reference/operators/default.md#default-literal), ou inicializando cada um dos campos particulares.
 
-#### <a name="change-description"></a>Descrição das alterações
+#### <a name="change-description"></a>Alterar descrição
 
 No .NET Core 2,0 e nas versões anteriores, alguns tipos de struct internos, por exemplo, <xref:System.ConsoleKeyInfo>, podem ser instanciados sem usar o operador `new` ou o [literal padrão](../../../../docs/csharp/language-reference/operators/default.md#default-literal) no C#. Isso ocorreu porque os [assemblies de referência](../../../../docs/standard/assembly/reference-assemblies.md) usados pelo C# compilador não continham os campos privados para as estruturas. Todos os campos privados para tipos de struct .NET são adicionados aos assemblies de referência a partir do .NET Core 2,1.
 
@@ -413,7 +413,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `T:System.ConsoleKeyInfo`
 - `T:System.Memory{T}`

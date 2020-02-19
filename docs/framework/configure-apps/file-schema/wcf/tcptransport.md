@@ -2,14 +2,14 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 7101719f77a03909d9a38dca93100ec90c1add13
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f2c1335795ffd3cb395a7006bfaeb3cf7b39636b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921382"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448615"
 ---
-# <a name="tcptransport"></a>\<tcpTransport>
+# <a name="tcptransport"></a>\<tcpTransport >
 Define um transporte TCP que pode ser usado por um canal para transferir mensagens para uma associação personalizada.  
   
 [ **\<configuration>** ](../configuration-element.md)\
@@ -46,9 +46,9 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
  As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
-### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
+### <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |channelInitializationTimeout|Obtém ou define o limite de tempo para inicializar um canal a ser aceito.  O tempo máximo que um canal pode estar no estado de inicialização antes de ser desconectado em segundos. Essa cota inclui o tempo que uma conexão TCP pode tomar para se autenticar usando o protocolo de enquadramento de mensagens .NET. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. O padrão é 30 segundos.|  
 |connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir uma parte da mensagem serializada na conexão do cliente ou do serviço.|  
@@ -62,25 +62,25 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho máximo de mensagem permitido que pode ser recebido.|  
 |portSharingEnabled|Um valor booliano que especifica se o compartilhamento de porta TCP está habilitado para esta conexão. Se isso for `false`, cada associação usará sua própria porta exclusiva. O padrão é `false`.<br /><br /> Essa configuração é relevante apenas para serviços do. Os clientes não são afetados.<br /><br /> O uso dessa configuração requer a habilitação do serviço de compartilhamento de porta TCP Windows Communication Foundation (WCF) alterando seu tipo de inicialização para manual ou automático|  
-|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Essa propriedade é aplicável somente no Windows XP SP2 e no Windows Server 2003. O Windows Vista tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo. Para obter mais informações sobre como configurar o Teredo, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obter mais informações, consulte [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).<br /><br /> Essa propriedade é aplicável somente no Windows XP SP2 e no Windows Server 2003. O Windows Vista tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo.|  
 |transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
 |connectionPoolSettings|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- {1&gt;Nenhum&lt;1}  
+ Nenhum  
   
 ### <a name="parent-elements"></a>Elementos Pai  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
-|[\<binding>](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
+|[> de associação de \<](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse transporte usa URIs no formato "net. TCP://hostname: port/path". Outros componentes de URI são opcionais.  
   
  O elemento `tcpTransport` é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF para WCF.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
@@ -88,7 +88,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportes](../../../wcf/feature-details/transports.md)
 - [Escolhendo um transporte](../../../wcf/feature-details/choosing-a-transport.md)
-- [Associações](../../../wcf/bindings.md)
+- [Bindings](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [> \<CustomBinding](custombinding.md)

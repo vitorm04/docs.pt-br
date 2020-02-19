@@ -2,22 +2,22 @@
 title: Assinando procedimentos armazenados no SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 8dc62527be7273d3ce3222d4d261b81bc40b1e19
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791803"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452351"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Assinando procedimentos armazenados no SQL Server
 
-Uma assinatura digital é um resumo dos dados criptografados com a chave privada do assinante. A chave privada garante que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar procedimentos armazenados, funções (exceto para funções com valor de tabela embutida), gatilhos e assemblies.
+A assinatura digital é um resumo de dados criptografados com a chave privada do signatário. A chave privada assegura que a assinatura digital seja exclusiva de seu portador ou proprietário. Você pode assinar procedimentos armazenados, funções (exceto para funções com valor de tabela embutida), gatilhos e assemblies.
 
 Você pode assinar um procedimento armazenado com um certificado ou uma chave assimétrica. Isso é criado para cenários quando as permissões não podem ser herdadas pelo encadeamento de propriedade ou quando a cadeia de propriedade é quebrada, como SQL dinâmico. Em seguida, você pode criar um usuário mapeado para o certificado, concedendo permissões de usuário de certificado nos objetos que o procedimento armazenado precisa acessar.
 
-Você também pode criar um logon mapeado para o mesmo certificado e, em seguida, conceder permissões de nível de servidor necessárias para esse logon ou adicionar o logon a uma ou mais das funções de servidor fixas. Isso é projetado para evitar a habilitação da configuração do `TRUSTWORTHY` banco de dados para cenários nos quais são necessárias permissões de nível superior.
+Você também pode criar um logon mapeado para o mesmo certificado e, em seguida, conceder permissões de nível de servidor necessárias para esse logon ou adicionar o logon a uma ou mais das funções de servidor fixas. Isso é projetado para evitar a habilitação da configuração `TRUSTWORTHY` banco de dados para cenários nos quais são necessárias permissões de nível superior.
 
-Quando o procedimento armazenado é executado, SQL Server combina as permissões do usuário do certificado e/ou o logon com aqueles do chamador. Ao contrário `EXECUTE AS` da cláusula, ele não altera o contexto de execução do procedimento. As funções internas que retornam o logon e os nomes de usuário retornam o nome do chamador, não o nome do usuário do certificado.
+Quando o procedimento armazenado é executado, SQL Server combina as permissões do usuário do certificado e/ou o logon com aqueles do chamador. Ao contrário da cláusula `EXECUTE AS`, ela não altera o contexto de execução do procedimento. As funções internas que retornam o logon e os nomes de usuário retornam o nome do chamador, não o nome do usuário do certificado.
 
 ## <a name="creating-certificates"></a>Criando certificados
 
@@ -39,9 +39,9 @@ Se o módulo precisar de permissões adicionais no nível do banco de dados:
 
 Se o módulo precisar de permissões adicionais no nível do servidor:
 
-1. Copie o certificado no banco `master` de dados.
+1. Copie o certificado para o banco de dados `master`.
 
-1. Crie um logon associado a esse certificado usando a instrução Transact- `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` SQL.
+1. Crie um logon associado a esse certificado usando a instrução Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`.
 
 1. Conceda ao certificado logon as permissões necessárias no nível do servidor.
 
@@ -50,20 +50,20 @@ Se o módulo precisar de permissões adicionais no nível do servidor:
 
 ## <a name="external-resources"></a>Recursos externos
 
-Para obter mais informações, consulte os seguintes recursos.
+Para obter mais informações, consulte os recursos a seguir.
 
-|Recurso|Descrição|
+|Recurso|DESCRIÇÃO|
 |--------------|-----------------|
-|Manuais Online do SQL Server de [entrada de módulo](https://go.microsoft.com/fwlink/?LinkId=98590)|Descreve a assinatura do módulo, fornecendo um cenário de exemplo e links para tópicos relevantes do Transact-SQL.|
-|[Assinando procedimentos armazenados com um certificado](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) no manuais online do SQL Server|Fornece um tutorial para assinar um procedimento armazenado com um certificado.|
+|[Assinatura de módulo](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|Descreve a assinatura de módulo, fornecendo um cenário de exemplo e links para os artigos relevantes do Transact-SQL.|
+|[Assinando procedimentos armazenados com um certificado](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|Fornece um tutorial para assinar um procedimento armazenado com um certificado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Visão geral de segurança do SQL Server](overview-of-sql-server-security.md)
-- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
 - [Gerenciando permissões com procedimentos armazenados no SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Escrevendo SQL dinâmico seguro no SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Gravação de SQL Dinâmico Seguro no SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Personalizando permissões com representação no SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
 - [Modificando dados com procedimentos armazenados](../modifying-data-with-stored-procedures.md)
 - [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

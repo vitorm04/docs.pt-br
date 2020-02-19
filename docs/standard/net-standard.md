@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: Saiba mais sobre o .NET Standard, suas versões e as implementações de .NET que dão suporte a ele.
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124631"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452585"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.Net Standard](https://github.com/dotnet/standard) é uma especificação formal das APIs do .NET que devem estar disponíveis em todas as implementações do .net. A motivação por trás .NET Standard está estabelecendo uma maior uniformidade no ecossistema do .NET. A [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua estabelecendo a uniformidade de comportamento da implementação do .NET, mas não há especificação semelhante para as BCLs (Bibliotecas de Classe Base) do .NET para implementações da biblioteca do .NET.
+[.Net Standard](https://github.com/dotnet/standard) é uma especificação formal das APIs do .NET que devem estar disponíveis em todas as implementações do .net. A motivação por trás do .NET Standard é estabelecer uma maior uniformidade no ecossistema do .NET. O [ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) continua estabelecendo a uniformidade para o comportamento de implementação do .net e, embora o ECMA 335 especifique um pequeno conjunto de bibliotecas padrão, a especificação de .net standard abrange uma gama mais ampla de APIs do .net.
 
 .NET Standard habilita os seguintes cenários principais:
 
@@ -147,19 +147,19 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standar
 
 | Perfil do PCL | .NET Standard | Plataformas PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
+| Profile7    | 1,1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
 | Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
 | Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
 | Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
+| Profile111  | 1,1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
 | Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Versões do .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [Criar uma biblioteca de .NET Standard](../core/tutorials/library-with-visual-studio.md)

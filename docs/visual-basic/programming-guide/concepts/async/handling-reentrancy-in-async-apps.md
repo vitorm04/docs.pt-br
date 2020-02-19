@@ -2,12 +2,12 @@
 title: Tratando a reentrada em aplicativos assíncronos
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354274"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452572"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Manipulando a reentrância em aplicativos assíncronos (Visual Basic)
 
@@ -17,7 +17,7 @@ Ao incluir código assíncrono em seu aplicativo, você deve considerar e, possi
 > Para executar o exemplo, você deve ter o Visual Studio 2012 ou mais recente e o .NET Framework 4.5 ou posterior instalados no seu computador.
 
 > [!NOTE]
-> O protocolo TLS versão 1,2 agora é a versão mínima a ser usada no desenvolvimento de seu aplicativo. Se seu aplicativo for destinado a uma versão do .NET Framework anterior a 4,7, consulte o artigo a seguir para [práticas recomendadas de TLS (Transport Layer Security) com o .NET Framework](../../../../framework/network-programming/tls.md) 
+> O protocolo TLS versão 1,2 agora é a versão mínima a ser usada no desenvolvimento de seu aplicativo. Se seu aplicativo tiver como alvo uma versão .NET Framework anterior a 4,7, consulte o artigo a seguir para obter as [práticas recomendadas de TLS (Transport Layer Security) com o .NET Framework](../../../../framework/network-programming/tls.md).
 
 ## <a name="BKMK_RecognizingReentrancy"></a> Reconhecendo a reentrância
 
@@ -558,7 +558,7 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 2. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.
 
-     A caixa de diálogo **Novo Projeto** é aberta.
+     A caixa de diálogo **Novo Projeto** será aberta.
 
 3. No painel **modelos instalados** , expanda **Visual Basic**e, em seguida, expanda **Windows**.
 
@@ -682,7 +682,7 @@ A seção a seguir fornece o código para compilar o exemplo como um aplicativo 
 
 12. Faça as alterações de [Desabilitar o botão Iniciar](#BKMK_DisableTheStartButton), [Cancelar e reiniciar a operação](#BKMK_CancelAndRestart) ou [Executar várias operações e colocar a saída em fila](#BKMK_RunMultipleOperations) para tratar a reentrância.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

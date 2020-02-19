@@ -2,12 +2,12 @@
 title: Gerenciando permissões com procedimentos armazenados no SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780957"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452377"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gerenciando permissões com procedimentos armazenados no SQL Server
 Um método de criar várias linhas de defesa em torno do banco de dados é implementar todo o acesso a dados usando procedimentos armazenados ou funções definidas pelo usuário. Você revogar ou nega todas as permissões para objetos subjacentes, como tabelas, e concede permissões EXECUTE em procedimentos armazenados. Isso cria efetivamente um perímetro de segurança em torno dos dados e objetos de banco de dados.  
@@ -32,7 +32,7 @@ Um método de criar várias linhas de defesa em torno do banco de dados é imple
 ## <a name="stored-procedure-execution"></a>Execução de procedimento armazenado  
  Os procedimentos armazenados aproveitam o encadeamento de propriedade para fornecer acesso aos dados de forma que os usuários não precisem ter a permissão explícita para acessar objetos de banco de dados. Uma cadeia de propriedade existe quando os objetos que se acessam entre si tiverem o mesmo proprietário sequencialmente. Por exemplo, um procedimento armazenado pode chamar outros procedimentos armazenados, ou um procedimento armazenado pode acessar várias tabelas. Se todos os objetos na cadeia de execução tiverem o mesmo proprietário, o SQL Server somente verificará a permissão EXECUTE para o chamador, não as permissões do chamador em outros objetos. Portanto, você precisa conceder somente permissões EXECUTE em procedimentos armazenados; você pode revogar ou nega todas as permissões nas tabelas subjacentes.  
   
-## <a name="best-practices"></a>Práticas recomendadas  
+## <a name="best-practices"></a>Práticas Recomendadas  
  Somente gravar procedimentos armazenados não é suficiente para proteger adequadamente seu aplicativo. Você também deverá considerar os seguintes buracos na segurança.  
   
 - Conceda permissões EXECUTE em procedimentos armazenados para funções de banco de dados que você deseja que possam acessar os dados.  
@@ -50,18 +50,18 @@ Um método de criar várias linhas de defesa em torno do banco de dados é imple
 - Evite SQL dinâmico a menos que seja absolutamente necessário. Use a função Transact-SQL QUOTENAME() para limitar um valor de cadeia de caracteres e ignorar qualquer ocorrência de delimitadores na cadeia de caracteres de entrada.  
   
 ## <a name="external-resources"></a>Recursos externos  
- Para obter mais informações, consulte os seguintes recursos.  
+ Para obter mais informações, consulte os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Recurso|DESCRIÇÃO|  
 |--------------|-----------------|  
-|[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [Injeção de SQL](https://go.microsoft.com/fwlink/?LinkId=98234) nos Manuais Online do SQL Server|Os tópicos descrevem como criar procedimentos armazenados e como a injeção de SQL funciona.|  
+|[Procedimentos armazenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [injeção de SQL](/sql/relational-databases/security/sql-injection)|Os artigos descrevem como criar procedimentos armazenados e como funciona a injeção de SQL.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Visão geral de segurança do SQL Server](overview-of-sql-server-security.md)
-- [Cenários de segurança do aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
-- [Escrevendo SQL dinâmico seguro no SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Cenários de Segurança de Aplicativo no SQL Server](application-security-scenarios-in-sql-server.md)
+- [Gravação de SQL Dinâmico Seguro no SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
 - [Assinando procedimentos armazenados no SQL Server](signing-stored-procedures-in-sql-server.md)
 - [Personalizando permissões com representação no SQL Server](customizing-permissions-with-impersonation-in-sql-server.md)
 - [Modificando dados com procedimentos armazenados](../modifying-data-with-stored-procedures.md)

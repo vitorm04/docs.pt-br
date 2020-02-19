@@ -1,28 +1,28 @@
 ---
-title: 'Como: Criar um giro do elemento in-loco'
+title: Como criar um giro do elemento in-loco
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e72389a11e48629c2763fcbd9f7b1945ffff5dd
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947245"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452786"
 ---
-# <a name="how-to-make-an-element-spin-in-place"></a>Como: Criar um giro do elemento in-loco
-Este exemplo mostra como criar um elemento de rotação usando um <xref:System.Windows.Media.RotateTransform> e um <xref:System.Windows.Media.Animation.DoubleAnimation>.  
+# <a name="how-to-make-an-element-spin-in-place"></a>Como criar um giro do elemento in-loco
+Este exemplo mostra como fazer um elemento girar usando um <xref:System.Windows.Media.RotateTransform> e um <xref:System.Windows.Media.Animation.DoubleAnimation>.  
   
- O exemplo a seguir aplica-se a <xref:System.Windows.Media.RotateTransform> para o <xref:System.Windows.UIElement.RenderTransform%2A> propriedade do elemento. O exemplo usa uma <xref:System.Windows.Media.Animation.DoubleAnimation> animar o <xref:System.Windows.Media.RotateTransform.Angle%2A> da <xref:System.Windows.Media.RotateTransform>. Para fazer com que o elemento girar em vigor, o exemplo define o <xref:System.Windows.UIElement.RenderTransformOrigin%2A> propriedade do elemento para o ponto (0,5, 0,5).  
+ O exemplo a seguir aplica o <xref:System.Windows.Media.RotateTransform> à propriedade <xref:System.Windows.UIElement.RenderTransform%2A> do elemento. O exemplo usa um <xref:System.Windows.Media.Animation.DoubleAnimation> para animar a <xref:System.Windows.Media.RotateTransform.Angle%2A> do <xref:System.Windows.Media.RotateTransform>. Para fazer com que o elemento gire no lugar, o exemplo define a propriedade <xref:System.Windows.UIElement.RenderTransformOrigin%2A> do elemento como o ponto (0,5, 0,5).  
   
 ## <a name="example"></a>Exemplo  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- Para o exemplo completo, que inclui mais exemplos de transformação, consulte [exemplo de transformações 2D](https://go.microsoft.com/fwlink/?LinkID=158252).  
+ Para obter o exemplo completo, que inclui mais exemplos de transformação, consulte [amostra de transformações 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral de transformações](transforms-overview.md)

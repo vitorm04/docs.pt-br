@@ -2,12 +2,12 @@
 title: Uniões discriminadas
 description: Saiba como usar F# uniões discriminadas.
 ms.date: 05/16/2016
-ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 539e2843c0bbc8c5ac9c0597ffc5443f8cd127f8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083035"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452637"
 ---
 # <a name="discriminated-unions"></a>Uniões discriminadas
 
@@ -28,7 +28,7 @@ type [accessibility-modifier] type-name =
 
 Uniões discriminadas são semelhantes aos tipos Union em outras linguagens, mas há diferenças. Como com um tipo de União C++ em ou um tipo variant no Visual Basic, os dados armazenados no valor não são fixos; pode ser uma das várias opções distintas. No entanto, ao contrário das uniões nessas outras linguagens, cada uma das opções possíveis recebe um *identificador de caso*. Os identificadores de caso são nomes para os vários tipos possíveis de valores que os objetos desse tipo podem ser; os valores são opcionais. Se os valores não estiverem presentes, o caso será equivalente a um caso de enumeração. Se os valores estiverem presentes, cada valor poderá ser um único valor de um tipo especificado ou uma tupla que agrega vários campos dos mesmos ou de tipos diferentes. Você pode dar um nome a um campo individual, mas o nome é opcional, mesmo que outros campos no mesmo caso sejam nomeados.
 
-A acessibilidade para uniões discriminadas usa como `public`padrão.
+A acessibilidade para uniões discriminadas tem como padrão `public`.
 
 Por exemplo, considere a declaração a seguir de um tipo de forma.
 
@@ -39,7 +39,7 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-O código anterior declara uma forma de união discriminada, que pode ter valores de qualquer um dos três casos: Retângulo, círculo e prisma. Cada caso tem um conjunto diferente de campos. O caso de retângulo tem dois campos nomeados, ambos `float`os tipos, que têm a largura e o comprimento dos nomes. O caso de círculo tem apenas um campo nomeado, raio. O caso do prisma tem três campos, dois dos quais (largura e altura) são campos nomeados. Os campos sem nome são referidos como campos anônimos.
+O código anterior declara uma forma de união discriminada, que pode ter valores de qualquer um dos três casos: Rectangle, Circle e Prism. Cada caso tem um conjunto diferente de campos. O caso de retângulo tem dois campos nomeados, ambos os tipos `float`, que têm a largura e o comprimento dos nomes. O caso de círculo tem apenas um campo nomeado, raio. O caso do prisma tem três campos, dois dos quais (largura e altura) são campos nomeados. Os campos sem nome são referidos como campos anônimos.
 
 Você constrói objetos fornecendo valores para os campos nomeados e anônimos de acordo com os exemplos a seguir.
 
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-Esse código mostra que você pode usar os campos nomeados na inicialização ou pode contar com a ordenação dos campos na declaração e apenas fornecer os valores para cada campo por vez. A chamada de construtor `rect` para no código anterior usa os campos nomeados, mas a chamada de `circ` Construtor para usa a ordenação. Você pode misturar os campos ordenados e os campos nomeados, como na `prism`construção de.
+Esse código mostra que você pode usar os campos nomeados na inicialização ou pode contar com a ordenação dos campos na declaração e apenas fornecer os valores para cada campo por vez. A chamada de construtor para `rect` no código anterior usa os campos nomeados, mas a chamada de construtor para `circ` usa a ordenação. Você pode misturar os campos ordenados e os campos nomeados, como na construção de `prism`.
 
-O `option` tipo é uma união discriminada simples na biblioteca F# principal. O `option` tipo é declarado da seguinte maneira.
+O tipo de `option` é uma união discriminada simples na F# biblioteca principal. O tipo de `option` é declarado da seguinte maneira.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,24 +60,24 @@ type Option<'a> =
     | None
 ```
 
-O código anterior especifica que o tipo `Option` é uma união discriminada que tem dois `Some` casos e `None`. O `Some` caso tem um valor associado que consiste em um campo anônimo cujo tipo é representado pelo parâmetro `'a`de tipo. O `None` caso não tem nenhum valor associado. Portanto, `option` o tipo especifica um tipo genérico que tem um valor de algum tipo ou nenhum valor. O tipo `Option` também tem um alias de tipo minúsculo, `option`, que é mais comumente usado.
+O código anterior especifica que o tipo `Option` é uma união discriminada que tem dois casos, `Some` e `None`. O caso de `Some` tem um valor associado que consiste em um campo anônimo cujo tipo é representado pelo parâmetro de tipo `'a`. O caso de `None` não tem nenhum valor associado. Portanto, o tipo de `option` especifica um tipo genérico que tem um valor de algum tipo ou nenhum valor. O tipo `Option` também tem um alias de tipo minúsculo, `option`, que é mais comumente usado.
 
-Os identificadores de caso podem ser usados como construtores para o tipo de união discriminada. Por exemplo, o código a seguir é usado para criar valores do `option` tipo.
+Os identificadores de caso podem ser usados como construtores para o tipo de união discriminada. Por exemplo, o código a seguir é usado para criar valores do tipo `option`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-Os identificadores de caso também são usados em expressões de correspondência de padrões. Em uma expressão de correspondência de padrões, os identificadores são fornecidos para os valores associados aos casos individuais. Por exemplo, no código a seguir, `x` é o identificador dado ao valor associado `Some` ao caso do `option` tipo.
+Os identificadores de caso também são usados em expressões de correspondência de padrões. Em uma expressão de correspondência de padrões, os identificadores são fornecidos para os valores associados aos casos individuais. Por exemplo, no código a seguir, `x` é o identificador dado ao valor que está associado ao `Some` caso do tipo de `option`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
 Em expressões de correspondência de padrões, você pode usar campos nomeados para especificar correspondências de União discriminadas. Para o tipo de forma que foi declarado anteriormente, você pode usar os campos nomeados como mostra o código a seguir para extrair os valores dos campos.
 
 ```fsharp
-let getShapeHeight shape =
+let getShapeWidth shape =
     match shape with
-    | Rectangle(height = h) -> h
+    | Rectangle(width = w) -> w
     | Circle(radius = r) -> 2. * r
-    | Prism(height = h) -> h
+    | Prism(width = w) -> w
 ```
 
 Normalmente, os identificadores de caso podem ser usados sem qualificá-los com o nome da União. Se desejar que o nome sempre seja qualificado com o nome da União, você poderá aplicar o atributo [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) à definição do tipo Union.
@@ -111,7 +111,7 @@ let someFunctionUsingShaderProgram (ShaderProgram id) =
 
 ## <a name="struct-discriminated-unions"></a>Uniões discriminadas de struct
 
-Você também pode representar uniões discriminadas como estruturas.  Isso é feito com o `[<Struct>]` atributo.
+Você também pode representar uniões discriminadas como estruturas.  Isso é feito com o atributo `[<Struct>]`.
 
 ```fsharp
 [<Struct>]
@@ -132,7 +132,7 @@ Como esses são tipos de valor e não tipos de referência, há considerações 
 
 ## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>Usando uniões discriminadas em vez de hierarquias de objeto
 
-Geralmente, você pode usar uma união discriminada como uma alternativa mais simples a uma pequena hierarquia de objetos. Por exemplo, a seguinte união discriminada pode ser usada em vez de `Shape` uma classe base que tenha tipos derivados para Circle, Square e assim por diante.
+Geralmente, você pode usar uma união discriminada como uma alternativa mais simples a uma pequena hierarquia de objetos. Por exemplo, a seguinte união discriminada pode ser usada em vez de uma classe base `Shape` que tem tipos derivados para Circle, Square e assim por diante.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
@@ -140,7 +140,7 @@ Em vez de um método virtual para computar uma área ou um perímetro, como voc�
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
-A saída é a seguinte:
+A saída é da seguinte maneira:
 
 ```console
 Area of circle that has radius 15.000000: 706.858347
@@ -150,15 +150,15 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 ## <a name="using-discriminated-unions-for-tree-data-structures"></a>Usando uniões discriminadas para estruturas de dados de árvore
 
-Uniões discriminadas podem ser recursivas, o que significa que a União em si pode ser incluída no tipo de um ou mais casos. As uniões discriminadas recursivas podem ser usadas para criar estruturas de árvore, que são usadas para modelar expressões em linguagens de programação. No código a seguir, uma união discriminada recursiva é usada para criar uma estrutura de dados de árvore binária. A União consiste em dois casos, `Node`, que é um nó com um valor inteiro e subárvores esquerda e direita, e `Tip`que encerra a árvore.
+Uniões discriminadas podem ser recursivas, o que significa que a União em si pode ser incluída no tipo de um ou mais casos. As uniões discriminadas recursivas podem ser usadas para criar estruturas de árvore, que são usadas para modelar expressões em linguagens de programação. No código a seguir, uma união discriminada recursiva é usada para criar uma estrutura de dados de árvore binária. A União consiste em dois casos, `Node`, que é um nó com um valor inteiro e subárvores esquerda e direita, e `Tip`, que encerra a árvore.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-No código anterior, `resultSumTree` tem o valor 10. A ilustração a seguir mostra a estrutura de `myTree`árvore do.
+No código anterior, `resultSumTree` tem o valor 10. A ilustração a seguir mostra a estrutura de árvore para `myTree`.
 
 ![Diagrama que mostra a estrutura de árvore para myTree.](../media/discriminated-unions/tree-structure-mytree.png)
 
-Uniões discriminadas funcionam bem se os nós na árvore forem heterogêneos. No código a seguir, o tipo `Expression` representa a árvore de sintaxe abstrata de uma expressão em uma linguagem de programação simples que dá suporte à adição e à multiplicação de números e variáveis. Alguns dos casos de União não são recursivos e representam números (`Number`) ou variáveis (`Variable`). Outros casos são recursivos e representam operações (`Add` e `Multiply`), em que os operandos também são expressões. A `Evaluate` função usa uma expressão de correspondência para processar recursivamente a árvore de sintaxe.
+Uniões discriminadas funcionam bem se os nós na árvore forem heterogêneos. No código a seguir, o tipo `Expression` representa a árvore de sintaxe abstrata de uma expressão em uma linguagem de programação simples que dá suporte à adição e à multiplicação de números e variáveis. Alguns dos casos Union não são recursivos e representam números (`Number`) ou variáveis (`Variable`). Outros casos são recursivos e representam operações (`Add` e `Multiply`), em que os operandos também são expressões. A função `Evaluate` usa uma expressão de correspondência para processar recursivamente a árvore de sintaxe.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
@@ -205,6 +205,6 @@ Os seguintes atributos são normalmente vistos em uniões discriminadas:
 - `[<NoComparison>]`
 - `[<Struct>]`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência da Linguagem F#](index.md)
