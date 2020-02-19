@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920375"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450974"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -19,9 +19,9 @@ Este artigo descreve o que há de novo no .NET Core 3.0. Um dos maiores avanços
 
 O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou mais recente, [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview) ou mais recente ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**mais recente.
 
-[Baixe e comece a usar o .NET Core 3.0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
+[Baixe e comece a usar o .NET Core 3,0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
-Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 O .NET Core RC1 foi considerado pronto para produção pela Microsoft e foi totalmente suportado. Se você estiver usando uma versão de visualização, deverá mover para a versão RTM para obter suporte contínuo.
 
@@ -54,7 +54,7 @@ Se você estiver usando o Visual Studio, precisará do [Visual Studio 2019](http
 
 ### <a name="default-executables"></a>Executáveis por padrão
 
-O .NET Core agora compila [executáveis dependentes de estrutura](../deploying/index.md#framework-dependent-executables-fde) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#self-contained-deployments-scd) produziam um executável.
+O .NET Core agora compila [executáveis dependentes de estrutura](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
 
 Durante `dotnet build` ou `dotnet publish`, é criado um executável que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
@@ -74,7 +74,7 @@ Para publicar um único arquivo executável, defina o `PublishSingleFile` em seu
 </PropertyGroup>
 ```
 
-- ou -
+-ou-
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -254,7 +254,7 @@ O instalador MSI para Windows foi alterado do .NET Core 3.0 em diante. Os instal
 
 Para obter mais informações sobre controle de versão, consulte [Visão geral de como é o controle de versão no .NET Core](../versions/index.md).
 
-### <a name="windows-desktop"></a>Área de Trabalho do Windows
+### <a name="windows-desktop"></a>Área de trabalho do Windows
 
 O .NET Core 3.0 dá suporte a aplicativos da Área de Trabalho do Windows usando o Windows Forms e o WPF (Windows Presentation Foundation). Essas estruturas também oferecem suporte ao uso de controles modernos e no estilo Fluent da biblioteca XAML da interface do usuário do Windows (WinUI) por meio de [Ilhas XAML](/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -301,7 +301,7 @@ O Windows oferece uma API nativa rica na forma de APIs C simples, COM e WinRT. E
 
 [MSIX](https://docs.microsoft.com/windows/msix/) é um novo formato de pacote de aplicativos do Windows. Ele pode ser usado para implantar aplicativos da área de trabalho do .NET Core 3.0 no Windows 10.
 
-O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#self-contained-deployments-scd).
+O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#publish-self-contained).
 
 O arquivo de projeto do .NET Core precisa especificar os runtimes compatíveis na propriedade `<RuntimeIdentifiers>`:
 
@@ -517,7 +517,7 @@ O novo suporte interno a JSON é alto desempenho, baixa alocação e funciona co
 * [Como serializar e desserializar JSON no .net](../../standard/serialization/system-text-json-how-to.md).
 * [Como migrar de Newtonsoft. JSON para System. Text. JSON](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
-### <a name="http2-support"></a>Compatibilidade com HTTP/2
+### <a name="http2-support"></a>Suporte do HTTP/2
 
 O tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> dá suporte ao protocolo HTTP/2. Se o HTTP/2 estiver habilitado, a versão do protocolo HTTP é negociada via TLS/ALPN, e o HTTP/2 é usado apenas se o servidor selecionar seu uso.
 
@@ -533,7 +533,7 @@ Muitas vezes, quando você está desenvolvendo um aplicativo, quer usar uma cone
 
 [!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 - [Examine as alterações significativas entre o .NET Core 2,2 e 3,0.](../compatibility/2.2-3.0.md)
 - [Examine as alterações significativas no .NET Core 3,0 para aplicativos Windows Forms.](../compatibility/winforms.md#net-core-30)

@@ -1,23 +1,23 @@
 ---
 title: System.Delegate e a palavra-chave `delegate`
-description: Aprenda sobre as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave “delegado”.
+description: Saiba mais sobre as classes no .NET que dão suporte a delegados e como elas são mapeadas para a palavra-chave ' delegate '.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420360"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450915"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
 [Anterior](delegates-overview.md)
 
-Este artigo abordará as classes do .NET Framework que dão suporte a delegados e como eles são mapeados para a palavra-chave `delegate`.
+Este artigo aborda as classes no .NET que dão suporte a delegados e como elas são mapeadas para a palavra-chave `delegate`.
 
-## <a name="defining-delegate-types"></a>Definindo os tipos de delegado
+## <a name="define-delegate-types"></a>Definir tipos delegados
 
 Vamos começar com a palavra-chave ‘delegate’, pois ela é basicamente o que você usará ao trabalhar com delegados. O código que o compilador gera quando você usa a palavra-chave `delegate` será mapeado para chamadas de método que invocam membros das classes <xref:System.Delegate> e <xref:System.MulticastDelegate>. 
 
@@ -41,7 +41,7 @@ Observe que a sintaxe pode aparecer como se estivesse declarando uma variável, 
 
 O compilador também gera manipuladores de adição e remoção para esse novo tipo de forma que os clientes dessa classe podem adicionar e remover métodos de uma lista de invocação de instância. O compilador imporá que a assinatura do método que está sendo adicionado ou removido corresponda à assinatura usada ao declarar o método. 
 
-## <a name="declaring-instances-of-delegates"></a>Declarando instâncias de delegados
+## <a name="declare-instances-of-delegates"></a>Declarar instâncias de delegados
 
 Depois de definir o delegado, você pode criar uma instância desse tipo.
 Como todas as variáveis em C#, você não pode declarar instâncias de delegado diretamente em um namespace ou no namespace global.
@@ -57,7 +57,7 @@ O tipo da variável é `Comparison<T>`, o tipo de delegado definido anteriorment
  
  Esse snippet de código acima declarou uma variável de membro dentro de uma classe. Você também pode declarar variáveis de delegado que são variáveis locais ou argumentos para métodos.
 
-## <a name="invoking-delegates"></a>Invocando delegados
+## <a name="invoke-delegates"></a>Invocar delegados
 
 Você invoca os métodos que estão na lista de invocação de um delegado chamando esse delegado. Dentro do método `Sort()`, o código chamará o método de comparação para determinar em qual ordem posicionar objetos:
 
@@ -70,7 +70,7 @@ Você trata a variável como um nome de método e a invoca usando a sintaxe de c
 
 Essa linha de código faz uma suposição não segura: não há garantia de que um destino foi adicionado ao delegado. Se nenhum destino tiver sido anexado, a linha acima fará com que um `NullReferenceException` seja lançado. As expressões usadas para resolver esse problema são mais complicadas do que uma simples verificação de null e são abordadas posteriormente nesta [série](delegates-patterns.md).
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>Atribuindo, adicionando e remondo destinos de invocação
+## <a name="assign-add-and-remove-invocation-targets"></a>Atribuir, adicionar e remover destinos de invocação
 
 Essa é a forma como o tipo do delegado é definido e como as instâncias de delegado são declaradas e invocadas.
 
@@ -115,7 +115,7 @@ O exemplo de Sort() normalmente anexa um único método de destino ao delegado. 
 
 O suporte de linguagem descrito acima fornece os recursos e o suporte que você normalmente precisará para trabalhar com delegados. Esses recursos são criados com base em duas classes no .NET Core Framework: <xref:System.Delegate> e <xref:System.MulticastDelegate>.
 
-A classe `System.Delegate` e sua única subclasse direta, `System.MulticastDelegate`, fornecem o suporte de estrutura para criar delegados, registrar métodos como destinos de delegado e invocar todos os métodos que são registrados como um destino de delegado. 
+A classe `System.Delegate` e sua única subclasse Direct, `System.MulticastDelegate`, fornecem o suporte à estrutura para criar delegados, registrar métodos como destinos delegados e invocar todos os métodos que são registrados como um destino delegado. 
 
 Curiosamente, as classes `System.Delegate` e `System.MulticastDelegate` não são em si tipos de delegado. Elas fornecem a base para todos os tipos de delegado específicos. Esse mesmo processo de design de linguagem determinou que você não pode declarar uma classe que deriva de `Delegate` ou `MulticastDelegate`. As regras da linguagem C# proíbem isso.
  
@@ -131,6 +131,6 @@ O primeiro e mais importante fato a se lembrar é que todos os delegados com os 
 
 Os métodos que você usará mais com delegados são `Invoke()` e `BeginInvoke()` / `EndInvoke()`. `Invoke()` invocará todos os métodos que foram anexados a uma instância de delegado específica. Como você viu anteriormente, normalmente invoca delegados usando a sintaxe de chamada de método na variável de delegado. Como você verá [posteriormente nesta série](delegates-patterns.md), existem padrões que trabalham diretamente com esses métodos.
 
-Agora que você viu a sintaxe da linguagem e as classes que dão suporte a delegados, vamos examinar como os delegados fortemente tipados são usados, criados e invocados.
+Agora que você viu a sintaxe da linguagem e as classes que oferecem suporte a delegados, vamos examinar como os delegados com rigidez de tipos são usados, criados e invocados.
 
-[Avançar](delegates-strongly-typed.md)
+[Próximo](delegates-strongly-typed.md)

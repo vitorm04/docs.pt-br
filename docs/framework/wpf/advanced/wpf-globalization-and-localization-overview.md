@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124547"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452663"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Visão geral de globalização e localização do WPF
 
@@ -178,7 +178,7 @@ Depois de criar o aplicativo, a primeira etapa da localização é analisar os r
 
 Use seu editor de CSV favorito que dá suporte a Unicode para editar esse arquivo. Filtre todas as entradas com a categoria de localização “Nenhum”. Você deverá ver as seguintes entradas:
 
-|Chave de Recurso|Categoria de Localização|{1&gt;Valor&lt;1}|
+|Chave de Recurso|Categoria de Localização|Valor|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botão|Cancelar|
@@ -186,11 +186,11 @@ Use seu editor de CSV favorito que dá suporte a Unicode para editar esse arquiv
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Digite o nome de um programa, uma pasta, um documento ou recurso da Internet e o Windows o abrirá para você.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Aberto:|
-|Window_1:System.Windows.Window.Title|{1&gt;Título&lt;1}|Executar|
+|Window_1:System.Windows.Window.Title|Title|Executar|
 
 A localização do aplicativo para o alemão exigirá as seguintes traduções:
 
-|Chave de Recurso|Categoria de Localização|{1&gt;Valor&lt;1}|
+|Chave de Recurso|Categoria de Localização|Valor|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botão|Abbrechen|
@@ -198,7 +198,7 @@ A localização do aplicativo para o alemão exigirá as seguintes traduções:
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
-|Window_1:System.Windows.Window.Title|{1&gt;Título&lt;1}|Executar|
+|Window_1:System.Windows.Window.Title|Title|Executar|
 
 **Generate**
 
@@ -215,11 +215,11 @@ No Windows em alemão, se essa. dll for colocada em uma pasta de de-DE ao lado d
 |Código|BAML original em inglês|BAML localizado|
 |Recursos com neutralidade de cultura|Outros recursos em inglês|Outros recursos localizados para o alemão|
 
-O .NET Framework escolhe automaticamente o assembly de recursos de satélite a ser carregado com base no `Thread.CurrentThread.CurrentUICulture`do aplicativo. O padrão é a cultura do seu sistema operacional Windows. Portanto, se você estiver usando janelas em alemão, o de-DE\MyDialog.resources.dll será carregado, se você estiver usando janelas em inglês, o en-US\MyDialog.resources.dll será carregado. Você pode definir o recurso de fallback final para seu aplicativo especificando o NeutralResourcesLanguage no AssemblyInfo do seu projeto.\*. Por exemplo, se você especificar:
+O .NET escolhe automaticamente o assembly de recursos satélite a ser carregado com base no <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>do aplicativo. O padrão é a cultura do seu sistema operacional Windows. Se você estiver usando janelas em alemão, o arquivo *de-DE\MyDialog.Resources.dll* será carregado. Se você estiver usando janelas em inglês, o arquivo *en-US\MyDialog.Resources.dll* será carregado. Você pode definir o recurso de fallback final para seu aplicativo especificando o atributo `NeutralResourcesLanguage` no arquivo *AssemblyInfo* do seu projeto. Por exemplo, se você especificar:
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-o en-US\MyDialog.resources.dll será usado com o Windows em alemão se um de-DE\MyDialog.resources.dll ou de\MyDialog.resources.dll não estiver disponível.
+em seguida, o arquivo *en-US\MyDialog.Resources.dll* será usado com janelas em alemão se nenhum dos seguintes arquivos estiver disponível: *de-DE\MyDialog.Resources.dll* ou *DE\MyDialog.Resources.dll*.
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Home page da Microsoft na Arábia Saudita
 
@@ -267,7 +267,7 @@ Há muitos casos em que o conteúdo pode ser ambíguo e difícil de ser traduzid
 
 Esse comentário se torna associado ao conteúdo de TextBlock_1 e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha de TextBlock_1 no arquivo de saída. csv:
 
-|Chave de Recurso|Categoria|Legível|Modificável|Comentário|{1&gt;Valor&lt;1}|
+|Chave de Recurso|Categoria|Legível|Modificável|Comentário|Valor|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|TRUE|TRUE|Esse caractere é usado como uma regra decorativa.|&#124;|
 

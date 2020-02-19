@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920886"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449017"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -24,7 +24,7 @@ As seções a seguir mostram como usar o Microsoft Visual Studio para criar os s
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [dependências e requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [dependências e requisitos do .NET Core](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
@@ -110,7 +110,7 @@ Após concluir a depuração, será possível publicar sua implantação indepen
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
 
 Depois de ter depurado e testado o programa, crie os arquivos a serem implantados com seu aplicativo para cada plataforma à qual ele se destina.
 
@@ -176,7 +176,7 @@ A seguir está o arquivo *csproj* completo para esse projeto.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
 
 Depois de ter depurado e testado o programa, crie os arquivos a serem implantados com seu aplicativo para cada plataforma à qual ele se destina. Isso envolve a criação de um perfil separado para cada plataforma de destino.
 
@@ -274,7 +274,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 
 A seguir está o arquivo *csproj* completo para esse projeto:
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ A seguir está o arquivo *csproj* completo para esse projeto:
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 e versões posteriores](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -309,7 +309,7 @@ Quando você implanta seu aplicativo, todas as dependências de terceiros usadas
 
 Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Implantação de um aplicativo .NET Core](index.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

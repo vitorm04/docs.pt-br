@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 2f4858d729093d3520e97610e0eac8600093187a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936870"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450668"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operadores de conversão definidos pelo usuário (Referência de C#)
 
@@ -33,7 +33,7 @@ O exemplo a seguir demonstra como definir uma conversão implícita e explícita
 
 Use também a palavra-chave `operator` para sobrecarregar um operador C# predefinido. Para obter mais informações, consulte [Sobrecarga de operador](operator-overloading.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -42,11 +42,12 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Conversões implícitas](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [Conversões explícitas](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
 - [Sobrecarga de operador](operator-overloading.md)
 - [Operadores cast e teste de tipo](type-testing-and-cast.md)
 - [Conversão e conversão de tipo](../../programming-guide/types/casting-and-type-conversions.md)
+- [Diretrizes de design – operadores de conversão](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [Conversões explícitas encadeadas definidas pelo usuário em C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)

@@ -2,15 +2,15 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bcf1f1dcdba50c3e7fba8eb170132d0cf47c4271
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39dc92d65a41d223ebd39aec3dc59871ad1fd101
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919816"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448679"
 ---
-# <a name="behaviorextensions"></a>\<> behaviorExtensions
-As extensões de comportamento permitem que o usuário crie elementos de comportamento definidos pelo usuário. Esses elementos podem ser usados junto com os elementos de comportamento padrão do Windows Communication Foundation (WCF). A `behaviorExtensions` seção define o elemento de modo que ele possa ser usado na configuração. Aqui está um exemplo de uma extensão de comportamento típica.  
+# <a name="behaviorextensions"></a>\<behaviorExtensions >
+As extensões de comportamento permitem que o usuário crie elementos de comportamento definidos pelo usuário. Esses elementos podem ser usados junto com os elementos de comportamento padrão do Windows Communication Foundation (WCF). A seção `behaviorExtensions` define o elemento de modo que ele possa ser usado na configuração. Aqui está um exemplo de uma extensão de comportamento típica.  
   
 ```xml  
 <system.serviceModel>
@@ -24,7 +24,7 @@ As extensões de comportamento permitem que o usuário crie elementos de comport
 </system.serviceModel>
 ```  
   
- Para adicionar habilidades de configuração ao elemento, você precisa escrever e registrar um elemento de configuração. Para obter mais informações sobre isso, consulte <xref:System.Configuration> a documentação.  
+ Para adicionar habilidades de configuração ao elemento, você precisa escrever e registrar um elemento de configuração. Para obter mais informações sobre isso, consulte a documentação do <xref:System.Configuration>.  
   
  Depois que o elemento e seu tipo de configuração são definidos, a extensão pode ser usada, conforme mostrado no exemplo a seguir.  
   
@@ -43,15 +43,15 @@ As extensões de comportamento permitem que o usuário crie elementos de comport
 ```  
   
 ## <a name="security"></a>Segurança  
- É altamente recomendável que você use nomes de assembly totalmente qualificados ao registrar tipos nos `machine.config` arquivos e. `app.config` Se o tipo não for definido exclusivamente, o carregador de tipo CLR pesquisará nos seguintes locais na ordem especificada:  
+ É altamente recomendável que você use nomes de assembly totalmente qualificados ao registrar tipos nos arquivos de `machine.config` e `app.config`. Se o tipo não for definido exclusivamente, o carregador de tipo CLR pesquisará nos seguintes locais na ordem especificada:  
   
- Se o assembly do tipo for conhecido, o carregador pesquisará os locais de redirecionamento do arquivo de configuração, o GAC, o assembly atual usando as informações de configuração e o diretório base do aplicativo. Se o assembly for desconhecido, o carregador pesquisará o assembly atual, mscorlib e o local retornado pelo manipulador `TypeResolve` de eventos. Essa ordem de pesquisa do CLR pode ser modificada com ganchos, como o mecanismo de encaminhamento de tipo e o evento AppDomain. typeresolve.  
+ Se o assembly do tipo for conhecido, o carregador pesquisará os locais de redirecionamento do arquivo de configuração, o GAC, o assembly atual usando as informações de configuração e o diretório base do aplicativo. Se o assembly for desconhecido, o carregador pesquisará o assembly atual, mscorlib e o local retornado pelo manipulador de eventos `TypeResolve`. Essa ordem de pesquisa do CLR pode ser modificada com ganchos, como o mecanismo de encaminhamento de tipo e o evento AppDomain. typeresolve.  
   
- Um invasor pode explorar a ordem de pesquisa do CLR e executar código não autorizado. O uso de nomes totalmente qualificados (fortes) identifica exclusivamente um tipo e aumenta ainda mais a segurança do sistema.  
+ Um invasor pode explorar a ordem de pesquisa do CLR e executar código não autorizado. Usar nomes totalmente qualificados (fortes) identifica exclusivamente um tipo e aumenta ainda mais a segurança do sistema.  
   
- Para obter mais informações, consulte [como o tempo de execução localiza assemblies](https://go.microsoft.com/fwlink/?LinkId=95336) e <xref:System.AppDomain.TypeResolve>.  
+ Para obter mais informações, consulte [como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md) e <xref:System.AppDomain.TypeResolve>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [Configurando e estendendo o tempo de execução com comportamentos](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configurando e estendendo o runtime com comportamentos](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

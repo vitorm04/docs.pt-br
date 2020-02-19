@@ -3,12 +3,12 @@ title: Solucionar problemas de uso da ferramenta .NET Core
 description: Descubra os problemas comuns ao executar as ferramentas do .NET Core e as possíveis soluções.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282496"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451071"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solucionar problemas de uso da ferramenta .NET Core
 
@@ -73,7 +73,7 @@ O nome do executável determina como você invoca a ferramenta. A tabela a segui
 
 ### <a name="runtime-not-found"></a>Tempo de execução não encontrado
 
-As ferramentas do .NET Core são [aplicativos dependentes da estrutura](../deploying/index.md#framework-dependent-deployments-fdd), o que significa que eles dependem de um tempo de execução do .NET Core instalado em seu computador. Se o tempo de execução esperado não for encontrado, siga as regras normais de roll-forward do tempo de execução do .NET Core, como:
+As ferramentas do .NET Core são [aplicativos dependentes da estrutura](../deploying/index.md#publish-runtime-dependent), o que significa que eles dependem de um tempo de execução do .NET Core instalado em seu computador. Se o tempo de execução esperado não for encontrado, siga as regras normais de roll-forward do tempo de execução do .NET Core, como:
 
 * Um aplicativo efetua roll forward até a versão de patch mais recente da versão principal e secundária especificadas.
 * Se não houver nenhum tempo de execução correspondente com um número de versão principal e secundária correspondente, a próxima versão secundária mais alta será usada.
@@ -160,6 +160,6 @@ A instalação da ferramenta requer acesso ao feed do NuGet que contém o pacote
 
 Um motivo comum para a falha é que o nome da ferramenta não está correto. Isso pode ocorrer devido a digitação incorreta ou porque a ferramenta foi movida ou foi preterida. Para ferramentas no NuGet.org, uma maneira de garantir que você tenha o nome correto é Pesquisar a ferramenta em NuGet.org e copiar o comando de instalação.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 * [Visão geral das Ferramentas Globais do .NET Core](global-tools.md)

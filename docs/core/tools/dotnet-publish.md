@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica seu projeto .NET Core em um diretório.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117618"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451286"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117618"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
@@ -56,11 +56,11 @@ dotnet publish [-h|--help]
 - O arquivo *.runtimeconfig.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
 - As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
-A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o tempo de execução compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](/aspnet/core/hosting/directory-structure).
+A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o runtime compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](/aspnet/core/hosting/directory-structure).
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `PROJECT`
 
@@ -68,7 +68,7 @@ O projeto a ser publicado. É o caminho e o nome de arquivo de um arquivo de pro
 
 ## <a name="options"></a>Opções
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -109,11 +109,11 @@ Se o caminho for relativo, o diretório de saída gerado será relativo ao local
 
 `--self-contained`
 
-Publica o tempo de execução do .NET Core com seu aplicativo para que não seja necessário instalar o tempo de execução no computador de destino. Se um identificador de tempo de execução for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
+Publica o runtime do .NET Core com seu aplicativo para que não seja necessário instalar o runtime no computador de destino. Se um identificador de runtime for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica o aplicativo para um determinado runtime. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#publish-self-contained). Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,7 +123,7 @@ Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m
 
 Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão do arquivo de projeto.
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -160,11 +160,11 @@ Se o caminho for relativo, o diretório de saída gerado será relativo ao local
 
 `--self-contained`
 
-Publica o tempo de execução do .NET Core com seu aplicativo para que não seja necessário instalar o tempo de execução no computador de destino. Se um identificador de tempo de execução for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
+Publica o runtime do .NET Core com seu aplicativo para que não seja necessário instalar o runtime no computador de destino. Se um identificador de runtime for especificado, seu valor padrão será `true`. Para obter mais informações sobre os diferentes tipos de implantação, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica o aplicativo para um determinado runtime. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#publish-self-contained). Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,7 +174,7 @@ Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m
 
 Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão do arquivo de projeto.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -199,7 +199,7 @@ Se o caminho for relativo, o diretório de saída gerado será relativo ao local
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica o aplicativo para um determinado runtime. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#publish-self-contained). Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#publish-runtime-dependent).
 
 `-v|--verbosity <LEVEL>`
 
@@ -225,7 +225,7 @@ Publique o projeto no diretório atual usando a estrutura `netcoreapp1.1`:
 
 `dotnet publish --framework netcoreapp1.1`
 
-Publique o aplicativo atual usando a estrutura `netcoreapp1.1` e o tempo de execução para `OS X 10.10` (liste este RID no arquivo de projeto).
+Publique o aplicativo atual usando a estrutura `netcoreapp1.1` e o runtime para `OS X 10.10` (liste este RID no arquivo de projeto).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
@@ -233,7 +233,7 @@ Publique o aplicativo atual, mas não restaure as referências P2P (projeto a pr
 
 `dotnet publish --no-dependencies`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de destino](../../standard/frameworks.md)
-- [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
+- [Catálogo de RID (Identificador de Runtime)](../rid-catalog.md)

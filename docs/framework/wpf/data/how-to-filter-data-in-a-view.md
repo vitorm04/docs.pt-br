@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453477"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453072"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Como filtrar dados em uma exibição
 Este exemplo mostra como filtrar dados em uma exibição.  
@@ -35,7 +35,7 @@ Este exemplo mostra como filtrar dados em uma exibição.
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- Para obter informações sobre como criar ou obter uma exibição, consulte [Obter a exibição padrão de uma coleção de dados](how-to-get-the-default-view-of-a-data-collection.md). Para o exemplo completo, consulte [Classificando e filtrando itens em um exemplo de exibição](https://go.microsoft.com/fwlink/?LinkID=160040).  
+ Para obter informações sobre como criar ou obter uma exibição, consulte [Obter a exibição padrão de uma coleção de dados](how-to-get-the-default-view-of-a-data-collection.md). Para o exemplo completo, consulte [Classificando e filtrando itens em um exemplo de exibição](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter).  
   
  Se o objeto View vier de um objeto <xref:System.Windows.Data.CollectionViewSource>, você aplicará a lógica de filtragem definindo um manipulador de eventos para o evento <xref:System.Windows.Data.CollectionViewSource.Filter>. No exemplo a seguir, `listingDataView` é uma instância de <xref:System.Windows.Data.CollectionViewSource>.  
   
@@ -47,7 +47,7 @@ Este exemplo mostra como filtrar dados em uma exibição.
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>

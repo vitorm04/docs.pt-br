@@ -2,15 +2,15 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968412"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452481"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
-Este tópico descreve as considerações de segurança específicas para o desenvolvimento, implantação e execução de aplicativos Entity Framework. Você também deve seguir as recomendações para criar aplicativos de .NET Framework seguros. Para obter mais informações, consulte [visão geral de segurança](../security-overview.md).  
+Este tópico descreve as considerações de segurança específicas para o desenvolvimento, implantação e execução de aplicativos Entity Framework. Você também deve seguir as recomendações para criar aplicativos de .NET Framework seguros. Para obter mais informações, consulte [Visão geral de segurança](../security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Considerações gerais de segurança  
  As considerações de segurança a seguir se aplicam a todos os aplicativos que usam o Entity Framework.  
@@ -27,7 +27,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
  Durante a operação de logon, as informações baseadas na senha do usuário são passadas para o servidor através das bibliotecas de rede da fonte de dados subjacente. Um provedor mal-intencionado pode roubar credenciais do usuário, gerar consultas mal-intencionadas ou violar o conjunto de resultados.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Criptografe sua conexão para proteger dados confidenciais.  
- O Entity Framework não trata diretamente da criptografia de dados. Se os usuários acessam dados por uma rede pública, seu aplicativo deve estabelecer uma conexão criptografada com a fonte de dados para aumentar a segurança. Para obter mais informações, consulte a documentação relacionada à segurança da sua fonte de dados. Para obter uma SQL Server fonte de dados, consulte [Criptografando conexões com SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
+ O Entity Framework não trata diretamente da criptografia de dados. Se os usuários acessam dados por uma rede pública, seu aplicativo deve estabelecer uma conexão criptografada com a fonte de dados para aumentar a segurança. Para obter mais informações, consulte a documentação relacionada à segurança da sua fonte de dados. Para obter uma SQL Server fonte de dados, consulte [Criptografando conexões com SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Proteja a cadeia de conexão.  
  A proteção do acesso à fonte de dados é essencial para a segurança do aplicativo. Uma cadeia de conexão é potencialmente vulnerável caso não esteja protegida ou se tiver sido construída incorretamente. Quando você armazena informações de conexão em texto sem formatação ou persiste essas informações na memória, corre o risco de comprometer seu sistema inteiro. Os seguintes métodos são recomendados para proteger cadeias de conexão:  
@@ -51,7 +51,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
  Para obter mais informações, consulte [Protegendo informações de conexão](../protecting-connection-information.md).  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Não exponha um objeto EntityConnection a usuários não confiáveis.  
- Um objeto <xref:System.Data.EntityClient.EntityConnection> expõe a cadeia de conexão subjacente. Um usuário com acesso a um objeto <xref:System.Data.EntityClient.EntityConnection> também pode alterar o <xref:System.Data.ConnectionState> da conexão subjacente. A classe <xref:System.Data.EntityClient.EntityConnection> não é segura para threads.  
+ Um objeto <xref:System.Data.EntityClient.EntityConnection> expõe a cadeia de conexão subjacente. Um usuário com acesso a um objeto <xref:System.Data.EntityClient.EntityConnection> também pode alterar o <xref:System.Data.ConnectionState> da conexão subjacente. A classe <xref:System.Data.EntityClient.EntityConnection> não é thread safe.  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>Não passe conexões fora do contexto de segurança.  
  Após uma conexão ser estabelecida, você não deve passá-la fora do contexto de segurança. Por exemplo, um thread com permissão para abrir uma conexão não deve armazenar a conexão em um local global. Se a conexão estiver disponível em um local global, então outro thread mal-intencionado poderá usar a conexão aberta sem ter a permissão explícita para isso.  
@@ -81,7 +81,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
  O Entity Framework não impõe nenhuma permissão de segurança e invocará qualquer código de objeto de dados fornecido pelo usuário em processo, independentemente de ser confiável ou não. Verifique se a autenticação e a autorização do cliente são executadas pelo repositório de dados e por seu aplicativo.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Restrinja o acesso a todos os arquivos de configuração.  
- Um administrador deve restringir o acesso de gravação a todos os arquivos que especificam a configuração de um aplicativo, incluindo para enterprisesec. config, Security. config, Machine. conf e o arquivo de configuração de aplicativo \<> de *aplicativo*. exe. config.  
+ Um administrador deve restringir o acesso de gravação a todos os arquivos que especificam a configuração de um aplicativo, incluindo para enterprisesec. config, Security. config, Machine. conf, e o arquivo de configuração de aplicativo \<*application*>. exe. config.  
   
  O nome invariável do provedor é modificável no app. config. O aplicativo cliente deve assumir a responsabilidade de acessar o provedor subjacente por meio do modelo de fábrica de provedor padrão usando um nome forte.  
   
@@ -137,7 +137,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
 #### <a name="prevent-type-safety-violations"></a>Evite violações de segurança de tipos.  
  Se a segurança de tipo for violada, o Entity Framework não poderá garantir a integridade dos dados em objetos. As violações de segurança de tipo podem ocorrer se você permitir que aplicativos não confiáveis sejam executados com segurança de acesso do código de confiança total.  
   
-#### <a name="handle-exceptions"></a>Trate exceções.  
+#### <a name="handle-exceptions"></a>Tratar exceções.  
  Acesse métodos e propriedades de um <xref:System.Data.Objects.ObjectContext> dentro de um bloco try-catch. A captura de exceções impede que exceções não tratadas exponham entradas no <xref:System.Data.Objects.ObjectStateManager> ou informações de modelo (como nomes de tabela) aos usuários do seu aplicativo.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Considerações de segurança para aplicativos ASP.NET  
@@ -162,7 +162,7 @@ Os componentes do serviço de metadados ADO.NET não registram nenhuma informaç
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Não aceite objetos MetadataWorkspace de fontes não confiáveis.  
  Os aplicativos não devem aceitar instâncias da classe <xref:System.Data.Metadata.Edm.MetadataWorkspace> de fontes não confiáveis. Em vez disso, você deve construir e popular explicitamente um workspace como fonte.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Securing ADO.NET Applications](../securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [Considerações de implantação](deployment-considerations.md)
