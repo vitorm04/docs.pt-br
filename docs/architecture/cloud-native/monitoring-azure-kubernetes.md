@@ -1,13 +1,13 @@
 ---
 title: Como monitorar nos Serviços de Kubernetes do Azure
 description: Como monitorar nos Serviços de Kubernetes do Azure
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711643"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450057"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Como monitorar nos Serviços de Kubernetes do Azure
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711643"
 
 O log interno em kubernetes é primitivo. No entanto, há algumas ótimas opções para fazer os logs de kubernetes e em um local onde eles podem ser analisados corretamente. Se você precisar monitorar os clusters do AKS, configurar a pilha elástica para kubernetes é uma ótima solução.
 
-## <a name="elastic-stack"></a>Pilha elástica
+## <a name="azure-monitor-for-containers"></a>Azure Monitor para Contêineres
 
-A pilha elástica é uma opção avançada para coletar informações de um cluster kubernetes. O kubernetes dá suporte ao envio de logs para um ponto de extremidade Elasticsearch e, na [maioria das vezes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), tudo o que você precisa para começar é definir as variáveis de ambiente, conforme mostrado na Figura 7-5:
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**Figura 7-5** -variáveis de configuração para kubernetes
-
-Isso instalará o Elasticsearch no cluster e o destino enviando todos os logs de cluster para ele.
-
-![um exemplo de um painel Kibana que mostra os resultados de uma consulta em relação a logs ingeridos de kubernetes](./media/kibana-dashboard.png)
-**figura 7-6**. Um exemplo de um painel de Kibana que mostra os resultados de uma consulta em relação aos logs que são ingeridos do kubernetes
-
-## <a name="azure-container-monitoring"></a>Monitoramento de contêiner do Azure
-
-O monitoramento de contêiner do Azure dá suporte a logs de consumo de não apenas kubernetes, mas também de outros mecanismos de orquestração, como DC/OS, Docker Swarm e Red Hat OpenShift.
+[Azure monitor para contêineres](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview) dá suporte a logs de consumo não apenas kubernetes, mas também de outros mecanismos de orquestração, como DC/os, Docker Swarm e Red Hat OpenShift.
 
 ![consumir logs de vários contêineres](./media/containers-diagram.png)
-**figura 7-7**.  Consumindo logs de vários contêineres
+**figura 7-10**. Consumindo logs de vários contêineres
+
+O [Prometheus](https://prometheus.io/) é uma popular solução de monitoramento de métrica de software livre. Ele faz parte da base de computação nativa da nuvem. Normalmente, o uso de Prometheus requer o gerenciamento de um servidor Prometheus com seu próprio armazenamento. No entanto, [Azure monitor para contêineres fornece integração direta com pontos de extremidade de métricas do Prometheus](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration), portanto, um servidor separado não é necessário.
 
 As informações de log e métricas são coletadas não apenas dos contêineres em execução no cluster, mas também dos hosts de cluster. Ele permite correlacionar as informações de log das duas tornando muito mais fácil rastrear um erro.
 
@@ -45,7 +31,7 @@ A instalação dos coletores de logs difere nos clusters do [Windows](https://do
 Não importa qual orquestrador ou sistema operacional está executando o daemon de Azure Monitor, as informações de log são encaminhadas para as mesmas ferramentas de Azure Monitor com as quais os usuários estão familiarizados. Isso garante uma experiência paralela em ambientes que misturam diferentes fontes de log, como um ambiente híbrido de kubernetes/Azure Functions.
 
 ![um painel de exemplo mostrando informações de log e métrica de vários contêineres em execução.](./media/containers-dashboard.png)
-**figura 7-8**. Um painel de exemplo mostrando informações de log e métrica de vários contêineres em execução.
+**figura 7-11**. Um painel de exemplo mostrando informações de log e métrica de vários contêineres em execução.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

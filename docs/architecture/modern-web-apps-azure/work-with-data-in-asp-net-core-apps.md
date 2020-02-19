@@ -3,13 +3,13 @@ title: Trabalhar com os dados em aplicativos ASP.NET Core
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Trabalhando com os dados em aplicativos ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449342"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-Neste exemplo, a propriedade `ShipToAddress` é do tipo `Address`. `Address` é um objeto de valor com várias propriedades, como `Street` e `City`. O EF Core mapeia o objeto `Order` à tabela dele com uma coluna por propriedade `Address`, prefixando cada nome de coluna com o nome da propriedade. Neste exemplo, a tabela `Order` incluiria colunas, como `ShipToAddress_Street` e `ShipToAddress_City`.
+Neste exemplo, a propriedade `ShipToAddress` é do tipo `Address`. `Address` é um objeto de valor com várias propriedades, como `Street` e `City`. O EF Core mapeia o objeto `Order` à tabela dele com uma coluna por propriedade `Address`, prefixando cada nome de coluna com o nome da propriedade. Neste exemplo, a tabela `Order` incluiria colunas, como `ShipToAddress_Street` e `ShipToAddress_City`. Também é possível armazenar tipos de propriedade em tabelas separadas, se desejado.
 
-[O EF Core 2.2 introduz o suporte para coleções de entidades próprias](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+Saiba mais sobre o [suporte a entidades pertencentes no EF Core](/ef/core/modeling/owned-entities).
 
 ### <a name="resilient-connections"></a>Conexões resilientes
 
@@ -242,7 +242,7 @@ No entanto, se o código iniciar uma transação usando BeginTransaction, você 
 
 System.InvalidOperationException: a estratégia de execução configurada 'SqlServerRetryingExecutionStrategy' não dá suporte a transações iniciadas pelo usuário. Use a estratégia de execução retornada por ' DbContext. Database. CreateExecutionStrategy () ' para executar todas as operações na transação como uma unidade com nova tentativa.
 
-A solução é invocar manualmente a estratégia de execução do EF com um delegado que representa tudo que precisa ser executado. Se ocorrer uma falha temporária, a estratégia de execução invocará o delegado novamente. O seguinte código mostra como implementar essa abordagem:
+A solução é invocar manualmente a estratégia de execução do EF com um delegado que representa tudo que precisa ser executado. Se ocorrer uma falha transitória, a estratégia de execução invocará o representante novamente. O seguinte código mostra como implementar essa abordagem:
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -350,7 +350,7 @@ O Azure Cosmos DB é um serviço de banco de dados NoSQL totalmente gerenciado q
 
 **Figura 8-2.** Azure Cosmos DB organização de recursos.
 
-A linguagem de consulta Azure Cosmos DB é uma interface simples, mas poderosa, para consultar documentos JSON. A linguagem é compatível com um subconjunto da gramática ANSI SQL e adiciona integração profunda de objeto JavaScript, matrizes, construção de objeto e invocação de função.
+A linguagem de consulta Azure Cosmos DB é uma interface simples, mas poderosa, para consultar documentos JSON. A linguagem suporta um subconjunto da gramática ANSI SQL e adiciona profunda integração do objeto JavaScript, matrizes, construção de objetos e invocação de funções.
 
 **Referências – Azure Cosmos DB**
 
@@ -372,7 +372,7 @@ Além das opções de armazenamento relacional e NoSQL, os aplicativos ASP.NET C
 
 - Introdução ao armazenamento do Azure <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Armazenamento em cache
+## <a name="caching"></a>Cache
 
 Em aplicativos Web, cada solicitação da Web deve ser concluída no menor tempo possível. Uma maneira de fazer isso é limitar o número de chamadas externas que o servidor deve fazer para concluir a solicitação. O cache envolve o armazenamento de uma cópia dos dados no servidor (ou em outro armazenamento de dados que é consultado com mais facilidade do que a fonte dos dados). Os aplicativos Web, e especialmente aplicativos Web tradicionais não SPA, precisam criar toda a interface do usuário a cada solicitação. Isso geralmente envolve fazer muitas das mesmas consultas de banco de dados repetidamente de uma solicitação de usuário para a próxima. Na maioria dos casos, esses dados são raramente alterados e, portanto, há pouca justificativa para solicitá-los constantemente do banco de dados. O ASP.NET Core é compatível com cache de resposta, armazenamento em cache de páginas inteiras e cache de dados, que é compatível com um comportamento de cache mais granular.
 
@@ -411,7 +411,7 @@ public void Configure(IApplicationBuilder app)
 
 O middleware de cache de resposta armazenará em cache automaticamente as respostas baseadas em um conjunto de condições, que pode ser personalizado. Por padrão, apenas respostas 200 (OK) solicitadas por meio de métodos GET ou HEAD são armazenadas em cache. Além disso, as solicitações devem ter uma resposta com um cabeçalho público Cache-Control: e não pode incluir cabeçalhos de Authorization ou Set-Cookie. Consulte uma [lista completa das condições de cache usadas pelo middleware de cache de resposta](/aspnet/core/performance/caching/middleware#conditions-for-caching).
 
-### <a name="data-caching"></a>Cache de dados
+### <a name="data-caching"></a>Armazenamento de dados em cache
 
 Em vez de (ou além de) armazenar em cache as respostas da Web completas, você pode armazenar em cache os resultados de consultas de dados individuais. Para isso, você pode usar o cache em memória no servidor Web ou usar [um cache distribuído](/aspnet/core/performance/caching/distributed). Esta seção demonstrará como implementar o cache em memória.
 

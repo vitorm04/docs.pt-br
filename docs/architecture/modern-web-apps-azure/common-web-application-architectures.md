@@ -3,13 +3,13 @@ title: Arquiteturas comuns de aplicativo Web
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Explore as arquiteturas comuns para aplicativos Web
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884235"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450162"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -40,7 +40,7 @@ Para resolver esses problemas, os aplicativos geralmente evoluem para soluções
 
 ## <a name="what-are-layers"></a>O que são camadas?
 
-Conforme a complexidade dos aplicativos aumenta, uma maneira de gerenciar essa complexidade é dividir o aplicativo de acordo com suas responsabilidades ou interesses. Isso segue a separação do princípio de interesses e pode ajudar a manter organizada uma base de código em expansão, de modo que os desenvolvedores possam encontrar com facilidade o local em que determinada funcionalidade foi implementada. Apesar disso, a arquitetura em camadas oferece inúmeras vantagens, além de apenas a organização do código.
+Conforme a complexidade dos aplicativos aumenta, uma maneira de gerenciar essa complexidade é dividir o aplicativo de acordo com suas responsabilidades ou interesses. Isso segue a separação do princípio de preocupações e pode ajudar a manter uma base de código crescente organizada para que os desenvolvedores possam encontrar facilmente onde determinadas funcionalidades são implementadas. Apesar disso, a arquitetura em camadas oferece inúmeras vantagens, além de apenas a organização do código.
 
 Com a organização do código em camadas, a funcionalidade comum de baixo nível pode ser reutilizada em todo o aplicativo. Essa reutilização é útil porque significa que menos código precisa ser escrito e ainda pode permitir que o aplicativo seja padronizado em uma única implementação, seguindo o princípio [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
@@ -99,8 +99,7 @@ A abordagem mais simples para dimensionar um aplicativo Web no Azure é configur
 
 Os aplicativos que seguem o Princípio da Inversão de Dependência, bem como os princípios de DDD (Design Controlado por Domínio), tendem a chegar a uma arquitetura semelhante. Essa arquitetura foi conhecida por muitos nomes ao longo dos anos. Um dos primeiros nomes foi Arquitetura Hexagonal, seguido por Portas e Adaptadores. Mais recentemente, ela é citada como a [Arquitetura Cebola](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [Arquitetura Limpa](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). O último nome, Arquitetura Limpa, é usado como o nome dessa arquitetura neste livro eletrônico.
 
-> [!NOTE]
-> O termo Arquitetura Limpa pode ser aplicado a aplicativos criados com os Princípios de DDD, bem como os que não são criados com o DDD. No caso anterior, essa combinação pode ser chamada de "Arquitetura de DDD Limpa".
+O aplicativo de referência eShopOnWeb usa a abordagem de arquitetura limpa para organizar seu código em projetos. Você pode encontrar um modelo de solução que pode ser usado como um ponto de partida para seu próprio ASP.NET Core no repositório GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) .
 
 A arquitetura limpa coloca a lógica de negócios e o modelo de aplicativo no centro do aplicativo. Em vez de fazer com que a lógica de negócios dependa do acesso a dados ou de outros interesses da infraestrutura, essa dependência é invertida: os detalhes de implementação e a infraestrutura dependem do Núcleo do Aplicativo. Isso é feito pela definição de abstrações, ou interfaces, no Núcleo do Aplicativo, que, em seguida, são implementadas por tipos definidos na camada de infraestrutura. Uma maneira comum de visualizar essa arquitetura é usar uma série de círculos concêntricos, semelhantes a uma cebola. A Figura 5-7 mostra um exemplo desse estilo de representação de arquitetura.
 
@@ -170,7 +169,7 @@ A camada de interface do usuário em um aplicativo ASP.NET Core MVC é o ponto d
 ### <a name="ui-layer-types"></a>Tipos de camada de interface do usuário
 
 - Controladores
-- Filtros.
+- Filtros
 - Exibições
 - ViewModels
 - Inicialização
@@ -212,7 +211,7 @@ Implantar atualizações como imagens do Docker é muito mais rápido e eficient
 
 Como os contêineres são inerentemente imutáveis por design, você nunca precisa se preocupar com VMs corrompidas, enquanto os scripts de atualização podem esquecer de levar em conta alguma configuração específica ou um arquivo deixado no disco.
 
-Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Não se pode mais dizer "funciona no meu computador, por que não funciona na produção?"
+Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Não mais "ele funciona em meu computador, por que ele não funciona em produção?"
 
 Uma arquitetura baseada em microsserviços tem muitos benefícios, mas esses benefícios são fornecidos ao custo do aumento da complexidade. Em alguns casos, os custos superam os benefícios, portanto, um aplicativo de implantação monolítica em execução em um único contêiner ou em alguns contêineres é uma opção melhor.
 
@@ -260,24 +259,22 @@ networks:
       name: nat
 ```
 
-O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
+O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Web` do `Dockerfile`:
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Para adicionar o suporte ao Docker ao aplicativo usando o Visual Studio, verifiq
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **O Padrão de Repositório**  
   <https://deviq.com/repository-pattern/>
-- **Amostra de solução de Arquitetura Limpa**  
+- **Limpar modelo de solução de arquitetura**  
   <https://github.com/ardalis/cleanarchitecture>
 - **Livro eletrônico Architecting Microservices** (Arquitetando microsserviços)  
   <https://aka.ms/MicroservicesEbook>

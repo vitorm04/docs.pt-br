@@ -1,20 +1,37 @@
 ---
 title: Como registrar em log com a pilha elástica
 description: Registro em log usando Stack elástico, Logstash e Kibana
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087064"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448900"
 ---
 # <a name="logging-with-elastic-stack"></a>Como registrar em log com a pilha elástica
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Há muitas boas ferramentas de registro em log centralizadas e elas variam de acordo com as ferramentas gratuitas de software livre, até opções mais caras. Em muitos casos, as ferramentas gratuitas são tão boas ou melhores do que as ofertas pagas. Uma dessas ferramentas é uma combinação de três componentes de código-fonte aberto: pesquisa elástica, Logstash e Kibana.
+
 Coletivamente, essas ferramentas são conhecidas como pilha elástica ou pilha ELK.
+
+## <a name="elastic-stack"></a>Pilha elástica
+
+A pilha elástica é uma opção avançada para coletar informações de um cluster kubernetes. O kubernetes dá suporte ao envio de logs para um ponto de extremidade Elasticsearch e, na [maioria das vezes](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), tudo o que você precisa para começar é definir as variáveis de ambiente, conforme mostrado na Figura 7-5:
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**Figura 7-5**. Variáveis de configuração para kubernetes
+
+Isso instalará o Elasticsearch no cluster e o destino enviando todos os logs de cluster para ele.
+
+![um exemplo de um painel Kibana que mostra os resultados de uma consulta em relação a logs ingeridos de kubernetes](./media/kibana-dashboard.png)
+**figura 7-6**. Um exemplo de um painel de Kibana que mostra os resultados de uma consulta em relação aos logs que são ingeridos do kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Quais são as vantagens da pilha elástica?
 
@@ -24,7 +41,7 @@ A pilha elástica fornece registro em log centralizado de maneira econômica, es
 
 O primeiro componente é [Logstash](https://www.elastic.co/products/logstash). Essa ferramenta é usada para coletar informações de log de uma grande variedade de fontes diferentes. Por exemplo, Logstash pode ler logs do disco e também receber mensagens de bibliotecas de log, como [Serilog](https://serilog.net/). O Logstash pode fazer alguma filtragem básica e expansão nos logs à medida que eles chegam. Por exemplo, se os logs contiverem endereços IP, Logstash poderá ser configurado para fazer uma pesquisa geográfica e obter um país ou até mesmo uma cidade de origem para essa mensagem.
 
-Serilog é uma biblioteca de registro em log para linguagens .NET, que permite o registro em log com parâmetros. Em vez de gerar uma mensagem de log textual que incorpore campos, os parâmetros são mantidos separados. Isso permite a filtragem e a pesquisa mais inteligentes. Uma configuração de Serilog de exemplo para gravação em Logstash aparece na Figura 7-2.
+Serilog é uma biblioteca de registro em log para linguagens .NET, que permite o registro em log com parâmetros. Em vez de gerar uma mensagem de log textual que incorpore campos, os parâmetros são mantidos separados. Isso permite a filtragem e a pesquisa mais inteligentes. Uma configuração de Serilog de exemplo para gravação em Logstash aparece na Figura 7-7.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**Figura 7-2** Configuração de Serilog para gravar informações de log diretamente no logstash sobre HTTP
+**Figura 7-7**. Configuração de Serilog para gravar informações de log diretamente no logstash sobre HTTP
 
-Logstash usaria uma configuração como a mostrada na Figura 7-3.
+Logstash usaria uma configuração como a mostrada na Figura 7-8.
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**Figura 7-3** -uma configuração de Logstash para consumir logs de Serilog
+**Figura 7-8**. Uma configuração do Logstash para o consumo de logs do Serilog
 
 Para cenários em que a manipulação de log extensa não é necessária, há uma alternativa ao Logstash conhecido como [batidas](https://www.elastic.co/products/beats). Os batidas são uma família de ferramentas que podem reunir uma grande variedade de dados de logs para dados de rede e informações de tempo de atividade. Muitos aplicativos usarão Logstash e batidas.
 
@@ -64,7 +81,7 @@ A pesquisa elástica é um mecanismo de pesquisa poderoso que pode indexar logs 
 
 As mensagens de log que foram criadas para conter parâmetros ou que tiveram parâmetros divididos por meio deles por meio do processamento de Logstash podem ser consultadas diretamente à medida que Elasticsearch preserva essas informações.
 
-Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.com`, aparece na Figura 7-4.
+Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.com`, aparece na Figura 7-9.
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Uma consulta que pesquisa as 10 principais páginas visitadas por `jill@example.
   }
 ```
 
-**Figura 7-4** -uma consulta Elasticsearch para localizar as 10 páginas principais visitadas por um usuário
+**Figura 7-9**. Uma consulta Elasticsearch para localizar as 10 páginas principais visitadas por um usuário
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Visualizando informações com painéis da Web do Kibana
 

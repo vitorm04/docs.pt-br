@@ -3,13 +3,13 @@ title: Tecnologias da Web comuns no lado do cliente
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Tecnologias da Web comuns no lado do cliente
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093117"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449368"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologias da Web comuns no lado do cliente
 
@@ -18,13 +18,16 @@ ms.locfileid: "77093117"
 
 Os aplicativos ASP.NET Core são aplicativos Web e normalmente se baseiam em tecnologias da Web do lado do cliente como HTML, CSS e JavaScript. Ao separar o conteúdo da página (o HTML) de seu layout e estilo (o CSS) e seu comportamento (por meio do JavaScript), os aplicativos Web complexos podem aproveitar o princípio da Separação de Interesses. As alterações futuras na estrutura, no design ou no comportamento do aplicativo podem ser feitas com mais facilidade quando esses interesses não são entrelaçados.
 
-Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo analisa algumas maneiras como o JavaScript é usado por desenvolvedores da Web e fornece uma visão geral de alto nível das bibliotecas angulares e reajam do lado do cliente.
+Embora o HTML e o CSS sejam relativamente estáveis, o JavaScript, por meio das estruturas do aplicativo e dos utilitários com os quais os desenvolvedores trabalham para criar aplicativos baseados na Web, está evoluindo em uma velocidade vertiginosa. Este capítulo analisa algumas maneiras em que o JavaScript é usado por desenvolvedores da Web e fornece uma visão geral de alto nível das bibliotecas angulares e reajam do lado do cliente.
+
+> [!NOTE]
+> O mais poderoso é uma alternativa às estruturas do JavaScript para a criação de interfaces de usuário avançadas e interativas do cliente. O suporte mais alto do cliente ainda está em versão prévia, portanto, por enquanto, está fora do escopo deste capítulo.
 
 ## <a name="html"></a>HTML
 
-A linguagem HTML é a linguagem de marcação padrão usada para criar páginas da Web e aplicativos Web. Seus elementos formam os blocos de construção de páginas, representando o texto formatado, imagens, entradas de formulário e outras estruturas. Quando um navegador faz uma solicitação para uma URL, independentemente se ele está buscando uma página ou um aplicativo, a primeira coisa retornada é um documento HTML. Esse documento HTML pode referenciar ou incluir informações adicionais sobre sua aparência e o layout na forma de CSS ou sobre seu comportamento na forma de JavaScript.
+HTML é a linguagem de marcação padrão usada para criar páginas da Web e aplicativos Web. Seus elementos formam os blocos de construção de páginas, representando o texto formatado, imagens, entradas de formulário e outras estruturas. Quando um navegador faz uma solicitação para uma URL, independentemente se ele está buscando uma página ou um aplicativo, a primeira coisa retornada é um documento HTML. Esse documento HTML pode referenciar ou incluir informações adicionais sobre sua aparência e o layout na forma de CSS ou sobre seu comportamento na forma de JavaScript.
 
-## <a name="css"></a>{1&gt;CSS&lt;1}
+## <a name="css"></a>CSS
 
 O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o layout de elementos HTML. Os estilos CSS podem ser aplicados diretamente a um elemento HTML, definidos separadamente na mesma página ou definidos em um arquivo separado e referenciados pela página. Os estilos são aplicados em cascata de acordo com a forma como são usados para selecionar determinado elemento HTML. Por exemplo, um estilo pode se aplicar a um documento inteiro, mas ser substituído por um estilo aplicado a um elemento específico. Da mesma forma, um estilo específico de elemento seria substituído por um estilo aplicado a uma classe CSS que foi aplicada ao elemento, que, por sua vez, seria substituído por um estilo direcionado a uma instância específica desse elemento (por meio de sua ID). Figura 6-1
 
@@ -36,13 +39,13 @@ O CSS (folhas de estilos em cascata) é usado para controlar a aparência e o la
 
 ### <a name="css-preprocessors"></a>Pré-processadores de CSS
 
-As folhas de estilos CSS não têm suporte para lógica condicional, variáveis e outros recursos de linguagem de programação. Portanto, folhas de estilos grandes geralmente incluem um lote de repetição, pois a mesma cor, fonte ou outra configuração é aplicada a muitas variações diferentes de elementos HTML e classes CSS. Os pré-processadores do CSS podem ajudar as folhas de estilos a seguirem o [princípio DRY](https://deviq.com/don-t-repeat-yourself/), com a adição de suporte para variáveis e lógica.
+As folhas de estilos CSS não têm suporte para lógica condicional, variáveis e outros recursos de linguagem de programação. Assim, as folhas de estilo grandes geralmente incluem um pouco de repetição, pois a mesma cor, fonte ou outra configuração é aplicada a muitas variações diferentes de elementos HTML e classes CSS. Os pré-processadores do CSS podem ajudar as folhas de estilos a seguirem o [princípio DRY](https://deviq.com/don-t-repeat-yourself/), com a adição de suporte para variáveis e lógica.
 
 Os pré-processadores do CSS mais populares são o Sass e LESS. Ambos estendem o CSS e são compatíveis com versões anteriores dele, o que significa que um arquivo CSS simples é um arquivo do Sass ou LESS válido. O Sass é baseado em Ruby e o LESS é baseado em JavaScript e ambos costumam ser executados como parte do processo de desenvolvimento local. Ambos têm ferramentas de linha de comando disponíveis, bem como suporte interno no Visual Studio para executá-las usando tarefas Gulp ou Grunt.
 
 ## <a name="javascript"></a>JavaScript
 
-O JavaScript é uma linguagem de programação dinâmica e interpretada que foi padronizada na especificação da linguagem ECMAScript. É a linguagem de programação da Web. Assim como o CSS, o JavaScript pode ser definido como atributos em elementos HTML, como blocos de script em uma página ou em arquivos separados. Assim como o CSS, é geralmente recomendado organizar o JavaScript em arquivos separados, mantendo-o separado tanto quanto possível do HTML encontrado em páginas da Web individuais ou exibições do aplicativo.
+O JavaScript é uma linguagem de programação dinâmica e interpretada que foi padronizada na especificação da linguagem ECMAScript. É a linguagem de programação da Web. Assim como o CSS, o JavaScript pode ser definido como atributos em elementos HTML, como blocos de script em uma página ou em arquivos separados. Assim como o CSS, é recomendável organizar o JavaScript em arquivos separados, mantendo-o separado o máximo possível do HTML encontrado em páginas da Web individuais ou em exibições de aplicativos.
 
 Ao trabalhar com o JavaScript no aplicativo Web, há algumas tarefas que você geralmente precisará executar:
 
@@ -79,7 +82,7 @@ A associação de dados é um ótimo exemplo disso. No jQuery, normalmente só u
 
 ### <a name="angular-spas"></a>SPAs do Angular
 
-O AngularJS rapidamente se tornou uma das estruturas de JavaScript mais populares do mundo. Com o Angular 2, a equipe reformulou totalmente a estrutura (usando o [TypeScript](https://www.typescriptlang.org/)) e passou a chamar o AngularJS de simplesmente Angular. Atualmente na versão 4, o Angular continua sendo uma estrutura robusta para a criação de Aplicativos de Página Única.
+O angular permanece uma das estruturas JavaScript mais populares do mundo. Desde o angular 2, a equipe reconstruiu a estrutura do zero (usando [TypeScript](https://www.typescriptlang.org/)) e remarcava o nome do AngularJS original para simplesmente angular. Agora, há vários anos, o angular reprojetado continua a ser uma estrutura robusta para a criação de aplicativos de página única.
 
 Os aplicativos do Angular baseiam-se em componentes. Os componentes combinam modelos HTML com objetos especiais e controlam uma parte da página. Um componente simples da documentação do Angular é mostrado aqui:
 
@@ -104,7 +107,7 @@ A Microsoft desenvolveu um aplicativo de referência, o [eShopOnContainers](http
 
 ### <a name="react"></a>React
 
-Ao contrário do Angular, que oferece uma implementação completa do padrão Modelo-Exibição-Controlador, o React está voltado para exibições. Ele não é uma estrutura, apenas uma biblioteca e, portanto, para criar um SPA, precisará utilizar bibliotecas adicionais.
+Ao contrário do Angular, que oferece uma implementação completa do padrão Modelo-Exibição-Controlador, o React está voltado para exibições. Ele não é uma estrutura, apenas uma biblioteca e, portanto, para criar um SPA, precisará utilizar bibliotecas adicionais. Há uma série de bibliotecas que são projetadas para serem usadas com o reagir a produzir aplicativos avançados de página única.
 
 Um dos recursos mais importantes do React é o uso de um DOM virtual. O DOM virtual oferece várias vantagens ao React, incluindo o desempenho (o DOM virtual pode otimizar quais partes do DOM real precisam ser atualizadas) e a capacidade de teste (sem a necessidade de ter um navegador para testar o React e suas interações com seu DOM virtual).
 
@@ -121,6 +124,40 @@ O React também é incomum na forma como funciona com HTML. Em vez de ter uma se
 Se você já conhece o JavaScript, aprender a usar o React deve ser fácil. A curva de aprendizado ou a sintaxe especial envolvida não é tão grande quanto a do Angular ou de outras bibliotecas populares.
 
 Como o React não é uma estrutura completa, geralmente, você desejará ter outras bibliotecas para manipular aspectos como roteamento, chamadas à API Web e gerenciamento de dependências. A vantagem é que você pode escolher a melhor biblioteca para cada um deles, mas a desvantagem é que você precisa tomar todas essas decisões e verificar se todas as bibliotecas escolhidas funcionam bem em conjunto quando terminar. Caos deseje um bom ponto de partida, use um kit de início como o React Slingshot, que pré-empacota um conjunto de bibliotecas compatíveis com o React.
+
+### <a name="vue"></a>Vue
+
+Do seu guia de introdução, "Vue é uma estrutura progressiva para a criação de interfaces do usuário. Ao contrário de outras estruturas monolíticos, o Vue é projetado desde o início para ser populado incrementalmente. A biblioteca principal concentra-se apenas na camada de exibição e é fácil de pegar e integrar com outras bibliotecas ou projetos existentes. Por outro lado, o Vue é perfeitamente capaz de capacitar aplicativos de página única sofisticados quando usados em combinação com ferramentas modernas e bibliotecas de suporte. "
+
+A introdução ao Vue simplesmente requer a inclusão de seu script em um arquivo HTML:
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+Com a estrutura adicionada, você é capaz de renderizar declarativamente os dados para o DOM usando a sintaxe de modelagem simples do Vue:
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+em seguida, adicione o seguinte script:
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+Isso é suficiente para renderizar "Olá Vue!" na página. No entanto, observe que Vue não está simplesmente renderizando a mensagem para o div uma vez. Ele dá suporte a DataBinding e atualizações dinâmicas, de modo que, se o valor de `message` for alterado, o valor na `<div>` será atualizado imediatamente para refletir.
+
+É claro que isso só aborda a superfície do que o Vue é capaz de fazer. Ele ganhou uma grande popularidade nos últimos anos e tem uma ampla comunidade. Há uma [lista enorme e crescente de componentes de suporte e bibliotecas](https://github.com/vuejs/awesome-vue#redux) que funcionam com o Vue para estendê-lo também. Se você pretende adicionar o comportamento do lado do cliente ao seu aplicativo Web ou considerar a criação de um SPA completo, vale a pena investigar o Vue.
 
 ### <a name="choosing-a-spa-framework"></a>Escolhendo uma estrutura de SPA
 
@@ -157,13 +194,13 @@ As estruturas de JavaScript continuam evoluindo em uma velocidade vertiginosa. U
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **Comparação entre o React e o Angular 2**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **As cinco melhores estruturas de JavaScript de 2017**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular versus reagir vs Vue: qual estrutura escolher em 2020**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **As principais estruturas de JavaScript para desenvolvimento de front-end no 2020**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[Anterior](common-web-application-architectures.md)

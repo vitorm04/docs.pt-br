@@ -3,13 +3,13 @@ title: Princípios de arquitetura
 description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Princípios de arquitetura
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416694"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450265"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -34,7 +34,7 @@ Nas classes, o encapsulamento é obtido por meio da limitação do acesso extern
 
 ### <a name="dependency-inversion"></a>Inversão de dependência
 
-A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em runtime. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em tempo de compilação, A dependerá de B que dependerá de C, conforme mostrado na Figura 4-1.
+A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em runtime. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em seguida, no momento da compilação, um dependerá de B, que dependerá de C, como mostra a Figura 4-1.
 
 ![Grafo de dependência direta](./media/image4-1.png)
 
@@ -46,17 +46,17 @@ A aplicação do princípio da inversão de dependência permite que A chame mé
 
 **Figura 4-2.** Grafo de dependência invertida.
 
-A **inversão de dependência** é uma parte fundamental da criação de aplicativos com acoplamento flexível, pois os detalhes de implementação podem ser escritos para que eles dependam de abstrações de nível superior e implemente-as, em vez do inverso. Como resultado, os aplicativos resultantes são mais testáveis, modulares e de manutenção mais fácil. A prática da *injeção de dependência* se tornou possível pela observância do princípio da inversão de dependência.
+A **inversão de dependência** é uma parte fundamental da criação de aplicativos menos rígidos, já que os detalhes da implementação podem ser escritos para depender e implementar abstrações de nível superior, em vez do contrário. Como resultado, os aplicativos resultantes são mais testáveis, modulares e de manutenção mais fácil. A prática da *injeção de dependência* se tornou possível pela observância do princípio da inversão de dependência.
 
 ### <a name="explicit-dependencies"></a>Dependências explícitas
 
-**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se certos componentes globais ou da infraestrutura estiverem em vigor, essas classes estarão sendo *desonestas* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em runtime, acontece que o objeto realmente precisou de outra coisa.
+**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se determinados componentes globais ou de infraestrutura estiverem em vigor, essas classes serão *desonestos* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em runtime, acontece que o objeto realmente precisou de outra coisa.
 
 Seguindo o princípio da dependência explícita, os métodos e as classes estão sendo honestos com seus clientes sobre o que precisam para funcionar. Isso torna o código mais autodocumentado e os contratos de codificação mais amigáveis, pois os usuários confiarão que, desde que eles forneçam o que é necessário na forma de método ou de parâmetros do construtor, os objetos com os quais eles estão trabalhando se comportarão corretamente em runtime.
 
 ### <a name="single-responsibility"></a>Responsabilidade única
 
-O princípio da responsabilidade única se aplica ao design orientado a objeto, mas também pode ser considerado um princípio de arquitetura semelhante à separação de interesses. Ele informa que os objetos devem ter apenas uma responsabilidade e que devem ter apenas uma única razão para serem alterados. Especificamente, a única situação na qual o objeto deve ser alterado é se a maneira na qual ele executa sua responsabilidade única precisa ser atualizada. A observância desse princípio ajuda a produzir sistemas modulares e com acoplamento mais flexível, pois muitos tipos de novos comportamentos podem ser implementados como novas classes, em vez de pela adição de mais responsabilidades para as classes existentes. A adição de novas classes sempre é mais segura do que a alteração das classes existentes, pois nenhum código ainda depende das novas classes.
+O princípio da responsabilidade única se aplica ao design orientado a objeto, mas também pode ser considerado um princípio de arquitetura semelhante à separação de interesses. Ele informa que os objetos devem ter apenas uma responsabilidade e que devem ter apenas uma única razão para serem alterados. Especificamente, a única situação na qual o objeto deve ser alterado é se a maneira na qual ele executa sua responsabilidade única precisa ser atualizada. Seguir esse princípio ajuda a produzir sistemas mais rígidos e modulares, já que muitos tipos de novo comportamento podem ser implementados como novas classes, em vez de adicionar responsabilidade adicional às classes existentes. A adição de novas classes sempre é mais segura do que a alteração das classes existentes, pois nenhum código ainda depende das novas classes.
 
 Em um aplicativo monolítico, podemos aplicar o princípio da responsabilidade única em um alto nível às camadas do aplicativo. A responsabilidade de apresentação deve permanecer no projeto de interface do usuário, enquanto a responsabilidade de acesso a dados deve ser mantida em um projeto de infraestrutura. A lógica de negócios deve ser mantida no projeto de núcleo do aplicativo, no qual ela pode ser testada com facilidade e pode evoluir de maneira independente das outras responsabilidades.
 
@@ -95,7 +95,7 @@ O requisito de que as classes tenham um dos recursos ou comportamentos acima adi
 
 ### <a name="bounded-contexts"></a>Contextos limitados
 
-**Contextos limitados** são um padrão central no Design Controlado por Domínio. Eles fornecem uma maneira de lidar com a complexidade de aplicativos ou organizações grandes dividindo-os em módulos conceituais separados. Em seguida, cada módulo conceitual representa um contexto que é separado de outros contextos (portanto, limitado) e pode evoluir de maneira independente. Cada contexto limitado deve ser, de preferência, livre para escolher seus próprios nomes para conceitos dentro dele e deve ter acesso exclusivo ao seu próprio repositório de persistência.
+**Contextos limitados** são um padrão central no Design Controlado por Domínio. Eles fornecem uma maneira de lidar com a complexidade de aplicativos ou organizações grandes dividindo-os em módulos conceituais separados. Cada módulo conceitual representa um contexto que é separado de outros contextos (portanto, limitado) e pode evoluir de forma independente. Cada contexto limitado deve ser, de preferência, livre para escolher seus próprios nomes para conceitos dentro dele e deve ter acesso exclusivo ao seu próprio repositório de persistência.
 
 No mínimo, os aplicativos Web individuais devem tentar ser seu próprio contexto limitado, com seu próprio repositório de persistência para seu modelo de negócios, em vez de compartilhar um banco de dados com outros aplicativos. A comunicação entre contextos limitados ocorre por meio de interfaces programáticas, em vez de por meio de um banco de dados compartilhado, o que permite que a lógica de negócios e os eventos ocorram em resposta às alterações feitas. Os contextos limitados são mapeados estreitamente aos microsserviços, que também são idealmente implementados como seus próprios contextos limitados individuais.
 

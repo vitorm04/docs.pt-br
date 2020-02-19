@@ -3,13 +3,13 @@ title: Características de aplicativos Web modernos
 description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | Características de aplicativos Web modernos
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 12/04/2019
+ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374084"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451558"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de aplicativos Web modernos
 
@@ -49,7 +49,7 @@ O ASP.NET Core também é totalmente compatível com a [injeção de dependênci
 
 ## <a name="easily-tested-with-automated-tests"></a>Testados facilmente com testes automatizados
 
-Os aplicativos ASP.NET Core são compatíveis com teste de unidade, além disso, o acoplamento flexível e o suporte a injeções de dependência facilitam a alternância de interesses da infraestrutura com implementações fictícias para fins de teste. O ASP.NET Core também fornece um TestServer que pode ser usado para hospedar aplicativos em memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, model binding, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
+Os aplicativos ASP.NET Core são compatíveis com teste de unidade, além disso, o acoplamento flexível e o suporte a injeções de dependência facilitam a alternância de interesses da infraestrutura com implementações fictícias para fins de teste. O ASP.NET Core também é fornecido com um TestServer que pode ser usado para hospedar aplicativos na memória. Os testes funcionais podem então fazer solicitações para esse servidor em memória, exercitando a pilha completa do aplicativo (incluindo middleware, roteamento, model binding, filtros, etc.) e recebendo uma resposta, tudo isso em uma fração do tempo que levaria para hospedar o aplicativo em um servidor real e fazer solicitações por meio da camada de rede. Esses testes são especialmente fáceis de serem gravados e significativos para APIs, que são cada vez mais importantes em aplicativos Web modernos.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Comportamentos tradicionais e de SPA com suporte
 
@@ -61,20 +61,28 @@ Muitos aplicativos Web envolvem uma combinação do comportamento do aplicativo 
 
 ## <a name="simple-development-and-deployment"></a>Desenvolvimento e implantação simples
 
-Os aplicativos ASP.NET Core podem ser escritos com editores de texto e interfaces de linha de comando simples ou com ambientes de desenvolvimento completo como o Visual Studio. Normalmente, os aplicativos monolíticos são implantados em um único ponto de extremidade. As implantações podem ser automatizadas com facilidade para ocorrerem como parte de um pipeline de CI (integração contínua) e CD (entrega contínua). Além das ferramentas de CI/CD tradicionais, o Microsoft Azure tem suporte integrado para repositórios Git e pode implantar automaticamente atualizações conforme elas são feitas em um GIT branch ou marcação especificado.
+ASP.NET Core aplicativos podem ser escritos usando editores de texto simples e interfaces de linha de comando, ou ambientes de desenvolvimento completos, como o Visual Studio. Normalmente, os aplicativos monolíticos são implantados em um único ponto de extremidade. As implantações podem ser automatizadas com facilidade para ocorrerem como parte de um pipeline de CI (integração contínua) e CD (entrega contínua). Além das ferramentas tradicionais de CI/CD, Microsoft Azure tem suporte integrado para repositórios git e pode implantar atualizações automaticamente conforme elas são feitas em uma ramificação ou marca git especificada. O Azure DevOps fornece uma compilação completa de CI/CD e um pipeline de implantação, e as ações do GitHub fornecem outra opção para projetos hospedados lá.
 
 ## <a name="traditional-aspnet-and-web-forms"></a>ASP.NET tradicional e Web Forms
 
-Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma robusta e confiável para a criação de aplicativos Web. O ASP.NET é compatível com modelos de desenvolvimento do MVC e da API Web, bem como ao Web Forms, que é adequado para o desenvolvimento de aplicativos avançados baseados em página e apresenta um ecossistema avançado de componentes de terceiros. O Microsoft Azure apresenta um excelente suporte de longa data para aplicativos ASP.NET 4.x e muitos desenvolvedores estão familiarizados com essa plataforma.
+Além do ASP.NET Core, o ASP.NET 4.x tradicional continua sendo uma plataforma robusta e confiável para a criação de aplicativos Web. O ASP.NET dá suporte a modelos de desenvolvimento de API Web e MVC, bem como Web Forms, que é adequado para o desenvolvimento de aplicativos baseado em página avançado e apresenta um ecossistema avançado de componentes de terceiros. A Microsoft Azure tem um excelente suporte de longa qualidade para aplicativos ASP.NET 4. x e muitos desenvolvedores estão familiarizados com essa plataforma.
+
+## <a name="blazor"></a>Blazor
+
+O mais recente é incluído no ASP.NET Core 3,0 e posterior. Ele fornece um novo mecanismo para a criação de aplicativos avançados de cliente Web interativos usando Razor, C#e ASP.NET Core. Ele oferece outra solução a ser considerada ao desenvolver aplicativos Web modernos. Há duas versões do mais alto a considerar: lado do servidor e do cliente.
+
+O mais alto do servidor foi lançado em 2019 com ASP.NET Core 3,0. Como o nome indica, ele é executado no servidor, processando alterações no documento do cliente de volta para o navegador pela rede. O melhor do servidor fornece uma experiência de cliente rica sem a necessidade de JavaScript do lado do cliente e sem a necessidade de carregamentos de página separados para cada interação de página de cliente. As alterações na página carregada são solicitadas e processadas pelo servidor e, em seguida, enviadas de volta para o cliente usando o Signalr.
+
+O mais alto do cliente será lançado em 2020 e eliminará a necessidade de processar alterações no servidor. Em vez disso, ele utilizará o Webassembly para executar o código .NET dentro do cliente. O cliente ainda pode fazer chamadas à API para o servidor, se necessário, para solicitar dados, mas todo o comportamento do lado do cliente é executado no cliente por meio do Webassembly, que já tem suporte em todos os principais navegadores e é apenas uma biblioteca JavaScript.
 
 > ### <a name="references--modern-web-applications"></a>Referências – Aplicativos Web modernos
 >
 > - **Introdução ao ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/>
-> - **Seis benefícios principais do ASP.NET Core que o tornam diferente e melhor**  
->   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Teste no ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Mais incrivelmente-introdução**  
+>   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
