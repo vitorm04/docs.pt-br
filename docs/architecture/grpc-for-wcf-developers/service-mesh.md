@@ -2,12 +2,12 @@
 title: Malhas de serviço-gRPC para desenvolvedores do WCF
 description: Usar uma malha de serviço para rotear e balancear solicitações para serviços gRPC em um cluster kubernetes.
 ms.date: 09/02/2019
-ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a29d6893e585c7eb60c847cef0149afeeaebcdab
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711270"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503391"
 ---
 # <a name="service-meshes"></a>Malhas de serviço
 
@@ -19,27 +19,27 @@ Uma malha de serviço é um componente de infraestrutura que assume o controle d
 - Criptografia
 - Monitoramento
 
-As malhas do serviço kubernetes funcionam adicionando um contêiner extra, chamado *proxy sidecar*, a cada pod incluído na malha. O proxy assume o tratamento de todas as solicitações de rede de entrada e saída, permitindo que a configuração e o gerenciamento de rede sejam mantidos separados dos contêineres de aplicativos e, em muitos casos, sem a necessidade de qualquer alteração no código do aplicativo.
+As malhas do serviço kubernetes funcionam adicionando um contêiner extra, chamado *proxy sidecar*, a cada pod incluído na malha. O proxy assume o tratamento de todas as solicitações de rede de entrada e saída. Em seguida, você pode manter a configuração e o gerenciamento de redes de rede separadas dos contêineres de aplicativos. Em muitos casos, essa separação não requer nenhuma alteração no código do aplicativo.
 
-Pegue o [exemplo do capítulo anterior](kubernetes.md#test-the-application), em que as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome de host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo de vida da instância de `HttpClientHandler`. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes, mas isso complicaria consideravelmente o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
+No [exemplo do capítulo anterior](kubernetes.md#test-the-application), as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome do host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo de vida da instância de `HttpClientHandler`. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes. Mas essa solução alternativa complicaria o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
 
-Usando uma malha de serviço, as solicitações do contêiner de aplicativo são enviadas para o proxy sidecar, que pode distribuí-las de forma inteligente em todas as instâncias do outro serviço. A malha também pode:
+Quando você usa uma malha de serviço, as solicitações do contêiner de aplicativo são enviadas para o proxy sidecar. O proxy sidecar pode então distribuí-los de forma inteligente em todas as instâncias do outro serviço. A malha também pode:
 
 - Responda de forma direta às falhas de instâncias individuais de um serviço.
-- Manipular semânticas de repetição para chamadas com falha ou tempos limite
+- Manipule a semântica de repetição para chamadas com falha ou tempos limite.
 - Redirecionar solicitações com falha para uma instância alternativa sem retornar ao aplicativo cliente.
 
-A captura de tela a seguir mostra o aplicativo StockWeb em execução com a malha de serviço do Linkerd, sem alterações no código do aplicativo ou até mesmo a imagem do Docker que está sendo usada. A única alteração necessária foi a adição de uma anotação à implantação nos arquivos YAML para os serviços de `stockdata` e `stockweb`.
+A captura de tela a seguir mostra o aplicativo StockWeb em execução com a malha de serviço do Linkerd. Não há nenhuma alteração no código do aplicativo e a imagem do Docker não está sendo usada. A única alteração necessária foi a adição de uma anotação à implantação nos arquivos YAML para os serviços de `stockdata` e `stockweb`.
 
 ![StockWeb com malha de serviço](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Você pode ver na coluna servidor que as solicitações do aplicativo StockWeb foram roteadas para ambas as réplicas do serviço StockData, apesar de serem originadas de uma única instância de `HttpClient` no código do aplicativo. Na verdade, se você examinar o código, verá que todas as solicitações de 100 para o serviço StockData são feitas simultaneamente usando a mesma instância de `HttpClient`, mas com a malha de serviço, essas solicitações serão balanceadas em todas as instâncias de serviço, no entanto, estão disponíveis.
+Você pode ver na coluna **servidor** que as solicitações do aplicativo StockWeb foram roteadas para ambas as réplicas do serviço StockData, apesar de serem originadas de uma única instância de `HttpClient` no código do aplicativo. Na verdade, se você examinar o código, verá que todas as solicitações de 100 para o serviço StockData são feitas simultaneamente usando a mesma instância de `HttpClient`. Com a malha de serviço, essas solicitações serão balanceadas em todas as instâncias de serviço, no entanto, estão disponíveis.
 
-As malhas de serviço se aplicam somente ao tráfego em um cluster. Para clientes externos, consulte [o próximo capítulo, balanceamento de carga](load-balancing.md).
+As malhas de serviço aplicam-se somente ao tráfego em um cluster. Para clientes externos, consulte o próximo capítulo, [balanceamento de carga](load-balancing.md).
 
 ## <a name="service-mesh-options"></a>Opções de malha de serviço
 
-Há três implementações de malha de serviço de uso geral disponíveis atualmente para uso com kubernetes: İSTİO, Linkerd e Consul Connect. Todos os três fornecem roteamento/proxy de solicitação, criptografia de tráfego, resiliência, autenticação de host para host e controle de tráfego.
+Três implementações de malha de serviço de uso geral estão disponíveis atualmente para uso com kubernetes: [İSTİO](https://istio.io), [Linkerd](https://linkerd.io)e [Consul Connect](https://consul.io/mesh.html). Todos os três fornecem roteamento/proxy de solicitação, criptografia de tráfego, resiliência, autenticação de host para host e controle de tráfego.
 
 Escolher uma malha de serviço depende de vários fatores:
 
@@ -47,18 +47,12 @@ Escolher uma malha de serviço depende de vários fatores:
 - A natureza do cluster, seu tamanho, o número de serviços implantados e o volume de tráfego na rede de cluster.
 - Facilidade de implantar e gerenciar a malha e usá-la com serviços.
 
-Mais informações sobre cada malha de serviço estão disponíveis em seus respectivos sites.
-
-- [**İSTİO** -İSTİO.Io](https://istio.io)
-- [**Linkerd** -linkerd.Io](https://linkerd.io)
-- [**Consul** -Consul.Io/mesh.html](https://consul.io/mesh.html)
-
 ## <a name="example-add-linkerd-to-a-deployment"></a>Exemplo: Adicionar Linkerd a uma implantação
 
 Neste exemplo, você aprenderá a usar a malha de serviço Linkerd com o aplicativo *StockKube* da [seção anterior](kubernetes.md).
-Para seguir este exemplo, você precisará [instalar a CLI do Linkerd](https://linkerd.io/2/getting-started/#step-1-install-the-cli). Os binários do Windows podem ser baixados na seção versões do GitHub; Certifique-se de usar a versão **estável** mais recente e não uma das versões de borda.
+Para seguir este exemplo, você precisará [instalar a CLI do Linkerd](https://linkerd.io/2/getting-started/#step-1-install-the-cli). Você pode baixar binários do Windows na seção que lista as versões do GitHub. Certifique-se de usar a versão *estável* mais recente e não uma das versões de borda.
 
-Com a CLI do Linkerd instalada, siga as instruções [*introdução* no site da Linkerd] para instalar os componentes do Linkerd no cluster do kubernetes. As instruções são diretas e a instalação deve levar apenas alguns minutos em uma instância de kubernetes local.
+Com a CLI do Linkerd instalada, siga as instruções de [introdução](https://linkerd.io/2/getting-started/index.html) para instalar os componentes do Linkerd no cluster do kubernetes. As instruções são simples e a instalação deve levar apenas alguns minutos em uma instância de kubernetes local.
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Adicionar Linkerd a implantações do kubernetes
 
@@ -80,7 +74,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Inspecionar serviços no painel do Linkerd
 
-Inicie o painel do Linkerd usando a CLI do `linkerd`.
+Abra o painel do Linkerd usando a CLI do `linkerd`.
 
 ```console
 linkerd dashboard
@@ -90,7 +84,7 @@ O painel fornece informações detalhadas sobre todos os serviços que estão co
 
 ![Painel do Linkerd mostrando aplicativos StockKube](media/service-mesh/linkerd-screenshot.png)
 
-Se você aumentar o número de réplicas do serviço StockData gRPC, conforme mostrado no exemplo a seguir, e atualizar a página StockWeb no navegador, verá uma mistura de IDs na coluna servidor, indicando que as solicitações estão sendo atendidas por todas as instâncias disponíveis .
+Se você aumentar o número de réplicas do serviço StockData gRPC, conforme mostrado no exemplo a seguir, e atualizar a página StockWeb no navegador, você deverá ver uma mistura de IDs na coluna **servidor** . Essa combinação indica que todas as instâncias disponíveis estão atendendo a solicitações.
 
 ```yaml
 apiVersion: apps/v1

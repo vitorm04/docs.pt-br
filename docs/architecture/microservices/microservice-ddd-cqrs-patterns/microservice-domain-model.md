@@ -1,13 +1,13 @@
 ---
 title: Criando um modelo de domínio de microsserviço
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os principais conceitos ao projetar um modelo de domínio orientado a DDD.
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737475"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502329"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
@@ -74,9 +74,9 @@ Algo que é uma entidade em um microsserviço pode não ser uma entidade em outr
 
 Uma pessoa com um nome e um sobrenome geralmente é uma entidade, porque a pessoa tem uma identidade, mesmo se o nome e o sobrenome coincidirem com outro conjunto de valores, por exemplo, se esses nomes também se referirem a uma outra pessoa.
 
-Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e em ORMs, como o EF, mas em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
+Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e ORMs como Entity Framework (EF), enquanto em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
 
-O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que torna mais fácil lidar com objetos de valor, como veremos em detalhes posteriormente.
+EF Core 2,0 e versões posteriores incluem o recurso de [entidades de propriedade](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita o tratamento de objetos de valor, como veremos detalhadamente mais adiante.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 

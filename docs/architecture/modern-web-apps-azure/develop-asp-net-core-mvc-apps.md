@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449434"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503952"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -546,7 +546,7 @@ Uma abordagem híbrida é usar o DDD somente para as áreas transacionais ou mai
 
 ## <a name="deployment"></a>Implantação
 
-Há algumas etapas envolvidas no processo de implantação do aplicativo ASP.NET Core, independentemente do local em que ele será hospedado. A primeira etapa é publicar o aplicativo, que pode ser feita com o comando da CLI dotnet publish. Isso compilará o aplicativo e colocará todos os arquivos necessários para executar o aplicativo em uma pasta designada. Quando você faz a implantação por meio do Visual Studio, esta etapa é executada automaticamente para você. A pasta de publicação contém arquivos .exe e .dll para o aplicativo e suas dependências. Um aplicativo autossuficiente também incluirá uma versão do runtime do .NET. Os aplicativos ASP.NET Core também incluirão arquivos de configuração, ativos de cliente estático e exibições do MVC.
+Há algumas etapas envolvidas no processo de implantação do aplicativo ASP.NET Core, independentemente do local em que ele será hospedado. A primeira etapa é publicar o aplicativo, o que pode ser feito usando o comando `dotnet publish` CLI. Isso compilará o aplicativo e colocará todos os arquivos necessários para executar o aplicativo em uma pasta designada. Quando você faz a implantação por meio do Visual Studio, esta etapa é executada automaticamente para você. A pasta de publicação contém arquivos .exe e .dll para o aplicativo e suas dependências. Um aplicativo autossuficiente também incluirá uma versão do runtime do .NET. Os aplicativos ASP.NET Core também incluirão arquivos de configuração, ativos de cliente estático e exibições do MVC.
 
 Os aplicativos ASP.NET Core são aplicativos de console que devem ser iniciados quando o servidor é inicializado e reiniciados quando há falhas no aplicativo (ou no servidor). Um gerenciador de processos pode ser usado para automatizar esse processo. Os gerenciadores de processos mais comuns para o ASP.NET Core são o Nginx e o Apache no Linux e o IIS ou o Serviço Windows no Windows.
 

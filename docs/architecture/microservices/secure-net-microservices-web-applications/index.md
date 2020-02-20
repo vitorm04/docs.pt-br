@@ -2,14 +2,13 @@
 title: Protegendo microsserviços e aplicativos Web .NET
 description: Segurança nos Microsserviços do .NET e aplicativos Web – Conheça as opções de autenticação em aplicativos Web ASP.NET Core.
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777210"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501645"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
@@ -19,13 +18,13 @@ Há muitos aspectos sobre segurança em microsserviços e aplicativos Web que o 
 
 Geralmente é necessário que os recursos e as APIs publicados por um serviço sejam limitados a determinados usuários ou clientes confiáveis. A primeira etapa para tomar esses tipos de decisões de confiança no nível da API é a autenticação. Autenticação é o processo de confirmar a identidade do usuário de forma confiável.
 
-Em cenários de microsserviço, normalmente a autenticação é manipulada centralmente. Se você estiver usando um Gateway de API, o gateway será um bom lugar para fazer a autenticação, conforme é mostrado na Figura 9-1. Se você usar esta abordagem, verifique se os microsserviços individuais não podem ser acessados diretamente (sem o Gateway de API), a não ser que haja uma segurança adicional em vigor para autenticar mensagens que entram ou não pelo gateway.
+Em cenários de microsserviço, a autenticação é normalmente feita de forma centralizada. Se você estiver usando um Gateway de API, o gateway será um bom lugar para fazer a autenticação, conforme é mostrado na Figura 9-1. Se você usar esta abordagem, verifique se os microsserviços individuais não podem ser acessados diretamente (sem o Gateway de API), a não ser que haja uma segurança adicional em vigor para autenticar mensagens que entram ou não pelo gateway.
 
 ![Diagrama mostrando como o aplicativo móvel cliente interage com o back-end.](./media/index/api-gateway-centralized-authentication.png)
 
 **Figura 9-1**. Autenticação centralizada com um Gateway de API
 
-Quando o Gateway de API centraliza a autenticação, ele adiciona informações do usuário ao encaminhar solicitações para os microsserviços. Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre ASP.NET Core aplicativos, se necessário, implementando o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing).) Esse padrão é ilustrado na Figura 9-2.
+Quando o Gateway de API centraliza a autenticação, ele adiciona informações do usuário ao encaminhar solicitações para os microsserviços. Se os serviços puderem ser acessados diretamente, um serviço de autenticação, como o Azure Active Directory ou um microsserviço de autenticação dedicado atuando como um serviço de token de segurança (STS), poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre ASP.NET Core aplicativos, se necessário, implementando o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing).) Esse padrão é ilustrado na Figura 9-2.
 
 ![Diagrama mostrando a autenticação por meio de microserviços de back-end.](./media/index/identity-microservice-authentication.png)
 
@@ -35,19 +34,50 @@ Quando os microsserviços são acessados diretamente, a confiança, que inclui a
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Autenticar usando o ASP.NET Core Identity
 
-O mecanismo primário no ASP.NET Core para identificar os usuários de um aplicativo é sistema de associação [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). O ASP.NET Core Identity armazena as informações do usuário (incluindo informações de logon, funções e declarações) em um armazenamento de dados configurado pelo desenvolvedor. Normalmente, o armazenamento de dados do ASP.NET Core Identity é um repositório do Entity Framework fornecido no pacote `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. No entanto, os repositórios personalizados ou outros pacotes de terceiros podem ser usados para armazenar informações de identidade no Armazenamento de Tabelas do Azure, no CosmosDB ou em outros locais.
+O mecanismo primário no ASP.NET Core para identificar os usuários de um aplicativo é sistema de associação [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). A Identidade do ASP.NET Core armazena informações de usuário (incluindo informações de logon, funções e declarações) em um repositório de dados configurado pelo desenvolvedor. Normalmente, o armazenamento de dados do ASP.NET Core Identity é um repositório do Entity Framework fornecido no pacote `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. No entanto, os repositórios personalizados ou outros pacotes de terceiros podem ser usados para armazenar informações de identidade no Armazenamento de Tabelas do Azure, no CosmosDB ou em outros locais.
 
-O código a seguir foi obtido no modelo de projeto de aplicativo Web do ASP.NET Core com a autenticação de conta de usuário individual selecionada. Ele mostra como configurar o ASP.NET Core Identity usando o EntityFramework.Core no método Startup.ConfigureServices.
+> [!TIP]
+> ASP.NET Core 2,1 e posterior fornece [ASP.NET Core identidade](/aspnet/core/security/authentication/identity) como uma [biblioteca de classes Razor](/aspnet/core/razor-pages/ui-class), de modo que você não verá grande parte do código necessário em seu projeto, como foi o caso de versões anteriores. Para obter detalhes sobre como personalizar o código de identidade para atender às suas necessidades, consulte [Scaffold Identity in ASP.NET Core Projects](/aspnet/core/security/authentication/scaffold-identity).
+
+O código a seguir é obtido do modelo de projeto ASP.NET Core aplicativo Web MVC 3,1 com a autenticação de conta de usuário individual selecionada. Ele mostra como configurar ASP.NET Core identidade usando Entity Framework Core no método `Startup.ConfigureServices`.
 
 ```csharp
-services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-    services.AddIdentity<ApplicationUser, IdentityRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlServer(
+            Configuration.GetConnectionString("DefaultConnection")));
+
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddRazorPages();
+    //...
+}
 ```
 
-Após configurar o ASP.NET Core Identity, você pode habilitá-lo chamando app.UseIdentity no método `Startup.Configure` do serviço.
+Quando ASP.NET Core identidade estiver configurada, você a habilitará adicionando o `app.UseAuthentication()` e `endpoints.MapRazorPages()` conforme mostrado no código a seguir no método de `Startup.Configure` do serviço:
+
+```csharp
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    //...
+    app.UseRouting();
+
+    app.UseAuthentication();
+    app.UseAuthorization();
+
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapRazorPages();
+    });
+    //...
+}
+```
+
+> [!IMPORTANT]
+> As linhas no código anterior **devem estar na ordem mostrada** para que a identidade funcione corretamente.
 
 Usar o ASP.NET Core Identity permite vários cenários:
 
@@ -65,7 +95,27 @@ Para cenários de autenticação que usam um armazenamento de dados de usuário 
 
 O ASP.NET Core também dá suporte ao uso de [provedores de autenticação externos](/aspnet/core/security/authentication/social/) para permitir que os usuários entrem por meio de fluxos [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2). Isso significa que os usuários podem entrar usando os processos de autenticação existentes de provedores como Microsoft, Google, Facebook ou Twitter e associar essas identidades a um ASP.NET Core Identity no seu aplicativo.
 
-Para usar a autenticação externa, você pode incluir o middleware de autenticação apropriado no pipeline de processamento de solicitação HTTP do aplicativo. Este middleware é responsável por manipular solicitações para retornar as rotas de URI do provedor de autenticação, capturando informações de identidade e disponibilizando-as por meio do método SignInManager.GetExternalLoginInfo.
+Para usar a autenticação externa, além de incluir o middleware de autenticação, conforme mencionado anteriormente, usando o método `app.UseAuthentication()`, você também precisa registrar o provedor externo em `Startup`, conforme mostrado no exemplo a seguir:
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+        .AddEntityFrameworkStores<ApplicationDbContext>();
+
+    services.AddAuthentication()
+        .AddMicrosoftAccount(microsoftOptions =>
+        {
+            microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+            microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+        })
+        .AddGoogle(googleOptions => { ... })
+        .AddTwitter(twitterOptions => { ... })
+        .AddFacebook(facebookOptions => { ... });
+    //...
+}
+```
 
 Os provedores de autenticação externos populares e seus pacotes NuGet associados são mostrados na tabela a seguir:
 
@@ -76,58 +126,23 @@ Os provedores de autenticação externos populares e seus pacotes NuGet associad
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-Em todos os casos, o middleware é registrado com uma chamada para um método de registro semelhante a `app.Use{ExternalProvider}Authentication` em `Startup.Configure`. Esses métodos de registro usam um objeto de opções que contém uma ID do aplicativo e informações secretas (uma senha, por exemplo), conforme o provedor exigir. Os provedores de autenticação externos requerem que o aplicativo seja registrado [conforme é explicado em [ASP.NET Documentation](/aspnet/core/security/authentication/social/) (documentação do ASP.NET Core)] para que eles possam informar ao usuário qual aplicativo está solicitando acesso à sua identidade.
+Em todos os casos, você deve concluir um procedimento de registro de aplicativo que é dependente do fornecedor e que geralmente envolve:
 
-Depois que o middleware é registrado em `Startup.Configure`, você pode solicitar que os usuários entrem usando qualquer ação do controlador. Para isso, crie um objeto `AuthenticationProperties` que inclui o nome do provedor de autenticação e uma URL de redirecionamento. Em seguida, você retorna uma resposta de desafio que passa o objeto `AuthenticationProperties`. O código a seguir mostra um exemplo disso.
+1. Obtendo uma ID do aplicativo cliente.
+2. Obtendo um segredo do aplicativo cliente.
+3. Configurando uma URL de redirecionamento, que é tratada pelo middleware de autorização e pelo provedor registrado
+4. Opcionalmente, a configuração de uma URL de saída para tratar corretamente a saída em um cenário de logon único (SSO).
 
-```csharp
-var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
-    redirectUrl);
-return Challenge(properties, provider);
-```
+Para obter detalhes sobre como configurar seu aplicativo para um provedor externo, consulte a [autenticação do provedor externo na documentação do ASP.NET Core](/aspnet/core/security/authentication/social/)).
 
-O parâmetro redirectUrl inclui a URL para a qual o provedor externo deverá ser redirecionado quando o usuário for autenticado. A URL deve representar uma ação que conectará o usuário com base nas informações de identidade externas, como no seguinte exemplo simplificado:
+> [!TIP]
+Todos os detalhes são tratados pelo middleware de autorização e pelos serviços mencionados anteriormente. Portanto, basta escolher a opção de autenticação de **conta de usuário individual** ao criar o projeto de aplicativo Web de código ASP.net no Visual Studio, como mostrado na Figura 9-3, além de registrar os provedores de autenticação mencionados anteriormente.
 
-```csharp
-// Sign in the user with this external login provider if the user
-// already has a login.
-var result = await _signInManager.ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, isPersistent: false);
+![Captura de tela da caixa de diálogo novo ASP.NET Core aplicativo Web.](./media/index/select-individual-user-account-authentication-option.png)
 
-if (result.Succeeded)
-{
-    return RedirectToLocal(returnUrl);
-}
-else
-{
-    ApplicationUser newUser = new ApplicationUser
-    {
-        // The user object can be constructed with claims from the
-        // external authentication provider, combined with information
-        // supplied by the user after they have authenticated with
-        // the external provider.
-        UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
-        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
-    };
-    var identityResult = await _userManager.CreateAsync(newUser);
-    if (identityResult.Succeeded)
-    {
-        identityResult = await _userManager.AddLoginAsync(newUser, info);
-        if (identityResult.Succeeded)
-        {
-            await _signInManager.SignInAsync(newUser, isPersistent: false);
-        }
-        return RedirectToLocal(returnUrl);
-    }
-}
-```
+**Figura 9-3**. Selecionando a opção contas de usuário individuais, para usar a autenticação externa, ao criar um projeto de aplicativo Web no Visual Studio 2019.
 
-Se você escolher a opção de autenticação de **conta de usuário individual** ao criar o ASP.NET Core projeto de aplicativo Web no Visual Studio, todo o código necessário para entrar com um provedor externo já estará no projeto, como mostra a Figura 9-3.
-
-![Captura de tela da caixa de diálogo novo ASP.NET Core aplicativo Web.](./media/index/select-external-authentication-option.png)
-
-**Figura 9-3**. Selecionando uma opção para usar a autenticação externa ao criar um projeto de aplicativo Web
-
-Além dos provedores de autenticação externos listados anteriormente, estão disponíveis pacotes de terceiros que fornecem middleware para o uso de vários outros provedores de autenticação externos. Para obter uma lista, consulte o repositório [AspNet.Security.OAuth.Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) no GitHub.
+Além dos provedores de autenticação externos listados anteriormente, estão disponíveis pacotes de terceiros que fornecem middleware para o uso de vários outros provedores de autenticação externos. Para obter uma lista, consulte o repositório [ASPNET. Security. OAuth. Providers](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src) no github.
 
 Você também pode criar seu próprio middleware de autenticação externa para resolver alguma necessidade especial.
 
@@ -147,31 +162,36 @@ Se as informações de usuário estiverem armazenadas no Azure Active Directory 
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
 {
     var identityUrl = Configuration.GetValue<string>("IdentityUrl");
     var callBackUrl = Configuration.GetValue<string>("CallBackUrl");
+    var sessionCookieLifetime = configuration.GetValue("SessionCookieLifetimeMinutes", 60);
 
     // Add Authentication services
 
     services.AddAuthentication(options =>
     {
         options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     })
-    .AddCookie()
+    .AddCookie(setup => setup.ExpireTimeSpan = TimeSpan.FromMinutes(sessionCookieLifetime))
     .AddOpenIdConnect(options =>
     {
         options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-        options.Authority = identityUrl;
-        options.SignedOutRedirectUri = callBackUrl;
+        options.Authority = identityUrl.ToString();
+        options.SignedOutRedirectUri = callBackUrl.ToString();
+        options.ClientId = useLoadTest ? "mvctest" : "mvc";
         options.ClientSecret = "secret";
+        options.ResponseType = useLoadTest ? "code id_token token" : "code id_token";
         options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
         options.RequireHttpsMetadata = false;
@@ -218,12 +238,16 @@ Ao especificar os clientes e os recursos para o IdentityServer4 usar, você pode
 Um exemplo de configuração para o IdentityServer4 usar recursos e clientes na memória fornecidos por um tipo IClientStore personalizado pode ser semelhante ao exemplo a seguir:
 
 ```csharp
-// Add IdentityServer services
-services.AddSingleton<IClientStore, CustomClientStore>();
-services.AddIdentityServer()
-    .AddSigningCredential("CN=sts")
-    .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
-    .AddAspNetIdentity<ApplicationUser>();
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    //...
+    services.AddSingleton<IClientStore, CustomClientStore>();
+    services.AddIdentityServer()
+        .AddSigningCredential("CN=sts")
+        .AddInMemoryApiResources(MyApiResourceProvider.GetAllResources())
+        .AddAspNetIdentity<ApplicationUser>();
+    //...
+}
 ```
 
 ### <a name="consume-security-tokens"></a>Consumir tokens de segurança
@@ -241,7 +265,10 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     // Configure the pipeline to use authentication
     app.UseAuthentication();
     //…
-    app.UseMvc();
+    app.UseEndpoints(endpoints =>
+    {
+        //...
+    });
 }
 
 public void ConfigureServices(IServiceCollection services)
@@ -252,8 +279,8 @@ public void ConfigureServices(IServiceCollection services)
 
     services.AddAuthentication(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultAuthenticateScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme;
 
     }).AddJwtBearer(options =>
     {

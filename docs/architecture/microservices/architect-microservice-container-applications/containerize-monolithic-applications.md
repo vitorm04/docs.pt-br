@@ -1,13 +1,13 @@
 ---
 title: Implantar aplicativos monolíticos em contêineres
 description: Colocar em contêineres aplicativos monolíticos, embora não obtenha todos os benefícios da arquitetura de microsserviços, tem benefícios de implantação importantes que podem ser entregues imediatamente.
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737960"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503280"
 ---
 # <a name="containerizing-monolithic-applications"></a>Implantar aplicativos monolíticos em contêineres
 
@@ -61,7 +61,7 @@ Seja para validar um contêiner implantado no Azure ou quando um aplicativo é b
 
 ![Captura de tela da caixa de diálogo Criar serviço de aplicativo mostrando um registro de contêiner.](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**Figura 4-4**. Publicar um aplicativo baseado em contêiner único no Serviço de Aplicativo do Azure por meio do Visual Studio
+**Figura 4-4**. Publicando um aplicativo de contêiner único para Azure App serviço do Visual Studio 2019
 
 Sem o Docker, se você precisasse de outros recursos, estruturas ou dependências sem suporte no Serviço de Aplicativo do Azure, seria necessário aguardar até que a equipe do Azure atualizasse essas dependências no Serviço de Aplicativo. Outra opção era mudar para outros serviços, como Serviços de Nuvem do Azure, ou VMs, em que se tinha mais controle e era possível instalar o componente ou a estrutura exigidos pelo aplicativo.
 

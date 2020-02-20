@@ -1,13 +1,13 @@
 ---
 title: Quando escolher o .NET Core para os contêineres do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Quando escolher o .NET Core para os contêineres do Docker
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920989"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501842"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando escolher o .NET Core para os contêineres do Docker
 
@@ -35,11 +35,11 @@ Além dos IDEs e editores, você pode usar o [CLI do .NET Core](../../../core/to
 
 Contêineres são comumente usados em conjunto com uma arquitetura de microsserviços, embora também possam ser usados para colocar em contêineres aplicativos Web ou serviços que sigam qualquer padrão de arquitetura. É possível usar o .NET Framework em contêineres do Windows, mas a modularidade e a natureza leve do .NET Core torna-o perfeito para contêineres e arquiteturas de microsserviços. Quando você cria e implanta um contêiner, sua imagem é muito menor com o .NET Core do que com o .NET Framework.
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>Criando e implantando microsserviços em contêineres
+## <a name="create-and-deploy-microservices-on-containers"></a>Criar e implantar microserviços em contêineres
 
-É possível usar o .NET Framework tradicional para criar aplicativos baseados em microsserviços (sem contêineres) usando processos simples. Dessa forma, como o .NET Framework já está instalado e já é compartilhado entre processos, os processos são leves inicializam rapidamente. No entanto, se você estiver usando contêineres, a imagem do .NET Framework tradicional também será baseada no Windows Server Core e isso a tornará muito pesada para uma abordagem de microsserviços em contêineres.
+É possível usar o .NET Framework tradicional para criar aplicativos baseados em microsserviços (sem contêineres) usando processos simples. Dessa forma, como o .NET Framework já está instalado e já é compartilhado entre processos, os processos são leves inicializam rapidamente. No entanto, se você estiver usando contêineres, a imagem do .NET Framework tradicional também será baseada no Windows Server Core e isso a tornará muito pesada para uma abordagem de microsserviços em contêineres. No entanto, as equipes têm busca de oportunidades para melhorar a experiência de .NET Framework usuários também. Recentemente, o tamanho das [imagens de contêiner do Windows Server Core foi reduzido para > 40% menor](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller). 
 
-Por outro lado, o .NET Core é o melhor candidato se você está adotando um sistema orientado a microsserviços baseado em contêineres, porque o .NET Core é leve. Além disso, suas imagens de contêineres relacionadas, a imagem do Linux ou a imagem do Windows Nano, são enxutas e pequenas, tornando os contêineres leves e rápidos para inicializar.
+Por outro lado, o .NET Core é o melhor candidato se você estiver adotando um sistema orientado a microserviços baseado em contêineres, pois o .NET Core é leve. Além disso, suas imagens de contêiner relacionadas, para Linux ou Windows nano Server, são de baixo e pequeno, tornando os contêineres claros e rápidos para começar.
 
 Um microsserviço deve ser o menor possível: ser leve ao iniciar, ocupar um pequeno espaço, ter um Contexto limitado pequeno (confira DDD, [Design Voltado a Domínio](https://en.wikipedia.org/wiki/Domain-driven_design)), para representar uma pequena área de preocupações e ser capaz de ser iniciado e interrompido rapidamente. Para esses requisitos, você desejará usar imagens de contêiner pequenas e cuja instância é fácil de criar, como a imagem de contêiner do .NET Core.
 

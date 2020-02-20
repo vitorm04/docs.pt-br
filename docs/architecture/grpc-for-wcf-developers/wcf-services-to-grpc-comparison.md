@@ -2,16 +2,16 @@
 title: Comparando o WCF com o gRPC-gRPC para desenvolvedores do WCF
 description: Uma comparação das estruturas do WCF e do gRPC para a criação de aplicativos distribuídos.
 ms.date: 09/02/2019
-ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966961"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503332"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Comparando o WCF com o gRPC
 
-O capítulo anterior deve ter dado a você uma boa visão do Protobuf e como o gRPC lida com as mensagens. Antes de trabalhar em uma conversão detalhada do WCF para o gRPC, é importante observar como a variedade de recursos disponíveis atualmente no WCF é tratada em gRPC e quais soluções alternativas você pode usar quando não parece haver um equivalente gRPC. Em particular, este capítulo abordará os seguintes assuntos:
+O capítulo anterior forneceu uma boa visão sobre Protobuf e como o gRPC lida com mensagens. Antes de você trabalhar com uma conversão detalhada de Windows Communication Foundation (WCF) para gRPC, é importante saber como os recursos disponíveis no WCF são manipulados no gRPC e quais soluções alternativas você pode usar quando não há nenhum equivalente gRPC. Em particular, este capítulo abordará os seguintes assuntos:
 
 - Operações e métodos
 - Associações e transportes
@@ -37,12 +37,12 @@ service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply);
 }
 
-// The request message containing the user's name.
+// The request message that contains the user's name.
 message HelloRequest {
   string name = 1;
 }
 
-// The response message containing the greetings.
+// The response message that contains the greetings.
 message HelloReply {
   string message = 1;
 }
@@ -74,7 +74,7 @@ namespace HelloGrpc
 }
 ```
 
-Este capítulo fará referência a este código de exemplo ao explicar vários conceitos e recursos do gRPC.
+Este capítulo fará referência a este código de exemplo ao explicar diferentes conceitos e recursos do gRPC.
 
 >[!div class="step-by-step"]
 >[Anterior](protobuf-maps.md)

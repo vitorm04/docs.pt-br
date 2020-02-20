@@ -1,13 +1,13 @@
 ---
 title: Para qual sistema operacional direcionar com os contêineres do .NET
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Para qual sistema operacional direcionar com os contêineres do .NET
-ms.date: 01/07/2019
-ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736911"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501857"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Para qual sistema operacional direcionar com os contêineres do .NET
 
@@ -32,12 +32,12 @@ Também é possível criar sua própria imagem do Docker em casos em que você d
 
 Ao adicionar o nome de imagem ao seu arquivo Dockerfile, é possível selecionar o sistema operacional e a versão dependendo da marcação usada, como nos seguintes exemplos:
 
-| Imagem | Comments |
+| Imagem | Comentários |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 multiarquiteturas: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core várias arquiteturas 2,2: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. <br/> A imagem aspnetcore tem algumas otimizações para ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine | .NET Core 2.2 somente em runtime na distribuição do Linux Alpine |
-| mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803 | .NET Core 2.2 somente em runtime no Windows Nano Server (Windows Server versão 1803) |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3,1 multiarquiteturas: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core várias arquiteturas 3,1: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. <br/> A imagem aspnetcore tem algumas otimizações para ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Tempo de execução do .NET Core 3,1 – somente no Linux Debian distribuição |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Tempo de execução do .NET Core 3,1 somente no Windows nano Server (Windows Server versão 1809) |
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

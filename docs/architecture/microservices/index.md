@@ -1,19 +1,19 @@
 ---
 title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Microsserviços são serviços implantáveis de maneira modular e independente. Os contêineres do Docker (para Linux e Windows) simplificam a implantação e o teste ao agrupar um serviço e suas dependências em uma única unidade, que será executada em um ambiente isolado.
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089903"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502621"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços .NET: arquitetura para aplicativos .NET em contêineres
 
 ![Capa do livro](./media/cover-small.png)
 
-**EDIÇÃO v2.2** – Atualizada para o ASP.NET Core 2.2
+**Edição v 3.1** -atualizado para ASP.NET Core 3,1
 
 Este guia é uma introdução ao desenvolvimento de aplicativos com base em microsserviços e ao gerenciamento deles usando contêineres. Ele discute as abordagens de design de arquitetura e de implementação usando o .NET Core e os contêineres do Docker.
 
@@ -45,13 +45,13 @@ Este guia fornece diretrizes básicas de desenvolvimento e de arquitetura princi
 
 Depois de estudar este guia, a próxima etapa será saber mais sobre os microsserviços pronto para produção no Microsoft Azure.
 
-## <a name="version"></a>Version
+## <a name="version"></a>Versão
 
-Este guia foi revisado para abordar a versão do **.NET Core 2.2**, além de muitas outras atualizações relacionadas à mesma "onda" de tecnologias (ou seja, as tecnologias do Azure e outras de terceiros) simultâneas ao .NET Core 2.2. É por isso que a versão do guia também foi atualizada para a versão **2.2**.
+Este guia foi revisado para cobrir a versão **3,1 do .NET Core** junto com muitas atualizações adicionais relacionadas à mesma "onda" de tecnologias (isto é, Azure e tecnologias de terceiros adicionais) que coincidem no tempo com a versão 3,1 do .NET Core. É por isso que a versão do livro também foi atualizada para a versão **3,1**.
 
 ## <a name="what-this-guide-does-not-cover"></a>O que este guia não cobre
 
-Este guia não se concentra no ciclo de vida do aplicativo, em DevOps, nos pipelines de CI/CD nem no trabalho da equipe. O guia complementar [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook) (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft) trata desse assunto. O guia atual também não fornece detalhes de implementação na infraestrutura do Azure, como informações sobre orquestradores específicos.
+Este guia não se concentra no ciclo de vida do aplicativo, em DevOps, nos pipelines de CI/CD nem no trabalho da equipe. O guia complementar [Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft](https://aka.ms/dockerlifecycleebook) trata desse assunto. O guia atual também não fornece detalhes de implementação na infraestrutura do Azure, como informações sobre orquestradores específicos.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -82,7 +82,7 @@ Escrevemos este guia para ajudá-lo a entender a arquitetura de aplicativos em c
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>Créditos
+## <a name="credits"></a>Credits
 
 Coautores:
 
@@ -146,9 +146,9 @@ Participantes e revisores:
 >
 > **Charles Lowell**, Engenheiro de Software, equipe do VS CAT, Microsoft
 >
-> **Miguel Veloso**, Consultor sênior da Turing Challenge
+> **Miguel Veloso**, engenheiro de desenvolvimento de software em conceitos simples
 
-## <a name="copyright"></a>Copyright
+## <a name="copyright"></a>Direitos autorais
 
 DOWNLOAD disponível em: <https://aka.ms/microservicesebook>
 
@@ -158,17 +158,17 @@ Divisão de Desenvolvedores Microsoft, equipes dos produtos .NET e Visual Studio
 
 Uma divisão da Microsoft Corporation
 
-Uma maneira de Microsoft
+One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019, Microsoft Corporation
+Copyright © 2020 da Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
 Este manual é fornecido "no estado em que se encontra" e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste guia, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
-Alguns exemplos aqui representados são fornecidos apenas para ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
+Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
 A Microsoft e as marcas comerciais listadas em <https://www.microsoft.com> na página da Web “Marcas comerciais” são marcas comerciais do grupo de empresas da Microsoft.
 
@@ -179,4 +179,4 @@ O logotipo de redistribuição do Docker é uma marca registrada do Docker, Inc.
 Todas as outras marcas e logotipos são propriedade de seus respectivos proprietários.
 
 >[!div class="step-by-step"]
->[Avançar](container-docker-introduction/index.md)
+>[Próximo](container-docker-introduction/index.md)

@@ -1,13 +1,13 @@
 ---
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899769"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502507"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 Você pode ver como essa implementação de objeto de valor do Endereço não tem nenhuma identidade e, portanto, nenhum campo de ID, nem na classe Address, nem mesmo na classe ValueObject.
 
-Não era possível prescindir de um campo de ID em uma classe a ser usada pelo Entity Framework até o EF Core 2.0, o que ajuda muito a implementar objetos de valor melhores sem nenhuma ID. Essa é justamente a explicação da próxima seção.
+Não foi possível ter nenhum campo de ID em uma classe a ser usado pelo Entity Framework (EF) até EF Core 2,0, o que ajuda muito a implementar objetos de valor melhores sem ID. Essa é justamente a explicação da próxima seção.
 
-Seria possível argumentar que já que os objetos de valor são imutáveis, deveriam ser somente leitura (ou seja, propriedades get-only) e isso realmente é verdade. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
+Pode ser argumentado que os objetos de valor, sendo imutáveis, devem ser somente leitura (ou seja, têm propriedades somente obtenção) e isso é verdade. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>Como manter objetos de valor no banco de dados com o EF Core 2.0
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Como persistir objetos de valor no banco de dados com EF Core 2,0 e posterior
 
-Você acabou de ver como definir um objeto de valor em seu modelo de domínio. Porém, como pode você realmente mantê-lo no banco de dados por meio de núcleo do EF (Entity Framework) que geralmente tem como alvo entidades com identidade?
+Você acabou de ver como definir um objeto de valor em seu modelo de domínio. Mas como você pode realmente mantê-lo no banco de dados usando Entity Framework Core, já que ele normalmente visa entidades com identidade?
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Tela de fundo e abordagens mais antigas usando EF Core 1.1
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 No entanto, a persistência desse objeto de valor no banco de dados foi executada como uma entidade normal em uma tabela diferente.
 
-Com o EF Core 2.0, há maneiras novas e melhores de manter objetos de valor.
+Com o EF Core 2,0 e posterior, há novas e melhores maneiras de persistir objetos de valor.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>Manter objetos de valor como tipos de entidade própria no EF Core 2.0
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Persistir objetos de valor como tipos de entidade pertencentes no EF Core 2,0 e posterior
 
-Mesmo com algumas lacunas entre o padrão de objeto de valor canônico em DDD e o tipo de entidade de propriedade no EF Core, atualmente é a melhor maneira de manter objetos de valor com EF Core 2.0. Você pode ver as limitações no final desta seção.
+Mesmo com algumas lacunas entre o padrão de objeto de valor canônico em DDD e o tipo de entidade de propriedade no EF Core, atualmente, é a melhor maneira de persistir objetos de valor com o EF Core 2,0 e posterior. Você pode ver as limitações no final desta seção.
 
 O recurso de tipo de entidade própria foi adicionado ao EF Core desde a versão 2.0.
 
@@ -178,7 +178,7 @@ A identidade de instâncias de tipos próprios não é completamente própria. C
 
 - A propriedade de navegação apontando para elas
 
-- No caso de coleções de tipos próprios, um componente independente (ainda não compatível com o EF Core 2.0; em breve no 2.2).
+- No caso de coleções de tipos de propriedade, um componente independente (com suporte no EF Core 2,2 e posterior).
 
 Por exemplo, no modelo de domínio Ordenação em eShopOnContainers, como parte da entidade de Ordem, o objeto de valor de endereço é implementado como um tipo de entidade própria dentro da entidade de proprietário, que é a entidade Ordem. Endereço é um tipo sem propriedade de identidade definida no modelo de domínio. Ele é usado como uma propriedade do tipo Ordem para especificar o endereço para entrega para uma ordem específica.
 
@@ -275,7 +275,7 @@ public class Address
 
 - A identidade (chave) de uma instância de tipo próprio na nossa pilha é uma composição da identidade do tipo de proprietário e a definição do tipo próprio.
 
-#### <a name="owned-entities-capabilities"></a>Recursos de entidades próprias:
+#### <a name="owned-entities-capabilities"></a>Recursos de entidades de propriedade
 
 - Os tipos próprios podem referenciar outras entidades, tanto próprias (tipos próprios aninhados) quanto não próprias (propriedades de navegação de referência comuns para outras entidades).
 
@@ -283,27 +283,27 @@ public class Address
 
 - A divisão de tabela está configurada por convenção, mas você pode recusá-la mapeando o tipo próprio para uma tabela diferente usando ToTable.
 
-- O carregamento adiantado é executado automaticamente em tipos próprios, ou seja, não há necessidade de chamar Include() na consulta.
+- O carregamento adiantado é executado automaticamente em tipos de propriedade, ou seja, não há necessidade de chamar `.Include()` na consulta.
 
-- Pode ser configurado com o atributo \[Owned\], do EF Core 2.1 em diante
+- Pode ser configurado com o atributo `[Owned]`, usando EF Core 2,1 e posterior.
 
-#### <a name="owned-entities-limitations"></a>Limitações de entidades próprias:
+- Pode lidar com coleções de tipos de propriedade (usando a versão 2,2 e posteriores).
 
-- Não é possível criar um DbSet\<T\> de um tipo próprio (por design).
+#### <a name="owned-entities-limitations"></a>Limitações de entidades pertencentes
 
-- Não é possível chamar ModelBuilder.Entity\<T\>() em tipos próprios (atualmente por design).
+- Você não pode criar um `DbSet<T>` de um tipo de propriedade (por Design).
 
-- Nenhuma coleção de tipos próprios ainda (do EF Core 2.1 em diante, mas terá suporte no 2.2).
+- Você não pode chamar `ModelBuilder.Entity<T>()` em tipos de propriedade (atualmente por Design).
 
-- Não há suporte para tipos próprios opcionais (ou seja, que permitem valor nulo) mapeados com o proprietário na mesma tabela (ou seja, usando a divisão de tabela). Isso ocorre porque o mapeamento é feito para cada propriedade; não temos um sentinela separado para o valor complexo nulo como um inteiro.
+- Não há suporte para tipos de propriedade opcionais (ou seja, anuláveis) que são mapeados com o proprietário na mesma tabela (ou seja, usando divisão de tabela). Isso ocorre porque o mapeamento é feito para cada propriedade; não temos um sentinela separado para o valor complexo nulo como um inteiro.
 
 - Não há suporte de mapeamento de herança para tipos de propriedade, mas você deve conseguir mapear dois tipos de folha das mesmas hierarquias de herança como diferentes tipos próprios. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principais diferenças com tipos complexos do EF6
 
-- A divisão de tabela é opcional, ou seja, podem opcionalmente ser mapeados para uma tabela separada e ainda serem tipos próprios.
+- A divisão de tabela é opcional, ou seja, pode, opcionalmente, ser mapeada para uma tabela separada e ainda ser de tipos de propriedade.
 
-- Podem referenciar outras entidades (ou seja, podem funcionar como o lado dependente em relações com outros tipos não próprios).
+- Eles podem referenciar outras entidades (ou seja, eles podem atuar como o lado dependente em relações com outros tipos de propriedade diferente).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon. Implementando o design controlado por domínio.** (Livro; inclui uma discussão sobre objetos de valor) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **Tipos de entidade pertencentes** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **Propriedades de sombra** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **Tipos complexos e/ou objetos de valor**. Discussão no repositório GitHub do EF Core (guia Problemas) \
   <https://github.com/dotnet/efcore/issues/246>

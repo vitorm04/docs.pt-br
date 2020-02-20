@@ -1,13 +1,13 @@
 ---
 title: Terminologia do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Terminologia do Docker
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921014"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502831"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -31,7 +31,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Registro**: um serviço que dá acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: para várias arquiteturas, é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:2.2** do registro, ele realmente Obtém **2,2-SDK-los-1709**, **2,2-SDK-los-1803**, **2,2-SDK-coserver-1809** ou **2,2-SDK-Stretch**, dependendo do sistema operacional e da versão em que o Docker está em execução.
+**Imagem de vários arcos**: para várias arquiteturas, trata-se de um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução. Por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:3.1** a partir do registro, ele realmente Obtém **3,1-SDK-** los-1909, **3,1-sdk-los Server-1809** ou **3,1-SDK-Buster-Slim**, dependendo do sistema operacional e da versão em que o Docker está em execução.
 
 **Docker Hub**: um registro público para carregar imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 

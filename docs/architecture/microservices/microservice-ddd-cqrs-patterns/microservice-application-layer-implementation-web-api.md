@@ -1,13 +1,13 @@
 ---
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
-description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: Entenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo da API Web.
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737480"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502443"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ Basicamente, a classe de comando contém todos os dados necessários para realiz
 
 Como uma característica adicional, os comandos são imutáveis, porque o uso esperado é que eles sejam processados diretamente pelo modelo de domínio. Eles não precisam ser alterados durante o tempo de vida projetado. Em uma classe de C#, a imutabilidade pode ser obtida por não haver nenhum setter nem outros métodos que alterem o estado interno.
 
-Lembre-se de que se você pretende ou espera que os comandos passem por um processo de serialização/desserialização, as propriedades devem ter um setter privado e o atributo `[DataMember]` (ou `[JsonProperty]`), caso contrário, o desserializador não consegue reconstruir o objeto no destino com os valores necessários.
+Tenha em mente que, se você pretender ou esperar que os comandos passem por um processo de serialização/desserialização, as propriedades deverão ter um setter particular e o atributo `[DataMember]` (ou `[JsonProperty]`). Caso contrário, o desserializador não poderá reconstruir o objeto no destino com os valores necessários. Você também pode usar Propriedades verdadeiramente somente leitura se a classe tiver um construtor com parâmetros para todas as propriedades, com a Convenção de nomenclatura camelCase usual e anotar o construtor como `[JsonConstructor]`. No entanto, essa opção requer mais código.
 
 Por exemplo, a classe de comando para a criação de um pedido é, provavelmente, semelhante em relação aos dados para o pedido que você deseja criar, mas é provável que você não precise dos mesmos atributos. Por exemplo, `CreateOrderCommand` não tem uma ID de pedido, porque a ordem ainda não foi criada.
 
@@ -313,9 +311,9 @@ public class UpdateOrderStatusCommand
 
 Alguns desenvolvedores criam os objetos de solicitação da interface do usuário separados dos DTOs do comando, mas essa é apenas uma questão de preferência. É uma separação entediante que não agrega muito valor, e os objetos são quase exatamente da mesma forma. Por exemplo, em eShopOnContainers, alguns comandos vêm diretamente do lado do cliente.
 
-### <a name="the-command-handler-class"></a>A classe Manipuladora de Comandos
+### <a name="the-command-handler-class"></a>A classe do manipulador de comandos
 
-Você deve implementar uma classe manipuladora de comandos específica para cada comando. É assim que o padrão funciona e é o local em que você usará o objeto de comando, os objetos de domínio e os objetos de repositório da infraestrutura. O manipulador de comandos é, na verdade, a essência da camada de aplicativo em termos de CQRS e DDD. No entanto, toda a lógica do domínio deve estar contida nas classes de domínio — nas raízes de agregação (entidades raiz), nas entidades filho ou nos [serviços de domínio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), mas não no manipulador de comandos, que é uma classe da camada de aplicativo.
+Você deve implementar uma classe manipuladora de comandos específica para cada comando. É assim que o padrão funciona, e é onde você usará o objeto de comando, os objetos de domínio e os objetos de repositório de infraestrutura. O manipulador de comandos é, na verdade, a essência da camada de aplicativo em termos de CQRS e DDD. No entanto, toda a lógica de domínio deve estar contida nas classes de domínio — dentro das raízes de agregação (entidades raiz), entidades filho ou [serviços de domínio](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/), mas não dentro do manipulador de comandos, que é uma classe da camada de aplicativo.
 
 A classe de manipulador de comando oferece um forte ponto de partida no caminho para alcançar o SRP (Princípio de Responsabilidade Único) mencionado em uma seção anterior.
 
@@ -668,7 +666,7 @@ public class MediatorModule : Autofac.Module
 
 É aqui que a "mágica acontece" com o MediatR.
 
-Como cada manipulador de comando implementa a interface `IAsyncRequestHandler<T>` genérica, durante o registro de assemblies, o código registra todos os tipos marcados como `IAsyncRequestHandler` com `RegisteredAssemblyTypes`, relacionando, ao mesmo tempo, os `CommandHandlers` com seus respectivos `Commands`, graças a relação declarada na classe `CommandHandler`, como no exemplo a seguir:
+Como cada manipulador de comando implementa a interface `IAsyncRequestHandler<T>` genérica, durante o registro de assemblies, o código registra todos os tipos marcados como `RegisteredAssemblyTypes` com `IAsyncRequestHandler`, relacionando, ao mesmo tempo, os `CommandHandlers` com seus respectivos `Commands`, graças a relação declarada na classe `CommandHandler`, como no exemplo a seguir:
 
 ```csharp
 public class CreateOrderCommandHandler
