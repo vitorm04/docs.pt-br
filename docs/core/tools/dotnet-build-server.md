@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet build-server
 description: O comando dotnet build-server interage com os servidores iniciados por um build.
-ms.date: 04/24/2019
-ms.openlocfilehash: e77a4d9f49f555ac847bb13380380599eef881b1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734383"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503782"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
--->
-
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet build-server` – interage com servidores iniciados por um build.
 
@@ -29,13 +25,13 @@ dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
 ```
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 
 - **`shutdown`**
 
   Desliga servidores de build iniciados por meio do dotnet. Por padrão, todos os servidores estão desligados.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`-h|--help`**
 

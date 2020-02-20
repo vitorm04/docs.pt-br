@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340377"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503563"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: criar um modelo de item
 
@@ -26,7 +26,7 @@ Nesta parte da série, você aprenderá a:
 > * Testar um modelo de item
 > * Desinstalar um modelo de item
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 * [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download) ou versões posteriores.
 * Leia o artigo de referência [Modelos personalizados para dotnet new](../tools/custom-templates.md).
@@ -41,7 +41,7 @@ Esta série usa uma "pasta de trabalho" na qual sua fonte de modelo está contid
 
 Primeiro, crie a pasta pai. Use o nome que desejar para a pasta. Em seguida, crie uma subpasta chamada _working_. Na pasta _working_, crie uma subpasta chamada _templates_.
 
-Em seguida, crie uma pasta na pasta pai chamada _test_. A estrutura da pasta deve ser semelhante a isto:
+Em seguida, crie uma pasta na pasta pai chamada _test_. A estrutura de pastas deve ser parecida com a seguinte.
 
 ```console
 parent_folder
@@ -89,7 +89,7 @@ Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de
 
 Quando você cria um modelo, todos os arquivos e pastas na pasta de modelos são incluídos como parte do modelo, exceto a pasta de configuração especial. Esta pasta de configuração chama-se _.template.config_.
 
-Primeiro, crie uma nova subpasta chamada _.template.config_, insira-a. Em seguida, crie um novo arquivo chamado _template.json_. A estrutura da pasta deve ter a seguinte aparência:
+Primeiro, crie uma nova subpasta chamada _.template.config_, insira-a. Em seguida, crie um novo arquivo chamado _template.json_. A estrutura de pastas devem ter a seguinte aparência:
 
 ```console
 working
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-Abra o _template.json_ com seu editor de texto favorito, cole no seguinte código JSON e salve-o:
+Abra o _Template. JSON_ com seu editor de texto favorito e cole o código JSON a seguir e salve-o.
 
 ```json
 {
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 Agora que você tem um modelo de item instalado, teste-o. Navegue até a pasta _test/_ e crie um novo aplicativo de console com `dotnet new console`. Isso gera um projeto funcional que você pode testar facilmente com o comando `dotnet run`.
 
+```dotnetcli
+dotnet new console
+```
+
+Você Obtém uma saída semelhante à seguinte.
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+Execute o projeto com.
+
+```dotnetcli
+dotnet run
+```
+
+Você Obtém a saída a seguir.
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 Em seguida, execute `dotnet new stringext` para gerar o _CommonExtensions.cs_ a partir do modelo.
 
+```dotnetcli
+dotnet new stringext
+```
+
+Você Obtém a saída a seguir.
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 Execute o programa novamente e você verá que o resultado foi invertido.
 
+```dotnetcli
+dotnet run
+```
+
+Você Obtém a saída a seguir.
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ Parabéns! Você criou e implantou um modelo de item com o .NET Core. Para se pr
 
 Como você instalou o modelo com o caminho de arquivo, você deve desinstalá-lo com o caminho de arquivo **absoluto**. Você pode ver uma lista de modelos instalados executando o comando `dotnet new -u`. Seu modelo deve ser listado por último. Use o caminho listado para desinstalar o modelo com o comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
 
+```dotnetcli
+dotnet new -u
+```
+
+Você Obtém uma saída semelhante à seguinte.
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,11 +249,13 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+Para desinstalar um modelo, execute o comando a seguir.
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você criou um modelo de item. Para saber como criar um modelo de projeto, continue a ver essa série de tutoriais.
 

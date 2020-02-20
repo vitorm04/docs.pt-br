@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734116"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503649"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet pack` – Empacota o código em um pacote NuGet.
 
@@ -30,7 +26,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote NuGet (ou seja, um arquivo *. nupkg* ).
 
@@ -61,15 +57,15 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
   O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), um arquivo de solução ou um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O valor padrão é `Debug`.
+  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 - **`--force`**
 
-  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*. Opção disponível desde o SDK do .NET Core 2.0.
+  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--no-dependencies`**
 
-  Ignora as referências projeto a projeto e só restaura o projeto raiz. Opção disponível desde o SDK do .NET Core 2.0.
+  Ignora as referências projeto a projeto e só restaura o projeto raiz.
 
 - **`--no-restore`**
 
-  Não executa uma restauração implícita ao executar o comando. Opção disponível desde o SDK do .NET Core 2.0.
+  Não executa uma restauração implícita ao executar o comando.
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica o runtime de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Opção disponível desde o SDK do .NET Core 2.0.
+  Especifica o runtime de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md).
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Empacote o projeto e use um runtime específico (Windows 10) para a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
+- Empacotar o projeto e usar um tempo de execução específico (Windows 10) para a operação de restauração:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

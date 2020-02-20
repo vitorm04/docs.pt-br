@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet msbuild
 description: O comando dotnet msbuild fornece acesso à linha de comando MSBuild.
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733201"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503671"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet msbuild` – Compila um projeto e todas as suas dependências.
 
@@ -21,7 +21,7 @@ ms.locfileid: "76733201"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet msbuild` permite o acesso a um MSBuild totalmente funcional.
 
@@ -31,25 +31,25 @@ O comando [dotnet build](dotnet-build.md) é equivalente ao comando `dotnet msbu
 
 ## <a name="examples"></a>Exemplos
 
-* Compile um projeto e suas dependências:
+- Compile um projeto e suas dependências:
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* Compile um projeto e suas dependências usando a configuração da Versão:
+- Compile um projeto e suas dependências usando a configuração da Versão:
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* Execute o destino de publicação e publique para o RID `osx.10.11-x64`:
+- Execute o destino de publicação e publique para o RID `osx.10.11-x64`:
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* Confira o projeto inteiro com todos os destinos incluídos pelo SDK:
+- Confira o projeto inteiro com todos os destinos incluídos pelo SDK:
 
   ```dotnetcli
   dotnet msbuild -preprocess

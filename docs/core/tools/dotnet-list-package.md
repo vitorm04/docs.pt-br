@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet list package
 description: O comando 'dotnet list package' fornece uma opção conveniente para listar as referências de pacote de um projeto ou solução.
-ms.date: 06/26/2019
-ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 02/14/2020
+ms.openlocfilehash: bd275c308c3a213661d5cc6c7e60817620f076a5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117729"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503742"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-[!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -25,7 +25,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução. Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado. O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 
@@ -33,7 +33,7 @@ O comando `dotnet list package` fornece uma opção conveniente para listar toda
 Project 'SentimentAnalysis' has the following package references
    [netcoreapp2.1]:
    Top-level Package               Requested   Resolved
-   > Microsoft.ML                  0.11.0      0.11.0
+   > Microsoft.ML                  1.4.0       1.4.0
    > Microsoft.NETCore.App   (A)   [2.1.0, )   2.1.0
 
 (A) : Auto-referenced package.
@@ -46,11 +46,12 @@ Use a opção `--outdated` para descobrir se existem versões mais recentes dos 
 ```output
 The following sources were used:
    https://api.nuget.org/v3/index.json
+   C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
 
 Project `SentimentAnalysis` has the following updates to its packages
    [netcoreapp2.1]:
    Top-level Package      Requested   Resolved   Latest
-   > Microsoft.ML         0.11.0      0.11.0     1.0.0-preview
+   > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
 Se você precisa descobrir se seu projeto tem dependências transitivas, use a opção `--include-transitive`. Dependências transitivas ocorrem quando você adiciona um pacote ao seu projeto que, por sua vez, depende de outro pacote. O exemplo a seguir mostra a saída da execução do comando `dotnet list package --include-transitive` para o projeto [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin), que exibe os pacotes de nível superior e os pacotes dos quais eles dependem:
@@ -58,18 +59,11 @@ Se você precisa descobrir se seu projeto tem dependências transitivas, use a o
 ```output
 Project 'HelloPlugin' has the following package references
    [netcoreapp3.0]:
-   Top-level Package                      Requested                    Resolved
-   > Microsoft.NETCore.Platforms    (A)   [3.0.0-preview3.19128.7, )   3.0.0-preview3.19128.7
-   > Microsoft.WindowsDesktop.App   (A)   [3.0.0-preview3-27504-2, )   3.0.0-preview3-27504-2
-
-   Transitive Package               Resolved
-   > Microsoft.NETCore.Targets      2.0.0
-   > PluginBase                     1.0.0
-
-(A) : Auto-referenced package.
+   Transitive Package      Resolved
+   > PluginBase            1.0.0
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `PROJECT | SOLUTION`
 
@@ -77,61 +71,61 @@ O arquivo de projeto ou solução para operar. Se não for especificado, o coman
 
 ## <a name="options"></a>Opções
 
-* **`--config <SOURCE>`**
+- **`--config <SOURCE>`**
 
   A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a opção `--outdated`.
 
-* **`--framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
   Exibe apenas os pacotes aplicáveis para a [estrutura de destino](../../standard/frameworks.md) especificada. Para especificar várias estruturas, repita a opção várias vezes. Por exemplo: `--framework netcoreapp2.2 --framework netstandard2.0`.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
-* **`--highest-minor`**
+- **`--highest-minor`**
 
   Ao procurar pacotes mais novos, considerar apenas os pacotes com um número de versão principal correspondente. Requer a opção `--outdated`.
 
-* **`--highest-patch`**
+- **`--highest-patch`**
 
   Ao procurar pacotes mais novos, considerar apenas os pacotes com números de versão principais e secundários correspondentes. Requer a opção `--outdated`.
 
-* **`--include-prerelease`**
+- **`--include-prerelease`**
 
   Ao procurar pacotes mais novos, considere pacotes com versões de pré-lançamento. Requer a opção `--outdated`.
 
-* **`--include-transitive`**
+- **`--include-transitive`**
 
   Lista pacotes transitivos, além dos pacotes de nível superior. Ao especificar essa opção, você obtém uma lista de pacotes dos quais os pacotes de nível superior dependem.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
 
-* **`--outdated`**
+- **`--outdated`**
 
   Lista os pacotes que têm as versões mais recentes disponíveis.
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   A fontes do NuGet a serem usadas ao procurar pacotes mais novos. Requer a opção `--outdated`.
 
 ## <a name="examples"></a>Exemplos
 
-* Listar referências de pacote de um projeto específico:
+- Listar referências de pacote de um projeto específico:
 
   ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
-* Listar referências de pacote com versões mais recentes disponíveis, incluindo versões de pré-lançamento:
+- Listar referências de pacote com versões mais recentes disponíveis, incluindo versões de pré-lançamento:
 
   ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
-* Listar referências de pacotes para uma estrutura de destino específica:
+- Listar referências de pacotes para uma estrutura de destino específica:
 
   ```dotnetcli
   dotnet list package --framework netcoreapp3.0

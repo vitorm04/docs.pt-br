@@ -3,18 +3,18 @@ title: Desenvolver bibliotecas com o CLI do .NET Core
 description: Saiba como criar bibliotecas do .NET Core usando o CLI do .NET Core. Você criará uma biblioteca que dá suporte a várias estruturas.
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920440"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503499"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Desenvolver bibliotecas com o CLI do .NET Core
 
 Este artigo aborda como gravar bibliotecas para .NET usando o CLI do .NET Core. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisa da [CLI e do SDK do .NET Core](https://dotnet.microsoft.com/download) instalados no seu computador.
 
@@ -29,7 +29,7 @@ Além disso, se você quiser dar suporte a destinos de .NET Framework mais antig
 | 4.5.2                  | Pacote de Desenvolvedor do .NET Framework 4.5.2                    |
 | 4.5.1                  | Pacote de Desenvolvedor do .NET Framework 4.5.1                    |
 | 4.5                    | Software Development Kit do Windows (SDK do Windows) para Windows 8         |
-| 4.0                    | SDK do Windows para Windows 7 e .NET Framework 4         |
+| 4,0                    | SDK do Windows para Windows 7 e .NET Framework 4         |
 | 2.0, 3.0 e 3.5      | Runtime do .NET Framework 3.5 SP1 (ou versão do Windows 8 ou superior) |
 
 ## <a name="how-to-target-the-net-standard"></a>Como direcionar para o .NET Standard
@@ -77,10 +77,10 @@ Se você quiser alcançar o número máximo de desenvolvedores e projetos, use .
 | .NET Framework 3.0     | `net30`  |
 | .NET Framework 3.5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
-| {1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1}     | `net45`  |
-| {1&gt;.NET Framework 4.5.1&lt;1}   | `net451` |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
-| .NET Framework 4.6     | `net46`  |
+| .NET framework 4.6     | `net46`  |
 | .NET Framework 4.6.1   | `net461` |
 | .NET Framework 4.6.2   | `net462` |
 | .NET Framework 4.7     | `net47`  |
@@ -96,7 +96,7 @@ Em seguida, insira esse TFM na seção `TargetFramework` do arquivo de projeto. 
 </Project>
 ```
 
-E pronto. Embora isso seja compilado apenas para .NET Framework 4, você pode usar a biblioteca em versões mais recentes do .NET Framework.
+E isso é tudo! Embora isso seja compilado apenas para .NET Framework 4, você pode usar a biblioteca em versões mais recentes do .NET Framework.
 
 ## <a name="how-to-multitarget"></a>Como multidirecionar
 
@@ -220,7 +220,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
 
 1. Configure sua solução. Você pode fazer isso usando os seguintes comandos:
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
 
 1. Navegue até o diretório do projeto de teste e adicione uma referência a `MyProject.Test` de `MyProject`.
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -257,7 +257,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
 
 1. Verifique se o xUnit é executado por meio da execução do comando `dotnet test`. Se você optar por usar o MSTest, o executor de console do MSTest deverá ser executado.
 
-E pronto. Agora você pode testar sua biblioteca em todas as plataformas usando ferramentas de linha de comando. É muito simples testar sua biblioteca agora que está tudo configurado:
+E isso é tudo! Agora você pode testar sua biblioteca em todas as plataformas usando ferramentas de linha de comando. É muito simples testar sua biblioteca agora que está tudo configurado:
 
 1. Faça alterações na sua biblioteca.
 1. Execute os testes de linha de comando no diretório de teste com o comando `dotnet test`.
@@ -300,7 +300,7 @@ Cenários de consumo como esse significam que as APIs que estão sendo acessadas
 
 Você pode executar os comandos a seguir no seu terminal para produzir a mesma estrutura que este guia:
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

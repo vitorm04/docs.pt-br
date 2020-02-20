@@ -1,21 +1,17 @@
 ---
 title: Comando dotnet clean
 description: O comando dotnet clean limpa o diretório atual.
-ms.date: 06/26/2019
-ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451350"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503748"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -41,9 +37,9 @@ O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou p
 
 ## <a name="options"></a>Opções
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O valor padrão é `Debug`. Essa opção só será exigida na limpeza se você especificá-la durante o momento do build.
+  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto. Essa opção só será exigida na limpeza se você especificá-la durante o momento do build.
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou p
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Limpa a pasta de saída do runtime especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#publish-self-contained) foi criada. Opção disponível desde o SDK do .NET Core 2.0.
+  Limpa a pasta de saída do runtime especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#publish-self-contained) foi criada.
 
 * **`-v|--verbosity <LEVEL>`**
 

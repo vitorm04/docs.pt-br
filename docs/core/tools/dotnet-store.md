@@ -1,84 +1,90 @@
 ---
 title: Comando dotnet store
 description: O comando "dotnet store" armazena os assemblies especificados no repositório de pacotes de runtime.
-ms.date: 05/29/2018
-ms.openlocfilehash: cc5b4b6160ba296e1529f006c15e238746d9e08a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733057"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503586"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet store` – Armazena os assemblies especificados no [repositório de pacotes de runtime](../deploying/runtime-store.md).
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
+```dotnetcli
+dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 `dotnet store` armazena os assemblies especificados no [repositório de pacotes de runtime](../deploying/runtime-store.md). Por padrão, os assemblies são otimizados para a estrutura e o runtime de destino. Para obter mais informações, consulte o tópico [repositório de pacotes de runtime](../deploying/runtime-store.md).
 
 ## <a name="required-options"></a>Opções obrigatórias
 
-`-f|--framework <FRAMEWORK>`
+- **`-f|--framework <FRAMEWORK>`**
 
-Especifica a [estrutura de destino](../../standard/frameworks.md).
+  Especifica a [estrutura de destino](../../standard/frameworks.md). A estrutura de destino deve ser especificada no arquivo de projeto.
 
-`-m|--manifest <PATH_TO_MANIFEST_FILE>`
+- **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados. O formato do arquivo de manifesto é compatível com o formato de projeto de estilo SDK. Portanto, um arquivo de projeto que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar assemblies no repositório de pacotes de runtime. Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo. Por exemplo: `--manifest packages1.csproj --manifest packages2.csproj`.
+  O *arquivo de manifesto do repositório de pacotes* é um arquivo XML que contém a lista de pacotes a serem armazenados. O formato do arquivo de manifesto é compatível com o formato de projeto de estilo SDK. Portanto, um arquivo de projeto que referencia os pacotes desejados pode ser usado com a opção `-m|--manifest` para armazenar assemblies no repositório de pacotes de runtime. Para especificar vários arquivos de manifesto, repita a opção e o caminho para cada arquivo. Por exemplo: `--manifest packages1.csproj --manifest packages2.csproj`.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-O [identificador do runtime](../rid-catalog.md) a ser usado como destino.
+  O [identificador do runtime](../rid-catalog.md) a ser usado como destino.
 
 ## <a name="optional-options"></a>Opções opcionais
 
-`--framework-version <FRAMEWORK_VERSION>`
+- **`--framework-version <FRAMEWORK_VERSION>`**
 
-Especifica a versão do SDK do .NET Core. Essa opção permite que você selecione uma versão da estrutura específica, além da estrutura especificada pela opção `-f|--framework`.
+  Especifica a versão do SDK do .NET Core. Essa opção permite que você selecione uma versão da estrutura específica, além da estrutura especificada pela opção `-f|--framework`.
 
-`-h|--help`
+- **`-h|--help`**
 
-Mostra informações de ajuda.
+  Mostra informações de ajuda.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Especifica o caminho para o repositório de pacotes de runtime. Se não for especificado, o padrão será o subdiretório *repositório* do diretório de instalação do .NET Core do perfil do usuário.
+  Especifica o caminho para o repositório de pacotes de runtime. Se não for especificado, o padrão será o subdiretório *repositório* do diretório de instalação do .NET Core do perfil do usuário.
 
-`--skip-optimization`
+- **`--skip-optimization`**
 
-Ignora a fase de otimização.
+  Ignora a fase de otimização.
 
-`--skip-symbols`
+- **`--skip-symbols`**
 
-Ignora a geração de símbolos. No momento, só é possível gerar símbolos no Windows e no Linux.
+  Ignora a geração de símbolos. No momento, só é possível gerar símbolos no Windows e no Linux.
 
-`-v|--verbosity <LEVEL>`
+- **`-v|--verbosity <LEVEL>`**
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-`-w|--working-dir <INTERMEDIATE_WORKING_DIRECTORY>`
+- **`-w|--working-dir <WORKING_DIRECTORY>`**
 
-O diretório de trabalho usado pelo comando. Se não for especificado, ele usará o subdiretório *obj* do diretório atual.
+  O diretório de trabalho usado pelo comando. Se não for especificado, ele usará o subdiretório *obj* do diretório atual.
 
 ## <a name="examples"></a>Exemplos
 
-Armazene os pacotes especificados no arquivo de projeto *packages.csproj* para .NET Core 2.0.0:
+- Armazene os pacotes especificados no arquivo de projeto *packages.csproj* para .NET Core 2.0.0:
 
-`dotnet store --manifest packages.csproj --framework-version 2.0.0`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --framework-version 2.0.0
+  ```
 
-Armazene os pacotes especificados no *packages.csproj* sem otimização:
+- Armazene os pacotes especificados no *packages.csproj* sem otimização:
 
-`dotnet store --manifest packages.csproj --skip-optimization`
+  ```dotnetcli
+  dotnet store --manifest packages.csproj --skip-optimization
+  ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Repositório de pacote de runtime](../deploying/runtime-store.md)

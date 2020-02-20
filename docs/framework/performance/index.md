@@ -5,12 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716038"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504096"
 ---
 # <a name="net-framework-performance"></a>Desempenho do .NET Framework
 Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o desempenho da mesma forma como projetaria qualquer outro recurso do aplicativo. É possível usar as ferramentas fornecidas pela Microsoft para medir o desempenho do aplicativo e, se necessário, fazer melhorias no uso da memória, na produtividade de código e na capacidade de resposta. Este tópico lista as ferramentas de análise de desempenho que a Microsoft fornece, além de fornecer links a outros tópicos que abordam o desempenho em áreas específicas do desenvolvimento de aplicativo.  
@@ -28,12 +28,12 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 ### <a name="performance-tools"></a>Ferramentas de desempenho  
  Seguem algumas das ferramentas de desempenho que você pode usar com os aplicativos .NET Framework.  
   
-|Ferramenta|Descrição|  
+|Ferramenta|DESCRIÇÃO|  
 |----------|-----------------|  
 |Análise de desempenho do Visual Studio|Use para analisar o uso de CPU dos aplicativos .NET Framework, que serão implantados em computadores que executam o sistema operacional Windows.<br /><br /> Essa ferramenta está disponível do menu **Depurar** no Visual Studio depois de você abrir um projeto. Para obter mais informações, consulte [Gerenciador de Desempenho](/visualstudio/profiling/performance-explorer). **Observação:** use a Análise de Aplicativo do Windows Phone (veja a próxima linha) ao focar um Windows Phone.|  
 |Análise de Aplicativo do Windows Phone|Use para analisar a CPU e a memória, a taxa de transferência de dados de rede, a capacidade de resposta do aplicativo e o consumo de bateria nos aplicativos do Windows Phone.<br /><br /> Essa ferramenta está disponível do menu **Depurar** para um projeto do Windows Phone no Visual Studio depois de você instalar o [SDK do Windows Phone](https://go.microsoft.com/fwlink/?LinkId=265773). Para obter mais informações, consulte [criação de perfil de aplicativo para Windows Phone 8](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
-|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Use para identificar problemas de desempenho relacionados a CPU e memória. Essa ferramenta usa APIs de criação de perfil Rastreamento de Eventos para Windows (ETW) e CLR para fornecer investigações avançadas de memória e CPU, além de informações sobre coleta de lixo e compilação JIT. Para obter mais informações sobre como usar o PerfView, consulte os arquivos de ajuda e o tutorial que estão incluídos com o aplicativo, os [tutoriais em vídeo do Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) e as [postagens de blog](https://blogs.msdn.microsoft.com/vancem/tag/perfview/).<br /><br /> Para problemas específicos de memória, consulte [Usando PerfView para investigações de memória](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
-|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Use para determinar o desempenho geral do sistema, como uso de memória e armazenamento do aplicativo quando vários aplicativos estão em execução no mesmo computador. Essa ferramenta está disponível no centro de download como parte do kit de avaliação e implantação do Windows (ADK) para Windows 8. Para obter mais informações, consulte [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|  
+|[PerfView](https://www.microsoft.com/download/details.aspx?id=28567)|Use para identificar problemas de desempenho relacionados a CPU e memória. Essa ferramenta usa APIs de criação de perfil Rastreamento de Eventos para Windows (ETW) e CLR para fornecer investigações avançadas de memória e CPU, além de informações sobre coleta de lixo e compilação JIT. Para obter mais informações sobre como usar o PerfView, consulte os arquivos de ajuda e o tutorial que estão incluídos com o aplicativo, os [tutoriais em vídeo do Channel 9](https://channel9.msdn.com/Series/PerfView-Tutorial) e as [postagens de blog](https://docs.microsoft.com/archive/blogs/vancem/).<br /><br /> Para problemas específicos de memória, consulte [Usando PerfView para investigações de memória](https://channel9.msdn.com/Series/PerfView-Tutorial/PerfView-Tutorial-9-NET-Memory-Investigation-Basics-of-GC-Heap-Snapshots).|  
+|[Windows Performance Analyzer](https://www.microsoft.com/download/details.aspx?id=30652)|Use para determinar o desempenho geral do sistema, como uso de memória e armazenamento do aplicativo quando vários aplicativos estão em execução no mesmo computador. Essa ferramenta está disponível no centro de download como parte do kit de avaliação e implantação do Windows (ADK) para Windows 8. Para obter mais informações, consulte [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|
   
 ### <a name="event-tracing-for-windows-etw"></a>ETW (Rastreamento de Eventos para Windows)  
  O ETW é uma técnica que permite obter informações de diagnóstico sobre o código em execução e é essencial para muitas das ferramentas de desempenho já mencionadas. O ETW cria logs quando eventos em particular são lançados pelos aplicativos .NET Framework e o Windows. Com o ETW, é possível habilitar e desabilitar o registro em log dinamicamente, de modo que você possa realizar acompanhamento detalhado em um ambiente de produção sem reiniciar o aplicativo. O .NET Framework oferece suporte a eventos do ETW, e o ETW é usado por muitas ferramentas de definição de perfil e desempenho para gerar dados de desempenho. Essas ferramentas habilitam e desabilitam com frequência eventos do ETW, então é útil ficar familiarizado com elas. É possível usar eventos específicos do ETW para coletar informações de desempenho sobre componentes especiais do seu aplicativo. Para obter mais informações sobre o suporte ETW no .NET Framework, consulte [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md) e [Eventos ETW na biblioteca de tarefas paralelas e em PLINQ](etw-events-in-task-parallel-library-and-plinq.md).  
@@ -48,9 +48,9 @@ Se você deseja criar aplicativos com ótimo desempenho, projete e planeje o des
 |Windows Presentation Foundation (WPF)|[Pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[Visão geral do desempenho do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Cargo|Descrição|  
+|Title|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Cache em aplicativos do .NET Framework](caching-in-net-framework-applications.md)|Descreve técnicas para armazenar dados em cache para melhorar o desempenho no aplicativo.|  
 |[Inicialização lenta](lazy-initialization.md)|Descreve como inicializar objetos quando necessário para melhorar o desempenho, especialmente na inicialização do aplicativo.|  

@@ -2,18 +2,18 @@
 title: Introdução ao F# com ferramentas de linha de comando
 description: Saiba como criar uma solução simples de vários projetos sobre F# como usar o CLI do .NET Core em qualquer sistema operacional (Windows, MacOS ou Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559481"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504138"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Introdução ao F# com o CLI do .NET Core
 
 Este artigo aborda como você pode começar a usar F# o em qualquer sistema operacional (Windows, MacOS ou Linux) com o CLI do .NET Core. Ele passa pela criação de uma solução de vários projetos com uma biblioteca de classes chamada por um aplicativo de console.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Para começar, você deve instalar a [SDK do .NET Core](https://dotnet.microsoft.com/download)mais recente.
 
@@ -135,7 +135,7 @@ Restaure as dependências do NuGet, `dotnet restore` e execute `dotnet build` pa
 
 Altere o diretório para o projeto de console `src/App` e execute o projeto passando `Hello World` como argumentos:
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```
@@ -149,6 +149,6 @@ I used to be Hello but now I'm ""Hello"" thanks to JSON.NET!
 I used to be World but now I'm ""World"" thanks to JSON.NET!
 ```
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Em seguida, confira o [Tour F# do](../tour.md) para saber mais sobre F# os diferentes recursos.

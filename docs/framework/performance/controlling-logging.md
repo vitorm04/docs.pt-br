@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716102"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504103"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
 
@@ -17,7 +17,7 @@ Você pode usar o ETW (Rastreamento de Eventos para Windows) para registrar even
 
 - As ferramentas de linha de comando [Logman](/windows-server/administration/windows-commands/logman) e [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), ambas incluídas no sistema operacional Windows.
 
-- As ferramentas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) no [Windows Performance Toolkit](/windows-hardware/test/wpt/). Para obter mais informações sobre o Xperf, visite o [blog de Desempenho do Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/).
+- As ferramentas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) no [Windows Performance Toolkit](/windows-hardware/test/wpt/). Para obter mais informações sobre o Xperf, visite o [blog de Desempenho do Windows](https://docs.microsoft.com/archive/blogs/pigscanfly/).
 
 Para capturar informações de eventos de CLR, o provedor de CLR deve estar instalado em seu computador. Para confirmar que o provedor está instalado, digite `logman query providers` no prompt de comando. Uma lista de provedores é exibida. Essa lista deve conter uma entrada para o provedor CLR, conforme mostrado a seguir.
 
@@ -27,7 +27,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra a janela do Prompt de Comando como administrador. Altere o diretório de prompts para a pasta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versão > \). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
+Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra uma janela de prompt de comando como administrador. Altere o diretório de prompts para a pasta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versão > \). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
 
 `wevtutil im CLR-ETW.man`
 
@@ -49,7 +49,7 @@ Para ativar o log, um usuário deve especificar três coisas:
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
-     em que:
+     onde:
 
     - O parâmetro `-p` identifica o GUID do provedor.
 
@@ -109,7 +109,7 @@ Use os comandos listados abaixo para exibir os eventos ETW de CLR. Para obter um
 
      Este comando faz com que XPerf despeje os eventos na forma de um arquivo de valores separados por vírgula (CSV) que você pode abrir. Porque eventos diferentes possuem campos diferentes, esse arquivo CSV contém mais de uma linha de cabeçalho antes dos dados. O primeiro campo de cada linha é o tipo de evento, que indica qual cabeçalho deve ser usado para determinar o restante dos campos.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Kit de Ferramentas de Desempenho do Windows](/windows-hardware/test/wpt/)
+- [Kit de ferramentas de desempenho do Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

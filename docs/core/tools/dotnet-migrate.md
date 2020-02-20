@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet migrate
 description: O comando dotnet migrate migra um projeto e todas as suas dependências.
-ms.date: 01/07/2020
-ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734148"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503704"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x ✔️ SDK do .NET Core 2. x
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet migrate` – Migrar um projeto do .NET Core Versão Prévia 2 para um projeto no estilo do SDK do .NET Core.
 
@@ -24,7 +24,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 Este comando foi preterido. O comando `dotnet migrate` não está mais disponível a partir do SDK do .NET Core 3,0. Ele só pode migrar um projeto do .NET Core da versão prévia 2 para um projeto do .NET Core 1. x, que está sem suporte.
 
@@ -56,7 +56,7 @@ O caminho até um dos seguintes:
 
 Se nada for especificado, o padrão será o diretório atual.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 `--format-report-file-json <REPORT_FILE>`
 

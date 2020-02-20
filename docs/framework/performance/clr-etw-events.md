@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716207"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504131"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW no CLR
 Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para Windows). Cada evento tem uma palavra-chave e um nível associados, que são descritos no tópico [Palavras-chave e níveis CLR ETW](clr-etw-keywords-and-levels.md). O CLR tem dois provedores para os eventos:  
@@ -59,10 +59,9 @@ Os tópicos desta seção descrevem os eventos ETW (rastreamento de eventos para
  [Evento de pilha](stack-etw-event.md)  
  Captura informações que são usadas com outros eventos para gerar rastreamentos de pilha depois que um evento é acionado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Melhore o ajuste de depuração e desempenho com o ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
-- [Blog de desempenho do Windows](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Controlando o log no .NET Framework](controlling-logging.md)
 - [Provedores CLR ETW](clr-etw-providers.md)
 - [Palavras-chave e níveis CLR ETW](clr-etw-keywords-and-levels.md)

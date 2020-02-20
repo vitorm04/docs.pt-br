@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712033"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504006"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -39,8 +39,11 @@ Em seguida, crie um script do Powershell para executar o aplicativo e exibir o r
 
 Como o código retorna zero, o arquivo em lotes relatará êxito. No entanto, se você alterar o MainReturnValTest.cs para retornar um valor diferente de zero e recompilar o programa, a execução subsequente do script do PowerShell reportará falha.
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -92,7 +95,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 > [!NOTE]
 >Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Referência de C#](../index.md)

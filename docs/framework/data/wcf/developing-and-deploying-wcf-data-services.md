@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937455"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504031"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
 
@@ -80,7 +80,7 @@ Você deve considerar o seguinte ao desenvolver um serviço de dados:
 
 - Um programa de inspeção de HTTP pode ser muito útil ao depurar um serviço de dados permitindo que você inspecione o conteúdo de mensagens de solicitação e resposta. Qualquer analisador de pacote de rede que possa exibir pacotes brutos pode ser usado para inspecionar solicitações HTTP para e respostas do serviço de dados.
 
-- Ao depurar um serviço de dados, talvez você queira obter mais informações sobre um erro do serviço de dados do que durante a operação regular. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte o [WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)pós-depuração. Você também pode habilitar o rastreamento no WCF para exibir exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando o rastreamento](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Ao depurar um serviço de dados, talvez você queira obter mais informações sobre um erro do serviço de dados do que durante a operação regular. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte o [WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)pós-depuração. Você também pode habilitar o rastreamento no WCF para exibir exceções geradas na camada de mensagens HTTP. Para obter mais informações, consulte [Configurando o rastreamento](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Um serviço de dados normalmente é desenvolvido como um projeto de aplicativo ASP.NET, mas você também pode criar o serviço de dados como um projeto de site ASP.NET no Visual Studio. Para obter informações sobre as diferenças entre os dois tipos de projetos, consulte [projetos de aplicativos Web versus projetos de site no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -125,7 +125,7 @@ Você deve considerar o seguinte ao implantar um serviço de dados:
 
 - Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Hospedagem o serviço de dados](hosting-the-data-service-wcf-data-services.md)
 - [Protegendo o WCF Data Services](securing-wcf-data-services.md)

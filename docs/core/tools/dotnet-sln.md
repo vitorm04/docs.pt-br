@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
-ms.date: 10/29/2019
-ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: dc0e2f294076ea649f150b076ac279cdc5d224a0
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733074"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503598"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet sln` – modifica um arquivo de solução do .NET Core.
 
@@ -27,7 +23,7 @@ ms.locfileid: "76733074"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet sln` oferece uma maneira conveniente de adicionar, remover e listar projetos em um arquivo de solução.
 
@@ -43,13 +39,13 @@ dotnet new sln
 
   O arquivo de solução a ser usado. Se não for especificado, o comando pesquisará um no diretório atual. Se houver vários arquivos de solução no diretório, um deles deverá ser especificado.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 
 ### `add`
 
@@ -72,7 +68,7 @@ dotnet sln add [-h|--help]
 
   O caminho para o projeto a ser adicionado à solução. Adicione vários projetos adicionando um após o outro separado por espaços. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
 
-#### <a name="options"></a>{1&gt;Opções&lt;1}
+#### <a name="options"></a>Opções
 
 - **`-h|--help`**
 
@@ -107,7 +103,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
   O caminho para o projeto a ser removido da solução. Remova vários projetos adicionando um após o outro separado por espaços. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
 
-#### <a name="options"></a>{1&gt;Opções&lt;1}
+#### <a name="options"></a>Opções
 
 - **`-h|--help`**
 
@@ -129,7 +125,7 @@ dotnet sln list [-h|--help]
 
   O arquivo de solução a ser usado. Se não for especificado, o comando pesquisará um no diretório atual. Se houver vários arquivos de solução no diretório, um deles deverá ser especificado.
 
-#### <a name="options"></a>{1&gt;Opções&lt;1}
+#### <a name="options"></a>Opções
 
 - **`-h|--help`**
 

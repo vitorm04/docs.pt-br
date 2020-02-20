@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606270"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503480"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (opções do compilador C#)
 A opção **-warnaserror+** trata todos os avisos como erros  
@@ -29,7 +29,7 @@ A opção **-warnaserror+** trata todos os avisos como erros
   
  Por padrão, a opção **-warnaserror-** está em vigor, o que faz com que os avisos não impeçam a geração de um arquivo de saída. A **-warnaserror**, que é a mesma que **-warnaserror+** , faz com que os avisos sejam tratados como erros.  
   
- Opcionalmente, se você deseja que apenas avisos específicos sejam tratados como erros, você pode especificar uma lista separada por vírgulas de números de aviso para serem tratados como erros.  
+ Opcionalmente, se você deseja que apenas avisos específicos sejam tratados como erros, você pode especificar uma lista separada por vírgulas de números de aviso para serem tratados como erros. O conjunto de todos os avisos de nulidade pode ser especificado com a abreviação **anulável** .
   
  Use [-warn](./warn-compiler-option.md) para especificar o nível de avisos que você deseja que o compilador exiba. Use [-nowarn](./nowarn-compiler-option.md) para desabilitar determinados avisos.  
   
@@ -48,10 +48,10 @@ A opção **-warnaserror+** trata todos os avisos como erros
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

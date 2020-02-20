@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 62ec1e21fd8e95991af6e2f8fa6f99c17249c761
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452715"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504052"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versões e dependências do .NET Framework
 
@@ -237,7 +237,7 @@ As tabelas a seguir resumem .NET Framework histórico de versão e correlacionam
 |**Versão do CLR**|2,0|
 |**Incluído na versão do Visual Studio**|2005|
 |**Versões do Windows**|N/D|
-|**Versões do Windows Server**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 200|
+|**Versões do Windows Server**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
 |**Para determinar a versão do .NET instalada**|Confira as [instruções](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1

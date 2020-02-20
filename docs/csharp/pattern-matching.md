@@ -4,12 +4,12 @@ description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039360"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501624"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -17,7 +17,7 @@ Os padrões testam um valor que tem uma determinada *forma* e podem *extrair* in
 
 Neste artigo, vamos examinar a nova sintaxe para mostrar a você como ela possibilita um código conciso e legível. A correspondência de padrões habilita expressões em que os dados e o código são separados, diferente dos designs orientados a objeto em que os dados e os métodos que os manipulam estão intimamente ligados.
 
-Para ilustrar essas novas expressões, vamos trabalhar com estruturas que representam formas geométricas usando instruções de correspondência de padrões. Provavelmente você está familiarizado com a criação de hierarquias de classe com a criação de [métodos virtuais e métodos substituídos](methods.md#inherited) para personalizar o comportamento do objeto com base no tipo de tempo de execução do objeto.
+Para ilustrar essas novas expressões, vamos trabalhar com estruturas que representam formas geométricas usando instruções de correspondência de padrões. Provavelmente você está familiarizado com a criação de hierarquias de classe com a criação de [métodos virtuais e métodos substituídos](methods.md#inherited) para personalizar o comportamento do objeto com base no tipo de runtime do objeto.
 
 Essas técnicas não são possíveis para dados não estruturados em uma hierarquia de classe. Quando os dados e métodos são separados, você precisa de outras ferramentas. Os novos constructos de *correspondência de padrões* permitem uma sintaxe mais clara para examinar dados e manipular o fluxo de controle com base em qualquer condição desses dados. Você já escreve instruções `if` e `switch` que testam o valor da variável. Você escreve instruções `is` que testam o tipo da variável. A *correspondência de padrões* adiciona novos recursos a essas instruções.
 
@@ -94,7 +94,7 @@ Essa alteração demonstra alguns pontos importantes sobre a nova sintaxe. Prime
 Este exemplo apresenta duas variáveis diferentes nos dois rótulos `case` para o primeiro bloco `switch`. Observe que as instruções neste bloco `switch` não usam as variáveis `c` (para o círculo) ou `s` (para o quadrado).
 Nenhuma dessas variáveis é atribuída definitivamente nesse bloco `switch`.
 Se algum desses casos corresponder, claramente uma das variáveis foi atribuída.
-No entanto, é impossível dizer *qual* foi atribuída em tempo de compilação, porque ambos os casos poderiam corresponder em tempo de execução. Por esse motivo, na maioria das vezes que você usar vários rótulos `case` para o mesmo bloco, não introduzirá uma nova variável na instrução `case` ou apenas usará a variável na cláusula `when`.
+No entanto, é impossível dizer *qual* foi atribuída em tempo de compilação, porque ambos os casos poderiam corresponder em runtime. Por esse motivo, na maioria das vezes que você usar vários rótulos `case` para o mesmo bloco, não introduzirá uma nova variável na instrução `case` ou apenas usará a variável na cláusula `when`.
 
 Depois de adicionar essas formas com a área 0, vamos adicionar mais alguns tipos de forma: um retângulo e um triângulo:
 
@@ -136,3 +136,7 @@ Os *constructos de correspondência de padrões* permitem que você gerencie fac
 A correspondência de padrões funciona com qualquer tipo de dados. Você escreve expressões que examinam o objeto e toma decisões de fluxo de controle com base nessas condições.
 
 Compare o código deste exemplo com o design que viria após a criação de uma hierarquia de classe para um resumo de `Shape` e formas derivadas específicas, cada uma com sua própria implementação de um método virtual para calcular a área. Muitas vezes você descobrirá que as expressões de correspondência de padrões podem ser uma ferramenta muito útil quando estiver trabalhando com os dados e desejar separar as preocupações de armazenamento de dados das preocupações de comportamento.
+
+## <a name="see-also"></a>Confira também
+
+- [Tutorial: usando recursos de correspondência de padrões para estender tipos de dados](tutorials/pattern-matching.md)

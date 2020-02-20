@@ -1,23 +1,19 @@
 ---
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734320"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503767"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet build` – Compila um projeto e todas as suas dependências.
 
@@ -31,7 +27,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--for
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet build` compila o projeto e suas dependências em um conjunto de binários. Os binários incluem o código do projeto em arquivos de IL (linguagem intermediária) com uma extensão *. dll* .  Dependendo do tipo de projeto e das configurações, outros arquivos podem ser incluídos, como:
 
@@ -73,9 +69,9 @@ A execução de `dotnet build` é equivalente à execução de `dotnet msbuild -
 
 O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou projeto não for especificado, o MSBuild pesquisará o diretório de trabalho atual em busca de um arquivo que tenha uma extensão terminada em *proj* ou *sln* e usará esse arquivo.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
@@ -85,7 +81,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 - **`--force`**
 
-  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*. Disponível desde o SDK do .NET Core 2.0.
+  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 - **`--no-restore`**
 
-  Não executa uma restauração implícita durante o build. Disponível desde o SDK do .NET Core 2.0.
+  Não executa uma restauração implícita durante o build.
 
 - **`--nologo`**
 

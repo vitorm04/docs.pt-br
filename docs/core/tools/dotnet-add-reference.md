@@ -1,23 +1,23 @@
 ---
 title: dotnet Adicionar comando de referência
 description: O comando dotnet add reference fornece uma opção conveniente para adicionar referências projeto a projeto.
-ms.date: 06/26/2019
-ms.openlocfilehash: dc8bc01a2bff4f2cf3a8af9efb233448d7de337f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733278"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503793"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet add reference` – Adiciona as referências P2P (projeto a projeto).
 
@@ -25,7 +25,7 @@ ms.locfileid: "76733278"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet add reference` fornece uma opção conveniente para adicionar referências de projeto a um projeto. Depois de executar o comando, os elementos de `<ProjectReference>` são adicionados ao arquivo de projeto.
 
@@ -47,7 +47,7 @@ O comando `dotnet add reference` fornece uma opção conveniente para adicionar 
 
   Referências P2P (projeto a projeto) a serem adicionadas. Especifique um ou mais projetos. Os [padrões Glob](https://en.wikipedia.org/wiki/Glob_(programming)) são compatíveis com sistemas baseados em Unix/Linux.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`-h|--help`**
 

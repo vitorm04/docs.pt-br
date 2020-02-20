@@ -2,23 +2,19 @@
 title: Comando dotnet nuget locals
 description: O comando nuget dotnet locals limpa ou lista os recursos locais do NuGet, como cache de solicitação http-, cache temporário ou pasta de pacotes globais em todo o computador.
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734084"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503689"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
-
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet nuget locals`-Limpa ou lista os recursos locais do NuGet.
 
@@ -29,13 +25,13 @@ dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english
 dotnet nuget locals [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet nuget locals` limpa ou lista os recursos locais do NuGet no cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.
 
 ## <a name="arguments"></a>Argumentos
 
-* **`CACHE_LOCATION`**
+- **`CACHE_LOCATION`**
 
   O local do cache a ser listado ou limpo. Aceita um dos seguintes valores:
 
@@ -44,56 +40,56 @@ O comando `dotnet nuget locals` limpa ou lista os recursos locais do NuGet no ca
   * `global-packages` – Indica que a operação especificada aplica-se apenas ao cache de pacotes globais. Os outros locais do cache não são afetados.
   * `temp` – Indica que a operação especificada aplica-se apenas ao cache temporário. Os outros locais do cache não são afetados.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   Força a execução do aplicativo usando uma cultura invariável com base em inglês.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
 
-* **`-c|--clear`**
+- **`-c|--clear`**
 
   A opção clear executa uma operação de limpeza no tipo de cache especificado. O conteúdo dos diretórios de cache é excluído recursivamente. O usuário/grupo executor deve ter permissão nos arquivos nos diretórios de cache. Caso contrário, um erro é exibido, indicando as pastas/os arquivos que não foram limpos.
 
-* **`-l|--list`**
+- **`-l|--list`**
 
   A opção de lista é usada para exibir a localização do tipo de cache especificado.
 
 ## <a name="examples"></a>Exemplos
 
-* Exibe os caminhos de todos os diretórios de cache local (diretório de cache de http, o diretório de cache de pacotes globais e diretório de cache temporário):
+- Exibe os caminhos de todos os diretórios de cache local (diretório de cache de http, o diretório de cache de pacotes globais e diretório de cache temporário):
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-* Exibe o caminho para o diretório local do cache de http:
+- Exibe o caminho para o diretório local do cache de http:
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-* Limpa todos os arquivos dos diretórios de cache local (diretório de cache de http, o diretório de cache de pacotes globais e diretório de cache temporário):
+- Limpa todos os arquivos dos diretórios de cache local (diretório de cache de http, o diretório de cache de pacotes globais e diretório de cache temporário):
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-* Limpa todos os arquivos no diretório local de cache de pacotes globais:
+- Limpa todos os arquivos no diretório local de cache de pacotes globais:
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
   ```
 
-* Limpa todos os arquivos no diretório local de cache temporário:
+- Limpa todos os arquivos no diretório local de cache temporário:
 
   ```dotnetcli
   dotnet nuget locals temp -c
   ```
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
 Para saber mais sobre os problemas e erros mais comuns ao usar o comando `dotnet nuget locals`, veja [Gerenciamento do cache do NuGet](/nuget/consume-packages/managing-the-nuget-cache).

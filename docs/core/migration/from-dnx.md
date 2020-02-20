@@ -2,16 +2,16 @@
 title: Migrando do DNX para a CLI do .NET Core
 description: Migre para mudar do uso de ferramentas de DNX para ferramentas da CLI do .NET Core.
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920621"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503825"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 A versão RC1 do .NET Core e ASP.NET Core 1.0 introduziu ferramentas DNX. A versão RC2 do .NET Core e ASP.NET Core 1.0 mudou do DNX para a CLI do .NET Core.
 
 Como um ligeiro lembrete, vamos recapitular o que foi o DNX. O DNX era um runtime e um conjunto de ferramentas usado para criar aplicativos do .NET Core e, mais especificamente, do ASP.NET Core 1.0. Ele era composto por 3 partes principais:
@@ -46,15 +46,15 @@ Se você estivesse usando o DNX, teria usado comandos de uma das suas três part
 
 A tabela a seguir mostra o mapeamento entre os comandos DNX/DNU e seus equivalentes da CLI.
 
-| Comando do DNX                    | Comando da CLI    | Descrição                                                                                                     |
+| Comando do DNX                    | Comando da CLI    | DESCRIÇÃO                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | Execute o código da origem.                                                                                           |
-| dnu build                      | dotnet build   | Crie um binário IL do seu código.                                                                                |
-| dnu pack                       | dotnet pack    | Empacote um pacote NuGet do seu código.                                                                        |
+| dnx run                        | `dotnet run`     | Execute o código da origem.                                                                                           |
+| dnu build                      | `dotnet build`   | Crie um binário IL do seu código.                                                                                |
+| dnu pack                       | `dotnet pack`    | Empacote um pacote NuGet do seu código.                                                                        |
 | dnx \[comando] (por exemplo, "dnx web") | N/D\*          | No mundo DNX, execute um comando conforme definido no project.json.                                                     |
 | dnu install                    | N/D\*          | No mundo DNX, instale um pacote como uma dependência.                                                            |
-| dnu restore                    | dotnet restore | Restaure as dependências especificadas no seu project.json. ([veja observação](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo). |
+| dnu restore                    | `dotnet restore` | Restaure as dependências especificadas no seu project.json. ([veja a observação](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo). |
 | dnu wrap                       | N/D\*          | No mundo DNX, encapsule um project.json em csproj.                                                                    |
 | dnu commands                   | N/D\*          | No mundo DNX, gerencie os comandos instalados globalmente.                                                           |
 
@@ -68,7 +68,7 @@ O DNU vinha com um conceito chamado "comandos globais". Eles eram, essencialment
 
 A CLI não dá suporte a esse conceito. Contudo, ela dá suporte ao conceito de adição de comandos por projeto, os quais podem ser invocados usando a sintaxe familiar do `dotnet <command>`.
 
-### <a name="installing-dependencies"></a>Instalando dependências
+### <a name="installing-dependencies"></a>Instalar dependências
 A partir de v1, o CLI do .NET Core não tem um comando `install` para instalar dependências. Para instalar um pacote NuGet, você precisará adicioná-lo como uma dependência ao arquivo `project.json` e, em seguida, executar `dotnet restore` ([veja observação](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Execução do código
