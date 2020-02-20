@@ -1,23 +1,23 @@
 ---
 title: Comando dotnet list package
 description: O comando 'dotnet list package' fornece uma opção conveniente para listar as referências de pacote de um projeto ou solução.
-ms.date: 06/26/2019
-ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 02/14/2020
+ms.openlocfilehash: bd275c308c3a213661d5cc6c7e60817620f076a5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117729"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503742"
 ---
-# <a name="dotnet-list-package"></a><span data-ttu-id="18ffc-103">dotnet list package</span><span class="sxs-lookup"><span data-stu-id="18ffc-103">dotnet list package</span></span>
+# <a name="dotnet-list-package"></a><span data-ttu-id="fcc88-103">dotnet list package</span><span class="sxs-lookup"><span data-stu-id="fcc88-103">dotnet list package</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
+<span data-ttu-id="fcc88-104">**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="fcc88-104">**This article applies to:** ✔️ .NET Core 2.2 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="18ffc-104">Nome</span><span class="sxs-lookup"><span data-stu-id="18ffc-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="fcc88-105">Nome</span><span class="sxs-lookup"><span data-stu-id="fcc88-105">Name</span></span>
 
-<span data-ttu-id="18ffc-105">`dotnet list package` – Lista as referências de pacote para um projeto ou solução.</span><span class="sxs-lookup"><span data-stu-id="18ffc-105">`dotnet list package` - Lists the package references for a project or solution.</span></span>
+<span data-ttu-id="fcc88-106">`dotnet list package` – Lista as referências de pacote para um projeto ou solução.</span><span class="sxs-lookup"><span data-stu-id="fcc88-106">`dotnet list package` - Lists the package references for a project or solution.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="18ffc-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="18ffc-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="fcc88-107">Sinopse</span><span class="sxs-lookup"><span data-stu-id="fcc88-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
@@ -25,113 +25,107 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="18ffc-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="18ffc-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="fcc88-108">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="fcc88-108">Description</span></span>
 
-<span data-ttu-id="18ffc-108">O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução.</span><span class="sxs-lookup"><span data-stu-id="18ffc-108">The `dotnet list package` command provides a convenient option to list all NuGet package references for a specific project or a solution.</span></span> <span data-ttu-id="18ffc-109">Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado.</span><span class="sxs-lookup"><span data-stu-id="18ffc-109">You first need to build the project in order to have the assets needed for this command to process.</span></span> <span data-ttu-id="18ffc-110">O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):</span><span class="sxs-lookup"><span data-stu-id="18ffc-110">The following example shows the output of the `dotnet list package` command for the [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) project:</span></span>
+<span data-ttu-id="fcc88-109">O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução.</span><span class="sxs-lookup"><span data-stu-id="fcc88-109">The `dotnet list package` command provides a convenient option to list all NuGet package references for a specific project or a solution.</span></span> <span data-ttu-id="fcc88-110">Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado.</span><span class="sxs-lookup"><span data-stu-id="fcc88-110">You first need to build the project in order to have the assets needed for this command to process.</span></span> <span data-ttu-id="fcc88-111">O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):</span><span class="sxs-lookup"><span data-stu-id="fcc88-111">The following example shows the output of the `dotnet list package` command for the [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) project:</span></span>
 
 ```output
 Project 'SentimentAnalysis' has the following package references
    [netcoreapp2.1]:
    Top-level Package               Requested   Resolved
-   > Microsoft.ML                  0.11.0      0.11.0
+   > Microsoft.ML                  1.4.0       1.4.0
    > Microsoft.NETCore.App   (A)   [2.1.0, )   2.1.0
 
 (A) : Auto-referenced package.
 ```
 
-<span data-ttu-id="18ffc-111">A coluna **Requested** refere-se à versão do pacote especificada no arquivo de projeto e pode ser um intervalo.</span><span class="sxs-lookup"><span data-stu-id="18ffc-111">The **Requested** column refers to the package version specified in the project file and can be a range.</span></span> <span data-ttu-id="18ffc-112">A coluna **Resolved** lista a versão que o projeto está usando atualmente e é sempre um valor único.</span><span class="sxs-lookup"><span data-stu-id="18ffc-112">The **Resolved** column lists the version that the project is currently using and is always a single value.</span></span> <span data-ttu-id="18ffc-113">Os pacotes que exibem um `(A)` ao lado de seus nomes representam [referências de pacotes implícitas](csproj.md#implicit-package-references) que são inferidas das configurações do seu projeto (tipo `Sdk`, propriedade `<TargetFramework>` ou `<TargetFrameworks>`, etc.)</span><span class="sxs-lookup"><span data-stu-id="18ffc-113">The packages displaying an `(A)` right next to their names represent [implicit package references](csproj.md#implicit-package-references) that are inferred from your project settings (`Sdk` type, `<TargetFramework>` or `<TargetFrameworks>` property, etc.)</span></span>
+<span data-ttu-id="fcc88-112">A coluna **Requested** refere-se à versão do pacote especificada no arquivo de projeto e pode ser um intervalo.</span><span class="sxs-lookup"><span data-stu-id="fcc88-112">The **Requested** column refers to the package version specified in the project file and can be a range.</span></span> <span data-ttu-id="fcc88-113">A coluna **Resolved** lista a versão que o projeto está usando atualmente e é sempre um valor único.</span><span class="sxs-lookup"><span data-stu-id="fcc88-113">The **Resolved** column lists the version that the project is currently using and is always a single value.</span></span> <span data-ttu-id="fcc88-114">Os pacotes que exibem um `(A)` ao lado de seus nomes representam [referências de pacotes implícitas](csproj.md#implicit-package-references) que são inferidas das configurações do seu projeto (tipo `Sdk`, propriedade `<TargetFramework>` ou `<TargetFrameworks>`, etc.)</span><span class="sxs-lookup"><span data-stu-id="fcc88-114">The packages displaying an `(A)` right next to their names represent [implicit package references](csproj.md#implicit-package-references) that are inferred from your project settings (`Sdk` type, `<TargetFramework>` or `<TargetFrameworks>` property, etc.)</span></span>
 
-<span data-ttu-id="18ffc-114">Use a opção `--outdated` para descobrir se existem versões mais recentes dos pacotes que você está usando em seus projetos.</span><span class="sxs-lookup"><span data-stu-id="18ffc-114">Use the `--outdated` option to find out if there are newer versions available of the packages you're using in your projects.</span></span> <span data-ttu-id="18ffc-115">Por padrão, `--outdated` lista os pacotes estáveis mais recentes, a menos que a versão resolvida também seja uma versão de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="18ffc-115">By default, `--outdated` lists the latest stable packages unless the resolved version is also a prerelease version.</span></span> <span data-ttu-id="18ffc-116">Para incluir versões de pré-lançamento ao listar versões mais recentes, especifique também a opção `--include-prerelease`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-116">To include prerelease versions when listing newer versions, also specify the `--include-prerelease` option.</span></span> <span data-ttu-id="18ffc-117">Os exemplos a seguir mostram a saída do comando `dotnet list package --outdated --include-prerelease` para o mesmo projeto do exemplo anterior:</span><span class="sxs-lookup"><span data-stu-id="18ffc-117">The following examples shows the output of the `dotnet list package --outdated --include-prerelease` command for the same project as the previous example:</span></span>
+<span data-ttu-id="fcc88-115">Use a opção `--outdated` para descobrir se existem versões mais recentes dos pacotes que você está usando em seus projetos.</span><span class="sxs-lookup"><span data-stu-id="fcc88-115">Use the `--outdated` option to find out if there are newer versions available of the packages you're using in your projects.</span></span> <span data-ttu-id="fcc88-116">Por padrão, `--outdated` lista os pacotes estáveis mais recentes, a menos que a versão resolvida também seja uma versão de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="fcc88-116">By default, `--outdated` lists the latest stable packages unless the resolved version is also a prerelease version.</span></span> <span data-ttu-id="fcc88-117">Para incluir versões de pré-lançamento ao listar versões mais recentes, especifique também a opção `--include-prerelease`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-117">To include prerelease versions when listing newer versions, also specify the `--include-prerelease` option.</span></span> <span data-ttu-id="fcc88-118">Os exemplos a seguir mostram a saída do comando `dotnet list package --outdated --include-prerelease` para o mesmo projeto do exemplo anterior:</span><span class="sxs-lookup"><span data-stu-id="fcc88-118">The following examples shows the output of the `dotnet list package --outdated --include-prerelease` command for the same project as the previous example:</span></span>
 
 ```output
 The following sources were used:
    https://api.nuget.org/v3/index.json
+   C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
 
 Project `SentimentAnalysis` has the following updates to its packages
    [netcoreapp2.1]:
    Top-level Package      Requested   Resolved   Latest
-   > Microsoft.ML         0.11.0      0.11.0     1.0.0-preview
+   > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-<span data-ttu-id="18ffc-118">Se você precisa descobrir se seu projeto tem dependências transitivas, use a opção `--include-transitive`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-118">If you need to find out whether your project has transitive dependencies, use the `--include-transitive` option.</span></span> <span data-ttu-id="18ffc-119">Dependências transitivas ocorrem quando você adiciona um pacote ao seu projeto que, por sua vez, depende de outro pacote.</span><span class="sxs-lookup"><span data-stu-id="18ffc-119">Transitive dependencies occur when you add a package to your project that in turn relies on another package.</span></span> <span data-ttu-id="18ffc-120">O exemplo a seguir mostra a saída da execução do comando `dotnet list package --include-transitive` para o projeto [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin), que exibe os pacotes de nível superior e os pacotes dos quais eles dependem:</span><span class="sxs-lookup"><span data-stu-id="18ffc-120">The following example shows the output from running the `dotnet list package --include-transitive` command for the [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) project, which displays top-level packages and the packages they depend on:</span></span>
+<span data-ttu-id="fcc88-119">Se você precisa descobrir se seu projeto tem dependências transitivas, use a opção `--include-transitive`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-119">If you need to find out whether your project has transitive dependencies, use the `--include-transitive` option.</span></span> <span data-ttu-id="fcc88-120">Dependências transitivas ocorrem quando você adiciona um pacote ao seu projeto que, por sua vez, depende de outro pacote.</span><span class="sxs-lookup"><span data-stu-id="fcc88-120">Transitive dependencies occur when you add a package to your project that in turn relies on another package.</span></span> <span data-ttu-id="fcc88-121">O exemplo a seguir mostra a saída da execução do comando `dotnet list package --include-transitive` para o projeto [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin), que exibe os pacotes de nível superior e os pacotes dos quais eles dependem:</span><span class="sxs-lookup"><span data-stu-id="fcc88-121">The following example shows the output from running the `dotnet list package --include-transitive` command for the [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) project, which displays top-level packages and the packages they depend on:</span></span>
 
 ```output
 Project 'HelloPlugin' has the following package references
    [netcoreapp3.0]:
-   Top-level Package                      Requested                    Resolved
-   > Microsoft.NETCore.Platforms    (A)   [3.0.0-preview3.19128.7, )   3.0.0-preview3.19128.7
-   > Microsoft.WindowsDesktop.App   (A)   [3.0.0-preview3-27504-2, )   3.0.0-preview3-27504-2
-
-   Transitive Package               Resolved
-   > Microsoft.NETCore.Targets      2.0.0
-   > PluginBase                     1.0.0
-
-(A) : Auto-referenced package.
+   Transitive Package      Resolved
+   > PluginBase            1.0.0
 ```
 
-## <a name="arguments"></a><span data-ttu-id="18ffc-121">Arguments</span><span class="sxs-lookup"><span data-stu-id="18ffc-121">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="fcc88-122">Argumentos</span><span class="sxs-lookup"><span data-stu-id="fcc88-122">Arguments</span></span>
 
 `PROJECT | SOLUTION`
 
-<span data-ttu-id="18ffc-122">O arquivo de projeto ou solução para operar.</span><span class="sxs-lookup"><span data-stu-id="18ffc-122">The project or solution file to operate on.</span></span> <span data-ttu-id="18ffc-123">Se não for especificado, o comando pesquisará um no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="18ffc-123">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="18ffc-124">Se mais de uma solução ou projeto for encontrado, um erro será lançado.</span><span class="sxs-lookup"><span data-stu-id="18ffc-124">If more than one solution or project is found, an error is thrown.</span></span>
+<span data-ttu-id="fcc88-123">O arquivo de projeto ou solução para operar.</span><span class="sxs-lookup"><span data-stu-id="fcc88-123">The project or solution file to operate on.</span></span> <span data-ttu-id="fcc88-124">Se não for especificado, o comando pesquisará um no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="fcc88-124">If not specified, the command searches the current directory for one.</span></span> <span data-ttu-id="fcc88-125">Se mais de uma solução ou projeto for encontrado, um erro será lançado.</span><span class="sxs-lookup"><span data-stu-id="fcc88-125">If more than one solution or project is found, an error is thrown.</span></span>
 
-## <a name="options"></a><span data-ttu-id="18ffc-125">Opções</span><span class="sxs-lookup"><span data-stu-id="18ffc-125">Options</span></span>
+## <a name="options"></a><span data-ttu-id="fcc88-126">Opções</span><span class="sxs-lookup"><span data-stu-id="fcc88-126">Options</span></span>
 
-* **`--config <SOURCE>`**
+- **`--config <SOURCE>`**
 
-  <span data-ttu-id="18ffc-126">A fontes do NuGet a serem usadas ao procurar pacotes mais novos.</span><span class="sxs-lookup"><span data-stu-id="18ffc-126">The NuGet sources to use when searching for newer packages.</span></span> <span data-ttu-id="18ffc-127">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-127">Requires the `--outdated` option.</span></span>
+  <span data-ttu-id="fcc88-127">A fontes do NuGet a serem usadas ao procurar pacotes mais novos.</span><span class="sxs-lookup"><span data-stu-id="fcc88-127">The NuGet sources to use when searching for newer packages.</span></span> <span data-ttu-id="fcc88-128">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-128">Requires the `--outdated` option.</span></span>
 
-* **`--framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="18ffc-128">Exibe apenas os pacotes aplicáveis para a [estrutura de destino](../../standard/frameworks.md) especificada.</span><span class="sxs-lookup"><span data-stu-id="18ffc-128">Displays only the packages applicable for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="18ffc-129">Para especificar várias estruturas, repita a opção várias vezes.</span><span class="sxs-lookup"><span data-stu-id="18ffc-129">To specify multiple frameworks, repeat the option multiple times.</span></span> <span data-ttu-id="18ffc-130">Por exemplo: `--framework netcoreapp2.2 --framework netstandard2.0`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-130">For example: `--framework netcoreapp2.2 --framework netstandard2.0`.</span></span>
+  <span data-ttu-id="fcc88-129">Exibe apenas os pacotes aplicáveis para a [estrutura de destino](../../standard/frameworks.md) especificada.</span><span class="sxs-lookup"><span data-stu-id="fcc88-129">Displays only the packages applicable for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="fcc88-130">Para especificar várias estruturas, repita a opção várias vezes.</span><span class="sxs-lookup"><span data-stu-id="fcc88-130">To specify multiple frameworks, repeat the option multiple times.</span></span> <span data-ttu-id="fcc88-131">Por exemplo: `--framework netcoreapp2.2 --framework netstandard2.0`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-131">For example: `--framework netcoreapp2.2 --framework netstandard2.0`.</span></span>
 
-* **`-h|--help`**
+- **`-h|--help`**
 
-  <span data-ttu-id="18ffc-131">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="18ffc-131">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="fcc88-132">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="fcc88-132">Prints out a short help for the command.</span></span>
 
-* **`--highest-minor`**
+- **`--highest-minor`**
 
-  <span data-ttu-id="18ffc-132">Ao procurar pacotes mais novos, considerar apenas os pacotes com um número de versão principal correspondente.</span><span class="sxs-lookup"><span data-stu-id="18ffc-132">Considers only the packages with a matching major version number when searching for newer packages.</span></span> <span data-ttu-id="18ffc-133">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-133">Requires the `--outdated` option.</span></span>
+  <span data-ttu-id="fcc88-133">Ao procurar pacotes mais novos, considerar apenas os pacotes com um número de versão principal correspondente.</span><span class="sxs-lookup"><span data-stu-id="fcc88-133">Considers only the packages with a matching major version number when searching for newer packages.</span></span> <span data-ttu-id="fcc88-134">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-134">Requires the `--outdated` option.</span></span>
 
-* **`--highest-patch`**
+- **`--highest-patch`**
 
-  <span data-ttu-id="18ffc-134">Ao procurar pacotes mais novos, considerar apenas os pacotes com números de versão principais e secundários correspondentes.</span><span class="sxs-lookup"><span data-stu-id="18ffc-134">Considers only the packages with a matching major and minor version numbers when searching for newer packages.</span></span> <span data-ttu-id="18ffc-135">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-135">Requires the `--outdated` option.</span></span>
+  <span data-ttu-id="fcc88-135">Ao procurar pacotes mais novos, considerar apenas os pacotes com números de versão principais e secundários correspondentes.</span><span class="sxs-lookup"><span data-stu-id="fcc88-135">Considers only the packages with a matching major and minor version numbers when searching for newer packages.</span></span> <span data-ttu-id="fcc88-136">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-136">Requires the `--outdated` option.</span></span>
 
-* **`--include-prerelease`**
+- **`--include-prerelease`**
 
-  <span data-ttu-id="18ffc-136">Ao procurar pacotes mais novos, considere pacotes com versões de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="18ffc-136">Considers packages with prerelease versions when searching for newer packages.</span></span> <span data-ttu-id="18ffc-137">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-137">Requires the `--outdated` option.</span></span>
+  <span data-ttu-id="fcc88-137">Ao procurar pacotes mais novos, considere pacotes com versões de pré-lançamento.</span><span class="sxs-lookup"><span data-stu-id="fcc88-137">Considers packages with prerelease versions when searching for newer packages.</span></span> <span data-ttu-id="fcc88-138">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-138">Requires the `--outdated` option.</span></span>
 
-* **`--include-transitive`**
+- **`--include-transitive`**
 
-  <span data-ttu-id="18ffc-138">Lista pacotes transitivos, além dos pacotes de nível superior.</span><span class="sxs-lookup"><span data-stu-id="18ffc-138">Lists transitive packages, in addition to the top-level packages.</span></span> <span data-ttu-id="18ffc-139">Ao especificar essa opção, você obtém uma lista de pacotes dos quais os pacotes de nível superior dependem.</span><span class="sxs-lookup"><span data-stu-id="18ffc-139">When specifying this option, you get a list of packages that the top-level packages depend on.</span></span>
+  <span data-ttu-id="fcc88-139">Lista pacotes transitivos, além dos pacotes de nível superior.</span><span class="sxs-lookup"><span data-stu-id="fcc88-139">Lists transitive packages, in addition to the top-level packages.</span></span> <span data-ttu-id="fcc88-140">Ao especificar essa opção, você obtém uma lista de pacotes dos quais os pacotes de nível superior dependem.</span><span class="sxs-lookup"><span data-stu-id="fcc88-140">When specifying this option, you get a list of packages that the top-level packages depend on.</span></span>
 
-* **`--interactive`**
+- **`--interactive`**
 
-  <span data-ttu-id="18ffc-140">Permite que o comando pare e aguarde entrada ou ação do usuário.</span><span class="sxs-lookup"><span data-stu-id="18ffc-140">Allows the command to stop and wait for user input or action.</span></span> <span data-ttu-id="18ffc-141">Por exemplo, para concluir a autenticação.</span><span class="sxs-lookup"><span data-stu-id="18ffc-141">For example, to complete authentication.</span></span> <span data-ttu-id="18ffc-142">Disponível desde o SDK do .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="18ffc-142">Available since .NET Core 3.0 SDK.</span></span>
+  <span data-ttu-id="fcc88-141">Permite que o comando pare e aguarde entrada ou ação do usuário.</span><span class="sxs-lookup"><span data-stu-id="fcc88-141">Allows the command to stop and wait for user input or action.</span></span> <span data-ttu-id="fcc88-142">Por exemplo, para concluir a autenticação.</span><span class="sxs-lookup"><span data-stu-id="fcc88-142">For example, to complete authentication.</span></span> <span data-ttu-id="fcc88-143">Disponível desde o SDK do .NET Core 3.0.</span><span class="sxs-lookup"><span data-stu-id="fcc88-143">Available since .NET Core 3.0 SDK.</span></span>
 
-* **`--outdated`**
+- **`--outdated`**
 
-  <span data-ttu-id="18ffc-143">Lista os pacotes que têm as versões mais recentes disponíveis.</span><span class="sxs-lookup"><span data-stu-id="18ffc-143">Lists packages that have newer versions available.</span></span>
+  <span data-ttu-id="fcc88-144">Lista os pacotes que têm as versões mais recentes disponíveis.</span><span class="sxs-lookup"><span data-stu-id="fcc88-144">Lists packages that have newer versions available.</span></span>
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
-  <span data-ttu-id="18ffc-144">A fontes do NuGet a serem usadas ao procurar pacotes mais novos.</span><span class="sxs-lookup"><span data-stu-id="18ffc-144">The NuGet sources to use when searching for newer packages.</span></span> <span data-ttu-id="18ffc-145">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="18ffc-145">Requires the `--outdated` option.</span></span>
+  <span data-ttu-id="fcc88-145">A fontes do NuGet a serem usadas ao procurar pacotes mais novos.</span><span class="sxs-lookup"><span data-stu-id="fcc88-145">The NuGet sources to use when searching for newer packages.</span></span> <span data-ttu-id="fcc88-146">Requer a opção `--outdated`.</span><span class="sxs-lookup"><span data-stu-id="fcc88-146">Requires the `--outdated` option.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="18ffc-146">Exemplos</span><span class="sxs-lookup"><span data-stu-id="18ffc-146">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="fcc88-147">Exemplos</span><span class="sxs-lookup"><span data-stu-id="fcc88-147">Examples</span></span>
 
-* <span data-ttu-id="18ffc-147">Listar referências de pacote de um projeto específico:</span><span class="sxs-lookup"><span data-stu-id="18ffc-147">List package references of a specific project:</span></span>
+- <span data-ttu-id="fcc88-148">Listar referências de pacote de um projeto específico:</span><span class="sxs-lookup"><span data-stu-id="fcc88-148">List package references of a specific project:</span></span>
 
   ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
-* <span data-ttu-id="18ffc-148">Listar referências de pacote com versões mais recentes disponíveis, incluindo versões de pré-lançamento:</span><span class="sxs-lookup"><span data-stu-id="18ffc-148">List package references that have newer versions available, including prerelease versions:</span></span>
+- <span data-ttu-id="fcc88-149">Listar referências de pacote com versões mais recentes disponíveis, incluindo versões de pré-lançamento:</span><span class="sxs-lookup"><span data-stu-id="fcc88-149">List package references that have newer versions available, including prerelease versions:</span></span>
 
   ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
-* <span data-ttu-id="18ffc-149">Listar referências de pacotes para uma estrutura de destino específica:</span><span class="sxs-lookup"><span data-stu-id="18ffc-149">List package references for a specific target framework:</span></span>
+- <span data-ttu-id="fcc88-150">Listar referências de pacotes para uma estrutura de destino específica:</span><span class="sxs-lookup"><span data-stu-id="fcc88-150">List package references for a specific target framework:</span></span>
 
   ```dotnetcli
   dotnet list package --framework netcoreapp3.0

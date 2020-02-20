@@ -4,43 +4,46 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712033"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504006"
 ---
-# <a name="main-return-values-c-programming-guide"></a><span data-ttu-id="59aff-102">Valores retornados de Main() (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="59aff-102">Main() return values (C# Programming Guide)</span></span>
+# <a name="main-return-values-c-programming-guide"></a><span data-ttu-id="8222c-102">Valores retornados de Main() (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="8222c-102">Main() return values (C# Programming Guide)</span></span>
 
-<span data-ttu-id="59aff-103">O método `Main` pode retornar `void`:</span><span class="sxs-lookup"><span data-stu-id="59aff-103">The `Main` method can return `void`:</span></span>
+<span data-ttu-id="8222c-103">O método `Main` pode retornar `void`:</span><span class="sxs-lookup"><span data-stu-id="8222c-103">The `Main` method can return `void`:</span></span>
 
  [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-<span data-ttu-id="59aff-104">Ele também pode retornar um `int`:</span><span class="sxs-lookup"><span data-stu-id="59aff-104">It can also return an `int`:</span></span>
+<span data-ttu-id="8222c-104">Ele também pode retornar um `int`:</span><span class="sxs-lookup"><span data-stu-id="8222c-104">It can also return an `int`:</span></span>
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-<span data-ttu-id="59aff-105">Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples.</span><span class="sxs-lookup"><span data-stu-id="59aff-105">If the return value from `Main` is not used, returning `void` allows for slightly simpler code.</span></span> <span data-ttu-id="59aff-106">No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="59aff-106">However, returning an integer enables the program to communicate status information to other programs or scripts that invoke the executable file.</span></span> <span data-ttu-id="59aff-107">O valor retornado de `Main` é tratado como o código de saída para o processo.</span><span class="sxs-lookup"><span data-stu-id="59aff-107">The return value from `Main` is treated as the exit code for the process.</span></span> <span data-ttu-id="59aff-108">Se `void` for retornado de `Main`, o código de saída será implicitamente `0`.</span><span class="sxs-lookup"><span data-stu-id="59aff-108">If `void` is returned from `Main` the exit code will be implicitly `0`.</span></span> <span data-ttu-id="59aff-109">O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.</span><span class="sxs-lookup"><span data-stu-id="59aff-109">The following example shows how the return value from `Main` can be accessed.</span></span>
+<span data-ttu-id="8222c-105">Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples.</span><span class="sxs-lookup"><span data-stu-id="8222c-105">If the return value from `Main` is not used, returning `void` allows for slightly simpler code.</span></span> <span data-ttu-id="8222c-106">No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="8222c-106">However, returning an integer enables the program to communicate status information to other programs or scripts that invoke the executable file.</span></span> <span data-ttu-id="8222c-107">O valor retornado de `Main` é tratado como o código de saída para o processo.</span><span class="sxs-lookup"><span data-stu-id="8222c-107">The return value from `Main` is treated as the exit code for the process.</span></span> <span data-ttu-id="8222c-108">Se `void` for retornado de `Main`, o código de saída será implicitamente `0`.</span><span class="sxs-lookup"><span data-stu-id="8222c-108">If `void` is returned from `Main` the exit code will be implicitly `0`.</span></span> <span data-ttu-id="8222c-109">O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.</span><span class="sxs-lookup"><span data-stu-id="8222c-109">The following example shows how the return value from `Main` can be accessed.</span></span>
 
-## <a name="example"></a><span data-ttu-id="59aff-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="59aff-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="8222c-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8222c-110">Example</span></span>
 
-<span data-ttu-id="59aff-111">Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.md).</span><span class="sxs-lookup"><span data-stu-id="59aff-111">This example uses [.NET Core](../../../core/index.md) command line tools.</span></span> <span data-ttu-id="59aff-112">Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/cli-create-console-app.md).</span><span class="sxs-lookup"><span data-stu-id="59aff-112">If you are unfamiliar with .NET Core command line tools, you can learn about them in this [Get started topic](../../../core/tutorials/cli-create-console-app.md).</span></span>
+<span data-ttu-id="8222c-111">Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.md).</span><span class="sxs-lookup"><span data-stu-id="8222c-111">This example uses [.NET Core](../../../core/index.md) command line tools.</span></span> <span data-ttu-id="8222c-112">Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/cli-create-console-app.md).</span><span class="sxs-lookup"><span data-stu-id="8222c-112">If you are unfamiliar with .NET Core command line tools, you can learn about them in this [Get started topic](../../../core/tutorials/cli-create-console-app.md).</span></span>
 
-<span data-ttu-id="59aff-113">Modifique o método `Main` em *program.cs* da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="59aff-113">Modify the `Main` method in *program.cs* as follows:</span></span>
+<span data-ttu-id="8222c-113">Modifique o método `Main` em *program.cs* da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="8222c-113">Modify the `Main` method in *program.cs* as follows:</span></span>
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
-<span data-ttu-id="59aff-114">Quando um programa é executado no Windows, qualquer valor retornado da função `Main` é armazenado em uma variável de ambiente.</span><span class="sxs-lookup"><span data-stu-id="59aff-114">When a program is executed in Windows, any value returned from the `Main` function is stored in an environment variable.</span></span> <span data-ttu-id="59aff-115">Essa variável de ambiente pode ser recuperada usando `ERRORLEVEL` de um arquivo em lotes ou `$LastExitCode` do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="59aff-115">This environment variable can be retrieved using `ERRORLEVEL` from a batch file, or `$LastExitCode` from powershell.</span></span>
+<span data-ttu-id="8222c-114">Quando um programa é executado no Windows, qualquer valor retornado da função `Main` é armazenado em uma variável de ambiente.</span><span class="sxs-lookup"><span data-stu-id="8222c-114">When a program is executed in Windows, any value returned from the `Main` function is stored in an environment variable.</span></span> <span data-ttu-id="8222c-115">Essa variável de ambiente pode ser recuperada usando `ERRORLEVEL` de um arquivo em lotes ou `$LastExitCode` do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="8222c-115">This environment variable can be retrieved using `ERRORLEVEL` from a batch file, or `$LastExitCode` from powershell.</span></span>
 
-<span data-ttu-id="59aff-116">Você pode criar o aplicativo usando o comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="59aff-116">You can build the application using the [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` command.</span></span>
+<span data-ttu-id="8222c-116">Você pode criar o aplicativo usando o comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`.</span><span class="sxs-lookup"><span data-stu-id="8222c-116">You can build the application using the [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` command.</span></span>
 
-<span data-ttu-id="59aff-117">Em seguida, crie um script do Powershell para executar o aplicativo e exibir o resultado.</span><span class="sxs-lookup"><span data-stu-id="59aff-117">Next, create a Powershell script to run the application and display the result.</span></span> <span data-ttu-id="59aff-118">Cole o código a seguir em um arquivo de texto e salve-o como `test.ps1` na pasta que contém o projeto.</span><span class="sxs-lookup"><span data-stu-id="59aff-118">Paste the following code into a text file and save it as `test.ps1` in the folder that contains the project.</span></span> <span data-ttu-id="59aff-119">Execute o script do PowerShell digitando `test.ps1` no prompt do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="59aff-119">Run the powershell script by typing `test.ps1` at the powershell prompt.</span></span>
+<span data-ttu-id="8222c-117">Em seguida, crie um script do Powershell para executar o aplicativo e exibir o resultado.</span><span class="sxs-lookup"><span data-stu-id="8222c-117">Next, create a Powershell script to run the application and display the result.</span></span> <span data-ttu-id="8222c-118">Cole o código a seguir em um arquivo de texto e salve-o como `test.ps1` na pasta que contém o projeto.</span><span class="sxs-lookup"><span data-stu-id="8222c-118">Paste the following code into a text file and save it as `test.ps1` in the folder that contains the project.</span></span> <span data-ttu-id="8222c-119">Execute o script do PowerShell digitando `test.ps1` no prompt do PowerShell.</span><span class="sxs-lookup"><span data-stu-id="8222c-119">Run the powershell script by typing `test.ps1` at the powershell prompt.</span></span>
 
-<span data-ttu-id="59aff-120">Como o código retorna zero, o arquivo em lotes relatará êxito.</span><span class="sxs-lookup"><span data-stu-id="59aff-120">Because the code returns zero, the batch file will report success.</span></span> <span data-ttu-id="59aff-121">No entanto, se você alterar o MainReturnValTest.cs para retornar um valor diferente de zero e recompilar o programa, a execução subsequente do script do PowerShell reportará falha.</span><span class="sxs-lookup"><span data-stu-id="59aff-121">However, if you change MainReturnValTest.cs to return a non-zero value and then re-compile the program, subsequent execution of the powershell script will report failure.</span></span>
+<span data-ttu-id="8222c-120">Como o código retorna zero, o arquivo em lotes relatará êxito.</span><span class="sxs-lookup"><span data-stu-id="8222c-120">Because the code returns zero, the batch file will report success.</span></span> <span data-ttu-id="8222c-121">No entanto, se você alterar o MainReturnValTest.cs para retornar um valor diferente de zero e recompilar o programa, a execução subsequente do script do PowerShell reportará falha.</span><span class="sxs-lookup"><span data-stu-id="8222c-121">However, if you change MainReturnValTest.cs to return a non-zero value and then re-compile the program, subsequent execution of the powershell script will report failure.</span></span>
+
+```dotnetcli
+dotnet run
+```
 
 ```powershell
-dotnet run
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -50,16 +53,16 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a><span data-ttu-id="59aff-122">Saída de exemplo</span><span class="sxs-lookup"><span data-stu-id="59aff-122">Sample output</span></span>
+## <a name="sample-output"></a><span data-ttu-id="8222c-122">Saída de exemplo</span><span class="sxs-lookup"><span data-stu-id="8222c-122">Sample output</span></span>
 
 ```txt
 Execution succeeded
 Return value = 0
 ```
 
-## <a name="async-main-return-values"></a><span data-ttu-id="59aff-123">Valores retornados de Async Main</span><span class="sxs-lookup"><span data-stu-id="59aff-123">Async Main return values</span></span>
+## <a name="async-main-return-values"></a><span data-ttu-id="8222c-123">Valores retornados de Async Main</span><span class="sxs-lookup"><span data-stu-id="8222c-123">Async Main return values</span></span>
 
-<span data-ttu-id="59aff-124">Os valores retornados de Async Main movem o código clichê necessário para chamar métodos assíncronos em `Main` para o código gerado pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="59aff-124">Async Main return values move the boilerplate code necessary for calling asynchronous methods in `Main` to code generated by the compiler.</span></span> <span data-ttu-id="59aff-125">Anteriormente, você precisaria gravar esse constructo para chamar código assíncrono e assegurar que o programa fosse executado até que a operação assíncrona fosse concluída:</span><span class="sxs-lookup"><span data-stu-id="59aff-125">Previously, you would need to write this construct to call asynchronous code and ensure your program ran until the asynchronous operation completed:</span></span>
+<span data-ttu-id="8222c-124">Os valores retornados de Async Main movem o código clichê necessário para chamar métodos assíncronos em `Main` para o código gerado pelo compilador.</span><span class="sxs-lookup"><span data-stu-id="8222c-124">Async Main return values move the boilerplate code necessary for calling asynchronous methods in `Main` to code generated by the compiler.</span></span> <span data-ttu-id="8222c-125">Anteriormente, você precisaria gravar esse constructo para chamar código assíncrono e assegurar que o programa fosse executado até que a operação assíncrona fosse concluída:</span><span class="sxs-lookup"><span data-stu-id="8222c-125">Previously, you would need to write this construct to call asynchronous code and ensure your program ran until the asynchronous operation completed:</span></span>
 
 ```csharp
 public static void Main()
@@ -74,27 +77,27 @@ private static async Task<int> AsyncConsoleWork()
 }
 ```
 
-<span data-ttu-id="59aff-126">Agora, isso pode ser substituído por:</span><span class="sxs-lookup"><span data-stu-id="59aff-126">Now, this can be replaced by:</span></span>
+<span data-ttu-id="8222c-126">Agora, isso pode ser substituído por:</span><span class="sxs-lookup"><span data-stu-id="8222c-126">Now, this can be replaced by:</span></span>
 
 [!code-csharp[AsyncMain](../../../../samples/snippets/csharp/main-arguments/program.cs#AsyncMain)]
 
-<span data-ttu-id="59aff-127">A vantagem da nova sintaxe é que o compilador sempre gera o código correto.</span><span class="sxs-lookup"><span data-stu-id="59aff-127">The advantage of the new syntax is that the compiler always generates the correct code.</span></span>
+<span data-ttu-id="8222c-127">A vantagem da nova sintaxe é que o compilador sempre gera o código correto.</span><span class="sxs-lookup"><span data-stu-id="8222c-127">The advantage of the new syntax is that the compiler always generates the correct code.</span></span>
 
-## <a name="compiler-generated-code"></a><span data-ttu-id="59aff-128">Código gerado pelo compilador</span><span class="sxs-lookup"><span data-stu-id="59aff-128">Compiler generated code</span></span>
+## <a name="compiler-generated-code"></a><span data-ttu-id="8222c-128">Código gerado pelo compilador</span><span class="sxs-lookup"><span data-stu-id="8222c-128">Compiler generated code</span></span>
 
-<span data-ttu-id="59aff-129">Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o compilador gera um novo ponto de entrada que chama o método de ponto de entrada declarado no código do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="59aff-129">When the application entry point returns a `Task` or `Task<int>`, the compiler generates a new entry point that calls the entry point method declared in the application code.</span></span> <span data-ttu-id="59aff-130">Supondo que esse ponto de entrada é chamado `$GeneratedMain`, o compilador gera o código a seguir para esses pontos de entrada:</span><span class="sxs-lookup"><span data-stu-id="59aff-130">Assuming that this entry point is called `$GeneratedMain`, the compiler generates the following code for these entry points:</span></span>
+<span data-ttu-id="8222c-129">Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o compilador gera um novo ponto de entrada que chama o método de ponto de entrada declarado no código do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="8222c-129">When the application entry point returns a `Task` or `Task<int>`, the compiler generates a new entry point that calls the entry point method declared in the application code.</span></span> <span data-ttu-id="8222c-130">Supondo que esse ponto de entrada é chamado `$GeneratedMain`, o compilador gera o código a seguir para esses pontos de entrada:</span><span class="sxs-lookup"><span data-stu-id="8222c-130">Assuming that this entry point is called `$GeneratedMain`, the compiler generates the following code for these entry points:</span></span>
 
-- <span data-ttu-id="59aff-131">`static Task Main()` resulta no compilador emitindo o equivalente a `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="59aff-131">`static Task Main()` results in the compiler emitting the equivalent of `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
-- <span data-ttu-id="59aff-132">`static Task Main(string[])` resulta no compilador emitindo o equivalente a `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="59aff-132">`static Task Main(string[])` results in the compiler emitting the equivalent of `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
-- <span data-ttu-id="59aff-133">`static Task<int> Main()` resulta no compilador emitindo o equivalente a `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="59aff-133">`static Task<int> Main()` results in the compiler emitting the equivalent of `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
-- <span data-ttu-id="59aff-134">`static Task<int> Main(string[])` resulta no compilador emitindo o equivalente a `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="59aff-134">`static Task<int> Main(string[])` results in the compiler emitting the equivalent of `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="8222c-131">`static Task Main()` resulta no compilador emitindo o equivalente a `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="8222c-131">`static Task Main()` results in the compiler emitting the equivalent of `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="8222c-132">`static Task Main(string[])` resulta no compilador emitindo o equivalente a `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="8222c-132">`static Task Main(string[])` results in the compiler emitting the equivalent of `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="8222c-133">`static Task<int> Main()` resulta no compilador emitindo o equivalente a `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="8222c-133">`static Task<int> Main()` results in the compiler emitting the equivalent of `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`</span></span>
+- <span data-ttu-id="8222c-134">`static Task<int> Main(string[])` resulta no compilador emitindo o equivalente a `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span><span class="sxs-lookup"><span data-stu-id="8222c-134">`static Task<int> Main(string[])` results in the compiler emitting the equivalent of `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`</span></span>
 
 > [!NOTE]
-><span data-ttu-id="59aff-135">Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.</span><span class="sxs-lookup"><span data-stu-id="59aff-135">If the examples used `async` modifier on the `Main` method, the compiler would generate the same code.</span></span>
+><span data-ttu-id="8222c-135">Se os exemplos usassem o modificador `async` no método `Main`, o compilador geraria o mesmo código.</span><span class="sxs-lookup"><span data-stu-id="8222c-135">If the examples used `async` modifier on the `Main` method, the compiler would generate the same code.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="59aff-136">Veja também</span><span class="sxs-lookup"><span data-stu-id="59aff-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8222c-136">Confira também</span><span class="sxs-lookup"><span data-stu-id="8222c-136">See also</span></span>
 
-- [<span data-ttu-id="59aff-137">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="59aff-137">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="59aff-138">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="59aff-138">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="59aff-139">Main() e argumentos de linha de comando</span><span class="sxs-lookup"><span data-stu-id="59aff-139">Main() and Command-Line Arguments</span></span>](index.md)
-- [<span data-ttu-id="59aff-140">Como exibir argumentos de linha de comando</span><span class="sxs-lookup"><span data-stu-id="59aff-140">How to display command line arguments</span></span>](./how-to-display-command-line-arguments.md)
+- [<span data-ttu-id="8222c-137">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="8222c-137">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="8222c-138">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="8222c-138">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="8222c-139">Main() e argumentos de linha de comando</span><span class="sxs-lookup"><span data-stu-id="8222c-139">Main() and Command-Line Arguments</span></span>](index.md)
+- [<span data-ttu-id="8222c-140">Como exibir argumentos de linha de comando</span><span class="sxs-lookup"><span data-stu-id="8222c-140">How to display command line arguments</span></span>](./how-to-display-command-line-arguments.md)
