@@ -3,21 +3,21 @@ title: funcionalidades do SQL Server e ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 30eb7d7f3f98d3cd3999c74f660986bef887c05d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979788"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451818"
 ---
 # <a name="sql-server-features-and-adonet"></a>funcionalidades do SQL Server e ADO.NET
 Os tópicos desta seção discutem os recursos do SQL Server que são destinados a desenvolver aplicativos de banco de dados usando o ADO.NET.  
   
  Para obter mais informações, consulte os Manuais Online do SQL Server da versão do SQL Server que você está usando, conforme listado na tabela a seguir.  
   
- **SQL Server Books Online** (Guias online do SQL Server)  
+ **Documentação do SQL Server**  
   
-1. [Desenvolvimento (Mecanismo de Banco de Dados)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [Desenvolvimento (Mecanismo de Banco de Dados)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Enumeração de instâncias do SQL Server (ADO.NET)](enumerating-instances-of-sql-server.md)  
@@ -47,10 +47,10 @@ Os tópicos desta seção discutem os recursos do SQL Server que são destinados
  [Suporte do SqlClient para LocalDB](sqlclient-support-for-localdb.md)  
  Descreve o suporte do SqlClient para bancos de dados LocalDB.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [SQL Server Data Operations in ADO.NET](sql-server-data-operations.md) (Operações de dados do SQL Server no ADO.NET)
 - [Retrieving and Modifying Data in ADO.NET](../retrieving-and-modifying-data.md) (Recuperando e modificando dados no ADO.NET)
 - [LINQ to SQL](./linq/index.md)
-- [SQL Server and ADO.NET](index.md) (SQL Server e ADO.NET)
+- [SQL Server e ADO.NET](index.md)
 - [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)

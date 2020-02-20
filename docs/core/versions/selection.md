@@ -4,12 +4,12 @@ description: Saiba como o .NET Core localiza e escolhe automaticamente versões 
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713980"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450993"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -78,7 +78,7 @@ As estruturas de destino do .NET Standard também são limitadas à estrutura de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll foward de aplicativos dependentes da estrutura
 
-Quando você executa um aplicativo da fonte com [`dotnet run`](../tools/dotnet-run.md), de uma [**implantação dependente de estrutura**](../deploying/index.md#framework-dependent-deployments-fdd) com [`dotnet myapp.dll`](../tools/dotnet.md#description) ou de um [**arquivo executável dependente de estrutura**](../deploying/index.md#framework-dependent-executables-fde) com `myapp.exe`, o arquivo executável `dotnet` é o **host** do aplicativo.
+Quando você executa um aplicativo da fonte com [`dotnet run`](../tools/dotnet-run.md), de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com [`dotnet myapp.dll`](../tools/dotnet.md#description) ou de um [**arquivo executável dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com `myapp.exe`, o arquivo executável `dotnet` é o **host** do aplicativo.
 
 O host escolhe a versão de patch mais recente instalada no computador. Por exemplo, se você especificar `netcoreapp2.0` em seu arquivo de projeto e `2.0.4` for o runtime mais recente do .NET instalado, o runtime `2.0.4` será usado.
 
@@ -91,7 +91,7 @@ Veja alguns exemplos de uso que demonstram o comportamento, caso seu destino sej
 - A 2.0 é especificada. Não há nenhuma versão 2.0.* instalada. 2.2.2 é a versão de runtime 2.x mais recente instalada. A 2.2.2 é usada.
 - A 2.0 é especificada. Não há nenhuma versão 2.x instalada. A 3.0.0 é instalada. Uma mensagem de erro é exibida.
 
-O roll forward de versão secundária tem um efeito colateral que pode afetar os usuários finais. Considere o seguinte cenário:
+O roll forward de versão secundária tem um efeito colateral que pode afetar os usuários finais. Considere o cenário a seguir.
 
 1. O aplicativo especifica que a versão 2.0 é necessária.
 2. Quando ele é executado, a versão 2.0.* não está instalada, mas a 2.2.2 está. A versão 2.2.2 será usada.
@@ -101,7 +101,7 @@ O roll forward de versão secundária tem um efeito colateral que pode afetar os
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>As implantações autossuficientes incluem o runtime selecionado
 
-É possível publicar um aplicativo como uma [**distribuição autossuficiente**](../deploying/index.md#self-contained-deployments-scd). Essa abordagem inclui o runtime e as bibliotecas do .NET Core com seu aplicativo. As implantações autossuficientes não são dependentes dos ambientes de runtime. A seleção da versão do runtime ocorre no momento da publicação, não no runtime.
+É possível publicar um aplicativo como uma [**distribuição autossuficiente**](../deploying/index.md#publish-self-contained). Essa abordagem inclui o runtime e as bibliotecas do .NET Core com seu aplicativo. As implantações autossuficientes não são dependentes dos ambientes de runtime. A seleção da versão do runtime ocorre no momento da publicação, não no runtime.
 
 O processo de publicação seleciona a versão de patch mais recente da família de determinado runtime. Por exemplo, `dotnet publish` selecionará o .NET Core 2.0.4 se ele for a versão de patch mais recente da família do runtime do .NET Core 2.0. A estrutura de destino (incluindo os patches de segurança mais recentes instalados) é empacotada com o aplicativo.
 

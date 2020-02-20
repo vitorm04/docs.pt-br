@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559710"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453111"
 ---
 # <a name="animation-overview"></a>Visão geral da animação
 
@@ -231,10 +231,10 @@ A tabela a seguir mostra vários tipos de animação comuns e algumas propriedad
 
 |Tipo de propriedade|Animação básica (De/Para/Por) correspondente|Animação de quadro chave correspondente|Animação de caminho correspondente|Exemplo de uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|{1&gt;Nenhum&lt;1}|Anime a <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> ou um <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Nenhum|Anime a <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> ou um <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Anime a <xref:System.Windows.FrameworkElement.Width%2A> de um <xref:System.Windows.Controls.DockPanel> ou a <xref:System.Windows.FrameworkElement.Height%2A> de um <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Anime a posição de <xref:System.Windows.Media.EllipseGeometry.Center%2A> de um <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|{1&gt;Nenhum&lt;1}|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|{1&gt;Nenhum&lt;1}|Anime a <xref:System.Windows.Controls.TextBlock.Text%2A> de um <xref:System.Windows.Controls.TextBlock> ou a <xref:System.Windows.Controls.ContentControl.Content%2A> de um <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|Nenhum|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Nenhum|Anime a <xref:System.Windows.Controls.TextBlock.Text%2A> de um <xref:System.Windows.Controls.TextBlock> ou a <xref:System.Windows.Controls.ContentControl.Content%2A> de um <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -341,7 +341,7 @@ Embora um relógio também seja criado para a <xref:System.Windows.Media.Animati
 
 Para uma animação refletir as alterações de animação ou de associação de dados, seu relógio deve ser regenerado. Os relógios não são regenerados automaticamente para você. Para fazer uma animação refletir as alterações, reaplique seu storyboard usando um <xref:System.Windows.Media.Animation.BeginStoryboard> ou o método <xref:System.Windows.Media.Animation.Storyboard.Begin%2A>. Quando você usa qualquer um desses métodos, a animação é reiniciada. No código, você pode usar o método <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> para deslocar o storyboard de volta para sua posição anterior.
 
-Para obter um exemplo de uma animação associada a dados, consulte [exemplo de animação da chave spline](https://go.microsoft.com/fwlink/?LinkID=160011). Para obter mais informações sobre como funciona a animação e o sistema de temporização, consulte [visão geral do sistema de animação e tempo](animation-and-timing-system-overview.md).
+Para obter um exemplo de uma animação associada a dados, consulte [exemplo de animação da chave spline](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations). Para obter mais informações sobre como funciona a animação e o sistema de temporização, consulte [visão geral do sistema de animação e tempo](animation-and-timing-system-overview.md).
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,19 +355,19 @@ Os exemplos nesta visão geral mostram como animar pelo uso de storyboards. Quan
 
 As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus aplicativos.
 
-- [Amostra de valores de destino de animação De, Para e Por](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Amostra de valores de destino de animação De, Para e Por](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   Demonstra diferentes configurações De/Para/Por.
 
-- [Amostra de comportamento de tempo da animação](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Amostra de comportamento de tempo da animação](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   Demonstra as diferentes maneiras em que você pode controlar o comportamento de temporização de uma animação. Essa amostra também demonstra como associar o valor de destino de uma animação a dados.
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
-|Cargo|Descrição|
+|Title|DESCRIÇÃO|
 |-----------|-----------------|
 |[Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)|Descreve como o sistema de tempo usa as classes <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock>, que permitem criar animações.|
 |[Dicas e truques de animação](animation-tips-and-tricks.md)|Lista dicas úteis para solucionar problemas com animações, por exemplo, desempenho.|

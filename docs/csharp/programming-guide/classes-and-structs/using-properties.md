@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705399"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452013"
 ---
 # <a name="using-properties-c-programming-guide"></a>Usando propriedades (Guia de Programação em C#)
 
@@ -53,7 +53,7 @@ No segmento de código anterior, se você não atribuir um valor à propriedade 
 
 ## <a name="the-set-accessor"></a>O acessador set
 
-O acessador `set` é semelhante a um método cujo tipo de retorno é [void](../../language-reference/keywords/void.md). Ele usa uma parâmetro implícito chamado `value`, cujo tipo é o tipo da propriedade. No exemplo a seguir, uma acessador `set` é adicionado à propriedade `Name`:
+O acessador `set` é semelhante a um método cujo tipo de retorno é [void](../../language-reference/builtin-types/void.md). Ele usa uma parâmetro implícito chamado `value`, cujo tipo é o tipo da propriedade. No exemplo a seguir, uma acessador `set` é adicionado à propriedade `Name`:
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
@@ -65,9 +65,9 @@ Quando você atribui um valor à propriedade, o acessador `set` é invocado por 
 
 ## <a name="remarks"></a>Comentários
 
-As propriedades podem ser marcadas como `public`, `private`, `protected`, `internal`, `protected internal` ou `private protected`. Esses modificadores de acesso definem como os usuários da classe podem acessar a propriedade. Os acessadores `get` e `set` para a mesma propriedade podem ter modificadores de acesso diferentes. Por exemplo, o `get` pode ser `public` para permitir acesso somente leitura de fora do tipo e o `set` pode ser `private` ou `protected`. Para obter mais informações, consulte [Modificadores de Acesso](./access-modifiers.md).
+As propriedades podem ser marcadas como `public`, `private`, `protected`, `internal`, `protected internal` ou `private protected`. Esses modificadores de acesso definem como os usuários da classe podem acessar a propriedade. Os acessadores `get` e `set` para a mesma propriedade podem ter modificadores de acesso diferentes. Por exemplo, o `get` pode ser `public` para permitir acesso somente leitura de fora do tipo e o `set` pode ser `private` ou `protected`. Para obter mais informações, consulte [Modificadores de acesso](./access-modifiers.md).
 
-Uma propriedade pode ser declarada como uma propriedade estática, usando a palavra-chave `static`. Isso torna a propriedade disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](./static-classes-and-static-class-members.md).
+Uma propriedade pode ser declarada como uma propriedade estática, usando a palavra-chave `static`. Isso torna a propriedade disponível para chamadores a qualquer momento, mesmo se não existir nenhuma instância da classe. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](./static-classes-and-static-class-members.md).
 
 Uma propriedade pode ser marcada como uma propriedade virtual, usando a palavra-chave [virtual](../../language-reference/keywords/virtual.md). Isso habilita as classes derivadas a substituírem o comportamento da propriedade, usando a palavra-chave [override](../../language-reference/keywords/override.md). Para obter mais informações sobre essas opções, consulte [Herança](inheritance.md).
 
@@ -106,7 +106,7 @@ Neste exemplo, duas classes, `Cube` e `Square`, implementam uma classe abstrata 
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Propriedades](properties.md)

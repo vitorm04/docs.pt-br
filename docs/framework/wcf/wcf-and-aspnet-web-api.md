@@ -2,12 +2,12 @@
 title: ASP.NET Web API e WCF
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 302415a67a953d157b0aee8aa126786d2d0c4e62
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e058b2ea5e9188c365c679ae46c4d7c9de45e4b9
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320247"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452559"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>ASP.NET Web API e WCF
 WCF é o modelo de programação unificada da Microsoft para a criação de aplicativos orientados a serviços. Ele permite aos desenvolvedores criarem soluções seguras, confiáveis e transacionadas que se integram nas plataformas e interoperam com os investimentos existentes. [ASP.NET Web API](https://www.asp.net/web-api) é uma estrutura que facilita a criação de serviços http que atingem uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework. Este tópico apresenta algumas diretrizes para ajudá-lo a decidir qual tecnologia atenderá melhor suas necessidades.  
@@ -22,11 +22,11 @@ WCF é o modelo de programação unificada da Microsoft para a criação de apli
 |Dá suporte a serviços de compilação com padrões WS-* como Mensagens Confiáveis, Transações, Segurança da Mensagem.|Usa protocolo básico e formatos como HTTP, WebSockets, SSL, JSON e XML. Não há suporte para protocolos de nível mais alto como Mensagens Confiáveis ou Transações.|  
 |Dá suporte a padrões de troca de mensagens solicitação-resposta, unidirecional e duplex.|O HTTP é uma solicitação/resposta, mas padrões adicionais podem ser suportados por meio da integração de [signalr](https://github.com/SignalR/SignalR) e WebSockets.|  
 |Os serviços de WCF SOAP podem ser descritos no WSDL permitindo que as ferramentas automatizadas gerem proxies de cliente mesmo para os serviços com esquemas complexos.|Há várias maneiras de descrever uma API da Web variando de página de ajuda HTML gerada automaticamente descrevendo snippets para metadados estruturados para APIs integradas de OData.|  
-|É fornecido com o .NET framework.|É fornecido com o .NET framework, mas tem código aberto e também está disponível fora da banda como download independente.|  
+|É fornecido com o .NET Framework.|O é fornecido com .NET Framework, mas é de software livre e também está disponível fora de banda como download independente.|  
   
  Use o WCF para criar serviços Web confiáveis e seguros que podem ser acessados por uma variedade de transportes. Use ASP.NET Web API para criar serviços baseados em HTTP que estejam acessíveis a partir de uma ampla variedade de clientes. Use o ASP.NET Web API se você estiver criando novos serviços de estilo REST. Embora o WCF forneça algum suporte para escrever serviços de estilo REST, o suporte para REST no ASP.NET Web API é mais completo e todas as melhorias futuras do recurso REST serão feitas no ASP.NET Web API. Se você tiver um serviço WCF existente e quiser expor pontos de extremidade adicionais REST, use WCF e o <xref:System.ServiceModel.WebHttpBinding>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [O que é o Windows Communication Foundation](whats-wcf.md)
 - [Conceitos fundamentais do Windows Communication Foundation](fundamental-concepts.md)

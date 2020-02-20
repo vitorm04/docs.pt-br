@@ -2,12 +2,12 @@
 title: Catálogo do RID (Identificador de Runtime) do .NET Core
 description: Saiba mais sobre o RID (Identificador de runtime) e como os RIDs são usados no .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789901"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451727"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de RIDs do .NET Core
 
@@ -108,7 +108,7 @@ Apenas os valores comuns são listados. Para obter a versão mais recente e comp
   - `win10-arm`
   - `win10-arm64`
 
-Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?pivots=os-windows).
 
 ## <a name="linux-rids"></a>RIDs do Linux
 
@@ -126,7 +126,7 @@ Apenas os valores comuns são listados. Para obter a versão mais recente e comp
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux).
+Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?pivots=os-linux).
 
 ## <a name="macos-rids"></a>RIDs do macOS
 
@@ -145,8 +145,8 @@ Os RIDs do macOS usam a identidade visual “OSX” mais antiga. Apenas os valor
 - macOS 10.14 Mojave (.NET Core 1.1 ou versões posteriores)
   - `osx.10.14-x64`
 
-Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos).
+Para obter mais informações, consulte [dependências e requisitos do .NET Core](install/dependencies.md?pivots=os-macos).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [IDs de Runtime](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

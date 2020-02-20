@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454450"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449966"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Como associar a um serviço Web
 Este exemplo mostra como associar a objetos retornados por chamadas de método de serviço Web.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o [serviço de conteúdo de sistema de publicação MSDN/TechNet (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) para recuperar a lista de idiomas com suporte de um documento especificado.  
+ Este exemplo usa o serviço de conteúdo do MTPS (sistema de publicação do MSDN/TechNet) para recuperar a lista de idiomas com suporte em um documento especificado.  
   
  Antes de chamar um serviço Web, é necessário criar uma referência a ele. Para criar uma referência Web para o serviço MTPS usando o Visual Studio, siga as seguintes etapas:  
   
-1. Abra seu projeto no Visual Studio.  
+1. Abra o projeto no Visual Studio.  
   
 2. No menu **Projeto**, clique em **Adicionar referência Web**.  
   
@@ -45,7 +45,7 @@ Este exemplo mostra como associar a objetos retornados por chamadas de método d
   
  Para obter informações sobre a estrutura de `getContentResponse`, consulte [documentação do serviço de conteúdo](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
 - [Visão geral das origens da associação](binding-sources-overview.md)

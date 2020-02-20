@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802369"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449498"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novidades no Windows Communication Foundation 4.5
 
@@ -36,7 +36,7 @@ O WCF agora tem suporte para desenvolvimento do primeiro contrato. O SvcUtil. ex
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Adicione uma referência de serviço de um projeto de subconjunto portátil
 
-Os projetos de subconjunto portáteis permitem que os programadores do assembly .NET mantenham uma única árvore de origem e criem o sistema enquanto ainda dão suporte a várias plataformas .NET (área de trabalho, Silverlight, Windows Phone e XBOX). Os projetos de subconjuntos portáteis só fazem referência a bibliotecas portáteis .NET que são um assembly do .NET Framework que pode ser usado em qualquer plataforma .NET. A experiência do desenvolvedor é a mesma que adicionar uma referência de serviço dentro de qualquer outro aplicativo cliente WCF. Para obter mais informações, consulte [Adicionar referência de serviço em um projeto de subconjunto portátil](add-service-reference-in-a-portable-subset-project.md).
+Os projetos de subconjuntos portáteis permitem que os programadores de assembly .NET mantenham uma única árvore de origem e um sistema de compilação enquanto ainda dão suporte a várias plataformas .NET (desktop, Silverlight, Windows Phone e Xbox). Os projetos de subconjuntos portáteis só fazem referência a bibliotecas portáteis .NET que são assemblies que podem ser usados em qualquer plataforma .NET. A experiência do desenvolvedor é a mesma que adicionar uma referência de serviço dentro de qualquer outro aplicativo cliente WCF. Para obter mais informações, consulte [Adicionar referência de serviço em um projeto de subconjunto portátil](add-service-reference-in-a-portable-subset-project.md).
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Padrão do modo de compatibilidade do ASP.NET alterado
 
@@ -78,7 +78,7 @@ WebSockets é uma tecnologia que fornece comunicação bidirecional verdadeira n
 
 A tabela a seguir descreve as configurações que foram alteradas e onde localizar informações adicionais.
 
-|propriedade|{1&gt;On&lt;1}|Novo padrão|Para obter mais informações, consulte|
+|Propriedade|Por|Novo padrão|Para obter mais informações, consulte|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * número de processadores|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

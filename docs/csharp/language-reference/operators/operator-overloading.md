@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937192"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451922"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operador (referência de C#)
 
@@ -52,16 +52,18 @@ A tabela a seguir fornece informações sobre capacidade de sobrecarga de operad
 > - Operadores `<` e `>`
 > - Operadores `<=` e `>=`
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
 - [Sobrecarga de operador](~/_csharplang/spec/expressions.md#operator-overloading)
 - [Operadores](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
 - [Operadores de conversão definidos pelo usuário](user-defined-conversion-operators.md)
+- [Diretrizes de design – sobrecargas de operador](../../../standard/design-guidelines/operator-overloads.md)
+- [Diretrizes de design-operadores de igualdade](../../../standard/design-guidelines/equality-operators.md)
 - [Por que os operadores sobrecarregados sempre são estáticos em C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c)

@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 7c0930f6606aa96d2863dc740aef8e9cab724b37
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344853"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449381"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>Alteração no valor padrão de UseShellExecute
 
 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> tem um valor padrão de `false` no .NET Core. Em .NET Framework, seu valor padrão é `true`.
 
-#### <a name="change-description"></a>Descrição das alterações
+#### <a name="change-description"></a>Alterar descrição
 
 <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> permite que você inicie um aplicativo diretamente, por exemplo, com um código como `Process.Start("mspaint.exe")` que inicia o Paint. Ele também permite que você inicie indiretamente um aplicativo associado se <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> estiver definido como `true`. No .NET Framework, o valor padrão de <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> é `true`, o que significa que o código como `Process.Start("mytextfile.txt")` iniciaria o bloco de notas, se você tiver associado arquivos *. txt* com esse editor. Para evitar a inicialização indireta de um aplicativo no .NET Framework, você deve definir explicitamente <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> como `false`. No .NET Core, o valor padrão para <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> é `false`. Isso significa que, por padrão, os aplicativos associados não são iniciados quando você chama `Process.Start`.
 
@@ -38,7 +38,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Diagnostics.Process.Start`
 - `M:System.Diagnostics.ProcessStartInfo`

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100689"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451974"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novidades do .NET Core 2.2
 
@@ -18,7 +18,7 @@ O .NET Core 2.2 inclui aprimoramentos na implantação do aplicativo, na manipul
 
 ## <a name="new-deployment-mode"></a>Novo modo de implantação
 
-A partir do .NET Core 2.2, você pode implantar [executáveis dependentes da estrutura](../deploying/index.md#framework-dependent-executables-fde), que são arquivos **.exe** em vez de arquivos **.dll**. Com uma funcionalidade semelhante às implantações dependentes de estrutura, os FDEs (executáveis dependentes de estrutura) ainda contam com a presença de uma versão compartilhada de todo o sistema do .NET Core para executar. Seu aplicativo contém apenas seu código e quaisquer dependências de terceiros. Ao contrário de implantações dependentes de estrutura, os FDEs são específicos da plataforma.
+A partir do .NET Core 2.2, você pode implantar [executáveis dependentes da estrutura](../deploying/index.md#publish-runtime-dependent), que são arquivos **.exe** em vez de arquivos **.dll**. Com uma funcionalidade semelhante às implantações dependentes de estrutura, os FDEs (executáveis dependentes de estrutura) ainda contam com a presença de uma versão compartilhada de todo o sistema do .NET Core para executar. Seu aplicativo contém apenas seu código e quaisquer dependências de terceiros. Ao contrário de implantações dependentes de estrutura, os FDEs são específicos da plataforma.
 
 Esse novo modo de implantação tem a vantagem distinta da criar um executável em vez de uma biblioteca, o que significa que você pode executar seu aplicativo diretamente, sem invocar `dotnet` primeiro.
 
@@ -64,7 +64,7 @@ Além disso, o .NET Core 2.2 adiciona as duas propriedades a seguir à classe <x
 
 - <xref:System.Diagnostics.Tracing.EventWrittenEventArgs.TimeStamp?displayProperty=nameWithType>
 
-## <a name="data"></a>Dados
+## <a name="data"></a>data
 
 **Autenticação do AAD para Bancos de Dados SQL do Azure com a propriedade SqlConnection.AccessToken**
 
@@ -94,7 +94,7 @@ Esperamos que os provedores de hospedagem definam a configuração e a política
 
 Confira [Gancho de inicialização do host](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/host-startup-hook.md) para saber mais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Novidades do .NET Core](index.md)
 - [Novidades do ASP.NET Core 2.2](/aspnet/core/release-notes/aspnetcore-2.2)

@@ -3,12 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714129"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451099"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -30,7 +30,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 
 ## <a name="common-top-level-properties"></a>Propriedades comuns de nível superior
 
-### <a name="name"></a>{1&gt;name&lt;1}
+### <a name="name"></a>name
 
 ```json
 {
@@ -38,7 +38,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 }
 ```
 
-Não há mais suporte. Em csproj, isso é determinado pelo nome de arquivo do projeto, que normalmente corresponde ao nome do diretório. Por exemplo, `MyProjectName.csproj`.
+Não tem mais suporte. Em csproj, isso é determinado pelo nome de arquivo do projeto, que normalmente corresponde ao nome do diretório. Por exemplo, `MyProjectName.csproj`.
 
 Por padrão, o nome de arquivo do projeto também especifica o valor das propriedades `<AssemblyName>` e `<PackageId>`.
 
@@ -52,7 +52,7 @@ Por padrão, o nome de arquivo do projeto também especifica o valor das proprie
 O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json.
 Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
 
-### <a name="version"></a>versão
+### <a name="version"></a>version
 
 ```json
 {
@@ -337,7 +337,7 @@ No MSBuild, todos os projetos são *portáteis* durante o build, mas podem ser p
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-Para obter mais informações, consulte [SCD (implantações independentes)](../deploying/index.md#self-contained-deployments-scd).
+Para obter mais informações, consulte [SCD (implantações independentes)](../deploying/index.md#publish-self-contained).
 
 ## <a name="tools"></a>ferramentas
 
@@ -561,7 +561,7 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>{1&gt;shared&lt;1}
+## <a name="shared"></a>compartilhadas
 
 ```json
 {
@@ -572,7 +572,7 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*.
 Para obter mais informações, consulte [Incluindo arquivos de conteúdo](/nuget/schema/nuspec#including-content-files).
 
-## <a name="files"></a>arquivos
+## <a name="files"></a>files
 
 Em *project.json*, o build e o pacote poderão ser estendidos para serem compilados e inseridos de pastas diferentes.
 No MSBuild, isso é feito com [itens](/visualstudio/msbuild/common-msbuild-project-items). O seguinte exemplo é uma conversão comum:
@@ -673,6 +673,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de alto nível das alterações na CLI](../tools/cli-msbuild-architecture.md)

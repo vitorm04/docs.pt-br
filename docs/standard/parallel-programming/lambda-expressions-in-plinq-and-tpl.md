@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129026"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452994"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>Expressões lambda em PLINQ e TPL
 
@@ -26,11 +26,11 @@ A TPL (Biblioteca de Paralelismo de Tarefas) contém vários métodos que usam u
 
 ## <a name="func-delegate"></a>Delegado Func
 
-Um delegado `Func` encapsula um método que retorna um valor. Em uma assinatura Func, o último parâmetro de tipo, ou da extrema direita, sempre especifica o tipo de retorno. Uma causa comum de erros do compilador é tentar passar dois parâmetros de entrada para um <xref:System.Func%602?displayProperty=nameWithType>; na verdade, esse tipo usa somente um parâmetro de entrada. A Biblioteca de Classes do Framework define 17 versões do `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType> e assim por diante até <xref:System.Func%6017?displayProperty=nameWithType>.
+Um delegado `Func` encapsula um método que retorna um valor. Em uma assinatura `Func`, o parâmetro de tipo Last ou mais à direita sempre especifica o tipo de retorno. Uma causa comum de erros do compilador é tentar passar dois parâmetros de entrada para um <xref:System.Func%602?displayProperty=nameWithType>; na verdade, esse tipo usa somente um parâmetro de entrada. O .NET define 17 versões do `Func`: <xref:System.Func%601?displayProperty=nameWithType>, <xref:System.Func%602?displayProperty=nameWithType>, <xref:System.Func%603?displayProperty=nameWithType>e assim por diante por meio de <xref:System.Func%6017?displayProperty=nameWithType>.
 
 ## <a name="action-delegate"></a>Delegado Action
 
-Um delegado <xref:System.Action?displayProperty=nameWithType> encapsula um método (Sub em Visual Basic) que não retorna um valor, ou que retorna [void](../../csharp/language-reference/keywords/void.md). Em uma assinatura de tipo Action, os parâmetros de tipo representam apenas os parâmetros de entrada. Assim como Func, a Biblioteca de Classes do Framework define 17 versões de Action, partindo de uma versão que não tem nenhum parâmetro de tipo até uma versão que tenha 16 parâmetros de tipo.
+Um delegado <xref:System.Action?displayProperty=nameWithType> encapsula um método (sub no Visual Basic) que não retorna um valor. Em uma assinatura de tipo `Action`, os parâmetros de tipo representam apenas os parâmetros de entrada. Assim como `Func`, o .NET define 17 versões do `Action`, de uma versão que não tem parâmetros de tipo até uma versão que tem 16 parâmetros de tipo.
 
 ## <a name="example"></a>Exemplo
 
@@ -39,6 +39,6 @@ O exemplo a seguir para o método <xref:System.Threading.Tasks.Parallel.ForEach%
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação paralela](../../../docs/standard/parallel-programming/index.md)

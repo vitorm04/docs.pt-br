@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 215e8136b4bc3f2982cdb2d8382b0eca6a881f9b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2df4acc0606e4fe8fccee4a8acc6ab744dcbbb71
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217042"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452702"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Segurança e campos de matriz públicos somente leitura
 Nunca use campos de matriz pública somente leitura de bibliotecas gerenciadas para definir o comportamento de limite ou a segurança de seus aplicativos porque campos de matriz pública somente leitura podem ser modificados.  
   
 ## <a name="remarks"></a>Comentários  
- Algumas classes do .NET Framework incluem campos públicos somente leitura que contêm parâmetros de limite específicos da plataforma.  Por exemplo, o campo <xref:System.IO.Path.InvalidPathChars> é uma matriz que descreve os caracteres que não são permitidos em uma cadeia de caracteres de caminho de arquivo.  Muitos campos semelhantes estão presentes durante o .NET Framework.  
+
+Algumas classes .NET incluem campos públicos somente leitura que contêm parâmetros de limite específicos da plataforma. Por exemplo, o campo <xref:System.IO.Path.InvalidPathChars> é uma matriz que descreve os caracteres que não são permitidos em uma cadeia de caracteres de caminho de arquivo. Muitos campos semelhantes estão presentes em todo o .NET.  
   
  Os valores de campos somente leitura públicos como <xref:System.IO.Path.InvalidPathChars> podem ser modificados pelo código ou código que compartilha o domínio do aplicativo do seu código.  Você não deve usar campos de matriz pública somente leitura como este para definir o comportamento de limite de seus aplicativos.  Se você fizer isso, o código mal-intencionado poderá alterar as definições de limite e usar seu código de maneiras inesperadas.  
   

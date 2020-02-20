@@ -2,12 +2,12 @@
 title: funcionalidades de simplificação do WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802382"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452650"
 ---
 # <a name="wcf-simplification-features"></a>funcionalidades de simplificação do WCF
 
@@ -78,7 +78,7 @@ O WCF agora tem suporte para desenvolvimento do primeiro contrato. A ferramenta 
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>Adicione uma referência de serviço de um projeto de subconjunto portátil
 
-Os projetos de subconjuntos portáteis permitem que os programadores de assembly .NET mantenham uma única árvore de origem e um sistema de compilação enquanto ainda dão suporte a várias implementações do .NET (desktop, Silverlight, Windows Phone e XBOX). Os projetos de subconjuntos portáteis só fazem referência a bibliotecas portáteis .NET que são um assembly do .NET Framework que pode ser usado em qualquer implementação do .NET. A experiência do desenvolvedor é a mesma que adicionar uma referência de serviço dentro de qualquer outro aplicativo cliente WCF. Para obter mais informações, consulte [Adicionar referência de serviço em um projeto de subconjunto portátil](add-service-reference-in-a-portable-subset-project.md).
+Os projetos de subconjuntos portáteis permitem que os programadores de assembly .NET mantenham uma única árvore de origem e um sistema de compilação enquanto ainda dão suporte a várias implementações do .NET (desktop, Silverlight, Windows Phone e Xbox). Os projetos de subconjuntos portáteis só fazem referência a bibliotecas portáteis .NET que são assemblies que podem ser usados em qualquer implementação do .NET. A experiência do desenvolvedor é a mesma que adicionar uma referência de serviço dentro de qualquer outro aplicativo cliente WCF. Para obter mais informações, consulte [Adicionar referência de serviço em um projeto de subconjunto portátil](add-service-reference-in-a-portable-subset-project.md).
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>Padrão do modo de compatibilidade do ASP.NET alterado
 
@@ -94,7 +94,7 @@ O WCF fornece o modo de compatibilidade do ASP.NET para conceder aos desenvolved
 
 A tabela a seguir descreve as configurações que foram alteradas e onde localizar informações adicionais.
 
-|propriedade|{1&gt;On&lt;1}|Novo padrão|Mais Informações|
+|Propriedade|Por|Novo padrão|Mais informações|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|Essa propriedade determina quanto tempo uma conexão TCP pode tomar para se autenticar usando o protocolo de enquadramento .NET. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. Esse tempo limite é feito intencionalmente menor que o ReceiveTimeout (10 min) para que os clientes não autenticados mal-intencionados não mantenham as conexões vinculadas no servidor por muito tempo. O valor padrão é 30 segundos. Para obter mais informações sobre <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * número de processadores|Esta propriedade de nível de soquete descreve o número de solicitações com aceitações pendentes a serem enfileiradas. Se a fila de pendências de escuta for preenchida, as novas solicitações de soquete serão rejeitadas. Para obter mais informações sobre <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -109,7 +109,7 @@ A tabela a seguir descreve as configurações que foram alteradas e onde localiz
 
 <xref:System.Xml.XmlDictionaryReaderQuotas> contém valores de cota configuráveis para os leitores de dicionário de XML que limitam a quantidade de memória utilizada por um codificador ao criar uma mensagem. Embora essas quotas sejam configuráveis, os valores padrão foram alterados para diminuir a possibilidade de um desenvolvedor precisar defini-las explicitamente. A cota de `MaxReceivedMessageSize` não foi alterada para que ainda possa limitar o consumo de memória evitando a necessidade de você ter que lidar com a complexidade de <xref:System.Xml.XmlDictionaryReaderQuotas>. A tabela a seguir mostra as cotas, seus novos valores padrão e uma explicação breve do uso de cada cota.
 
-|Nome da cota|Valor Padrão|Descrição|
+|Nome da Cota|Valor Padrão|DESCRIÇÃO|
 |----------------|-------------------|-----------------|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Obtém e define a extensão máxima permitida da matriz. Essa cota limita o tamanho máximo de uma matriz de primitivas que o leitor de XML retorna, inclusive matrizes de bytes. Essa cota não limita o consumo de memória no próprio leitor de XML, mas em qualquer componente que esteja usando o leitor. Por exemplo, quando o <xref:System.Runtime.Serialization.DataContractSerializer> usa um leitor protegido com <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, ele não desserializa as matrizes de bytes maiores do que essa cota.|
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Obtém e define o máximo permitido de bytes retornados para cada leitura. Essa cota limita o número de bytes que são lidos em uma única operação de leitura ao ler a marca inicial do elemento e seus atributos. (Em casos não transmitidos por streaming, o nome do elemento em si não é contado na cota.) Ter atributos XML demais pode consumir todo o tempo de processamento de maneira desproporcional porque a exclusividade dos nomes de atributo tem que ser verificada. O <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> atenua essa ameaça.|

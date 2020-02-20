@@ -2,12 +2,12 @@
 title: Modelo de extensibilidade da CLI do .NET Core
 description: Saiba como você pode estender o CLI do .NET Core.
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920523"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451149"
 ---
 # <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidade da CLI do .NET Core
 
@@ -32,7 +32,7 @@ A CLI pode ser estendida de três maneiras principais:
 Os três mecanismos de extensibilidade descritos acima não são exclusivos. Você pode usar um, todos ou uma combinação deles. Qual deles escolher depende muito da meta que você está tentando alcançar com a extensão.
 
 ## <a name="per-project-based-extensibility"></a>Extensibilidade por projeto
-Ferramentas por projeto são [implantações dependentes de estrutura](../deploying/index.md#framework-dependent-deployments-fdd) distribuídas como pacotes NuGet. As ferramentas estão disponíveis apenas no contexto do projeto que faz referência a eles e para os quais eles são restaurados. A invocação fora do contexto do projeto (por exemplo, fora do diretório que contém o projeto) falhará porque o comando não foi encontrado.
+Ferramentas por projeto são [implantações dependentes de estrutura](../deploying/index.md#publish-runtime-dependent) distribuídas como pacotes NuGet. As ferramentas estão disponíveis apenas no contexto do projeto que faz referência a eles e para os quais eles são restaurados. A invocação fora do contexto do projeto (por exemplo, fora do diretório que contém o projeto) falhará porque o comando não foi encontrado.
 
 Essas ferramentas são perfeitas para criar servidores, desde que nada fora do arquivo de projeto seja necessário. O processo de build executa a restauração para o projeto compilado e as ferramentas disponíveis. Projetos de linguagem, como F#, também estão nesta categoria, uma vez que cada projeto pode ser escrito apenas em uma linguagem específica.
 

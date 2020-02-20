@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: b71783f2d061c9139de4449d8e0106eb00345894
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a86c1c36f75fa232d52731959371268a8b2593d7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740181"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452799"
 ---
 # <a name="how-to-hit-test-using-a-win32-host-container"></a>Como fazer teste de clique usando um contêiner de host Win32
 Você pode criar objetos visuais em uma janela do Win32 fornecendo um contêiner de janela de host para os objetos visuais. Para fornecer a manipulação de eventos para os objetos visuais contidos, você processa as mensagens passadas para o loop de filtro de mensagem do contêiner da janela do host. Consulte o [tutorial: hospedando objetos visuais em um aplicativo Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) para obter mais informações sobre como hospedar objetos visuais em uma janela do Win32.  
@@ -32,9 +32,9 @@ Você pode criar objetos visuais em uma janela do Win32 fornecendo um contêiner
   
  O objeto <xref:System.Windows.Interop.HwndSource> apresenta [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] conteúdo em uma janela do Win32. O valor da propriedade <xref:System.Windows.Interop.HwndSource.RootVisual%2A> do objeto <xref:System.Windows.Interop.HwndSource> representa o nó superior na hierarquia da árvore visual.  
   
- Para obter o exemplo completo sobre os objetos de teste de clique usando um contêiner de host do Win32, consulte [teste de clique com o exemplo de interoperação do Win32](https://go.microsoft.com/fwlink/?LinkID=159995).  
+ Para obter o exemplo completo sobre os objetos de teste de clique usando um contêiner de host do Win32, consulte [teste de clique com o exemplo de interoperação do Win32](https://github.com/microsoft/WPF-Samples/tree/master/Visual%20Layer/VisualsHitTesting).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Teste de clique na camada visual](hit-testing-in-the-visual-layer.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937690"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452676"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Melhores práticas do TLS (Transport Layer Security) com o .NET Framework
 
@@ -31,7 +31,7 @@ Este documento é destinado a desenvolvedores que estejam:
 - Usando diretamente clientes do WCF e serviços usando o namespace <xref:System.ServiceModel?displayProperty=nameWithType>.
 - Usando as funções de Trabalho e Web do [Serviços de Nuvem do Azure](https://azure.microsoft.com/services/cloud-services/) para hospedar e executar seu aplicativo. Confira a seção [Serviços de Nuvem do Azure](#azure-cloud-services).
 
-Recomendamos que você:
+É recomendável que você:
 
 - Defina o .NET Framework 4.7 ou versões posteriores como destino nos seus aplicativos. Defina o .NET Framework 4.7.1 ou versões posteriores como destino nos seus aplicativos WCF.
 - Não especifique a versão do protocolo TLS. Configure seu código para permitir que o sistema operacional decida sobre a versão do protocolo TLS.
@@ -140,7 +140,7 @@ Essas versões da estrutura do WCF são codificadas para usar valores do protoco
 
 ## <a name="if-your-app-targets-net-framework-35"></a>Se o aplicativo definir o .NET Framework 3.5 como destino
 
-Se você precisa definir explicitamente um protocolo de segurança em vez de deixar o .NET Framework ou o sistema operacional escolhê-lo, adicione as enumerações `SecurityProtocolTypeExtensions` e `SslProtocolsExtension` ao seu código. `SecurityProtocolTypeExtensions` e `SslProtocolsExtension` incluem valores para `Tls12`, `Tls11` e o valor `SystemDefault`. Confira [Suporte para versões padrão do sistema TLS incluídas no .NET Framework 3.5 no Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework).
+Se você precisar definir explicitamente um protocolo de segurança em vez de permitir que o .NET ou o sistema operacional escolha o protocolo de segurança, adicione `SecurityProtocolTypeExtensions` e `SslProtocolsExtension` enumerações ao seu código. `SecurityProtocolTypeExtensions` e `SslProtocolsExtension` incluem valores para `Tls12`, `Tls11` e o valor `SystemDefault`. Para obter mais informações, consulte [suporte para as versões padrão do sistema TLS incluídas no .NET Framework 3,5 no Windows 8.1 e no Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -209,7 +209,7 @@ Se o aplicativo for destinado ao .NET Framework 4.7 ou versões posteriores, o v
 
 Para saber mais, confira [Atualização Cumulativa para Windows 10 Versão 1511 e Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016).
 
-Para saber mais sobre o .NET Framework 3.5.1, confira [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
+Para obter mais informações com o .NET Framework 3.5.1, consulte [suporte para versões padrão do sistema TLS incluídas no .NET Framework 3.5.1 no Windows 7 SP1 e Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework).
 
 O arquivo _.REG_ a seguir define as chaves do Registro e suas variantes para seus valores mais seguros:
 
@@ -241,7 +241,7 @@ Comece com a chave do Registro do `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\C
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>O sinalizador SCH_USE_STRONG_CRYPTO
 
-Quando ele é habilitado (por padrão, por uma opção `AppContext` ou pelo Registro do Windows), o .NET Framework usa o sinalizador `SCH_USE_STRONG_CRYPTO` quando seu aplicativo solicita o protocolo de segurança TLS. O sinalizador `SCH_USE_STRONG_CRYPTO` pode ser habilitado por padrão, com a opção `AppContext` ou com o Registro. O sistema operacional passa o sinalizador para o `Schannel` para instruí-lo a desativar algoritmos criptográficos fracos conhecidos, pacotes de codificação e versões do protocolo TLS/SSL que possam ser habilitadas para uma melhor interoperabilidade. Para obter mais informações, consulte .
+Quando ele é habilitado (por padrão, por uma opção `AppContext` ou pelo Registro do Windows), o .NET Framework usa o sinalizador `SCH_USE_STRONG_CRYPTO` quando seu aplicativo solicita o protocolo de segurança TLS. O sinalizador `SCH_USE_STRONG_CRYPTO` pode ser habilitado por padrão, com a opção `AppContext` ou com o Registro. O sistema operacional passa o sinalizador para o `Schannel` para instruí-lo a desativar algoritmos criptográficos fracos conhecidos, pacotes de codificação e versões do protocolo TLS/SSL que possam ser habilitadas para uma melhor interoperabilidade. Para obter mais informações, consulte:
 
 - [Canal Seguro](/windows/desktop/SecAuthN/secure-channel)
 - [Estrutura SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred)
@@ -266,26 +266,26 @@ Consulte também:
 
 Para que seu aplicativo negocie o TLS 1.2, o sistema operacional e a versão do .NET Framework precisam dar suporte ao TLS 1.2.
 
-**Requisitos do sistema operacional para dar suporte ao TLS 1.2**
+**Requisitos do sistema operacional para dar suporte a TLS 1.2**
 
 Para habilitar ou reabilitar o TLS 1.2 e/ou o TLS 1.1 em um sistema compatível com eles, confira [Configurações do Registro do TLS (protocolo TLS)](/windows-server/security/tls/tls-registry-settings).
 
-| **Sistema operacional** | **Suporte ao TLS 1.2** |
+| **SO** | **Suporte ao TLS 1.2** |
 | --- | --- |
-| Windows 10<br>Windows Server 2016 | Com suporte e habilitado por padrão. |
-| Windows 8.1<br>Windows Server 2012 R2 | Com suporte e habilitado por padrão. |
-| Windows 8.0<br>Windows Server 2012 | Com suporte e habilitado por padrão. |
+| Windows 10<br>Windows Server 2016 | Suporte e habilitado por padrão. |
+| Windows 8.1<br>Windows Server 2012 R2 | Suporte e habilitado por padrão. |
+| Windows 8.0<br>Windows Server 2012 | Suporte e habilitado por padrão. |
 | Windows 7 SP1<br>Windows Server 2008 R2 SP1 | Com suporte, mas não habilitado por padrão. Veja a página da Web [Configurações do Registro do TLS (protocolo TLS)](/windows-server/security/tls/tls-registry-settings) para obter detalhes sobre como habilitar o TLS 1.2. |
 | Windows Server 2008 | O suporte ao protocolo TLS 1.2 e TLS 1.1 requer uma atualização. Confira [Atualizar para adicionar suporte ao protocolo TLS 1.1 e TLS 1.2 no Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
-| Windows Vista | {1&gt;Sem suporte.&lt;1} |
+| Windows Vista | Sem suporte. |
 
 Para saber mais sobre quais protocolos TLS/SSL são habilitados por padrão em cada versão do Windows, confira [Protocolos no TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
 
-**Requisitos para suporte ao protocolo TLS 1.2 com .NET Framework 3.5**
+**Requisitos para dar suporte a TLS 1.2 com .NET Framework 3.5**
 
 Esta tabela mostra a atualização do sistema operacional que você precisará para dar suporte ao protocolo TLS 1.2 com o .NET Framework 3.5. Recomendamos aplicar todas as atualizações do sistema operacional.
 
-| **Sistema operacional** | **Atualização mínima necessária para dar suporte ao TLS 1.2 com .NET Framework 3.5** |
+| **SO** | **Atualização mínima necessária para dar suporte ao TLS 1.2 com .NET Framework 3.5** |
 | --- | --- |
 | Windows 10<br>Windows Server 2016 | [Atualização Cumulativa para Windows 10 Versão 1511 e Windows Server 2016 Technical Preview 4: 10 de maio de 2016](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016) |
 | Windows 8.1<br>Windows Server 2012 R2 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 3.5 no Windows 8.1 e Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
@@ -294,7 +294,7 @@ Esta tabela mostra a atualização do sistema operacional que você precisará p
 | Windows Server 2008 | [Suporte para Versões Padrão do Sistema TLS incluídas no .NET Framework 2.0 SP2 no Windows Vista SP2 e Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Sem suporte |
 
-## <a name="azure-cloud-services"></a>Serviços de Nuvem do Azure
+## <a name="azure-cloud-services"></a>Serviços de nuvem do Azure
 
 Se você está usando as funções de Trabalho e Web dos [Serviços de Nuvem do Azure](https://azure.microsoft.com/services/cloud-services/) para hospedar e executar seu aplicativo, há algumas considerações que você precisa levar em conta para dar suporte ao TLS 1.2.
 

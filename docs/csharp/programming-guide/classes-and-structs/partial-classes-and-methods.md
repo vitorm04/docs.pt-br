@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714738"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451909"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 
@@ -60,7 +60,7 @@ Os itens a seguir são mesclados de todas as definições de tipo parcial:
 
 - atributos class
 
-- Membros do
+- membros
 
 Por exemplo, considere as declarações a seguir:
 
@@ -70,7 +70,7 @@ Elas são equivalentes às seguintes declarações:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
-### <a name="restrictions"></a>{1&gt;Restrições&lt;1}
+### <a name="restrictions"></a>Restrições
 
 Há várias regras para seguir quando você está trabalhando com definições de classes parciais:
 
@@ -90,7 +90,7 @@ Há várias regras para seguir quando você está trabalhando com definições d
 
 - As seguintes palavras-chave em uma definição de tipo parcial são opcionais, mas, se estiverem presentes em uma definição de tipo parcial, não podem entrar em conflito com as palavras-chave especificadas em outra definição parcial para o mesmo tipo:
 
-  - [public](../../language-reference/keywords/public.md)
+  - [público](../../language-reference/keywords/public.md)
 
   - [private](../../language-reference/keywords/private.md)
 
@@ -112,7 +112,7 @@ Para obter mais informações, consulte [Restrições a parâmetros de tipo](../
 
 ## <a name="example-1"></a>Exemplo 1
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarados em uma definição de classe parcial e o membro, `PrintCoords`, é declarado em outra definição de classe parcial.
 
@@ -122,7 +122,7 @@ No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarad
 
 ## <a name="example-2"></a>Exemplo 2
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 O exemplo a seguir mostra que você também pode desenvolver interfaces e structs parciais.
 
@@ -151,7 +151,7 @@ partial void onNameChanged()
 }
 ```
 
-- Declarações de métodos parcial devem começar com a palavra-chave contextual [partial](../../language-reference/keywords/partial-type.md) e o método deve retornar [void](../../language-reference/keywords/void.md).
+- Declarações de métodos parcial devem começar com a palavra-chave contextual [partial](../../language-reference/keywords/partial-type.md) e o método deve retornar [void](../../language-reference/builtin-types/void.md).
 
 - Os métodos parciais podem ter os parâmetros [in](../../language-reference/keywords/in-parameter-modifier.md) ou [ref](../../language-reference/keywords/ref.md), mas não [out](../../language-reference/keywords/out-parameter-modifier.md).
 
@@ -169,7 +169,7 @@ partial void onNameChanged()
 
 Para obter mais informações, veja [Tipos parciais](~/_csharplang/spec/classes.md#partial-types) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes](./classes.md)

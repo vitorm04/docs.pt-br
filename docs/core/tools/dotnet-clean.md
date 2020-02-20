@@ -2,12 +2,12 @@
 title: Comando dotnet clean
 description: O comando dotnet clean limpa o diretório atual.
 ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734243"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451350"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -17,7 +17,7 @@ ms.locfileid: "76734243"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet clean` – limpa a saída de um projeto.
 
@@ -29,7 +29,7 @@ dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--int
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet clean` limpará a saída da compilação anterior. Ele é implementado como um [destino de MSBuild](/visualstudio/msbuild/msbuild-targets), para que o projeto seja avaliado durante a execução do comando. Apenas as saídas criadas durante a compilação são limpas. As pastas de saídas intermediária (*obj*) e final (*bin*) serão limpas.
 
@@ -39,7 +39,7 @@ O comando `dotnet clean` limpará a saída da compilação anterior. Ele é impl
 
 O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou projeto não for especificado, o MSBuild pesquisará no diretório de trabalho atual por um arquivo que tenha uma extensão terminada em *proj* ou *sln* e usará esse arquivo.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -67,7 +67,7 @@ O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou p
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Limpa a pasta de saída do runtime especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#self-contained-deployments-scd) foi criada. Opção disponível desde o SDK do .NET Core 2.0.
+  Limpa a pasta de saída do runtime especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#publish-self-contained) foi criada. Opção disponível desde o SDK do .NET Core 2.0.
 
 * **`-v|--verbosity <LEVEL>`**
 
