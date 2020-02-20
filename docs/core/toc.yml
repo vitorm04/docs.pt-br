@@ -2,7 +2,7 @@
   href: index.md
 - name: Sobre o .NET Core
   href: about.md
-- name: Instalar o
+- name: Instalar
   items:
     - name: Visão geral
       href: install/index.md
@@ -111,6 +111,18 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 – Criar um pacote de modelo
           href: tutorials/cli-templates-create-template-pack.md
+- name: SDKs do projeto
+  items:
+    - name: Visão geral
+      href: project-sdk/overview.md
+    - name: Referência
+      items:
+        - name: Microsoft.NET.Sdk
+          href: project-sdk/msbuild-props.md
+        - name: Microsoft.NET.Sdk.Web
+          href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+        - name: Microsoft.NET.Sdk.Razor
+          href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
 - name: Configuração do runtime
   items:
     - name: Configurações
