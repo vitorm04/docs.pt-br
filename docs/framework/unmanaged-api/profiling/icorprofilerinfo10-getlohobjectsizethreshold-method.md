@@ -11,43 +11,43 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7a0f6f6bea5bc919ebfe9c9acc3b02a31eaa7cd0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868978"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452208"
 ---
-# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a><span data-ttu-id="d9af3-102">Método ICorProfilerInfo10:: GetLOHObjectSizeThreshold</span><span class="sxs-lookup"><span data-stu-id="d9af3-102">ICorProfilerInfo10::GetLOHObjectSizeThreshold Method</span></span>
+# <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a><span data-ttu-id="2c2ba-102">Método ICorProfilerInfo10:: GetLOHObjectSizeThreshold</span><span class="sxs-lookup"><span data-stu-id="2c2ba-102">ICorProfilerInfo10::GetLOHObjectSizeThreshold Method</span></span>
 
-<span data-ttu-id="d9af3-103">Obtém o valor do limite de LOH (heap de objeto grande) configurado.</span><span class="sxs-lookup"><span data-stu-id="d9af3-103">Gets the value of the configured large object heap (LOH) threshold.</span></span>
+<span data-ttu-id="2c2ba-103">Obtém o valor do limite de LOH (heap de objeto grande) configurado.</span><span class="sxs-lookup"><span data-stu-id="2c2ba-103">Gets the value of the configured large object heap (LOH) threshold.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d9af3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d9af3-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2c2ba-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2c2ba-104">Syntax</span></span>
 
 ```cpp
 HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="d9af3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d9af3-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="2c2ba-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="2c2ba-105">Parameters</span></span>
 
 - `pThreshold`
 
-  <span data-ttu-id="d9af3-106">\[out] o limite de heap de objeto grande em bytes.</span><span class="sxs-lookup"><span data-stu-id="d9af3-106">\[out] The large object heap threshold in bytes.</span></span>
+  <span data-ttu-id="2c2ba-106">\[out] o limite de heap de objeto grande em bytes.</span><span class="sxs-lookup"><span data-stu-id="2c2ba-106">\[out] The large object heap threshold in bytes.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="d9af3-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d9af3-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2c2ba-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="2c2ba-107">Remarks</span></span>
 
-<span data-ttu-id="d9af3-108">Os objetos maiores que o limite de heap de objeto grande serão alocados no heap de objeto grande.</span><span class="sxs-lookup"><span data-stu-id="d9af3-108">Objects larger than the large object heap threshold will be allocated on the large object heap.</span></span> <span data-ttu-id="d9af3-109">A partir do .NET Core 3,0, o limite de heap de objeto grande é configurável, `pThreshold` conterá o tamanho limite de heap de objeto grande ativo em bytes.</span><span class="sxs-lookup"><span data-stu-id="d9af3-109">Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.</span></span>
+<span data-ttu-id="2c2ba-108">Os objetos maiores que o limite de heap de objeto grande serão alocados no heap de objeto grande.</span><span class="sxs-lookup"><span data-stu-id="2c2ba-108">Objects larger than the large object heap threshold will be allocated on the large object heap.</span></span> <span data-ttu-id="2c2ba-109">A partir do .NET Core 3,0, o limite de heap de objeto grande é configurável, `pThreshold` conterá o tamanho limite de heap de objeto grande ativo em bytes.</span><span class="sxs-lookup"><span data-stu-id="2c2ba-109">Starting with .NET Core 3.0 the large object heap threshold is configurable, `pThreshold` will contain the active large object heap threshold size in bytes.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d9af3-110">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="d9af3-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="2c2ba-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2c2ba-110">Requirements</span></span>
 
-<span data-ttu-id="d9af3-111">**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="d9af3-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).</span></span>
+<span data-ttu-id="2c2ba-111">**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="2c2ba-111">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?pivots=os-windows).</span></span>
 
-<span data-ttu-id="d9af3-112">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="d9af3-112">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="2c2ba-112">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="2c2ba-112">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="d9af3-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9af3-113">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="2c2ba-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c2ba-113">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="d9af3-114">**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9af3-114">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="2c2ba-114">**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c2ba-114">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d9af3-115">Veja também</span><span class="sxs-lookup"><span data-stu-id="d9af3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c2ba-115">Confira também</span><span class="sxs-lookup"><span data-stu-id="2c2ba-115">See also</span></span>
 
-- [<span data-ttu-id="d9af3-116">Interface ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="d9af3-116">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="2c2ba-116">Interface ICorProfilerInfo10</span><span class="sxs-lookup"><span data-stu-id="2c2ba-116">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
