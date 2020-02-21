@@ -2,14 +2,14 @@
 title: Analisador de API do .NET
 description: Saiba como o analisador de API do .NET pode ajudar a detectar problemas de compatibilidade de plataforma e de APIs preteridas.
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124241"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542618"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -20,11 +20,11 @@ O Analisador de API é fornecido como um pacote NuGet [Microsoft.DotNet.Analyzer
 > [!NOTE]
 > O analisador do .NET API ainda é uma versão de pré-lançamento.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 e versões posteriores ou Visual Studio para Mac (todas as versões).
 
-## <a name="discovering-deprecated-apis"></a>Descobrindo APIs preteridas
+## <a name="discover-deprecated-apis"></a>Descobrir APIs preteridas
 
 ### <a name="what-are-deprecated-apis"></a>Quais são as APIs preteridas?
 
@@ -36,7 +36,21 @@ A família .NET é um conjunto de produtos grandes que são atualizados constant
 
 O Analisador de API usa códigos de erro específicos de API que começam com DE (que representa Erro de Preterição), o que permite controlar a exibição de avisos individuais. As APIs preteridas identificadas pelo analisador são definidas no repositório [dotnet/platform-compat](https://github.com/dotnet/platform-compat).
 
-### <a name="using-the-api-analyzer"></a>Como usar o analisador de API
+### <a name="add-the-api-analyzer-to-your-project"></a>Adicionar o analisador de API ao seu projeto
+
+1. Abra o Visual Studio.
+2. Abra o projeto no qual você deseja executar o analisador.
+3. Em **Gerenciador de soluções**, clique com o botão direito do mouse em seu projeto e escolha **gerenciar pacotes NuGet**. (Esta opção também está disponível no menu **Projeto**.)
+4. Na guia Gerenciador de pacotes NuGet:
+   1. Selecione "nuget.org" como a origem do pacote.
+   2. Vá para a guia **procurar** .
+   3. Selecione **Incluir pré-lançamento**.
+   4. Procure **Microsoft. dotnet. Analyzers. Compatibility**.
+   5. Selecione esse pacote na lista.
+   6. Selecione o botão **Instalar**. 
+   7. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
+
+### <a name="use-the-api-analyzer"></a>Usar o analisador de API
 
 Quando uma API preterida, como <xref:System.Net.WebClient>, é usada em um código, o Analisador de API a realça com uma linha irregular verde. Quando você focaliza a chamada de API, uma lâmpada é exibida com informações sobre a substituição de API, como no seguinte exemplo:
 
@@ -50,14 +64,14 @@ Clicando na ID, você vai para uma página da Web com informações detalhadas s
 
 Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro realçado e selecionando **Suprimir \<ID de diagnóstico>** . Há duas maneiras de suprimir avisos: 
 
-- [localmente (no código-fonte)](#suppressing-warnings-locally)
-- [globalmente (em um arquivo de supressão)](#suppressing-warnings-globally) ‒ recomendado
+- [localmente (no código-fonte)](#suppress-warnings-locally)
+- [globalmente (em um arquivo de supressão)](#suppress-warnings-globally) ‒ recomendado
 
-### <a name="suppressing-warnings-locally"></a>Como suprimir avisos localmente
+### <a name="suppress-warnings-locally"></a>Suprimir avisos localmente
 
 Para suprimir avisos localmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico*\<ID de diagnóstico >**  > **na Fonte**. A política de pré-processamento de aviso [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) é adicionada ao código-fonte no escopo definido: !["Captura de tela de código enquadrado com #pragma warning disable"](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>Como suprimir avisos globalmente
+### <a name="suppress-warnings-globally"></a>Suprimir avisos globalmente
 
 Para suprimir avisos globalmente, clique no membro para o qual você deseja suprimir avisos e selecione **Ações Rápidas e Refatorações** > **Suprimir *ID de diagnóstico*\<ID de diagnóstico >**  > **no Arquivo de Supressão**.
 
@@ -69,7 +83,7 @@ Um arquivo *GlobalSuppressions.cs* é adicionado ao projeto após a primeira sup
 
 A supressão global é a maneira recomendada de garantir a consistência do uso da API em projetos.
 
-## <a name="discovering-cross-platform-issues"></a>Detectando problemas entre plataformas
+## <a name="discover-cross-platform-issues"></a>Descobrir problemas entre plataformas
 
 De forma semelhante a APIs preteridas, o analisador identifica todas as APIs que não são entre plataformas. Por exemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona no Windows, mas não no Linux ou no macOS. A ID de diagnóstico é mostrada na janela **Lista de Erros**. Você pode suprimir esse aviso clicando e selecionando **Ações Rápidas e Refatorações**. Diferentemente de casos de preterição em que você tem duas opções (continuar usando o membro preterido e suprimir avisos ou não o utilizar), aqui, se estiver desenvolvendo o código apenas para algumas plataformas, você poderá suprimir todos os avisos para todas as outras plataformas em que não planejar executar o código. Para fazer isso, basta editar o arquivo de projeto e adicionar a propriedade `PlatformCompatIgnore` que lista todas as plataformas a serem ignoradas. Os valores aceitos são: `Linux`, `macOS` e `Windows`.
 
@@ -111,7 +125,7 @@ O usuário decide como o diagnóstico deve ser tratado: como avisos, erros, suge
 
 !["Captura de tela do Gerenciador de Soluções mostrando o diagnóstico e a caixa de diálogo pop-up com Severidade de Conjunto de Regras"](media/api-analyzer/disable-notifications.jpg)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - Postagem de blog [Introduzindo o analisador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vídeo de demonstração no YouTube [Analisador de API](https://youtu.be/eeBEahYXGd0).

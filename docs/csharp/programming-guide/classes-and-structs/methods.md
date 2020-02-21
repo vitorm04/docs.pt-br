@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743911"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543554"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 
@@ -21,7 +21,7 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
 
 ## <a name="method-signatures"></a>Assinaturas de método
 
-Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md) ou [struct](../../language-reference/keywords/struct.md) especificando o nível de acesso, como `public` ou `private`, modificadores opcionais, como `abstract` ou `sealed`, o valor retornado, o nome do método e os parâmetros de método. Juntas, essas partes são a assinatura do método.
+Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/keywords/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, como `public` ou `private`, modificadores opcionais como `abstract` ou `sealed`, o valor de retorno, o nome do método e qualquer parâmetro de método. Juntas, essas partes são a assinatura do método.
 
 > [!NOTE]
 > Um tipo de retorno de um método não faz parte da assinatura do método para fins de sobrecarga de método. No entanto, ele faz parte da assinatura do método ao determinar a compatibilidade entre um delegado e o método para o qual ele aponta.
@@ -60,7 +60,7 @@ O exemplo faz essencialmente a mesma coisa que o exemplo anterior, pois ele pass
 
 Para obter mais informações sobre como passar tipos de referência por referência e por valor, consulte [Passando parâmetros de tipo de referência](./passing-reference-type-parameters.md) e [Tipos de referência](../../language-reference/keywords/reference-types.md).
 
-## <a name="return-values"></a>Valores de retorno
+## <a name="return-values"></a>Valores retornados
 
 Os métodos podem retornar um valor para o chamador. Se o tipo de retorno, o tipo listado antes do nome do método, não for `void`, o método poderá retornar o valor usando a palavra-chave `return`. Uma instrução com a palavra-chave `return` seguida por uma variável que corresponde ao tipo de retorno retornará esse valor ao chamador do método.
 
@@ -161,11 +161,11 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](index.md)

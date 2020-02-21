@@ -2,13 +2,13 @@
 title: Solucionar problemas de uso da ferramenta .NET Core
 description: Descubra os problemas comuns ao executar as ferramentas do .NET Core e as possíveis soluções.
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451071"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543268"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solucionar problemas de uso da ferramenta .NET Core
 
@@ -59,7 +59,7 @@ O nome do executável determina como você invoca a ferramenta. A tabela a segui
   * Se você instalou o SDK do .NET Core 3,0 e definiu a variável de ambiente `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` como `false`.
   * Se você tiver instalado o SDK do .NET Core 2,2 ou versões anteriores, e tiver definido a variável de ambiente `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` como `true`.
 
-  Para obter mais informações sobre ferramentas globais, consulte [visão geral das ferramentas globais do .NET Core](global-tools.md).
+  Para obter mais informações, consulte [Ferramentas do .NET Core](global-tools.md).
 
 * Ferramentas locais
 
@@ -137,9 +137,6 @@ As ferramentas do .NET Core que estão em visualização devem ser especificadas
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> A equipe de CLI do .NET Core está planejando adicionar uma opção de `--preview` em uma versão futura para facilitar isso.
-
 ### <a name="package-isnt-a-net-core-tool"></a>O pacote não é uma ferramenta .NET Core
 
 * Um pacote NuGet com esse nome foi encontrado, mas não era uma ferramenta .NET Core.
@@ -162,4 +159,4 @@ Um motivo comum para a falha é que o nome da ferramenta não está correto. Iss
 
 ## <a name="see-also"></a>Confira também
 
-* [Visão geral das Ferramentas Globais do .NET Core](global-tools.md)
+* [Ferramentas do .NET Core](global-tools.md)

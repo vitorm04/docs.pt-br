@@ -3,12 +3,12 @@ title: Como modificar o conteúdo da cadeia C# de caracteres-guia
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973262"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543255"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo da cadeia de caracteres em C\#
 
@@ -62,16 +62,17 @@ O exemplo a seguir mostra como substituir um conjunto de caracteres em uma cadei
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>Modificações não seguras à cadeia de caracteres
+## <a name="programmatically-build-up-string-content"></a>Criar programaticamente o conteúdo da cadeia de caracteres
 
-Usando código **não seguro**, é possível modificar uma cadeia de caracteres "no local" depois que ela é criada. Código não seguro usa muitos dos recursos do .NET projetados para minimizar determinados tipos de bugs no código. Você precisa usar o código não seguro para modificar uma cadeia de caracteres em vigor porque a classe de cadeia de caracteres foi projetada como um tipo **immutable**. Depois de ela ser criada, seu valor não é alterado. O código não seguro contorna a essa propriedade, acessando e modificando a memória usada por um `string` sem usar métodos `string` normais.
-O exemplo a seguir é fornecido para as raras situações em que você deseja modificar uma cadeia de caracteres no local usando código não seguro. O exemplo mostra como usar a palavra-chave `fixed`. A palavra-chave `fixed` impede que o GC (coletor de lixo) mova o objeto de cadeia de caracteres na memória enquanto o código acessa a memória usando o ponteiro não seguro. Ele também demonstra um possível efeito colateral das operações não seguras em cadeias de caracteres, que resultam da forma com que o compilador C# armazena (interna) as cadeias de caracteres internamente. Em geral, você não deve usar essa técnica, a menos que seja absolutamente necessário. É possível aprender mais sobre [não seguro](../language-reference/keywords/unsafe.md) e [fixo](../language-reference/keywords/fixed-statement.md) nos artigos. A referência à API para <xref:System.String.Intern%2A> inclui informações sobre centralização de cadeia de caracteres.
+Como as cadeias de caracteres são imutáveis, todos os exemplos anteriores criam cadeias temporárias ou matrizes de caractere. Em cenários de alto desempenho, pode ser desejável evitar essas alocações de heap. O .NET Core fornece um método de <xref:System.String.Create%2A?displayProperty=nameWithType> que permite que você preencha programaticamente o conteúdo de caractere de uma cadeia de caracteres por meio de um retorno de chamada enquanto evita as alocações de cadeia de caracteres temporárias intermediárias.
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+Você pode modificar uma cadeia de caracteres em um bloco fixo com código não seguro, mas não é **altamente** recomendável modificar o conteúdo da cadeia de caracteres depois que uma cadeia de caracteres é criada. Isso interromperá as coisas de maneiras imprevisíveis. Por exemplo, se alguém estagiárior uma cadeia de caracteres que tenha o mesmo conteúdo que o seu, ele obterá sua cópia e não esperará que você esteja modificando sua cadeia de caracteres.
 
 Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -3,12 +3,12 @@ title: Acesso elevado para os comandos dotnet
 description: Conheça as melhores práticas para os comandos dotnet que exigem acesso elevado.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503573"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543424"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acesso elevado para os comandos dotnet
 
@@ -31,7 +31,7 @@ As instruções a seguir mostram a maneira recomendada para instalar, executar e
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>Instalar a ferramenta global
+### <a name="install-the-tool"></a>Instalar a ferramenta
 
 Se a pasta `%ProgramFiles%\dotnet-tools` já existir, faça o seguinte para verificar se o grupo “Usuários” tem permissão para gravar ou modificar esse diretório:
 
