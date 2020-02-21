@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802843"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504037"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>Tutorial: streaming estruturado com .NET para Apache Spark 
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > * Usar netcat para criar um fluxo de dados
 > * Usar funções definidas pelo usuário e SparkSQL para analisar dados de streaming
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Se este for seu primeiro aplicativo .NET para Apache Spark, comece com o [tutorial de introdução](get-started.md) para se familiarizar com os conceitos básicos.
 
@@ -32,7 +32,7 @@ Se este for seu primeiro aplicativo .NET para Apache Spark, comece com o [tutori
 
 1. No prompt de comando, execute os seguintes comandos para criar um novo aplicativo de console:
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ Se este for seu primeiro aplicativo .NET para Apache Spark, comece com o [tutori
 
 1. Para usar o .NET para Apache Spark em um aplicativo, instale o pacote Microsoft. Spark. No console do, execute o seguinte comando:
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 
@@ -143,7 +143,7 @@ StreamingQuery query = arrayDf
     .Start();
 ```
 
-## <a name="run-your-code"></a>Executar o código
+## <a name="run-your-code"></a>Executar seu código
 
 O streaming estruturado no Spark processa dados por meio de uma série de **lotes**pequenos.  Quando você executa o programa, o prompt de comando no qual você estabelece a conexão netcat permite que você comece a digitar. Cada vez que você pressiona a tecla ENTER depois de digitar dados nesse prompt de comando, o Spark considera sua entrada em um lote e executa o UDF.
 
@@ -166,7 +166,7 @@ Este tutorial usa o exemplo [StructuredNetworkCharacterCount.cs](https://github.
 * [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs): contagem de palavras em dados com lógica de janela
 * [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs): contagem de palavras em dados transmitidos de Kafka
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Avance para o próximo artigo para saber como implantar seu .NET para Apache Spark aplicativo no databricks.
 > [!div class="nextstepaction"]

@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 77b57463375c36444532bdd383ec4b3bfe3ab056
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860772"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504170"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no Azure HDInsight
 
@@ -25,18 +25,18 @@ Neste tutorial, você aprenderá como:
 > * Crie e execute uma ação de script do HDInsight.
 > * Execute um aplicativo .NET para Apache Spark em um cluster HDInsight.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, execute as seguintes tarefas:
 
 * Se você não tiver uma assinatura do Azure, crie uma [conta gratuita](https://azure.microsoft.com/free/).
-* Entre no [Portal do Azure](https://portal.azure.com/).
+* Entre no [portal do Azure](https://portal.azure.com/).
 * Instale o Gerenciador de Armazenamento do Azure em seu computador [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)ou [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) .
 * Conclua o [.net para Apache Spark-introdução no tutorial de 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
 ## <a name="access-your-storage-accounts"></a>Acessar suas contas de armazenamento
 
-1. Abra Gerenciador de Armazenamento do Azure.
+1. Abra o Gerenciador de Armazenamento do Azure.
 
 2. Selecione **adicionar conta** no menu à esquerda e entre em sua conta do Azure.
 
@@ -44,41 +44,41 @@ Antes de começar, execute as seguintes tarefas:
 
    Depois de entrar, você deverá ver todas as contas de armazenamento que você tem e todos os recursos que você carregou em suas contas de armazenamento.
 
-## <a name="create-an-hdinsight-cluster"></a>Criar um cluster HDInsight
+## <a name="create-an-hdinsight-cluster"></a>Crie um cluster HDInsight
 
 > [!IMPORTANT]
-> A cobrança por clusters HDInsight é rateada por minuto, mesmo se você não os estiver usando. Certifique-se de excluir o cluster depois de terminar de usá-lo. Para obter mais informações, consulte a seção [limpar recursos](#clean-up-resources) deste tutorial.
+> A cobrança por clusters HDInsight é rateada por minuto, mesmo se você não os estiver usando. Exclua seu cluster depois de terminar de usá-lo. Para obter mais informações, consulte a seção [limpar recursos](#clean-up-resources) deste tutorial.
 
-1. Visite a [portal do Azure](https://portal.azure.com).
+1. Visite o [Portal do Azure](https://portal.azure.com).
 
-2. Selecione **+ criar um recurso**. Em seguida, selecione **HDInsight** na categoria **análise** .
+2. Selecione **+ Criar um recurso**. Em seguida, selecione **HDInsight** na categoria **análise** .
 
     ![Criar recurso do HDInsight a partir de portal do Azure](./media/hdinsight-deployment/create-hdinsight-resource.png)
 
-3. Em **noções básicas**, forneça os seguintes valores:
+3. Em **Noções básicas**, forneça os seguintes valores:
 
-    |propriedade  |Descrição  |
+    |Propriedade  |DESCRIÇÃO  |
     |---------|---------|
-    |Assinatura  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
-    |Grupo de recursos | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém recursos relacionados para uma solução do Azure. |
-    |Nome do cluster | Dê um nome ao seu cluster HDInsight Spark.|
-    |Local   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
+    |Subscription  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
+    |Resource group | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém os recursos relacionados a uma solução do Azure. |
+    |Nome do cluster | Dê um nome para seu cluster HDInsight Spark.|
+    |Location   | Selecione um local para o grupo de recursos. O modelo usa esse local para criar o cluster, bem como para o armazenamento de cluster padrão. |
     |Tipo de cluster| Selecione **Spark** como o tipo de cluster.|
     |Versão do cluster|Este campo será preenchido automaticamente com a versão padrão depois que o tipo de cluster tiver sido selecionado. Selecione uma versão 2,3 ou 2,4 do Spark.|
-    |Nome de usuário de logon do cluster| Insira o nome de usuário de logon do cluster.  O nome padrão é *admin*. |
+    |Nome de usuário de logon do cluster| Insira o nome de logon do usuário do cluster.  O nome padrão é *admin*. |
     |Senha de logon do cluster| Insira qualquer senha de logon. |
-    |Nome de usuário do Secure Shell (SSH)| Insira o nome de usuário SSH. Por padrão, essa conta compartilha a mesma senha que a conta de *nome de usuário de logon do cluster* . |
+    |Nome de usuário do Secure Shell (SSH)| Insira um Nome de Usuário SSH. Por padrão, essa conta tem a mesma senha que a conta de*nome de usuário de logon do cluster*. |
 
-4. Selecione **Avançar: > de armazenamento >** para continuar na página **armazenamento** . Em **armazenamento**, forneça os seguintes valores:
+4. Selecione **Avançar: > de armazenamento >** para continuar na página **armazenamento** . Em **Armazenamento**, forneça os seguintes valores:
 
-    |propriedade  |Descrição  |
+    |Propriedade  |DESCRIÇÃO  |
     |---------|---------|
-    |Tipo de armazenamento primário|Use o valor padrão **armazenamento do Azure**.|
-    |Método de seleção|Use o valor padrão **selecionar da lista**.|
-    |Conta de armazenamento principal|Escolha sua assinatura e uma de suas contas de armazenamento ativas nessa assinatura.|
+    |Tipo de armazenamento primário|Use o valor padrão **Armazenamento do Azure**.|
+    |Método de seleção|Use o valor padrão **Selecione na lista**.|
+    |Conta de armazenamento primária|Escolha sua assinatura e uma de suas contas de armazenamento ativas nessa assinatura.|
     |Contêiner|Esse contêiner é o contêiner de blob específico em sua conta de armazenamento em que o cluster procura arquivos para executar seu aplicativo na nuvem. Você pode dar a ele qualquer nome disponível.|
 
-5. Em **revisão + criar**, selecione **criar**. Demora cerca de 20 minutos para criar o cluster. O cluster deve ser criado para que você possa continuar para a próxima etapa.
+5. Em **Examinar + criar**, selecione **Criar**. Demora cerca de 20 minutos para criar o cluster. O cluster deve ser criado para que você possa continuar para a próxima etapa.
 
 ## <a name="publish-your-app"></a>Publicar seu aplicativo
 
@@ -88,7 +88,7 @@ Em seguida, você publica o *mySparkApp* criado no [.net para Apache Spark-intro
 
    **No Windows:**
 
-   ```console
+   ```dotnetcli
    cd mySparkApp
    dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
@@ -148,13 +148,13 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
 2. Selecione **+ Enviar novo** e forneça os seguintes valores:
 
-   |propriedade  |Descrição  |
+   |Propriedade  |DESCRIÇÃO  |
    |---------|---------|
    | Tipo de script |Personalizado|
-   | Name | Instalar trabalho|
-   | URI do script bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
-   | Tipo (s) de nó| Trabalhador|
-   | Parâmetros | Azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
+   | Nome | Instalar trabalho|
+   | URI do script Bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
+   | Tipo(s) de nó| Trabalho|
+   | parâmetros | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
 
 3. Selecione **criar** para enviar o script.
 
@@ -176,15 +176,15 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
    Quando seu aplicativo for executado, você verá a mesma tabela de contagem de palavras da execução local de introdução gravada no console. Parabéns, você executou seu primeiro .NET para Apache Spark aplicativo na nuvem!
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
-O HDInsight salva seus dados no armazenamento do Azure, para que você possa excluir um cluster com segurança quando ele não estiver em uso. Você também é cobrado por um cluster HDInsight, mesmo quando ele não está em uso. Como os encargos para o cluster são muitas vezes mais do que os encargos de armazenamento, ele faz sentido econômico excluir clusters quando eles não estiverem em uso.
+O HDInsight salva seus dados no armazenamento do Azure, para que você possa excluir um cluster com segurança quando ele não estiver em uso. Você também é cobrado por um cluster HDInsight, mesmo quando ele não está em uso. Como os encargos para o cluster são muitas vezes maiores do que os encargos para armazenamento, faz sentido, do ponto de vista econômico, excluir os clusters quando não estiverem em uso.
 
-Você também pode selecionar o nome do grupo de recursos para abrir a página do grupo de recursos e, em seguida, selecionar **excluir grupo de recursos**. Ao excluir o grupo de recursos, você exclui o cluster HDInsight Spark e a conta de armazenamento padrão.
+Também é possível selecionar o nome do grupo de recursos para abrir a página do grupo de recursos, e depois selecionar **Excluir grupo de recursos**. Ao excluir o grupo de recursos, você exclui o cluster Spark do HDInsight e a conta de armazenamento padrão.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você implantou seu aplicativo .NET para Apache Spark para o Azure HDInsight. Para saber mais sobre o HDInsight, continue na Documentação do Azure HDInsight.
 
 > [!div class="nextstepaction"]
-> [Documentação do Azure HDInsight](https://docs.microsoft.com/azure/hdinsight/)
+> [Documentação do HDInsight do Azure](https://docs.microsoft.com/azure/hdinsight/)
