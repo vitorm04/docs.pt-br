@@ -13,10 +13,10 @@ ms.lasthandoff: 09/14/2019
 ms.locfileid: "70989682"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Como: criar um fluxo de trabalho de fluxograma
-Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a <xref:System.Activities.Statements.Flowchart> atividade, e as atividades personalizadas da seção [como: Criar um tópico](how-to-create-an-activity.md) de atividade. O fluxo de trabalho modela um jogo de palpite de número.  
+Os fluxos de trabalho podem ser construídos a partir de atividades internas assim como as atividades personalizadas. Este tópico percorre a criação de um fluxo de trabalho que usa atividades internas, como a atividade de <xref:System.Activities.Statements.Flowchart>, e as atividades personalizadas do [anterior: Crie uma atividade](how-to-create-an-activity.md) tópico. O fluxo de trabalho modela um jogo de palpite de número.  
   
 > [!NOTE]
-> Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Crie uma atividade](how-to-create-an-activity.md).  
+> Cada tópico do tutorial de Introdução depende dos tópicos anteriores. Para concluir este tópico, você deve primeiro concluir [como: Crie uma](how-to-create-an-activity.md)de atividade.  
   
 > [!NOTE]
 > Para baixar uma versão completa do tutorial, consulte [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -39,11 +39,11 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 3. Clique em **criar argumento**.  
   
-4. Digite `MaxNumber` na caixa **nome** , selecione **em na** lista suspensa **direção** , selecione **Int32** na lista suspensa **tipo de argumento** e pressione ENTER para salvar o argumento...  
+4. Digite `MaxNumber` na caixa **nome** , selecione **em na** lista suspensa **direção** , selecione **Int32** na lista suspensa **tipo de argumento** e, em seguida, pressione ENTER para salvar o argumento.  
   
 5. Clique em **criar argumento**.  
   
-6. Digite `Turns` na caixa de **nome** que `MaxNumber` está abaixo do argumento recém-adicionado, selecione **fora** na lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e, em seguida, pressione Enter.  
+6. Digite `Turns` na caixa **nome** que está abaixo do argumento de `MaxNumber` adicionado recentemente, selecione **fora** na lista suspensa **direção** , selecione **Int32** na lista suspensa tipo de **argumento** e pressione Enter.  
   
 7. Clique em **argumentos** no lado inferior esquerdo do designer de atividade para fechar o painel **argumentos** .  
   
@@ -52,7 +52,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 9. Clique em **criar variável**.  
   
     > [!TIP]
-    > Se nenhuma caixa **criar variável** for exibida, clique na <xref:System.Activities.Statements.Flowchart> atividade na superfície do designer de fluxo de trabalho para selecioná-la.  
+    > Se nenhuma caixa **criar variável** for exibida, clique na atividade <xref:System.Activities.Statements.Flowchart> na superfície do designer de fluxo de trabalho para selecioná-la.  
   
 10. Digite `Guess` na caixa **nome** , selecione **Int32** na lista suspensa **tipo de variável** e pressione ENTER para salvar a variável.  
   
@@ -82,9 +82,9 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
     > [!TIP]
     > Se a janela **caixa de ferramentas** não for exibida, selecione caixa de **ferramentas** no menu **Exibir** .  
   
-3. Arraste uma atividade de **prompt** da seção **NumberGuessWorkflowActivities** da **caixa de ferramentas**, solte-a abaixo da atividade **atribuir** da etapa anterior e conecte a atividade de **prompt** à atividade **atribuir** . Há três modos de conectar as duas atividades. A primeira maneira é conectá-los à medida que você remove a atividade **prompt** no fluxo de trabalho. Conforme você está arrastando a atividade de **prompt** para o fluxo de trabalho, passe o mouse sobre a atividade **atribuir** e solte-a em um dos quatro triângulos que aparecem quando a atividade de **prompt** está sobre a atividade **atribuir** . A segunda maneira é descartar a atividade de **prompt** no fluxo de trabalho no local desejado. Em seguida, passe o mouse sobre a atividade **atribuir** e arraste um dos retângulos que aparece até a atividade de **prompt** . Arraste o mouse para que a linha de conexão da atividade **atribuir** se conecte a um dos retângulos da atividade de **prompt** e, em seguida, solte o botão do mouse. A terceira maneira é muito semelhante à primeira maneira, exceto que, em vez de arrastar a atividade **prompt** da **caixa de ferramentas**, você a arrasta de seu local na superfície de design do fluxo de trabalho, passa o mouse sobre a atividade **atribuir** e a solta em uma das triângulos que aparece.  
+3. Arraste uma atividade de **prompt** da seção **NumberGuessWorkflowActivities** da **caixa de ferramentas**, solte-a abaixo da atividade **atribuir** da etapa anterior e conecte a atividade de **prompt** à atividade **atribuir** . Há três modos de conectar as duas atividades. A primeira maneira é conectá-los à medida que você remove a atividade **prompt** no fluxo de trabalho. Conforme você está arrastando a atividade de **prompt** para o fluxo de trabalho, passe o mouse sobre a atividade **atribuir** e solte-a em um dos quatro triângulos que aparecem quando a atividade de **prompt** está sobre a atividade **atribuir** . A segunda maneira é descartar a atividade de **prompt** no fluxo de trabalho no local desejado. Em seguida, passe o mouse sobre a atividade **atribuir** e arraste um dos retângulos que aparece até a atividade de **prompt** . Arraste o mouse para que a linha de conexão da atividade **atribuir** se conecte a um dos retângulos da atividade de **prompt** e, em seguida, solte o botão do mouse. A terceira maneira é muito semelhante à primeira maneira, exceto que, em vez de arrastar a atividade **prompt** da **caixa de ferramentas**, você a arrasta de seu local na superfície de design do fluxo de trabalho, passa o mouse sobre a atividade **atribuir** e a solta em um dos triângulos que aparece.  
   
-4. Na **janela Propriedades** da atividade **prompt** , digite `"EnterGuess"` incluindo as aspas na caixa valor da propriedade **BookmarkName** . Digite `Guess` na caixa valor da propriedade de **resultado** e digite a expressão a seguir na caixa de propriedade **texto** .  
+4. Na **janela Propriedades** da atividade **Prompt** , digite `"EnterGuess"` incluindo as aspas na caixa valor da propriedade **BookmarkName** . Digite `Guess` na caixa valor da propriedade de **resultado** e digite a expressão a seguir na caixa de propriedade **texto** .  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -148,7 +148,7 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
   
 1. Pressione CTRL+SHIFT+B para criar a solução.  
   
-     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico [, como: Executar um fluxo](how-to-run-a-workflow.md)de trabalho. Se você já tiver concluído o [como: Execute uma etapa](how-to-run-a-workflow.md) de fluxo de trabalho com um estilo diferente de fluxo de trabalho e deseje executá-lo usando o fluxo de trabalho de fluxograma nesta etapa, pule para a seção [para criar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [como: Executar um fluxo](how-to-run-a-workflow.md)de trabalho.  
+     Para obter instruções sobre como executar o fluxo de trabalho, consulte o próximo tópico, [como: Execute um](how-to-run-a-workflow.md)de fluxo de trabalho. Se você já tiver concluído o [como: Execute um fluxo de trabalho](how-to-run-a-workflow.md) etapa com um estilo diferente de fluxo de trabalho e deseja executá-lo usando o fluxo de trabalho de fluxograma nesta etapa, pule para a seção [para compilar e executar o aplicativo](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [como: Execute um de fluxo de trabalho.](how-to-run-a-workflow.md)  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -158,4 +158,4 @@ Os fluxos de trabalho podem ser construídos a partir de atividades internas ass
 - [Criando fluxos de trabalho](designing-workflows.md)
 - [Tutorial de Introdução](getting-started-tutorial.md)
 - [Como: Criar uma atividade](how-to-create-an-activity.md)
-- [Como: Executar um fluxo de trabalho](how-to-run-a-workflow.md)
+- [Como: Executar um de fluxo de trabalho](how-to-run-a-workflow.md)

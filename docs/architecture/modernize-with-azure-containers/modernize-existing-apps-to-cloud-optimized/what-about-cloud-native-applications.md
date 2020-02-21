@@ -2,12 +2,12 @@
 title: E quanto aos aplicativos nativos na nuvem?
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | E quanto aos aplicativos nativos de nuvem?
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318426"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543541"
 ---
 # <a name="what-about-cloud-native-applications"></a>E quanto aos aplicativos nativos na nuvem?
 
@@ -41,7 +41,10 @@ O [aplicativo de doze fatores](https://12factor.net/) (uma coleção de padrões
 
 A [CNCF (nuvem Native Computing Foundation)](https://www.cncf.io/) é uma promoção principal de princípios nativos de nuvem. A Microsoft é [membro do CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Para obter uma definição de exemplo e para obter mais informações sobre as características de aplicativos nativos de nuvem, consulte o artigo da Gartner [como arquitetar e projetar aplicativos nativos de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Para obter diretrizes específicas da Microsoft sobre como implementar um aplicativo nativo de nuvem, consulte [microservices do .net: arquitetura para aplicativos .net em contêineres](https://aka.ms/microservicesebook).
+Para obter orientações detalhadas sobre como projetar e desenvolver aplicativos nativos de nuvem, leia os seguintes livros eletrônicos gratuitos:
+
+* [Arquitetando aplicativos .NET nativos de nuvem para o Azure](../../cloud-native/introduction.md)
+* [Microserviços .net: arquitetura para aplicativos .net em contêineres](../../microservices/index.md).
 
 O fator mais importante a ser considerado ao migrar um aplicativo completo para o modelo nativo de nuvem é que você deve rearquitetar para uma arquitetura baseada em microserviços. Isso exige claramente um investimento significativo em desenvolvimento devido ao grande processo de refatoração envolvido. Essa opção geralmente é escolhida para aplicativos críticos que precisam de novos níveis de escalabilidade e agilidade a longo prazo. Mas, você pode começar a mudar para a nuvem nativa adicionando microservices para apenas alguns cenários novos e eventualmente refatorar o aplicativo completamente como microservices. Essa é uma abordagem incremental que é a melhor opção para alguns cenários.
 

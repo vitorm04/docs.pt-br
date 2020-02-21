@@ -1,17 +1,17 @@
 ---
 title: Mapas do Protobuf para dicionários-gRPC para desenvolvedores do WCF
-description: Entenda como usar o Protobuf Maps para representar. Tipos de dicionário de rede.
+description: Entenda como usar o Protobuf Maps para representar tipos de dicionário no .NET.
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967423"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543125"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>Mapas de Protobuf para dicionários
 
-É importante poder representar coleções arbitrárias de valores nomeados em mensagens. No .NET, isso é normalmente Tratado usando tipos de dicionário. O equivalente do Protobuf do tipo .NET <xref:System.Collections.Generic.IDictionary%602> é o tipo de `map<key_type, value_type>`. Esta seção mostra como declarar uma `map` no Protobuf e como usar o código gerado.
+É importante poder representar coleções arbitrárias de valores nomeados em mensagens. No .NET, isso é normalmente tratado por meio de tipos de dicionário. O equivalente do tipo de <xref:System.Collections.Generic.IDictionary%602> do .NET no buffer de protocolo (Protobuf) é o tipo de `map<key_type, value_type>`. Esta seção mostra como declarar um tipo de `map` em Protobuf e como usar o código gerado.
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-No código gerado, `map` campos usam a classe `Google.Protobuf.Collections.MapField<TKey, TValue>`, que implementa as interfaces de coleção do .NET padrão, incluindo <xref:System.Collections.Generic.IDictionary%602>.
+No código gerado, `map` campos usam a classe `Google.Protobuf.Collections.MapField<TKey, TValue>`. Essa classe implementa as interfaces de coleção do .NET padrão, incluindo <xref:System.Collections.Generic.IDictionary%602>.
 
-Os campos de mapa não podem ser repetidos diretamente em uma definição de mensagem, mas você pode criar uma mensagem aninhada contendo um mapa e usar `repeated` no tipo de mensagem, como no exemplo a seguir:
+Os campos de mapa não podem ser repetidos diretamente em uma definição de mensagem. Mas você pode criar uma mensagem aninhada que contém um mapa e usar `repeated` no tipo de mensagem, como no exemplo a seguir:
 
 ```protobuf
 message Order {
