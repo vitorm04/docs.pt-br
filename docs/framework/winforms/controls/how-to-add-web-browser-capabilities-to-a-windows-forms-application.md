@@ -12,29 +12,32 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 5feecd975700745541103e81fd09bfc5e788c729
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7cb789121f4aa9a1e7cef54f992d0697ce6dfc62
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747218"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543567"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a><span data-ttu-id="45ff5-102">Como adicionar recursos do navegador da Web a um Aplicativo do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="45ff5-102">How to: Add Web Browser Capabilities to a Windows Forms Application</span></span>
-<span data-ttu-id="45ff5-103">Com o controle <xref:System.Windows.Forms.WebBrowser>, você pode adicionar a funcionalidade do navegador da Web ao seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="45ff5-103">With the <xref:System.Windows.Forms.WebBrowser> control, you can add Web browser functionality to your application.</span></span> <span data-ttu-id="45ff5-104">O controle funciona como um navegador da Web por padrão.</span><span class="sxs-lookup"><span data-stu-id="45ff5-104">The control works like a Web browser by default.</span></span> <span data-ttu-id="45ff5-105">Depois de carregar uma URL inicial definindo a propriedade <xref:System.Windows.Forms.WebBrowser.Url%2A>, você pode navegar clicando em hiperlinks ou usando atalhos de teclado para voltar e avançar pelo histórico de navegação.</span><span class="sxs-lookup"><span data-stu-id="45ff5-105">After you load an initial URL by setting the <xref:System.Windows.Forms.WebBrowser.Url%2A> property, you can navigate by clicking hyperlinks or by using keyboard shortcuts to move backward and forward through navigation history.</span></span> <span data-ttu-id="45ff5-106">Por padrão, você pode acessar a funcionalidade adicional do navegador por meio do menu de atalho acessado quando se clica com o botão direito do mouse.</span><span class="sxs-lookup"><span data-stu-id="45ff5-106">By default, you can access additional browser functionality through the right-click shortcut menu.</span></span> <span data-ttu-id="45ff5-107">Você também pode abrir novos documentos soltando-os no controle.</span><span class="sxs-lookup"><span data-stu-id="45ff5-107">You can also open new documents by dropping them onto the control.</span></span> <span data-ttu-id="45ff5-108">O controle de <xref:System.Windows.Forms.WebBrowser> também tem várias propriedades, métodos e eventos que você pode usar para implementar recursos de interface de usuário semelhantes àqueles encontrados no Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="45ff5-108">The <xref:System.Windows.Forms.WebBrowser> control also has several properties, methods, and events that you can use to implement user interface features similar to those found in Internet Explorer.</span></span>  
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a><span data-ttu-id="c078a-102">Como adicionar recursos do navegador da Web a um aplicativo Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c078a-102">How to add web browser capabilities to a Windows Forms application</span></span>
+
+<span data-ttu-id="c078a-103">Com o controle <xref:System.Windows.Forms.WebBrowser>, você pode adicionar a funcionalidade do navegador da Web ao seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="c078a-103">With the <xref:System.Windows.Forms.WebBrowser> control, you can add Web browser functionality to your application.</span></span> <span data-ttu-id="c078a-104">O controle funciona como um navegador da Web por padrão.</span><span class="sxs-lookup"><span data-stu-id="c078a-104">The control works like a Web browser by default.</span></span> <span data-ttu-id="c078a-105">Depois de carregar uma URL inicial definindo a propriedade <xref:System.Windows.Forms.WebBrowser.Url%2A>, você pode navegar clicando em hiperlinks ou usando atalhos de teclado para voltar e avançar pelo histórico de navegação.</span><span class="sxs-lookup"><span data-stu-id="c078a-105">After you load an initial URL by setting the <xref:System.Windows.Forms.WebBrowser.Url%2A> property, you can navigate by clicking hyperlinks or by using keyboard shortcuts to move backward and forward through navigation history.</span></span> <span data-ttu-id="c078a-106">Por padrão, você pode acessar a funcionalidade adicional do navegador por meio do menu de atalho acessado quando se clica com o botão direito do mouse.</span><span class="sxs-lookup"><span data-stu-id="c078a-106">By default, you can access additional browser functionality through the right-click shortcut menu.</span></span> <span data-ttu-id="c078a-107">Você também pode abrir novos documentos soltando-os no controle.</span><span class="sxs-lookup"><span data-stu-id="c078a-107">You can also open new documents by dropping them onto the control.</span></span> <span data-ttu-id="c078a-108">O controle de <xref:System.Windows.Forms.WebBrowser> também tem várias propriedades, métodos e eventos que você pode usar para implementar recursos de interface de usuário semelhantes àqueles encontrados no Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="c078a-108">The <xref:System.Windows.Forms.WebBrowser> control also has several properties, methods, and events that you can use to implement user interface features similar to those found in Internet Explorer.</span></span>
+
+<span data-ttu-id="c078a-109">O exemplo de código a seguir implementa uma barra de endereços, botões de navegador típicos, um menu **Arquivo**, uma barra de status e uma barra de título que exibe o título da página atual.</span><span class="sxs-lookup"><span data-stu-id="c078a-109">The following code example implements an address bar, typical browser buttons, a **File** menu, a status bar, and a title bar that displays the current page title.</span></span>
+
+## <a name="example"></a><span data-ttu-id="c078a-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c078a-110">Example</span></span>
+
+[!code-cpp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CPP/form1.cpp#0)]
+[!code-csharp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CS/form1.cs#0)]
+[!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]
   
- <span data-ttu-id="45ff5-109">O exemplo de código a seguir implementa uma barra de endereços, botões de navegador típicos, um menu **Arquivo**, uma barra de status e uma barra de título que exibe o título da página atual.</span><span class="sxs-lookup"><span data-stu-id="45ff5-109">The following code example implements an address bar, typical browser buttons, a **File** menu, a status bar, and a title bar that displays the current page title.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="45ff5-110">{1&gt;Exemplo&lt;1}</span><span class="sxs-lookup"><span data-stu-id="45ff5-110">Example</span></span>  
- [!code-cpp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CPP/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="45ff5-111">Compilando o Código</span><span class="sxs-lookup"><span data-stu-id="45ff5-111">Compiling the Code</span></span>  
- <span data-ttu-id="45ff5-112">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="45ff5-112">This example requires:</span></span>  
-  
-- <span data-ttu-id="45ff5-113">Referências aos assemblies `System`, `System.Drawing`e `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="45ff5-113">References to the `System`, `System.Drawing`, and `System.Windows.Forms` assemblies.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="45ff5-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="45ff5-114">See also</span></span>
+## <a name="compile-the-code"></a><span data-ttu-id="c078a-111">Compilar o código</span><span class="sxs-lookup"><span data-stu-id="c078a-111">Compile the code</span></span>
+
+<span data-ttu-id="c078a-112">Este exemplo requer:</span><span class="sxs-lookup"><span data-stu-id="c078a-112">This example requires:</span></span>
+
+- <span data-ttu-id="c078a-113">Referências aos assemblies `System`, `System.Drawing`e `System.Windows.Forms`.</span><span class="sxs-lookup"><span data-stu-id="c078a-113">References to the `System`, `System.Drawing`, and `System.Windows.Forms` assemblies.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c078a-114">Confira também</span><span class="sxs-lookup"><span data-stu-id="c078a-114">See also</span></span>
 
 - <xref:System.Windows.Forms.WebBrowser>
-- [<span data-ttu-id="45ff5-115">Controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="45ff5-115">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)
+- [<span data-ttu-id="c078a-115">Controle WebBrowser</span><span class="sxs-lookup"><span data-stu-id="c078a-115">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)

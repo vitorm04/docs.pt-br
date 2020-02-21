@@ -1,141 +1,275 @@
 ---
-title: Ferramentas Globais do .NET Core
-description: Uma visão geral do que são as Ferramentas Globais do .NET Core e os comandos da CLI do .NET Core disponíveis para elas.
+title: Ferramentas do .NET Core
+description: Como instalar, usar, atualizar e remover as ferramentas do .NET Core. Aborda ferramentas globais, ferramentas de caminho de ferramenta e ferramentas locais.
 author: KathleenDollard
-ms.date: 05/29/2018
-ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/12/2020
+ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920501"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543385"
 ---
-# <a name="net-core-global-tools-overview"></a><span data-ttu-id="769e2-103">Visão geral das Ferramentas Globais do .NET Core</span><span class="sxs-lookup"><span data-stu-id="769e2-103">.NET Core Global Tools overview</span></span>
+# <a name="how-to-manage-net-core-tools"></a><span data-ttu-id="33548-104">Como gerenciar as ferramentas do .NET Core</span><span class="sxs-lookup"><span data-stu-id="33548-104">How to manage .NET Core tools</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+<span data-ttu-id="33548-105">**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="33548-105">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-<span data-ttu-id="769e2-104">Uma Ferramenta Global do .NET Core é um pacote NuGet especial que contém um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="769e2-104">A .NET Core Global Tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="769e2-105">Uma Ferramenta Global pode ser instalada no computador em uma localização padrão que está incluída na variável de ambiente PATH ou em um local personalizado.</span><span class="sxs-lookup"><span data-stu-id="769e2-105">A Global Tool can be installed on your machine on a default location that is included in the PATH environment variable or on a custom location.</span></span>
+<span data-ttu-id="33548-106">Uma ferramenta .NET Core é um pacote NuGet especial que contém um aplicativo de console.</span><span class="sxs-lookup"><span data-stu-id="33548-106">A .NET Core tool is a special NuGet package that contains a console application.</span></span> <span data-ttu-id="33548-107">Uma ferramenta pode ser instalada em seu computador das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="33548-107">A tool can be installed on your machine in the following ways:</span></span>
 
-<span data-ttu-id="769e2-106">Caso deseje usar uma Ferramenta Global do .NET Core:</span><span class="sxs-lookup"><span data-stu-id="769e2-106">If you want to use a .NET Core Global Tool:</span></span>
+* <span data-ttu-id="33548-108">Como uma ferramenta global.</span><span class="sxs-lookup"><span data-stu-id="33548-108">As a global tool.</span></span>
 
-* <span data-ttu-id="769e2-107">Encontre informações sobre a ferramenta (geralmente um site ou uma página do GitHub).</span><span class="sxs-lookup"><span data-stu-id="769e2-107">Find information about the tool (usually a website or GitHub page).</span></span>
-* <span data-ttu-id="769e2-108">Verifique o autor e as estatísticas na página inicial do feed (geralmente, NuGet.org).</span><span class="sxs-lookup"><span data-stu-id="769e2-108">Check the author and statistics in the home for the feed (usually NuGet.org).</span></span>
-* <span data-ttu-id="769e2-109">Instale a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="769e2-109">Install the tool.</span></span>
-* <span data-ttu-id="769e2-110">Chame a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="769e2-110">Call the tool.</span></span>
-* <span data-ttu-id="769e2-111">Atualize a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="769e2-111">Update the tool.</span></span>
-* <span data-ttu-id="769e2-112">Desinstale a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="769e2-112">Uninstall the tool.</span></span>
+  <span data-ttu-id="33548-109">Os binários de ferramenta são instalados em um diretório padrão que é adicionado à variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="33548-109">The tool binaries are installed in a default directory that is added to the PATH environment variable.</span></span> <span data-ttu-id="33548-110">Você pode invocar a ferramenta de qualquer diretório no computador sem especificar seu local.</span><span class="sxs-lookup"><span data-stu-id="33548-110">You can invoke the tool from any directory on the machine without specifying its location.</span></span> <span data-ttu-id="33548-111">Uma versão de uma ferramenta é usada para todos os diretórios no computador.</span><span class="sxs-lookup"><span data-stu-id="33548-111">One version of a tool is used for all directories on the machine.</span></span>
+
+* <span data-ttu-id="33548-112">Como uma ferramenta global em um local personalizado (também conhecido como ferramenta de caminho de ferramenta).</span><span class="sxs-lookup"><span data-stu-id="33548-112">As a global tool in a custom location (also known as a tool-path tool).</span></span>
+
+  <span data-ttu-id="33548-113">Os binários de ferramenta são instalados em um local que você especificar.</span><span class="sxs-lookup"><span data-stu-id="33548-113">The tool binaries are installed in a location that you specify.</span></span> <span data-ttu-id="33548-114">Você pode invocar a ferramenta no diretório de instalação ou fornecendo o diretório com o nome do comando ou adicionando o diretório à variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="33548-114">You can invoke the tool from the installation directory or by providing the directory with the command name or by adding the directory to the PATH environment variable.</span></span> <span data-ttu-id="33548-115">Uma versão de uma ferramenta é usada para todos os diretórios no computador.</span><span class="sxs-lookup"><span data-stu-id="33548-115">One version of a tool is used for all directories on the machine.</span></span>
+
+* <span data-ttu-id="33548-116">Como uma ferramenta local (aplica-se a SDK do .NET Core 3,0 e posterior).</span><span class="sxs-lookup"><span data-stu-id="33548-116">As a local tool (applies to .NET Core SDK 3.0 and later).</span></span>
+
+  <span data-ttu-id="33548-117">Os binários de ferramenta são instalados em um diretório padrão.</span><span class="sxs-lookup"><span data-stu-id="33548-117">The tool binaries are installed in a default directory.</span></span> <span data-ttu-id="33548-118">Você invoca a ferramenta no diretório de instalação ou em qualquer um de seus subdiretórios.</span><span class="sxs-lookup"><span data-stu-id="33548-118">You invoke the tool from the installation directory or any of its subdirectories.</span></span> <span data-ttu-id="33548-119">Diretórios diferentes podem usar versões diferentes da mesma ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-119">Different directories can use different versions of the same tool.</span></span>
+  
+  <span data-ttu-id="33548-120">A CLI do .NET usa arquivos de manifesto para controlar quais ferramentas são instaladas como locais em um diretório.</span><span class="sxs-lookup"><span data-stu-id="33548-120">The .NET CLI uses manifest files to keep track of which tools are installed as local to a directory.</span></span> <span data-ttu-id="33548-121">Quando o arquivo de manifesto é salvo no diretório raiz de um repositório de código-fonte, um colaborador pode clonar o repositório e invocar um único comando CLI do .NET Core que instala todas as ferramentas listadas nos arquivos de manifesto.</span><span class="sxs-lookup"><span data-stu-id="33548-121">When the manifest file is saved in the root directory of a source code repository, a contributor can clone the repository and invoke a single .NET Core CLI command that installs all of the tools listed in the manifest files.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="769e2-113">As Ferramentas Globais do .NET Core são exibidas no caminho e executadas com confiança total.</span><span class="sxs-lookup"><span data-stu-id="769e2-113">.NET Core Global Tools appear on your path and run in full trust.</span></span> <span data-ttu-id="769e2-114">Não instale as Ferramentas Globais do .NET Core, a menos que você confie no autor.</span><span class="sxs-lookup"><span data-stu-id="769e2-114">Do not install .NET Core Global Tools unless you trust the author.</span></span>
+> <span data-ttu-id="33548-122">As ferramentas do .NET Core são executadas com confiança total.</span><span class="sxs-lookup"><span data-stu-id="33548-122">.NET Core tools run in full trust.</span></span> <span data-ttu-id="33548-123">Não instale uma ferramenta do .NET Core, a menos que você confie no autor.</span><span class="sxs-lookup"><span data-stu-id="33548-123">Do not install a .NET Core tool unless you trust the author.</span></span>
 
-## <a name="find-a-net-core-global-tool"></a><span data-ttu-id="769e2-115">Encontrar uma Ferramenta Global do .NET Core</span><span class="sxs-lookup"><span data-stu-id="769e2-115">Find a .NET Core Global Tool</span></span>
+## <a name="find-a-tool"></a><span data-ttu-id="33548-124">Encontrar uma ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-124">Find a tool</span></span>
 
-<span data-ttu-id="769e2-116">Atualmente, não há um recurso de pesquisa de ferramenta global no CLI do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="769e2-116">Currently, there isn't a Global Tool search feature in the .NET Core CLI.</span></span> <span data-ttu-id="769e2-117">Veja a seguir algumas recomendações sobre como encontrar ferramentas:</span><span class="sxs-lookup"><span data-stu-id="769e2-117">The following are some recommendations on how to find tools:</span></span>
+<span data-ttu-id="33548-125">Atualmente, o .NET Core não tem um recurso de pesquisa de ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-125">Currently, .NET Core doesn't have a tool search feature.</span></span> <span data-ttu-id="33548-126">Aqui estão algumas maneiras de encontrar ferramentas:</span><span class="sxs-lookup"><span data-stu-id="33548-126">Here are some ways to find tools:</span></span>
 
-* <span data-ttu-id="769e2-118">Encontre Ferramentas Globais do .NET Core no [NuGet](https://www.nuget.org).</span><span class="sxs-lookup"><span data-stu-id="769e2-118">You can find .NET Core Global Tools on [NuGet](https://www.nuget.org).</span></span> <span data-ttu-id="769e2-119">No entanto, o NuGet ainda não permite a pesquisa especificamente de Ferramentas Globais do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="769e2-119">However, NuGet doesn't yet allow you to search specifically for .NET Core Global Tools.</span></span>
-* <span data-ttu-id="769e2-120">Você pode encontrar recomendações de ferramentas em Postagens de blog ou no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .</span><span class="sxs-lookup"><span data-stu-id="769e2-120">You may find tool recommendations in blog posts or in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
-* <span data-ttu-id="769e2-121">Você pode ver o código-fonte para as ferramentas globais criadas pela equipe do ASP.NET no repositório do GitHub [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) .</span><span class="sxs-lookup"><span data-stu-id="769e2-121">You can see the source code for the Global Tools created by the ASP.NET team at the [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub repository.</span></span>
-* <span data-ttu-id="769e2-122">Você pode aprender sobre as ferramentas de diagnóstico em [ferramentas globais de diagnóstico dotnet do .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span><span class="sxs-lookup"><span data-stu-id="769e2-122">You can learn about diagnostic tools at [.NET Core dotnet diagnostic Global Tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
+* <span data-ttu-id="33548-127">Consulte a lista de ferramentas no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .</span><span class="sxs-lookup"><span data-stu-id="33548-127">See the list of tools in the [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub repository.</span></span>
+* <span data-ttu-id="33548-128">Use [ToolGet](https://www.toolget.net/) para procurar ferramentas .net.</span><span class="sxs-lookup"><span data-stu-id="33548-128">Use [ToolGet](https://www.toolget.net/) to search for .NET tools.</span></span>
+* <span data-ttu-id="33548-129">Consulte o código-fonte para as ferramentas criadas pela equipe de ASP.NET Core no [diretório de ferramentas do repositório do GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).</span><span class="sxs-lookup"><span data-stu-id="33548-129">See the source code for the tools created by the ASP.NET Core team in the [Tools directory of the dotnet/aspnetcore GitHub repository](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).</span></span>
+* <span data-ttu-id="33548-130">Saiba mais sobre as ferramentas de diagnóstico nas [ferramentas de diagnóstico do .NET Core dotnet](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span><span class="sxs-lookup"><span data-stu-id="33548-130">Learn about diagnostic tools at [.NET Core dotnet diagnostic tools](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).</span></span>
+* <span data-ttu-id="33548-131">Pesquise o site do [NuGet](https://www.nuget.org) .</span><span class="sxs-lookup"><span data-stu-id="33548-131">Search the [NuGet](https://www.nuget.org) website.</span></span> <span data-ttu-id="33548-132">No entanto, o site do NuGet ainda não tem um recurso que permite pesquisar apenas pacotes de ferramentas.</span><span class="sxs-lookup"><span data-stu-id="33548-132">However, the NuGet site doesn't yet have a feature that lets you search only for tool packages.</span></span>
 
-## <a name="check-the-author-and-statistics"></a><span data-ttu-id="769e2-123">Verificar o autor e as estatísticas</span><span class="sxs-lookup"><span data-stu-id="769e2-123">Check the author and statistics</span></span>
+## <a name="check-the-author-and-statistics"></a><span data-ttu-id="33548-133">Verificar o autor e as estatísticas</span><span class="sxs-lookup"><span data-stu-id="33548-133">Check the author and statistics</span></span>
 
-<span data-ttu-id="769e2-124">Como as Ferramentas Globais do .NET Core são executadas em confiança total e geralmente são instaladas no caminho, elas podem ser muito eficientes.</span><span class="sxs-lookup"><span data-stu-id="769e2-124">Since .NET Core Global Tools run in full trust and are generally installed on your path, they can be very powerful.</span></span> <span data-ttu-id="769e2-125">Não baixe ferramentas de pessoas em quem você não confia.</span><span class="sxs-lookup"><span data-stu-id="769e2-125">Don't download tools from people you don't trust.</span></span>
+<span data-ttu-id="33548-134">Como as ferramentas do .NET Core são executadas com confiança total e as ferramentas globais são adicionadas à variável de ambiente PATH, elas podem ser muito poderosas.</span><span class="sxs-lookup"><span data-stu-id="33548-134">Since .NET Core tools run in full trust, and global tools are added to the PATH environment variable, they can be very powerful.</span></span> <span data-ttu-id="33548-135">Não baixe ferramentas de pessoas em quem você não confia.</span><span class="sxs-lookup"><span data-stu-id="33548-135">Don't download tools from people you don't trust.</span></span>
 
-<span data-ttu-id="769e2-126">Se a ferramenta estiver hospedada no NuGet, você pode verificar o autor e as estatísticas pesquisando a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="769e2-126">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
+<span data-ttu-id="33548-136">Se a ferramenta estiver hospedada no NuGet, você pode verificar o autor e as estatísticas pesquisando a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-136">If the tool is hosted on NuGet, you can check the author and statistics by searching for the tool.</span></span>
 
-## <a name="install-a-global-tool"></a><span data-ttu-id="769e2-127">Instalar uma Ferramenta Global</span><span class="sxs-lookup"><span data-stu-id="769e2-127">Install a Global Tool</span></span>
+## <a name="install-a-global-tool"></a><span data-ttu-id="33548-137">Instalar uma ferramenta global</span><span class="sxs-lookup"><span data-stu-id="33548-137">Install a global tool</span></span>
 
-<span data-ttu-id="769e2-128">Para instalar uma Ferramenta Global, use o comando [dotnet tool install](dotnet-tool-install.md) da CLI do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="769e2-128">To install a Global Tool, you use the [dotnet tool install](dotnet-tool-install.md) .NET Core CLI command.</span></span> <span data-ttu-id="769e2-129">O seguinte exemplo mostra como instalar uma Ferramenta Global na localização padrão:</span><span class="sxs-lookup"><span data-stu-id="769e2-129">The following example shows how to install a Global Tool in the default location:</span></span>
+<span data-ttu-id="33548-138">Para instalar uma ferramenta como uma ferramenta global, use a opção `-g` ou `--global` da [instalação da ferramenta dotnet](dotnet-tool-install.md), conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-138">To install a tool as a global tool, use the `-g` or `--global` option of [dotnet tool install](dotnet-tool-install.md), as shown in the following example:</span></span>
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-<span data-ttu-id="769e2-130">Se a ferramenta não puder ser instalada, mensagens de erro serão exibidas.</span><span class="sxs-lookup"><span data-stu-id="769e2-130">If the tool can't be installed, error messages are displayed.</span></span> <span data-ttu-id="769e2-131">Verifique se os feeds esperados estão sendo verificados.</span><span class="sxs-lookup"><span data-stu-id="769e2-131">Check that the feeds you expected are being checked.</span></span>
-
-<span data-ttu-id="769e2-132">Se estiver tentando instalar uma versão de pré-lançamento ou uma versão específica da ferramenta, especifique o número de versão usando o seguinte formato:</span><span class="sxs-lookup"><span data-stu-id="769e2-132">If you're trying to install a pre-release version or a specific version of the tool, you can specify the version number using the following format:</span></span>
-
-```dotnetcli
-dotnet tool install -g <package-name> --version <version-number>
-```
-
-<span data-ttu-id="769e2-133">Se a instalação for bem-sucedida, será exibida uma mensagem mostrando o comando usado para chamar a ferramenta e a versão instalada, de maneira semelhante ao seguinte exemplo:</span><span class="sxs-lookup"><span data-stu-id="769e2-133">If installation is successful, a message is displayed showing the command used to call the tool and the version installed, similar to the following example:</span></span>
+<span data-ttu-id="33548-139">A saída mostra o comando usado para invocar a ferramenta e a versão instalada, semelhante ao exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-139">The output shows the command used to invoke the tool and the version installed, similar to the following example:</span></span>
 
 ```output
 You can invoke the tool using the following command: dotnetsay
-Tool 'dotnetsay' (version '2.0.0') was successfully installed.
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-<span data-ttu-id="769e2-134">As Ferramentas Globais podem ser instaladas no diretório padrão ou em um local específico.</span><span class="sxs-lookup"><span data-stu-id="769e2-134">Global Tools can be installed in the default directory or in a specific location.</span></span> <span data-ttu-id="769e2-135">Os diretórios padrão são:</span><span class="sxs-lookup"><span data-stu-id="769e2-135">The default directories are:</span></span>
+<span data-ttu-id="33548-140">O local padrão para os binários de uma ferramenta depende do sistema operacional:</span><span class="sxs-lookup"><span data-stu-id="33548-140">The default location for a tool's binaries depends on the operating system:</span></span>
 
-| <span data-ttu-id="769e2-136">Sistema operacional</span><span class="sxs-lookup"><span data-stu-id="769e2-136">OS</span></span>          | <span data-ttu-id="769e2-137">Caminho</span><span class="sxs-lookup"><span data-stu-id="769e2-137">Path</span></span>                          |
+| <span data-ttu-id="33548-141">Sistema operacional</span><span class="sxs-lookup"><span data-stu-id="33548-141">OS</span></span>          | <span data-ttu-id="33548-142">Caminho</span><span class="sxs-lookup"><span data-stu-id="33548-142">Path</span></span>                          |
 |-------------|-------------------------------|
-| <span data-ttu-id="769e2-138">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="769e2-138">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
-| <span data-ttu-id="769e2-139">Portal</span><span class="sxs-lookup"><span data-stu-id="769e2-139">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
+| <span data-ttu-id="33548-143">Linux/macOS</span><span class="sxs-lookup"><span data-stu-id="33548-143">Linux/macOS</span></span> | `$HOME/.dotnet/tools`         |
+| <span data-ttu-id="33548-144">Windows</span><span class="sxs-lookup"><span data-stu-id="33548-144">Windows</span></span>     | `%USERPROFILE%\.dotnet\tools` |
 
-<span data-ttu-id="769e2-140">Esses locais são adicionados ao caminho do usuário quando o SDK é executado pela primeira vez e, portanto, as Ferramentas Globais instaladas nesses locais podem ser chamadas diretamente.</span><span class="sxs-lookup"><span data-stu-id="769e2-140">These locations are added to the user's path when the SDK is first run, so Global Tools installed there can be called directly.</span></span>
+<span data-ttu-id="33548-145">Esse local é adicionado ao caminho do usuário quando o SDK é executado pela primeira vez, portanto, as ferramentas globais podem ser invocadas de qualquer diretório sem especificar o local da ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-145">This location is added to the user's path when the SDK is first run, so global tools can be invoked from any directory without specifying the tool location.</span></span>
 
-<span data-ttu-id="769e2-141">Observe que as Ferramentas Globais são específicas ao usuário e não globais no computador.</span><span class="sxs-lookup"><span data-stu-id="769e2-141">Note that the Global Tools are user-specific, not machine global.</span></span> <span data-ttu-id="769e2-142">Ser específico ao usuário significa que não é possível instalar uma Ferramenta Global que esteja disponível para todos os usuários do computador.</span><span class="sxs-lookup"><span data-stu-id="769e2-142">Being user-specific means you cannot install a Global Tool that is available to all users of the machine.</span></span> <span data-ttu-id="769e2-143">A ferramenta só fica disponível para cada perfil de usuário no qual a ferramenta foi instalada.</span><span class="sxs-lookup"><span data-stu-id="769e2-143">The tool is only available for each user profile where the tool was installed.</span></span>
+<span data-ttu-id="33548-146">O acesso à ferramenta é específico do usuário, não do computador global.</span><span class="sxs-lookup"><span data-stu-id="33548-146">Tool access is user-specific, not machine global.</span></span> <span data-ttu-id="33548-147">Uma ferramenta global só está disponível para o usuário que instalou a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-147">A global tool is only available to the user that installed the tool.</span></span>
 
-<span data-ttu-id="769e2-144">As Ferramentas Globais também podem ser instaladas em um diretório específico.</span><span class="sxs-lookup"><span data-stu-id="769e2-144">Global Tools can also be installed in a specific directory.</span></span> <span data-ttu-id="769e2-145">Quando elas forem instaladas em um diretório específico, o usuário precisará garantir que o comando esteja disponível, incluindo o diretório no caminho, chamando o comando com o diretório especificado ou chamando a ferramenta no diretório especificado.</span><span class="sxs-lookup"><span data-stu-id="769e2-145">When installed in a specific directory, the user must ensure the command is available, by including that directory in the path, by calling the command with the directory specified, or calling the tool from within the specified directory.</span></span>
-<span data-ttu-id="769e2-146">Nesse caso, a CLI do .NET Core não adiciona esse local automaticamente à variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="769e2-146">In this case, the .NET Core CLI doesn't add this location automatically to the PATH environment variable.</span></span>
+### <a name="install-a-global-tool-in-a-custom-location"></a><span data-ttu-id="33548-148">Instalar uma ferramenta global em um local personalizado</span><span class="sxs-lookup"><span data-stu-id="33548-148">Install a global tool in a custom location</span></span>
 
-## <a name="use-the-tool"></a><span data-ttu-id="769e2-147">Usar a ferramenta</span><span class="sxs-lookup"><span data-stu-id="769e2-147">Use the tool</span></span>
+<span data-ttu-id="33548-149">Para instalar uma ferramenta como uma ferramenta global em um local personalizado, use a opção `--tool-path` da [instalação da ferramenta dotnet](dotnet-tool-install.md), conforme mostrado nos exemplos a seguir.</span><span class="sxs-lookup"><span data-stu-id="33548-149">To install a tool as a global tool in a custom location, use the `--tool-path` option of [dotnet tool install](dotnet-tool-install.md), as shown in the following examples.</span></span>
 
-<span data-ttu-id="769e2-148">Depois de instalar a ferramenta, chame-a usando seu comando.</span><span class="sxs-lookup"><span data-stu-id="769e2-148">Once the tool is installed, you can call it by using its command.</span></span> <span data-ttu-id="769e2-149">Observe que o comando pode não ser o mesmo que o nome do pacote.</span><span class="sxs-lookup"><span data-stu-id="769e2-149">Note that the command may not be the same as the package name.</span></span>
+<span data-ttu-id="33548-150">No Windows:</span><span class="sxs-lookup"><span data-stu-id="33548-150">On Windows:</span></span>
 
-<span data-ttu-id="769e2-150">Se o comando for `dotnetsay`, chame a ferramenta com:</span><span class="sxs-lookup"><span data-stu-id="769e2-150">If the command is `dotnetsay`, you call it with:</span></span>
+```dotnetcli
+dotnet tool install dotnetsay --tool-path c:\dotnet-tools
+```
+
+<span data-ttu-id="33548-151">No Linux ou macOS:</span><span class="sxs-lookup"><span data-stu-id="33548-151">On Linux or macOS:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay --tool-path ~/bin
+```
+
+<span data-ttu-id="33548-152">O SDK do .NET Core não adiciona esse local automaticamente à variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="33548-152">The .NET Core SDK doesn't add this location automatically to the PATH environment variable.</span></span> <span data-ttu-id="33548-153">Para [invocar uma ferramenta de caminho de ferramenta](#invoke-a-tool-path-tool), você precisa certificar-se de que o comando está disponível usando um dos seguintes métodos:</span><span class="sxs-lookup"><span data-stu-id="33548-153">To [invoke a tool-path tool](#invoke-a-tool-path-tool), you have to make sure the command is available by using one of the following methods:</span></span>
+
+* <span data-ttu-id="33548-154">Adicione o diretório de instalação à variável de ambiente PATH.</span><span class="sxs-lookup"><span data-stu-id="33548-154">Add the installation directory to the PATH environment variable.</span></span>
+* <span data-ttu-id="33548-155">Especifique o caminho completo para a ferramenta ao chamá-lo.</span><span class="sxs-lookup"><span data-stu-id="33548-155">Specify the full path to the tool when you invoke it.</span></span>
+* <span data-ttu-id="33548-156">Invoque a ferramenta de dentro do diretório de instalação.</span><span class="sxs-lookup"><span data-stu-id="33548-156">Invoke the tool from within the installation directory.</span></span>
+
+## <a name="install-a-local-tool"></a><span data-ttu-id="33548-157">Instalar uma ferramenta local</span><span class="sxs-lookup"><span data-stu-id="33548-157">Install a local tool</span></span>
+
+<span data-ttu-id="33548-158">**Aplica-se ao SDK do .NET Core 3,0 e posterior.**</span><span class="sxs-lookup"><span data-stu-id="33548-158">**Applies to .NET Core 3.0 SDK and later.**</span></span>
+
+<span data-ttu-id="33548-159">Para instalar uma ferramenta somente para acesso local (para o diretório e subdiretórios atuais), ela deve ser adicionada a um arquivo de manifesto da ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-159">To install a tool for local access only (for the current directory and subdirectories), it has to be added to a tool manifest file.</span></span> <span data-ttu-id="33548-160">Para criar um arquivo de manifesto da ferramenta, execute o comando `dotnet new tool-manifest`:</span><span class="sxs-lookup"><span data-stu-id="33548-160">To create a tool manifest file, run the `dotnet new tool-manifest` command:</span></span>
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+<span data-ttu-id="33548-161">Este comando cria um arquivo de manifesto chamado *dotnet-Tools. JSON* no diretório *. config* .</span><span class="sxs-lookup"><span data-stu-id="33548-161">This command creates a manifest file named *dotnet-tools.json* under the *.config* directory.</span></span> <span data-ttu-id="33548-162">Para adicionar uma ferramenta local ao arquivo de manifesto, use o comando de [instalação da ferramenta dotnet](dotnet-tool-install.md) e **omita** as opções `--global` e `--tool-path`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-162">To add a local tool to the manifest file, use the [dotnet tool install](dotnet-tool-install.md) command and **omit** the `--global` and `--tool-path` options, as shown in the following example:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay
+```
+
+<span data-ttu-id="33548-163">A saída do comando mostra em qual arquivo de manifesto a ferramenta recém-instalada está, semelhante ao exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-163">The command output shows which manifest file the newly installed tool is in, similar to the following example:</span></span>
+
+```console
+You can invoke the tool from this directory using the following command:
+dotnet tool run dotnetsay
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
+Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
+```
+
+<span data-ttu-id="33548-164">O exemplo a seguir mostra um arquivo de manifesto com duas ferramentas locais instaladas:</span><span class="sxs-lookup"><span data-stu-id="33548-164">The following example shows a manifest file with two local tools installed:</span></span>
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "botsay": {
+      "version": "1.0.0",
+      "commands": [
+        "botsay"
+      ]
+    },
+    "dotnetsay": {
+      "version": "2.1.3",
+      "commands": [
+        "dotnetsay"
+      ]
+    }
+  }
+}
+```
+
+<span data-ttu-id="33548-165">Normalmente, você adiciona uma ferramenta local ao diretório raiz do repositório.</span><span class="sxs-lookup"><span data-stu-id="33548-165">You typically add a local tool to the root directory of the repository.</span></span> <span data-ttu-id="33548-166">Depois de fazer o check-in do arquivo de manifesto para o repositório, os desenvolvedores que confiram o código do repositório obtêm o arquivo de manifesto mais recente.</span><span class="sxs-lookup"><span data-stu-id="33548-166">After you check in the manifest file to the repository, developers who check out code from the repository get the latest manifest file.</span></span> <span data-ttu-id="33548-167">Para instalar todas as ferramentas listadas no arquivo de manifesto, elas executam o comando `dotnet tool restore`:</span><span class="sxs-lookup"><span data-stu-id="33548-167">To install all of the tools listed in the manifest file, they run the `dotnet tool restore` command:</span></span>
+
+```dotnetcli
+dotnet tool restore
+```
+
+<span data-ttu-id="33548-168">A saída indica quais ferramentas foram restauradas:</span><span class="sxs-lookup"><span data-stu-id="33548-168">The output indicates which tools were restored:</span></span>
+
+```console
+Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
+Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
+Restore was successful.
+```
+
+## <a name="install-a-specific-tool-version"></a><span data-ttu-id="33548-169">Instalar uma versão específica da ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-169">Install a specific tool version</span></span>
+
+<span data-ttu-id="33548-170">Para instalar uma versão de pré-lançamento ou uma versão específica de uma ferramenta, especifique o número de versão usando a opção `--version`, conforme mostrado no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-170">To install a pre-release version or a specific version of a tool, specify the version number by using the `--version` option, as shown in the following example:</span></span>
+
+```dotnetcli
+dotnet tool install dotnetsay --version 2.1.3
+```
+
+## <a name="use-a-tool"></a><span data-ttu-id="33548-171">Usar uma ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-171">Use a tool</span></span>
+
+<span data-ttu-id="33548-172">O comando que você usa para invocar uma ferramenta pode ser diferente do nome do pacote que você instalar.</span><span class="sxs-lookup"><span data-stu-id="33548-172">The command that you use to invoke a tool may be different from the name of the package that you install.</span></span> <span data-ttu-id="33548-173">Para exibir todas as ferramentas atualmente instaladas no computador para o usuário atual, use o comando [dotnet da lista de ferramentas](dotnet-tool-list.md) :</span><span class="sxs-lookup"><span data-stu-id="33548-173">To display all of the tools currently installed on the machine for the current user, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
+
+```dotnetcli
+dotnet tool list
+```
+
+<span data-ttu-id="33548-174">A saída mostra a versão e o comando de cada ferramenta, semelhante ao exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-174">The output shows each tool's version and command, similar to the following example:</span></span>
+
+```console
+Package Id      Version      Commands       Manifest
+-------------------------------------------------------------------------------------------
+botsay          1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+```
+
+<span data-ttu-id="33548-175">Conforme mostrado neste exemplo, a lista mostra as ferramentas locais.</span><span class="sxs-lookup"><span data-stu-id="33548-175">As shown in this example, the list shows local tools.</span></span> <span data-ttu-id="33548-176">Para ver as ferramentas globais, use a opção `--global` e para ver ferramentas de caminho de ferramenta, use a opção `--tool-path`.</span><span class="sxs-lookup"><span data-stu-id="33548-176">To see global tools, use the `--global` option, and to see tool-path tools, use the `--tool-path` option.</span></span>
+
+### <a name="invoke-a-global-tool"></a><span data-ttu-id="33548-177">Invocar uma ferramenta global</span><span class="sxs-lookup"><span data-stu-id="33548-177">Invoke a global tool</span></span>
+
+<span data-ttu-id="33548-178">Para ferramentas globais, use o comando de ferramenta por si só.</span><span class="sxs-lookup"><span data-stu-id="33548-178">For global tools, use the tool command by itself.</span></span> <span data-ttu-id="33548-179">Por exemplo, se o comando for `dotnetsay` ou `dotnet-doc`, é isso que você usa para invocar o comando:</span><span class="sxs-lookup"><span data-stu-id="33548-179">For example, if the command is `dotnetsay` or `dotnet-doc`, that's what you use to invoke the command:</span></span>
 
 ```console
 dotnetsay
+dotnet-doc
 ```
 
-<span data-ttu-id="769e2-151">Se o autor da ferramenta desejou que a ferramenta fosse exibida no contexto do prompt do `dotnet`, ele pode ter escrito a ferramenta de modo que você a chame como `dotnet <command>`, por exemplo:</span><span class="sxs-lookup"><span data-stu-id="769e2-151">If the tool author wanted the tool to appear in the context of the `dotnet` prompt, they may have written it in a way that you call it as `dotnet <command>`, such as:</span></span>
+<span data-ttu-id="33548-180">Se o comando começar com o prefixo `dotnet-`, uma maneira alternativa de invocar a ferramenta é usar o comando `dotnet` e omitir o prefixo de comando da ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-180">If the command begins with the prefix `dotnet-`, an alternative way to invoke the tool is to use the `dotnet` command and omit the tool command prefix.</span></span> <span data-ttu-id="33548-181">Por exemplo, se o comando for `dotnet-doc`, o comando a seguir invocará a ferramenta:</span><span class="sxs-lookup"><span data-stu-id="33548-181">For example, if the command is `dotnet-doc`, the following command invokes the tool:</span></span>
 
 ```dotnetcli
 dotnet doc
 ```
 
-<span data-ttu-id="769e2-152">Encontre quais ferramentas estão incluídas em um pacote de Ferramentais Global instalado por meio da listagem dos pacotes instalados usando o comando [dotnet tool list](dotnet-tool-list.md).</span><span class="sxs-lookup"><span data-stu-id="769e2-152">You can find which tools are included in an installed Global Tool package by listing the installed packages using the [dotnet tool list](dotnet-tool-list.md) command.</span></span>
+<span data-ttu-id="33548-182">No entanto, no cenário a seguir, você não pode usar o comando `dotnet` para invocar uma ferramenta global:</span><span class="sxs-lookup"><span data-stu-id="33548-182">However, in the following scenario you can't use the `dotnet` command to invoke a global tool:</span></span>
 
-<span data-ttu-id="769e2-153">Procure também instruções de uso no site da ferramenta ou digitando um dos seguintes comandos:</span><span class="sxs-lookup"><span data-stu-id="769e2-153">You can also look for usage instructions at the tool's website or by typing one of the following commands:</span></span>
+* <span data-ttu-id="33548-183">Uma ferramenta global e uma ferramenta local têm o mesmo comando prefixado por `dotnet-`.</span><span class="sxs-lookup"><span data-stu-id="33548-183">A global tool and a local tool have the same command prefixed by `dotnet-`.</span></span>
+* <span data-ttu-id="33548-184">Você deseja invocar a ferramenta global de um diretório que está no escopo da ferramenta local.</span><span class="sxs-lookup"><span data-stu-id="33548-184">You want to invoke the global tool from a directory that is in scope for the local tool.</span></span>
 
-```console
-<command> --help
-dotnet <command> --help
+<span data-ttu-id="33548-185">Nesse cenário, `dotnet doc` e `dotnet dotnet-doc` invocam a ferramenta local.</span><span class="sxs-lookup"><span data-stu-id="33548-185">In this scenario, `dotnet doc` and `dotnet dotnet-doc` invoke the local tool.</span></span> <span data-ttu-id="33548-186">Para invocar a ferramenta global, use o comando por si só:</span><span class="sxs-lookup"><span data-stu-id="33548-186">To invoke the global tool, use the command by itself:</span></span>
+
+```dotnetcli
+dotnet-doc
 ```
 
-## <a name="other-cli-commands"></a><span data-ttu-id="769e2-154">Outros comandos da CLI</span><span class="sxs-lookup"><span data-stu-id="769e2-154">Other CLI commands</span></span>
+### <a name="invoke-a-tool-path-tool"></a><span data-ttu-id="33548-187">Invocar uma ferramenta de caminho de ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-187">Invoke a tool-path tool</span></span>
 
-<span data-ttu-id="769e2-155">O SDK do .NET Core contém outros comandos que dão suporte às Ferramentas Globais do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="769e2-155">The .NET Core SDK contains other commands that support .NET Core Global Tools.</span></span> <span data-ttu-id="769e2-156">Use um dos comandos `dotnet tool` com uma das seguintes opções:</span><span class="sxs-lookup"><span data-stu-id="769e2-156">Use any of the `dotnet tool` commands with one of the following options:</span></span>
+<span data-ttu-id="33548-188">Para invocar uma ferramenta global que é instalada usando a opção `tool-path`, verifique se o comando está disponível, conforme explicado [anteriormente neste artigo](#install-a-global-tool-in-a-custom-location).</span><span class="sxs-lookup"><span data-stu-id="33548-188">To invoke a global tool that is installed by using the `tool-path` option, make sure the command is available, as explained [earlier in this article](#install-a-global-tool-in-a-custom-location).</span></span>
 
-* <span data-ttu-id="769e2-157">`--global` ou `-g` especifica que o comando é aplicável às Ferramentas Globais de todos os usuários.</span><span class="sxs-lookup"><span data-stu-id="769e2-157">`--global` or `-g` specifies that the command is applicable to user-wide Global Tools.</span></span>
-* <span data-ttu-id="769e2-158">`--tool-path` especifica um local personalizado para as Ferramentas Globais.</span><span class="sxs-lookup"><span data-stu-id="769e2-158">`--tool-path` specifies a custom location for Global Tools.</span></span>
+### <a name="invoke-a-local-tool"></a><span data-ttu-id="33548-189">Invocar uma ferramenta local</span><span class="sxs-lookup"><span data-stu-id="33548-189">Invoke a local tool</span></span>
 
-<span data-ttu-id="769e2-159">Para descobrir quais comandos estão disponíveis para as Ferramentas Globais:</span><span class="sxs-lookup"><span data-stu-id="769e2-159">To find out which commands are available for Global Tools:</span></span>
+<span data-ttu-id="33548-190">Para invocar uma ferramenta local, você precisa usar o comando `dotnet` de dentro do diretório de instalação.</span><span class="sxs-lookup"><span data-stu-id="33548-190">To invoke a local tool, you have to use the `dotnet` command from within the installation directory.</span></span> <span data-ttu-id="33548-191">Você pode usar a forma longa (`dotnet tool run <COMMAND_NAME>`) ou a forma abreviada (`dotnet <COMMAND_NAME>`), conforme mostrado nos exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="33548-191">You can use the long form (`dotnet tool run <COMMAND_NAME>`) or the short form (`dotnet <COMMAND_NAME>`), as shown in the following examples:</span></span>
+
+```dotnetcli
+dotnet tool run dotnetsay
+dotnet dotnetsay
+```
+
+<span data-ttu-id="33548-192">Se o comando for prefixado por `dotnet-`, você poderá incluir ou omitir o prefixo ao invocar a ferramenta.</span><span class="sxs-lookup"><span data-stu-id="33548-192">If the command is prefixed by `dotnet-`, you can include or omit the prefix when you invoke the tool.</span></span> <span data-ttu-id="33548-193">Por exemplo, se o comando for `dotnet-doc`, qualquer um dos seguintes exemplos invocará a ferramenta local:</span><span class="sxs-lookup"><span data-stu-id="33548-193">For example, if the command is `dotnet-doc`, any of the following examples invokes the local tool:</span></span>
+
+```dotnetcli
+dotnet tool run dotnet-doc
+dotnet dotnet-doc
+dotnet doc
+```
+
+## <a name="update-a-tool"></a><span data-ttu-id="33548-194">Atualizar uma ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-194">Update a tool</span></span>
+
+<span data-ttu-id="33548-195">A atualização de uma ferramenta envolve a desinstalação e a reinstalação com a versão estável mais recente.</span><span class="sxs-lookup"><span data-stu-id="33548-195">Updating a tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="33548-196">Para atualizar uma ferramenta, use o comando [dotnet ferramenta de atualização](dotnet-tool-update.md) com a mesma opção usada para instalar a ferramenta:</span><span class="sxs-lookup"><span data-stu-id="33548-196">To update a tool, use the [dotnet tool update](dotnet-tool-update.md) command with the same option that you used to install the tool:</span></span>
+
+```dotnetcli
+dotnet tool update --global <packagename>
+dotnet tool update --tool-path <packagename>
+dotnet tool update <packagename>
+```
+
+<span data-ttu-id="33548-197">Para uma ferramenta local, o SDK encontra o primeiro arquivo de manifesto que contém a ID do pacote examinando o diretório atual e os diretórios pai.</span><span class="sxs-lookup"><span data-stu-id="33548-197">For a local tool, the SDK finds the first manifest file that contains the package ID by looking in the current directory and parent directories.</span></span> <span data-ttu-id="33548-198">Se não houver nenhuma ID de pacote em nenhum arquivo de manifesto, o SDK adicionará uma nova entrada ao arquivo de manifesto mais próximo.</span><span class="sxs-lookup"><span data-stu-id="33548-198">If there is no such package ID in any manifest file, the SDK adds a new entry to the closest manifest file.</span></span>
+
+## <a name="uninstall-a-tool"></a><span data-ttu-id="33548-199">Desinstalar uma ferramenta</span><span class="sxs-lookup"><span data-stu-id="33548-199">Uninstall a tool</span></span>
+
+<span data-ttu-id="33548-200">Remova uma ferramenta usando o comando [dotnet ferramenta de desinstalação](dotnet-tool-uninstall.md) com a mesma opção usada para instalar a ferramenta:</span><span class="sxs-lookup"><span data-stu-id="33548-200">Remove a tool by using the [dotnet tool uninstall](dotnet-tool-uninstall.md) command with the same option that you used to install the tool:</span></span>
+
+```dotnetcli
+dotnet tool uninstall --global <packagename>
+dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall <packagename>
+```
+
+<span data-ttu-id="33548-201">Para uma ferramenta local, o SDK encontra o primeiro arquivo de manifesto que contém a ID do pacote examinando o diretório atual e os diretórios pai.</span><span class="sxs-lookup"><span data-stu-id="33548-201">For a local tool, the SDK finds the first manifest file that contains the package ID by looking in the current directory and parent directories.</span></span>
+
+## <a name="get-help-and-troubleshoot"></a><span data-ttu-id="33548-202">Obter ajuda e solucionar problemas</span><span class="sxs-lookup"><span data-stu-id="33548-202">Get help and troubleshoot</span></span>
+
+<span data-ttu-id="33548-203">Para obter uma lista de comandos de `dotnet tool` disponíveis, digite o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="33548-203">To get a list of available `dotnet tool` commands, enter the following command:</span></span>
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-<span data-ttu-id="769e2-160">A atualização de uma Ferramenta Global envolve sua desinstalação e reinstalação com a última versão estável.</span><span class="sxs-lookup"><span data-stu-id="769e2-160">Updating a Global Tool involves uninstalling and reinstalling it with the latest stable version.</span></span> <span data-ttu-id="769e2-161">Para atualizar uma Ferramenta Global, use o comando [dotnet tool update](dotnet-tool-update.md):</span><span class="sxs-lookup"><span data-stu-id="769e2-161">To update a Global Tool, use the [dotnet tool update](dotnet-tool-update.md) command:</span></span>
+<span data-ttu-id="33548-204">Para obter instruções de uso da ferramenta, insira um dos comandos a seguir ou consulte o site da ferramenta:</span><span class="sxs-lookup"><span data-stu-id="33548-204">To get tool usage instructions, enter one of the following commands or see the tool's website:</span></span>
 
 ```dotnetcli
-dotnet tool update -g <packagename>
+<command> --help
+dotnet <command> --help
 ```
 
-<span data-ttu-id="769e2-162">Remova uma Ferramenta Global usando [dotnet tool uninstall](dotnet-tool-uninstall.md):</span><span class="sxs-lookup"><span data-stu-id="769e2-162">Remove a Global Tool using the [dotnet tool uninstall](dotnet-tool-uninstall.md):</span></span>
-
-```dotnetcli
-dotnet tool uninstall -g <packagename>
-```
-
-<span data-ttu-id="769e2-163">Para exibir todas as Ferramentas Globais atualmente instaladas no computador, junto com as versões e os comandos, use o comando [dotnet tool list](dotnet-tool-list.md):</span><span class="sxs-lookup"><span data-stu-id="769e2-163">To display all of the Global Tools currently installed on the machine, along with their version and commands, use the [dotnet tool list](dotnet-tool-list.md) command:</span></span>
-
-```dotnetcli
-dotnet tool list -g
-```
-
-## <a name="see-also"></a><span data-ttu-id="769e2-164">Veja também</span><span class="sxs-lookup"><span data-stu-id="769e2-164">See also</span></span>
-
-* [<span data-ttu-id="769e2-165">Solucionar problemas de uso da ferramenta .NET Core</span><span class="sxs-lookup"><span data-stu-id="769e2-165">Troubleshoot .NET Core tool usage issues</span></span>](troubleshoot-usage-issues.md)
+<span data-ttu-id="33548-205">Se uma ferramenta não for instalada ou executada, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).</span><span class="sxs-lookup"><span data-stu-id="33548-205">If a tool fails to install or run, see [Troubleshoot .NET Core tool usage issues](troubleshoot-usage-issues.md).</span></span>
