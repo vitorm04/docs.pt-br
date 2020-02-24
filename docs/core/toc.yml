@@ -2,7 +2,7 @@
   href: index.md
 - name: Sobre o .NET Core
   href: about.md
-- name: Instalar
+- name: Instalar o
   items:
     - name: Visão geral
       href: install/index.md
@@ -250,17 +250,23 @@
   items:
     - name: Visão geral
       href: tools/index.md
-    - name: Ferramentas
+    - name: Ferramentas globais e locais
       expanded: true
       items:
-        - name: Ferramentas globais
-          expanded: true
+        - name: Como gerenciar ferramentas
+          href: tools/global-tools.md
+        - name: Tutoriais
           items:
-            - name: Visão geral
-              href: tools/global-tools.md
-            - name: Criar uma ferramenta global
+            - name: Criar uma ferramenta
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: Solucionar problemas de uso da ferramenta
+            - name: Instalar e usar uma ferramenta global
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: Instalar e usar uma ferramenta local
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: Solucionar problemas das ferramentas
           href: tools/troubleshoot-usage-issues.md
     - name: Acesso elevado
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
