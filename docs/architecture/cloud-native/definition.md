@@ -54,13 +54,13 @@ Os sistemas nativos de nuvem aproveitam ao máximo o modelo de serviço de nuvem
 
 Projetado para prosperar em um ambiente de nuvem dinâmico e virtualizado, esses sistemas fazem uso extensivo da infraestrutura de computação e dos serviços gerenciados de [PaaS (plataforma como serviço)](https://azure.microsoft.com/overview/what-is-paas/) . Eles tratam a infraestrutura subjacente como *desdescartável* -provisionado em minutos e redimensionados, dimensionados, movidos ou destruídos sob demanda – via automação.
 
-Considere o conceito de DevOps amplamente aceito de [pets versus burro](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
+Considere o conceito de DevOps amplamente aceito de [pets versus gado](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Em um data center tradicional, os servidores são tratados como *animais de estimação*: um computador físico, dado um nome significativo e cuidados para. Você dimensiona adicionando mais recursos ao mesmo computador (expandindo verticalmente). Se o servidor se tornar doente, você o enfermaria de volta para a integridade. Se o servidor ficar indisponível, todos os avisos serão percebidos.
 
-O modelo de serviço *burro* é diferente. Você provisiona cada instância como uma máquina virtual ou contêiner. Eles são idênticos e atribuídos a um identificador de sistema, como Service-01, Service-02 e assim por diante. Você dimensiona criando mais deles (expandindo). Quando um se torna indisponível, ninguém percebe.
+O modelo de serviço *gado* é diferente. Você provisiona cada instância como uma máquina virtual ou contêiner. Eles são idênticos e atribuídos a um identificador de sistema, como Service-01, Service-02 e assim por diante. Você dimensiona criando mais deles (expandindo). Quando um se torna indisponível, ninguém percebe.
 
-O modelo burro adota a *infraestrutura imutável*. Os servidores não são reparados ou modificados. Se uma falha ou requer atualização, ela é destruída e uma nova é provisionada – tudo feito por meio da automação.
+O modelo gado adota a *infraestrutura imutável*. Os servidores não são reparados ou modificados. Se uma falha ou requer atualização, ela é destruída e uma nova é provisionada – tudo feito por meio da automação.
 
-Os sistemas nativos de nuvem adotam o modelo de serviço burro. Eles continuam a ser executados conforme a infraestrutura é dimensionada para dentro ou para fora, sem considerar as máquinas nas quais estão em execução.
+Os sistemas nativos de nuvem adotam o modelo de serviço gado. Eles continuam a ser executados conforme a infraestrutura é dimensionada para dentro ou para fora, sem considerar as máquinas nas quais estão em execução.
 
 A plataforma de nuvem do Azure dá suporte a esse tipo de infraestrutura altamente elástica com recursos de dimensionamento automático, auto-recuperação e monitoramento.
 
