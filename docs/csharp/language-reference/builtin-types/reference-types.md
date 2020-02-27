@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163092"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627264"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referência internos (Referência de C#)
 
@@ -33,7 +33,7 @@ O C# tem um número de tipos de referência internos. Eles têm palavras-chave o
 
 ## <a name="the-object-type"></a>O tipo de objeto
 
-O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do tipo `object` é convertida em um tipo de valor, ela é considerada *desemoldurada*. Para obter mais informações, consulte [Conversões boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do tipo `object` é convertida em um tipo de valor, ela é considerada *desemoldurada*. Para obter mais informações, consulte [Boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>O tipo de cadeia de caracteres
 
@@ -97,9 +97,9 @@ Os literais de cadeia de caracteres podem conter qualquer literal de caractere. 
 ```csharp-interactive
 string a = "\\\u0066\n F";
 Console.WriteLine(a);
-\\ Output:
-\\ \f
-\\  F
+// Output:
+// \f
+//  F
 ```
 
 > [!NOTE]
@@ -168,7 +168,7 @@ O exemplo a seguir usa `dynamic` em várias declarações. O método `Main` tamb
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Veja também
+### <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](../keywords/index.md)

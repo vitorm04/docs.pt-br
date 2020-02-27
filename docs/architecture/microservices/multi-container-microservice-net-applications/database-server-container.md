@@ -2,12 +2,12 @@
 title: Usar um servidor de banco de dados em execução como um contêiner
 description: Entenda a importância de usar um servidor de banco de dados executando como um contêiner somente para desenvolvimento. Nunca para produção.
 ms.date: 01/30/2020
-ms.openlocfilehash: 816ac196636f78a368a9f20e8eedcc6a22567fa7
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502287"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628521"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Usar um servidor de banco de dados em execução como um contêiner
 
@@ -48,10 +48,10 @@ Ter o SQL Server em execução como um contêiner não é apenas útil para uma 
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Executar a imagem do Docker do SQL Server no Linux, no Mac ou no Windows** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
 
 - **Conectar e consultar o SQL Server em Linux com sqlcmd** \
-    <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
+  <https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd>
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Propagação com os dados de teste na inicialização do aplicativo Web
 

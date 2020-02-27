@@ -5,18 +5,18 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964940"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625859"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Valores padrão de C# tipos (C# referência)
 
 A seguinte tabela mostra os valores padrão de tipos C#:
 
-|{1&gt;Tipo&lt;1}|Valor padrão|
+|Tipo|Valor padrão|
 |---------|------------------|
 |Qualquer tipo de referência|`null`|
 |Qualquer [tipo numérico integral interno](integral-numeric-types.md)|0 (zero)|
@@ -24,7 +24,7 @@ A seguinte tabela mostra os valores padrão de tipos C#:
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
-|[struct](../keywords/struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
+|[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
 |Qualquer [tipo de valor que permite valor nulo](nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. Esse valor padrão também é conhecido como o valor *nulo* de um tipo de valor anulável.|
 
 Use o [operador padrão](../operators/default.md) para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
@@ -55,7 +55,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Valores padrão](~/_csharplang/spec/variables.md#default-values)
 - [Construtores padrão](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Construtores](../../programming-guide/classes-and-structs/constructors.md)

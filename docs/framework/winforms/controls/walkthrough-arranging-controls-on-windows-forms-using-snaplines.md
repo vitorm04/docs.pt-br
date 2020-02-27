@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740210"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628794"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>Walkthrough: organizar controles em Windows Forms usando Snaplines
 
@@ -124,7 +124,7 @@ Você pode usar snaplines para alinhar controles agrupados, bem como controles d
 
 ## <a name="align-a-label-to-a-controls-text"></a>Alinhar um rótulo ao texto de um controle
 
-1. Arraste um controle de <xref:System.Windows.Forms.TextBox> da **caixa de ferramentas** para seu formulário. Ao soltar o controle <xref:System.Windows.Forms.TextBox> no formulário, clique no glifo de marca inteligente e selecione a opção **definir texto como TextBox1** . Para obter detalhes, consulte [Instruções passo a passo: realizando tarefas comuns usando smart tags em controles dos Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md).
+1. Arraste um controle de <xref:System.Windows.Forms.TextBox> da **caixa de ferramentas** para seu formulário. Ao soltar o controle <xref:System.Windows.Forms.TextBox> no formulário, clique no glifo de marca inteligente e selecione a opção **definir texto como TextBox1** . Para obter detalhes, consulte [Walkthrough: executar tarefas comuns usando ações de designer](perform-common-tasks-design-actions.md).
 
 2. Arraste um controle de <xref:System.Windows.Forms.Label> da **caixa de ferramentas** para seu formulário.
 
@@ -180,7 +180,7 @@ Nenhuma SnapLine é exibida e o controle não se ajusta a nenhuma posição de a
 
 4. Selecione um controle no formulário e mova-o em torno dos outros controles. Observe que as guias de alinhamento não aparecem.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 As guias de alinhamento oferecem uma forma intuitiva de alinhar controles no formulário. Sugestões para exploração adicional incluem:
 
@@ -188,7 +188,7 @@ As guias de alinhamento oferecem uma forma intuitiva de alinhar controles no for
 
 - Crie uma coluna de controles de <xref:System.Windows.Forms.TextBox> e uma coluna correspondente de controles de <xref:System.Windows.Forms.Label>. Defina o valor da propriedade <xref:System.Windows.Forms.Control.AutoSize%2A> dos controles de <xref:System.Windows.Forms.Label> como `true`. Use snaplines para mover os controles de <xref:System.Windows.Forms.Label> para que o texto exibido seja alinhado com o texto nos controles de <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

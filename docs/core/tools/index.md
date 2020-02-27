@@ -3,12 +3,12 @@ title: CLI do .NET Core
 titleSuffix: ''
 description: Uma visão geral do CLI do .NET Core e de seus recursos.
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543308"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625976"
 ---
 # <a name="net-core-cli-overview"></a>Visão geral de CLI do .NET Core
 
@@ -87,9 +87,9 @@ Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de
 dotnet build
 ```
 
-Primeiro, o driver determina a versão do SDK a ser usada. Se não houver uma ['global.json'](global-json.md), a versão mais recente do SDK disponível será usada. Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.  Depois que a versão do SDK é determinada, ela executa o comando.
+Primeiro, o driver determina a versão do SDK a ser usada. Se não houver nenhum arquivo [global. JSON](global-json.md) , a versão mais recente do SDK disponível será usada. Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.  Depois que a versão do SDK é determinada, ela executa o comando.
 
-### <a name="command"></a>Comando
+### <a name="command"></a>{1&gt;Comando&lt;1}
 
 O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {command}`.
 
@@ -97,11 +97,11 @@ O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotn
 
 Os argumentos que você passa na linha de comando são aqueles do comando invocado. Por exemplo, quando você executa `dotnet publish my_app.csproj`, o argumento `my_app.csproj` indica o projeto a ser publicado e é passado para o comando `publish`.
 
-### <a name="options"></a>Opções
+### <a name="options"></a>{1&gt;Opções&lt;1}
 
 As opções que você passa na linha de comando são aquelas do comando invocado. Por exemplo, quando você executa `dotnet publish --output /build_output`, a opção `--output` e seu valor são passados para o comando `publish`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [repositório do GitHub do dotnet/SDK](https://github.com/dotnet/sdk/)
 - [Guia de instalação do .NET Core](../install/sdk.md)

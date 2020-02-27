@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337667"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628040"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -30,7 +30,7 @@ Um caminho DOS padrão pode consistir em três componentes:
 
 Se todos os três componentes estiverem presentes, o caminho será absoluto. Se nenhum volume ou letra da unidade for especificado e o nome do diretório começar com o [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>), o caminho será relativo na raiz da unidade atual. Caso contrário, o caminho será relativo ao diretório atual. A tabela a seguir mostra alguns possíveis caminhos de arquivo e diretório.
 
-|Caminho  |Descrição  |
+|Caminho  |DESCRIÇÃO  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Um caminho de arquivo absoluto da raiz da unidade C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Um caminho absoluto da raiz da unidade atual. |
@@ -49,6 +49,8 @@ O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. El
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="unc-paths"></a>Caminhos UNC
 
 Os caminhos UNC (convenção de nomenclatura universal), usados para acessar recursos de rede, têm o seguinte formato:
@@ -60,7 +62,7 @@ Os caminhos UNC (convenção de nomenclatura universal), usados para acessar rec
 
 Veja alguns exemplos de caminhos UNC:
 
-|Caminho  |Descrição  |
+|Caminho  |DESCRIÇÃO  |
 | -- | -- |
 | `\\system07\C$\` | O diretório raiz da unidade C: em `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | O arquivo Foo.txt no diretório Teste do volume \\\\Server2\\Share.|

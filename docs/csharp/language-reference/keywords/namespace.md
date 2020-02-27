@@ -8,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713361"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625794"
 ---
 # <a name="namespace-c-reference"></a>namespace (Referência de C#)
 
@@ -31,7 +31,7 @@ Dentro de um namespace, é possível declarar zero ou mais dos seguintes tipos:
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struct](../builtin-types/struct.md)
 
 - [enum](../builtin-types/enum.md)
 
@@ -45,7 +45,7 @@ Os namespaces implicitamente têm acesso público e não isso é modificável. P
 
 [!code-csharp[csrefKeywordsNamespace#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#2)]
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra como chamar um método estático em um namespace aninhado.
 
@@ -55,7 +55,7 @@ O exemplo a seguir mostra como chamar um método estático em um namespace aninh
 
 Para saber mais, confira a seção [Namespaces](~/_csharplang/spec/namespaces.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

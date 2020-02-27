@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748513"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625941"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valorC# (referência)
 
-*Tipos de valor* e [tipos de referência](../keywords/reference-types.md) são as duas categorias C# principais de tipos. Uma variável de um tipo Value contém uma instância do tipo. Isso é diferente de uma variável de um tipo de referência, que contém uma referência a uma instância do tipo. Por padrão, na [atribuição](../operators/assignment-operator.md), passando um argumento para um método ou retornando um resultado de método, valores de variáveis são copiados. No caso de variáveis de tipo de valor, as instâncias de tipo correspondentes são copiadas. O exemplo a seguir demonstra esse comportamento:
+*Tipos de valor* e [tipos de referência](../keywords/reference-types.md) são as duas categorias C# principais de tipos. Uma variável de um tipo Value contém uma instância do tipo. Isso é diferente de uma variável de um tipo de referência, que contém uma referência a uma instância do tipo. Por padrão, na [atribuição](../operators/assignment-operator.md), passando um argumento para um método e retornando um resultado de método, valores de variáveis são copiados. No caso de variáveis de tipo de valor, as instâncias de tipo correspondentes são copiadas. O exemplo a seguir demonstra esse comportamento:
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ Se um tipo de valor contiver um membro de dados de um tipo de referência, somen
 
 Um tipo de valor pode ser um dos dois tipos a seguir:
 
-- um [tipo de estrutura](../keywords/struct.md), que encapsula dados e funcionalidade relacionada
+- um [tipo de estrutura](struct.md), que encapsula dados e funcionalidade relacionada
 - um [tipo de enumeração](enum.md), que é definido por um conjunto de constantes nomeadas e representa uma opção ou uma combinação de opções
 
 Um [tipo de valor anulável](nullable-value-types.md) `T?` representa todos os valores de seu tipo de valor subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Você não pode atribuir `null` a uma variável de um tipo de valor, a menos que seja um tipo de valor anulável.

@@ -2,22 +2,24 @@
 title: Opção de compilador
 description: Use F# opções de linha de comando do compilador para controlar a compilação F# de seus aplicativos e bibliotecas.
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424753"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628872"
 ---
 # <a name="compiler-options"></a>Opção de compilador
 
-Este tópico descreve as opções de linha de comando do F# compilador para o compilador, FSC. exe. O ambiente de compilação também pode ser controlado definindo as propriedades do projeto.
+Este tópico descreve as opções de linha de comando do F# compilador para o compilador, FSC. exe.
+
+O ambiente de compilação também pode ser controlado definindo as propriedades do projeto. Para projetos destinados ao .NET Core, a propriedade "outros sinalizadores", `<OtherFlags>...</OtherFlags>` em `.fsproj`, é usada para especificar opções de linha de comando extras.
 
 ## <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
 A tabela a seguir mostra as opções de compilador listadas em ordem alfabética. Algumas das opções F# do compilador são semelhantes às opções C# do compilador. Se esse for o caso, será fornecido um link C# para o tópico de opções do compilador.
 
-|Opção do compilador|Descrição|
+|Opção do compilador|DESCRIÇÃO|
 |---------------|-----------|
 |`-a filename.fs`|Gera uma biblioteca a partir do arquivo especificado. Essa opção é uma forma curta de `--target:library filename.fs`.|
 |`--baseaddress:address`|Especifica o endereço básico preferencial no qual uma DLL será carregada.<br /><br />Essa opção de compilador é equivalente à C# opção de compilador do mesmo nome. Para obter mais informações, [ &#47;consulte &#40;as&#35; opções&#41;do compilador do BaseAddress C](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
@@ -26,7 +28,7 @@ A tabela a seguir mostra as opções de compilador listadas em ordem alfabética
 |`--crossoptimize[+|-]`|Habilita ou desabilita otimizações de módulo cruzado.|
 |<code>--delaysign[+&#124;-]</code>|Delay-assina o assembly usando apenas a parte pública da chave de nome forte.<br /><br />Essa opção de compilador é equivalente à C# opção de compilador do mesmo nome. Para obter mais informações, [ &#47;consulte &#40;opções&#35; &#41;do compilador do delaysign C](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Habilita ou desabilita a geração de verificações de estouro.<br /><br />Essa opção de compilador é equivalente à C# opção de compilador do mesmo nome. Para obter mais informações, [ &#47;consulte &#40;selecionado&#35; as opções&#41;do compilador C](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
-|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Habilita ou desabilita a geração de informações de depuração ou especifica o tipo de informações de depuração a serem geradas. O padrão é Full, que permite anexar a um programa em execução. Escolha **pdbonly** para obter informações de depuração limitadas armazenadas em um arquivo PDB (banco de dados do programa).<br /><br />Equivalente à opção C# do compilador de mesmo nome. Para saber mais, veja<br /><br />[depurar opções do compilador C&#35; &#40; &#47;&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
+|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Habilita ou desabilita a geração de informações de depuração ou especifica o tipo de informações de depuração a serem geradas. O padrão é Full, que permite anexar a um programa em execução. Escolha **pdbonly** para obter informações de depuração limitadas armazenadas em um arquivo PDB (banco de dados do programa).<br /><br />Equivalente à opção C# do compilador de mesmo nome. Para obter mais informações, consulte<br /><br />[depurar opções do compilador C&#35; &#40; &#47;&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
 |`--define:symbol`<br /><br />`-d:symbol`|Define um símbolo para uso em compilação condicional.|
 |<code>--deterministic[+&#124;-]</code>|Produz um assembly determinístico (incluindo o GUID de versão do módulo e o carimbo de data/hora). Esta opção não pode ser usada com números de versão curinga e só dá suporte a tipos de depuração incorporados e portáteis|
 |`--doc:xmldoc-filename`|Instrui o compilador a gerar comentários de documentação XML para o arquivo especificado. Para obter mais informações, consulte a [documentação XML](xml-documentation.md).<br /><br />Essa opção de compilador é equivalente à C# opção de compilador do mesmo nome. Para obter mais informações, [ &#47;consulte &#40;doc&#35; C compilador&#41;Options](https://msdn.microsoft.com/library/3260k4x7.aspx).|
@@ -69,7 +71,7 @@ A tabela a seguir mostra as opções de compilador listadas em ordem alfabética
 
 ## <a name="related-articles"></a>Artigos relacionados
 
-|Título|Descrição|
+|Title|DESCRIÇÃO|
 |-----|-----------|
 |[Opções do F# Interativo](fsharp-interactive-options.md)|Descreve as opções de linha de comando suportadas pelo F# intérprete, FSI. exe.|
 |[Referência de Propriedades do Projeto](/visualstudio/ide/reference/project-properties-reference)|Descreve a interface do usuário para projetos, incluindo páginas de propriedades do projeto que fornecem opções de compilação.|

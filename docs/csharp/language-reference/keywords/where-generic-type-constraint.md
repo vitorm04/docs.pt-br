@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712800"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626705"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
 
@@ -32,7 +32,7 @@ A cláusula `where` pode especificar que o tipo é um `class` ou um `struct`. A 
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-A cláusula `where` pode incluir a restrição `notnull`. A restrição `notnull` limita o parâmetro de tipo a tipos não anuláveis. Esse tipo pode ser um tipo de [valor](struct.md) ou um tipo de referência não anulável. A restrição `notnull` está disponível a partir C# de 8,0 para o código compilado em um [contexto de`nullable enable`](../../nullable-references.md#nullable-contexts). Ao contrário de outras restrições, se um argumento de tipo violar a restrição de `notnull`, o compilador gerará um aviso em vez de um erro. Os avisos são gerados apenas em um contexto de `nullable enable`. 
+A cláusula `where` pode incluir a restrição `notnull`. A restrição `notnull` limita o parâmetro de tipo a tipos não anuláveis. Esse tipo pode ser um tipo de [valor](../builtin-types/value-types.md) ou um tipo de referência não anulável. A restrição `notnull` está disponível a partir C# de 8,0 para o código compilado em um [contexto de`nullable enable`](../../nullable-references.md#nullable-contexts). Ao contrário de outras restrições, se um argumento de tipo violar a restrição de `notnull`, o compilador gerará um aviso em vez de um erro. Os avisos são gerados apenas em um contexto de `nullable enable`.
 
 > [!IMPORTANT]
 > Declarações genéricas que incluem a restrição `notnull` podem ser usadas em um contexto alheios anulável, mas o compilador não impõe a restrição.
@@ -69,7 +69,7 @@ Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restriç�
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

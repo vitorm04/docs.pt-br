@@ -2,24 +2,24 @@
 title: Especificando um algoritmo de criptografia personalizada
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 55200732b392c15a25853af28ecdf9e32d092da4
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 0bfa6c46f4db1171eb314625e36c267000a0ec12
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849111"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628677"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Especificando um algoritmo de criptografia personalizada
 O WCF permite que você especifique um algoritmo de criptografia personalizado a ser usado ao criptografar dados ou computação de assinaturas digitais. Isso é feito pelas seguintes etapas:  
   
-1. Derive uma classe de<xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Derive uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2. Registrar o algoritmo  
   
-3. Configure a associação com a <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>classe derivada.  
+3. Configure a associação com a classe derivada de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Derive uma classe de SecurityAlgorithmSuite  
- O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> é uma classe base abstrata que permite que você especifique o algoritmo a ser usado ao executar várias operações relacionadas à segurança. Por exemplo, computar um hash para uma assinatura digital ou criptografar uma mensagem. O código a seguir mostra como derivar uma classe <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>de:  
+ O <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> é uma classe base abstrata que permite que você especifique o algoritmo a ser usado ao executar várias operações relacionadas à segurança. Por exemplo, computar um hash para uma assinatura digital ou criptografar uma mensagem. O código a seguir mostra como derivar uma classe de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  
   
 ```csharp  
 public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite  
@@ -105,9 +105,9 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- A seção sob o <`cryptoClasses`elemento > cria o mapeamento entre o SHA256CryptoServiceProvider e o alias "SHA256CSP". O elemento`nameEntry`< > cria o mapeamento entre o alias "SHA256CSP" e a URL especificada (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm ).  
+ A seção no elemento <`cryptoClasses`> cria o mapeamento entre o SHA256CryptoServiceProvider e o alias "SHA256CSP". O elemento <`nameEntry`> cria o mapeamento entre o alias "SHA256CSP" e a URL especificada `http://constoso.com/CustomAlgorithms/CustomHashAlgorithm`.  
   
- Para registrar o algoritmo personalizado no código, use <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> o método. Esse método cria os dois mapeamentos. O exemplo a seguir mostra como chamar esse método:  
+ Para registrar o algoritmo personalizado no código, use o método <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])>. Esse método cria os dois mapeamentos. O exemplo a seguir mostra como chamar esse método:  
   
 ```csharp
 // Register the custom URI string defined for the hashAlgorithm in MyCustomAlgorithmSuite class to create the   
@@ -116,7 +116,7 @@ CryptoConfig.AddAlgorithm(typeof(SHA256CryptoServiceProvider), "http://constoso.
 ```  
   
 ## <a name="configure-the-binding"></a>Configurar a associação  
- Você configura a associação especificando a classe derivada <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>personalizada nas configurações de associação, conforme mostrado no trecho de código a seguir:  
+ Configure a associação especificando a classe derivada de <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>personalizada nas configurações de associação, conforme mostrado no trecho de código a seguir:  
   
 ```csharp  
 WSHttpBinding binding = new WSHttpBinding();  
@@ -125,7 +125,7 @@ WSHttpBinding binding = new WSHttpBinding();
   
  Para obter um exemplo de código completo, consulte a [agilidade de criptografia no](../samples/cryptographic-agility-in-wcf-security.md) exemplo de segurança do WCF.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Protegendo serviços e clientes](../feature-details/securing-services-and-clients.md)
 - [Protegendo serviços](../securing-services.md)

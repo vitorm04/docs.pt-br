@@ -3,12 +3,12 @@ title: Telemetria do SDK do .NET Core
 description: Descubra os recursos de telemetria do SDK do .NET Core que coletam informações de uso para análise, quais dados são coletados e como desabilitá-los.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714110"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625911"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -56,13 +56,13 @@ O recurso de telemetria coleta os seguintes dados:
 
 | Versões do SDK | Dados |
 |--------------|------|
-| {1&gt;Todos&lt;1}          | Carimbo de data/hora da invocação. |
-| {1&gt;Todos&lt;1}          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
-| {1&gt;Todos&lt;1}          | Três endereços IP de octeto usados para determinar a localização geográfica. |
-| {1&gt;Todos&lt;1}          | Sistema operacional e versão. |
-| {1&gt;Todos&lt;1}          | RID (ID de runtime) em que o SDK está em execução. |
-| {1&gt;Todos&lt;1}          | Versão do SDK do .NET Core. |
-| {1&gt;Todos&lt;1}          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
+| Tudo          | Carimbo de data/hora da invocação. |
+| Tudo          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
+| Tudo          | Três endereços IP de octeto usados para determinar a localização geográfica. |
+| Tudo          | Sistema operacional e versão. |
+| Tudo          | RID (ID de runtime) em que o SDK está em execução. |
+| Tudo          | Versão do SDK do .NET Core. |
+| Tudo          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
 | >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
 | >=2.0         | Se o SDK está em execução em um contêiner. |
 | >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
@@ -90,7 +90,7 @@ Alguns comandos enviam dados adicionais. Um subconjunto de comandos envia o prim
 
 Um subconjunto de comandos envia as opções selecionadas se elas são usadas, juntamente com seus valores:
 
-| Opção                  | Comandos                                                                                       |
+| {1&gt;Opção&lt;1}                  | Commands                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Todos os comandos                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
@@ -128,13 +128,13 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>Evitar a divulgação não intencional de informações
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Evite a divulgação inadvertida de informações
 
 Os colaboradores do .NET Core e qualquer outra pessoa que estejam executando uma versão do SDK do .NET Core criada por conta própria devem considerar o caminho para o código-fonte do SDK. Se ocorrer uma falha durante o uso de um SDK do .NET Core que seja um build de depuração personalizado ou configurado com arquivos de símbolo de build personalizado, o caminho do arquivo de origem do SDK do computador de build será coletado como parte do rastreamento de pilha e não terá hash.
 
 Por isso, os builds personalizados do SDK do .NET Core não devem estar localizados em diretórios cujos nomes de caminho exponham informações pessoais ou confidenciais. 
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Telemetria da CLI do .NET Core – dados do T2 de 2019](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
 - [Fonte de referência de telemetria (repositório dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)

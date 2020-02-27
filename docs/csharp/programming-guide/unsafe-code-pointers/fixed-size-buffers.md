@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711838"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627793"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>Comentários
 
-No código de seguro, um struct C# que contém uma matriz não contém os elementos da matriz. Em vez disso, o struct contém uma referência aos elementos. Você pode inserir uma matriz de tamanho fixo em um [struct](../../language-reference/keywords/struct.md) quando ele é usado em um bloco de código [não seguro](../../language-reference/keywords/unsafe.md).
+No código de seguro, um struct C# que contém uma matriz não contém os elementos da matriz. Em vez disso, o struct contém uma referência aos elementos. Você pode inserir uma matriz de tamanho fixo em um [struct](../../language-reference/builtin-types/struct.md) quando ele é usado em um bloco de código [não seguro](../../language-reference/keywords/unsafe.md).
 
 O seguinte `struct` tem 8 bytes de tamanho. A matriz `pathName` é uma referência:
 
@@ -48,7 +48,7 @@ Buffers não seguros diferem de matrizes regulares das seguintes maneiras:
 - A declaração de matriz deve incluir uma contagem, como `char id[8]`. Não é possível usar `char id[]`.
 - Buffers não seguros só podem ser structs ou campos de instância em um contexto não seguro.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)

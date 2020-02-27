@@ -2,12 +2,12 @@
 title: '{1&gt;Iteradores&lt;1}'
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353732"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628729"
 ---
 # <a name="iterators-visual-basic"></a>Iteradores (Visual Basic)
 
@@ -259,7 +259,7 @@ Se o corpo de `For Each` (em vez do método iterador) gerar uma exceção, um bl
 
 ## <a name="BKMK_AnonymousMethods"></a>Métodos anônimos
 
-No Visual Basic, uma função anônima pode ser uma função de iterador. O exemplo a seguir mostra isso.
+No Visual Basic, uma função anônima pode ser uma função de iterador. O exemplo a seguir ilustra isto.
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -435,7 +435,7 @@ Embora você escreva um iterador como um método, o compilador o traduz em uma c
 
 Para ver o que o compilador faz, você pode usar a ferramenta Ildasm.exe para exibir o código Microsoft Intermediate Language que é gerado para um método iterador.
 
-Quando você cria um iterador para uma [classe](../../../csharp/language-reference/keywords/class.md) ou [estrutura](../../../csharp/language-reference/keywords/struct.md), não é necessário implementar toda a interface de <xref:System.Collections.IEnumerator>. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
+Quando você cria um iterador para uma [classe](../../language-reference/statements/class-statement.md) ou [estrutura](../../language-reference/statements/structure-statement.md), não é necessário implementar toda a interface de <xref:System.Collections.IEnumerator>. Quando o compilador detecta o iterador, ele gera automaticamente os métodos `Current`, `MoveNext` e `Dispose` da interface <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
 
 A cada iteração sucessiva do loop `For Each…Next` (ou a chamada direta ao `IEnumerator.MoveNext`), o próximo corpo de código do iterador continua, depois da instrução `Yield` anterior. Em seguida, ele continua na próxima instrução de `Yield` até que o final do corpo do iterador seja atingido ou até que uma instrução `Exit Function` ou `Return` seja encontrada.
 
@@ -453,7 +453,7 @@ Os iteradores permitem que você mantenha a simplicidade de um loop `For Each` q
 
 - Encapsular a criação da lista no iterador. No método iterador, você pode criar a lista e, em seguida, gerar cada resultado em um loop.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

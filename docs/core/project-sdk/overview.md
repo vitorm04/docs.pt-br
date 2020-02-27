@@ -3,12 +3,12 @@ title: Visão geral do SDK do projeto .NET Core
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: b1b839f81b1b4a8d20dbb34d3d2fc000c64acb8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c41b25bf7933e7b1f6cb50da5e52dc0b312f5c74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453800"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626245"
 ---
 # <a name="net-core-project-sdks"></a>SDKs do projeto do .NET Core
 
@@ -18,7 +18,7 @@ Os projetos do .NET Core são associados a um Software Development Kit (SDK). Ca
 
 Os seguintes SDKs estão disponíveis para o .NET Core:
 
-| ID | DESCRIÇÃO | Repositório|
+| ID | Descrição | Repositório|
 | - | - | - |
 | `Microsoft.NET.Sdk` | O SDK do .NET Core | https://github.com/dotnet/sdk |
 | `Microsoft.NET.Sdk.Web` | O [SDK Web](/aspnet/core/razor-pages/web-sdk) do .NET Core | https://github.com/aspnet/websdk |
@@ -32,7 +32,7 @@ Você também pode criar seu próprio SDK que pode ser distribuído via NuGet.
 
 ## <a name="project-files"></a>Arquivos de projeto
 
-Os projetos do .NET Core são baseados no formato [MSBuild](/visualstudio/msbuild/msbuild) . Arquivos de projeto, que têm extensões como *. csproj* para C# projetos e *. fsproj* para F# projetos, estão no formato XML. O elemento raiz de um arquivo de projeto do MSBuild é o elemento [Project](/msbuild/project-element-msbuild) . O elemento `Project` tem um atributo opcional `Sdk` que especifica qual SDK (e versão) usar. Para usar as ferramentas do .NET Core e criar seu código, defina o atributo `Sdk` como um dos IDs na tabela [SDKs disponíveis](#available-sdks) .
+Os projetos do .NET Core são baseados no formato [MSBuild](/visualstudio/msbuild/msbuild) . Arquivos de projeto, que têm extensões como *. csproj* para C# projetos e *. fsproj* para F# projetos, estão no formato XML. O elemento raiz de um arquivo de projeto do MSBuild é o elemento [Project](/visualstudio/msbuild/project-element-msbuild) . O elemento `Project` tem um atributo opcional `Sdk` que especifica qual SDK (e versão) usar. Para usar as ferramentas do .NET Core e criar seu código, defina o atributo `Sdk` como um dos IDs na tabela [SDKs disponíveis](#available-sdks) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -88,8 +88,8 @@ A tabela a seguir mostra qual elemento e quais [globs](https://en.wikipedia.org/
 
 | Elemento           | Incluir glob                              | Excluir glob                                                  | Remover glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/D                      |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
+| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | {1&gt;N/A&lt;1}                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | {1&gt;N/A&lt;1}                      |
 | Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
@@ -129,7 +129,7 @@ Para desabilitar *todos os* globs implícitos, defina a propriedade `EnableDefau
 
 Há várias maneiras de [personalizar uma compilação](/visualstudio/msbuild/customize-your-build). Talvez você queira substituir uma propriedade passando-a como um argumento para um comando [MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) ou [dotnet](../tools/index.md) . Você também pode adicionar a propriedade ao arquivo de projeto ou a um arquivo *Directory. Build. props* . Para obter uma lista de propriedades úteis para projetos do .NET Core, consulte [Propriedades do MSBuild para projetos de SDK do .NET Core](msbuild-props.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Instalar o .NET Core](../install/index.md)
 - [Como usar SDKs de projeto do MSBuild](/visualstudio/msbuild/how-to-use-project-sdk)

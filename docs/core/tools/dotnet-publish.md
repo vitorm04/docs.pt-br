@@ -2,18 +2,18 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica seu projeto .NET Core em um diretório.
 ms.date: 05/29/2018
-ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 88dc53d6c45bc18f630d8a7137704e813ad4f0e3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451286"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626067"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet publish`- Empacota o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
 
@@ -47,7 +47,7 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída inclui os seguintes ativos:
 
@@ -66,13 +66,13 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 
 O projeto a ser publicado. É o caminho e o nome de arquivo de um arquivo de projeto [C#](csproj.md), F# ou do Visual Basic ou o caminho para um diretório que contém um arquivo de projeto C#, F# ou do Visual Basic. Se não é especificado, ele usa como padrão o diretório atual.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Define a configuração da compilação. O valor padrão é `Debug`.
+Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -125,9 +125,9 @@ Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão
 
 # <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Define a configuração da compilação. O valor padrão é `Debug`.
+Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -176,9 +176,9 @@ Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão
 
 # <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-Define a configuração da compilação. O valor padrão é `Debug`.
+Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -233,7 +233,7 @@ Publique o aplicativo atual, mas não restaure as referências P2P (projeto a pr
 
 `dotnet publish --no-dependencies`
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Estruturas de destino](../../standard/frameworks.md)
 - [Catálogo de RID (Identificador de Runtime)](../rid-catalog.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094131"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628118"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -134,21 +134,7 @@ O InstallAware compila pacotes de aplicativos do Windows (APPX), Windows Install
 
 ### <a name="installshield-deployment"></a>Implantação do InstallShield
 
-No Visual Studio, para escolher a implantação do InstallShield e adicionar uma dependência no .NET Framework:
-
-1. Na barra de menus do Visual Studio, escolha **Arquivo**, **Novo**, **Projeto**.
-
-2. No painel esquerdo da caixa de diálogo **Novo Projeto**, escolha **Outros Tipos de Projeto**, **Instalação e Implantação**, **InstallShield LE**.
-
-3. Na caixa **Nome**, digite um nome para o projeto e escolha **OK**.
-
-4. Se você estiver criando um projeto de instalação e implantação pela primeira vez, escolha **Ir para InstallShield** ou **Habilitar o InstallShield Limited Edition** para baixar o InstallShield Limited Edition para sua versão do Microsoft Visual Studio. Reinicie o Visual Studio.
-
-5. Vá até o **Assistente de Projeto** e escolha **Arquivos de Aplicativo** para adicionar a Saída do Projeto. É possível configurar outros atributos do projeto usando esse assistente.
-
-6. Vá até **Requisitos de Instalação** e selecione os sistemas operacionais e a versão do .NET Framework que deseja instalar.
-
-7. Abra o menu de atalho do seu projeto de instalação e escolha **Compilar**.
+O InstallShield cria pacotes de aplicativos do Windows (MSIX, APPX), pacotes de Windows Installer (MSI) e instaladores de código nativo (EXE). O InstallShield também fornece a integração do Visual Studio. Para obter mais informações, consulte o site do [InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) .
 
 <a name="wix"></a>
 
@@ -245,7 +231,7 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Versão|Valor da liberação de DWORD|
+|{1&gt;Version&lt;1}|Valor da liberação de DWORD|
 |-------------|--------------------------------|
 |.NET Framework 4.8 instalado na Atualização de maio de 2019 para Windows 10|528040|
 |.NET Framework 4.8 instalado em todas as versões do sistema operacional diferentes da Atualização de maio de 2019 para Windows 10|528049|
@@ -275,8 +261,8 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 | | |
 |-|-|
 | Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Nome | Versão |
-| Type | DWORD |
+| {1&gt;Nome&lt;1} | Versão |
+| Tipo | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -310,13 +296,13 @@ Não é necessário encadear os pacotes de idiomas se você utilizar o instalado
 
 Para obter uma lista completa de opções da linha de comando, consulte a seção [Opções da linha de comando](#command-line-options).
 
-### <a name="troubleshooting"></a>solução de problemas
+### <a name="troubleshooting"></a>Solução de problemas
 
 #### <a name="return-codes"></a>Códigos de retorno
 
 A tabela a seguir lista os códigos de retorno mais comuns do instalador redistribuível do .NET Framework. Os códigos de retorno são os mesmos para todas as versões do instalador. Para obter links com informações detalhadas, consulte a próxima seção.
 
-|Código de retorno|DESCRIÇÃO|
+|Código de retorno|Descrição|
 |-----------------|-----------------|
 |0|A instalação foi concluída com êxito.|
 |1602|O usuário cancelou a instalação.|
@@ -356,7 +342,7 @@ A partir do Windows 8, você pode desinstalar o .NET Framework 4,5 ou versões p
 
 A tabela a seguir lista opções que podem ser incluídas ao encadear o redistribuível do .NET Framework 4.5 para a instalação do seu aplicativo.
 
-|Opção|DESCRIÇÃO|
+|{1&gt;Opção&lt;1}|Descrição|
 |------------|-----------------|
 |**/CEIPConsent**|Substitui o comportamento padrão e envia comentários anônimos à Microsoft para aprimorar experiências futuras de implantação. Essa opção só pode ser usada se o programa de instalação solicitar consentimento e se o usuário conceder permissão para enviar comentários anônimos à Microsoft.|
 |`packageName` **/chainingpackage**|Especifica o nome do executável que está fazendo o encadeamento. Essas informações são enviadas à Microsoft como comentários anônimos para ajudar a aprimorar experiências futuras de implantação.<br /><br /> Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Lucerne Publishing"** . Para obter um exemplo de um pacote de encadeamento, consulte [obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
@@ -381,10 +367,10 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |LCID|Idioma – país/região|Cultura|
 |----------|--------------------------------|-------------|
 |1025|Árabe - Arábia Saudita|ar|
-|1028|Chinês – Tradicional|zh-Hans|
+|1028|Chinês – Tradicional|zh-Hant|
 |1029|Tcheco|cs|
 |1030|Dinamarquês|da|
-|1031|Alemão – Alemanha|de|
+|1031|Alemão – Alemanha|{1&gt;{2&gt;de&lt;2}&lt;1}|
 |1032|Grego|el|
 |1035|Finlandês|fi|
 |1036|Francês – França|fr|
@@ -404,7 +390,7 @@ A tabela a seguir lista .NET Framework pacotes de idiomas que estão disponívei
 |2070|Português – Portugal|pt-PT|
 |3082|Espanhol - Espanha (Moderno)|es|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Guia de implantação para administradores](guide-for-administrators.md)
 - [Requisitos do sistema](../get-started/system-requirements.md)

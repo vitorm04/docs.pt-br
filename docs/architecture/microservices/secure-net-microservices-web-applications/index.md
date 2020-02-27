@@ -3,12 +3,12 @@ title: Protegendo microsserviços e aplicativos Web .NET
 description: Segurança nos Microsserviços do .NET e aplicativos Web – Conheça as opções de autenticação em aplicativos Web ASP.NET Core.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501645"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628326"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
@@ -135,8 +135,8 @@ Em todos os casos, você deve concluir um procedimento de registro de aplicativo
 
 Para obter detalhes sobre como configurar seu aplicativo para um provedor externo, consulte a [autenticação do provedor externo na documentação do ASP.NET Core](/aspnet/core/security/authentication/social/)).
 
-> [!TIP]
-Todos os detalhes são tratados pelo middleware de autorização e pelos serviços mencionados anteriormente. Portanto, basta escolher a opção de autenticação de **conta de usuário individual** ao criar o projeto de aplicativo Web de código ASP.net no Visual Studio, como mostrado na Figura 9-3, além de registrar os provedores de autenticação mencionados anteriormente.
+>[!TIP]
+>Todos os detalhes são tratados pelo middleware de autorização e pelos serviços mencionados anteriormente. Portanto, basta escolher a opção de autenticação de **conta de usuário individual** ao criar o projeto de aplicativo Web de código ASP.net no Visual Studio, como mostrado na Figura 9-3, além de registrar os provedores de autenticação mencionados anteriormente.
 
 ![Captura de tela da caixa de diálogo novo ASP.NET Core aplicativo Web.](./media/index/select-individual-user-account-authentication-option.png)
 

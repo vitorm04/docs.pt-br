@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 5b98e3e2d41d3e49a28db6393f15f13c3579b06d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960491"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628072"
 ---
 # <a name="work-with-buffers-in-net"></a>Trabalhar com buffers no .NET
 
@@ -51,8 +51,8 @@ Esse método de gravação usa o `Memory<T>`/buffer `Span<T>` fornecido pelo `IB
 
 <xref:System.Buffers.ReadOnlySequence%601> é uma struct que pode representar uma sequência contígua ou não contígua de `T`. Ele pode ser construído a partir de:
 
-1. Um `T[]`
-1. Um `ReadOnlyMemory<T>`
+1. Uma `T[]`
+1. Uma `ReadOnlyMemory<T>`
 1. Um par de <xref:System.Buffers.ReadOnlySequenceSegment%601> de nó de lista vinculada e índice para representar a posição inicial e final da sequência.
 
 A terceira representação é a mais interessante, uma vez que tem implicações de desempenho em várias operações no `ReadOnlySequence<T>`:
@@ -115,6 +115,8 @@ O exemplo a seguir analisa um tamanho inteiro big-endian de 4 bytes desde o iní
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>Processar dados de texto
 
 O exemplo a seguir:
@@ -138,7 +140,7 @@ O código anterior cria uma `ReadOnlySequence<byte>` com segmentos vazios e most
 
 ### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>Problemas potenciais com ReadOnlySequence\<T > e SequencePosition
 
-Há vários resultados incomuns ao lidar com um `ReadOnlySequence<T>`/`SequencePosition` vs. um `ReadOnlySpan<T>`normal /`ReadOnlyMemory<T>`/`T[]`/:
+Há vários resultados incomuns ao lidar com um `ReadOnlySequence<T>`/`SequencePosition` vs. um `ReadOnlySpan<T>`normal /`ReadOnlyMemory<T>`/`T[]`/:`int`
 
 - `SequencePosition` é um marcador de posição para uma `ReadOnlySequence<T>`específica, não uma posição absoluta. Como ele é relativo a um `ReadOnlySequence<T>`específico, ele não tem significado se for usado fora do `ReadOnlySequence<T>` de origem.
 - A aritmética não pode ser executada em `SequencePosition` sem o `ReadOnlySequence<T>`. Isso significa fazer coisas básicas como `position++` é escrito `ReadOnlySequence<T>.GetPosition(position, 1)`.
@@ -146,7 +148,7 @@ Há vários resultados incomuns ao lidar com um `ReadOnlySequence<T>`/`SequenceP
 - Dois `SequencePosition` não podem ser comparados, dificultando:
   - Saiba se uma posição é maior ou menor que outra posição.
   - Escreva alguns algoritmos de análise.
-- `ReadOnlySequence<T>` é maior que uma referência de objeto e deve ser passada por [em](../../csharp/language-reference/keywords/in-parameter-modifier.md) ou [ref](../../csharp/language-reference/keywords/ref.md) sempre que possível. A passagem de `ReadOnlySequence<T>` por `in` ou `ref` reduz as cópias da [estrutura](../../csharp/language-reference/keywords/struct.md).
+- `ReadOnlySequence<T>` é maior que uma referência de objeto e deve ser passada por [em](../../csharp/language-reference/keywords/in-parameter-modifier.md) ou [ref](../../csharp/language-reference/keywords/ref.md) sempre que possível. A passagem de `ReadOnlySequence<T>` por `in` ou `ref` reduz as cópias da [estrutura](../../csharp/language-reference/builtin-types/struct.md).
 - Segmentos vazios:
   - São válidos dentro de um `ReadOnlySequence<T>`.
   - Pode aparecer ao iterar usando o método `ReadOnlySequence<T>.TryGet`.

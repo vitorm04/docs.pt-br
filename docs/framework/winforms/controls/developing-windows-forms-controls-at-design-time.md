@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745991"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628703"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Desenvolver Windows Forms controles em tempo de design
 
@@ -36,7 +36,7 @@ Mostra como criar um controle de composição simples em C#.
 [Walkthrough: herdar de um controle de Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 Mostra como criar um controle simples dos Windows Forms usando herança em C#.
 
-[Passo a passo: realizando tarefas comuns usando smart tags em controles dos Windows Forms](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[Walkthrough: executar tarefas comuns usando ações de designer](perform-common-tasks-design-actions.md)\
 Mostra como usar o recurso de smart tag em controles dos Windows Forms.
 
 [Walkthrough: Serializando coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)\

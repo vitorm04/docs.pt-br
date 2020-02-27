@@ -2,12 +2,12 @@
 title: Programação assíncrona
 description: Saiba como F# o fornece suporte claro para assincronia com base em um modelo de programação de nível de linguagem derivado dos principais conceitos de programação funcional.
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344668"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628846"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
@@ -33,13 +33,13 @@ Se você considerar o etymology da palavra "Asynchronous", há duas partes envol
 - "a", significando "não".
 - "síncrono", significando "ao mesmo tempo".
 
-Ao reunir esses dois termos, você verá que "assíncrono" significa "não ao mesmo tempo". É só isso! Não há implicação de simultaneidade ou paralelismo nessa definição. Isso também é verdade na prática.
+Ao reunir esses dois termos, você verá que "assíncrono" significa "não ao mesmo tempo". É isso! Não há implicação de simultaneidade ou paralelismo nessa definição. Isso também é verdade na prática.
 
 Em termos práticos, as Computações assíncronas no F# são agendadas para execução independente do fluxo do programa principal. Isso não implica em simultaneidade ou paralelismo, nem significa que uma computação sempre ocorre em segundo plano. Na verdade, as Computações assíncronas podem até mesmo executar de forma síncrona, dependendo da natureza da computação e do ambiente em que a computação está sendo executada.
 
 O principal argumento que você deve ter é que as Computações assíncronas são independentes do fluxo do programa principal. Embora haja algumas garantias sobre quando ou como uma computação assíncrona é executada, há algumas abordagens para orquestrar e agendá-las. O restante deste artigo explora os principais conceitos de F# assincronia e como usar os tipos, funções e expressões incorporados ao. F#
 
-## <a name="core-concepts"></a>Conceitos fundamentais
+## <a name="core-concepts"></a>Conceitos principais
 
 No F#, a programação assíncrona é centralizada em cerca de três conceitos principais:
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-No exemplo, a função `printTotalFileBytes` é do tipo `string -> Async<unit>`. Chamar a função não executa realmente a computação assíncrona. Em vez disso, ele retorna um `Async<unit>` que atua como uma *especificação* do trabalho que deve ser executado de forma assíncrona. Ele chama `Async.AwaitTask` em seu corpo, que converte o resultado de <xref:System.IO.File.WriteAllBytesAsync%2A> para um tipo apropriado.
+No exemplo, a função `printTotalFileBytes` é do tipo `string -> Async<unit>`. Chamar a função não executa realmente a computação assíncrona. Em vez disso, ele retorna um `Async<unit>` que atua como uma *especificação* do trabalho que deve ser executado de forma assíncrona. Ele chama `Async.AwaitTask` em seu corpo, que converte o resultado de <xref:System.IO.File.ReadAllBytesAsync%2A> para um tipo apropriado.
 
 Outra linha importante é a chamada para `Async.RunSynchronously`. Essa é uma das funções que iniciam o módulo Async, que você precisará chamar se quiser realmente executar uma F# computação assíncrona.
 
@@ -144,7 +144,7 @@ Como F# as Computações assíncronas são uma _especificação_ de trabalho em 
 
 Inicia uma computação filho em uma computação assíncrona. Isso permite que vários cálculos assíncronos sejam executados simultaneamente. A computação filho compartilha um token de cancelamento com a computação pai. Se o cálculo pai for cancelado, o cálculo filho também será cancelado.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -164,7 +164,7 @@ O que deve ser observado:
 
 Executa uma computação assíncrona, começando imediatamente no thread do sistema operacional atual. Isso será útil se você precisar atualizar algo no thread de chamada durante o cálculo. Por exemplo, se uma computação assíncrona precisar atualizar uma interface do usuário (como atualizar uma barra de progresso), `Async.StartImmediate` deverá ser usada.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -182,7 +182,7 @@ O que deve ser observado:
 
 Executa uma computação no pool de threads. Retorna um <xref:System.Threading.Tasks.Task%601> que será concluído no estado correspondente depois que o cálculo for encerrado (produz o resultado, gera exceção ou é cancelado). Se nenhum token de cancelamento for fornecido, o token de cancelamento padrão será usado.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -200,7 +200,7 @@ O que deve ser observado:
 
 Agenda uma sequência de Computações assíncronas a serem executadas em paralelo. O grau de paralelismo pode ser, opcionalmente, ajustado/limitado, especificando o parâmetro `maxDegreesOfParallelism`.
 
-Assinatura:
+Signature
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -220,7 +220,7 @@ O que deve ser observado:
 
 Agenda uma sequência de Computações assíncronas a serem executadas na ordem em que são passadas. O primeiro cálculo será executado e, em seguida, o próximo e assim por diante. Nenhum cálculo será executado em paralelo.
 
-Assinatura:
+Signature
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -239,7 +239,7 @@ O que deve ser observado:
 
 Retorna uma computação assíncrona que aguarda a conclusão da <xref:System.Threading.Tasks.Task%601> especificada e retorna seu resultado como um `Async<'T>`
 
-Assinatura:
+Signature
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -257,7 +257,7 @@ O que deve ser observado:
 
 Cria uma computação assíncrona que executa um determinado `Async<'T>`, retornando um `Async<Choice<'T, exn>>`. Se a `Async<'T>` especificada for concluída com êxito, uma `Choice1Of2` será retornada com o valor resultante. Se uma exceção for lançada antes de ser concluída, uma `Choice2of2` será retornada com a exceção gerada. Se ele for usado em uma computação assíncrona que, por sua vez, é composto por muitos cálculos, e um desses cálculos gera uma exceção, a computação que englobará o cálculo será totalmente interrompida.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -275,7 +275,7 @@ O que deve ser observado:
 
 Cria uma computação assíncrona que executa a computação específica e ignora seu resultado.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -293,7 +293,7 @@ O que deve ser observado:
 
 Executa uma computação assíncrona e aguarda seu resultado no thread de chamada. Esta chamada está bloqueando.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -312,7 +312,7 @@ O que deve ser observado:
 
 Inicia uma computação assíncrona no pool de threads que retorna `unit`. Não aguarda seu resultado. Cálculos aninhados iniciados com `Async.Start` são iniciados completamente de forma independente do cálculo pai que os chamou. Seu tempo de vida não está vinculado a nenhum cálculo pai. Se o cálculo pai for cancelado, nenhum cálculo filho será cancelado.
 
-Assinatura:
+Signature
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -382,7 +382,7 @@ Por exemplo, uma computação pode ser realmente executada no thread do chamador
 
 Embora F# o forneça algumas capacidades para iniciar uma computação assíncrona no thread atual (ou não explicitamente no thread atual), a assincronia geralmente não está associada a uma estratégia de Threading específica.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [O F# modelo de programação assíncrona](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Guia assíncrono do F# Jet. com](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

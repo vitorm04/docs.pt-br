@@ -2,18 +2,18 @@
 title: Comando dotnet tool install
 description: O comando dotnet ferramenta de instalação instala a ferramenta .NET Core especificada em seu computador.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543463"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626028"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Nome
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet tool install`-instala a [ferramenta .NET Core](global-tools.md) especificada em seu computador.
 
@@ -26,11 +26,11 @@ dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [
 dotnet tool install <-h|--help>
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet tool install` fornece uma maneira de instalar as ferramentas do .NET Core em seu computador. Para usar o comando, especifique uma das seguintes opções de instalação:
 
-* Para instalar uma ferramenta global no local padrão, use a opção `--tool-path`.
+* Para instalar uma ferramenta global no local padrão, use a opção `--global`.
 * Para instalar uma ferramenta global em um local personalizado, use a opção `--tool-path`.
 * Para instalar uma ferramenta local, omita as opções `--global` e `--tool-path`.
 
@@ -41,7 +41,7 @@ As ferramentas globais são instaladas nos diretórios a seguir por padrão, qua
 | Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| Windows     | `%USERPROFILE%\.dotnet\tools` |
+| Portal     | `%USERPROFILE%\.dotnet\tools` |
 
 As ferramentas locais são adicionadas a um arquivo de *ferramenta-manifest. JSON* em um diretório *. config* no diretório atual. Se um arquivo de manifesto ainda não existir, crie-o executando o seguinte comando:
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte [instalar uma ferramenta local](global-t
 
   Nome/ID do pacote NuGet que contém a ferramenta .NET Core a ser instalada.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
 - **`add-source <SOURCE>`**
 
@@ -113,6 +113,6 @@ Para obter mais informações, consulte [instalar uma ferramenta local](global-t
 
   Instala o [dotnetsay](https://www.nuget.org/packages/dotnetsay/) como uma ferramenta local para o diretório atual.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Ferramentas do .NET Core](global-tools.md)

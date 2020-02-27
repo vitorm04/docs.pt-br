@@ -2,50 +2,37 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c221e8a34e844d0ad0482d2bb4aa6e1c795555ca
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920554"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626054"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>Name
+## <a name="name"></a>{1&gt;Nome&lt;1}
 
 `dotnet restore` – Restaura as dependências e as ferramentas de um projeto.
 
 ## <a name="synopsis"></a>Sinopse
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
+    [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime]
+    [-s|--source] [-v|--verbosity] [--interactive]
+
 dotnet restore [-h|--help]
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
-dotnet restore [-h|--help]
-```
-
----
 
 ## <a name="description"></a>Descrição
 
 O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *NuGet. config* pela opção `-s`.
+Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *NuGet. config* pela opção-`-s`.
 
 Para dependências, especifique onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
 
@@ -69,9 +56,9 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
   Essa configuração não é aplicável, pois o [NuGet ainda não dá suporte à verificação de multiplataforma](https://github.com/NuGet/Home/issues/7939) de pacotes confiáveis.
 
-## <a name="implicit-dotnet-restore"></a>`dotnet restore` implícito
+## <a name="implicit-restore"></a>Restauração implícita
 
-Começando com o .NET Core 2.0, se necessário, o `dotnet restore` será executado implicitamente quando você executar os comandos a seguir:
+O comando `dotnet restore` é executado implicitamente, se necessário, quando você executa os seguintes comandos:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -81,130 +68,94 @@ Começando com o .NET Core 2.0, se necessário, o `dotnet restore` será executa
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Na maioria dos casos, você não precisa usar o comando `dotnet restore` explicitamente.
+Na maioria dos casos, você não precisa usar explicitamente o comando `dotnet restore`.
 
 Às vezes, pode ser inconveniente executar `dotnet restore` implicitamente. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar que o `dotnet restore` seja executado implicitamente, use o sinalizador `--no-restore` com um desses comandos para desabilitar a restauração implícita.
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
-`ROOT`
+- **`ROOT`**
 
-Caminho opcional para o arquivo de projeto a ser restaurado.
+  Caminho opcional para o arquivo de projeto a ser restaurado.
 
-## <a name="options"></a>Opções
+## <a name="options"></a>{1&gt;Opções&lt;1}
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+- **`--configfile <FILE>`**
 
-`--configfile <FILE>`
+  O arquivo de configuração NuGet (*nuget.config*) a ser usado para a operação de restauração.
 
-O arquivo de configuração NuGet (*nuget.config*) a ser usado para a operação de restauração.
+- **`--disable-parallel`**
 
-`--disable-parallel`
+  Desabilita a restauração de vários projetos paralelamente.
 
-Desabilita a restauração de vários projetos paralelamente.
+- **`--force`**
 
-`--force`
+  Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
-Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
+- **`-h|--help`**
 
-`-h|--help`
+  Imprime uma ajuda breve para o comando.
 
-Imprime uma ajuda breve para o comando.
+- **`--ignore-failed-sources`**
 
-`--ignore-failed-sources`
+  Avise somente sobre fontes com falha se houver pacotes que atendem ao requisito de versão.
 
-Avise somente sobre fontes com falha se houver pacotes que atendem ao requisito de versão.
+- **`--no-cache`**
 
-`--no-cache`
+  Especifica para não armazenar os pacotes e solicitações HTTP em cache.
 
-Especifica para não armazenar os pacotes e solicitações HTTP em cache.
+- **`--no-dependencies`**
 
-`--no-dependencies`
+  Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
 
-Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
+- **`--packages <PACKAGES_DIRECTORY>`**
 
-`--packages <PACKAGES_DIRECTORY>`
+  Especifica o diretório para os pacotes restaurados.
 
-Especifica o diretório para os pacotes restaurados.
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+  Especifica um runtime para a restauração do pacote. Isso é usado para restaurar pacotes para runtimes não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
 
-Especifica um runtime para a restauração do pacote. Isso é usado para restaurar pacotes para runtimes não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
+- **`-s|--source <SOURCE>`**
 
-`-s|--source <SOURCE>`
+  Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Essa configuração substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
-Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Essa configuração substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
+- **`--verbosity <LEVEL>`**
 
-`--verbosity <LEVEL>`
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `minimal`.
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `minimal`.
+- **`--interactive`**
 
-`--interactive`
-
-Permite que o comando pare e aguarde a entrada ou uma ação do usuário (por exemplo, para concluir a autenticação). A partir do .NET Core 2.1.400.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--configfile <FILE>`
-
-O arquivo de configuração NuGet (*nuget.config*) a ser usado para a operação de restauração.
-
-`--disable-parallel`
-
-Desabilita a restauração de vários projetos paralelamente.
-
-`-h|--help`
-
-Imprime uma ajuda breve para o comando.
-
-`--ignore-failed-sources`
-
-Avise somente sobre fontes com falha se houver pacotes que atendem ao requisito de versão.
-
-`--no-cache`
-
-Especifica para não armazenar os pacotes e solicitações HTTP em cache.
-
-`--no-dependencies`
-
-Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
-
-`--packages <PACKAGES_DIRECTORY>`
-
-Especifica o diretório para os pacotes restaurados.
-
-`-r|--runtime <RUNTIME_IDENTIFIER>`
-
-Especifica um runtime para a restauração do pacote. Isso é usado para restaurar pacotes para runtimes não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
-
-`-s|--source <SOURCE>`
-
-Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o elemento de `<packageSource>` não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
-
-`--verbosity <LEVEL>`
-
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`.
-
----
+  Permite que o comando pare e aguarde a entrada ou uma ação do usuário (por exemplo, para concluir a autenticação). A partir do .NET Core 2.1.400.
 
 ## <a name="examples"></a>Exemplos
 
-Restaure as dependências e as ferramentas para o projeto no diretório atual:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual:
 
-`dotnet restore`
+  ```dotnetcli
+  dotnet restore
+  ```
 
-Restaure as dependências e as ferramentas para o projeto `app1` encontrado no caminho fornecido:
+- Restaure as dependências e as ferramentas para o projeto `app1` encontrado no caminho fornecido:
 
-`dotnet restore ~/projects/app1/app1.csproj`
+  ```dotnetcli
+  dotnet restore ~/projects/app1/app1.csproj
+  ```
 
-Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a fonte:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a origem:
 
-`dotnet restore -s c:\packages\mypackages`
+  ```dotnetcli
+  dotnet restore -s c:\packages\mypackages
+  ```
 
-Restaure as dependências e as ferramentas para o projeto no diretório atual usando os caminhos dos dois arquivos fornecidos como fontes:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual usando os dois caminhos de arquivo fornecidos como fontes:
 
-`dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages`
+  ```dotnetcli
+  dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
+  ```
 
-Restaure as dependências e as ferramentas para o projeto no diretório atual mostrando a saída detalhada:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual mostrando a saída detalhada:
 
-`dotnet restore --verbosity detailed`
+  ```dotnetcli
+  dotnet restore --verbosity detailed
+  ```

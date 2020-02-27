@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745353"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627704"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -31,11 +31,11 @@ int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-Um ponteiro não pode apontar para uma referência ou um [struct](../../language-reference/keywords/struct.md) que contenha referências, pois uma referência de objeto pode ser coletada como lixo mesmo se um ponteiro estiver apontando para ela. O coletor de lixo não acompanha se um objeto está sendo apontado por qualquer tipo de ponteiro.
+Um ponteiro não pode apontar para uma referência ou um [struct](../../language-reference/builtin-types/struct.md) que contenha referências, pois uma referência de objeto pode ser coletada como lixo mesmo se um ponteiro estiver apontando para ela. O coletor de lixo não acompanha se um objeto está sendo apontado por qualquer tipo de ponteiro.
 
 O valor da variável de ponteiro do tipo `myType*` é o endereço de uma variável do tipo `myType`. Estes são exemplos de declarações de tipos de ponteiro:
 
-|{1&gt;Exemplo&lt;1}|Descrição|
+|Exemplo|DESCRIÇÃO|
 |-------------|-----------------|
 |`int* p`|`p` é um ponteiro para um inteiro.|
 |`int** p`|`p` é um ponteiro para um ponteiro para um inteiro.|
@@ -81,7 +81,7 @@ Para obter mais informações sobre operadores relacionados a ponteiro, veja [Op
 
 Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)

@@ -2,12 +2,12 @@
 title: Tipos de alterações da falha
 description: Saiba como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET e que tipo de alteração é considerada uma alteração significativa.
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092974"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628586"
 ---
 # <a name="changes-that-affect-compatibility"></a>Alterações que afetam a compatibilidade
 
@@ -49,7 +49,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
   O assembly *antigo* deve ser marcado com o <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> que aponta para o novo assembly.
 
-- ✔️ **permitido: alterar um tipo de [struct](../../csharp/language-reference/keywords/struct.md) para um tipo de `readonly struct`**
+- ✔️ **permitido: alterar um tipo de [struct](../../csharp/language-reference/builtin-types/struct.md) para um tipo de `readonly struct`**
 
   Não é permitido alterar um tipo de `readonly struct` para um tipo de `struct`.
 
@@ -77,11 +77,11 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
   Há uma exceção à regra para remoção de interface: é possível adicionar a implementação de uma interface derivada da interface removida. Por exemplo, você pode remover <xref:System.IDisposable> se o tipo ou interface agora implementa <xref:System.ComponentModel.IComponent>, que implementa <xref:System.IDisposable>.
 
-- ❌ não **permitido: alterar um tipo de `readonly struct` para um tipo de [struct](../../csharp/language-reference/keywords/struct.md)**
+- ❌ não **permitido: alterar um tipo de `readonly struct` para um tipo de [struct](../../csharp/language-reference/builtin-types/struct.md)**
 
   No entanto, a alteração de um tipo de `struct` para um tipo de `readonly struct` é permitida.
 
-- ❌ não **permitido: alterar um tipo de [struct](../../csharp/language-reference/keywords/struct.md) para um tipo de `ref struct` e vice-versa**
+- ❌ não **permitido: alterar um tipo de [struct](../../csharp/language-reference/builtin-types/struct.md) para um tipo de `ref struct` e vice-versa**
 
 - ❌ não **permitido: reduzindo a visibilidade de um tipo**
 
@@ -300,7 +300,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
 - ✔️ **permitido: adicionando [params](../../csharp/language-reference/keywords/params.md) a um parâmetro**
 
-- ❌ não **permitido: alterar uma [struct](../../csharp/language-reference/keywords/struct.md) para uma [classe](../../csharp/language-reference/keywords/class.md) e vice-versa**
+- ❌ não **permitido: alterar uma [struct](../../csharp/language-reference/builtin-types/struct.md) para uma [classe](../../csharp/language-reference/keywords/class.md) e vice-versa**
 
 - ❌ não **permitido: adicionando a palavra-chave [verificada](../../csharp/language-reference/keywords/virtual.md) a um bloco de código**
 

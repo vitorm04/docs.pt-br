@@ -2,12 +2,12 @@
 title: Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 description: Aprenda a migrar aplicativos usando o método lift-and-shift e modernizar os existentes para a nuvem e contêineres do Azure com este livro eletrônico.
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714578"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628347"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 
@@ -16,10 +16,10 @@ ms.locfileid: "75714578"
 PUBLICADO POR  
 Microsoft Press e Microsoft DevDiv  
 Divisões da Microsoft Corporation  
-Uma maneira de Microsoft  
+One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Copyright © 2018, Microsoft Corporation  
+Copyright © 2020 da Microsoft Corporation  
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida de nenhuma forma, nem por nenhum meio, sem a permissão por escrito do distribuidor.
 
@@ -29,7 +29,7 @@ Se você tiver dúvidas relacionadas a este livro, envie um email para [dotnet-a
 
 Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste livro, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
-Alguns exemplos usados aqui são fornecidos apenas como ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
+Alguns exemplos usados aqui são fornecidos apenas como ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
 A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft. Todas as outras marcas são propriedade de seus respectivos proprietários.
 
@@ -202,4 +202,4 @@ Esses aplicativos de exemplo têm uma segunda versão, com o código modernizado
 Este guia foi escrito para ajudar você a entender suas opções para melhorar e modernizar aplicativos Web .NET existentes. O guia e os aplicativos de exemplo relacionados estão em evolução. Agradecemos seus comentários! Se você tiver comentários sobre como este guia poderia ser mais útil, envie-os para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Avançar](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[Próximo](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

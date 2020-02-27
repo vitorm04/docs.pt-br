@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543554"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626523"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
 
@@ -21,7 +21,7 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
 
 ## <a name="method-signatures"></a>Assinaturas de método
 
-Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/keywords/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, como `public` ou `private`, modificadores opcionais como `abstract` ou `sealed`, o valor de retorno, o nome do método e qualquer parâmetro de método. Juntas, essas partes são a assinatura do método.
+Os métodos são declarados em uma [classe](../../language-reference/keywords/class.md), [struct](../../language-reference/builtin-types/struct.md)ou [interface](../interfaces/index.md) especificando o nível de acesso, como `public` ou `private`, modificadores opcionais como `abstract` ou `sealed`, o valor de retorno, o nome do método e qualquer parâmetro de método. Juntas, essas partes são a assinatura do método.
 
 > [!NOTE]
 > Um tipo de retorno de um método não faz parte da assinatura do método para fins de sobrecarga de método. No entanto, ele faz parte da assinatura do método ao determinar a compatibilidade entre um delegado e o método para o qual ele aponta.
@@ -161,7 +161,7 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](../concepts/iterators.md).
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

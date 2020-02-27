@@ -1,36 +1,39 @@
 ---
 title: Controle de versão da linguagem C# – Guia de C#
-description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
-ms.date: 07/10/2019
-ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+description: Saiba mais sobre como C# a versão de idioma é determinada com base no seu projeto e os motivos por trás dessa escolha. Saiba como substituir o padrão manualmente.
+ms.date: 02/21/2020
+ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980126"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626758"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
-O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de runtime que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
+O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. O Visual Studio não fornece uma interface do usuário para alterar o valor, mas você pode alterá-lo editando o arquivo *csproj* . A escolha do padrão garante que você use a versão de idioma mais recente compatível com a estrutura de destino. Você se beneficia do acesso aos recursos de linguagem mais recentes compatíveis com o destino do seu projeto. Essa opção padrão também garante que você não use uma linguagem que exija tipos ou comportamento de tempo de execução não disponível em sua estrutura de destino. Escolher uma versão de idioma mais recente do que o padrão pode causar dificuldade para diagnosticar erros de tempo de compilação e Runtime.
 
-As regras neste artigo se aplicam ao compilador fornecido com o Visual Studio 2019 ou o SDK do .NET Core 3,0. Os compiladores do C# que fazem parte da instalação do Visual Studio 2017 ou de versões anteriores do SDK do .NET Core são direcionados ao C# 7.0 por padrão. 
+C#8,0 (e superior) tem suporte apenas no .NET Core 3. x e em versões mais recentes. Muitos dos recursos mais recentes exigem recursos de biblioteca e tempo de execução introduzidos no .NET Core 3. x:
 
-## <a name="defaults"></a>Padrão
+- A implementação de membro de interface padrão requer novos recursos no .NET Core 3,0 CLR.
+- Os fluxos assíncronos exigem os novos tipos <xref:System.IAsyncDisposable?displayProperty=nameWithType>, <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>e <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
+- Índices e intervalos exigem os novos tipos <xref:System.Index?displayProperty=nameWithType> e <xref:System.Range?displayProperty=nameWithType>.
+- Os tipos de referência anuláveis fazem uso de vários [atributos](../nullable-attributes.md) para fornecer avisos melhores. Esses atributos foram adicionados no .NET Core 3,0. Outras estruturas de destino não foram anotadas com nenhum desses atributos. Isso significa que os avisos anuláveis podem não refletir com precisão possíveis problemas.
+
+## <a name="defaults"></a>Padrões
 
 O compilador determina um padrão com base nestas regras:
 
-|Estrutura de destino|versão|Padrão da versão da linguagem C#|
+|Estrutura de destino|version|Padrão da versão da linguagem C#|
 |----------------|-------|---------------------------|
-|.NET Core|Win|C# 8.0|
-|.NET Core|2.x|C# 7.3|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2. x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
-|.NET Standard|2.0|C# 7.3|
+|.NET Standard|2,0|C# 7.3|
 |.NET Standard|1.x|C# 7.3|
-|.NET Framework|all|C# 7.3|
+|{1&gt;.NET Framework&lt;1}|all|C# 7.3|
 
-## <a name="default-for-previews"></a>Padrão para versões prévias
-
-Quando seu projeto se destina a uma estrutura de visualização que tem uma versão da linguagem correspondente da visualização, a versão de linguagem usada é a de visualização. Com isso, é possível usar os recursos mais recentes que são garantidos para trabalhar com essa versão prévia em qualquer ambiente sem afetar seus projetos que direcionam uma versão lançada do .NET Core.
+Quando seu projeto se destina a uma estrutura de visualização que tem uma versão da linguagem correspondente da visualização, a versão de linguagem usada é a de visualização. Você usa os recursos mais recentes com essa visualização em qualquer ambiente, sem afetar projetos direcionados a uma versão lançada do .NET Core.
 
 ## <a name="override-a-default"></a>Substituir um padrão
 
@@ -64,15 +67,15 @@ Para configurar vários projetos, você pode criar um arquivo **Directory. Build
 </Project>
 ```
 
-Agora, os builds de todo subdiretório do diretório que contém esse arquivo usarão a versão do C# da versão prévia. Para obter mais informações, confira o artigo sobre como [personalizar o build](/visualstudio/msbuild/customize-your-build).
+As compilações em todos os subdiretórios do diretório que contém esse arquivo usarão C# a versão de visualização. Para obter mais informações, confira o artigo sobre como [personalizar o build](/visualstudio/msbuild/customize-your-build).
 
 ## <a name="c-language-version-reference"></a>Referência à versão da linguagem C#
 
-A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilador talvez não entenda necessariamente todo valor se for mais antigo. Se instalar o .NET Core 3.0, você terá acesso a tudo que está listado.
+A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilador pode não entender necessariamente todos os valores se for mais antigo. Se você instalar o .NET Core 3,0 ou posterior, terá acesso a todos os itens listados.
 
-|Value|Significado|
+|{1&gt;Valor&lt;1}|Significado|
 |------------|-------------|
-|versão prévia|O compilador aceita todas as sintaxes de linguagem válidas da versão prévia mais recente.|
+|preview|O compilador aceita todas as sintaxes de linguagem válidas da versão prévia mais recente.|
 |mais recente|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
 |latestMajor|O compilador aceita a sintaxe da versão principal mais recente lançada do compilador.|
 |8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
