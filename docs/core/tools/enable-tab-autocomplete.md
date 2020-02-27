@@ -1,23 +1,23 @@
 ---
-title: Habilitar o preenchimento com TAB
+title: Ativar o recurso auto-completar com TAB
 description: Este artigo ensina você a habilitar o preenchimento com TAB na CLI do .NET Core para o PowerShell, o Bash e o zsh.
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6614f11a9c4eb1b1aac4dd8dac8d05d15262bd0c
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920528"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626002"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a><span data-ttu-id="84481-103">Como habilitar o preenchimento com TAB na CLI do .NET Core</span><span class="sxs-lookup"><span data-stu-id="84481-103">How to enable TAB completion for the .NET Core CLI</span></span>
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a><span data-ttu-id="83e8b-103">Como habilitar o preenchimento com TAB na CLI do .NET Core</span><span class="sxs-lookup"><span data-stu-id="83e8b-103">How to enable TAB completion for the .NET Core CLI</span></span>
 
-<span data-ttu-id="84481-104">Começando no SDK do .NET Core 2.0, a CLI do .NET Core dá suporte ao preenchimento com TAB.</span><span class="sxs-lookup"><span data-stu-id="84481-104">Starting with .NET Core 2.0 SDK, the .NET Core CLI supports tab completion.</span></span> <span data-ttu-id="84481-105">Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh.</span><span class="sxs-lookup"><span data-stu-id="84481-105">This article describes how to configure tab completion for three shells, PowerShell, Bash, and zsh.</span></span> <span data-ttu-id="84481-106">Outros shells podem ter suporte para preenchimento automático.</span><span class="sxs-lookup"><span data-stu-id="84481-106">Other shells may have support for auto completion.</span></span> <span data-ttu-id="84481-107">Veja a documentação deles para saber como configurar o preenchimento automático. As etapas devem ser semelhantes às etapas descritas neste artigo.</span><span class="sxs-lookup"><span data-stu-id="84481-107">Refer to their documentation on how to configure auto completion, the steps should be similar to the steps described in this article.</span></span>
+<span data-ttu-id="83e8b-104">**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="83e8b-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
+<span data-ttu-id="83e8b-105">Este artigo descreve como configurar o preenchimento com TAB para três shells: PowerShell, Bash e zsh.</span><span class="sxs-lookup"><span data-stu-id="83e8b-105">This article describes how to configure tab completion for three shells, PowerShell, Bash, and zsh.</span></span> <span data-ttu-id="83e8b-106">Para outros shells, consulte a documentação sobre como configurar a conclusão da guia.</span><span class="sxs-lookup"><span data-stu-id="83e8b-106">For other shells, refer to their documentation on how to configure tab completion.</span></span>
 
-<span data-ttu-id="84481-108">Depois de configurado, o preenchimento com TAB na CLI do .NET Core é disparado pela digitação de um comando `dotnet` no shell e, em seguida, pelo pressionamento da tecla TAB.</span><span class="sxs-lookup"><span data-stu-id="84481-108">Once setup, tab completion for the .NET Core CLI is triggered by typing a `dotnet` command in the shell, and then pressing the TAB key.</span></span> <span data-ttu-id="84481-109">A linha de comando atual é enviada para o comando `dotnet complete`, e os resultados são processados pelo shell.</span><span class="sxs-lookup"><span data-stu-id="84481-109">The current command line is sent to the `dotnet complete` command, and the results are processed by your shell.</span></span> <span data-ttu-id="84481-110">Teste os resultados sem habilitar o preenchimento com TAB enviando algo diretamente para o comando `dotnet complete`.</span><span class="sxs-lookup"><span data-stu-id="84481-110">You can test the results without enabling tab completion by sending something directly to the `dotnet complete` command.</span></span> <span data-ttu-id="84481-111">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="84481-111">For example:</span></span>
+<span data-ttu-id="83e8b-107">Uma vez configurado, o preenchimento com Tab para o CLI do .NET Core é disparado digitando um comando `dotnet` no Shell e, em seguida, pressionando a tecla TAB.</span><span class="sxs-lookup"><span data-stu-id="83e8b-107">Once set up, tab completion for the .NET Core CLI is triggered by typing a `dotnet` command in the shell, and then pressing the TAB key.</span></span> <span data-ttu-id="83e8b-108">A linha de comando atual é enviada para o comando `dotnet complete`, e os resultados são processados pelo shell.</span><span class="sxs-lookup"><span data-stu-id="83e8b-108">The current command line is sent to the `dotnet complete` command, and the results are processed by your shell.</span></span> <span data-ttu-id="83e8b-109">Teste os resultados sem habilitar o preenchimento com TAB enviando algo diretamente para o comando `dotnet complete`.</span><span class="sxs-lookup"><span data-stu-id="83e8b-109">You can test the results without enabling tab completion by sending something directly to the `dotnet complete` command.</span></span> <span data-ttu-id="83e8b-110">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="83e8b-110">For example:</span></span>
 
 ```console
 > dotnet complete "dotnet a"
@@ -28,25 +28,25 @@ migrate
 pack
 ```
 
-<span data-ttu-id="84481-112">Se esse comando não funcionar, verifique se esse SDK do .NET Core 2.0 ou superior está instalado.</span><span class="sxs-lookup"><span data-stu-id="84481-112">If that command doesn't work, make sure that .NET Core 2.0 SDK or above is installed.</span></span> <span data-ttu-id="84481-113">Se ele está instalado, mas esse comando ainda não funciona, verifique se o comando `dotnet` é resolvido para uma versão do SDK do .NET Core 2.0 e superior.</span><span class="sxs-lookup"><span data-stu-id="84481-113">If it's installed, but that command still doesn't work, make sure that the `dotnet` command resolves to a version of .NET Core 2.0 SDK and above.</span></span> <span data-ttu-id="84481-114">Use o comando `dotnet --version` para ver para qual versão do `dotnet` o caminho atual está sendo resolvido.</span><span class="sxs-lookup"><span data-stu-id="84481-114">Use the `dotnet --version` command to see what version of `dotnet` your current path is resolving to.</span></span> <span data-ttu-id="84481-115">Para obter mais informações, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md).</span><span class="sxs-lookup"><span data-stu-id="84481-115">For more information, see [Select the .NET Core version to use](../versions/selection.md).</span></span>
+<span data-ttu-id="83e8b-111">Se esse comando não funcionar, verifique se esse SDK do .NET Core 2.0 ou superior está instalado.</span><span class="sxs-lookup"><span data-stu-id="83e8b-111">If that command doesn't work, make sure that .NET Core 2.0 SDK or above is installed.</span></span> <span data-ttu-id="83e8b-112">Se ele está instalado, mas esse comando ainda não funciona, verifique se o comando `dotnet` é resolvido para uma versão do SDK do .NET Core 2.0 e superior.</span><span class="sxs-lookup"><span data-stu-id="83e8b-112">If it's installed, but that command still doesn't work, make sure that the `dotnet` command resolves to a version of .NET Core 2.0 SDK and above.</span></span> <span data-ttu-id="83e8b-113">Use o comando `dotnet --version` para ver para qual versão do `dotnet` o caminho atual está sendo resolvido.</span><span class="sxs-lookup"><span data-stu-id="83e8b-113">Use the `dotnet --version` command to see what version of `dotnet` your current path is resolving to.</span></span> <span data-ttu-id="83e8b-114">Para obter mais informações, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md).</span><span class="sxs-lookup"><span data-stu-id="83e8b-114">For more information, see [Select the .NET Core version to use](../versions/selection.md).</span></span>
 
-### <a name="examples"></a><span data-ttu-id="84481-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="84481-116">Examples</span></span>
+### <a name="examples"></a><span data-ttu-id="83e8b-115">Exemplos</span><span class="sxs-lookup"><span data-stu-id="83e8b-115">Examples</span></span>
 
-<span data-ttu-id="84481-117">Estes são alguns exemplos do que o preenchimento com TAB fornece:</span><span class="sxs-lookup"><span data-stu-id="84481-117">Here are some examples of what tab completion provides:</span></span>
+<span data-ttu-id="83e8b-116">Estes são alguns exemplos do que o preenchimento com TAB fornece:</span><span class="sxs-lookup"><span data-stu-id="83e8b-116">Here are some examples of what tab completion provides:</span></span>
 
-<span data-ttu-id="84481-118">Entrada</span><span class="sxs-lookup"><span data-stu-id="84481-118">Input</span></span>                                | <span data-ttu-id="84481-119">se transforma em</span><span class="sxs-lookup"><span data-stu-id="84481-119">becomes</span></span>                                                                     | <span data-ttu-id="84481-120">porque</span><span class="sxs-lookup"><span data-stu-id="84481-120">because</span></span>
+<span data-ttu-id="83e8b-117">Entrada</span><span class="sxs-lookup"><span data-stu-id="83e8b-117">Input</span></span>                                | <span data-ttu-id="83e8b-118">torna-se</span><span class="sxs-lookup"><span data-stu-id="83e8b-118">becomes</span></span>                                                                     | <span data-ttu-id="83e8b-119">porque</span><span class="sxs-lookup"><span data-stu-id="83e8b-119">because</span></span>
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
-`dotnet a⇥`                          | `dotnet add`                                                                 | <span data-ttu-id="84481-121">`add` é o primeiro subcomando, em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="84481-121">`add` is the first subcommand, alphabetically.</span></span>
-`dotnet add p⇥`                      | `dotnet add --help`                                                          | <span data-ttu-id="84481-122">O preenchimento com TAB faz a correspondência de subcadeias de caracteres e `--help` vem em primeiro lugar em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="84481-122">Tab completion matches substrings and `--help` comes first alphabetically.</span></span>
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | <span data-ttu-id="84481-123">Na segunda vez que a tecla TAB é pressionada, a próxima sugestão é exibida.</span><span class="sxs-lookup"><span data-stu-id="84481-123">Pressing tab a second time brings up the next suggestion.</span></span>      
-`dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | <span data-ttu-id="84481-124">Os resultados são retornados em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="84481-124">Results are returned alphabetically.</span></span>
-`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | <span data-ttu-id="84481-125">O preenchimento com TAB reconhece o arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="84481-125">Tab completion is project file aware.</span></span>
+`dotnet a⇥`                          | `dotnet add`                                                                 | <span data-ttu-id="83e8b-120">`add` é o primeiro subcomando, em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="83e8b-120">`add` is the first subcommand, alphabetically.</span></span>
+`dotnet add p⇥`                      | `dotnet add --help`                                                          | <span data-ttu-id="83e8b-121">O preenchimento com TAB faz a correspondência de subcadeias de caracteres e `--help` vem em primeiro lugar em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="83e8b-121">Tab completion matches substrings and `--help` comes first alphabetically.</span></span>
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | <span data-ttu-id="83e8b-122">Na segunda vez que a tecla TAB é pressionada, a próxima sugestão é exibida.</span><span class="sxs-lookup"><span data-stu-id="83e8b-122">Pressing tab a second time brings up the next suggestion.</span></span>      
+`dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | <span data-ttu-id="83e8b-123">Os resultados são retornados em ordem alfabética.</span><span class="sxs-lookup"><span data-stu-id="83e8b-123">Results are returned alphabetically.</span></span>
+`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | <span data-ttu-id="83e8b-124">O preenchimento com TAB reconhece o arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="83e8b-124">Tab completion is project file aware.</span></span>
 
-## <a name="powershell"></a><span data-ttu-id="84481-126">PowerShell</span><span class="sxs-lookup"><span data-stu-id="84481-126">PowerShell</span></span>
+## <a name="powershell"></a><span data-ttu-id="83e8b-125">PowerShell</span><span class="sxs-lookup"><span data-stu-id="83e8b-125">PowerShell</span></span>
 
-<span data-ttu-id="84481-127">Para adicionar o preenchimento com TAB ao **PowerShell** na CLI do .NET Core, crie ou edite o perfil armazenado na variável `$PROFILE`.</span><span class="sxs-lookup"><span data-stu-id="84481-127">To add tab completion to **PowerShell** for the .NET Core CLI, create or edit the profile stored in the variable `$PROFILE`.</span></span> <span data-ttu-id="84481-128">Para obter mais informações, confira [Como criar seu perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) e [Perfis e política de execução](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span><span class="sxs-lookup"><span data-stu-id="84481-128">For more information, see [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) and [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span></span> 
+<span data-ttu-id="83e8b-126">Para adicionar o preenchimento com TAB ao **PowerShell** na CLI do .NET Core, crie ou edite o perfil armazenado na variável `$PROFILE`.</span><span class="sxs-lookup"><span data-stu-id="83e8b-126">To add tab completion to **PowerShell** for the .NET Core CLI, create or edit the profile stored in the variable `$PROFILE`.</span></span> <span data-ttu-id="83e8b-127">Para obter mais informações, confira [Como criar seu perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) e [Perfis e política de execução](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span><span class="sxs-lookup"><span data-stu-id="83e8b-127">For more information, see [How to create your profile](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) and [Profiles and execution policy](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).</span></span> 
 
-<span data-ttu-id="84481-129">Adicione o seguinte código ao seu perfil:</span><span class="sxs-lookup"><span data-stu-id="84481-129">Add the following code to your profile:</span></span>
+<span data-ttu-id="83e8b-128">Adicione o seguinte código ao seu perfil:</span><span class="sxs-lookup"><span data-stu-id="83e8b-128">Add the following code to your profile:</span></span>
 
 ```powershell
 # PowerShell parameter completion shim for the dotnet CLI 
@@ -58,9 +58,9 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a><span data-ttu-id="84481-130">bash</span><span class="sxs-lookup"><span data-stu-id="84481-130">bash</span></span>
+## <a name="bash"></a><span data-ttu-id="83e8b-129">bash</span><span class="sxs-lookup"><span data-stu-id="83e8b-129">bash</span></span>
 
-<span data-ttu-id="84481-131">Para adicionar o preenchimento com TAB ao shell do **Bash** na CLI do .NET Core, adicione o seguinte código ao arquivo `.bashrc`:</span><span class="sxs-lookup"><span data-stu-id="84481-131">To add tab completion to your **bash** shell for the .NET Core CLI, add the following code to your `.bashrc` file:</span></span>
+<span data-ttu-id="83e8b-130">Para adicionar o preenchimento com TAB ao shell do **Bash** na CLI do .NET Core, adicione o seguinte código ao arquivo `.bashrc`:</span><span class="sxs-lookup"><span data-stu-id="83e8b-130">To add tab completion to your **bash** shell for the .NET Core CLI, add the following code to your `.bashrc` file:</span></span>
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -81,9 +81,9 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a><span data-ttu-id="84481-132">zsh</span><span class="sxs-lookup"><span data-stu-id="84481-132">zsh</span></span>
+## <a name="zsh"></a><span data-ttu-id="83e8b-131">zsh</span><span class="sxs-lookup"><span data-stu-id="83e8b-131">zsh</span></span>
 
-<span data-ttu-id="84481-133">Para adicionar o preenchimento com TAB ao shell do **zsh** na CLI do .NET Core, adicione o seguinte código ao arquivo `.zshrc`:</span><span class="sxs-lookup"><span data-stu-id="84481-133">To add tab completion to your **zsh** shell for the .NET Core CLI, add the following code to your `.zshrc` file:</span></span>
+<span data-ttu-id="83e8b-132">Para adicionar o preenchimento com TAB ao shell do **zsh** na CLI do .NET Core, adicione o seguinte código ao arquivo `.zshrc`:</span><span class="sxs-lookup"><span data-stu-id="83e8b-132">To add tab completion to your **zsh** shell for the .NET Core CLI, add the following code to your `.zshrc` file:</span></span>
 
 ```zsh
 # zsh parameter completion for the dotnet CLI
