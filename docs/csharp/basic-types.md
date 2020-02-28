@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos principais (numéricos, cadeias de caract
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 10230394ece27a2a34be1075abcdbd3765995aeb
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628560"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673258"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variáveis e valores
 
@@ -82,9 +82,10 @@ Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples d
   
 - Ele dá suporte ao conceito de herança. Os tipos podem derivar de outros tipos, chamados *tipos base*. O tipo derivado herda (com algumas restrições) os métodos, as propriedades e outros membros do tipo base. O tipo base, por sua vez, pode derivar de algum outro tipo, nesse caso, o tipo derivado herda os membros de ambos os tipos base na sua hierarquia de herança. Todos os tipos, incluindo tipos numéricos internos, como o <xref:System.Int32> (palavra-chave do C#: `int`), derivam, em última análise, de um único tipo base, que é o <xref:System.Object> (palavra-chave do C#: `object`). Essa hierarquia unificada de tipos é chamada de [CTS](../standard/common-type-system.md) (Common Type System). Para obter mais informações sobre herança em C#, consulte [Herança](programming-guide/classes-and-structs/inheritance.md).  
   
-- Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes .NET Framework e também seus próprios tipos definidos pelo usuário. Os tipos que você define usando a palavra-chave [struct](language-reference/builtin-types/struct.md) são tipos de valor. Todos os tipos numéricos internos são **structs**. Para obter mais informações sobre tipos de valor, consulte [Structs](structs.md). Os tipos que você define usando a palavra-chave [classe](language-reference/keywords/class.md) são tipos de referência. Para obter mais informações sobre tipos de referência, consulte [Classes](programming-guide/classes-and-structs/classes.md). Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.
+- Cada tipo no CTS é definido como um *tipo de valor* ou um *tipo de referência*. Isso inclui todos os tipos personalizados na biblioteca de classes do .NET, além de tipos personalizados definidos pelo usuário. Os tipos que você define usando a palavra-chave `struct` ou `enum` são tipos de valor. Para obter mais informações sobre tipos de valor, consulte [tipos de valor](language-reference/builtin-types/value-types.md). Os tipos que você define usando a palavra-chave [classe](language-reference/keywords/class.md) são tipos de referência. Para obter mais informações sobre tipos de referência, consulte [Classes](programming-guide/classes-and-structs/classes.md). Os tipos de referência e os tipos de valor têm diferentes regras de tempo de compilação e comportamento de tempo de execução diferente.
 
 ## <a name="see-also"></a>Confira também
 
-- [Structs](structs.md)
+- [Tipos de estrutura](language-reference/builtin-types/struct.md)
+- [Tipos de enumeração](language-reference/builtin-types/enum.md)
 - [Classes](programming-guide/classes-and-structs/classes.md)

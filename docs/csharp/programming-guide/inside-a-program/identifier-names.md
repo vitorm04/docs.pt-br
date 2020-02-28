@@ -2,12 +2,12 @@
 title: Nomes de identificadores
 description: Conheça as regras para nomes de identificador válidos na linguagem de programação C#.
 ms.date: 08/21/2018
-ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589346"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673362"
 ---
 # <a name="identifier-names"></a>Nomes de identificadores
 
@@ -32,13 +32,13 @@ Além das regras, há inúmeras [convenções de nomenclatura](../../../standard
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Por dentro de um programa em C#](./index.md)
 - [Referência de C#](../../language-reference/index.md)
 - [Classes](../classes-and-structs/classes.md)
-- [Estruturas](../classes-and-structs/structs.md)
+- [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Namespaces](../namespaces/index.md)
 - [Interfaces](../interfaces/index.md)
 - [Delegados](../delegates/index.md)

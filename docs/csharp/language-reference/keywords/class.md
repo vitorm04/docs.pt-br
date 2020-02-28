@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713686"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673089"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -30,18 +30,18 @@ class TestClass
 
 Somente a herança única é permitida em C#. Em outras palavras, uma classe pode herdar a implementação de apenas uma classe base. No entanto, uma classe pode implementar mais de uma interface. A tabela a seguir mostra exemplos de implementação de interface e herança de classe:
 
-|{1&gt;Herança&lt;1}|Exemplo|
+|Herança|Exemplo|
 |-----------------|-------------|
-|{1&gt;Nenhum&lt;1}|`class ClassA { }`|
-|Simples|`class DerivedClass: BaseClass { }`|
-|Nenhuma, implementa duas interfaces|`class ImplClass: IFace1, IFace2 { }`|
-|Única, implementa uma interface|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|Nenhum|`class ClassA { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|Nenhuma, implementa duas interfaces|`class ImplClass : IFace1, IFace2 { }`|
+|Única, implementa uma interface|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 Classes que você declara diretamente dentro de um namespace, não aninhadas em outras classes, podem ser [públicas](./public.md) ou [internas](./internal.md). As classes são `internal` por padrão.
 
 Os membros da classe, incluindo classes aninhadas, podem ser [públicos](public.md), [internos protegidos](protected-internal.md), [protegidos](protected.md), [internos](internal.md), [privados](private.md) ou [protegidos privados](private-protected.md). Os membros são `private` por padrão.
 
-Para obter mais informações, consulte [Modificadores de Acesso](../../programming-guide/classes-and-structs/access-modifiers.md).
+Para obter mais informações, consulte [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md).
 
 É possível declarar classes genéricas que têm parâmetros de tipo. Para obter mais informações, consulte [Classes genéricas](../../programming-guide/generics/generic-classes.md).
 
@@ -51,7 +51,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Constantes](../../programming-guide/classes-and-structs/constants.md)
 
-- [Campos](../../programming-guide/classes-and-structs/fields.md)
+- [Fields](../../programming-guide/classes-and-structs/fields.md)
 
 - [Finalizadores](../../programming-guide/classes-and-structs/destructors.md)
 
@@ -71,9 +71,9 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Interfaces](../../programming-guide/interfaces/index.md)
 
-- [Structs](../../programming-guide/classes-and-structs/structs.md)
+- [Tipos de estrutura](../builtin-types/struct.md)
 
-- [Enumerações](../builtin-types/enum.md)
+- [Tipos de enumeração](../builtin-types/enum.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -81,7 +81,7 @@ O exemplo a seguir demonstra a declaração de métodos, construtores e campos d
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Comentários
 
 Observe que, no exemplo anterior, os campos particulares (`name` e `age`) só podem ser acessados por meio dos métodos públicos da classe `Child`. Por exemplo, você não pode imprimir o nome do filho, do método `Main`, usando uma instrução como esta:
 
@@ -99,7 +99,7 @@ Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

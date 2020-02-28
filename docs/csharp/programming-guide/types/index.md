@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628131"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673388"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -113,7 +113,7 @@ Você usa a palavra-chave [struct](../../language-reference/builtin-types/struct
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Para obter mais informações sobre structs, consulte [Structs](../classes-and-structs/structs.md). Para obter mais informações sobre tipos de valor, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md).
+Para obter mais informações sobre structs, consulte [tipos de estrutura](../../language-reference/builtin-types/struct.md). Para obter mais informações sobre tipos de valor, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md).
 
 A outra categoria de tipos de valor é [enum](../../language-reference/builtin-types/enum.md). Uma enum define um conjunto de constantes integrais nomeadas. Por exemplo, a enumeração <xref:System.IO.FileMode?displayProperty=nameWithType> na biblioteca de classes do .NET contém um conjunto de números inteiros constantes nomeados que especificam como um arquivo deve ser aberto. Ela é definida conforme mostrado no exemplo abaixo:
 
@@ -199,9 +199,10 @@ Para obter mais informações, consulte estes tópicos:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../../language-reference/index.md)
 - [Guia de Programação em C#](../index.md)
 - [Conversão de tipos de dados XML](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tipos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
+ 

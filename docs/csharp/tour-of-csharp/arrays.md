@@ -3,18 +3,18 @@ title: Matrizes em C# - um tour pela linguagem C#
 description: Matrizes são o tipo mais básico de coleção da linguagem C#
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634600"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673310"
 ---
 # <a name="arrays"></a>Matrizes
 
 Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados. As variáveis contidas em uma matriz, também chamadas de ***elementos*** da matriz, são todas do mesmo tipo, e esse tipo é chamado de ***tipo de elemento*** da matriz.
 
-Os tipos de matriz são tipos de referência, e a declaração de uma variável de matriz simplesmente reserva espaço para uma referência a uma instância de matriz. As instâncias reais da matriz são criadas dinamicamente em tempo de execução usando o operador new. A operação new especifica a ***duração*** da nova instância de matriz, que depois fica fixa para o tempo de vida da instância. Os índices dos elementos de uma matriz variam de `0` a `Length - 1`. O operador `new` inicializa automaticamente os elementos de uma matriz usando o valor padrão, que, por exemplo, é zero para todos os tipos numéricos e `null` para todos os tipos de referência.
+Os tipos de matriz são tipos de referência, e a declaração de uma variável de matriz simplesmente reserva espaço para uma referência a uma instância de matriz. As instâncias reais da matriz são criadas dinamicamente em runtime usando o operador new. A operação new especifica a ***duração*** da nova instância de matriz, que depois fica fixa para o tempo de vida da instância. Os índices dos elementos de uma matriz variam de `0` a `Length - 1`. O operador `new` inicializa automaticamente os elementos de uma matriz usando o valor padrão, que, por exemplo, é zero para todos os tipos numéricos e `null` para todos os tipos de referência.
 
 O exemplo a seguir cria uma matriz de elementos `int`, inicializa a matriz e imprime o conteúdo da matriz.
 
@@ -44,5 +44,5 @@ Os dois exemplos anteriores são equivalentes ao seguinte:
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Anterior](structs.md)
+>[Anterior](classes-and-objects.md)
 >[Próximo](interfaces.md)

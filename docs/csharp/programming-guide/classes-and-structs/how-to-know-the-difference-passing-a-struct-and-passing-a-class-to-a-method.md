@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 258001ae8ed3591bf75aeb040d1a63118196455a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628196"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673427"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como saber a diferença entre passar uma struct e passar uma referência de classe para um método (C# guia de programação)
 O exemplo a seguir demonstra como passar um [struct](../../language-reference/builtin-types/struct.md) para um método difere de passar uma instância de [classe](../../language-reference/keywords/class.md) para um método. No exemplo, ambos os argumentos (struct e instância de classe) são passados por valor e ambos os métodos alteram o valor de um campo do argumento. No entanto, os resultados dos dois métodos não são os mesmos, pois o que é passado ao passar um struct é diferente do que é passado ao passar uma instância de uma classe.  
@@ -22,12 +22,12 @@ O exemplo a seguir demonstra como passar um [struct](../../language-reference/bu
   
  O resultado do exemplo a seguir ilustra a diferença. O valor do campo `willIChange` da instância da classe foi alterado pela chamada ao método `ClassTaker`, pois o método usa o endereço no parâmetro para localizar o campo especificado da instância da classe. O campo `willIChange` do struct no método de chamada não foi alterado pela chamada ao método `StructTaker`, pois o valor do argumento é uma cópia do próprio struct e não uma cópia de seu endereço. `StructTaker` altera a cópia e a cópia será perdida quando a chamada para `StructTaker` for concluída.  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideObjects#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#32)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes](./classes.md)
-- [Structs](./structs.md)
+- [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Passando parâmetros](./passing-parameters.md)

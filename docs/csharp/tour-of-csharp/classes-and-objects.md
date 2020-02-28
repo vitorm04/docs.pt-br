@@ -3,12 +3,12 @@ title: Classes e objetos em C# - um tour pela linguagem C#
 description: Novato em C#? Leia esta visão geral de classes, objetos e herança
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: e5078135ab22445ac636c6edc3d46570be8fcaf5
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105625"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673297"
 ---
 # <a name="classes-and-objects"></a>Classes e objetos
 
@@ -119,7 +119,7 @@ Como os tipos, os métodos também podem ter um conjunto de parâmetros de tipo,
 
 A *assinatura* de um método deve ser exclusiva na classe na qual o método é declarado. A assinatura de um método consiste no nome do método, número de parâmetros de tipo e número, modificadores e tipos de seus parâmetros. A assinatura de um método não inclui o tipo de retorno.
 
-### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>parâmetros
 
 Os parâmetros são usados para passar valores ou referências de variável aos métodos. Os parâmetros de um método obtêm seus valores reais de *argumentos* que são especificados quando o método é invocado. Há quatro tipos de parâmetros: parâmetros de valor, parâmetros de referência, parâmetros de saída e matrizes de parâmetros.
 
@@ -199,7 +199,7 @@ As quatro classes anteriores podem ser usadas para modelar expressões aritméti
 
 O método `Evaluate` de uma instância `Expression` é chamado para avaliar a expressão especificada e produzir um valor `double`. O método recebe um argumento `Dictionary` que contém nomes de variáveis (como chaves das entradas) e valores (como valores das entradas). Como `Evaluate` é um método abstrato, classes não abstratas derivadas de `Expression` devem substituir `Evaluate`.
 
-Uma implementação de `Evaluate` do `Constant` retorna apenas a constante armazenada. Uma implementação de `VariableReference` consulta o nome de variável no dicionário e retorna o valor resultante. Uma implementação de `Operation` primeiro avalia os operandos esquerdo e direito (chamando recursivamente seus métodos `Evaluate`) e, em seguida, executa a operação aritmética determinada.
+Uma implementação de `Constant` do `Evaluate` retorna apenas a constante armazenada. Uma implementação de `VariableReference` consulta o nome de variável no dicionário e retorna o valor resultante. Uma implementação de `Operation` primeiro avalia os operandos esquerdo e direito (chamando recursivamente seus métodos `Evaluate`) e, em seguida, executa a operação aritmética determinada.
 
 O seguinte programa usa as classes `Expression` para avaliar a expressão `x * (y + 2)` para valores diferentes de `x` e `y`.
 
@@ -298,4 +298,4 @@ A instrução `using` fornece uma abordagem melhor para a destruição de objeto
 
 > [!div class="step-by-step"]
 > [Anterior](statements.md)
-> [Próximo](structs.md)
+> [Próximo](arrays.md)

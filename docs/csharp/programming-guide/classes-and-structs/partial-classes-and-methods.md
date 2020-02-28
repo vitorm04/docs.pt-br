@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 641c2e3adfb3dabaa300e94b203aa6c4c4b509d2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628183"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673349"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 
@@ -70,7 +70,7 @@ Elas são equivalentes às seguintes declarações:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
-### <a name="restrictions"></a>{1&gt;Restrições&lt;1}
+### <a name="restrictions"></a>Restrições
 
 Há várias regras para seguir quando você está trabalhando com definições de classes parciais:
 
@@ -112,7 +112,7 @@ Para obter mais informações, consulte [Restrições a parâmetros de tipo](../
 
 ## <a name="example-1"></a>Exemplo 1
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarados em uma definição de classe parcial e o membro, `PrintCoords`, é declarado em outra definição de classe parcial.
 
@@ -122,7 +122,7 @@ No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarad
 
 ## <a name="example-2"></a>Exemplo 2
 
-### <a name="description"></a>Descrição
+### <a name="description"></a>DESCRIÇÃO
 
 O exemplo a seguir mostra que você também pode desenvolver interfaces e structs parciais.
 
@@ -165,14 +165,14 @@ partial void onNameChanged()
 
 - Você pode fazer um [delegado](../../language-reference/builtin-types/reference-types.md) para um método parcial que foi definido e implementado, mas não para um método parcial que só foi definido.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
 Para obter mais informações, veja [Tipos parciais](~/_csharplang/spec/classes.md#partial-types) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes](./classes.md)
-- [Structs](./structs.md)
+- [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Interfaces](../interfaces/index.md)
 - [(partial (tipo)](../../language-reference/keywords/partial-type.md)

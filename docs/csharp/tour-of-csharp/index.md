@@ -2,12 +2,12 @@
 title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711656"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673284"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pelo C# idioma
 
@@ -23,7 +23,7 @@ C# tem um ***sistema de tipo unificado***. Todos os tipos do C#, incluindo tipos
 
 Para garantir que C# os programas e as bibliotecas possam evoluir ao longo do tempo de maneira compatível, muito ênfase foi colocado no C#design do ***controle de versão*** . Muitas linguagens de programação prestam pouca atenção a esse problema e, como resultado, programas escritos nessas linguagens quebram com mais frequência do que o necessário quando versões mais recentes das bibliotecas dependentes são introduzidas. Aspectos do C#design de do que foram influenciados diretamente pelas considerações de controle de versão incluem os modificadores `virtual` e `override` separados, as regras para resolução de sobrecarga de método e suporte para declarações de membro de interface explícitas.
 
-## <a name="hello-world"></a>Hello world
+## <a name="hello-world"></a>Olá, Mundo
 
 O programa "Hello, World" é usado tradicionalmente para introduzir uma linguagem de programação. Este é para C#:
 
@@ -54,9 +54,9 @@ A saída do programa é produzida pelo método `WriteLine` da classe `Console` n
 
 Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecem informações básicas sobre todos os elementos da linguagem e fornecem as informações necessárias para se aprofundar:
 
-- [Estrutura do programa](program-structure.md)
+- [Estrutura do Programa](program-structure.md)
   - Aprenda os principais conceitos organizacionais na linguagem C#: ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***.
-- [Tipos e variáveis](types-and-variables.md)
+- [Tipos e Variáveis](types-and-variables.md)
   - Saiba mais sobre ***tipos de valor***, ***tipos de referência***, e ***variáveis*** na linguagem C#.
 - [Expressões](expressions.md)
   - ***Expressões*** são construídas a partir de ***operandos*** e ***operadores***. As expressões produzem um valor.
@@ -64,8 +64,6 @@ Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão 
   - Você usa ***instruções*** para expressar as ações de um programa.
 - [Classes e objetos](classes-and-objects.md)
   - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
-- [Structs](structs.md)
-  - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 - [Matrizes](arrays.md)
   - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.
 - [Interfaces](interfaces.md)
@@ -79,4 +77,4 @@ Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão 
 > Esses artigos se aplicam ao C# 7,0 e posterior. Alguns recursos podem não estar disponíveis em versões anteriores.
 
 > [!div class="step-by-step"]
-> [Avançar](program-structure.md)
+> [Próximo](program-structure.md)

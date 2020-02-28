@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a2f5300f9647823cf2c9ac2a4a5c7c888c7dd245
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626575"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673375"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
 Uma definição de classe ou struct é como um esquema que especifica o que o tipo pode fazer. Um objeto é basicamente um bloco de memória que foi alocado e configurado de acordo com o esquema. Um programa pode criar vários objetos da mesma classe. Objetos também são chamados de instâncias e podem ser armazenados em uma variável nomeada ou em uma matriz ou coleção. O código de cliente é o código que usa essas variáveis para chamar os métodos e acessar as propriedades públicas do objeto. Em uma linguagem orientada a objetos, como o C#, um programa típico consiste em vários objetos que interagem dinamicamente.  
@@ -52,8 +52,6 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
   
 - [Classes](./classes.md)  
   
-- [Structs](./structs.md)  
-  
 - [Construtores](./constructors.md)  
   
 - [Finalizadores](./destructors.md)  
@@ -66,6 +64,6 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [Herança](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Operador new](../../language-reference/operators/new-operator.md)
 - [Common Type System](../../../standard/base-types/common-type-system.md)
