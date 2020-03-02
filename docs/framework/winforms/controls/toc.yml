@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'Passo a passo: Herdar de um controle'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'Passo a passo: Executar tarefas comuns usando marcas inteligentes'
+        - name: 'Passo a passo: Executar tarefas comuns usando ações de design'
           href: perform-common-tasks-design-actions.md
         - name: 'Passo a passo: Serializar coleções de tipos padrão'
           href: serializing-collections-designerserializationvisibilityattribute.md
