@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade para F# no .NET Core por m
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715437"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157304"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -82,7 +82,7 @@ Você tem o seguinte layout de solução final:
         MathServiceTests.fsproj
 ```
 
-Execute `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` no diretório de *teste de unidade com o FSharp* . 
+Execute `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` no diretório de *teste de unidade com o FSharp* .
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
@@ -158,15 +158,15 @@ Você pode corrigir o teste redirecionando a sequência filtrada por meio de uma
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-new.md)

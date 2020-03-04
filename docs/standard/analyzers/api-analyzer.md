@@ -4,12 +4,12 @@ description: Saiba como o analisador de API do .NET pode ajudar a detectar probl
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542618"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156128"
 ---
 # <a name="net-api-analyzer"></a>Analisador de API do .NET
 
@@ -47,7 +47,7 @@ O Analisador de API usa códigos de erro específicos de API que começam com DE
    3. Selecione **Incluir pré-lançamento**.
    4. Procure **Microsoft. dotnet. Analyzers. Compatibility**.
    5. Selecione esse pacote na lista.
-   6. Selecione o botão **Instalar**. 
+   6. Selecione o botão **Instalar**.
    7. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
 
 ### <a name="use-the-api-analyzer"></a>Usar o analisador de API
@@ -56,13 +56,13 @@ Quando uma API preterida, como <xref:System.Net.WebClient>, é usada em um códi
 
 !["Captura de tela da API WebClient com linha irregular verde e lâmpada à esquerda"](media/api-analyzer/green-squiggle.jpg)
 
-A janela **Lista de Erros** contém avisos com uma ID exclusiva por API preterida, conforme mostrado no seguinte exemplo (`DE004`): 
+A janela **Lista de Erros** contém avisos com uma ID exclusiva por API preterida, conforme mostrado no seguinte exemplo (`DE004`):
 
 !["Captura de tela da janela de Lista de Erros mostrando a ID e a descrição do aviso"](media/api-analyzer/warnings-id-and-descriptions.jpg "Lista de Erros janela que inclui avisos.")
 
 Clicando na ID, você vai para uma página da Web com informações detalhadas sobre por que a API foi preterida e sugestões sobre APIs alternativas que podem ser usadas.
 
-Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro realçado e selecionando **Suprimir \<ID de diagnóstico>** . Há duas maneiras de suprimir avisos: 
+Os avisos podem ser suprimidos clicando com o botão direito do mouse no membro realçado e selecionando **Suprimir \<ID de diagnóstico>** . Há duas maneiras de suprimir avisos:
 
 - [localmente (no código-fonte)](#suppress-warnings-locally)
 - [globalmente (em um arquivo de supressão)](#suppress-warnings-globally) ‒ recomendado

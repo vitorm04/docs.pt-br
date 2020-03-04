@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120900"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239944"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -55,7 +55,7 @@ Mesmo se você estiver desenvolvendo um aplicativo que tenha como alvo uma únic
 
 - Você pode incluir recursos que não sejam cadeia de caracteres tais como imagens ou dados binários no arquivo de recurso, em vez de armazená-los em um arquivo autônomo separado, para que eles possam ser recuperados facilmente.
 
-Usar arquivos de recurso tem vantagens específicas se você está criando um aplicativo localizado. Quando você implanta recursos em assemblies satélite, o Common Language Runtime seleciona automaticamente um recurso apropriado com base na cultura da interface do usuário atual, conforme definido pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Desde que você forneça um recurso específico de cultura apropriado e instancie corretamente um objeto <xref:System.Resources.ResourceManager> ou então use uma classe de recurso fortemente tipada, o tempo de execução cuidará dos detalhes para recuperar os recursos apropriados.
+Usar arquivos de recurso tem vantagens específicas se você está criando um aplicativo localizado. Quando você implanta recursos em assemblies satélite, o Common Language Runtime seleciona automaticamente um recurso apropriado com base na cultura da interface do usuário atual, conforme definido pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. Desde que você forneça um recurso específico de cultura apropriado e instancie corretamente um objeto <xref:System.Resources.ResourceManager> ou então use uma classe de recurso fortemente tipada, o runtime cuidará dos detalhes para recuperar os recursos apropriados.
 
 Para obter mais informações sobre como criar arquivos de recursos, consulte [Criar arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Para obter informações sobre como criar e implantar assemblies satélite, consulte [Criar assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) e [Empacotar e implantar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
@@ -66,7 +66,7 @@ Sempre que possível, você deve tratar cadeias de caracteres como cadeias de ca
 > [!TIP]
 > Você pode usar a classe <xref:System.Globalization.StringInfo> para trabalhar com os elementos de texto em vez dos caracteres individuais em uma cadeia de caracteres.
 
-Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como uma coleção de caracteres, cada um dos quais é representado por um objeto <xref:System.Char>. Na verdade, um único caractere pode ser formado por um, dois ou mais objetos <xref:System.Char>. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U+00C0) ou como um caractere composto (duas unidades de código: U+0021 e U+007E). Nesse caso, o caractere é representado na instância de cadeia de caracteres por dois objetos <xref:System.Char>, U+0021 e U+007E. O código de exemplo chama as sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada de método tem um argumento <xref:System.Char>; ele executa uma comparação ordinal e, portanto, não é capaz de encontrar uma correspondência. A segunda chamada tem um argumento <xref:System.String>; ele executa uma comparação com diferenciação entre culturas e, portanto, encontra uma correspondência.
+Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como uma coleção de caracteres, cada um dos quais é representado por um objeto <xref:System.Char>. Na verdade, um único caractere pode ser formado por um, dois ou mais objetos <xref:System.Char>. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U + 00C0) ou como um caractere composto (duas unidades de código: U + 0041 e U + 0300). Nesse caso, o caractere é representado na instância de cadeia de caracteres por dois objetos <xref:System.Char>, U + 0041 e U + 0300. O código de exemplo chama as sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada de método tem um argumento <xref:System.Char>; ele executa uma comparação ordinal e, portanto, não é capaz de encontrar uma correspondência. A segunda chamada tem um argumento <xref:System.String>; ele executa uma comparação com diferenciação entre culturas e, portanto, encontra uma correspondência.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,7 +108,7 @@ O .NET usa tabelas para realizar classificações com detecção de cultura em d
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Todos os sistemas operacionais|Unicode 4.1|
 |.NET Framework 3.0|Todos os sistemas operacionais|Unicode 4.1|
-|.NET Framework 3,5|Todos os sistemas operacionais|Unicode 4.1|
+|.NET Framework 3.5|Todos os sistemas operacionais|Unicode 4.1|
 |.NET Framework 4|Todos os sistemas operacionais|Unicode 5.0|
 |.NET Framework 4.5 e posterior no Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e posterior nos sistemas operacionais Windows 8 e posteriores|Unicode 6.3.0|
@@ -338,7 +338,7 @@ Em geral, não faça suposições sobre os valores de propriedades <xref:System.
 
 - Nos sistemas Windows, o usuário pode personalizar as configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que sejam apresentados ao usuário dados em um formato que ele espera.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
 - [Melhores práticas para o uso de cadeias de caracteres](../../../docs/standard/base-types/best-practices-strings.md)

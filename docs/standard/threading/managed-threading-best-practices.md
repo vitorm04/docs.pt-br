@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 26b0535fa918a802dd0922554ae197ba10396d56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129557"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160255"
 ---
 # <a name="managed-threading-best-practices"></a>Práticas recomendadas de threading gerenciado
 O multithreading requer programação cuidadosa. Para a maioria das tarefas, você pode reduzir a complexidade ao enfileirar solicitações para a execução por parte de threads de pool. Este tópico aborda situações mais difíceis, como coordenar o trabalho de vários threads ou manipular threads que bloqueiam.  
@@ -79,7 +79,7 @@ else {
 
 A existência de apenas um ou de vários processadores disponíveis em um sistema pode influenciar a arquitetura de vários threads. Para obter mais informações, veja [Número de processadores](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
 
-Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar o número de processadores disponíveis no tempo de execução.
+Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar o número de processadores disponíveis no runtime.
   
 ## <a name="general-recommendations"></a>Recomendações gerais  
  Ao usar vários threads, considere as seguintes diretrizes:  
@@ -107,7 +107,7 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
     ```  
   
     ```csharp  
-    lock(lockObject)   
+    lock(lockObject)
     {  
         myField++;  
     }  
@@ -172,7 +172,7 @@ Use a propriedade <xref:System.Environment.ProcessorCount?displayProperty=nameWi
   
 - Evite fornecer métodos estáticos que alteram o estado estático. Em cenários de servidor comuns, o estado estático é compartilhado entre as solicitações, que significa que vários threads podem executar esse código ao mesmo tempo. Isso abre a possibilidade de bugs de threading. Considere usar um padrão de design que encapsule dados em instâncias que não sejam compartilhadas entre solicitações. Além disso, se os dados estáticos forem sincronizados, chamadas entre os métodos estáticos que alteram o estado podem resultar em deadlocks ou em sincronização redundante, afetando negativamente o desempenho.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Threading](../../../docs/standard/threading/index.md)
 - [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)

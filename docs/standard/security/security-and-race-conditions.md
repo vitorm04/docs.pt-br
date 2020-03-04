@@ -11,12 +11,12 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc0d9f481fd212ede55bffde6cc20c3e080629e4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705867"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159410"
 ---
 # <a name="security-and-race-conditions"></a>Segurança e condições de corrida
 Outra área de preocupação é o potencial de brechas de segurança exploradas por condições de corrida. Há várias maneiras pelas quais isso pode acontecer. Os subtópicos a seguir descrevem algumas das principais armadilhas que o desenvolvedor deve evitar.  
@@ -34,9 +34,9 @@ End Sub
 ```  
   
 ```csharp  
-void Dispose()   
+void Dispose()
 {  
-    if (myObj != null)   
+    if (myObj != null)
     {  
         Cleanup(myObj);  
         myObj = null;  
@@ -72,22 +72,22 @@ End Sub
 ```  
   
 ```csharp  
-void SomeSecureFunction()   
+void SomeSecureFunction()
 {  
-    if (SomeDemandPasses())   
+    if (SomeDemandPasses())
     {  
         fCallersOk = true;  
         DoOtherWork();  
         fCallersOk = false;  
     }  
 }  
-void DoOtherWork()   
+void DoOtherWork()
 {  
-    if (fCallersOK)   
+    if (fCallersOK)
     {  
         DoSomethingTrusted();  
     }  
-    else   
+    else
     {  
         DemandSomething();  
         DoSomethingTrusted();  
@@ -102,6 +102,6 @@ void DoOtherWork()
 ## <a name="race-conditions-in-finalizers"></a>Condições de corrida em finalizadores  
  As condições de corrida também podem ocorrer em um objeto que faz referência a um recurso estático ou não gerenciado que ele libera em seu finalizador. Se vários objetos compartilharem um recurso que é manipulado no finalizador de uma classe, os objetos deverão sincronizar todo o acesso a esse recurso.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

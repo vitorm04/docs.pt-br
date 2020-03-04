@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543515"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157630"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
@@ -35,6 +35,19 @@ O Windows tem instaladores autônomos que podem ser usados para instalar o .NET 
 o macOS tem instaladores autônomos que podem ser usados para instalar o .NET Core 3,1 Runtime:
 
 - [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+
+Como alternativa para os instaladores do macOS para .NET Core, você pode baixar e instalar manualmente o tempo de execução.
+
+Para instalar o tempo de execução e habilitar os comandos de CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir. Supõe-se que o tempo de execução seja baixado para o arquivo de `~/Downloads/dotnet-runtime.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Shell bash**: *~/. bash_profile*, *~/.bashrc*
 > - **Shell Korn**: *~/.Kshrc* ou *. Profile*
 > - **Shell Z**: *~/.zshrc* ou *. zprofile*
-> 
+>
 > Edite o arquivo de origem apropriado para o Shell e adicione `:$HOME/dotnet` ao final da instrução `PATH` existente. Se nenhuma instrução de `PATH` for incluída, adicione uma nova linha com `export PATH=$PATH:$HOME/dotnet`.
 >
 > Além disso, adicione `export DOTNET_ROOT=$HOME/dotnet` ao final do arquivo.

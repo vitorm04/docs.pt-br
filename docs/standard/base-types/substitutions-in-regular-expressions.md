@@ -13,21 +13,21 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: db0e2234055c6869c4cf55196d9f3b62a6996c96
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972057"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160063"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
 As substituições são elementos de linguagem que são reconhecidos apenas em padrões de substituição. Eles usam um padrão de expressão regular para definir o todo ou parte do texto que substitui o texto correspondente na cadeia de caracteres de entrada. O padrão de substituição pode consistir em uma ou mais substituições junto com caracteres literais. Padrões de substituição são fornecidos para sobrecargas do método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que têm um parâmetro `replacement` e para o método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Os métodos substituem o padrão correspondente pelo padrão que é definido pelo parâmetro `replacement`.  
   
  O .NET Framework define os elementos de substituição listados na tabela a seguir.  
   
-|Substituição|Descrição|  
+|Substituição|DESCRIÇÃO|  
 |------------------|-----------------|  
-|$ *número*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#substituting-a-numbered-group).|  
+|$ *number*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#substituting-a-numbered-group).|  
 |${ *name* }|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#substituting-a-named-group).|  
 |$$|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#substituting-a--character).|  
 |$&|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a correspondência inteira](#substituting-the-entire-match).|  
@@ -60,7 +60,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -83,7 +83,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -102,7 +102,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\b(\d+)(\.(\d+))?` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Inicia a correspondência no começo de um limite de palavra.|  
 |`(\d+)`|Corresponde a um ou mais dígitos decimais. Este é o primeiro grupo de captura.|  
@@ -120,7 +120,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `^(\w+\s?)+$` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres de entrada.|  
 |`(\w+\s?)+`|Corresponde ao padrão de um ou mais caracteres de palavra seguidos por zero ou um espaço em branco uma ou mais vezes.|  
@@ -144,7 +144,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |2|5|aa1bb|aaaabb**aa1bb**cc3dd4ee5|  
 |3|8|aa1bb2cc|aaaabbaa1bbcc**aa1bb2cc**dd4ee5|  
 |4|11|aa1bb2cc3dd|aaaabbaa1bbccaa1bb2ccdd**aa1bb2cc3dd**ee5|  
-|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**| 
+|5|14|aa1bb2cc3dd4ee|aaaabbaa1bbccaa1bb2ccddaa1bb2cc3ddee**aa1bb2cc3dd4ee**|
 
 ## <a name="substituting-the-text-after-the-match"></a>Substituindo texto após a correspondência  
  A substituição `$'` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira após a correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada após a correspondência e remove o texto correspondido. Qualquer texto antes do texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se não houver correspondência, a substituição `$'` não terá efeito.  
@@ -174,7 +174,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\b(\w+)\s\1\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -197,6 +197,6 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920389"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239879"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -163,7 +163,7 @@ Você pode optar pela compilação em camadas de duas maneiras.
    </PropertyGroup>
    ```
 
-## <a name="api-changes"></a>Alterações na API
+## <a name="api-changes"></a>Alterações de API
 
 ### <a name="spant-and-memoryt"></a>`Span<T>` e `Memory<T>`
 
@@ -177,17 +177,17 @@ Sem esses tipos, ao transmitir esses itens como parte de uma matriz ou seção d
 
 O exemplo a seguir usa uma instância <xref:System.Span%601> e <xref:System.Memory%601> para fornecer uma visão virtual de 10 elementos de uma matriz.
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Compactação Brotli
 
 O .NET Core 2.1 adiciona suporte para compactação e descompactação Brotli. Brotli é um algoritmo de compactação sem perda, de uso geral, que é definido em [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) e é compatível com a maioria dos navegadores da Web e com os principais servidores Web. Você pode usar a classe <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> baseada em fluxo ou as classes <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> e <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> baseadas em span de alto desempenho. O exemplo a seguir ilustra a compactação com a classe <xref:System.IO.Compression.BrotliStream>:
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 O comportamento <xref:System.IO.Compression.BrotliStream> é o mesmo de <xref:System.IO.Compression.DeflateStream> e <xref:System.IO.Compression.GZipStream>, o que facilita a conversão de código que chame essas APIs para <xref:System.IO.Compression.BrotliStream>.
 
@@ -245,7 +245,11 @@ No Windows, você também pode escolher usar <xref:System.Net.Http.WinHttpHandle
 
 No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClient> por processo. No Linux, você precisa implantar [libcurl](https://curl.haxx.se/libcurl/) se quiser usar a implementação <xref:System.Net.Http.HttpClient> antiga. (Ele é instalado com .NET Core 2.0.)
 
-## <a name="see-also"></a>Veja também
+### <a name="breaking-changes"></a>Alterações de quebra
+
+Para obter informações sobre alterações significativas, consulte [alterações recentes de migração da versão 2,0 para 2,1](../compatibility/2.0-2.1.md).
+
+## <a name="see-also"></a>Confira também
 
 - [Novidades do .NET Core](index.md)
 - [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)

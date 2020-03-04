@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 3a4f25b0d250469102fdac6ee960e42b2d969aed
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559572"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156615"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Testar uma biblioteca de .NET Standard com o .NET Core no Visual Studio
 
@@ -29,7 +29,7 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    1. Na página **Adicionar um novo projeto** , digite **MSTest** na caixa de pesquisa. Escolha **C#** ou **Visual Basic** na lista idioma e, em seguida, escolha **todas as plataformas** na lista plataforma. Escolha o modelo de **projeto de teste MSTest (.NET Core)** e, em seguida, escolha **Avançar**.
 
-   1. Na página **configurar seu novo projeto** , digite **StringLibraryTest** na caixa **nome do projeto** . Em seguida, escolha **Criar**.
+   1. Na página **configurar seu novo projeto** , digite **StringLibraryTest** na caixa **nome do projeto** . Depois, escolha **Criar**.
 
    > [!NOTE]
    > Além de um MSTest, você também pode criar projetos de teste xUnit e nUnit para .NET Core no Visual Studio.
@@ -54,13 +54,13 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
     ```vb
     Imports Microsoft.VisualStudio.TestTools.UnitTesting
-    
+
     Namespace StringLibraryTest
         <TestClass>
         Public Class UnitTest1
             <TestMethod>
             Sub TestSub()
-    
+
             End Sub
         End Class
     End Namespace
@@ -181,6 +181,6 @@ Para testar a compilação de Lançamento:
 
 Agora que você concluiu o teste de sua biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode agrupá-la com um ou mais aplicativos, ou pode distribuí-la como um pacote do NuGet. Para obter mais informações, consulte [Consumindo uma biblioteca de classes .NET Standard](consuming-library-with-visual-studio.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Noções básicas do teste de unidade – Visual Studio](/visualstudio/test/unit-test-basics)

@@ -3,18 +3,18 @@ title: Portabilidade de bibliotecas para o .NET Core
 description: Saiba como realizar a portabilidade de projetos de biblioteca do .NET Framework para o .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920618"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157525"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portabilidade de bibliotecas do .NET Framework para o .NET Core
 
 Saiba como portar .NET Framework o código da biblioteca para o .NET Core, em que ele é executado em várias plataformas e expande o alcance dos aplicativos que o utilizam.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Este artigo pressupõe que você:
 
@@ -91,13 +91,13 @@ Essa abordagem pode ser a melhor para projetos maiores e mais complexos, nos qua
    - Você precisa refatorar seu código?
    - Para os tipos que não são portáteis, há APIs alternativas que realizam a mesma tarefa? Por exemplo, se você estiver usando a classe <xref:System.Net.WebClient>, poderá usar a classe <xref:System.Net.Http.HttpClient> em vez disso.
    - Há diferentes APIs portáteis disponíveis para realizar uma tarefa, mesmo se não for uma substituição exata? Por exemplo, se você estiver usando <xref:System.Xml.Schema.XmlSchema> para analisar XML, mas não exigir a descoberta de esquema XML, poderá usar APIs de <xref:System.Xml.Linq> e implementar a análise em vez de depender de uma API.
-1. Se você tiver assemblies que são de difícil portabilidade, vale a pena deixá-los no .NET Framework por enquanto? Esses são alguns pontos a considerar:
+1. Se você tiver assemblies que são de difícil portabilidade, vale a pena deixá-los no .NET Framework por enquanto? Estas são algumas coisas que você deve considerar:
    - Você pode ter alguma funcionalidade na sua biblioteca que é incompatível com o .NET Core por ser muito dependente de funcionalidades específicas do .NET Framework ou do Windows. Vale a pena deixar essa funcionalidade por trás por enquanto e lançar uma versão temporária do .NET Core de sua biblioteca com menos recursos, até que os recursos estejam disponíveis para portar os recursos?
    - Uma refatoração ajudaria?
 1. Seria razoável criar sua própria implementação de uma API do .NET Framework indisponível?
    Você pode considerar copiar, modificar e usar código da fonte de [referência de .NET Framework](https://github.com/Microsoft/referencesource). O código-fonte de referência é licenciado sob a [Licença do MIT](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt), portanto, você tem uma liberdade considerável para usar a fonte como base para seu próprio código. Basta atribuir devidamente a Microsoft em seu código.
 1. Repita esse processo conforme necessário para os diferentes projetos.
- 
+
 A fase de análise pode demorar algum tempo dependendo do tamanho de sua base de código. Dedique tempo a essa fase para compreender profundamente o escopo das mudanças necessárias e como desenvolver um plano normalmente economiza tempo em longo prazo, especialmente se você tiver uma base de código complexa.
 
 Seu plano pode envolver alterações significativas na sua base de código enquanto ainda é direcionado para o .NET Framework 4.7.2, tornando essa uma versão mais estruturada da abordagem anterior. A maneira de executar o plano depende de sua base de código.
@@ -130,7 +130,7 @@ Por fim, o esforço de portabilidade depende muito de como seu código do .NET F
 
 Se você começar a partir da base de sua biblioteca, progredir externamente e testar cada camada conforme necessário, a portabilidade será um processo sistemático no qual os problemas ficam isolados a uma camada de código por vez.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 >[!div class="nextstepaction"]
 >[Organizar projetos para o .NET Core](project-structure.md)

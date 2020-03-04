@@ -3,12 +3,12 @@ title: Integração XML com dados relacionais e o ADO.NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709927"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155614"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integração XML com dados relacionais e o ADO.NET
 A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e contém dados XML. A vantagem de **XmlDataDocument** é que fornece uma ponte entre dados relacionais e hierárquicos. É um **XmlDocument** que pode ser associado a **Conjunto de Dados** e ambas as classes podem sincronizar as alterações feitas aos dados contidos nas duas classes. Um **XmlDocument** que é associado a um **Conjunto de Dados** permite ao XML integrar-se a dados relacionais, e você não precisa representar seus dados como XML ou em um formato relacional. Você pode fazer ambos e não ser restrito a uma única representação dos dados.  
@@ -27,7 +27,7 @@ A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e conté
   
  Como **XmlDataDocument** é herdado de um **XmlDocument**, ele fornece uma implementação DOM de W3C. O fato de **XmlDataDocument** estar associado a, e armazenar um subconjunto de seus dados dentro de, um **Conjunto de Dados** não restringe ou altera seu uso como **XmlDocument** de forma alguma. O código escrito para consumir **XmlDocument** funciona sem alteração com **XmlDataDocument**. O **Conjunto de Dados** fornece a exibição relacional dos mesmos dados definindo tabelas, colunas, relações e restrições, e é um repositório de dados de usuário autônomo e na memória.  
   
- A ilustração a seguir mostra a associações diferentes que os dados XML têm com **Conjunto de Dados** e **XmlDataDocument**: 
+ A ilustração a seguir mostra a associações diferentes que os dados XML têm com **Conjunto de Dados** e **XmlDataDocument**:
   
  ![Diagrama que mostra as diferentes associações com o Conjunto de Dados XML.](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
@@ -45,6 +45,6 @@ A classe **XmlDataDocument** é uma classe derivada de **XmlDocument**, e conté
   
  Se carregar o **Conjunto de Dados** de um **XmlDataDocument** atender às suas necessidades, consulte [Sincronizar um Conjunto de Dados com um documento XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Using XML in a DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md) (Usando XML em um DataSet)

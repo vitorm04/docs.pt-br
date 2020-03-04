@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606994"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239686"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (opções do compilador C#)
 A opção **-checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../keywords/checked.md) ou [unchecked](../keywords/unchecked.md), causa uma exceção de tempo de execução.  
@@ -39,9 +39,9 @@ A opção **-checked** especifica se uma instrução de aritmética de inteiros 
   
 2. Clique na página de propriedades **Compilar**.  
   
-3. Clique no botão **Avançado**.  
+3. Clique no botão **Avançado** .  
   
-4. Modifique a propriedade **Procurar estouro/estouro negativo aritmético**.  
+4. Modifique a propriedade **verificar estouro aritmético** .  
   
  Para acessar programaticamente essa opção do compilador, confira <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
@@ -52,7 +52,7 @@ A opção **-checked** especifica se uma instrução de aritmética de inteiros 
 csc t2.cs -checked  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opções do compilador de C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

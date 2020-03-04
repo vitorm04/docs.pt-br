@@ -4,12 +4,12 @@ description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501624"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241007"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -27,7 +27,7 @@ Conforme percorrer esse exemplo, contraste esse código com como ele seria estru
 
 Em vez de iniciar com uma definição de forma abstrata e adicionar classes de forma específicas diferentes, vamos começar com os dados simples, apenas definições de dados para cada uma das formas geométricas:
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 Dessas estruturas, vamos escrever um método que calcula a área de uma forma.
 
@@ -35,13 +35,13 @@ Dessas estruturas, vamos escrever um método que calcula a área de uma forma.
 
 Antes do C# 7.0, você precisaria testar cada tipo de uma série de instruções `if` e `is`:
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 O código acima é uma expressão clássica do *padrão de tipo*: você está testando uma variável para determinar seu tipo e adotando uma ação diferente com base no tipo.
 
 Esse código se torna mais simples usando extensões para a expressão `is` para atribuir uma variável se o teste tiver êxito:
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 Nesta versão atualizadas, a expressão `is` testa a variável e a atribui a uma nova variável do tipo adequado. Além disso, observe que essa versão inclui o tipo `Rectangle`, que é um `struct`. A nova expressão `is` funciona com tipos de valor, bem como com tipos de referência.
 
@@ -64,12 +64,12 @@ Com o tempo, talvez seja necessário dar suporte a outros tipos de forma. Confor
 A instrução `switch` tradicional era uma expressão padrão: ela dava suporte ao padrão de constante.
 Você poderia comparar uma variável a qualquer constante usada em uma instrução `case`:
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 O único padrão com suporte pela instrução `switch` era o padrão de constante. Ele era ainda mais limitado a tipos numéricos e ao tipo `string`.
 Essas restrições foram removidas e agora você pode escrever uma instrução `switch` usando o padrão de tipo:
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 A instrução `switch` da correspondência de padrões usa a sintaxe familiar para os desenvolvedores que usaram a instrução `switch` de estilo C tradicional. Cada `case` é avaliada e o código sob a condição que corresponde a variável de entrada é executado. A execução de código não pode "passar" de uma expressão case para a seguinte, a sintaxe da instrução `case` requer que cada `case` termine com um `break`, `return` ou `goto`.
 
@@ -87,7 +87,7 @@ O case `default` será executado somente se nenhum outro rótulo case correspond
 
 Você pode criar cases especiais para essas formas que têm área 0 usando uma cláusula `when` no rótulo `case`. Um quadrado com um comprimento do lado 0 ou um círculo com um raio 0 tem uma área 0. Você especifica essa condição usando uma cláusula `when` no rótulo `case`:  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 Essa alteração demonstra alguns pontos importantes sobre a nova sintaxe. Primeiro, vários rótulos `case` podem ser aplicados a uma seção `switch`. O bloco de instrução é executado quando qualquer um desses rótulos é `true`. Neste exemplo, se a expressão `switch` é um círculo ou um quadrado com área 0, o método retorna a constante 0.
 
@@ -98,13 +98,13 @@ No entanto, é impossível dizer *qual* foi atribuída em tempo de compilação,
 
 Depois de adicionar essas formas com a área 0, vamos adicionar mais alguns tipos de forma: um retângulo e um triângulo:
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  Esse conjunto de alterações adiciona rótulos `case` para o caso de degeneração e rótulos e blocos para cada uma das novas formas. 
 
 Por fim, você pode adicionar um case `null` para garantir que o argumento não seja `null`:
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 O comportamento especial para o padrão `null` é interessante porque a constante `null` no padrão não tem um tipo, mas pode ser convertida em qualquer tipo de referência ou tipo que permite valor nulo. Em vez de converter um `null` em qualquer tipo, a linguagem define que um `null` valor não será correspondente ao padrão de qualquer tipo, independentemente do tipo de tempo de compilação da variável. Esse comportamento torna o novo padrão de tipo baseado em `switch` consistente com a instrução `is`: instruções `is` sempre retornam `false` quando o valor sendo verificado é `null`. Isso também é mais simples: depois de verificar o tipo, não é necessário fazer uma verificação adicional de nulos. Você pode ver isso pelo fato de que não há nenhuma verificação de nulos em nenhum dos blocos de casos dos exemplos acima: elas não são necessárias, já que a correspondência do padrão de tipo assegura um valor não nulo.
 
@@ -124,7 +124,7 @@ Como um case não padrão é preferencial ao case `default`, o case `default` nu
 
 A terceira regra introduz usos em que um case `var` pode ser útil. Imagine que você esteja fazendo uma correspondência de padrão em que a entrada é uma cadeia de caracteres e você está pesquisando valores de comando conhecidos. Você pode escrever algo parecido com:
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 O case `var` corresponde a `null`, a cadeia de caracteres vazia ou qualquer cadeia de caracteres que contém somente espaços em branco. Observe que o código anterior usa o operador `?.` para garantir que ele não gere um <xref:System.NullReferenceException>acidentalmente. O case `default` lida com outros valores de cadeia de caracteres que não são entendidos pelo analisador de comando.
 

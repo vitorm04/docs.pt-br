@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123207"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156004"
 ---
 # <a name="runtime-callable-wrapper"></a>RCW (Runtime Callable Wrapper)
 O common language runtime expõe objetos COM através de um proxy chamado RCW (Runtime Callable Wrapper). Embora o RCW pareça ser um objeto comum para clientes .NET, a função principal dele é realizar marshaling de chamadas entre um cliente .NET e um objeto COM.  
@@ -31,9 +31,9 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
  O wrapper padrão impõe regras de marshaling internas. Por exemplo, quando um cliente .NET passa um tipo de cadeia de caracteres como parte de um argumento para um objeto não gerenciado, o wrapper converte a cadeia de caracteres em um tipo BSTR. Se o objeto COM retornar um BSTR ao chamador gerenciado, o chamador receberá uma cadeia de caracteres. Tanto o cliente quanto o servidor enviam e recebem dados com os quais estão familiarizados. Outros tipos não exigem conversão. Por exemplo, um wrapper padrão sempre passará um inteiro de 4 bytes entre código gerenciado e não gerenciado sem converter o tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Marshaling de interfaces selecionadas  
- A meta principal do [RCW](runtime-callable-wrapper.md) (Runtime Callable Wrapper) é ocultar as diferenças entre os modelos de programação gerenciado e não gerenciado. Para criar uma transição suave, o RCW consome interfaces COM selecionadas sem expô-las ao cliente .NET, conforme mostrado na ilustração a seguir. 
+ A meta principal do [RCW](runtime-callable-wrapper.md) (Runtime Callable Wrapper) é ocultar as diferenças entre os modelos de programação gerenciado e não gerenciado. Para criar uma transição suave, o RCW consome interfaces COM selecionadas sem expô-las ao cliente .NET, conforme mostrado na ilustração a seguir.
 
- A seguinte imagem mostra as interfaces COM e o RCW (Runtime Callable Wrapper): 
+ A seguinte imagem mostra as interfaces COM e o RCW (Runtime Callable Wrapper):
   
  ![Captura de tela do RCW (Runtime Callable Wrapper) com interfaces.](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
@@ -41,22 +41,22 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
   
  O RCW consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|Descrição|  
+|Interface|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**IDispatch**|Para associação tardia a objetos COM por meio de reflexão.|  
 |**IErrorInfo**|Fornece uma descrição textual do erro, sua origem, um arquivo de Ajuda, um contexto de Ajuda e o GUID da interface que definiu o erro (sempre **GUID_NULL** para classes do .NET).|  
 |**IProvideClassInfo**|Se o objeto COM sendo empacotado implementa **IProvideClassInfo**, o RCW extrai as informações de tipo dessa interface para fornecer uma melhor identidade de tipo.|  
-|**IUnknown**|Para gerenciamento do tempo de vida, coerção de tipo e identidade de objeto:<br /><br /> – Identidade de objeto<br />     O tempo de execução faz distinção entre os objetos COM, comparando o valor da interface **IUnknown** para cada objeto.<br />– Coerção de tipo<br />     O RCW reconhece a descoberta de tipo dinâmico executada pelo método **QueryInterface**.<br />– Gerenciamento do tempo de vida<br />     Usando o **QueryInterface** método RCW obtém e mantém uma referência a um objeto não gerenciado até o tempo de execução executar a coleta de lixo no wrapper, que libera o objeto não gerenciado.|  
+|**IUnknown**|Para gerenciamento do tempo de vida, coerção de tipo e identidade de objeto:<br /><br /> – Identidade de objeto<br />     O runtime faz distinção entre os objetos COM, comparando o valor da interface **IUnknown** para cada objeto.<br />– Coerção de tipo<br />     O RCW reconhece a descoberta de tipo dinâmico executada pelo método **QueryInterface**.<br />– Gerenciamento do tempo de vida<br />     Usando o **QueryInterface** método RCW obtém e mantém uma referência a um objeto não gerenciado até o runtime executar a coleta de lixo no wrapper, que libera o objeto não gerenciado.|  
   
  O RCW, opcionalmente, consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|Descrição|  
+|Interface|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|O RCW converte objetos que expõem o estilo do evento de ponto de conexão para eventos com base em delegado.|  
 |**IDispatchEx** (somente .NET Framework) |Se a classe implementa **IDispatchEx**, o RCW implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|  
 |**IEnumVARIANT**|Permite que os tipos COM que dão suporte a enumerações sejam tratados como coleções.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Wrappers COM](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)

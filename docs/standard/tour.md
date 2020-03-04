@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337574"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241137"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -21,13 +21,13 @@ Este artigo oferece um tour guiado por alguns dos principais recursos do .NET. C
 
 ## <a name="how-to-run-the-code-samples"></a>Como executar os exemplos de código
 
-Para saber como configurar um ambiente de desenvolvimento para executar os exemplos de código, consulte o tópico [Introdução](get-started.md). Copie e cole os exemplos de código desta página no seu ambiente para executá-los. 
+Para saber como configurar um ambiente de desenvolvimento para executar os exemplos de código, consulte o tópico [Introdução](get-started.md). Copie e cole os exemplos de código desta página no seu ambiente para executá-los.
 
 ## <a name="programming-languages"></a>Linguagens de programação
 
 O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um runtime independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
-A Microsoft desenvolve e dá suporte ativamente a três C#linguagens .net:, F#e Visual Basic. 
+A Microsoft desenvolve e dá suporte ativamente a três C#linguagens .net:, F#e Visual Basic.
 
 * A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.yml) para saber mais sobre o C#.
 
@@ -41,7 +41,7 @@ O .NET usa a [(GC) coleta de lixo](garbage-collection/index.md) para fornecer ge
 
 As duas linhas a seguir alocam memória:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 Não há nenhuma palavra-chave análoga para desalocar memória, pois a desalocação ocorre automaticamente quando o coletor de lixo recupera a memória por meio de sua execução agendada.
 
@@ -49,7 +49,7 @@ O coletor de lixo é um dos serviços que ajudam a garantir a *segurança da mem
 
 No exemplo a seguir, o runtime aciona uma exceção <xref:System.IndexOutOfRangeException> para impor segurança da memória:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Trabalhando com recursos não gerenciados
 
@@ -57,9 +57,9 @@ Alguns objetos fazem referência a *recursos não gerenciados*. Os recursos não
 
 No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface <xref:System.IDisposable>. Quando você termina de usar o objeto, você chama o método <xref:System.IDisposable.Dispose> do objeto, responsável por liberar quaisquer recursos não gerenciados. As linguagens .NET fornecem uma [instrução`using`](../csharp/language-reference/keywords/using.md) conveniente para tais objetos, conforme mostrado no exemplo a seguir:
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Uma vez que o bloco `using` é concluído, o runtime do .NET automaticamente chama o método <xref:System.IDisposable.Dispose> do objeto `stream`, que libera o identificador de arquivo. O runtime também faz isso se uma exceção faz com que o controle deixe o bloco.
+Uma vez que o bloco `using` é concluído, o runtime do .NET automaticamente chama o método `stream` do objeto <xref:System.IDisposable.Dispose>, que libera o identificador de arquivo. O runtime também faz isso se uma exceção faz com que o controle deixe o bloco.
 
 Para obter mais detalhes, consulte os seguintes tópicos:
 
@@ -73,15 +73,15 @@ Um objeto é uma instância de um tipo específico. As únicas operações permi
 
 As linguagens do .NET são orientadas a objeto, com hierarquias de classes base e classes derivadas. O runtime do .NET só permite conversões de objeto e chamadas alinhadas à hierarquia do objeto. Lembre-se de que todos os tipos definidos em qualquer linguagem .NET derivam do tipo base <xref:System.Object>.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 A segurança de tipos também é usada para ajudar a forçar o encapsulamento, garantindo a fidelidade das palavras-chave acessadoras. Palavras-chave acessadoras são artefatos que controlam o acesso a membros de um determinado tipo por outro código. Elas geralmente são usadas para vários tipos de dados dentro de um tipo que são usados para gerenciar seu comportamento.
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#, Visual Basic e F# dão suporte à *inferência de tipo* de variável local. Inferência de tipos significa que o compilador deduz o tipo da expressão no lado esquerdo da expressão com base na expressão do lado direito. Isso não significa que a segurança de tipos é interrompida ou evitada. O tipo resultante realmente tem um tipo forte com tudo o que a expressão implica. No exemplo anterior, `dog` é reescrito para introduzir a inferência de tipos e o restante do exemplo permanece inalterado:
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F#tem ainda mais recursos de inferência de tipos do que a inferência de C# tipo de método local encontrada no e Visual Basic. Para obter mais informações, consulte [Inferência de tipos](../fsharp/language-reference/type-inference.md).
 
@@ -101,7 +101,7 @@ Os genéricos foram adicionados para ajudar os programadores a implementar estru
 
 O exemplo a seguir mostra a execução de um programa básico usando uma instância de tipos <xref:System.Collections.Generic.List%601>:
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 Para obter mais informações, veja o tópico [Visão geral de tipos genéricos (Genéricos)](generics.md).
 
@@ -133,9 +133,9 @@ Dependendo do suporte da linguagem, o CLR permite acessar a memória nativa e re
 
 O exemplo a seguir é uma versão modificada do `ToString()` método da classe `StringBuilder`. Ele ilustra como o uso do código `unsafe` pode implementar um algoritmo com eficiência movendo blocos de memória diretamente:
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Se você estiver interessado em um tour pelos recursos do C#, confira [Tour do C#](../csharp/tour-of-csharp/index.md).
 

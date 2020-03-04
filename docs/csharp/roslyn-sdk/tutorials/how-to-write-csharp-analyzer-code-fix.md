@@ -3,12 +3,12 @@ title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346935"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240544"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
@@ -16,7 +16,7 @@ O SDK da .NET Compiler Platform fornece as ferramentas necessárias para criar a
 
 Neste tutorial, você explorará a criação de um **analisador** e uma **correção de código** que o acompanha, usando as APIs do Roslyn. Um analisador é uma maneira de executar a análise de código-fonte e relatar um problema para o usuário. Opcionalmente, um analisador também pode fornecer uma correção de código que representa uma modificação no código-fonte do usuário. Este tutorial cria um analisador que localiza as declarações de variável local que poderiam ser declaradas usando o modificador `const`, mas não o são. A correção de código anexa modifica essas declarações para adicionar o modificador `const`.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -105,7 +105,7 @@ context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
 
 Substitua-a com a seguinte linha:
 
-[!code-csharp[Register the node action](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
+[!code-csharp[Register the node action](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
 
 Após essa alteração, você poderá excluir o método `AnalyzeSymbol`. Este analisador examina <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.LocalDeclarationStatement?displayProperty=nameWithType>, e não instruções <xref:Microsoft.CodeAnalysis.SymbolKind.NamedType?displayProperty=nameWithType>. Observe que `AnalyzeNode` tem rabiscos vermelhos sob ele. O código apenas que você acaba de adicionar referencia um método `AnalyzeNode` que não foi declarado. Declare esse método usando o seguinte código:
 
@@ -192,17 +192,17 @@ O usuário escolhe-a da lâmpada da interface do usuário no editor e do Visual 
 
 Abra o arquivo **MakeConstCodeFixProvider.cs** adicionado pelo modelo.  Essa correção de código já está conectada à ID de Diagnóstico produzida pelo analisador de diagnóstico, mas ela ainda não implementa a transformação de código correta. Primeiro você deve remover parte do código de modelo. Altere a cadeia de caracteres do título para "Tornar constante":
 
-[!code-csharp[Update the CodeFix title](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
+[!code-csharp[Update the CodeFix title](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
 
 Em seguida, exclua o método `MakeUppercaseAsync`. Ele não se aplica mais.
 
 Todos os provedores de correção de código derivam de <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>. Todos eles substituem <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> para relatar as correções de código disponíveis. Em `RegisterCodeFixesAsync`, altere o tipo de nó ancestral pelo qual você está pesquisando para um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> para corresponder ao diagnóstico:
 
-[!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
+[!code-csharp[Find local declaration node](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
 Em seguida, altere a última linha para registrar uma correção de código. A correção criará um novo documento resultante da adição do modificador `const` para uma declaração existente:
 
-[!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
+[!code-csharp[Register the new code fix](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
 Você observará rabiscos vermelhos no código que você acabou de adicionar no símbolo `MakeConstAsync`. Adicione uma declaração para `MakeConstAsync` semelhante ao seguinte código:
 
@@ -218,7 +218,7 @@ Seu novo método `MakeConstAsync` transformará o <xref:Microsoft.CodeAnalysis.D
 
 Você cria um novo token de palavra-chave `const` a ser inserido no início da instrução de declaração. Tenha cuidado para remover qualquer desafio à esquerda do primeiro token de instrução de declaração e anexe-o ao token `const`. Adicione o seguinte código ao método `MakeConstAsync`:
 
-[!code-csharp[Create a new const keyword token](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
+[!code-csharp[Create a new const keyword token](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
 Em seguida, adicione o token `const` à declaração usando o seguinte código:
 
@@ -233,7 +233,7 @@ var newLocal = trimmedLocal
 
 Em seguida, formate a nova declaração de acordo com regras de formatação de C#. Formatar de suas alterações para corresponderem ao código existente cria uma experiência melhor. Adicione a instrução a seguir imediatamente após o código existente:
 
-[!code-csharp[Format the new declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
+[!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
 Um novo namespace é necessário para esse código. Adicione a instrução `using` a seguir à parte superior do arquivo:
 
@@ -249,7 +249,7 @@ A etapa final é fazer a edição. Há três etapas para esse processo:
 
 Adicione o código a seguir ao final do método `MakeConstAsync`:
 
-[!code-csharp[replace the declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
+[!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
 A correção de código está pronta para ser experimentada.  Pressione F5 para executar o projeto do analisador em uma segunda instância do Visual Studio. Na segunda instância do Visual Studio, crie um novo projeto de Aplicativo de Console em C# e adicione algumas declarações de variável local inicializadas com valores constantes para o método Main. Você verá que elas são relatadas como avisos, conforme mostrado a seguir.
 
@@ -308,7 +308,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 O código anterior também fez algumas alterações no código que cria o resultado de diagnóstico esperado. Ele usa as constantes públicas registradas no analisador `MakeConst`. Além disso, ele usa duas constantes de cadeia de caracteres para a fonte de entrada e fonte fixa. Adicione as seguintes constantes de cadeia de caracteres à classe `UnitTest`:
 
-[!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
+[!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
 Execute esses dois testes para certificar-se de sua aprovação. No Visual Studio, abra o **Gerenciador de Testes** selecionando **Teste** > **Windows** > **Gerenciador de Testes**.  Em seguida, pressione o link **Executar Tudo**.
 
@@ -316,7 +316,7 @@ Execute esses dois testes para certificar-se de sua aprovação. No Visual Studi
 
 Como regra geral, os analisadores devem sair assim que possível, fazendo o mínimo de trabalho. O Visual Studio chama analisadores registrados conforme o usuário edita o código. A capacidade de resposta é um requisito fundamental. Há vários casos de teste para o código que não deverão gerar o diagnóstico. O analisador já gerencia um desses testes, o caso em que uma variável é atribuída após ser inicializada. Adicione a constante de cadeia de caracteres a seguir para seus testes para representar esse caso:
 
-[!code-csharp[variable assigned](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
+[!code-csharp[variable assigned](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
 
 Em seguida, adicione uma linha de dados para este teste, conforme mostrado no snippet de código a seguir:
 
@@ -331,19 +331,19 @@ Esse teste é aprovado também. Em seguida, adicione as constantes para as condi
 
 - Declarações que já são `const`, porque elas já são const:
 
-   [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
+   [!code-csharp[already const declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
 - Declarações que não têm nenhum inicializador, porque não há nenhum valor a ser usado:
 
-   [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
+   [!code-csharp[declarations that have no initializer](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
 - Declarações em que o inicializador não é uma constante, porque elas não podem ser constantes de tempo de compilação:
 
-   [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
+   [!code-csharp[declarations where the initializer isn't const](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
 Isso pode ser ainda mais complicado, porque o C# permite várias declarações como uma instrução. Considere a seguinte constante de cadeia de caracteres de caso de teste:
 
-[!code-csharp[multiple initializers](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
+[!code-csharp[multiple initializers](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
 
 A variável `i` pode ser tornada constante, mas o mesmo não se aplica à variável `j`. Portanto, essa instrução não pode ser tornada uma declaração const. Adicione as declarações `DataRow` para todos esses testes:
 
@@ -423,25 +423,25 @@ O primeiro loop de `foreach` examina cada declaração de variável usando a an�
 
 ## <a name="add-the-final-polish"></a>Adicionar o final polonês
 
-Você está quase terminando. Há mais algumas condições com as quais o seu analisador deve lidar. Enquanto o usuário está escrevendo código, o Visual Studio chama os analisadores. Muitas vezes o analisador será chamado para código que não é compilado. O método `AnalyzeNode` do analisador de diagnóstico não verifica para ver se o valor da constante é conversível para o tipo de variável. Assim, a implementação atual converterá facilmente uma declaração incorreta, tal como int i = "abc", em uma constante local. Adicione uma constante de cadeia de caracteres de origem para essa condição:
+Você está quase lá. Há mais algumas condições com as quais o seu analisador deve lidar. Enquanto o usuário está escrevendo código, o Visual Studio chama os analisadores. Muitas vezes o analisador será chamado para código que não é compilado. O método `AnalyzeNode` do analisador de diagnóstico não verifica para ver se o valor da constante é conversível para o tipo de variável. Assim, a implementação atual converterá facilmente uma declaração incorreta, tal como int i = "abc", em uma constante local. Adicione uma constante de cadeia de caracteres de origem para essa condição:
 
-[!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
+[!code-csharp[Mismatched types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
 Além disso, os tipos de referência não são tratados corretamente. O único valor de constante permitido para um tipo de referência é `null`, exceto no caso de <xref:System.String?displayProperty=nameWithType>, que permite literais de cadeia de caracteres. Em outras palavras, `const string s = "abc"` é legal, mas `const object s = "abc"` não é. Este snippet de código verifica essa condição:
 
-[!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
+[!code-csharp[Reference types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
 Para ser criterioso, você precisará adicionar outro teste para verificar se pode criar uma declaração de constante para uma cadeia de caracteres. O snippet de código a seguir define o código que gera o diagnóstico e o código após a aplicação da correção:
 
-[!code-csharp[string reference types raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
+[!code-csharp[string reference types raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
 
 Por fim, se uma variável é declarada com a palavra-chave `var`, a correção de código faz a coisa errada e gera uma declaração `const var`, que não é compatível com a linguagem C#. Para corrigir esse bug, a correção de código deve substituir a palavra-chave `var` pelo nome do tipo inferido:
 
-[!code-csharp[var references need to use the inferred types](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
+[!code-csharp[var references need to use the inferred types](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
 
 Essas alterações atualizam as declarações de linha de dados para ambos os testes. O código a seguir mostra esses testes com todos os atributos de linha de dados:
 
-[!code-csharp[The finished tests](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
+[!code-csharp[The finished tests](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
 
 Felizmente, todos os erros acima podem ser resolvidos usando as mesmas técnicas que você acabou de aprender.
 
@@ -495,7 +495,7 @@ Você precisa escrever um pouco mais de código no seu provedor de correção de
 
 Isso soa como muito código. Mas não é. Substitua a linha que declara e inicializa `newLocal` com o código a seguir. Ele é colocado imediatamente após a inicialização de `newModifiers`:
 
-[!code-csharp[Replace Var designations](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
+[!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
 Você precisará adicionar uma instrução `using` para usar o tipo <xref:Microsoft.CodeAnalysis.Simplification.Simplifier>:
 

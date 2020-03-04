@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921366"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156499"
 ---
 # <a name="assemblies-in-net"></a>Assemblies no .NET
 
@@ -85,13 +85,13 @@ Como os assemblies contêm informações sobre conteúdo, controle de versão e 
 Para usar um assembly em um aplicativo, você deve adicionar uma referência a ele. Depois que um assembly é referenciado, todos os tipos, propriedades, métodos e outros membros acessíveis de seus namespaces estão disponíveis para seu aplicativo como se o código fosse parte de seu arquivo de origem.
 
 > [!NOTE]
-> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um elemento [\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) para o assembly para o projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a opção de linha de comando `-reference` para os [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiladores do ou do [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> A maioria dos assemblies da Biblioteca de Classes .NET é referenciada automaticamente. Se um assembly do sistema não for referenciado automaticamente, para o .NET Core, você poderá adicionar uma referência ao pacote NuGet que contém o assembly. Use o Gerenciador de pacotes NuGet no Visual Studio ou adicione um elemento [\<PackageReference >](../../core/tools/dependencies.md#the-packagereference-element) para o assembly para o projeto *. csproj* ou *. vbproj* . No .NET Framework, você pode adicionar uma referência ao assembly usando a caixa de diálogo **Adicionar referência** no Visual Studio ou usando a opção de linha de comando `-reference` para os [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiladores do ou do [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
-No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. Para obter mais informações, consulte [alias externo](../../csharp/language-reference/keywords/extern-alias.md).
+No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. Para obter mais informações, consulte [alias extern](../../csharp/language-reference/keywords/extern-alias.md).
 
 ## <a name="related-content"></a>Conteúdo relacionado
 
-|Cargo|Descrição|
+|Title|DESCRIÇÃO|
 |-----------|-----------------|
 |[Conteúdo do assembly](contents.md)|Elementos que compõem um assembly.|
 |[Manifesto do assembly](manifest.md)|Dados no manifesto do assembly e como eles são armazenados em assemblies.|
@@ -108,7 +108,7 @@ No C#, você pode usar duas versões do mesmo assembly em um único aplicativo. 
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Formato de arquivo do assembly .NET](file-format.md)
 - [Assemblies Friend](friend.md)

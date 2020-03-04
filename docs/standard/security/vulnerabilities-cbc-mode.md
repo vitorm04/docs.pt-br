@@ -3,16 +3,16 @@ title: Vulnerabilidade de descriptografia de CBC
 description: Saiba como detectar e atenuar as vulnerabilidades de tempo com a descriptografia simétrica do modo CBC (Cipher-Block-Chaining) usando o preenchimento.
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705841"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159956"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnerabilidades de temporização com descriptografia simétrica no modo CBC usando preenchimento
 
-A Microsoft acredita que não é mais seguro descriptografar dados criptografados com o modo CBC (Cipher-Block-Chaining) de criptografia simétrica quando o preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto cifrado, exceto para um procedimento muito específico excepcionais. Este Judgement se baseia na pesquisa criptográfica conhecida no momento. 
+A Microsoft acredita que não é mais seguro descriptografar dados criptografados com o modo CBC (Cipher-Block-Chaining) de criptografia simétrica quando o preenchimento verificável tiver sido aplicado sem primeiro garantir a integridade do texto cifrado, exceto para um procedimento muito específico excepcionais. Este Judgement se baseia na pesquisa criptográfica conhecida no momento.
 
 ## <a name="introduction"></a>Introdução
 
@@ -68,7 +68,7 @@ Inicialmente, os ataques práticos eram baseados em serviços que retornavam có
 
 Desde que o esquema de criptografia empregue uma assinatura e que a verificação da assinatura seja executada com um tempo de execução fixo para um determinado comprimento de dados (independentemente do conteúdo), a integridade dos dados pode ser verificada sem emitir nenhuma informação para um invasor por meio de um [canal lateral](https://en.wikipedia.org/wiki/Side-channel_attack). Como a verificação de integridade rejeita todas as mensagens violadas, o preenchimento da ameaça Oracle é mitigado.
 
-## <a name="guidance"></a>{1&gt;Orientação&lt;1}
+## <a name="guidance"></a>Orientação
 
 Em primeiro lugar, a Microsoft recomenda que todos os dados que têm confidencialidade sejam transmitidos pela TLS (segurança da camada de transporte), o sucessor para protocolo SSL (SSL).
 

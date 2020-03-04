@@ -2,12 +2,12 @@
 title: 'Tutorial: instalar e usar as ferramentas locais do .NET Core'
 description: Saiba como instalar e usar uma ferramenta .NET como uma ferramenta local.
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543862"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156693"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core
 
@@ -24,9 +24,9 @@ Este tutorial ensina como instalar e usar uma ferramenta local. Você usa uma fe
 
 ## <a name="create-a-manifest-file"></a>Criar um arquivo de manifesto
 
-Para instalar uma ferramenta somente para acesso local (para o diretório e subdiretórios atuais), ela deve ser adicionada a um arquivo de manifesto. 
+Para instalar uma ferramenta somente para acesso local (para o diretório e subdiretórios atuais), ela deve ser adicionada a um arquivo de manifesto.
 
-Na pasta *nome do botsay-\<>* , navegue até um nível para a pasta do *repositório* :
+Na pasta *Microsoft. botsay* , navegue até um nível para a pasta do *repositório* :
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ Quando você usa um comando da CLI que se refere a uma ferramenta local, o SDK p
 Instale a ferramenta do pacote que você criou no primeiro tutorial:
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 Esse comando adiciona a ferramenta ao arquivo de manifesto que você criou na etapa anterior. A saída do comando mostra qual arquivo de manifesto está em sua ferramenta recém-instalada:
@@ -71,7 +71,7 @@ Esse comando adiciona a ferramenta ao arquivo de manifesto que você criou na et
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ O arquivo *. config/dotnet-Tools. JSON* agora tem uma ferramenta:
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
 
 1. Salve suas alterações.
 
-   Fazer essa alteração é o mesmo que obter a versão mais recente do repositório depois que outra pessoa instalou o pacote `dotnetsay` para o diretório do projeto. 
+   Fazer essa alteração é o mesmo que obter a versão mais recente do repositório depois que outra pessoa instalou o pacote `dotnetsay` para o diretório do projeto.
 
 1. Execute o comando `dotnet tool restore`.
 
@@ -142,7 +142,7 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
    O comando produz uma saída semelhante ao exemplo a seguir:
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. Teste as ferramentas:
@@ -191,7 +191,7 @@ O comando Update localiza o primeiro arquivo de manifesto que contém a ID do pa
 Remova as ferramentas instaladas executando o comando [dotnet ferramenta de desinstalação](dotnet-tool-uninstall.md) :
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

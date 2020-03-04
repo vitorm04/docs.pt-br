@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095041"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159332"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 
@@ -50,7 +50,7 @@ Uma classe de caracteres define um conjunto de caracteres, qualquer dos quais po
 > [!NOTE]
 > Classes de caractere que fazem a correspondência de caracteres por categoria, como [\w](#WordCharacter) para a correspondência de caracteres de palavra ou [\p{}](#CategoryOrBlock) para uma categoria de Unicode, dependem da classe <xref:System.Globalization.CharUnicodeInfo> para fornecer informações sobre categorias de caractere.  Do .NET Framework 4.6.2 em diante, as categorias de caracteres se baseiam no [Padrão Unicode, versão 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). No .NET Framework 4 até o .NET Framework 4.6.1, eles se baseiam no [Padrão Unicode, versão 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
-<a name="PositiveGroup"></a>   
+<a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Grupo de caracteres positivo: [ ]  
  Um grupo de caracteres positivos especifica uma lista de caracteres, qualquer caractere dela pode aparecer em uma cadeia de caracteres de entrada para que uma correspondência ocorra. Essa lista de caracteres pode ser especificada individualmente, como um intervalo ou ambos.  
   
@@ -106,7 +106,7 @@ Alguns padrões de expressões regulares comuns que contêm classes de caractere
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|  
 |`\b`|Corresponder a um limite de palavra.|  
   
-<a name="NegativeGroup"></a>   
+<a name="NegativeGroup"></a>
 ## <a name="negative-character-group-"></a>Grupo de caracteres negativos: [^]  
  Um grupo de caracteres negativos especifica uma lista de caracteres que não devem aparecer em uma cadeia de caracteres de entrada para que uma correspondência ocorra. A lista de caracteres pode ser especificada individualmente, como um intervalo ou ambos.  
   
@@ -154,7 +154,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|  
 |`\b`|Terminar em um limite de palavra.|  
   
-<a name="AnyCharacter"></a>   
+<a name="AnyCharacter"></a>
 ## <a name="any-character-"></a>Qualquer caractere: .  
  O caractere de ponto (.) corresponde a qualquer caractere, exceto `\n` (o caractere de nova linha, \u000A), com estas duas qualificações:  
   
@@ -176,7 +176,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 > [!NOTE]
 > Como ele corresponde a qualquer caractere, o elemento de linguagem `.` é frequentemente usado com um quantificador lento se um padrão de expressão regular tenta corresponder a qualquer caractere várias vezes. Para saber mais, confira [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
-<a name="CategoryOrBlock"></a>   
+<a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Categoria de Unicode ou bloco Unicode: \p{}  
  O padrão Unicode atribui a cada caractere uma categoria geral. Por exemplo, um caractere específico pode ser uma letra maiúscula (representada pela categoria `Lu`), um dígito decimal (a categoria `Nd`), um símbolo matemático (a categoria `Sm`) ou um separador de parágrafo (a categoria `Zl`). Os conjuntos de caracteres específicos no padrão Unicode também ocupam um intervalo específico ou um bloco de pontos de código consecutivos. Por exemplo, o conjunto de caracteres latinos básico é de \u0000 a \u007F, enquanto que o conjunto de caracteres árabe vai de \u0600 a \u06FF.  
   
@@ -205,7 +205,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 |`(\s)?`|Corresponder a zero ou a um caractere de espaço em branco.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Corresponder ao padrão de um ou mais caracteres latinos básicos seguidos por zero ou um caractere de espaço em branco uma ou mais vezes.|  
   
-<a name="NegativeCategoryOrBlock"></a>   
+<a name="NegativeCategoryOrBlock"></a>
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Categoria Unicode negativa ou bloco Unicode: \P{}  
  O padrão Unicode atribui a cada caractere uma categoria geral. Por exemplo, um caractere específico pode ser uma letra maiúscula (representada pela categoria `Lu`), um dígito decimal (a categoria `Nd`), um símbolo matemático (a categoria `Sm`) ou um separador de parágrafo (a categoria `Zl`). Os conjuntos de caracteres específicos no padrão Unicode também ocupam um intervalo específico ou um bloco de pontos de código consecutivos. Por exemplo, o conjunto de caracteres latinos básico é de \u0000 a \u007F, enquanto que o conjunto de caracteres árabe vai de \u0600 a \u06FF.  
   
@@ -222,7 +222,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  O padrão de expressão regular `(\P{Sc})+` corresponde a um ou mais caracteres que não são símbolos de moeda; ele remove efetivamente qualquer símbolo de moeda da cadeia de caracteres de resultado.  
   
-<a name="WordCharacter"></a>   
+<a name="WordCharacter"></a>
 ## <a name="word-character-w"></a>Caractere de palavra: \w  
  `\w` corresponde a qualquer caractere de palavra. Um caractere de palavra é um membro de qualquer uma das categorias Unicode listadas na tabela a seguir.  
   
@@ -252,7 +252,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
-<a name="NonWordCharacter"></a>   
+<a name="NonWordCharacter"></a>
 ## <a name="non-word-character-w"></a>Caractere não pertencente a palavras: \W  
  `\W` corresponde a qualquer caractere que não seja uma palavra. O elemento de linguagem \W é equivalente à seguinte classe de caracteres:  
   
@@ -289,7 +289,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  Como o objeto <xref:System.Text.RegularExpressions.Group> do segundo grupo de captura contém apenas um único caractere capturado não pertencente a palavras, o exemplo recupera todos os caracteres capturados não pertencentes a palavras do objeto <xref:System.Text.RegularExpressions.CaptureCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-<a name="WhitespaceCharacter"></a>   
+<a name="WhitespaceCharacter"></a>
 ## <a name="whitespace-character-s"></a>Caractere de espaço em branco: \s  
  `\s` corresponde a um caractere de espaço em branco. É equivalente às sequências de escape e às categorias de Unicode listadas na tabela a seguir.  
   
@@ -318,7 +318,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
-<a name="NonWhitespaceCharacter"></a>   
+<a name="NonWhitespaceCharacter"></a>
 ## <a name="non-whitespace-character-s"></a>Caractere diferente de espaço em branco: \S  
  `\S` corresponde a qualquer caractere que não seja um caractere de espaço em branco. Ele é equivalente ao padrão de expressão regular `[^\f\n\r\t\v\x85\p{Z}]` ou o oposto do padrão de expressão regular equivalente a `\s`, o qual corresponde a caracteres de espaço em branco. Para saber mais, confira [Caractere de espaço em branco: \s](#WhitespaceCharacter).  
   
@@ -335,7 +335,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
   
-<a name="DigitCharacter"></a>   
+<a name="DigitCharacter"></a>
 ## <a name="decimal-digit-character-d"></a>Caractere de dígito decimal: \d  
  `\d` corresponde a qualquer dígito decimal. É equivalente ao padrão de expressão regular `\p{Nd}`, o qual inclui os dígitos decimais padrão 0-9, bem como os dígitos decimais de vários outros conjuntos de caracteres.  
   
@@ -357,7 +357,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
-<a name="NonDigitCharacter"></a>   
+<a name="NonDigitCharacter"></a>
 ## <a name="non-digit-character-d"></a>Caractere que não seja dígito: \D  
  `\D` corresponde a qualquer caractere que não seja um dígito. É equivalente ao padrão de expressão regular `\P{Nd}`.  
   
@@ -376,7 +376,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
   
-<a name="SupportedUnicodeGeneralCategories"></a>   
+<a name="SupportedUnicodeGeneralCategories"></a>
 ## <a name="supported-unicode-general-categories"></a>Categorias gerais Unicode com suporte  
  O Unicode define as categorias gerais listadas na tabela a seguir. Para obter mais informações, consulte os subtópicos "Formato de arquivo UCD" e "Valores de categoria geral" no [Banco de dados de caractere Unicode](https://www.unicode.org/reports/tr44/).  
   
@@ -425,7 +425,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
-<a name="SupportedNamedBlocks"></a>   
+<a name="SupportedNamedBlocks"></a>
 ## <a name="supported-named-blocks"></a>Blocos nomeados compatíveis
 
 O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blocos nomeados com suporte baseia-se no Unicode 4.0 e no Perl 5.6. Para uma expressão regular que usa blocos nomeados, consulte a seção[Categoria Unicode ou bloco Unicode: \\p{}](#unicode-category-or-unicode-block-p).  
@@ -538,7 +538,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
   
-<a name="CharacterClassSubtraction"></a>   
+<a name="CharacterClassSubtraction"></a>
 ## <a name="character-class-subtraction-base_group---excluded_group"></a>Subtração de classes de caractere: [base_group - [excluded_group]]  
  Uma classe de caracteres define um conjunto de caracteres. A subtração de classes de caracteres fornece um conjunto de caracteres que é o resultado da exclusão dos caracteres em uma classe de caracteres em outra classe de caracteres.  
   

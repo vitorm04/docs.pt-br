@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715232"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239645"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -36,7 +36,7 @@ Ao usar o padrão de tipo para realizar a correspondência de padrões, `is` tes
    expr is type varname
 ```
 
-em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *type* é o nome do tipo no qual o resultado de *expr* será convertido e *varname* é o objeto no qual o resultado de *expr* será convertido se o teste `is` for `true`. 
+Em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *digite* é o nome do tipo para o qual o resultado de *expr* deve ser convertido e *VarName* é o objeto para o qual o resultado de *expr* é convertido se o teste de `is` for `true`. 
 
 A expressão `is` será `true` se *expr* não for `null` e qualquer um dos seguintes for verdadeiro:
 
@@ -70,7 +70,7 @@ O código equivalente sem correspondência de padrões requer uma atribuição s
 
 ### <a name="constant-pattern"></a>Padrão de constante
 
-Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). A partir do C# 7.0, ele também é compatível com a instrução `is`. A sintaxe é:
+Ao executar a correspondência de padrões com o padrão constante, `is` testa se uma expressão é igual a uma constante especificada. No C# 6 e em versões anteriores, o padrão constante tem suporte da instrução [switch](switch.md). A partir do C# 7.0, ele também é compatível com a instrução `is`. Sua sintaxe é:
 
 ```csharp
    expr is constant
@@ -94,7 +94,7 @@ O exemplo a seguir combina os padrões de tipo e constante para testar se um obj
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-É possível verificar em busca de `null` usando o padrão de constante. A palavra-chave `null` é compatível com a instrução `is`. A sintaxe é:
+É possível verificar em busca de `null` usando o padrão de constante. A palavra-chave `null` é compatível com a instrução `is`. Sua sintaxe é:
 
 ```csharp
    expr is null
@@ -106,24 +106,30 @@ O exemplo a seguir demonstra uma comparação de verificações de `null`:
 
 ### <a name="var-pattern"></a>Padrão var
 
-O padrão `var` é um catch-all para qualquer tipo ou valor. O valor de *expr* é sempre atribuído a uma variável local do mesmo tipo que o tipo de tempo de compilação de *expr*. O resultado da expressão `is` é sempre `true`. A sintaxe é:
+Uma correspondência de padrão com o padrão de `var` sempre é realizada com sucesso. Sua sintaxe é:
 
 ```csharp
    expr is var varname
 ```
 
-O exemplo a seguir usa o padrão var para atribuir uma expressão a uma variável chamada `obj`. Em seguida, ele exibe o valor e o tipo de `obj`.
+Em que o valor de *expr* sempre é atribuído a uma variável local chamada *VarName*. *VarName* é uma variável do mesmo tipo que o tipo de *expr*de tempo de compilação. 
+
+Se *expr* for avaliada como `null`, a expressão `is` produzirá `true` e atribuirá `null` a *VarName*. O padrão var é um dos poucos usos de `is` que produz `true` para um valor `null`.
+
+Você pode usar o padrão de `var` para criar uma variável temporária dentro de uma expressão booliana, como mostra o exemplo a seguir:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+No exemplo anterior, a variável temporária é usada para armazenar o resultado de uma operação cara. A variável pode ser usada várias vezes.
+
+## <a name="c-language-specification"></a>especificação da linguagem C#
   
 Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expressions.md#the-is-operator) da [especificação da linguagem C#](~/_csharplang/spec/introduction.md) e as seguintes propostas da linguagem C#:
 
 - [Correspondência de padrões](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Correspondência de padrões com genéricos](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

@@ -1,14 +1,14 @@
 ---
 title: Instruções em C# - um tour pela linguagem C#
 description: Criar as ações de um programa em C# usando as instruções
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634539"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159098"
 ---
 # <a name="statements"></a>Instruções
 
@@ -20,11 +20,11 @@ Um *bloco* permite a produção de várias instruções em contextos nos quais u
 
 *Instruções de expressão* são usadas para avaliar expressões. As expressões que podem ser usadas como instruções incluem chamadas de método, alocações de objeto usando o operador `new`, atribuições usando `=` e os operadores de atribuição compostos, operações de incremento e decremento usando os operadores `++` e `--` e as expressões `await`.
 
-*Instruções de seleção* são usadas para selecionar uma dentre várias instruções possíveis para execução com base no valor de alguma expressão. Neste grupo estão as instruções `if` e `switch`.
+*Instruções de seleção* são usadas para selecionar uma dentre várias instruções possíveis para execução com base no valor de alguma expressão. Esse grupo contém as instruções `if` e `switch`.
 
-*Instruções de iteração* são usadas para executar repetidamente uma instrução inserida. Neste grupo estão as instruções `while`, `do`, `for` e `foreach`.
+*Instruções de iteração* são usadas para executar repetidamente uma instrução inserida. Esse grupo contém as instruções `while`, `do`, `for`e `foreach`.
 
-*Instruções de salto* são usadas para transferir o controle. Neste grupo estão as instruções `break`, `continue`, `goto`, `throw`, `return` e `yield`.
+*Instruções de salto* são usadas para transferir o controle. Esse grupo contém as instruções `break`, `continue`, `goto`, `throw`, `return`e `yield`.
 
 A instrução `try`... `catch` é usada para capturar exceções que ocorrem durante a execução de um bloco, e a instrução `try`... `finally` é usada para especificar o código de finalização que é executado sempre, se uma exceção ocorrer ou não.
 

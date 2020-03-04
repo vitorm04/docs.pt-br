@@ -4,18 +4,18 @@ description: Este tutorial avançado fornece uma introdução aos tipos de refer
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 3ee5e50cf889dd0e02bf58f1e3471fc709b729cd
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039710"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240061"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos que não permitem valor nulo
 
 C#8,0 apresenta [tipos de referência anuláveis](../nullable-references.md), que complementam os tipos de referência da mesma maneira que os tipos de valores de valor nulo complementam tipos Value. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis *devem sempre ter um valor*, outras *podem ter um valor* ausente.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -58,7 +58,7 @@ Esses tipos usarão os tipos de referência que permitem valor nulo e tipos de r
 - Os entrevistados nunca poderão ser nulos. Convém controlar as pessoas contatadas, mesmo os entrevistados que se recusaram a participar.
 - Qualquer resposta a uma pergunta pode ser um valor nulo. Os entrevistados podem se recusar a responder a algumas ou a todas as perguntas.
 
-Se você já tiver programado C#o no, talvez esteja acostumado a se acostumar com os tipos de referência que permitem`null`valores que você pode ter perdido outras oportunidades para declarar instâncias não anuláveis:
+Se você já tiver programado C#o no, talvez esteja acostumado a se acostumar com os tipos de referência que permitem `null` valores que você pode ter perdido outras oportunidades para declarar instâncias não anuláveis:
 
 - O conjunto de perguntas não deve permitir um valor nulo.
 - O conjunto de entrevistados não deve permitir um valor nulo.
@@ -107,7 +107,7 @@ namespace NullableIntroduction
 
 Como você não inicializou `QuestionText`, o compilador emitirá um aviso informando que uma propriedade que não permite valor nulo não foi inicializada. Seu design exige que o texto da pergunta não seja um valor nulo, portanto, você inclui um construtor para inicializá-lo e o valor `QuestionType` também. A definição da classe concluída se parece com o código a seguir:
 
-[!code-csharp[DefineQuestion](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyQuestion.cs)]
+[!code-csharp[DefineQuestion](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyQuestion.cs)]
 
 A adição do construtor removerá o aviso. O argumento do construtor também é um tipo de referência que não permite valor nulo, portanto, o compilador não emite avisos.
 
@@ -133,7 +133,7 @@ Como foi feito anteriormente, você deve inicializar o objeto de lista com um va
 
 Alterne para *Program.cs* no seu editor e substitua o conteúdo de `Main` pelas seguintes linhas de código:
 
-[!code-csharp[AddQuestions](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
+[!code-csharp[AddQuestions](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
 Como o projeto inteiro está em um contexto de anotação anulável habilitado, você receberá avisos quando passar `null` para qualquer método que espera um tipo de referência não anulável. Experimente adicionar a seguinte linha a `Main`:
 
@@ -165,7 +165,7 @@ namespace NullableIntroduction
 
 Em seguida, adicione um método `static` para criar novos participantes ao gerar uma ID aleatória:
 
-[!code-csharp[GenerateRespondents](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#Random)]
+[!code-csharp[GenerateRespondents](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#Random)]
 
 A principal responsabilidade dessa classe é gerar as respostas de um participante para as perguntas da pesquisa. Essa responsabilidade conta com algumas etapas:
 
@@ -174,7 +174,7 @@ A principal responsabilidade dessa classe é gerar as respostas de um participan
 
 Adicione o seguinte código à classe `SurveyResponse`:
 
-[!code-csharp[AnswerSurvey](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
+[!code-csharp[AnswerSurvey](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 O armazenamento das respostas da pesquisa é um `Dictionary<int, string>?`, indicando que ele pode ser um valor nulo. Você está usando o novo recurso de idioma para declarar sua intenção de design, tanto para o compilador quanto para qualquer pessoa que leia seu código posteriormente. Se você já desreferenciar `surveyResponses` sem verificar o valor de `null` primeiro, obterá um aviso do compilador. Você não receberá um aviso no método `AnswerSurvey` porque o compilador pode determinar que a variável `surveyResponses` foi definida como um valor não nulo acima.
 
@@ -182,31 +182,31 @@ O uso de `null` para respostas ausentes destaca um ponto importante para trabalh
 
 Em seguida, é necessário gravar o método `PerformSurvey` na classe `SurveyRun`. Adicione o seguinte código à classe `SurveyRun`:
 
-[!code-csharp[PerformSurvey](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#PerformSurvey)]
+[!code-csharp[PerformSurvey](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#PerformSurvey)]
 
 Aqui, novamente, sua opção por uma `List<SurveyResponse>?` que permite valor nulo indica que a resposta pode ser um valor nulo. Isso indica que a pesquisa ainda não foi entregue a nenhum pesquisado. Observe que os entrevistados são adicionados até que um suficiente de pessoas tiver consentido.
 
 A última etapa para executar a pesquisa é adicionar uma chamada para executar a pesquisa no final do método `Main`:
 
-[!code-csharp[RunSurvey](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#RunSurvey)]
+[!code-csharp[RunSurvey](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#RunSurvey)]
 
 ## <a name="examine-survey-responses"></a>Examinar as respostas da pesquisa
 
 A última etapa é exibir os resultados da pesquisa. Você adicionará código a várias classes gravadas. Este código demonstra o valor da distinção dos tipos de referência que permitem valor nulo e tipos de referência que não permitem valor nulo. Comece adicionando os dois membros com corpo de expressão à classe `SurveyResponse`:
 
-[!code-csharp[ReportResponses](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
+[!code-csharp[ReportResponses](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
 Como `surveyResponses` é um tipo de referência anulável, são necessárias verificações nulas antes de fazer referência a ela. O método `Answer` retorna uma cadeia de caracteres não anulável, portanto, precisamos abordar o caso de uma resposta ausente usando o operador de União nulo.
 
 Em seguida, adicione esses três membros com corpo de expressão à classe `SurveyRun`:
 
-[!code-csharp[ReportResults](~/samples/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#RunReport)]
+[!code-csharp[ReportResults](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#RunReport)]
 
 O membro `AllParticipants` deve levar em conta que a variável `respondents` pode ser um valor nulo, mas o valor de retorno não pode ser nulo. Se você alterar essa expressão removendo `??` e a sequência vazia que se segue, o compilador avisará que o método poderá retornar `null` e sua assinatura de retorno retornará um tipo que não permite valor nulo.
 
 Por fim, adicione o seguinte loop à parte inferior do método `Main`:
 
-[!code-csharp[DisplaySurveyResults](~/samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#WriteAnswers)]
+[!code-csharp[DisplaySurveyResults](~/samples/snippets/csharp/NullableIntroduction/NullableIntroduction/Program.cs#WriteAnswers)]
 
 Você não precisa de verificações de `null` neste código porque criou as interfaces subjacentes para que todas elas retornem tipos de referência que não permitem valor nulo.
 

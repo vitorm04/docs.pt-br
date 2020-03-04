@@ -4,12 +4,12 @@ description: Descreve os componentes de arquitetura do .NET, como o .NET Standar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124384"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160372"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -40,7 +40,7 @@ O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar
 
 Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
-### <a name="net-framework"></a>{1&gt;.NET Framework&lt;1}
+### <a name="net-framework"></a>.NET Framework
 
 O.NET Framework é a implementação original do .NET que existe desde 2002. É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram. As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework. Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF. O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
 
@@ -70,7 +70,7 @@ Um runtime é o ambiente de execução de um programa gerenciado. O SO faz parte
 
 - CLR (Common Language Runtime) para o .NET Framework
 - Core Common Language Runtime (CoreCLR) para o .NET Core
-- .NET Native para a Plataforma Universal do Windows 
+- .NET Native para a Plataforma Universal do Windows
 - O runtime Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Ferramentas do .NET e infraestrutura comum
@@ -96,14 +96,14 @@ Os documentos ECMA oficiais a seguir estão disponíveis [C#](http://www.ecma-in
 - **O C# idioma padrão (versão 5,0)** : [ECMA-334. pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **O Common Language Infrastructure**: isso está disponível em formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e formato [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
 - **Informações derivadas do arquivo XML da partição IV**: isso está disponível em formatos [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
- 
+
 Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO/IEC [publicamente disponível](https://standards.iso.org/ittf/PubliclyAvailableStandards/) . Esses links são diretos dessa página:
 
 - **Tecnologia da informação-linguagens C#de programação-** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
 - **Tecnologia da informação — partições de Common Language Infrastructure (CLI) I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)

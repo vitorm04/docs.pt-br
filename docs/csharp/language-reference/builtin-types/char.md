@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a5aca12e4037d517c3bcfb403c990605a052d48f
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093234"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239840"
 ---
 # <a name="char-c-reference"></a>Char (C# referência)
 
@@ -34,7 +34,7 @@ Você pode especificar um valor de `char` com:
 - uma sequência de escape Unicode, que é `\u` seguida pela representação hexadecimal de quatro símbolos de um código de caractere.
 - uma sequência de escape hexadecimal, que é `\x` seguida pela representação hexadecimal de um código de caractere.
 
-[!code-csharp-interactive[char literals](~/samples/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](~/samples/snippets/csharp/language-reference/builtin-types/CharType.cs#Literals)]
 
 Como mostra o exemplo anterior, você também pode converter o valor de um código de caractere no valor de `char` correspondente.
 

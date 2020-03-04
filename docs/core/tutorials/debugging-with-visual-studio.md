@@ -3,12 +3,12 @@ title: Depurar seu aplicativo Olá, Mundo .NET Core com o Visual Studio
 description: Saiba como depurar um aplicativo Olá, Mundo escrito C# ou Visual Basic com o Visual Studio.
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714050"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156667"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Depurar seu C# ou Visual Basic aplicativo .net Core Olá, mundo usando o Visual Studio
 
@@ -28,7 +28,7 @@ Execute o programa e experimente alguns recursos de depuração:
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Defina um *ponto de interrupção* na linha que lê `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` clicando na margem esquerda da janela de código nessa linha. Você também pode definir um ponto de interrupção colocando o cursor na linha de código e, em seguida, pressionando **F9** ou escolhendo **debug** > **alternar ponto de interrupção** na barra de menus.
 
@@ -64,12 +64,12 @@ Execute o programa e experimente alguns recursos de depuração:
 
 1. Pressione qualquer tecla para sair do aplicativo e parar a depuração.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Defina um *ponto de interrupção* na linha que lê `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` clicando na margem esquerda da janela de código nessa linha. Você também pode definir um ponto de interrupção colocando o cursor na linha desejada e escolhendo **depurar** > **alternar ponto de interrupção** na barra de menus.
 
    Um ponto de interrupção interrompe temporariamente a execução do aplicativo *antes que* a linha com o ponto de interrupção seja executada.
-   
+
    Como mostra a figura a seguir, o Visual Studio indica a linha na qual o ponto de interrupção é definido, realçando-o e exibindo um círculo vermelho na sua margem esquerda.
 
    ![Janela Programa do Visual Studio com o ponto de interrupção definido](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ O programa exibe a cadeia de caracteres que o usuário insere. O que acontecerá
 
 Para definir um ponto de interrupção condicional e testar o que acontece quando o usuário não insere uma cadeia de caracteres, faça o seguinte:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção. No menu de contexto, selecione **Condições** para abrir a caixa de diálogo **Configurações de Ponto de Interrupção**. Marque a caixa para **condições** se ela ainda não estiver selecionada.
 
@@ -142,7 +142,7 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
 
 1. Desmarque o ponto de interrupção clicando no pontos na margem esquerda da janela de código ou escolhendo **depurar > alternar** ponto de interrupção enquanto a linha de código está selecionada.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Clique com o botão direito do mouse no ponto vermelho que representa o ponto de interrupção. No menu de contexto, selecione **Condições** para abrir a caixa de diálogo **Configurações de Ponto de Interrupção**. Marque a caixa de **Condições**.
 
@@ -185,7 +185,7 @@ Para definir um ponto de interrupção condicional e testar o que acontece quand
 
 O Visual Studio também permite percorrer linha por linha de um programa e monitorar sua execução. Normalmente, você define um ponto de interrupção e usa esse recurso para seguir o fluxo do programa por uma pequena parte do código do programa. Como seu programa é pequeno, você pode percorrer todo o programa:
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Na barra de menus, escolha **depurar** > **etapa** ou pressione **F11**. O Visual Studio realça e exibe uma seta ao lado da próxima linha de execução.
 
@@ -211,7 +211,7 @@ O Visual Studio também permite percorrer linha por linha de um programa e monit
 
 1. Pressione qualquer tecla para fechar a janela do console e parar a depuração.
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Na barra de menus, escolha **depurar** > **etapa** ou pressione **F11**. O Visual Studio realça e exibe uma seta ao lado da próxima linha de execução.
 
@@ -249,6 +249,6 @@ Para compilar e testar a versão de lançamento do seu aplicativo de console, al
 
 Quando você pressiona **F5** ou escolhe **Compilar solução** no menu **Compilar** , o Visual Studio compila a versão de lançamento do aplicativo. Você pode testá-lo como fez a versão de depuração.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Depois de depurar seu aplicativo, a próxima etapa é publicar uma versão implantável do aplicativo. Para obter informações sobre como fazer isso, consulte [publicar seu aplicativo .NET Core Olá, mundo com o Visual Studio](publishing-with-visual-studio.md).

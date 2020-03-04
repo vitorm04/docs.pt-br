@@ -1,18 +1,18 @@
 ---
-title: 'Como: controlar a serialização de classes derivadas'
+title: Como controlar a serialização de classes derivadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af19981fd7cfeda3e8e985fa991fd7fdf2476b42
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922506"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159917"
 ---
-# <a name="how-to-control-serialization-of-derived-classes"></a>Como: controlar a serialização de classes derivadas
+# <a name="how-to-control-serialization-of-derived-classes"></a>Como controlar a serialização de classes derivadas
 O uso do atributo **XmlElementAttribute** para alterar o nome de um elemento XML não é a única maneira de personalizar a serialização de objetos. Você também pode personalizar o fluxo XML derivando de uma classe existente e instruindo a instância de <xref:System.Xml.Serialization.XmlSerializer> sobre como serializar a nova classe.  
   
  Por exemplo, dada uma classe `Book`, você pode derivar dela e criar uma classe `ExpandedBook` que tem algumas propriedades a mais. Entretanto, é necessário instruir o **XmlSerializer** a aceitar o tipo derivado durante a serialização ou desserialização. Isso pode ser feito criando uma instância do <xref:System.Xml.Serialization.XmlElementAttribute> e definindo sua propriedade **Type** com o tipo da classe derivada. Adicione o **XmlElementAttribute** a uma instância <xref:System.Xml.Serialization.XmlAttributes>. Em seguida, adicione **XmlAttributes** a uma instância do <xref:System.Xml.Serialization.XmlAttributeOverrides>, especificando o tipo que está sendo substituído e o nome do membro que aceita a classe derivada. Isso é mostrado no exemplo a seguir.  
@@ -22,10 +22,10 @@ O uso do atributo **XmlElementAttribute** para alterar o nome de um elemento XML
 ```vb  
 Public Class Orders  
     public Books() As Book  
-End Class     
+End Class
   
 Public Class Book  
-    public ISBN As String   
+    public ISBN As String
 End Class  
   
 Public Class ExpandedBook  
@@ -41,11 +41,11 @@ Public Class Run
     End Sub  
   
     Public Sub SerializeObject(filename As String)  
-        ' Each overridden field, property, or type requires   
-        ' an XmlAttributes instance.   
+        ' Each overridden field, property, or type requires
+        ' an XmlAttributes instance.
         Dim attrs As XmlAttributes = New XmlAttributes()  
   
-        ' Creates an XmlElementAttribute instance to override the   
+        ' Creates an XmlElementAttribute instance to override the
         ' field that returns Book objects. The overridden field  
         ' returns Expanded objects instead.  
         Dim attr As XmlElementAttribute = _  
@@ -60,9 +60,9 @@ Public Class Run
         Dim attrOverrides As XmlAttributeOverrides = _  
         New XmlAttributeOverrides()  
   
-        ' Adds the type of the class that contains the overridden   
-        ' member, as well as the XmlAttributes instance to override it   
-        ' with, to the XmlAttributeOverrides instance.   
+        ' Adds the type of the class that contains the overridden
+        ' member, as well as the XmlAttributes instance to override it
+        ' with, to the XmlAttributeOverrides instance.
         attrOverrides.Add(GetType(Orders), "Books", attrs)  
   
         ' Creates the XmlSerializer using the XmlAttributeOverrides.  
@@ -91,9 +91,9 @@ Public Class Run
         New XmlAttributeOverrides()  
         Dim attrs As XmlAttributes = New XmlAttributes()  
   
-        ' Creates an XmlElementAttribute to override the   
+        ' Creates an XmlElementAttribute to override the
         ' field that returns Book objects. The overridden field  
-        ' returns Expanded objects instead.   
+        ' returns Expanded objects instead.
         Dim attr As XmlElementAttribute = _  
         New XmlElementAttribute()  
         attr.ElementName = "NewBook"  
@@ -112,11 +112,11 @@ Public Class Run
         Dim myOrders As Orders = CType( s.Deserialize(fs), Orders)  
         Console.WriteLine("ExpandedBook:")  
   
-        ' The difference between deserializing the overridden   
-        ' XML document and serializing it is this: To read the derived   
-        ' object values, you must declare an object of the derived type   
-        ' and cast the returned object to it.   
-        Dim expanded As ExpandedBook   
+        ' The difference between deserializing the overridden
+        ' XML document and serializing it is this: To read the derived
+        ' object values, you must declare an object of the derived type
+        ' and cast the returned object to it.
+        Dim expanded As ExpandedBook
         Dim b As Book  
         for each b  in myOrders.Books  
             expanded = CType(b, ExpandedBook)  
@@ -131,7 +131,7 @@ End Class
 public class Orders  
 {  
     public Book[] Books;  
-}      
+}
   
 public class Book  
 {  
@@ -147,11 +147,11 @@ public class Run
 {  
     public void SerializeObject(string filename)  
     {  
-        // Each overridden field, property, or type requires   
+        // Each overridden field, property, or type requires
         // an XmlAttributes instance.  
         XmlAttributes attrs = new XmlAttributes();  
   
-        // Creates an XmlElementAttribute instance to override the   
+        // Creates an XmlElementAttribute instance to override the
         // field that returns Book objects. The overridden field  
         // returns Expanded objects instead.  
         XmlElementAttribute attr = new XmlElementAttribute();  
@@ -164,13 +164,13 @@ public class Run
         // Creates the XmlAttributeOverrides instance.  
         XmlAttributeOverrides attrOverrides = new XmlAttributeOverrides();  
   
-        // Adds the type of the class that contains the overridden   
-        // member, as well as the XmlAttributes instance to override it   
+        // Adds the type of the class that contains the overridden
+        // member, as well as the XmlAttributes instance to override it
         // with, to the XmlAttributeOverrides.  
         attrOverrides.Add(typeof(Orders), "Books", attrs);  
   
         // Creates the XmlSerializer using the XmlAttributeOverrides.  
-        XmlSerializer s =   
+        XmlSerializer s =
         new XmlSerializer(typeof(Orders), attrOverrides);  
   
         // Writing the file requires a TextWriter instance.  
@@ -192,11 +192,11 @@ public class Run
   
     public void DeserializeObject(string filename)  
     {  
-        XmlAttributeOverrides attrOverrides =   
+        XmlAttributeOverrides attrOverrides =
             new XmlAttributeOverrides();  
         XmlAttributes attrs = new XmlAttributes();  
   
-        // Creates an XmlElementAttribute to override the   
+        // Creates an XmlElementAttribute to override the
         // field that returns Book objects. The overridden field  
         // returns Expanded objects instead.  
         XmlElementAttribute attr = new XmlElementAttribute();  
@@ -209,35 +209,35 @@ public class Run
         attrOverrides.Add(typeof(Orders), "Books", attrs);  
   
         // Creates the XmlSerializer using the XmlAttributeOverrides.  
-        XmlSerializer s =   
+        XmlSerializer s =
         new XmlSerializer(typeof(Orders), attrOverrides);  
   
         FileStream fs = new FileStream(filename, FileMode.Open);  
         Orders myOrders = (Orders) s.Deserialize(fs);  
         Console.WriteLine("ExpandedBook:");  
   
-        // The difference between deserializing the overridden   
-        // XML document and serializing it is this: To read the derived   
-        // object values, you must declare an object of the derived type   
+        // The difference between deserializing the overridden
+        // XML document and serializing it is this: To read the derived
+        // object values, you must declare an object of the derived type
         // and cast the returned object to it.  
         ExpandedBook expanded;  
-        foreach(Book b in myOrders.Books)   
+        foreach(Book b in myOrders.Books)
         {  
             expanded = (ExpandedBook)b;  
             Console.WriteLine(  
-            expanded.ISBN + "\n" +   
+            expanded.ISBN + "\n" +
             expanded.NewEdition);  
         }  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como: Especifique um nome de elemento alternativo para um Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973306"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240968"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
@@ -32,16 +32,30 @@ No .NET Core, o processo de expor seus objetos .NET ao COM foi significativament
 A primeira etapa é criar a biblioteca.
 
 1. Crie uma nova pasta e, nessa pasta, execute o seguinte comando:
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
-2. Abra `Class1.cs`.
+2. Abra o `Class1.cs`.
 3. Adicione `using System.Runtime.InteropServices;` ao topo do arquivo.
 4. Crie uma interface chamada `IServer`. Por exemplo:
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. Adicione o atributo `[Guid("<IID>")]` à interface, com o GUID da interface COM que você está implementando. Por exemplo, `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`. Observe que esse GUID precisa ser exclusivo, pois é o único identificador dessa interface para COM. No Visual Studio, você pode gerar um GUID acessando Ferramentas > Criar GUID para abrir a ferramenta Criar GUID.
 6. Adicione o atributo `[InterfaceType]` à interface e especifique quais interfaces COM base sua interface deve implementar.

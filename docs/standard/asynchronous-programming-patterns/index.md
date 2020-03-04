@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124263"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160047"
 ---
 # <a name="asynchronous-programming-patterns"></a>Padrões de programação assíncrona
 
@@ -59,13 +59,13 @@ O equivalente do APM poderia expor os métodos `BeginRead` e `EndRead`:
 public class MyClass  
 {  
     public IAsyncResult BeginRead(  
-        byte [] buffer, int offset, int count,   
+        byte [] buffer, int offset, int count,
         AsyncCallback callback, object state);  
     public int EndRead(IAsyncResult asyncResult);  
 }  
 ```  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Assincronia detalhada](../async-in-depth.md)
 - [Programação assíncrona em C#](../../csharp/async.md)

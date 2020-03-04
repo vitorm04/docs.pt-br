@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738775"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160307"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como assinar um assembly com um nome forte
 
@@ -73,9 +73,9 @@ Para saber mais sobre essa ferramenta, veja [Vinculador de Assembly](../../frame
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>Assinar um assembly com um nome forte usando atributos  
   
 1. Adicione o atributo <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> ou <xref:System.Reflection.AssemblyKeyNameAttribute> ao seu arquivo de código-fonte e especifique o nome do arquivo ou contêiner que contém o par de chaves a ser usado ao assinar o assembly com um nome forte.  
-   
+
 2. Compile o arquivo de código-fonte normalmente.  
-   
+
    > [!NOTE]
    > Os compiladores de C# e Visual Basic emitem avisos do compilador (CS1699 e BC41008, respectivamente) quando encontram o atributo <xref:System.Reflection.AssemblyKeyFileAttribute> ou <xref:System.Reflection.AssemblyKeyNameAttribute> no código-fonte. Você pode ignorar os avisos.  
 
@@ -107,7 +107,7 @@ O exemplo a seguir usa C# o compilador e assina o assembly *UtilityLibrary. dll*
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Criar e usar assemblies de nome forte](create-use-strong-named.md)
 - [Como criar um par de chaves pública/privada](create-public-private-key-pair.md)

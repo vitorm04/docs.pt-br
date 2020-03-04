@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c59ae6960a77efd866db4748ca537d9e5218fd1e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451922"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238969"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operador (referência de C#)
 
@@ -25,7 +25,7 @@ Use a palavra-chave `operator` para declarar um operador. Uma declaração de op
 
 O exemplo a seguir define uma estrutura simplificada para representar um número racional. A estrutura sobrecarrega alguns dos [operadores aritméticos](arithmetic-operators.md):
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](~/samples/snippets/csharp/language-reference/operators/OperatorOverloading.cs)]
 
 Você pode estender o exemplo anterior [definindo uma conversão implícita](user-defined-conversion-operators.md) de `int` para `Fraction`. Em seguida, os operadores sobrecarregados seriam compatíveis com os argumentos desses dois tipos. Ou seja, tornaria-se possível adicionar um inteiro a uma fração e obter uma fração como um resultado.
 

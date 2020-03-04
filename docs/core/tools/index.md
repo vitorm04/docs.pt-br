@@ -3,12 +3,12 @@ title: CLI do .NET Core
 titleSuffix: ''
 description: Uma visão geral do CLI do .NET Core e de seus recursos.
 ms.date: 02/13/2020
-ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625976"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156706"
 ---
 # <a name="net-core-cli-overview"></a>Visão geral de CLI do .NET Core
 
@@ -77,7 +77,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Driver
 
-O driver é chamado [dotnet](dotnet.md) e tem duas responsabilidades, executar um [aplicativo dependente da estrutura](../deploying/index.md) ou executar um comando. 
+O driver é chamado [dotnet](dotnet.md) e tem duas responsabilidades, executar um [aplicativo dependente da estrutura](../deploying/index.md) ou executar um comando.
 
 Para executar um aplicativo dependente da estrutura, especifique o aplicativo após o driver, por exemplo, `dotnet /path/to/my_app.dll`. Ao executar o comando na pasta onde está a DLL do aplicativo, basta executar `dotnet my_app.dll`. Se você quiser usar uma versão específica do .NET Core Runtime, use a opção `--fx-version <VERSION>` (consulte a referência [do comando dotnet](dotnet.md)).
 
@@ -89,7 +89,7 @@ dotnet build
 
 Primeiro, o driver determina a versão do SDK a ser usada. Se não houver nenhum arquivo [global. JSON](global-json.md) , a versão mais recente do SDK disponível será usada. Isso pode ser uma versão prévia ou estável, dependendo do que há de mais recente no computador.  Depois que a versão do SDK é determinada, ela executa o comando.
 
-### <a name="command"></a>{1&gt;Comando&lt;1}
+### <a name="command"></a>Comando
 
 O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {command}`.
 
@@ -97,11 +97,11 @@ O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotn
 
 Os argumentos que você passa na linha de comando são aqueles do comando invocado. Por exemplo, quando você executa `dotnet publish my_app.csproj`, o argumento `my_app.csproj` indica o projeto a ser publicado e é passado para o comando `publish`.
 
-### <a name="options"></a>{1&gt;Opções&lt;1}
+### <a name="options"></a>Opções
 
 As opções que você passa na linha de comando são aquelas do comando invocado. Por exemplo, quando você executa `dotnet publish --output /build_output`, a opção `--output` e seu valor são passados para o comando `publish`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [repositório do GitHub do dotnet/SDK](https://github.com/dotnet/sdk/)
 - [Guia de instalação do .NET Core](../install/sdk.md)

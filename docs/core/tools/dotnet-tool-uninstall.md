@@ -2,12 +2,12 @@
 title: Comando dotnet tool uninstall
 description: O comando dotnet ferramenta de desinstalação desinstala a ferramenta .NET Core especificada do seu computador.
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543437"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157039"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramen
 
 - **`-g|--global`**
 
-  Especifica que a ferramenta a ser removida pertence a uma instalação de todos os usuários. Não pode ser combinada com a opção `--tool-path`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local. 
+  Especifica que a ferramenta a ser removida pertence a uma instalação de todos os usuários. Não pode ser combinada com a opção `--tool-path`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local.
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramen
 
 - **`--tool-path <PATH>`**
 
-  Especifica o local onde a ferramenta será desinstalada. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local. 
+  Especifica o local onde a ferramenta será desinstalada. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local.
 
 ## <a name="examples"></a>Exemplos
 

@@ -4,18 +4,18 @@ description: Este tutorial avançado ilustra os cenários em que gerar e consumi
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fab2917a26a1774ad73866fa0448dbf47c94583
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039217"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240087"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: gerar e consumir fluxos assíncronos C# usando o 8,0 e o .net Core 3,0
 
 O C#8.0 apresenta **fluxos assíncronos**, que modelam uma fonte de dados de streaming quando os elementos no fluxo de dados podem ser recuperados ou gerados de forma assíncrona. Os fluxos assíncronos contam com novas interfaces introduzidas no .NET Standard 2.1 e implementadas no .NET Core 3.0 para fornecer um modelo de programação natural para fontes de dados de streaming assíncrono.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -45,7 +45,7 @@ Você pode obter o código para o aplicativo inicial usado neste tutorial em nos
 
 O aplicativo inicial é um aplicativo de console que usa a interface [GitHub GraphQL](https://developer.github.com/v4/) para recuperar os problemas recentes gravados no repositório [dotnet/docs](https://github.com/dotnet/docs). Comece observando o código a seguir para o método `Main` do aplicativo inicial:
 
-[!code-csharp[StarterAppMain](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
 
 Você pode definir uma variável de ambiente `GitHubKey` para o token de acesso pessoal ou pode substituir o último argumento na chamada para `GenEnvVariable` com seu token de acesso pessoal. Não coloque o código de acesso no código-fonte se for salvar a fonte com outras ou coloque-a em um repositório de origem compartilhado.
 
@@ -57,7 +57,7 @@ Ao executar o aplicativo inicial, você poderá realizar algumas observações i
 
 A implementação revela por que você observou o comportamento discutido na seção anterior. Examine o código para `runPagedQueryAsync`:
 
-[!code-csharp[RunPagedQueryStarter](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
 Vamos nos concentrar no algoritmo de paginação e na estrutura assíncrona do código anterior. (Você pode consultar a [documentação do GitHub GraphQL](https://developer.github.com/v4/guides/) para obter detalhes sobre a API GraphQL do github.) O método `runPagedQueryAsync` enumera os problemas do mais recente para o mais antigo. Ele solicita 25 problemas por página e examina a estrutura `pageInfo` da resposta para continuar com a página anterior. Isso segue o suporte de paginação padrão do GraphQL para respostas com várias páginas. A resposta inclui um objeto `pageInfo` que inclui um valor `hasPreviousPages` e um valor `startCursor` usados para solicitar a página anterior. Os problemas estão na matriz `nodes`. O método `runPagedQueryAsync` anexa esses nós em uma matriz que contém todos os resultados de todas as páginas.
 
@@ -108,29 +108,29 @@ Um tipo que pode não ser familiar é <xref:System.Threading.Tasks.ValueTask?dis
 
 Em seguida, converta o método `runPagedQueryAsync` para gerar um fluxo assíncrono. Primeiro, altere a assinatura de `runPagedQueryAsync` para retornar um `IAsyncEnumerable<JToken>` e remova os objetos de progresso e o token de cancelamento da lista de parâmetros, conforme mostrado no código a seguir:
 
-[!code-csharp[FinishedSignature](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
 
 O código inicial processa cada página à medida que a página é recuperada, como mostrado no código a seguir:
 
-[!code-csharp[StarterPaging](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
 
 Substitua essas três linhas pelo seguinte código:
 
-[!code-csharp[FinishedPaging](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
 
 Você também pode remover a declaração de `finalResults` anteriormente nesse método e a instrução `return` que segue o loop que você modificou.
 
 Você terminou as alterações para gerar um fluxo assíncrono. O método concluído deve se parecer com o código a seguir:
 
-[!code-csharp[FinishedGenerate](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
 
 Em seguida, você pode alterar o código que consome a coleção para consumir o fluxo assíncrono. Localize o seguinte código em `Main` que processa a coleção de problemas:
 
-[!code-csharp[EnumerateOldStyle](~/samples/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
 
 Substitua o código pelo seguinte loop `await foreach`:
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
 
 Você pode obter o código do tutorial concluído no repositório [dotnet/samples](https://github.com/dotnet/samples) na pasta [csharp/tutoriais/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished).
 

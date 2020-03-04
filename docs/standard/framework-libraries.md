@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552652"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159228"
 ---
 # <a name="framework-libraries"></a>Bibliotecas do Framework
 
@@ -36,7 +36,7 @@ O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáv
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) – um tipo numérico de 16 bits que representa um caractere Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
 
-## <a name="data-structures"></a>Estruturas de dados
+## <a name="data-structures"></a>estruturas de dados
 
 O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET. Elas são em sua maioria coleções, mas também incluem outros tipos.
 
@@ -52,7 +52,7 @@ O .NET inclui um conjunto de APIs utilitárias que fornecem funcionalidade para 
 
 * <xref:System.Net.Http.HttpClient> – uma API para enviar solicitações HTTP e receber respostas HTTP de um recurso identificado por um URI.
 * <xref:System.Xml.Linq.XDocument> – uma API para carregar e consultar documentos XML com o LINQ.
-* <xref:System.IO.StreamReader> – uma API para ler arquivos. 
+* <xref:System.IO.StreamReader> – uma API para ler arquivos.
 * <xref:System.IO.StreamWriter> – uma API para gravar arquivos.
 
 ## <a name="app-model-apis"></a>APIs do modelo de aplicativo

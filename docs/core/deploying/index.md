@@ -2,18 +2,18 @@
 title: Publicação de aplicativos
 description: Saiba mais sobre as maneiras de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou de plataforma cruzada. Você pode publicar um aplicativo como independente ou dependente do tempo de execução. Cada modo afeta como um usuário executa seu aplicativo.
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448978"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157929"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos do .NET Core
 
 Os aplicativos criados com o .NET Core podem ser publicados em dois modos diferentes, e o modo afeta a forma como um usuário executa seu aplicativo.
 
-Publicar seu aplicativo como independente produz um aplicativo que inclui o *tempo de execução* e as bibliotecas do .NET Core e seu aplicativo e suas dependências. Os usuários do aplicativo podem executá-lo em um computador que não tem o tempo de execução do .NET Core instalado. 
+Publicar seu aplicativo como independente produz um aplicativo que inclui o *tempo de execução* e as bibliotecas do .NET Core e seu aplicativo e suas dependências. Os usuários do aplicativo podem executá-lo em um computador que não tem o tempo de execução do .NET Core instalado.
 
 Publicar seu aplicativo como *dependente de tempo de execução* produz um aplicativo que inclui somente seu aplicativo e suas dependências. Os usuários do aplicativo precisam instalar separadamente o tempo de execução do .NET Core.
 
@@ -132,7 +132,7 @@ Como seu aplicativo inclui o tempo de execução do .NET Core e todas as suas de
   > Você pode reduzir o tamanho da implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)do .NET Core. Isso força seu aplicativo a tratar todas as culturas como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - É mais **difícil atualizar a versão do .NET Core**\
-O tempo de execução do .NET Core (distribuído com seu aplicativo) só pode ser atualizado com a liberação de uma nova versão do seu aplicativo. Você é responsável por fornecer uma versão atualizada do seu aplicativo para patches de segurança para o tempo de execução do .NET Core. 
+O tempo de execução do .NET Core (distribuído com seu aplicativo) só pode ser atualizado com a liberação de uma nova versão do seu aplicativo. Você é responsável por fornecer uma versão atualizada do seu aplicativo para patches de segurança para o tempo de execução do .NET Core.
 
 ### <a name="examples"></a>Exemplos
 

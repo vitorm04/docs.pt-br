@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742576"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156550"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novidades do .NET Core 3.1
 
@@ -36,6 +36,34 @@ O .NET Core 3,1 é uma versão LTS com suporte da Microsoft nos próximos três 
 | .NET Core 2.1 | Fim da vida útil em 21 de agosto de 2021.    |
 
 Para obter mais informações, consulte a [política de suporte do .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost e notarization
+
+*somente macOS*
+
+A partir do notarized SDK do .NET Core 3,1 para macOS, a configuração appHost é desabilitada por padrão. Para obter mais informações, consulte [o notarization Catalina do MacOS e o impacto sobre os downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
+
+Quando a configuração appHost está habilitada, o .NET Core gera um executável de Mach-O nativo quando você cria ou publica. Seu aplicativo é executado no contexto do appHost quando ele é executado do código-fonte com o comando `dotnet run` ou iniciando o executável de Mach-O diretamente.
+
+Sem o appHost, a única maneira como um usuário pode iniciar um aplicativo [dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) é com o comando `dotnet <filename.dll>`. Um appHost é sempre criado quando você publica [seu aplicativo independente](../deploying/index.md#publish-self-contained).
+
+Você pode configurar o appHost no nível do projeto ou alternar o appHost para um comando `dotnet` específico com o parâmetro `-p:UseAppHost`:
+
+- Arquivo de projeto
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Parâmetro de linha de comando
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Para obter mais informações sobre a configuração de `UseAppHost`, consulte [Propriedades do MSBuild para Microsoft. net. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ## <a name="windows-forms"></a>Windows Forms
 
@@ -69,7 +97,7 @@ Para adicionar suporte a C++/CLI no Visual Studio 2019 versão 16,4, instale o [
 - Biblioteca de classes CLR (.NET Core)
 - Projeto CLR vazio (.NET Core)
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 - [Examine as alterações significativas entre o .NET Core 3,0 e 3,1.](../compatibility/3.0-3.1.md)
 - [Examine as alterações significativas no .NET Core 3,1 para aplicativos Windows Forms.](../compatibility/winforms.md#net-core-31)

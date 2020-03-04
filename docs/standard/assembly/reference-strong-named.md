@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127640"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156472"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
 O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
@@ -28,7 +28,7 @@ Uma referência de tempo de compilação ocorre quando você indica ao compilado
   
 ## <a name="make-a-compile-time-reference-to-a-strong-named-assembly"></a>Fazer uma referência de tempo de compilação a um assembly de nome forte  
 
-Em um prompt de comando, digite o seguinte comando:  
+Em um prompt de comando, digite o comando a seguir:  
 
 \<*comando do compilador*>  **/reference:** \<*nome do assembly*>  
 
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 Quando você faz uma referência de tempo de execução para um assembly de nome forte, por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>, você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
 
-\<*nome do assembly*> **,** \<*número da versão*> **,** \<*cultura*> **,** \<*token de chave pública*>  
+\<*nome do assembly*> **,** \<*número de versão*> **,** \<*cultura*>, \<token **de** *chave pública*>  
 
 Por exemplo:  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 Neste exemplo, `PublicKeyToken` é a forma hexadecimal do token de chave pública. Se não houver valor de cultura, use `Culture=neutral`.  
@@ -73,12 +73,12 @@ Dim myDll As Assembly = _
 
 Você pode imprimir o formato hexadecimal da chave pública e do token de chave pública para um assembly específico usando o seguinte comando [Nome Forte (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md):  
 
-**sn -Tp \<** *assembly* **>**  
+**\<de assembly de SN-Tp** **>**  
 
 Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):  
 
-**sn -tp \<** *arquivo de chave pública* **>**  
+**SN-tp \<** *arquivo de chave pública* **>**  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar e usar assemblies de nome forte](create-use-strong-named.md)

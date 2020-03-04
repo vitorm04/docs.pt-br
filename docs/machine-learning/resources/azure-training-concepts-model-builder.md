@@ -2,15 +2,15 @@
 title: Recursos de treinamento do Azure do Model Builder
 description: Um guia de recursos para Azure Machine Learning
 ms.topic: reference
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a0a75283cdc7402c67b6bfb0799189fa34cd39a7
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77675201"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159293"
 ---
 # <a name="model-builder-azure-training-resources"></a>Recursos de treinamento do Azure do Model Builder
 
@@ -52,7 +52,7 @@ Para criar um espaço de trabalho Azure Machine Learning, são necessários os s
 
 ## <a name="training"></a>Treinamento
 
-O treinamento no Azure só está disponível para o cenário de classificação de imagem do construtor de modelos. O algoritmo usado para treinar esses modelos é uma rede neural profunda baseada na arquitetura ResNet50. Durante o treinamento, os recursos necessários para treinar o modelo são provisionados e o modelo é treinado. Esse processo leva vários minutos e a quantidade de tempo pode variar dependendo do tamanho da computação selecionada, bem como da quantidade de dados. Você pode acompanhar o progresso de suas execuções selecionando o link "monitorar a execução atual no portal do Azure" no Visual Studio.
+O treinamento no Azure só está disponível para o cenário de classificação de imagem do construtor de modelos. O algoritmo usado para treinar esses modelos é uma rede neural profunda baseada na arquitetura ResNet50. O processo de treinamento leva algum tempo e a quantidade de tempo pode variar dependendo do tamanho da computação selecionada, bem como da quantidade de dados. Na primeira vez que um modelo é treinado, você pode esperar um tempo de treinamento um pouco maior, pois os recursos precisam ser provisionados. Você pode acompanhar o progresso de suas execuções selecionando o link "monitorar a execução atual no portal do Azure" no Visual Studio.
 
 ## <a name="results"></a>Resultados
 
@@ -64,12 +64,26 @@ Quando o treinamento for concluído, dois projetos serão adicionados à sua sol
   - bestModel. onnx: uma versão serializada do modelo em formato de intercâmbio de rede neural aberto (ONNX). ONNX é um formato de software livre para modelos de ia que oferece suporte à interoperabilidade entre estruturas como ML.NET, PyTorch e TensorFlow.
   - bestModelMap. JSON: uma lista de categorias usadas ao fazer previsões para mapear a saída do modelo para uma categoria de texto.
   - MLModel. zip: uma versão serializada do pipeline de previsão ML.NET que usa a versão serializada do modelo *bestModel. onnx* para fazer previsões e mapeia saídas usando o arquivo `bestModelMap.json`.
-  
+
+## <a name="use-the-machine-learning-model"></a>Usar o modelo de Machine Learning
+
+As classes `ModelInput` e `ModelOutput` no projeto de *modelo* definem o esquema da entrada e saída esperada do modelo, respectivamente.
+
+Em um cenário de classificação de imagem, o `ModelInput` contém duas colunas:
+
+- `ImageSource`: o caminho da cadeia de caracteres do local da imagem.
+- `Label`: a categoria real à qual a imagem pertence. `Label` é usado apenas como uma entrada quando o treinamento e não precisa ser fornecido ao fazer previsões.
+
+O `ModelOutput` contém duas colunas:
+
+- `Prediction`: a categoria prevista da imagem.
+- `Score`: a lista de probabilidades para todas as categorias (a mais alta pertence ao `Prediction`).
+
 ## <a name="troubleshooting"></a>solução de problemas
 
 ### <a name="cannot-create-compute"></a>Não é possível criar computação
 
 Se ocorrer um erro durante a criação de computação Azure Machine Learning, o recurso de computação ainda poderá existir, em um estado com erros. Se você tentar recriar o recurso de computação com o mesmo nome, a operação falhará. Para corrigir esse erro:
 
-* Criar a nova computação com um nome diferente
-* Vá para a portal do Azure e remova o recurso de computação original
+- Criar a nova computação com um nome diferente
+- Vá para a portal do Azure e remova o recurso de computação original

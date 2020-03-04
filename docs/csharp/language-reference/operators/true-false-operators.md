@@ -5,12 +5,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 498f8698401e91845b14ee1dbcda84ba7166bd14
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9924009ef4f0f8c512ea9b3da2b0dedeaa97bb9d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712592"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239014"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operadores true e false (referência do C#)
 
@@ -19,7 +19,7 @@ O operador `true` retorna o valor [bool](../builtin-types/bool.md) `true` para i
 > [!TIP]
 > Use o tipo de `bool?`, se você precisar dar suporte à lógica de três valores (por exemplo, ao trabalhar com bancos de dados que dão suporte a um tipo booliano de três valores). C# fornece os operadores `&` e `|` que suportam a lógica de três valores com os operandos `bool?`. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](boolean-logical-operators.md).
 
-## <a name="boolean-expressions"></a>expressões boolianas
+## <a name="boolean-expressions"></a>Expressões boolianas
 
 Um tipo com o operador `true` definido pode ser o tipo de resultado de uma expressão condicional de controle nas instruções [if](../keywords/if-else.md), [do](../keywords/do.md), [while](../keywords/while.md) e [for](../keywords/for.md) e no [operador condicional `?:`](conditional-operator.md). Para saber mais, confira a seção [Expressões boolianas](~/_csharplang/spec/expressions.md#boolean-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -31,7 +31,7 @@ Se um tipo com os operadores definidos `true` e `false` [sobrecarregar](operator
 
 O exemplo a seguir apresenta o tipo que define os dois operadores, `true` e `false`. O tipo também sobrecarrega os `&` lógicos e de operador de forma que o operador de `&&` também possa ser avaliado para os operandos desse tipo.
 
-[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
+[!code-csharp[true and false operators example](~/samples/snippets/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 Observe o comportamento de curto-circuito do operador `&&`. Quando o método `GetFuelLaunchStatus` retorna `LaunchStatus.Red`, o operando à direita do operador `&&` não é avaliado. Isso ocorre porque `LaunchStatus.Red` é, definitivamente, false. Depois, o resultado do AND lógico não depende do valor do operando à direita. A saída do exemplo é a seguinte:
 
@@ -40,7 +40,7 @@ Getting fuel launch status...
 Wait!
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132894"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159982"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Como cortar e remover caracteres das cadeias de caracteres no .NET
 Se estiver analisando as palavras individuais de uma sentença, você poderá encontrar palavras com espaços em branco em ambas as extremidades da palavra. Nessa situação, você pode usar um dos métodos de corte na classe **System.String** para remover qualquer número de espaços ou de outros caracteres de uma posição especificada na cadeia de caracteres. A tabela a seguir descreve os métodos de corte disponíveis.  
@@ -77,7 +77,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
   
  Esse código exibe `World!` no console.  
   
-## <a name="remove"></a>Remover 
+## <a name="remove"></a>Remover
 
  O método <xref:System.String.Remove%2A?displayProperty=nameWithType> remove um número especificado de caracteres que começam em uma posição especificada em uma cadeia de caracteres existente. Este método assume um índice baseado em zero.  
   
@@ -87,13 +87,13 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>Substituir
+## <a name="replace"></a>Substitua
 
  Você também pode remover um caractere ou uma subcadeia de caracteres especificada de uma cadeia de caracteres chamando o método <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> e especificando uma cadeia de caracteres vazia (<xref:System.String.Empty?displayProperty=nameWithType>) como a substituição. O exemplo a seguir remove todas as vírgulas de uma cadeia de caracteres.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)

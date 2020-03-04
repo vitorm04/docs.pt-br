@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451974"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156576"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novidades do .NET Core 2.2
 
@@ -26,7 +26,7 @@ Esse novo modo de implantação tem a vantagem distinta da criar um executável 
 
 **Manipulação de eventos nos serviços de runtime**
 
-Muitas vezes, convém monitorar o uso dos serviços de runtime do seu aplicativo, como o GC, o JIT e o ThreadPool, para entender como eles afetam seu aplicativo. Em sistemas Windows, isso é comumente feito monitorando os eventos ETW do processo atual. Embora isso continue funcionando bem, nem sempre é possível usar o ETW se você estiver executando em um ambiente de baixo privilégio ou no Linux ou no macOS. 
+Muitas vezes, convém monitorar o uso dos serviços de runtime do seu aplicativo, como o GC, o JIT e o ThreadPool, para entender como eles afetam seu aplicativo. Em sistemas Windows, isso é comumente feito monitorando os eventos ETW do processo atual. Embora isso continue funcionando bem, nem sempre é possível usar o ETW se você estiver executando em um ambiente de baixo privilégio ou no Linux ou no macOS.
 
 A partir do .NET Core 2.2, os eventos de CoreCLR podem ser consumidos usando a classe <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>. Esses eventos descrevem o comportamento desses serviços de runtime como GC, JIT, ThreadPool e interoperabilidade. Esses são os mesmos eventos são expostos como parte do provedor ETW CoreCLR.  Isso permite que os aplicativos consumam esses eventos ou usem um mecanismo de transporte para enviá-los a um serviço de agregação de telemetria. Veja como assinar eventos no exemplo de código a seguir:
 

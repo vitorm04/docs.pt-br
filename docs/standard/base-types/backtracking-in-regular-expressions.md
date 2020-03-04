@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: e7922294db1236e697df80203583b2dbb3e41a01
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124436"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158058"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
 O retrocesso ocorre quando um padrão de expressão regular contém [quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) opcionais ou [constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md) e o mecanismo de expressões regulares retorna a um estado salvo anterior para retomar sua pesquisa por uma correspondência. O retrocesso é indispensável para o poder das expressões regulares, ele permite que as expressões sejam poderosas e flexíveis e correspondam a padrões muito complexos. No entanto, todo esse poder tem um custo. O retrocesso muitas vezes é o fator individual que mais afeta o desempenho do mecanismo de expressões regulares. Felizmente, o desenvolvedor tem controle sobre o comportamento do mecanismo de expressões regulares e como ele usa o retrocesso. Este tópico explica como o retrocesso funciona e como ele pode ser controlado.  
@@ -40,7 +40,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  Embora essa expressão regular inclua o quantificador `{2}`, ela é avaliada de uma maneira linear. O mecanismo de expressões regulares não retrocede porque `{2}` não é um quantificador opcional, ele especifica um número exato e não um número variável de vezes que a subexpressão anterior deve corresponder. Como resultado, o mecanismo de expressões regulares tenta corresponder o padrão da expressão regular com a cadeia de caracteres de entrada conforme mostrado na tabela a seguir.  
   
-|Operação|Posição no padrão|Posição na cadeia de caracteres|Resultado|  
+|Operação|Posição no padrão|Posição na cadeia de caracteres|Result|  
 |---------------|-------------------------|------------------------|------------|  
 |1|e|"needing a reed" (índice 0)|Nenhuma correspondência.|  
 |2|e|"eeding a reed" (índice 1)|Possível correspondência.|  
@@ -62,7 +62,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 |18|\w|"d" (índice 13)|Possível correspondência.|  
 |19|\b|"" (índice 14)|Correspondência.|  
   
- Se um padrão de expressão regular não inclui nenhum quantificador ou construtor de alternância opcional, o número máximo de comparações necessárias para corresponder ao padrão da expressão regular com a cadeia de caracteres de entrada é aproximadamente equivalente ao número de caracteres na cadeia de caracteres de entrada. Nesse caso, o mecanismo de expressões regulares usa 19 comparações para identificar possíveis correspondências nesta cadeia de 13 caracteres.  Em outras palavras, o mecanismo de expressões regulares é executado em tempo quase linear se não contém quantificadores ou construtores de alternância opcionais.   
+ Se um padrão de expressão regular não inclui nenhum quantificador ou construtor de alternância opcional, o número máximo de comparações necessárias para corresponder ao padrão da expressão regular com a cadeia de caracteres de entrada é aproximadamente equivalente ao número de caracteres na cadeia de caracteres de entrada. Nesse caso, o mecanismo de expressões regulares usa 19 comparações para identificar possíveis correspondências nesta cadeia de 13 caracteres.  Em outras palavras, o mecanismo de expressões regulares é executado em tempo quase linear se não contém quantificadores ou construtores de alternância opcionais.
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>Retrocesso com quantificadores opcionais ou construtores de alternância  
  Quando uma expressão regular inclui quantificadores ou construtores de alternância opcionais, a avaliação da cadeia de caracteres de entrada deixa de ser linear. A correspondência de padrões com um mecanismo NFA é orientada pelos elementos de linguagem da expressão regular e não pelos caracteres a serem correspondidos na cadeia de caracteres de entrada. Assim, o mecanismo de expressões regulares tenta fazer a correspondência total de subexpressões opcionais ou alternativas. Quando ele avança para o elemento de linguagem seguinte na subexpressão e a correspondência falha, o mecanismo de expressões regulares pode abandonar uma parte de sua correspondência bem-sucedida e retornar a um estado salvo anteriormente com o objetivo de corresponder a expressão regular inteira com a cadeia de caracteres de entrada. Esse processo de retornar a um estado salvo anterior para localizar uma correspondência é conhecido como o retrocesso.  
@@ -84,7 +84,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
 - Ele compara o “s” no padrão com o “s” após o caractere “e” que já foi correspondido (o primeiro “s” em “expressions”). A correspondência é bem-sucedida.  
   
- Quando o retrocesso é usado, corresponder o padrão de expressão regular com a cadeia de caracteres de entrada, que tem 55 caracteres de comprimento, requer 67 operações de comparação. Geralmente, se um padrão de expressão regular tem um único constructo de alternância ou um único quantificador opcional, o número de operações de comparação necessárias para corresponder ao padrão é mais que duas vezes maior do que o número de caracteres na cadeia de caracteres de entrada.   
+ Quando o retrocesso é usado, corresponder o padrão de expressão regular com a cadeia de caracteres de entrada, que tem 55 caracteres de comprimento, requer 67 operações de comparação. Geralmente, se um padrão de expressão regular tem um único constructo de alternância ou um único quantificador opcional, o número de operações de comparação necessárias para corresponder ao padrão é mais que duas vezes maior do que o número de caracteres na cadeia de caracteres de entrada.
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Retrocesso com quantificadores opcionais aninhados  
  O número de operações de comparação necessárias para corresponder a um padrão de expressão regular pode aumentar exponencialmente se o padrão inclui um grande número de construtores de alternância, se ele inclui construtores de alternância aninhados ou, mais comumente, se ele inclui quantificadores opcionais aninhados. Por exemplo, o padrão de expressão regular `^(a+)+$` foi criado para corresponder a uma cadeia de caracteres completa que contém um ou mais caracteres “a”. O exemplo fornece duas cadeias de caracteres de entrada de comprimento idêntico, mas somente a primeira cadeia de caracteres corresponde ao padrão. A classe <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> é usada para determinar a duração da operação de correspondência.  
@@ -100,7 +100,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
 - Ele retorna à correspondência 3 salva anteriormente. Ele determina que há dois caracteres adicionais “a” a serem atribuídos a um grupo capturado adicional. No entanto, o teste de fim da cadeia de caracteres falha. Ele então retorna para a correspondência 3 e tenta corresponder os dois caracteres adicionais “a” em dois grupos capturados adicionais. No entanto, o teste de fim da cadeia de caracteres continua a falhar. Essas correspondências com falha exigem 12 comparações. Até agora, foi executado um total de 25 comparações.  
   
- A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2<sup>n</sup>) ou uma operação exponencial, em que *n* é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular. 
+ A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2<sup>n</sup>) ou uma operação exponencial, em que *n* é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular.
 
 ## <a name="controlling-backtracking"></a>Controlando o retrocesso  
  O retrocesso permite a você criar expressões regulares avançadas e flexíveis. No entanto, conforme mostrado na seção anterior, esses benefícios podem estar associados a um baixo desempenho inaceitável. Para evitar o retrocesso excessivo, você deve definir um intervalo de tempo limite no qual você criará uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ou chamará um método de correspondência de expressão regular estático. Isso é abordado na próxima seção. Além disso, o .NET dá suporte a três elementos de linguagem de expressão regular que limitam ou suprimem o retrocesso e que dão suporte a expressões regulares complexas com pouca ou nenhuma penalidade de desempenho: [grupos atômicos](#atomic-groups), [asserções lookbehind](#lookbehind-assertions)e [declarações de lookahead](#lookahead-assertions). Para saber mais sobre cada elemento de linguagem, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
@@ -138,7 +138,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O primeiro padrão de expressão regular, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -149,7 +149,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O segundo padrão de expressão regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa uma asserção lookbehind positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -169,7 +169,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O primeiro padrão de expressão regular, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`([A-Z]\w*)+\.`|Corresponde a um caractere alfabético (A-Z) seguido por zero ou mais caracteres de palavra uma ou mais vezes, seguidos de um ponto. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -179,7 +179,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O segundo padrão de expressão regular, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, usa uma asserção lookahead positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`(?=[A-Z])`|Examine além do primeiro caractere e continue a correspondência se ele for alfabético (A-Z). Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -188,7 +188,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 |`[A-Z]\w*`|Corresponder a um caractere alfabético seguido por zero ou mais caracteres de palavra.|  
 |`$`|Finalizar a correspondência no final da cadeia de caracteres de entrada.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

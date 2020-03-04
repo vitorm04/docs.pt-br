@@ -14,17 +14,17 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711461"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159345"
 ---
 # <a name="changing-case-in-net"></a>Como alterar a capitalização no .NET
 Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia de maiúsculas e minúsculas consistente, especialmente se você estiver exibindo-as na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  
   
-|Nome do método|Uso|  
+|Nome do método|Use|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Converte todos os caracteres em uma cadeia de caracteres para maiúsculas.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Converte todos os caracteres em uma cadeia de caracteres para minúsculas.|  
@@ -33,7 +33,7 @@ Se você gravar um aplicativo que aceita a inserção de informações por um us
 > [!WARNING]
 > Observe que os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> e <xref:System.String.ToLower%2A?displayProperty=nameWithType> não devem ser usados para converter cadeias de caracteres a fim de compará-las ou testá-las quanto à igualdade. Confira mais informações na seção [Comparação de cadeias de caracteres em maiúsculas e minúsculas](#Comparing).  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>Comparando cadeias de caracteres em maiúsculas e minúsculas  
  Para comparar cadeias de caracteres em maiúsculas e minúsculas e determinar a ordem delas, chame uma das sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> com um parâmetro `comparisonType` e forneça um valor de <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>, <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> para o argumento `comparisonType`. Para fazer uma comparação usando uma cultura específica que não seja a atual, chame uma sobrecarga do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> com um parâmetro `culture` e um `options` e forneça um valor de <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> como o argumento `options`.  
   
@@ -69,7 +69,7 @@ Se você gravar um aplicativo que aceita a inserção de informações por um us
   
  Embora diferencie a cultura, o método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> não fornece regras linguisticamente corretas de capitalização. No exemplo anterior, o método converte "um conto de duas cidades" para "Um Conto De Duas Cidades". No entanto, a capitalização linguisticamente correta para a cultura en-US seria "Um Conto de Duas Cidades."  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

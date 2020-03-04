@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá a colocar em contêiner um aplicat
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900107"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157824"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: colocar um aplicativo .NET Core em contêineres
 
@@ -21,7 +21,7 @@ Você aprenderá a:
 >
 > - Criar e publicar um aplicativo .NET Core simples
 > - Criar e configurar um Dockerfile para .NET Core
-> - Criar uma imagem do Docker
+> - Compilar uma imagem do docker
 > - Criar e executar um contêiner do Docker
 
 Você aprenderá as tarefas de build e implantação de contêiner do Docker para um aplicativo .NET Core. A *plataforma Docker* usa o *Mecanismo do Docker* para criar e empacotar aplicativos como *imagens do Docker* com agilidade. Essas imagens são gravadas no formato *Dockerfile* para serem implantadas e executadas em um contêiner em camadas.
@@ -29,7 +29,7 @@ Você aprenderá as tarefas de build e implantação de contêiner do Docker par
 > [!TIP]
 > Se você estiver trabalhando com um aplicativo de ASP.NET Core existente, consulte o tutorial [saiba como colocar um aplicativo em contêineres de ASP.NET Core](/aspnet/core/host-and-deploy/docker/building-net-docker-images) .
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Instale os seguintes pré-requisitos:
 
@@ -40,7 +40,7 @@ Se você tiver o .NET Core instalado, use o comando `dotnet --info` para determi
 
 - Uma pasta de trabalho temporária para o *Dockerfile* e o aplicativo de exemplo do .NET Core. Neste tutorial, o nome *Docker – Working* é usado como a pasta de trabalho.
 
-## <a name="create-net-core-app"></a>Criar um aplicativo .NET Core
+## <a name="create-net-core-app"></a>Criar aplicativo .NET Core
 
 Você precisa de um aplicativo .NET Core que o contêiner do Docker irá executar. Abra seu terminal, crie uma pasta de trabalho se você ainda não fez isso e entre nela. Na pasta de trabalho, execute o seguinte comando para criar um novo projeto em um subdiretório chamado *app*:
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 Esse comando compila seu aplicativo para a pasta *publish*. O caminho para a pasta *publish* da pasta de trabalho deve ser `.\app\bin\Release\netcoreapp3.1\publish\`
 
-Na pasta do *aplicativo* , obtenha uma listagem de diretório da pasta de publicação para verificar se o arquivo *MyApp. dll* foi criado. 
+Na pasta do *aplicativo* , obtenha uma listagem de diretório da pasta de publicação para verificar se o arquivo *MyApp. dll* foi criado.
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish
@@ -323,7 +323,7 @@ Counter: 19
 ^C
 ```
 
-### <a name="delete-a-container"></a>Criar um contêiner
+### <a name="delete-a-container"></a>Excluir um contêiner
 
 Para os fins desse artigo, você não quer contêineres sem função alguma. Exclua o contêiner que você criou anteriormente. Se o contêiner estiver em execução, interrompa-o.
 
@@ -370,7 +370,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 O comando `docker run` também permite modificar o comando `ENTRYPOINT` do *Dockerfile* e executar outra coisa, mas apenas para esse contêiner. Por exemplo, use o seguinte comando para executar `bash` ou `cmd.exe`. Edite o comando conforme necessário.
 
-#### <a name="windows"></a>Portal
+#### <a name="windows"></a>Windows
 
 Neste exemplo, `ENTRYPOINT` é alterado para `cmd.exe`. <kbd>CTRL</kbd>+<kbd>C</kbd> é pressionado para encerrar o processo e parar o contêiner.
 
@@ -421,7 +421,7 @@ O Docker tem muitos comandos diferentes que englobam o que você deseja fazer co
 - [docker rmi](https://docs.docker.com/engine/reference/commandline/rmi/)
 - [docker image](https://docs.docker.com/engine/reference/commandline/image/)
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Durante este tutorial, você criou contêineres e imagens. Se quiser, exclua esses recursos. Use os seguintes comandos para:
 
@@ -455,7 +455,7 @@ Use o comando `docker images` para ver uma lista de imagens instaladas.
 > [!NOTE]
 > Arquivos de imagem podem ser grandes. Normalmente, você removeria contêineres temporários criados durante o teste e o desenvolvimento de seu aplicativo. Em geral, mantenha as imagens de base com o runtime instalado se você planeja construir outras imagens com base nesse runtime.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 - [Aprenda a colocar em contêiner um aplicativo ASP.NET Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [Experimentar o Tutorial de Microsserviço do ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708365"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156303"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -124,14 +124,14 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
   
  O Common Language Runtime fornece novos opcodes e prefixos para oferecer suporte a tipos genéricos na Microsoft Intermediate Language (MSIL), incluindo <xref:System.Reflection.Emit.OpCodes.Stelem>, <xref:System.Reflection.Emit.OpCodes.Ldelem>, <xref:System.Reflection.Emit.OpCodes.Unbox_Any>, <xref:System.Reflection.Emit.OpCodes.Constrained> e <xref:System.Reflection.Emit.OpCodes.Readonly>.  
   
- Visual C++, C# e Visual Basic todos oferecem suporte completo para definir e usar genéricos. Para saber mais sobre suporte à linguagem, confira [Tipos genéricos no Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introdução aos genéricos](../../csharp/programming-guide/generics/index.md) e [Visão geral dos genéricos no Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp). 
+ Visual C++, C# e Visual Basic todos oferecem suporte completo para definir e usar genéricos. Para saber mais sobre suporte à linguagem, confira [Tipos genéricos no Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md), [Introdução aos genéricos](../../csharp/programming-guide/generics/index.md) e [Visão geral dos genéricos no Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp).
 
 ## <a name="nested-types-and-generics"></a>Tipos e genéricos aninhados  
  Um tipo que é aninhado em um tipo genérico pode depender dos parâmetros de tipo do tipo genérico de delimitador. O Common Language Runtime considera tipos aninhados como genéricos, mesmo que eles não tenham seus próprios parâmetros de tipo genérico. Quando você cria uma instância de um tipo aninhado, deverá especificar argumentos de tipo para todos os tipos de delimitadores.  
 
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Cargo|Descrição|  
+|Title|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Coleções genéricas no .NET](../../../docs/standard/generics/collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET.|  
 |[Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Descreve delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.|  

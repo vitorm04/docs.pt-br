@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
-ms.date: 05/29/2018
-ms.openlocfilehash: c221e8a34e844d0ad0482d2bb4aa6e1c795555ca
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626054"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157018"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet restore` – Restaura as dependências e as ferramentas de um projeto.
 
@@ -28,7 +28,7 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
 dotnet restore [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
 
@@ -78,7 +78,7 @@ Na maioria dos casos, você não precisa usar explicitamente o comando `dotnet r
 
   Caminho opcional para o arquivo de projeto a ser restaurado.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`--configfile <FILE>`**
 

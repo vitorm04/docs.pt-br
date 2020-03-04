@@ -1,18 +1,18 @@
 ---
-title: 'Como: Determinar se um arquivo é um assembly'
+title: Como determinar se um arquivo é um assembly
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f9bff86ac559e40136ed016b862eef8ba0863ce3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973218"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159501"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Como: Determinar se um arquivo é um assembly
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>Como determinar se um arquivo é um assembly
 
 Um arquivo será um assembly somente se ele for gerenciado e se contiver uma entrada de assembly em seus metadados. Para obter mais informações sobre assemblies e metadados, consulte [manifesto do assembly](manifest.md).  
   
@@ -22,7 +22,7 @@ Um arquivo será um assembly somente se ele for gerenciado e se contiver uma ent
   
 2. Carregue o arquivo que você deseja testar.  
   
-3. Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, confira o tópico [Como: Exibir conteúdo](view-contents.md)do assembly.  
+3. Se o **ILDASM** relatar que o arquivo não é um arquivo PE (executável portátil), então ele não será um assembly. Para obter mais informações, consulte o tópico [How to: View assembly Contents](view-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>Como determinar programaticamente se um arquivo é um assembly  
   
@@ -88,10 +88,10 @@ End Module
 ' Output (with .NET Framework 3.5 installed):  
 '        Yes, the file is an Assembly.  
 ```
- 
+
 O método <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> carrega o arquivo de teste e o libera quando a informação é lida.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.AssemblyName>
 - [Guia de programação em C#](../../csharp/programming-guide/index.md)

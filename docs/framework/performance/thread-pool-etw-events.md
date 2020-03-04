@@ -5,12 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715896"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240487"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
 Esses eventos coletam informações sobre threads de e/s de trabalho.  
@@ -33,7 +33,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Um thread de trabalho é criado.|  
 |`ThreadPoolWorkerThreadStop`|51|Um thread de trabalho é interrompido.|  
@@ -42,7 +42,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|win:UInt32|Número de threads de trabalho disponíveis para processar o trabalho, incluindo aqueles que já estão processando o trabalho.|  
 |RetiredWorkerThreadCount|win:UInt32|Número de threads de trabalho que não estão disponíveis para processar o trabalho, mas que estão sendo mantidos em reserva, caso mais threads sejam necessários posteriormente.|  
@@ -60,15 +60,15 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Descrição|  
+|Evento|ID do evento|DESCRIÇÃO|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Refere-se à coleta de informações para uma amostra; ou seja, uma medida da taxa de transferência com determinado nível de simultaneidade, em um instante.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|Taxa de transferência|win:Double|Número de conclusões por unidade de tempo.|  
+|Produtividade|win:Double|Número de conclusões por unidade de tempo.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
@@ -80,17 +80,17 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Descrição|  
+|Evento|ID do evento|DESCRIÇÃO|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra uma alteração no controle, quando o algoritmo de injeção de threads (escalada) determina se uma alteração no nível de simultaneidade está em vigor.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Taxa de transferência média de uma amostra de medidas.|  
 |NewWorkerThreadCount|win:UInt32|Novo número de threads de trabalho ativos.|  
-|Reason|win:UInt32|Motivo do ajuste.<br /><br /> 0x00 – Aquecimento.<br /><br /> 0x01 – Inicialização.<br /><br /> 0x02 – Movimentação aleatória.<br /><br /> 0x03 – Movimentação ascendente.<br /><br /> 0x04 – Alteração de ponto.<br /><br /> 0x05 – Estabilização.<br /><br /> 0x06 – Privação.<br /><br /> 0x07 – O thread atingiu o tempo limite.|  
+|Motivo|win:UInt32|Motivo do ajuste.<br /><br /> 0x00 – Aquecimento.<br /><br /> 0x01 – Inicialização.<br /><br /> 0x02 – Movimentação aleatória.<br /><br /> 0x03 – Movimentação ascendente.<br /><br /> 0x04 – Alteração de ponto.<br /><br /> 0x05 – Estabilização.<br /><br /> 0x06 – Privação.<br /><br /> 0x07 – O thread atingiu o tempo limite.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -102,22 +102,22 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Descrição|  
+|Evento|ID do evento|DESCRIÇÃO|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Coleta de dados no pool de threads.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|Duração|win:Double|Tempo, em segundos, durante o qual essas estatísticas foram coletadas.|  
-|Taxa de transferência|win:Double|Número médio de conclusões por segundo durante esse intervalo.|  
+|Duration|win:Double|Tempo, em segundos, durante o qual essas estatísticas foram coletadas.|  
+|Produtividade|win:Double|Número médio de conclusões por segundo durante esse intervalo.|  
 |ThreadWave|win:Double|Reservado para uso interno.|  
 |ThroughputWave|win:Double|Reservado para uso interno.|  
 |ThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
 |AverageThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
 |ThroughputRatio|win:Double|A melhoria relativa na taxa de transferência causada por variações na contagem de threads de trabalho ativos durante esse intervalo.|  
-|Confidence|win:Double|Uma medida da validade do campo ThroughputRatio.|  
+|Confiança|win:Double|Uma medida da validade do campo ThroughputRatio.|  
 |NewcontrolSetting|win:Double|O número de threads de trabalho ativos que servirão como a linha de base para variações futuras na contagem de threads ativos.|  
 |NewThreadWaveMagnitude|Win:UInt16|A magnitude das variações futuras na contagem de threads ativos.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
@@ -134,15 +134,15 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Um thread de E/S é criado no pool de threads.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S, incluindo o thread recém-criado.|  
+|Contagem|win:UInt64|Número de threads de E/S, incluindo o thread recém-criado.|  
 |NumRetired|win:UInt64|Número de threads de trabalho desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -155,15 +155,15 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Um thread de E/S se torna um candidato para desativação.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
+|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -176,15 +176,15 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Um thread de E/S é ativado novamente devido à E/S que chega em um período de espera depois que o thread se torna um candidato para desativação.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S no pool de threads, incluindo esse.|  
+|Contagem|win:UInt64|Número de threads de E/S no pool de threads, incluindo esse.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -197,18 +197,18 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|Event|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
-|`IOThreadTerminate`|45|Um thread de E/S é criado no pool de threads.|  
+|`IOThreadTerminate`|45|Um thread de e/s é encerrado no pool de threads.|  
   
  A tabela a seguir mostra os dados do evento.  
   
-|Nome do campo|Tipo de dados|Descrição|  
+|Nome do campo|Tipo de dados|DESCRIÇÃO|  
 |----------------|---------------|-----------------|  
-|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
+|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

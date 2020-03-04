@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960393"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160216"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -36,7 +36,7 @@ ms.locfileid: "74960393"
   
      O Common Language Runtime fornece a infraestrutura que permite que a execução ocorra e os serviços que podem ser usados durante a execução.  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>Escolhendo um compilador  
  Para obter as vantagens fornecidas pelo CLR (Common Language Runtime), você deve usar um ou mais compiladores de linguagem que direcionam o tempo de execução, como Visual Basic, C#, Visual C++, F# ou um dos muitos compiladores de terceiros como um Eiffel, um Perl ou um compilador COBOL.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960393"
   
  [Voltar ao início](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>Compilando para MSIL  
  Quando compila para o código gerenciado, o compilador converte seu código fonte em MSIL, que é um conjunto de instruções independente de CPU que pode ser convertido em código nativo com eficiência. O MSIL inclui instruções para carregamento, armazenamento, inicialização e chamada de métodos em objetos, bem como instruções para operações aritméticas e lógicas, fluxo de controle, acesso direto à memória, tratamento de exceções e outras operações. Para o código ser executado, a MSIL deve ser convertida em código específico de CPU, geralmente por um [Compilador JIT (Just-In-Time)](#compiling_msil_to_native_code). Como o Common Language Runtime fornece um ou mais compiladores JIT para cada arquitetura de computador para a qual dá suporte, o mesmo conjunto de MSIL pode ser compilado por JIT e executado em qualquer arquitetura compatível.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960393"
   
  [Voltar ao início](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>Compilando MSIL para código nativo  
  Para executar o MSIL, ele deve ser compilado no CLR para código nativo da arquitetura do computador de destino. O .NET Framework fornece duas maneiras para realizar essa conversão:  
   
@@ -89,9 +89,9 @@ ms.locfileid: "74960393"
   
  [Voltar ao início](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>Executando o código  
- O CLR fornece a infraestrutura que permite que a execução gerenciada ocorra e os serviços que podem ser usados durante a execução. Para um método ser executado, ele deve ser compilado para o código específico do processador. Cada método para MSIL gerado é compilado por JIT quando é chamado pela primeira vez e executado. Na próxima vez em que o método for executado, o código nativo compilado por JIT existente será executado. O processo de compilação por JIT e a execução do código é repetido até a execução ser concluída.  
+ O CLR fornece a infraestrutura que permite que a runtime gerenciada ocorra e os serviços que podem ser usados durante a runtime. Para um método ser executado, ele deve ser compilado para o código específico do processador. Cada método para MSIL gerado é compilado por JIT quando é chamado pela primeira vez e executado. Na próxima vez em que o método for executado, o código nativo compilado por JIT existente será executado. O processo de compilação por JIT e a execução do código é repetido até a execução ser concluída.  
   
  Durante a execução, o código gerenciado recebe serviços como coleta de lixo, segurança, interoperabilidade com código não gerenciado, suporte à depuração entre linguagens e suporte avançado à implantação e ao controle de versão.  
   
@@ -99,19 +99,19 @@ ms.locfileid: "74960393"
   
 1. Garante que o código seja um código gerenciado válido.  
   
-2. Altera o ponto de entrada na imagem para um ponto de entrada no ambiente de execução.  
+2. Altera o ponto de entrada na imagem para um ponto de entrada no ambiente de runtime.  
   
  No Windows 64 bits, `_CorValidateImage` modifica a imagem que está na memória transformando-a do formato PE32 para o formato PE32+.  
   
  [Voltar ao início](#introduction)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão Geral](../../docs/framework/get-started/overview.md)
+- [Visão geral](../../docs/framework/get-started/overview.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadados e componentes autodescritivos](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Security](../../docs/standard/security/index.md)
+- [Segurança](../../docs/standard/security/index.md)
 - [Interoperação com código não gerenciado](../../docs/framework/interop/index.md)
 - [Implantação](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblies no .NET](assembly/index.md)

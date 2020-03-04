@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634865"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239775"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estruturaC# (referência)
 
 Um *tipo de estrutura* (ou *tipo de struct*) é um tipo de [valor](value-types.md) que pode encapsular dados e funcionalidade relacionada. Você usa a palavra-chave `struct` para definir um tipo de estrutura:
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
 
 Os tipos de estrutura têm *semântica de valor*. Ou seja, uma variável de um tipo de estrutura contém uma instância do tipo. Por padrão, os valores de variáveis são copiados na atribuição, passando um argumento para um método e retornando um resultado de método. No caso de uma variável de tipo de estrutura, uma instância do tipo é copiada. Para obter mais informações, consulte [tipos de valor](value-types.md).
 
@@ -47,7 +47,7 @@ Normalmente, você cria uma instância de um tipo de estrutura chamando um const
 
 Se todos os campos de instância de um tipo de estrutura estiverem acessíveis, você também poderá instanciá-lo sem o operador de `new`. Nesse caso, você deve inicializar todos os campos de instância antes do primeiro uso da instância. O seguinte exemplo mostra como fazer isso:
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
 
 No caso dos tipos de [valor internos](value-types.md#built-in-value-types), use os literais correspondentes para especificar um valor do tipo.
 
@@ -59,7 +59,7 @@ Quando você passa uma variável de tipo de estrutura para um método como um ar
 
 Para qualquer tipo de estrutura, existem conversões [boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md) de e para os tipos <xref:System.ValueType?displayProperty=nameWithType> e <xref:System.Object?displayProperty=nameWithType>. Existem também conversões boxing e unboxing entre um tipo de estrutura e qualquer interface que ela implementa.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [structs](~/_csharplang/spec/structs.md) da [ C# especificação da linguagem](~/_csharplang/spec/introduction.md).
 

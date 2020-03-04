@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950803"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156043"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Práticas recomendadas para a implementação do padrão assíncrono baseado em evento
 O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de expor o comportamento assíncrono nas classes, com evento familiar e semântica de representante. Para implementá-lo, você deve seguir alguns requisitos de comportamento específicos. As seções a seguir descrevem os requisitos e as diretrizes a serem considerados ao implementar uma classe que segue o padrão assíncrono baseado em eventos.  
@@ -27,7 +27,7 @@ O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de ex
 ## <a name="required-behavioral-guarantees"></a>Garantias comportamentais necessárias  
  Se implementar o padrão assíncrono baseado em eventos, você deve fornecer diversas garantias para assegurar que a classe se comportará corretamente e que os clientes da classe podem confiar nesse comportamento.  
   
-### <a name="completion"></a>Conclusão  
+### <a name="completion"></a>Completion  
  Sempre invoque o manipulador de eventos <em>MethodName</em>**Completed** quando houver uma conclusão com êxito, um erro ou um cancelamento. Os aplicativos nunca devem permanecer inativos sem que a conclusão ocorra. Uma exceção a essa regra é se a própria operação assíncrona for projetada para nunca ser concluída.  
   
 ### <a name="completed-event-and-eventargs"></a>Evento e argumentos de eventos concluídos  
@@ -43,14 +43,14 @@ O padrão assíncrono baseado em eventos proporciona uma maneira eficiente de ex
   
 ```csharp  
 // Good design  
-private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, xxxCompletedEventArgs e)
+{
     DemoType result = e.Result;  
 }  
   
 // Bad design  
-private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)   
-{   
+private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventArgs e)
+{
     DemoType result = (DemoType)(e.Result);  
 }  
 ```  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Se sua classe permite fazer diversas invocações ao mesmo tempo, permita que o desenvolvedor acompanhe cada invocação separadamente. Para isso, defina a sobrecarga de <em>MethodName</em>**Async** que usa um parâmetro de estado com valor de objeto, ou ID de tarefa, chamado `userSuppliedState`. Esse parâmetro sempre deve ser o último presente na assinatura do método <em>MethodName</em>**Async**.  
   
-- Se sua classe define a sobrecarga de <em>MethodName</em>**Async** que usa um parâmetro de estado com valor de objeto, ou ID de tarefa, acompanhe o tempo de vida da operação com essa ID de tarefa e informe o manipulador de conclusão. Há algumas classes auxiliares disponíveis para ajudar. Para obter mais informações sobre o gerenciamento de simultaneidade, confira [Como implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+- Se sua classe define a sobrecarga de <em>MethodName</em>**Async** que usa um parâmetro de estado com valor de objeto, ou ID de tarefa, acompanhe o tempo de vida da operação com essa ID de tarefa e informe o manipulador de conclusão. Há algumas classes auxiliares disponíveis para ajudar. Para saber mais sobre o gerenciamento de simultaneidade, veja [Como implementar um componente compatível com o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 - Se sua classe define o método <em>MethodName</em>**Async** sem o parâmetro de estado e não é compatível com diversas invocações ao mesmo tempo, verifique se as tentativas de invocar <em>MethodName</em>**Async** antes da conclusão da invocação anterior de <em>MethodName</em>**Async** gera um <xref:System.InvalidOperationException>.  
   
@@ -85,7 +85,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Verifique se todas as tentativas de acessar o resultado geram um <xref:System.InvalidOperationException>, indicando que a operação foi cancelada. Use o método <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A?displayProperty=nameWithType> para fazer essa verificação.  
   
-### <a name="progress-reporting"></a>Relatórios de progresso  
+### <a name="progress-reporting"></a>Relatório de progresso  
   
 - Permita o uso de relatórios de progresso, se possível. Isso permite que os desenvolvedores melhorem a experiência dos usuários do aplicativo quando eles usam sua classe.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 > Você pode driblar essas regras se quiser explicitamente ir contra a política de modelo de aplicativos, e ainda aproveitar outras vantagens do padrão assíncrono baseado em eventos. Por exemplo, uma classe pode operar no Windows Forms para ter threads livres. Você pode criar uma classe de thread livre, contanto que os desenvolvedores conheçam as restrições inerentes. Os aplicativos de console não sincronizam a execução das chamadas de <xref:System.ComponentModel.AsyncOperation.Post%2A>. Isso pode fazer com que os eventos `ProgressChanged` sejam gerados fora de ordem. Se quiser que as chamadas <xref:System.ComponentModel.AsyncOperation.Post%2A> sejam executadas em série, implemente e instale uma classe <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
- Para obter mais informações de como usar <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager> para habilitar as operações assíncronas, confira [Como implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Para saber mais sobre como usar <xref:System.ComponentModel.AsyncOperation> e <xref:System.ComponentModel.AsyncOperationManager> para habilitar as operações assíncronas, veja [Como implementar um componente compatível com o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Diretrizes  
   
@@ -143,7 +143,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - Ao usar multithreading de qualquer tipo, você pode enfrentar bugs muito sérios e complexos. Veja as [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md) antes de implementar qualquer solução que use multithreading.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ComponentModel.AsyncOperation>
 - <xref:System.ComponentModel.AsyncOperationManager>
@@ -154,5 +154,5 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [EAP (Padrão Assíncrono baseado em Evento)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Decidindo quando implementar o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Práticas recomendadas para a implementação do Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
-- [Como: usar componentes compatíveis com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Como: implementar um componente compatível com o padrão assíncrono baseado em evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [Como usar componentes compatíveis com o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Como implementar um componente compatível com o Padrão Assíncrono baseado em Evento](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123169"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159358"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
 Na programação assíncrona, é comum para uma operação assíncrona, após a conclusão, invocar uma segunda operação e passar dados para ela. Tradicionalmente, continuações foram feitas usando os métodos de retorno de chamada. Na Biblioteca de Tarefas Paralelas, a mesma funcionalidade é fornecida pelas *tarefas de continuação*. Uma tarefa de continuação (também conhecida como uma continuação) é uma tarefa assíncrona invocada por outra tarefa, que é conhecida como a *antecessora*, quando a antecessora termina.  
@@ -42,7 +42,7 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
  Uma continuação é um <xref:System.Threading.Tasks.Task> e não bloqueia o thread em que é iniciada. Chame o método <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> para bloquear até que a tarefa de continuação seja concluída.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Criação de uma continuação para uma única antecessora  
- Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado. 
+ Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado.
 
 > [!NOTE]
 > Os exemplos de C# neste artigo usam o modificador `async` no método `Main`. Este recurso está disponível no C# 7.1 e versões posteriores. As versões anteriores geram [`CS5001`](../../csharp/misc/cs5001.md) ao compilar este código de exemplo. Você precisará definir a versão da linguagem de programação para C# 7.1 ou mais recente. Você pode aprender como configurar a versão da linguagem de programação no artigo sobre [configuração da versão da linguagem](../../csharp/language-reference/configure-language-version.md).
@@ -94,7 +94,7 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
  [!code-csharp[TPL_Continuations#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation1.cs#3)]
  [!code-vb[TPL_Continuations#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation1.vb#3)]  
   
- Você também pode impedir a execução de uma continuação caso sua antecessora seja cancelada sem o fornecimento da continuação de um token de cancelamento especificando a opção <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled?displayProperty=nameWithType> quando a continuação for criada. Este é um exemplo simples.  
+ Você também pode impedir a execução de uma continuação caso sua antecessora seja cancelada sem o fornecimento da continuação de um token de cancelamento especificando a opção <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled?displayProperty=nameWithType> quando a continuação for criada. A seguir há um exemplo simples.  
   
  [!code-csharp[TPL_Continuations#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/cancellation2.cs#8)]
  [!code-vb[TPL_Continuations#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/cancellation2.vb#8)]  
@@ -150,6 +150,6 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
   
 - Se a continuação for uma tarefa filha anexada que foi criada usando a opção <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType>, suas exceções serão propagadas pelo pai para o thread de chamada, como será o caso em qualquer outra filha anexada. Para obter mais informações, consulte [Tarefas filho anexadas e desanexadas](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

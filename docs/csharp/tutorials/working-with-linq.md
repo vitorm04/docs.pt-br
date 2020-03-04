@@ -4,12 +4,12 @@ description: Este tutorial ensina a gerar sequências com LINQ, escrever método
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345619"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240009"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Trabalhar com consulta integrada à linguagem (LINQ)
 
@@ -29,11 +29,11 @@ Para os seus propósitos, vamos examinar rapidamente as sequências de manipula�
 
 Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [download do .NET Core](https://dotnet.microsoft.com/download) . Você pode executar esse aplicativo no Windows, Ubuntu Linux ou OS X ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code](https://code.visualstudio.com/) que é um editor de plataforma cruzada de software livre. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [download do .NET Core](https://dotnet.microsoft.com/download) . Você pode executar esse aplicativo no Windows, Ubuntu Linux ou OS X ou em um contêiner do Docker. Você precisará instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code](https://code.visualstudio.com/) que é um editor de plataforma cruzada de software livre. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-## <a name="create-the-application"></a>{1&gt;Criar o aplicativo&lt;1}
+## <a name="create-the-application"></a>Criar o aplicativo
 
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
@@ -179,7 +179,7 @@ A interface <xref:System.Collections.Generic.IEnumerable%601> tem um método: <x
 
 Aqui está a implementação desse método:
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 Agora que você escreveu esse método, vá até o método `Main` e embaralhe uma vez:
 
@@ -213,7 +213,7 @@ Quantos embaralhamentos são necessários para colocar o baralho em sua ordem or
 
 Escrever um método para determinar se as duas sequências são iguais deve ser simples. É uma estrutura semelhante para o método que você escreveu para embaralhar as cartas. Somente desta vez, em vez de o `yield return`rendimento retornar cada elemento, você comparará os elementos correspondentes de cada sequência. Quando toda a sequência tiver sido enumerada, se os elementos corresponderem, as sequências serão as mesmas:
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 Isso mostra uma segunda linguagem LINQ: métodos de terminal. Eles consideram uma sequência como entrada (ou, neste caso, duas sequências) e retornam um único valor escalar. Ao usar métodos de terminal, eles são sempre o método final em uma cadeia de métodos para uma consulta LINQ, por isso, o nome "terminal".
 
@@ -267,7 +267,7 @@ Lembre-se de que geramos o baralho original usando uma consulta LINQ. Cada embar
 
 Em seu arquivo `Extensions.cs`, digite ou copie o método a seguir. Esse método de extensão cria um novo arquivo chamado `debug.log` em seu diretório do projeto, e registra qual consulta está sendo executada atualmente para o arquivo de log. Este método de extensão pode ser anexado a qualquer consulta para marcar que a consulta foi executada.
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 Você verá um rabisco vermelho sob `File`, que significa que ele não existe. Ele não será compilado, pois o compilador não sabe o que é `File`. Para resolver esse problema, é preciso que você adicione a linha de código a seguir abaixo da primeira linha em `Extensions.cs`:
 
@@ -329,7 +329,7 @@ Observe que você não precisa fazer o registro sempre que acessar uma consulta.
 
 Aqui, você pode melhorar o desempenho do código para reduzir o número de execuções feitas. Uma correção simples possível é *armazenar em cache* os resultados da consulta do LINQ original que constrói o baralho de cartas. Atualmente, você executa as consultas novamente sempre que o loop do-while passa por uma iteração, construindo novamente o baralho de cartas e o embaralhamento de novo todas as vezes. Para armazenar em cache o baralho de cartas, aproveite os métodos LINQ <xref:System.Linq.Enumerable.ToArray%2A> e <xref:System.Linq.Enumerable.ToList%2A>; ao anexá-los às consultas, eles executarão as mesmas ações paras quais foram instruídos, mas agora armazenarão os resultados em uma matriz ou lista, dependendo de qual método você optar por chamar. Anexe o método LINQ <xref:System.Linq.Enumerable.ToArray%2A> às duas consultas e execute o programa novamente:
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 Agora, o embaralhamento externo contém 30 consultas. Execute novamente com o embaralhamento interno e você verá melhorias semelhantes: agora, executa 162 consultas.
 

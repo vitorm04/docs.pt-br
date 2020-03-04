@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696763"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160164"
 ---
 # <a name="best-practices-for-exceptions"></a>Práticas recomendadas para exceções
 
@@ -56,7 +56,7 @@ Uma classe pode fornecer métodos ou propriedades que permitem que você evite f
 
 Outra maneira de evitar exceções é retornar nulo (ou padrão) para casos muito comuns de erro, em vez de gerar uma exceção. Um caso extremamente comum de erro pode ser considerado um fluxo normal de controle. Ao retornar nulo (ou padrão) nesses casos, você minimiza o impacto no desempenho de um aplicativo.
 
-Para tipos de valor, convém considerar o uso de `Nullable<T>` ou padrão como indicador de erro para seu aplicativo. Ao usar `Nullable<Guid>`, `default` se torna `null` em vez de `Guid.Empty`. Algumas vezes, adicionar `Nullable<T>` pode deixar mais claro quando um valor está presente ou ausente. Outras vezes, adicionar `Nullable<T>` pode criar casos extras que não precisam ser verificados e só servem para criar possíveis fontes de erros. 
+Para tipos de valor, convém considerar o uso de `Nullable<T>` ou padrão como indicador de erro para seu aplicativo. Ao usar `Nullable<Guid>`, `default` se torna `null` em vez de `Guid.Empty`. Algumas vezes, adicionar `Nullable<T>` pode deixar mais claro quando um valor está presente ou ausente. Outras vezes, adicionar `Nullable<T>` pode criar casos extras que não precisam ser verificados e só servem para criar possíveis fontes de erros.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Gerar exceções em vez de retornar um código de erro
 
@@ -88,7 +88,7 @@ Use pelo menos três os construtores comuns ao criar suas próprias classes de e
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, que aceita uma mensagem de cadeia de caracteres e a exceção interna.
 
-Para obter um exemplo, consulte [ Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md).
+Para ver um exemplo, veja [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Certifique-se de que os dados de exceção estão disponíveis quando o código é executado remotamente
 
@@ -98,7 +98,7 @@ Por exemplo, em implementações do .NET que dão suporte a Domínios de Aplicat
 
 - Coloque o assembly em uma base de aplicativos comum compartilhada por ambos os domínios de aplicativos.
 
-    \- ou -
+    \- ou –
 
 - Se os domínios não compartilham uma base de aplicativos comum, assine o assembly que contém as informações de exceção com um nome forte e implante o assembly no cache de assembly global.
 
@@ -113,7 +113,7 @@ A mensagem de erro que o usuário recebe é derivada da propriedade <xref:System
 Para aplicativos localizados, você deverá fornecer uma cadeia de caracteres de mensagem localizada para toda exceção que seu aplicativo puder gerar. Use arquivos de recurso para fornecer mensagens de erro localizadas. Para obter informações sobre a localização de aplicativos e a recuperação de cadeias de caracteres localizadas, consulte os seguintes artigos:
 
 - [Como: criar exceções definidas pelo usuário com mensagens de exceção localizadas](how-to-create-localized-exception-messages.md)
-- [Recursos em aplicativos de área de trabalho](../../framework/resources/index.md) 
+- [Recursos em aplicativos de área de trabalho](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Em exceções personalizadas, forneça propriedades adicionais conforme necessário
@@ -214,6 +214,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Exceções](index.md)

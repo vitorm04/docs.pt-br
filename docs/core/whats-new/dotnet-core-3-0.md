@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450974"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156563"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -54,12 +54,40 @@ Se você estiver usando o Visual Studio, precisará do [Visual Studio 2019](http
 
 ### <a name="default-executables"></a>Executáveis por padrão
 
-O .NET Core agora compila [executáveis dependentes de estrutura](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
+O .NET Core agora cria [executáveis dependentes de tempo de execução](../deploying/index.md#publish-runtime-dependent) por padrão. Esse comportamento é novo para aplicativos que usam uma versão do .NET Core instalada globalmente. Anteriormente, apenas [implantações autocontidas](../deploying/index.md#publish-self-contained) produziam um executável.
 
-Durante `dotnet build` ou `dotnet publish`, é criado um executável que corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
+Durante `dotnet build` ou `dotnet publish`, um executável (conhecido como **appHost**) é criado e corresponde ao ambiente e à plataforma do SDK que você está usando. Você pode esperar desses executáveis o mesmo que de outros executáveis nativos, como:
 
 - Você pode clicar duas vezes no arquivo executável.
 - Você pode iniciar o aplicativo diretamente de um prompt de comando, como `myapp.exe` no Windows e `./myapp` no Linux e macOS.
+
+### <a name="macos-apphost-and-notarization"></a>macOS appHost e notarization
+
+*somente macOS*
+
+A partir do notarized SDK do .NET Core 3,0 para macOS, a configuração para produzir um executável padrão (conhecida como appHost) é desabilitada por padrão. Para obter mais informações, consulte [o notarization Catalina do MacOS e o impacto sobre os downloads e projetos do .NET Core](../install/macos-notarization-issues.md).
+
+Quando a configuração appHost está habilitada, o .NET Core gera um executável de Mach-O nativo quando você cria ou publica. Seu aplicativo é executado no contexto do appHost quando ele é executado do código-fonte com o comando `dotnet run` ou iniciando o executável de Mach-O diretamente.
+
+Sem o appHost, a única maneira como um usuário pode iniciar um aplicativo [dependente de tempo de execução](../deploying/index.md#publish-runtime-dependent) é com o comando `dotnet <filename.dll>`. Um appHost é sempre criado quando você publica [seu aplicativo independente](../deploying/index.md#publish-self-contained).
+
+Você pode configurar o appHost no nível do projeto ou alternar o appHost para um comando `dotnet` específico com o parâmetro `-p:UseAppHost`:
+
+- Arquivo de projeto
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- Parâmetro de linha de comando
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+Para obter mais informações sobre a configuração de `UseAppHost`, consulte [Propriedades do MSBuild para Microsoft. net. SDK](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="single-file-executables"></a>Executáveis de arquivo único
 

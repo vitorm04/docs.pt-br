@@ -4,12 +4,12 @@ description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039664"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239996"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -50,7 +50,7 @@ Você sempre pode manipular a assinatura de método antiga para chamar a nova as
 
 Quanto mais fácil for para os usuários atualizarem para a nova versão da sua biblioteca, mais provável será que eles atualizem o quanto antes.
 
-### <a name="application-configuration-file"></a>Arquivo de Configuração do Aplicativo
+### <a name="application-configuration-file"></a>Arquivo de configuração do aplicativo
 
 Como um desenvolvedor de .NET, há uma chance muito grande de você já ter encontrado o [arquivo o `app.config`](../framework/configure-apps/file-schema/index.md) na maioria dos tipos de projeto.
 Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve criar suas bibliotecas de forma que as informações que provavelmente forem alteradas regularmente sejam armazenadas no arquivo de `app.config`, dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas precisará ser substituído pelo novo sem a necessidade de recompilação da biblioteca.
@@ -76,13 +76,13 @@ Você pode usar o arquivo *app. config* para atualizar a versão de uma bibliote
 > Essa abordagem só funcionará se a nova versão do `ReferencedLibrary` for compatível de forma binária com seu aplicativo.
 > Consulte a seção [Compatibilidade com versões anteriores](#backwards-compatibility) acima para ver as alterações importantes ao determinar a compatibilidade.
 
-### <a name="new"></a>new
+### <a name="new"></a>novo
 
 Você usa o modificador `new` para ocultar membros herdados de uma classe base. Essa é uma maneira das classes derivadas responderem a atualizações em classes base.
 
 Veja o exemplo a seguir:
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **Saída**
 
@@ -100,7 +100,7 @@ Quando nenhum modificador `new` é especificado, uma classe derivada ocultará p
 
 O modificador `override` significa que uma implementação derivada estende a implementação de um membro da classe base, em vez de ocultá-lo. O membro da classe base precisa ter o modificador `virtual` aplicado a ele.
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **Saída**
 

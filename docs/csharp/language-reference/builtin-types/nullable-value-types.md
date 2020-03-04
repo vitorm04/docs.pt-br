@@ -4,12 +4,12 @@ description: Saiba mais C# sobre os tipos de valor anulável e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9b7a1e7e639608248b4b465bd440247b4061f52e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093182"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239788"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valores anuláveis (C# referência)
 
@@ -26,7 +26,7 @@ Normalmente, você usa um tipo de valor anulável quando precisa representar o v
 
 Como um tipo de valor é implicitamente conversível para o tipo de valor anulável correspondente, você pode atribuir um valor a uma variável de um tipo de valor anulável, como faria com o tipo de valor subjacente. Você também pode atribuir o valor `null`. Por exemplo:
 
-[!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
+[!code-csharp[declare and assign](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
 O valor padrão de um tipo de valor anulável representa `null`, ou seja, é uma instância cuja propriedade <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> retorna `false`.
 
@@ -34,7 +34,7 @@ O valor padrão de um tipo de valor anulável representa `null`, ou seja, é uma
 
 A partir C# do 7,0, você pode usar o [operador de`is` com um padrão de tipo](../operators/type-testing-and-cast.md#type-testing-with-pattern-matching) para examinar uma instância de um tipo de valor anulável para `null` e recuperar um valor de um tipo subjacente:
 
-[!code-csharp-interactive[use pattern matching](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
+[!code-csharp-interactive[use pattern matching](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#PatternMatching)]
 
 Você sempre pode usar as seguintes propriedades somente leitura para examinar e obter um valor de uma variável de tipo de valor anulável:
 
@@ -44,23 +44,23 @@ Você sempre pode usar as seguintes propriedades somente leitura para examinar e
 
 O exemplo a seguir usa a propriedade `HasValue` para testar se a variável contém um valor antes de exibi-la:
 
-[!code-csharp-interactive[use HasValue](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
+[!code-csharp-interactive[use HasValue](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#HasValue)]
 
 Você também pode comparar uma variável de um tipo de valor anulável com `null` em vez de usar a propriedade `HasValue`, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[use comparison with null](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
+[!code-csharp-interactive[use comparison with null](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#CompareWithNull)]
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>Conversão de um tipo de valor anulável para um tipo subjacente
 
 Se você quiser atribuir um valor de tipo de valor anulável a uma variável de tipo de valor não anulável, talvez seja necessário especificar o valor a ser atribuído no lugar de `null`. Use o [operador de União nulo `??`](../operators/null-coalescing-operator.md) para fazer isso (você também pode usar o método <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType> para a mesma finalidade):
 
-[!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
+[!code-csharp-interactive[?? operator](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
 Se você quiser usar o valor [padrão](default-values.md) do tipo de valor subjacente no lugar de `null`, use o método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Você também pode converter explicitamente um tipo de valor anulável para um tipo não anulável, como mostra o exemplo a seguir:
 
-[!code-csharp[explicit cast](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
+[!code-csharp[explicit cast](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Cast)]
 
 Em tempo de execução, se o valor de um tipo de valor anulável for `null`, a conversão explícita lançará um <xref:System.InvalidOperationException>.
 
@@ -70,7 +70,7 @@ Um tipo de valor não anulável `T` é implicitamente conversível para o tipo d
 
 Os [operadores](../operators/index.md) unários e binários predefinidos ou quaisquer operadores sobrecarregados com suporte de um tipo de valor `T` também são suportados pelo tipo de valor anulável correspondente `T?`. Esses operadores, também conhecidos como *operadores levantados*, produzem `null` se um ou ambos os operandos forem `null`; caso contrário, o operador usa os valores contidos de seus operandos para calcular o resultado. Por exemplo:
 
-[!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
+[!code-csharp[lifted operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
 > Para o tipo de `bool?`, os operadores predefinidos `&` e `|` não seguem as regras descritas nesta seção: o resultado de uma avaliação de operador pode ser não nulo, mesmo que um dos operandos seja `null`. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](../operators/boolean-logical-operators.md).
@@ -80,7 +80,7 @@ Para os [operadores de comparação](../operators/comparison-operators.md) `<`, 
 - Nem maior ou igual a `null`
 - Nem menor que `null`
 
-[!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
+[!code-csharp-interactive[relational and equality operators](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
 Para o [operador de igualdade](../operators/equality-operators.md#equality-operator-) `==`, se ambos os operandos forem `null`, o resultado será `true`, se apenas um dos operandos for `null`, o resultado será `false`; caso contrário, os valores contidos dos operandos serão comparados.
 
@@ -97,27 +97,27 @@ Uma instância de um tipo de valor anulável `T?` é [a](../../programming-guide
 
 Você pode unbox um valor em caixa de um tipo de valor `T` para o tipo de valor anulável correspondente `T?`, como mostra o exemplo a seguir:
 
-[!code-csharp-interactive[boxing and unboxing](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
+[!code-csharp-interactive[boxing and unboxing](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#Boxing)]
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>Como identificar um tipo de valor anulável
 
 O exemplo a seguir mostra como determinar se uma instância de <xref:System.Type?displayProperty=nameWithType> representa um tipo de valor anulável construído, ou seja, o tipo de <xref:System.Nullable%601?displayProperty=nameWithType> com um parâmetro de tipo especificado `T`:
 
-[!code-csharp-interactive[whether Type is nullable](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
+[!code-csharp-interactive[whether Type is nullable](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsTypeNullable)]
 
 Como mostra o exemplo, você usa o operador [typeof](../operators/type-testing-and-cast.md#typeof-operator) para criar uma instância de <xref:System.Type?displayProperty=nameWithType>.
 
 Se você quiser determinar se uma instância é de um tipo de valor anulável, não use o método <xref:System.Object.GetType%2A?displayProperty=nameWithType> para obter uma instância de <xref:System.Type> a ser testada com o código anterior. Quando você chama o método <xref:System.Object.GetType%2A?displayProperty=nameWithType> em uma instância de um tipo de valor anulável, a instância é [encaixada](#boxing-and-unboxing) para <xref:System.Object>. Como Boxing de uma instância não nula de um tipo de valor anulável é equivalente à Boxing de um valor do tipo subjacente, <xref:System.Object.GetType%2A> retorna uma instância de <xref:System.Type> que representa o tipo subjacente de um tipo de valor anulável:
 
-[!code-csharp-interactive[GetType example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
+[!code-csharp-interactive[GetType example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#GetType)]
 
 Além disso, não use o operador [is](../operators/type-testing-and-cast.md#is-operator) para determinar se uma instância é de um tipo de valor anulável. Como mostra o exemplo a seguir, você não pode distinguir tipos de uma instância de tipo de valor anulável e sua instância de tipo subjacente com o operador de `is`:
 
-[!code-csharp-interactive[is operator example](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
+[!code-csharp-interactive[is operator example](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsOperator)]
 
 Você pode usar o código apresentado no exemplo a seguir para determinar se uma instância é de um tipo de valor anulável:
 
-[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
+[!code-csharp-interactive[whether an instance is of a nullable type](~/samples/snippets/csharp/language-reference/builtin-types/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
 > Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anuláveis](../../nullable-references.md).

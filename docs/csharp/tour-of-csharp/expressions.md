@@ -1,16 +1,16 @@
 ---
 title: Expressões C# - um tour pela linguagem C#
 description: Expressões, operandos e operadores são blocos de compilação da linguagem C#
-ms.date: 04/25/2019
+ms.date: 02/27/2020
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4866d12118518827c1f7032ac09933927f0f3c52
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 209b5da01cd7539f2bd97023f40fd149910b6f1d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395670"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159150"
 ---
-# <a name="expressions"></a>{1&gt;Expressões&lt;1}
+# <a name="expressions"></a>Expressões
 
 *Expressões* são construídas a partir de *operandos* e *operadores*. Os operadores de uma expressão indicam quais operações devem ser aplicadas aos operandos. Exemplos de operadores incluem `+`, `-`, `*`, `/` e `new`. Exemplos de operandos incluem literais, campos, variáveis locais e expressões.
 

@@ -1,14 +1,14 @@
 ---
 title: Atributos em C# - um tour pela linguagem C#
 description: Saiba mais sobre a programação declarativa usando atributos no C#
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 79bd14ebd3b25eabc0b9f7ed8f9e9585a050805f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dc5b194c22fc2746ff8b0ab3e550e560a3666bbe
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634649"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159202"
 ---
 # <a name="attributes"></a>Atributos
 
@@ -24,7 +24,7 @@ Todas as classes de atributo derivam da classe base <xref:System.Attribute> forn
 
 Este exemplo anexa um `HelpAttribute` à classe `Widget`. Ele adiciona outro `HelpAttribute` ao método `Display` na classe. Os construtores públicos de uma classe de atributo controlam as informações que devem ser fornecidas quando o atributo é anexado a uma entidade de programa. As informações adicionais podem ser fornecidas ao referenciar propriedades públicas de leitura-gravação da classe de atributo (como a referência anterior à propriedade `Topic`).
 
-Os metadados definidos por atributos podem ser lidos e manipulados em tempo de execução usando reflexão. Quando um atributo específico for solicitado usando esta técnica, o construtor para a classe de atributo será invocado com as informações fornecidas na origem do programa e a instância do atributo resultante será retornada. Se forem fornecidas informações adicionais por meio de propriedades, essas propriedades serão definidas para os valores fornecidos antes que a instância do atributo seja retornada.
+Os metadados definidos por atributos podem ser lidos e manipulados em runtime usando reflexão. Quando um atributo específico for solicitado usando esta técnica, o construtor para a classe de atributo será invocado com as informações fornecidas na origem do programa e a instância do atributo resultante será retornada. Se forem fornecidas informações adicionais por meio de propriedades, essas propriedades serão definidas para os valores fornecidos antes que a instância do atributo seja retornada.
 
 O exemplo de código a seguir demonstra como obter as instâncias `HelpAttribute` associadas à classe `Widget` e seu método `Display`.
 

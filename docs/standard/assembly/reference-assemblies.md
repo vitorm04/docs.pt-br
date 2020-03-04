@@ -4,12 +4,12 @@ description: Saiba mais sobre assemblies de referência, um tipo especial de ass
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089263"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156459"
 ---
 # <a name="reference-assemblies"></a>Assemblies de referência
 
@@ -27,7 +27,7 @@ Para usar determinadas APIs do seu projeto, você deve adicionar referências a 
 
 Os assemblies de referência para as bibliotecas de .NET Framework são distribuídos com pacotes de direcionamento. Você pode obtê-los baixando um instalador autônomo ou selecionando um componente no instalador do Visual Studio. Para obter mais informações, consulte [instalar o .NET Framework para desenvolvedores](../../framework/install/guide-for-developers.md). Para .NET Core e .NET Standard, os assemblies de referência são baixados automaticamente conforme necessário (via NuGet) e referenciados. Para o .NET Core 3,0 e superior, os assemblies de referência para a estrutura principal estão no pacote [Microsoft. NetCore. app. ref](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref) (o pacote [Microsoft. NetCore. app](https://www.nuget.org/packages/Microsoft.NETCore.App) é usado em vez de versões anteriores a 3,0). Para obter mais informações, consulte [pacotes, metapacotes e estruturas](../../core/packages.md) no guia do .NET Core.
 
-Quando você adiciona referências a .NET Framework assemblies no Visual Studio usando a caixa de diálogo **Adicionar referência** , seleciona um assembly na lista e o Visual Studio localiza automaticamente os assemblies de referência que correspondem à versão da estrutura de destino selecionado em seu projeto. O mesmo se aplica à adição de referências diretamente no projeto do MSBuild usando o item de projeto de [referência](/visualstudio/msbuild/common-msbuild-project-items#reference) : você só precisa especificar o nome do assembly, não o caminho completo do arquivo. Quando você adiciona referências a esses assemblies na linha de comando usando a opção `-reference` do compilador ([no C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md) e no [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) ou usando o método <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> na API Roslyn, você deve especificar manualmente os arquivos do assembly de referência para a versão correta da plataforma de destino. .NET Framework arquivos de assembly de referência estão localizados nos *assemblies de referência% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Diretório NETFramework* Para o .NET Core, você pode forçar a operação de publicação a copiar assemblies de referência para sua plataforma de destino no subdiretório *Publish/refs* do diretório de saída definindo a propriedade `PreserveCompilationContext` project como `true`. Em seguida, você pode passar esses arquivos de assembly de referência para o compilador. O uso de `DependencyContext` do pacote [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) pode ajudar a localizar seus caminhos.
+Quando você adiciona referências a .NET Framework assemblies no Visual Studio usando a caixa de diálogo **Adicionar referência** , seleciona um assembly na lista e o Visual Studio localiza automaticamente os assemblies de referência que correspondem à versão da estrutura de destino selecionada em seu projeto. O mesmo se aplica à adição de referências diretamente no projeto do MSBuild usando o item de projeto de [referência](/visualstudio/msbuild/common-msbuild-project-items#reference) : você só precisa especificar o nome do assembly, não o caminho completo do arquivo. Quando você adiciona referências a esses assemblies na linha de comando usando a opção `-reference` do compilador ([no C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md) e no [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)) ou usando o método <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> na API Roslyn, você deve especificar manualmente os arquivos do assembly de referência para a versão correta da plataforma de destino. .NET Framework arquivos de assembly de referência estão localizados nos *assemblies de referência% ProgramFiles (x86)%\\\\Microsoft\\Framework\\. Diretório NETFramework* Para o .NET Core, você pode forçar a operação de publicação a copiar assemblies de referência para sua plataforma de destino no subdiretório *Publish/refs* do diretório de saída definindo a propriedade `PreserveCompilationContext` project como `true`. Em seguida, você pode passar esses arquivos de assembly de referência para o compilador. O uso de `DependencyContext` do pacote [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/) pode ajudar a localizar seus caminhos.
 
 Como não contêm nenhuma implementação, os assemblies de referência não podem ser carregados para execução; tentar fazer isso resulta em um <xref:System.BadImageFormatException?displayProperty=nameWithType>. No entanto, eles ainda podem ser carregados no contexto somente de reflexão (usando o método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType>), se você precisar examinar seu conteúdo.
 
@@ -39,11 +39,11 @@ IDEs e ferramentas de Build também podem aproveitar os assemblies de referênci
 
 Você pode gerar assemblies de referência:
 
-- Em um projeto do MSBuild, usando a [propriedade de projeto `ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
+- Em um projeto do MSBuild, usando a [propriedade de projeto`ProduceReferenceAssembly`](/visualstudio/msbuild/common-msbuild-project-properties).
 - Ao compilar o programa da linha de comando, por opções[C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) de compilador especificar `-refonly` ( / [C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ) ou `-refout` ( / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)).
 - Ao usar a API Roslyn, ao definir <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> como `true` e <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> como `false` em um objeto passado para o método <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType>.
 
-Se você quiser distribuir assemblies de referência com pacotes NuGet, deverá incluí-los no subdiretório *ref \\* no diretório do pacote, em vez de no subdiretório *lib \\* usado para assemblies de implementação.
+Se você quiser distribuir assemblies de referência com pacotes NuGet, deverá incluí-los no subdiretório *ref\\* no diretório do pacote, em vez de no subdiretório *lib\\* usado para assemblies de implementação.
 
 ## <a name="reference-assemblies-structure"></a>Estrutura de assemblies de referência
 
@@ -70,7 +70,7 @@ Os detalhes da estrutura do assembly de referência exata dependem da versão do
 > [!NOTE]
 > As informações nesta seção são aplicáveis somente a assemblies de referência gerados por compiladores do Roslyn C# a partir da versão 7,1 ou Visual Basic versão 15,3. A estrutura de assemblies de referência para as bibliotecas .NET Framework e .NET Core pode ser diferente em alguns detalhes, pois elas usam seu próprio mecanismo de geração de assemblies de referência. Por exemplo, eles podem ter corpos de métodos totalmente vazios em vez do corpo da `throw null`. Mas o princípio geral ainda se aplica: eles não têm implementações de método utilizáveis e contêm metadados somente para membros que têm um impacto observável de uma perspectiva de API pública.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Assemblies no .NET](index.md)
 - [Visão geral do direcionamento de estrutura](/visualstudio/ide/visual-studio-multi-targeting-overview)

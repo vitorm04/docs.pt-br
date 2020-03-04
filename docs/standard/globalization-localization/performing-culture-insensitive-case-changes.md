@@ -15,12 +15,12 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-ms.openlocfilehash: b5289074724e3afd7356599738eeba648f25ca06
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120841"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160125"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Executando alterações de maiúsculas e minúsculas que não levam em conta a cultura
 Os métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> e <xref:System.Char.ToLower%2A?displayProperty=nameWithType> fornecem sobrecargas que não aceitam quaisquer parâmetros. Por padrão, essas sobrecargas sem parâmetros executam alterações de maiúsculas e minúsculas com base no valor do <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Isso produz resultados sensíveis a maiúsculas e minúsculas que podem variar de acordo com a cultura. Para deixar claro se você deseja que as mudanças de maiúsculas e minúsculas sejam sensíveis à cultura ou não sejam insensíveis à cultura, você deve usar as sobrecargas desses métodos que exigem que você especifique explicitamente um parâmetro `culture`. Para mudanças de maiúsculas e minúsculas sensíveis à cultura, especifique `CultureInfo.CurrentCulture` para o parâmetro `culture`. Para mudanças de maiúsculas e minúsculas insensíveis à cultura, especifique `CultureInfo.InvariantCulture` para o parâmetro `culture`.  
@@ -41,7 +41,7 @@ End Function
 ```  
   
 ```csharp  
-static object LookupKey(string key)   
+static object LookupKey(string key)
 {  
     return internalHashtable[key.ToLower()];  
 }  
@@ -56,7 +56,7 @@ End Function
 ```  
   
 ```csharp  
-static object LookupKey(string key)   
+static object LookupKey(string key)
 {  
     return internalHashtable[key.ToLower(CultureInfo.InvariantCulture)];  
 }  
@@ -65,7 +65,7 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Usando os Métodos Char.ToUpper e Char.ToLower  
  Embora os métodos `Char.ToUpper` e `Char.ToLower` tenham as mesmas características que os métodos `String.ToUpper` e `String.ToLower`, as únicas culturas afetadas são turca (Turquia) e azerbaijana (Latino, Azerbaijão). Essas são apenas duas culturas com diferenças de maiúsculas e minúsculas de um único caractere. Para obter mais detalhes sobre este mapeamento de maiúsculas e minúsculas único, confira a seção "Maiúsculas e minúsculas" no tópico da classe <xref:System.String>. Para clareza de código e para garantir resultados consistentes, recomenda-se que você sempre use as sobrecargas desses métodos que permitem que você especifique explicitamente um parâmetro `culture`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>

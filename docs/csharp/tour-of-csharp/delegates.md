@@ -1,18 +1,18 @@
 ---
 title: Delegados em C# - um tour pela linguagem C#
 description: Aprenda a associação tardia com delegados C#
-ms.date: 08/10/2016
+ms.date: 02/27/2020
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 317d3ee6fb1350824fa9b3b4d0e3e851780ce4d4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1740ddc65dcb0ee8775f4cbaa8356293ea55fae
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346880"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159163"
 ---
-# <a name="delegates"></a>Delegados
+# <a name="delegates"></a>Delega
 
-Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são parecidos com o conceito de ponteiros de função em outras linguagens, mas ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
+Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Delegados são semelhantes ao conceito de ponteiros de função encontrados em algumas outras linguagens. Diferentemente de ponteiros de função, os delegados são orientados a objeto e são de tipo seguro.
 
 O exemplo a seguir declara e usa um tipo delegado chamado `Function`.
 
@@ -22,11 +22,11 @@ Uma instância do tipo delegado `Function` pode fazer referência a qualquer mé
 
 Um delegado pode referenciar um método estático (como `Square` ou `Math.Sin` no exemplo anterior) ou um método de instância (como `m.Multiply` no exemplo anterior). Um delegado que referencia um método de instância também referencia um objeto específico, e quando o método de instância é invocado por meio do delegado, esse objeto se torna `this` na invocação.
 
-Os delegados podem ser criados usando funções anônimas, que são "métodos embutidos" criados dinamicamente. As funções anônimas podem ver as variáveis locais dos métodos ao redor. Assim, o exemplo de multiplicador acima pode ser gravado mais facilmente sem usar uma classe de multiplicador:
+Os delegados também podem ser criados usando funções anônimas, que são "métodos embutidos" que são criados quando declarados. As funções anônimas podem ver as variáveis locais dos métodos ao redor. O exemplo a seguir não cria uma classe:
 
 [!code-csharp[LambdaExample](../../../samples/snippets/csharp/tour/delegates/Program.cs#L44-L44)]
 
-Uma propriedade interessante e útil de um delegado é que ele não sabe ou se importa com a classe do método que referencia; o que importa é que o método referenciado tem os mesmos parâmetros e o tipo de retorno do delegado.
+Um delegado não conhece ou se preocupa com a classe do método referenciado; Tudo o que importa é que o método referenciado tem os mesmos parâmetros e tipo de retorno como o delegado.
 
 >[!div class="step-by-step"]
 >[Anterior](interfaces.md)

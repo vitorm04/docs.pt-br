@@ -2,12 +2,12 @@
 title: Como personalizar o marshaling de parâmetro – .NET
 description: Saiba como personalizar a forma como o .NET realiza marshalling em seus parâmetros para uma representação nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159605"
 ---
 # <a name="customizing-parameter-marshaling"></a>Como personalizar o marshaling de parâmetro
 
@@ -21,10 +21,10 @@ O .NET tem uma variedade de formatos para a realização de marshaling de cadeia
 
 Cada um desses formatos passa uma cadeia de caracteres terminada em nulo para o código nativo. Eles diferem pela codificação da cadeia de caracteres nativa.
 
-| Valor `System.Runtime.InteropServices.UnmanagedType` | Encoding |
+| `System.Runtime.InteropServices.UnmanagedType` valor | Codificação |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
-| LPUTF8Str | UTF-8 | 
+| LPUTF8Str | UTF-8 |
 | LPWStr | UTF-16 |
 | LPTStr | UTF-16 |
 

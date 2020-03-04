@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: df167e0559c841510df17ba39801e43315036241
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714245"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240929"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e MSTest
 
@@ -91,7 +91,7 @@ Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../too
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
-Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. Remova *UnitTest1.vb* do diretório *PrimeService.Tests* e crie um novo arquivo do Visual Basic chamado *PrimeService_IsPrimeShould.VB*. Adicione o seguinte código:
+Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. Remova *UnitTest1.vb* do diretório *PrimeService.Tests* e crie um novo arquivo do Visual Basic chamado *PrimeService_IsPrimeShould.VB*. Adicione os códigos a seguir:
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
@@ -133,7 +133,7 @@ Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alg
 
 Em vez de criar novos testes, aplique esses dois atributos para criar uma única teoria. A teoria é um método que testa vários valores inferiores a dois, que é o número primo mais baixo:
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-mstest/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 Execute `dotnet test`, e dois desses testes falham. Para fazer todos os testes serem aprovados, altere a cláusula `if` no início do método:
 

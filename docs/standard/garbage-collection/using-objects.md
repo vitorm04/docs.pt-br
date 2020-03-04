@@ -10,16 +10,16 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 979cd782e5ab094b6dea010fc7a0b27caa390e67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141348"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160269"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Usando objetos que implementam IDisposable
 
-O coletor de lixo do Common Language Runtime recupera a memória usada por objetos gerenciados, mas os tipos que usam recursos não gerenciados implementam a interface <xref:System.IDisposable> para permitir que a memória alocada para esses recursos não gerenciados seja recuperada. Após terminar de usar um objeto que implementa <xref:System.IDisposable>, você deverá chamar a implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do objeto. Você pode fazer isso de duas maneiras:  
+O coletor de lixo do Common Language Runtime recupera a memória usada por objetos gerenciados, mas os tipos que usam recursos não gerenciados implementam a interface <xref:System.IDisposable> para permitir que a memória alocada para esses recursos não gerenciados seja recuperada. Após terminar de usar um objeto que implementa <xref:System.IDisposable>, você deverá chamar a implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do objeto. É possível fazer isso de duas formas:  
   
 - Com a instrução `using` do C# ou a instrução `Using` do Visual Basic.  
   
@@ -56,9 +56,9 @@ O exemplo a seguir é semelhante ao exemplo anterior, exceto que ele usa um bloc
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-Você poderá seguir esse padrão básico se optar por implementar ou precisar implementar um bloco `try/finally`, pois a linguagem de programação não oferece suporte a uma instrução `using`, mas permite chamadas diretas para o método <xref:System.IDisposable.Dispose%2A>. 
+Você poderá seguir esse padrão básico se optar por implementar ou precisar implementar um bloco `try/finally`, pois a linguagem de programação não oferece suporte a uma instrução `using`, mas permite chamadas diretas para o método <xref:System.IDisposable.Dispose%2A>.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Limpando recursos não gerenciados](../../../docs/standard/garbage-collection/unmanaged.md)
 - [Instrução using (Referência de C#)](../../csharp/language-reference/keywords/using-statement.md)

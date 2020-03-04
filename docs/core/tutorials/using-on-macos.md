@@ -2,12 +2,12 @@
 title: 'Tutorial: criar uma solução do .NET Core no macOS usando Visual Studio Code'
 description: Este documento fornece as etapas e o fluxo de trabalho para criar uma Solução do .NET Core usando o Visual Studio Code.
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741544"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156589"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>Tutorial: criar uma solução do .NET Core no macOS usando Visual Studio Code
 
@@ -16,9 +16,9 @@ Este documento fornece as etapas e o fluxo de trabalho para criar uma solução 
 > [!NOTE]
 > Esse artigo usa o [Visual Studio Code](https://code.visualstudio.com) no macOS.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-Instalar o [SDK do .NET Core](https://dotnet.microsoft.com/download). O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do runtime.
+Instale o [SDK do .NET Core](https://dotnet.microsoft.com/download). O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do runtime.
 
 Instale o [Visual Studio Code](https://code.visualstudio.com). No decorrer deste artigo, você vai instalar as extensões do Visual Studio Code que melhoram a experiência de desenvolvimento do .NET Core.
 
@@ -80,7 +80,7 @@ Execute [`dotnet restore`](../tools/dotnet-restore.md), ([veja observação](#do
 dotnet restore
 ```
 
-Na pasta *library*, renomeie o arquivo *Class1.cs* como *Thing.cs*. Substitua o código pelo seguinte:
+Na pasta *library*, renomeie o arquivo *Class1.cs* como *Thing.cs*. Substitua o código pelo seguinte código:
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -155,7 +155,7 @@ Observe que você declara que o valor 42 não é igual a 19+23 (ou 42) quando vo
 Na pasta *golden*, execute os seguintes comandos:
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 

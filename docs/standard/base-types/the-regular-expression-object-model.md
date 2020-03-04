@@ -35,15 +35,15 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: e637b2527ce0f7e1b48b713549cb87b2c13881db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124807"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159995"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
-<a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seguintes seções:  
+<a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seções a seguir:  
   
 - [O mecanismo de expressões regulares](#Engine)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "73124807"
   
 - [A captura individual](#the_individual_capture)  
   
-<a name="Engine"></a>   
+<a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>O mecanismo da expressão regular  
  O mecanismo de expressões regulares no .NET é representada pela classe <xref:System.Text.RegularExpressions.Regex>. O mecanismo de expressões regulares é responsável por analisar e compilar uma expressão regular e realizar operações que correspondem ao padrão da expressão regular com uma cadeia de caracteres de entrada. O mecanismo é o componente central no modelo do objeto da expressão regular do .NET.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73124807"
   
  O padrão da expressão regular `^\d{3}-\d{2}-\d{4}$` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Corresponder ao início da cadeia de caracteres de entrada.|  
 |`\d{3}`|Corresponder a três dígitos decimais.|  
@@ -107,7 +107,7 @@ ms.locfileid: "73124807"
   
  O padrão da expressão regular `\b(\w+)\W+(\1)\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -129,7 +129,7 @@ ms.locfileid: "73124807"
   
  O padrão da expressão regular `\b\d+\.\d{2}\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
@@ -152,18 +152,18 @@ ms.locfileid: "73124807"
   
  O padrão da expressão regular `\b\d{1,2}\.\s` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d{1,2}`|Corresponder a um ou dois dígitos decimais.|  
 |`\.`|Corresponde a um ponto final.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
   
-<a name="Match_and_MCollection"></a>   
+<a name="Match_and_MCollection"></a>
 ## <a name="the-matchcollection-and-match-objects"></a>A coleção de correspondência e os objetos de correspondência  
  Métodos regex retornam dois objetos que fazem parte do modelos de objeto de expressão regular: os objetos <xref:System.Text.RegularExpressions.MatchCollection> e <xref:System.Text.RegularExpressions.Match>.  
   
-<a name="the_match_collection"></a>   
+<a name="the_match_collection"></a>
 ### <a name="the-match-collection"></a>A coleção de correspondência  
  O método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> que contém objetos <xref:System.Text.RegularExpressions.Match> que representam todas as correspondências localizadas pelo mecanismo de expressão regular na ordem em que elas ocorrem na cadeia de caracteres de entrada. Se não houver correspondências, o método retorna um objeto <xref:System.Text.RegularExpressions.MatchCollection> sem membros. A propriedade <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> permite que você acesse membros individuais da coleção por índice, de zero a um valor uma vez menor do que o valor da propriedade <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> é o indexador da coleção (no C#) e a propriedade padrão (no Visual Basic).  
   
@@ -174,7 +174,7 @@ ms.locfileid: "73124807"
  [!code-csharp[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/matchcollection1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.ObjectModel#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/matchcollection1.vb#6)]  
   
-<a name="the_match"></a>   
+<a name="the_match"></a>
 ### <a name="the-match"></a>A correspondência  
  A classe <xref:System.Text.RegularExpressions.Match> representa o resultado de uma única correspondência de expressão regular. É possível acessar objetos <xref:System.Text.RegularExpressions.Match> de duas formas:  
   
@@ -215,7 +215,7 @@ ms.locfileid: "73124807"
   
  O padrão de expressão regular `\b\d+(,\d{3})*\.\d{2}\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
@@ -228,7 +228,7 @@ ms.locfileid: "73124807"
   
  [Voltar ao início](#introduction)  
   
-<a name="GroupCollection"></a>   
+<a name="GroupCollection"></a>
 ## <a name="the-group-collection"></a>A coleção de grupo  
  A propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> retorna um objeto <xref:System.Text.RegularExpressions.GroupCollection> que contém <xref:System.Text.RegularExpressions.Group> objetos que representam grupos capturados em uma única correspondência. O primeiro objeto <xref:System.Text.RegularExpressions.Group> na coleção (no índice 0) representa a correspondência inteira. Cada objeto que se segue representa os resultados de um único grupo de captura.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "73124807"
   
  O padrão de expressão regular `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
 |`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -259,7 +259,7 @@ ms.locfileid: "73124807"
   
  [Voltar ao início](#introduction)  
   
-<a name="the_captured_group"></a>   
+<a name="the_captured_group"></a>
 ## <a name="the-captured-group"></a>O grupo capturado  
  A classe <xref:System.Text.RegularExpressions.Group> representa o resultado de um único grupo de captura. Objetos de grupo que representam os grupos de captura definidos em uma expressão regular são retornados pela propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> do objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. A propriedade <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> é o indexador (no C#) e a propriedade padrão (no Visual Basic) da classe <xref:System.Text.RegularExpressions.Group>. Você também pode recuperar membros individuais iterando a coleção usando o constructo `foreach` ou `For Each`. Para ver um exemplo, consulte a seção anterior.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "73124807"
   
  O padrão de expressão regular `^(?<name>\w+):(?<value>\w+)` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
 |`(?<name>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `name`.|  
@@ -294,7 +294,7 @@ ms.locfileid: "73124807"
     |`Value`|<xref:System.String.Empty?displayProperty=nameWithType>|  
     |`Length`|0|  
   
-     O exemplo a seguir fornece uma ilustração. No padrão de expressão regular `aaa(bbb)*ccc`, o primeiro grupo de captura (a subcadeia de caracteres “bbb”) pode ser correspondido a zero ou mais vezes. Como a cadeia de caracteres de entrada “aaaccc” corresponde ao padrão, o grupo de captura não tem correspondência.  
+     O exemplo a seguir ilustra esse cenário. No padrão de expressão regular `aaa(bbb)*ccc`, o primeiro grupo de captura (a subcadeia de caracteres “bbb”) pode ser correspondido a zero ou mais vezes. Como a cadeia de caracteres de entrada “aaaccc” corresponde ao padrão, o grupo de captura não tem correspondência.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
@@ -306,7 +306,7 @@ ms.locfileid: "73124807"
   
  [Voltar ao início](#introduction)  
   
-<a name="CaptureCollection"></a>   
+<a name="CaptureCollection"></a>
 ## <a name="the-capture-collection"></a>A coleção de captura  
  O objeto <xref:System.Text.RegularExpressions.Group> contém informações somente sobre a última captura. No entanto, o conjunto inteiro de capturas realizadas por um grupo de captura ainda estará disponível do objeto <xref:System.Text.RegularExpressions.CaptureCollection> que é retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Cada membro da coleção é um objeto <xref:System.Text.RegularExpressions.Capture> que representa uma captura realizada por esse grupo de captura, na ordem na qual elas foram capturadas (e, portanto, na ordem em que as cadeias capturadas foram correspondidas da esquerda para a direita na cadeia de caracteres de entrada). Você pode recuperar objetos <xref:System.Text.RegularExpressions.Capture> individuais na coleção de duas formas:  
   
@@ -328,7 +328,7 @@ ms.locfileid: "73124807"
   
  [Voltar ao início](#introduction)  
   
-<a name="the_individual_capture"></a>   
+<a name="the_individual_capture"></a>
 ## <a name="the-individual-capture"></a>A captura individual  
  A classe <xref:System.Text.RegularExpressions.Capture> contém os resultados de uma única captura de subexpressão. A propriedade <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType> contém o texto correspondido, e a propriedade <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> indica a posição baseada em zero na cadeia de caracteres de entrada na qual a subcadeia de caracteres correspondida começa.  
   
@@ -339,7 +339,7 @@ ms.locfileid: "73124807"
   
  A expressão regular é definida como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\w+`|Corresponde a um ou mais caracteres de palavra.|  
 |`(\s\w+)*`|Corresponder a zero ou mais ocorrências de um caractere de espaço em branco seguido por um ou mais caracteres de palavra. Este padrão corresponde a nomes de cidade com várias palavras. Este é o terceiro grupo de captura.|  
@@ -349,7 +349,7 @@ ms.locfileid: "73124807"
 |`;`|Corresponder a um ponto e vírgula.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Corresponder ao padrão de uma palavra seguida por qualquer palavra adicional seguida por uma vírgula, um ou mais dígitos e um ponto e vírgula, uma ou mais vezes. Este é o primeiro grupo de captura.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.RegularExpressions>
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

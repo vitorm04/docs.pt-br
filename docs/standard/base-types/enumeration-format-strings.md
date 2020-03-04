@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348263"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155952"
 ---
 # <a name="enumeration-format-strings"></a>Cadeias de caracteres de formato de enumeração
 
@@ -48,7 +48,7 @@ Exibem a entrada de enumeração como um valor inteiro na representação mais c
 
 Exibe a entrada de enumeração como um valor hexadecimal. O valor é representado com zeros à esquerda conforme o necessário, para garantir que a cadeia de caracteres resultante tenha dois caracteres para cada byte no tipo de enumeração [tipo numérico subjacente](xref:System.Enum.GetUnderlyingType%2A). O exemplo a seguir ilustra o especificador de formato X. No exemplo, o tipo subjacente de <xref:System.ConsoleColor> e <xref:System.IO.FileAttributes> é <xref:System.Int32>, ou um inteiro de 32 bits (ou 4 bytes), que produz uma cadeia de caracteres resultante de oito caracteres.
 
-[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
+[!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Exemplo
@@ -68,6 +68,6 @@ O método `Color.ToString(System.String)` pode, então, ser usado para exibir o 
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Formatando Tipos](formatting-types.md)

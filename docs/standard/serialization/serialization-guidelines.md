@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 067f32a026e3354e6c4256602ed17fd7d7bde0b8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645047"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159787"
 ---
 # <a name="serialization-guidelines"></a>Diretrizes de serialização
 Este documento lista as diretrizes a serem consideradas na criação de uma API a ser serializado.  
@@ -26,7 +26,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
 |----------------|----------------------|-----------|  
 |Serialização do contrato de dados|<xref:System.Runtime.Serialization.DataContractAttribute><br /><br /> <xref:System.Runtime.Serialization.DataMemberAttribute><br /><br /> <xref:System.Runtime.Serialization.DataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.NetDataContractSerializer><br /><br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer><br /><br /> <xref:System.Runtime.Serialization.ISerializable>|Persistência geral<br /><br /> Serviços Web<br /><br /> JSON|  
 |Serialização XML|<xref:System.Xml.Serialization.XmlSerializer>|Formato XML <br />com controle total|  
-|Tempo de execução - serialização (binário e SOAP)|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Comunicação remota .NET|  
+|Runtime - serialização (binário e SOAP)|<xref:System.SerializableAttribute><br /><br /> <xref:System.Runtime.Serialization.ISerializable><br /><br /> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter><br /><br /> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>|Comunicação remota .NET|  
   
  Ao criar novos tipos, você deverá decidir a quais dessas tecnologias, se houver alguma, esses tipos precisam oferecer suporte. As diretrizes a seguir descrevem como fazer essa escolha e como fornecer esse suporte. Essas diretrizes não foram criadas para ajudar você a escolher qual tecnologia de serialização usará na implementação do aplicativo ou da biblioteca. Elas não estão diretamente relacionadas ao design da API e, portanto, não estão dentro do escopo deste tópico.  
   
@@ -45,9 +45,9 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
   
      Isso talvez seja necessário em alguns cenários de interoperabilidade no qual você precise usar uma construção XML para a qual não haja suporte na serialização do contrato de dados, por exemplo, para gerar atributos XML.  
   
-- CONSIDERE dar suporte à *serialização em tempo de execução* se as instâncias do tipo precisarem ultrapassar os limites da comunicação remota .NET.  
+- CONSIDERE dar suporte à *serialização em runtime* se as instâncias do tipo precisarem ultrapassar os limites da comunicação remota .NET.  
   
-- EVITE o suporte à serialização em tempo de execução ou à serialização XML apenas por motivos gerais de persistência. Prefira a serialização do contrato de dados em vez disso  
+- EVITE o suporte à serialização em runtime ou à serialização XML apenas por motivos gerais de persistência. Prefira a serialização do contrato de dados em vez disso  
   
 #### <a name="supporting-data-contract-serialization"></a>Dando suporte à serialização do contrato de dados  
  Os tipos podem dar suporte à serialização do contrato de dados aplicando o <xref:System.Runtime.Serialization.DataContractAttribute> ao tipo e o <xref:System.Runtime.Serialization.DataMemberAttribute> aos membros (campos e propriedades) do tipo.  
@@ -69,8 +69,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos da família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>,    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute> e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> é o atributo de retorno de chamada mais usado. Os outros atributos na família são <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute>e <xref:System.Runtime.Serialization.OnSerializedAttribute>. Eles podem ser usados para marcar os retornos de chamada que são executados antes de desserialização, antes da serialização e, por fim, após a serialização, respectivamente.  
   
 4. CONSIDERE o uso do <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar os tipos concretos que devem ser usados ao desserializar um grafo de objeto complexo.  
   
@@ -79,7 +78,7 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
   
-     Nos casos em que a lista de tipos conhecidos não é conhecida estaticamente (quando a classe **Person** é compilada), **KnownTypeAttribute** também pode apontar para um método que retorna uma lista de tipos conhecidos em tempo de execução.  
+     Nos casos em que a lista de tipos conhecidos não é conhecida estaticamente (quando a classe **Person** é compilada), **KnownTypeAttribute** também pode apontar para um método que retorna uma lista de tipos conhecidos em runtime.  
   
 5. Considere a compatibilidade com versões anteriores e posteriores ao criar ou modificar tipos serializáveis.  
   
@@ -104,19 +103,19 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos da interface <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permitem que você controle totalmente o fluxo XML serializável. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
+2. CONSIDERE implementar a interface <xref:System.Xml.Serialization.IXmlSerializable> se quiser ainda mais controle sobre o formato do XML serializado do que o que é oferecido aplicando os atributos de Serialização XML. Dois métodos da interface, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> e <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permitem controlar totalmente o fluxo XML serializado. Você também pode controlar o esquema XML gerado para o tipo aplicando o atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.  
   
-#### <a name="supporting-runtime-serialization"></a>Suporte à serialização em tempo de execução  
- A *serialização em tempo de execução* é uma tecnologia usada pelo .NET Remoting. Se você considerar que os tipos serão transportados por meio da comunicação remota .NET, será necessário verificar se eles oferecem suporte à serialização em tempo de execução.  
+#### <a name="supporting-runtime-serialization"></a>Suporte à serialização em runtime  
+ A *serialização em runtime* é uma tecnologia usada pelo .NET Remoting. Se você considerar que os tipos serão transportados por meio da comunicação remota .NET, será necessário verificar se eles oferecem suporte à serialização em runtime.  
   
- O suporte básico da *serialização em tempo de execução* pode ser fornecido aplicando o atributo <xref:System.SerializableAttribute> e os cenários mais avançados envolvem a implementação de um *padrão serializável de tempo de execução* simples (implemente –<xref:System.Runtime.Serialization.ISerializable> e forneça um construtor de serialização).  
+ O suporte básico da *serialização em runtime* pode ser fornecido aplicando o atributo <xref:System.SerializableAttribute> e os cenários mais avançados envolvem a implementação de um *padrão serializável de runtime* simples (implemente –<xref:System.Runtime.Serialization.ISerializable> e forneça um construtor de serialização).  
   
-1. CONSIDERE o suporte à serialização em tempo de execução se os tipos forem usados com a comunicação remota .NET. Por exemplo, o namespace <xref:System.AddIn> usa a comunicação remota .NET e, portanto, todos os tipos trocados entre os suplementos **System.AddIn** precisam oferecer suporte à serialização em tempo de execução.  
+1. CONSIDERE o suporte à serialização em runtime se os tipos forem usados com a comunicação remota .NET. Por exemplo, o namespace <xref:System.AddIn> usa a comunicação remota .NET e, portanto, todos os tipos trocados entre os suplementos **System.AddIn** precisam oferecer suporte à serialização em runtime.  
   
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
-2. CONSIDERE a implementação do *padrão serializável em tempo de execução* se quiser controle completo sobre o processo de serialização. Por exemplo, se você quiser transformar os dados à medida que eles forem serializados ou desserializados.  
+2. CONSIDERE a implementação do *padrão serializável em runtime* se quiser controle completo sobre o processo de serialização. Por exemplo, se você quiser transformar os dados à medida que eles forem serializados ou desserializados.  
   
      O padrão é muito simples. Tudo o que você precisa fazer é implementar a interface <xref:System.Runtime.Serialization.ISerializable> e fornecer um construtor especial que é usado quando o objeto é desserializado.  
   
@@ -133,12 +132,12 @@ Este documento lista as diretrizes a serem consideradas na criação de uma API 
      [!code-csharp[SerializationGuidelines#10](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#10)]
      [!code-vb[SerializationGuidelines#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#10)]  
   
-5. Aplicar uma demanda de link para a implementação **ISerializable.GetObjectData**. Isso garantirá que o somente núcleo completamente confiável e o serializador em tempo de execução terão acesso ao membro.  
+5. Aplicar uma demanda de link para a implementação **ISerializable.GetObjectData**. Isso garantirá que o somente núcleo completamente confiável e o serializador em runtime terão acesso ao membro.  
   
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando contratos de dados](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Serializador de contrato de dados](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)

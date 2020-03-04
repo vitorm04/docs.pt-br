@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921117"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160086"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -22,11 +22,11 @@ Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código
 
 Confira [CoreRT](#corert) e [.NET Native](#net-native).
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 A implementação do ASP.NET original que é fornecida com o .NET Framework.
 
-Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte ASP.NET 4.x quando quiser esclarecer que você não está usando ASP.NET para as duas implementações. 
+Às vezes, o ASP.NET é um termo abrangente que se refere a ambas as implementações de ASP.NET, incluindo o ASP.NET Core. O significado que o termo carrega em uma determinada instância é determinado pelo contexto. Consulte ASP.NET 4.x quando quiser esclarecer que você não está usando ASP.NET para as duas implementações.
 
 Confira [Documentação do ASP.NET](/aspnet/#pivot=aspnet).
 
@@ -78,7 +78,7 @@ Todos os softwares de runtime, as ferramentas de desenvolvimento e os recursos d
 
 O termo "Ecossistema do .NET" difere de termos semelhantes, como "Pilha do .NET", em relação à inclusão de bibliotecas e aplicativos de terceiros. Veja um exemplo em uma frase:
 
-- "A motivação por trás do [.NET Standard](#net-standard) é estabelecer maior uniformidade no ecossistema do .NET." 
+- "A motivação por trás do [.NET Standard](#net-standard) é estabelecer maior uniformidade no ecossistema do .NET."
 
 ## <a name="framework"></a>estrutura
 
@@ -92,11 +92,11 @@ A palavra "estrutura" tem um significado técnico mais específico nos seguintes
 
 Na documentação existente, "estrutura" às vezes se refere a uma [implementação do .NET](#implementation-of-net). Por exemplo, um artigo pode chamar o .NET Core de uma estrutura. Planejamos eliminar da documentação esse uso confuso da palavra.
 
-## <a name="gc"></a>{1&gt;GC&lt;1}
+## <a name="gc"></a>GC
 
 Coletor de lixo.
 
-O coletor de lixo é uma implementação do gerenciamento automático de memória.  O GC libera a memória ocupada por objetos que não estejam mais em uso. 
+O coletor de lixo é uma implementação do gerenciamento automático de memória.  O GC libera a memória ocupada por objetos que não estejam mais em uso.
 
 Consulte [Coleta de lixo](garbage-collection/index.md).
 
@@ -157,7 +157,7 @@ O termo coletivo para [.NET Standard](#net-standard) e todas as [implementaçõe
 
 Consulte o [guia do .NET](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 Uma implementação multiplataforma de alto desempenho e software livre do .NET. Inclui o CoreCLR (Core Common Language Runtime), o CoreRT (tempo de execução Core AOT, em desenvolvimento), a biblioteca de classes base do Core e o SDK do Core.
 
@@ -169,7 +169,7 @@ Uma cadeia de ferramentas multiplataforma para o desenvolvimento de aplicativos 
 
 Consulte [CLI do .NET Core](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>SDK do .NET Core
+## <a name="net-core-sdk"></a>SDK do .Net Core
 
 Um conjunto de bibliotecas e ferramentas que permitem aos desenvolvedores criar bibliotecas e aplicativos do .NET Core. Inclui a [CLI do .NET Core](#net-core-cli) para a criação de aplicativos, bibliotecas e runtime do .NET Core para criar e executar aplicativos e o executável do dotnet (*dotnet.exe*) que executa comandos de CLI e executa aplicativos.
 
@@ -211,18 +211,18 @@ Um pacote NuGet &mdash; ou apenas um pacote &mdash; é um arquivo *.zip* com um 
 
 O arquivo *.zip* tem uma extensão *.nupkg* e pode conter ativos, como arquivos *.dll* e arquivos *.xml*, para uso com várias versões e estruturas de destino. Quando instalado em um aplicativo ou uma biblioteca, os ativos apropriados são selecionados com base na estrutura de destino especificada pelo aplicativo ou pela biblioteca. Os ativos que definem a interface estão na pasta *ref* e os ativos que definem a implementação estão na pasta *lib*.
 
-## <a name="platform"></a>Plataforma do
+## <a name="platform"></a>plataforma
 
 Um sistema operacional e o hardware em que ele é executado, como macOS, Windows, Linux, iOS e Android.
 
 Veja alguns exemplos de uso nessas frases:
 
-- "O .NET Core é uma implementação multiplataforma do .NET." 
+- "O .NET Core é uma implementação multiplataforma do .NET."
 - "Os perfis de PCL representam plataformas da Microsoft enquanto que o .NET Standard é independente de plataforma."
 
 A documentação do .NET frequentemente usa "plataforma .NET" para significar uma implementação do .NET ou a pilha do .NET, incluindo todas as implementações. Os dois usos tendem a ser confundidos com o significado (SO/hardware) principal, portanto planejamos eliminar esses usos da documentação.
 
-## <a name="runtime"></a>Tempo de execução do
+## <a name="runtime"></a>runtime
 
 O ambiente de execução de um programa gerenciado.
 
@@ -237,15 +237,15 @@ O SO faz parte do ambiente do runtime, mas não faz parte do runtime do .NET. Aq
 
 - "Os diversos runtimes do .NET implementam versões específicas do .NET Standard."
 - "Bibliotecas destinadas à execução em vários runtimes devem ter essa estrutura como destino." (referindo-se ao .NET Standard)
-- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard. . Cada versão de runtime do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
+- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard. … Cada versão de runtime do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
 
-Planejamos eliminar esse uso inconsistente. 
+Planejamos eliminar esse uso inconsistente.
 
 ## <a name="stack"></a>stack
 
 Um conjunto de tecnologias de programação que são usadas para compilar e executar aplicativos.
 
-"A pilha do .NET" refere-se ao .NET Standard e a todas as implementações do .NET. A frase "uma pilha do .NET" pode se referir a uma implementação do .NET. 
+"A pilha do .NET" refere-se ao .NET Standard e a todas as implementações do .NET. A frase "uma pilha do .NET" pode se referir a uma implementação do .NET.
 
 ## <a name="target-framework"></a>estrutura de destino
 
@@ -271,7 +271,7 @@ Plataforma Universal do Windows.
 
 Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos C++em C#,, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET Core.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia do .NET](index.md)
 - [Guia do .NET Framework](../framework/index.md)

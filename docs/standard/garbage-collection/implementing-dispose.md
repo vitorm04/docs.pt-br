@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142061"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238982"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
@@ -33,7 +33,7 @@ O padrão de descarte tem duas variações:
   
 Para ajudar a garantir que os recursos sejam sempre limpos corretamente, um método <xref:System.IDisposable.Dispose%2A> deve poder ser chamado várias vezes sem gerar uma exceção.  
   
-O exemplo de código fornecido para o método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> mostra a agressividade com a qual uma coleta de lixo pode fazer com que um finalizador seja executado enquanto um membro do objeto recuperado ainda está em execução. É uma boa ideia chamar o método <xref:System.GC.KeepAlive%2A> no final de um método <xref:System.IDisposable.Dispose%2A> longo.  
+O exemplo de código fornecido para o método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> mostra como a coleta de lixo pode fazer com que um finalizador seja executado, enquanto uma referência não gerenciada para o objeto ou seus membros ainda está em uso. Pode fazer sentido utilizar <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> para tornar o objeto inelegível para coleta de lixo do início da rotina atual até o ponto em que esse método é chamado.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Boolean)  
@@ -125,7 +125,7 @@ Aqui está o padrão geral para implementar o padrão de descarte para uma class
 > [!NOTE]
 > No C#, você deve substituir <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definindo um [destruidor](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>Usando identificadores seguros
 
 Escrever código para o finalizador de um objeto é uma tarefa complexa que poderá causar problemas se não for feito corretamente. Assim, recomendamos que você construa objetos <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>, em vez de implementar um finalizador.  
@@ -142,7 +142,7 @@ As classes derivadas da classe <xref:System.Runtime.InteropServices.SafeHandle?d
   
 - A classe <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> para identificadores de espera.  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Usando um identificador seguro para implementar o padrão de descarte para uma classe base
 
 O exemplo a seguir ilustra o padrão de descarte para uma classe base, `DisposableStreamResource`, a qual usa um identificador seguro para encapsular recursos não gerenciados. Define uma classe `DisposableResource` que usa <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para encapsular um objeto <xref:System.IO.Stream> que representa um arquivo aberto. O método `DisposableResource` também inclui uma única propriedade, `Size`, a qual retorna o número total de bytes no fluxo de arquivos.  
@@ -150,7 +150,7 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe base, `Disposab
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Usando um identificador seguro para implementar o padrão de descarte para uma classe derivada
 
 O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `DisposableStreamResource2`, que herda da classe `DisposableStreamResource` apresentada no exemplo anterior. A classe acrescenta um método adicional, `WriteFileInfo`, e usa um objeto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> para encapsular o identificador do arquivo gravável.  
@@ -158,7 +158,7 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

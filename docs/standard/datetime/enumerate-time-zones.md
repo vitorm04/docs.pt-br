@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129119"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159436"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Como: enumerar fusos horários presentes em um computador
 
@@ -25,7 +25,7 @@ Trabalhar com êxito com um fuso horário designado requer que informações sob
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Para enumerar os fusos horários presentes no sistema local
 
-1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. O método retorna uma coleção genérica de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> de objetos <xref:System.TimeZoneInfo>. As entradas na coleção são classificadas por sua propriedade <xref:System.TimeZoneInfo.DisplayName%2A>. Por exemplo:
+1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> . O método retorna uma coleção genérica de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> de objetos <xref:System.TimeZoneInfo>. As entradas na coleção são classificadas por sua propriedade <xref:System.TimeZoneInfo.DisplayName%2A>. Por exemplo:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -37,7 +37,7 @@ Trabalhar com êxito com um fuso horário designado requer que informações sob
 
 ### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Para apresentar ao usuário uma lista de fusos horários presentes no sistema local
 
-1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType>. O método retorna uma coleção genérica de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> de objetos <xref:System.TimeZoneInfo>.
+1. Chame o método <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> . O método retorna uma coleção genérica de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> de objetos <xref:System.TimeZoneInfo>.
 
 2. Atribua a coleção retornada na etapa 1 à propriedade `DataSource` de um controle de lista do Windows Forms ou ASP.NET.
 
@@ -55,7 +55,7 @@ O exemplo inicia um aplicativo do Windows que exibe os fusos horários definidos
 A maioria dos controles de lista (como o <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> ou o controle de <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType>) permite que você atribua uma coleção de variáveis de objeto à sua propriedade `DataSource`, desde que essa coleção implemente a interface <xref:System.Collections.IEnumerable>. (A classe de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> genérica faz isso.) Para exibir um objeto individual na coleção, o controle chama o método de `ToString` do objeto para extrair a cadeia de caracteres usada para representar o objeto. No caso de objetos <xref:System.TimeZoneInfo>, o método `ToString` retorna o nome de exibição do objeto <xref:System.TimeZoneInfo> (o valor de sua propriedade <xref:System.TimeZoneInfo.DisplayName%2A>).
 
 > [!NOTE]
-> Como os controles de lista chamam o método de `ToString` de um objeto, você pode atribuir uma coleção de objetos <xref:System.TimeZoneInfo> ao controle, fazer com que o controle exiba um nome significativo para cada objeto e recuperar o objeto de <xref:System.TimeZoneInfo> que o usuário selecionou. Isso elimina a necessidade de extrair uma cadeia de caracteres para cada objeto na coleção, atribuir a cadeia de caracteres a uma coleção que, por sua vez, é atribuída à propriedade de `DataSource` do controle, recuperar a cadeia de caracteres que o usuário selecionou e, em seguida, usar essa cadeia de caracteres para extrair o objeto que Ele descreve. 
+> Como os controles de lista chamam o método de `ToString` de um objeto, você pode atribuir uma coleção de objetos <xref:System.TimeZoneInfo> ao controle, fazer com que o controle exiba um nome significativo para cada objeto e recuperar o objeto de <xref:System.TimeZoneInfo> que o usuário selecionou. Isso elimina a necessidade de extrair uma cadeia de caracteres para cada objeto na coleção, atribuir a cadeia de caracteres a uma coleção que, por sua vez, é atribuída à propriedade de `DataSource` do controle, recuperar a cadeia de caracteres que o usuário selecionou e, em seguida, usar essa cadeia de caracteres para extrair o objeto que ele descreve.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
@@ -67,7 +67,7 @@ Este exemplo requer:
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Datas, horas e fusos horários](../../../docs/standard/datetime/index.md)
 - [Como salvar fusos horários em um recurso inserido](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

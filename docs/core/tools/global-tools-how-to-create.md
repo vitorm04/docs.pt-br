@@ -2,12 +2,12 @@
 title: 'Tutorial: criar uma ferramenta do .NET Core'
 description: Saiba como criar uma ferramenta do .NET Core. Uma ferramenta é um aplicativo de console que é instalado usando o CLI do .NET Core.
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543398"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156719"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Tutorial: criar uma ferramenta do .NET Core usando o CLI do .NET Core
 
@@ -31,24 +31,18 @@ Este é o primeiro de uma série de três tutoriais. Neste tutorial, você criar
 
 1. Abra um prompt de comando e crie uma pasta chamada *Repository*.
 
-1. Navegue até a pasta *repositório* e insira o comando a seguir, substituindo `<name>` por um valor exclusivo para tornar o nome do projeto exclusivo. 
+1. Navegue até a pasta *repositório* e insira o seguinte comando:
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   Por exemplo, você pode executar o seguinte comando:
+   O comando cria uma nova pasta chamada *Microsoft. botsay* na pasta *Repository* .
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   O comando cria uma nova pasta chamada *botsay\<-name >* na pasta *Repository* .
-
-1. Navegue até o *nome do botsay-\<>* pasta.
+1. Navegue até a pasta *Microsoft. botsay* .
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>Adicionar o código
@@ -151,9 +145,9 @@ Todos os argumentos após o delimitador `--` são passados para o aplicativo.
 
 ## <a name="package-the-tool"></a>Empacotar a ferramenta
 
-Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você precisa modificar o arquivo de projeto. 
+Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você precisa modificar o arquivo de projeto.
 
-1. Abra o *botsay-\<nome > arquivo. csproj* e adicione três novos nós XML ao final do nó de `<PropertyGroup>`:
+1. Abra o arquivo *Microsoft. botsay. csproj* e adicione três novos nós XML ao final do nó de `<PropertyGroup>`:
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ Antes de poder empacotar e distribuir o aplicativo como uma ferramenta, você pr
    dotnet pack
    ```
 
-   O *nome botsay-\<> arquivo. 1.0.0. nupkg* é criado na pasta identificada pelo valor `<PackageOutputPath>` do arquivo *botsay-\<nome >. csproj* , que neste exemplo é a pasta *./nupkg* .
+   O arquivo *Microsoft. botsay. 1.0.0. nupkg* é criado na pasta identificada pelo valor `<PackageOutputPath>` do arquivo *Microsoft. botsay. csproj* , que neste exemplo é a pasta *./nupkg* .
   
    Quando você quiser liberar uma ferramenta publicamente, poderá carregá-la no `https://www.nuget.org`. Depois que a ferramenta estiver disponível no NuGet, os desenvolvedores poderão instalar a ferramenta usando o comando [dotnet ferramenta de instalação](dotnet-tool-install.md) . Para este tutorial, você instala o pacote diretamente da pasta *nupkg* local, portanto, não é necessário carregar o pacote no NuGet.
 

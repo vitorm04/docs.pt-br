@@ -3,12 +3,12 @@ title: Fragmento da árvore de resultado nas transformações
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710252"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156355"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento da árvore de resultado nas transformações
 
@@ -140,7 +140,7 @@ No exemplo a seguir, `$var` é uma variável que é uma árvore de nós na folha
     </xsl:variable>
 
     <xsl:template match="/">
-            <xsl:for-each select="msxsl:node-set($states)"/> 
+            <xsl:for-each select="msxsl:node-set($states)"/>
     </xsl:template>
 </xsl:stylesheet>
 ```
@@ -167,8 +167,8 @@ Aqui está um exemplo de uma variável que está em RTF, e portanto de fragmento
 <![CDATA[
     string func(XPathNodeIterator it)
     {
-        it.MoveNext(); 
-        return it.Current.Value; 
+        it.MoveNext();
+        return it.Current.Value;
         //it.Current returns XPathNavigator positioned on the current node
     }
 
@@ -190,7 +190,7 @@ O seguinte é o resultado de transformar XML com essa folha de estilos:
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)

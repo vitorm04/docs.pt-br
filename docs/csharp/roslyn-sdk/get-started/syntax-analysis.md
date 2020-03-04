@@ -3,12 +3,12 @@ title: Introdução à análise de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347010"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240500"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introdução à análise de sintaxe
 
@@ -84,35 +84,35 @@ Criar um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#:
 Você analisará o programa "Olá, Mundo!" básico mostrado anteriormente.
 Adicione o texto ao programa Olá, Mundo como uma constante em sua classe `Program`:
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 Em seguida, adicione o código a seguir para criar a **árvore de sintaxe** para o texto do código na constante `programText`.  Adicione a seguinte linha ao seu método `Main`:
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 Essas duas linhas criam a árvore e recuperam o nó raiz dessa árvore. Agora você pode examinar os nós na árvore. Adicione essas linhas ao seu método `Main` para exibir algumas das propriedades do nó raiz na árvore:
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 Execute o aplicativo para ver o que seu código descobriu sobre o nó raiz nessa árvore.
 
 Normalmente, percorreria a árvore para saber mais sobre o código. Neste exemplo, você está analisando código que você conhece para explorar as APIs. Adicione o código a seguir para examinar o primeiro membro do nó `root`:
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 Esse membro é um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>. Ele representa tudo no escopo da declaração `namespace HelloWorld`. Adicione o seguinte código para examinar quais nós são declarados dentro do namespace `HelloWorld`:
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 Execute o programa para ver o que você aprendeu.
 
 Agora que você sabe que a declaração é um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>, declare uma nova variável de tipo para examinar a declaração de classe. Essa classe contém somente um membro: o método `Main`. Adicione o código a seguir para localizar o método `Main` e convertê-lo em um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>.
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
-O nó de declaração do método contém todas as informações de sintaxe sobre o método. Permite exibir o tipo de retorno do método `Main`, o número e os tipos dos argumentos e o texto do corpo do método. Adicione o seguinte código:
+O nó de declaração do método contém todas as informações de sintaxe sobre o método. Permite exibir o tipo de retorno do método `Main`, o número e os tipos dos argumentos e o texto do corpo do método. Adicione os códigos a seguir:
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 Execute o programa para ver todas as informações que você descobriu sobre este programa:
 
@@ -144,7 +144,7 @@ Além de percorrer árvores, você também pode explorar a árvore de sintaxe us
 
 Você pode usar esses métodos de consulta para localizar o argumento para o método `Main` como uma alternativa a navegar pela árvore. Adicione o seguinte código à parte inferior do método `Main`:
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 A primeira instrução usa uma expressão LINQ e o método <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> para localizar o mesmo parâmetro do exemplo anterior.
 
@@ -164,35 +164,35 @@ Você pode ver o código concluído para essa amostra no [nosso repositório do 
 
 Assim como no exemplo anterior, você pode definir uma constante de cadeia de caracteres para conter o texto do programa que você pretende analisar:
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 Este texto de origem contém diretivas `using` espalhadas em quatro locais diferentes: o nível de arquivo, no namespace de nível superior e nos dois namespaces aninhados. Este exemplo destaca um cenário principal para usar a classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> para consultar código. Seria complicado visitar cada nó na árvore de sintaxe de raiz para encontrar declarações using. Em vez disso, você pode criar uma classe derivada e substituir o método chamado apenas quando o nó atual na árvore é uma diretiva using. O visitante não realiza nenhum trabalho em nenhum outro tipo de nó. Esse método único examina cada uma das instruções `using` e compila uma coleção de namespaces que não estão no namespace `System`. Você compila um <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> que examina todas as instruções `using`, mas apenas as instruções `using`.
 
 Agora que você definiu o texto do programa, você precisa criar um `SyntaxTree` e obter a raiz dessa árvore:
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 Em seguida, crie uma nova classe. No Visual Studio, escolha **Projeto** > **Adicionar Novo Item**. Na caixa de diálogo **Adicionar Novo Item**, digite *UsingCollector.cs* como o nome do arquivo.
 
 Você implementa a funcionalidade de visitante `using` na classe `UsingCollector`. Para começar, crie a classe `UsingCollector` derivada de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>.
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 Você precisa de armazenamento para conter os nós de namespace que você está coletando.  Declare uma propriedade pública somente leitura na classe `UsingCollector`; use essa variável para armazenar os nós <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> que você encontrar:
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 A classe base <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> implementa a lógica para visitar cada nó na árvore de sintaxe. A classe derivada substitui os métodos chamados para os nós específicos nos quais você está interessado. Nesse caso, você está interessado em qualquer diretiva `using`. Isso significa que você deve substituir o método <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>. Um argumento para esse método é um objeto <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType>. Essa é uma importante vantagem de se usar os visitantes: eles chamam os métodos substituídos com argumentos que já foram convertidos para o tipo de nó específico. A classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> tem uma propriedade <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> que armazena o nome do namespace que está sendo importado. É um <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>. Adicione o código a seguir na substituição <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)>:
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 Assim como no exemplo anterior, você adicionou uma variedade de instruções `WriteLine` para ajudar na compreensão do método. Você pode ver quando ele é chamado e quais argumentos são passados para ele a cada vez.
 
 Por fim, você precisa adicionar duas linhas de código para criar o `UsingCollector` e fazer com que ele acesse o nó raiz, coletando todas as instruções `using`. Em seguida, adicione um loop `foreach` para exibir todas as instruções `using` encontradas pelo seu coletor:
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
-Compile e execute o programa. Você deverá ver a seguinte saída:
+Compile e execute o programa. Você deve ver o seguinte resultado:
 
 ```console
         VisitUsingDirective called with System.

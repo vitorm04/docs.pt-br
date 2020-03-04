@@ -4,18 +4,18 @@ description: Este tutorial avançado demonstra como usar as técnicas de corresp
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039199"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240048"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: usando recursos de correspondência de padrões para estender tipos de dados
 
 O C#7 introduziu recursos básicos de correspondência de padrões. Esses recursos foram estendidos no C# 8 com novos padrões e expressões. É possível escrever uma funcionalidade que se comporte como se você tivesse estendido tipos que poderiam estar em outras bibliotecas. Outro uso dos padrões é criar a funcionalidade de que seu aplicativo precisa, mas que não é um recurso fundamental do tipo que está sendo estendido.
 
-Neste tutorial, você aprenderá a:
+Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
@@ -41,7 +41,7 @@ Imagine, por exemplo, uma área metropolitana principal que está implantando pe
 
 Com base nessa breve descrição, você pode ter elaborado rapidamente uma hierarquia de objetos para modelar esse sistema. No entanto, seus dados são provenientes de várias fontes, como outros sistemas de gerenciamento de registro do veículo. Esses sistemas fornecem classes diferentes para modelar aqueles dados, e você não tem um modelo de objeto único o qual seja possível usar. Neste tutorial, você usará essas classes simplificadas para criar o modelo para os dados do veículo, a partir desses sistemas externos, conforme mostrado no código a seguir:
 
-[!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
+[!code-csharp[ExternalSystems](~/samples/snippets/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
 Faça o download do código inicial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) do GitHub. É possível ver que as classes de veículos são de sistemas diferentes, e estão em namespaces diferentes. Nenhuma base comum de classe, além da `System.Object` pode ser aproveitada.
 
@@ -300,22 +300,22 @@ A tabela a seguir mostra as combinações de valores de entrada e multiplicador 
 
 | Dia        | Hora         | Direção | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Dia útil    | horário de pico da manhã | entrada   | x 2,00  |
-| Dia útil    | horário de pico da manhã | saída  | x 1,00  |
-| Dia útil    | hora do dia      | entrada   | x 1,50  |
-| Dia útil    | hora do dia      | saída  | x 1,50  |
-| Dia útil    | horário de pico do fim da tarde | entrada   | x 1,00  |
-| Dia útil    | horário de pico do fim da tarde | saída  | x 2,00  |
-| Dia útil    | noite e madrugada    | entrada   | x 0,75  |
-| Dia útil    | noite e madrugada    | saída  | x 0,75  |
-| Fim de semana    | horário de pico da manhã | entrada   | x 1,00  |
-| Fim de semana    | horário de pico da manhã | saída  | x 1,00  |
-| Fim de semana    | hora do dia      | entrada   | x 1,00  |
-| Fim de semana    | hora do dia      | saída  | x 1,00  |
-| Fim de semana    | horário de pico do fim da tarde | entrada   | x 1,00  |
-| Fim de semana    | horário de pico do fim da tarde | saída  | x 1,00  |
-| Fim de semana    | noite e madrugada    | entrada   | x 1,00  |
-| Fim de semana    | noite e madrugada    | saída  | x 1,00  |
+| Weekday    | horário de pico da manhã | entrada   | x 2,00  |
+| Weekday    | horário de pico da manhã | Saída do  | x 1,00  |
+| Weekday    | hora do dia      | entrada   | x 1,50  |
+| Weekday    | hora do dia      | Saída do  | x 1,50  |
+| Weekday    | horário de pico do fim da tarde | entrada   | x 1,00  |
+| Weekday    | horário de pico do fim da tarde | Saída do  | x 2,00  |
+| Weekday    | noite e madrugada    | entrada   | x 0,75  |
+| Weekday    | noite e madrugada    | Saída do  | x 0,75  |
+| Fim de Semana    | horário de pico da manhã | entrada   | x 1,00  |
+| Fim de Semana    | horário de pico da manhã | Saída do  | x 1,00  |
+| Fim de Semana    | hora do dia      | entrada   | x 1,00  |
+| Fim de Semana    | hora do dia      | Saída do  | x 1,00  |
+| Fim de Semana    | horário de pico do fim da tarde | entrada   | x 1,00  |
+| Fim de Semana    | horário de pico do fim da tarde | Saída do  | x 1,00  |
+| Fim de Semana    | noite e madrugada    | entrada   | x 1,00  |
+| Fim de Semana    | noite e madrugada    | Saída do  | x 1,00  |
 
 Há 16 combinações diferentes das três variáveis. Ao combinar algumas das condições, você simplificará a expressão switch.
 
@@ -337,17 +337,17 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 Esse método funciona, mas é redundante. Para simplificar, faça conforme mostrado no código a seguir:
 
-[!code-csharp[IsWeekDay](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
+[!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
 Depois, adicione uma função semelhante para categorizar o tempo nos blocos:
 
-[!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
+[!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
 O método anterior não usa a correspondência de padrões. Fica mais claro usando uma cascata familiar de instruções `if`. Adicione um `enum` privado para converter cada intervalo de tempo em um valor discreto.
 
 Depois de criar esses métodos, é possível usar outra expressão `switch` com o **padrão de tupla** para calcular o preço premium. Você pode construir uma expressão `switch` com todos os 16 braços:
 
-[!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
 O código acima funciona, mas pode ser simplificado. Todas as oito combinações para o fim de semana têm o mesmo pedágio. É possível substituir todas as oito pela seguinte linha:
 
@@ -380,7 +380,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 Por fim, você pode remover os dois horários de pico em que é pago o preço normal. Quando remover essas braços, substitua o `false` por um descarte (`_`) no braço switch final. O método concluído será o seguinte:
 
-[!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
+[!code-csharp[SimplifiedTuplePattern](../../../samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
 Este exemplo destaca uma das vantagens da correspondência de padrões: os branches de padrões são avaliados na ordem. Se você os reorganizar para que um branch anterior trate um dos casos posteriores, o compilador emitirá um aviso sobre o código inacessível. Essas regras de linguagem tornam as simplificações anteriores mais fáceis com a certeza de que o código não foi alterado.
 

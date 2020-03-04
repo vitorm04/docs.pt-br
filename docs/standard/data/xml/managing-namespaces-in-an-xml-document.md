@@ -3,17 +3,17 @@ title: Gerenciando namespaces em um documento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710694"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160034"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Gerenciando namespaces em um documento XML
 Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs personalizado e predefinido. Para criar essas associações, você define prefixos para URIs de namespace e usa os prefixos para qualificar nomes de atributo e elemento nos dados XML. Namespaces impedem conflitos de nomes de elementos e atributos e permitem que elementos e atributos de mesmo nome sejam tratados e validados de maneira diferente.  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>Declaração de namespaces  
  Para declarar um namespace em um elemento, você usa o atributo `xmlns:`:  
   
@@ -30,7 +30,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
   
  Para indicar que um elemento é uma parte de um namespace específico, adicione o prefixo de namespace a ele. Por exemplo, se um elemento `Author` pertence ao namespace `mybook`, ele é declarado como `<mybook:Author>`.  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>Escopo de declaração  
  Um namespace é efetivo do ponto de declaração até o fim do elemento em que foi declarado. Neste exemplo, o namespace definido no elemento `BOOK` não se aplica a elementos fora do elemento `BOOK`, como o elemento `Publisher`:  
   
@@ -65,7 +65,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
   
  Aqui estão algumas das tarefas de gerenciamento e de pesquisa podem ser executadas com a classe <xref:System.Xml.XmlNamespaceManager>. Para saber mais e exemplos, siga os links para a página de referência para cada método ou propriedade.  
   
-|{1&gt;Para&lt;1}|Uso|  
+|Para|Use|  
 |--------|---------|  
 |Adicionar um namespace|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Remover um namespace|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
@@ -77,7 +77,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
 |Verificar se um prefixo é definido no escopo atual|Método <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Obter a tabela de nomes usada para pesquisar URIs e prefixos|Propriedade <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708142"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160099"
 ---
 # <a name="compose-streams"></a>Redigir fluxos
-Um *repositório de backup* é uma mídia de armazenamento, como um disco ou uma memória. Cada repositório de backup diferente implementa seu próprio fluxo como uma implementação da classe <xref:System.IO.Stream>. 
+Um *repositório de backup* é uma mídia de armazenamento, como um disco ou uma memória. Cada repositório de backup diferente implementa seu próprio fluxo como uma implementação da classe <xref:System.IO.Stream>.
 
 Cada tipo de fluxo lê e grava bytes de e para seu repositório de backup específico. Os fluxos que se conectam aos repositórios de backup são chamados de *fluxos base*. Os fluxos base têm construtores com os parâmetros necessários para conectar o fluxo ao repositório de backup. Por exemplo, <xref:System.IO.FileStream> tem construtores que especificam um parâmetro de caminho, o qual especifica como o arquivo será compartilhado por processos.  
 
@@ -44,7 +44,7 @@ O exemplo a seguir cria um <xref:System.IO.BinaryReader> para ler bytes do **Fil
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>

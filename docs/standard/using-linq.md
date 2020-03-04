@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347268"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160320"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -143,7 +143,7 @@ Dim filteredItems = From item In myItems
 
 A sintaxe da API não é apenas uma maneira mais concisa de fazer a sintaxe de consulta?
 
-No. A sintaxe de consulta permite o uso da cláusula **let**, que permite que você introduza e associe uma variável no escopo da expressão, usando-a em partes subsequentes da expressão. É possível reproduzir o mesmo código com apenas a sintaxe da API, mas mais provavelmente levará a um código que é difícil de ler.
+Não. A sintaxe de consulta permite o uso da cláusula **let**, que permite que você introduza e associe uma variável no escopo da expressão, usando-a em partes subsequentes da expressão. É possível reproduzir o mesmo código com apenas a sintaxe da API, mas mais provavelmente levará a um código que é difícil de ler.
 
 Portanto, isso levanta a questão, **você deve usar apenas a sintaxe de consulta?**
 
@@ -257,7 +257,7 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 ```
 
 ```vb
-Public Class DogHairLengthComparer 
+Public Class DogHairLengthComparer
   Inherits IEqualityComparer(Of Dog)
 
   Public Function Equals(a As Dog,b As Dog) As Boolean
@@ -321,7 +321,7 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
     {
         return self == to;
     }
-    
+
     // Selects the properties which have unequal values into a sequence of those properties.
     var unequalProperties = from property in typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                             where !ignore.Contains(property.Name)
@@ -334,14 +334,14 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 ```
 
 ```vb
-<System.Runtime.CompilerServices.Extension()> 
+<System.Runtime.CompilerServices.Extension()>
 Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As T, ParamArray ignore As String()) As Boolean
     If self Is Nothing OrElse [to] Is Nothing Then
         Return self Is [to]
     End If
 
     ' Selects the properties which have unequal values into a sequence of those properties.
-    Dim unequalProperties = From [property] In GetType(T).GetProperties(BindingFlags.Public Or BindingFlags.Instance) 
+    Dim unequalProperties = From [property] In GetType(T).GetProperties(BindingFlags.Public Or BindingFlags.Instance)
                             Where Not ignore.Contains([property].Name)
                             Let selfValue = [property].GetValue(self, Nothing)
                             Let toValue = [property].GetValue([to], Nothing)

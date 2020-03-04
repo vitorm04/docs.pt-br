@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920818"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157785"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -18,7 +18,7 @@ Para obter mais informações sobre como instalar o Docker, consulte a página d
 
 ## <a name="docker-basics"></a>Noções básicas do Docker
 
-Há alguns conceitos que você deve conhecer. O cliente do Docker tem uma CLI que você pode usar para gerenciar imagens e contêineres. Conforme mencionado anteriormente, você deve reservar algum tempo para ler a documentação de [visão geral do Docker](https://docs.docker.com/engine/docker-overview/). 
+Há alguns conceitos que você deve conhecer. O cliente do Docker tem uma CLI que você pode usar para gerenciar imagens e contêineres. Conforme mencionado anteriormente, você deve reservar algum tempo para ler a documentação de [visão geral do Docker](https://docs.docker.com/engine/docker-overview/).
 
 ### <a name="images"></a>Imagens
 
@@ -34,7 +34,7 @@ Um contêiner é uma instância executável de uma imagem. Enquanto cria a image
 
 Registros de contêiner são uma coleção de repositórios de imagens. Você pode basear suas imagens em uma imagem de registro. Você pode criar contêineres diretamente em uma imagem em um registro. A [relação entre contêineres, imagens e registros do Docker](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) é um conceito importante ao [arquitetar e compilar aplicativos ou microsserviços em contêineres](../../architecture/microservices/architect-microservice-container-applications/index.md). Essa abordagem reduz bastante o tempo entre o desenvolvimento e a implantação.
 
-O Docker tem um registro público disponível hospedado no [Hub do Docker](https://hub.docker.com/). As [imagens relacionadas ao .NET core](https://hub.docker.com/_/microsoft-dotnet-core/) estão listadas no Hub do Docker. 
+O Docker tem um registro público disponível hospedado no [Hub do Docker](https://hub.docker.com/). As [imagens relacionadas ao .NET core](https://hub.docker.com/_/microsoft-dotnet-core/) estão listadas no Hub do Docker.
 
 O MCR (Registro de Contêiner da Microsoft) é a fonte oficial de imagens de contêiner fornecidas pela Microsoft. O MCR baseia-se na CDN do Azure para fornecer imagens replicadas globalmente. No entanto, o MCR não tem um site voltado ao público e a principal maneira de aprender sobre imagens de contêiner fornecidas pela Microsoft é por meio das [páginas do Hub do Docker da Microsoft](https://hub.docker.com/_/microsoft-dotnet-core/).
 
@@ -44,7 +44,7 @@ Um **Dockerfile** é um arquivo que define um conjunto de instruções que cria 
 
 ## <a name="net-core-images"></a>Imagens do .NET Core
 
-As imagens oficiais do Docker do .NET Core são publicadas no MCR (Registro de Contêiner da Microsoft) e podem ser encontradas no [repositório do Hub do Docker do .NET Core da Microsoft](https://hub.docker.com/_/microsoft-dotnet-core/). Cada repositório contém imagens para diferentes combinações do .NET (SDK ou Runtime) e do sistema operacional que você pode usar. 
+As imagens oficiais do Docker do .NET Core são publicadas no MCR (Registro de Contêiner da Microsoft) e podem ser encontradas no [repositório do Hub do Docker do .NET Core da Microsoft](https://hub.docker.com/_/microsoft-dotnet-core/). Cada repositório contém imagens para diferentes combinações do .NET (SDK ou Runtime) e do sistema operacional que você pode usar.
 
 A Microsoft fornece imagens personalizadas para cenários específicos. Por exemplo, o [repositório do ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) fornece imagens que são criadas para a execução de aplicativos ASP.NET Core na produção.
 
@@ -70,7 +70,7 @@ Migre, mude e Modernize aplicativos .NET para os microserviços usando contêine
 - [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/)\
 Armazene e gerencie imagens de contêiner em todos os tipos de implantações do Azure.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 - [Saiba como colocar em contêiner um aplicativo .NET Core.](build-container.md)
 - [Aprenda a colocar em contêiner um aplicativo ASP.NET Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)

@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
-ms.date: 05/30/2018
-ms.openlocfilehash: fc0aa4f9abf069f78e27692ee84aea2559109c98
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626015"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156927"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet-vstest` - Executa testes a partir de arquivos especificados.
 
@@ -27,7 +27,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
     [--InIsolation] [[--] <args>...]] [-?|--Help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade.
 
@@ -37,7 +37,7 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
   Execute testes a partir de assemblies especificados. Separe vários nomes de assembly de teste com espaços. Há suporte para caracteres curinga.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`--Settings <Settings File>`**
 

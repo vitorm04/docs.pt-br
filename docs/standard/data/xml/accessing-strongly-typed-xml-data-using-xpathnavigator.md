@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: ec08b668bf54c5460e078bbb27bfbc370aff4e4a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e6ec30e3c7c2318b199122cd63c7f56584707a98
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711175"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158045"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acessando dados fortemente tipados XML usando XPathNavigator
 Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.XPath.XPathNavigator> pode conter dados fortemente tipados que mapeiam a Common Language Runtime (CLR) tipos. De acordo com o modelo de dados XPath 2,0, somente os elementos e atributos podem conter dados fortemente tipados. A classe de <xref:System.Xml.XPath.XPathNavigator> fornece mecanismos para acessar dados em um objeto de <xref:System.Xml.XPath.XPathDocument> ou de <xref:System.Xml.XmlDocument> como dados fortemente tipados bem como mecanismos para converter de um tipo de dados para outro.  
@@ -32,7 +32,7 @@ Como uma instância do modelo de dados XPath 2,0, a classe de <xref:System.Xml.X
 ## <a name="xpathnavigator-typed-accessors"></a>XPathNavigator digitou acessadores  
  A tabela a seguir mostra as várias propriedades e métodos de <xref:System.Xml.XPath.XPathNavigator> classe que pode ser usado para acessar informações de tipo sobre um nó.  
   
-|propriedade|Descrição|  
+|Propriedade|DESCRIÇÃO|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Isso contém informações de tipo o esquema XML para o nó se é válido.|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Isso contém a validação Infoset do esquema de postagem de nó que é adicionado após a validação. Isso inclui informações de tipo do esquema XML, bem como informações de validade.|  
@@ -111,9 +111,9 @@ Console.WriteLine(navigator.SchemaInfo.SchemaElement.MinOccurs);
  O exemplo também usa o esquema de `books.xsd` como entrada.  
   
 ```xml  
-<xs:schema xmlns="http://www.contoso.com/books"   
-attributeFormDefault="unqualified" elementFormDefault="qualified"   
-targetNamespace="http://www.contoso.com/books"   
+<xs:schema xmlns="http://www.contoso.com/books"
+attributeFormDefault="unqualified" elementFormDefault="qualified"
+targetNamespace="http://www.contoso.com/books"
 xmlns:xs="http://www.w3.org/2001/XMLSchema">  
     <xs:simpleType name="publishedType">  
         <xs:restriction base="xs:date">  
@@ -183,7 +183,7 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  Para saber mais sobre o mapeamento de tipos internos de esquema para tipos de CLR, confira [Suporte a tipo nas classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

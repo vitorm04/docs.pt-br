@@ -2,12 +2,12 @@
 title: Criar uma solução completa do .NET Core usando o Visual Studio para Mac
 description: Este artigo orienta você pela criação de uma solução .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
 ms.date: 12/19/2019
-ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8c9fcca404a3875b6bb7f9cf20551a017ff553c5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215201"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239957"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Criar uma solução completa do .NET Core no macOS usando Visual Studio para Mac
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre os pré-requisitos, consulte as [dependênci
 
 1. No painel de **solução** , expanda o nó `TextUtils` para revelar o arquivo de classe fornecido pelo modelo, *Class1.cs*. CTRL-clique no arquivo, selecione **renomear** no menu de contexto e renomeie o arquivo para *WordCount.cs*. Abra o arquivo e substitua o conteúdo pelo código a seguir:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/TextUtils/WordCount.cs)]
 
 1. Salve <kbd>&#8984;</kbd> o arquivo usando qualquer um dos três métodos diferentes: Use o atalho de teclado+<kbd>s</kbd>, selecione **arquivo** > **salvar** no menu ou CTRL + clique na guia do arquivo e selecione **salvar** no menu contextual. A imagem a seguir mostra a janela do IDE:
 
@@ -175,7 +175,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 1. Abra o arquivo *Program.cs*. Substitua o código pelo código a seguir:
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/WordCounterApp/Program.cs)]
 
 1. CTRL + clique no projeto `WordCounterApp` e selecione **Executar projeto** no menu de contexto. Ao executar o aplicativo, forneça valores para a palavra de pesquisa e a cadeia de caracteres de entrada nos prompts da janela do console. O aplicativo indica o número de vezes que a palavra de pesquisa aparece na cadeia de caracteres.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 790249c4cc85128f529bd88a4bf27d8b75121aaa
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712748"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239529"
 ---
 # <a name="assignment-operators-c-reference"></a>Operadores de atribuiçãoC# (referência)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 O exemplo a seguir demonstra o uso do operador de atribuição com uma variável local, uma propriedade e um elemento do indexador como seu operando esquerdo:
 
-[!code-csharp-interactive[simple assignment](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>Operador de atribuição ref
 
 Começando pelo C# 7.3, você pode usar o operador de atribuição ref `= ref` para reatribuir uma variável [ref local](../keywords/ref.md#ref-locals) ou [ref readonly local](../keywords/ref.md#ref-readonly-locals). O exemplo a seguir demonstra o uso do operador de atribuição ref:
 
-[!code-csharp[ref assignment operator](~/samples/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](~/samples/snippets/csharp/language-reference/operators/AssignmentOperator.cs#RefAssignment)]
 
 No caso do operador de atribuição de referência, os dois operandos devem ser do mesmo tipo.
 
@@ -49,7 +49,7 @@ Para um operador binário `op`, uma expressão de atribuição composta do forma
 x op= y
 ```
 
-equivale a
+é equivalente a
 
 ```csharp
 x = x op y
@@ -69,13 +69,13 @@ Um tipo definido pelo usuário não pode [sobrecarregar](operator-overloading.md
 
 Um tipo definido pelo usuário não pode sobrecarregar explicitamente um operador de atribuição composta. No entanto, se um tipo definido pelo usuário sobrecarregar um operador binário `op`, o operador de `op=`, se existir, também será sobrecarregado implicitamente.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Saiba mais na seção [Operadores de atribuição](~/_csharplang/spec/expressions.md#assignment-operators) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 Para obter mais informações sobre o operador de atribuição de referência `= ref`, consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

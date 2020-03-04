@@ -4,12 +4,12 @@ description: Saiba mais sobre como criar padrões de evento .NET e como criar or
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037178"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239853"
 ---
 # <a name="standard-net-event-patterns"></a>Padrões de evento .NET padrão
 
@@ -40,7 +40,7 @@ O uso de um modelo de evento fornece algumas vantagens de design. Você pode cri
 
 Aqui está a declaração de argumento de evento inicial para localizar um arquivo pesquisado: 
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Embora esse tipo se pareça com um tipo pequeno de somente dados, você deve seguir a convenção e torná-lo um tipo de referência (`class`). Isso significa que o objeto de argumento será passado por referência e todas as atualizações nos dados serão visualizadas por todos os assinantes. A primeira versão é um objeto imutável. É preferível tornar as propriedades em seu tipo de argumento de evento imutáveis. Dessa forma, um assinante não poderá alterar os valores antes que outro assinante os veja. (Há exceções, como você verá abaixo).  
 
@@ -48,21 +48,21 @@ Em seguida, precisamos criar a declaração de evento na classe FileSearcher. O 
 
 Vamos preencher a classe FileSearcher para pesquisar arquivos que correspondam a um padrão e acionar o evento correto quando uma correspondência for descoberta.
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>Definindo e acionando eventos semelhantes a campo
 
 A maneira mais simples de adicionar um evento à sua classe é declarar esse evento como um campo público, como no exemplo anterior:
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 Isso é semelhante à declaração de um campo público, o que parece ser uma prática ruim orientada a objetos. Você deseja proteger o acesso a dados por meio de propriedades ou métodos. Embora isso possa parecer uma prática ruim, o código gerado pelo compilador cria wrappers para que os objetos de evento só possam ser acessados de maneiras seguras. As únicas operações disponíveis em um evento semelhante a campo são adicionar manipulador:
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 e remover manipulador:
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Observe que há uma variável local para o manipulador. Se você usou o corpo de lambda, a operação remover não funcionará corretamente. Ela seria uma instância diferente do delegado e silenciosamente não faria nada.
 
@@ -86,7 +86,7 @@ Depois que todos os assinantes viram o evento acionado, o componente FileSearche
 
 Vamos implementar a primeira versão deste exemplo. Você precisa adicionar um campo booliano chamado `CancelRequested` ao tipo `FileFoundArgs`:
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 Este novo campo é inicializado automaticamente para `false`, o valor padrão para um campo booliano, para que você não cancele acidentalmente. A única alteração adicional no componente é verificar o sinalizador depois de acionar o evento, para ver se qualquer um dos assinantes solicitou um cancelamento:
 
@@ -124,29 +124,29 @@ Isso poderia se tornar uma operação demorada em um diretório com muitos subdi
 
 Você começará criando a nova classe derivada EventArgs para relatar o novo diretório e o andamento. 
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Novamente, você pode seguir as recomendações para criar um tipo de referência imutável para os argumentos do evento.
 
 Em seguida, defina o evento. Desta vez, você usará uma sintaxe diferente. Além de usar a sintaxe de campo, você pode explicitamente criar a propriedade com os manipuladores adicionar e remover. Nesta amostra, você não precisará de código extra nos manipuladores, mas será mostrado como criá-los.
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 De muitas formas, o código que você escreverá aqui é bem parecido com o código que o compilador gera para as definições de evento de campo vistas anteriormente. Você cria o evento usando uma sintaxe muito parecida àquela utilizada para [propriedades](properties.md). Observe que os manipuladores têm nomes diferentes: `add` e `remove`. Eles são chamados para assinar o evento ou cancelar a inscrição do evento. Observe que você também deve declarar um campo de suporte particular para armazenar a variável de evento. Ele é inicializado como null.
 
 Em seguida, vamos adicionar a sobrecarga do método `Search` que percorre os subdiretórios e aciona os dois eventos. A maneira mais fácil de fazer isso é usar um argumento padrão para especificar que você deseja pesquisar todas as pastas:
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 Neste momento, você pode executar o aplicativo, chamando a sobrecarga para pesquisar todos os subdiretórios. Não há nenhum assinante no novo evento `ChangeDirectory`, mas o uso da expressão `?.Invoke()` garante que isso funcione corretamente.
 
  Vamos adicionar um manipulador para escrever uma linha que mostra o andamento na janela do console. 
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 Você viu os padrões que são seguidos em todo o ecossistema do .NET.
 Ao aprender esses padrões e convenções, você escreverá expressões idiomáticas de C# e .NET rapidamente.
 
 Em seguida, você verá algumas alterações nesses padrões na versão mais recente do .NET.
 
-[Avançar](modern-events.md)
+[Próximo](modern-events.md)

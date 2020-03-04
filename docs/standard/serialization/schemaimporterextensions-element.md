@@ -6,14 +6,14 @@ helpviewer_keywords:
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: 43f8439708c73e8e5241a923360caf549bf09d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed80ac370e34d6b62bb2b601cb7bd978228a302
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017951"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159813"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions > elemento
+# <a name="schemaimporterextensions-element"></a>\<elemento de > schemaImporterExtensions
 Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -26,13 +26,13 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
   
 ## <a name="child-elements"></a>Elementos filho  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |[\<Adicionar > elemento para \<schemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)|Adiciona tipos que são usados pela <xref:System.Xml.Serialization.XmlSchemaImporter> para criar mapeamentos.|  
   
-## <a name="parent-elements"></a>Elementos pai  
+## <a name="parent-elements"></a>Elementos Pai  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |[\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)|O elemento de nível superior para controlar a serialização XML.|  
   
@@ -42,15 +42,15 @@ Contém tipos que são usados pelo <xref:System.Xml.Serialization.XmlSchemaImpor
 ```xml  
 <system.xml.serialization>  
     <schemaImporterExtensions>  
-        <add name = "MobileCapabilities" type =   
-        "System.Web.Mobile.MobileCapabilities,   
-        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,   
+        <add name = "MobileCapabilities" type =
+        "System.Web.Mobile.MobileCapabilities,
+        System.Web.Mobile, Version - 2.0.0.0, Culture = neutral,
         PublicKeyToken = b03f5f6f11d40a3a" />  
     </schemaImporterExtensions>  
 </system.xml.serialization>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>

@@ -3,12 +3,12 @@ title: Visão geral do SDK do .NET Core
 description: Saiba mais sobre o SDK do .NET Core, que é um conjunto de bibliotecas e ferramentas usadas para criar projetos do .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 09b32b0065326af54da935a810764f93248618af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920594"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157460"
 ---
 # <a name="net-core-sdk-overview"></a>Visão geral do SDK do .NET Core
 
@@ -31,7 +31,7 @@ Scripts de instalação, por outro lado, não exigem privilégios administrativo
 
 Por padrão, o SDK é instalado de maneira "lado a lado" (SxS), o que significa que várias versões podem coexistir em um determinado momento em um único computador. A maneira como a versão é escolhida quando você está executando comandos da CLI é explicada mais detalhadamente no artigo [Selecionar a versão do .NET Core a usar](versions/selection.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de CLI do .NET Core](tools/index.md)
 - [Visão geral do controle de versão do .NET Core](versions/index.md)

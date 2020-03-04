@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f47623aa305ae6e98625acc3d199a76e27d2ea5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794973"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159930"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<Adicionar > elemento para \<schemaImporterExtensions >
 Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> para mapeamento de tipos XSD para tipos do .NET Framework. Para obter mais informações sobre arquivos de configuração, consulte [Esquema de arquivos de configuração](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -27,21 +27,21 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descrição|  
+|Atributo|DESCRIÇÃO|  
 |---------------|-----------------|  
 |**name**|Um nome simples que é usado para localizar a instância.|  
-|**type**|Necessário. Especifica a classe de extensão de esquema para adicionar. O valor de atributo **type** deve ser uma linha e incluir o nome do tipo totalmente qualificado. Quando o assembly é colocado no GAC (cache de assembly global), ele também deve incluir a versão, cultura e token de chave pública do assembly assinado.|  
+|**tipo**|Obrigatórios. Especifica a classe de extensão de esquema para adicionar. O valor de atributo **type** deve ser uma linha e incluir o nome do tipo totalmente qualificado. Quando o assembly é colocado no GAC (cache de assembly global), ele também deve incluir a versão, cultura e token de chave pública do assembly assinado.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
-|Elemento|Descrição|  
+|Elemento|DESCRIÇÃO|  
 |-------------|-----------------|  
 |\<schemaImporterExtensions>|Contém tipos que são usados pela <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
@@ -52,15 +52,15 @@ Adiciona tipos usados pelo <xref:System.Xml.Serialization.XmlSchemaImporter> par
 <configuration>  
   <system.xml.serialization>  
     <schemaImporterExtensions>  
-       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,   
-       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,   
-       PublicKeyToken=b03f5f7f11d50a3a" />   
+       <add name="contoso" type="System.Web.Mobile.MobileCapabilities,
+       System.Web.Mobile, Version=2.0.0.0, Culture=neutral,
+       PublicKeyToken=b03f5f7f11d50a3a" />
     </schemaImporterExtensions>  
   </system.xml.serialization>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - [\<Elemento system.xml.serialization>](../../../docs/standard/serialization/system-xml-serialization-element.md)

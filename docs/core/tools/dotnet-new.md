@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157213"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451324"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Para obter uma lista de C# versões padrão, consulte [padrões](../../csharp/language-reference/configure-language-version.md#defaults).
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   Se especificado, não executa uma restauração implícita durante a criação do projeto. Disponível desde o SDK do .NET Core 2,2.
 
@@ -202,7 +202,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1. 
+  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1. 
+  Especifica a [estrutura](../../standard/frameworks.md) a ser direcionada. O valor padrão é `netcoreapp3.1`. Disponível desde o SDK do .NET Core 3,1.
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  O tipo de autenticação a ser usado. Disponível desde o SDK do .NET Core 3.0. 
+  O tipo de autenticação a ser usado. Disponível desde o SDK do .NET Core 3.0.
   
   Os valores possíveis são:
 
@@ -512,7 +512,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado. 
+  Exclui *launchSettings. JSON* do modelo gerado.
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 - **`--exclude-launch-settings`**
 
-  Exclui *launchSettings. JSON* do modelo gerado. 
+  Exclui *launchSettings. JSON* do modelo gerado.
 
 - **`-f|--framework <FRAMEWORK>`**
 

@@ -2,12 +2,12 @@
 title: Instalar arquivos do IntelliSense localizado
 description: Saiba como configurar seu computador de desenvolvimento para usar arquivos do IntelliSense localizado para projetos do .NET Core no Visual Studio.
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733655"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157707"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Como instalar arquivos do IntelliSense localizado para o .NET Core
 
@@ -16,7 +16,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
 - Como instalar a versão localizada desses arquivos.
 - Como modificar a instalação do Visual Studio para usar uma linguagem diferente.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 - [SDK do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.
 - [Visual Studio 2019 versão 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou uma versão posterior.
@@ -40,9 +40,9 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
       | Tipo de SDK        | Caminho                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows 10 Desktop | *Microsoft.WindowsDesktop.App.Ref* |
+      | Área de Trabalho do Windows | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. Navegue até a versão para a qual você deseja instalar o IntelliSense localizado. Por exemplo, *3.1.0*.
    1. Abra a pasta *ref*.
    1. Abra a pasta moniker. Por exemplo, *netcoreapp3.1*.
@@ -53,7 +53,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
 
    | Linguagem              | Nome da pasta |
    | --------------------- | ----------- |
-   | Português do Brasil  | *pt-br*     |
+   | Português (Brasil)  | *pt-br*     |
    | Chinês (simplificado)  | *zh-hans*   |
    | Chinês (tradicional) | *zh-hant*   |
    | Francês                | *fr*        |
@@ -108,7 +108,7 @@ Se você não instalou o pacote de idiomas desejado durante a instalação, atua
 
 Depois de instalar os pacotes de idiomas desejados, modifique suas configurações do Visual Studio para usar um idioma diferente:
 
-1. {1&gt;Abra o Visual Studio.&lt;1}
+1. Abra o Visual Studio.
 
 1. Na janela de início, escolha **Continuar sem código**.
 
@@ -116,7 +116,7 @@ Depois de instalar os pacotes de idiomas desejados, modifique suas configuraçõ
 
 1. No nó **ambiente** , escolha **configurações internacionais**.
 
-1. No menu suspenso **Idioma**, selecione o idioma desejado. Escolha **OK**. 
+1. No menu suspenso **Idioma**, selecione o idioma desejado. Escolha **OK**.
 
 1. Uma caixa de diálogo informa que você precisa reiniciar o Visual Studio para que as alterações entrem em vigor. Escolha **OK**.
 
@@ -124,6 +124,6 @@ Depois de instalar os pacotes de idiomas desejados, modifique suas configuraçõ
 
 Depois disso, seu IntelliSense deverá funcionar conforme o esperado quando você abrir um projeto do .NET Core que direciona a versão dos arquivos do IntelliSense que você acabou de instalar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [IntelliSense no Visual Studio](/visualstudio/ide/using-intellisense)

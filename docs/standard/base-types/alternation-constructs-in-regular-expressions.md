@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711552"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159683"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 
@@ -42,7 +42,7 @@ Como a classe de caracteres positivos, o caractere `|` pode ser usado para corre
 
 A expressão regular que usa o caractere `|`, `\bgr(a|e)y\b`, é interpretada conforme mostrado na tabela a seguir:
 
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`gr`|Corresponder aos caracteres "gr".|  
@@ -56,16 +56,16 @@ O caractere `|` também pode ser usado para executar uma correspondência do tip
 
 A expressão regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretada conforme mostrado na tabela a seguir:
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Corresponde a uma das seguintes opções: dois dígitos decimais seguidos por um hífen seguido por sete dígitos decimais ou três dígitos decimais, um hífen, dois dígitos decimais, outro hífen e quatro dígitos decimais.|  
 |`\d`|Termina a correspondência em um limite de palavra.|  
   
-<a name="Conditional_Expr"></a>   
+<a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>Correspondência condicional com uma expressão
 
-Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele pode corresponder a um padrão inicial. A sintaxe é:  
+Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele pode corresponder a um padrão inicial. Sua sintaxe é:  
 
 *expressão* de `(?(` `)` *sim* `|` *não* `)`
 
@@ -85,7 +85,7 @@ O exemplo a seguir é uma variação do exemplo que aparece na seção [E/Ou Cor
 
 O padrão de expressão regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretado conforme mostrado na tabela a seguir:
 
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?(\d{2}-)`|Determinar se os próximos três caracteres são compostos por dois dígitos seguidos por um hífen.|  
@@ -96,7 +96,7 @@ O padrão de expressão regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` �
 <a name="Conditional_Group"></a>
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Correspondência condicional com base em um grupo capturado válido
 
-Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele correspondeu a um grupo de captura especificado. A sintaxe é:
+Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele correspondeu a um grupo de captura especificado. Sua sintaxe é:
 
 `(?(` *nome* `)` *sim* `|` *não* `)`
 
@@ -115,7 +115,7 @@ O exemplo a seguir é uma variação do exemplo que aparece na seção [E/Ou Cor
 
 O padrão de expressão regular `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretado conforme mostrado na tabela a seguir:
 
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(?<n2>\d{2}-)?`|Corresponder a zero ou uma ocorrência de dois dígitos seguidos por um hífen. Atribua um nome ao grupo de captura `n2`.|  
@@ -129,6 +129,6 @@ Uma variação desse exemplo que usa um grupo numerado em vez de um grupo nomead
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressão regular – referência rápida](regular-expression-language-quick-reference.md)

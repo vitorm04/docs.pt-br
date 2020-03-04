@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709667"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160203"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando \<msxsl:script>
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
@@ -47,28 +47,28 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  As funções podem ser declaradas no elemento `msxsl:script`. A tabela a seguir mostra os namespaces que têm suporte por padrão. Você pode usar as classes fora dos namespaces listados. No entanto, essas classes devem ser totalmente qualificadas.  
   
-|Namespaces padrão|Descrição|  
+|Namespaces padrão|DESCRIÇÃO|  
 |------------------------|-----------------|  
-|System|Classe do sistema.|  
+|Sistema|Classe do sistema.|  
 |System.Collection|Classes de coleção.|  
-|{1&gt;System.Text&lt;1}|Classes de texto.|  
-|{1&gt;System.Text.RegularExpressions&lt;1}|Classes de expressão regular.|  
-|{1&gt;System.Xml&lt;1}|Classes XML principais.|  
+|{1&gt;{2&gt;System.Text&lt;2}&lt;1}|Classes de texto.|  
+|{1&gt;{2&gt;System.Text.RegularExpressions&lt;2}&lt;1}|Classes de expressão regular.|  
+|System.Xml|Classes XML principais.|  
 |System.Xml.Xsl|Classes XSLT.|  
 |System.Xml.XPath|Classes da linguagem XPath.|  
-|{1&gt;Microsoft.VisualBasic&lt;1}|Classes para scripts do Microsoft Visual Basic.|  
+|Microsoft.VisualBasic|Classes para scripts do Microsoft Visual Basic.|  
   
  Quando uma função é declarada, ela está contida em um bloco de script. As folhas de estilos podem conter vários blocos de script, cada uma funcionando de maneira independente da outra. Isso significa que, se você estiver realizando a execução em um bloco de script, não poderá chamar uma função definida em outro bloco de script, a menos que tenha sido declarado que ela tem o mesmo namespace e a mesma linguagem de script. Como cada bloco de script pode estar em sua própria linguagem, e o bloco é analisado de acordo com as regras de gramática do analisador de linguagem, você deverá usar a sintaxe correta para a linguagem em uso. Por exemplo, se você estiver em um bloco de script C#, é um erro usar um nó de comentário XML `<!-- an XML comment -->` no bloco.  
   
  Os argumentos fornecidos e os valores de retorno definidos pelas funções de script devem ser do tipo XPath do W3C (World Wide Web Consortium) ou XSLT. A tabela a seguir mostra os tipos correspondentes de W3C, as classes equivalentes do .NET Framework (tipo) e se o tipo do W3C é XPath ou XSLT.  
   
-|{1&gt;Tipo&lt;1}|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
+|Type|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|Cadeia de caracteres|System.String|{1&gt;XPath&lt;1}|  
-|Booliano|System.Boolean|{1&gt;XPath&lt;1}|  
-|Número|System.Double|{1&gt;XPath&lt;1}|  
+|String|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Número|System.Double|XPath|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
-|Node Set|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
+|Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  Se a função de script utilizar um dos seguintes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, eles serão forçados para Double, que mapeia para o número do tipo XPath do W3C. Todos os outros tipos são forçados para uma cadeia de caracteres chamando o método `ToString`.  
   
@@ -122,14 +122,14 @@ Public Class Sample
     'Load the XML data file.  
     Dim doc As XPathDocument = New XPathDocument(filename)  
   
-    'Create an XmlTextWriter to output to the console.               
+    'Create an XmlTextWriter to output to the console.
     Dim writer As XmlTextWriter = New XmlTextWriter(Console.Out)  
     writer.Formatting = Formatting.Indented  
   
     'Transform the file.  
     xslt.Transform(doc, Nothing, writer, Nothing)  
     writer.Close()  
-  End Sub   
+  End Sub
 End Class  
 ```  
   
@@ -154,7 +154,7 @@ public class Sample
     //Load the XML data file.  
     XPathDocument doc = new XPathDocument(filename);  
   
-    //Create an XmlTextWriter to output to the console.               
+    //Create an XmlTextWriter to output to the console.
     XmlTextWriter writer = new XmlTextWriter(Console.Out);  
     writer.Formatting = Formatting.Indented;  
   
@@ -198,14 +198,14 @@ public class Sample
       ]]>  
    </msxsl:script>  
   
-  <xsl:template match="data">    
+  <xsl:template match="data">
   <circles>  
   
   <xsl:for-each select="circle">  
     <circle>  
     <xsl:copy-of select="node()"/>  
        <circumference>  
-          <xsl:value-of select="user:circumference(radius)"/>   
+          <xsl:value-of select="user:circumference(radius)"/>
        </circumference>  
     </circle>  
   </xsl:for-each>  
@@ -226,9 +226,9 @@ public class Sample
     <radius>37.5</radius>  
     <circumference>235.5</circumference>  
   </circle>  
-</circles>    
+</circles>
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -3,12 +3,12 @@ title: Teste de unidade em C# com NUnit e .NET Core
 description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa, criando passo a passo uma solução de exemplo, usando dotnet test e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714222"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240877"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -16,10 +16,10 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 - [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
-- Um editor de texto ou de código de sua escolha.
+- Um editor de texto ou editor de código de sua escolha.
 
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
@@ -28,7 +28,7 @@ Abra uma janela do shell. Crie um diretório chamado *unit-testing-using-nunit* 
 ```dotnetcli
 dotnet new sln
 ```
- 
+
 Em seguida, crie um diretório *PrimeService*. A seguinte estrutura de tópicos mostra a estrutura de arquivo e o diretório até aqui:
 
 ```console
@@ -87,7 +87,7 @@ dotnet new nunit
 
 O comando [dotnet new](../tools/dotnet-new.md) cria um projeto de teste que usa o NUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no arquivo *PrimeService.Tests.csproj*:
 
-[!code-xml[Packages](~/samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
+[!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
 O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new`, na etapa anterior, adicionou o SDK de teste da Microsoft, a estrutura de teste do NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
@@ -120,35 +120,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 Escreva um teste com falha, faça-o ser aprovado e, em seguida, repita o processo. No diretório *PrimeService.Tests*, renomeie o arquivo *UnitTest1.cs* para *PrimeService_IsPrimeShould.cs* e substitua todo o seu conteúdo pelo código a seguir:
 
-```csharp
-using NUnit.Framework;
-using Prime.Services;
-
-namespace Prime.UnitTests.Services
-{
-    [TestFixture]
-    public class PrimeService_IsPrimeShould
-    {
-        [Test]
-        public void IsPrime_InputIs1_ReturnFalse()
-        {
-            PrimeService primeService = CreatePrimeService();
-            var result = primeService.IsPrime(1);
-
-            Assert.IsFalse(result, "1 should not be prime");
-        }
-        
-        /*
-        More tests
-        */
-        
-        private PrimeService CreatePrimeService()
-        {
-             return new PrimeService();
-        }
-    }
-}
-```
+[!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 O atributo `[TestFixture]` indica uma classe que contém testes de unidade. O atributo `[Test]` indica um método que é um método de teste.
 
@@ -175,7 +147,7 @@ Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alg
 
 Em vez de criar novos testes, aplique esse atributo para criar um único teste controlado por dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 Execute `dotnet test`, e dois desses testes falham. Para fazer com que todos os testes sejam aprovados, altere a cláusula `if` no início do método `Main` no arquivo *PrimeService.cs*:
 

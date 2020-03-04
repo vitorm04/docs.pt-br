@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
-ms.date: 05/29/2018
-ms.openlocfilehash: 890d1fc3fd9d47f2bdcd63f2a25248c3edd705e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.date: 02/27/2020
+ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626041"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156999"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
-## <a name="name"></a>{1&gt;Nome&lt;1}
+## <a name="name"></a>Nome
 
 `dotnet test` - driver de teste do .NET usado para executar testes de unidade.
 
@@ -29,7 +29,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
 dotnet test [-h|--help]
 ```
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>DESCRIÇÃO
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
@@ -43,7 +43,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Caminho para o projeto de teste. Se não é especificado, usa como padrão o diretório atual.
 
-## <a name="options"></a>{1&gt;Opções&lt;1}
+## <a name="options"></a>Opções
 
 - **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
@@ -147,8 +147,8 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 | Estrutura de teste | Propriedades com suporte                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>Nome Totalmente Qualificado</li><li>{1&gt;Nome&lt;1}</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>Nome Totalmente Qualificado</li><li>DisplayName</li><li>Características</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Características</li></ul>                                   |
 
 O `<operator>` descreve a relação entre a propriedade o valor:
 
@@ -167,14 +167,14 @@ As expressões podem ser associadas a operadores condicionais:
 
 | Operador            | Função |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | OU       |
 | `&`                 | AND      |
 
 Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

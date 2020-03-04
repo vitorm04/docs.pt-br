@@ -3,12 +3,12 @@ title: Automatizar o treinamento de modelos com a CLI do ML.NET
 description: Descubra como usar a ferramenta de CLI do ML.NET para treinar automaticamente o melhor modelo da linha de comando.
 ms.date: 12/17/2019
 ms.custom: how-to
-ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9c493b1df0dd326ad2f0a5d1cac0fc11d7cf37e2
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740126"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240617"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizar o treinamento de modelos com a CLI do ML.NET
 
@@ -23,11 +23,11 @@ A CLI do ML.NET simplifica esse processo usando o AutoML (Machine Learning autom
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>O que é a CLI (interface de linha de comando) do ML.NET?
 
-A CLI do ML.NET é uma ferramenta de dotnet global. Depois de instalado, dê a ele uma tarefa de aprendizado de máquina e um conjunto de dado de treinamento e ele gera um modelo C# ml.net, bem como o código a ser executado para usar o modelo em seu aplicativo.
+A CLI do ML.NET é uma [ferramenta .NET Core](../core/tools/global-tools.md). Depois de instalado, você dá a ele uma tarefa de aprendizado de máquina e um conjunto de informações de treinamento e gera um modelo ML.NET C# , bem como o código a ser executado para usar o modelo em seu aplicativo.
 
-Conforme mostrado na figura abaixo, é simples gerar um modelo de alta qualidade do ML.NET (arquivo. zip de modelo serializado) mais o código C# de exemplo para executar/pontuar esse modelo. Além disso, o código C# para criar/treinar esse modelo também é gerado, de modo que você pode pesquisar e iterar pelo algoritmo e pelas configurações usados para esse "melhor modelo" gerado.
+Conforme mostrado na figura a seguir, é simples gerar um modelo ML.NET de alta qualidade (arquivo. zip de modelo serializado) mais o código C# de exemplo para executar/pontuar esse modelo. Além disso, o código C# para criar/treinar esse modelo também é gerado, de modo que você pode pesquisar e iterar pelo algoritmo e pelas configurações usados para esse "melhor modelo" gerado.
 
-![image](media/automate-training-with-cli/cli-high-level-process.png "O mecanismo AutoML está trabalhando dentro da CLI do ML.NET")
+![imagem](media/automate-training-with-cli/cli-high-level-process.png "O mecanismo AutoML está trabalhando dentro da CLI do ML.NET")
 
 Você pode gerar esses ativos de seus próprios conjuntos de dados sem codificação por conta própria, portanto, ele também melhorará a sua produtividade, mesmo se você já conhecer o ML.NET.
 
@@ -44,7 +44,7 @@ Exemplo de uso:
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
 ```
 
-![imagem](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/cli-model-generation.gif)
 
 Você pode executá-los do mesmo modo que no *Windows PowerShell*, no *bash do macOS/Linux ou no *CMD do Windows*. No entanto, o preenchimento automático de tabela (sugestões de parâmetro) não funcionará no *CMD do Windows*.
 
@@ -64,17 +64,17 @@ O terceiro ativo, o código de treinamento, mostra a você qual código de API d
 
 ## <a name="understanding-the-quality-of-the-model"></a>Noções básicas sobre a qualidade do modelo
 
-Quando você gera um "melhor modelo" com a ferramenta da CLI, você vê métricas de qualidade (tais como precisão e R-quadrado) conforme apropriado para a tarefa de ML que você está usando como destino.
+Quando você gera um ' melhor modelo ' com a ferramenta CLI, vê métricas de qualidade (como precisão e R-quadrado) conforme apropriado para a tarefa ML que você está direcionando.
 
-Aqui, resumiremos essas métricas agrupadas pela tarefa de ML para que você possa entender a qualidade do seu "melhor modelo" gerado automaticamente.
+Aqui, essas métricas são resumidas agrupadas pela tarefa ML para que você possa entender a qualidade do ' melhor modelo ' gerado automaticamente.
 
 ### <a name="metrics-for-binary-classification-models"></a>Métricas para modelos de classificação binária
 
 A seguir, é exibida a lista de métricas de tarefas de classificação binária de ML para os cinco principais modelos encontrados pela CLI:
 
-![imagem](media/automate-training-with-cli/cli-binary-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
-A precisão é uma métrica popular para problemas de classificação, mas precisão nem sempre é a melhor métrica para selecionar o melhor modelo, conforme explicado nas referências abaixo. Há casos em que você precisa avaliar a qualidade do seu modelo com métricas adicionais.
+A precisão é uma métrica popular para problemas de classificação. no entanto, a precisão nem sempre é a melhor métrica para selecionar o melhor modelo, conforme explicado nas referências a seguir. Há casos em que você precisa avaliar a qualidade do seu modelo com métricas adicionais.
 
 Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para classificação binária](resources/metrics.md#evaluation-metrics-for-binary-classification).
 
@@ -82,7 +82,7 @@ Para explorar e entender as métricas que são geradas pela CLI, consulte [métr
 
 A seguir é exibida a lista de métricas de tarefas de ML de classificação multiclasse para os cinco principais modelos encontrados pela CLI:
 
-![imagem](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
+![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
 Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para classificação multiclasse](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
@@ -90,13 +90,13 @@ Para explorar e entender as métricas que são geradas pela CLI, consulte [métr
 
 Um modelo de regressão se ajustará bem aos dados se as diferenças entre os valores observados e os previstos do modelo forem pequenas e sem desvio. A regressão pode ser avaliada com certas métricas.
 
-Você verá uma lista semelhante de métricas para os cinco modelos com melhor qualidade encontrados pela CLI. Neste caso em particular, relacionados a uma tarefa de ML de regressão:
+Você verá uma lista semelhante de métricas para os melhores cinco modelos de qualidade encontrados pela CLI. Neste caso em particular, relacionados a uma tarefa de ML de regressão:
 
-![imagem](media/automate-training-with-cli/cli-regression-metrics.png)
+![image](media/automate-training-with-cli/cli-regression-metrics.png)
 
 Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para regressão](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como instalar a ferramenta de CLI do ML.NET](how-to-guides/install-ml-net-cli.md)
 - [Tutorial: analisar o sentimentos usando a CLI do ML.NET](tutorials/sentiment-analysis-cli.md)

@@ -2,220 +2,159 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotNet (o Driver genérico para o CLI do .NET Core) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451162"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240864"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet` – Uma ferramenta para gerenciar o código-fonte e os binários do .NET.
+`dotnet`-o Driver genérico para o CLI do .NET Core.
 
 ## <a name="synopsis"></a>Sinopse
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+Para obter informações sobre os comandos disponíveis e o ambiente:
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [-h|--help] [--version] [--info]
+    [--list-runtimes] [--list-sdks]
 ```
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+Para executar um comando (requer a instalação do SDK):
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
-    [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+    [command-options] [arguments]
 ```
 
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
+Para executar um aplicativo:
 
 ```dotnetcli
-dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
+
+dotnet exec [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
 ```
 
----
+`--roll-forward` está disponível desde o .NET Core 3. x. Use `--roll-forward-on-no-candidate-fx` para .NET Core 2. x.
 
 ## <a name="description"></a>DESCRIÇÃO
 
-`dotnet` é uma ferramenta para gerenciar o código-fonte e os binários do .NET. Ela expõe comandos que realizam tarefas específicas, como [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md). Cada comando define seus próprios argumentos. Digite `--help` após cada comando para acessar uma breve documentação de ajuda.
+O comando `dotnet` tem duas funções:
 
-`dotnet` pode ser usado para executar aplicativos, especificando uma DLL de aplicativo, como `dotnet myapp.dll`. Consulte [Implantação de um aplicativo .NET Core](../deploying/index.md) para saber mais sobre as opções de implantação.
+- Ele fornece comandos para trabalhar com projetos do .NET Core.
+
+  Por exemplo, [`dotnet build`](dotnet-build.md) compila um projeto. Cada comando define suas próprias opções e argumentos. Todos os comandos dão suporte à opção `--help` para imprimir uma breve documentação sobre como usar o comando.
+
+- Ele executa aplicativos .NET Core.
+
+  Especifique o caminho para um arquivo de `.dll` de aplicativo para executar o aplicativo. Por exemplo, `dotnet myapp.dll` executa o aplicativo `myapp`. Consulte [implantação de aplicativos do .NET Core](../deploying/index.md) para saber mais sobre as opções de implantação.
 
 ## <a name="options"></a>Opções
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+Opções diferentes estão disponíveis para `dotnet` por si só, para executar um comando e para executar um aplicativo.
 
-`--additional-deps <PATH>`
+### <a name="options-for-dotnet-by-itself"></a>Opções para dotnet por si só
 
-Caminho para um arquivo *.deps.json* adicional.
+As opções a seguir são para `dotnet` por si só. Por exemplo, `dotnet --info`. Eles imprimem informações sobre o ambiente.
 
-`--additionalprobingpath <PATH>`
+- **`--info`**
 
-Caminho que contém a política de investigação e os assemblies a serem investigados.
+  Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.
 
-`--depsfile`
+- **`--version`**
 
-Caminho para um arquivo *deps.json*.
+  Imprime a versão do SDK do .NET Core em uso.
 
-Um arquivo *deps. JSON* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais informações sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+- **`--list-runtimes`**
 
-`-d|--diagnostics`
+  Imprime uma lista de tempos de execução do .NET Core instalados.
 
-Habilita a saída de diagnóstico.
+- **`--list-sdks`**
 
-`--fx-version <VERSION>`
+  Imprime uma lista de SDKs do .NET Core instalados.
 
-Versão do runtime do .NET Core a ser usada para executar o aplicativo.
+- **`-h|--help`**
 
-`-h|--help`
+  Imprime uma lista de comandos disponíveis.
 
-Imprime a documentação para um determinado comando, como `dotnet build --help`. `dotnet --help` imprime uma lista de comandos disponíveis.
+### <a name="sdk-options-for-running-a-command"></a>Opções do SDK para executar um comando
 
-`--info`
+As opções a seguir são para `dotnet` com um comando. Por exemplo, `dotnet build --help`.
 
-Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.
+- **`-d|--diagnostics`**
 
-`--list-runtimes`
+  Habilita a saída de diagnóstico.
 
-Exibe os runtimes do .NET Core instalado.
+- **`-v|--verbosity <LEVEL>`**
 
-`--list-sdks`
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Sem suporte em todos os comandos. Consulte a página de comando específica para determinar se essa opção está disponível.
 
-Exibe os tempos de execução dos SDKs .NET Core instalados.
+- **`-h|--help`**
 
-`--roll-forward-on-no-candidate-fx <N>`
+  Imprime a documentação para um determinado comando, como `dotnet build --help`.
 
-Define o comportamento quando a estrutura compartilhada necessária não está disponível. `N` pode ser:
+- **`command options`**
 
-- `0` – Desabilitar até mesmo o roll forward da versão secundária.
-- `1` – Efetuar roll forward da versão secundária, mas não da versão principal. Esse é o comportamento padrão.
-- `2` – Efetuar roll forward das versões secundária e principal.
+  Cada comando define opções específicas para esse comando. Consulte a página de comando específica para obter uma lista de opções disponíveis.
 
- Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
+### <a name="runtime-options"></a>Opções de tempo de execução
 
-`--runtimeconfig`
+As opções a seguir estão disponíveis quando `dotnet` executa um aplicativo. Por exemplo, `dotnet myapp.dll --fx-version 3.1.1`.
 
-Caminho para um arquivo *runtimeconfig.json*.
+- **`--additionalprobingpath <PATH>`**
 
-Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
+  Caminho que contém a política de investigação e os assemblies a serem investigados.
 
-`-v|--verbosity <LEVEL>`
+- **`--additional-deps <PATH>`**
 
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.
+  Caminho para um arquivo *.deps.json* adicional. Um arquivo *deps. JSON* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais informações, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
 
-`--version`
+- **`--fx-version <VERSION>`**
 
-Imprime a versão do SDK do .NET Core em uso.
+  Versão do runtime do .NET Core a ser usada para executar o aplicativo.
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+- **`--runtimeconfig`**
 
-`--additional-deps <PATH>`
+  Caminho para um arquivo *runtimeconfig.json*. Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
-Caminho para um arquivo *.deps.json* adicional.
+- **`--roll-forward-on-no-candidate-fx <N>`** **disponível no SDK do .NET Core 2. x.**
 
-`--additionalprobingpath <PATH>`
+  Define o comportamento quando a estrutura compartilhada necessária não está disponível. `N` pode ser:
 
-Caminho que contém a política de investigação e os assemblies a serem investigados.
+  - `0` – Desabilitar até mesmo o roll forward da versão secundária.
+  - `1` – Efetuar roll forward da versão secundária, mas não da versão principal. Esse é o comportamento padrão.
+  - `2` – Efetuar roll forward das versões secundária e principal.
 
-`--depsfile`
+   Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
-Caminho para um arquivo *deps.json*.
+- **`--roll-forward <SETTING>`** **disponível a partir do SDK do .NET Core 3,0.**
 
-Um arquivo *deps.json* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais detalhes sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+  Controla como o roll forward é aplicado ao aplicativo. O `SETTING` pode ser um dos valores a seguir. Se não for especificado, `Minor` será o padrão.
 
-`-d|--diagnostics`
+  - `LatestPatch`-roll forward para a versão mais alta do patch. Isso desabilita o roll forward da versão secundária.
+  - `Minor`-roll forward para a versão secundária mais baixa, se a versão secundária solicitada estiver ausente. Se a versão secundária solicitada estiver presente, a política LatestPatch será usada.
+  - `Major`-rolar para a versão principal mais baixa e a versão secundária mais baixa, se a versão principal solicitada estiver ausente. Se a versão principal solicitada estiver presente, a política secundária será usada.
+  - `LatestMinor`-roll forward até a versão secundária mais alta, mesmo que a versão secundária solicitada esteja presente. Destinado a cenários de hospedagem de componente.
+  - `LatestMajor`-roll forward até a versão secundária mais alta e a mais alta, mesmo que a principal solicitada esteja presente. Destinado a cenários de hospedagem de componente.
+  - `Disable`-não rolar para frente. Associar somente à versão especificada. Essa política não é recomendada para uso geral, pois ela desabilita a capacidade de efetuar roll forward para os patches mais recentes. Esse valor só é recomendado para teste.
 
-Habilita a saída de diagnóstico.
+Com exceção de `Disable`, todas as configurações usarão a versão de patch mais alta disponível.
 
-`--fx-version <VERSION>`
-
-Versão do runtime do .NET Core a ser usada para executar o aplicativo.
-
-`-h|--help`
-
-Imprime a documentação para um determinado comando, como `dotnet build --help`. `dotnet --help` imprime uma lista de comandos disponíveis.
-
-`--info`
-
-Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.
-
-`--roll-forward-on-no-candidate-fx`
-
- Desabilita o roll forward da versão secundária, se definido como `0`. Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
-
-`--runtimeconfig`
-
-Caminho para um arquivo *runtimeconfig.json*.
-
-Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
-
-`-v|--verbosity <LEVEL>`
-
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.
-
-`--version`
-
-Imprime a versão do SDK do .NET Core em uso.
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`--additionalprobingpath <PATH>`
-
-Caminho que contém a política de investigação e os assemblies a serem investigados.
-
-`--depsfile`
-
-Caminho para um arquivo *deps.json*.
-
-Um arquivo *deps.json* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais detalhes sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
-
-`-d|--diagnostics`
-
-Habilita a saída de diagnóstico.
-
-`--fx-version <VERSION>`
-
-Versão do runtime do .NET Core a ser usada para executar o aplicativo.
-
-`-h|--help`
-
-Imprime a documentação para um determinado comando, como `dotnet build --help`. `dotnet --help` imprime uma lista de comandos disponíveis.
-
-`--info`
-
-Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.
-
-`--runtimeconfig`
-
-Caminho para um arquivo *runtimeconfig.json*.
-
-Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
-
-`-v|--verbosity <LEVEL>`
-
-Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.
-
-`--version`
-
-Imprime a versão do SDK do .NET Core em uso.
-
----
+O comportamento de roll forward também pode ser configurado em uma propriedade de arquivo de projeto, uma propriedade de arquivo de configuração de tempo de execução e uma variável de ambiente. Para obter mais informações, consulte [roll forward de tempo de execução de versão principal](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).
 
 ## <a name="dotnet-commands"></a>Comandos dotnet
 
 ### <a name="general"></a>Geral
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | Comando                                       | Função                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -233,42 +172,6 @@ Imprime a versão do SDK do .NET Core em uso.
 | [dotnet sln](dotnet-sln.md)                   | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
 | [dotnet store](dotnet-store.md)               | Armazena os assemblies no repositório de pacotes de runtime.                     |
 | [dotnet test](dotnet-test.md)                 | Executa testes usando um executor de teste.                                     |
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-| Comando                             | Função                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | Compila um aplicativo .NET Core.                                     |
-| [dotnet clean](dotnet-clean.md)     | Limpa saídas de build.                                              |
-| [dotnet help](dotnet-help.md)       | Mostra uma documentação mais detalhada online para o comando.           |
-| [dotnet migrate](dotnet-migrate.md) | Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.  |
-| [dotnet msbuild](dotnet-msbuild.md) | Oferece acesso à linha de comando do MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicializa um projeto do C# ou F# de um modelo especificado.                |
-| [dotnet pack](dotnet-pack.md)       | Cria um pacote NuGet do seu código.                               |
-| [dotnet publish](dotnet-publish.md) | Publica um aplicativo dependente do .NET Framework ou autocontido. |
-| [dotnet restore](dotnet-restore.md) | Restaura as dependências para um determinado aplicativo.                  |
-| [dotnet run](dotnet-run.md)         | Executa o aplicativo na origem.                                   |
-| [dotnet sln](dotnet-sln.md)         | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
-| [dotnet store](dotnet-store.md)     | Armazena os assemblies no repositório de pacotes de runtime.                     |
-| [dotnet test](dotnet-test.md)       | Executa testes usando um executor de teste.                                     |
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-| Comando                             | Função                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | Compila um aplicativo .NET Core.                                     |
-| [dotnet clean](dotnet-clean.md)     | Limpa saídas de build.                                              |
-| [dotnet migrate](dotnet-migrate.md) | Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.  |
-| [dotnet msbuild](dotnet-msbuild.md) | Oferece acesso à linha de comando do MSBuild.                        |
-| [dotnet new](dotnet-new.md)         | Inicializa um projeto do C# ou F# de um modelo especificado.                |
-| [dotnet pack](dotnet-pack.md)       | Cria um pacote NuGet do seu código.                               |
-| [dotnet publish](dotnet-publish.md) | Publica um aplicativo dependente do .NET Framework ou autocontido. |
-| [dotnet restore](dotnet-restore.md) | Restaura as dependências para um determinado aplicativo.                  |
-| [dotnet run](dotnet-run.md)         | Executa o aplicativo na origem.                                   |
-| [dotnet sln](dotnet-sln.md)         | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
-| [dotnet test](dotnet-test.md)       | Executa testes usando um executor de teste.                                     |
-
----
 
 ### <a name="project-references"></a>Referências de projeto
 
@@ -320,81 +223,81 @@ Para obter mais informações sobre cada ferramenta, digite `dotnet <tool-name> 
 
 ## <a name="examples"></a>Exemplos
 
-Cria um novo aplicativo de console do .NET Core:
+Crie um novo aplicativo de console .NET Core:
 
-`dotnet new console`
-
-Restaure as dependências para um determinado aplicativo:
-
-`dotnet restore`
-
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+```dotnetcli
+dotnet new console
+```
 
 Compile um projeto e suas dependências em um determinado diretório:
 
-`dotnet build`
+```dotnetcli
+dotnet build
+```
 
-Execute a DLL de um aplicativo, como `myapp.dll`:
+Executar um aplicativo:
 
-`dotnet myapp.dll`
+```dotnetcli
+dotnet myapp.dll
+```
 
 ## <a name="environment-variables"></a>Variáveis de ambiente
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-`DOTNET_PACKAGES`
+  Especifica o local dos tempos de execução do .NET Core, se eles não estiverem instalados no local padrão. O local padrão no Windows é `C:\Program Files\dotnet`. O local padrão no Linux e no macOS é `/usr/share/dotnet`. Essa variável de ambiente é usada somente ao executar aplicativos por meio de executáveis gerados (apphosts). `DOTNET_ROOT(x86)` é usado em vez de executar um executável de 32 bits em um sistema operacional de 64 bits.
 
-A pasta de pacotes globais. Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
+- `DOTNET_PACKAGES`
 
-`DOTNET_SERVICING`
+  A pasta de pacotes globais. Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
+- `DOTNET_SERVICING`
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+  Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
 
-Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos). Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
+- `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-`DOTNET_MULTILEVEL_LOOKUP`
+  Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos). Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
 
-Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+- `DOTNET_MULTILEVEL_LOOKUP`
 
-`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+  Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definido, o padrão será 1 (`true`lógico). Defina como 0 (`false`lógico) para não resolver a partir do local global e ter instalações isoladas do .NET Core. Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
-Desabilita o roll forward da versão secundária, se definido como `0`. Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
+- `DOTNET_ROLL_FORWARD` **disponível a partir do SDK do .NET Core 3. x.**
 
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+  Determina o comportamento de roll-forward. Para obter mais informações, consulte a opção `--roll-forward` anteriormente neste artigo.
 
-`DOTNET_PACKAGES`
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **disponível no SDK do .NET Core 2. x.**
 
-O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
+  Desabilita o roll forward da versão secundária, se definido como `0`. Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
-`DOTNET_SERVICING`
+- `DOTNET_CLI_UI_LANGUAGE`
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
+  Define o idioma da interface do usuário da CLI usando um valor de localidade, como `en-us`. Os valores com suporte são os mesmos para o Visual Studio. Para obter mais informações, consulte a seção sobre como alterar o idioma do instalador na [documentação de instalação do Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019). As regras do Gerenciador de recursos do .NET se aplicam, portanto, você não precisa escolher uma correspondência exata&mdash;também pode escolher os descendentes na árvore de `CultureInfo`. Por exemplo, se você defini-lo como `fr-CA`, a CLI encontrará e usará as traduções `fr`. Se você defini-lo como um idioma sem suporte, a CLI voltará para o inglês.
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `DOTNET_DISABLE_GUI_ERRORS`
 
-Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos). Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
+  Para executáveis gerados por GUI habilitado-desabilita o Popup da caixa de diálogo que normalmente mostra para determinadas classes de erros. Ele só grava em `stderr` e sai nesses casos.
+  
+- `DOTNET_ADDITIONAL_DEPS`
 
-`DOTNET_MULTILEVEL_LOOKUP`
+  Equivalente à opção da CLI `--additional-deps`.
 
-Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+- `DOTNET_RUNTIME_ID`
 
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
+  Substitui o RID detectado.
 
-`DOTNET_PACKAGES`
+- `DOTNET_SHARED_STORE`
 
-O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.
+  Local do "armazenamento compartilhado" para o qual a resolução de assembly volta para em alguns casos.
 
-`DOTNET_SERVICING`
+- `DOTNET_STARTUP_HOOKS`
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
+  Lista de assemblies dos quais carregar e executar os ganchos de inicialização.
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
-Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos). Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos). Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.
-
----
+  Controla o rastreamento de diagnóstico dos componentes de hospedagem, como `dotnet.exe`, `hostfxr`e `hostpolicy`.
 
 ## <a name="see-also"></a>Confira também
 

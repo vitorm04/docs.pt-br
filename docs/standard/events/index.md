@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423536"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159618"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 
@@ -40,7 +40,7 @@ O exemplo de código a seguir mostra como declarar um evento denominado `Thresho
  [!code-csharp[EventsOverview#1](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#1)]
  [!code-vb[EventsOverview#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#1)]  
   
-## <a name="delegates"></a>Delegados
+## <a name="delegates"></a>Delega
 
 Um representante é um tipo que contém uma referência a um método. Um representante é declarado com uma assinatura que mostra o tipo de retorno e os parâmetros para os métodos aos quais faz referência, e pode conter referências apenas aos métodos que correspondem à sua assinatura. Portanto, um representante é equivalente a um ponteiro de função fortemente tipado ou um retorno de chamada. Uma declaração de representante é suficiente para definir uma classe de representante.  
   
@@ -78,7 +78,7 @@ O exemplo a seguir mostra um método de manipulador de eventos chamado `c_Thresh
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>Manipuladores de eventos estáticos e dinâmicos  
- 
+
 O .NET permite que os assinantes se registrem para receber notificações de eventos de modo estático ou dinâmico. Os manipuladores de eventos estáticos permanecem em vigor por toda a vida da classe cujos eventos eles manipulam. Os manipuladores de eventos dinâmicos são ativados e desativados explicitamente durante a execução do programa, geralmente em resposta a alguma lógica de programa condicional. Por exemplo, eles podem ser usados se as notificações de eventos forem necessárias apenas sob determinadas condições, ou se um aplicativo fornecer vários manipuladores de eventos e as condições de tempo de execução definirem o apropriado para uso. O exemplo na seção anterior mostra como adicionar dinamicamente um manipulador de eventos. Para obter mais informações, veja [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (no Visual Basic) e [Eventos](../../csharp/programming-guide/events/index.md) (em C#).  
   
 ## <a name="raising-multiple-events"></a>Acionando vários eventos  
@@ -88,14 +88,14 @@ O .NET permite que os assinantes se registrem para receber notificações de eve
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Title|DESCRIÇÃO|  
 |-----------|-----------------|  
 |[Como acionar e consumir eventos](how-to-raise-and-consume-events.md)|Contém exemplos de como acionar e consumir eventos.|  
 |[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  
 |[Padrão de design do observador](observer-design-pattern.md)|Descreve o padrão de design que permite a um assinante se registrar em um provedor e receber notificações dele.|  
 |[Como consumir eventos em um aplicativo Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Mostra como manipular um evento acionado por um controle do Web Forms.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

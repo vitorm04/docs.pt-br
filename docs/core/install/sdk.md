@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740572"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157565"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
@@ -35,6 +35,19 @@ O Windows tem instaladores autônomos que podem ser usados para instalar o SDK d
 o macOS tem instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,1:
 
 - [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+
+Como alternativa aos instaladores do macOS para .NET Core, você pode baixar e instalar manualmente o SDK.
+
+Para extrair o SDK e tornar os comandos do CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir. Supõe-se que o tempo de execução seja baixado para o arquivo de `~/Downloads/dotnet-sdk.pkg`.
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -86,7 +99,7 @@ Se você estiver usando o Visual Studio para desenvolver aplicativos .NET Core, 
 
 Se você já tiver o Visual Studio instalado, poderá verificar sua versão com as etapas a seguir.
 
-01. {1&gt;Abra o Visual Studio.&lt;1}
+01. Abra o Visual Studio.
 01. Selecione **ajuda** > **sobre Microsoft Visual Studio**.
 01. Leia o número de versão na caixa de diálogo **sobre** .
 
@@ -104,6 +117,25 @@ Ao instalar ou modificar o Visual Studio, selecione uma ou mais das cargas de tr
 - A carga de trabalho **.net desktop Development** na seção **Desktop & Mobile** .
 
 [![o Windows Visual Studio 2019 com carga de trabalho do .NET Core](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+
+Para extrair o tempo de execução e tornar os comandos do CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, crie um diretório para instalar, por exemplo `%USERPROFILE%\dotnet`. Por fim, extraia o arquivo zip baixado para esse diretório.
+
+Por padrão, CLI do .NET Core comandos e aplicativos não usarão o .NET Core instalado dessa maneira. Você precisa optar por usá-lo explicitamente. Para fazer isso, altere as variáveis de ambiente com as quais um aplicativo é iniciado:
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+Essa abordagem permite que você instale várias versões em locais separados e escolha explicitamente qual local de instalação um aplicativo deve usar executando o aplicativo com variáveis de ambiente apontando para esse local.
+
+Mesmo quando essas variáveis de ambiente são definidas, o .NET Core ainda considera o local de instalação global padrão ao selecionar a melhor estrutura para executar o aplicativo. Normalmente, o padrão é `C:\Program Files\dotnet`, que os instaladores usam. Você pode instruir o tempo de execução para usar apenas o local de instalação personalizado definindo essa variável de ambiente também:
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -174,7 +206,7 @@ A Microsoft fornece imagens personalizadas para cenários específicos. Por exem
 
 Para obter mais informações sobre como usar o .NET Core em um contêiner do Docker, consulte [introdução ao .net e ao Docker](../docker/introduction.md) e [amostras](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 ::: zone pivot="os-windows"
 
@@ -186,6 +218,7 @@ Para obter mais informações sobre como usar o .NET Core em um contêiner do Do
 
 ::: zone pivot="os-macos"
 
+- [Trabalhando com o notarization Catalina do MacOS](macos-notarization-issues.md).
 - [Tutorial: introdução ao MacOS](../tutorials/using-on-mac-vs.md).
 - [Tutorial: criar um novo aplicativo com Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Tutorial: colocar em contêiner um aplicativo .NET Core](../docker/build-container.md).

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084241"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160008"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Quantificadores em expressões regulares
 Os quantificadores especificam quantas instâncias de um caractere, grupo ou classe de caracteres devem estar presentes na entrada para encontrar uma correspondência.  A tabela a seguir lista os quantificadores tem suporte no .NET.  
   
-|Quantificador Greedy|Quantificador lento|Descrição|  
+|Quantificador Greedy|Quantificador lento|DESCRIÇÃO|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Corresponder a zero ou mais vezes.|  
 |`+`|`+?`|Corresponder a um ou mais vezes.|  
@@ -54,7 +54,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`91*`|Corresponder a “9” seguido por zero ou mais caracteres “1”.|  
@@ -71,7 +71,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`an+`|Corresponder a um “a” seguido por um ou mais caracteres “n”.|  
@@ -88,7 +88,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`an?`|Corresponder a um “a” seguido por zero ou um caractere “n”.|  
@@ -104,7 +104,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
@@ -122,7 +122,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`\d{2,}`|Corresponder a pelo menos dois dígitos decimais.|  
@@ -147,7 +147,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`\w*?`|Corresponder a zero ou mais caracteres de palavra, mas o menor número de caracteres possível.|  
@@ -173,7 +173,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`^`|Corresponder ao início do fluxo de entrada.|  
 |`\s*`|Corresponder a zero ou mais caracteres de espaço em branco.|  
@@ -192,7 +192,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`(\w{3,}?\.)`|Corresponder a pelo menos três caracteres de palavra, mas o menor número de caracteres possível, seguido por um caractere de ponto. Este é o primeiro grupo de captura.|  
@@ -214,7 +214,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  O padrão de expressão regular é definido como mostra a tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`\b`|Iniciar em um limite de palavra.|  
 |`[A-Z]`|Corresponder a um caractere maiúscula de A a Z.|  
@@ -222,7 +222,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
 |`{1,10}`|Corresponder ao padrão anterior entre 1 e 10 vezes.|  
 |`[.!?]`|Corresponder a qualquer um dos caracteres de pontuação “.”, “!” ou “?”.|  
   
-<a name="Greedy"></a>   
+<a name="Greedy"></a>
 ## <a name="greedy-and-lazy-quantifiers"></a>Quantificadores Greedy e lentos  
  Alguns quantificadores têm duas versões:  
   
@@ -258,7 +258,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
   
  Para ver a diferença prática entre um grupo de captura que define um número mínimo e máximo de captura e um que define um número fixo de capturas, considere os padrões de expressão regular `(a\1|(?(1)\1)){0,2}` e `(a\1|(?(1)\1)){2}`. Ambas as expressões regulares consistem em um único grupo de captura, que é definido como mostrado na tabela a seguir.  
   
-|Padrão|Descrição|  
+|Padrão|DESCRIÇÃO|  
 |-------------|-----------------|  
 |`(a\1`|Faça qualquer correspondência a “a” juntamente com o valor do primeiro grupo capturado…|  
 |<code>&#124;(?(1)</code>|… ou teste se o primeiro grupo capturado foi definido. (Observe que o constructo `(?(1)` não define um grupo de captura).|  
@@ -269,7 +269,7 @@ Os quantificadores especificam quantas instâncias de um caractere, grupo ou cla
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

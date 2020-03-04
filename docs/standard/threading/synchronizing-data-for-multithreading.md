@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128973"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159384"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizando dados para multithreading
 
@@ -64,10 +64,10 @@ O .NET fornece várias estratégias para sincronizar o acesso à instância e ao
  Em ambos os casos, se uma exceção for lançada no bloqueio de código, o bloqueio adquirido por **lock** ou **SyncLock** é liberado automaticamente. Os compiladores C # e Visual Basic emitem um bloqueio **try**/**finally** com **Monitor.Enter** no início da tentativa, e **Monitor.Exit** no bloqueio **finally**. Se uma exceção for lançada dentro do bloqueio **lock** ou **SyncLock**, o manipulador **finally** é executado para permitir que você faça qualquer trabalho de limpeza.  
   
 ## <a name="synchronized-context"></a>Contexto sincronizado  
- 
+
 Nos aplicativos .NET Framework e Xamarin somente, você pode usar o <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> em qualquer <xref:System.ContextBoundObject> para sincronizar todos os campos e métodos de instância. Todos os objetos no mesmo domínio de contexto compartilham o mesmo bloqueio. Múltiplos threads podem acessar os métodos e os campos, mas somente um único thread é permitido em qualquer momento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)

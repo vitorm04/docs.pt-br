@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448887"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157798"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dependências e requisitos do .NET Core
 
@@ -214,7 +214,7 @@ O .NET Core 2,1 tem suporte nas seguintes distribuições/versões do Linux:
 | Fedora                         |  29 +                    | x64 |
 | Debian                         |  9                      | x64, ARM32 |
 | Ubuntu                         |  16, 4, 18, 4, 19, 4, 19,10    | x64, ARM32 |
-| Linux Mint                     |  17 +                    | x64 |
+| Linux Mint                     |  17+                    | x64 |
 | openSUSE                       |  15 +                    | x64 |
 | SLES (SUSE Linux Enterprise Server)   |  12 SP2+                | x64 |
 | Alpine Linux                   |  3.8+                   | x64 |
@@ -294,6 +294,14 @@ O .NET Core tem suporte nas seguintes versões do macOS:
 | 3.0               | Alta serra (10.13 +)  | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12 +)       | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Mais informações](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+A partir do macOS Catalina (versão 10,15), todo software criado após 1º de junho de 2019 que é distribuído com a ID do desenvolvedor deve ser notarized. Esse requisito se aplica ao tempo de execução do .NET Core, SDK do .NET Core e software criado com o .NET Core.
+
+Os instaladores do .NET Core (Runtime e SDK) versões 3,1, 3,0 e 2,1, foram notarizeddos desde 18 de fevereiro de 2020. Versões anteriores liberadas não são notarized. Se você executar um aplicativo não notarized, verá um erro semelhante à imagem a seguir:
+
+![alerta de notarization Catalina do macOS](media/dependencies/macos-notarized-pkg-warning.png)
+
+Para obter mais informações sobre como o imforced-notarization afeta o .NET Core (e seus aplicativos .NET Core), consulte [trabalhando com o MacOS Catalina notarization](macos-notarization-issues.md).
 
 ## <a name="libgdiplus"></a>libgdiplus
 

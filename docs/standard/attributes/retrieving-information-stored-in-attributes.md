@@ -11,12 +11,12 @@ helpviewer_keywords:
 - multiple attribute instances
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: fe5bb95d5e1f90c0dafa30977d76ea1d62125c99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130885"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158071"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperando informações armazenadas em atributos
 Recuperar um atributo personalizado é um processo simples. Primeiro, declare uma instância do atributo que você deseja recuperar. Em seguida, use o método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar o novo atributo para o valor do atributo que você deseja recuperar. Após a inicialização do novo atributo, basta usar suas propriedades para obter os valores.  
@@ -32,7 +32,7 @@ Recuperar um atributo personalizado é um processo simples. Primeiro, declare um
   
 - [Recuperar várias instâncias de um atributo aplicado a escopos diferentes](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
-<a name="cpconretrievingsingleinstanceofattribute"></a>   
+<a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Recuperar uma única instância de um atributo  
  No exemplo a seguir, o `DeveloperAttribute` (descrito na seção anterior) é aplicado à classe `MainApp` no nível da classe. O método `GetAttribute` usa **GetCustomAttribute** para recuperar os valores armazenados em `DeveloperAttribute` no nível da classe antes de exibi-los no console.  
   
@@ -51,12 +51,12 @@ The Reviewed Attribute is: True.
  Se o atributo não for encontrado, o método **GetCustomAttribute** inicializará `MyAttribute` com um valor nulo. Este exemplo verifica em `MyAttribute` a existência dessa instância e notifica o usuário caso nenhum atributo seja encontrado. Se o `DeveloperAttribute` não for encontrado no escopo da classe, a mensagem a seguir será exibida no console.  
   
 ```console  
-The attribute was not found.   
+The attribute was not found.
 ```  
   
  Este exemplo supõe que a definição de atributo está no namespace atual. Lembre-se de importar o namespace no qual a definição do atributo reside, se não estiver no namespace atual.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>Recuperar várias instâncias de um atributo aplicado ao mesmo escopo  
  No exemplo anterior, a classe a ser inspecionada e o atributo específico para localizar são passados para <xref:System.Attribute.GetCustomAttribute%2A>. Esse código funcionará bem se apenas uma instância de um atributo for aplicada no nível de classe. No entanto, se várias instâncias de um atributo forem aplicadas no mesmo nível de classe, o método **GetCustomAttribute** não recuperará todas as informações. Em casos em que várias instâncias do mesmo atributo são aplicadas ao mesmo escopo, você pode usar <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> para colocar todas as instâncias de um atributo em uma matriz. Por exemplo, se duas instâncias de `DeveloperAttribute` forem aplicadas no nível de classe da mesma classe, o método `GetAttribute` poderá ser modificado para exibir as informações encontradas nos dois atributos. Lembre-se, para aplicar vários atributos no mesmo nível, o atributo deverá ser definido com a propriedade **AllowMultiple** definida como **true** no <xref:System.AttributeUsageAttribute>.  
   
@@ -68,7 +68,7 @@ The attribute was not found.
   
  Se nenhum atributo for encontrado, esse código alertará o usuário. Caso contrário, as informações contidas nas duas instâncias de `DeveloperAttribute` serão exibidas.  
   
-<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>   
+<a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Recuperar várias instâncias de um atributo aplicado a escopos diferentes  
  Os métodos <xref:System.Attribute.GetCustomAttributes%2A> e <xref:System.Attribute.GetCustomAttribute%2A> não pesquisam uma classe inteira e retornam todas as instâncias de um atributo nessa classe. Em vez disso, eles pesquisam somente um método ou membro especificado por vez. Se você tiver uma classe com o mesmo atributo aplicado a cada membro e quiser recuperar os valores em todos os atributos aplicados a esses membros, forneça cada método ou membro individualmente para **GetCustomAttributes** e  **GetCustomAttribute**.  
   
@@ -82,7 +82,7 @@ The attribute was not found.
   
  Você pode usar os membros da classe <xref:System.Type> para obter os métodos e membros individuais na classe passada. Primeiro, esse exemplo consulta o objeto **Type** para obter informações de atributo para o nível de classe. Em seguida, ele usa <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> para colocar instâncias de todos os métodos em uma matriz de objetos <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> para recuperar informações de atributo para o nível de método. Você também pode usar o método <xref:System.Type.GetProperties%2A?displayProperty=nameWithType> para verificar os atributos no nível de propriedade, ou <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType> para verificar os atributos no nível do construtor.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714233"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240890"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -33,7 +33,7 @@ Nesta seção, é criada uma solução que contém os projetos de origem e de te
 As instruções a seguir fornecem as etapas para criar a solução de teste. Consulte [comandos para criar solução de teste](#create-test-cmd) para obter instruções para criar a solução de teste em uma única etapa.
 
 * Abra uma janela do shell.
-* Execute o seguinte comando:
+* Execute o comando a seguir:
 
   ```dotnetcli
   dotnet new sln -o unit-testing-using-dotnet-test
@@ -41,7 +41,7 @@ As instruções a seguir fornecem as etapas para criar a solução de teste. Con
 
   O comando [`dotnet new sln`](../tools/dotnet-new.md) cria uma nova solução no diretório *Unit-Testing-using-dotnet-Test* .
 * Altere o diretório para a pasta *Unit-Testing-using-dotnet-Test* .
-* Execute o seguinte comando:
+* Execute o comando a seguir:
 
   ```dotnetcli
   dotnet new classlib -o PrimeService
@@ -84,7 +84,7 @@ As instruções a seguir fornecem as etapas para criar a solução de teste. Con
   dotnet new xunit -o PrimeService.Tests
   ```
 
-* No comando anterior:
+* O comando anterior:
   * Cria o projeto *PrimeService. Tests* no diretório *PrimeService. Tests* . O projeto de teste usa [xUnit](https://xunit.github.io/) como a biblioteca de teste.
   * Configura o executor de teste adicionando os seguintes elementos de `<PackageReference />`ao arquivo de projeto:
     * "Microsoft. NET. Test. SDK"
@@ -207,7 +207,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 
 pelo código a seguir:
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 No código anterior, `[Theory]` e `[InlineData]` permitem testar vários valores menores que dois. Dois é o menor número de primo.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921202"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160294"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Como: gravar um loop Parallel. ForEach simples
 
@@ -50,7 +50,7 @@ No Visual Studio, há modelos de aplicativo de console do Visual Basic e do C# p
 Na linha de comando, você pode usar os comandos de CLI do .NET Core (por exemplo, `dotnet new console` ou `dotnet new console -lang vb`) ou pode criar o arquivo e usar o compilador de linha de comando para um aplicativo .NET Framework.
 
 Para um projeto do .NET Core, você precisa referenciar o pacote **System.Drawing.Common** do NuGet. No Visual Studio, use o Gerenciador de Pacotes do NuGet para instalar o pacote. Como alternativa, você pode adicionar uma referência ao pacote no arquivo \*.csproj* ou \*.vbproj*:
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
@@ -61,7 +61,7 @@ Para executar um aplicativo de console do .NET Core na linha de comando, use `do
 
 Para executar o aplicativo de console do Visual Studio, pressione **F5**.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Programação paralela](../../../docs/standard/parallel-programming/index.md)

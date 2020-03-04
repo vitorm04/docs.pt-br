@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459276"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159904"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlando a serialização XML usando atributos
 
@@ -250,7 +250,7 @@ Outra maneira para diferenciar os dois fluxos XML é usar a Ferramenta de Defini
 Quando o <xref:System.Xml.Serialization.XmlElementAttribute> é aplicado ao campo, o esquema resultante descreve o elemento da seguinte maneira.
 
 ```xml
-<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" /> 
+<xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" />
 ```
 
 ## <a name="serializing-an-arraylist"></a>Serializando um ArrayList
@@ -267,7 +267,7 @@ End Class
 
 ```csharp
 public class Group {
-    [XmlElement(Type = typeof(Employee)), 
+    [XmlElement(Type = typeof(Employee)),
     XmlElement(Type = typeof(Manager))]
     public ArrayList Info;
 }
@@ -315,7 +315,7 @@ Por outro lado, se você quisesse serializar uma instância da classe, somente `
 
 Pode haver situações quando uma propriedade pública ou um campo não precisam ser serializados. Por exemplo, um campo ou propriedade podem ser usados para conter metadados. Nesses casos, aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> ao campo ou propriedade e o <xref:System.Xml.Serialization.XmlSerializer> o ignorarão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)

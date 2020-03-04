@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30af18b7d7b86621586c7da66eda1b37356d5565
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706156"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159774"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Como criar um objeto WindowsPrincipal
 Há duas maneiras de criar um objeto de <xref:System.Security.Principal.WindowsPrincipal>, dependendo se o código deve executar repetidamente a validação baseada em função ou deve executá-la apenas uma vez.  
@@ -40,13 +40,13 @@ Há duas maneiras de criar um objeto de <xref:System.Security.Principal.WindowsP
 2. Com a política definida, use a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> estática para recuperar a entidade de segurança que encapsula o usuário atual do Windows. Como o tipo de retorno da propriedade é <xref:System.Security.Principal.IPrincipal>, você deve converter o resultado em um tipo de <xref:System.Security.Principal.WindowsPrincipal>. O código a seguir inicializa um novo objeto <xref:System.Security.Principal.WindowsPrincipal> para o valor da entidade de segurança associada ao thread atual.  
   
     ```csharp  
-    WindowsPrincipal myPrincipal =   
+    WindowsPrincipal myPrincipal =
         (WindowsPrincipal) Thread.CurrentPrincipal;  
     ```  
   
     ```vb  
     Dim myPrincipal As WindowsPrincipal = _  
-        CType(Thread.CurrentPrincipal, WindowsPrincipal)   
+        CType(Thread.CurrentPrincipal, WindowsPrincipal)
     ```  
   
 3. Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.  
@@ -75,6 +75,6 @@ Há duas maneiras de criar um objeto de <xref:System.Security.Principal.WindowsP
   
 3. Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)
