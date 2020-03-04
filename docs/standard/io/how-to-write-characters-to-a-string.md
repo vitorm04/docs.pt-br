@@ -11,38 +11,38 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: b53513ef0b373cdde7703eddcd182ab7fd15cb9b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706615"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160268"
 ---
-# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="d91f9-102">Como: gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="d91f9-102">How to: Write characters to a string</span></span>
-<span data-ttu-id="d91f9-103">Os exemplos de código a seguir gravam caracteres de forma síncrona ou assíncrona de uma matriz de caracteres em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d91f9-103">The following code examples write characters synchronously or asynchronously from a character array into a string.</span></span>  
+# <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="d7775-102">Como: gravar caracteres em uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="d7775-102">How to: Write characters to a string</span></span>
+<span data-ttu-id="d7775-103">Os exemplos de código a seguir gravam caracteres de forma síncrona ou assíncrona de uma matriz de caracteres em uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d7775-103">The following code examples write characters synchronously or asynchronously from a character array into a string.</span></span>  
   
-## <a name="example-write-characters-synchronously-in-a-console-app"></a><span data-ttu-id="d91f9-104">Exemplo: gravar caracteres de forma síncrona em um aplicativo de console</span><span class="sxs-lookup"><span data-stu-id="d91f9-104">Example: Write characters synchronously in a console app</span></span>  
- <span data-ttu-id="d91f9-105">O exemplo a seguir usa um <xref:System.IO.StringWriter> para gravar cinco caracteres de forma síncrona em um objeto <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="d91f9-105">The following example uses a <xref:System.IO.StringWriter> to write five characters synchronously to a <xref:System.Text.StringBuilder> object.</span></span> 
+## <a name="example-write-characters-synchronously-in-a-console-app"></a><span data-ttu-id="d7775-104">Exemplo: gravar caracteres de forma síncrona em um aplicativo de console</span><span class="sxs-lookup"><span data-stu-id="d7775-104">Example: Write characters synchronously in a console app</span></span>  
+ <span data-ttu-id="d7775-105">O exemplo a seguir usa um <xref:System.IO.StringWriter> para gravar cinco caracteres de forma síncrona em um objeto <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="d7775-105">The following example uses a <xref:System.IO.StringWriter> to write five characters synchronously to a <xref:System.Text.StringBuilder> object.</span></span>
   
  [!code-csharp[Conceptual.StringBuilder#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/example2.cs#9)]
  [!code-vb[Conceptual.StringBuilder#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/example2.vb#9)]  
   
-## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a><span data-ttu-id="d91f9-106">Exemplo: gravar caracteres de forma assíncrona em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="d91f9-106">Example: Write characters asynchronously in a WPF app</span></span> 
- <span data-ttu-id="d91f9-107">O próximo exemplo é o código por trás de um aplicativo WPF.</span><span class="sxs-lookup"><span data-stu-id="d91f9-107">The next example is the code behind a WPF app.</span></span> <span data-ttu-id="d91f9-108">Na carga de janela, o exemplo lê todos os caracteres de forma assíncrona de um controle <xref:System.Windows.Controls.TextBox> e os armazena em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="d91f9-108">On window load, the example asynchronously reads all characters from a <xref:System.Windows.Controls.TextBox> control and stores them in an array.</span></span> <span data-ttu-id="d91f9-109">Em seguida, ele grava cada letra ou caractere de espaço em branco de forma assíncrona em uma linha separada de um controle <xref:System.Windows.Controls.TextBlock>.</span><span class="sxs-lookup"><span data-stu-id="d91f9-109">It then asynchronously writes each letter or white-space character to a separate line of a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
+## <a name="example-write-characters-asynchronously-in-a-wpf-app"></a><span data-ttu-id="d7775-106">Exemplo: gravar caracteres de forma assíncrona em um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="d7775-106">Example: Write characters asynchronously in a WPF app</span></span>
+ <span data-ttu-id="d7775-107">O próximo exemplo é o código por trás de um aplicativo WPF.</span><span class="sxs-lookup"><span data-stu-id="d7775-107">The next example is the code behind a WPF app.</span></span> <span data-ttu-id="d7775-108">Na carga de janela, o exemplo lê todos os caracteres de forma assíncrona de um controle <xref:System.Windows.Controls.TextBox> e os armazena em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="d7775-108">On window load, the example asynchronously reads all characters from a <xref:System.Windows.Controls.TextBox> control and stores them in an array.</span></span> <span data-ttu-id="d7775-109">Em seguida, ele grava cada letra ou caractere de espaço em branco de forma assíncrona em uma linha separada de um controle <xref:System.Windows.Controls.TextBlock>.</span><span class="sxs-lookup"><span data-stu-id="d7775-109">It then asynchronously writes each letter or white-space character to a separate line of a <xref:System.Windows.Controls.TextBlock> control.</span></span>  
   
  [!code-csharp[StreamReaderWriter](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[StreamReaderWriter](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="d91f9-110">Veja também</span><span class="sxs-lookup"><span data-stu-id="d91f9-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7775-110">Confira também</span><span class="sxs-lookup"><span data-stu-id="d7775-110">See also</span></span>
 
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
 - <xref:System.Text.StringBuilder>  
-- [<span data-ttu-id="d91f9-111">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="d91f9-111">File and stream I/O</span></span>](../../../docs/standard/io/index.md)  
-- [<span data-ttu-id="d91f9-112">E/S assíncrona de arquivo</span><span class="sxs-lookup"><span data-stu-id="d91f9-112">Asynchronous file I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [<span data-ttu-id="d91f9-113">Como: enumerar diretórios e arquivos</span><span class="sxs-lookup"><span data-stu-id="d91f9-113">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [<span data-ttu-id="d91f9-114">Como: ler e gravar em um arquivo de dados recém-criado</span><span class="sxs-lookup"><span data-stu-id="d91f9-114">How to: Read and write to a newly created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [<span data-ttu-id="d91f9-115">Como: abrir e anexar a um arquivo de log</span><span class="sxs-lookup"><span data-stu-id="d91f9-115">How to: Open and append to a log file</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [<span data-ttu-id="d91f9-116">Como: ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="d91f9-116">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [<span data-ttu-id="d91f9-117">Como: gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="d91f9-117">How to: Write text to a file</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [<span data-ttu-id="d91f9-118">Como: ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="d91f9-118">How to: Read characters from a string</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [<span data-ttu-id="d7775-111">E/S de arquivo e de fluxo</span><span class="sxs-lookup"><span data-stu-id="d7775-111">File and stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="d7775-112">E/S assíncrona de arquivo</span><span class="sxs-lookup"><span data-stu-id="d7775-112">Asynchronous file I/O</span></span>](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [<span data-ttu-id="d7775-113">Como: enumerar diretórios e arquivos</span><span class="sxs-lookup"><span data-stu-id="d7775-113">How to: Enumerate directories and files</span></span>](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [<span data-ttu-id="d7775-114">Como: ler e gravar em um arquivo de dados recém-criado</span><span class="sxs-lookup"><span data-stu-id="d7775-114">How to: Read and write to a newly created data file</span></span>](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [<span data-ttu-id="d7775-115">Como: abrir e anexar a um arquivo de log</span><span class="sxs-lookup"><span data-stu-id="d7775-115">How to: Open and append to a log file</span></span>](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [<span data-ttu-id="d7775-116">Como: ler texto de um arquivo</span><span class="sxs-lookup"><span data-stu-id="d7775-116">How to: Read text from a file</span></span>](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [<span data-ttu-id="d7775-117">Como: gravar texto em um arquivo</span><span class="sxs-lookup"><span data-stu-id="d7775-117">How to: Write text to a file</span></span>](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [<span data-ttu-id="d7775-118">Como: ler caracteres de uma cadeia de caracteres</span><span class="sxs-lookup"><span data-stu-id="d7775-118">How to: Read characters from a string</span></span>](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

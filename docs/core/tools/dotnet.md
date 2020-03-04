@@ -2,401 +2,304 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotNet (o Driver genérico para o CLI do .NET Core) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451162"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240864"
 ---
-# <a name="dotnet-command"></a><span data-ttu-id="3a304-103">Comando dotnet</span><span class="sxs-lookup"><span data-stu-id="3a304-103">dotnet command</span></span>
+# <a name="dotnet-command"></a><span data-ttu-id="d25f4-103">Comando dotnet</span><span class="sxs-lookup"><span data-stu-id="d25f4-103">dotnet command</span></span>
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+<span data-ttu-id="d25f4-104">**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="d25f4-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="3a304-104">Nome</span><span class="sxs-lookup"><span data-stu-id="3a304-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="d25f4-105">Nome</span><span class="sxs-lookup"><span data-stu-id="d25f4-105">Name</span></span>
 
-<span data-ttu-id="3a304-105">`dotnet` – Uma ferramenta para gerenciar o código-fonte e os binários do .NET.</span><span class="sxs-lookup"><span data-stu-id="3a304-105">`dotnet` - A tool for managing .NET source code and binaries.</span></span>
+<span data-ttu-id="d25f4-106">`dotnet`-o Driver genérico para o CLI do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-106">`dotnet` - The generic driver for the .NET Core CLI.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="3a304-106">Sinopse</span><span class="sxs-lookup"><span data-stu-id="3a304-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="d25f4-107">Sinopse</span><span class="sxs-lookup"><span data-stu-id="d25f4-107">Synopsis</span></span>
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[<span data-ttu-id="3a304-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3a304-107">.NET Core 2.1</span></span>](#tab/netcore21)
+<span data-ttu-id="d25f4-108">Para obter informações sobre os comandos disponíveis e o ambiente:</span><span class="sxs-lookup"><span data-stu-id="d25f4-108">To get information about the available commands and the environment:</span></span>
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [-h|--help] [--version] [--info]
+    [--list-runtimes] [--list-sdks]
 ```
 
-# <a name="net-core-20"></a>[<span data-ttu-id="3a304-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3a304-108">.NET Core 2.0</span></span>](#tab/netcore20)
+<span data-ttu-id="d25f4-109">Para executar um comando (requer a instalação do SDK):</span><span class="sxs-lookup"><span data-stu-id="d25f4-109">To run a command (requires SDK installation):</span></span>
 
 ```dotnetcli
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
-    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
-    [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+    [command-options] [arguments]
 ```
 
-# <a name="net-core-1x"></a>[<span data-ttu-id="3a304-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3a304-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+<span data-ttu-id="d25f4-110">Para executar um aplicativo:</span><span class="sxs-lookup"><span data-stu-id="d25f4-110">To run an application:</span></span>
 
 ```dotnetcli
-dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
+dotnet [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
+
+dotnet exec [--additionalprobingpath] [--additional-deps]
+    [--fx-version]  [--roll-forward]
+    <PATH_TO_APPLICATION> [arguments]
 ```
 
----
+<span data-ttu-id="d25f4-111">`--roll-forward` está disponível desde o .NET Core 3. x.</span><span class="sxs-lookup"><span data-stu-id="d25f4-111">`--roll-forward` is available since .NET Core 3.x.</span></span> <span data-ttu-id="d25f4-112">Use `--roll-forward-on-no-candidate-fx` para .NET Core 2. x.</span><span class="sxs-lookup"><span data-stu-id="d25f4-112">Use `--roll-forward-on-no-candidate-fx` for .NET Core 2.x.</span></span>
 
-## <a name="description"></a><span data-ttu-id="3a304-110">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="3a304-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="d25f4-113">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="d25f4-113">Description</span></span>
 
-<span data-ttu-id="3a304-111">`dotnet` é uma ferramenta para gerenciar o código-fonte e os binários do .NET.</span><span class="sxs-lookup"><span data-stu-id="3a304-111">`dotnet` is a tool for managing .NET source code and binaries.</span></span> <span data-ttu-id="3a304-112">Ela expõe comandos que realizam tarefas específicas, como [`dotnet build`](dotnet-build.md) e [`dotnet run`](dotnet-run.md).</span><span class="sxs-lookup"><span data-stu-id="3a304-112">It exposes commands that perform specific tasks, such as [`dotnet build`](dotnet-build.md) and [`dotnet run`](dotnet-run.md).</span></span> <span data-ttu-id="3a304-113">Cada comando define seus próprios argumentos.</span><span class="sxs-lookup"><span data-stu-id="3a304-113">Each command defines its own arguments.</span></span> <span data-ttu-id="3a304-114">Digite `--help` após cada comando para acessar uma breve documentação de ajuda.</span><span class="sxs-lookup"><span data-stu-id="3a304-114">Type `--help` after each command to access brief help documentation.</span></span>
+<span data-ttu-id="d25f4-114">O comando `dotnet` tem duas funções:</span><span class="sxs-lookup"><span data-stu-id="d25f4-114">The `dotnet` command has two functions:</span></span>
 
-<span data-ttu-id="3a304-115">`dotnet` pode ser usado para executar aplicativos, especificando uma DLL de aplicativo, como `dotnet myapp.dll`.</span><span class="sxs-lookup"><span data-stu-id="3a304-115">`dotnet` can be used to run applications, by specifying an application DLL, such as `dotnet myapp.dll`.</span></span> <span data-ttu-id="3a304-116">Consulte [Implantação de um aplicativo .NET Core](../deploying/index.md) para saber mais sobre as opções de implantação.</span><span class="sxs-lookup"><span data-stu-id="3a304-116">See [.NET Core application deployment](../deploying/index.md) for to learn about deployment options.</span></span>
+- <span data-ttu-id="d25f4-115">Ele fornece comandos para trabalhar com projetos do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-115">It provides commands for working with .NET Core projects.</span></span>
 
-## <a name="options"></a><span data-ttu-id="3a304-117">Opções</span><span class="sxs-lookup"><span data-stu-id="3a304-117">Options</span></span>
+  <span data-ttu-id="d25f4-116">Por exemplo, [`dotnet build`](dotnet-build.md) compila um projeto.</span><span class="sxs-lookup"><span data-stu-id="d25f4-116">For example, [`dotnet build`](dotnet-build.md) builds a project.</span></span> <span data-ttu-id="d25f4-117">Cada comando define suas próprias opções e argumentos.</span><span class="sxs-lookup"><span data-stu-id="d25f4-117">Each command defines its own options and arguments.</span></span> <span data-ttu-id="d25f4-118">Todos os comandos dão suporte à opção `--help` para imprimir uma breve documentação sobre como usar o comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-118">All commands support the `--help` option for printing out brief documentation about how to use the command.</span></span>
 
-# <a name="net-core-21"></a>[<span data-ttu-id="3a304-118">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3a304-118">.NET Core 2.1</span></span>](#tab/netcore21)
+- <span data-ttu-id="d25f4-119">Ele executa aplicativos .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-119">It runs .NET Core applications.</span></span>
 
-`--additional-deps <PATH>`
+  <span data-ttu-id="d25f4-120">Especifique o caminho para um arquivo de `.dll` de aplicativo para executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-120">You specify the path to an application `.dll` file to run the application.</span></span> <span data-ttu-id="d25f4-121">Por exemplo, `dotnet myapp.dll` executa o aplicativo `myapp`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-121">For example, `dotnet myapp.dll` runs the `myapp` application.</span></span> <span data-ttu-id="d25f4-122">Consulte [implantação de aplicativos do .NET Core](../deploying/index.md) para saber mais sobre as opções de implantação.</span><span class="sxs-lookup"><span data-stu-id="d25f4-122">See [.NET Core application deployment](../deploying/index.md) to learn about deployment options.</span></span>
 
-<span data-ttu-id="3a304-119">Caminho para um arquivo *.deps.json* adicional.</span><span class="sxs-lookup"><span data-stu-id="3a304-119">Path to an additional *.deps.json* file.</span></span>
+## <a name="options"></a><span data-ttu-id="d25f4-123">Opções</span><span class="sxs-lookup"><span data-stu-id="d25f4-123">Options</span></span>
 
-`--additionalprobingpath <PATH>`
+<span data-ttu-id="d25f4-124">Opções diferentes estão disponíveis para `dotnet` por si só, para executar um comando e para executar um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-124">Different options are available for `dotnet` by itself, for running a command, and for running an application.</span></span>
 
-<span data-ttu-id="3a304-120">Caminho que contém a política de investigação e os assemblies a serem investigados.</span><span class="sxs-lookup"><span data-stu-id="3a304-120">Path containing probing policy and assemblies to probe.</span></span>
+### <a name="options-for-dotnet-by-itself"></a><span data-ttu-id="d25f4-125">Opções para dotnet por si só</span><span class="sxs-lookup"><span data-stu-id="d25f4-125">Options for dotnet by itself</span></span>
 
-`--depsfile`
+<span data-ttu-id="d25f4-126">As opções a seguir são para `dotnet` por si só.</span><span class="sxs-lookup"><span data-stu-id="d25f4-126">The following options are for `dotnet` by itself.</span></span> <span data-ttu-id="d25f4-127">Por exemplo, `dotnet --info`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-127">For example, `dotnet --info`.</span></span> <span data-ttu-id="d25f4-128">Eles imprimem informações sobre o ambiente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-128">They print out information about the environment.</span></span>
 
-<span data-ttu-id="3a304-121">Caminho para um arquivo *deps.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-121">Path to a *deps.json* file.</span></span>
+- **`--info`**
 
-<span data-ttu-id="3a304-122">Um arquivo *deps. JSON* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly.</span><span class="sxs-lookup"><span data-stu-id="3a304-122">A *deps.json* file contains a list of dependencies, compilation dependencies, and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3a304-123">Para obter mais informações sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="3a304-123">For more information about this file, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
+  <span data-ttu-id="d25f4-129">Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-129">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
 
-`-d|--diagnostics`
+- **`--version`**
 
-<span data-ttu-id="3a304-124">Habilita a saída de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="3a304-124">Enables diagnostic output.</span></span>
+  <span data-ttu-id="d25f4-130">Imprime a versão do SDK do .NET Core em uso.</span><span class="sxs-lookup"><span data-stu-id="d25f4-130">Prints out the version of the .NET Core SDK in use.</span></span>
 
-`--fx-version <VERSION>`
+- **`--list-runtimes`**
 
-<span data-ttu-id="3a304-125">Versão do runtime do .NET Core a ser usada para executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-125">Version of the .NET Core runtime to use to run the application.</span></span>
+  <span data-ttu-id="d25f4-131">Imprime uma lista de tempos de execução do .NET Core instalados.</span><span class="sxs-lookup"><span data-stu-id="d25f4-131">Prints out a list of the installed .NET Core runtimes.</span></span>
 
-`-h|--help`
+- **`--list-sdks`**
 
-<span data-ttu-id="3a304-126">Imprime a documentação para um determinado comando, como `dotnet build --help`.</span><span class="sxs-lookup"><span data-stu-id="3a304-126">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3a304-127">`dotnet --help` imprime uma lista de comandos disponíveis.</span><span class="sxs-lookup"><span data-stu-id="3a304-127">`dotnet --help` prints a list of available commands.</span></span>
+  <span data-ttu-id="d25f4-132">Imprime uma lista de SDKs do .NET Core instalados.</span><span class="sxs-lookup"><span data-stu-id="d25f4-132">Prints out a list of the installed .NET Core SDKs.</span></span>
 
-`--info`
+- **`-h|--help`**
 
-<span data-ttu-id="3a304-128">Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-128">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
+  <span data-ttu-id="d25f4-133">Imprime uma lista de comandos disponíveis.</span><span class="sxs-lookup"><span data-stu-id="d25f4-133">Prints out a list of available commands.</span></span>
 
-`--list-runtimes`
+### <a name="sdk-options-for-running-a-command"></a><span data-ttu-id="d25f4-134">Opções do SDK para executar um comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-134">SDK options for running a command</span></span>
 
-<span data-ttu-id="3a304-129">Exibe os runtimes do .NET Core instalado.</span><span class="sxs-lookup"><span data-stu-id="3a304-129">Displays the installed .NET Core runtimes.</span></span>
+<span data-ttu-id="d25f4-135">As opções a seguir são para `dotnet` com um comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-135">The following options are for `dotnet` with a command.</span></span> <span data-ttu-id="d25f4-136">Por exemplo, `dotnet build --help`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-136">For example, `dotnet build --help`.</span></span>
 
-`--list-sdks`
+- **`-d|--diagnostics`**
 
-<span data-ttu-id="3a304-130">Exibe os tempos de execução dos SDKs .NET Core instalados.</span><span class="sxs-lookup"><span data-stu-id="3a304-130">Displays the installed .NET Core SDKs.</span></span>
+  <span data-ttu-id="d25f4-137">Habilita a saída de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="d25f4-137">Enables diagnostic output.</span></span>
 
-`--roll-forward-on-no-candidate-fx <N>`
+- **`-v|--verbosity <LEVEL>`**
 
-<span data-ttu-id="3a304-131">Define o comportamento quando a estrutura compartilhada necessária não está disponível.</span><span class="sxs-lookup"><span data-stu-id="3a304-131">Defines behavior when the required shared framework is not available.</span></span> <span data-ttu-id="3a304-132">`N` pode ser:</span><span class="sxs-lookup"><span data-stu-id="3a304-132">`N` can be:</span></span>
+  <span data-ttu-id="d25f4-138">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-138">Sets the verbosity level of the command.</span></span> <span data-ttu-id="d25f4-139">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-139">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="d25f4-140">Sem suporte em todos os comandos.</span><span class="sxs-lookup"><span data-stu-id="d25f4-140">Not supported in every command.</span></span> <span data-ttu-id="d25f4-141">Consulte a página de comando específica para determinar se essa opção está disponível.</span><span class="sxs-lookup"><span data-stu-id="d25f4-141">See specific command page to determine if this option is available.</span></span>
 
-- <span data-ttu-id="3a304-133">`0` – Desabilitar até mesmo o roll forward da versão secundária.</span><span class="sxs-lookup"><span data-stu-id="3a304-133">`0` - Disable even minor version roll forward.</span></span>
-- <span data-ttu-id="3a304-134">`1` – Efetuar roll forward da versão secundária, mas não da versão principal.</span><span class="sxs-lookup"><span data-stu-id="3a304-134">`1` - Roll forward on minor version, but not on major version.</span></span> <span data-ttu-id="3a304-135">Esse é o comportamento padrão.</span><span class="sxs-lookup"><span data-stu-id="3a304-135">This is the default behavior.</span></span>
-- <span data-ttu-id="3a304-136">`2` – Efetuar roll forward das versões secundária e principal.</span><span class="sxs-lookup"><span data-stu-id="3a304-136">`2` - Roll forward on minor and major versions.</span></span>
+- **`-h|--help`**
 
- <span data-ttu-id="3a304-137">Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span><span class="sxs-lookup"><span data-stu-id="3a304-137">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
+  <span data-ttu-id="d25f4-142">Imprime a documentação para um determinado comando, como `dotnet build --help`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-142">Prints out documentation for a given command, such as `dotnet build --help`.</span></span>
 
-`--runtimeconfig`
+- **`command options`**
 
-<span data-ttu-id="3a304-138">Caminho para um arquivo *runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-138">Path to a *runtimeconfig.json* file.</span></span>
+  <span data-ttu-id="d25f4-143">Cada comando define opções específicas para esse comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-143">Each command defines options specific to that command.</span></span> <span data-ttu-id="d25f4-144">Consulte a página de comando específica para obter uma lista de opções disponíveis.</span><span class="sxs-lookup"><span data-stu-id="d25f4-144">See specific command page for a list of available options.</span></span>
 
-<span data-ttu-id="3a304-139">Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="3a304-139">A *runtimeconfig.json* file is a configuration file containing run-time settings.</span></span> <span data-ttu-id="3a304-140">Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="3a304-140">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
+### <a name="runtime-options"></a><span data-ttu-id="d25f4-145">Opções de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="d25f4-145">Runtime options</span></span>
 
-`-v|--verbosity <LEVEL>`
+<span data-ttu-id="d25f4-146">As opções a seguir estão disponíveis quando `dotnet` executa um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-146">The following options are available when `dotnet` runs an application.</span></span> <span data-ttu-id="d25f4-147">Por exemplo, `dotnet myapp.dll --fx-version 3.1.1`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-147">For example, `dotnet myapp.dll --fx-version 3.1.1`.</span></span>
 
-<span data-ttu-id="3a304-141">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-141">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3a304-142">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="3a304-142">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3a304-143">Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.</span><span class="sxs-lookup"><span data-stu-id="3a304-143">Not supported in every command; see specific command page to determine if this option is available.</span></span>
+- **`--additionalprobingpath <PATH>`**
 
-`--version`
+  <span data-ttu-id="d25f4-148">Caminho que contém a política de investigação e os assemblies a serem investigados.</span><span class="sxs-lookup"><span data-stu-id="d25f4-148">Path containing probing policy and assemblies to probe.</span></span>
 
-<span data-ttu-id="3a304-144">Imprime a versão do SDK do .NET Core em uso.</span><span class="sxs-lookup"><span data-stu-id="3a304-144">Prints out the version of the .NET Core SDK in use.</span></span>
+- **`--additional-deps <PATH>`**
 
-# <a name="net-core-20"></a>[<span data-ttu-id="3a304-145">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3a304-145">.NET Core 2.0</span></span>](#tab/netcore20)
+  <span data-ttu-id="d25f4-149">Caminho para um arquivo *.deps.json* adicional.</span><span class="sxs-lookup"><span data-stu-id="d25f4-149">Path to an additional *.deps.json* file.</span></span> <span data-ttu-id="d25f4-150">Um arquivo *deps. JSON* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly.</span><span class="sxs-lookup"><span data-stu-id="d25f4-150">A *deps.json* file contains a list of dependencies, compilation dependencies, and version information used to address assembly conflicts.</span></span> <span data-ttu-id="d25f4-151">Para obter mais informações, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="d25f4-151">For more information, see [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) on GitHub.</span></span>
 
-`--additional-deps <PATH>`
+- **`--fx-version <VERSION>`**
 
-<span data-ttu-id="3a304-146">Caminho para um arquivo *.deps.json* adicional.</span><span class="sxs-lookup"><span data-stu-id="3a304-146">Path to an additional *.deps.json* file.</span></span>
+  <span data-ttu-id="d25f4-152">Versão do runtime do .NET Core a ser usada para executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-152">Version of the .NET Core runtime to use to run the application.</span></span>
 
-`--additionalprobingpath <PATH>`
+- **`--runtimeconfig`**
 
-<span data-ttu-id="3a304-147">Caminho que contém a política de investigação e os assemblies a serem investigados.</span><span class="sxs-lookup"><span data-stu-id="3a304-147">Path containing probing policy and assemblies to probe.</span></span>
+  <span data-ttu-id="d25f4-153">Caminho para um arquivo *runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="d25f4-153">Path to a *runtimeconfig.json* file.</span></span> <span data-ttu-id="d25f4-154">Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém configurações de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="d25f4-154">A *runtimeconfig.json* file is a configuration file that contains run-time settings.</span></span> <span data-ttu-id="d25f4-155">Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="d25f4-155">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
 
-`--depsfile`
+- <span data-ttu-id="d25f4-156">**`--roll-forward-on-no-candidate-fx <N>`** **disponível no SDK do .NET Core 2. x.**</span><span class="sxs-lookup"><span data-stu-id="d25f4-156">**`--roll-forward-on-no-candidate-fx <N>`** **Available in .NET Core 2.x SDK.**</span></span>
 
-<span data-ttu-id="3a304-148">Caminho para um arquivo *deps.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-148">Path to a *deps.json* file.</span></span>
+  <span data-ttu-id="d25f4-157">Define o comportamento quando a estrutura compartilhada necessária não está disponível.</span><span class="sxs-lookup"><span data-stu-id="d25f4-157">Defines behavior when the required shared framework is not available.</span></span> <span data-ttu-id="d25f4-158">`N` pode ser:</span><span class="sxs-lookup"><span data-stu-id="d25f4-158">`N` can be:</span></span>
 
-<span data-ttu-id="3a304-149">Um arquivo *deps.json* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly.</span><span class="sxs-lookup"><span data-stu-id="3a304-149">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3a304-150">Para obter mais detalhes sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="3a304-150">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
+  - <span data-ttu-id="d25f4-159">`0` – Desabilitar até mesmo o roll forward da versão secundária.</span><span class="sxs-lookup"><span data-stu-id="d25f4-159">`0` - Disable even minor version roll forward.</span></span>
+  - <span data-ttu-id="d25f4-160">`1` – Efetuar roll forward da versão secundária, mas não da versão principal.</span><span class="sxs-lookup"><span data-stu-id="d25f4-160">`1` - Roll forward on minor version, but not on major version.</span></span> <span data-ttu-id="d25f4-161">Esse é o comportamento padrão.</span><span class="sxs-lookup"><span data-stu-id="d25f4-161">This is the default behavior.</span></span>
+  - <span data-ttu-id="d25f4-162">`2` – Efetuar roll forward das versões secundária e principal.</span><span class="sxs-lookup"><span data-stu-id="d25f4-162">`2` - Roll forward on minor and major versions.</span></span>
 
-`-d|--diagnostics`
+   <span data-ttu-id="d25f4-163">Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span><span class="sxs-lookup"><span data-stu-id="d25f4-163">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
 
-<span data-ttu-id="3a304-151">Habilita a saída de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="3a304-151">Enables diagnostic output.</span></span>
+- <span data-ttu-id="d25f4-164">**`--roll-forward <SETTING>`** **disponível a partir do SDK do .NET Core 3,0.**</span><span class="sxs-lookup"><span data-stu-id="d25f4-164">**`--roll-forward <SETTING>`** **Available starting with .NET Core SDK 3.0.**</span></span>
 
-`--fx-version <VERSION>`
+  <span data-ttu-id="d25f4-165">Controla como o roll forward é aplicado ao aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-165">Controls how roll forward is applied to the app.</span></span> <span data-ttu-id="d25f4-166">O `SETTING` pode ser um dos valores a seguir.</span><span class="sxs-lookup"><span data-stu-id="d25f4-166">The `SETTING` can be one of the following values.</span></span> <span data-ttu-id="d25f4-167">Se não for especificado, `Minor` será o padrão.</span><span class="sxs-lookup"><span data-stu-id="d25f4-167">If not specified, `Minor` is the default.</span></span>
 
-<span data-ttu-id="3a304-152">Versão do runtime do .NET Core a ser usada para executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-152">Version of the .NET Core runtime to use to run the application.</span></span>
+  - <span data-ttu-id="d25f4-168">`LatestPatch`-roll forward para a versão mais alta do patch.</span><span class="sxs-lookup"><span data-stu-id="d25f4-168">`LatestPatch` - Roll forward to the highest patch version.</span></span> <span data-ttu-id="d25f4-169">Isso desabilita o roll forward da versão secundária.</span><span class="sxs-lookup"><span data-stu-id="d25f4-169">This disables minor version roll forward.</span></span>
+  - <span data-ttu-id="d25f4-170">`Minor`-roll forward para a versão secundária mais baixa, se a versão secundária solicitada estiver ausente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-170">`Minor` - Roll forward to the lowest higher minor version, if requested minor version is missing.</span></span> <span data-ttu-id="d25f4-171">Se a versão secundária solicitada estiver presente, a política LatestPatch será usada.</span><span class="sxs-lookup"><span data-stu-id="d25f4-171">If the requested minor version is present, then the LatestPatch policy is used.</span></span>
+  - <span data-ttu-id="d25f4-172">`Major`-rolar para a versão principal mais baixa e a versão secundária mais baixa, se a versão principal solicitada estiver ausente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-172">`Major` - Roll forward to lowest higher major version, and lowest minor version, if requested major version is missing.</span></span> <span data-ttu-id="d25f4-173">Se a versão principal solicitada estiver presente, a política secundária será usada.</span><span class="sxs-lookup"><span data-stu-id="d25f4-173">If the requested major version is present, then the Minor policy is used.</span></span>
+  - <span data-ttu-id="d25f4-174">`LatestMinor`-roll forward até a versão secundária mais alta, mesmo que a versão secundária solicitada esteja presente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-174">`LatestMinor` - Roll forward to highest minor version, even if requested minor version is present.</span></span> <span data-ttu-id="d25f4-175">Destinado a cenários de hospedagem de componente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-175">Intended for component hosting scenarios.</span></span>
+  - <span data-ttu-id="d25f4-176">`LatestMajor`-roll forward até a versão secundária mais alta e a mais alta, mesmo que a principal solicitada esteja presente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-176">`LatestMajor` - Roll forward to highest major and highest minor version, even if requested major is present.</span></span> <span data-ttu-id="d25f4-177">Destinado a cenários de hospedagem de componente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-177">Intended for component hosting scenarios.</span></span>
+  - <span data-ttu-id="d25f4-178">`Disable`-não rolar para frente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-178">`Disable` - Don't roll forward.</span></span> <span data-ttu-id="d25f4-179">Associar somente à versão especificada.</span><span class="sxs-lookup"><span data-stu-id="d25f4-179">Only bind to specified version.</span></span> <span data-ttu-id="d25f4-180">Essa política não é recomendada para uso geral, pois ela desabilita a capacidade de efetuar roll forward para os patches mais recentes.</span><span class="sxs-lookup"><span data-stu-id="d25f4-180">This policy isn't recommended for general use because it disables the ability to roll forward to the latest patches.</span></span> <span data-ttu-id="d25f4-181">Esse valor só é recomendado para teste.</span><span class="sxs-lookup"><span data-stu-id="d25f4-181">This value is only recommended for testing.</span></span>
 
-`-h|--help`
+<span data-ttu-id="d25f4-182">Com exceção de `Disable`, todas as configurações usarão a versão de patch mais alta disponível.</span><span class="sxs-lookup"><span data-stu-id="d25f4-182">With the exception of `Disable`, all settings will use the highest available patch version.</span></span>
 
-<span data-ttu-id="3a304-153">Imprime a documentação para um determinado comando, como `dotnet build --help`.</span><span class="sxs-lookup"><span data-stu-id="3a304-153">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3a304-154">`dotnet --help` imprime uma lista de comandos disponíveis.</span><span class="sxs-lookup"><span data-stu-id="3a304-154">`dotnet --help` prints a list of available commands.</span></span>
+<span data-ttu-id="d25f4-183">O comportamento de roll forward também pode ser configurado em uma propriedade de arquivo de projeto, uma propriedade de arquivo de configuração de tempo de execução e uma variável de ambiente.</span><span class="sxs-lookup"><span data-stu-id="d25f4-183">Roll forward behavior can also be configured in a project file property, a run-time configuration file property, and an environment variable.</span></span> <span data-ttu-id="d25f4-184">Para obter mais informações, consulte [roll forward de tempo de execução de versão principal](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).</span><span class="sxs-lookup"><span data-stu-id="d25f4-184">For more information, see [Major-version runtime roll forward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward).</span></span>
 
-`--info`
+## <a name="dotnet-commands"></a><span data-ttu-id="d25f4-185">Comandos dotnet</span><span class="sxs-lookup"><span data-stu-id="d25f4-185">dotnet commands</span></span>
 
-<span data-ttu-id="3a304-155">Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-155">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
+### <a name="general"></a><span data-ttu-id="d25f4-186">Geral</span><span class="sxs-lookup"><span data-stu-id="d25f4-186">General</span></span>
 
-`--roll-forward-on-no-candidate-fx`
-
- <span data-ttu-id="3a304-156">Desabilita o roll forward da versão secundária, se definido como `0`.</span><span class="sxs-lookup"><span data-stu-id="3a304-156">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="3a304-157">Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span><span class="sxs-lookup"><span data-stu-id="3a304-157">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
-
-`--runtimeconfig`
-
-<span data-ttu-id="3a304-158">Caminho para um arquivo *runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-158">Path to a *runtimeconfig.json* file.</span></span>
-
-<span data-ttu-id="3a304-159">Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="3a304-159">A *runtimeconfig.json* file is a configuration file containing run-time settings.</span></span> <span data-ttu-id="3a304-160">Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="3a304-160">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
-
-`-v|--verbosity <LEVEL>`
-
-<span data-ttu-id="3a304-161">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-161">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3a304-162">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="3a304-162">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3a304-163">Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.</span><span class="sxs-lookup"><span data-stu-id="3a304-163">Not supported in every command; see specific command page to determine if this option is available.</span></span>
-
-`--version`
-
-<span data-ttu-id="3a304-164">Imprime a versão do SDK do .NET Core em uso.</span><span class="sxs-lookup"><span data-stu-id="3a304-164">Prints out the version of the .NET Core SDK in use.</span></span>
-
-# <a name="net-core-1x"></a>[<span data-ttu-id="3a304-165">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3a304-165">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-`--additionalprobingpath <PATH>`
-
-<span data-ttu-id="3a304-166">Caminho que contém a política de investigação e os assemblies a serem investigados.</span><span class="sxs-lookup"><span data-stu-id="3a304-166">Path containing probing policy and assemblies to probe.</span></span>
-
-`--depsfile`
-
-<span data-ttu-id="3a304-167">Caminho para um arquivo *deps.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-167">Path to a *deps.json* file.</span></span>
-
-<span data-ttu-id="3a304-168">Um arquivo *deps.json* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly.</span><span class="sxs-lookup"><span data-stu-id="3a304-168">A *deps.json* file contains a list of dependencies, compilation dependencies and version information used to address assembly conflicts.</span></span> <span data-ttu-id="3a304-169">Para obter mais detalhes sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="3a304-169">For more details on this file, see [Runtime Configuration Files on GitHub](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).</span></span>
-
-`-d|--diagnostics`
-
-<span data-ttu-id="3a304-170">Habilita a saída de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="3a304-170">Enables diagnostic output.</span></span>
-
-`--fx-version <VERSION>`
-
-<span data-ttu-id="3a304-171">Versão do runtime do .NET Core a ser usada para executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-171">Version of the .NET Core runtime to use to run the application.</span></span>
-
-`-h|--help`
-
-<span data-ttu-id="3a304-172">Imprime a documentação para um determinado comando, como `dotnet build --help`.</span><span class="sxs-lookup"><span data-stu-id="3a304-172">Prints out documentation for a given command, such as `dotnet build --help`.</span></span> <span data-ttu-id="3a304-173">`dotnet --help` imprime uma lista de comandos disponíveis.</span><span class="sxs-lookup"><span data-stu-id="3a304-173">`dotnet --help` prints a list of available commands.</span></span>
-
-`--info`
-
-<span data-ttu-id="3a304-174">Imprime informações detalhadas sobre uma instalação do .NET Core e o ambiente do computador, como o sistema operacional atual, e o SHA da confirmação da versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-174">Prints out detailed information about a .NET Core installation and the machine environment, such as the current operating system, and commit SHA of the .NET Core version.</span></span>
-
-`--runtimeconfig`
-
-<span data-ttu-id="3a304-175">Caminho para um arquivo *runtimeconfig.json*.</span><span class="sxs-lookup"><span data-stu-id="3a304-175">Path to a *runtimeconfig.json* file.</span></span>
-
-<span data-ttu-id="3a304-176">Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="3a304-176">A *runtimeconfig.json* file is a configuration file containing run-time settings.</span></span> <span data-ttu-id="3a304-177">Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).</span><span class="sxs-lookup"><span data-stu-id="3a304-177">For more information, see [.NET Core run-time configuration settings](../run-time-config/index.md#runtimeconfigjson).</span></span>
-
-`-v|--verbosity <LEVEL>`
-
-<span data-ttu-id="3a304-178">Define o nível de detalhes do comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-178">Sets the verbosity level of the command.</span></span> <span data-ttu-id="3a304-179">Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="3a304-179">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span> <span data-ttu-id="3a304-180">Não compatível com todos os comandos. Veja a página de comando específica para determinar se essa opção está disponível.</span><span class="sxs-lookup"><span data-stu-id="3a304-180">Not supported in every command; see specific command page to determine if this option is available.</span></span>
-
-`--version`
-
-<span data-ttu-id="3a304-181">Imprime a versão do SDK do .NET Core em uso.</span><span class="sxs-lookup"><span data-stu-id="3a304-181">Prints out the version of the .NET Core SDK in use.</span></span>
-
----
-
-## <a name="dotnet-commands"></a><span data-ttu-id="3a304-182">Comandos dotnet</span><span class="sxs-lookup"><span data-stu-id="3a304-182">dotnet commands</span></span>
-
-### <a name="general"></a><span data-ttu-id="3a304-183">Geral</span><span class="sxs-lookup"><span data-stu-id="3a304-183">General</span></span>
-
-# <a name="net-core-21"></a>[<span data-ttu-id="3a304-184">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3a304-184">.NET Core 2.1</span></span>](#tab/netcore21)
-
-| <span data-ttu-id="3a304-185">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-185">Command</span></span>                                       | <span data-ttu-id="3a304-186">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-186">Function</span></span>                                                            |
+| <span data-ttu-id="d25f4-187">Comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-187">Command</span></span>                                       | <span data-ttu-id="d25f4-188">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-188">Function</span></span>                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="3a304-187">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3a304-187">dotnet build</span></span>](dotnet-build.md)               | <span data-ttu-id="3a304-188">Compila um aplicativo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-188">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="3a304-189">dotnet build-server</span><span class="sxs-lookup"><span data-stu-id="3a304-189">dotnet build-server</span></span>](dotnet-build-server.md) | <span data-ttu-id="3a304-190">Interage com servidores iniciados por um build.</span><span class="sxs-lookup"><span data-stu-id="3a304-190">Interacts with servers started by a build.</span></span>                          |
-| [<span data-ttu-id="3a304-191">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3a304-191">dotnet clean</span></span>](dotnet-clean.md)               | <span data-ttu-id="3a304-192">Limpa saídas de build.</span><span class="sxs-lookup"><span data-stu-id="3a304-192">Clean build outputs.</span></span>                                                |
-| [<span data-ttu-id="3a304-193">dotnet help</span><span class="sxs-lookup"><span data-stu-id="3a304-193">dotnet help</span></span>](dotnet-help.md)                 | <span data-ttu-id="3a304-194">Mostra uma documentação mais detalhada online para o comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-194">Shows more detailed documentation online for the command.</span></span>           |
-| [<span data-ttu-id="3a304-195">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3a304-195">dotnet migrate</span></span>](dotnet-migrate.md)           | <span data-ttu-id="3a304-196">Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-196">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="3a304-197">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3a304-197">dotnet msbuild</span></span>](dotnet-msbuild.md)           | <span data-ttu-id="3a304-198">Oferece acesso à linha de comando do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="3a304-198">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="3a304-199">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3a304-199">dotnet new</span></span>](dotnet-new.md)                   | <span data-ttu-id="3a304-200">Inicializa um projeto do C# ou F# de um modelo especificado.</span><span class="sxs-lookup"><span data-stu-id="3a304-200">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="3a304-201">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3a304-201">dotnet pack</span></span>](dotnet-pack.md)                 | <span data-ttu-id="3a304-202">Cria um pacote NuGet do seu código.</span><span class="sxs-lookup"><span data-stu-id="3a304-202">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="3a304-203">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3a304-203">dotnet publish</span></span>](dotnet-publish.md)           | <span data-ttu-id="3a304-204">Publica um aplicativo dependente do .NET Framework ou autocontido.</span><span class="sxs-lookup"><span data-stu-id="3a304-204">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="3a304-205">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3a304-205">dotnet restore</span></span>](dotnet-restore.md)           | <span data-ttu-id="3a304-206">Restaura as dependências para um determinado aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-206">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="3a304-207">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3a304-207">dotnet run</span></span>](dotnet-run.md)                   | <span data-ttu-id="3a304-208">Executa o aplicativo na origem.</span><span class="sxs-lookup"><span data-stu-id="3a304-208">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="3a304-209">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3a304-209">dotnet sln</span></span>](dotnet-sln.md)                   | <span data-ttu-id="3a304-210">Opções para adicionar, remover e listar projetos em um arquivo de solução.</span><span class="sxs-lookup"><span data-stu-id="3a304-210">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="3a304-211">dotnet store</span><span class="sxs-lookup"><span data-stu-id="3a304-211">dotnet store</span></span>](dotnet-store.md)               | <span data-ttu-id="3a304-212">Armazena os assemblies no repositório de pacotes de runtime.</span><span class="sxs-lookup"><span data-stu-id="3a304-212">Stores assemblies in the runtime package store.</span></span>                     |
-| [<span data-ttu-id="3a304-213">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3a304-213">dotnet test</span></span>](dotnet-test.md)                 | <span data-ttu-id="3a304-214">Executa testes usando um executor de teste.</span><span class="sxs-lookup"><span data-stu-id="3a304-214">Runs tests using a test runner.</span></span>                                     |
+| [<span data-ttu-id="d25f4-189">dotnet build</span><span class="sxs-lookup"><span data-stu-id="d25f4-189">dotnet build</span></span>](dotnet-build.md)               | <span data-ttu-id="d25f4-190">Compila um aplicativo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-190">Builds a .NET Core application.</span></span>                                     |
+| [<span data-ttu-id="d25f4-191">dotnet build-server</span><span class="sxs-lookup"><span data-stu-id="d25f4-191">dotnet build-server</span></span>](dotnet-build-server.md) | <span data-ttu-id="d25f4-192">Interage com servidores iniciados por um build.</span><span class="sxs-lookup"><span data-stu-id="d25f4-192">Interacts with servers started by a build.</span></span>                          |
+| [<span data-ttu-id="d25f4-193">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="d25f4-193">dotnet clean</span></span>](dotnet-clean.md)               | <span data-ttu-id="d25f4-194">Limpa saídas de build.</span><span class="sxs-lookup"><span data-stu-id="d25f4-194">Clean build outputs.</span></span>                                                |
+| [<span data-ttu-id="d25f4-195">dotnet help</span><span class="sxs-lookup"><span data-stu-id="d25f4-195">dotnet help</span></span>](dotnet-help.md)                 | <span data-ttu-id="d25f4-196">Mostra uma documentação mais detalhada online para o comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-196">Shows more detailed documentation online for the command.</span></span>           |
+| [<span data-ttu-id="d25f4-197">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="d25f4-197">dotnet migrate</span></span>](dotnet-migrate.md)           | <span data-ttu-id="d25f4-198">Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-198">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
+| [<span data-ttu-id="d25f4-199">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="d25f4-199">dotnet msbuild</span></span>](dotnet-msbuild.md)           | <span data-ttu-id="d25f4-200">Oferece acesso à linha de comando do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="d25f4-200">Provides access to the MSBuild command line.</span></span>                        |
+| [<span data-ttu-id="d25f4-201">dotnet new</span><span class="sxs-lookup"><span data-stu-id="d25f4-201">dotnet new</span></span>](dotnet-new.md)                   | <span data-ttu-id="d25f4-202">Inicializa um projeto do C# ou F# de um modelo especificado.</span><span class="sxs-lookup"><span data-stu-id="d25f4-202">Initializes a C# or F# project for a given template.</span></span>                |
+| [<span data-ttu-id="d25f4-203">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="d25f4-203">dotnet pack</span></span>](dotnet-pack.md)                 | <span data-ttu-id="d25f4-204">Cria um pacote NuGet do seu código.</span><span class="sxs-lookup"><span data-stu-id="d25f4-204">Creates a NuGet package of your code.</span></span>                               |
+| [<span data-ttu-id="d25f4-205">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="d25f4-205">dotnet publish</span></span>](dotnet-publish.md)           | <span data-ttu-id="d25f4-206">Publica um aplicativo dependente do .NET Framework ou autocontido.</span><span class="sxs-lookup"><span data-stu-id="d25f4-206">Publishes a .NET framework-dependent or self-contained application.</span></span> |
+| [<span data-ttu-id="d25f4-207">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="d25f4-207">dotnet restore</span></span>](dotnet-restore.md)           | <span data-ttu-id="d25f4-208">Restaura as dependências para um determinado aplicativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-208">Restores the dependencies for a given application.</span></span>                  |
+| [<span data-ttu-id="d25f4-209">dotnet run</span><span class="sxs-lookup"><span data-stu-id="d25f4-209">dotnet run</span></span>](dotnet-run.md)                   | <span data-ttu-id="d25f4-210">Executa o aplicativo na origem.</span><span class="sxs-lookup"><span data-stu-id="d25f4-210">Runs the application from source.</span></span>                                   |
+| [<span data-ttu-id="d25f4-211">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="d25f4-211">dotnet sln</span></span>](dotnet-sln.md)                   | <span data-ttu-id="d25f4-212">Opções para adicionar, remover e listar projetos em um arquivo de solução.</span><span class="sxs-lookup"><span data-stu-id="d25f4-212">Options to add, remove, and list projects in a solution file.</span></span>       |
+| [<span data-ttu-id="d25f4-213">dotnet store</span><span class="sxs-lookup"><span data-stu-id="d25f4-213">dotnet store</span></span>](dotnet-store.md)               | <span data-ttu-id="d25f4-214">Armazena os assemblies no repositório de pacotes de runtime.</span><span class="sxs-lookup"><span data-stu-id="d25f4-214">Stores assemblies in the runtime package store.</span></span>                     |
+| [<span data-ttu-id="d25f4-215">dotnet test</span><span class="sxs-lookup"><span data-stu-id="d25f4-215">dotnet test</span></span>](dotnet-test.md)                 | <span data-ttu-id="d25f4-216">Executa testes usando um executor de teste.</span><span class="sxs-lookup"><span data-stu-id="d25f4-216">Runs tests using a test runner.</span></span>                                     |
 
-# <a name="net-core-20"></a>[<span data-ttu-id="3a304-215">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3a304-215">.NET Core 2.0</span></span>](#tab/netcore20)
+### <a name="project-references"></a><span data-ttu-id="d25f4-217">Referências de projeto</span><span class="sxs-lookup"><span data-stu-id="d25f4-217">Project references</span></span>
 
-| <span data-ttu-id="3a304-216">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-216">Command</span></span>                             | <span data-ttu-id="3a304-217">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-217">Function</span></span>                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="3a304-218">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3a304-218">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="3a304-219">Compila um aplicativo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-219">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="3a304-220">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3a304-220">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="3a304-221">Limpa saídas de build.</span><span class="sxs-lookup"><span data-stu-id="3a304-221">Clean build outputs.</span></span>                                              |
-| [<span data-ttu-id="3a304-222">dotnet help</span><span class="sxs-lookup"><span data-stu-id="3a304-222">dotnet help</span></span>](dotnet-help.md)       | <span data-ttu-id="3a304-223">Mostra uma documentação mais detalhada online para o comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-223">Shows more detailed documentation online for the command.</span></span>           |
-| [<span data-ttu-id="3a304-224">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3a304-224">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="3a304-225">Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-225">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="3a304-226">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3a304-226">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="3a304-227">Oferece acesso à linha de comando do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="3a304-227">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="3a304-228">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3a304-228">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="3a304-229">Inicializa um projeto do C# ou F# de um modelo especificado.</span><span class="sxs-lookup"><span data-stu-id="3a304-229">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="3a304-230">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3a304-230">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="3a304-231">Cria um pacote NuGet do seu código.</span><span class="sxs-lookup"><span data-stu-id="3a304-231">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="3a304-232">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3a304-232">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="3a304-233">Publica um aplicativo dependente do .NET Framework ou autocontido.</span><span class="sxs-lookup"><span data-stu-id="3a304-233">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="3a304-234">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3a304-234">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="3a304-235">Restaura as dependências para um determinado aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-235">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="3a304-236">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3a304-236">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="3a304-237">Executa o aplicativo na origem.</span><span class="sxs-lookup"><span data-stu-id="3a304-237">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="3a304-238">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3a304-238">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="3a304-239">Opções para adicionar, remover e listar projetos em um arquivo de solução.</span><span class="sxs-lookup"><span data-stu-id="3a304-239">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="3a304-240">dotnet store</span><span class="sxs-lookup"><span data-stu-id="3a304-240">dotnet store</span></span>](dotnet-store.md)     | <span data-ttu-id="3a304-241">Armazena os assemblies no repositório de pacotes de runtime.</span><span class="sxs-lookup"><span data-stu-id="3a304-241">Stores assemblies in the runtime package store.</span></span>                     |
-| [<span data-ttu-id="3a304-242">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3a304-242">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="3a304-243">Executa testes usando um executor de teste.</span><span class="sxs-lookup"><span data-stu-id="3a304-243">Runs tests using a test runner.</span></span>                                     |
-
-# <a name="net-core-1x"></a>[<span data-ttu-id="3a304-244">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3a304-244">.NET Core 1.x</span></span>](#tab/netcore1x)
-
-| <span data-ttu-id="3a304-245">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-245">Command</span></span>                             | <span data-ttu-id="3a304-246">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-246">Function</span></span>                                                            |
-| ----------------------------------- | ------------------------------------------------------------------- |
-| [<span data-ttu-id="3a304-247">dotnet build</span><span class="sxs-lookup"><span data-stu-id="3a304-247">dotnet build</span></span>](dotnet-build.md)     | <span data-ttu-id="3a304-248">Compila um aplicativo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-248">Builds a .NET Core application.</span></span>                                     |
-| [<span data-ttu-id="3a304-249">dotnet clean</span><span class="sxs-lookup"><span data-stu-id="3a304-249">dotnet clean</span></span>](dotnet-clean.md)     | <span data-ttu-id="3a304-250">Limpa saídas de build.</span><span class="sxs-lookup"><span data-stu-id="3a304-250">Clean build outputs.</span></span>                                              |
-| [<span data-ttu-id="3a304-251">dotnet migrate</span><span class="sxs-lookup"><span data-stu-id="3a304-251">dotnet migrate</span></span>](dotnet-migrate.md) | <span data-ttu-id="3a304-252">Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-252">Migrates a valid Preview 2 project to a .NET Core SDK 1.0 project.</span></span>  |
-| [<span data-ttu-id="3a304-253">dotnet msbuild</span><span class="sxs-lookup"><span data-stu-id="3a304-253">dotnet msbuild</span></span>](dotnet-msbuild.md) | <span data-ttu-id="3a304-254">Oferece acesso à linha de comando do MSBuild.</span><span class="sxs-lookup"><span data-stu-id="3a304-254">Provides access to the MSBuild command line.</span></span>                        |
-| [<span data-ttu-id="3a304-255">dotnet new</span><span class="sxs-lookup"><span data-stu-id="3a304-255">dotnet new</span></span>](dotnet-new.md)         | <span data-ttu-id="3a304-256">Inicializa um projeto do C# ou F# de um modelo especificado.</span><span class="sxs-lookup"><span data-stu-id="3a304-256">Initializes a C# or F# project for a given template.</span></span>                |
-| [<span data-ttu-id="3a304-257">dotnet pack</span><span class="sxs-lookup"><span data-stu-id="3a304-257">dotnet pack</span></span>](dotnet-pack.md)       | <span data-ttu-id="3a304-258">Cria um pacote NuGet do seu código.</span><span class="sxs-lookup"><span data-stu-id="3a304-258">Creates a NuGet package of your code.</span></span>                               |
-| [<span data-ttu-id="3a304-259">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="3a304-259">dotnet publish</span></span>](dotnet-publish.md) | <span data-ttu-id="3a304-260">Publica um aplicativo dependente do .NET Framework ou autocontido.</span><span class="sxs-lookup"><span data-stu-id="3a304-260">Publishes a .NET framework-dependent or self-contained application.</span></span> |
-| [<span data-ttu-id="3a304-261">dotnet restore</span><span class="sxs-lookup"><span data-stu-id="3a304-261">dotnet restore</span></span>](dotnet-restore.md) | <span data-ttu-id="3a304-262">Restaura as dependências para um determinado aplicativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-262">Restores the dependencies for a given application.</span></span>                  |
-| [<span data-ttu-id="3a304-263">dotnet run</span><span class="sxs-lookup"><span data-stu-id="3a304-263">dotnet run</span></span>](dotnet-run.md)         | <span data-ttu-id="3a304-264">Executa o aplicativo na origem.</span><span class="sxs-lookup"><span data-stu-id="3a304-264">Runs the application from source.</span></span>                                   |
-| [<span data-ttu-id="3a304-265">dotnet sln</span><span class="sxs-lookup"><span data-stu-id="3a304-265">dotnet sln</span></span>](dotnet-sln.md)         | <span data-ttu-id="3a304-266">Opções para adicionar, remover e listar projetos em um arquivo de solução.</span><span class="sxs-lookup"><span data-stu-id="3a304-266">Options to add, remove, and list projects in a solution file.</span></span>       |
-| [<span data-ttu-id="3a304-267">dotnet test</span><span class="sxs-lookup"><span data-stu-id="3a304-267">dotnet test</span></span>](dotnet-test.md)       | <span data-ttu-id="3a304-268">Executa testes usando um executor de teste.</span><span class="sxs-lookup"><span data-stu-id="3a304-268">Runs tests using a test runner.</span></span>                                     |
-
----
-
-### <a name="project-references"></a><span data-ttu-id="3a304-269">Referências de projeto</span><span class="sxs-lookup"><span data-stu-id="3a304-269">Project references</span></span>
-
-<span data-ttu-id="3a304-270">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-270">Command</span></span> | <span data-ttu-id="3a304-271">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-271">Function</span></span>
+<span data-ttu-id="d25f4-218">Comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-218">Command</span></span> | <span data-ttu-id="d25f4-219">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-219">Function</span></span>
 --- | ---
-[<span data-ttu-id="3a304-272">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="3a304-272">dotnet add reference</span></span>](dotnet-add-reference.md) | <span data-ttu-id="3a304-273">Adiciona uma referência ao projeto.</span><span class="sxs-lookup"><span data-stu-id="3a304-273">Adds a project reference.</span></span>
-[<span data-ttu-id="3a304-274">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="3a304-274">dotnet list reference</span></span>](dotnet-list-reference.md) | <span data-ttu-id="3a304-275">Lista referências ao projeto.</span><span class="sxs-lookup"><span data-stu-id="3a304-275">Lists project references.</span></span>
-[<span data-ttu-id="3a304-276">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="3a304-276">dotnet remove reference</span></span>](dotnet-remove-reference.md) | <span data-ttu-id="3a304-277">Remove uma referência ao projeto.</span><span class="sxs-lookup"><span data-stu-id="3a304-277">Removes a project reference.</span></span>
+[<span data-ttu-id="d25f4-220">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="d25f4-220">dotnet add reference</span></span>](dotnet-add-reference.md) | <span data-ttu-id="d25f4-221">Adiciona uma referência ao projeto.</span><span class="sxs-lookup"><span data-stu-id="d25f4-221">Adds a project reference.</span></span>
+[<span data-ttu-id="d25f4-222">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="d25f4-222">dotnet list reference</span></span>](dotnet-list-reference.md) | <span data-ttu-id="d25f4-223">Lista referências ao projeto.</span><span class="sxs-lookup"><span data-stu-id="d25f4-223">Lists project references.</span></span>
+[<span data-ttu-id="d25f4-224">dotnet remove reference</span><span class="sxs-lookup"><span data-stu-id="d25f4-224">dotnet remove reference</span></span>](dotnet-remove-reference.md) | <span data-ttu-id="d25f4-225">Remove uma referência ao projeto.</span><span class="sxs-lookup"><span data-stu-id="d25f4-225">Removes a project reference.</span></span>
 
-### <a name="nuget-packages"></a><span data-ttu-id="3a304-278">Pacotes NuGet</span><span class="sxs-lookup"><span data-stu-id="3a304-278">NuGet packages</span></span>
+### <a name="nuget-packages"></a><span data-ttu-id="d25f4-226">Pacotes NuGet</span><span class="sxs-lookup"><span data-stu-id="d25f4-226">NuGet packages</span></span>
 
-<span data-ttu-id="3a304-279">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-279">Command</span></span> | <span data-ttu-id="3a304-280">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-280">Function</span></span>
+<span data-ttu-id="d25f4-227">Comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-227">Command</span></span> | <span data-ttu-id="d25f4-228">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-228">Function</span></span>
 --- | ---
-[<span data-ttu-id="3a304-281">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="3a304-281">dotnet add package</span></span>](dotnet-add-package.md) | <span data-ttu-id="3a304-282">Adiciona um pacote NuGet.</span><span class="sxs-lookup"><span data-stu-id="3a304-282">Adds a NuGet package.</span></span>
-[<span data-ttu-id="3a304-283">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="3a304-283">dotnet remove package</span></span>](dotnet-remove-package.md) | <span data-ttu-id="3a304-284">Remove um pacote NuGet.</span><span class="sxs-lookup"><span data-stu-id="3a304-284">Removes a NuGet package.</span></span>
+[<span data-ttu-id="d25f4-229">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="d25f4-229">dotnet add package</span></span>](dotnet-add-package.md) | <span data-ttu-id="d25f4-230">Adiciona um pacote NuGet.</span><span class="sxs-lookup"><span data-stu-id="d25f4-230">Adds a NuGet package.</span></span>
+[<span data-ttu-id="d25f4-231">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="d25f4-231">dotnet remove package</span></span>](dotnet-remove-package.md) | <span data-ttu-id="d25f4-232">Remove um pacote NuGet.</span><span class="sxs-lookup"><span data-stu-id="d25f4-232">Removes a NuGet package.</span></span>
 
-### <a name="nuget-commands"></a><span data-ttu-id="3a304-285">Comandos NuGet</span><span class="sxs-lookup"><span data-stu-id="3a304-285">NuGet commands</span></span>
+### <a name="nuget-commands"></a><span data-ttu-id="d25f4-233">Comandos NuGet</span><span class="sxs-lookup"><span data-stu-id="d25f4-233">NuGet commands</span></span>
 
-<span data-ttu-id="3a304-286">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-286">Command</span></span> | <span data-ttu-id="3a304-287">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-287">Function</span></span>
+<span data-ttu-id="d25f4-234">Comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-234">Command</span></span> | <span data-ttu-id="d25f4-235">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-235">Function</span></span>
 --- | ---
-[<span data-ttu-id="3a304-288">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="3a304-288">dotnet nuget delete</span></span>](dotnet-nuget-delete.md) | <span data-ttu-id="3a304-289">Exclui ou retira da lista um pacote do servidor.</span><span class="sxs-lookup"><span data-stu-id="3a304-289">Deletes or unlists a package from the server.</span></span>
-[<span data-ttu-id="3a304-290">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="3a304-290">dotnet nuget locals</span></span>](dotnet-nuget-locals.md) | <span data-ttu-id="3a304-291">Limpa ou lista os recursos locais do NuGet, como cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.</span><span class="sxs-lookup"><span data-stu-id="3a304-291">Clears or lists local NuGet resources such as http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
-[<span data-ttu-id="3a304-292">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="3a304-292">dotnet nuget push</span></span>](dotnet-nuget-push.md) | <span data-ttu-id="3a304-293">Envia um pacote ao servidor e os publica.</span><span class="sxs-lookup"><span data-stu-id="3a304-293">Pushes a package to the server and publishes it.</span></span>
+[<span data-ttu-id="d25f4-236">dotnet nuget delete</span><span class="sxs-lookup"><span data-stu-id="d25f4-236">dotnet nuget delete</span></span>](dotnet-nuget-delete.md) | <span data-ttu-id="d25f4-237">Exclui ou retira da lista um pacote do servidor.</span><span class="sxs-lookup"><span data-stu-id="d25f4-237">Deletes or unlists a package from the server.</span></span>
+[<span data-ttu-id="d25f4-238">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="d25f4-238">dotnet nuget locals</span></span>](dotnet-nuget-locals.md) | <span data-ttu-id="d25f4-239">Limpa ou lista os recursos locais do NuGet, como cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.</span><span class="sxs-lookup"><span data-stu-id="d25f4-239">Clears or lists local NuGet resources such as http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
+[<span data-ttu-id="d25f4-240">dotnet nuget push</span><span class="sxs-lookup"><span data-stu-id="d25f4-240">dotnet nuget push</span></span>](dotnet-nuget-push.md) | <span data-ttu-id="d25f4-241">Envia um pacote ao servidor e os publica.</span><span class="sxs-lookup"><span data-stu-id="d25f4-241">Pushes a package to the server and publishes it.</span></span>
 
-### <a name="global-tool-path-and-local-tools-commands"></a><span data-ttu-id="3a304-294">Comandos globais, de caminho de ferramenta e de ferramentas locais</span><span class="sxs-lookup"><span data-stu-id="3a304-294">Global, tool-path, and local tools commands</span></span>
+### <a name="global-tool-path-and-local-tools-commands"></a><span data-ttu-id="d25f4-242">Comandos globais, de caminho de ferramenta e de ferramentas locais</span><span class="sxs-lookup"><span data-stu-id="d25f4-242">Global, tool-path, and local tools commands</span></span>
 
-<span data-ttu-id="3a304-295">Ferramentas são aplicativos de console que são instalados a partir de pacotes NuGet e são invocados no prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="3a304-295">Tools are console applications that are installed from NuGet packages and are invoked from the command prompt.</span></span> <span data-ttu-id="3a304-296">Você pode escrever ferramentas por conta própria ou instalar ferramentas escritas por terceiros.</span><span class="sxs-lookup"><span data-stu-id="3a304-296">You can write tools yourself or install tools written by third parties.</span></span> <span data-ttu-id="3a304-297">As ferramentas também são conhecidas como ferramentas globais, ferramentas de caminho de ferramenta e ferramentas locais.</span><span class="sxs-lookup"><span data-stu-id="3a304-297">Tools are also known as global tools, tool-path tools, and local tools.</span></span> <span data-ttu-id="3a304-298">Para obter mais informações, consulte [visão geral das ferramentas do .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="3a304-298">For more information, see [.NET Core tools overview](global-tools.md).</span></span> <span data-ttu-id="3a304-299">As ferramentas globais e de caminho de ferramenta estão disponíveis a partir do SDK do .NET Core 2,1.</span><span class="sxs-lookup"><span data-stu-id="3a304-299">Global and tool-path tools are available starting with .NET Core SDK 2.1.</span></span> <span data-ttu-id="3a304-300">As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.</span><span class="sxs-lookup"><span data-stu-id="3a304-300">Local tools are available starting with .NET Core SDK 3.0.</span></span>
+<span data-ttu-id="d25f4-243">Ferramentas são aplicativos de console que são instalados a partir de pacotes NuGet e são invocados no prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="d25f4-243">Tools are console applications that are installed from NuGet packages and are invoked from the command prompt.</span></span> <span data-ttu-id="d25f4-244">Você pode escrever ferramentas por conta própria ou instalar ferramentas escritas por terceiros.</span><span class="sxs-lookup"><span data-stu-id="d25f4-244">You can write tools yourself or install tools written by third parties.</span></span> <span data-ttu-id="d25f4-245">As ferramentas também são conhecidas como ferramentas globais, ferramentas de caminho de ferramenta e ferramentas locais.</span><span class="sxs-lookup"><span data-stu-id="d25f4-245">Tools are also known as global tools, tool-path tools, and local tools.</span></span> <span data-ttu-id="d25f4-246">Para obter mais informações, consulte [visão geral das ferramentas do .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="d25f4-246">For more information, see [.NET Core tools overview](global-tools.md).</span></span> <span data-ttu-id="d25f4-247">As ferramentas globais e de caminho de ferramenta estão disponíveis a partir do SDK do .NET Core 2,1.</span><span class="sxs-lookup"><span data-stu-id="d25f4-247">Global and tool-path tools are available starting with .NET Core SDK 2.1.</span></span> <span data-ttu-id="d25f4-248">As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.</span><span class="sxs-lookup"><span data-stu-id="d25f4-248">Local tools are available starting with .NET Core SDK 3.0.</span></span>
 
-<span data-ttu-id="3a304-301">Comando</span><span class="sxs-lookup"><span data-stu-id="3a304-301">Command</span></span> | <span data-ttu-id="3a304-302">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-302">Function</span></span>
+<span data-ttu-id="d25f4-249">Comando</span><span class="sxs-lookup"><span data-stu-id="d25f4-249">Command</span></span> | <span data-ttu-id="d25f4-250">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-250">Function</span></span>
 --- | ---
-[<span data-ttu-id="3a304-303">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="3a304-303">dotnet tool install</span></span>](dotnet-tool-install.md) | <span data-ttu-id="3a304-304">Instala uma ferramenta em seu computador.</span><span class="sxs-lookup"><span data-stu-id="3a304-304">Installs a tool on your machine.</span></span>
-[<span data-ttu-id="3a304-305">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="3a304-305">dotnet tool list</span></span>](dotnet-tool-list.md) | <span data-ttu-id="3a304-306">Lista todas as ferramentas globais, ferramentas-caminho ou locais atualmente instaladas no seu computador.</span><span class="sxs-lookup"><span data-stu-id="3a304-306">Lists all global, tool-path, or local tools currently installed on your machine.</span></span>
-[<span data-ttu-id="3a304-307">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="3a304-307">dotnet tool uninstall</span></span>](dotnet-tool-uninstall.md) | <span data-ttu-id="3a304-308">Desinstala uma ferramenta do seu computador.</span><span class="sxs-lookup"><span data-stu-id="3a304-308">Uninstalls a tool from your machine.</span></span>
-[<span data-ttu-id="3a304-309">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="3a304-309">dotnet tool update</span></span>](dotnet-tool-update.md) | <span data-ttu-id="3a304-310">Atualiza uma ferramenta instalada em seu computador.</span><span class="sxs-lookup"><span data-stu-id="3a304-310">Updates a tool that is installed on your machine.</span></span>
+[<span data-ttu-id="d25f4-251">dotnet tool install</span><span class="sxs-lookup"><span data-stu-id="d25f4-251">dotnet tool install</span></span>](dotnet-tool-install.md) | <span data-ttu-id="d25f4-252">Instala uma ferramenta em seu computador.</span><span class="sxs-lookup"><span data-stu-id="d25f4-252">Installs a tool on your machine.</span></span>
+[<span data-ttu-id="d25f4-253">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="d25f4-253">dotnet tool list</span></span>](dotnet-tool-list.md) | <span data-ttu-id="d25f4-254">Lista todas as ferramentas globais, ferramentas-caminho ou locais atualmente instaladas no seu computador.</span><span class="sxs-lookup"><span data-stu-id="d25f4-254">Lists all global, tool-path, or local tools currently installed on your machine.</span></span>
+[<span data-ttu-id="d25f4-255">dotnet tool uninstall</span><span class="sxs-lookup"><span data-stu-id="d25f4-255">dotnet tool uninstall</span></span>](dotnet-tool-uninstall.md) | <span data-ttu-id="d25f4-256">Desinstala uma ferramenta do seu computador.</span><span class="sxs-lookup"><span data-stu-id="d25f4-256">Uninstalls a tool from your machine.</span></span>
+[<span data-ttu-id="d25f4-257">dotnet tool update</span><span class="sxs-lookup"><span data-stu-id="d25f4-257">dotnet tool update</span></span>](dotnet-tool-update.md) | <span data-ttu-id="d25f4-258">Atualiza uma ferramenta instalada em seu computador.</span><span class="sxs-lookup"><span data-stu-id="d25f4-258">Updates a tool that is installed on your machine.</span></span>
 
-### <a name="additional-tools"></a><span data-ttu-id="3a304-311">Ferramentas adicionais</span><span class="sxs-lookup"><span data-stu-id="3a304-311">Additional tools</span></span>
+### <a name="additional-tools"></a><span data-ttu-id="d25f4-259">Ferramentas adicionais</span><span class="sxs-lookup"><span data-stu-id="d25f4-259">Additional tools</span></span>
 
-<span data-ttu-id="3a304-312">A partir do SDK do .NET Core 2.1.300, várias ferramentas que estavam disponíveis apenas por projeto usando `DotnetCliToolReference` agora estão disponíveis como parte do SDK do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-312">Starting with .NET Core SDK 2.1.300, a number of tools that were available only on a per project basis using `DotnetCliToolReference` are now available as part of the .NET Core SDK.</span></span> <span data-ttu-id="3a304-313">Essas ferramentas estão listadas na tabela a seguir:</span><span class="sxs-lookup"><span data-stu-id="3a304-313">These tools are listed in the following table:</span></span>
+<span data-ttu-id="d25f4-260">A partir do SDK do .NET Core 2.1.300, várias ferramentas que estavam disponíveis apenas por projeto usando `DotnetCliToolReference` agora estão disponíveis como parte do SDK do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-260">Starting with .NET Core SDK 2.1.300, a number of tools that were available only on a per project basis using `DotnetCliToolReference` are now available as part of the .NET Core SDK.</span></span> <span data-ttu-id="d25f4-261">Essas ferramentas estão listadas na tabela a seguir:</span><span class="sxs-lookup"><span data-stu-id="d25f4-261">These tools are listed in the following table:</span></span>
 
-| <span data-ttu-id="3a304-314">Ferramenta</span><span class="sxs-lookup"><span data-stu-id="3a304-314">Tool</span></span>                                              | <span data-ttu-id="3a304-315">Função</span><span class="sxs-lookup"><span data-stu-id="3a304-315">Function</span></span>                                                     |
+| <span data-ttu-id="d25f4-262">Ferramenta</span><span class="sxs-lookup"><span data-stu-id="d25f4-262">Tool</span></span>                                              | <span data-ttu-id="d25f4-263">Função</span><span class="sxs-lookup"><span data-stu-id="d25f4-263">Function</span></span>                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
-| <span data-ttu-id="3a304-316">dev-certs</span><span class="sxs-lookup"><span data-stu-id="3a304-316">dev-certs</span></span>                                         | <span data-ttu-id="3a304-317">Cria e gerencia certificados de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="3a304-317">Creates and manages development certificates.</span></span>                |
-| [<span data-ttu-id="3a304-318">ef</span><span class="sxs-lookup"><span data-stu-id="3a304-318">ef</span></span>](/ef/core/miscellaneous/cli/dotnet)           | <span data-ttu-id="3a304-319">Ferramentas de linha de comando do Entity Framework Core.</span><span class="sxs-lookup"><span data-stu-id="3a304-319">Entity Framework Core command-line tools.</span></span>                    |
-| <span data-ttu-id="3a304-320">sql-cache</span><span class="sxs-lookup"><span data-stu-id="3a304-320">sql-cache</span></span>                                         | <span data-ttu-id="3a304-321">Ferramentas de linha de comando de cache do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="3a304-321">SQL Server cache command-line tools.</span></span>                         |
-| [<span data-ttu-id="3a304-322">user-secrets</span><span class="sxs-lookup"><span data-stu-id="3a304-322">user-secrets</span></span>](/aspnet/core/security/app-secrets) | <span data-ttu-id="3a304-323">Gerencia os segredos do usuário de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="3a304-323">Manages development user secrets.</span></span>                            |
-| [<span data-ttu-id="3a304-324">watch</span><span class="sxs-lookup"><span data-stu-id="3a304-324">watch</span></span>](/aspnet/core/tutorials/dotnet-watch)      | <span data-ttu-id="3a304-325">Inicia um observador de arquivo que executa um comando quando os arquivos são alterados.</span><span class="sxs-lookup"><span data-stu-id="3a304-325">Starts a file watcher that runs a command when files change.</span></span> |
+| <span data-ttu-id="d25f4-264">dev-certs</span><span class="sxs-lookup"><span data-stu-id="d25f4-264">dev-certs</span></span>                                         | <span data-ttu-id="d25f4-265">Cria e gerencia certificados de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="d25f4-265">Creates and manages development certificates.</span></span>                |
+| [<span data-ttu-id="d25f4-266">ef</span><span class="sxs-lookup"><span data-stu-id="d25f4-266">ef</span></span>](/ef/core/miscellaneous/cli/dotnet)           | <span data-ttu-id="d25f4-267">Ferramentas de linha de comando do Entity Framework Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-267">Entity Framework Core command-line tools.</span></span>                    |
+| <span data-ttu-id="d25f4-268">sql-cache</span><span class="sxs-lookup"><span data-stu-id="d25f4-268">sql-cache</span></span>                                         | <span data-ttu-id="d25f4-269">Ferramentas de linha de comando de cache do SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d25f4-269">SQL Server cache command-line tools.</span></span>                         |
+| [<span data-ttu-id="d25f4-270">user-secrets</span><span class="sxs-lookup"><span data-stu-id="d25f4-270">user-secrets</span></span>](/aspnet/core/security/app-secrets) | <span data-ttu-id="d25f4-271">Gerencia os segredos do usuário de desenvolvimento.</span><span class="sxs-lookup"><span data-stu-id="d25f4-271">Manages development user secrets.</span></span>                            |
+| [<span data-ttu-id="d25f4-272">watch</span><span class="sxs-lookup"><span data-stu-id="d25f4-272">watch</span></span>](/aspnet/core/tutorials/dotnet-watch)      | <span data-ttu-id="d25f4-273">Inicia um observador de arquivo que executa um comando quando os arquivos são alterados.</span><span class="sxs-lookup"><span data-stu-id="d25f4-273">Starts a file watcher that runs a command when files change.</span></span> |
 
-<span data-ttu-id="3a304-326">Para obter mais informações sobre cada ferramenta, digite `dotnet <tool-name> --help`.</span><span class="sxs-lookup"><span data-stu-id="3a304-326">For more information about each tool, type `dotnet <tool-name> --help`.</span></span>
+<span data-ttu-id="d25f4-274">Para obter mais informações sobre cada ferramenta, digite `dotnet <tool-name> --help`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-274">For more information about each tool, type `dotnet <tool-name> --help`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="3a304-327">Exemplos</span><span class="sxs-lookup"><span data-stu-id="3a304-327">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="d25f4-275">Exemplos</span><span class="sxs-lookup"><span data-stu-id="d25f4-275">Examples</span></span>
 
-<span data-ttu-id="3a304-328">Cria um novo aplicativo de console do .NET Core:</span><span class="sxs-lookup"><span data-stu-id="3a304-328">Creates a new .NET Core console application:</span></span>
+<span data-ttu-id="d25f4-276">Crie um novo aplicativo de console .NET Core:</span><span class="sxs-lookup"><span data-stu-id="d25f4-276">Create a new .NET Core console application:</span></span>
 
-`dotnet new console`
+```dotnetcli
+dotnet new console
+```
 
-<span data-ttu-id="3a304-329">Restaure as dependências para um determinado aplicativo:</span><span class="sxs-lookup"><span data-stu-id="3a304-329">Restore dependencies for a given application:</span></span>
+<span data-ttu-id="d25f4-277">Compile um projeto e suas dependências em um determinado diretório:</span><span class="sxs-lookup"><span data-stu-id="d25f4-277">Build a project and its dependencies in a given directory:</span></span>
 
-`dotnet restore`
+```dotnetcli
+dotnet build
+```
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+<span data-ttu-id="d25f4-278">Executar um aplicativo:</span><span class="sxs-lookup"><span data-stu-id="d25f4-278">Run an application:</span></span>
 
-<span data-ttu-id="3a304-330">Compile um projeto e suas dependências em um determinado diretório:</span><span class="sxs-lookup"><span data-stu-id="3a304-330">Build a project and its dependencies in a given directory:</span></span>
+```dotnetcli
+dotnet myapp.dll
+```
 
-`dotnet build`
+## <a name="environment-variables"></a><span data-ttu-id="d25f4-279">Variáveis de ambiente</span><span class="sxs-lookup"><span data-stu-id="d25f4-279">Environment variables</span></span>
 
-<span data-ttu-id="3a304-331">Execute a DLL de um aplicativo, como `myapp.dll`:</span><span class="sxs-lookup"><span data-stu-id="3a304-331">Run an application DLL, such as `myapp.dll`:</span></span>
+- <span data-ttu-id="d25f4-280">`DOTNET_ROOT`, `DOTNET_ROOT(x86)`</span><span class="sxs-lookup"><span data-stu-id="d25f4-280">`DOTNET_ROOT`, `DOTNET_ROOT(x86)`</span></span>
 
-`dotnet myapp.dll`
+  <span data-ttu-id="d25f4-281">Especifica o local dos tempos de execução do .NET Core, se eles não estiverem instalados no local padrão.</span><span class="sxs-lookup"><span data-stu-id="d25f4-281">Specifies the location of the .NET Core runtimes, if they are not installed in the default location.</span></span> <span data-ttu-id="d25f4-282">O local padrão no Windows é `C:\Program Files\dotnet`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-282">The default location on Windows is `C:\Program Files\dotnet`.</span></span> <span data-ttu-id="d25f4-283">O local padrão no Linux e no macOS é `/usr/share/dotnet`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-283">The default location on Linux and macOS is `/usr/share/dotnet`.</span></span> <span data-ttu-id="d25f4-284">Essa variável de ambiente é usada somente ao executar aplicativos por meio de executáveis gerados (apphosts).</span><span class="sxs-lookup"><span data-stu-id="d25f4-284">This environment variable is used only when running apps via generated executables (apphosts).</span></span> <span data-ttu-id="d25f4-285">`DOTNET_ROOT(x86)` é usado em vez de executar um executável de 32 bits em um sistema operacional de 64 bits.</span><span class="sxs-lookup"><span data-stu-id="d25f4-285">`DOTNET_ROOT(x86)` is used instead when running a 32-bit executable on a 64-bit OS.</span></span>
 
-## <a name="environment-variables"></a><span data-ttu-id="3a304-332">Variáveis de ambiente</span><span class="sxs-lookup"><span data-stu-id="3a304-332">Environment variables</span></span>
+- `DOTNET_PACKAGES`
 
-# <a name="net-core-21"></a>[<span data-ttu-id="3a304-333">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="3a304-333">.NET Core 2.1</span></span>](#tab/netcore21)
+  <span data-ttu-id="d25f4-286">A pasta de pacotes globais.</span><span class="sxs-lookup"><span data-stu-id="d25f4-286">The global packages folder.</span></span> <span data-ttu-id="d25f4-287">Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.</span><span class="sxs-lookup"><span data-stu-id="d25f4-287">If not set, it defaults to `~/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
 
-`DOTNET_PACKAGES`
+- `DOTNET_SERVICING`
 
-<span data-ttu-id="3a304-334">A pasta de pacotes globais.</span><span class="sxs-lookup"><span data-stu-id="3a304-334">The global packages folder.</span></span> <span data-ttu-id="3a304-335">Se não estiver definido, o padrão será `~/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.</span><span class="sxs-lookup"><span data-stu-id="3a304-335">If not set, it defaults to `~/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+  <span data-ttu-id="d25f4-288">Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.</span><span class="sxs-lookup"><span data-stu-id="d25f4-288">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
 
-`DOTNET_SERVICING`
+- `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-<span data-ttu-id="3a304-336">Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.</span><span class="sxs-lookup"><span data-stu-id="3a304-336">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+  <span data-ttu-id="d25f4-289">Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft.</span><span class="sxs-lookup"><span data-stu-id="d25f4-289">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="d25f4-290">Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="d25f4-290">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="d25f4-291">Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="d25f4-291">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="d25f4-292">Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-292">If not set, the default is `false` and the telemetry feature is active.</span></span>
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `DOTNET_MULTILEVEL_LOOKUP`
 
-<span data-ttu-id="3a304-337">Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft.</span><span class="sxs-lookup"><span data-stu-id="3a304-337">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3a304-338">Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-338">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3a304-339">Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-339">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3a304-340">Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-340">If not set, the default is `false` and the telemetry feature is active.</span></span>
+  <span data-ttu-id="d25f4-293">Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global.</span><span class="sxs-lookup"><span data-stu-id="d25f4-293">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="d25f4-294">Se não estiver definido, o padrão será 1 (`true`lógico).</span><span class="sxs-lookup"><span data-stu-id="d25f4-294">If not set, it defaults to 1 (logical `true`).</span></span> <span data-ttu-id="d25f4-295">Defina como 0 (`false`lógico) para não resolver a partir do local global e ter instalações isoladas do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="d25f4-295">Set to 0 (logical `false`) to not resolve from the global location and have isolated .NET Core installations.</span></span> <span data-ttu-id="d25f4-296">Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span><span class="sxs-lookup"><span data-stu-id="d25f4-296">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
 
-`DOTNET_MULTILEVEL_LOOKUP`
+- <span data-ttu-id="d25f4-297">`DOTNET_ROLL_FORWARD` **disponível a partir do SDK do .NET Core 3. x.**</span><span class="sxs-lookup"><span data-stu-id="d25f4-297">`DOTNET_ROLL_FORWARD` **Available starting with .NET Core 3.x SDK.**</span></span>
 
-<span data-ttu-id="3a304-341">Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global.</span><span class="sxs-lookup"><span data-stu-id="3a304-341">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="3a304-342">Se não estiver definida, o padrão será `true`.</span><span class="sxs-lookup"><span data-stu-id="3a304-342">If not set, it defaults to `true`.</span></span> <span data-ttu-id="3a304-343">Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-343">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="3a304-344">Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span><span class="sxs-lookup"><span data-stu-id="3a304-344">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
+  <span data-ttu-id="d25f4-298">Determina o comportamento de roll-forward.</span><span class="sxs-lookup"><span data-stu-id="d25f4-298">Determines roll forward behavior.</span></span> <span data-ttu-id="d25f4-299">Para obter mais informações, consulte a opção `--roll-forward` anteriormente neste artigo.</span><span class="sxs-lookup"><span data-stu-id="d25f4-299">For more information, see the `--roll-forward` option earlier in this article.</span></span>
 
-`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+- <span data-ttu-id="d25f4-300">`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **disponível no SDK do .NET Core 2. x.**</span><span class="sxs-lookup"><span data-stu-id="d25f4-300">`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **Available in .NET Core 2.x SDK.**</span></span>
 
-<span data-ttu-id="3a304-345">Desabilita o roll forward da versão secundária, se definido como `0`.</span><span class="sxs-lookup"><span data-stu-id="3a304-345">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="3a304-346">Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span><span class="sxs-lookup"><span data-stu-id="3a304-346">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
+  <span data-ttu-id="d25f4-301">Desabilita o roll forward da versão secundária, se definido como `0`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-301">Disables minor version roll forward, if set to `0`.</span></span> <span data-ttu-id="d25f4-302">Para saber mais, confira [Efetuar roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span><span class="sxs-lookup"><span data-stu-id="d25f4-302">For more information, see [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward).</span></span>
 
-# <a name="net-core-20"></a>[<span data-ttu-id="3a304-347">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="3a304-347">.NET Core 2.0</span></span>](#tab/netcore20)
+- `DOTNET_CLI_UI_LANGUAGE`
 
-`DOTNET_PACKAGES`
+  <span data-ttu-id="d25f4-303">Define o idioma da interface do usuário da CLI usando um valor de localidade, como `en-us`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-303">Sets the language of the CLI UI using a locale value such as `en-us`.</span></span> <span data-ttu-id="d25f4-304">Os valores com suporte são os mesmos para o Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d25f4-304">The supported values are the same as for Visual Studio.</span></span> <span data-ttu-id="d25f4-305">Para obter mais informações, consulte a seção sobre como alterar o idioma do instalador na [documentação de instalação do Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019).</span><span class="sxs-lookup"><span data-stu-id="d25f4-305">For more information, see the section on changing the installer language in the [Visual Studio installation documentation](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019).</span></span> <span data-ttu-id="d25f4-306">As regras do Gerenciador de recursos do .NET se aplicam, portanto, você não precisa escolher uma correspondência exata&mdash;também pode escolher os descendentes na árvore de `CultureInfo`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-306">The .NET resource manager rules apply, so you don't have to pick an exact match&mdash;you can also pick descendants in the `CultureInfo` tree.</span></span> <span data-ttu-id="d25f4-307">Por exemplo, se você defini-lo como `fr-CA`, a CLI encontrará e usará as traduções `fr`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-307">For example, if you set it to `fr-CA`, the CLI will find and use the `fr` translations.</span></span> <span data-ttu-id="d25f4-308">Se você defini-lo como um idioma sem suporte, a CLI voltará para o inglês.</span><span class="sxs-lookup"><span data-stu-id="d25f4-308">If you set it to a language that is not supported, the CLI falls back to English.</span></span>
 
-<span data-ttu-id="3a304-348">O cache do pacote principal.</span><span class="sxs-lookup"><span data-stu-id="3a304-348">The primary package cache.</span></span> <span data-ttu-id="3a304-349">Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.</span><span class="sxs-lookup"><span data-stu-id="3a304-349">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+- `DOTNET_DISABLE_GUI_ERRORS`
 
-`DOTNET_SERVICING`
+  <span data-ttu-id="d25f4-309">Para executáveis gerados por GUI habilitado-desabilita o Popup da caixa de diálogo que normalmente mostra para determinadas classes de erros.</span><span class="sxs-lookup"><span data-stu-id="d25f4-309">For GUI-enabled generated executables - disables dialog popup which normally shows for certain classes of errors.</span></span> <span data-ttu-id="d25f4-310">Ele só grava em `stderr` e sai nesses casos.</span><span class="sxs-lookup"><span data-stu-id="d25f4-310">It only writes to `stderr` and exits in those cases.</span></span>
+  
+- `DOTNET_ADDITIONAL_DEPS`
 
-<span data-ttu-id="3a304-350">Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.</span><span class="sxs-lookup"><span data-stu-id="3a304-350">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+  <span data-ttu-id="d25f4-311">Equivalente à opção da CLI `--additional-deps`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-311">Equivalent to CLI option `--additional-deps`.</span></span>
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
+- `DOTNET_RUNTIME_ID`
 
-<span data-ttu-id="3a304-351">Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft.</span><span class="sxs-lookup"><span data-stu-id="3a304-351">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3a304-352">Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-352">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3a304-353">Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-353">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3a304-354">Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-354">If not set, the default is `false` and the telemetry feature is active.</span></span>
+  <span data-ttu-id="d25f4-312">Substitui o RID detectado.</span><span class="sxs-lookup"><span data-stu-id="d25f4-312">Overrides the detected RID.</span></span>
 
-`DOTNET_MULTILEVEL_LOOKUP`
+- `DOTNET_SHARED_STORE`
 
-<span data-ttu-id="3a304-355">Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global.</span><span class="sxs-lookup"><span data-stu-id="3a304-355">Specifies whether .NET Core runtime, shared framework, or SDK are resolved from the global location.</span></span> <span data-ttu-id="3a304-356">Se não estiver definida, o padrão será `true`.</span><span class="sxs-lookup"><span data-stu-id="3a304-356">If not set, it defaults to `true`.</span></span> <span data-ttu-id="3a304-357">Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-357">Set to `false` to not resolve from the global location and have isolated .NET Core installations (values `0` or `false` are accepted).</span></span> <span data-ttu-id="3a304-358">Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span><span class="sxs-lookup"><span data-stu-id="3a304-358">For more information about multi-level lookup, see [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).</span></span>
+  <span data-ttu-id="d25f4-313">Local do "armazenamento compartilhado" para o qual a resolução de assembly volta para em alguns casos.</span><span class="sxs-lookup"><span data-stu-id="d25f4-313">Location of the "shared store" which assembly resolution falls back to in some cases.</span></span>
 
-# <a name="net-core-1x"></a>[<span data-ttu-id="3a304-359">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="3a304-359">.NET Core 1.x</span></span>](#tab/netcore1x)
+- `DOTNET_STARTUP_HOOKS`
 
-`DOTNET_PACKAGES`
+  <span data-ttu-id="d25f4-314">Lista de assemblies dos quais carregar e executar os ganchos de inicialização.</span><span class="sxs-lookup"><span data-stu-id="d25f4-314">List of assemblies to load and execute startup hooks from.</span></span>
 
-<span data-ttu-id="3a304-360">O cache do pacote principal.</span><span class="sxs-lookup"><span data-stu-id="3a304-360">The primary package cache.</span></span> <span data-ttu-id="3a304-361">Se não estiver definido, o padrão será `$HOME/.nuget/packages` em Unix ou `%userprofile%\.nuget\packages` no Windows.</span><span class="sxs-lookup"><span data-stu-id="3a304-361">If not set, it defaults to `$HOME/.nuget/packages` on Unix or `%userprofile%\.nuget\packages` on Windows.</span></span>
+- <span data-ttu-id="d25f4-315">`COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`</span><span class="sxs-lookup"><span data-stu-id="d25f4-315">`COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`</span></span>
 
-`DOTNET_SERVICING`
+  <span data-ttu-id="d25f4-316">Controla o rastreamento de diagnóstico dos componentes de hospedagem, como `dotnet.exe`, `hostfxr`e `hostpolicy`.</span><span class="sxs-lookup"><span data-stu-id="d25f4-316">Controls diagnostics tracing from the hosting components, such as `dotnet.exe`, `hostfxr`, and `hostpolicy`.</span></span>
 
-<span data-ttu-id="3a304-362">Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.</span><span class="sxs-lookup"><span data-stu-id="3a304-362">Specifies the location of the servicing index to use by the shared host when loading the runtime.</span></span>
+## <a name="see-also"></a><span data-ttu-id="d25f4-317">Confira também</span><span class="sxs-lookup"><span data-stu-id="d25f4-317">See also</span></span>
 
-`DOTNET_CLI_TELEMETRY_OPTOUT`
-
-<span data-ttu-id="3a304-363">Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft.</span><span class="sxs-lookup"><span data-stu-id="3a304-363">Specifies whether data about the .NET Core tools usage is collected and sent to Microsoft.</span></span> <span data-ttu-id="3a304-364">Definido como `true` para recusar o recurso de telemetria (os valores `true`, `1` ou `yes` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-364">Set to `true` to opt-out of the telemetry feature (values `true`, `1`, or `yes` accepted).</span></span> <span data-ttu-id="3a304-365">Caso contrário, definido como `false` para aceitar os recursos de telemetria (os valores `false`, `0` ou `no` são aceitos).</span><span class="sxs-lookup"><span data-stu-id="3a304-365">Otherwise, set to `false` to opt into the telemetry features (values `false`, `0`, or `no` accepted).</span></span> <span data-ttu-id="3a304-366">Se não estiver definido, o padrão será `false`, e o recurso de telemetria estará ativo.</span><span class="sxs-lookup"><span data-stu-id="3a304-366">If not set, the default is `false` and the telemetry feature is active.</span></span>
-
----
-
-## <a name="see-also"></a><span data-ttu-id="3a304-367">Confira também</span><span class="sxs-lookup"><span data-stu-id="3a304-367">See also</span></span>
-
-- [<span data-ttu-id="3a304-368">Arquivos de configuração de runtime</span><span class="sxs-lookup"><span data-stu-id="3a304-368">Runtime Configuration Files</span></span>](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
-- [<span data-ttu-id="3a304-369">Definições de configuração de tempo de execução do .NET Core</span><span class="sxs-lookup"><span data-stu-id="3a304-369">.NET Core run-time configuration settings</span></span>](../run-time-config/index.md)
+- [<span data-ttu-id="d25f4-318">Arquivos de configuração de runtime</span><span class="sxs-lookup"><span data-stu-id="d25f4-318">Runtime Configuration Files</span></span>](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [<span data-ttu-id="d25f4-319">Definições de configuração de tempo de execução do .NET Core</span><span class="sxs-lookup"><span data-stu-id="d25f4-319">.NET Core run-time configuration settings</span></span>](../run-time-config/index.md)
