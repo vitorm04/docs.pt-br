@@ -19,7 +19,7 @@ ms.locfileid: "62008209"
 <a name="introduction"></a> Este tópico apresenta animações de caminho, que permitem que você use um caminho geométrico para gerar valores de saída. Animações de caminho são úteis para mover e girar objetos junto em caminhos complexos.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esse tópico, você deve estar familiarizado com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recursos de animações. Para obter uma introdução a recursos de animação, consulte o [visão geral da animação](animation-overview.md).  
   
  Porque você usa um <xref:System.Windows.Media.PathGeometry> objeto para definir uma animação de caminho, você também deve estar familiarizado com <xref:System.Windows.Media.PathGeometry> e os diferentes tipos de <xref:System.Windows.Media.PathSegment> objetos. Para obter mais informações, consulte o [visão geral de geometria](geometry-overview.md).  

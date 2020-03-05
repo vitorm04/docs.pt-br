@@ -18,7 +18,7 @@ ms.locfileid: "64625673"
 # <a name="timing-events-overview"></a>Visão geral dos eventos de tempo
 Este tópico descreve como usar os cinco eventos de tempo disponíveis no <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> objetos.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender este tópico, você deve entender como criar e usar animações. Para se familiarizar com a animação, consulte o [visão geral da animação](animation-overview.md).  
   
  Há várias maneiras de animar propriedades no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  

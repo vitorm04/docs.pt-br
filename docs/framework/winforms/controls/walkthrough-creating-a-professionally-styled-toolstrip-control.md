@@ -33,7 +33,7 @@ Quando tiver terminado, você terá um controle de cliente personalizado reutili
 
 Para copiar o código deste tópico como uma única listagem, confira [Como: Criar um controle ToolStrip com estilo profissional](how-to-create-a-professionally-styled-toolstrip-control.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Será necessário o Visual Studio para concluir este passo a passo.
 

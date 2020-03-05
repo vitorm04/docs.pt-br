@@ -16,7 +16,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
  Esse passo a passo foi escrito usando as configurações de desenvolvimento do Visual C#.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Este passo a passo requer o seguinte:  
   
 - Este passo a passo usa uma pasta dedicada ("c:\linqtest6") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  

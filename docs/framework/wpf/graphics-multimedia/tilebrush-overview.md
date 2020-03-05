@@ -19,7 +19,7 @@ ms.locfileid: "64625690"
 <xref:System.Windows.Media.TileBrush> objetos oferecem uma grande quantidade de controle sobre como uma área é pintada com uma imagem <xref:System.Windows.Media.Drawing>, ou <xref:System.Windows.Media.Visual>. Este tópico descreve como usar <xref:System.Windows.Media.TileBrush> recursos para obter mais controle sobre como uma <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> pinta uma área.  
 
 <a name="prerequisite"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esse tópico, é útil entender como usar os recursos básicos do <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ou <xref:System.Windows.Media.VisualBrush> classe. Para obter uma introdução a esses tipos, consulte a [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   

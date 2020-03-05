@@ -18,7 +18,7 @@ Essa explicação passo a passo fornece um cenário completo fundamental do [!IN
   
  Este passo a passo foi escrito usando as Configurações de Desenvolvimento do Visual Basic.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Este passo a passo requer o seguinte:  
   
 - Este passo a passo usa uma pasta dedicada ("c:\linqtest2") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  

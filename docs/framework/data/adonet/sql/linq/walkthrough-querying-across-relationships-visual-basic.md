@@ -18,7 +18,7 @@ Este tutorial demonstra o uso de [!INCLUDE[vbtecdlinq](../../../../../../include
   
  Este passo a passo foi escrito usando as Configurações de Desenvolvimento do Visual Basic.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Você deve ter concluído [o passo a passos: Modelo de objeto simples e consulta (Visual Basic](walkthrough-simple-object-model-and-query-visual-basic.md)). Este passo a passo é baseado naquele, incluindo a presença do arquivo northwnd.mdf em c:\linqtest.  
   
 ## <a name="overview"></a>Visão geral  

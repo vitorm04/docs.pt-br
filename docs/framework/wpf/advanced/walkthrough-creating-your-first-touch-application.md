@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: a915b8e238550eb3d9c1bcbe72d0d05a83a8312c
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64605800"
@@ -20,7 +20,7 @@ ms.locfileid: "64605800"
 # <a name="walkthrough-creating-your-first-touch-application"></a>Passo a passo: criar o primeiro aplicativo sensível ao toque
 O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] possibilita que os aplicativos respondam ao toque. Por exemplo, você pode interagir com um aplicativo usando um ou mais dedos em um dispositivo sensível ao toque, como uma tela sensível ao toque. Este passo a passo cria um aplicativo que possibilita ao usuário mover, redimensionar ou girar um único objeto usando toque.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:  
   
 - Visual Studio.  

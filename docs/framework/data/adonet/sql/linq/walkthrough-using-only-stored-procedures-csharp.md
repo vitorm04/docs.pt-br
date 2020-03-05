@@ -24,7 +24,7 @@ Este tutorial não depende do Object Relational Designer. Os desenvolvedores que
 
 Esse passo a passo foi escrito usando as configurações de desenvolvimento do Visual C#.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este passo a passo requer o seguinte:
 

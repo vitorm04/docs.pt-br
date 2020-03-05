@@ -16,7 +16,7 @@ ms.locfileid: "62020319"
 Este tópico descreve como o sistema de temporização usa a animação <xref:System.Windows.Media.Animation.Timeline>, e <xref:System.Windows.Media.Animation.Clock> classes para animar propriedades.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esse tópico, você deve ser capaz de usar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animações para animar propriedades, conforme descrito na [Visão geral da animação](animation-overview.md). Ele também ajuda a se familiarizar com as propriedades de dependência; para obter mais informações, consulte o [visão geral das propriedades de dependência](../advanced/dependency-properties-overview.md).  
   
 <a name="timelinesandclocks"></a>   

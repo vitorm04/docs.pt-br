@@ -23,7 +23,7 @@ ms.locfileid: "69929604"
 Este <xref:System.Windows.Media.ImageBrush>tópico descreve como usar objetos, <xref:System.Windows.Media.DrawingBrush>e <xref:System.Windows.Media.VisualBrush> para pintar uma área com uma imagem, um <xref:System.Windows.Media.Drawing>ou um <xref:System.Windows.Media.Visual>.  
 
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esse tópico, você deve estar familiarizado com os diferentes tipos de pincéis que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece e seus recursos básicos. Para uma introdução, consulte a [Visão geral de pincéis do WPF](wpf-brushes-overview.md).  
   
 <a name="image"></a>   

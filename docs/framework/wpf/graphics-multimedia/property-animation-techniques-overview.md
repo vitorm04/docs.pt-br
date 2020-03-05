@@ -20,7 +20,7 @@ ms.locfileid: "62002255"
 Este tópico descreve as diferentes abordagens para animar propriedades: storyboards, animações locais, relógios e animações por quadro.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender este tópico, você deve estar familiarizado com os recursos básicos de animação descritos na [Visão geral da animação](animation-overview.md).  
   
 <a name="summary"></a>   

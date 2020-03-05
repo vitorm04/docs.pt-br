@@ -31,7 +31,7 @@ Esta explicação passo a passo ilustra as seguintes tarefas:
 
 - Habilite um painel para receber dados que foram soltos pelo controle de usuário.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 É necessário o Visual Studio para concluir este passo a passo.
 

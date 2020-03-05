@@ -17,7 +17,7 @@ ms.locfileid: "64645334"
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esta visão geral, você deverá estar familiarizado com as animações e linhas do tempo do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Para obter uma introdução às animações, consulte a [Visão geral da animação](animation-overview.md). Ela também ajuda a se familiarizar com as animações De/Para/Por. Para obter mais informações, consulte a Visão geral das animações De/Para/Por.  
   
 <a name="whatisakeyframeanimation"></a>   

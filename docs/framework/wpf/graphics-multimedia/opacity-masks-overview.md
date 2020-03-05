@@ -17,7 +17,7 @@ ms.locfileid: "69929658"
 As máscaras de opacidade permitem que você torne partes de um elemento ou visual transparentes ou parcialmente transparentes. Para criar uma máscara de opacidade, você aplica <xref:System.Windows.Media.Brush> uma <xref:System.Windows.UIElement.OpacityMask%2A> à propriedade de um elemento ou <xref:System.Windows.Media.Visual>.  O pincel é mapeado para o elemento ou visual, e o valor de opacidade de cada pixel do pincel é usado para determinar a opacidade resultante de cada pixel correspondente do elemento ou visual.  
   
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Esta visão geral pressupõe que você esteja familiarizado <xref:System.Windows.Media.Brush> com objetos. Para uma introdução ao uso de pincéis, consulte [Visão geral sobre a pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md). Para obter informações <xref:System.Windows.Media.ImageBrush> sobre <xref:System.Windows.Media.DrawingBrush>o e o, consulte [pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md).  
   
 <a name="opacitymasks"></a>   

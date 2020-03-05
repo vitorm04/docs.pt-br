@@ -25,7 +25,7 @@ Essa explicação passo a passo fornece um cenário de ponta a ponta básico de 
   
  Este passo a passo foi escrito usando as Configurações de Desenvolvimento do Visual Basic.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Este passo a passo requer o seguinte:  
   
 - Essa explicação passo a passo usa uma pasta c:\linqtest3 dedicada (“") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.  

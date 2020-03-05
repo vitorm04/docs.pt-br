@@ -18,7 +18,7 @@ ms.locfileid: "69964846"
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistema de propriedades inclui um sistema de relatórios de metadados que vai além do que pode ser relatado sobre uma propriedade por meio de características de reflexão ou de Common Language Runtime geral (CLR). Os metadados de uma propriedade de dependência também podem ser atribuídos exclusivamente pela classe que define uma propriedade de dependência, podem ser alterados quando a propriedade de dependência é adicionada a uma classe diferente e podem ser substituídos especificamente por todas as classes derivadas que herdam a propriedade de dependência da classe base de definição.  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes em classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos deste tópico, você também deve ter noções básicas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e saber como escrever aplicativos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="dp_metadata_contents"></a>   

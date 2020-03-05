@@ -18,7 +18,7 @@ ms.locfileid: "64636702"
 Caminhos são discutidos [formas e desenho básico no WPF Overview](shapes-and-basic-drawing-in-wpf-overview.md) e o [visão geral de geometria](geometry-overview.md), no entanto, este tópico descreve em detalhes a poderosa e complexa mini-linguagem você pode usar para especificar o caminho geometrias mais eficiência usando [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
  Para entender esse tópico, você deve estar familiarizado com os recursos básicos do <xref:System.Windows.Media.Geometry> objetos. Para obter mais informações, consulte o [visão geral de geometria](geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   

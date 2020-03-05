@@ -19,7 +19,7 @@ Este passo a passo é orientado a código por design para ajudar a mostrar os co
 
 Esse passo a passo foi escrito usando as configurações de desenvolvimento do Visual C#.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Este passo a passo usa uma pasta dedicada ("c:\linqtest5") para armazenar arquivos. Crie essa pasta antes de iniciar o passo a passo.
 
