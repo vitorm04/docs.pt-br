@@ -1,16 +1,16 @@
 ---
-title: Especificar dinamicamente filtros predicados em tempo de execução (LINQ em C#)
-description: Saiba como especificar dinamicamente filtros predicados em tempo de execução usando o LINQ em C#.
+title: Especificar dinamicamente filtros predicados em runtime (LINQ em C#)
+description: Saiba como especificar dinamicamente filtros predicados em runtime usando o LINQ em C#.
 ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
 ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857730"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659937"
 ---
-# <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em tempo de execução
+# <a name="dynamically-specify-predicate-filters-at-runtime"></a>Especificar filtros predicados dinamicamente em runtime
 
 Em alguns casos, você não sabe até o tempo de execução quantos predicados precisa aplicar aos elementos de origem na cláusula `where`. Uma maneira de especificar dinamicamente vários filtros de predicados é usar o método <xref:System.Linq.Enumerable.Contains%2A>, conforme mostrado no exemplo a seguir. O exemplo é construído de duas maneiras. Primeiro, o projeto é executado filtrando valores que são fornecidos no programa. Em seguida, o projeto é executado novamente usando a entrada fornecida em tempo de execução.
 
@@ -68,7 +68,7 @@ Em alguns casos, você não sabe até o tempo de execução quantos predicados p
 
 4. Execute o projeto com um argumento de linha de comando de um valor inteiro entre 1 e 4.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
-- [Cláusula where](../language-reference/keywords/where-clause.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)
+- [onde cláusula](../language-reference/keywords/where-clause.md)

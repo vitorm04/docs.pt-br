@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922508"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opções do compilador C#)
@@ -25,7 +25,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
 -debug:{full | pdbonly}  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
  Especificar `+` ou apenas **-debug** faz o compilador gerar informações de depuração e colocá-las em um de banco de dados de programa (arquivo .pdb). Especificar `-`, que será aplicado se **-debug** não for especificado, faz com que nenhuma informação de depuração seja criada.  
   
@@ -42,7 +42,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
   
  Para obter informações sobre como configurar o desempenho de depuração de um aplicativo, consulte [Facilitando a Depuração de uma Imagem](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- Para alterar o local do arquivo .pdb, consulte [-pdb (Opções do Compilador C#)](./pdb-compiler-option.md).  
+ Para alterar a localização do arquivo .pdb, consulte [-pdb (C# Opções de compilação)](./pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -54,7 +54,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
   
 4. Modifique a propriedade **Informações de Depuração**.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Coloque as informações de depuração no arquivo de saída `app.pdb`:  
@@ -63,7 +63,7 @@ A opção **-debug** faz o compilador gerar informações de depuração e coloc
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

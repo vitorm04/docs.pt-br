@@ -3,10 +3,10 @@ title: Aplicando padrões CQRS e DDD simplificados em um microsserviço
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Entender a relação geral entre os padrões CQRS e DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834311"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicar padrões CQRS e DDD simplificados em um microsserviço
@@ -15,7 +15,7 @@ O CQRS é um padrão de arquitetura que separa os modelos para ler e gravar dado
 
 - Consultas. Essas retornam um resultado, não alteram o estado do sistema e são livres de efeitos colaterais.
 
-- Comandos. Esses alteram o estado de um sistema.
+- comandos. Esses alteram o estado de um sistema.
 
 O CQS é um conceito simples — trata-se de métodos dentro do mesmo objeto sendo consultas ou comandos. Cada método retorna um estado ou muda um estado, mas não ambos. Até mesmo um único objeto de padrão de repositório pode estar em conformidade com o CQS. O CQS pode ser considerado um princípio fundamental para o CQRS.
 
@@ -27,19 +27,19 @@ CQRS significa ter dois objetos para uma operação de leitura/gravação, em qu
 
 Um exemplo desse tipo de serviço é o microsserviço de ordenação do aplicativo eShopOnContainers de referência. Este serviço implementa um microsserviço com base em uma abordagem CQRS simplificada. Ele usa uma única fonte de dados ou banco de dados, mas dois modelos lógicos, além de padrões DDD para o domínio transacional, conforme mostrado na Figura 7-2.
 
-![Diagrama mostrando um microserviço do CQRS e do DDD de alto nível simplificado.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
+![Diagrama mostrando um microserviço CQRS e DDD simplificado de alto nível.](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **Figura 7-2**. Microsserviço baseado em CQRS e DDD simplificado
 
-O microserviço "ordenando" lógico inclui seu banco de dados de ordenação, que pode ser, mas não precisa ser, o mesmo host do Docker. É bom ter o banco de dados no mesmo host do Docker para desenvolvimento, mas não para produção.
+O Microservice lógico "Ordering" inclui seu banco de dados de pedidos, que pode ser, mas não precisa ser, o mesmo host Docker. É bom ter o banco de dados no mesmo host do Docker para desenvolvimento, mas não para produção.
 
 A camada de aplicativo pode ser a própria API Web. O aspecto de design importante aqui é que o microsserviço dividiu as consultas e ViewModels (modelos de dados criados especialmente para os aplicativos cliente) dos comandos, do modelo de domínio e das transações que seguem o padrão CQRS. Essa abordagem mantém as consultas independentes de restrições provenientes de padrões DDD que só fazem sentido para transações e atualizações, conforme explicado nas seções posteriores.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Greg Young. Controle de versão em um sistema de origem de eventos** (gratuito para ler o livro eletrônico online) \
+- **O Greg Young. Versão em um sistema de origem de eventos** (livre para ler e-book on-line) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
->[Anterior](index.md)
->[Próximo](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Próximo](index.md)
+>[anterior](eshoponcontainers-cqrs-ddd-microservice.md)

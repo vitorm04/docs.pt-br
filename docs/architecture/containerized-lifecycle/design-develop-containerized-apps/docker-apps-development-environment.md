@@ -3,10 +3,10 @@ title: Ambiente de desenvolvimento para aplicativos do Docker
 description: Saiba mais sobre as opções de ferramentas de desenvolvimento mais importantes compatíveis com o ciclo de vida de desenvolvimento do Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71214296"
 ---
 # <a name="development-environment-for-docker-apps"></a>Ambiente de desenvolvimento para aplicativos do Docker
@@ -38,7 +38,7 @@ Você pode desenvolver aplicativos do Docker usando as ferramentas da Microsoft 
 
 - .NET Core e ASP.NET Core
 - Node.js
-- Ir
+- Go
 - Java
 - Ruby
 - Python
@@ -46,5 +46,5 @@ Você pode desenvolver aplicativos do Docker usando as ferramentas da Microsoft 
 Basicamente, você pode usar qualquer linguagem moderna compatível com o Docker no Linux ou Windows.
 
 >[!div class="step-by-step"]
->[Anterior](deploy-azure-kubernetes-service.md)
->[Próximo](docker-apps-inner-loop-workflow.md)
+>[Próximo](deploy-azure-kubernetes-service.md)
+>[anterior](docker-apps-inner-loop-workflow.md)

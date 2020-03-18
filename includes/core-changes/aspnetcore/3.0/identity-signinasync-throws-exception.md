@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 6679e38aefa7d61ce430dc5375ff3b35c641ea27
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394040"
 ---
-### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Identidade: o SignInAsync gera uma exceção para a identidade não autenticada
+### <a name="identity-signinasync-throws-exception-for-unauthenticated-identity"></a>Identidade: SignInAsync lança exceção para identidade não autenticada
 
-Por padrão, `SignInAsync` gera uma exceção para entidades/identidades nas quais `IsAuthenticated` é `false`.
+Por padrão, `SignInAsync` lança uma exceção para `IsAuthenticated` diretores /identidades em que é `false`.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -16,19 +16,19 @@ Por padrão, `SignInAsync` gera uma exceção para entidades/identidades nas qua
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`SignInAsync` aceita quaisquer entidades/identidades, incluindo identidades nas quais `IsAuthenticated` está `false`.
+`SignInAsync`aceita quaisquer princípios/identidades, incluindo identidades `IsAuthenticated` `false`em que é .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Por padrão, `SignInAsync` gera uma exceção para entidades/identidades nas quais `IsAuthenticated` é `false`. Há um novo sinalizador para suprimir esse comportamento, mas o comportamento padrão foi alterado.
+Por padrão, `SignInAsync` lança uma exceção para `IsAuthenticated` diretores /identidades em que é `false`. Há uma nova bandeira para suprimir esse comportamento, mas o comportamento padrão mudou.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-O comportamento antigo era problemático porque, por padrão, essas entidades foram rejeitadas por `[Authorize]` / `RequireAuthenticatedUser()`.
+O comportamento antigo era problemático porque, por padrão, `[Authorize]`  /  `RequireAuthenticatedUser()`esses diretores eram rejeitados por .
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-No ASP.NET Core 3,0 Preview 6, há um sinalizador de `RequireAuthenticatedSignIn` no `AuthenticationOptions` `true` por padrão. Defina esse sinalizador como `false` para restaurar o comportamento antigo.
+Em ASP.NET Core 3.0 Preview 6, `AuthenticationOptions` há `true` uma `RequireAuthenticatedSignIn` bandeira que é por padrão. Coloque esta `false` bandeira para restaurar o velho comportamento.
 
 #### <a name="category"></a>Categoria
 

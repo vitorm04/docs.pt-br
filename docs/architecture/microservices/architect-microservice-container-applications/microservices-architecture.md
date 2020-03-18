@@ -3,10 +3,10 @@ title: Arquitetura de microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Exibição de 30.000 pés da arquitetura de microsserviços.
 ms.date: 09/20/2018
 ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834392"
 ---
 # <a name="microservices-architecture"></a>Arquitetura de microsserviços
@@ -23,7 +23,7 @@ Como uma vantagem adicional, os microsserviços podem ser aumentados de forma in
 
 **Figura 4-6**. Implantação monolítica versus a abordagem de microsserviços
 
-Como mostra a Figura 4-6, na abordagem monolítica tradicional, o aplicativo é dimensionado clonando o aplicativo inteiro em vários servidores/VM. Na abordagem de microsserviços, a funcionalidade é separada em serviços menores para que cada serviço possa ser dimensionado independentemente. A abordagem de microserviços permite alterações ágeis e iteração rápida de cada microserviço, pois você pode alterar áreas específicas e pequenas de aplicativos complexos, grandes e escalonáveis.
+Como a Figura 4-6 mostra, na abordagem monolítica tradicional, o aplicativo escala clonando todo o aplicativo em vários servidores/VM. Na abordagem de microsserviços, a funcionalidade é separada em serviços menores para que cada serviço possa ser dimensionado independentemente. A abordagem de microsserviços permite mudanças ágeis e iteração rápida de cada microserviço, pois você pode alterar áreas específicas, pequenas e complexas de aplicações complexas, grandes e escaláveis.
 
 A arquitetura de aplicativos baseados em microsserviços refinados permite práticas de integração e de entrega contínua. Ela também acelera a entrega de novas funções no aplicativo. A composição refinada de aplicativos também permite a você executar e testar microsserviços em isolamento e evoluí-los de maneira autônoma ao manter contratos claros entre eles. Desde que você não altere a interfaces ou contratos, é possível alterar a implementação interna de qualquer microsserviço ou adicionar novas funcionalidades sem interromper outros microsserviços.
 
@@ -43,21 +43,21 @@ Dessas, apenas as três primeiras serão abordadas ou introduzidas neste guia. O
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Mark Russinovich. Microserviços: uma revolução de aplicativo desativada pela nuvem** \
+- **Mark Russinovich. Microsserviços: Uma revolução de aplicativos alimentada pela nuvem** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler. \ de microservices**
+- **Martin Fowler. Microserviços** \
   <https://www.martinfowler.com/articles/microservices.html>
 
 - **Martin Fowler. Pré-requisitos de microserviço** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson.**  \ de computação em nuvem de partes
+- **Jimmy Nilsson. Chunk Cloud Computing** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre. Ciclo de vida do aplicativo Docker em contêiner com a plataforma e as ferramentas da Microsoft** (livro eletrônico baixável) \
+- **Cesar de la Torre. Ciclo de vida do aplicativo Docker containerizado com plataforma e ferramentas microsoft** (e-book para download) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
->[Anterior](service-oriented-architecture.md)
->[Próximo](data-sovereignty-per-microservice.md)
+>[Próximo](service-oriented-architecture.md)
+>[anterior](data-sovereignty-per-microservice.md)

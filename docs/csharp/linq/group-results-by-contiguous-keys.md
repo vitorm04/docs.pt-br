@@ -4,11 +4,11 @@ description: Como agrupar resultados por chaves contíguas usando LINQ em C#.
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47192999"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659898"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Agrupar resultados por chaves contíguas
 
@@ -20,7 +20,7 @@ O exemplo a seguir mostra como agrupar elementos em partes que representam subse
 |Um|think|
 |Um|that|
 |B|Linq|
-|C|is|
+|C|é|
 |Um|really|
 |B|cool|
 |B|!|
@@ -31,7 +31,7 @@ Os seguintes grupos serão criados nesta ordem:
 
 2. Linq
 
-3. is
+3. é
 
 4. really
 
@@ -49,6 +49,6 @@ O exemplo a seguir mostra o método de extensão e o código do cliente que o us
 
 Para usar o método de extensão em seu projeto, copie a classe estática `MyExtensions` para um arquivo de código-fonte novo ou existente e se for necessário, adicione uma diretiva `using` para o namespace em que ele está localizado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)

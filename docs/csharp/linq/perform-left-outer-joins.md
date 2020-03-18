@@ -4,11 +4,11 @@ description: Saiba como executar junções externas esquerdas usando o LINQ em C
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857574"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688573"
 ---
 # <a name="perform-left-outer-joins"></a>Executar junções externas esquerdas
 
@@ -18,7 +18,7 @@ Uma junção externa esquerda é uma junção em que cada elemento da primeira c
 
 O exemplo a seguir demonstra como usar o método <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> nos resultados de uma junção de grupo para executar uma junção externa esquerda.
 
-A primeira etapa da produção de uma junção externa esquerda de duas coleções é executar uma junção interna usando uma junção de grupo. (Consulte [Executar junções internas](perform-inner-joins.md) para obter uma explicação desse processo.) Neste exemplo, a lista de objetos `Person` é associada internamente à lista de objetos `Pet` com base em um objeto `Person` correspondente a `Pet.Owner`.
+A primeira etapa da produção de uma junção externa esquerda de duas coleções é executar uma junção interna usando uma junção de grupo. (Consulte [Realizar adesão interna](perform-inner-joins.md) para uma explicação desse processo.) Neste exemplo, a `Person` lista de objetos é acompanhada `Pet` internamente `Person` à lista `Pet.Owner`de objetos com base em um objeto que corresponde .
 
 A segunda etapa é incluir cada elemento da primeira coleção (esquerda) no conjunto de resultados, mesmo que esse elemento não tenha nenhuma correspondência na coleção direita. Isso é feito chamando <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> em cada sequência de elementos correspondentes da junção de grupo. Neste exemplo, <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> é chamado em cada sequência de objetos `Pet` correspondentes. O método retorna uma coleção que contém um valor padrão único se a sequência de objetos `Pet` correspondentes estiver vazia para qualquer objeto `Person`, garantindo assim que cada objeto `Person` seja representado no conjunto de resultados.
 
@@ -27,7 +27,7 @@ A segunda etapa é incluir cada elemento da primeira coleção (esquerda) no con
 
 [!code-csharp[CsLINQProgJoining#7](~/samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable.Join%2A>
 - <xref:System.Linq.Enumerable.GroupJoin%2A>

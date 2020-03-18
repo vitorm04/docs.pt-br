@@ -5,15 +5,15 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73093543"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicativos sem servidor: arquitetura, padrões e implementação no Azure
 
-![Captura de tela que mostra a capa do livro eletrônico de aplicativos sem servidor.](./media/index/serverless-apps-cover.jpg)
+![Captura de tela que mostra a capa do e-book Serverless Apps.](./media/index/serverless-apps-cover.jpg)
 
 > DOWNLOAD disponível em: <https://aka.ms/serverless-ebook>
 
@@ -23,7 +23,7 @@ Divisão de Desenvolvedores Microsoft, equipes dos produtos .NET e Visual Studio
 
 Uma divisão da Microsoft Corporation
 
-Uma maneira de Microsoft
+One Microsoft Way
 
 Redmond, Washington 98052-6399
 
@@ -33,7 +33,7 @@ Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser rep
 
 Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste guia, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
-Alguns exemplos aqui representados são fornecidos apenas para ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
+ Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
 A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
 
@@ -43,25 +43,25 @@ Todas as outras marcas e logotipos são propriedade de seus respectivos propriet
 
 Autor:
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , defensora da nuvem sênior, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**, Advogado Sênior em Nuvem, Microsoft Corp.
 
 Colaborador:
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , defensora da nuvem sênior, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)**, Advogado Sênior em Nuvem, Microsoft Corp.
 
 Editores:
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , desenvolvedor de conteúdo sênior, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)**, Desenvolvedor Sênior de Conteúdo, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , desenvolvedor de conteúdo sênior, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)**, Desenvolvedora Sênior de Conteúdo, Microsoft Corp.
 
 Participantes e revisores:
 
-> **[Steve Smith](https://twitter.com/ardalis)** , Proprietário, Ardalis Services.
+> **[Steve Smith](https://twitter.com/ardalis)**, Proprietário, Ardalis Services.
 
 ## <a name="introduction"></a>Introdução
 
-A computação [sem servidor](https://azure.microsoft.com/solutions/serverless/) é a evolução das plataformas de nuvem na direção do código nativo de nuvem pura. Ela aproxima os desenvolvedores da lógica de negócios, isolando-os das questões de infraestrutura. É um padrão que não quer dizer "nenhum servidor", mas sim, "sem servidor". O código sem servidor é controlado por eventos. O código pode ser disparado por qualquer coisa, desde uma solicitação da Web HTTP tradicional até um temporizador ou o carregamento de um arquivo. A infraestrutura por trás da computação sem servidor permite dimensionar instantaneamente para atender a demandas elásticas e oferece a microcobrança, que realmente permite "pagar por aquilo que você usar". A computação sem servidor requer uma nova maneira de pensar e abordar a criação de aplicativos e não é a solução certa para todos os problemas. Como desenvolvedor, você precisa decidir:
+[Serverless](https://azure.microsoft.com/solutions/serverless/) é a evolução das plataformas em nuvem na direção do código nativo da nuvem pura. Ela aproxima os desenvolvedores da lógica de negócios, isolando-os das questões de infraestrutura. É um padrão que não quer dizer "nenhum servidor", mas sim, "sem servidor". O código sem servidor é controlado por eventos. O código pode ser disparado por qualquer coisa, desde uma solicitação da Web HTTP tradicional até um temporizador ou o carregamento de um arquivo. A infraestrutura por trás da computação sem servidor permite dimensionar instantaneamente para atender a demandas elásticas e oferece a microcobrança, que realmente permite "pagar por aquilo que você usar". A computação sem servidor requer uma nova maneira de pensar e abordar a criação de aplicativos e não é a solução certa para todos os problemas. Como desenvolvedor, você precisa decidir:
 
 - Quais são os prós e contras do uso da computação sem servidor?
 - Por que você deve considerar a computação sem servidor para seus próprios aplicativos?
@@ -88,7 +88,7 @@ Antes da nuvem, existia um limite perceptível entre desenvolvimento e operaçõ
 - Para onde os backups de armazenamento são enviados?
 - É necessário que haja uma energia redundante?
 
-A lista continua e a sobrecarga era enorme. Em muitas situações, os departamentos de TI eram obrigados a lidar com um enorme desperdício. O desperdício era devido à alocação excessiva de servidores como máquinas de backup para recuperação de desastres e servidores em espera para habilitar a expansão. Felizmente, a introdução da tecnologia de virtualização (como o [Hyper-V](/virtualization/hyper-v-on-windows/about/)) com máquinas virtuais (VMS) deu origem à IaaS (infraestrutura como serviço). A infraestrutura virtualizada permitiu que as operações estabelecessem um conjunto padrão de servidores como o backbone, levando a um ambiente flexível com a capacidade de provisionar de servidores exclusivos "sob demanda”. Ainda mais importante, a virtualização preparou o terreno para que a nuvem pudesse ser usada para fornecer máquinas virtuais "como serviço”. As empresas puderam realmente parar de se preocupar com computadores físicos ou com fonte de alimentação redundante. Com isso, elas passaram a se concentrar no ambiente virtual.
+A lista continua e a sobrecarga era enorme. Em muitas situações, os departamentos de TI eram obrigados a lidar com um enorme desperdício. O desperdício foi devido à superalocação de servidores como máquinas de backup para recuperação de desastres e servidores de espera para habilitar a escala. Felizmente, a introdução da tecnologia de virtualização (como [Hyper-V](/virtualization/hyper-v-on-windows/about/)) com Máquinas Virtuais (VMs) deu origem à Infra-Estrutura como Serviço (IaaS). A infraestrutura virtualizada permitiu que as operações estabelecessem um conjunto padrão de servidores como o backbone, levando a um ambiente flexível com a capacidade de provisionar de servidores exclusivos "sob demanda”. Ainda mais importante, a virtualização preparou o terreno para que a nuvem pudesse ser usada para fornecer máquinas virtuais "como serviço”. As empresas puderam realmente parar de se preocupar com computadores físicos ou com fonte de alimentação redundante. Com isso, elas passaram a se concentrar no ambiente virtual.
 
 A IaaS ainda requer uma sobrecarga pesada porque as operações ainda são responsáveis por várias tarefas. Essas tarefas incluem:
 
@@ -118,8 +118,8 @@ Este guia enfatiza especificamente as abordagens de arquitetura e os padrões de
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- [Centro de Arquitetura do Azure](https://docs.microsoft.com/azure/architecture/)
-- [Práticas recomendadas para aplicativos de nuvem](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Centro de Arquitetura Azure](https://docs.microsoft.com/azure/architecture/)
+- [Melhores práticas para aplicações em nuvem](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Quem deve usar o guia
 

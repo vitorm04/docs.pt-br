@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
 ms.openlocfilehash: 12093e9c9246c87cc5ea3aedaca6ba34acacce4d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73036989"
 ---
 # <a name="expression-trees-explained"></a>Árvores de Expressão Explicadas
@@ -16,7 +16,7 @@ ms.locfileid: "73036989"
 [Anterior – Visão geral](expression-trees.md)
 
 Uma Árvore de expressão é uma estrutura de dados que define o código. Elas se baseiam nas mesmas estruturas que um compilador usa para analisar o código e gerar a saída compilada. Ao ler este tutorial, você notará certa semelhança entre árvores de expressão e os tipos usados nas APIs Roslyn para criar [Analyzers e CodeFixes](https://github.com/dotnet/roslyn-analyzers).
-(Analisadores e CodeFixes são pacotes NuGet que executam análise estática no código e podem sugerir possíveis correções para um desenvolvedor.) Os conceitos são semelhantes, e o resultado final é uma estrutura de dados que permite examinar o código-fonte de uma maneira significativa. No entanto, as árvores de expressão são baseadas em um conjunto de classes e APIs totalmente diferente das APIs Roslyn.
+(Analyzers e CodeFixes são pacotes NuGet que realizam análisees estáticas em código e podem sugerir correções potenciais para um desenvolvedor.) Os conceitos são semelhantes, e o resultado final é uma estrutura de dados que permite o exame do código fonte de forma significativa. No entanto, as árvores de expressão são baseadas em um conjunto de classes e APIs totalmente diferente das APIs Roslyn.
 
 Vejamos um exemplo simples.
 Aqui está uma linha de código:

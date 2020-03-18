@@ -3,15 +3,15 @@ title: Como arquitetar aplicativos baseados em contêineres e em microsserviços
 description: Arquitetar aplicativos baseados em contêineres e em microsserviços não é simples e deve ser levado a sério. Aprenda os conceitos principais neste capítulo.
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295514"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>Como arquitetar aplicativos baseados em contêineres e em microsserviços
 
-*Os microsserviços oferecem grandes benefícios, mas também geram novos grandes desafios. Os padrões da arquitetura de microsserviços são pilares fundamentais durante a criação de um aplicativo baseado em microsserviço.*
+*Os microserviços oferecem grandes benefícios, mas também levantam enormes novos desafios. Padrões de arquitetura de microserviços são pilares fundamentais ao criar um aplicativo baseado em microserviços.*
 
 Antes neste guia, você aprendeu os conceitos básicos sobre contêineres e sobre o Docker. Esse é o mínimo de informações necessárias para a introdução aos contêineres. Embora os contêineres habilitem os microsserviços e sejam muito adequados para isso, eles não são obrigatórios para uma arquitetura de microsserviço e muitos conceitos de arquitetura nesta seção de arquitetura também podem ser aplicados sem contêineres. No entanto, este guia concentra-se na interseção de ambos devido a importância dos contêineres que já foi apresentada.
 
@@ -28,5 +28,5 @@ Se o processo falhar, o contêiner é encerrado e o orquestrador assume. Se o or
 Você pode encontrar um cenário em que deseje vários processos em execução em um único contêiner. Para esse cenário, como pode haver apenas um ponto de entrada por contêiner, você poderá executar um script dentro do contêiner para iniciar quantos programas forem necessários. Por exemplo, você pode usar o [Supervisor](http://supervisord.org/) ou uma ferramenta semelhante para cuidar da inicialização de vários processos dentro de um único contêiner. No entanto, mesmo que seja possível encontrar arquiteturas com vários processos por contêiner, essa abordagem não é muito comum.
 
 >[!div class="step-by-step"]
->[Anterior](../net-core-net-framework-containers/official-net-docker-images.md)
->[Próximo](containerize-monolithic-applications.md)
+>[Próximo](../net-core-net-framework-containers/official-net-docker-images.md)
+>[anterior](containerize-monolithic-applications.md)

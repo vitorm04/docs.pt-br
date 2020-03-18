@@ -3,10 +3,10 @@ title: Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 ms.date: 02/25/2019
 ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70848748"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux em um orquestrador do AKS/Kubernetes
@@ -17,7 +17,7 @@ Os principais recursos do AKS são:
 
 - Um plano de controle hospedado no Azure
 - Atualizações automatizadas
-- Auto-recuperação
+- Autorrecuperação
 - Escala configurável pelo usuário
 - Uma experiência de usuário mais simples para desenvolvedores e operadores de cluster.
 
@@ -33,7 +33,7 @@ Este exemplo usa um projeto simples com base em um modelo de API Web do Visual S
 
 **Figura 4-36**. Como criar um aplicativo ASP.NET Core
 
-Para criar o projeto de exemplo no Visual Studio, selecione **Arquivo** > **Novo** > **Projeto**, selecione os tipos de projeto **Web** no painel esquerdo, seguido por **Aplicativo Web ASP.NET Core**.
+Para criar o projeto de amostra no Visual Studio, selecione **Arquivo** > **Novo** > **Projeto,** selecione os tipos de projeto **Web** no painel esquerdo, seguido por ASP.NET Aplicativo Web **Núcleo**.
 
 O Visual Studio lista modelos para projetos Web. Para nosso exemplo, selecione **API** para criar um aplicativo ASP.NET Web API.
 
@@ -45,9 +45,9 @@ Verifique se você selecionou o ASP.NET Core 2.2 como a estrutura. O .NET Core 2
 
 Se você tiver uma versão anterior do .NET Core, poderá baixar e instalar a versão 2.2 do <https://dotnet.microsoft.com/download>.
 
-Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode converter seu projeto para Docker a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com o botão direito do mouse no nó do projeto no Gerenciador de Soluções e selecione **Adicionar** > **Suporte ao Docker** no menu de contexto.
+Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode converter seu projeto para Docker a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com o botão direito do mouse no nó do projeto no Solution Explorer e selecione **Adicionar** > suporte ao**Docker** no menu de contexto.
 
-![Opção de menu de contexto para adicionar suporte do Docker a um projeto existente: clique com o botão direito do mouse (no projeto) > Adicionar > suporte do Docker.](media/add-docker-support-to-project.png)
+![Opção de menu de contexto para adicionar suporte ao Docker a um projeto existente: Clique com o botão direito (no projeto) > Adicionar > suporte ao Docker.](media/add-docker-support-to-project.png)
 
 **Figura 4-38**. Como adicionar suporte ao Docker ao projeto existente
 
@@ -69,7 +69,7 @@ Depois de executar o projeto, você pode listar as imagens usando o comando `doc
 docker images
 ```
 
-![A saída do console do comando imagens do Docker mostra uma lista com: repositório, marca, ID da imagem, criado (Data) e tamanho.](media/docker-images-command.png)
+![A saída do console do comando Docker Images mostra uma lista com: Repositório, Tag, Image ID, Created (data) e Size.](media/docker-images-command.png)
 
 **Figura 4-40**. Exibição de imagens do Docker
 
@@ -89,7 +89,7 @@ Se executar o comando `docker image`, você verá as duas imagens criadas, uma p
 
 ### <a name="create-a-new-tag-for-the-image"></a>Criar uma marca para a imagem
 
-Cada imagem de contêiner precisa ser marcada com o nome `loginServer` do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner para um registro de imagem.
+Cada imagem de contêiner precisa ser marcada com o nome do `loginServer` do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner por push a um registro da imagem.
 
 Você pode exibir o nome `loginServer` do portal do Azure com as informações do Registro de Contêiner do Azure
 
@@ -190,7 +190,7 @@ Agora você está quase pronto para implantar usando **Kubectl**, mas primeiro v
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Saída do console do comando acima: mesclado "MSSampleK8Cluster como contexto atual em/root/.Kube/config](media/getting-aks-credentials.png)
+![Saída do console do comando acima: Mesclado "MSSampleK8Cluster como contexto atual em /root/.kube/config](media/getting-aks-credentials.png)
 
 **Figura 4-47**. Como obter credenciais
 
@@ -202,7 +202,7 @@ kubectl create -f mssample-deploy.yml
 
 ![Saída de console do comando acima: implantação "mssamplesbook" criada. serviço "mssample-kub-app" criado.](media/kubectl-create-command.png)
 
-**Figura 4-48**. Implantar no kubernetes
+**Figura 4-48**. Implantar para o Kubernetes
 
 Quando a implantação for concluída, você poderá acessar o console do Kubernetes com um proxy local que pode ser acessado temporariamente com este comando:
 
@@ -219,8 +219,8 @@ E acessar a URL `http://127.0.0.1:8001`.
 Agora você tem seu aplicativo implantado no Azure usando um contêiner do Linux e um Cluster de Kubernetes do AKS. Você pode acessar seu aplicativo navegando até o IP público do seu serviço, que pode ser obtido do portal do Azure.
 
 > [!NOTE]
-> Você pode ver como criar o Cluster do AKS para esta amostra na seção [**Implantar no AKS (Serviço de Kubernetes do Azure)** ](deploy-azure-kubernetes-service.md) neste guia.
+> Você pode ver como criar o Cluster do AKS para esta amostra na seção [**Implantar no AKS (Serviço de Kubernetes do Azure)**](deploy-azure-kubernetes-service.md) neste guia.
 
 >[!div class="step-by-step"]
->[Anterior](set-up-windows-containers-with-powershell.md)
->[Próximo](../docker-devops-workflow/index.md)
+>[Próximo](set-up-windows-containers-with-powershell.md)
+>[anterior](../docker-devops-workflow/index.md)

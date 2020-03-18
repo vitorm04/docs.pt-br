@@ -1,15 +1,15 @@
 ---
-title: Consultar um XDocument versus Consultar um XElement (C#)
+title: Consultando um XDocument vs. Consultando um XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253136"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Consultar um XDocument versus Consultar um XElement (C#)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Consultando um XDocument vs. Consultando um XElement (C#)
 Ao carregar um documento por meio do <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, você observará que precisa escrever consultas um pouco diferentes do que ao carregar por meio do <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparação de XDocument.Load e de XElement.Load  
@@ -65,7 +65,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 Querying tree loaded with XDocument.Load  

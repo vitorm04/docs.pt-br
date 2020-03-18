@@ -2,11 +2,11 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589302"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668712"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -15,13 +15,13 @@ Determina como uma classe de atributo personalizado pode ser usada. <xref:System
 - A quais elementos do programa o atributo pode ser aplicado. A menos que você restrinja seu uso, um atributo poderá ser aplicado a qualquer um dos seguintes elementos do programa:
   - assembly
   - module
-  - campo
-  - evento
+  - field
+  - event
   - method
   - param
   - propriedade
-  - return
-  - tipo
+  - retorno
+  - type
 - Indica se um atributo pode ser aplicado a um único elemento do programa várias vezes.
 - Indica se os atributos são herdados por classes derivadas.
 
@@ -49,7 +49,7 @@ Se o argumento <xref:System.AttributeUsageAttribute.AllowMultiple> for `true`, o
 
 Nesse caso, `MultiUseAttribute` pode ser aplicado repetidas vezes porque `AllowMultiple` está definido como `true`. Os dois formatos mostrados para a aplicação de vários atributos são válidos.
 
-Se <xref:System.AttributeUsageAttribute.Inherited> for `false`, o atributo não será herdado por classes derivadas de uma classe atribuída. Por exemplo:
+Se <xref:System.AttributeUsageAttribute.Inherited> for `false`, o atributo não será herdado por classes derivadas de uma classe atribuída. Por exemplo: 
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
@@ -67,7 +67,7 @@ O exemplo a seguir demonstra o efeito dos argumentos <xref:System.AttributeUsage
 
 [!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
 
-## <a name="sample-output"></a>Saída de Exemplo
+## <a name="sample-output"></a>Saída de exemplo
 
 ```text
 Attributes on Base Class:
@@ -79,11 +79,11 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Guia de Programação em C#](../..//index.md)
+- [C# Guia de Programação](../..//index.md)
 - [Atributos](../../../..//standard/attributes/index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos](index.md)

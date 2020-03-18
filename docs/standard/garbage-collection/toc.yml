@@ -6,7 +6,7 @@
       items:
         - name: Implementando um método Dispose
           href: implementing-dispose.md
-        - name: Usar objetos que implementam IDisposable
+        - name: Usando objetos que implementam IDisposable
           href: using-objects.md
     - name: Coleta de Lixo
       href: index.md

@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393957"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Caching: tipos de ResponseCaching "pubternal" alterados para interno
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Cache: ResponseCaching tipos "pubternal" alterados para internos
 
-No ASP.NET Core 3,0, os tipos "pubternal" no `ResponseCaching` foram alterados para `internal`.
+Em ASP.NET Núcleo 3.0, os tipos `ResponseCaching` "pubternais" foram alterados para `internal`.
 
-Além disso, as implementações padrão de `IResponseCachingPolicyProvider` e `IResponseCachingKeyProvider` não são mais adicionadas aos serviços como parte do método `AddResponseCaching`.
+Além disso, implementações `IResponseCachingPolicyProvider` `IResponseCachingKeyProvider` padrão e não são mais `AddResponseCaching` adicionadas aos serviços como parte do método.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-Em ASP.NET Core, os tipos "pubternal" são declarados como `public`, mas residem em um namespace com sufixo `.Internal`. Embora esses tipos sejam públicos, eles não têm nenhuma política de suporte e estão sujeitos a alterações significativas. Infelizmente, o uso acidental desses tipos foi comum, resultando em alterações significativas nesses projetos e limitando a capacidade de manter a estrutura.
+Em ASP.NET Core, os tipos "pubternais" são declarados como `public` `.Internal`mas residem em um namespace sufixo com . Embora esses tipos sejam públicos, eles não têm política de apoio e estão sujeitos a mudanças. Infelizmente, o uso acidental desses tipos tem sido comum, resultando em mudanças nesses projetos e limitando a capacidade de manter o quadro.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -22,19 +22,19 @@ Em ASP.NET Core, os tipos "pubternal" são declarados como `public`, mas residem
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Esses tipos foram publicamente visíveis, mas sem suporte.
+Esses tipos eram publicamente visíveis, mas sem suporte.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Esses tipos agora são `internal`.
+Esses tipos `internal`são agora.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-O escopo `internal` reflete melhor a política sem suporte.
+O `internal` escopo reflete melhor a política sem fundamento.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Tipos de cópia que são usados pelo seu aplicativo ou biblioteca.
+Copiar tipos que são usados pelo seu aplicativo ou biblioteca.
 
 #### <a name="category"></a>Categoria
 

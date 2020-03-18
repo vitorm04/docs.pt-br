@@ -6,29 +6,29 @@ helpviewer_keywords:
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
 ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626614"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propriedades de interface (Guia de Programação em C#)
 
-As propriedades podem ser declaradas em uma [interface](../../language-reference/keywords/interface.md). O exemplo a seguir declara um acessador de propriedade de interface:
+As propriedades podem ser declaradas em uma [interface](../../language-reference/keywords/interface.md). O exemplo a seguir declara um acessório de propriedade de interface:
 
 [!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-Normalmente, as propriedades de interface não têm um corpo. Os acessadores indicam se a propriedade é de leitura/gravação, somente leitura ou somente gravação. Ao contrário de classes e structs, a declaração dos acessadores sem um corpo não declara uma [propriedade implementada automaticamente](auto-implemented-properties.md). A partir C# do 8,0, uma interface pode definir uma implementação padrão para membros, incluindo propriedades. Definir uma implementação padrão para uma propriedade em uma interface é raro porque as interfaces não podem definir campos de dados de instância.
+As propriedades da interface normalmente não têm um corpo. Os acessórios indicam se a propriedade é leitura-gravação, somente leitura ou somente gravação. Ao contrário das classes e estruturas, declarar os acessórios sem um corpo não declara uma [propriedade auto-implementada.](auto-implemented-properties.md) Começando com C# 8.0, uma interface pode definir uma implementação padrão para membros, incluindo propriedades. Definir uma implementação padrão para uma propriedade em uma interface é raro porque as interfaces podem não definir campos de dados de instância.
 
 ## <a name="example"></a>Exemplo
 
 Neste exemplo, a interface `IEmployee` tem uma propriedade de leitura/gravação, `Name` e uma propriedade somente leitura, `Counter`. A classe `Employee` implementa a interface `IEmployee` e usa essas duas propriedades. O programa lê o nome de um novo funcionário e o número atual de funcionários e exibe o nome do funcionário e o número do funcionário computado.
 
-Seria possível usar o nome totalmente qualificado da propriedade, que referencia a interface na qual o membro é declarado. Por exemplo:
+Seria possível usar o nome totalmente qualificado da propriedade, que referencia a interface na qual o membro é declarado. Por exemplo: 
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-O exemplo anterior demonstra a [implementação de interface explícita](../interfaces/explicit-interface-implementation.md). Por exemplo, se a classe `Employee` estiver implementando duas interfaces `ICitizen` e `IEmployee` e as duas interfaces tiverem a propriedade `Name`, será necessária a implementação explícita de membro da interface. Ou seja, a seguinte declaração de propriedade:
+O exemplo anterior demonstra [a implementação da interface explícita.](../interfaces/explicit-interface-implementation.md) Por exemplo, se a classe `Employee` estiver implementando duas interfaces `ICitizen` e `IEmployee` e as duas interfaces tiverem a propriedade `Name`, será necessária a implementação explícita de membro da interface. Ou seja, a seguinte declaração de propriedade:
 
 [!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
@@ -55,7 +55,7 @@ Employee name: Hazem Abolrous
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Propriedades](./properties.md)
 - [Usando propriedades](./using-properties.md)
 - [Comparação entre propriedades e indexadores](../indexers/comparison-between-properties-and-indexers.md)

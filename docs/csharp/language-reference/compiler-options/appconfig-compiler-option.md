@@ -9,10 +9,10 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 7a7e8e61f65704a2e99385a1be320048d950324c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922515"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opções do compilador C#)
@@ -24,9 +24,9 @@ A opção do compilador **-appconfig** permite que um aplicativo em C# especifiq
 -appconfig:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `file`  
- Necessário. O arquivo de configuração de aplicativo que contém as configurações de associação de assembly.  
+ Obrigatórios. O arquivo de configuração de aplicativo que contém as configurações de associação de assembly.  
   
 ## <a name="remarks"></a>Comentários  
  O **-appconfig** pode ser usado em cenários avançados, nos quais é necessário que um assembly referencie, ao mesmo temo, tanto a versão do .NET Framework quanto a versão do .NET Framework para a versão do Silverlight de um assembly de referência específico. Por exemplo, um designer XAML gravado no Windows Presentation Foundation (WPF) pode ter que referenciar a Área de Trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF incluído no Silverlight. O mesmo assembly do designer deve acessar ambos os assemblies. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes.  
@@ -54,7 +54,7 @@ A opção do compilador **-appconfig** permite que um aplicativo em C# especifiq
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elemento \<supportPortability>](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
-- [Opções do compilador de C# listadas em ordem alfabética](./listed-alphabetically.md)
+- [\<suporteElemento de> de portabilidade](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)
+- [Opções do compilador C# listadas em ordem alfabética](./listed-alphabetically.md)

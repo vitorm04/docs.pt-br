@@ -3,10 +3,10 @@ title: Refatoração em funções puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253106"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
@@ -24,7 +24,7 @@ Um aspecto importante de transformações e puras é aprender como o código do 
   
  Uma maneira de fazer a transição para programação funcional é o código existente do refatorar para eliminar efeitos colaterais desnecessários e dependências externas. Dessa maneira, você pode criar versões puras de função do código existente.  
   
- Este tópico descreve o que é uma função pura e o que não é. O [Tutorial: Manipulando o conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como fazer a refatoração usando uma função pura.  
+ Este tópico descreve o que é uma função pura e o que não é. O tutorial [Tutorial: manipulando conteúdo em um documento WordprocessingML](./shape-of-wordprocessingml-documents.md) mostra como manipular um documento WordprocessingML e inclui dois exemplos de como refatorar usando uma função pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminando efeitos colaterais e dependências externas  
  Os seguintes exemplos contrastam duas funções não puras e uma função pura.  
@@ -112,7 +112,7 @@ class Program
   
  Para obter mais informações, consulte [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
-- [Programação funcional versus Programação obrigatória (C#)](./functional-programming-vs-imperative-programming.md)
+- [Programação Funcional vs. Programação Imperativa (C#)](./functional-programming-vs-imperative-programming.md)

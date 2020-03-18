@@ -9,10 +9,10 @@ helpviewer_keywords:
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970183"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (opções do compilador C#)
@@ -24,7 +24,7 @@ Essa opção adiciona um módulo criado com a opção target:module para a compi
 -addmodule:file[;file2]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `file`, `file2`  
  Um arquivo de saída que contém metadados. O arquivo não pode conter um manifesto do assembly. Para importar mais de um arquivo, separe os nomes de arquivo com vírgula ou ponto e vírgula.  
   
@@ -44,9 +44,9 @@ Essa opção adiciona um módulo criado com a opção target:module para a compi
 csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
-- [Assemblies de vários arquivos](../../../framework/app-domains/multifile-assemblies.md)
-- [Como: Criar um assembly de vários arquivos](../../../framework/app-domains/build-multifile-assembly.md)
+- [Conjuntos multiarquivos](../../../framework/app-domains/multifile-assemblies.md)
+- [Como Compilar um Assembly de Vários Arquivos](../../../framework/app-domains/build-multifile-assembly.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70202912"
 ---
 # <a name="-c-compiler-options"></a>@ (Opções do compilador de C#)
@@ -23,14 +23,14 @@ A opção @ possibilita especificar um arquivo que contém opções do compilado
 @response_file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `response_file`  
  Um arquivo que lista as opções do compilador ou os arquivos de código-fonte a serem compilados.  
   
 ## <a name="remarks"></a>Comentários  
  As opções do compilador e os arquivos de código-fonte serão processados pelo compilador apenas se eles tiverem sido especificados na linha de comando.  
   
- Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta. Por exemplo:  
+ Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta. Por exemplo:   
   
 ```console  
 @file1.rsp @file2.rsp  
@@ -42,7 +42,7 @@ A opção @ possibilita especificar um arquivo que contém opções do compilado
   
  O compilador processa as opções de comando como elas são encontradas. Portanto, os argumentos da linha de comando podem substituir opções listadas anteriormente em arquivos de resposta. Por outro lado, opções em um arquivo de resposta substituirão as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.  
   
- O C# fornece o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe. Consulte [-noconfig](./noconfig-compiler-option.md) para obter informações sobre csc.rsp.  
+ O C# fornece o arquivo csc.rsp, localizado no mesmo diretório que o arquivo csc.exe. Consulte [-noconfig](./noconfig-compiler-option.md) para obter mais informações sobre csc.rsp.  
   
  Essa opção do compilador não pode ser definida no ambiente de desenvolvimento do Visual Studio nem pode ser alterada por meio de programação.  
   
@@ -54,6 +54,6 @@ A opção @ possibilita especificar um arquivo que contém opções do compilado
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)

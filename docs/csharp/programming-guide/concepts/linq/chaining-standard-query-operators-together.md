@@ -3,14 +3,14 @@ title: Encadeando operadores de consulta padrão juntos (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204210"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Encadeando operadores de consulta padrão juntos (C#)
-Este é o tópico final no [Tutorial: Encadeando consultas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+Este é o tópico final no tutorial do [Tutorial: encadear consultas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Os operadores de consulta padrão podem também ser encadeados juntos. Por exemplo, você pode interject o operador de <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> , e também funciona em uma forma lazy. Resultados intermediária é materializado por ele.  
   
@@ -19,7 +19,7 @@ Este é o tópico final no [Tutorial: Encadeando consultas (C#)](./deferred-exec
   
  Uma diferença é que nesse caso, o método de <xref:System.Linq.Enumerable.Where%2A> itera através da coleção fonte, determina que o primeiro item não passa o predicado e em seguida, o próximo item, que passa. Produz no segundo item.  
   
- No entanto, a ideia básica é a mesma: As coleções intermediárias não são materializadas a menos que isso seja necessário.  
+ Entretanto, a exibição básica é a mesma: As coleções intermediários não são materializadas a menos que têm que ser.  
   
  Quando as expressões de consulta são usadas, são convertidas para chamadas aos operadores de consulta padrão, e os mesmos princípios se aplicam.  
   
@@ -73,7 +73,7 @@ class Program
 }  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 ToUpper: source >abc<  

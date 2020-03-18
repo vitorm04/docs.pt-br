@@ -3,10 +3,10 @@ title: Orquestrar microsserviços e aplicativos de vários contêineres para alt
 description: Saiba como implantar um aplicativo usando o Serviço de Kubernetes do Azure.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71182365"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Implantar no AKS (Serviço de Kubernetes do Azure)
@@ -64,7 +64,7 @@ Em primeiro lugar, obtendo as credenciais:
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Saída do console do comando acima: mesclado "MsSampleK8Cluster como contexto atual em/root/.Kube/config.](media/get-credentials-command-result.png)
+![Saída do console do comando acima: Mesclado "MsSampleK8Cluster como contexto atual em /root/.kube/config.](media/get-credentials-command-result.png)
 
 **Figura 4-19**. Resultado do comando `aks get-credentials`.
 
@@ -74,10 +74,10 @@ E, em seguida, obtendo nós do Kubectl:
 kubectl get nodes
 ```
 
-![Saída do console a partir do comando acima: lista de nós com status, idade (tempo em execução) e versão](media/kubectl-get-nodes-command-result.png)
+![Saída do console do comando acima: Lista de nomes com status, idade (tempo de execução) e versão](media/kubectl-get-nodes-command-result.png)
 
 **Figura 4-20**. Resultado do comando `kubectl get nodes`.
 
 >[!div class="step-by-step"]
->[Anterior](orchestrate-high-scalability-availability.md)
->[Próximo](docker-apps-development-environment.md)
+>[Próximo](orchestrate-high-scalability-availability.md)
+>[anterior](docker-apps-development-environment.md)

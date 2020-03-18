@@ -4,11 +4,11 @@ description: Saiba como ordenar os resultados de uma cláusula join de LINQ em C
 ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
 ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857882"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659859"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Ordenar os resultados de uma cláusula join
 
@@ -20,8 +20,8 @@ Esta consulta cria uma junção de grupos e classifica os grupos com base no ele
 
 [!code-csharp[csProgGuideLINQ#81](~/samples/snippets/csharp/concepts/linq/how-to-order-the-results-of-a-join-clause_1.cs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)
 - [Cláusula orderby](../language-reference/keywords/orderby-clause.md)
-- [Cláusula join](../language-reference/keywords/join-clause.md)
+- [aderir cláusula](../language-reference/keywords/join-clause.md)

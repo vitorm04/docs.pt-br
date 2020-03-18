@@ -3,10 +3,10 @@ title: Refatoração usando uma função pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
 ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253087"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refatoração usando uma função pura (C#)
@@ -179,7 +179,7 @@ StyleName:Code >Hello World<
   
 - [Projetando XML em uma forma diferente (C#)](./projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refatoração usando um método de extensão (C#)](./refactoring-using-an-extension-method.md)

@@ -3,10 +3,10 @@ title: Conceitos e terminologia (transformação funcional) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 ms.openlocfilehash: 3e2ecc4c2f70700ae92ee36b6f122059b922332e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70040629"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceitos e terminologia (transformação funcional) (C#)
@@ -36,7 +36,7 @@ A *programação funcional* é uma abordagem de programação que dá suporte di
 
 Historicamente, as linguagens de programação funcionais de uso geral, como o ML, Scheme, Haskell e F#, têm sido, principalmente, de interesse da comunidade acadêmica. Embora sempre foi possível escrever transformações funcionais puras no C#, a dificuldade em fazê-lo não tornou essa opção atrativa à maioria dos programadores. Nas versões recentes do C#, no entanto, os novos constructos de linguagem como expressões lambda e inferência de tipos tornaram a programação funcional muito mais fácil e mais produtiva.
 
-Para obter mais informações sobre programação funcional, consulte [Programação funcional versus Programação obrigatória (C#)](./functional-programming-vs-imperative-programming.md).
+Para obter mais informações sobre programação funcional, consulte [Programação Funcional vs. Programação Imperdativa (C#)](./functional-programming-vs-imperative-programming.md).
 
 #### <a name="domain-specific-fp-languages"></a>Linguagens específicas do domínio FP
 
@@ -62,7 +62,7 @@ Um conjunto estruturada de dados, geralmente um tipo de uniforme. Para ser compa
 tupla (tipos anônimos) \
 Um conceito matemático, um tuple é uma sequência finito rotuladas de objetos, cada um de um tipo específico. Um tuple também é conhecido como uma lista ordenada. Tipos anônimos são uma implementação de linguagem desse conceito, que permitem que um tipo sem nome da classe ser declarados e um objeto do tipo a ser instanciada ao mesmo tempo.
 
-Para obter mais informações, consulte [Tipos anônimos](../../classes-and-structs/anonymous-types.md).
+Para obter mais informações, consulte [Tipos Anônimos](../../classes-and-structs/anonymous-types.md).
 
 inferência de tipos (digitação implícita) \
 A capacidade de um compilador de determinar o tipo de uma variável na ausência de uma declaração de tipo explícita.
@@ -76,7 +76,7 @@ Para obter mais informações, consulte [Introdução a consultas LINQ (C#)](./i
 
 Esses recursos de idioma serão usados em exemplos de código em todo esta seção.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
-- [Programação funcional versus Programação obrigatória (C#)](./functional-programming-vs-imperative-programming.md)
+- [Programação Funcional vs. Programação Imperativa (C#)](./functional-programming-vs-imperative-programming.md)

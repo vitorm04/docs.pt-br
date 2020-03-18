@@ -1,11 +1,11 @@
 - name: Programação assíncrona com Async e Await
   href: index.md
   items:
-    - name: 'Passo a passo: acessar a Web usando Async e Await'
+    - name: 'Instruções passo a passo: acessando a Web e usando Async e Await'
       href: walkthrough-accessing-the-web-by-using-async-and-await.md
-    - name: 'Como: estender o passo a passo de async usando Task.WhenAll'
+    - name: Como estender as instruções passo a passo assíncronas usando Task.WhenAll
       href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-    - name: 'Como: fazer várias solicitações da Web em paralelo usando Async e Await'
+    - name: 'Instruções passo a passo: fazer várias solicitações da Web em paralelo e usando Async e Await'
       href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
     - name: Tipos de retorno assíncronos
       href: async-return-types.md
@@ -22,7 +22,7 @@
           href: cancel-remaining-async-tasks-after-one-is-complete.md
         - name: Iniciar várias tarefas assíncronas e processá-las na conclusão
           href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-    - name: Tratar a reentrada em aplicativos assíncronos
+    - name: Tratando a reentrada em aplicativos assíncronos
       href: handling-reentrancy-in-async-apps.md
     - name: Usar Async para acessar arquivos
       href: using-async-for-file-access.md

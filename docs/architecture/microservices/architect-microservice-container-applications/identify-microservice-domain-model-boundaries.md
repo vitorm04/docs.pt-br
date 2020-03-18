@@ -3,10 +3,10 @@ title: Identificando os limites de modelo de domínio de cada microsserviço
 description: Explore a essência do particionamento de um aplicativo grande em microsserviços para alcançar uma arquitetura sólida.
 ms.date: 09/20/2018
 ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834412"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Identificar os limites de modelo de domínio de cada microsserviço
@@ -31,7 +31,7 @@ Talvez a melhor resposta à pergunta de quão grande um modelo de domínio para 
 
 **Figura 4-10**. Identificação de entidades e limites de modelo de microsserviço
 
-A Figura 4-10 ilustra um cenário de exemplo relacionado a um sistema de gerenciamento de conferência online. A mesma entidade aparece como "usuários", "compradores", "contribuintes" e "clientes", dependendo do contexto limitado. Você identificou vários BCs que podem ser implementados como microsserviços, com base em domínios que especialistas de domínio definiram para você. Como você pode ver, há entidades que estão presentes apenas em um único modelo de microsserviço, como Pagamentos no microsserviço de Pagamento. Esses serão fáceis de implementar.
+A Figura 4-10 ilustra um cenário de exemplo relacionado a um sistema de gerenciamento de conferência online. A mesma entidade aparece como "Usuários", "Compradores", "Pagadores" e "Clientes" dependendo do contexto limitado. Você identificou vários BCs que podem ser implementados como microsserviços, com base em domínios que especialistas de domínio definiram para você. Como você pode ver, há entidades que estão presentes apenas em um único modelo de microsserviço, como Pagamentos no microsserviço de Pagamento. Esses serão fáceis de implementar.
 
 No entanto, você também pode ter entidades com diferentes formas, mas que compartilhem de uma mesma identidade em vários modelos de domínio de vários microsserviços. Por exemplo, a entidade de Usuário é identificada no microsserviço Gerenciamento de Conferências. Esse mesmo usuário, com a mesma identidade, é o chamado Compradores no microsserviço de Ordenação ou o chamado Pagante no microsserviço de Pagamento e, até mesmo, o chamado Cliente no microsserviço de Atendimento ao Cliente. Isso ocorre porque, dependendo da [linguagem ubíqua](https://martinfowler.com/bliki/UbiquitousLanguage.html) que cada especialista em domínio está usando, um usuário pode ter uma perspectiva diferente mesmo com atributos diferentes. A entidade de usuário no modelo de microsserviço denominado Gerenciamento de Conferências pode ter a maioria dos seus atributos de dados pessoais. No entanto, esse mesmo usuário na forma Pagante no microsserviço Pagamento ou na forma de Cliente no microsserviço Atendimento ao Cliente talvez não precise da mesma lista de atributos.
 
@@ -50,5 +50,5 @@ Basicamente, há um conceito compartilhado de um usuário que existe em vários 
 Existem vários benefícios em não compartilhar a mesma entidade de usuário com o mesmo número de atributos entre domínios. Um benefício é reduzir a duplicação para que os modelos de microsserviço não tenham nenhum dado de que não precisem. Outro benefício é ter um microsserviço mestre que detém um determinado tipo de dados por entidade de modo que atualizações e consultas para esse tipo de dados sejam controladas apenas por esse microsserviço.
 
 >[!div class="step-by-step"]
->[Anterior](distributed-data-management.md)
->[Próximo](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Próximo](distributed-data-management.md)
+>[anterior](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

@@ -3,14 +3,14 @@ title: Objetos XName e XNamespace atomizados (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
 ms.openlocfilehash: bc5066440d87f5485ae9099d7a7f4f5e9e66b4ec
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204275"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>Objetos XName e XNamespace atomizados (LINQ to XML) (C#)
-Os objetos <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> são *atomizados*, isto é, se eles contêm o mesmo nome qualificado, referem-se ao mesmo objeto. Isso resulta em benefícios de desempenho para consultas: Quando você compara dois nomes atomizados quanto à igualdade, a linguagem intermediária subjacente só precisa determinar se as duas referências apontam para o mesmo objeto. O código subjacente não tem que fazer as comparações de cadeias de caracteres, que poderiam demoradas.  
+Os objetos <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace> são *atomizados*, isto é, se eles contêm o mesmo nome qualificado, referem-se ao mesmo objeto. Este benefícios de desempenho das para consultas: Quando você compara dois nomes atomizados para igualdade, o linguagem intermediária subjacente só precisa determinar se o ponto de duas referências para o mesmo objeto. O código subjacente não tem que fazer as comparações de cadeias de caracteres, que poderiam demoradas.  
   
 ## <a name="atomization-semantics"></a>Semântica de atomização  
  A atomização significa que se dois objetos de <xref:System.Xml.Linq.XName> têm o mesmo nome local, e estão no mesmo namespace, compartilham a mesma instância. Da mesma forma, se dois objetos de <xref:System.Xml.Linq.XNamespace> têm o mesmo URI de namespace, compartilham a mesma instância.  
@@ -39,7 +39,7 @@ else
     Console.WriteLine("Different");  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 r1 and r2 have names that refer to the same instance.  
@@ -67,7 +67,7 @@ foreach (var z in query)
     Console.WriteLine(z);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <C1>1</C1>  

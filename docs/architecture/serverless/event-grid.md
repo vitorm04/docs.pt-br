@@ -1,73 +1,73 @@
 ---
-title: Grade de eventos do Azure-aplicativos sem servidor
-description: A grade de eventos do Azure é uma solução sem servidor para entrega e roteamento de eventos confiáveis em grande escala em um modelo de pagamento por evento.
+title: Azure Event Grid - Aplicativos sem servidor
+description: O Azure Event Grid é uma solução sem servidor para entrega e roteamento de eventos confiáveis em grande escala em um modelo de pagamento por evento.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 3c577139c12567e762aabd58c9dc29457fa37aa1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522720"
 ---
-# <a name="event-grid"></a>Grade de eventos
+# <a name="event-grid"></a>Grade de Eventos
 
-A [grade de eventos do Azure](/azure/event-grid/overview) fornece a infraestrutura sem servidor para aplicativos baseados em eventos. Você pode publicar na grade de eventos de qualquer fonte e consumir mensagens de qualquer plataforma. A grade de eventos também tem suporte interno para eventos de recursos do Azure para simplificar a integração com seus aplicativos. Por exemplo, você pode assinar eventos de armazenamento de BLOBs para notificar seu aplicativo quando um arquivo for carregado. Em seguida, seu aplicativo pode publicar uma mensagem de grade de eventos personalizada consumida por outros aplicativos na nuvem ou locais. A grade de eventos foi criada para lidar de forma confiável em grande escala. Você Obtém os benefícios de publicar e assinar mensagens sem a sobrecarga de configurar a infraestrutura necessária.
+[O Azure Event Grid](/azure/event-grid/overview) fornece infra-estrutura sem servidor para aplicativos baseados em eventos. Você pode publicar no Event Grid de qualquer fonte e consumir mensagens de qualquer plataforma. Event Grid também tem suporte integrado para eventos a partir de recursos do Azure para agilizar a integração com seus aplicativos. Por exemplo, você pode se inscrever em eventos de armazenamento blob para notificar seu aplicativo quando um arquivo é carregado. Seu aplicativo pode então publicar uma mensagem personalizada da grade de eventos que é consumida por outros aplicativos em nuvem ou no local. Event Grid foi construído para lidar de forma confiável em grande escala. Você tem os benefícios de publicar e assinar mensagens sem a sobrecarga de configurar a infra-estrutura necessária.
 
-![Logotipo da grade de eventos](./media/event-grid-logo.png)
+![Logotipo da Grade de Eventos](./media/event-grid-logo.png)
 
-Os principais recursos da grade de eventos incluem:
+As principais características da grade de eventos incluem:
 
 - Roteamento de eventos totalmente gerenciado.
 - Entrega de eventos quase em tempo real em escala.
-- Cobertura ampla dentro e fora do Azure.
+- Ampla cobertura dentro e fora do Azure.
 
 ## <a name="scenarios"></a>Cenários
 
-A grade de eventos aborda vários cenários diferentes. Esta seção aborda três dos mais comuns.
+Event Grid aborda vários cenários diferentes. Esta seção abrange três das mais comuns.
 
 ### <a name="ops-automation"></a>Automação de operações
 
 ![Automação de operações](./media/ops-automation.png)
 
-A grade de eventos pode ajudar a acelerar a automação e simplificar a imposição de políticas notificando a [automação do Azure](https://docs.microsoft.com/azure/automation) quando a infraestrutura é provisionada.
+O Event Grid pode ajudar a acelerar a automação e simplificar a aplicação de políticas, notificando [a Automação Do Azure](https://docs.microsoft.com/azure/automation) quando a infra-estrutura é provisionada.
 
 ### <a name="application-integration"></a>Integração de aplicativos
 
 ![Integração de aplicativos](./media/app-integration.png)
 
-Você pode usar a grade de eventos para conectar seu aplicativo a outros serviços. Usando protocolos HTTP padrão, até mesmo aplicativos herdados podem ser facilmente modificados para publicar mensagens de grade de eventos. Os ganchos da Web estão disponíveis para outros serviços e plataformas para consumir mensagens da grade de eventos.
+Você pode usar event grid para conectar seu aplicativo a outros serviços. Usando protocolos HTTP padrão, até mesmo aplicativos legados podem ser facilmente modificados para publicar mensagens da Event Grid. Os ganchos web estão disponíveis para outros serviços e plataformas para consumir mensagens do Event Grid.
 
 ### <a name="serverless-apps"></a>Aplicativos sem servidor
 
 ![Aplicativos sem servidor](./media/serverless-apps.png)
 
-A grade de eventos pode disparar Azure Functions, aplicativos lógicos ou seu próprio código personalizado. Uma grande vantagem de usar a grade de eventos é que ela usa um mecanismo de *Push* para enviar mensagens quando ocorrem eventos. A arquitetura de push consome menos recursos e dimensiona melhor do que os mecanismos de *sondagem* . A sondagem deve verificar se há atualizações em um intervalo regular.
+Event Grid pode ativar funções do Azure, aplicativos lógicos ou seu próprio código personalizado. Um grande benefício do uso do Event Grid é que ele usa um mecanismo *de push* para enviar mensagens quando ocorrem eventos. A arquitetura push consome menos recursos e escalas melhor do que os mecanismos *de votação.* A votação deve verificar se há atualizações em um intervalo regular.
 
-## <a name="event-grid-vs-other-azure-messaging-services"></a>Grade de eventos versus outros serviços de mensagens do Azure
+## <a name="event-grid-vs-other-azure-messaging-services"></a>Event Grid vs. outros serviços de mensagens do Azure
 
-O Azure fornece vários serviços de mensagens, incluindo [hubs de eventos](https://docs.microsoft.com/azure/event-hubs) e [barramento de serviço](https://docs.microsoft.com/azure/service-bus-messaging). Cada um foi projetado para atender a um conjunto específico de casos de uso. O diagrama a seguir fornece uma visão geral de alto nível das diferenças entre os serviços.
+O Azure fornece vários serviços de mensagens, incluindo [Event Hubs](https://docs.microsoft.com/azure/event-hubs) e [Service Bus.](https://docs.microsoft.com/azure/service-bus-messaging) Cada um foi projetado para abordar um conjunto específico de casos de uso. O diagrama a seguir fornece uma visão geral de alto nível das diferenças entre os serviços.
 
-![Comparação de mensagens do Azure](./media/azure-messaging-services.png)
+![Comparação de mensagens azure](./media/azure-messaging-services.png)
 
-Para obter uma comparação mais detalhada, consulte [comparar serviços de mensagens](https://docs.microsoft.com/azure/event-grid/compare-messaging-services).
+Para obter uma comparação mais aprofundada, consulte [Comparar serviços de mensagens](https://docs.microsoft.com/azure/event-grid/compare-messaging-services).
 
-## <a name="performance-targets"></a>Metas de desempenho
+## <a name="performance-targets"></a>Destinos de desempenho
 
-Usando a grade de eventos, você pode aproveitar as seguintes garantias de desempenho:
+Usando a Grade de Eventos, você pode aproveitar as seguintes garantias de desempenho:
 
-- Latência de ponta a ponta de subsegundos no 99 º percentil.
-- 99,99% de disponibilidade.
-- 10 milhões eventos por segundo por região.
-- 100 milhões assinaturas por região.
-- 50-latência do Publicador MS.
-- repetição de 24 horas com retirada exponencial para entrega garantida na janela de um dia.
+- Latência de ponta a ponta no percentil 99.
+- disponibilidade de 99,99%.
+- 10 milhões de eventos por segundo por região.
+- 100 milhões de assinaturas por região.
+- Latência de editores de 50 ms.
+- Retente de 24 horas com recuo exponencial para entrega garantida na janela de 1 dia.
 - Failover regional transparente.
 
-## <a name="event-grid-schema"></a>Esquema de grade de eventos
+## <a name="event-grid-schema"></a>Esquema da Grade de Eventos
 
-A grade de eventos usa um esquema padrão para encapsular eventos personalizados. O esquema é como um envelope que encapsula o elemento de dados personalizado. Aqui está um exemplo de mensagem de grade de eventos:
+Event Grid usa um esquema padrão para encerrar eventos personalizados. O esquema é como um envelope que envolve seu elemento de dados personalizado. Aqui está uma mensagem de event grid de exemplo:
 
 ```json
 [{
@@ -84,63 +84,63 @@ A grade de eventos usa um esquema padrão para encapsular eventos personalizados
 }]
 ```
 
-Tudo sobre a mensagem é padrão, exceto a propriedade `data`. Você pode inspecionar a mensagem e usar a `eventType` e `dataVersion` para desserializar a parte personalizada da carga.
+Tudo sobre a mensagem `data` é padrão, exceto a propriedade. Você pode inspecionar a `eventType` mensagem e usar o e `dataVersion` desserializar a parte personalizada da carga.
 
 ## <a name="azure-resources"></a>Recursos do Azure
 
-Uma grande vantagem de usar a grade de eventos são as mensagens automáticas produzidas pelo Azure. No Azure, os recursos são publicados automaticamente em um *tópico* que permite que você assine vários eventos. A tabela a seguir lista os tipos de recursos, tipos de mensagem e eventos que estão disponíveis automaticamente.
+Um grande benefício do uso do Event Grid são as mensagens automáticas produzidas pelo Azure. No Azure, os recursos são publicados automaticamente em um *tópico* que permite que você se inscreva para vários eventos. A tabela a seguir lista os tipos de recursos, tipos de mensagens e eventos disponíveis automaticamente.
 
-| Recurso do Azure | Tipo de evento | Descrição |
+| Recursos do Azure | Tipo de evento | Descrição |
 | -------------- | ---------- | ----------- |
-| Assinatura do Azure | Microsoft.Resources.ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
-| | Microsoft.Resources.ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
-| | Microsoft.Resources.ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
-|  | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
-|  | Microsoft.Resources.ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
-| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
-| Armazenamento de Blobs | Microsoft.Storage.BlobCreated | Gerado quando um blob é criado. |
-| | Microsoft.Storage.BlobDeleted | Gerado quando um blob é excluído. |
-| Hubs de eventos | Microsoft.EventHub.CaptureFileCreated | Gerado quando um arquivo de captura é criado.
-| Hub IoT | Microsoft.Devices.DeviceCreated | Publicado quando um dispositivo é registrado em um hub IoT. |
-| | Microsoft.Devices.DeviceDeleted | Publicado quando um dispositivo é excluído de um hub IoT. |
-| Grupos de recursos | Microsoft.Resources.ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
-| | Microsoft.Resources.ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
-| | Microsoft.Resources.ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
-| | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
-| | Microsoft.Resources.ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
-| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
+| Assinatura do Azure | Microsoft.Resources.ResourceWriteSuccess | Gerado quando um recurso cria ou operação de atualização será bem-sucedida. |
+| | Microsoft.Resources.ResourceWriteFailure | Gerado quando um recurso cria ou operação de atualização será falha. |
+| | Microsoft.Resources.ResourceWriteCancel | Gerado quando um recurso cria ou operação de atualização é cancelada. |
+|  | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando um recurso cria ou operação de atualização é bem-sucedida. |
+|  | Microsoft.Resources.ResourceDeleteFailure | Gerado quando um recurso cria ou operação de atualização é falha. |
+| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando um recurso cria ou operação de atualização é cancelada. Esse evento ocorre quando a implantação de um modelo é cancelada. |
+| Armazenamento de blob | Microsoft.Storage.BlobCreated | Gerado quando um blob é criado. |
+| | Microsoft.Storage.BlobDeleted | Gerado quando um blob é deletado. |
+| Hubs de Eventos | Microsoft.EventHub.CaptureFileCriado | Criado quando um arquivo de captura é criado.
+| Hub IoT | Microsoft.Devices.DeviceCreated | Publicado quando um dispositivo é registrado para um Hub IoT. |
+| | Microsoft.Devices.DeviceDeleted | Publicado quando um dispositivo é excluído de um Hub IoT. |
+| Grupos de recursos | Microsoft.Resources.ResourceWriteSuccess | Gerado quando um recurso cria ou operação de atualização será bem-sucedida. |
+| | Microsoft.Resources.ResourceWriteFailure | Gerado quando um recurso cria ou operação de atualização será falha. |
+| | Microsoft.Resources.ResourceWriteCancel | Gerado quando um recurso cria ou operação de atualização é cancelada. |
+| | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando um recurso cria ou operação de atualização é bem-sucedida. |
+| | Microsoft.Resources.ResourceDeleteFailure | Gerado quando um recurso cria ou operação de atualização é falha. |
+| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando um recurso cria ou operação de atualização é cancelada. Esse evento ocorre quando a implantação de um modelo é cancelada. |
 
-Para obter mais informações, consulte [esquema de eventos da grade de eventos do Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
+Para obter mais informações, consulte [o esquema de eventos da Azure Event Grid](https://docs.microsoft.com/azure/event-grid/event-schema).
 
-Você pode acessar a grade de eventos de qualquer tipo de aplicativo, mesmo um que seja executado localmente.
+Você pode acessar o Event Grid a partir de qualquer tipo de aplicativo, mesmo um que seja executado no local.
 
 ## <a name="conclusion"></a>Conclusão
 
-Neste capítulo, você aprendeu sobre a plataforma sem servidor do Azure que é composta de Azure Functions, aplicativos lógicos e grade de eventos. Você pode usar esses recursos para criar uma arquitetura de aplicativo totalmente sem servidor ou criar uma solução híbrida que interaja com outros recursos de nuvem e servidores locais. Combinado com uma plataforma de dados sem servidor, como o [Azure SQL](https://docs.microsoft.com/azure/sql-database) ou o [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction), você pode criar aplicativos nativos de nuvem totalmente gerenciados.
+Neste capítulo você aprendeu sobre a plataforma sem servidor Azure que é composta por Funções Do Zure, Aplicativos lógicos e Grade de Eventos. Você pode usar esses recursos para construir uma arquitetura de aplicativo totalmente sem servidor ou criar uma solução híbrida que interaja com outros recursos de nuvem e servidores locais. Combinado com uma plataforma de dados sem servidor, como [o Azure SQL](https://docs.microsoft.com/azure/sql-database) ou [o CosmosDB,](https://docs.microsoft.com/azure/cosmos-db/introduction)você pode criar aplicativos nativos na nuvem totalmente gerenciados.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Planos do serviço de aplicativo](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
+- [Planos de serviço de aplicativos](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)
 - [Application Insights](https://docs.microsoft.com/azure/application-insights)
-- [Análise de Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
-- [Azure: Traga seu aplicativo para a nuvem com Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102)
-- [Grade de Eventos do Azure](https://docs.microsoft.com/azure/event-grid/overview)
-- [Esquema de evento da grade de eventos do Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
+- [Análise do Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
+- [Azure: traga seu aplicativo para a nuvem com funções do Azure sem servidor](https://channel9.msdn.com/events/Connect/2017/E102)
+- [Grade de Eventos Azure](https://docs.microsoft.com/azure/event-grid/overview)
+- [Esquema de eventos da Grade de Eventos do Azure](https://docs.microsoft.com/azure/event-grid/event-schema)
 - [Hubs de eventos do Azure](https://docs.microsoft.com/azure/event-hubs)
-- [Documentação do Azure Functions](https://docs.microsoft.com/azure/azure-functions)
-- [Conceitos de Azure Functions de gatilhos e associações](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
-- [Aplicativos Lógicos do Azure](https://docs.microsoft.com/azure/logic-apps)
-- [Barramento de Serviço do Azure](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Armazenamento de tabelas do Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
-- [Comparar as funções 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
-- [Conectando-se a fontes de dados locais com o gateway de dados local do Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
+- [Documentação de Funções do Azure](https://docs.microsoft.com/azure/azure-functions)
+- [Conceitos de gatilhos e de associações do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [Aplicativos azure logic](https://docs.microsoft.com/azure/logic-apps)
+- [Ônibus de serviço azure](https://docs.microsoft.com/azure/service-bus-messaging)
+- [Armazenamento de mesa azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Comparar funções 1.x e 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
+- [Conectar-se a fontes de dados locais com o Gateway de Dados Local do Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Criar sua primeira função no portal do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
-- [Criar sua primeira função usando o CLI do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
+- [Criar sua primeira função usando a CLI do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)
 - [Criar sua primeira função usando o Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio)
-- [Idiomas com suporte de funções](https://docs.microsoft.com/azure/azure-functions/supported-languages)
-- [Azure Functions de monitor](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
-- [Trabalhar com Proxies do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
+- [Funções suportadas idiomas](https://docs.microsoft.com/azure/azure-functions/supported-languages)
+- [Monitorar Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)
+- [Trabalhe com Proxies do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
->[Anterior](logic-apps.md)
->[Próximo](durable-azure-functions.md)
+>[Próximo](logic-apps.md)
+>[anterior](durable-azure-functions.md)

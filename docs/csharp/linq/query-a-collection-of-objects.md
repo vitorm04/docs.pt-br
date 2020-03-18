@@ -4,11 +4,11 @@ description: Saiba como consultar coleções usando LINQ em C#.
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
 ms.openlocfilehash: 9b2f5dd09c540800e9a2498d48883357f58c0116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734497"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659800"
 ---
 # <a name="query-a-collection-of-objects"></a>Consultar uma coleção de objetos
 
@@ -24,7 +24,7 @@ A consulta a seguir retorna os alunos que receberam uma pontuação de 90 ou mai
   
 Essa consulta é intencionalmente simples para que você possa testar. Por exemplo, você pode testar mais condições na cláusula `where` ou usar uma clausula `orderby` para classificar os resultados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
-- [Interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)
+- [Interpolação de cadeias de caracteres](../language-reference/tokens/interpolated.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 ms.openlocfilehash: 4c96f7be5ac500886ea036c93b4651fa814ee58a
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970101"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opções do compilador C#)
@@ -29,12 +29,12 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `fileList`  
- Necessário. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.  
+ Obrigatórios. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-link` permite que você implante um aplicativo que inseriu informações de tipo. O aplicativo pode usar tipos em um assembly de tempo de execução que implementa as informações de tipo inseridas sem a necessidade de uma referência ao assembly de tempo de execução. Se forem publicadas várias versões do assembly de tempo de execução, o aplicativo que contém as informações de tipo inseridas poderá trabalhar com as várias versões sem precisar ser recompilado. Para obter um exemplo, confira [Passo a passo: inserir tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md).  
+ A opção `-link` permite que você implante um aplicativo que inseriu informações de tipo. O aplicativo pode usar tipos em um assembly de runtime que implementa as informações de tipo inseridas sem a necessidade de uma referência ao assembly de runtime. Se forem publicadas várias versões do assembly de runtime, o aplicativo que contém as informações de tipo inseridas poderá trabalhar com as várias versões sem precisar ser recompilado. Para obter um exemplo, consulte [Instruções passo a passo: Inserindo tipos de assemblies gerenciado](../../../standard/assembly/embed-types-visual-studio.md).  
   
  Usar a opção `-link` é especialmente útil quando você está trabalhando com a interoperabilidade COM. Você pode inserir tipos COM para que seu aplicativo não precise mais de um PIA (assembly de interoperabilidade primário) no computador de destino. A opção `-link` instrui o compilador a inserir as informações de tipo de COM do assembly de interoperabilidade referenciado no código compilado resultante. O tipo COM é identificado pelo valor CLSID (GUID). Como resultado, o aplicativo pode ser executado em um computador de destino que tem os mesmos tipos COM instalados com os mesmos valores CLSID. Os aplicativos que automatizam o Microsoft Office são um bom exemplo. Como aplicativos como o Office normalmente mantêm o mesmo valor CLSID entre diferentes versões, seu aplicativo pode usar os tipos COM referenciados contanto que o .NET Framework 4 ou posterior esteja instalado no computador de destino e seu aplicativo use métodos, propriedades ou eventos que estão incluídos nos tipos COM referenciados.  
   
@@ -81,11 +81,11 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
 csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
-- [Passo a passo: inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference (opções do compilador do C#)](./reference-compiler-option.md)
-- [-noconfig (opções do compilador do C#)](./noconfig-compiler-option.md)
+- [C# Opções de compilador](./index.md)
+- [Instruções passo a passo: Inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)
+- [-referência (C# Opções de compilador)](./reference-compiler-option.md)
+- [-noconfig (opções do compilador C#)](./noconfig-compiler-option.md)
 - [Build pela linha de comando com csc.exe](./command-line-building-with-csc-exe.md)
 - [Visão geral sobre interoperabilidade](../../programming-guide/interop/interoperability-overview.md)

@@ -3,10 +3,10 @@ title: Refatoração usando um método de extensão (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253095"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refatoração usando um método de extensão (C#)
@@ -78,7 +78,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString()));
 Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 onetwothree  
@@ -246,7 +246,7 @@ StyleName:Code >Hello World<
   
 - [Refatoração usando uma função pura (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
 - [Refatoração em funções puras (C#)](./refactoring-into-pure-functions.md)
