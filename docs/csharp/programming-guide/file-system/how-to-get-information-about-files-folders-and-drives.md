@@ -1,18 +1,18 @@
 ---
-title: Como obter informações sobre arquivos, pastas e unidades – guia de C# programação
+title: Como obter informações sobre arquivos, pastas e unidades - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
 ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705204"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a><span data-ttu-id="5b317-102">Como obter informações sobre arquivos, pastas e unidades (guia deC# programação)</span><span class="sxs-lookup"><span data-stu-id="5b317-102">How to get information about files, folders, and drives  (C# Programming Guide)</span></span>
-<span data-ttu-id="5b317-103">No .NET Framework, você pode acessar informações do sistema de arquivos usando as classes a seguir:</span><span class="sxs-lookup"><span data-stu-id="5b317-103">In the .NET Framework, you can access file system information by using the following classes:</span></span>  
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a><span data-ttu-id="b2e09-102">Como obter informações sobre arquivos, pastas e drives (C# Programming Guide)</span><span class="sxs-lookup"><span data-stu-id="b2e09-102">How to get information about files, folders, and drives  (C# Programming Guide)</span></span>
+<span data-ttu-id="b2e09-103">No .NET Framework, você pode acessar informações do sistema de arquivos usando as classes a seguir:</span><span class="sxs-lookup"><span data-stu-id="b2e09-103">In the .NET Framework, you can access file system information by using the following classes:</span></span>  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
@@ -24,36 +24,36 @@ ms.locfileid: "75705204"
   
 - <xref:System.IO.File?displayProperty=nameWithType>  
   
- <span data-ttu-id="5b317-104">As classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> representam um arquivo ou diretório e contêm propriedades que expõem muitos dos atributos de arquivo que têm suporte pelo sistema de arquivos NTFS.</span><span class="sxs-lookup"><span data-stu-id="5b317-104">The <xref:System.IO.FileInfo> and <xref:System.IO.DirectoryInfo> classes represent a file or directory and contain properties that expose many of the file attributes that are supported by the NTFS file system.</span></span> <span data-ttu-id="5b317-105">Elas também contêm métodos para abrir, fechar, mover e excluir arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="5b317-105">They also contain methods for opening, closing, moving, and deleting files and folders.</span></span> <span data-ttu-id="5b317-106">Você pode criar instâncias dessas classes passando uma cadeia de caracteres que representa o nome do arquivo, pasta ou unidade para o construtor:</span><span class="sxs-lookup"><span data-stu-id="5b317-106">You can create instances of these classes by passing a string that represents the name of the file, folder, or drive in to the constructor:</span></span>  
+ <span data-ttu-id="b2e09-104">As classes <xref:System.IO.FileInfo> e <xref:System.IO.DirectoryInfo> representam um arquivo ou diretório e contêm propriedades que expõem muitos dos atributos de arquivo que têm suporte pelo sistema de arquivos NTFS.</span><span class="sxs-lookup"><span data-stu-id="b2e09-104">The <xref:System.IO.FileInfo> and <xref:System.IO.DirectoryInfo> classes represent a file or directory and contain properties that expose many of the file attributes that are supported by the NTFS file system.</span></span> <span data-ttu-id="b2e09-105">Elas também contêm métodos para abrir, fechar, mover e excluir arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="b2e09-105">They also contain methods for opening, closing, moving, and deleting files and folders.</span></span> <span data-ttu-id="b2e09-106">Você pode criar instâncias dessas classes passando uma cadeia de caracteres que representa o nome do arquivo, pasta ou unidade para o construtor:</span><span class="sxs-lookup"><span data-stu-id="b2e09-106">You can create instances of these classes by passing a string that represents the name of the file, folder, or drive in to the constructor:</span></span>  
   
 ```csharp  
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- <span data-ttu-id="5b317-107">Você também pode obter os nomes das unidades, pastas ou arquivos por meio de chamadas para <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType> e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5b317-107">You can also obtain the names of files, folders, or drives by using calls to <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType>, and <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.</span></span>  
+ <span data-ttu-id="b2e09-107">Você também pode obter os nomes das unidades, pastas ou arquivos por meio de chamadas para <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType> e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b2e09-107">You can also obtain the names of files, folders, or drives by using calls to <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=nameWithType>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=nameWithType>, and <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=nameWithType>.</span></span>  
   
- <span data-ttu-id="5b317-108">As classes <xref:System.IO.Directory?displayProperty=nameWithType> e <xref:System.IO.File?displayProperty=nameWithType> fornecem métodos estáticos para recuperar informações sobre arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="5b317-108">The <xref:System.IO.Directory?displayProperty=nameWithType> and <xref:System.IO.File?displayProperty=nameWithType> classes provide static methods for retrieving information about directories and files.</span></span>  
+ <span data-ttu-id="b2e09-108">As classes <xref:System.IO.Directory?displayProperty=nameWithType> e <xref:System.IO.File?displayProperty=nameWithType> fornecem métodos estáticos para recuperar informações sobre arquivos e diretórios.</span><span class="sxs-lookup"><span data-stu-id="b2e09-108">The <xref:System.IO.Directory?displayProperty=nameWithType> and <xref:System.IO.File?displayProperty=nameWithType> classes provide static methods for retrieving information about directories and files.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5b317-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5b317-109">Example</span></span>  
- <span data-ttu-id="5b317-110">O exemplo a seguir mostra várias maneiras de acessar informações sobre arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="5b317-110">The following example shows various ways to access information about files and folders.</span></span>  
+## <a name="example"></a><span data-ttu-id="b2e09-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b2e09-109">Example</span></span>  
+ <span data-ttu-id="b2e09-110">O exemplo a seguir mostra várias maneiras de acessar informações sobre arquivos e pastas.</span><span class="sxs-lookup"><span data-stu-id="b2e09-110">The following example shows various ways to access information about files and folders.</span></span>  
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="5b317-111">Programação Robusta</span><span class="sxs-lookup"><span data-stu-id="5b317-111">Robust Programming</span></span>  
- <span data-ttu-id="5b317-112">Quando você processa cadeias de caracteres do caminho especificado pelo usuário, você também deve tratar exceções para as seguintes condições:</span><span class="sxs-lookup"><span data-stu-id="5b317-112">When you process user-specified path strings, you should also handle exceptions for the following conditions:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="b2e09-111">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="b2e09-111">Robust Programming</span></span>  
+ <span data-ttu-id="b2e09-112">Quando você processa cadeias de caracteres do caminho especificado pelo usuário, você também deve tratar exceções para as seguintes condições:</span><span class="sxs-lookup"><span data-stu-id="b2e09-112">When you process user-specified path strings, you should also handle exceptions for the following conditions:</span></span>  
   
-- <span data-ttu-id="5b317-113">O nome do arquivo está malformado.</span><span class="sxs-lookup"><span data-stu-id="5b317-113">The file name is malformed.</span></span> <span data-ttu-id="5b317-114">Por exemplo, ele contém caracteres inválidos ou somente espaço em branco.</span><span class="sxs-lookup"><span data-stu-id="5b317-114">For example, it contains invalid characters or only white space.</span></span>  
+- <span data-ttu-id="b2e09-113">O nome do arquivo está malformado.</span><span class="sxs-lookup"><span data-stu-id="b2e09-113">The file name is malformed.</span></span> <span data-ttu-id="b2e09-114">Por exemplo, ele contém caracteres inválidos ou somente espaço em branco.</span><span class="sxs-lookup"><span data-stu-id="b2e09-114">For example, it contains invalid characters or only white space.</span></span>  
   
-- <span data-ttu-id="5b317-115">O nome do arquivo é nulo.</span><span class="sxs-lookup"><span data-stu-id="5b317-115">The file name is null.</span></span>  
+- <span data-ttu-id="b2e09-115">O nome do arquivo é nulo.</span><span class="sxs-lookup"><span data-stu-id="b2e09-115">The file name is null.</span></span>  
   
-- <span data-ttu-id="5b317-116">O nome de arquivo é maior que o comprimento máximo definido pelo sistema.</span><span class="sxs-lookup"><span data-stu-id="5b317-116">The file name is longer than the system-defined maximum length.</span></span>  
+- <span data-ttu-id="b2e09-116">O nome de arquivo é maior que o comprimento máximo definido pelo sistema.</span><span class="sxs-lookup"><span data-stu-id="b2e09-116">The file name is longer than the system-defined maximum length.</span></span>  
   
-- <span data-ttu-id="5b317-117">O nome de arquivo contém dois-pontos (:).</span><span class="sxs-lookup"><span data-stu-id="5b317-117">The file name contains a colon (:).</span></span>  
+- <span data-ttu-id="b2e09-117">O nome de arquivo contém dois-pontos (:).</span><span class="sxs-lookup"><span data-stu-id="b2e09-117">The file name contains a colon (:).</span></span>  
   
- <span data-ttu-id="5b317-118">Se o aplicativo não tem permissões suficientes para ler o arquivo especificado, o método `Exists` retorna `false` independentemente de se um caminho existe, o método não gera uma exceção.</span><span class="sxs-lookup"><span data-stu-id="5b317-118">If the application does not have sufficient permissions to read the specified file, the `Exists` method returns `false` regardless of whether a path exists; the method does not throw an exception.</span></span>  
+ <span data-ttu-id="b2e09-118">Se o aplicativo não tem permissões suficientes para ler o arquivo especificado, o método `Exists` retorna `false` independentemente de se um caminho existe, o método não gera uma exceção.</span><span class="sxs-lookup"><span data-stu-id="b2e09-118">If the application does not have sufficient permissions to read the specified file, the `Exists` method returns `false` regardless of whether a path exists; the method does not throw an exception.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b317-119">Veja também</span><span class="sxs-lookup"><span data-stu-id="5b317-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2e09-119">Confira também</span><span class="sxs-lookup"><span data-stu-id="b2e09-119">See also</span></span>
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [<span data-ttu-id="5b317-120">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="5b317-120">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="5b317-121">Sistema de arquivos e o Registro (Guia de programação em C#)</span><span class="sxs-lookup"><span data-stu-id="5b317-121">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
+- [<span data-ttu-id="b2e09-120">C# Guia de Programação</span><span class="sxs-lookup"><span data-stu-id="b2e09-120">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="b2e09-121">Sistema de arquivos e o Registro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="b2e09-121">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
