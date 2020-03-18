@@ -1,18 +1,18 @@
 ---
-title: 'Arquivo XML de exemplo: Configuração de teste em um namespace'
+title: 'Arquivo XML de Exemplo: Configuração de teste em um namespace'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 9c444bb3870ac358c2fba187c82cdc5ce5b7a3bd
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
-ms.translationtype: HT
+ms.openlocfilehash: ed25a8608977070e0db5f4cdee8a44a3c347cc8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868733"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167996"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="f2fd8-102">Arquivo XML de exemplo: Configuração de teste em um namespace</span><span class="sxs-lookup"><span data-stu-id="f2fd8-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="f2fd8-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f2fd8-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f2fd8-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="f2fd8-104">This is a test configuration file.</span></span> <span data-ttu-id="f2fd8-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="f2fd8-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="acb6e-102">Arquivo XML de Exemplo: Configuração de teste em um namespace</span><span class="sxs-lookup"><span data-stu-id="acb6e-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="acb6e-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="acb6e-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="acb6e-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="acb6e-104">This is a test configuration file.</span></span> <span data-ttu-id="acb6e-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="acb6e-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="f2fd8-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f2fd8-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="acb6e-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="acb6e-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -55,4 +55,3 @@ ms.locfileid: "68868733"
   </Test>  
 </Tests>  
 ```  
- 
