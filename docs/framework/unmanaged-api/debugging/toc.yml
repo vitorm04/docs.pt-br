@@ -98,7 +98,7 @@
               href: icordebug-setunmanagedhandler-method.md
             - name: Método Terminate
               href: icordebug-terminate-method.md
-        - name: Método ICorDebugAppDomain
+        - name: Interface ICorDebugAppDomain
           href: icordebugappdomain-interface.md
           items:
             - name: Método Attach
@@ -357,7 +357,7 @@
               href: icordebugdatatarget2-enumeratethreadids-method.md
             - name: Método GetImageFromPointer
               href: icordebugdatatarget2-getimagefrompointer-method.md
-            - name: Método GetImageLocation
+            - name: Método de GetImageLocation
               href: icordebugdatatarget2-getimagelocation-method.md
             - name: Método GetSymbolProviderForImage
               href: icordebugdatatarget2-getsymbolproviderforimage-method.md

@@ -245,7 +245,7 @@
                   items:
                     - name: Projeção
                       href: method-based-query-syntax-examples-projection.md
-                    - name: Particionamento
+                    - name: Divisão
                       href: method-based-query-syntax-examples-partitioning-linq.md
                     - name: Ordenando
                       href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
@@ -255,7 +255,7 @@
                       href: method-based-query-syntax-examples-conversion-operators.md
                     - name: Operadores de elemento
                       href: method-based-query-syntax-examples-element-operators.md
-                    - name: Operadores de agregação
+                    - name: Operadores agregados
                       href: method-based-query-syntax-examples-aggregate-operators.md
                     - name: Join
                       href: method-based-query-syntax-examples-join-linq-to-dataset.md

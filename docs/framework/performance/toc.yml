@@ -8,7 +8,7 @@
     - name: Inicialização lenta
       href: lazy-initialization.md
       items:
-        - name: 'Como: executar a inicialização lenta de objetos'
+        - name: Como executar a inicialização lenta de objetos
           href: how-to-perform-lazy-initialization-of-objects.md
     - name: Eventos ETW no .NET Framework
       href: etw-events.md
@@ -27,7 +27,7 @@
             - name: Eventos ETW no CLR
               href: clr-etw-events.md
               items:
-                - name: Eventos de informação de tempo de execução
+                - name: Eventos de informação de runtime
                   href: runtime-information-etw-events.md
                 - name: Evento Exception Thrown_V1
                   href: exception-thrown-v1-etw-event.md
