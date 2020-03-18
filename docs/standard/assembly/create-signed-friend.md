@@ -1,41 +1,41 @@
 ---
-title: Como criar assemblies Friend assinados
+title: 'Como: Criar assembléias de amigos assinados'
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159488"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="bdda9-102">Como criar assemblies Friend assinados</span><span class="sxs-lookup"><span data-stu-id="bdda9-102">How to: Create signed friend assemblies</span></span>
-<span data-ttu-id="bdda9-103">Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="bdda9-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="bdda9-104">Os dois assemblies devem ter nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="bdda9-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="bdda9-105">Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.</span><span class="sxs-lookup"><span data-stu-id="bdda9-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
+# <a name="how-to-create-signed-friend-assemblies"></a><span data-ttu-id="607e3-102">Como: Criar assembléias de amigos assinados</span><span class="sxs-lookup"><span data-stu-id="607e3-102">How to: Create signed friend assemblies</span></span>
+<span data-ttu-id="607e3-103">Este exemplo mostra como usar assemblies amigáveis com assemblies que têm nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="607e3-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="607e3-104">Os dois assemblies devem ter nomes fortes.</span><span class="sxs-lookup"><span data-stu-id="607e3-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="607e3-105">Embora os dois assemblies neste exemplo usem as mesmas chaves, você pode usar chaves diferentes para dois assemblies.</span><span class="sxs-lookup"><span data-stu-id="607e3-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="bdda9-106">Criar um assembly assinado e um assembly Friend</span><span class="sxs-lookup"><span data-stu-id="bdda9-106">Create a signed assembly and a friend assembly</span></span>  
+## <a name="create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="607e3-106">Crie uma assembléia assinada e uma reunião de amigos</span><span class="sxs-lookup"><span data-stu-id="607e3-106">Create a signed assembly and a friend assembly</span></span>  
   
-1. <span data-ttu-id="bdda9-107">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="bdda9-107">Open a command prompt.</span></span>  
+1. <span data-ttu-id="607e3-107">Abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="607e3-107">Open a command prompt.</span></span>  
   
-2. <span data-ttu-id="bdda9-108">Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública.</span><span class="sxs-lookup"><span data-stu-id="bdda9-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="bdda9-109">Para obter mais informações, consulte [sn. exe (Strong Name Tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="bdda9-109">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
+2. <span data-ttu-id="607e3-108">Use a seguinte sequência de comandos com a ferramenta Nome Forte para gerar um keyfile e exibir sua chave pública.</span><span class="sxs-lookup"><span data-stu-id="607e3-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="607e3-109">Para obter mais informações, consulte [Sn.exe (ferramenta Nome Forte)](../../framework/tools/sn-exe-strong-name-tool.md).</span><span class="sxs-lookup"><span data-stu-id="607e3-109">For more information, see [Sn.exe (Strong Name tool)](../../framework/tools/sn-exe-strong-name-tool.md).</span></span>  
   
-    1. <span data-ttu-id="bdda9-110">Gere uma chave de nome forte para este exemplo e armazene-a no arquivo *FriendAssemblies. SNK*:</span><span class="sxs-lookup"><span data-stu-id="bdda9-110">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
+    1. <span data-ttu-id="607e3-110">Gerar uma chave de nome forte para este exemplo e armazená-la no arquivo *FriendAssemblies.snk*:</span><span class="sxs-lookup"><span data-stu-id="607e3-110">Generate a strong-name key for this example and store it in the file *FriendAssemblies.snk*:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2. <span data-ttu-id="bdda9-111">Extraia a chave pública de *FriendAssemblies. SNK* e coloque-a em *FriendAssemblies. PublicKey*:</span><span class="sxs-lookup"><span data-stu-id="bdda9-111">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
+    2. <span data-ttu-id="607e3-111">Extrair a chave pública de *FriendAssemblies.snk* e colocá-la em *FriendAssemblies.publickey*:</span><span class="sxs-lookup"><span data-stu-id="607e3-111">Extract the public key from *FriendAssemblies.snk* and put it into *FriendAssemblies.publickey*:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3. <span data-ttu-id="bdda9-112">Exiba a chave pública armazenada no arquivo *FriendAssemblies. PublicKey*:</span><span class="sxs-lookup"><span data-stu-id="bdda9-112">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
+    3. <span data-ttu-id="607e3-112">Exibir a chave pública armazenada no arquivo *FriendAssemblies.publickey*:</span><span class="sxs-lookup"><span data-stu-id="607e3-112">Display the public key stored in the file *FriendAssemblies.publickey*:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. <span data-ttu-id="bdda9-113">Crie um C# ou Visual Basic arquivo chamado *friend_signed_A* que contenha o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="bdda9-113">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="bdda9-114">O código usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para declarar *friend_signed_B* como um assembly Friend.</span><span class="sxs-lookup"><span data-stu-id="bdda9-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
+3. <span data-ttu-id="607e3-113">Crie um arquivo C# ou Visual Basic chamado *friend_signed_A* que contenha o seguinte código.</span><span class="sxs-lookup"><span data-stu-id="607e3-113">Create a C# or Visual Basic file named *friend_signed_A* that contains the following code.</span></span> <span data-ttu-id="607e3-114">O código <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> usa o atributo para declarar *friend_signed_B* como uma assembléia de amigos.</span><span class="sxs-lookup"><span data-stu-id="607e3-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare *friend_signed_B* as a friend assembly.</span></span>  
 
-   <span data-ttu-id="bdda9-115">A ferramenta Nome Forte gera uma nova chave pública sempre que for executada.</span><span class="sxs-lookup"><span data-stu-id="bdda9-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="bdda9-116">Portanto, você deve substituir a chave pública no código a seguir com a chave pública que você acabou de gerar, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="bdda9-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
+   <span data-ttu-id="607e3-115">A ferramenta Nome Forte gera uma nova chave pública sempre que for executada.</span><span class="sxs-lookup"><span data-stu-id="607e3-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="607e3-116">Portanto, você deve substituir a chave pública no código a seguir com a chave pública que você acabou de gerar, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="607e3-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
 
    ```csharp  
    // friend_signed_A.cs  
@@ -69,7 +69,7 @@ ms.locfileid: "78159488"
    End Class  
    ```  
 
-4. <span data-ttu-id="bdda9-117">Compile e assine *friend_signed_A* usando o comando a seguir.</span><span class="sxs-lookup"><span data-stu-id="bdda9-117">Compile and sign *friend_signed_A* by using the following command.</span></span>  
+4. <span data-ttu-id="607e3-117">Compire e assine *friend_signed_A* usando o seguinte comando.</span><span class="sxs-lookup"><span data-stu-id="607e3-117">Compile and sign *friend_signed_A* by using the following command.</span></span>  
 
    ```csharp
    csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
@@ -79,7 +79,7 @@ ms.locfileid: "78159488"
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
 
-5. <span data-ttu-id="bdda9-118">Crie um C# ou Visual Basic arquivo chamado *friend_signed_B* que contenha o código a seguir.</span><span class="sxs-lookup"><span data-stu-id="bdda9-118">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="bdda9-119">Como *friend_signed_A* especifica *friend_signed_B* como um assembly Friend, o código em *friend_signed_B* pode acessar tipos `internal`C#() ou `Friend` (Visual Basic) e membros de *friend_signed_A*.</span><span class="sxs-lookup"><span data-stu-id="bdda9-119">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="bdda9-120">O arquivo contém o seguinte código.</span><span class="sxs-lookup"><span data-stu-id="bdda9-120">The file contains the following code.</span></span>  
+5. <span data-ttu-id="607e3-118">Crie um arquivo C# ou Visual Basic chamado *friend_signed_B* que contenha o seguinte código.</span><span class="sxs-lookup"><span data-stu-id="607e3-118">Create a C# or Visual Basic file named *friend_signed_B* that contains the following code.</span></span> <span data-ttu-id="607e3-119">Como *friend_signed_A* especifica *friend_signed_B* como uma reunião de amigos, o código em *friend_signed_B* pode `internal` acessar (C#) ou `Friend` (Visual Basic) tipos e membros de *friend_signed_A*.</span><span class="sxs-lookup"><span data-stu-id="607e3-119">Because *friend_signed_A* specifies *friend_signed_B* as a friend assembly, the code in *friend_signed_B* can access `internal` (C#) or `Friend` (Visual Basic) types and members from *friend_signed_A*.</span></span> <span data-ttu-id="607e3-120">O arquivo contém o seguinte código.</span><span class="sxs-lookup"><span data-stu-id="607e3-120">The file contains the following code.</span></span>  
 
    ```csharp  
    // friend_signed_B.cs  
@@ -107,7 +107,7 @@ ms.locfileid: "78159488"
    End Module  
    ```  
 
-6. <span data-ttu-id="bdda9-121">Compile e assine *friend_signed_B* usando o comando a seguir.</span><span class="sxs-lookup"><span data-stu-id="bdda9-121">Compile and sign *friend_signed_B* by using the following command.</span></span>  
+6. <span data-ttu-id="607e3-121">Compire e assine *friend_signed_B* usando o seguinte comando.</span><span class="sxs-lookup"><span data-stu-id="607e3-121">Compile and sign *friend_signed_B* by using the following command.</span></span>  
 
    ```csharp
    csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -117,24 +117,24 @@ ms.locfileid: "78159488"
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
 
-   <span data-ttu-id="bdda9-122">O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="bdda9-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="bdda9-123">Você deve especificar explicitamente o nome do assembly de saída ( *. exe* ou *. dll*) usando a opção de compilador `-out`.</span><span class="sxs-lookup"><span data-stu-id="bdda9-123">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="bdda9-124">Para obter mais informações, consulte [-outC# (opções do compilador)](../../csharp/language-reference/compiler-options/out-compiler-option.md) ou [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span><span class="sxs-lookup"><span data-stu-id="bdda9-124">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
+   <span data-ttu-id="607e3-122">O nome do assembly gerado pelo compilador deve corresponder ao nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>.</span><span class="sxs-lookup"><span data-stu-id="607e3-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="607e3-123">Você deve especificar explicitamente o nome do conjunto de saída ( `-out` *.exe* ou *.dll*) usando a opção compilador.</span><span class="sxs-lookup"><span data-stu-id="607e3-123">You must explicitly specify the name of the output assembly (*.exe* or *.dll*) by using the `-out` compiler option.</span></span> <span data-ttu-id="607e3-124">Para obter mais informações, consulte [-out (opções de compilador C#)](../../csharp/language-reference/compiler-options/out-compiler-option.md) ou [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span><span class="sxs-lookup"><span data-stu-id="607e3-124">For more information, see [-out (C# compiler options)](../../csharp/language-reference/compiler-options/out-compiler-option.md) or [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
 
-7. <span data-ttu-id="bdda9-125">Execute o arquivo *friend_signed_B. exe* .</span><span class="sxs-lookup"><span data-stu-id="bdda9-125">Run the *friend_signed_B.exe* file.</span></span>  
+7. <span data-ttu-id="607e3-125">Execute o arquivo *friend_signed_B.exe.*</span><span class="sxs-lookup"><span data-stu-id="607e3-125">Run the *friend_signed_B.exe* file.</span></span>  
 
-   <span data-ttu-id="bdda9-126">O programa gera a cadeia de caracteres **Class1. Test**.</span><span class="sxs-lookup"><span data-stu-id="bdda9-126">The program outputs the string **Class1.Test**.</span></span>  
+   <span data-ttu-id="607e3-126">O programa produz a string **Class1.Test**.</span><span class="sxs-lookup"><span data-stu-id="607e3-126">The program outputs the string **Class1.Test**.</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="bdda9-127">Segurança do .NET</span><span class="sxs-lookup"><span data-stu-id="bdda9-127">.NET security</span></span>  
- <span data-ttu-id="bdda9-128">Há semelhanças entre o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e a classe <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="bdda9-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="bdda9-129">A principal diferença é que <xref:System.Security.Permissions.StrongNameIdentityPermission> pode exigir permissões de segurança para executar uma determinada seção de código, enquanto o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla a visibilidade dos membrosC#e tipos `internal` () ou `Friend` (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="bdda9-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
+## <a name="net-security"></a><span data-ttu-id="607e3-127">Segurança do .NET</span><span class="sxs-lookup"><span data-stu-id="607e3-127">.NET security</span></span>  
+ <span data-ttu-id="607e3-128">Há semelhanças entre o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> e a classe <xref:System.Security.Permissions.StrongNameIdentityPermission>.</span><span class="sxs-lookup"><span data-stu-id="607e3-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="607e3-129">A principal diferença <xref:System.Security.Permissions.StrongNameIdentityPermission> é que pode exigir permissões de segurança <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para executar uma determinada `internal` seção de `Friend` código, enquanto o atributo controla a visibilidade dos tipos e membros (C#) ou (Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="607e3-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `internal` (C#) or `Friend` (Visual Basic) types and members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bdda9-130">Confira também</span><span class="sxs-lookup"><span data-stu-id="bdda9-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="607e3-130">Confira também</span><span class="sxs-lookup"><span data-stu-id="607e3-130">See also</span></span>
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [<span data-ttu-id="bdda9-131">Assemblies no .NET</span><span class="sxs-lookup"><span data-stu-id="bdda9-131">Assemblies in .NET</span></span>](index.md)
-- [<span data-ttu-id="bdda9-132">Assemblies Friend</span><span class="sxs-lookup"><span data-stu-id="bdda9-132">Friend assemblies</span></span>](friend.md)
-- [<span data-ttu-id="bdda9-133">Como: criar assemblies Friend não assinados</span><span class="sxs-lookup"><span data-stu-id="bdda9-133">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
-- [<span data-ttu-id="bdda9-134">-keyfile (C#)</span><span class="sxs-lookup"><span data-stu-id="bdda9-134">-keyfile (C#)</span></span>](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [<span data-ttu-id="bdda9-135">-keyfile (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdda9-135">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [<span data-ttu-id="bdda9-136">Sn. exe (ferramenta Strong Name)</span><span class="sxs-lookup"><span data-stu-id="bdda9-136">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
-- [<span data-ttu-id="bdda9-137">Criar e usar assemblies de nome forte</span><span class="sxs-lookup"><span data-stu-id="bdda9-137">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
-- [<span data-ttu-id="bdda9-138">Guia de programação em C#</span><span class="sxs-lookup"><span data-stu-id="bdda9-138">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="bdda9-139">Conceitos de programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bdda9-139">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
+- [<span data-ttu-id="607e3-131">Assemblies no .NET</span><span class="sxs-lookup"><span data-stu-id="607e3-131">Assemblies in .NET</span></span>](index.md)
+- [<span data-ttu-id="607e3-132">Assemblies amigáveis</span><span class="sxs-lookup"><span data-stu-id="607e3-132">Friend assemblies</span></span>](friend.md)
+- [<span data-ttu-id="607e3-133">Como: Criar assembléias de amigos não assinados</span><span class="sxs-lookup"><span data-stu-id="607e3-133">How to: Create unsigned friend assemblies</span></span>](create-unsigned-friend.md)
+- [<span data-ttu-id="607e3-134">-arquivo de tecla (C#)</span><span class="sxs-lookup"><span data-stu-id="607e3-134">-keyfile (C#)</span></span>](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [<span data-ttu-id="607e3-135">-arquivo-chave (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="607e3-135">-keyfile (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [<span data-ttu-id="607e3-136">Sn.exe (ferramenta Nome Forte)</span><span class="sxs-lookup"><span data-stu-id="607e3-136">Sn.exe (Strong Name tool)</span></span>](../../framework/tools/sn-exe-strong-name-tool.md)
+- [<span data-ttu-id="607e3-137">Criar e usar assemblies com nome forte</span><span class="sxs-lookup"><span data-stu-id="607e3-137">Create and use strong-named assemblies</span></span>](create-use-strong-named.md)
+- [<span data-ttu-id="607e3-138">Guia de programação em C#</span><span class="sxs-lookup"><span data-stu-id="607e3-138">C# programming guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="607e3-139">Conceitos de programação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="607e3-139">Programming concepts (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/index.md)
