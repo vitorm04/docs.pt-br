@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418061"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Instruções passo a passo: escrevendo consultas em C# (LINQ)
@@ -28,7 +28,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 2. Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
-     A caixa de diálogo **Novo Projeto** é aberta.  
+     A caixa de diálogo **Novo Projeto** será aberta.  
   
 3. Expanda **Instalado**, expanda **Modelos**, expanda **Visual C#** e, em seguida, escolha **Aplicativo de Console**.  
   
@@ -39,7 +39,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 5. Observe que o projeto tem uma referência a System.Core.dll e a uma diretiva `using` para o namespace <xref:System.Linq?displayProperty=nameWithType>.  
   
 ## <a name="create-an-in-memory-data-source"></a>Criar uma Fonte de Dados na Memória  
- A fonte de dados para as consultas é uma lista simples de objetos `Student`. Cada registro `Student` tem um nome, sobrenome e uma matriz de inteiros que representa seus resultados de testes na classe. Copie este código no seu projeto. Observe as seguintes características:  
+ A fonte de dados para as consultas é uma lista simples de objetos `Student`. Cada registro `Student` tem um nome, sobrenome e uma matriz de inteiros que representa seus resultados de testes na classe. Copie este código em seu projeto. Observe as seguintes características:  
   
 - A classe `Student` consiste em propriedades autoimplementadas.  
   
@@ -63,7 +63,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 #### <a name="to-create-a-simple-query"></a>Para criar uma consulta simples  
   
-- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter mais informações sobre `var`, consulte [Variáveis locais de tipo implícito](../../classes-and-structs/implicitly-typed-local-variables.md).)  
+- No método `Main` do aplicativo, crie uma consulta simples que, quando for executada, produzirá uma lista de todos os alunos cuja pontuação no primeiro teste foi superior a 90. Observe que como o objeto `Student` todo está selecionado, o tipo da consulta é `IEnumerable<Student>`. Embora o código também possa usar a tipagem implícita usando a palavra-chave [var](../../../language-reference/keywords/var.md), a tipagem explícita é usada para ilustrar claramente os resultados. (Para obter `var`mais informações sobre , consulte [Variáveis locais digitadas implicitamente](../../classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Observe também que a variável de intervalo da consulta, `student`, também funciona como uma referência para cada `Student` na fonte, fornecendo acesso ao membro para cada objeto.  
   
@@ -71,7 +71,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
 ## <a name="execute-the-query"></a>Executar a Consulta  
   
-#### <a name="to-execute-the-query"></a>Para executar a consulta  
+#### <a name="to-execute-the-query"></a>Para executar a consulta.  
   
 1. Agora escreva o loop `foreach` que fará com que a consulta seja executada. Observe o seguinte sobre o código:  
   
@@ -91,7 +91,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
-     Para obter mais informações, consulte [Cláusula where](../../../language-reference/keywords/where-clause.md).  
+     Para obter mais informações, consulte [onde a cláusula](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="modify-the-query"></a>Modificar a Consulta  
   
@@ -182,7 +182,7 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (consulta integrada à linguagem) (C#)](./index.md)
-- [Expressões de consulta LINQ](../../../linq/index.md)
+- [LINQ (Consulta Integrada à Linguagem) (C#)](./index.md)
+- [Expressões de Consulta LINQ](../../../linq/index.md)

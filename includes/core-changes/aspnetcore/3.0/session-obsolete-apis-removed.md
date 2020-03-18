@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198335"
 ---
 ### <a name="session-state-obsolete-apis-removed"></a>Estado da sessão: APIs obsoletas removidas
 
-APIs obsoletas para configurar cookies de sessão foram removidas. Para obter mais informações, consulte [ASPNET/comunicados n º 257](https://github.com/aspnet/Announcements/issues/257).
+ApIs obsoletas para configurar cookies de sessão foram removidas. Para obter mais informações, consulte [aspnet/Announcements#257](https://github.com/aspnet/Announcements/issues/257).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 3.0
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Essa alteração impõe a consistência entre APIs para configurar recursos que usam cookies.
+Essa alteração impõe consistência entre as APIs para configurar recursos que usam cookies.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Migre o uso das APIs removidas para suas substituições mais recentes. Considere o exemplo a seguir em `Startup.ConfigureServices`:
+Migre o uso das APIs removidas para suas substituições mais novas. Considere o exemplo a seguir em `Startup.ConfigureServices`:
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)

@@ -1,15 +1,15 @@
 ---
-title: Como localizar um elemento com um atributo específico (C#)
+title: Como encontrar um elemento com um atributo específico (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141155"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Como localizar um elemento com um atributo específico (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Como encontrar um elemento com um atributo específico (C#)
 Este tópico mostra como localizar um elemento que tem um atributo que tem um valor específico.  
   
 ## <a name="example"></a>Exemplo  
@@ -69,7 +69,7 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>

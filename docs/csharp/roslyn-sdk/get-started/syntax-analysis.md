@@ -4,10 +4,10 @@ description: Uma introdução pela travessia, consulta e percurso por árvores d
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240500"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introdução à análise de sintaxe
@@ -51,12 +51,12 @@ Uma árvore de sintaxe é uma estrutura de dados usada pelos compiladores C# e V
 
 Os quatro principais blocos de construção de árvores de sintaxe são:
 
-* A classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, uma instância da qual representa uma árvore de análise inteira. <xref:Microsoft.CodeAnalysis.SyntaxTree> é uma classe abstrata que tem derivativos específicos a um idioma. Você usa os métodos Parse da classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analisar o texto em C# ou Visual Basic.
+* A classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, uma instância da qual representa uma árvore de análise inteira. <xref:Microsoft.CodeAnalysis.SyntaxTree> é uma classe abstrata que tem derivativos específicos a um idioma. Você usa os métodos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> de <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>análise da classe (ou ) para analisar o texto em C# ou Visual Basic.
 * A classe <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, instâncias da qual representam constructos sintáticos como declarações, instruções, cláusulas e expressões.
 * A estrutura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, que representa uma pontuação, operador, identificador ou palavra-chave individual.
 * Finalmente, a estrutura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa os bits de informação sem significância sintática, tais como o espaço em branco entre tokens, diretivas de pré-processamento e comentários.
 
-Trívia, tokens e nós são compostos hierarquicamente para formar uma árvore que representa completamente tudo em um fragmento de código do Visual Basic ou do C#. Você pode ver essa estrutura usando a janela **Visualizador de Sintaxe**. No Visual Studio, escolha **Exibição** > **Outras Janelas** > **Visualizador de Sintaxe**. Por exemplo, o arquivo de origem C# anterior examinado usando o **Visualizador de Sintaxe** se parecerá com a figura a seguir:
+Trívia, tokens e nós são compostos hierarquicamente para formar uma árvore que representa completamente tudo em um fragmento de código do Visual Basic ou do C#. Você pode ver essa estrutura usando a janela **Visualizador de Sintaxe**. No Visual Studio, escolha **Exibir** > **outro** > **visualizador de sintaxe do Windows**. Por exemplo, o arquivo de origem C# anterior examinado usando o **Visualizador de Sintaxe** se parecerá com a figura a seguir:
 
 **SyntaxNode**: Azul | **SyntaxToken**: Verde | **SyntaxTrivia**: Vermelho ![Arquivo de Código C#](media/walkthrough-csharp-syntax-figure1.png)
 
@@ -78,7 +78,7 @@ Você pode ver o código concluído para essa amostra no [nosso repositório do 
 Criar um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#:
 
 * No Visual Studio, escolha **Arquivo** > **Novo** > **Projeto** para exibir a caixa de diálogo Novo Projeto.
-* Em **Visual C#**  > **Extensibilidade**, escolha **Ferramenta de Análise de Código Autônoma**.
+* Em **Visual C#** > **Extensibility,** escolha **a ferramenta de análise de código independente**.
 * Nomeie o projeto "**SyntaxTreeManualTraversal**" e clique em OK.
 
 Você analisará o programa "Olá, Mundo!" básico mostrado anteriormente.
@@ -172,7 +172,7 @@ Agora que você definiu o texto do programa, você precisa criar um `SyntaxTree`
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-Em seguida, crie uma nova classe. No Visual Studio, escolha **Projeto** > **Adicionar Novo Item**. Na caixa de diálogo **Adicionar Novo Item**, digite *UsingCollector.cs* como o nome do arquivo.
+Em seguida, crie uma nova classe. No Visual Studio, escolha **Projeto** > **Adicionar novo item**. Na caixa de diálogo **Adicionar Novo Item**, digite *UsingCollector.cs* como o nome do arquivo.
 
 Você implementa a funcionalidade de visitante `using` na classe `UsingCollector`. Para começar, crie a classe `UsingCollector` derivada de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>.
 

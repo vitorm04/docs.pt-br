@@ -1,15 +1,15 @@
 ---
-title: Como localizar descendentes com um nome de elemento específico (C#)
+title: Como encontrar descendentes com um nome de elemento específico (C#)
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
 ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141084"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Como localizar descendentes com um nome de elemento específico (C#)
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>Como encontrar descendentes com um nome de elemento específico (C#)
 Às vezes, você deseja localizar todos os descendentes com um nome específico. Você poderia escrever um código para iterar por todos os descendentes, mas é mais fácil usar o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -91,6 +91,6 @@ Console.WriteLine(str);
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

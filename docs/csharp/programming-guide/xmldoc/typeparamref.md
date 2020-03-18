@@ -1,5 +1,5 @@
 ---
-title: Guia de C# programação de <typeparamref>
+title: <typeparamref>- Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789652"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref > (C# guia de programação)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -22,7 +22,7 @@ ms.locfileid: "76789652"
 <typeparamref name="name"/>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `name`
 
@@ -34,13 +34,13 @@ Para obter mais informações sobre parâmetros de tipo em tipos e métodos gen�
 
 Use essa marca para habilitar os consumidores do arquivo de documentação a formatar a palavra de alguma forma distinta, por exemplo, em itálico.
 
-Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
+Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
 
 ## <a name="example"></a>Exemplo
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

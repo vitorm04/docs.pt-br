@@ -3,10 +3,10 @@ title: Capacidade de endereçamento de microsserviços e o Registro do serviço
 description: Entenda a função dos Registros de imagem de contêiner na arquitetura de microsserviços.
 ms.date: 09/20/2018
 ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674043"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Capacidade de endereçamento de microsserviços e o Registro do serviço
@@ -19,15 +19,15 @@ Em alguns ambientes de implantação de microsserviço (chamados clusters, a ser
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: Registro de serviço** \
+- **Chris Richardson. Padrão: Registro de serviços** \
   <https://microservices.io/patterns/service-registry.html>
 
-- **Auth0. O Registro de serviço** \
+- **Auth0. O Registro de Serviços** \
   <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
-- **Gabriel Schenker. Descoberta de serviço** \
+- **Gabriel Schenker. Descoberta de serviços** \
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
->[Anterior](maintain-microservice-apis.md)
->[Próximo](microservice-based-composite-ui-shape-layout.md)
+>[Próximo](maintain-microservice-apis.md)
+>[anterior](microservice-based-composite-ui-shape-layout.md)

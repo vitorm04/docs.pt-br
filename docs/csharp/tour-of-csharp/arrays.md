@@ -4,10 +4,10 @@ description: Matrizes são o tipo mais básico de coleção da linguagem C#
 ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
 ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159189"
 ---
 # <a name="arrays"></a>Matrizes
@@ -25,7 +25,7 @@ Este exemplo cria e opera em uma ***matriz unidimensional***. O C# também ofere
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 A matriz `a1` contém 10 elementos, a matriz `a2` contém 50 (10 × 5) elementos e a matriz `a3` contém 100 (10 × 5 × 2) elementos.
-O tipo do elemento de uma matriz pode ser qualquer tipo, incluindo um tipo de matriz. Uma matriz com elementos de um tipo de matriz, às vezes, é chamada de ***matriz denteada*** porque os comprimentos das matrizes de elementos nem todos precisam ser iguais. O exemplo a seguir aloca uma matriz de matrizes de `int`:
+O tipo do elemento de uma matriz pode ser qualquer tipo, incluindo um tipo de matriz. Uma matriz com elementos de um tipo de matriz às vezes é chamada de ***matriz irregular*** porque os comprimentos das matrizes de elementos não têm que ser todos os mesmos. O exemplo a seguir aloca uma matriz de matrizes de `int`:
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,14 +35,14 @@ O operador new permite que os valores iniciais dos elementos da matriz sejam esp
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-O comprimento da matriz é inferido a partir do número de expressões entre {e}. A variável local e declarações de campo podem ser reduzidas ainda mais, de modo que o tipo de matriz não precise ser redefinido.
+O comprimento da matriz é inferido a partir do número de expressões entre { e }. A variável local e declarações de campo podem ser reduzidas ainda mais, de modo que o tipo de matriz não precise ser redefinido.
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-Os dois exemplos anteriores são equivalentes ao seguinte código:
+Ambos os exemplos anteriores são equivalentes ao seguinte código:
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[Anterior](classes-and-objects.md)
->[Próximo](interfaces.md)
+>[Próximo](classes-and-objects.md)
+>[anterior](interfaces.md)

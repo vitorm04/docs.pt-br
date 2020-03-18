@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504006"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
@@ -33,7 +33,7 @@ Modifique o método `Main` em *program.cs* da seguinte maneira:
 
 Quando um programa é executado no Windows, qualquer valor retornado da função `Main` é armazenado em uma variável de ambiente. Essa variável de ambiente pode ser recuperada usando `ERRORLEVEL` de um arquivo em lotes ou `$LastExitCode` do PowerShell.
 
-Você pode criar o aplicativo usando o comando [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build`.
+Você pode construir o aplicativo usando o comando [DOtnet CLI.](../../../core/tools/dotnet.md) `dotnet build`
 
 Em seguida, crie um script do Powershell para executar o aplicativo e exibir o resultado. Cole o código a seguir em um arquivo de texto e salve-o como `test.ps1` na pasta que contém o projeto. Execute o script do PowerShell digitando `test.ps1` no prompt do PowerShell.
 
@@ -97,7 +97,7 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Referência de C#](../index.md)
+- [C# Guia de Programação](../index.md)
+- [C# Referência](../index.md)
 - [Main() e argumentos de linha de comando](index.md)
 - [Como exibir argumentos de linha de comando](./how-to-display-command-line-arguments.md)

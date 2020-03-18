@@ -33,15 +33,15 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093195"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos integrais (Referência C#)
 
-Os *tipos numéricos integrais* representam números inteiros. Todos os tipos numéricos integrais são [tipos de valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#integer-literals). Todos os tipos numéricos integrais dão suporte a operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos](../operators/bitwise-and-shift-operators.md), de [comparação](../operators/comparison-operators.md)e de [igualdade](../operators/equality-operators.md) .
+Os *tipos numéricos integrais* representam números inteiros. Todos os tipos numéricos integrais são [tipos de valor](value-types.md). Eles também são [tipos simples](value-types.md#built-in-value-types) e podem ser inicializados com [literais](#integer-literals). Todos os tipos numéricos integrais suportam [operadores aritméticos,](../operators/arithmetic-operators.md) [bitwise lógicos,](../operators/bitwise-and-shift-operators.md) [de comparação](../operators/comparison-operators.md)e [de igualdade.](../operators/equality-operators.md)
 
 ## <a name="characteristics-of-the-integral-types"></a>Características dos tipos integrais
 
@@ -69,13 +69,13 @@ O valor padrão de cada tipo integral é zero, `0`. Cada um dos tipos integrais 
 
 Use a estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para representar um inteiro com sinal sem nenhum limite superior ou inferior.
 
-## <a name="integer-literals"></a>Literais inteiros
+## <a name="integer-literals"></a>Literals inteiros
 
 Literais inteiros podem ser
 
-- *decimal*: sem nenhum prefixo
-- *hexadecimal*: com o prefixo de `0x` ou `0X`
-- *Binary*: com o prefixo `0b` ou `0B` (disponível em C# 7,0 e posterior)
+- *decimal*: sem qualquer prefixo
+- *hexadecimal*: `0x` com `0X` o prefixo ou prefixo
+- *binário*: `0b` com `0B` o prefixo ou (disponível em C# 7.0 e posterior)
 
 O código a seguir demonstra um exemplo de cada um:
 
@@ -85,31 +85,31 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-O exemplo anterior também mostra o uso de `_` como um *separador de dígito*, que tem C# suporte a partir de 7,0. Você pode usar o separador de dígitos com todos os tipos de literais numéricos.
+O exemplo anterior também `_` mostra o uso de como *separador de dígitos,* que é suportado a partir de C# 7.0. Você pode usar o separador de dígitos com todos os tipos de literais numéricos.
 
-O tipo de um inteiro literal é determinado por seu sufixo da seguinte maneira:
+O tipo de um inteiro literal é determinado pelo seu sufixo da seguinte forma:
 
-- Se o literal não tiver nenhum sufixo, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `int`, `uint`, `long``ulong`.
-- Se o literal for sufixado por `U` ou `u`, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `uint``ulong`.
-- Se o literal for sufixado por `L` ou `l`, seu tipo será o primeiro dos seguintes tipos em que seu valor pode ser representado: `long``ulong`.
+- Se o literal não tiver sufixo, seu tipo é o primeiro dos `int` `uint`seguintes tipos em que seu valor pode ser representado: , , `long`. `ulong`
+- Se o literal for `U` sufixo por ou `u`, seu tipo é o primeiro `uint` `ulong`dos seguintes tipos em que seu valor pode ser representado: , .
+- Se o literal for `L` sufixo por ou `l`, seu tipo é o primeiro `long` `ulong`dos seguintes tipos em que seu valor pode ser representado: , .
 
   > [!NOTE]
-  > Você pode usar a letra minúscula `l` como um sufixo. No entanto, isso gera um aviso do compilador porque a letra `l` pode ser confundida com o `1`de dígitos. Use `L` para maior clareza.
+  > Você pode usar a `l` letra minúscula como um sufixo. No entanto, isso gera um `l` aviso compilador porque `1`a letra pode ser confundida com o dígito . Use `L` para clareza.
 
-- Se o literal for sufixado por `UL`, `Ul`, `uL`, `ul`, `LU`, `Lu`, `lU`ou `lu`, seu tipo será `ulong`.
+- Se o literal for `UL`sufixo por `Lu` `lU`, `Ul` `uL`, `ul`, , `LU`, , , , ou `lu`, seu tipo é `ulong`.
 
 Se o valor representado por um literal inteiro exceder <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, ocorrerá um erro de compilador [CS1021](../../misc/cs1021.md).
 
-Se o tipo determinado de um literal inteiro for `int` e o valor representado pelo literal estiver dentro do intervalo do tipo de destino, o valor poderá ser convertido implicitamente em `sbyte`, `byte`, `short`, `ushort`, `uint`ou `ulong`:
+Se o tipo determinado de um `int` inteiro literal é e o valor representado pelo literal está dentro do `sbyte`intervalo `byte` `short`do `ushort`tipo de destino, o valor pode ser implicitamente convertido para, , , , , `uint`, ou `ulong`:
 
 ```csharp
 byte a = 17;
 byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-Como mostra o exemplo anterior, se o valor do literal não estiver dentro do intervalo do tipo de destino, ocorrerá um erro de compilador [CS0031](../../misc/cs0031.md) .
+Como o exemplo anterior mostra, se o valor do literal não estiver dentro do intervalo do tipo de destino, ocorrerá um erro de compilador [CS0031.](../../misc/cs0031.md)
 
-Você também pode usar uma conversão para converter o valor representado por um literal inteiro para o tipo diferente do tipo determinado do literal:
+Você também pode usar um elenco para converter o valor representado por um inteiro literal para o tipo diferente do determinado tipo do literal:
 
 ```csharp
 var signedByte = (sbyte)42;
@@ -118,19 +118,19 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversões
 
-Você pode converter qualquer tipo numérico integral para qualquer outro tipo numérico integral. Se o tipo de destino puder armazenar todos os valores do tipo de origem, a conversão será implícita. Caso contrário, você precisa usar o [operador cast `()`](../operators/type-testing-and-cast.md#cast-operator-) para invocar uma conversão explícita. Para obter mais informações, consulte [conversões numéricas internas](numeric-conversions.md).
+Você pode converter qualquer tipo numérico integral para qualquer outro tipo numérico integral. Se o tipo de destino pode armazenar todos os valores do tipo de origem, a conversão está implícita. Caso contrário, você precisa usar o [operador `()` de elenco](../operators/type-testing-and-cast.md#cast-operator-) para invocar uma conversão explícita. Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
 - [Tipos integrais](~/_csharplang/spec/types.md#integral-types)
-- [Literais inteiros](~/_csharplang/spec/lexical-structure.md#integer-literals)
+- [Literals inteiros](~/_csharplang/spec/lexical-structure.md#integer-literals)
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Tipos de valor](value-types.md)
-- [Tipos de ponto flutuante](floating-point-numeric-types.md)
+- [Tipos de pontos flutuantes](floating-point-numeric-types.md)
 - [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Numéricos no .NET](../../../standard/numerics.md)

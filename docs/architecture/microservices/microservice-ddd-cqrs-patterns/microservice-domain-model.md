@@ -3,10 +3,10 @@ title: Criando um modelo de domínio de microsserviço
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os principais conceitos ao projetar um modelo de domínio orientado a DDD.
 ms.date: 01/30/2020
 ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502329"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
@@ -55,10 +55,10 @@ Algumas pessoas dizem que o modelo de domínio anêmico é um antipadrão. Isso 
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **DevIQ.**  \ de entidade de domínio
+- **O DevIQ. Entidade de Domínio** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler. O modelo de domínio** \
+- **Martin Fowler. O Modelo de Domínio** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. O modelo de domínio anêmico** \
@@ -74,22 +74,22 @@ Algo que é uma entidade em um microsserviço pode não ser uma entidade em outr
 
 Uma pessoa com um nome e um sobrenome geralmente é uma entidade, porque a pessoa tem uma identidade, mesmo se o nome e o sobrenome coincidirem com outro conjunto de valores, por exemplo, se esses nomes também se referirem a uma outra pessoa.
 
-Os objetos de valor são difíceis de gerenciar em bancos de dados relacionais e ORMs como Entity Framework (EF), enquanto em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
+Objetos de valor são difíceis de gerenciar em bancos de dados relacionais e ORMs como Entity Framework (EF), enquanto em bancos de dados orientados a documentos eles são mais fáceis de implementar e usar.
 
-EF Core 2,0 e versões posteriores incluem o recurso de [entidades de propriedade](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita o tratamento de objetos de valor, como veremos detalhadamente mais adiante.
+As versões EF Core 2.0 e posteriores incluem o recurso [Entidades De Propriedade](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting) que facilita o manuseio de objetos de valor, como veremos em detalhes mais tarde.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Martin Fowler. Padrão de objeto de valor** \
+- **Martin Fowler. Padrão do objeto de valor** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Objeto de valor** \
   <https://deviq.com/value-object/>
 
-- **Objetos de valor no Desenvolvimento Orientado por Testes** \
+- **Objetos de valor em desenvolvimento orientado a teste** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre objetos de valor) \
+- **Eric Evans. Design orientado por domínio: enfrentando a complexidade no coração do software.** (Livro; inclui uma discussão sobre objetos de valor) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>O padrão de agregação
@@ -108,7 +108,7 @@ A finalidade de uma raiz de agregação é garantir a consistência da agregaç�
 
 Na Figura 7-9, veja as agregações de exemplo, como a agregação de comprador, que contém uma única entidade (a raiz de agregação de comprador). A agregação de pedido contém várias entidades e um objeto de valor.
 
-![Diagrama comparando uma agregação de comprador e uma agregação de ordem.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
+![Diagrama comparando um agregado comprador e um agregado de pedidos.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Figura 7-9**. Exemplo de agregações com uma única entidade ou com várias entidades
 
@@ -133,24 +133,24 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Vaughn Vernon. Design agregado efetivo-parte I: modelando uma única agregação** (de <http://dddcommunity.org/>) \
+- **O Vaughn Vernon. Design Agregado Efetivo - Parte I: Modelagem de um Único Agregado** (a partir de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Design agregado efetivo-parte II: fazer com que as agregações funcionem juntas** (de <http://dddcommunity.org/>) \
+- **O Vaughn Vernon. Design agregado efetivo - Parte II: Fazendo os agregados funcionarem juntos** (a partir <http://dddcommunity.org/>de ) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Design agregado efetivo-parte III: obtendo informações sobre a descoberta** (de <http://dddcommunity.org/>) \
+- **O Vaughn Vernon. Design Agregado Efetivo - Parte III: Obtendo insightatravés** da Descoberta (a partir de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. Padrões de design tático DDD** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Desenvolvendo um microserviço transacional usando agregações** \
+- **Chris Richardson. Desenvolvimento de microserviços transacionais usando agregados** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. O padrão agregado** \
+- **O DevIQ. O padrão Agregado** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Anterior](ddd-oriented-microservice.md)
->[Próximo](net-core-microservice-domain-model.md)
+>[Próximo](ddd-oriented-microservice.md)
+>[anterior](net-core-microservice-domain-model.md)

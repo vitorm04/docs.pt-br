@@ -1,5 +1,5 @@
 ---
-title: <list> - C# guia de programação
+title: <list> - Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789747"
 ---
-# <a name="list-c-programming-guide"></a>> de lista deC# \<(guia de programação)
+# <a name="list-c-programming-guide"></a>\<lista> (guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,7 +36,7 @@ ms.locfileid: "76789747"
 </list>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `term`
 
@@ -54,13 +54,13 @@ Cada item na lista é especificado com um bloco \<item>. Ao criar uma lista de d
 
 Uma lista ou tabela pode ter quantos blocos \<item> forem necessários.
 
-Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
+Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
 
 ## <a name="example"></a>Exemplo
 
 [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

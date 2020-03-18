@@ -3,15 +3,15 @@ title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503649"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -26,14 +26,14 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote NuGet (ou seja, um arquivo *. nupkg* ).
+O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado deste comando é um pacote NuGet (ou seja, um arquivo *.nupkg).*
 
-Se você quiser gerar um pacote que contém os símbolos de depuração, terá duas opções disponíveis:
+Se você quiser gerar um pacote que contenha os símbolos de depuração, você tem duas opções disponíveis:
 
-- `--include-symbols`-ele cria o pacote de símbolos.
-- `--include-source`-ele cria o pacote de símbolos com uma pasta `src` dentro do que contém os arquivos de origem.
+- `--include-symbols`- cria o pacote de símbolos.
+- `--include-source`- ele cria o pacote `src` de símbolos com uma pasta dentro contendo os arquivos de origem.
 
 As dependências do NuGet do projeto empacotado são adicionadas ao arquivo *.nuspec* para que possam ser resolvidas apropriadamente quando o pacote for instalado. As referências de projeto a projeto não são empacotadas dentro do projeto. No momento, você precisa ter um pacote por projeto se tiver dependências de projeto a projeto.
 
@@ -55,13 +55,13 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 `PROJECT | SOLUTION`
 
-  O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), um arquivo de solução ou um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
+  O projeto ou solução para embalar. Ou é um caminho para um [arquivo csproj,](csproj.md)um arquivo de solução ou para um diretório. Se não for especificado, o comando pesquisa o diretório atual para um arquivo de projeto ou solução.
 
 ## <a name="options"></a>Opções
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
+  Define a configuração da compilação. O padrão para `Debug`a maioria dos projetos é, mas você pode substituir as configurações de configuração de compilação em seu projeto.
 
 - **`--force`**
 
@@ -73,11 +73,11 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--include-source`**
 
-  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de origem são incluídos na pasta `src` dentro do pacote de símbolos.
+  Inclui os símbolos de depuração pacotes NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de fontes `src` estão incluídos na pasta dentro do pacote de símbolos.
 
 - **`--include-symbols`**
 
-  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída.
+  Inclui os símbolos de depuração pacotes NuGet, além dos pacotes NuGet regulares no diretório de saída.
 
 - **`--interactive`**
 
@@ -163,7 +163,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Empacotar o projeto e usar um tempo de execução específico (Windows 10) para a operação de restauração:
+- Embale o projeto e use um tempo de execução específico (Windows 10) para a operação de restauração:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

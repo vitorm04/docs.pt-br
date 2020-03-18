@@ -3,10 +3,10 @@ title: Implementando leituras/consultas em um microsserviço CQRS
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Entenda a implementação do lado de consultas do CQRS no microsserviço de ordenação no eShopOnContainers usando o Dapper.
 ms.date: 10/08/2018
 ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972081"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
@@ -15,7 +15,7 @@ Para leituras/consultas, o microsserviço de ordenação do aplicativo de refer�
 
 A abordagem é simples, conforme mostra a Figura 7-3. A interface de API é implementada pelos controladores de API da Web usando qualquer infraestrutura, como um micro ORM (Mapeador Relacional de Objeto) como Dapper e retornando ViewModels dinâmicos dependendo das necessidades dos aplicativos de interface do usuário.
 
-![Diagrama mostrando consultas de alto nível no CQRS simplificado.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
+![Diagrama mostrando o lado das consultas de alto nível em CQRS simplificado.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. A abordagem mais simples para consultas em um microsserviço CQRS
 
@@ -23,7 +23,7 @@ A abordagem mais simples para o lado de consultas em uma abordagem CQRS simplifi
 
 Como essa é uma abordagem simples, o código necessário para o lado de consultas (como o código usando um micro ORM como [Dapper](https://github.com/StackExchange/Dapper)) pode ser implementado [dentro do mesmo projeto de API da Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). A Figura 7-4 mostra isso. As consultas são definidas no projeto de microsserviço **Ordering.API** dentro da solução eShopOnContainers.
 
-![Captura de tela do da pasta de consultas do projeto de ordenação. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![Captura de tela da pasta Consultas do projeto Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Consultas no microsserviço de Ordenação em eShopOnContainers
 
@@ -177,7 +177,7 @@ Essa é outra razão pela qual tipos retornados explícitos são melhores que ti
 
 Na imagem a seguir, você pode ver como a interface do usuário Swagger mostra as informações de ResponseType.
 
-![Captura de tela da página da interface do usuário do Swagger para a API de ordenação.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
+![Captura de tela da página Swagger UI para a API de encomenda.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5**. Interface do usuário do Swagger mostrando os tipos de resposta e possíveis códigos de status HTTP de uma API da Web
 
@@ -188,12 +188,12 @@ Você pode ver na imagem acima alguns valores de exemplo com base nos tipos View
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **Julie Lerman. Pontos de dados – Dapper, Entity Framework e aplicativos híbridos (artigo da MSDN Magazine)**  
+- **Julie Lerman. Pontos de dados - Dapper, Entity Framework e Hybrid Apps (artigo da revista MSDN)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
-- **Páginas de ajuda da API Web ASP.NET Core usando o Swagger**  
+- **ASP.NET páginas de ajuda da API da Web principais usando o Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[Anterior](eshoponcontainers-cqrs-ddd-microservice.md)
->[Próximo](ddd-oriented-microservice.md)
+>[Próximo](eshoponcontainers-cqrs-ddd-microservice.md)
+>[anterior](ddd-oriented-microservice.md)

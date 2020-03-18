@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450162"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
@@ -40,7 +40,7 @@ Para resolver esses problemas, os aplicativos geralmente evoluem para soluções
 
 ## <a name="what-are-layers"></a>O que são camadas?
 
-Conforme a complexidade dos aplicativos aumenta, uma maneira de gerenciar essa complexidade é dividir o aplicativo de acordo com suas responsabilidades ou interesses. Isso segue a separação do princípio de preocupações e pode ajudar a manter uma base de código crescente organizada para que os desenvolvedores possam encontrar facilmente onde determinadas funcionalidades são implementadas. Apesar disso, a arquitetura em camadas oferece inúmeras vantagens, além de apenas a organização do código.
+Conforme a complexidade dos aplicativos aumenta, uma maneira de gerenciar essa complexidade é dividir o aplicativo de acordo com suas responsabilidades ou interesses. Isso segue a separação do princípio de preocupações e pode ajudar a manter uma base de código crescente organizada para que os desenvolvedores possam facilmente encontrar onde determinada funcionalidade é implementada. Apesar disso, a arquitetura em camadas oferece inúmeras vantagens, além de apenas a organização do código.
 
 Com a organização do código em camadas, a funcionalidade comum de baixo nível pode ser reutilizada em todo o aplicativo. Essa reutilização é útil porque significa que menos código precisa ser escrito e ainda pode permitir que o aplicativo seja padronizado em uma única implementação, seguindo o princípio [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
@@ -59,7 +59,7 @@ A disposição em camadas lógicas é uma técnica comum para melhorar a organiz
 
 A organização mais comum da lógica do aplicativo em camadas é mostrada na Figura 5-2.
 
-![Camadas de aplicativo típicas](./media/image5-2.png)
+![Camadas típicas de aplicativos](./media/image5-2.png)
 
 **Figura 5-2.** Camadas de aplicativo típicas.
 
@@ -69,7 +69,7 @@ Uma desvantagem dessa abordagem tradicional de disposição em camadas é que as
 
 A Figura 5-3 mostra uma solução de exemplo, que divide o aplicativo em três projetos por responsabilidade (ou camada).
 
-![Um aplicativo monolítico simples com três projetos](./media/image5-3.png)
+![Uma simples aplicação monolítica com três projetos](./media/image5-3.png)
 
 **Figura 5-3.** Um aplicativo monolítico simples com três projetos.
 
@@ -91,7 +91,7 @@ Essa unidade pode ser escalada verticalmente ou expandida para aproveitar a esca
 
 A abordagem mais simples para dimensionar um aplicativo Web no Azure é configurar o dimensionamento manualmente no Plano do Serviço de Aplicativo do aplicativo. A Figura 5-6 mostra a tela apropriada do painel do Azure para configurar a quantidade de instâncias que atendem um aplicativo.
 
-![Dimensionamento do plano do serviço de aplicativo no Azure](./media/image5-6.png)
+![Dimensionamento do Plano de Serviço de Aplicativos no Azure](./media/image5-6.png)
 
 **Figura 5-6.** Dimensionamento do Plano do Serviço de Aplicativo no Azure.
 
@@ -99,7 +99,7 @@ A abordagem mais simples para dimensionar um aplicativo Web no Azure é configur
 
 Os aplicativos que seguem o Princípio da Inversão de Dependência, bem como os princípios de DDD (Design Controlado por Domínio), tendem a chegar a uma arquitetura semelhante. Essa arquitetura foi conhecida por muitos nomes ao longo dos anos. Um dos primeiros nomes foi Arquitetura Hexagonal, seguido por Portas e Adaptadores. Mais recentemente, ela é citada como a [Arquitetura Cebola](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [Arquitetura Limpa](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). O último nome, Arquitetura Limpa, é usado como o nome dessa arquitetura neste livro eletrônico.
 
-O aplicativo de referência eShopOnWeb usa a abordagem de arquitetura limpa para organizar seu código em projetos. Você pode encontrar um modelo de solução que pode ser usado como um ponto de partida para seu próprio ASP.NET Core no repositório GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) .
+O aplicativo de referência eShopOnWeb usa a abordagem Clean Architecture na organização de seu código em projetos. Você pode encontrar um modelo de solução que você pode usar como ponto de partida para seu próprio ASP.NET Core no repositório GitHub [ardalis/cleanarchitecture.](https://github.com/ardalis/cleanarchitecture)
 
 A arquitetura limpa coloca a lógica de negócios e o modelo de aplicativo no centro do aplicativo. Em vez de fazer com que a lógica de negócios dependa do acesso a dados ou de outros interesses da infraestrutura, essa dependência é invertida: os detalhes de implementação e a infraestrutura dependem do Núcleo do Aplicativo. Isso é feito pela definição de abstrações, ou interfaces, no Núcleo do Aplicativo, que, em seguida, são implementadas por tipos definidos na camada de infraestrutura. Uma maneira comum de visualizar essa arquitetura é usar uma série de círculos concêntricos, semelhantes a uma cebola. A Figura 5-7 mostra um exemplo desse estilo de representação de arquitetura.
 
@@ -119,7 +119,7 @@ Observe que as setas sólidas representam as dependências em tempo de compilaç
 
 A Figura 5-9 mostra uma exibição mais detalhada da arquitetura de um aplicativo ASP.NET Core quando criado seguindo essas recomendações.
 
-![Diagrama de arquitetura de ASP.NET Core seguindo a arquitetura limpa](./media/image5-9.png)
+![ASP.NET diagrama de arquitetura Core seguindo arquitetura limpa](./media/image5-9.png)
 
 **Figura 5-9.** Diagrama da arquitetura do ASP.NET Core que segue a Arquitetura Limpa.
 
@@ -145,7 +145,7 @@ Em aplicativos monolíticos, os projetos de Núcleo do Aplicativo, Infraestrutur
 
 Em uma solução de Arquitetura Limpa, cada projeto tem responsabilidades bem-definidas. Assim, determinados tipos pertencem a cada projeto e, com frequência, haverá pastas correspondentes a esses tipos no projeto apropriado.
 
-O Núcleo do Aplicativo contém o modelo de negócios, que inclui entidades, serviços e interfaces. Essas interfaces incluem abstrações para operações que serão executadas usando a infraestrutura, como acesso a dados, acesso ao sistema de arquivos, chamadas de rede, etc. Às vezes, serviços ou interfaces definidos nessa camada precisarão trabalhar com tipos que não sejam de entidade que não tenham dependências na interface do usuário ou na infraestrutura. Eles podem ser definidos como DTOs (Objetos de Transferência de Dados) simples.
+O Núcleo do Aplicativo contém o modelo de negócios, que inclui entidades, serviços e interfaces. Essas interfaces incluem abstrações para operações que serão realizadas usando infra-estrutura, como acesso a dados, acesso ao sistema de arquivos, chamadas de rede, etc. Às vezes, serviços ou interfaces definidas nesta camada precisarão trabalhar com tipos não-entidades que não tenham dependências de Interface do Usuário ou Infra-estrutura. Eles podem ser definidos como DTOs (Objetos de Transferência de Dados) simples.
 
 ### <a name="application-core-types"></a>Tipos de Núcleo do Aplicativo
 
@@ -211,7 +211,7 @@ Implantar atualizações como imagens do Docker é muito mais rápido e eficient
 
 Como os contêineres são inerentemente imutáveis por design, você nunca precisa se preocupar com VMs corrompidas, enquanto os scripts de atualização podem esquecer de levar em conta alguma configuração específica ou um arquivo deixado no disco.
 
-Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Não mais "ele funciona em meu computador, por que ele não funciona em produção?"
+Você pode usar contêineres do Docker para a implantação monolítica de aplicativos Web mais simples. Isso melhora os pipelines de integração contínua e de implantação contínua e ajuda a obter êxito na implantação de produção. Chega de "Funciona na minha máquina, por que não funciona na produção?"
 
 Uma arquitetura baseada em microsserviços tem muitos benefícios, mas esses benefícios são fornecidos ao custo do aumento da complexidade. Em alguns casos, os custos superam os benefícios, portanto, um aplicativo de implantação monolítica em execução em um único contêiner ou em alguns contêineres é uma opção melhor.
 
@@ -259,7 +259,7 @@ networks:
       name: nat
 ```
 
-O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Web` do `Dockerfile`:
+O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
@@ -295,13 +295,13 @@ Para adicionar o suporte ao Docker ao aplicativo usando o Visual Studio, verifiq
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **O Padrão de Repositório**  
   <https://deviq.com/repository-pattern/>
-- **Limpar modelo de solução de arquitetura**  
+- **Modelo de solução de arquitetura limpa**  
   <https://github.com/ardalis/cleanarchitecture>
-- **Livro eletrônico Architecting Microservices** (Arquitetando microsserviços)  
+- **Livro eletrônico Architecting Microservices**  
   <https://aka.ms/MicroservicesEbook>
 - **DDD (design controlado por domínio)**  
   <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
->[Anterior](architectural-principles.md)
->[Próximo](common-client-side-web-technologies.md)
+>[Próximo](architectural-principles.md)
+>[anterior](common-client-side-web-technologies.md)

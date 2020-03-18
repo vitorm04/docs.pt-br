@@ -1,5 +1,5 @@
 ---
-title: Delimitadores para marcas de documentação C# – guia de programação
+title: Delimitadores para tags de documentação - Guia de programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789828"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores para marcas de documentaçãoC# (guia de programação)
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Delimitadores para tags de documentação (guia de programação C#)
 
 O uso de comentários do documento XML requer delimitadores, que indicam ao compilador em que um comentário de documentação começa e termina. Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:
 
@@ -28,7 +28,7 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
 
   Delimitadores multilinha.
 
-  Há algumas regras de formatação a serem seguidas ao usar os delimitadores de `/** */`:
+  Existem algumas regras de formatação `/** */` a seguir quando você usa os delimitadores:
   
   - Na linha que contém o delimitador `/**`, se o restante da linha for um espaço em branco, a linha não será processada para comentários. Se o primeiro caractere após o delimitador `/**` for um espaço em branco, esse caractere de espaço em branco será ignorado e o restante da linha será processado. Caso contrário, todo o texto da linha após o delimitador `/**` é processado como parte do comentário.
 
@@ -52,7 +52,7 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
     */
     ```
 
-  - O compilador identifica um padrão comum de "\*" no início da segunda e terceira linhas. O padrão não é incluído na saída.
+  - O compilador identifica um padrão \* comum de " no início da segunda e terceira linhas. O padrão não é incluído na saída.
 
     ```csharp
     /**
@@ -82,8 +82,8 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
-- [Comentários de documentação XML](./index.md)
-- [-Doc (C# opções do compilador)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentários da documentação XML](./index.md)
+- [-doc (opções de compilador C#)](../../language-reference/compiler-options/doc-compiler-option.md)

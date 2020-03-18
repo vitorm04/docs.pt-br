@@ -1,16 +1,16 @@
 ---
-title: Como modificar o conteúdo da cadeia C# de caracteres-guia
+title: Como modificar o conteúdo das cordas - Guia C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543255"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo da cadeia de caracteres em C\#
+# <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo das strings em C\#
 
 Este artigo demonstra várias técnicas para produzir um `string` modificando um `string` existente. Todas as técnicas demonstradas retornam o resultado das modificações como um novo objeto `string`. Para demonstrar isso claramente, todos os exemplos armazenam o resultado em uma nova variável. Em seguida, você pode examinar o `string` original e o `string` resultante da modificação quando você executa cada exemplo.
 
@@ -48,7 +48,7 @@ Você pode remover texto de uma cadeia de caracteres usando o método <xref:Syst
 
 Você pode usar [expressões regulares](../../standard/base-types/regular-expressions.md) para substituir padrões correspondentes de texto com um novo texto, possivelmente definido por um padrão. O exemplo a seguir usa a classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> para localizar um padrão em uma cadeia de caracteres de origem e substituí-lo pela capitalização correta. O método <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> usa uma função que fornece a lógica de substituição como um de seus argumentos. Neste exemplo, essa função `LocalReplaceMatchCase` é uma **função local** declarada dentro do método de exemplo. `LocalReplaceMatchCase` usa a classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> para criar a cadeia de caracteres de substituição com a capitalização correta.
 
-Expressões regulares são mais úteis para localizar e substituir texto que segue um padrão, em vez de texto conhecido. Consulte [como Pesquisar cadeias de caracteres](search-strings.md) para obter mais detalhes. O padrão de pesquisa "the\s" procura a palavra "the" seguida por um caractere de espaço em branco. Essa parte do padrão garante que isso não corresponda a "there" na cadeia de caracteres de origem. Para obter mais informações sobre elementos de linguagem de expressão regular, consulte [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
+Expressões regulares são mais úteis para localizar e substituir texto que segue um padrão, em vez de texto conhecido. [Veja como pesquisar strings](search-strings.md) para obter mais detalhes. O padrão de pesquisa "the\s" procura a palavra "the" seguida por um caractere de espaço em branco. Essa parte do padrão garante que isso não corresponda a "there" na cadeia de caracteres de origem. Para obter mais informações sobre elementos de linguagem de expressão regular, consulte [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -62,17 +62,17 @@ O exemplo a seguir mostra como substituir um conjunto de caracteres em uma cadei
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="programmatically-build-up-string-content"></a>Criar programaticamente o conteúdo da cadeia de caracteres
+## <a name="programmatically-build-up-string-content"></a>Programmaticamente construir conteúdo de string
 
-Como as cadeias de caracteres são imutáveis, todos os exemplos anteriores criam cadeias temporárias ou matrizes de caractere. Em cenários de alto desempenho, pode ser desejável evitar essas alocações de heap. O .NET Core fornece um método de <xref:System.String.Create%2A?displayProperty=nameWithType> que permite que você preencha programaticamente o conteúdo de caractere de uma cadeia de caracteres por meio de um retorno de chamada enquanto evita as alocações de cadeia de caracteres temporárias intermediárias.
+Como as strings são imutáveis, os exemplos anteriores criam strings temporárias ou matrizes de caracteres. Em cenários de alto desempenho, pode ser desejável evitar essas alocações de pilhas. O .NET <xref:System.String.Create%2A?displayProperty=nameWithType> Core fornece um método que permite que você preencha programáticamente o conteúdo do caractere de uma string através de um retorno de chamada, evitando as alocações de strings temporárias intermediárias.
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-Você pode modificar uma cadeia de caracteres em um bloco fixo com código não seguro, mas não é **altamente** recomendável modificar o conteúdo da cadeia de caracteres depois que uma cadeia de caracteres é criada. Isso interromperá as coisas de maneiras imprevisíveis. Por exemplo, se alguém estagiárior uma cadeia de caracteres que tenha o mesmo conteúdo que o seu, ele obterá sua cópia e não esperará que você esteja modificando sua cadeia de caracteres.
+Você pode modificar uma seqüência em um bloco fixo com código inseguro, mas é **fortemente** desencorajado a modificar o conteúdo da seqüência depois que uma string é criada. Fazer isso vai quebrar as coisas de maneiras imprevisíveis. Por exemplo, se alguém internar uma string que tenha o mesmo conteúdo que o seu, ele receberá sua cópia e não esperará que você esteja modificando sua seqüência.
 
-Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de Expressão Regular - Referência Rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

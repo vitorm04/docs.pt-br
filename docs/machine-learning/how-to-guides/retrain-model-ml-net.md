@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976961"
 ---
 # <a name="re-train-a-model"></a>Treinar novamente um modelo
@@ -33,7 +33,7 @@ Os seguintes algoritmos podem ser treinados novamente do ML.NET:
 
 ## <a name="load-pre-trained-model"></a>Carregar modelo pré-treinado
 
-Primeiro, carregue o modelo pré-treinado no seu aplicativo. Para saber mais sobre como carregar os pipelines e modelos de treinamento, consulte [salvar e carregar um modelo treinado](save-load-machine-learning-models-ml-net.md).
+Primeiro, carregue o modelo pré-treinado no seu aplicativo. Para saber mais sobre como carregar pipelines e modelos de treinamento, consulte [Salvar e carregar um modelo treinado](save-load-machine-learning-models-ml-net.md).
 
 ```csharp
 // Create MLContext
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Extrair os parâmetros de modelo pré-treinado
 
-Depois que o modelo é carregado, extraia os parâmetros do modelo aprendido acessando a propriedade [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) do modelo pré-treinado. O modelo pré-treinado foi treinado usando o modelo de regressão linear [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) que cria um[`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) que gera [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Esses parâmetros de modelo de regressão linear contêm o desvio aprendido e os pesos ou os coeficientes do modelo. Esses valores serão usados como ponto de partida para o novo modelo treinado novamente.
+Uma vez carregado o modelo, extraia os [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) parâmetros do modelo aprendido acessando a propriedade do modelo pré-treinado. O modelo pré-treinado foi treinado utilizando-se o modelo [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) de regressão linear que cria um[`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) que produz [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Esses parâmetros de modelo de regressão linear contêm o desvio aprendido e os pesos ou os coeficientes do modelo. Esses valores serão usados como ponto de partida para o novo modelo treinado novamente.
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>Treinar novamente o modelo
 
-O processo de treinar novamente um modelo não é diferente daquele de treinar um modelo. A única diferença é que o método [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*), além dos dados, também utiliza como entrada os parâmetros de modelo aprendidos originais e os usa como um ponto de partida no processo de novo treinamento.
+O processo de treinar novamente um modelo não é diferente daquele de treinar um modelo. A única diferença [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) é que o método além dos dados também toma como entrada os parâmetros originais do modelo aprendido e os usa como ponto de partida no processo de retreinamento.
 
 ```csharp
 // New Data

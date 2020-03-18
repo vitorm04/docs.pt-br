@@ -1,102 +1,102 @@
 ---
-title: Cenários de negócios de exemplo e casos de uso para aplicativos sem servidor
-description: Aprenda sem servidor com uma abordagem prática acessando exemplos que variam desde o processamento de imagens até back-ends móveis e pipelines de ETL.
+title: Amostrar cenários de negócios e usar casos para aplicativos sem servidor
+description: Aprenda sem servidor com uma abordagem prática acessando amostras que vão desde o processamento de imagens até back ends móveis e pipelines ETL.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76787887"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Casos de uso e cenários de negócios sem servidor
 
-Há muitos casos de uso e cenários para aplicativos sem servidor. Este capítulo inclui exemplos que ilustram os diferentes cenários. Os cenários incluem links para documentação relacionada e repositórios de código-fonte público. Os exemplos neste capítulo permitem que você comece a usar sua própria compilação e implementação de soluções sem servidor.
+Existem muitos casos de uso e cenários para aplicativos sem servidor. Este capítulo inclui amostras que ilustram os diferentes cenários. Os cenários incluem links para documentação relacionada e repositórios de código-fonte público. As amostras deste capítulo permitem que você comece em seu próprio edifício e implemente soluções sem servidor.
 
 ## <a name="analyze-and-archive-images"></a>Analisar e arquivar imagens
 
-Este exemplo demonstra eventos sem servidor (grade de eventos), fluxos de trabalho (aplicativo lógico) e código (Azure Functions). Ele também mostra como integrar com outro recurso, neste caso, serviços cognitivas para análise de imagem.
+Esta amostra demonstra eventos sem servidor (Event Grid), fluxos de trabalho (Logic App) e código (Funções Azure). Também mostra como se integrar com outro recurso, neste caso serviços cognitivos para análise de imagem.
 
-Um aplicativo de console permite passar um link para uma URL na Web. O aplicativo publica a URL como uma mensagem de grade de eventos. Em paralelo, um aplicativo de funções sem servidor e um aplicativo lógico assinam a mensagem. O aplicativo de funções sem servidor serializa a imagem no armazenamento de BLOBs. Ele também armazena informações no armazenamento de tabelas do Azure. Os metadados armazenam a URL da imagem original e o nome da imagem de BLOB. O aplicativo lógico interage com a API do Visão Personalizada para analisar a imagem e criar uma legenda gerada pelo computador. A legenda é armazenada na tabela de metadados.
+Um aplicativo de console permite que você passe um link para uma URL na Web. O aplicativo publica a URL como uma mensagem de grade de eventos. Paralelamente, um aplicativo de função sem servidor e um aplicativo lógico assinam a mensagem. O aplicativo de função sem servidor serializa a imagem para o armazenamento blob. Ele também armazena informações no Azure Table Storage. Os metadados armazenam a URL de imagem original e o nome da imagem blob. O aplicativo lógico interage com a API de visão personalizada para analisar a imagem e criar uma legenda gerada por máquina. A legenda é armazenada na tabela de metadados.
 
 ![Analisar e arquivar a arquitetura de imagens](./media/image-processing-example.png)
 
-Um SPA (aplicativo de página única) separado chama uma função sem servidor para obter uma lista de imagens e metadados. Para cada imagem, ele chama outra função que entrega os dados de imagem do arquivo morto. O resultado final é uma galeria com legendas automáticas.
+Um aplicativo de página única separado (SPA) chama uma função sem servidor para obter uma lista de imagens e metadados. Para cada imagem, ela chama outra função que fornece os dados de imagem do arquivo. O resultado final é uma galeria com legendas automáticas.
 
 ![Galeria de imagens automatizada](./media/automated-image-gallery.png)
 
-O repositório completo e as instruções para criar o aplicativo lógico estão disponíveis aqui: [cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue).
+O repositório completo e as instruções para construir o aplicativo lógico estão disponíveis aqui: [Cola da grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue).
 
-## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Cliente móvel de plataforma cruzada usando Xamarin. Forms e funções
+## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Cliente móvel multiplataforma usando Xamarin.Forms e funções
 
-Veja como implementar uma função simples sem servidor do Azure no portal da Web do Azure ou no Visual Studio. Crie um cliente com o Xamarin. Forms que é executado em Android, iOS e Windows. O aplicativo é então refinado para usar JavaScript Object Notation (JSON) como uma mídia de comunicação entre o servidor e os clientes móveis com um back-end sem servidor.
+Veja como implementar uma simples função Azure sem servidor no Portal Web do Azure ou no Visual Studio. Crie um cliente com Xamarin.Forms que seja executado no Android, iOS e Windows. O aplicativo é então refinado para usar A notação de objeto JavaScript (JSON) como um meio de comunicação entre o servidor e os clientes móveis com um back-end sem servidor.
 
-Para obter mais informações, consulte [implementando uma função simples do Azure com um cliente Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/).
+Para obter mais informações, consulte [Implementando uma função azure simples com um cliente Xamarin.Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/).
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>Gerar um mosaico de fotos com reconhecimento de imagem sem servidor
 
-O exemplo usa Azure Functions e serviços cognitivas da Microsoft Serviço de Visão Personalizada para gerar um mosaico de fotos a partir de uma imagem de entrada. O modelo é treinado para reconhecer imagens. Quando uma imagem é carregada, ela reconhece a imagem e pesquisa com o Bing. A imagem original é recomposta usando os resultados da pesquisa.
+A amostra usa funções do Azure e do Serviço de Visão Personalizada do Microsoft Cognitive Services para gerar um mosaico fotográfico a partir de uma imagem de entrada. O modelo é treinado para reconhecer imagens. Quando uma imagem é carregada, ela reconhece a imagem e pesquisa com Bing. A imagem original é recomposta usando os resultados da pesquisa.
 
 ![Foto de olho de Orlando e mosaico](./media/orlando-eye-both.png)
 
-Por exemplo, você pode treinar seu modelo com pontos de referência Orlando, como o olho de Orlando. Visão Personalizada reconhecerá uma imagem do olho de Orlando e a função criará um mosaico de fotos composto pelos resultados da pesquisa de imagem do Bing para "olho de Orlando".
+Por exemplo, você pode treinar seu modelo com pontos turísticos de Orlando, como o Orlando Eye. A Custom Vision reconhecerá uma imagem do Orlando Eye, e a função criará um mosaico fotográfico composto pelos resultados de pesquisa de imagem de Bing para "Orlando Eye".
 
-Para obter mais informações, consulte [Azure Functions o gerador de mosaico de fotos](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
+Para obter mais informações, consulte [o gerador de mosaico de fotos Azure Functions](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic).
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>Migrar um aplicativo existente para a nuvem
 
-Conforme discutido nos capítulos anteriores, é comum adotar uma arquitetura de N camadas para hospedar seu aplicativo local. Embora a migração de recursos "no estado em que se encontra" usando máquinas virtuais seja o caminho menos arriscado para a nuvem, muitas empresas optam por usar a oportunidade de refatorar seus aplicativos. Felizmente, a refatoração não precisa ser um esforço "tudo ou nada". Na verdade, é possível migrar seu aplicativo e, em seguida, substituir componentes por contrapartes nativas da nuvem.
+Como discutido em capítulos anteriores, é comum adotar uma arquitetura N-Tier para hospedar seu aplicativo no local. Embora migrar recursos "como é" usando máquinas virtuais seja o caminho menos arriscado para a nuvem, muitas empresas optam por usar a oportunidade para refatorar suas aplicações. Felizmente, refatorar não precisa ser um esforço "tudo ou nada". Na verdade, é possível migrar seu aplicativo e substituir componentes por contrapartes nativas da nuvem.
 
-O aplicativo usa o recurso de proxies do Azure Functions para habilitar a refatoração de um ponto de extremidade do código local herdado para um ponto de extremidade sem servidor.
+O aplicativo usa o recurso proxies do Azure Functions para permitir a refatoração de um ponto final do código local legado para um ponto final sem servidor.
 
 ![Arquitetura de migração](./media/migration-architecture.png)
 
-O proxy fornece um único ponto de extremidade de API que é atualizado para redirecionar solicitações individuais à medida que elas são movidas para funções sem servidor.
+O proxy fornece um único ponto final de API que é atualizado para redirecionar solicitações individuais à medida que são movidas para funções sem servidor.
 
-Você pode exibir um vídeo que percorre toda a migração: comparando [e Shift com o Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Acesse o código de exemplo: [traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Você pode ver um vídeo que percorre toda a migração: [Levantar e shift com funções azure sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102). Acesse o código de exemplo: [Traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
-## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analisar um arquivo CSV e inseri-lo em um banco de dados
+## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analise um arquivo CSV e insira em um banco de dados
 
-Extração, transformação e carregamento (ETL) é uma função comercial comum que integra sistemas diferentes. As abordagens tradicionais geralmente envolvem a configuração de servidores FTP dedicados e, em seguida, a implantação de trabalhos agendados para analisar arquivos e traduzi-los para uso comercial. A arquitetura sem servidor facilita o trabalho, pois um gatilho pode ser acionado quando o arquivo é carregado. Azure Functions resolve tarefas como ETL por meio de sua composição ideal de pequenas partes de código que se concentram em um problema específico.
+Extrair, Transformar e Carregar (ETL) é uma função de negócios comum que integra diferentes sistemas. As abordagens tradicionais geralmente envolvem a criação de servidores FTP dedicados e, em seguida, a implantação de trabalhos programados para analisar arquivos e traduzi-los para uso comercial. A arquitetura sem servidor facilita o trabalho porque um gatilho pode ser acionado quando o arquivo é carregado. O Azure Functions aborda tarefas como o ETL através de sua composição ideal de pequenos pedaços de código que se concentram em um problema específico.
 
-![Captura de tela que mostra o processo de análise de CSV.](./media/serverless-business-scenarios/csv-parse-database-import.png)
+![Captura de tela que mostra o processo de análise csv.](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
-Para o código-fonte e um laboratório prático, consulte [laboratório de importação de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol).
+Para obter código fonte e um laboratório prático, consulte [o laboratório de importação csv](https://github.com/JeremyLikness/azure-fn-file-process-hol).
 
-## <a name="shorten-links-and-track-metrics"></a>Encurtar links e controlar métricas
+## <a name="shorten-links-and-track-metrics"></a>Encurtar links e rastrear métricas
 
-As ferramentas de redução de links ajudaram originalmente a codificar URLs em postagens curtas no Twitter para acomodar o limite de 140 caracteres. Eles cresceram para abranger vários usos, mais comumente para controlar o clique para análise. O link Shortener Scenario é um aplicativo totalmente sem servidor que gerencia as métricas de links e relatórios.
+Ferramentas de encurtamento de link originalmente ajudaram a codificar URLs em postagens curtas no Twitter para acomodar o limite de 140 caracteres. Eles cresceram para abranger vários usos, mais comumente para rastrear click-throughs para análises. O cenário de encurtamento de links é um aplicativo totalmente sem servidor que gerencia links e métricas de relatórios.
 
-Azure Functions é usado para servir um aplicativo de página única (SPA) que permite colar a URL longa e gerar URLs curtas. As URLs são marcadas para controlar coisas como campanhas (tópicos) e meios (como redes sociais nas quais os links são postados). O código curto é armazenado no armazenamento de tabelas do Azure como a chave, com a URL longa como o valor. Quando você clica no link curto, outra função pesquisa a URL longa, envia um redirecionamento e coloca as informações sobre o evento em uma fila. Outra função do Azure processa a fila e coloca as informações em Azure Cosmos DB.
+As funções do Azure são usadas para servir um Aplicativo de Página Única (SPA) que permite colar a URL longa e gerar URLs curtas. Os URLs são marcados para rastrear coisas como campanhas (tópicos) e meios (como redes sociais para as quais os links são postados). O código curto é armazenado no Azure Table Storage como a chave, com a URL longa como o valor. Quando você clica no link curto, outra função procura a URL longa, envia um redirecionamento e coloca informações sobre o evento em uma fila. Outra função do Azure processa a fila e coloca as informações no Azure Cosmos DB.
 
-![Vincular arquitetura do Shortener](./media/link-shortener-architecture.png)
+![Arquitetura de encurtador de link](./media/link-shortener-architecture.png)
 
-Em seguida, você pode criar um painel de Power BI para coletar informações sobre os dados coletados. No back-end, Application Insights fornece métricas importantes. A telemetria inclui quanto tempo leva para o usuário médio redirecionar e quanto tempo leva para acessar o armazenamento de tabelas do Azure.
+Em seguida, você pode criar um painel power bi para coletar insights sobre os dados coletados. No back-end, o Application Insights fornece métricas importantes. A telemetria inclui quanto tempo leva para o usuário médio redirecionar e quanto tempo leva para acessar o Azure Table Storage.
 
-![Exemplo de Power BI](./media/power-bi-example.png)
+![Exemplo de POWER BI](./media/power-bi-example.png)
 
-O repositório Shortener de link completo com instruções está disponível aqui: [URL sem servidor Shortener](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
+O repositório completo do encurtador de link com instruções está disponível aqui: [encurtador de URL sem servidor](https://github.com/jeremylikness/serverless-url-shortener). Você pode ler sobre uma versão simplificada aqui: [Azure Storage para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/).
 
-## <a name="verify-device-connectivity-using-a-ping"></a>Verificar a conectividade do dispositivo usando um ping
+## <a name="verify-device-connectivity-using-a-ping"></a>Verifique a conectividade do dispositivo usando um ping
 
-O exemplo consiste em um hub IoT do Azure e uma função do Azure. Uma nova mensagem no Hub IoT dispara a função do Azure. O código sem servidor envia o mesmo conteúdo de mensagem de volta para o dispositivo que o enviou. O projeto tem todo o código e a configuração de implantação necessários para a solução.
+A amostra consiste em um Hub Azure IoT e uma função Azure. Uma nova mensagem no IoT Hub aciona a função Azure. O código sem servidor envia o mesmo conteúdo de mensagem de volta para o dispositivo que o enviou. O projeto tem toda a configuração de código e implantação necessária para a solução.
 
-Para obter mais informações, consulte [ping do Hub IOT do Azure](https://github.com/Azure-Samples/iot-hub-node-ping).
+Para obter mais informações, consulte [o ping do Azure IoT Hub](https://github.com/Azure-Samples/iot-hub-node-ping).
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Gerador de mosaico de fotos Azure Functions](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
-- [Ping do Hub IoT do Azure](https://github.com/Azure-Samples/iot-hub-node-ping)
+- [Gerador de mosaico fotográfico azure Functions](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Ping no Hub do Azure IoT](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [Armazenamento do Azure para aplicativos .NET sem servidor em minutos](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [Traga seu próprio aplicativo](https://github.com/JeremyLikness/bring-own-app-connect-17)
-- [Laboratório de importação de CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-- [Cola de grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Implementando uma função simples do Azure com um cliente Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
-- [Migrar e Shift com o Azure Functions sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102)
-- [URL sem servidor Shortener](https://github.com/jeremylikness/serverless-url-shortener)
+- [Laboratório de importação csv](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Cola da grade de eventos](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Implementando uma função azure simples com um cliente Xamarin.Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+- [Levantar e shift com funções do Azure sem servidor](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Encurtador de URL sem servidor](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
->[Anterior](orchestration-patterns.md)
->[Próximo](serverless-conclusion.md)
+>[Próximo](orchestration-patterns.md)
+>[anterior](serverless-conclusion.md)

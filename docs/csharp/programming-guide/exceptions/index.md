@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76735654"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceções e manipulação de exceções (Guia de Programação em C#)
@@ -31,36 +31,36 @@ As exceções têm as seguintes propriedades:
 - Use um bloco `try` nas instruções que podem lançar exceções.
 - Quando ocorre uma exceção no bloco `try`, o fluxo de controle vai para o primeiro manipulador de exceção associada que está presente em qualquer lugar na pilha de chamadas. No C#, a palavra-chave `catch` é usada para definir um manipulador de exceção.
 - Se nenhum manipulador de exceção para uma determinada exceção estiver presente, o programa interromperá a execução com uma mensagem de erro.
-- Não capture uma exceção a menos que você possa manipulá-la e deixar o aplicativo em um estado conhecido. Se você capturar `System.Exception`, recrie-o usando a palavra-chave `throw` no final do bloco de `catch`.
+- Não capture uma exceção a menos que você possa manipulá-la e deixar o aplicativo em um estado conhecido. Se você `System.Exception`pegar, jogue-a `throw` de ré usando `catch` a palavra-chave no final do bloco.
 - Se um bloco `catch` define uma variável de exceção, você pode usá-lo para obter mais informações sobre o tipo de exceção que ocorreu.
 - As exceções podem ser geradas explicitamente por um programa usando a palavra-chave `throw`.
 - Os objetos de exceção contêm informações detalhadas sobre o erro, como o estado da pilha de chamadas e uma descrição de texto do erro.
 - O código em um bloco `finally` será executado mesmo se uma exceção for lançada. Use um bloco `finally` para liberar recursos, por exemplo, para fechar todos os fluxos ou arquivos que foram abertos no bloco `try`.
 - As exceções gerenciadas no .NET Framework são implementadas sobre o mecanismo de manipulação de exceções estruturadas do Win32. Para obter mais informações, consulte [Manipulação de exceções estruturadas (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) e [Curso rápido sobre a manipulação de exceções estruturadas do Win32](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).
 
-## <a name="related-sections"></a>Seções Relacionadas
+## <a name="related-sections"></a>Seções relacionadas
 
-Consulte os artigos a seguir para obter mais informações sobre exceções e manipulação de exceção:
+Consulte os artigos a seguir para obter mais informações sobre exceções e tratamento de exceções:
 
-- [Usando exceções](using-exceptions.md)
-- [Tratamento de Exceção](exception-handling.md)
+- [Usar exceções](using-exceptions.md)
+- [Tratamento de exceção](exception-handling.md)
 - [Criando e lançando exceções](creating-and-throwing-exceptions.md)
 - [Exceções geradas pelo compilador](compiler-generated-exceptions.md)
-- [Como tratar uma exceção usando try/catch (guiaC# de programação)](how-to-handle-an-exception-using-try-catch.md)
-- [Como executar o código de limpeza usando finally](how-to-execute-cleanup-code-using-finally.md)
-- [Como capturar uma exceção não-CLS](how-to-catch-a-non-cls-exception.md)
+- [Como lidar com uma exceção usando try/catch (Guia de Programação C#)](how-to-handle-an-exception-using-try-catch.md)
+- [Como executar código de limpeza usando finally](how-to-execute-cleanup-code-using-finally.md)
+- [Como capturar uma exceção não compatível com CLS](how-to-catch-a-non-cls-exception.md)
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
 Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.SystemException>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Palavras-chave do C#](../../language-reference/keywords/index.md)
-- [throw](../../language-reference/keywords/throw.md)
-- [try-catch](../../language-reference/keywords/try-catch.md)
+- [Jogar](../../language-reference/keywords/throw.md)
+- [tentar pegar](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [Exceções](../../../standard/exceptions/index.md)

@@ -4,17 +4,17 @@ description: Saiba mais sobre modelos personalizados para qualquer tipo de proje
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420875"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
-O [SDK do .NET Core](https://dotnet.microsoft.com/download) apresenta muitos modelos já instalados e prontos para uso. O [comando `dotnet new`](dotnet-new.md) não é apenas sobre como usar um modelo, mas também como instalar e desinstalar os modelos. A partir do .NET Core 2.0, é possível criar seus próprios modelos personalizados para qualquer tipo de projeto, como um aplicativo, serviço, ferramenta ou biblioteca de classes. É possível, inclusive, criar um modelo que gere um ou mais arquivos independentes, como um arquivo de configuração.
+O [SDK do .NET Core](https://dotnet.microsoft.com/download) apresenta muitos modelos já instalados e prontos para uso. O [ `dotnet new` comando](dotnet-new.md) não é apenas a maneira de usar um modelo, mas também como instalar e desinstalar modelos. A partir do .NET Core 2.0, é possível criar seus próprios modelos personalizados para qualquer tipo de projeto, como um aplicativo, serviço, ferramenta ou biblioteca de classes. É possível, inclusive, criar um modelo que gere um ou mais arquivos independentes, como um arquivo de configuração.
 
-É possível instalar modelos personalizados a partir de um pacote NuGet em qualquer feed do NuGet, bastando para isso fazer referência a um arquivo *.nupkg* do NuGet diretamente ou especificando um diretório de sistema de arquivos que contenha o modelo. O mecanismo de modelo oferece recursos que permitem substituir valores, incluir e excluir arquivos e executar operações de processamento personalizadas quando seu modelo é usado.
+Você pode instalar modelos personalizados de um pacote NuGet em qualquer feed NuGet, fazendo referência diretamente a um arquivo NuGet *.nupkg* ou especificando um diretório do sistema de arquivos que contém o modelo. O mecanismo de modelo oferece recursos que permitem substituir valores, incluir e excluir arquivos e executar operações de processamento personalizadas quando seu modelo é usado.
 
 O mecanismo de modelo é um software livre e o repositório de código online fica em [dotnet/modelagem](https://github.com/dotnet/templating/) no GitHub. Acesse o repositório [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obter exemplos de modelos. Mais modelos, incluindo modelos de terceiros, são encontrados em [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelos disponíveis para dotnet new) no GitHub. Para obter mais informações sobre a criação e o uso de modelos personalizados, consulte [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) (Como criar seus próprios modelos para dotnet new) e o [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki).
 
@@ -33,7 +33,7 @@ dotnet new --list
 O modelo é composto pelas seguintes partes:
 
 - Arquivos e pastas de origem.
-- Um arquivo de configuração (*template.json*).
+- Um arquivo de configuração *(template.json*).
 
 ### <a name="source-files-and-folders"></a>Arquivos e pastas de origem
 
@@ -52,14 +52,14 @@ Os arquivos gerados pelo modelo podem ser modificados com base na lógica e nas 
 
 O arquivo *template.json* é colocado em uma pasta *.template.config* no diretório raiz do modelo. O arquivo fornece informações de configuração para o mecanismo de modelo. A configuração mínima requer os membros mostrados na tabela a seguir, suficiente para criar um modelo funcional.
 
-| Membro            | Digite          | Descrição |
+| Membro            | Type          | Descrição |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | O esquema JSON do arquivo *template.json*. Os editores que dão suporte a esquemas JSON habilitam recursos de edição de JSON quando o esquema é especificado. Por exemplo, o [Visual Studio Code](https://code.visualstudio.com/) requer que esse membro habilite o IntelliSense. Use um valor de `http://json.schemastore.org/template`. |
-| `author`          | cadeia de caracteres        | O autor do modelo. |
+| `author`          | string        | O autor do modelo. |
 | `classifications` | array(string) | Zero ou mais características do modelo que um usuário pode usar para localizá-lo ao procurá-lo. As classificações também são exibidas na coluna *Marcas* quando ela é exibida em uma lista de modelos produzida usando o comando `dotnet new -l|--list`. |
-| `identity`        | cadeia de caracteres        | Um nome exclusivo para este modelo. |
-| `name`            | cadeia de caracteres        | O nome do modelo que os usuários devem ver. |
-| `shortName`       | cadeia de caracteres        | Um nome abreviado padrão para seleção do modelo aplicável aos ambientes em que o nome do modelo é especificado pelo usuário, não selecionado por uma GUI. Por exemplo, o nome curto é útil ao usar os modelos em um prompt de comando com comandos CLI. |
+| `identity`        | string        | Um nome exclusivo para este modelo. |
+| `name`            | string        | O nome do modelo que os usuários devem ver. |
+| `shortName`       | string        | Um nome abreviado padrão para seleção do modelo aplicável aos ambientes em que o nome do modelo é especificado pelo usuário, não selecionado por uma GUI. Por exemplo, o nome curto é útil ao usar os modelos em um prompt de comando com comandos CLI. |
 
 O esquema completo do arquivo *template.json* é encontrado no [Repositório de Esquema JSON](http://json.schemastore.org/template). Para saber mais sobre o arquivo *template.json*, veja o [wiki de modelagem dotnet](https://github.com/dotnet/templating/wiki).
 
@@ -248,7 +248,7 @@ Depois que um modelo é instalado, use o modelo executando o comando `dotnet new
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/cli-templates-create-item-template.md)
 - [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)

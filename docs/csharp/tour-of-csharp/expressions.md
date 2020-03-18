@@ -4,10 +4,10 @@ description: Expressões, operandos e operadores são blocos de compilação da 
 ms.date: 02/27/2020
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.openlocfilehash: 209b5da01cd7539f2bd97023f40fd149910b6f1d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159150"
 ---
 # <a name="expressions"></a>Expressões
@@ -18,8 +18,8 @@ Quando uma expressão contiver vários operadores, a *precedência* dos operador
 
 Quando ocorre um operando entre dois operadores com a mesma precedência, a *associatividade* dos operadores controla a ordem na qual as operações são executadas:
 
-* Exceto para os operadores de atribuição e de União nulo, todos os operadores binários são *associativos à esquerda*, o que significa que as operações são executadas da esquerda para a direita. Por exemplo, `x + y + z` é avaliado como `(x + y) + z`.
-* Os operadores de atribuição, a `??` de União nula e os operadores de `??=` e o operador condicional `?:` são *associativos à direita*, o que significa que as operações são executadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
+* Com exceção da atribuição e dos operadores de coalizão nula, todos os operadores binários são *associativos à esquerda, o*que significa que as operações são realizadas da esquerda para a direita. Por exemplo, `x + y + z` é avaliado como `(x + y) + z`.
+* Os operadores de cessão, o `??` `??=` nulo-coalescing `?:` e os operadores, e o operador condicional são *associativos à direita,* o que significa que as operações são realizadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
 
 Precedência e associatividade podem ser controladas usando parênteses. Por exemplo, `x + y * z` primeiro multiplica `y` por `z` e, em seguida, adiciona o resultado a `x`, mas `(x + y) * z` primeiro adiciona `x` e `y` e, em seguida, multiplica o resultado por `z`.
 
@@ -30,5 +30,5 @@ C# fornece uma série de operadores para realizar operações [aritméticas](../
 Para obter a lista completa de operadores do C# ordenada pelo nível de precedência, confira [Operadores do C#](../language-reference/operators/index.md).
 
 > [!div class="step-by-step"]
-> [Anterior](types-and-variables.md)
-> [Próximo](statements.md)
+> [Próximo](types-and-variables.md)
+> [anterior](statements.md)

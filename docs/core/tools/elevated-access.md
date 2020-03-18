@@ -4,10 +4,10 @@ description: Conheça as melhores práticas para os comandos dotnet que exigem a
 author: wli3
 ms.date: 06/26/2019
 ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156758"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acesso elevado para os comandos dotnet
@@ -31,12 +31,12 @@ As instruções a seguir mostram a maneira recomendada para instalar, executar e
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-tool"></a>Instalar a ferramenta
+### <a name="install-the-tool"></a>Instale a ferramenta
 
 Se a pasta `%ProgramFiles%\dotnet-tools` já existir, faça o seguinte para verificar se o grupo “Usuários” tem permissão para gravar ou modificar esse diretório:
 
-- Clique com o botão direito do mouse na pasta `%ProgramFiles%\dotnet-tools` e selecione **Propriedades**. A caixa de diálogo **Propriedades Comuns** é aberta.
-- Selecione a guia **segurança** . Em **nomes de grupo ou de usuário**, verifique se o grupo "usuários" tem permissão para gravar ou modificar o diretório.
+- Clique com `%ProgramFiles%\dotnet-tools` o botão direito do mouse na pasta e selecione **Propriedades**. A caixa de diálogo **Propriedades Comuns** é aberta.
+- Selecione a guia **Segurança.** Em **Grupo ou nomes de usuários,** verifique se o grupo "Usuários" tem permissão para escrever ou modificar o diretório.
 - Se o grupo “Usuários” puder gravar ou modificar o diretório, use um nome de diretório diferente ao instalar as ferramentas em vez de *dotnet-tools*.
 
 Para instalar as ferramentas, execute o seguinte comando no prompt com privilégios elevados. Ele criará a pasta *dotnet-tools* durante a instalação.

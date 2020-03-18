@@ -4,10 +4,10 @@ description: Como armazenar os resultados.
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
 ms.openlocfilehash: 66a7a95c74db4062e76c54d4339ccb7343f44067
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65633562"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>Armazenar os resultados de uma consulta na memória
@@ -28,6 +28,6 @@ Uma consulta é basicamente um conjunto de instruções sobre como recuperar e o
 
 [!code-csharp[csProgGuideLINQ#25](~/samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)

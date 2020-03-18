@@ -3,10 +3,10 @@ title: Noções básicas de criação de contêiner comum
 description: 'Aprenda um princípio fundamental do bom design de contêineres: um contêiner deve hospedar apenas um processo.'
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672493"
 ---
 # <a name="common-container-design-principles"></a>Noções básicas de criação de contêiner comum
@@ -20,5 +20,5 @@ No modelo de contêiner, um contêiner representa um único processo. Definindo 
 Você pode encontrar um cenário em que deseje vários processos em execução em um único contêiner. Em qualquer documento de arquitetura, nunca há um "nunca" e nem sempre há um "sempre". Para cenários que exigem vários processos, um padrão comum é usar o [Supervisor](http://supervisord.org/).
 
 >[!div class="step-by-step"]
->[Anterior](design-docker-applications.md)
->[Próximo](monolithic-applications.md)
+>[Próximo](design-docker-applications.md)
+>[anterior](monolithic-applications.md)

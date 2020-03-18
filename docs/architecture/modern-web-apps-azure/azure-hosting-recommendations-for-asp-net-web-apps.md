@@ -5,16 +5,16 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
 ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416721"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
 > "Líderes de linha de negócios do mundo todo estão passando por cima dos departamentos de TI para obter aplicativos da nuvem (também conhecidos como SaaS) e pagando por eles como se fossem uma assinatura de revista. E quando o serviço não é mais necessário, eles podem cancelar a assinatura sem nenhum equipamento deixado inutilizado no canto."  
-> _\- Daryl Plummer, analista do Gartner_
+> _\-Daryl Plummer, analista do Gartner_
 
 Quaisquer que sejam as necessidades e a arquitetura de seu aplicativo, o Microsoft Azure pode dar suporte a elas. Suas necessidades de hospedagem podem variar de um simples site estático até aplicativos extremamente sofisticados compostos por dezenas de serviços. Para aplicativos Web ASP.NET Core monolíticos e os serviços de suporte, há várias configurações bem conhecidas que são recomendadas. As recomendações neste artigo são agrupadas com base no tipo de recurso a ser hospedado, seja para aplicativos completos, processos individuais ou dados.
 
@@ -44,7 +44,7 @@ Os Aplicativos Web do Serviço de Aplicativo oferecem uma plataforma totalmente 
 
 - Integração com o Visual Studio.
 
-O Serviço de Aplicativo do Azure é a melhor opção para a maioria dos aplicativos Web. A implantação e o gerenciamento estão integrados à plataforma, os sites podem ser dimensionados rapidamente para manipular cargas de alto tráfego e o balanceamento de carga interno e o gerenciador de tráfego fornecem alta disponibilidade. Você pode mover os sites existentes para o Serviço de Aplicativo do Azure com facilidade usando uma ferramenta de migração online, usar um aplicativo de software livre por meio da Galeria de Aplicativos Web ou criar um novo site usando a estrutura e as ferramentas de sua escolha. O recurso WebJobs facilita a adição de um processamento de trabalho em segundo plano ao aplicativo Web do Serviço de Aplicativo. Se você tem um aplicativo ASP.NET hospedado no local usando um banco de dados, há um caminho claro de migração para um Aplicativo Web do Serviço de Aplicativo com um Banco de Dados SQL do Azure (ou acesso seguro ao servidor de banco de dados local, se preferir).
+O Serviço de Aplicativo do Azure é a melhor opção para a maioria dos aplicativos Web. A implantação e o gerenciamento estão integrados na plataforma, os sites podem ser dimensionados rapidamente para suportar altas cargas de tráfego e o gerenciador de balanceamento de carga e tráfego integrado oferece alta disponibilidade. Você pode mover os sites existentes para o Serviço de Aplicativo do Azure com facilidade usando uma ferramenta de migração online, usar um aplicativo de software livre por meio da Galeria de Aplicativos Web ou criar um novo site usando a estrutura e as ferramentas de sua escolha. O recurso WebJobs facilita a adição de um processamento de trabalho em segundo plano ao aplicativo Web do Serviço de Aplicativo. Se você tem um aplicativo ASP.NET hospedado no local usando um banco de dados, há um caminho claro de migração para um Aplicativo Web do Serviço de Aplicativo com um Banco de Dados SQL do Azure (ou acesso seguro ao servidor de banco de dados local, se preferir).
 
 ![Estratégia de migração recomendada para aplicativos .NET locais no Serviço de Aplicativo do Azure](./media/image1-6.png)
 
@@ -78,18 +78,18 @@ Como partes de aplicativos maiores são divididas em seus próprios *microsservi
 
 ### <a name="azure-kubernetes-service"></a>Serviço de Kubernetes do Azure
 
-O AKS (Serviço de Kubernetes do Azure) gerencia seu ambiente Kubernetes hospedado, acelerando e facilitando a implantação e o gerenciamento de aplicativos em contêineres, sem exigir conhecimento em orquestração de contêiner. Ele também elimina a sobrecarga de operações e manutenção contínuas por meio de provisionamento, atualização e dimensionamento de recursos sob demanda, sem deixar seus aplicativos offline.
+O Serviço de Kubernetes do Azure (AKS) gerencia seu ambiente Kubernetes hospedado, tornando rápido e fácil implantar e gerenciar os aplicativos em contêiner sem conhecimento de orquestração do contêiner. Também elimina a sobrecarga das operações em andamento e a manutenção provisionando, atualizando e dimensionamento os recursos sob demanda, sem colocar seus aplicativos offline.
 
-O AKS reduz a complexidade e a sobrecarga operacional do gerenciamento de um cluster do Kubernetes descarregando grande parte dessa responsabilidade para o Azure. Como se trata de um serviço de Kubernetes hospedado, o Azure trata das tarefas críticas, como monitoramento de integridade e manutenção, para você. Além disso, você paga apenas pelos nós do agente dentro dos clusters, não pelos mestres. Como um serviço de Kubernetes gerenciados, o AKS fornece:
+O AKS reduz a complexidade e a sobrecarga operacional de gerenciar um cluster Kubernetes deixando grande parte dessa responsabilidade para o Azure. Como um serviço Kubernetes hospedado, o Azure lida com as tarefas críticas para você, como o monitoramento da integridade e a manutenção. Além disso, você paga apenas pelos nós do agente dentro dos clusters, não pelos mestres. Como um serviço Kubernetes gerenciado, o AKS fornece:
 
 - Atualizações de versão e aplicação de patch automatizadas para o Kubernetes.
 - Dimensionamento fácil do cluster.
 - Plano de controle hospedado de autorrecuperação (mestres).
 - Economia de custos – pague somente pelos nós do pool de agentes em execução.
 
-Com o Azure lidando com o gerenciamento dos nós no cluster do AKS, você não precisa mais executar muitas tarefas manualmente, como as atualizações de cluster. Como o Azure lida com essas tarefas de manutenção importantes, o AKS não fornece acesso direto (como com SSH) ao cluster.
+Com o Azure lidando com o gerenciamento de nós no cluster AKS, você não precisa mais executar muitas tarefas manualmente, como as atualizações do cluster. Como o Azure lida com essas tarefas de manutenção importantes, o AKS não fornece acesso direto (como com SSH) ao cluster.
 
-As equipes que estão utilizando o AKS também podem aproveitar o Azure Dev Spaces. O Azure Dev Spaces ajuda as equipes a focarem no desenvolvimento e na rápida iteração de seu aplicativo de microsserviço, permitindo que elas trabalhem diretamente com toda a arquitetura de microsserviços ou com o aplicativo em execução no AKS. O Azure Dev Spaces também fornece uma maneira de atualizar independentemente partes da arquitetura de microsserviços de forma isolada, sem afetar o restante do cluster AKS ou outros desenvolvedores.
+As equipes que estão utilizando o AKS também podem aproveitar o Azure Dev Spaces. O Azure Dev Spaces ajuda as equipes a se concentrarem no desenvolvimento e na rápida iteração de seu aplicativo de microsserviço permitindo que trabalhem diretamente com toda a arquitetura ou aplicativo de microsserviço em execução no AKS. O Azure Dev Spaces também fornece uma maneira independente de atualizar partes da arquitetura de seus microsserviços de forma isolada, sem afetar o restante do cluster do AKS ou outros desenvolvedores.
 
 ![Exemplo de fluxo de trabalho do Azure Dev Spaces](./media/image1-9.gif)
 
@@ -116,7 +116,7 @@ O Azure oferece uma ampla variedade de opções de armazenamento de dados, de mo
 
 Para dados transacionais e relacionais, os Bancos de Dados SQL do Azure são a melhor opção. Para dados de alto desempenho em sua maior parte de leitura, um Cache Redis com o apoio de um Banco de Dados SQL do Azure é uma boa solução.
 
-Os dados JSON não estruturados podem ser armazenados de várias maneiras, de colunas do banco do dados SQL a BLOBs ou tabelas no armazenamento do Azure, para Azure Cosmos DB. Desses, Azure Cosmos DB oferece a melhor funcionalidade de consulta e é a opção recomendada para grandes números de documentos baseados em JSON que devem dar suporte à consulta.
+Os dados JSON não estruturados podem ser armazenados de várias maneiras, desde colunas de banco de dados SQL até Blobs ou Tabelas no Armazenamento Azure, até O Azure Cosmos DB. Destes, o Azure Cosmos DB oferece a melhor funcionalidade de consulta, e é a opção recomendada para um grande número de documentos baseados em JSON que devem suportar consultas.
 
 Dados transitórios baseados em comando ou evento usados para orquestrar o comportamento do aplicativo podem usar o Barramento de Serviço do Azure ou as Filas do Armazenamento do Azure. O Barramento do Armazenamento do Azure oferece mais flexibilidade e é o serviço recomendado para mensagens não triviais enviadas dentro e entre aplicativos.
 
@@ -124,13 +124,13 @@ Dados transitórios baseados em comando ou evento usados para orquestrar o compo
 
 Os requisitos do aplicativo devem determinar sua arquitetura. Há muitos serviços do Azure diferentes disponíveis. Escolher o certo é uma decisão importante. A Microsoft oferece uma galeria de arquiteturas de referência para ajudar a identificar as arquiteturas típicas otimizadas para cenários comuns. Você pode encontrar uma arquitetura de referência que mapeie de perto as necessidades do seu aplicativo ou que, pelo menos, ofereça um ponto de partida.
 
-A Figura 11-1 mostra uma arquitetura de referência de exemplo. Esse diagrama descreve uma abordagem de arquitetura recomendada para um site de sistema de gerenciamento de conteúdo do Sitecore otimizado para marketing.
+A Figura 11-1 mostra um exemplo de arquitetura de referência. Esse diagrama descreve uma abordagem de arquitetura recomendada para um site de sistema de gerenciamento de conteúdo do Sitecore otimizado para marketing.
 
 ![Figura 11-1](./media/image11-2.png)
 
 **Figura 11-1.** Arquitetura de referência do site de marketing do Sitecore.
 
-**Referências – recomendações de hospedagem do Azure**
+**Referências – Recomendações de hospedagem do Azure**
 
 - Arquiteturas de solução do Azure\
   <https://azure.microsoft.com/solutions/architecture/>

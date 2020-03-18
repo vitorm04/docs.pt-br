@@ -6,15 +6,15 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937608"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (Guia de Programação em C#)
 
-Os namespaces são usados intensamente em programações de C# de duas maneiras. Primeiro, o .NET usa namespaces para organizar suas várias classes, da seguinte maneira:  
+Os namespaces são usados intensamente em programações de C# de duas maneiras. Primeiro, .NET usa namespaces para organizar suas muitas classes, da seguinte forma:  
 
 [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]
 
@@ -32,7 +32,7 @@ Em segundo lugar, declarar seus próprios namespaces pode ajudar a controlar o e
 
 O nome do namespace deve ser um [nome do identificador](../inside-a-program/identifier-names.md) válido em C#.
 
-## <a name="namespaces-overview"></a>Visão geral dos namespaces
+## <a name="namespaces-overview"></a>Visão geral do Namespaces
 
 Os namespaces têm as seguintes propriedades:
 
@@ -41,15 +41,15 @@ Os namespaces têm as seguintes propriedades:
 - A diretiva `using` elimina a necessidade de especificar o nome do namespace para cada classe.
 - O namespace `global` é o namespace "raiz": `global::System` sempre fará referência ao namespace do .NET <xref:System>.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Namespaces](~/_csharplang/spec/namespaces.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Usando namespaces](using-namespaces.md)
-- [Como usar o namespace My](how-to-use-the-my-namespace.md)
+- [Como usar o My Namespace](how-to-use-the-my-namespace.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)
 - [Diretiva using](../../language-reference/keywords/using-directive.md)
-- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [:: Operador](../../language-reference/operators/namespace-alias-qualifier.md)

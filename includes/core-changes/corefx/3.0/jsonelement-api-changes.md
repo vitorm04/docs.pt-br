@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568090"
 ---
-### <a name="jsonelement-api-changes"></a>Alterações da API jsonelement
+### <a name="jsonelement-api-changes"></a>Mudanças na API do JsonElement
 
-A partir do .NET Core 3,0 Preview 7, algumas APIs <xref:System.Text.Json.JsonElement> foram alteradas para permitir uma descoberta mais fácil e maior usabilidade.
+Começando com o .NET Core 3.0 Preview 7, algumas APIs foram alteradas <xref:System.Text.Json.JsonElement> para permitir uma descoberta mais fácil e maior usabilidade.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-No .NET Core 3,0 Preview 7, as APIs de <xref:System.Text.Json.JsonElement> foram alteradas da seguinte maneira para permitir uma descoberta mais fácil e maior usabilidade.
+No .NET Core 3.0 <xref:System.Text.Json.JsonElement> Preview 7, as APIs mudaram da seguinte forma para permitir uma descoberta mais fácil e maior usabilidade.
 
-1. Todas as sobrecargas de método de `WriteProperty` foram removidas do <xref:System.Text.Json.JsonElement>. Isso afeta o código como o seguinte:
+1. Todas `WriteProperty` as sobrecargas <xref:System.Text.Json.JsonElement>do método foram removidas de . Isso afeta o código, como o seguinte:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -31,7 +31,7 @@ No .NET Core 3,0 Preview 7, as APIs de <xref:System.Text.Json.JsonElement> foram
    }
    ```
 
-1. `WriteValue` foi renomeado como <xref:System.Text.Json.JsonElement.WriteTo%2A>. Isso afeta o código como o seguinte:
+1. `WriteValue`foi renomeado <xref:System.Text.Json.JsonElement.WriteTo%2A>como . Isso afeta o código, como o seguinte:
 
    ```csharp
     using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -41,17 +41,17 @@ No .NET Core 3,0 Preview 7, as APIs de <xref:System.Text.Json.JsonElement> foram
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> agora gera um <xref:System.ArgumentNullException> quando seu parâmetro de método é `null`.
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A>agora lança <xref:System.ArgumentNullException> um quando seu `null`parâmetro de método é .
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,0 Preview 7
+3.0 Pré-visualização 7
 
 #### <a name="recommended-action"></a>Ação recomendada
 
 Se o seu código for afetado por essas alterações, você poderá fazer o seguinte:
 
-- Não há API de substituição para as sobrecargas de `WriteProperty` no <xref:System.Text.Json.JsonElement>. Em vez disso, você pode chamar uma das sobrecargas de <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> junto com o método <xref:System.Text.Json.JsonElement.WriteTo%2A> para obter o mesmo resultado. Por exemplo:
+- Não há API de `WriteProperty` substituição <xref:System.Text.Json.JsonElement>para as sobrecargas em . Em vez disso, você <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> pode chamar <xref:System.Text.Json.JsonElement.WriteTo%2A> uma das sobrecargas junto com o método para alcançar o mesmo resultado. Por exemplo: 
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -62,7 +62,7 @@ Se o seu código for afetado por essas alterações, você poderá fazer o segui
    }
    ```
 
-- Renomeie o método `WriteValue` como <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>. O parâmetro do método permanece inalterado. Por exemplo, o código anterior deve ser alterado para o seguinte:
+- Renomeie `WriteValue` <xref:System.Text.Json.JsonElement.WriteTo(System.Text.Json.Utf8JsonWriter)>o método para . O parâmetro do método permanece inalterado. Por exemplo, o código anterior deve ser alterado para o seguinte:
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ Se o seu código for afetado por essas alterações, você poderá fazer o segui
    }
    ```
 
-- Manipule o <xref:System.ArgumentNullException> em chamadas para o método <xref:System.Text.Json.JsonElement.WriteTo%2A>.
+- Manuseie <xref:System.ArgumentNullException> as <xref:System.Text.Json.JsonElement.WriteTo%2A> chamadas para o método.
 
 #### <a name="affected-apis"></a>APIs afetadas
 

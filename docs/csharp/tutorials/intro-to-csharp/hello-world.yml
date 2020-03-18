@@ -12,10 +12,10 @@ metadata:
   interactive: csharp
   ms.custom: mvc
   ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969416"
 items:
 - durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 - title: Executar seu primeiro programa em C#
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa e selecione **executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **Entrar no modo foco.** Em seguida, digite o seguinte bloco de código na janela interativa e selecione **Executar**:
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    Selecione **executar** novamente para ver os resultados.
+    Selecione **Executar** novamente para ver os resultados.
 
 
     Você usou `+` para criar cadeias de caracteres com base em cadeias de caracteres de **variáveis** e de **constantes**. Há uma maneira melhor.
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Selecione **executar** novamente para ver os resultados. Em vez de "Olá {aFriend}", a mensagem deve ser "Olá, Maira".
+    Selecione **Executar** novamente para ver os resultados. Em vez de "Olá {aFriend}", a mensagem deve ser "Olá, Maira".
 
 
     > [!NOTE]
@@ -130,7 +130,7 @@ items:
     Sua última edição foi nossa primeira análise do que você pode fazer com cadeias de caracteres. Vamos explorar mais.
 
 
-    Você não está limitado a uma única variável entre as chaves. Experimente isto:
+    Você não está limitado a uma única variável entre as chaves. Tente o seguinte:
 
 
     ```csharp
@@ -167,7 +167,7 @@ items:
 - title: Faça mais com as cadeias de caractere
   durationInMinutes: 5
   content: >
-    Você usou um **método**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, para imprimir mensagens. Um **método** é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
+    Você tem usado **method**um <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>método para imprimir mensagens. Um **método** é um bloco de código que implementa alguma ação. Ele tem um nome, portanto você pode acessá-lo.
 
 
     Suponha que suas cadeias de caracteres têm espaços à esquerda ou à direita que você não deseja exibir. Você deseja **cortar** os espaços das cadeias de caracteres.
@@ -202,7 +202,7 @@ items:
     Este exemplo reforça alguns conceitos importantes do trabalho com cadeias de caracteres. Os métodos que manipulam cadeias de caracteres retornam novos objetos de cadeia de caracteres, em vez de fazer modificações no local. Veja que cada chamada para qualquer um dos métodos `Trim` retorna uma nova cadeia de caracteres, mas não altera a mensagem original.
 
 
-    Há outros métodos disponíveis para trabalhar com uma cadeia de caracteres. Por exemplo, você provavelmente já usou um comando de pesquisa e substituição em um editor ou processador de textos. O método <xref:System.String.Replace%2A> faz algo semelhante em uma cadeia de caracteres. Ele procura uma subcadeia de caracteres e a substitui por outro texto. O método <xref:System.String.Replace%2A> utiliza dois **parâmetros**. Essas são as cadeias de caracteres entre parênteses. A primeira cadeia de caracteres é o texto a ser pesquisado. A segunda cadeia de caracteres é o texto para substituição. Experimente. Adicione este código. Digite-o para ver as dicas conforme você começa a digitar `.Re` depois da variável `sayHello`:
+    Há outros métodos disponíveis para trabalhar com uma cadeia de caracteres. Por exemplo, você provavelmente já usou um comando de pesquisa e substituição em um editor ou processador de textos. O método <xref:System.String.Replace%2A> faz algo semelhante em uma cadeia de caracteres. Ele procura uma subcadeia de caracteres e a substitui por outro texto. O <xref:System.String.Replace%2A> método requer dois **parâmetros**. Essas são as cadeias de caracteres entre parênteses. A primeira cadeia de caracteres é o texto a ser pesquisado. A segunda cadeia de caracteres é o texto para substituição. Experimente. Adicione este código. Digite-o para ver as dicas conforme você começa a digitar `.Re` depois da variável `sayHello`:
 
 
     ```csharp
@@ -296,7 +296,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Você pode selecionar os **números no C# ** link abaixo para iniciar o próximo tutorial interativo ou pode visitar o site do [.net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
+    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Você pode selecionar o link **Numbers in C#** abaixo para iniciar o próximo tutorial interativo, ou você pode visitar o [site .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o .NET Core SDK, criar um projeto em sua máquina e manter a codificação. A seção "Próximos passos" traz você de volta a esses tutoriais.
 
 
     Para ler mais sobre o tipo `string`:

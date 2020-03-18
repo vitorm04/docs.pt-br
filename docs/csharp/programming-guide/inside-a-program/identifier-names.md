@@ -3,10 +3,10 @@ title: Nomes de identificadores
 description: Conheça as regras para nomes de identificador válidos na linguagem de programação C#.
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673362"
 ---
 # <a name="identifier-names"></a>Nomes de identificadores
@@ -34,11 +34,11 @@ Além das regras, há inúmeras [convenções de nomenclatura](../../../standard
   
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Por dentro de um programa em C#](./index.md)
-- [Referência de C#](../../language-reference/index.md)
+- [C# Referência](../../language-reference/index.md)
 - [Classes](../classes-and-structs/classes.md)
 - [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Namespaces](../namespaces/index.md)
 - [Interfaces](../interfaces/index.md)
-- [Delegados](../delegates/index.md)
+- [Delega](../delegates/index.md)

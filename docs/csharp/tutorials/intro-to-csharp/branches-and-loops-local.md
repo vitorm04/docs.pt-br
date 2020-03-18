@@ -4,21 +4,21 @@ description: Neste tutorial sobre branches e loops, você escreve código em C# 
 ms.date: 10/31/2017
 ms.custom: mvc
 ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73739128"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
 Este tutorial ensina a escrever código que examina variáveis e muda o caminho de execução com base nessas variáveis. Escreva o código em C# e veja os resultados da compilação e da execução. O tutorial contém uma série de lições que exploram construções de branches e loops em C#. Estas lições ensinam os princípios básicos da linguagem C#.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Tome decisões usando a instrução `if`
 
-Crie um diretório chamado *branches-tutorial*. Faça com que o diretório atual e execute o seguinte comando:
+Crie um diretório chamado *branches-tutorial*. Faça disso o diretório atual e execute o seguinte comando:
 
 ```dotnetcli
 dotnet new console -n BranchesAndLoops -o .
@@ -235,11 +235,11 @@ for (int index = 0; index < 10; index++)
 
 Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
-A primeira parte é o **inicializador for**: `int index = 0;` declara que `index` é a variável do loop, e define seu valor inicial como `0`.
+A primeira parte é o `int index = 0;` para `index` **inicializador**: declara que é `0`a variável loop, e define seu valor inicial para .
 
-A parte central é a **condição for**: `index < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.
+A parte do meio `index < 10` é a `for` **condição para**: declara que este loop continua a ser executado desde que o valor do contador seja menor que 10.
 
-A parte final é o **iterador for**: `index++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`. Aqui, ela especifica que `index` deve ser incrementado com 1 sempre que o bloco for executado.
+A parte final é o `index++` **para iterator**: especifica como modificar a `for` variável loop após a execução do bloco após a declaração. Aqui, ela especifica que `index` deve ser incrementado com 1 sempre que o bloco for executado.
 
 Experimente você mesmo. Tente o seguinte:
 
@@ -264,7 +264,7 @@ Continue com o tutorial [Matrizes e coleções](arrays-and-collections.md) em se
 
 Saiba mais sobre esses conceitos nestes tópicos:
 
-- [Instrução If e else](../../language-reference/keywords/if-else.md)
-- [Instrução while](../../language-reference/keywords/while.md)
-- [Instrução Do](../../language-reference/keywords/do.md)
-- [Instrução for](../../language-reference/keywords/for.md)
+- [Instrução if e else](../../language-reference/keywords/if-else.md)
+- [Enquanto declaração](../../language-reference/keywords/while.md)
+- [Instrução do](../../language-reference/keywords/do.md)
+- [Para declaração](../../language-reference/keywords/for.md)

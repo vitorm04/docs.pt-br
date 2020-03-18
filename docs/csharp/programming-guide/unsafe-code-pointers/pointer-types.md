@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627704"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
@@ -24,7 +24,7 @@ O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo ref
 
 Os tipos de ponteiro não são herdados de [objeto](../../language-reference/builtin-types/reference-types.md) e não há nenhuma conversão entre tipos de ponteiro e `object`. Além disso, as conversões boxing e unboxing não oferecem suporte a ponteiros. No entanto, você pode converter entre diferentes tipos de ponteiro e tipos de ponteiro e tipos integrais.
 
-Quando você designa vários ponteiros na mesma declaração, o asterisco (*) é escrito junto apenas com o tipo subjacente; ele não é usado como um prefixo para cada nome de ponteiro. Por exemplo:
+Quando você designa vários ponteiros na mesma declaração, o asterisco (*) é escrito junto apenas com o tipo subjacente; ele não é usado como um prefixo para cada nome de ponteiro. Por exemplo: 
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -35,7 +35,7 @@ Um ponteiro não pode apontar para uma referência ou um [struct](../../language
 
 O valor da variável de ponteiro do tipo `myType*` é o endereço de uma variável do tipo `myType`. Estes são exemplos de declarações de tipos de ponteiro:
 
-|Exemplo|DESCRIÇÃO|
+|Exemplo|Descrição|
 |-------------|-----------------|
 |`int* p`|`p` é um ponteiro para um inteiro.|
 |`int** p`|`p` é um ponteiro para um ponteiro para um inteiro.|
@@ -72,20 +72,20 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 |`++` e `--`|Incrementa e decrementa ponteiros.|
 |`+` e `-`|Executa aritmética de ponteiros.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Compara ponteiros.|
-|[Operador `stackalloc`](../../language-reference/operators/stackalloc.md)|Aloca memória na pilha.|
-|[Instrução `fixed`](../../language-reference/keywords/fixed-statement.md)|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
+|[`stackalloc`Operador](../../language-reference/operators/stackalloc.md)|Aloca memória na pilha.|
+|[`fixed`Declaração](../../language-reference/keywords/fixed-statement.md)|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Código não seguro e ponteiros](index.md)
-- [Conversões de ponteiro](pointer-conversions.md)
+- [Conversões de ponteiros](pointer-conversions.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)
 - [Tipos de valor](../../language-reference/builtin-types/value-types.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [Inseguro](../../language-reference/keywords/unsafe.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602446"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (opções do compilador C#)
@@ -33,7 +33,7 @@ Essa opção faz com que o compilador não gere um manifesto do assembly.
   
  Não há suporte para a criação de um módulo no ambiente de desenvolvimento do Visual Studio.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile `in.cs`, criando `in.netmodule`:  
@@ -42,7 +42,7 @@ Essa opção faz com que o compilador não gere um manifesto do assembly.
 csc -target:module in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [-target (opções do compilador do C#)](./target-compiler-option.md)
-- [Opções do compilador de C#](./index.md)
+- [-destino (C# Opções de compilador)](./target-compiler-option.md)
+- [C# Opções de compilador](./index.md)

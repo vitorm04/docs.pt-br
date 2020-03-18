@@ -1,19 +1,19 @@
 ---
 title: Scripts dotnet-install
-description: Saiba mais sobre os scripts dotnet-install para instalar o SDK do .NET Core e o tempo de execução compartilhado.
+description: Saiba mais sobre os scripts de instalação dotnet para instalar o .NET Core SDK e o tempo de execução compartilhado.
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092857"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
 ## <a name="name"></a>Nome
 
-`dotnet-install.ps1` | `dotnet-install.sh`-script usado para instalar o SDK do .NET Core e o tempo de execução compartilhado.
+`dotnet-install.ps1` | `dotnet-install.sh`- Script usado para instalar o .NET Core SDK e o tempo de execução compartilhado.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -33,14 +33,14 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
     [--runtime-id] [--skip-non-versioned-files] [--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-Os scripts de `dotnet-install` são usados para executar uma instalação não administrativa do SDK do .NET Core, que inclui o CLI do .NET Core e o tempo de execução compartilhado.
+Os `dotnet-install` scripts são usados para executar uma instalação não-admin do .NET Core SDK, que inclui o .NET Core CLI e o tempo de execução compartilhado.
 
 Recomendamos que você use a versão estável dos scripts:
 
-- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
+- Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
 A principal utilidade desses scripts é para cenários de automação e instalações não administrativas. Há dois scripts, um do PowerShell que funciona no Windows e um script bash que funciona no Linux/macOS. Ambos os scripts têm o mesmo comportamento. O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 
@@ -50,7 +50,7 @@ Por padrão, o script adiciona o local de instalação ao $PATH da sessão atual
 
 Antes de executar o script, instale as [dependências](../install/dependencies.md) necessárias.
 
-Você pode instalar uma versão específica usando o argumento `-Version|--version`. A versão deve ser especificada como uma versão de três partes (por exemplo, `2.1.0`). Se não for fornecida, será usada a versão `latest`.
+Você pode instalar uma versão específica usando o argumento `-Version|--version`. A versão deve ser especificada como uma versão `2.1.0`de três partes (por exemplo, ). Se não for fornecida, será usada a versão `latest`.
 
 ## <a name="options"></a>Opções
 
@@ -61,7 +61,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
   - `Current`: versão mais atual.
   - `LTS`: canal de suporte de longo prazo (versão mais atual compatível).
   - Versão de duas partes no formato X.Y que representa uma versão específica (por exemplo, `2.1` ou `3.0`).
-  - Nome do Branch: por exemplo, `release/3.1.1xx` ou `master` (para versões noturnas). Use esta opção para instalar uma versão de um canal de visualização. Use o nome do canal, conforme listado em [instaladores e binários](https://github.com/dotnet/core-sdk#installers-and-binaries).
+  - Nome da filial: `release/3.1.1xx` `master` por exemplo, ou (para lançamentos noturnos). Use esta opção para instalar uma versão de um canal de visualização. Use o nome do canal conforme listado em [Instaladores e Binários](https://github.com/dotnet/core-sdk#installers-and-binaries).
 
   O valor padrão é `LTS`. Para saber mais sobre os canais de suporte do .NET, consulte a página [Política de suporte do .NET](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).
 
@@ -77,7 +77,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  Especifica um caminho para um arquivo [global. JSON](global-json.md) que será usado para determinar a versão do SDK. O arquivo *global. JSON* deve ter um valor para `sdk:version`.
+  Especifica um caminho para um arquivo [global.json](global-json.md) que será usado para determinar a versão SDK. O arquivo *global.json* deve `sdk:version`ter um valor para .
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -92,7 +92,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
   > [!NOTE]
   > Esse parâmetro está obsoleto e pode ser removido em uma versão futura do script. A alternativa recomendada é a opção `-Runtime|--runtime`.
 
-  Instala apenas os bits de runtime compartilhado, não todo o SDK. Essa opção é equivalente a especificar `-Runtime|--runtime dotnet`.
+  Instala apenas os bits de runtime compartilhado, não todo o SDK. Esta opção é equivalente `-Runtime|--runtime dotnet`a especificar .
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -108,7 +108,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
 
 - **`-NoPath|--no-path`**
 
-  Se definida, a pasta de instalação não será exportada para o caminho da sessão atual. Por padrão, o script modifica o caminho, o que torna o CLI do .NET Core disponível imediatamente após a instalação.
+  Se definida, a pasta de instalação não será exportada para o caminho da sessão atual. Por padrão, o script modifica o PATH, que disponibiliza o .NET Core CLI imediatamente após a instalação.
 
 - **`-Verbose|--verbose`**
 
@@ -132,7 +132,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
 
 - **`--runtime-id`**
 
-  Especifica o [identificador de tempo de execução](../rid-catalog.md) para o qual as ferramentas estão sendo instaladas. Use `linux-x64` para Linux portátil. (Válido somente para Linux/macOS)
+  Especifica o [identificador de tempo de execução](../rid-catalog.md) para o qual as ferramentas estão sendo instaladas. Use `linux-x64` para Linux portátil. (Válido apenas para Linux/macOS)
 
 - **`-ProxyAddress`**
 
@@ -166,7 +166,7 @@ Você pode instalar uma versão específica usando o argumento `-Version|--versi
   ./dotnet-install.sh --channel LTS
   ```
 
-- Instale a versão mais recente do canal 3,1 no local especificado:
+- Instale a versão mais recente do canal 3.1 para o local especificado:
 
   Windows:
 

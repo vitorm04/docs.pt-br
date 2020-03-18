@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449017"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
@@ -24,7 +24,7 @@ As seções a seguir mostram como usar o Microsoft Visual Studio para criar os s
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [dependências e requisitos do .NET Core](../install/dependencies.md?pivots=os-windows).
+Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [as dependências e requisitos do .NET Core](../install/dependencies.md?pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
@@ -32,18 +32,18 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Crie o projeto.
 
-   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK**.
+   Selecione **Arquivo** > **Novo** > **Projeto**. Na caixa de diálogo **Novo projeto**, expanda as categorias de projeto (C# ou Visual Basic) de sua linguagem no painel de tipos de projeto **Instalados**, escolha **.NET Core** e, em seguida, selecione o modelo **Aplicativo de console (.NET Core)** no painel central. Insira um nome de projeto, como "FDD" na caixa de texto **Nome**. Selecione o botão **OK.**
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* ou *Program. vb* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o arquivo *Program.cs* ou *Program.vb* no editor e substitua o código gerado automaticamente pelo seguinte código. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Crie um build de depuração do seu aplicativo.
 
-   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar o build de Depuração do aplicativo selecionando **Depurar** > **Iniciar Depuração**.
+   Selecione **Build** > **Build Solution**. Você também pode compilar e executar a compilação Debug do seu aplicativo selecionando >  **Depuração****Iniciar depuração**.
 
 1. Implante seu aplicativo.
 
@@ -69,13 +69,13 @@ Além dos binários do aplicativo, o instalador deverá também agrupar o instal
 
 Implantar uma implantação dependente de estrutura com uma ou mais dependências de terceiros requer que todas as dependências estejam disponíveis para seu projeto. As etapas adicionais a seguir são necessárias antes de ser possível compilar seu aplicativo:
 
-1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
+1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
-1. Confirme se as dependências de terceiros (por exemplo, `Newtonsoft.Json`) estão instaladas no seu sistema e, se não estiverem, instale-as. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirme se suas dependências de `Newtonsoft.Json`terceiros (por exemplo) estão instaladas no seu sistema e, se não estiverem, instalá-las. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
-Uma implantação dependente da estrutura com dependências de terceiros é tão portável quanto suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Runtime)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
+Uma implantação dependente de estruturas com dependências de terceiros é tão portátil quanto suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Runtime)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
 
 ## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
 
@@ -87,7 +87,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* ou *Program. vb* em seu editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o *arquivo Program.cs* ou *Program.vb* em seu editor e substitua o código gerado automaticamente pelo seguinte código. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -102,7 +102,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Crie um build de depuração do seu aplicativo.
 
-   Selecione **Compilar** > **Compilar Solução**. Você também pode compilar e executar o build de Depuração do aplicativo selecionando **Depurar** > **Iniciar Depuração**. Essa etapa de depuração permite identificar problemas com seu aplicativo quando ele está em execução em sua plataforma de host. Ainda será necessário testá-lo em cada uma de suas plataformas de destino.
+   Selecione **Build** > **Build Solution**. Você também pode compilar e executar a compilação Debug do seu aplicativo selecionando >  **Depuração****Iniciar depuração**. Essa etapa de depuração permite identificar problemas com seu aplicativo quando ele está em execução em sua plataforma de host. Ainda será necessário testá-lo em cada uma de suas plataformas de destino.
 
    Se você tiver habilitado o modo invariável de globalização, certifique-se principalmente de testar se a ausência de dados que levam em conta a cultura é adequada para o seu aplicativo.
 
@@ -130,7 +130,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
    </PropertyGroup>
    ```
 
-   O elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj* . Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
+   O `<RuntimeIdentifiers>` elemento pode `<PropertyGroup>` entrar em qualquer um que você tenha em seu arquivo *csproj.* Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
 
 1. Publique seu aplicativo.
 
@@ -144,7 +144,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As definições de configuração do perfil são mostradas na seção **Resumo** da guia. o **tempo de execução de destino** identifica qual tempo de execução foi publicado e o local de **destino** identifica onde os arquivos da implantação autônoma foram gravados.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As configurações de configuração do perfil são mostradas na seção **Resumo** da guia. **O Tempo de execução** do destino identifica qual tempo de execução foi publicado e o **Local de destino** identifica onde os arquivos para a implantação independente foram gravados.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada runtime de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 
@@ -158,7 +158,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
          1. Siga as etapas anteriores novamente para criar um perfil para a plataforma `osx.10.11-x64`. O **Local de Destino** é *bin\Release\PublishOutput\osx.10.11-x64* e o **Runtime de Destino** é `osx.10.11-x64`. O nome que o Visual Studio atribui a este perfil é **FolderProfile2**.
 
-      Cada local de destino contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+      Cada local de destino contém o conjunto completo de arquivos (tanto os arquivos do aplicativo quanto todos os arquivos .NET Core) necessários para iniciar o aplicativo.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -192,9 +192,9 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
 
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente de estrutura de seu aplicativo para o *\<diretório de projeto > \bin\Release\netcoreapp2.1\publish* .
+   Se você estiver apenas publicando em uma única plataforma, você pode aceitar o valor padrão na caixa de texto **Escolher uma pasta;** isso publica a implantação dependente da estrutura do seu aplicativo para o * \<diretório de projeto>\bin\Release\netcoreapp2.1\publish* directory.
 
-   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "Linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura de seu aplicativo no *diretório\<projeto > diretório \bin\Release\netcoreapp2.1\publish\linux* .
+   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você anexar a string "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo para o * \<diretório de projeto>\bin\Release\netcoreapp2.1\publish\linux* directory.
 
 1. Crie o perfil selecionando o ícone de lista suspensa ao lado do botão **Publicar** e selecionando **Criar perfil**. Em seguida, selecione o botão **Criar perfil** para criar o perfil.
 
@@ -210,7 +210,7 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
 
 1. Nomeie seu perfil.
 
-   1. Selecione **Ações** > **Renomear perfil** para nomear seu perfil.
+   1. Selecione >  **'Renomear****o perfil' para** nomear seu perfil.
 
    2. Atribua um nome ao seu perfil que identifique a plataforma de destino e, em seguida, selecione **Salvar*.
 
@@ -222,7 +222,7 @@ Você configurou seus perfis e agora está pronto para publicar seu aplicativo. 
 
    2. Selecione o perfil que você deseja publicar e, em seguida, selecione **Publicar**. Faça isso para cada perfil a ser publicado.
 
-   Cada local de destino (no caso do nosso exemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+   Cada local de destino (no caso do nosso exemplo, bin\release\netcoreapp2.1\publicar\\o nome do*perfil* contém o conjunto completo de arquivos (tanto os arquivos do aplicativo quanto todos os arquivos .NET Core) necessários para iniciar o aplicativo.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -266,13 +266,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 Implantar uma implantação autocontida com uma ou mais dependências de terceiros envolve adicionar as dependências. As etapas adicionais a seguir são necessárias antes de ser possível compilar seu aplicativo:
 
-1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
+1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
-1. Confirme se as dependências de terceiros (por exemplo, `Newtonsoft.Json`) estão instaladas no seu sistema e, se não estiverem, instale-as. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirme se suas dependências de `Newtonsoft.Json`terceiros (por exemplo) estão instaladas no seu sistema e, se não estiverem, instalá-las. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
-A seguir está o arquivo *csproj* completo para esse projeto:
+A seguir está o arquivo *csproj* completo para este projeto:
 
 # <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 e versões anteriores](#tab/vs156)
 
@@ -307,9 +307,9 @@ A seguir está o arquivo *csproj* completo para esse projeto:
 
 Quando você implanta seu aplicativo, todas as dependências de terceiros usadas em seu aplicativo também contém os arquivos do aplicativo. As bibliotecas de terceiros não são necessárias no sistema em que o aplicativo está em execução.
 
-Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
+Você só pode implantar uma implantação independente com uma biblioteca de terceiros para plataformas suportadas por essa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
 ## <a name="see-also"></a>Confira também
 
-- [Implantação de um aplicativo .NET Core](index.md)
+- [Implantação do .NET Core Application](index.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

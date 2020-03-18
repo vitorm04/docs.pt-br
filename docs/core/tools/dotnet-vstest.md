@@ -3,15 +3,15 @@ title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156927"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -27,7 +27,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
     [--InIsolation] [[--] <args>...]] [-?|--Help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade.
 
@@ -61,11 +61,11 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 - **`--Parallel`**
 
-  Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número explícito de núcleos definindo a propriedade `MaxCpuCount` sob o nó `RunConfiguration` no arquivo *RunSettings* .
+  Executar testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número `MaxCpuCount` explícito de `RunConfiguration` núcleos definindo a propriedade o nó no arquivo *de configurações* de execução.
 
 - **`--TestCaseFilter <Expression>`**
 
-  Execute testes que correspondam à expressão fornecida. `<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Os `()` de parênteses são usados para agrupar subexpressões.
+  Execute testes que correspondam à expressão fornecida. `<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Parênteses `()` são usados para agrupar subexpressões.
 
 - **`-?|--Help`**
 
@@ -127,19 +127,19 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 ## <a name="examples"></a>Exemplos
 
-Executar testes em *MyTestProject. dll*:
+Executar testes em *mytestproject.dll*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-Execute testes em *MyTestProject. dll*, exportando para a pasta personalizada com o nome personalizado:
+Executar testes em *mytestproject.dll,* exportando para pasta personalizada com nome personalizado:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-Execute testes em *MyTestProject. dll* e *myothertestproject. exe*:
+Executar testes em *mytestproject.dll* e *myothertestproject.exe*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe

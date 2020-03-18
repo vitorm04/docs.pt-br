@@ -4,33 +4,33 @@ description: Uma visão geral da ferramenta Microsoft WCF dotnet-svcutil que adi
 author: mlacouture
 ms.date: 02/22/2019
 ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920942"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Ferramenta dotnet-svcutil do WCF para .NET Core
 
-A ferramenta **dotnet-SvcUtil** do Windows Communication Foundation (WCF) é uma ferramenta .NET que recupera metadados de um serviço Web em um local de rede ou de um arquivo WSDL e gera uma classe WCF que contém métodos de proxy de cliente que acessam as operações de serviço Web.
+A ferramenta **dotnet-svcutil** da Windows Communication Foundation (WCF) é uma ferramenta .NET que recupera metadados de um serviço web em um local de rede ou de um arquivo WSDL, e gera uma classe WCF contendo métodos de proxy do cliente que acessam as operações de serviço web.
 
-Semelhante à ferramenta [**Metadados de Modelo de Serviço - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para projetos .NET Framework, o **dotnet-svcutil** é uma ferramenta de linha de comando para gerar uma referência de serviço Web compatível com projetos .NET Core e .NET Standard.
+Semelhante à ferramenta [** Metadados de Modelo de Serviço - svcutil **](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para projetos .NET Framework, o **dotnet-svcutil** é uma ferramenta de linha de comando para gerar uma referência de serviço Web compatível com projetos .NET Core e .NET Standard.
 
-A ferramenta **dotnet-SvcUtil** é uma opção alternativa para o provedor de serviços conectados do Visual Studio de [**referência do serviço Web WCF**](wcf-web-service-reference-guide.md) que foi fornecido pela primeira vez com o Visual Studio 2017 versão 15,5. A ferramenta **dotnet-SvcUtil** como uma ferramenta .net, está disponível entre plataformas no Linux, no MacOS e no Windows.
+A ferramenta **dotnet-svcutil** é uma opção alternativa ao provedor de serviços conectados [**WCF Web Service Reference**](wcf-web-service-reference-guide.md) Visual Studio, que foi enviado pela primeira vez com o Visual Studio 2017 versão 15.5. A ferramenta **dotnet-svcutil** como uma ferramenta .NET, está disponível em plataforma sinuosa no Linux, macOS e Windows.
 
 > [!IMPORTANT]
 > Você só deve fazer referência a serviços de uma fonte confiável. A adição de referências de uma fonte não confiável pode comprometer a segurança.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-- [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) ou versões posteriores
 - Seu editor de código favorito
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [SDK do .NET Core 1.0.4](https://dotnet.microsoft.com/download) ou versões posteriores
 - Seu editor de código favorito
@@ -61,21 +61,21 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
     cd HelloSvcutil
     ```
 
-2. Crie um novo projeto Web em C# nesse diretório usando o comando [`dotnet new`](../tools/dotnet-new.md) da seguinte maneira:
+2. Crie um novo projeto web C# [`dotnet new`](../tools/dotnet-new.md) nesse diretório usando o comando da seguinte forma:
 
     ```dotnetcli
     dotnet new web
     ```
 
-3. Instalar o [pacote do NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como uma ferramenta da CLI:  <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. Instale o [ `dotnet-svcutil` pacote NuGet](https://nuget.org/packages/dotnet-svcutil) como uma ferramenta CLI: <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-    Abra o arquivo de projeto `HelloSvcutil.csproj` em seu editor, edite o elemento `Project` e adicione o pacote [`dotnet-svcutil` do NuGet ](https://nuget.org/packages/dotnet-svcutil) como uma referência à ferramenta da CLI, usando o seguinte código:
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    Abra `HelloSvcutil.csproj` o arquivo de projeto `Project` em seu editor, edite o elemento e adicione o [ `dotnet-svcutil` pacote NuGet](https://nuget.org/packages/dotnet-svcutil) como referência de ferramenta CLI, usando o seguinte código:
 
     ```xml
     <ItemGroup>
@@ -93,13 +93,13 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
 
 4. Execute o comando _dotnet-svcutil_ para gerar o arquivo de referência do serviço Web da seguinte maneira:
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -107,11 +107,11 @@ Em uma janela de comandos do Windows, macOS ou Linux, execute as seguintes etapa
 
     ---
 
-O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A ferramenta _dotnet-svcutil_ também adiciona ao projeto os pacotes WCF apropriados exigidos pelo código proxy como referências de pacote.
+O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A ferramenta _dotnet-svcutil_ também adiciona ao projeto os pacotes WCF apropriados exigidos pelo código proxy como referências do pacote.
 
 ## <a name="using-the-service-reference"></a>Usar a referência de serviço
 
-1. Restaure os pacotes do WCF usando o comando [`dotnet restore`](../tools/dotnet-restore.md) da seguinte forma:
+1. Restaurar os pacotes WCF usando o [`dotnet restore`](../tools/dotnet-restore.md) comando da seguinte forma:
 
     ```dotnetcli
     dotnet restore
@@ -145,7 +145,7 @@ O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A f
 
     ```
 
-5. Execute o aplicativo usando o comando [`dotnet run`](../tools/dotnet-run.md) da seguinte forma:
+5. Execute o aplicativo [`dotnet run`](../tools/dotnet-run.md) usando o comando da seguinte forma:
 
     ```dotnetcli
     dotnet run
@@ -156,13 +156,13 @@ O arquivo gerado é salvo como _HelloSvcutil/ServiceReference/Reference.cs_. A f
 Você deverá ver a seguinte saída: "Hello dotnet-svcutil!"
 
 Para ver uma descrição detalhada dos parâmetros da ferramenta `dotnet-svcutil`, chame a ferramenta passando o parâmetro de ajuda da seguinte forma:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help
@@ -174,10 +174,10 @@ dotnet svcutil --help
 
 Se tiver perguntas ou comentários, [abra um problema no GitHub](https://github.com/dotnet/wcf/issues/new). Você também pode examinar as perguntas ou os problemas existentes [no repositório do WCF no GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
-## <a name="release-notes"></a>Notas de Versão
+## <a name="release-notes"></a>Notas de versão
 
 - Consulte as [Notas de versão](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) para obter informações de versão atualizadas, incluindo problemas conhecidos.
 
-## <a name="information"></a>Informações do
+## <a name="information"></a>Informações
 
 - [Pacote do NuGet dotnet-svcutil](https://nuget.org/packages/dotnet-svcutil)

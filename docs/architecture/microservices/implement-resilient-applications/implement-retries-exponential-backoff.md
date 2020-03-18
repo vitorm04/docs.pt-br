@@ -3,10 +3,10 @@ title: Implementar repetição com retirada exponencial
 description: Saiba como implementar repetições com retirada exponencial.
 ms.date: 10/16/2018
 ms.openlocfilehash: 1b948e399495eeb12016006442ac08d2b04f2e69
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674533"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implementar repetição com retirada exponencial
@@ -16,5 +16,5 @@ ms.locfileid: "68674533"
 Há muitas abordagens para implementar a lógica de repetições com retirada exponencial.
 
 >[!div class="step-by-step"]
->[Anterior](partial-failure-strategies.md)
->[Próximo](implement-resilient-entity-framework-core-sql-connections.md)
+>[Próximo](partial-failure-strategies.md)
+>[anterior](implement-resilient-entity-framework-core-sql-connections.md)

@@ -3,15 +3,15 @@ title: Comando dotnet run
 description: O comando dotnet run oferece uma opção conveniente para executar o aplicativo do código-fonte.
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157070"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -26,9 +26,9 @@ dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--la
 dotnet run [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-O comando `dotnet run` fornece uma opção conveniente para executar o aplicativo do código-fonte com um comando. Ele é útil para o desenvolvimento iterativo rápido a partir da linha de comando. O comando depende do comando [`dotnet build`](dotnet-build.md) para compilar o código. Os requisitos para a compilação, como o projeto, devem ser restaurado primeiro, e se aplicam a `dotnet run` também.
+O comando `dotnet run` fornece uma opção conveniente para executar o aplicativo do código-fonte com um comando. Ele é útil para o desenvolvimento iterativo rápido a partir da linha de comando. O comando depende [`dotnet build`](dotnet-build.md) do comando para construir o código. Os requisitos para a compilação, como o projeto, devem ser restaurado primeiro, e se aplicam a `dotnet run` também.
 
 Os arquivos de saída são gravados no local padrão, que é `bin/<configuration>/<target>`. Por exemplo, se você tiver um aplicativo `netcoreapp2.1` e executar `dotnet run`, a saída será colocada em `bin/Debug/netcoreapp2.1`. Os arquivos são substituídos conforme necessário. Os arquivos temporários são colocados no diretório `obj`.
 
@@ -54,7 +54,7 @@ Para executar o aplicativo, o comando `dotnet run` resolve as dependências do a
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O padrão para a maioria dos projetos é `Debug`, mas você pode substituir as definições de configuração de compilação em seu projeto.
+  Define a configuração da compilação. O padrão para `Debug`a maioria dos projetos é, mas você pode substituir as configurações de configuração de compilação em seu projeto.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -74,7 +74,7 @@ Para executar o aplicativo, o comando `dotnet run` resolve as dependências do a
 
 - **`--launch-profile <NAME>`**
 
-  O nome do perfil de inicialização (se houver) a ser usado ao iniciar o aplicativo. Os perfis de inicialização são definidos no arquivo *launchSettings.json* e, normalmente, são chamados `Development`, `Staging` e `Production`. Para obter mais informações, consulte [Working with multiple environments](/aspnet/core/fundamentals/environments) (Trabalhando com vários ambientes).
+  O nome do perfil de inicialização (se houver) a ser usado ao iniciar o aplicativo. Os perfis de lançamento são definidos no arquivo *launchSettings.json* e são tipicamente chamados `Development`, `Staging`e `Production`. Para obter mais informações, consulte [Trabalhando com vários ambientes](/aspnet/core/fundamentals/environments).
 
 - **`--no-build`**
 
@@ -98,11 +98,11 @@ Para executar o aplicativo, o comando `dotnet run` resolve as dependências do a
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica o runtime de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). `-r` opção curta disponível desde o SDK do .NET Core 3,0.
+  Especifica o runtime de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). `-r`opção curta disponível desde .NET Core 3.0 SDK.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `m`. Disponível desde o SDK do .NET Core 2,1.
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `m`. Disponível desde .NET Core 2.1 SDK.
 
 ## <a name="examples"></a>Exemplos
 

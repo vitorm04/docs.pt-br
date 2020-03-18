@@ -3,10 +3,10 @@ title: Tratando falha parcial
 description: Saiba como tratar falhas parciais normalmente. Um microsserviço pode não estar totalmente funcional, mas ainda conseguir realizar algum trabalho útil.
 ms.date: 10/16/2018
 ms.openlocfilehash: f00e5349df74b543deb6ac941c751cb130b3837c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73732986"
 ---
 # <a name="handle-partial-failure"></a>Tratar falhas parciais
@@ -19,9 +19,9 @@ Por exemplo, considere a página de detalhes Ordem do aplicativo de exemplo eSho
 
 **Figura 8-1**. Falhas parciais devido a dependências que afetam a disponibilidade do thread de serviço
 
-Em um aplicativo grande baseado em microsserviços, falhas parciais poderão ser amplificadas, principalmente se a maioria da interação interna dos microsserviços for baseada em chamadas HTTP síncronas (o que é considerado um antipadrão). Pense em um sistema que recebe milhões de chamadas de entrada por dia. Se o sistema tiver um design ruim baseado em longas cadeias de chamadas HTTP síncronas, essas chamadas de entrada poderão resultar em muito mais milhões de chamadas de saída (vamos supor uma razão de 1:4) a dezenas de microsserviços internos como dependências síncronas. Essa situação é mostrada na Figura 8-2, especialmente a dependência \#3, que inicia uma cadeia, chamando a dependência #4. que as chamadas #5.
+Em um aplicativo grande baseado em microsserviços, falhas parciais poderão ser amplificadas, principalmente se a maioria da interação interna dos microsserviços for baseada em chamadas HTTP síncronas (o que é considerado um antipadrão). Pense em um sistema que recebe milhões de chamadas de entrada por dia. Se o sistema tiver um design ruim baseado em longas cadeias de chamadas HTTP síncronas, essas chamadas de entrada poderão resultar em muito mais milhões de chamadas de saída (vamos supor uma razão de 1:4) a dezenas de microsserviços internos como dependências síncronas. Essa situação é mostrada na Figura \#8-2, especialmente a dependência 3, que inicia uma cadeia, chamando dependência #4. que os chamados #5.
 
-![Diagrama mostrando várias dependências distribuídas.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
+![Diagrama mostrando múltiplas dependências distribuídas.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 
 **Figura 8-2**. O impacto de ter um design incorreto com longas cadeias de solicitações HTTP
 
@@ -38,5 +38,5 @@ Para minimizar esse problema, na seção [A integração assíncrona do microsse
 Além disso, é essencial que você crie seus aplicativos cliente e microsserviços para lidar com falhas parciais, ou seja, crie microsserviços e aplicativos cliente resilientes.
 
 >[!div class="step-by-step"]
->[Anterior](index.md)
->[Próximo](partial-failure-strategies.md)
+>[Próximo](index.md)
+>[anterior](partial-failure-strategies.md)

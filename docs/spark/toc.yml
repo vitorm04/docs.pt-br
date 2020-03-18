@@ -1,6 +1,6 @@
 - name: Guia do .NET para Apache Spark
   href: index.yml
-- name: Visão geral
+- name: Visão Geral
   expanded: true
   items:
     - name: O que é Apache Spark?

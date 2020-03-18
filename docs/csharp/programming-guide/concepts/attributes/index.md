@@ -2,11 +2,11 @@
 title: Atributos (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141559"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399745"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -72,10 +72,10 @@ A lista de possíveis valores `target` é mostrada na tabela a seguir.
 |`assembly`|Assembly inteiro|
 |`module`|Módulo do assembly atual|
 |`field`|Campo em uma classe ou um struct|
-|`event`|evento|
+|`event`|Evento|
 |`method`|Método ou acessadores de propriedade `get` e `set`|
 |`param`|Parâmetros de método ou parâmetros de acessador de propriedade `set`|
-|`property`|propriedade|
+|`property`|Propriedade|
 |`return`|Valor retornado de um método, indexador de propriedade ou acessador de propriedade `get`|
 |`type`|Struct, classe, interface, enum ou delegado|
 
@@ -119,13 +119,13 @@ Para obter mais informações, consulte:
 
 - [Criando atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)  
-- [Como criar uma C/C++ Union usando atributos ()C#](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Como criar uma união C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comuns (C#)](common-attributes.md)  
 - [Informações do chamador (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../../index.md)
+- [C# Guia de Programação](../../index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Atributos](../../../../standard/attributes/index.md)
-- [Usando atributos em C#](../../../tutorials/attributes.md)
+- [Usando atributos em C #](../../../tutorials/attributes.md)

@@ -4,10 +4,10 @@ description: Como usar uma expressão de filtro para executar testes de unidade 
 author: smadala
 ms.date: 03/22/2017
 ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543502"
 ---
 # <a name="running-selective-unit-tests"></a>Executar testes de unidade seletivos
@@ -15,7 +15,7 @@ ms.locfileid: "77543502"
 Com o comando `dotnet test` no .NET Core, use uma expressão de filtro para executar testes seletivos. Este artigo demonstra como filtrar os testes que são executados. Os exemplos a seguir usam `dotnet test`. Se você estiver usando `vstest.console.exe`, substitua `--filter` por `--testcasefilter:`.
 
 > [!NOTE]
-> O uso de filtros que incluem o ponto de exclamação (!) em `*nix` requer saída, uma vez que `!` é reservado. Por exemplo, esse filtro ignorará todos os testes se o namespace contiver IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests`.
+> O uso de filtros que incluem `*nix` ponto de `!` exclamação (!) requer fuga, já que está reservado. Por exemplo, este filtro ignora todos os testes `dotnet test --filter FullyQualifiedName\!~IntegrationTests`se o namespace contiver Testes de Integração: .
 > Observe a barra invertida que precede o ponto de exclamação.
 
 ## <a name="mstest"></a>MSTest
@@ -57,9 +57,9 @@ namespace MSTestNamespace
 
 | Expression | Result |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **ou** `TestCategory` é `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **e** `TestCategory` é `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Executa testes que têm um `FullyQualifiedName` contendo `UnitTest1` **e** `TestCategory` é `CategoryA` **ou** `Priority` é 1. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **, ou ** `TestCategory` é `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **, e ** `TestCategory` é `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Executa testes que têm `FullyQualifiedName` contendo `UnitTest1` **, e ** `TestCategory` é `CategoryA` ** ou ** `Priority` é 1. |
 
 ## <a name="xunit"></a>xUnit
 
@@ -103,9 +103,9 @@ No exemplo de código, as características definidas com chaves `Category` e `Pr
 
 | Expression | Result |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Executa testes que têm `TestClass1` em `FullyQualifiedName` **ou** `Category` é `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Executa testes que têm `TestClass1` em `FullyQualifiedName` **e** `Category` é `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Executa testes que têm um `FullyQualifiedName` contendo `TestClass1` **e** `Category` é `CategoryA` **ou** `Priority` é 1. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | Executa testes que têm `TestClass1` em `FullyQualifiedName` **, ou ** `Category` é `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | Executa testes que têm `TestClass1` em `FullyQualifiedName` **, e ** `Category` é `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | Executa testes que têm `FullyQualifiedName` contendo `TestClass1` **, e ** `Category` é `CategoryA` ** ou ** `Priority` é 1. |
 
 ## <a name="nunit"></a>NUnit
 
@@ -145,6 +145,6 @@ namespace NUnitNamespace
 
 | Expression | Result |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **ou** `TestCategory` é `CategoryA`. |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **e** `TestCategory` é `CategoryA`. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Executa testes que têm um `FullyQualifiedName` contendo `UnitTest1` **e** `TestCategory` é `CategoryA` **ou** `Priority` é 1. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **, ou ** `TestCategory` é `CategoryA`. |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | Executa testes que têm `UnitTest1` em `FullyQualifiedName` **, e ** `TestCategory` é `CategoryA`. |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | Executa testes que têm `FullyQualifiedName` contendo `UnitTest1` **, e ** `TestCategory` é `CategoryA` ** ou ** `Priority` é 1. |

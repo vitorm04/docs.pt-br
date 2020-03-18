@@ -4,10 +4,10 @@ description: Criar as ações de um programa em C# usando as instruções
 ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
 ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159098"
 ---
 # <a name="statements"></a>Instruções
@@ -20,11 +20,11 @@ Um *bloco* permite a produção de várias instruções em contextos nos quais u
 
 *Instruções de expressão* são usadas para avaliar expressões. As expressões que podem ser usadas como instruções incluem chamadas de método, alocações de objeto usando o operador `new`, atribuições usando `=` e os operadores de atribuição compostos, operações de incremento e decremento usando os operadores `++` e `--` e as expressões `await`.
 
-*Instruções de seleção* são usadas para selecionar uma dentre várias instruções possíveis para execução com base no valor de alguma expressão. Esse grupo contém as instruções `if` e `switch`.
+*Instruções de seleção* são usadas para selecionar uma dentre várias instruções possíveis para execução com base no valor de alguma expressão. Este grupo `if` contém `switch` as declarações.
 
-*Instruções de iteração* são usadas para executar repetidamente uma instrução inserida. Esse grupo contém as instruções `while`, `do`, `for`e `foreach`.
+*Instruções de iteração* são usadas para executar repetidamente uma instrução inserida. Este grupo `while`contém `do` `for`as `foreach` declarações e declarações.
 
-*Instruções de salto* são usadas para transferir o controle. Esse grupo contém as instruções `break`, `continue`, `goto`, `throw`, `return`e `yield`.
+*Instruções de salto* são usadas para transferir o controle. Este grupo `break`contém `continue` `goto`as `throw` `return` `yield` declarações.
 
 A instrução `try`... `catch` é usada para capturar exceções que ocorrem durante a execução de um bloco, e a instrução `try`... `finally` é usada para especificar o código de finalização que é executado sempre, se uma exceção ocorrer ou não.
 
@@ -109,5 +109,5 @@ A lista a seguir contém os tipos de instruções que podem ser usados, e fornec
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
->[Anterior](expressions.md)
->[Próximo](classes-and-objects.md)
+>[Próximo](expressions.md)
+>[anterior](classes-and-objects.md)

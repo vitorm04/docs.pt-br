@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: e9bf192a2075653802f0c5a8b4e44ff0ceacb975
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66487535"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparação XPath e de LINQ to XML
@@ -29,7 +29,7 @@ O XPath e o LINQ to XML fornecem alguma funcionalidade semelhante. Ambos podem s
   
  Por outro lado, a maioria dos eixos do LINQ to XML retorna coleções na ordem de documento, mas por dois deles, <xref:System.Xml.Linq.XNode.Ancestors%2A> e <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, retornam coleções na ordem inversa do documento. A tabela a seguir enumera os eixos, e indica a ordem de coleção para cada:  
   
-|O eixo LINQ to XML|Ordenando|  
+|O eixo LINQ to XML|Ordering|  
 |----------------------|--------------|  
 |XContainer.DescendantNodes|Ordem de documento|  
 |XContainer.Descendants|Ordem de documento|  

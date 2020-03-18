@@ -3,10 +3,10 @@ title: Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 93526f772f79e993767fd8f29087b6caf4e29468
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595726"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
@@ -24,11 +24,11 @@ O primeiro exemplo associa o botão **Cancelar** a uma única tarefa de download
 
 ### <a name="download-the-example"></a>Baixar o exemplo
 
-Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.
+Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.
 
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
-2. Na barra de menus, escolha **Arquivo** > **Abrir** > **Projeto/Solução**.
+2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
 
 3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningCS.
 
@@ -144,11 +144,11 @@ Você pode estender o exemplo anterior para cancelar muitas tarefas associando a
 
 ### <a name="download-the-example"></a>Baixar o exemplo
 
-Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, siga estas etapas.
+Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) e, em seguida, seguir estas etapas.
 
 1. Descompacte o arquivo baixado e, em seguida, inicie o Visual Studio.
 
-2. Na barra de menus, escolha **Arquivo** > **Abrir** > **Projeto/Solução**.
+2. Na barra de menu, escolha > **Projeto/solução aberta de** > **Project/Solution** **arquivo**.
 
 3. Na caixa de diálogo **Abrir Projeto**, abra a pasta em que está o código de exemplo que você descompactou e, em seguida, abra o arquivo de solução (.sln) de AsyncFineTuningCS.
 
@@ -156,7 +156,7 @@ Baixe o projeto completo do WPF (Windows Presentation Foundation) em [Amostra as
 
 5. Pressione a tecla **F5** para executar o projeto.
 
-     Escolha as teclas **CTRL**+**F5** para executar o projeto sem depurá-lo.
+     Escolha as teclas **Ctrl**+**F5** para executar o projeto sem depura-lo.
 
 Se você não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xaml.cs no final deste tópico.
 
@@ -258,7 +258,7 @@ Para estender o exemplo você mesmo, passo a passo, siga as instruções na seç
 
 As seções a seguir contêm o código para cada um dos exemplos anteriores. Observe que você deve adicionar uma referência para <xref:System.Net.Http>.
 
-Você pode baixar os projetos em [Amostra assíncrona: Ajustando o aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Você pode baixar os projetos de [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="example---cancel-a-task"></a>Exemplo – cancelar uma tarefa
 
@@ -517,10 +517,10 @@ namespace CancelAListOfTasks
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
-- [Programação assíncrona com async e await (C#)](./index.md)
+- [Programação Assíncrona com assincronia e espera (C#)](./index.md)
 - [Ajuste fino de seu aplicativo assíncrono (C#)](./fine-tuning-your-async-application.md)
-- [Exemplo de Async: ajuste do seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -1,12 +1,12 @@
 ---
-title: CI (integração contínua) com SDK do .NET Core e ferramentas
-description: Saiba como usar o SDK do .NET Core e suas ferramentas no servidor de compilação com integração contínua.
+title: Integração Contínua (CI) com .NET Core SDK e ferramentas
+description: Aprenda a usar o .NET Core SDK e suas ferramentas no servidor de compilação com integração contínua.
 ms.date: 05/18/2017
 ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451032"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
@@ -32,7 +32,7 @@ O script do instalador é automatizado para execução no início do build para 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. Para obter mais informações, consulte [dependências e requisitos do .NET Core](../install/dependencies.md).
+> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. Para obter mais informações, consulte [as dependências e os requisitos do .NET Core](../install/dependencies.md).
 
 ## <a name="ci-setup-examples"></a>Exemplos de instalação de CI
 
@@ -155,7 +155,7 @@ Para usar um script de instalação manual no Azure DevOps Services, crie uma no
 
    ![Escolhendo uma definição de build vazia](./media/using-ci-with-cli/select-empty-build-definition.png)
 
-1. Depois de configurar o repositório do build, você será direcionado para as definições de build. Escolha **Adicionar etapa de build**:
+1. Depois de configurar o repositório do build, você será direcionado para as definições de build. Selecione **Adicionar etapa de compilação:**
 
    ![Adicionando uma etapa de build](./media/using-ci-with-cli/add-build-step.png)
 

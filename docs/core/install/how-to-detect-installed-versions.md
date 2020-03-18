@@ -1,35 +1,35 @@
 ---
-title: Verificar as versões do .NET Core instaladas no Windows, Linux e macOS – .NET Core
-description: Saiba como listar quais versões do .NET Core estão instaladas em seu computador. Isso inclui o SDK e o tempo de execução do .NET Core.
+title: Verifique as versões instaladas do .NET Core no Windows, Linux e macOS - .NET Core
+description: Saiba como listar quais versões do .NET Core estão instaladas no seu computador. Isso inclui o tempo de execução do .NET Core e o SDK.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503838"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399031"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>Como verificar se o .NET Core já está instalado
 
-Este artigo ensina como verificar quais versões do .NET Core Runtime e SDK estão instalados em seu computador. O .NET Core pode já ter sido instalado se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac.
+Este artigo ensina como verificar quais versões do .NET Core runtime e SDK estão instaladas no seu computador. O núcleo .NET pode já ter sido instalado se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac.
 
 A instalação de um SDK instala o tempo de execução correspondente.
 
-Se qualquer comando deste artigo falhar, você não tem o tempo de execução ou o SDK instalado. Para obter mais informações, consulte [baixar e instalar o .NET Core](index.md).
+Se algum comando neste artigo falhar, você não terá o tempo de execução ou SDK instalado. Para obter mais informações, consulte [Baixar e instalar o .NET Core](index.md).
 
-## <a name="check-sdk-versions"></a>Verificar versões do SDK
+## <a name="check-sdk-versions"></a>Confira as versões do SDK
 
-Você pode ver quais versões do SDK do .NET Core estão instaladas atualmente com um terminal. Abra um terminal e execute o comando a seguir.
+Você pode ver quais versões do .NET Core SDK estão atualmente instaladas com um terminal. Abra um terminal e execute o seguinte comando.
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-Você Obtém uma saída semelhante à seguinte.
+Você tem saída semelhante à seguinte.
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ Você Obtém uma saída semelhante à seguinte.
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Verificar versões de tempo de execução
+## <a name="check-runtime-versions"></a>Verifique as versões em tempo de execução
 
-Você pode ver quais versões do tempo de execução do .NET Core estão instaladas no momento com o comando a seguir.
+Você pode ver quais versões do tempo de execução do .NET Core estão atualmente instaladas com o seguinte comando.
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Você Obtém uma saída semelhante à seguinte.
+Você tem saída semelhante à seguinte.
 
 ::: zone pivot="os-windows"
 
@@ -168,9 +168,9 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>Mais informações
 
-Você pode ver as versões do SDK e as versões de tempo de execução com o comando `dotnet --info`. Você também obterá outras informações relacionadas ao ambiente, como a versão do sistema operacional e o RID (identificador de tempo de execução).
+Você pode ver as versões SDK `dotnet --info`e versões em tempo de execução com o comando . Você também obterá outras informações relacionadas ao meio ambiente, como a versão do sistema operacional e o identificador de tempo de execução (RID).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Instale o tempo de execução do .NET Core](runtime.md).
-- [Instale o SDK do .NET Core](sdk.md).
+- [Instale o .NET Core Runtime](runtime.md).
+- [Instale o .NET Core SDK](sdk.md).

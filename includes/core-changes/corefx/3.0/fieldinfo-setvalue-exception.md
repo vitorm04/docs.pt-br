@@ -1,23 +1,23 @@
 ---
 ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449539"
 ---
-### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo. SetValue gera uma exceção para campos estáticos somente de inicialização
+### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue lança exceção para campos estáticos e somente somente init
 
-A partir do .NET Core 3,0, uma exceção é lançada quando você tenta definir um valor em um campo estático <xref:System.Reflection.FieldAttributes.InitOnly> chamando <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>.
+A partir do .NET Core 3.0, uma exceção é lançada <xref:System.Reflection.FieldAttributes.InitOnly> quando <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>você tenta definir um valor em um campo estático, chamando .
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-Em .NET Framework e versões do .NET Core anteriores a 3,0, você pode definir o valor de um campo estático que é constante depois que ele é inicializado ([ReadOnly C# ](~/docs/csharp/language-reference/keywords/readonly.md)) chamando <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>. No entanto, a definição desse campo dessa forma resultou em um comportamento imprevisível com base na estrutura de destino e nas configurações de otimização.
+Em .NET Framework e versões do .NET Core antes de 3.0, você pode definir o valor de um <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName>campo estático que é constante depois de inicializado[(readonly in C#](~/docs/csharp/language-reference/keywords/readonly.md)) chamando . No entanto, a definição desse campo dessa forma resultou em um comportamento imprevisível com base no quadro-alvo e nas configurações de otimização.
 
-No .NET Core 3,0 e versões posteriores, quando você chama <xref:System.Reflection.FieldInfo.SetValue%2A> em um campo estático <xref:System.Reflection.FieldAttributes.InitOnly>, uma exceção <xref:System.FieldAccessException?displayProperty=nameWithType> é lançada.
+Nas versões .NET Core 3.0 <xref:System.Reflection.FieldInfo.SetValue%2A> e posteriores, quando você chama um <xref:System.Reflection.FieldAttributes.InitOnly> campo estático, uma exceção <xref:System.FieldAccessException?displayProperty=nameWithType> é lançada.
 
 > [!TIP]
-> Um campo de <xref:System.Reflection.FieldAttributes.InitOnly> é aquele que só pode ser definido no momento em que é declarado ou no construtor para a classe que a contém. Em outras palavras, é constante depois que ela é inicializada.
+> Um <xref:System.Reflection.FieldAttributes.InitOnly> campo é aquele que só pode ser definido no momento em que é declarado ou no construtor para a classe de contenção. Em outras palavras, é constante depois de ser inicializado.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -25,9 +25,9 @@ No .NET Core 3,0 e versões posteriores, quando você chama <xref:System.Reflect
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Inicializar os campos estáticos <xref:System.Reflection.FieldAttributes.InitOnly> em um construtor estático. Isso se aplica a tipos dinâmicos e não dinâmicos.
+Inicialize estática, <xref:System.Reflection.FieldAttributes.InitOnly> campos em um construtor estático. Isso se aplica tanto aos tipos dinâmicos quanto aos não dinâmicos.
 
-Como alternativa, você pode remover o atributo <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> do campo e, em seguida, chamar <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>.
+Alternativamente, você pode <xref:System.Reflection.FieldAttributes.InitOnly?displayProperty=nameWithType> remover o atributo <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=nameWithType>do campo e, em seguida, chamar .
 
 #### <a name="category"></a>Categoria
 

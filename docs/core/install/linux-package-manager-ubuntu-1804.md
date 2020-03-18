@@ -1,23 +1,23 @@
 ---
-title: Instalar o .NET Core no Ubuntu 18, 4 Package Manager-.NET Core
-description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no Ubuntu 18, 4.
+title: Instale o .NET Core no Gerenciador de pacotes Ubuntu 18.04 - .NET Core
+description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tempo de execução no Ubuntu 18.04.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: e36116d357b8fcd5ced328a574e12c558dd9e2f2
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920685"
 ---
-# <a name="ubuntu-1804-package-manager---install-net-core"></a>Gerenciador de pacotes do Ubuntu 18, 4 – instalar o .NET Core
+# <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 Package Manager - Instalar .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Ubuntu 18, 4. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
+Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Core no Ubuntu 18.04. Se você estiver instalando o tempo de execução, sugerimos que você instale o [tempo de execução do ASP.NET Core,](#install-the-aspnet-core-runtime)pois inclui os tempos de execução do .NET Core e do ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -27,7 +27,7 @@ Antes de instalar o .NET, você precisará:
 
 Isso só precisa ser feito uma vez por computador.
 
-Abra um terminal e execute os comandos a seguir.
+Abra um terminal e execute os seguintes comandos.
 
 ```bash
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -36,7 +36,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 ## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
-Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK do .NET Core. Em seu terminal, execute os comandos a seguir.
+Atualize os produtos disponíveis para instalação e instale o .NET Core SDK. Em seu terminal, execute os seguintes comandos.
 
 ```bash
 sudo add-apt-repository universe
@@ -47,11 +47,11 @@ sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-SDK-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **Não conseguir localizar o pacote dotnet-sdk-3.1,** consulte a [solucionar problemas na](#troubleshoot-the-package-manager) seção 'Gerenciador de pacotes'.
 
-## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
+## <a name="install-the-aspnet-core-runtime"></a>Instale o tempo de execução do ASP.NET Core
 
-Atualize os produtos disponíveis para instalação e instale o ASP.NET Core Runtime. Em seu terminal, execute os comandos a seguir.
+Atualize os produtos disponíveis para instalação e instale o tempo de execução do ASP.NET Core. Em seu terminal, execute os seguintes comandos.
 
 ```bash
 sudo add-apt-repository universe
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote aspnetcore-Runtime-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **Não conseguir localizar o pacote aspnetcore-runtime-3.1,** consulte a [solucionar problemas na](#troubleshoot-the-package-manager) seção 'Gerenciador de pacotes'.
 
-## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
+## <a name="install-the-net-core-runtime"></a>Instale o tempo de execução do .NET Core
 
-Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do .NET Core. Em seu terminal, execute os comandos a seguir.
+Atualize os produtos disponíveis para instalação e instale o tempo de execução do .NET Core. Em seu terminal, execute os seguintes comandos.
 
 ```bash
 sudo add-apt-repository universe
@@ -77,19 +77,19 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-Runtime-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **Não conseguir localizar o tempo de execução do dotnet-3.1**do pacote, consulte a [seção 'Solucionar problemas' na](#troubleshoot-the-package-manager) seção 'Gerenciador de pacotes'.
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
+## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do gerenciador de pacotes
 
-Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o gerenciador de pacotes para instalar o .NET Core.
 
 ### <a name="unable-to-locate"></a>Não é possível localizar
 
-Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote {The .NET Core Package}** , execute os comandos a seguir.
+Se você receber uma mensagem de erro semelhante a **Não conseguir localizar o pacote {o pacote .NET Core},** execute os seguintes comandos.
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
@@ -97,7 +97,7 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-Se isso não funcionar, você poderá executar uma instalação manual com os comandos a seguir.
+Se isso não funcionar, você pode executar uma instalação manual com os seguintes comandos.
 
 ```bash
 sudo apt-get install -y gpg
@@ -112,6 +112,6 @@ sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
 
-### <a name="failed-to-fetch"></a>Falha ao buscar
+### <a name="failed-to-fetch"></a>Falhou em buscar
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

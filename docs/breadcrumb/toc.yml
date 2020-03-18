@@ -391,7 +391,7 @@
                 - name: Aprimorar aplicativos do Windows Forms
                   tocHref: /dotnet/framework/winforms/advanced/
                   topicHref: /dotnet/framework/winforms/advanced/index
-                - name: Controles de formulários do Windows
+                - name: Controles do Windows Forms
                   tocHref: /dotnet/framework/winforms/controls/
                   topicHref: /dotnet/framework/winforms/controls/index
             - name: Windows Presentation Foundation

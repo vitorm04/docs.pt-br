@@ -5,11 +5,11 @@ ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.openlocfilehash: f44c83408e884d76eef5e2b5abbca511fbae2a1f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101492"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399444"
 ---
 # <a name="methods"></a>Métodos
 
@@ -79,7 +79,7 @@ Tipos podem substituir membros herdados usando a palavra-chave `override` e forn
 
 <a name="passing"></a>
 
-## <a name="passing-parameters"></a>Passando parâmetros
+## <a name="passing-parameters"></a>Passagem de parâmetros
 
 Os tipos no C# são *tipos de valor* ou *tipos de referência*. Para obter uma lista de tipos de valor internos, consulte [Tipos e variáveis](./tour-of-csharp/types-and-variables.md). Por padrão, os tipos de referência e tipos de valor são passados para um método por valor.
 
@@ -103,7 +103,7 @@ O exemplo a seguir define uma classe (que é um tipo de referência) chamada `Sa
 
 ### <a name="passing-parameters-by-reference"></a>Passando parâmetros por referência
 
-Você passa um parâmetro por referência quando deseja alterar o valor de um argumento em um método e deseja refletir essa alteração quando o controle retorna para o método de chamada. Para passar um parâmetro por referência, use a palavra-chave [`ref`](language-reference/keywords/ref.md) ou [`out`](language-reference/keywords/out-parameter-modifier.md). Você também pode passar um valor por referência para evitar a cópia e ainda evitar modificações usando a palavra-chave [`in`](language-reference/keywords/in-parameter-modifier.md).
+Você passa um parâmetro por referência quando deseja alterar o valor de um argumento em um método e deseja refletir essa alteração quando o controle retorna para o método de chamada. Para passar um parâmetro por referência, você usa a [`ref`](language-reference/keywords/ref.md) palavra-chave. [`out`](language-reference/keywords/out-parameter-modifier.md) Você também pode passar um valor por referência para evitar [`in`](language-reference/keywords/in-parameter-modifier.md) copiar, mas ainda evitar modificações usando a palavra-chave.
 
 O exemplo a seguir é idêntico ao anterior, exceto que o valor é passado por referência para o método `ModifyValue`. Quando o valor do parâmetro é modificado no método `ModifyValue`, a alteração no valor é refletida quando o controle retorna ao chamador.
 
@@ -165,7 +165,7 @@ O uso de parâmetros opcionais afeta a *resolução de sobrecarga* ou a maneira 
 
 <a name="return"></a>
 
-## <a name="return-values"></a>Valores de retorno
+## <a name="return-values"></a>Valores retornados
 
 Os métodos podem retornar um valor para o chamador. Se o tipo de retorno (o tipo listado antes do nome do método) não for `void`, o método poderá retornar o valor usando palavra-chave `return`. Uma instrução com a palavra-chave `return` seguida por uma variável, constante ou expressão que corresponde ao tipo de retorno retornará esse valor para o chamador do método. Métodos com um tipo de retorno não nulo devem usar a palavra-chave `return` para retornar um valor. A palavra-chave `return` também interrompe a execução do método.
 
@@ -282,14 +282,14 @@ O tipo de retorno de um iterador pode ser <xref:System.Collections.IEnumerable>,
 
 Para obter mais informações, consulte [Iteradores](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Modificadores de acesso](language-reference/keywords/access-modifiers.md)
 - [Classes static e membros de classes static](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Herança](programming-guide/classes-and-structs/inheritance.md)
-- [Classes e membros de classes abstract e sealed](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [params](language-reference/keywords/params.md)
-- [out](language-reference/keywords/out-parameter-modifier.md)
+- [Classes e membros de classes abstratas e lacradas](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Params](language-reference/keywords/params.md)
+- [fora](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
-- [in](language-reference/keywords/in-parameter-modifier.md)
+- [Em](language-reference/keywords/in-parameter-modifier.md)
 - [Passando parâmetros](programming-guide/classes-and-structs/passing-parameters.md)

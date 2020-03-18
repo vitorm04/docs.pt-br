@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: be1fad236dd3eed047b010e93285aec8bc607b61
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394334"
 ---
-### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hospedagem: tipos IHostingEnvironment e IApplicationLifetime marcados como obsoletos e substituídos
+### <a name="hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced"></a>Hospedagem: IHostingTipos de ambiente e IAppLifetime marcados como obsoletos e substituídos
 
-Novos tipos foram introduzidos para substituir os tipos existentes `IHostingEnvironment` e `IApplicationLifetime`.
+Novos tipos foram introduzidos `IHostingEnvironment` para `IApplicationLifetime` substituir os tipos e os existentes.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -16,19 +16,19 @@ Novos tipos foram introduzidos para substituir os tipos existentes `IHostingEnvi
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Havia dois tipos diferentes `IHostingEnvironment` e `IApplicationLifetime` de `Microsoft.Extensions.Hosting` e `Microsoft.AspNetCore.Hosting`.
+Havia dois `IHostingEnvironment` `IApplicationLifetime` tipos diferentes de `Microsoft.Extensions.Hosting` e `Microsoft.AspNetCore.Hosting`.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
 Os tipos antigos foram marcados como obsoletos e substituídos por novos tipos.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Quando `Microsoft.Extensions.Hosting` foi introduzido no ASP.NET Core 2,1, alguns tipos, como `IHostingEnvironment` e `IApplicationLifetime`, foram copiados de `Microsoft.AspNetCore.Hosting`. Algumas alterações ASP.NET Core 3,0 fazem com que os aplicativos incluam os namespaces `Microsoft.Extensions.Hosting` e `Microsoft.AspNetCore.Hosting`. Qualquer uso desses tipos duplicados causa um erro de compilador "referência ambígua" quando ambos os namespaces são referenciados.
+Quando `Microsoft.Extensions.Hosting` foi introduzido em ASP.NET Núcleo 2.1, alguns tipos gostam `IHostingEnvironment` e `IApplicationLifetime` foram copiados de `Microsoft.AspNetCore.Hosting`. Algumas ASP.NET alterações do Core 3.0 fazem com que os aplicativos incluam os `Microsoft.Extensions.Hosting` espaços de nome e `Microsoft.AspNetCore.Hosting` os seguintes. Qualquer uso desses tipos duplicados causa um erro de compilador de "referência ambígua" quando ambos os namespaces são referenciados.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Substituídos os usos dos tipos antigos pelos tipos introduzidos recentemente, como abaixo:
+Substituiu todos os usos dos tipos antigos pelos tipos recém-introduzidos conforme abaixo:
 
 **Tipos obsoletos (aviso):**
 
@@ -46,7 +46,7 @@ Substituídos os usos dos tipos antigos pelos tipos introduzidos recentemente, c
 - <xref:Microsoft.Extensions.Hosting.IHostApplicationLifetime?displayProperty=nameWithType>
 - <xref:Microsoft.Extensions.Hosting.Environments?displayProperty=nameWithType>
 
-Os novos métodos de extensão `IHostEnvironment` `IsDevelopment` e `IsProduction` estão no namespace `Microsoft.Extensions.Hosting`. Esse namespace pode precisar ser adicionado ao seu projeto.
+Os `IHostEnvironment` `IsDevelopment` novos `IsProduction` métodos de `Microsoft.Extensions.Hosting` extensão estão no namespace. Esse namespace pode precisar ser adicionado ao seu projeto.
 
 #### <a name="category"></a>Categoria
 

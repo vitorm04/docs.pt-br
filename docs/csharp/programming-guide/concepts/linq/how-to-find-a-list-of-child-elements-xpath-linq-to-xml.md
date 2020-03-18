@@ -1,16 +1,16 @@
 ---
-title: Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)
+title: Como encontrar uma lista de elementos infantis (XPath-LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141221"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)
-Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como encontrar uma lista de elementos infantis (XPath-LINQ para XML) (C#)
+Este tópico compara o eixo de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> elementos da criança XPath com o eixo.  
   
  A expressão XPath é: `./*`  
   
@@ -38,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 Results are identical  

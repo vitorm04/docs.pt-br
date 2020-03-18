@@ -1,16 +1,16 @@
 ---
-title: Organizando e testando projetos com o CLI do .NET Core
+title: Organização e teste de projetos com o .NET Core CLI
 description: Este tutorial explica como organizar e testar projetos do .NET Core por meio da linha de comando.
 author: cartermp
 ms.date: 09/10/2018
 ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78239905"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organizando e testando projetos com o CLI do .NET Core
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>Organização e teste de projetos com o .NET Core CLI
 
 Este tutorial segue a [Introdução ao .NET Core no Windows/Linux/macOS, usando a linha de comando](cli-create-console-app.md), e leva você além da criação de um simples aplicativo de console para desenvolver aplicativos avançados e bem organizados. Depois de mostrar como usar pastas para organizar seu código, este tutorial mostra como estender um aplicativo de console com a estrutura de teste [xUnit](https://xunit.github.io/).
 
@@ -75,7 +75,7 @@ Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:
 
 [!code-csharp[Cat class](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Pets/Cat.cs)]
 
-*Program.cs*:
+*Program.cs:*
 
 [!code-csharp[Main](../../../samples/snippets/core/tutorials/testing-with-cli/csharp/src/NewTypes/Program.cs)]
 
@@ -104,7 +104,7 @@ O projeto `NewTypes` está em funcionamento e você o organizou mantendo os tipo
 
 Navegue de volta para a pasta *src* e crie uma pasta *test* com uma pasta *NewTypesTests* dentro dela. Em um prompt de comando da pasta *NewTypesTests*, execute `dotnet new xunit`. Isso gera dois arquivos: *NewTypesTests.csproj* e *UnitTest1.cs*.
 
-No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`. Para adicionar uma referência de projeto, use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+No momento, o projeto de teste não pode testar os tipos no `NewTypes` e requer uma referência de projeto para o projeto `NewTypes`. Para adicionar uma referência [`dotnet add reference`](../tools/dotnet-add-reference.md) de projeto, use o comando:
 
 ```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
@@ -181,7 +181,7 @@ O código a seguir mostra a estrutura do projeto completo:
       |__NewTypesTests.csproj
 ```
 
-Inicie no diretório *test/NewTypesTests*. Restaure o projeto de teste com o comando [`dotnet restore`](../tools/dotnet-restore.md). Execute os testes com o comando [`dotnet test`](../tools/dotnet-test.md). Esse comando inicia o executor de teste especificado no arquivo de projeto.
+Inicie no diretório *test/NewTypesTests*. Restaure o projeto [`dotnet restore`](../tools/dotnet-restore.md) de teste com o comando. Execute os testes [`dotnet test`](../tools/dotnet-test.md) com o comando. Esse comando inicia o executor de teste especificado no arquivo de projeto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 

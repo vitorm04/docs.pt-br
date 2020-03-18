@@ -10,7 +10,7 @@
           href: pack-uris-in-wpf.md
         - name: Adicionar uma tela inicial a um aplicativo WPF
           href: how-to-add-a-splash-screen-to-a-wpf-application.md
-        - name: Usar um dicionário de recursos no escopo do aplicativo
+        - name: Usar um dicionário de recursos de escopo do aplicativo
           href: how-to-use-an-application-scope-resource-dictionary.md
         - name: Persistir e restaurar propriedades de escopo do aplicativo em sessões de aplicativo
           href: persist-and-restore-application-scope-properties.md
@@ -21,7 +21,7 @@
           href: wpf-windows-overview.md
         - name: Visão geral das caixas de diálogo
           href: dialog-boxes-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: window-management-how-to-topics.md
           items:
             - name: Dimensionar automaticamente uma janela para caber seu conteúdo
@@ -45,7 +45,7 @@
           href: structured-navigation-overview.md
         - name: Visão geral de topologias da navegação
           href: navigation-topologies-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: navigation-how-to-topics.md
           items:
             - name: Chamar uma função de página
@@ -77,7 +77,7 @@
     - name: Visão geral dos suplementos do WPF
       href: wpf-add-ins-overview.md
       items:
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: how-to-topics.md
           items:
             - name: Criar um suplemento que retorne uma interface do usuário
@@ -121,9 +121,9 @@
       items:
         - name: Compilando um aplicativo WPF
           href: building-a-wpf-application-wpf.md
-        - name: Implantar um aplicativo WPF
+        - name: Implantando um aplicativo do WPF
           href: deploying-a-wpf-application-wpf.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: build-and-deploy-how-to-topics.md
           items:
             - name: Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF

@@ -1,27 +1,27 @@
 ---
 ms.openlocfilehash: ac5a3c4f3aefbb59418ad92b2d795f36916f877f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394117"
 ---
-### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPAs: SpaServices e Nodeservices marcados como obsoletos
+### <a name="spas-spaservices-and-nodeservices-marked-obsolete"></a>SPAs: SpaServices e NodeServices marcados como obsoletos
 
-Todos os conteúdos dos pacotes NuGet a seguir foram desnecessários desde ASP.NET Core 2,1. Consequentemente, os seguintes pacotes estão sendo marcados como obsoletos:
+O conteúdo dos seguintes pacotes NuGet tem sido desnecessário desde ASP.NET Core 2.1. Consequentemente, os seguintes pacotes estão sendo marcados como obsoletos:
 
-- [Microsoft. AspNetCore. SpaServices](https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices/)
-- [Microsoft. AspNetCore. Nodeservices](https://www.nuget.org/packages/Microsoft.AspNetCore.NodeServices/)
+- [Microsoft.AspNetCore.SpaServices](https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices/)
+- [Microsoft.AspNetCore.NodeServices](https://www.nuget.org/packages/Microsoft.AspNetCore.NodeServices/)
 
-Pelo mesmo motivo, os seguintes módulos NPM estão sendo marcados como preteridos:
+Pela mesma razão, os seguintes módulos npm estão sendo marcados como preteridos:
 
-- [ASPNET-angular](https://www.npmjs.com/package/aspnet-angular)
-- [ASPNET-pré-processamento](https://www.npmjs.com/package/aspnet-prerendering)
-- [ASPNET-webpack](https://www.npmjs.com/package/aspnet-webpack)
-- [ASPNET-webpack – reagir](https://www.npmjs.com/package/aspnet-webpack-react)
-- [tarefa de domínio](https://www.npmjs.com/package/domain-task)
+- [aspnet-angular](https://www.npmjs.com/package/aspnet-angular)
+- [aspnet-prerendering](https://www.npmjs.com/package/aspnet-prerendering)
+- [aspnet-webpack](https://www.npmjs.com/package/aspnet-webpack)
+- [aspnet-webpack-react](https://www.npmjs.com/package/aspnet-webpack-react)
+- [domínio-tarefa](https://www.npmjs.com/package/domain-task)
 
-Os pacotes anteriores e os módulos NPM serão removidos posteriormente no .NET 5.
+Os pacotes anteriores e os módulos npm serão posteriormente removidos em .NET 5.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -29,31 +29,31 @@ Os pacotes anteriores e os módulos NPM serão removidos posteriormente no .NET 
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Os pacotes preteridos e os módulos NPM foram destinados a integrar ASP.NET Core com várias estruturas de SPA (aplicativo de página única). Tais estruturas incluem angular, reagir e reagir com Redux.
+Os pacotes preteridos e os módulos npm foram destinados a integrar ASP.NET Core com várias estruturas de SPA (Single-Page App). Tais estruturas incluem Angular, React e React com Redux.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Existe um novo mecanismo de integração no pacote NuGet [Microsoft. AspNetCore. SpaServices. Extensions](https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices.Extensions/) . O pacote permanece a base dos modelos de projeto angular e reajam desde o ASP.NET Core 2,1.
+Existe um novo mecanismo de integração no pacote [Microsoft.AspNetCore.SpaServices.Extensions](https://www.nuget.org/packages/Microsoft.AspNetCore.SpaServices.Extensions/) NuGet. O pacote continua sendo a base dos modelos de projeto Angular e React desde ASP.NET Core 2.1.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-O ASP.NET Core dá suporte à integração com várias estruturas de SPA (aplicativo de página única), incluindo angular, reagir e reagir com Redux. Inicialmente, a integração com essas estruturas foi realizada com componentes específicos do ASP.NET Core que manipulavam cenários como o pré-processamento do lado do servidor e a integração com o webpack. À medida que o tempo passou, os padrões do setor mudaram. Cada uma das estruturas de SPA lançou suas próprias interfaces de linha de comando padrão. Por exemplo, CLI angular e Create-reajam-app.
+ASP.NET Core suporta a integração com várias estruturas de Aplicativo de Página Única (SPA), incluindo Angular, React e React com Redux. Inicialmente, a integração com esses frameworks foi realizada com ASP.NET componentes específicos do Core que lidavam com cenários como pré-renderização do lado do servidor e integração com o Webpack. Com o passar do tempo, os padrões da indústria mudaram. Cada uma das estruturas de SPA lançou suas próprias interfaces padrão de linha de comando. Por exemplo, CLI angular e create-react-app.
 
-Quando ASP.NET Core 2,1 foi lançado em maio de 2018, a equipe respondeu à alteração nos padrões. Foi fornecida uma maneira mais nova e mais simples de integrar com o próprio cadeias das estruturas do SPA. O novo mecanismo de integração existe no pacote `Microsoft.AspNetCore.SpaServices.Extensions` e permanece a base dos modelos de projeto angular e reajam desde ASP.NET Core 2,1.
+Quando ASP.NET Core 2.1 foi lançado em maio de 2018, a equipe respondeu à mudança nos padrões. Uma maneira mais nova e simples de se integrar com as próprias cadeias de ferramentas das estruturas spa foi fornecida. O novo mecanismo de `Microsoft.AspNetCore.SpaServices.Extensions` integração existe no pacote e continua sendo a base dos modelos angular e react do projeto desde ASP.NET Core 2.1.
 
-Para esclarecer que os componentes mais antigos ASP.NET Core específicos são irrelevantes e não são recomendados:
+Para esclarecer que os componentes mais antigos ASP.NET específicos do Núcleo são irrelevantes e não recomendados:
 
-- O mecanismo de integração anterior ao 2,1 é marcado como obsoleto.
-- Os pacotes NPM de suporte são marcados como preteridos.
+- O mecanismo de integração pré-2.1 é marcado como obsoleto.
+- Os pacotes npm de suporte são marcados como preteridos.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
 Se você estiver usando esses pacotes, atualize seus aplicativos para usar a funcionalidade:
 
-- No pacote `Microsoft.AspNetCore.SpaServices.Extensions`.
-- Fornecido pelas estruturas SPA que você está usando
+- No `Microsoft.AspNetCore.SpaServices.Extensions` pacote.
+- Fornecido pelas estruturas de SPA que você está usando
 
-Para habilitar recursos como o pré-processamento do lado do servidor e a recarga de módulo quente, consulte a documentação da estrutura SPA correspondente. A funcionalidade no `Microsoft.AspNetCore.SpaServices.Extensions` *não* está obsoleta e continuará a ter suporte.
+Para habilitar recursos como pré-renderização do lado do servidor e recarga de módulo quente, consulte a documentação da estrutura spa correspondente. A funcionalidade `Microsoft.AspNetCore.SpaServices.Extensions` *não* é obsoleta e continuará a ser suportada.
 
 #### <a name="category"></a>Categoria
 

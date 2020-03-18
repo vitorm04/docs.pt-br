@@ -1,4 +1,4 @@
-- name: Desenvolvimento para várias plataformas
+- name: Desenvolvendo para várias plataformas
   href: index.md
   items:
     - name: Biblioteca de Classes Portátil
@@ -7,7 +7,7 @@
       href: using-portable-class-library-with-model-view-view-model.md
     - name: Recursos do aplicativo para bibliotecas direcionadas a várias plataformas
       href: app-resources-for-libraries-that-target-multiple-platforms.md
-    - name: 'Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime '
+    - name: Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime
       href: support-for-windows-store-apps-and-windows-runtime.md
     - name: Passando um URI para o Windows Runtime
       href: passing-a-uri-to-the-windows-runtime.md

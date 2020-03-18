@@ -1,5 +1,5 @@
 ---
-title: <para> - C# guia de programação
+title: <para> - Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
 ms.openlocfilehash: b2740370106ce5b2812acbea212354ebea1f0e34
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793416"
 ---
-# <a name="para-c-programming-guide"></a>\<para > (C# guia de programação)
+# <a name="para-c-programming-guide"></a>\<para> (guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ ms.locfileid: "76793416"
 <para>content</para>
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `content`
 
@@ -31,15 +31,15 @@ ms.locfileid: "76793416"
 
 ## <a name="remarks"></a>Comentários
 
-A marca \<para> é para uso dentro de uma marca, como [\<summary>](./summary.md), [\<remarks>](./remarks.md) ou [\<returns>](./returns.md) e permite que você adicione estrutura ao texto.
+A \<tag para> é para uso dentro de uma tag, como [ \<>de resumo, ](./summary.md) [ \<observações>, ](./remarks.md)ou [ \<retorna>, ](./returns.md)e permite adicionar estrutura ao texto.
 
-Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.
+Compilar com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação para um arquivo.
 
 ## <a name="example"></a>Exemplo
 
-Consulte [\<summary>](./summary.md) para obter um exemplo sobre o uso de \<para>.
+Veja [ \<resumo>](./summary.md) para um \<exemplo de uso de para>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

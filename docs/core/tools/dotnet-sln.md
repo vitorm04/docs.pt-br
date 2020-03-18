@@ -3,19 +3,19 @@ title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
 ms.date: 02/14/2020
 ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543476"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet sln`-lista ou modifica os projetos em um arquivo de solução do .NET Core.
+`dotnet sln`- Lista ou modifica os projetos em um arquivo de solução .NET Core.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -23,11 +23,11 @@ ms.locfileid: "77543476"
 dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-O comando `dotnet sln` fornece uma maneira conveniente de listar e modificar projetos em um arquivo de solução.
+O `dotnet sln` comando fornece uma maneira conveniente de listar e modificar projetos em um arquivo de solução.
 
-Para usar o comando `dotnet sln`, o arquivo de solução já deve existir. Se você precisar criar um, use o comando [dotnet New](dotnet-new.md) , como no exemplo a seguir:
+Para usar o comando `dotnet sln`, o arquivo de solução já deve existir. Se você precisar criar um, use o novo comando [dotnet,](dotnet-new.md) como no exemplo a seguir:
 
 ```dotnetcli
 dotnet new sln
@@ -37,7 +37,7 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  O arquivo de solução a ser usado. Se esse argumento for omitido, o comando pesquisará o diretório atual em busca de um. Se ele não encontrar nenhum arquivo de solução ou vários arquivos de solução, o comando falhará.
+  O arquivo de solução para usar. Se esse argumento for omitido, o comando procurará o diretório atual por um. Se não encontrar nenhum arquivo de solução ou vários arquivos de solução, o comando falhará.
 
 ## <a name="options"></a>Opções
 
@@ -61,7 +61,7 @@ dotnet sln list [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  O arquivo de solução a ser usado. Se esse argumento for omitido, o comando pesquisará o diretório atual em busca de um. Se ele não encontrar nenhum arquivo de solução ou vários arquivos de solução, o comando falhará.
+  O arquivo de solução para usar. Se esse argumento for omitido, o comando procurará o diretório atual por um. Se não encontrar nenhum arquivo de solução ou vários arquivos de solução, o comando falhará.
 
 #### <a name="options"></a>Opções
 
@@ -84,11 +84,11 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  O arquivo de solução a ser usado. Se não for especificado, o comando pesquisará o diretório atual em busca de um e falhará se houver vários arquivos de solução.
+  O arquivo de solução para usar. Se não for especificado, o comando procura o diretório atual por um e falha se houver vários arquivos de solução.
 
 - **`PROJECT_PATH`**
 
-  O caminho para o projeto ou projetos a serem adicionados à solução. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
+  O caminho para o projeto ou projetos para adicionar à solução. As expansões de [padrão de globbing](https://en.wikipedia.org/wiki/Glob_(programming)) de shell `dotnet sln` Unix/Linux são processadas corretamente pelo comando.
 
 #### <a name="options"></a>Opções
 
@@ -102,7 +102,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder`**
 
-  O caminho da pasta da solução de destino para a qual adicionar os projetos. Disponível desde o SDK do .NET Core 3.0.
+  O caminho da pasta de solução de destino para adicionar os projetos. Disponível desde o SDK do .NET Core 3.0.
 
 ### `remove`
 
@@ -119,11 +119,11 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  O arquivo de solução a ser usado. Se for Left não especificado, o comando pesquisará o diretório atual em busca de um e falhará se houver vários arquivos de solução.
+  O arquivo de solução para usar. Se for deixado não especificado, o comando procura o diretório atual por um e falha se houver vários arquivos de solução.
 
 - **`PROJECT_PATH`**
 
-  O caminho para o projeto ou projetos a serem adicionados à solução. As expansões de [padrão de mascaramento](https://en.wikipedia.org/wiki/Glob_(programming)) do shell do UNIX/Linux são processadas corretamente pelo comando `dotnet sln`.
+  O caminho para o projeto ou projetos para adicionar à solução. As expansões de [padrão de globbing](https://en.wikipedia.org/wiki/Glob_(programming)) de shell `dotnet sln` Unix/Linux são processadas corretamente pelo comando.
 
 #### <a name="options"></a>Opções
 
@@ -133,7 +133,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 ## <a name="examples"></a>Exemplos
 
-- Listar os projetos em uma solução:
+- Liste os projetos em uma solução:
 
   ```dotnetcli
   dotnet sln todo.sln list
@@ -151,7 +151,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln remove todo-app/todo-app.csproj
   ```
 
-- Adicionar vários C# projetos à raiz de uma solução:
+- Adicionar vários projetos C# à raiz de uma solução:
 
   ```dotnetcli
   dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
@@ -169,13 +169,13 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- Adicionar vários C# projetos a uma solução usando um padrão de mascaramento (somente UNIX/Linux):
+- Adicionar vários projetos C# a uma solução usando um padrão globbing (somente Unix/Linux):
 
   ```dotnetcli
   dotnet sln todo.sln add **/*.csproj
   ```
 
-- Remover vários C# projetos de uma solução usando um padrão de mascaramento (somente UNIX/Linux):
+- Remova vários projetos C# de uma solução usando um padrão globbing (somente Unix/Linux):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj

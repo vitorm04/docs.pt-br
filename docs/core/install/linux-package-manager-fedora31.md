@@ -1,23 +1,23 @@
 ---
-title: Instalar o .NET Core no Fedora 31-Package Manager-.NET Core
-description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no Fedora 31.
+title: Instale o .NET Core no Fedora 31 - gerenciador de pacotes - .NET Core
+description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tempo de execução no Fedora 31.
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2019
 ms.openlocfilehash: 28bda3676f99037e565080e1ff3f9d89a67d0d69
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920778"
 ---
-# <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 Package Manager-instalar o .NET Core
+# <a name="fedora-31-package-manager---install-net-core"></a>Fedora 31 Package Manager - Instalar .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Fedora 31. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
+Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Core no Fedora 31. Se você estiver instalando o tempo de execução, sugerimos que você instale o [tempo de execução do ASP.NET Core,](#install-the-aspnet-core-runtime)pois inclui os tempos de execução do .NET Core e do ASP.NET Core.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -27,7 +27,7 @@ Antes de instalar o .NET, você precisará:
 
 Isso só precisa ser feito uma vez por computador.
 
-Abra um terminal e execute os comandos a seguir.
+Abra um terminal e execute os seguintes comandos.
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -36,23 +36,23 @@ sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.
 
 ## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
-Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK do .NET Core. No seu terminal, execute o comando a seguir.
+Atualize os produtos disponíveis para instalação e instale o .NET Core SDK. Em seu terminal, execute o seguinte comando.
 
 ```bash
 sudo dnf install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
+## <a name="install-the-aspnet-core-runtime"></a>Instale o tempo de execução do ASP.NET Core
 
-Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do ASP.NET. No seu terminal, execute o comando a seguir.
+Atualize os produtos disponíveis para instalação e instale o ASP.NET tempo de execução. Em seu terminal, execute o seguinte comando.
 
 ```bash
 sudo dnf install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
+## <a name="install-the-net-core-runtime"></a>Instale o tempo de execução do .NET Core
 
-Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do .NET Core. No seu terminal, execute o comando a seguir.
+Atualize os produtos disponíveis para instalação e instale o tempo de execução do .NET Core. Em seu terminal, execute o seguinte comando.
 
 ```bash
 sudo dnf install dotnet-runtime-3.1
@@ -62,10 +62,10 @@ sudo dnf install dotnet-runtime-3.1
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do Gerenciador de pacotes
+## <a name="troubleshoot-the-package-manager"></a>Solucionar problemas do gerenciador de pacotes
 
-Esta seção fornece informações sobre erros comuns que você pode obter ao usar o Gerenciador de pacotes para instalar o .NET Core.
+Esta seção fornece informações sobre erros comuns que você pode obter ao usar o gerenciador de pacotes para instalar o .NET Core.
 
-### <a name="failed-to-fetch"></a>Falha ao buscar
+### <a name="failed-to-fetch"></a>Falhou em buscar
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

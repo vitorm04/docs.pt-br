@@ -3,15 +3,15 @@ title: Introdução aos contêineres e ao Docker
 description: Obtenha uma visão geral de alto nível dos principais benefícios de usar o Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738180"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introdução aos contêineres e ao Docker
 
-*A Containerização é uma abordagem para o desenvolvimento de software no qual um aplicativo ou serviço, suas dependências e sua configuração (abstratas como arquivos de manifesto de implantação) são empacotados juntos como uma imagem de contêiner. Em seguida, você pode testar o aplicativo em contêiner como uma unidade e implantá-lo como uma instância de imagem de contêiner no sistema operacional do host (SO).*
+*A containerização é uma abordagem para o desenvolvimento de software em que um aplicativo ou serviço, suas dependências e sua configuração (abstraídas como arquivos manifestos de implantação) são empacotados como uma imagem de contêiner. Em seguida, você pode testar o aplicativo contêiner como uma unidade e implantá-lo como uma instância de imagem de contêiner para o sistema operacional host (OS).*
 
 Assim como os contêineres de remessa permitem que as mercadorias sejam transportadas por navio, trem ou caminhão, independentemente da carga que contenham, os contêineres de implantação de software agem como uma unidade de software padrão que pode conter diferentes dependências e códigos. Inserir o software em contêineres dessa maneira permite que desenvolvedores e profissionais de TI os implantem em diferentes ambientes com pouca ou sem nenhuma modificação.
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937596"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
@@ -41,11 +41,11 @@ As expressões lambdas também podem ser convertidas nos tipos de [árvore de ex
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Use expressões lambda em qualquer código que exija instâncias de tipos delegados ou árvores de expressão, por exemplo, como um argumento ao método <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> para passar o código que deve ser executado em segundo plano. Você também pode usar expressões lambda ao escrever [LINQ no C# ](../../linq/index.md), como mostra o exemplo a seguir:
+Use expressões lambda em qualquer código que exija instâncias de tipos delegados ou árvores de expressão, por exemplo, como um argumento ao método <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> para passar o código que deve ser executado em segundo plano. Você também pode usar expressões lambda quando você escreve [LINQ em C#](../../linq/index.md), como o exemplo a seguir mostra:
 
 [!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> na classe <xref:System.Linq.Enumerable?displayProperty=nameWithType>, por exemplo, no LINQ to Objects e no LINQ to XML, o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Quando você chama o método <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> na classe <xref:System.Linq.Queryable?displayProperty=nameWithType>, por exemplo, no LINQ to SQL, o tipo de parâmetro é um tipo de árvore de expressão [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). Em ambos os casos, você pode usar a mesma expressão lambda para especificar o valor do parâmetro. Isso faz com que as duas chamadas `Select` pareçam semelhantes, embora, na verdade, o tipo de objetos criado dos lambdas seja diferente.
+Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> na classe <xref:System.Linq.Enumerable?displayProperty=nameWithType>, por exemplo, no LINQ to Objects e no LINQ to XML, o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Quando você <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> chama o <xref:System.Linq.Queryable?displayProperty=nameWithType> método na classe, por exemplo, em LINQ para SQL, o tipo de parâmetro é um tipo [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)de árvore de expressão . Em ambos os casos, você pode usar a mesma expressão lambda para especificar o valor do parâmetro. Isso faz com que as duas chamadas `Select` pareçam semelhantes, embora, na verdade, o tipo de objetos criado dos lambdas seja diferente.
   
 ## <a name="expression-lambdas"></a>Lambdas de expressão
 
@@ -137,7 +137,7 @@ public partial class Form1 : Form
 }
 ```
 
-Para obter mais informações sobre como criar e usar os métodos assíncronos, consulte [Programação assíncrona com async e await](../concepts/async/index.md).
+Para obter mais informações sobre como criar e usar métodos assíncronos, consulte [Programação Assíncrona com assincronia e aguarde](../concepts/async/index.md).
 
 ## <a name="lambda-expressions-and-tuples"></a>Expressões lambda e tuplas
 
@@ -147,7 +147,7 @@ Você pode definir uma tupla, colocando entre parênteses uma lista delimitada p
 
 [!code-csharp-interactive[lambda and tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
 
-Normalmente, os campos de uma tupla são nomeados `Item1`, `Item2`, etc. No entanto, você pode definir uma tupla com componentes nomeados, como faz o exemplo a seguir.
+Normalmente, os campos de uma `Item1`tuplo são chamados, `Item2`etc. Você pode, no entanto, definir uma tupla com componentes nomeados, como o exemplo a seguir faz.
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
@@ -217,7 +217,7 @@ As seguintes regras se aplicam ao escopo variável em expressões lambda:
 
 - Uma expressão lambda não pode conter uma instrução [goto](../../language-reference/keywords/goto.md), [break](../../language-reference/keywords/break.md) ou [continue](../../language-reference/keywords/continue.md) se o destino daquela instrução de salto estiver fora do bloco da expressão lambda. Também será um erro ter uma instrução de salto fora do bloco da expressão lambda se o destino estiver dentro do bloco.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -225,12 +225,12 @@ Para obter mais informações, confira a seção [Expressões de função anôni
 
 [Expressões lambda, eventos e delegados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [LINQ (Consulta Integrada à Linguagem)](../concepts/linq/index.md)
 - [Árvores de Expressão](../concepts/expression-trees/index.md)
-- [Funções locais comparadas com expressões lambda](../../local-functions-vs-lambdas.md)
+- [Funções locais em comparação com expressões lambda](../../local-functions-vs-lambdas.md)
 - [Expressões lambda tipadas implicitamente](../../implicitly-typed-lambda-expressions.md)
 - [Exemplos de C# do Visual Studio 2008 (veja os arquivos de exemplo de consultas LINQ e programa XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Expressões lambda recursivas](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

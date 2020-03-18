@@ -4,31 +4,31 @@ description: Obtenha uma visão geral dos novos recursos na versão 7.0 da lingu
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448628"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399689"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
 O C# 7.0 adiciona vários recursos novos à linguagem C#:
 
-- [Variáveis `out`](#out-variables)
+- [`out`Variáveis](#out-variables)
   - Declare valores `out` embutidos como argumentos para o método em que eles são usados.
 - [Tuplas](#tuples)
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
 - [Descarta](#discards)
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-- [Correspondência Padrão](#pattern-matching)
+- [Correspondência de padrões](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
-- [locais e retornos de `ref`](#ref-locals-and-returns)
+- [`ref`moradores e retorna](#ref-locals-and-returns)
   - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
-- [Funções Locais](#local-functions)
+- [Funções locais](#local-functions)
   - Você pode aninhar funções dentro de outras funções para limitar seu escopo e visibilidade.
 - [Mais membros aptos para expressão](#more-expression-bodied-members)
   - A lista de membros que podem ser criados usando expressões cresceu.
-- [Expressões `throw`](#throw-expressions)
+- [`throw`Expressões](#throw-expressions)
   - Gere exceções em constructos de código que anteriormente não eram permitidos devido ao fato de `throw` ser uma instrução.
 - [Tipos de retorno assíncrono generalizado](#generalized-async-return-types)
   - Os métodos declarados com o modificador `async` podem retornar outros tipos além de `Task` e `Task<T>`.
@@ -114,7 +114,7 @@ As expressões de correspondência de padrões estendem esse conceito, de modo q
 
 A correspondência de padrões tem suporte a expressões `is` e `switch`. Cada uma delas permite inspecionar um objeto e suas propriedades para determinar se esse objeto satisfaz o padrão procurado. Você usa a palavra-chave `when` para especificar regras adicionais para o padrão.
 
-A expressão de padrão `is` estende o [operador `is`](../language-reference/keywords/is.md#pattern-matching-with-is) conhecido para consultar um objeto sobre seu tipo e atribuir o resultado em uma única instrução. O seguinte código verifica se uma variável é um `int` e, nesse caso, adiciona-a à soma atual:
+A `is` expressão de padrão estende o [ `is` operador](../language-reference/keywords/is.md#pattern-matching-with-is) familiar a consultar um objeto sobre seu tipo e atribuir o resultado em uma instrução. O seguinte código verifica se uma variável é um `int` e, nesse caso, adiciona-a à soma atual:
 
 ```csharp
 if (input is int count)
@@ -211,7 +211,7 @@ A mesma técnica pode ser empregada com métodos `async` para garantir que as ex
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alguns dos designs com suporte pelas funções locais também podem ser feitos usando *expressões lambda*. Para obter mais informações, consulte [funções locais versus expressões lambda](../local-functions-vs-lambdas.md).
+> Alguns dos designs com suporte pelas funções locais também podem ser feitos usando *expressões lambda*. Para obter mais informações, consulte [funções locais vs. expressões lambda](../local-functions-vs-lambdas.md).
 
 ## <a name="more-expression-bodied-members"></a>Mais membros aptos para expressão
 
@@ -236,12 +236,12 @@ Essa adição facilita a escrita de um código mais baseado em expressão. Você
 
 Retornar um objeto `Task` de métodos assíncronos pode introduzir gargalos de desempenho em determinados caminhos. `Task` é um tipo de referência, portanto, usá-lo significa alocar um objeto. Em casos em que um método declarado com o modificador `async` retorna um resultado armazenado em cache ou é concluído de forma síncrona, as alocações extras podem se tornar um custo de tempo significativo em seções críticas de desempenho de código. Isso pode se tornar caro se essas alocações ocorrem em loops rígidos.
 
-O novo recurso de linguagem significa que os tipos de retorno do método assíncrono não se limitam a `Task`, `Task<T>` e `void`. O tipo retornado ainda deve satisfazer o padrão assíncrono, o que significa que um método `GetAwaiter` deve ser acessível. Como um exemplo concreto, o tipo de `ValueTask` foi adicionado ao .NET para fazer uso desse novo recurso de linguagem:
+O novo recurso de linguagem significa que os tipos de retorno do método assíncrono não se limitam a `Task`, `Task<T>` e `void`. O tipo retornado ainda deve satisfazer o padrão assíncrono, o que significa que um método `GetAwaiter` deve ser acessível. Como um exemplo `ValueTask` concreto, o tipo foi adicionado ao .NET para fazer uso deste novo recurso de linguagem:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> Você precisa adicionar o pacote NuGet [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) para usar o tipo <xref:System.Threading.Tasks.ValueTask%601>.
+> Você precisa adicionar o [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pacote NuGet <xref:System.Threading.Tasks.ValueTask%601> para usar o tipo.
 
 Essa melhoria é mais útil para autores de biblioteca impedirem a alocação de uma `Task` em um código crítico para o desempenho.
 

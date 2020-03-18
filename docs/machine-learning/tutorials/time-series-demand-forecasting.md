@@ -1,74 +1,74 @@
 ---
-title: 'Tutorial: Previsão de pressão de bicicletas – série temporal'
-description: Este tutorial mostra como prever a demanda por um serviço de aluguel de bicicletas usando análise de série temporal monovariável e ML.NET.
+title: 'Tutorial: Previsão de demanda de aluguel de bicicletas - série socorrida'
+description: Este tutorial mostra como prever a demanda por um serviço de aluguel de bicicletas usando análise siporida de séries tempois e ML.NET.
 ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
 ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921251"
 ---
-# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
+# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Previsão da demanda de serviço de aluguel de bicicletas com análise de séries tempois e ML.NET
 
-Saiba como prever a demanda por um serviço de aluguel de bicicletas usando a análise de série temporal monovariável nos dados armazenados em um banco de dados SQL Server com ML.NET.
+Saiba como prever a demanda por um serviço de aluguel de bicicletas usando análise de séries tempois univariadas em dados armazenados em um banco de dados do SQL Server com ML.NET.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
 >
 > * Compreender o problema
-> * Carregar dados de um banco
-> * Criar um modelo de previsão
+> * Carregar dados de um banco de dados
+> * Crie um modelo de previsão
 > * Avaliar modelo de previsão
 > * Salvar um modelo de previsão
-> * Usar um modelo de previsão
+> * Use um modelo de previsão
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
+- [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho ".NET Core cross-platform development" instalada.
 
-## <a name="time-series-forecasting-sample-overview"></a>Visão geral de exemplo de previsão de série temporal
+## <a name="time-series-forecasting-sample-overview"></a>Visão geral da amostra da série temporal
 
-Este exemplo é um **Aplicativo de console .NET Core em C#** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
+Esta amostra é um **aplicativo de console C# .NET Core** que prevê a demanda por aluguel de bicicletas usando um algoritmo de análise de séries tempois univariado conhecido como Análise de Espectro Único. O código para esta amostra pode ser encontrado no repositório [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no GitHub.
 
 ## <a name="understand-the-problem"></a>Compreender o problema
 
-Para executar uma operação eficiente, o gerenciamento de inventário desempenha um papel fundamental. Ter muitos produtos em estoque significa que produtos não vendidos nos bastidores não geram receita. Ter um produto muito pequeno leva a uma perda de vendas e clientes comprando de concorrentes. Portanto, a questão constante é, qual é a quantidade ideal de inventário a ser mantido disponível? A análise de série temporal ajuda a fornecer uma resposta a essas perguntas, examinando os dados históricos, identificando padrões e usando essas informações para prever valores em algum momento no futuro.
+Para executar uma operação eficiente, o gerenciamento de estoque desempenha um papel fundamental. Ter muito de um produto em estoque significa que produtos não vendidos sentados nas prateleiras não geram nenhuma receita. Ter muito pouco produto leva a vendas perdidas e clientes comprando de concorrentes. Portanto, a pergunta constante é: qual é a quantidade ideal de inventário para manter na mão? A análise de séries tempois ajuda a fornecer uma resposta a essas perguntas olhando dados históricos, identificando padrões e usando essas informações para prever valores em algum momento no futuro.
 
-A técnica para analisar dados usados neste tutorial é a análise de série temporal monovariável. A análise da série temporal monovariável examina uma única observação numérica durante um período de tempo em intervalos específicos, como vendas mensais.
+A técnica para analisar os dados utilizados neste tutorial é a análise univariada da série temporal. A análise univariada da série temporal analisa uma única observação numérica durante um período de tempo em intervalos específicos, como vendas mensais.
 
-O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). O SSA funciona decompondo uma série temporal em um conjunto de componentes principais. Esses componentes podem ser interpretados como as partes de um sinal que correspondem a tendências, ruídos, sazonalidade e muitos outros fatores. Em seguida, esses componentes são reconstruídos e usados para prever valores por algum tempo no futuro.
+O algoritmo usado neste tutorial é [o Single Spectrum Analysis(SSA).](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf) A SSA funciona decompondo uma série temporal em um conjunto de componentes principais. Esses componentes podem ser interpretados como as partes de um sinal que correspondem a tendências, ruídos, sazonalidade e muitos outros fatores. Então, esses componentes são reconstruídos e usados para prever valores algum tempo no futuro.
 
-## <a name="create-console-application"></a>Criar aplicativo de console
+## <a name="create-console-application"></a>Criar um aplicativo de console
 
-1. Crie um novo **Aplicativo de console .NET Core em C#** chamado "BikeDemandForecasting".
-1. Instalar o pacote NuGet do **ML.Net** Version **1.4.0**
+1. Crie um novo **aplicativo de console C# .NET Core** chamado "BikeDemandForecasting".
+1. Instale **Microsoft.ML** versão **1.4.0** NuGet
     1. No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
-    1. Escolha "nuget.org" como a origem do pacote, selecione a guia **procurar** , procure **Microsoft.ML**.
-    1. Marque a caixa de seleção **incluir pré-lançamento** .
+    1. Escolha "nuget.org" como fonte do Pacote, selecione a guia **Procurar,** procurar **Microsoft.ML**.
+    1. Verifique a **caixa de seleção Incluir pré-lançamento.**
     1. Selecione o botão **Instalar**.
-    1. Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.
-    1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0** e **Microsoft.ML.TimeSeries** versão **1.4.0**.
+    1. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.
+    1. Repita estas etapas para **System.Data.SqlClient** versão **4.7.0** e **Microsoft.ML.TimeSeries** versão **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
 1. Crie um diretório chamado *Data*.
-1. Baixe o arquivo de banco de dados [ *DailyDemand. MDF* ](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) e salve-o no diretório *Data* .
+1. Baixe o arquivo de banco de dados [ *DailyDemand.mdf* ](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) e salve-o no diretório *Data.*
 
 > [!NOTE]
-> Os dados usados neste tutorial são provenientes do [DataSet de compartilhamento de bicicletas de UCI](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi e gama, Joao, ' rotulamento de evento combinando detectores de Ensemble e conhecimento em segundo plano ', progresso em inteligência artificial (2013): PP. 1-15, Springer Berlim Heidelberg, [link da Web](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> Os dados usados neste tutorial vêm do conjunto de dados de compartilhamento de [bicicletas UCI](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi, e Gama, João, 'Rotulagem de eventos combinando detectores de conjunto e conhecimento de fundo', Progresso em Inteligência Artificial (2013): pp. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
-O conjunto de conteúdo original contém várias colunas correspondentes ao sazonalidade e ao clima. Para resumir e como o algoritmo usado neste tutorial requer apenas os valores de uma única coluna numérica, o conjunto de um original foi condensado para incluir apenas as seguintes colunas:
+O conjunto de dados original contém várias colunas correspondentes à sazonalidade e ao clima. Para a brevidade e porque o algoritmo usado neste tutorial requer apenas os valores de uma única coluna numérica, o conjunto de dados original foi condensado para incluir apenas as seguintes colunas:
 
-- **dteday**: a data da observação.
-- **year**: o ano codificado da observação (0 = 2011, 1 = 2012).
-- **CNT**: o número total de locações de bicicletas para esse dia.
+- **dia dteday**: A data da observação.
+- **ano**: O ano codificado da observação (0=2011, 1=2012).
+- **cnt**: O número total de aluguel de bicicletas para esse dia.
 
-O DataSet original é mapeado para uma tabela de banco de dados com o esquema a seguir em um banco de dados SQL Server.
+O conjunto de dados original é mapeado em uma tabela de banco de dados com o seguinte esquema em um banco de dados SQL Server.
 
 ```SQL
 CREATE TABLE [Rentals] (
@@ -78,9 +78,9 @@ CREATE TABLE [Rentals] (
 );
 ```
 
-Veja a seguir um exemplo dos dados:
+A seguir está uma amostra dos dados:
 
-| RentalDate | Ano | TotalRentals |
+| Data de aluguel | Ano | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -88,87 +88,87 @@ Veja a seguir um exemplo dos dados:
 
 ### <a name="create-input-and-output-classes"></a>Criar classes de entrada e saída
 
-1. Abra o arquivo *Program.cs* e substitua as instruções de `using` existentes pelo seguinte:
+1. Abra *Program.cs* arquivo e `using` substitua as instruções existentes pelo seguinte:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
-1. Criar `ModelInput` classe. Abaixo da classe `Program`, adicione o código a seguir.
+1. Crie a classe `ModelInput`. Abaixo `Program` da classe, adicione o seguinte código.
 
     [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
-    A classe `ModelInput` contém as seguintes colunas:
+    A `ModelInput` classe contém as seguintes colunas:
 
-    - **RentalDate**: a data da observação.
-    - **Year**: o ano codificado da observação (0 = 2011, 1 = 2012).
-    - **TotalRentals**: o número total de locações de bicicletas para esse dia.
+    - **Data de aluguel**: A data da observação.
+    - **Ano**: Ano codificado da observação (0=2011, 1=2012).
+    - **TotalRentals**: O número total de aluguéis de bicicletas para esse dia.
 
-1. Crie `ModelOutput` classe abaixo da classe de `ModelInput` recém-criada.
+1. Crie `ModelOutput` classe abaixo da `ModelInput` classe recém-criada.
 
     [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L129-L136)]
 
-    A classe `ModelOutput` contém as seguintes colunas:
+    A `ModelOutput` classe contém as seguintes colunas:
 
-    - **ForecastedRentals**: os valores previstos para o período previsto.
-    - **LowerBoundRentals**: os valores mínimos previstos para o período previsto.
-    - **UpperBoundRentals**: os valores máximos previstos para o período previsto.
+    - **Preços Previstos**: Os valores previstos para o período previsto.
+    - **LowerBoundRentals**: Os valores mínimos previstos para o período previsto.
+    - **UpperBoundRentals**: Os valores máximos previstos para o período previsto.
 
-### <a name="define-paths-and-initialize-variables"></a>Definir caminhos e inicializar variáveis
+### <a name="define-paths-and-initialize-variables"></a>Defina caminhos e inicialize variáveis
 
-1. Dentro do método `Main`, defina variáveis para armazenar o local dos dados, a cadeia de conexão e onde salvar o modelo treinado.
+1. Dentro `Main` do método, defina variáveis para armazenar a localização de seus dados, string de conexão e onde salvar o modelo treinado.
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L16-L19)]
 
-1. Inicialize a variável `mlContext` com uma nova instância de [`MLContext`](xref:Microsoft.ML.MLContext) adicionando a linha a seguir ao método `Main`.
+1. Inicialize `mlContext` a variável com [`MLContext`](xref:Microsoft.ML.MLContext) uma nova instância de `Main` adicionando a seguinte linha ao método.
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L21)]
 
-    A classe [`MLContext`](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações de ml.net e a inicialização de mlContext cria um novo ambiente ml.NET que pode ser compartilhado entre os objetos de fluxo de trabalho de criação de modelo. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.
+    A [`MLContext`](xref:Microsoft.ML.MLContext) classe é um ponto de partida para todas as operações ML.NET, e a inicialização do mlContext cria um novo ambiente ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelos. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.
 
 ## <a name="load-the-data"></a>Carregar os dados
 
-1. Criar `DatabaseLoader` que carrega registros do tipo `ModelInput`.
+1. Criar `DatabaseLoader` que carrega registros `ModelInput`do tipo .
 
     [!code-csharp [CreateDBLoader](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L23)]
 
-1. Defina a consulta para carregar os dados do banco de dado.
+1. Defina a consulta para carregar os dados do banco de dados.
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    Os algoritmos ML.NET esperam que os dados sejam do tipo [`Single`](xref:System.Single). Portanto, os valores numéricos provenientes do banco de dados que não são do tipo [`Real`](xref:System.Data.SqlDbType), um valor de ponto flutuante de precisão simples, precisam ser convertidos em [`Real`](xref:System.Data.SqlDbType).
+    ML.NET algoritmos esperam que [`Single`](xref:System.Single)os dados sejam do tipo . Portanto, valores numéricos provenientes do banco [`Real`](xref:System.Data.SqlDbType)de dados que não são do tipo , [`Real`](xref:System.Data.SqlDbType)um valor de ponto flutuante de precisão única, devem ser convertidos para .
 
-    As colunas `Year` e `TotalRental` são tipos inteiros no banco de dados. Usando a função interna `CAST`, elas são convertidas para `Real`.
+    As `Year` `TotalRental` colunas e colunas são tipos inteiros no banco de dados. Usando `CAST` a função incorporada, ambos são `Real`lançados para .
 
-1. Crie um `DatabaseSource` para se conectar ao banco de dados e executar a consulta.
+1. Crie `DatabaseSource` um para se conectar ao banco de dados e execute a consulta.
 
     [!code-csharp [CreateDBSource](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L27-L29)]
 
-1. Carregue os dados em um `IDataView`.
+1. Carregar os dados em um `IDataView`.
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. O DataSet contém dois anos de dados. Somente os dados do primeiro ano são usados para treinamento, o segundo ano é mantido para comparar os valores reais com a previsão produzida pelo modelo. Filtre os dados usando a transformação [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) .
+1. O conjunto de dados contém dois anos de dados. Apenas os dados do primeiro ano são utilizados para a formação, o segundo ano é realizado para comparar os valores reais com a previsão produzida pelo modelo. Filtre os [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) dados usando a transformação.
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
-    No primeiro ano, somente os valores na coluna `Year` menor que 1 são selecionados definindo o parâmetro `upperBound` como 1. Por outro lado, no segundo ano, valores maiores ou iguais a 1 são selecionados definindo o parâmetro `lowerBound` como 1.
+    Para o primeiro ano, apenas `Year` os valores da coluna `upperBound` inferior a 1 são selecionados definindo o parâmetro para 1. Por outro lado, para o segundo ano, valores maiores ou iguais a 1 são selecionados definindo o `lowerBound` parâmetro para 1.
 
-## <a name="define-time-series-analysis-pipeline"></a>Definir pipeline de análise de série temporal
+## <a name="define-time-series-analysis-pipeline"></a>Definir pipeline de análise de séries tempois
 
-1. Defina um pipeline que usa o [SsaForecastingEstimator](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator) para prever valores em um conjunto de tempo de série temporal.
+1. Defina um pipeline que usa o [SsaForecastingEstimator](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator) para prever valores em um conjunto de dados em série stempo.
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    O `forecastingPipeline` leva 365 pontos de dados para o primeiro ano e os exemplos ou divide o conjunto de tempo da série temporal em intervalos de 30 dias (mensais), conforme especificado pelo parâmetro `seriesLength`. Cada um desses exemplos é analisado por meio de uma janela semanal ou de 7 dias. Ao determinar qual é o valor previsto para o próximo período, os valores dos sete dias anteriores são usados para fazer uma previsão. O modelo é definido para prever sete períodos no futuro, conforme definido pelo parâmetro `horizon`. Como uma previsão é uma estimativa informada, nem sempre é mais 100% precisa. Portanto, é bom saber o intervalo de valores nos melhores e piores cenários, conforme definido pelos limites superior e inferior. Nesse caso, o nível de confiança para os limites inferior e superior é definido como 95%. O nível de confiança pode ser aumentado ou diminuído adequadamente. Quanto maior o valor, mais largo o intervalo é entre os limites superior e inferior para obter o nível de confiança desejado.
+    O `forecastingPipeline` conjunto de dados leva 365 pontos de dados para o primeiro ano e amostra ou divide o `seriesLength` conjunto de dados da série temporal em intervalos de 30 dias (mensais), conforme especificado pelo parâmetro. Cada uma dessas amostras é analisada por uma janela semanal ou de 7 dias. Ao determinar qual é o valor previsto para o próximo período, os valores dos sete dias anteriores são usados para fazer uma previsão. O modelo prevê sete períodos no futuro, `horizon` conforme definido pelo parâmetro. Como uma previsão é um palpite, nem sempre é 100% precisa. Portanto, é bom conhecer a gama de valores nos melhores e piores cenários, conforme definido pelos limites superior e inferior. Neste caso, o nível de confiança para os limites inferior e superior é definido para 95%. O nível de confiança pode ser aumentado ou diminuído em conformidade. Quanto maior o valor, maior a faixa entre os limites superior e inferior para alcançar o nível de confiança desejado.
 
-1. Use o método [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) para treinar o modelo e ajustar os dados ao `forecastingPipeline`definido anteriormente.
+1. Use [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) o método para treinar o modelo e `forecastingPipeline`encaixar os dados no previamente definido .
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
-## <a name="evaluate-the-model"></a>Avaliar o modelo
+## <a name="evaluate-the-model"></a>Avalie o modelo
 
-Avalie como o modelo é executado prevendo os dados do próximo ano e comparando-os com os valores reais.
+Avalie o desempenho do modelo, prevendo os dados do próximo ano e comparando-os com os valores reais.
 
-1. Abaixo do método `Main`, crie um novo método utilitário chamado `Evaluate`.
+1. Abaixo `Main` do método, crie um `Evaluate`novo método de utilidade chamado .
 
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
@@ -177,54 +177,54 @@ Avalie como o modelo é executado prevendo os dados do próximo ano e comparando
     }
     ```
 
-1. Dentro do método `Evaluate`, preveja os dados do segundo ano usando o método [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) com o modelo treinado.
+1. Dentro `Evaluate` do método, preveja os dados [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) do segundo ano utilizando o método com o modelo treinado.
 
     [!code-csharp [EvaluateForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L62)]
 
-1. Obtenha os valores reais dos dados usando o método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
+1. Obtenha os valores reais a [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) partir dos dados usando o método.
 
     [!code-csharp [GetActualRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L65-L67)]
 
-1. Obtenha os valores de previsão usando o método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
+1. Obtenha os valores [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) de previsão usando o método.
 
     [!code-csharp [GetForecastRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L70-L72)]
 
-1. Calcule a diferença entre os valores real e de previsão, normalmente chamados de erro.
+1. Calcule a diferença entre os valores reais e de previsão, comumente referido como erro.
 
     [!code-csharp [CalculateError](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L75)]
 
-1. Meça o desempenho computando os valores de erro médio de média e de erro no quadrado da média de raiz.
+1. Medir o desempenho calculando os valores de erro absoluto médio e erro quadrado de média raiz.
 
     [!code-csharp [CalculateMetrics](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L78-L79)]
 
-    Para avaliar o desempenho, as seguintes métricas são usadas:
+    Para avaliar o desempenho, são utilizadas as seguintes métricas:
 
-    - **Erro de média absoluta**: mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
-    - **Erro de raiz quadrada média**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro Absoluto Médio**: Mede o quão próximas as previsões são do valor real. Este valor varia entre 0 e infinito. Quanto mais perto de 0, melhor a qualidade do modelo.
+    - **Erro quadrado de média raiz**: resume o erro no modelo. Este valor varia entre 0 e infinito. Quanto mais perto de 0, melhor a qualidade do modelo.
 
-1. Gere as métricas para o console.
+1. Saída as métricas para o console.
 
     [!code-csharp [OutputMetrics](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L82-L85)]
 
-1. Use o método `Evaluate` dentro do método `Main`.
+1. Use `Evaluate` o método `Main` dentro do método.
 
     [!code-csharp [EvaluateModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L49)]
 
 ## <a name="save-the-model"></a>Salvar o modelo
 
-Se você estiver satisfeito com seu modelo, salve-o para uso posterior em outros aplicativos.
+Se você estiver satisfeito com o seu modelo, guarde-o para uso posterior em outros aplicativos.
 
-1. No método `Main`, crie um [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602). [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) é um método de conveniência para fazer previsões únicas.
+1. No `Main` método, crie [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602)um . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602)é um método de conveniência para fazer previsões únicas.
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
-1. Salve o modelo em um arquivo chamado `MLModel.zip` conforme especificado pela variável `modelPath` definida anteriormente. Use o método [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*) para salvar o modelo.
+1. Salve o modelo em `MLModel.zip` um arquivo chamado conforme `modelPath` especificado pela variável previamente definida. Use [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*) o método para salvar o modelo.
 
     [!code-csharp [SaveModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L52)]
 
-## <a name="use-the-model-to-forecast-demand"></a>Usar o modelo para prever a demanda
+## <a name="use-the-model-to-forecast-demand"></a>Use o modelo para prever a demanda
 
-1. Abaixo do método `Evaluate`, crie um novo método utilitário chamado `Forecast`.
+1. Abaixo `Evaluate` do método, crie um `Forecast`novo método de utilidade chamado .
 
     ```csharp
     static void Forecast(IDataView testData, int horizon, TimeSeriesPredictionEngine<ModelInput, ModelOutput> forecaster, MLContext mlContext)
@@ -233,25 +233,25 @@ Se você estiver satisfeito com seu modelo, salve-o para uso posterior em outros
     }
     ```
 
-1. Dentro do método `Forecast`, use o método [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) para prever locações para os próximos sete dias.
+1. Dentro `Forecast` do método, [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) use o método para prever aluguéis para os próximos sete dias.
 
     [!code-csharp [SingleForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L91)]
 
-1. Alinhe os valores reais e de previsão por sete períodos.
+1. Alinhar os valores reais e de previsão para sete períodos.
 
     [!code-csharp [GetForecastOutput](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L93-L108)]
 
-1. Itere na saída da previsão e exiba-a no console.
+1. Iterar através da saída de previsão e exibi-lo no console.
 
     [!code-csharp [DisplayForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L111-L116)]
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
-1. Dentro do método `Main`, chame o método `Forecast`.
+1. Dentro `Main` do método, `Forecast` chame o método.
 
     [!code-csharp [BuildForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L54)]
 
-1. Execute o aplicativo. Uma saída semelhante à mostrada abaixo deve aparecer no console do. Para resumir, a saída foi condensada.
+1. Execute o aplicativo. Saída semelhante à abaixo deve aparecer no console. Para a brevidade, a saída foi condensada.
 
     ```text
     Evaluation Metrics
@@ -276,15 +276,15 @@ Se você estiver satisfeito com seu modelo, salve-o para uso posterior em outros
 
 A inspeção dos valores reais e previstos mostra as seguintes relações:
 
-![Comparação real de previsão vs](./media/time-series-demand-forecasting/forecast.png)
+![Comparação real vs previsão](./media/time-series-demand-forecasting/forecast.png)
 
-Embora os valores previstos não prevejam o número exato de locações, eles fornecem um intervalo mais estreito de valores que permite que uma operação Otimize o uso dos recursos.
+Embora os valores previstos não estejam prevendo o número exato de aluguéis, eles fornecem uma faixa mais estreita de valores que permite uma operação para otimizar seu uso de recursos.
 
-Parabéns! Agora você criou com êxito um modelo de aprendizado de máquina de série temporal para prever a demanda de aluguel de bicicletas.
+Parabéns! Agora você construiu com sucesso um modelo de aprendizado de máquina de séries temporias para prever a demanda de aluguel de bicicletas.
 
-Você pode encontrar o código-fonte deste tutorial no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) .
+Você pode encontrar o código fonte para este tutorial no repositório [dotnet/machinelearning-samples.](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand)
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
-- [Tarefas de Machine Learning no ML.NET](../resources/tasks.md)
-- [Melhorar a precisão do modelo](../resources/improve-machine-learning-model-ml-net.md)
+- [Tarefas de aprendizado de máquina no ML.NET](../resources/tasks.md)
+- [Aprimorar a precisão do modelo](../resources/improve-machine-learning-model-ml-net.md)

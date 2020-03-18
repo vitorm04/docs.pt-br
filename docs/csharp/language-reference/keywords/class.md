@@ -8,10 +8,10 @@ helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
 ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673089"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
@@ -41,7 +41,7 @@ Classes que você declara diretamente dentro de um namespace, não aninhadas em 
 
 Os membros da classe, incluindo classes aninhadas, podem ser [públicos](public.md), [internos protegidos](protected-internal.md), [protegidos](protected.md), [internos](internal.md), [privados](private.md) ou [protegidos privados](private-protected.md). Os membros são `private` por padrão.
 
-Para obter mais informações, consulte [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md).
+Para obter mais informações, consulte [Modificadores de Acesso](../../programming-guide/classes-and-structs/access-modifiers.md).
 
 É possível declarar classes genéricas que têm parâmetros de tipo. Para obter mais informações, consulte [Classes genéricas](../../programming-guide/generics/generic-classes.md).
 
@@ -51,7 +51,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Constantes](../../programming-guide/classes-and-structs/constants.md)
 
-- [Fields](../../programming-guide/classes-and-structs/fields.md)
+- [Campos](../../programming-guide/classes-and-structs/fields.md)
 
 - [Finalizadores](../../programming-guide/classes-and-structs/destructors.md)
 
@@ -65,7 +65,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Eventos](../../programming-guide/events/index.md)
 
-- [Delegados](../../programming-guide/delegates/index.md)
+- [Delega](../../programming-guide/delegates/index.md)
 
 - [Classes](../../programming-guide/classes-and-structs/classes.md)
 
@@ -95,13 +95,13 @@ Tipos declarados dentro de uma classe sem um modificador de acesso têm o valor 
 
 Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`child3`), o campo `age` foi inicializado como zero por padrão.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
 - [Tipos de referência](./reference-types.md)

@@ -3,10 +3,10 @@ title: Suporte de ferramentas e do IDE do Visual Studio para LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
 ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590910"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>Suporte de ferramentas e do IDE do Visual Studio para LINQ (C#)
@@ -24,6 +24,6 @@ O IDE (ambiente de desenvolvimento integrado) do Visual Studio fornece os seguin
 ## <a name="visual-studio-debugger-support"></a>Suporte do Depurador do Visual Studio  
  O depurador do Visual Studio dá suporte à depuração de expressões de consulta. Para obter mais informações, consulte [Depurando LINQ](/visualstudio/debugger/debugging-linq).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [LINQ (consulta integrada à linguagem) (C#)](./index.md)
+- [LINQ (Consulta Integrada à Linguagem) (C#)](./index.md)

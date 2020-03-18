@@ -4,10 +4,10 @@ description: Links para tópicos que fornecem informações mais detalhadas sobr
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
 ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73421759"
 ---
 # <a name="linq-in-c"></a>LINQ em C\#
@@ -31,7 +31,7 @@ Descreve como tipos são preservados e/ou transformados nas três partes de uma 
 [Sintaxe de consulta e sintaxe de método em LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)  
 Compara a sintaxe de método e a sintaxe de consulta como dois modos para expressar uma consulta LINQ.
 
-[Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)  
+[C# recursos que suportam LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)  
 Descreve os constructos da linguagem em C# que dão suporte ao LINQ.
 
 ## <a name="related-sections"></a>Seções relacionadas

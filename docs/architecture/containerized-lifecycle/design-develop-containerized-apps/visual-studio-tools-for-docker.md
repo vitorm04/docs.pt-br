@@ -4,10 +4,10 @@ description: Conheça as ferramentas disponíveis do Docker no Visual Studio 201
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673873"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Use as ferramentas do Docker no Visual Studio 2017 no Windows
@@ -33,7 +33,7 @@ Os comandos **Adicionar > Suporte ao Docker** e **Adicionar > Suporte ao Orquest
 
 ### <a name="add-docker-support"></a>Adicionar suporte ao Docker
 
-É possível adicionar suporte ao Docker a um projeto do ASP.NET Core existente ao selecionar **Adicionar** > **Suporte ao Docker** em **Gerenciador de Soluções**. Você também pode habilitar o suporte ao Docker durante a criação do projeto selecionando **Habilitar suporte ao Docker** na caixa de diálogo **Novo aplicativo Web do ASP.NET Core** que abre após você clicar em **OK** na caixa de diálogo **Novo Projeto**, conforme mostrado na Figura 4-32.
+Você pode adicionar suporte ao Docker a um projeto ASP.NET Core existente selecionando **Adicionar** > **suporte ao Docker** no Solution **Explorer**. Você também pode habilitar o suporte ao Docker durante a criação do projeto selecionando **Habilitar suporte ao Docker** na caixa de diálogo **Novo aplicativo Web do ASP.NET Core** que abre após você clicar em **OK** na caixa de diálogo **Novo Projeto**, conforme mostrado na Figura 4-32.
 
 ![Habilitar o suporte ao Docker para o novo aplicativo Web do ASP.NET Core no Visual Studio](./media/enable-docker-support-visual-studio.png)
 
@@ -66,21 +66,21 @@ Se o *docker-compose.yml* já existir, o Visual Studio adiciona nele apenas as l
 
 No menu principal, escolha **Ferramentas > Opções** e expanda **Ferramentas de contêiner > Configurações**. As configurações de ferramentas de contêiner aparecem.
 
-![Opções de ferramentas de Docker do Visual Studio, mostrando: Extração automática das imagens necessárias do Docker no carregamento do projeto, início automático dos contêineres em segundo plano, encerramento automático dos contêineres no fechamento da solução e Não solicitar para confiar no certificado SSL.](./media/visual-studio-docker-tools-options.png)
+![Opções de ferramentas do Visual Studio Docker, mostrando: Puxe automaticamente as imagens Docker necessárias na carga do projeto, inicie automaticamente os contêineres em segundo plano, mate automaticamente os contêineres no fechamento da solução e não solicitar a confiança no certificado SSL.](./media/visual-studio-docker-tools-options.png)
 
 **Figura 4-35**. Opções de ferramentas do Docker
 
 A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 
-| Nome | Configuração Padrão | Aplica-se a | DESCRIÇÃO |
+| Nome | Configuração padrão | Aplica-se A | Descrição |
 | -----|:---------------:|:----------:| ----------- |
-| Extração automática das imagens necessárias do Docker no carregamento do projeto | On | Docker Compose | Para desempenho aprimorado durante o carregamento de projetos, o Visual Studio iniciará uma operação de pull do Docker em segundo plano para que, quando você estiver pronto para executar seu código, a imagem já esteja baixada ou sendo baixada. Se você estiver apenas carregando projetos e procurando código, será possível desativar isso para evitar o download de imagens de contêiner que você não precisa. |
-| Início automático dos contêineres em segundo plano | On | Docker Compose | Novamente, para melhorar o desempenho, o Visual Studio cria um contêiner com montagens de volume prontas para quando você compilar e executar seu contêiner. Se você desejar controlar quando o contêiner é criado, desative essa opção. |
-| Encerramento automático dos contêineres na solução | On | Docker Compose | Desative essa opção se desejar que os contêineres para sua solução continuem a executar após fechar a solução ou fechar o Visual Studio. |
-| Não solicitar para confiar no certificado SSL do localhost | Off | Projetos do ASP.NET Core 2.2 | Se o certificado SSL do localhost não for confiável, o Visual Studio solicitará sempre que você executar seu projeto, a menos que esta caixa de seleção esteja marcada. |
+| Extração automática das imagens necessárias do Docker no carregamento do projeto | Por | Docker Compose | Para desempenho aprimorado durante o carregamento de projetos, o Visual Studio iniciará uma operação de pull do Docker em segundo plano para que, quando você estiver pronto para executar seu código, a imagem já esteja baixada ou sendo baixada. Se você estiver apenas carregando projetos e procurando código, será possível desativar isso para evitar o download de imagens de contêiner que você não precisa. |
+| Início automático dos contêineres em segundo plano | Por | Docker Compose | Novamente, para melhorar o desempenho, o Visual Studio cria um contêiner com montagens de volume prontas para quando você compilar e executar seu contêiner. Se você desejar controlar quando o contêiner é criado, desative essa opção. |
+| Encerramento automático dos contêineres na solução | Por | Docker Compose | Desative essa opção se desejar que os contêineres para sua solução continuem a executar após fechar a solução ou fechar o Visual Studio. |
+| Não solicitar para confiar no certificado SSL do localhost | Desativado | Projetos do ASP.NET Core 2.2 | Se o certificado SSL do localhost não for confiável, o Visual Studio solicitará sempre que você executar seu projeto, a menos que esta caixa de seleção esteja marcada. |
 
 > [!WARNING]
-> Se o certificado SSL do localhost não for confiável e você marcar a caixa para suprimir a solicitação, as solicitações da Web HTTPS poderão falhar no tempo de execução em seu aplicativo ou serviço. Nesse caso, desmarque a caixa de seleção **Não solicitar**, execute seu projeto e indique a confiança no prompt.
+> Se o certificado SSL do localhost não for confiável e você marcar a caixa para suprimir a solicitação, as solicitações da Web HTTPS poderão falhar no runtime em seu aplicativo ou serviço. Nesse caso, desmarque a caixa de seleção **Não solicitar**, execute seu projeto e indique a confiança no prompt.
 
 > [!TIP]
 > Para obter mais detalhes sobre a implementação dos serviços e o uso das Ferramentas do Visual Studio para Docker, leia os seguintes artigos:
@@ -90,5 +90,5 @@ A tabela a seguir pode ajudá-lo a decidir como definir essas opções.
 >Implantar um contêiner ASP.NET em um registro de contêiner usando o Visual Studio: <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
->[Anterior](docker-apps-inner-loop-workflow.md)
->[Próximo](set-up-windows-containers-with-powershell.md)
+>[Próximo](docker-apps-inner-loop-workflow.md)
+>[anterior](set-up-windows-containers-with-powershell.md)

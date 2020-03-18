@@ -6,42 +6,42 @@ ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503495"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Tutorial: criar um pacote de modelos
+# <a name="tutorial-create-a-template-pack"></a>Tutorial: Crie um pacote de modelos
 
-Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte três de uma série que ensina a criar, instalar e desinstalar modelos para uso com o comando `dotnet new`.
+Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a terceira parte de uma série que ensina como criar, `dotnet new` instalar e desinstalar modelos para usar com o comando.
 
 Nesta parte da série, você aprenderá a:
 
 > [!div class="checklist"]
 >
-> * Criar um projeto \*. csproj para criar um pacote de modelos
+> * Crie \*um projeto .csproj para construir um pacote de modelos
 > * Configurar o arquivo de projeto para empacotamento
 > * Instalar o modelo de um arquivo do pacote NuGet
 > * Desinstalar um modelo pela ID do pacote
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 * Conclua a [parte 1](cli-templates-create-item-template.md) e a [parte 2](cli-templates-create-project-template.md) desta série de tutoriais.
 
-  Este tutorial usa os dois modelos criados nas duas primeiras partes deste tutorial. Você pode usar um modelo diferente, desde que copie o modelo, como uma pasta, na pasta _working\templates\\_ .
+  Este tutorial usa os dois modelos criados nas duas primeiras partes deste tutorial. Você pode usar um modelo diferente, desde que copie o modelo, como uma pasta, na pasta _working\templates.\\ _
 
-* Abra um terminal e navegue até a pasta _working\\_ .
+* Abra um terminal e navegue até a pasta _de trabalho.\\ _
 
 ## <a name="create-a-template-pack-project"></a>Criar um projeto de pacote de modelos
 
 Um pacote de modelos é um ou mais modelos empacotados em um arquivo. Quando você instala ou desinstala um pacote, todos os modelos contidos no pacote são adicionados ou removidos, respectivamente. As partes anteriores desta série de tutoriais só funcionavam com modelos individuais. Para compartilhar um modelo não empacotado, você precisa copiar a pasta de modelos e instalá-la por meio dessa pasta. Como um pacote de modelos pode ter mais de um modelo e é um arquivo único, o compartilhamento é mais fácil.
 
-Os pacotes de modelos são representados por um arquivo ( _.nupkg_) do pacote NuGet. E, como qualquer pacote NuGet, você pode carregar o pacote de modelos em um feed do NuGet. O comando `dotnet new -i` dá suporte à instalação do pacote de modelos de um feed do pacote NuGet. Além disso, você pode instalar um pacote de modelos de um arquivo _.nupkg_ diretamente.
+Os pacotes de modelos são representados por um arquivo (_.nupkg_) do pacote NuGet. E, como qualquer pacote NuGet, você pode carregar o pacote de modelos em um feed do NuGet. O comando `dotnet new -i` dá suporte à instalação do pacote de modelos de um feed do pacote NuGet. Além disso, você pode instalar um pacote de modelos de um arquivo _.nupkg_ diretamente.
 
 Normalmente você usa um arquivo de projeto C# para compilar o código e produzir um binário. No entanto, o projeto também pode ser usado para gerar um pacote de modelos. Com a alteração das configurações do _.csproj_, você pode evitar que ele compile códigos e, em vez disso, inclua todos os recursos dos modelos como recursos. Quando esse projeto é compilado, ele produz um pacote NuGet do pacote de modelos.
 
-O pacote que você criará incluirá o [modelo de item](cli-templates-create-item-template.md) e o [modelo de pacote](cli-templates-create-project-template.md) criados anteriormente. Como agrupamos os dois modelos na pasta _working\templates\\_ , podemos usar a pasta _working_ para o arquivo _.csproj_.
+O pacote que você criará incluirá o [modelo de item](cli-templates-create-item-template.md) e o [modelo de pacote](cli-templates-create-project-template.md) criados anteriormente. Como agrupamos os dois modelos na pasta _working\templates\\_, podemos usar a pasta _working_ para o arquivo _.csproj_.
 
 No terminal, navegue até a pasta _working_. Crie um novo projeto, defina o nome como `templatepack` e a pasta de saída para a pasta atual.
 
@@ -49,7 +49,7 @@ No terminal, navegue até a pasta _working_. Crie um novo projeto, defina o nome
 dotnet new console -n templatepack -o .
 ```
 
-O parâmetro `-n` define o nome de arquivo _. csproj_ como _templatepack. csproj_. O parâmetro `-o` cria os arquivos no diretório atual. Você verá um resultado semelhante à seguinte saída.
+O `-n` parâmetro define o nome de arquivo _.csproj_ para _templatepack.csproj_. O `-o` parâmetro cria os arquivos no diretório atual. Você verá um resultado semelhante à seguinte saída.
 
 ```dotnetcli
 dotnet new console -n templatepack -o .

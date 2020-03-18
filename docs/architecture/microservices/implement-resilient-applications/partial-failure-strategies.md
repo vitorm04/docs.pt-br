@@ -3,10 +3,10 @@ title: Estratégias para tratar falhas parciais
 description: Conheça várias estratégias para tratar falhas parciais normalmente.
 ms.date: 10/16/2018
 ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674503"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Estratégias para tratar falhas parciais
@@ -19,7 +19,7 @@ As estratégias para lidar com falhas parciais incluem o seguinte.
 
 **Solução alternativa para tempos limite de rede**. Em geral, os clientes devem ser criados para não serem bloqueados indefinidamente e para sempre usar tempos limite ao aguardar uma resposta. Usar tempos limite garante que os recursos nunca fiquem bloqueados indefinidamente.
 
-**Usar o padrão de disjuntor**. Nessa abordagem, o processo do cliente rastreia o número de solicitações com falha. Se a taxa de erro exceder um limite configurado, um "disjuntor" viajará para que outras tentativas falhem imediatamente. (Se um alto número de solicitações estão apresentando falha, isso sugere que o serviço não está disponível e que enviar solicitações é inútil.) Após um período de tempo limite, o cliente deverá tentar novamente e, se as novas solicitações forem bem-sucedidas, feche o disjuntor.
+**Usar o padrão de disjuntor**. Nessa abordagem, o processo do cliente rastreia o número de solicitações com falha. Se a taxa de erro exceder um limite configurado, um "disjuntor" viajará para que outras tentativas falhem imediatamente. (Se um grande número de solicitações estiver falhando, isso sugere que o serviço não está disponível e que o envio de solicitações é inútil.) Após um período de tempo, o cliente deve tentar novamente e, se as novas solicitações forem bem sucedidas, feche o disjuntor.
 
 **Fornecer fallbacks**. Nessa abordagem, o processo de cliente executa a lógica de fallback quando uma solicitação falha, como retornar dados armazenados em cache ou um valor padrão. Essa é uma abordagem adequada para consultas e é mais complexa para atualizações ou comandos.
 
@@ -30,18 +30,18 @@ As estratégias para lidar com falhas parciais incluem o seguinte.
 - **Padrões de resiliência**\
   [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
-- **Adicionando resiliência e otimizando o desempenho**\
+- **Adicionando resiliência e otimizando desempenho**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
-- **Bulkhead.** Repositório do GitHub. Implementação com a política Polly.\
+- **Anteparo.** Repositório do GitHub. Implementação com a política Polly.\
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **Projetando aplicativos resilientes para o Azure**\
   [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
-- **Tratamento de falhas transitórias**\
+- **Manuseio de falhas transitórias**\
   [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
->[Anterior](handle-partial-failure.md)
->[Próximo](implement-retries-exponential-backoff.md)
+>[Próximo](handle-partial-failure.md)
+>[anterior](implement-retries-exponential-backoff.md)

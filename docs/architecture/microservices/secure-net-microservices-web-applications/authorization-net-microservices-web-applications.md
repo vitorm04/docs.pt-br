@@ -4,10 +4,10 @@ description: Segurança nos microsserviços e aplicativos Web do .NET – obtenh
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501774"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Sobre a autorização em aplicativos Web e em microsserviços .NET
@@ -114,18 +114,18 @@ Um exemplo de requisito de autorização personalizado e de manipulador para ver
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Autenticação do ASP.NET Core** \
+- **Autenticação do Núcleo ASP.NET** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Autorização do ASP.NET Core** \
+- **autorização do núcleo ASP.NET** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/introduction](/aspnet/core/security/authorization/introduction)
 
-- **Autorização baseada em função** \
+- **Autorização baseada em papéis** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/roles](/aspnet/core/security/authorization/roles)
 
-- **Autorização baseada em política personalizada** \
+- **Autorização personalizada baseada em políticas** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
->[Anterior](index.md)
->[Próximo](developer-app-secrets-storage.md)
+>[Próximo](index.md)
+>[anterior](developer-app-secrets-storage.md)

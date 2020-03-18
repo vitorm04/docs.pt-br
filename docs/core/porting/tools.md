@@ -4,17 +4,17 @@ description: Conheça algumas das ferramentas que você pode usar para portar pa
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157512"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Ferramentas para ajudar com a portabilidade para o .NET Core
 
 As ferramentas listadas neste artigo podem ser úteis para portar:
 
-- [Analisador de portabilidade .net](../../standard/analyzers/portability-analyzer.md) – um ferramentas que pode gerar um relatório de quão portátil seu código está entre .NET Framework e .NET Core:
+- [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) - Uma cadeia de ferramentas que pode gerar um relatório de quão portátil seu código é entre .NET Framework e .NET Core:
   - Como uma [ferramenta de linha de comando](https://github.com/Microsoft/dotnet-apiport/releases)
   - Como uma [extensão do Visual Studio](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)
 - [Analisador de API do .NET](../../standard/analyzers/api-analyzer.md) – um analisador Roslyn que descobre possíveis riscos de compatibilidade para APIs C# em diferentes plataformas e detecta chamadas a APIs preteridas.

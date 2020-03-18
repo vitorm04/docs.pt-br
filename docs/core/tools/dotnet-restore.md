@@ -3,15 +3,15 @@ title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
 ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157018"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -28,11 +28,11 @@ dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
 dotnet restore [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
 
-Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *NuGet. config* pela opção-`-s`.
+Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o .NET Core SDK é instalado. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *nuget.config* com a opção - `-s` .
 
 Para dependências, especifique onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
 
@@ -48,7 +48,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
   Os redirecionamentos de associação não funcionam com elementos `<PackageReference>` e o .NET Core só dá suporte a elementos `<PackageReference>` em pacotes NuGet.
 
-- [solution](/nuget/schema/nuget-config-file#solution-section)
+- [Solução](/nuget/schema/nuget-config-file#solution-section)
 
   Essa configuração é específica do Visual Studio e não se aplica ao .NET Core. O .NET Core não usa um arquivo `packages.config` e, em vez disso, usa elementos `<PackageReference>` para pacotes NuGet.
 
@@ -58,7 +58,7 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
 ## <a name="implicit-restore"></a>Restauração implícita
 
-O comando `dotnet restore` é executado implicitamente, se necessário, quando você executa os seguintes comandos:
+O `dotnet restore` comando é executado implicitamente se necessário quando você executa os seguintes comandos:
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
@@ -68,7 +68,7 @@ O comando `dotnet restore` é executado implicitamente, se necessário, quando v
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-Na maioria dos casos, você não precisa usar explicitamente o comando `dotnet restore`.
+Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o comando.
 
 Às vezes, pode ser inconveniente executar `dotnet restore` implicitamente. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar que o `dotnet restore` seja executado implicitamente, use o sinalizador `--no-restore` com um desses comandos para desabilitar a restauração implícita.
 
@@ -136,25 +136,25 @@ Na maioria dos casos, você não precisa usar explicitamente o comando `dotnet r
   dotnet restore
   ```
 
-- Restaure as dependências e as ferramentas para o projeto `app1` encontrado no caminho fornecido:
+- Restaurar dependências e `app1` ferramentas para o projeto encontrado no caminho dado:
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj
   ```
 
-- Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a origem:
+- Restaurar as dependências e ferramentas para o projeto no diretório atual usando o caminho do arquivo fornecido como fonte:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages
   ```
 
-- Restaure as dependências e as ferramentas para o projeto no diretório atual usando os dois caminhos de arquivo fornecidos como fontes:
+- Restaurar as dependências e ferramentas para o projeto no diretório atual usando os dois caminhos de arquivo fornecidos como fontes:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
   ```
 
-- Restaure as dependências e as ferramentas para o projeto no diretório atual mostrando a saída detalhada:
+- Restaurar dependências e ferramentas para o projeto no diretório atual mostrando saída detalhada:
 
   ```dotnetcli
   dotnet restore --verbosity detailed

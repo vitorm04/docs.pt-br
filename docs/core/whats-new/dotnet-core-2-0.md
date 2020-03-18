@@ -3,22 +3,22 @@ title: Novidades do .NET Core 2.0
 description: Conheça os novos recursos encontrados no .NET Core.
 ms.date: 08/13/2017
 ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801897"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398828"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
 O .NET Core 2.0 contém melhorias e novos recursos nas seguintes áreas:
 
 - [Ferramentas](#tooling)
-- [Suporte a idiomas](#language-support)
+- [Suporte ao idioma](#language-support)
 - [Aprimoramentos da plataforma](#platform-improvements)
-- [Alterações na API](#api-changes-and-library-support)
-- [Integração com o Visual Studio](#visual-studio-integration)
-- [Aprimoramentos de documentação](#documentation-improvements)
+- [Alterações de API](#api-changes-and-library-support)
+- [Integração visual studio](#visual-studio-integration)
+- [Melhorias na documentação](#documentation-improvements)
 
 ## <a name="tooling"></a>Ferramentas
 
@@ -52,7 +52,7 @@ Você também pode redirecionar bibliotecas do .NET Standard para o .NET Standar
 
 Para mais informações sobre como migrar seu projeto para o .NET Core 2.0, confira [Migrar do ASP.NET Core 1.x para o ASP.NET Core 2.0](/aspnet/core/migration/1x-to-2x/index).
 
-## <a name="language-support"></a>Suporte a linguagens
+## <a name="language-support"></a>Suporte ao idioma
 
 Além do suporte a C# e F#, o .NET Core 2.0 também suporta Visual Basic.
 
@@ -70,11 +70,11 @@ Por exemplo, para criar um aplicativo "Olá, Mundo" do Visual Basic, siga as seg
 
 1. Abra uma janela do console, crie um diretório para seu projeto e torne-o o diretório atual.
 
-1. Insira o comando `dotnet new console -lang vb`.
+1. Digite o comando `dotnet new console -lang vb`.
 
    O comando cria um arquivo de projeto com uma extensão de arquivo `.vbproj`, junto com um arquivo de código-fonte do Visual Basic chamado *Program.vb*. Este arquivo contém o código-fonte para gravar a cadeia de caracteres "Olá, Mundo!" na janela do console.
 
-1. Insira o comando `dotnet run`. A [CLI do .NET Core](../tools/index.md) compila e executa automaticamente o aplicativo, que exibe a mensagem "Olá, Mundo!" na janela do console.
+1. Digite o comando `dotnet run`. A [CLI do .NET Core](../tools/index.md) compila e executa automaticamente o aplicativo, que exibe a mensagem "Olá, Mundo!" na janela do console.
 
 ### <a name="support-for-c-71"></a>Suporte para C# 7.1
 
@@ -110,7 +110,7 @@ O .NET Standard 2.0 inclui 20.000 APIs a mais do que havia disponível no .NET S
 
 As bibliotecas de classe .NET Standard 2.0 também podem fazer referência às bibliotecas de classe do .NET Framework, desde que elas chamem APIs que estão presentes no .NET Standard 2.0. Nenhuma recompilação das bibliotecas do .NET Framework é necessária.
 
-Para obter uma lista das APIs que foram adicionadas ao .NET Standard desde sua última versão, o .NET Standard 1,6, consulte [.NET Standard 2,0 vs. 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Para obter uma lista das APIs adicionadas ao .NET Standard desde a sua última versão, o .NET Standard 1.6, consulte [.NET Standard 2.0 vs. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Área de superfície expandida
 
@@ -122,7 +122,7 @@ E com o [Pacote de Compatibilidade do Windows](../porting/windows-compat-pack.md
 
 O código .NET Core pode fazer referência a bibliotecas existentes do .NET Framework, incluindo pacotes do NuGet. Observe que as bibliotecas devem usar APIs que são encontradas no .NET Standard.
 
-## <a name="visual-studio-integration"></a>integração com o Visual Studio
+## <a name="visual-studio-integration"></a>Integração do Visual Studio
 
 O Visual Studio 2017 versão 15.3 e, em alguns casos, o Visual Studio para Mac oferece vários aprimoramentos significativos para os desenvolvedores do .NET Core.
 
@@ -136,7 +136,7 @@ Para redirecionar seu projeto no Visual Studio, abra a guia **Aplicativo** da ca
 
 Sempre que você modifica o código, o Live Unit Testing executa os testes de unidade afetados automaticamente em segundo plano e exibe os resultados e a cobertura de código de forma dinâmica no ambiente do Visual Studio. O .NET Core 2.0 agora oferece suporte ao Live Unit Testing. Anteriormente, o Live Unit Testing estava disponível somente para aplicativos do .NET Framework.
 
-Para obter mais informações, consulte [Live Unit Testing com o Visual Studio](/visualstudio/test/live-unit-testing) e as [perguntas frequentes sobre Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
+Para obter mais informações, consulte [o Live Unit Testing com](/visualstudio/test/live-unit-testing) o Visual Studio e o [FAQ de teste da unidade ao vivo](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Melhor suporte a várias estruturas de destino
 
@@ -148,17 +148,17 @@ Se você estiver criando um projeto para várias estruturas de destino, selecion
 
 Agora você pode instalar o SDK do .NET Core independentemente do Visual Studio. Isso possibilita que uma única versão do Visual Studio crie projetos destinados a diferentes versões do .NET Core. Anteriormente, o Visual Studio e o SDK do .NET Core foram acoplados; uma versão específica do SDK acompanhava uma versão específica do Visual Studio.
 
-## <a name="documentation-improvements"></a>Aprimoramentos de documentação
+## <a name="documentation-improvements"></a>Melhorias na documentação
 
 ### <a name="net-application-architecture"></a>Arquitetura do Aplicativo .NET
 
 A [Arquitetura do Aplicativo .NET](https://dotnet.microsoft.com/learn/dotnet/architecture-guides) proporciona o acesso a um conjunto de livros eletrônicos que oferecem diretrizes, práticas recomendadas e aplicativos de exemplo ao usar o .NET para compilar:
 
-- [Microsserviços e contêineres do Docker](../../architecture/microservices/index.md)
-- [Aplicativos Web com o ASP.NET](../../architecture/modern-web-apps-azure/index.md)
-- [Aplicativos móveis com o Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Microserviços e contêineres Docker](../../architecture/microservices/index.md)
+- [Aplicações web com ASP.NET](../../architecture/modern-web-apps-azure/index.md)
+- [Aplicações móveis com Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Aplicativos que são implantados na Nuvem com o Azure](/azure/architecture/reference-architectures/index)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Novidades do ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
