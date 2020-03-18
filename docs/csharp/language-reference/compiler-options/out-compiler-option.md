@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970374"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opções do compilador C#)
@@ -24,7 +24,7 @@ A opção **-out** especifica o nome do arquivo de saída.
 -out:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `filename`  
  O nome do arquivo de saída criado pelo compilador.  
   
@@ -45,7 +45,7 @@ A opção **-out** especifica o nome do arquivo de saída.
   
  Os módulos produzidos como parte de uma compilação se tornam arquivos associados a qualquer assembly também produzido na compilação. Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) para exibir o manifesto do assembly para ver os arquivos associados.  
   
- A opção do compilador -out é necessária para que um exe seja o destino de um assembly amigável. Para obter mais informações, consulte [Assemblies amigáveis](../../../standard/assembly/friend.md).  
+ A opção do compilador -out é necessária para que um exe seja o destino de um assembly amigável. Para obter mais informações, consulte [Friend Assemblies](../../../standard/assembly/friend.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -64,8 +64,8 @@ A opção **-out** especifica o nome do arquivo de saída.
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
-- [Assemblies Amigáveis](../../../standard/assembly/friend.md)
+- [C# Opções de compilador](./index.md)
+- [Assembléias de Amigos](../../../standard/assembly/friend.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

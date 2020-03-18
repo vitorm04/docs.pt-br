@@ -3,7 +3,7 @@
   items:
     - name: Novidades em acessibilidade
       href: whats-new-in-accessibility.md
-    - name: O que está obsoleto na biblioteca de classes
+    - name: O que está obsoleto na Biblioteca de Classes
       href: whats-obsolete.md
       items:
         - name: Tipos obsoletos

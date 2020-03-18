@@ -3,10 +3,10 @@ title: Classificação de operadores de consulta padrão pelo modo de execução
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924288"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Classificação de operadores de consulta padrão pelo modo de execução (C#)
@@ -14,7 +14,7 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
   
 ## <a name="manners-of-execution"></a>Modos de execução  
   
-### <a name="immediate"></a>Imediato  
+### <a name="immediate"></a>Imediata  
  A execução imediata significa que a fonte de dados é lida e a operação é realizada no ponto do código em que a consulta é declarada. Todos os operadores de consulta padrão que retornam um resultado único e não enumerável são executados imediatamente.  
   
 ### <a name="deferred"></a>Adiado  
@@ -87,7 +87,7 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
 |<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)

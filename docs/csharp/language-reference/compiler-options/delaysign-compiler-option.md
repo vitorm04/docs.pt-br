@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970438"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opções do compilador C#)
@@ -25,15 +25,15 @@ Essa opção faz com que o compilador reserve espaço no arquivo de saída para 
 -delaysign[ + | - ]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `+` &#124; `-`
 
-Use **-delaysign-** se você quiser um assembly totalmente assinado. Use **-delaysign+** se você apenas desejar colocar a chave pública no assembly. O padrão é **-delaysign-** .
+Use **-delaysign-** se você quiser um assembly totalmente assinado. Use **-delaysign+** se você apenas desejar colocar a chave pública no assembly. O padrão é **-delaysign-**.
 
 ## <a name="remarks"></a>Comentários
 
-A opção **-delaysign** não tem nenhum efeito a menos que seja usada com [-keyfile](./keyfile-compiler-option.md) ou [-keycontainer](./keycontainer-compiler-option.md).
+A opção **-delaysign** não tem efeito a menos que seja usada com [-keyfile](./keyfile-compiler-option.md) ou [-keycontainer](./keycontainer-compiler-option.md).
 
 As opções **-delaysign** e **-publicsign** são mutuamente exclusivas.
 
@@ -48,10 +48,10 @@ Para obter mais informações, consulte [Criando e usando assemblies de nomes fo
 1. Abra a página **Propriedades** do projeto.
 1. Modifique a propriedade **Apenas adiar a assinatura**.
 
-Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
+Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opção -publicsign do C#](publicsign-compiler-option.md)
-- [Opções do compilador de C#](index.md)
+- [C# Opções de compilador](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

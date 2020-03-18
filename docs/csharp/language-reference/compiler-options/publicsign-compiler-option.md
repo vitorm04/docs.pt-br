@@ -8,15 +8,15 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738060"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61662524"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign (opções do compilador C#)
 
-Essa opção faz com que o compilador aplique uma chave pública, mas, na verdade, não assina o assembly. A opção **-publicsign** também define um bit no assembly que informa o tempo de execução que o arquivo realmente já está assinado.
+Essa opção faz com que o compilador aplique uma chave pública, mas, na verdade, não assina o assembly. A opção **-publicsign** também define um bit no assembly que informa o runtime que o arquivo realmente já está assinado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -24,9 +24,9 @@ Essa opção faz com que o compilador aplique uma chave pública, mas, na verdad
 -publicsign
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
-nenhuma.
+Nenhum.
 
 ## <a name="remarks"></a>Comentários
 
@@ -41,10 +41,10 @@ As opções **-publicsign** e **-delaysign** são mutuamente exclusivas.
 1. Abra a página **Propriedades** do projeto.
 1. Modifique a propriedade **Apenas adiar a assinatura**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Opção -delaysign do compilador C#](delaysign-compiler-option.md)
 - [Opção -keyfile do compilador C#](keyfile-compiler-option.md)
 - [Opção -keycontainer do compilador C#](keycontainer-compiler-option.md)
-- [Opções do compilador de C#](index.md)
+- [C# Opções de compilador](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

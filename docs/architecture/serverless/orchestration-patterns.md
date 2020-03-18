@@ -1,25 +1,25 @@
 ---
-title: Padrões de orquestração-aplicativos sem servidor
-description: Funções duráveis do Azure PR
+title: Padrões de orquestração - Aplicativos sem servidor
+description: Funções duráveis do Azure pr
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522640"
 ---
 # <a name="orchestration-patterns"></a>Padrões de orquestração
 
-Durable Functions facilita a criação de fluxos de trabalho com estado que são compostos por atividades de longa execução discretas em um ambiente sem servidor. Como Durable Functions pode acompanhar o progresso de seus fluxos de trabalho e, periodicamente, fazer o ponto de verificação do histórico de execução, ele se presta à implementação de alguns padrões interessantes.
+Funções duráveis facilitam a criação de fluxos de trabalho estaduais que são compostos de atividades discretas e de longa duração em um ambiente sem servidor. Uma vez que as Funções Duráveis podem acompanhar o progresso de seus fluxos de trabalho e periodicamente verifica o histórico de execução, ele se presta a implementar alguns padrões interessantes.
 
 ## <a name="function-chaining"></a>Encadeamento de funções
 
-Em um processo sequencial típico, as atividades precisam executar uma após a outra em uma ordem específica. Opcionalmente, a atividade futura pode exigir alguma saída da função anterior. Essa dependência na ordenação de atividades cria uma cadeia de função de execução.
+Em um processo seqüencial típico, as atividades precisam executar uma após a outra em uma ordem particular. Opcionalmente, a atividade futura pode exigir alguma saída da função anterior. Essa dependência da ordenação de atividades cria uma cadeia de funções de execução.
 
-O benefício de usar Durable Functions para implementar esse padrão de fluxo de trabalho vem da sua capacidade de fazer o ponto de verificação. Se o servidor falhar, a rede atinge o tempo limite ou algum outro problema ocorre, as funções duráveis podem retomar o último estado conhecido e continuar executando o fluxo de trabalho mesmo se ele estiver em outro servidor.
+O benefício de usar funções duráveis para implementar esse padrão de fluxo de trabalho vem de sua capacidade de fazer pontos de verificação. Se o servidor falhar, o tempo de rede sair ou algum outro problema ocorrer, as funções duráveis podem ser retomadas a partir do último estado conhecido e continuar executando seu fluxo de trabalho mesmo que esteja em outro servidor.
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-No exemplo de código anterior, a função `CallActivityAsync` é responsável por executar uma determinada atividade em uma máquina virtual na data center. Quando Await retornar e a tarefa subjacente for concluída, a execução será registrada na tabela de histórico. O código na função de orquestrador pode fazer uso de qualquer uma das construções familiares da biblioteca de tarefas paralelas e das palavras-chave Async/Await.
+Na amostra de código `CallActivityAsync` anterior, a função é responsável por executar uma determinada atividade em uma máquina virtual no data center. Quando a espera retornar e a Tarefa subjacente for concluída, a execução será registrada na tabela de história. O código na função orquestrador pode fazer uso de qualquer um dos construções familiares da Biblioteca Paralela da Tarefa e das palavras-chave assinuosas/aguardar.
 
-O código a seguir é um exemplo simplificado de como o método `ProcessPayment` pode ser:
+O código a seguir é um `ProcessPayment` exemplo simplificado de como o método pode se parecer:
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -58,9 +58,9 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 ## <a name="asynchronous-http-apis"></a>APIs HTTP assíncronas
 
-Em alguns casos, os fluxos de trabalho podem conter atividades que levam um período de tempo relativamente longo para ser concluído. Imagine um processo que inicia o backup de arquivos de mídia no armazenamento de BLOBs. Dependendo do tamanho e da quantidade dos arquivos de mídia, esse processo de backup pode levar horas para ser concluído.
+Em alguns casos, os fluxos de trabalho podem conter atividades que levam um período relativamente longo de tempo para serem concluídos. Imagine um processo que inicia o backup de arquivos de mídia em armazenamento blob. Dependendo do tamanho e quantidade dos arquivos de mídia, este processo de backup pode levar horas para ser concluído.
 
-Nesse cenário, a capacidade do `DurableOrchestrationClient`de verificar o status de um fluxo de trabalho em execução se torna útil. Ao usar um `HttpTrigger` para iniciar um fluxo de trabalho, o método `CreateCheckStatusResponse` pode ser usado para retornar uma instância do `HttpResponseMessage`. Essa resposta fornece ao cliente um URI no conteúdo que pode ser usado para verificar o status do processo em execução.
+Neste cenário, `DurableOrchestrationClient`a capacidade de verificar o status de um fluxo de trabalho em execução torna-se útil. Ao usar `HttpTrigger` um para iniciar `CreateCheckStatusResponse` um fluxo de trabalho, `HttpResponseMessage`o método pode ser usado para retornar uma instância de . Essa resposta fornece ao cliente um URI na carga útil que pode ser usado para verificar o status do processo de execução.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-O resultado de exemplo abaixo mostra a estrutura da carga de resposta.
+O resultado amostral abaixo mostra a estrutura da carga de resposta.
 
 ```json
 {
@@ -87,7 +87,7 @@ O resultado de exemplo abaixo mostra a estrutura da carga de resposta.
 }
 ```
 
-Usando seu cliente HTTP preferencial, as solicitações GET podem ser feitas para o URI no statusQueryGetUri para inspecionar o status do fluxo de trabalho em execução. A resposta de status retornada deve ser semelhante ao código a seguir.
+Usando seu cliente HTTP preferido, as solicitações GET podem ser feitas ao URI em statusQueryGetUri para inspecionar o status do fluxo de trabalho em execução. A resposta de status retornada deve se assemelhar ao seguinte código.
 
 ```json
 {
@@ -101,13 +101,13 @@ Usando seu cliente HTTP preferencial, as solicitações GET podem ser feitas par
 }
 ```
 
-Conforme o processo continua, a resposta de status será alterada para **com falha** ou **concluída**. Após a conclusão bem-sucedida, a propriedade de **saída** na carga conterá todos os dados retornados.
+À medida que o processo continua, a resposta de status será alterado para **Falha** ou **Concluído**. Após a conclusão bem-sucedida, a propriedade **de saída** na carga útil conterá quaisquer dados retornados.
 
 ## <a name="monitoring"></a>Monitoramento
 
-Para tarefas recorrentes simples, Azure Functions fornece o `TimerTrigger` que pode ser agendado com base em uma expressão CRON. O temporizador funciona bem para tarefas simples e de curta duração, mas pode haver cenários onde é necessário um agendamento mais flexível. Esse cenário é quando o padrão de monitoramento e o Durable Functions podem ajudar.
+Para tarefas simples e recorrentes, `TimerTrigger` o Azure Functions fornece o que pode ser agendado com base em uma expressão CRON. O temporizador funciona bem para tarefas simples e de curta duração, mas pode haver cenários onde é necessário agendamento mais flexível. Este cenário é quando o padrão de monitoramento e funções duráveis podem ajudar.
 
-Durable Functions permite intervalos de agendamento flexíveis, gerenciamento de tempo de vida e a criação de vários processos de monitor de uma única função de orquestração. Um caso de uso para essa funcionalidade pode ser criar observadores para alterações de preço de ações que são concluídas quando um determinado limite é atingido.
+Funções duráveis permitem intervalos de agendamento flexíveis, gerenciamento de vida e criação de múltiplos processos de monitor a partir de uma única função de orquestração. Um caso de uso para essa funcionalidade pode ser criar observadores para mudanças de preço de ações que se completam uma vez que um determinado limite é atingido.
 
 ```csharp
 [FunctionName("CheckStockPrice")]
@@ -149,13 +149,13 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-o método `CreateTimer` de `DurableOrchestrationContext`configura o agendamento para a próxima invocação do loop para verificar as alterações de preço de ações. `DurableOrchestrationContext` também tem uma propriedade `CurrentUtcDateTime` para obter o valor DateTime atual em UTC. É melhor usar essa propriedade em vez de `DateTime.UtcNow` porque ela é facilmente simulada para teste.
+`DurableOrchestrationContext`O `CreateTimer` método de 'configura o cronograma para a próxima invocação do loop para verificar as alterações no preço das ações. `DurableOrchestrationContext`também tem `CurrentUtcDateTime` uma propriedade para obter o valor datetime atual em UTC. É melhor usar esta propriedade `DateTime.UtcNow` em vez de porque ela é facilmente ridicularizada para testes.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
 - [Durable Functions do Azure](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Teste de unidade no .NET Core e no .NET Standard](../../core/testing/index.md)
+- [Teste unitário em .NET Core e .NET Standard](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
->[Anterior](durable-azure-functions.md)
->[Próximo](serverless-business-scenarios.md)
+>[Próximo](durable-azure-functions.md)
+>[anterior](serverless-business-scenarios.md)

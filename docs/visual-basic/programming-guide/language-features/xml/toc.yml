@@ -16,27 +16,27 @@
           href: xml-literals-and-the-xml-1-0-specification.md
         - name: Espaço em branco em literais XML
           href: white-space-in-xml-literals.md
-        - name: 'Como: criar literais XML'
+        - name: Como criar literais XML
           href: how-to-create-xml-literals.md
-        - name: 'Como: inserir expressões em literais XML'
+        - name: Como inserir expressões em literais XML
           href: how-to-embed-expressions-in-xml-literals.md
     - name: Manipular XML
       href: manipulating-xml.md
       items:
-        - name: 'Como: carregar XML de um arquivo, cadeia de caracteres ou fluxo'
+        - name: 'Como carregar XML a partir de um arquivo, cadeia de caracteres ou fluxo'
           href: how-to-load-xml-from-a-file-string-or-stream.md
-        - name: 'Como: transformar XML usando LINQ'
+        - name: Como transformar XML usando LINQ
           href: how-to-transform-xml-by-using-linq.md
-        - name: 'Como: modificar literais XML'
+        - name: Como modificar literais XML
           href: how-to-modify-xml-literals.md
     - name: Acessar XML
       href: accessing-xml.md
       items:
-        - name: 'Como: acessar elementos descendentes XML'
+        - name: Como acessar elementos descendentes XML
           href: how-to-access-xml-descendant-elements.md
-        - name: 'Como: acessar elementos filho XML'
+        - name: Como acessar elementos filho XML
           href: how-to-access-xml-child-elements.md
-        - name: 'Como: acessar atributos XML'
+        - name: Como acessar atributos XML
           href: how-to-access-xml-attributes.md
-        - name: 'Como: declarar e usar prefixos de namespace de XML'
+        - name: Como declarar e usar prefixos de namespace XML
           href: how-to-declare-and-use-xml-namespace-prefixes.md

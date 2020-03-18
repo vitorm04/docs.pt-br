@@ -39,7 +39,7 @@
       href: cryptography/index.md
     - name: Esquema de configurações de rede
       href: network/index.md
-    - name: Esquema de configurações do tempo de execução
+    - name: Esquema de configurações do runtime
       href: runtime/index.md
     - name: Esquema de configurações de inicialização
       href: startup/index.md
