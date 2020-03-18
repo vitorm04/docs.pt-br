@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: Implementando conexões SQL resilientes do Entity Framework Core
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: Explorar novas tentativas de chamadas HTTP personalizadas com retirada exponencial
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: Usar HttpClientFactory implementar solicitações HTTP resilientes
+        - name: Use o IHttpClientFactory para implementar solicitações HTTP resilientes
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Implementar repetições de chamadas HTTP com retirada exponencial com a Polly
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
