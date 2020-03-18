@@ -10,10 +10,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 01/24/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "76737539"
 items:
 - durationInMinutes: 2
@@ -22,7 +22,7 @@ items:
 - title: Criar uma cadeia de caracteres interpolada
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa (substitua `<name>` pelo seu nome) e selecione **executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **Entrar no modo foco.** Em seguida, digite o seguinte bloco `<name>` de código na janela interativa (substitua por seu nome) e selecione **Executar**:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     Na etapa anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Cada expressão de interpolação que faz parte de uma expressão de cadeia de caracteres interpolada pode ser de qualquer tipo de dados. Vamos incluir valores de várias expressões de tipo de dados em uma cadeia de caracteres interpolada.
 
 
-    No exemplo a seguir, primeiro definimos uma [tupla](../../tuples.md) que tem os membros `Name`, `Price` e `perPackage`. Execute o seguinte código na janela interativa:
+    No exemplo a seguir, definimos primeiro `Name`uma `Price` [tuple](../../tuples.md) que tem , e `perPackage` membros. Execute o seguinte código na janela interativa:
 
 
     ```csharp
@@ -100,7 +100,7 @@ items:
     ```
 
 
-    Você especifica uma cadeia de caracteres de formato colocando dois-pontos (":") e a cadeia de caracteres de formato após a expressão de interpolação. "d" é uma [cadeia de caracteres de formato de data e hora padrão](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa o formato de data abreviada. "C2" é um [cadeia de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa um número como um valor de moeda com dois dígitos após o ponto decimal.
+    Você especifica uma cadeia de caracteres de formato colocando dois-pontos (":") e a cadeia de caracteres de formato após a expressão de interpolação. "d" é uma [cadeia de caracteres de formato de data e hora padrão](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa o formato de data abreviada. "C2" é uma [seqüência de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa um número como um valor de moeda com dois dígitos após o ponto decimal.
 
 
     Diversos tipos nas bibliotecas do .NET são compatíveis com um conjunto predefinido de cadeias de caracteres de formato. Isso inclui todos os tipos numéricos e os tipos de data e hora. Para obter uma lista completa dos tipos que são compatíveis com as cadeias de caracteres de formato, consulte [Cadeias de caracteres de formato e tipos da biblioteca de classes do .NET](../../../standard/base-types/formatting-types.md#format-strings-and-net-types) no artigo [Tipos de formatação no .NET](../../../standard/base-types/formatting-types.md).

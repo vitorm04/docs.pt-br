@@ -6,9 +6,9 @@
       items:
         - name: AttributeUsage
           href: attributeusage.md
-    - name: Acessar atributos usando reflexão
+    - name: Acessando atributos usando reflexão
       href: accessing-attributes-by-using-reflection.md
-    - name: 'Como: criar uma união de C/C++ usando atributos'
+    - name: Como criar uma união do C/C++ usando atributos
       href: how-to-create-a-c-cpp-union-by-using-attributes.md
     - name: Atributos comuns
       href: common-attributes.md

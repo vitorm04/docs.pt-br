@@ -3,17 +3,17 @@ title: Exemplo de execução adiada (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204128"
 ---
-# <a name="deferred-execution-example-c"></a><span data-ttu-id="d320b-102">Exemplo de execução adiada (C#)</span><span class="sxs-lookup"><span data-stu-id="d320b-102">Deferred Execution Example (C#)</span></span>
-<span data-ttu-id="d320b-103">Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="d320b-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
+# <a name="deferred-execution-example-c"></a><span data-ttu-id="5a2c1-102">Exemplo de execução adiada (C#)</span><span class="sxs-lookup"><span data-stu-id="5a2c1-102">Deferred Execution Example (C#)</span></span>
+<span data-ttu-id="5a2c1-103">Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d320b-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d320b-104">Example</span></span>  
- <span data-ttu-id="d320b-105">O exemplo a seguir mostra a ordem de execução para usar um método de extensão que use a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="d320b-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="d320b-106">O exemplo declara uma matriz de três cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="d320b-106">The example declares an array of three strings.</span></span> <span data-ttu-id="d320b-107">Em itera através da coleção retornada por `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="d320b-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
+## <a name="example"></a><span data-ttu-id="5a2c1-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5a2c1-104">Example</span></span>  
+ <span data-ttu-id="5a2c1-105">O exemplo a seguir mostra a ordem de execução para usar um método de extensão que use a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="5a2c1-106">O exemplo declara uma matriz de três cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-106">The example declares an array of three strings.</span></span> <span data-ttu-id="5a2c1-107">Em itera através da coleção retornada por `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -44,7 +44,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="d320b-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="d320b-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="5a2c1-108">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="5a2c1-108">This example produces the following output:</span></span>  
   
 ```output  
 ToUpper: source abc  
@@ -55,14 +55,14 @@ ToUpper: source ghi
 Main: str GHI  
 ```  
   
- <span data-ttu-id="d320b-109">Observe que para iterar através da coleção retornada por `ConvertCollectionToUpperCase`, cada item é recuperado de matriz de cadeias de caracteres de origem e convertido para maiúsculas antes que o próximo item é recuperado de matriz de cadeias de caracteres de origem.</span><span class="sxs-lookup"><span data-stu-id="d320b-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
+ <span data-ttu-id="5a2c1-109">Observe que para iterar através da coleção retornada por `ConvertCollectionToUpperCase`, cada item é recuperado de matriz de cadeias de caracteres de origem e convertido para maiúsculas antes que o próximo item é recuperado de matriz de cadeias de caracteres de origem.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>  
   
- <span data-ttu-id="d320b-110">Você pode ver que a matriz inteira de cadeias de caracteres não é convertida para maiúsculas antes que cada item na coleção retornada é processado no loop de `foreach` em `Main`.</span><span class="sxs-lookup"><span data-stu-id="d320b-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
+ <span data-ttu-id="5a2c1-110">Você pode ver que a matriz inteira de cadeias de caracteres não é convertida para maiúsculas antes que cada item na coleção retornada é processado no loop de `foreach` em `Main`.</span><span class="sxs-lookup"><span data-stu-id="5a2c1-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>  
   
- <span data-ttu-id="d320b-111">O próximo tópico neste tutorial mostra o encadeamento consultas em conjunto:</span><span class="sxs-lookup"><span data-stu-id="d320b-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
+ <span data-ttu-id="5a2c1-111">O próximo tópico neste tutorial mostra o encadeamento consultas em conjunto:</span><span class="sxs-lookup"><span data-stu-id="5a2c1-111">The next topic in this tutorial illustrates chaining queries together:</span></span>  
   
-- [<span data-ttu-id="d320b-112">Exemplo de encadeamento de consultas (C#)</span><span class="sxs-lookup"><span data-stu-id="d320b-112">Chaining Queries Example (C#)</span></span>](./chaining-queries-example.md)  
+- [<span data-ttu-id="5a2c1-112">Exemplo de encadeamento de consultas (C#)</span><span class="sxs-lookup"><span data-stu-id="5a2c1-112">Chaining Queries Example (C#)</span></span>](./chaining-queries-example.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d320b-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d320b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a2c1-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="5a2c1-113">See also</span></span>
 
-- [<span data-ttu-id="d320b-114">Tutorial: Encadeando consultas (C#)</span><span class="sxs-lookup"><span data-stu-id="d320b-114">Tutorial: Chaining Queries Together (C#)</span></span>](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [<span data-ttu-id="5a2c1-114">Tutorial: encadear consultas juntas (C#)</span><span class="sxs-lookup"><span data-stu-id="5a2c1-114">Tutorial: Chaining Queries Together (C#)</span></span>](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
