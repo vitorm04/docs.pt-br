@@ -3,10 +3,10 @@ title: Visão geral dos eixos do LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 ms.openlocfilehash: c8b64731925f37d54bded62fae4ccae9933ffbe9
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635516"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Visão geral dos eixos do LINQ to XML (C#)
@@ -16,7 +16,7 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
   
  Além dos métodos de eixo, que retornam coleções, há mais dois métodos que você geralmente usa nas consultas do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. O método <xref:System.Xml.Linq.XContainer.Element%2A> retorna um <xref:System.Xml.Linq.XElement> único. O método <xref:System.Xml.Linq.XElement.Attribute%2A> retorna um <xref:System.Xml.Linq.XAttribute> único.  
   
- Para muitas finalidades, as consultas LINQ fornecem a maneira mais poderosa de examinar uma árvore, extrair dados dela e transformá-la. As consultas do LINQ operam em objetos que implementam <xref:System.Collections.Generic.IEnumerable%601>, e os eixos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retornam <xref:System.Collections.Generic.IEnumerable%601> de coleções de <xref:System.Xml.Linq.XElement> e <xref:System.Collections.Generic.IEnumerable%601> de coleções de <xref:System.Xml.Linq.XAttribute>. Você precisa dessas coleções para executar suas consultas.  
+ Para muitos propósitos, as consultas LINQ fornecem a maneira mais poderosa de examinar uma árvore, extrair dados dela e transformá-la. As consultas LINQ operam <xref:System.Collections.Generic.IEnumerable%601>em objetos que implementam , e os [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eixos <xref:System.Collections.Generic.IEnumerable%601> de retorno de <xref:System.Xml.Linq.XElement> coleções, e <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XAttribute> coleções. Você precisa dessas coleções para executar suas consultas.  
   
  Além dos métodos de eixo que recuperam coleções de elementos e atributos, há métodos de eixo que permitem a você iterar na árvore detalhadamente. Por exemplo, em vez de tratar elementos e atributos, você pode trabalhar com os nós da árvore. Os nós são um nível mais refinado de granularidade do que os elementos e os atributos. Ao trabalhar com os nós, você pode examinar comentários XML, nós de texto, instruções de processamento e muito mais. Essa funcionalidade é importante, por exemplo, para alguém que estiver escrevendo em um processador de texto e deseja salvar documentos como XML. No entanto, a maioria dos programadores XML se preocupam basicamente com os elementos, os atributos e seus valores.  
   
@@ -54,6 +54,6 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Retorna o <xref:System.Xml.Linq.XAttribute> que tem o <xref:System.Xml.Linq.XName> especificado.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eixos do LINQ to XML (C#)](linq-to-xml-axes-overview.md)

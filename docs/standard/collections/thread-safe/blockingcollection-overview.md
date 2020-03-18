@@ -9,10 +9,10 @@ helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 ms.openlocfilehash: fb01d29c723962e28d8ec4afc984cb4d6c48f9b5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711318"
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
@@ -78,7 +78,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Usando vários BlockingCollections como um  
  Para cenários em que um consumidor precisa remover itens de várias coleções simultaneamente, é possível criar matrizes de <xref:System.Collections.Concurrent.BlockingCollection%601> e usar os métodos estáticos como <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> que adicionarão ou retirarão de qualquer uma das coleções na matriz. Se uma coleção for de bloqueio, o método imediatamente tenta outra até encontrar uma que possa realizar a operação. Para obter mais informações, confira [Como usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções e Estruturas de Dados](../../../../docs/standard/collections/index.md)

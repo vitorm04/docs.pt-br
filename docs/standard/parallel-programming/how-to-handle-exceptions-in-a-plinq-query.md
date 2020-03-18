@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123097"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Como manipular exceções em uma consulta PLINQ
@@ -50,7 +50,7 @@ O exemplo a seguir mostra como inserir um bloco try-catch em um representante pa
 
 Não captura uma exceção, a menos que você saiba como tratá-la para que o estado do programa não sejam corrompido.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.ParallelEnumerable>
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

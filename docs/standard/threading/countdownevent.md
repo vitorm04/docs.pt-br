@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138118"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -38,13 +38,13 @@ ms.locfileid: "73138118"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent com cancelamento  
- O exemplo a seguir mostra como cancelar a operação de espera em <xref:System.Threading.CountdownEvent> usando um token de cancelamento. O padrão básico segue o modelo do cancelamento unificado introduzido no .NET Framework 4. Para saber mais, confira [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ O exemplo a seguir mostra como cancelar a operação de espera em <xref:System.Threading.CountdownEvent> usando um token de cancelamento. O padrão básico segue o modelo do cancelamento unificado introduzido no .NET Framework 4. Para obter mais informações, consulte [Cancelamento em Tópicos Gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  
   
  Observe que a operação de espera não cancela os threads que a estão sinalizando. Normalmente, o cancelamento é aplicado a uma operação lógica e isso pode incluir aguardar o evento e todos os itens de trabalho que a espera está sincronizando. Neste exemplo, cada item de trabalho passa uma cópia do mesmo token de cancelamento para que ele possa responder à solicitação de cancelamento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Semaphore?displayProperty=nameWithType>

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348302"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
@@ -32,16 +32,16 @@ As cadeias de caracteres de formato numérico personalizado têm suporte de algu
 > [!TIP]
 > Baixe o **Utilitário de Formatação**, um aplicativo do Windows Forms do .NET Core que permite aplicar cadeias de caracteres de formato a valores numéricos ou de data e hora e exibir a cadeia de caracteres de resultado. O código-fonte está disponível para o [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) e o [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb).
 
-<a name="table"></a> A tabela a seguir descreve os especificadores de formato numérico personalizado e exibe amostras de saída produzidas por cada especificador de formato. Consulte a seção [Notas](#NotesCustomFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico personalizado e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
+<a name="table"></a>A tabela a seguir descreve os especificadores de formato numérico personalizados e exibe a saída de amostra produzida por cada especificador de formato. Consulte a seção [Notas](#NotesCustomFormatting) para obter informações adicionais sobre como usar cadeias de caracteres de formato numérico personalizado e a seção [Exemplo](#example) para obter uma ilustração abrangente de seu uso.
 
-|Especificador de formato|Name|Descrição|Exemplos|
+|Especificador de formato|Nome|Descrição|Exemplos|
 |----------------------|----------|-----------------|--------------|
 |"0"|Espaço reservado de zero|Substitui o zero pelo dígito correspondente, se houver um presente. Caso contrário, o zero aparecerá na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
 |"#"|Espaço reservado de dígito|Substitui o símbolo "#" pelo dígito correspondente, se houver um presente. Caso contrário, nenhum dígito aparecerá na cadeia de caracteres de resultado.<br /><br /> Observe que nenhum dígito aparece na cadeia de caracteres de resultado se o dígito na cadeia de entrada correspondente for um 0 não significativo. Por exemplo, 0003 ("####") -> 3.<br /><br /> Mais informações: [Especificador de formato personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|
-|"."|Ponto decimal|Determina a posição do separador decimal na cadeia de caracteres de resultado.<br /><br /> Mais informações: [o "." Especificador personalizado](#SpecifierPt).|0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
-|","","|Separador de grupo e escala numérica|Funciona tanto como um separador de grupo quanto como um especificador de escala numérica. Como separador de grupo, insere um caractere separador de grupo localizado entre cada grupo. Como especificador de escala numérica, divide um número por 1000 para cada vírgula especificada.<br /><br /> Mais informações: [Especificador de formato personalizado ","](#SpecifierTh).|Especificador de separador de grupo:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
-|"%"|Espaço reservado percentual|Multiplica um número por 100 e insere um símbolo percentual localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "%"](#SpecifierPct).|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
-|"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [Especificador de formato personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
+|"."|Ponto decimal|Determina a posição do separador decimal na cadeia de caracteres de resultado.<br /><br /> Mais informações: [O "" Especificador personalizado](#SpecifierPt).|0.45678 (en-US "0,00") -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|
+|","|Separador de grupo e escala numérica|Funciona tanto como um separador de grupo quanto como um especificador de escala numérica. Como separador de grupo, insere um caractere separador de grupo localizado entre cada grupo. Como especificador de escala numérica, divide um número por 1000 para cada vírgula especificada.<br /><br /> Mais informações: [O Especificador Personalizado ."](#SpecifierTh)|Especificador de separador de grupo:<br /><br /> 2147483647 ("##,#", en-US) -> 2,147,483,647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Especificador de escala:<br /><br /> 2147483647 ("#,#,,", en-US) -> 2,147<br /><br /> 2147483647 ("#,#,,", es-ES) -> 2.147|
+|"%"|Espaço reservado percentual|Multiplica um número por 100 e insere um símbolo percentual localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [O Especificador Personalizado "%".](#SpecifierPct)|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|
+|"‰"|Espaço reservado por milhar|Multiplica um número por 1000 e insere um símbolo de por milhar localizado na cadeia de caracteres de resultado.<br /><br /> Mais informações: [O "⁄" Personal Specifier](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "e0"<br /><br /> "e+0"<br /><br /> "e-0"|Notação exponencial|Se seguida por pelo menos um 0 (zero), formata o resultado usando notação exponencial. A caixa de “E” ou “e” indica a caixa do símbolo do expoente na cadeia de caracteres de resultado. O número de zero depois do caractere “E” ou “e” determina o número mínimo de dígitos do expoente. Um sinal de positivo (+) indica que um caractere de sinal sempre precede o expoente. Um sinal de negativo (-) indica que um caractere de sinal precede apenas expoentes negativos.<br /><br /> Mais informações: [Especificadores de formato personalizado "E" e "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|Caractere de escape|Faz com que o próximo caractere seja interpretado como um literal em vez de como um especificador de formato personalizado.<br /><br /> Mais informações: [Caractere de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
 |'*string*'<br /><br /> "*string*"|Delimitador de cadeia de caracteres literal|Indica que os caracteres delimitados devem ser copiados para a cadeia de caracteres de resultado sem sofrerem alterações.<br/><br/>Para saber mais: [Literais de cadeia de caracteres](#character-literals).|68 ("# ' graus'") -> 68 graus<br /><br /> 68 ("# ' graus'") -> 68 graus|
@@ -84,7 +84,7 @@ O exemplo a seguir mostra vários valores formatados com cadeias de caracteres d
 [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
 [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]
 
-Para retornar uma cadeia de caracteres de resultado em que dígitos ausentes ou zeros à esquerda são substituídos por espaços, use o recurso de [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e especifique uma largura de campo, como mostra o exemplo a seguir.
+Para retornar uma seqüência de resultados na qual os dígitos ausentes ou zeros principais são substituídos por espaços, use o [recurso de formatação composta](../../../docs/standard/base-types/composite-formatting.md) e especifique uma largura de campo, como ilustra o exemplo a seguir.
 
 [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
 [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
@@ -209,7 +209,7 @@ O ponto-e-vírgula (;) é um especificador de formato condicional que aplica for
 |------------------------|-----------------|
 |Uma seção|A cadeia de caracteres de formato aplica-se a todos os valores.|
 |Duas seções|A primeira seção aplica-se a valores positivos e zeros e a segunda seção aplica-se a valores negativos.<br /><br /> Se o número a ser formatado for negativo, mas se tornar zero após o arredondamento de acordo com o formato na segunda seção, então o zero resultante será formatado de acordo com a primeira seção.|
-|Trê seções|A primeira seção aplica-se a valores positivos, a segunda seção aplica-se a valores negativos e a terceira seção aplica-se a zeros.<br /><br /> A segunda seção pode ser deixada em branco (ao não ter nada entre os pontos-e-vírgulas), caso em que a primeira seção se aplica a todos os valores diferentes de zero.<br /><br /> Se o número a ser formatado for não zero, mas se tornar zero após o arredondamento de acordo com o formato na primeira ou segunda seção, então o zero resultante será formatado de acordo com a terceira seção.|
+|Três seções|A primeira seção aplica-se a valores positivos, a segunda seção aplica-se a valores negativos e a terceira seção aplica-se a zeros.<br /><br /> A segunda seção pode ser deixada em branco (ao não ter nada entre os pontos-e-vírgulas), caso em que a primeira seção se aplica a todos os valores diferentes de zero.<br /><br /> Se o número a ser formatado for não zero, mas se tornar zero após o arredondamento de acordo com o formato na primeira ou segunda seção, então o zero resultante será formatado de acordo com a terceira seção.|
 
 Separadores de seção ignoram qualquer formatação preexistente associada a um número quando o valor final é formatado. Por exemplo, valores negativos sempre são exibidos sem um sinal de negativ o quando os separadores de seção são usados. Se desejar que o valor final formatado contenha um sinal de negativo, você deverá incluir explicitamente o sinal de negativo como parte de especificador de formato personalizado.
 
@@ -255,7 +255,7 @@ O exemplo a seguir usa as duas abordagem para incluir caracteres reservados em u
 
 <a name="NotesCustomFormatting"></a>
 
-## <a name="notes"></a>{1&gt;Observações&lt;1}
+## <a name="notes"></a>Observações
 
 ### <a name="floating-point-infinities-and-nan"></a>Infinitos de ponto flutuante e NaN
 
@@ -285,11 +285,11 @@ O exemplo a seguir demonstra duas cadeias de caracteres de formato numérico per
 
 [Voltar à tabela](#table)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

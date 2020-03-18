@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 ms.openlocfilehash: d4bbf30923d65ad7aeced80efa626136ae27491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138136"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelamento em threads gerenciados
@@ -33,7 +33,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
  A ilustração a seguir mostra o relacionamento entre uma fonte de token e todas as cópias de seu token.  
   
- ![Tokens de CancellationTokenSource e cancelamento](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
+ ![CancelamentoTokenFonte e tokens de cancelamento](../../../docs/standard/threading/media/vs-cancellationtoken.png "VS_CancellationToken")  
   
  O novo modelo de cancelamento facilita a criação de aplicativos e bibliotecas com reconhecimento de cancelamento, e ele dá suporte aos seguintes recursos:  
   
@@ -52,7 +52,7 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
 ## <a name="cancellation-types"></a>Tipos de cancelamento  
  A estrutura de cancelamento é implementada como um conjunto de tipos relacionados, que estão listados na tabela a seguir.  
   
-|Nome de tipo|Descrição|  
+|Nome do tipo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Threading.CancellationTokenSource>|O objeto que cria um token de cancelamento, e também emite o pedido de cancelamento para todas as cópias desse token.|  
 |<xref:System.Threading.CancellationToken>|O tipo de valor leve passado a um ou mais ouvintes, normalmente como um parâmetro de método. Os ouvintes monitoram o valor da propriedade `IsCancellationRequested` do token por sondagem, retorno de chamada ou identificador de espera.|  
@@ -144,8 +144,8 @@ A partir do .NET Framework 4, o .NET Framework usa um modelo unificado para canc
   
 - Os delegados de usuários devem tentar responder as solicitações de cancelamento do código da biblioteca em tempo hábil.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> são exemplos de classes que seguem essas diretrizes. Para obter mais informações, consulte [cancelamento de tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [como: cancelar uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> e <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> são exemplos de classes que seguem essas diretrizes. Para obter mais informações, consulte [Cancelamento de Tarefas](../../../docs/standard/parallel-programming/task-cancellation.md) e [Como: Cancelar uma Consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
+- [Noções básicas de rosca gerenciadas](../../../docs/standard/threading/managed-threading-basics.md)

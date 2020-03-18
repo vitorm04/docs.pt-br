@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: criar um recomendador de filmes usando Fatoração de Matriz com ML.NET'
+title: 'Tutorial: Construa um recomendador de filmes - fatoração de matriz'
 description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
 author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
 ms.openlocfilehash: a221289d0c232863f03a275c26dce835f2878bf7
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78241098"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Tutorial: criar um recomendador de filmes usando a fatoração de matriz com o ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Tutorial: Construa um recomendador de filmes usando fatoração de matriz com ML.NET
 
 Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
 
@@ -36,9 +36,9 @@ Você usará as seguintes etapas para realizar sua tarefa, bem como qualquer out
 3. [Avaliar o modelo](#evaluate-your-model)
 4. [Usar o modelo](#use-your-model)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho ".NET Core cross-platform development" instalada.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Selecionar a tarefa de aprendizado de máquina apropriada
 
@@ -48,11 +48,11 @@ Há várias maneiras de abordar problemas de recomendação, como recomendar uma
 
 ### <a name="create-a-project"></a>Criar um projeto
 
-1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "MovieRecommender" e, em seguida, selecione o botão **OK**.
+1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "MovieRecommender" e, em seguida, selecione o botão **OK**.
 
 2. Crie um diretório chamado *Data* no projeto para armazenar o conjunto de dados:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
 
 3. Instale os pacotes NuGet **Microsoft.ML** e **Microsoft.ML.Recommender**:
 
@@ -71,9 +71,9 @@ Há várias maneiras de abordar problemas de recomendação, como recomendar uma
 
      Salve os arquivos \*.csv na pasta *Data* ou, depois de salvá-los em outro lugar, mova os arquivos \*.csv para a pasta *Data*.
 
-2. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos \*.csv e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
+2. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos \*.csv e selecione **Propriedades**. Em **Avançado,** altere o valor de **Copiar para Diretório de Saída** para Copiar se mais **novo**.
 
-   ![GIF de um usuário selecionando copiar se mais recente no VS.](./media/movie-recommendation/copy-to-output-if-newer.gif)
+   ![GIF de um usuário selecionando cópia se mais novo em VS.](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Carregar os dados
 
@@ -83,7 +83,7 @@ Os dados de classificações de recomendação são divididos nos conjuntos de d
 
 Segue abaixo uma visualização dos dados nos arquivos \*.csv:
 
-![Captura de tela da visualização do conjunto de uma do CVS.](./media/movie-recommendation/csv-file-dataset-preview.png)
+![Captura de tela da visualização do conjunto de dados CVS.](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 Nos arquivos \*.csv, há quatro colunas:
 
@@ -102,7 +102,7 @@ Você deseja prever as classificações de filmes, portanto, a coluna de classif
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como a [importância do recurso de permutação](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ajudar a selecionar a melhor `Features`.
+Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como [a importância do recurso de permutação](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ajudar a selecionar o melhor `Features`.
 
 Nesse caso, você deve eliminar a coluna `timestamp` como um `Feature` porque o carimbo de data/hora não afeta como um usuário classifica determinado filme e, portanto, não contribui para uma previsão mais precisa:
 
@@ -167,15 +167,15 @@ Adicione o seguinte código ao método `Main()` para chamar o método `LoadData(
 
 ## <a name="build-and-train-your-model"></a>Criar e treinar o modelo
 
-Há três conceitos principais em ML.NET: [Data](../resources/glossary.md#data), [transformadores](../resources/glossary.md#transformer)e [estimadores](../resources/glossary.md#estimator).
+Existem três conceitos principais em ML.NET: [Dados,](../resources/glossary.md#data) [Transformadores](../resources/glossary.md#transformer)e [Estimadores.](../resources/glossary.md#estimator)
 
 Os algoritmos de treinamento de aprendizado de máquina exigem que os dados estejam em determinado formato. `Transformers` são usados para transformar dados de tabela em um formato compatível.
 
-![Diagrama da Dataflow do transformador.](./media/movie-recommendation/data-transformer-transformed.png)
+![Diagrama do fluxo de dados do Transformer.](./media/movie-recommendation/data-transformer-transformed.png)
 
 Crie `Transformers` no ML.NET criando `Estimators`. `Estimators` usa dados e retorna `Transformers`.
 
-![Diagrama do Dataflow do estimador.](./media/movie-recommendation/data-estimator-transformer.png)
+![Diagrama do fluxo de dados do Estimador.](./media/movie-recommendation/data-estimator-transformer.png)
 
 O algoritmo de treinamento de recomendação que você usará para treinar seu modelo é um exemplo de `Estimator`.
 
@@ -320,7 +320,7 @@ Use o `PredictionEngine` para prever a classificação adicionando o seguinte c�
 
 [!code-csharp[PredictionEngine](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite realizar uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)não é seguro para rosca. É aceitável usar em ambientes de um único fio ou protótipo. Para melhorar o desempenho e a segurança `PredictionEnginePool` dos fios nos [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ambientes de produção, use o serviço, que cria um objeto para uso em toda a sua aplicação. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API web ASP.NET.](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.
@@ -373,7 +373,7 @@ Adicione o seguinte como a próxima linha de código no método `Main()` para ch
 
 ### <a name="use-your-saved-model"></a>Usar o modelo salvo
 
-Depois de salvar seu modelo treinado, você pode consumir o modelo em ambientes diferentes. Consulte [salvar e carregar modelos treinados](../how-to-guides/save-load-machine-learning-models-ml-net.md) para saber como colocar em operação um modelo de aprendizado de máquina treinado em aplicativos.
+Depois de salvar seu modelo treinado, você pode consumir o modelo em diferentes ambientes. Veja [Salvar e carregar modelos treinados](../how-to-guides/save-load-machine-learning-models-ml-net.md) para aprender a operacionalizar um modelo de aprendizado de máquina treinado em aplicativos.
 
 ## <a name="results"></a>Resultados
 
@@ -416,7 +416,7 @@ Parabéns! Você agora criou um modelo de machine learning para recomendação d
 
 Há várias maneiras de melhorar o desempenho do modelo para obter previsões mais precisas.
 
-### <a name="data"></a>data
+### <a name="data"></a>Dados
 
 A adição de mais dados de treinamento que tenham amostras suficientes para cada usuário e a ID de filme pode ajudar a melhorar a qualidade do modelo de recomendação.
 
@@ -428,7 +428,7 @@ Neste tutorial, você só usará os três `Features` (`user id`, `movie id` e `r
 
 Embora esse seja um bom começo, na verdade, o ideal será adicionar outros atributos ou `Features` (por exemplo, idade, sexo, localização geográfica etc.) se eles forem incluídos no conjunto de dados. A adição de `Features` mais relevantes pode ajudar a melhorar o desempenho do modelo de recomendação.
 
-Se você não tiver certeza sobre qual `Features` pode ser a mais relevante para sua tarefa de aprendizado de máquina, você também poderá usar o cálculo de contribuição de recurso (FCC) e a [importância do recurso de permuta](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md), que o ml.NET fornece para descobrir as `Features`mais influentes.
+Se você não `Features` tem certeza sobre qual pode ser o mais relevante para sua tarefa de aprendizado de máquina, você também pode `Features`fazer uso do Cálculo de Contribuição de Recursos (FCC) e da importância do recurso de [permutação,](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)que ML.NET fornece para descobrir o mais influente .
 
 ### <a name="algorithm-hyperparameters"></a>Hiperparâmetros de algoritmo
 
@@ -455,8 +455,8 @@ O algoritmo de fatoração de matriz com a filtragem colaborativa é apenas uma 
 
 | Algoritmo       | Cenário           | Amostra  |
 | ------------- |:-------------:| -----:|
-| Fatoração de Matriz de uma Classe | Use isso quando você tiver apenas userId e movieId. Esse estilo de recomendação é baseado no cenário de cocompra, ou produtos frequentemente comprados juntos, o que significa que ele recomendará aos clientes um conjunto de produtos de acordo com seu próprio histórico de ordens de compra. | [>Experimentar](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| Computadores de Fatoração com Reconhecimento de Campo | Use isso para fazer recomendações quando você tiver mais Recursos do que userId, productId e a classificação (como descrição ou preço do produto). Esse método também usa uma abordagem de filtragem colaborativa. | [>Experimentar](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| Fatoração de Matriz de uma Classe | Use isso quando você tiver apenas userId e movieId. Esse estilo de recomendação é baseado no cenário de cocompra, ou produtos frequentemente comprados juntos, o que significa que ele recomendará aos clientes um conjunto de produtos de acordo com seu próprio histórico de ordens de compra. | [>Experimente](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| Computadores de Fatoração com Reconhecimento de Campo | Use isso para fazer recomendações quando você tiver mais Recursos do que userId, productId e a classificação (como descrição ou preço do produto). Esse método também usa uma abordagem de filtragem colaborativa. | [>Experimente](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>Novo cenário de usuário
 
@@ -480,4 +480,4 @@ Neste tutorial, você aprendeu a:
 
 Avançar para o próximo tutorial para saber mais
 > [!div class="nextstepaction"]
-> [Análise de Sentimento](sentiment-analysis.md)
+> [Análise de sentimento](sentiment-analysis.md)

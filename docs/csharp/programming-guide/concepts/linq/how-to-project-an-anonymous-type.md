@@ -3,10 +3,10 @@ title: Como projetar um tipo anônimo (C#)
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
 ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345729"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a>Como projetar um tipo anônimo (C#)

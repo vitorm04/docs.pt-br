@@ -1,6 +1,6 @@
 ---
 title: LINQ (Consulta Integrada à Linguagem)
-description: Saiba como o LINQ fornece recursos de consulta no nível de linguagem e uma C# API para e Visual Basic como uma maneira de escrever um código expressivo e declarativo.
+description: Saiba como o LINQ fornece recursos de consulta em nível de idioma e uma API para C# e Visual Basic como uma maneira de escrever código expressivo e declarativo.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,17 +10,17 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160320"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Consulta Integrada à Linguagem)
 
 ## <a name="what-is-it"></a>O que é?
 
-O LINQ fornece recursos de consulta no nível de linguagem e uma API de função de C# [ordem superior](https://en.wikipedia.org/wiki/Higher-order_function) para e Visual Basic como uma maneira de escrever um código expressivo e declarativo.
+O LINQ fornece recursos de consulta em nível de idioma e uma API [de função de ordem superior](https://en.wikipedia.org/wiki/Higher-order_function) para C# e Visual Basic como uma maneira de escrever código expressivo e declarativo.
 
 Sintaxe de consulta de nível de linguagem:
 
@@ -395,5 +395,5 @@ Trabalhos vinculados à CPU paralelizáveis que podem ser facilmente expressos p
 ## <a name="further-resources"></a>Recursos adicionais:
 
 * [101 exemplos do LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [LINQPad](https://www.linqpad.net/), um ambiente playground e mecanismo de consulta de banco C#deF#dados para//Visual Basic
+* [Linqpad](https://www.linqpad.net/), um ambiente de playground e mecanismo de consulta de banco de dados para C#/F#/Visual Basic
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), um livro eletrônico para aprender como o LINQ to Objects é implementado

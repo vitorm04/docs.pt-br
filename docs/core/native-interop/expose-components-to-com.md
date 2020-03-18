@@ -1,5 +1,6 @@
 ---
 title: Expondo componentes do .NET Core ao COM
+description: Este tutorial mostra como expor uma classe ao COM a partir do .NET Core. Você gera um servidor COM e um manifesto de servidor lado a lado para com.
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240968"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146652"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
@@ -23,9 +24,9 @@ No .NET Core, o processo de expor seus objetos .NET ao COM foi significativament
 - Gerar um servidor COM como parte de criar sua biblioteca do .NET Core.
 - Gerar automaticamente um manifesto de servidor lado a lado para COM Sem Registro.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-- Instale o [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download) ou uma versão mais recente.
+- Instale [o .NET Core 3.0 SDK](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
 ## <a name="create-the-library"></a>Criar a biblioteca
 
@@ -39,7 +40,7 @@ A primeira etapa é criar a biblioteca.
 
 2. Abra o `Class1.cs`.
 3. Adicione `using System.Runtime.InteropServices;` ao topo do arquivo.
-4. Crie uma interface chamada `IServer`. Por exemplo:
+4. Crie uma interface chamada `IServer`. Por exemplo: 
 
    ```csharp
    using System;
@@ -90,6 +91,6 @@ Há um [exemplo de servidor COM](https://github.com/dotnet/samples/tree/master/c
 
 ## <a name="additional-notes"></a>Observações adicionais
 
-Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é gravar manualmente um arquivo IDL ou um C/C++ Header para as declarações nativas das interfaces com.
+Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é escrever manualmente um arquivo IDL ou um cabeçalho C/C++ para as declarações nativas das interfaces COM.
 
-Além disso, o carregamento de .NET Framework e do .NET Core no mesmo processo tem limitações de diagnóstico. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar .NET Framework e o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assemblies gerenciados. Isso significa que não é possível compartilhar os tipos reais do .NET entre os dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.
+Além disso, carregar o .NET Framework e o .NET Core no mesmo processo tem limitações diagnósticas. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar tanto o .NET Framework quanto o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assembléias gerenciadas. Isso significa que não é possível compartilhar tipos reais .NET nos dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.

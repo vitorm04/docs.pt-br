@@ -18,10 +18,10 @@ helpviewer_keywords:
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158058"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retrocesso em expressões regulares
@@ -103,7 +103,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
  A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2<sup>n</sup>) ou uma operação exponencial, em que *n* é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular.
 
 ## <a name="controlling-backtracking"></a>Controlando o retrocesso  
- O retrocesso permite a você criar expressões regulares avançadas e flexíveis. No entanto, conforme mostrado na seção anterior, esses benefícios podem estar associados a um baixo desempenho inaceitável. Para evitar o retrocesso excessivo, você deve definir um intervalo de tempo limite no qual você criará uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ou chamará um método de correspondência de expressão regular estático. Isso é abordado na próxima seção. Além disso, o .NET dá suporte a três elementos de linguagem de expressão regular que limitam ou suprimem o retrocesso e que dão suporte a expressões regulares complexas com pouca ou nenhuma penalidade de desempenho: [grupos atômicos](#atomic-groups), [asserções lookbehind](#lookbehind-assertions)e [declarações de lookahead](#lookahead-assertions). Para saber mais sobre cada elemento de linguagem, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ O retrocesso permite a você criar expressões regulares avançadas e flexíveis. No entanto, conforme mostrado na seção anterior, esses benefícios podem estar associados a um baixo desempenho inaceitável. Para evitar o retrocesso excessivo, você deve definir um intervalo de tempo limite no qual você criará uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ou chamará um método de correspondência de expressão regular estático. Isso é abordado na próxima seção. Além disso, o .NET suporta três elementos de linguagem de expressão regulares que limitam ou suprimem o retrocesso e que suportam expressões regulares complexas com pouca ou nenhuma penalidade de desempenho: [grupos atômicos,](#atomic-groups) [afirmações de olhar atrás](#lookbehind-assertions)e [afirmações de olhar para frente.](#lookahead-assertions) Para saber mais sobre cada elemento de linguagem, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
 
 ### <a name="defining-a-time-out-interval"></a>Definindo um intervalo de tempo limite  
  Do .NET Framework 4.5 em diante, você pode definir um valor de tempo limite que representa o intervalo mais longo durante o qual o mecanismo de expressão regular pesquisará uma única correspondência antes de abandonar a tentativa e gerar uma exceção <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. Você especifica o intervalo de tempo limite ao fornecer um valor de <xref:System.TimeSpan> para o construtor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> para instanciar expressões regulares. Além disso, cada método de correspondência de padrão estático tem uma sobrecarga com um parâmetro <xref:System.TimeSpan> que permite a você especificar um valor de tempo limite. Por padrão, o intervalo de tempo limite é definido para <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, o que significa que o mecanismo de expressões regulares nunca excede o tempo limite.  
@@ -119,7 +119,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>Grupos atômicos
- O elemento de linguagem de *subexpressão*`)` `(?>` suprime a retrocesso na subexpressão. Depois que ele for correspondido com êxito, ele não resultará em nenhuma parte de sua correspondência para o retrocesso posterior. Por exemplo, no `(?>\w*\d*)1`de padrões, se o `1` não puder ser correspondido, o `\d*` não desistirá de nenhuma de sua correspondência, mesmo que isso signifique que o `1` seria correspondido com êxito. Os grupos atômicos podem ajudar a evitar os problemas de desempenho associados às correspondências com falha.
+ O `(?>` elemento de linguagem *de subexpressão* `)` suprime o retrocesso na subexpressão. Uma vez que tenha correspondido com sucesso, ele não desistirá de qualquer parte de sua partida para posterior retrocesso. Por exemplo, no `(?>\w*\d*)1`padrão `1` , se o `\d*` não pode ser correspondido, o não vai `1` desistir de qualquer um de seus jogos, mesmo que isso signifique que ele permitiria o match com sucesso. Grupos atômicos podem ajudar a prevenir os problemas de desempenho associados a partidas fracassadas.
   
  O exemplo a seguir ilustra como suprimir o retrocesso melhora o desempenho quando quantificadores aninhados são usados. Ele mede o tempo necessário para que o mecanismo de expressão regular determine que uma cadeia de caracteres de entrada não corresponde a duas expressões regulares. A primeira expressão regular usa o retrocesso para tentar corresponder uma cadeia de caracteres que contém uma ou mais ocorrências de um ou mais dígitos hexadecimais, seguidos por dois-pontos, seguido por um ou mais dígitos hexadecimais, seguidos por dois dois-pontos. A segunda expressão regular é idêntica à primeira, exceto que ela desabilita o retrocesso. Como a saída do exemplo mostra, a melhora do desempenho resultante da desabilitação do retrocesso é significativa.  
   
@@ -127,9 +127,9 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>Asserções lookbehind  
- O .NET inclui dois elementos de linguagem, `(?<=`*subexpression*`)` e `(?<!`*subexpression*`)`, que correspondem ao caractere ou aos caracteres anteriores na cadeia de caracteres de entrada. Ambos os elementos de linguagem são asserções de largura zero, ou seja, eles determinam se o caractere ou os caracteres que precedem imediatamente o caractere atual podem ser correspondidos pela *subexpressão*, sem avanço ou retrocesso.  
+ .NET inclui dois elementos de linguagem, `(?<=` *subexpressão* `)` `(?<!`e *subexpressão,*`)`que correspondem ao caractere ou caracteres anteriores na seqüência de entrada. Ambos os elementos de linguagem são asserções de largura zero, ou seja, eles determinam se o caractere ou os caracteres que precedem imediatamente o caractere atual podem ser correspondidos pela *subexpressão*, sem avanço ou retrocesso.  
   
- a *subexpressão* de `(?<=` `)` é uma asserção lookbehind positiva; ou seja, o caractere ou os caracteres antes da posição atual devem corresponder à *subexpressão*. `(?<!`*subexpression*`)` é uma asserção lookbehind negativa, ou seja, o caractere ou os caracteres antes da posição atual não devem corresponder à *subexpression*. As asserções lookbehind positivas e negativas são mais úteis quando *subexpressão* for um subconjunto da subexpressão anterior.  
+ `(?<=`*subexpressão* `)` é uma afirmação positiva por trás; ou seja, o caractere ou caracteres antes da posição atual deve corresponder *à subexpressão*. `(?<!`*subexpressão* `)` é uma afirmação de olhar negativo; ou seja, o caractere ou caracteres antes da posição atual não deve corresponder *à subexpressão*. Tanto as afirmações positivas quanto as negativas são mais úteis quando a *subexpressão* é um subconjunto da subexpressão anterior.  
   
  O exemplo a seguir usa dois padrões equivalentes à expressão regular que validam o nome de usuário em um endereço de email. O primeiro padrão está sujeito a baixo desempenho devido ao retrocesso excessivo. O segundo padrão modifica a primeira expressão regular ao substituir um quantificador aninhado por uma asserção lookbehind positiva. A saída do exemplo exibe, o tempo de execução do método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
   
@@ -138,7 +138,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O primeiro padrão de expressão regular, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -149,7 +149,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O segundo padrão de expressão regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, usa uma asserção lookbehind positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`[0-9A-Z]`|Corresponde a um caractere alfanumérico. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -158,9 +158,9 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 |`@`|Corresponde a um sinal ("\@").|  
 
 ### <a name="lookahead-assertions"></a>Asserções lookahead  
- O .NET inclui dois elementos de linguagem, `(?=`*subexpression*`)` e `(?!`*subexpression*`)`, que correspondem ao próximo caractere ou aos próximos caracteres na cadeia de caracteres de entrada. Ambos os elementos de linguagem são asserções de largura zero, ou seja, eles determinam se o caractere ou os caracteres que seguem imediatamente o caractere atual podem ser correspondidos pela *subexpressão*, sem avanço ou retrocesso.  
+ .NET inclui dois elementos de linguagem, `(?=` *subexpressão* `)` `(?!`e *subexpressão,*`)`que correspondem ao próximo caractere ou caracteres na seqüência de entrada. Ambos os elementos de linguagem são asserções de largura zero, ou seja, eles determinam se o caractere ou os caracteres que seguem imediatamente o caractere atual podem ser correspondidos pela *subexpressão*, sem avanço ou retrocesso.  
   
- a *subexpressão* de `(?=` `)` é uma asserção de antecipação positiva; ou seja, o caractere ou os caracteres após a posição atual devem corresponder à *subexpressão*. `(?!`*subexpression*`)` é uma asserção lookahead negativa, ou seja, o caractere ou os caracteres depois da posição atual não devem corresponder à *subexpression*. As asserções lookahead positivas e negativas são mais úteis quando *subexpression* é um subconjunto da subexpression seguinte.  
+ `(?=`*subexpressão* `)` é uma afirmação positiva de olhar para frente; ou seja, o caractere ou caracteres após a posição atual devem corresponder à *subexpressão*. `(?!`*subexpressão* `)` é uma afirmação de olhar negativo; ou seja, o caractere ou caracteres após a posição atual não devem corresponder à *subexpressão*. Tanto as afirmações positivas quanto as negativas são mais úteis quando a *subexpressão* é um subconjunto da próxima subexpressão.  
   
  O exemplo a seguir usa dois padrões de expressão regular equivalentes que validam um nome de tipo totalmente qualificado. O primeiro padrão está sujeito a baixo desempenho devido ao retrocesso excessivo. O segundo modifica a primeira expressão regular ao substituir um quantificador aninhado por uma asserção lookahead positiva. A saída do exemplo exibe, o tempo de execução do método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
   
@@ -169,7 +169,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O primeiro padrão de expressão regular, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, é definido como mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`([A-Z]\w*)+\.`|Corresponde a um caractere alfabético (A-Z) seguido por zero ou mais caracteres de palavra uma ou mais vezes, seguidos de um ponto. Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -179,7 +179,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
   
  O segundo padrão de expressão regular, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, usa uma asserção lookahead positiva. Ele é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres.|  
 |`(?=[A-Z])`|Examine além do primeiro caractere e continue a correspondência se ele for alfabético (A-Z). Essa comparação não diferencia maiúsculas de minúsculas porque o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> é chamado com a opção <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
@@ -191,7 +191,7 @@ O retrocesso ocorre quando um padrão de expressão regular contém [quantificad
 ## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Quantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [Constructos de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Agrupando constructos](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Construtores de alternância](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
+- [Construção de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

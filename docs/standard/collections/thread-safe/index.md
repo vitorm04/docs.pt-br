@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938104"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
@@ -32,7 +32,7 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
  A tabela a seguir lista os tipos de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|{1&gt;Tipo&lt;1}|Descrição|  
+|Type|Descrição|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Fornece funcionalidade de delimitação e bloqueio de qualquer tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obter mais informações, veja [Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementação thread-safe de um dicionário de pares chave-valor.|  
@@ -41,17 +41,17 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
 |<xref:System.Collections.Concurrent.ConcurrentBag%601>|Implementação thread-safe de uma coleção não ordenada de elementos.|  
 |<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>|A interface que um tipo deve implementar para uso em um `BlockingCollection`.|  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Cargo|Descrição|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Este tópico descreve a funcionalidade fornecida pelo tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
 |[Como Adicionar e Remover Itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
 |[Como Adicionar e Retirar Itens Individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
 |[Como Adicionar a Funcionalidade de Delimitação e Bloqueio a uma Coleção](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
 |[Como Usar ForEach para Remover Itens de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  
-|[Como Usar Matrizes de Coleções Blocking em um Pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
-|[Como Criar um Pool de Objetos Usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
+|[Como usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
+|[Como criar um pool de objetos usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

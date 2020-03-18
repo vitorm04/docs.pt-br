@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708318"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
@@ -40,11 +40,11 @@ Este tópico fornece uma visão geral de interfaces genéricas que fornecem func
   
  A interface genérica <xref:System.Collections.Generic.IEnumerable%601> fornece uma estrutura de enumerador genérico. A interface genérica <xref:System.Collections.Generic.IEnumerator%601> implementada pelos enumeradores genéricos herda a interface não genérica <xref:System.Collections.IEnumerator>; os membros <xref:System.Collections.IEnumerator.MoveNext%2A> e <xref:System.Collections.IEnumerator.Reset%2A>, que não dependem do parâmetro de tipo `T`, só aparecem na interface não genérica. Isso significa que qualquer consumidor da interface não genérica também poderá consumir a interface genérica.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
 - [Genéricos](../../../docs/standard/generics/index.md)
 - [Coleções genéricas no .NET Framework](../../../docs/standard/generics/collections.md)
 - [Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [Covariância e Contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)

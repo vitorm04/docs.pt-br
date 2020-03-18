@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091375"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Como: Fazer iterações de diretórios de arquivos com PLINQ
@@ -34,6 +34,6 @@ Este exemplo mostra duas maneiras simples de paralelizar operações em diretór
   
  Se a latência de E/S for um problema, por exemplo com E/S de arquivo em uma rede, considere o uso de uma das técnicas de E/S assíncronas descritas em [TPL e programação assíncrona de TPL e .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md) e nesta [postagem de blog ](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

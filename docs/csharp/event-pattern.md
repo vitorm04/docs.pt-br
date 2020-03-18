@@ -4,12 +4,12 @@ description: Saiba mais sobre como criar padrões de evento .NET e como criar or
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: dec516767e43a6bf4edfa555e34f3adcc21a46e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239853"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146135"
 ---
 # <a name="standard-net-event-patterns"></a>Padrões de evento .NET padrão
 
@@ -31,14 +31,14 @@ O tipo de retorno é nulo. Os eventos são baseados em delegados e são delegado
 
 A lista de argumentos contém dois argumentos: o remetente e os argumentos do evento. O tipo de tempo de compilação de `sender` é `System.Object`, mas é provável que você conheça um tipo mais derivado que sempre estaria correto. Por convenção, use `object`.
 
-O segundo argumento normalmente tem sido um tipo derivado de `System.EventArgs`. (Você verá na [próxima seção](modern-events.md) que essa Convenção não é mais imposta.) Se o seu tipo de evento não precisar de nenhum argumento adicional, você ainda fornecerá ambos os argumentos.
+O segundo argumento normalmente tem sido um tipo derivado de `System.EventArgs`. (Você verá na [próxima seção](modern-events.md) que esta convenção não é mais aplicada.) Se o seu tipo de evento não precisar de argumentos adicionais, você ainda fornecerá ambos os argumentos.
 Há um valor especial, o `EventArgs.Empty`, que você deve usar para indicar que o evento não contém nenhuma informação adicional.
 
 Vamos criar uma classe que lista os arquivos em um diretório ou em qualquer um de seus subdiretórios, que seguem um padrão. Esse componente aciona um evento para cada arquivo encontrado que corresponde ao padrão.
 
 O uso de um modelo de evento fornece algumas vantagens de design. Você pode criar vários ouvintes de eventos que realizam ações diferentes quando um arquivo procurado é encontrado. A combinação de diferentes ouvintes pode criar algoritmos mais robustos.
 
-Aqui está a declaração de argumento de evento inicial para localizar um arquivo pesquisado: 
+Aqui está a declaração de argumento de evento inicial para localizar um arquivo pesquisado:
 
 [!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
@@ -76,7 +76,7 @@ Quando você acionar o evento encontrado, os ouvintes devem ser capazes de parar
 
 Os manipuladores de eventos não retornam um valor, por isso você precisa comunicar isso de outra forma. O padrão de evento usa o objeto EventArgs para incluir campos que os assinantes de evento podem usar para comunicar o cancelamento.
 
-Há dois padrões diferentes que podem ser usados, com base na semântica do contrato de cancelamento. Em ambos os casos, você adicionará um campo booliano no EventArguments para o evento de arquivo encontrado. 
+Há dois padrões diferentes que podem ser usados, com base na semântica do contrato de cancelamento. Em ambos os casos, você adicionará um campo booliano no EventArguments para o evento de arquivo encontrado.
 
 Um padrão permitiria a qualquer assinante cancelar a operação.
 Para esse padrão, o novo campo é inicializado para `false`. Qualquer assinante pode alterá-lo para `true`. Depois que todos os assinantes viram o evento acionado, o componente FileSearcher examina o valor booliano e toma uma ação.
@@ -122,7 +122,7 @@ Vamos adicionar mais um recurso e demonstrar outras expressões de linguagem par
 
 Isso poderia se tornar uma operação demorada em um diretório com muitos subdiretórios. Vamos adicionar um evento que é acionado no início de cada nova pesquisa de diretório. Isso permite que os assinantes acompanhem o progresso e atualizem o usuário sobre o progresso. Todos os exemplos que você criou até agora são públicos. Vamos fazer com que esse seja um evento interno. Isso significa que você também pode fazer com que os tipos usados para os argumentos sejam internos.
 
-Você começará criando a nova classe derivada EventArgs para relatar o novo diretório e o andamento. 
+Você começará criando a nova classe derivada EventArgs para relatar o novo diretório e o andamento.
 
 [!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
@@ -140,7 +140,7 @@ Em seguida, vamos adicionar a sobrecarga do método `Search` que percorre os sub
 
 Neste momento, você pode executar o aplicativo, chamando a sobrecarga para pesquisar todos os subdiretórios. Não há nenhum assinante no novo evento `ChangeDirectory`, mas o uso da expressão `?.Invoke()` garante que isso funcione corretamente.
 
- Vamos adicionar um manipulador para escrever uma linha que mostra o andamento na janela do console. 
+ Vamos adicionar um manipulador para escrever uma linha que mostra o andamento na janela do console.
 
 [!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
@@ -149,4 +149,4 @@ Ao aprender esses padrões e convenções, você escreverá expressões idiomát
 
 Em seguida, você verá algumas alterações nesses padrões na versão mais recente do .NET.
 
-[Próximo](modern-events.md)
+[Avançar](modern-events.md)

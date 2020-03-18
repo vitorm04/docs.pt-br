@@ -2,16 +2,16 @@
 title: Comando dotnet add package
 description: O comando 'dotnet add package' fornece uma opção conveniente para adicionar uma referência de pacote NuGet a um projeto.
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503805"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146600"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503805"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet add package` fornece uma opção conveniente para adicionar uma referência de pacote a um arquivo de projeto. Depois de executar o comando, há uma verificação de compatibilidade para garantir que o pacote seja compatível com as estruturas do projeto. Se for aprovado na verificação, um elemento `<PackageReference>` será adicionado ao arquivo de projeto e [dotnet restore](dotnet-restore.md) será executada.
 
@@ -30,7 +30,7 @@ O comando `dotnet add package` fornece uma opção conveniente para adicionar um
 Por exemplo, adicionar `Newtonsoft.Json` a *ToDo.csproj* produz uma saída semelhante ao exemplo a seguir:
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json

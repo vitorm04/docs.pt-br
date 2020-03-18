@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712865"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173452"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 
 A palavra-chave `virtual` é usada para modificar uma declaração de método, propriedade, indexador ou evento e permitir que ela seja substituída em uma classe derivada. Por exemplo, esse método pode ser substituído por qualquer classe que o herde:
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
@@ -37,7 +37,7 @@ Não é possível usar o modificador `virtual` com os modificadores `static`, `a
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-As propriedades virtuais se comportam como métodos virtuais, exceto pelas diferenças na declaração e na sintaxe de invocação.
+As propriedades virtuais se comportam como métodos virtuais, exceto pelas diferenças na sintaxe de declaração e invocação.
 
 - É um erro usar o modificador `virtual` em uma propriedade estática.
 
@@ -57,13 +57,13 @@ O programa a seguir calcula e exibe a área apropriada para cada figura invocand
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Polimorfismo](../../programming-guide/classes-and-structs/polymorphism.md)
-- [abstract](abstract.md)
-- [override](override.md)
-- [new (modificador)](new-modifier.md)
+- [Abstrata](abstract.md)
+- [Substituir](override.md)
+- [novo (modificador)](new-modifier.md)

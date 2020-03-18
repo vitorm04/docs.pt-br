@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
 ms.openlocfilehash: 91b6165be2f4f464626fb25f7152de68de9d86e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124989"
 ---
 # <a name="how-to-measure-plinq-query-performance"></a>como avaliar o desempenho de consulta PLINQ
@@ -26,6 +26,6 @@ Este exemplo mostra como usar a classe <xref:System.Diagnostics.Stopwatch> para 
   
  O tempo total de execução é uma métrica útil quando você estiver experimentando com implantações de consulta, mas nem sempre ele aborda tudo. Para uma visão mais profunda e mais rica da interação dos threads de consulta entre si e com outros processos em execução, use a Visualização Simultânea. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

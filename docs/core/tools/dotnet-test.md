@@ -2,16 +2,16 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156999"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847892"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -20,16 +20,18 @@ ms.locfileid: "78156999"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
@@ -39,9 +41,9 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 ## <a name="arguments"></a>Argumentos
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  Caminho para o projeto de teste. Se não é especificado, usa como padrão o diretório atual.
+  Caminho para o projeto ou solução de teste. Se não é especificado, usa como padrão o diretório atual.
 
 ## <a name="options"></a>Opções
 
@@ -51,9 +53,9 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-blame`**
 
-  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
+  Executa os testes no modo blame. Esta opção é útil para isolar testes problemáticos que causam a falha do hospedeiro de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   Define a configuração da compilação. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
 
@@ -77,13 +79,21 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Imprime uma ajuda breve para o comando.
 
+- **`--interactive`**
+
+  Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   Especifica um agente para resultados do teste.
 
 - **`--no-build`**
 
-  Não compila o projeto de teste antes de sua execução. Ele também define implicitamente o sinalizador-`--no-restore`.
+  Não compila o projeto de teste antes de sua execução. Ele também define implicitamente a `--no-restore` bandeira.
+
+- **`--nologo`**
+
+  Execute testes sem exibir o banner microsoft testplatform. Disponível desde o SDK do .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -97,6 +107,10 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado.
 
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  O tempo de execução do alvo para testar.
+
 - **`-s|--settings <SETTINGS_FILE>`**
 
   O arquivo `.runsettings` a ser usado para executar os testes. [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
@@ -109,13 +123,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-- argumentos de `RunSettings`
+- `RunSettings`Argumentos
 
-  Os argumentos são passados como `RunSettings` configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
+  Os argumentos `RunSettings` são passados como configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
 
   Exemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Para obter mais informações, consulte [VSTest. console. exe: Pass RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Para obter mais informações, consulte [vstest.console.exe: Passando RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Exemplos
 
@@ -176,5 +190,5 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 
 ## <a name="see-also"></a>Confira também
 
-- [Estruturas e destinos](../../standard/frameworks.md)
+- [Frameworks e Metas](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

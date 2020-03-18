@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124579"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de classes do .NET
@@ -49,11 +49,11 @@ O .NET Standard não expõe toda a funcionalidade do .NET Framework (isso nem é
 As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standard:
 
 * .NET Core
-* {1&gt;.NET Framework&lt;1}
+* .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android
 * UWP (Plataforma Universal do Windows)
-* Portal
+* Windows
 * Windows Phone
 * Windows Phone Silverlight
 

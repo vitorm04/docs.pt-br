@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713086"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173504"
 ---
 # <a name="select-clause-c-reference"></a>Cláusula select (Referência de C#)
 
@@ -27,7 +27,7 @@ O tipo da sequência produzida pela cláusula `select` determina o tipo da vari�
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra todas as diferentes formas que uma cláusula `select` pode tomar. Em cada consulta, observe a relação entre a cláusula `select` e o tipo da *variável de consulta* (`studentQuery1`, `studentQuery2` e assim por diante).
+O exemplo a seguir mostra todas as diferentes formas que uma cláusula `select` pode tomar. Em cada consulta, observe a `select` relação entre a cláusula e`studentQuery1` `studentQuery2`o tipo da *variável consulta* ( , e assim por diante).
 
 [!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
 
@@ -37,12 +37,12 @@ Conforme mostrado em `studentQuery8` no exemplo anterior, às vezes, convém que
 
 No tempo de compilação, a cláusula `select` é convertida em uma chamada de método para o operador de consulta padrão <xref:System.Linq.Enumerable.Select%2A>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Palavras-chave de Consulta (LINQ)](query-keywords.md)
-- [Cláusula From](from-clause.md)
+- [C# Referência](../index.md)
+- [Palavras-chave de consulta (LINQ)](query-keywords.md)
+- [de cláusula](from-clause.md)
 - [partial (método) (Referência do C#)](partial-method.md)
 - [Tipos Anônimos](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ em C#](../../linq/index.md)
-- [Introdução a LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Consulta Integrada ao Idioma (LINQ)](../../programming-guide/concepts/linq/index.md)

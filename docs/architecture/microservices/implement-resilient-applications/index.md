@@ -1,17 +1,17 @@
 ---
-title: Implementar aplicativos resilientes
-description: Saiba mais sobre a resiliência, um conceito central na arquitetura de microsserviços. Você deve saber como lidar com falhas transitórias normalmente quando elas ocorrem.
+title: Implementar aplicações resilientes
+description: Saiba mais sobre a resiliência, um conceito central na arquitetura de microsserviços. Você deve saber como lidar com falhas transitórias graciosamente quando ocorrem.
 ms.date: 01/30/2020
-ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502651"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78847226"
 ---
-# <a name="implement-resilient-applications"></a>Implementar aplicativos resilientes
+# <a name="implement-resilient-applications"></a>Implementar aplicações resilientes
 
-*Seu microserviço e seus aplicativos baseados em nuvem devem adotar as falhas parciais que certamente ocorrerão eventualmente. Você deve projetar seu aplicativo para ser resiliente a essas falhas parciais.*
+*Seus aplicativos de microserviço e baseados em nuvem devem abraçar as falhas parciais que certamente ocorrerão eventualmente. Você deve projetar sua aplicação para ser resiliente a essas falhas parciais.*
 
 A resiliência é a capacidade de se recuperar de falhas e continuar funcionando. Não se trata de evitar falhas, mas de aceitar o fato de que as falhas acontecerão, e responder a elas de uma maneira que evite tempo de inatividade ou perda de dados. A meta de resiliência é retornar o aplicativo para um estado totalmente funcional após uma falha.
 
@@ -20,15 +20,15 @@ Já é um grande desafio criar e implantar um aplicativo baseado em microsservi�
 Os diversos componentes individuais do aplicativo também precisam incorporar recursos de monitoramento de integridade. Seguindo as diretrizes neste capítulo, você poderá criar um aplicativo que pode funcionar perfeitamente apesar do tempo de inatividade temporário ou das interrupções normais que ocorrem em implantações complexas e baseadas em nuvem.
 
 >[!IMPORTANT]
-> eShopOnContainer tinha usado a [biblioteca Polly](http://www.thepollyproject.org/) para implementar a resiliência usando [clientes digitados](./use-httpclientfactory-to-implement-resilient-http-requests.md) até a versão 3.0.0.
+> O eShopOnContainer estava usando a [biblioteca Polly](http://www.thepollyproject.org/) para implementar resiliência usando [clientes digitados](./use-httpclientfactory-to-implement-resilient-http-requests.md) até a versão 3.0.0.
 >
-> A partir da versão 3.0.0, a resiliência das chamadas HTTP é implementada usando uma [malha Linkerd](https://linkerd.io/), que trata as repetições de maneira transparente e configurável, em um cluster kubernetes, sem a necessidade de lidar com essas preocupações no código.
+> A partir da versão 3.0.0, o HTTP chama a resiliência usando uma [malha Linkerd](https://linkerd.io/), que lida com repetições de forma transparente e configurável, dentro de um cluster Kubernetes, sem ter que lidar com essas preocupações no código.
 >
-> A biblioteca Polly ainda é usada para adicionar resiliência a conexões de banco de dados, especialmente ao iniciar os serviços.
+> A biblioteca Polly ainda é usada para adicionar resiliência às conexões de banco de dados, especialmente durante a inicialização dos serviços.
 
 >[!WARNING]
-> Todos os exemplos de código nesta seção eram válidos antes de usar Linkerd e não são atualizados para refletir o código real atual. Eles fazem sentido no contexto desta seção.
+> Todas as amostras de código nesta seção eram válidas antes de usar o Linkerd e não são atualizadas para refletir o código real atual. Então eles fazem sentido no contexto desta seção.
 
 >[!div class="step-by-step"]
->[Anterior](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
->[Próximo](handle-partial-failure.md)
+>[Próximo](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[anterior](handle-partial-failure.md)

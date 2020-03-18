@@ -4,12 +4,12 @@ description: Saiba mais sobre como executar árvores de expressão, convertendo-
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037108"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146015"
 ---
 # <a name="executing-expression-trees"></a>Executar árvores de expressão
 
@@ -20,8 +20,8 @@ Ela não é código compilado nem executável. Se você quiser executar o códig
 
 ## <a name="lambda-expressions-to-functions"></a>Expressões lambda para funções
 
-Você pode converter qualquer LambdaExpression ou qualquer tipo derivado de LambdaExpression em IL executável. Outros tipos de expressão não podem ser convertidos diretamente em código. Essa restrição tem pouco efeito na prática. As expressões lambda são os únicos tipos de expressões que você gostaria de executar convertendo em IL (linguagem intermediária) executável. (Pense no que significaria executar diretamente uma `ConstantExpression`. Isso significa que algo é útil?) Qualquer árvore de expressão que seja uma `LambdaExpression`ou um tipo derivado de `LambdaExpression` pode ser convertido em IL.
-O tipo de expressão `Expression<TDelegate>` é o único exemplo concreto nas bibliotecas do .NET Core. Ele é usado para representar uma expressão que mapeia para qualquer tipo delegado. Como esse tipo mapeia para um tipo delegado, o .NET pode examinar a expressão e gerar a IL para um delegado apropriado que corresponda à assinatura da expressão lambda. 
+Você pode converter qualquer LambdaExpression ou qualquer tipo derivado de LambdaExpression em IL executável. Outros tipos de expressão não podem ser convertidos diretamente em código. Essa restrição tem pouco efeito na prática. As expressões lambda são os únicos tipos de expressões que você gostaria de executar convertendo em IL (linguagem intermediária) executável. (Pense no que significaria executar diretamente uma `ConstantExpression`. Isso significaria alguma coisa útil?) Qualquer árvore de `LambdaExpression`expressão que seja um `LambdaExpression` , ou um tipo derivado de pode ser convertido em IL.
+O tipo de expressão `Expression<TDelegate>` é o único exemplo concreto nas bibliotecas do .NET Core. Ele é usado para representar uma expressão que mapeia para qualquer tipo delegado. Como esse tipo mapeia para um tipo delegado, o .NET pode examinar a expressão e gerar a IL para um delegado apropriado que corresponda à assinatura da expressão lambda.
 
 Na maioria dos casos, isso cria um mapeamento simples entre uma expressão e o delegado correspondente. Por exemplo, uma árvore de expressão que é representada por `Expression<Func<int>>` seria convertida em um delegado do tipo `Func<int>`. Para uma expressão lambda com qualquer tipo de retorno e lista de argumentos, existe um tipo delegado que é o tipo de destino para o código executável representado por essa expressão lambda.
 
@@ -50,7 +50,7 @@ Eu alerto contra a tentativa de criar mecanismos de cache mais sofisticados para
 
 ## <a name="caveats"></a>Advertências
 
-A compilação de uma expressão lambda para um delegado e invocar esse delegado é uma das operações mais simples que você pode realizar com uma árvore de expressão. No entanto, mesmo com essa operação simples, há limitações que você deve estar ciente. 
+A compilação de uma expressão lambda para um delegado e invocar esse delegado é uma das operações mais simples que você pode realizar com uma árvore de expressão. No entanto, mesmo com essa operação simples, há limitações que você deve estar ciente.
 
 As expressões lambda criam fechamentos sobre todas as variáveis locais que são referenciadas na expressão. Você deve assegurar que todas as variáveis que farão parte do delegado são utilizáveis no local em que você chamar `Compile` e no momento em que você executar o delegado resultante.
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-O delegado retornado desse método fechou sobre o objeto `constant`, que foi descartado. (Foi descartado, porque foi declarado em uma instrução `using`). 
+O delegado retornado desse método fechou sobre o objeto `constant`, que foi descartado. (Foi descartado, porque foi declarado em uma instrução `using`).
 
 Agora, ao executar o delegado retornado desse método, uma `ObjectDisposedException` será lançada no ponto de execução.
 

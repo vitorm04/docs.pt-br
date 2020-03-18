@@ -1,6 +1,6 @@
 ---
-title: Tipos de enumeração C# -referência
-description: Saiba mais C# sobre tipos de enumeração que representam uma opção ou uma combinação de opções
+title: Tipos de enumeração - Referência C#
+description: Saiba mais sobre os tipos de enumeração C# que representam uma escolha ou uma combinação de escolhas
 ms.date: 12/13/2019
 f1_keywords:
 - enum
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239814"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847697"
 ---
-# <a name="enumeration-types-c-reference"></a>Tipos de enumeraçãoC# (referência)
+# <a name="enumeration-types-c-reference"></a>Tipos de enumeração (referência C#)
 
-Um *tipo de enumeração* (ou *tipo*de enumeração) é um [tipo de valor](value-types.md) definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de enumeração, use a palavra-chave `enum` e especifique os nomes dos *membros de enumeração*:
+Um *tipo de enumeração* (ou *tipo enum)* é um tipo de [valor](value-types.md) definido por um conjunto de constantes nomeadas do tipo [numérico integral](integral-numeric-types.md) subjacente. Para definir um tipo de `enum` enumeração, use a palavra-chave e especifique os nomes dos membros do *enum:*
 
 ```csharp
 enum Season
@@ -32,7 +32,7 @@ enum Season
 }
 ```
 
-Por padrão, os valores constantes associados de membros de enumeração são do tipo `int`; Eles começam com zero e aumentam em um seguindo a ordem de texto de definição. Você pode especificar explicitamente qualquer outro tipo [numérico integral](integral-numeric-types.md) como um tipo subjacente de um tipo de enumeração. Você também pode especificar explicitamente os valores constantes associados, como mostra o exemplo a seguir:
+Por padrão, os valores constantes associados `int`dos membros enum são do tipo; eles começam com zero e aumentam por um seguindo a ordem de texto de definição. Você pode especificar explicitamente qualquer outro tipo [numérico integral](integral-numeric-types.md) como um tipo subjacente de um tipo de enumeração. Você também pode especificar explicitamente os valores constantes associados, como mostra o exemplo a seguir:
 
 ```csharp
 enum ErrorCode : ushort
@@ -46,33 +46,33 @@ enum ErrorCode : ushort
 
 Você não pode definir um método dentro da definição de um tipo de enumeração. Para adicionar funcionalidade a um tipo de enumeração, crie um [método de extensão](../../programming-guide/classes-and-structs/extension-methods.md).
 
-O valor padrão de um tipo de enumeração `E` é o valor produzido pelo Expression `(E)0`, mesmo se zero não tiver o membro enum correspondente.
+O valor padrão de um `E` tipo de enumeração é o valor produzido pela expressão, `(E)0`mesmo que zero não tenha o membro enum correspondente.
 
-Você usa um tipo de enumeração para representar uma escolha de um conjunto de valores mutuamente exclusivos ou uma combinação de opções. Para representar uma combinação de opções, defina um tipo de enumeração como sinalizadores de bits.
+Você usa um tipo de enumeração para representar uma escolha de um conjunto de valores mutuamente exclusivos ou uma combinação de escolhas. Para representar uma combinação de opções, defina um tipo de enumeração como sinalizadores de bit.
 
 ## <a name="enumeration-types-as-bit-flags"></a>Tipos de Enumeração como Sinalizadores de Bit
 
-Se você quiser que um tipo de enumeração represente uma combinação de opções, defina membros de enum para essas opções, de modo que uma opção individual seja um campo de bits. Ou seja, os valores associados desses membros de enumeração devem ser as potências de dois. Em seguida, você pode usar os [operadores lógicos de bits bit a `|` ou `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) para combinar opções ou combinações de interseção de opções, respectivamente. Para indicar que um tipo de enumeração declara campos de bits, aplique o atributo [flags](xref:System.FlagsAttribute) a ele. Como mostra o exemplo a seguir, você também pode incluir algumas combinações típicas na definição de um tipo de enumeração.
+Se você quiser que um tipo de enumeração represente uma combinação de escolhas, defina os membros do enum para essas escolhas de tal forma que uma escolha individual seja um pouco de campo. Ou seja, os valores associados desses membros do enum devem ser os poderes de dois. Em seguida, você pode usar os [operadores lógicos `|` bitwise ou `&` ](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) para combinar escolhas ou interceptar combinações de escolhas, respectivamente. Para indicar que um tipo de enumeração declara campos de bits, aplique o atributo [Sinalizadores](xref:System.FlagsAttribute) a ele. Como o exemplo a seguir mostra, você também pode incluir algumas combinações típicas na definição de um tipo de enumeração.
 
-[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-Para obter mais informações e exemplos, consulte a página de referência da API <xref:System.FlagsAttribute?displayProperty=nameWithType> e os [Membros não exclusivos e a seção de atributo flags](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) da página de referência da API <xref:System.Enum?displayProperty=nameWithType>.
+Para obter mais informações e <xref:System.FlagsAttribute?displayProperty=nameWithType> exemplos, consulte a página de referência da API e os membros não exclusivos e a seção de [atributoS da](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) página de referência da <xref:System.Enum?displayProperty=nameWithType> API.
 
-## <a name="the-systemenum-type-and-enum-constraint"></a>O tipo System. Enum e a restrição enum
+## <a name="the-systemenum-type-and-enum-constraint"></a>A restrição system.enum e enum
 
-O tipo de <xref:System.Enum?displayProperty=nameWithType> é a classe base abstrata de todos os tipos de enumeração. Ele fornece vários métodos para obter informações sobre um tipo de enumeração e seus valores. Para obter mais informações e exemplos, consulte a página de referência da API <xref:System.Enum?displayProperty=nameWithType>.
+O <xref:System.Enum?displayProperty=nameWithType> tipo é a classe base abstrata de todos os tipos de enumeração. Ele fornece uma série de métodos para obter informações sobre um tipo de enumeração e seus valores. Para obter mais informações e <xref:System.Enum?displayProperty=nameWithType> exemplos, consulte a página de referência da API.
 
-A partir C# do 7,3, você pode usar `System.Enum` em uma restrição de classe base (que é conhecida como [restrição de enumeração](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que um parâmetro de tipo é um tipo de enumeração.
+Começando com C# 7.3, `System.Enum` você pode usar em uma restrição de classe base (que é conhecida como [restrição de enum](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que um parâmetro de tipo é um tipo de enumeração.
 
 ## <a name="conversions"></a>Conversões
 
-Para qualquer tipo de enumeração, existem conversões explícitas entre o tipo de enumeração e seu tipo integral subjacente. Se você [converter](../operators/type-testing-and-cast.md#cast-operator-) um valor de enumeração para seu tipo subjacente, o resultado será o valor integral associado de um membro de enumeração.
+Para qualquer tipo de enumeração, existem conversões explícitas entre o tipo de enumeração e seu tipo integral subjacente. Se você [lançar](../operators/type-testing-and-cast.md#cast-operator-) um valor de enum para o seu tipo subjacente, o resultado é o valor integral associado de um membro enum.
 
-[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
-Use o método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar se um tipo de enumeração contém um membro enum com determinado valor associado.
+Use <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> o método para determinar se um tipo de enumeração contém um membro enum com o determinado valor associado.
 
-Para qualquer tipo de enumeração, existem conversões [boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md) de e para o tipo <xref:System.Enum?displayProperty=nameWithType>, respectivamente.
+Para qualquer tipo de enumeração, existem conversões <xref:System.Enum?displayProperty=nameWithType> de boxe e [unboxing](../../programming-guide/types/boxing-and-unboxing.md) para e do tipo, respectivamente.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -82,13 +82,13 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Operações e valores de enum](~/_csharplang/spec/enums.md#enum-values-and-operations)
 - [Operadores lógicos de enumeração](~/_csharplang/spec/expressions.md#enumeration-logical-operators)
 - [Operadores de comparação de enumeração](~/_csharplang/spec/expressions.md#enumeration-comparison-operators)
-- [Conversões de enumeração explícitas](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
+- [Conversões explícitas de enumeração](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [Conversões implícitas de enumeração](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Cadeias de caracteres de formato de enumeração](../../../standard/base-types/enumeration-format-strings.md)
-- [Diretrizes de design-design de enumeração](../../../standard/design-guidelines/enum.md)
-- [Diretrizes de design-convenções de nomenclatura de enumeração](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
-- [instrução switch](../keywords/switch.md)
+- [Diretrizes de design - Design enum](../../../standard/design-guidelines/enum.md)
+- [Diretrizes de design - Convenções de nomeação enum](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Instrução switch](../keywords/switch.md)

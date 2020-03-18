@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159423"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
@@ -38,9 +38,9 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
   
  Combinando os conceitos de usuário, domínio e identidade de assembly, o armazenamento isolado pode isolar dados das seguintes maneiras, cada uma das quais tem seus próprios cenários de uso:  
   
-- [Isolamento por usuário e assembly](#UserAssembly)  
+- [Isolamento por usuário e montagem](#UserAssembly)  
   
-- [Isolamento por usuário, domínio e assembly](#UserDomainAssembly)  
+- [Isolamento por usuário, domínio e montagem](#UserDomainAssembly)  
   
  Um desses isolamentos pode ser combinado a um perfil de usuário móvel. Para saber mais, confira a seção [Armazenamento isolado e roaming](#Roaming).  
   
@@ -51,7 +51,7 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  Observe que, exceto pelos armazenamentos móveis, o armazenamento isolado é sempre implicitamente isolado por computador, pois usa os recursos de armazenamento locais para determinado computador.  
   
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
+> O armazenamento isolado não está disponível para aplicativos do Windows 8.x Store. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  
@@ -106,4 +106,4 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)

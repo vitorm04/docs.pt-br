@@ -4,18 +4,18 @@ description: Saber a diferença entre delegados e eventos e quando usar cada um 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037313"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146172"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinção entre Delegados e Eventos
 
 [Anterior](modern-events.md)
 
-Desenvolvedores que são novos na plataforma .NET Core geralmente têm dificuldades para decidir entre um design baseado em `delegates` e um design baseado em `events`. Este é um conceito difícil, porque os recursos das duas linguagens são muito semelhantes. De fato, os eventos são criados usando o suporte de linguagem para delegados. 
+Desenvolvedores que são novos na plataforma .NET Core geralmente têm dificuldades para decidir entre um design baseado em `delegates` e um design baseado em `events`. Este é um conceito difícil, porque os recursos das duas linguagens são muito semelhantes. De fato, os eventos são criados usando o suporte de linguagem para delegados.
 
 Ambas oferecem um cenário de associação tardia: elas permitem cenários em que um componente se comunica chamando um método que é conhecido somente em runtime. Ambas dão suporte a métodos de assinante único e vários assinantes. Você pode ver esse suporte ser chamado de singlecast e multicast. Ambas dão suporte a uma sintaxe semelhante para adicionar e remover manipuladores. Por fim, acionar um evento e chamar um delegado usam exatamente a mesma sintaxe de chamada de método. As duas até mesmo dão suporte à mesma sintaxe de método `Invoke()` para uso com o operador `?.`.
 
@@ -23,7 +23,7 @@ Com todas essas semelhanças, é fácil de ter problemas para determinar quando 
 
 ## <a name="listening-to-events-is-optional"></a>Ouvir eventos é opcional
 
-O aspecto mais importante para determinar qual recurso da linguagem usar é se é necessário ou não que haja um assinante anexado. Se seu código precisar chamar o código fornecido pelo assinante, você deverá usar um design baseado em delegados. Se seu código puder concluir todo o seu trabalho sem chamar nenhum assinante, você deverá usar um design baseado em eventos. 
+O aspecto mais importante para determinar qual recurso da linguagem usar é se é necessário ou não que haja um assinante anexado. Se seu código precisar chamar o código fornecido pelo assinante, você deverá usar um design baseado em delegados. Se seu código puder concluir todo o seu trabalho sem chamar nenhum assinante, você deverá usar um design baseado em eventos.
 
 Considere os exemplos criados durante esta seção. O código que você criou usando `List.Sort()` deve receber uma função de comparador para classificar corretamente os elementos. Consultas de LINQ devem receber delegados para determinar quais elementos retornar. Ambos usaram um design criado com delegados.
 
@@ -38,7 +38,7 @@ Outra consideração é o protótipo do método que você gostaria de ter para s
 
 Observe que essas duas heurísticas geralmente podem estar presentes: se o método de delegado retornar um valor, provavelmente ele terá impacto sobre o algoritmo de alguma forma.
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>Ouvintes de evento frequentemente têm vida útil mais longa 
+## <a name="event-listeners-often-have-longer-lifetimes"></a>Ouvintes de evento frequentemente têm vida útil mais longa
 
 Essa é uma justificativa ligeiramente mais fraca. No entanto, você pode descobrir que designs baseados em eventos são mais naturais quando a origem do evento for gerar eventos durante um longo período de tempo. Você pode ver exemplos disso para controles de UX em vários sistemas. Quando você assina um evento, a origem do evento pode gerar eventos durante o tempo de vida do programa.
 (Você pode cancelar a assinatura de eventos quando não precisar mais deles.)

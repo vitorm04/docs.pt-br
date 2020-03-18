@@ -8,10 +8,10 @@ helpviewer_keywords:
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127513"
 ---
 # <a name="threads-and-threading"></a>Threads e threading
@@ -23,9 +23,9 @@ O multithreading permite aumentar a capacidade de resposta do seu aplicativo e, 
 Um *processo* é um programa em execução. Um sistema operacional usa processos para separar os aplicativos que estão sendo executados. Um *thread* é a unidade básica para a qual um sistema operacional aloca tempo do processador. Cada thread tem uma [prioridade de agendamento](scheduling-threads.md) e mantém um conjunto de estruturas que o sistema usa para salvar o contexto do thread quando a execução do thread é colocada em pausa. O contexto de thread inclui todas as informações que o thread precisa para continuar a execução sem interrupções, incluindo o conjunto de registros de CPU e pilha do thread. Vários threads podem ser executados no contexto de um processo. Todos os threads de um processo compartilham seu espaço de endereço virtual. Um thread pode executar qualquer parte do código do programa, incluindo partes que estão sendo executadas no momento por outro thread.
 
 > [!NOTE]
-> O .NET Framework fornece uma maneira de isolar aplicativos em um processo com o uso de *domínios de aplicativo*. (Os domínios de aplicativo não estão disponíveis no .NET Core.) Para obter mais informações, consulte a seção [domínios e threads do aplicativo](../../framework/app-domains/application-domains.md#application-domains-and-threads) do artigo [domínios de aplicativo](../../framework/app-domains/application-domains.md) .
+> O .NET Framework fornece uma maneira de isolar aplicativos em um processo com o uso de *domínios de aplicativo*. (Os domínios do aplicativo não estão disponíveis no .NET Core.) Para obter mais informações, consulte a seção [Domínios e segmentos](../../framework/app-domains/application-domains.md#application-domains-and-threads) do artigo ['Domínios](../../framework/app-domains/application-domains.md) do aplicativo'.
 
-Por padrão, um programa .NET é iniciado com um único thread, geralmente chamado de thread *primário*. No entanto, ele pode criar threads adicionais para executar código em paralelo ou simultaneamente com o thread primário. Esses threads são chamados de threads de *trabalho*.
+Por padrão, um programa .NET é iniciado com um único thread, geralmente chamado de thread *primário*. No entanto, ele pode criar threads adicionais para executar código em paralelo ou simultaneamente com o thread primário. Esses segmentos são frequentemente chamados de segmentos *de trabalhadores.*
 
 ## <a name="when-to-use-multiple-threads"></a>Quando usar vários threads
 
@@ -47,9 +47,9 @@ Por fim, você pode usar a classe <xref:System.Threading.Thread?displayProperty=
 
 Não se esqueça de tratar as exceções nos threads. Exceções sem tratamento nos threads geralmente encerram o processo. Para obter mais informações, veja [Exceções em threads gerenciados](exceptions-in-managed-threads.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Objetos e recursos de threading](threading-objects-and-features.md)
 - [Práticas recomendadas de threading gerenciado](managed-threading-best-practices.md)
 - [Processamento paralelo, simultaneidade e programação assíncrona no .NET](../parallel-processing-and-concurrency.md)
-- [Sobre processos e threads](/windows/desktop/procthread/about-processes-and-threads)
+- [Sobre Processos e Threads](/windows/desktop/procthread/about-processes-and-threads)

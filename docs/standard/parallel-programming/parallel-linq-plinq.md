@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 ms.openlocfilehash: 1ea880c6403a5fc8b26ba67fe21dfce79c4683db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140042"
 ---
 # <a name="parallel-linq-plinq"></a>LINQ paralelo (PLINQ)
@@ -20,7 +20,7 @@ PLINQ (Parallel LINQ) é uma implementação paralela da LINQ to Objects. O PLIN
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução ao PLINQ](../../../docs/standard/parallel-programming/introduction-to-plinq.md)  
   
- [Noções básicas sobre agilização no PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
+ [Noções básicas sobre agilização em PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)  
   
  [Preservação da ordem em PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)  
   
@@ -32,25 +32,25 @@ PLINQ (Parallel LINQ) é uma implementação paralela da LINQ to Objects. O PLIN
   
  [Como combinar consultas LINQ paralelas e sequenciais](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)  
   
- [Como tratar exceções em uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
+ [Como manipular exceções em uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)  
   
  [Como cancelar uma consulta PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md)  
   
- [Como escrever uma função de agregação PLINQ personalizada](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
+ [Como escrever uma função agregada PLINQ personalizada](../../../docs/standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md)  
   
  [Como especificar o modo de execução em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)  
   
  [Como especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
   
- [Como iterar diretórios de arquivos com PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
+ [Como: Fazer iterações de diretórios de arquivos com PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
   
  [Como avaliar o desempenho da consulta PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
   
  [Exemplo de dados PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
+- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)
 - [LINQ (consulta integrada à linguagem) – C#](../../csharp/programming-guide/concepts/linq/index.md)  
 - [LINQ (consulta integrada à linguagem) – Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)  

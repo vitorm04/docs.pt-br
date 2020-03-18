@@ -9,23 +9,23 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 215636a9617a2723d8ab69640c1d3e69491a7d87
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160359"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Encaminhamento de tipo no Common Language Runtime
 O encaminhamento de tipo permite que você mova um tipo para outro assembly sem ter que recompilar os aplicativos que usam o assembly original.  
   
- Por exemplo, suponha que um aplicativo use a classe `Example` em um assembly chamado *Utility. dll*. Os desenvolvedores de *Utility. dll* podem decidir refatorar o assembly e, no processo, eles podem mover a classe `Example` para outro assembly. Se a versão antiga do *Utility. dll* for substituída pela nova versão do *Utility. dll* e seu assembly complementar, o aplicativo que usa a classe `Example` falhará porque ele não pode localizar a classe `Example` na nova versão do *Utility. dll*.  
+ Por exemplo, suponha `Example` que um aplicativo use a classe em um conjunto chamado *Utility.dll*. Os desenvolvedores do *Utility.dll* podem decidir refatorar a montagem, `Example` e no processo eles podem mover a classe para outra montagem. Se a versão antiga do *Utility.dll* for substituída pela nova versão do *Utility.dll* e seu conjunto companheiro, o aplicativo que usa a `Example` classe falhará porque não consegue localizar a `Example` classe na nova versão do *Utility.dll*.  
   
- Os desenvolvedores de *Utility. dll* podem evitar isso encaminhando as solicitações para a classe `Example`, usando o atributo <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>. Se o atributo tiver sido aplicado à nova versão do *Utility. dll*, as solicitações para a classe `Example` serão encaminhadas para o assembly que agora contém a classe. O aplicativo existente continua a funcionar normalmente, sem recompilação.  
+ Os desenvolvedores do *Utility.dll* podem evitar isso `Example` encaminhando <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> solicitações para a classe, usando o atributo. Se o atributo tiver sido aplicado à nova versão do `Example` *Utility.dll,* as solicitações para a classe serão encaminhadas para a montagem que agora contém a classe. O aplicativo existente continua a funcionar normalmente, sem recompilação.  
   
 > [!NOTE]
 > No .NET Framework versão 2.0, você não pode encaminhar os tipos de assemblies escritos em Visual Basic. No entanto, um aplicativo escrito em Visual Basic pode consumir tipos encaminhados. Ou seja, se o aplicativo usar um assembly de código em C# ou C++, e um tipo desse assembly for encaminhado para outro assembly, o aplicativo em Visual Basic poderá usar o tipo encaminhado.  
   
-## <a name="forward-types"></a>Tipos de encaminhamento  
+## <a name="forward-types"></a>Tipos avançados  
  Há quatro etapas para encaminhar um tipo:  
   
 1. Mova o código-fonte para o tipo do assembly original para o conjunto de destino.  
@@ -42,10 +42,10 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
 
 3. Compile o assembly que agora contém o tipo.  
 
-4. Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver compilando C# um arquivo da linha de comando, use a opção [-C# Reference (opções do compilador)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o assembly que contém o tipo. Em C++, use a diretiva [#using](/cpp/preprocessor/hash-using-directive-cpp) no arquivo de origem para especificar o assembly que contém o tipo.  
+4. Recompile o assembly onde o tipo estava localizado, com uma referência ao assembly que agora contém o tipo. Por exemplo, se você estiver compilando um arquivo C# da linha de comando, use a opção [-reference (C# compilor options)](../../csharp/language-reference/compiler-options/reference-compiler-option.md) para especificar o conjunto que contém o tipo. Em C++, use a diretiva [#using](/cpp/preprocessor/hash-using-directive-cpp) no arquivo de origem para especificar o assembly que contém o tipo.  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
-- [Encaminhamento de tipoC++(/CLI)](/cpp/windows/type-forwarding-cpp-cli)
-- [#using diretiva](/cpp/preprocessor/hash-using-directive-cpp)
+- [Encaminhamento de tipo (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
+- [diretiva #using](/cpp/preprocessor/hash-using-directive-cpp)

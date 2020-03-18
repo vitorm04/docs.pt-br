@@ -36,26 +36,26 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159995"
 ---
 # <a name="the-regular-expression-object-model"></a>O modelo de objeto de expressão regular
 <a name="introduction"></a> Este tópico descreve o modelo do objeto usado ao trabalhar com expressões regulares do .NET. Ele contém as seções a seguir:  
   
-- [O mecanismo de expressões regulares](#Engine)  
+- [O Motor de Expressão Regular](#Engine)  
   
-- [Os objetos MatchCollection e Match](#Match_and_MCollection)  
+- [A MatchCollection e os Objetos de Correspondência](#Match_and_MCollection)  
   
-- [A coleta de Grupo](#GroupCollection)  
+- [A Coleção de Grupos](#GroupCollection)  
   
-- [O grupo capturado](#the_captured_group)  
+- [O Grupo Capturado](#the_captured_group)  
   
-- [A coleta de captura](#CaptureCollection)  
+- [A Coleção de Capturas](#CaptureCollection)  
   
-- [A captura individual](#the_individual_capture)  
+- [A Captura Individual](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>O mecanismo da expressão regular  
@@ -89,7 +89,7 @@ ms.locfileid: "78159995"
   
  O padrão da expressão regular `^\d{3}-\d{2}-\d{4}$` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Corresponder ao início da cadeia de caracteres de entrada.|  
 |`\d{3}`|Corresponder a três dígitos decimais.|  
@@ -107,10 +107,10 @@ ms.locfileid: "78159995"
   
  O padrão da expressão regular `\b(\w+)\W+(\1)\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Começa a correspondência em um limite de palavra.|  
-|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|`(\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |`\W+`|Estabeleça a correspondência com um ou mais caracteres que não compõem palavras.|  
 |`(\1)`|Corresponder à primeira cadeia capturada. Este é o segundo grupo de captura.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
@@ -129,9 +129,9 @@ ms.locfileid: "78159995"
   
  O padrão da expressão regular `\b\d+\.\d{2}\b` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
 |`\.`|Corresponde a um ponto final.|  
 |`\d{2}`|Corresponde a dois dígitos decimais.|  
@@ -152,9 +152,9 @@ ms.locfileid: "78159995"
   
  O padrão da expressão regular `\b\d{1,2}\.\s` é interpretado conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`\d{1,2}`|Corresponder a um ou dois dígitos decimais.|  
 |`\.`|Corresponde a um ponto final.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
@@ -215,9 +215,9 @@ ms.locfileid: "78159995"
   
  O padrão de expressão regular `\b\d+(,\d{3})*\.\d{2}\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`\d+`|Corresponde a um ou mais dígitos decimais.|  
 |`(,\d{3})*`|Corresponder a zero ou mais ocorrências de uma vírgula seguida por três dígitos decimais.|  
 |`\.`|Corresponder ao caractere de vírgula decimal.|  
@@ -246,10 +246,10 @@ ms.locfileid: "78159995"
   
  O padrão de expressão regular `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
-|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
+|`(\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
 |`(\d{1,2})`|Corresponder a um ou dois dígitos decimais. Este é o segundo grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  
@@ -275,12 +275,12 @@ ms.locfileid: "78159995"
   
  O padrão de expressão regular `^(?<name>\w+):(?<value>\w+)` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começar a correspondência no início da cadeia de caracteres de entrada.|  
-|`(?<name>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `name`.|  
+|`(?<name>\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. O nome deste grupo de captura é `name`.|  
 |`:`|Corresponder a dois pontos.|  
-|`(?<value>\w+)`|Corresponde a um ou mais caracteres de palavra. O nome deste grupo de captura é `value`.|  
+|`(?<value>\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. O nome deste grupo de captura é `value`.|  
   
  As propriedades da classe <xref:System.Text.RegularExpressions.Group> fornecem informações sobre o grupo capturado: a propriedade `Group.Value` contém a subcadeia de caracteres capturada, a propriedade `Group.Index` indica a posição inicial do grupo capturado no texto de entrada, a propriedade `Group.Length` contém o comprimento do texto capturado e a propriedade `Group.Success` indica se uma subcadeia de caracteres corresponde ao padrão definido pelo grupo de captura.  
   
@@ -339,9 +339,9 @@ ms.locfileid: "78159995"
   
  A expressão regular é definida como mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
 |`(\s\w+)*`|Corresponder a zero ou mais ocorrências de um caractere de espaço em branco seguido por um ou mais caracteres de palavra. Este padrão corresponde a nomes de cidade com várias palavras. Este é o terceiro grupo de captura.|  
 |`(\w+(\s\w+)*)`|Corresponder a um ou mais caracteres de palavra seguido por zero ou mais ocorrências de um caractere de espaço em branco e um ou mais caracteres de palavra. Este é o segundo grupo de captura.|  
 |`,`|Corresponde a uma vírgula.|  
@@ -353,4 +353,4 @@ ms.locfileid: "78159995"
 
 - <xref:System.Text.RegularExpressions>
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

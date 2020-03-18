@@ -8,10 +8,10 @@ helpviewer_keywords:
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130936"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Padrão assíncrono baseado em evento (EAP)
@@ -23,25 +23,25 @@ Há várias maneiras de expor recursos assíncronos para o código cliente. O Pa
   
 ## <a name="in-this-section"></a>Nesta seção
 
- [Visão Geral do Padrão Assíncrono Baseado em Evento](event-based-asynchronous-pattern-overview.md)  
+ [Visão geral do padrão assíncrono baseado em evento](event-based-asynchronous-pattern-overview.md)  
  Descreve como o Padrão Assíncrono Baseado em Evento disponibiliza as vantagens de aplicativos de vários threads enquanto oculta muitos problemas complexos inerentes ao design com vários threads.  
   
  [Implementando o Padrão Assíncrono baseado em Evento](implementing-the-event-based-asynchronous-pattern.md)  
  Descreve a maneira padronizada de empacotar uma classe com recursos assíncronos.  
   
- [Práticas recomendadas para a implementação do Padrão Assíncrono baseado em Evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [Práticas recomendadas para a implementação do padrão assíncrono baseado em evento](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  Descreve as exigências para expor recursos assíncronos de acordo com o Padrão Assíncrono Baseado em Evento.  
   
- [Decidindo quando implementar o Padrão Assíncrono baseado em Evento](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ [Decidindo quando implementar o padrão assíncrono baseado em evento](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  Descreve como determinar quando você deve optar por implementar o Padrão assíncrono baseado em evento, em vez do padrão <xref:System.IAsyncResult> representado pelo [APM (Modelo de programação assíncrona)](asynchronous-programming-model-apm.md)
   
- [Como implementar um componente compatível com o Padrão Assíncrono baseado em Evento](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Como implementar um componente compatível com o padrão assíncrono baseado em evento](component-that-supports-the-event-based-asynchronous-pattern.md)  
  Descreve como criar um componente que implemente o Padrão assíncrono baseado em evento. É implementado usando classes do auxiliar do namespace <xref:System.ComponentModel?displayProperty=nameWithType>, o que garante que o componente funcione corretamente em qualquer modelo de aplicativo.  
 
  [Como implementar um cliente do Padrão Assíncrono baseado em Evento](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  Descreve como criar um cliente que usa um componente que implemente o Padrão assíncrono baseado em evento.
   
- [Como usar componentes compatíveis com o Padrão Assíncrono baseado em Evento](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Como usar componentes compatíveis com o padrão assíncrono baseado em evento](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Descreve como usar um componente com suporte ao Padrão Assíncrono Baseado em Evento.  
   
 ## <a name="reference"></a>Referência
@@ -57,14 +57,14 @@ Há várias maneiras de expor recursos assíncronos para o código cliente. O Pa
   
 ## <a name="related-sections"></a>Seções relacionadas
 
- [TPL (Biblioteca de Paralelismo de Tarefas)](../parallel-programming/task-parallel-library-tpl.md)  
+ [Biblioteca de tarefas paralelas (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
  Descreve um modelo de programação para operações paralelas e assíncronas.  
   
  [Threading](../../../docs/standard/threading/index.md)  
  Descreve recursos de multithreading no .NET.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Práticas recomendadas de threading gerenciado](../threading/managed-threading-best-practices.md)
+- [Práticas recomendadas de rosca gerenciadas](../threading/managed-threading-best-practices.md)
 - [Eventos](../events/index.md)
 - [Padrões de design de programação assíncrona](index.md)

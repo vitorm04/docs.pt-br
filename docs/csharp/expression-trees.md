@@ -4,18 +4,18 @@ description: Saiba mais sobre árvores de expressão no .NET Core e como usá-la
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036319"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145833"
 ---
 # <a name="expression-trees"></a>Árvores de expressão
 
-Se tiver usado o LINQ, você tem experiência com uma rica biblioteca em que os tipos `Func` fazem parte do conjunto de API. (Se você não estiver familiarizado com o LINQ, provavelmente deseja ler [o tutorial do LINQ](linq/index.md) e o artigo sobre [expressões lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) antes desta.) As *árvores de expressão* fornecem uma interação mais rica com os argumentos que são funções.
+Se tiver usado o LINQ, você tem experiência com uma rica biblioteca em que os tipos `Func` fazem parte do conjunto de API. (Se você não está familiarizado com linq, você provavelmente quer ler [o tutorial LINQ](linq/index.md) e o artigo sobre [expressões lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) antes deste.) *As Árvores de Expressão* proporcionam uma interação mais rica com os argumentos que são funções.
 
-Você escreve argumentos de função, normalmente usando expressões lambda, quando cria consultas LINQ. Em uma consulta LINQ típica, esses argumentos de função são transformados em um delegado que o compilador cria. 
+Você escreve argumentos de função, normalmente usando expressões lambda, quando cria consultas LINQ. Em uma consulta LINQ típica, esses argumentos de função são transformados em um delegado que o compilador cria.
 
 Quando quiser ter uma interação mais avançada, você precisa usar *Árvores de expressão*.
 Árvores de expressão representam o código como uma estrutura que você pode examinar, modificar ou executar. Essas ferramentas oferecem a capacidade de manipular o código em tempo de execução. Você pode escrever código que examina algoritmos em execução ou injeta novos recursos. Em cenários mais avançados, você pode modificar algoritmos em execução e até mesmo converter expressões C# para outro formato para execução em outro ambiente.
@@ -28,11 +28,11 @@ As seções restantes deste tutorial explorarão o que são as árvores de expre
 1. [Árvores de Expressão Explicadas](expression-trees-explained.md)
 
     Compreender a estrutura e os conceitos por trás das *Árvores de Expressão*.
-    
-2. [Tipos de Framework com Suporte a Árvores de Expressão](expression-classes.md)
-    
+
+2. [Tipos de Framework com suporte a árvores de expressão](expression-classes.md)
+
     Saiba mais sobre as estruturas e classes que definem e manipulam as árvores de expressão.
-    
+
 3. [Executando Expressões](expression-trees-execution.md)
 
     Saiba como converter uma árvore de expressão representada como uma expressão lambda em um delegado e como executar o delegado resultante.

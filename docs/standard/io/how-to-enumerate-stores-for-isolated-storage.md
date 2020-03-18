@@ -14,10 +14,10 @@ helpviewer_keywords:
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707522"
 ---
 # <a name="how-to-enumerate-stores-for-isolated-storage"></a>Como enumerar repositórios para o armazenamento isolado
@@ -29,7 +29,7 @@ Você pode enumerar todos os repositórios isolados para o usuário atual usando
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)

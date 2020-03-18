@@ -9,10 +9,10 @@ helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137964"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Como usar SpinLock para sincronização de baixo nível
@@ -28,7 +28,7 @@ O exemplo a seguir demonstra como usar o <xref:System.Threading.SpinLock>. No ex
   
  Observe o uso do `false` (`False` no Visual Basic) na chamada do <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>. Isso oferece o melhor desempenho. Especifique `true` (`True` em Visual Basic) em arquiteturas de IA64 para usar o limite de memória, que libera os buffers de gravação para garantir que o bloqueio esteja disponível para outros threads saírem.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Objetos e recursos de threading](threading-objects-and-features.md)
 - [Instrução lock (C#)](../../csharp/language-reference/keywords/lock-statement.md)

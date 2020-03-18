@@ -2,12 +2,12 @@
 title: Projetando a camada de persistência da infraestrutura
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore o padrão de repositório no design da camada de persistência da infraestrutura.
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737927"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846803"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Projetar a camada de persistência da infraestrutura
 
@@ -33,11 +33,11 @@ Se o usuário fizer alterações, os dados a serem atualizados virão da camada 
 
 É importante enfatizar novamente que você deve definir apenas um repositório para cada raiz de agregação, conforme mostrado na Figura 7-17. Para atingir a meta da raiz de agregação de manter a consistência transacional entre todos os objetos na agregação, você nunca deve criar um repositório para cada tabela no banco de dados.
 
-![Diagrama mostrando relações de domínio e outra infraestrutura.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![Diagrama mostrando relações de domínio e outras infra-estruturas.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. A relação entre repositórios, agregações e tabelas de banco de dados
 
-O diagrama acima mostra as relações entre as camadas de infraestrutura e de domínio: o comprador agregado depende do IBuyerRepository e a agregação de ordem depende das interfaces IOrderRepository, essas interfaces são implementadas na camada de infraestrutura pelos repositórios correspondentes que dependem de UnitOfWork, também implementados ali, que acessam as tabelas na camada de dados.
+O diagrama acima mostra as relações entre as camadas de Domínio e Infra-estrutura: O Agregado do Comprador depende do IBuyerRepository e o Order Aggregate depende das interfaces IOrderRepository, essas interfaces são implementadas na camada Infra-estrutura pelos repositórios correspondentes que dependem do UnitOfWork, também implementado lá, que acessa as tabelas no nível Dados.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Impor uma raiz de agregação por repositório
 
@@ -110,26 +110,23 @@ Os repositórios podem ser úteis, mas eles não são críticos para o design DD
 
 ### <a name="repository-pattern"></a>Padrão de Repositório
 
-- **O Padrão de Repositório** \
-  <https://deviq.com/repository-pattern/>
-
 - **Edward Hieatt e Rob me. Padrão de repositório.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **O Padrão de Repositório** \
+- **O padrão repositório** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
+- **Eric Evans. Design orientado por domínio: enfrentando a complexidade no coração do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Padrão de unidade de trabalho
 
-- **Martin Fowler. Padrão de unidade de trabalho.** \
+- **Martin Fowler. Padrão da unidade de trabalho.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC** \
+- **Implementação do Repositório e da Unidade de Padrões de Trabalho em um aplicativo MVC ASP.NET** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Anterior](domain-events-design-implementation.md)
->[Próximo](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Próximo](domain-events-design-implementation.md)
+>[anterior](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936850"
 ---
 # <a name="using-threads-and-threading"></a>Usando threads e threading
@@ -28,13 +28,13 @@ Crie um thread criando uma nova instância da classe <xref:System.Threading.Thre
 
 ## <a name="how-to-stop-a-thread"></a>Como interromper um thread
 
-Para encerrar a execução de um thread, use o <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Ele fornece uma maneira unificada de parar os threads de forma cooperativa. Para saber mais, confira [Cancelamento em threads gerenciados](cancellation-in-managed-threads.md).
+Para terminar a execução de <xref:System.Threading.CancellationToken?displayProperty=nameWithType>um segmento, use o . Ele fornece uma maneira unificada de parar os fios cooperativamente. Para saber mais, confira [Cancelamento em threads gerenciados](cancellation-in-managed-threads.md).
 
-Às vezes, não é possível parar um thread de cooperativa, pois ele executa código de terceiros não projetado para cancelamento cooperativo. Nesse caso, talvez você queira encerrar sua execução forçosamente. Para encerrar a execução de um thread de modo forçado, em .NET Framework você pode usar o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Esse método gera uma <xref:System.Threading.ThreadAbortException> no thread em que é invocado. Para obter mais informações, confira [Destruindo threads](destroying-threads.md). Não há suporte para o método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> no .NET Core. Se você precisar encerrar a execução de código de terceiros de modo forçado no .NET Core, execute-o no processo separado e use <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.
+Às vezes não é possível parar um segmento cooperativamente, porque ele executa código de terceiros não projetado para cancelamento cooperativo. Neste caso, você pode querer terminar sua execução à força. Para encerrar a execução de um segmento à força, no .NET Framework você pode usar o <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método. Esse método gera uma <xref:System.Threading.ThreadAbortException> no thread em que é invocado. Para obter mais informações, confira [Destruindo threads](destroying-threads.md). O <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> método não é suportado no .NET Core. Se você precisar encerrar a execução do código de terceiros à força no <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>.NET Core, execute-o no processo separado e use .
 
-O <xref:System.Threading.CancellationToken?displayProperty=nameWithType> não está disponível antes de .NET Framework 4. Para interromper um thread em versões mais antigas do .NET Framework, você deve implementar o cancelamento cooperativo manualmente usando as técnicas de sincronização de threads. Por exemplo, você pode criar o campo booliano volátil `shouldStop` e usá-lo para solicitar o código executado pelo thread para parar. Para obter mais informações, [volatile](../../csharp/language-reference/keywords/volatile.md) consulte volátil C# em referência e <xref:System.Threading.Volatile?displayProperty=nameWithType>.
+O <xref:System.Threading.CancellationToken?displayProperty=nameWithType> não está disponível antes do .NET Framework 4. Para parar um segmento nas versões mais antigas do .NET Framework, você deve implementar o cancelamento cooperativo manualmente usando as técnicas de sincronização de segmentos. Por exemplo, você pode criar `shouldStop` o campo booleano volátil e usá-lo para solicitar que o código executado pelo segmento pare. Para obter mais [volatile](../../csharp/language-reference/keywords/volatile.md) informações, consulte <xref:System.Threading.Volatile?displayProperty=nameWithType>volátil em C# Referência e .
 
-Use o método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para fazer com que o thread de chamada aguarde o encerramento do thread que está sendo interrompido.
+Use <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> o método para fazer com que o segmento de chamada aguarde o término do segmento sendo interrompido.
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>Como pausar ou interromper um thread
 
@@ -44,7 +44,7 @@ Use o método <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithTyp
 
 A tabela a seguir apresenta algumas das propriedades do <xref:System.Threading.Thread>:  
   
-|propriedade|Descrição|  
+|Propriedade|Descrição|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Retorna `true` quando um thread foi iniciado e ainda não foi encerrado normalmente ou anulado.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtém ou define um valor booliano que indica se um thread é um thread em segundo plano. Os threads em segundo plano são como threads em primeiro plano, mas um thread em segundo plano não impede que um processo pare. Após todos os threads de primeiro plano que pertencem a um processo serem parados, o Common Language Runtime finaliza o processo chamando o método <xref:System.Threading.Thread.Abort%2A> em threads em segundo plano que ainda estão ativos. Para obter mais informações, confira [Threads em primeiro plano e em segundo plano](foreground-and-background-threads.md).|  
@@ -52,8 +52,8 @@ A tabela a seguir apresenta algumas das propriedades do <xref:System.Threading.T
 |<xref:System.Threading.Thread.Priority%2A>|Obtém ou define um valor de <xref:System.Threading.ThreadPriority> que é usado pelo sistema operacional para priorizar agendamentos de thread. Para obter mais informações, confira [Agendando threads](scheduling-threads.md) e a referência de <xref:System.Threading.ThreadPriority>.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|Obtém um valor <xref:System.Threading.ThreadState> que contém os estados atuais de um thread.|  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
-- [Threads e threading](threads-and-threading.md)
-- [Programação paralela](../parallel-programming/index.md)
+- [Linhas e Roscas](threads-and-threading.md)
+- [Programação Paralela](../parallel-programming/index.md)

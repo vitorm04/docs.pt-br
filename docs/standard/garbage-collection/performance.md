@@ -7,21 +7,21 @@ helpviewer_keywords:
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900577"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
-Este tópico descreve problemas relacionados à coleta de lixo e ao uso de memória. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.
+ Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.
 
 ## <a name="performance-analysis-tools"></a>Ferramentas de análise de desempenho
 
 As seções a seguir descrevem as ferramentas que estão disponíveis para investigar problemas de coleta de lixo e de uso de memória. Os [procedimentos](#performance-check-procedures) fornecidos mais adiante neste tópico se referem a essas ferramentas.
 
-### <a name="memory-performance-counters"></a>Contadores de desempenho da memória
+### <a name="memory-performance-counters"></a>Contadores de Desempenho de Memória
 
 Você pode usar os contadores de desempenho para coletar dados de desempenho. Para obter instruções, consulte [Criação de perfil do runtime](../../../docs/framework/debug-trace-profile/runtime-profiling.md). A categoria de contadores de desempenho de memória CLR do .NET, conforme descrito em [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), fornece informações sobre o coletor de lixo.
 
@@ -61,15 +61,15 @@ A primeira etapa é [determinar se o problema é realmente a coleta de lixo](#Is
 
 - [O processo usa memória demais](#Issue_TooMuchMemory)
 
-- [O coletor de lixo não recupera objetos com rapidez suficiente](#Issue_NotFastEnough)
+- [O coletor de lixo não recupera objetos rápido o suficiente](#Issue_NotFastEnough)
 
-- [O heap gerenciado está fragmentado demais](#Issue_Fragmentation)
+- [O monte gerenciado é muito fragmentado](#Issue_Fragmentation)
 
 - [As pausas na coleta de lixo são longas demais](#Issue_LongPauses)
 
 - [A geração 0 é grande demais](#Issue_Gen0)
 
-- [O uso da CPU durante uma coleta de lixo é alto demais](#Issue_HighCPU)
+- [O uso da CPU durante uma coleta de lixo é muito alto](#Issue_HighCPU)
 
 <a name="Issue_OOM"></a>
 
@@ -133,7 +133,7 @@ No heap de objetos grandes sempre ocorre fragmentação, porque ele não é comp
 
 A fragmentação pode se tornar um problema na geração 1 e geração 2. Se esses gerações tiverem uma grande quantidade de espaço livre após uma coleta de lixo, o uso de objetos de um aplicativo poderá precisar de modificações e você deverá considerar reavaliar o tempo de vida dos objetos de longo prazo.
 
-O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação for alta, muitos objetos poderão ter sido fixados.
+O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação é alta, muitos objetos poderiam ter sido fixados.
 
 Se a fragmentação da memória virtual estiver impedindo que o coletor de lixo adicione segmentos, as causas poderão ser uma dos seguintes:
 
@@ -209,7 +209,7 @@ A menos que você esteja usando um criador de perfil, você terá que estabelece
 
 - Se você medir imediatamente antes de uma coleta de lixo, você medirá o máximo de alocação possível antes do início da coleta de lixo.
 
-- Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Isso faz parte do design.
+- Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Isso ocorre por design.
 
 - Quando você usa a coleta de lixo de estação de trabalho com coleta de lixo simultânea, os objetos recuperados não são compactados, portanto, o tamanho do heap pode ser igual ou maior (a fragmentação pode fazer com que pareça maior).
 
@@ -271,9 +271,9 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - Examine os dois contadores de desempenho de memória a seguir:
 
-  - **% de Tempo Gasto em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
+  - **% Tempo em GC**. Exibe o percentual de tempo decorrido que foi gasto na execução de uma coleta de lixo após o último ciclo de coleta de lixo. Use este contador para determinar se o coletor de lixo está gastando tempo demais para disponibilizar espaço de heap gerenciado. Se o tempo gasto na coleta de lixo for relativamente baixo, isso poderá indicar um problema de recurso fora do heap gerenciado. Esse contador pode não ser preciso quando coleta de lixo simultânea ou em segundo plano está envolvida.
 
-  - **N. Total de Bytes Confirmados**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
+  - **# Total comprometido Bytes**. Exibe a quantidade de memória virtual confirmada atualmente pelo coletor de lixo. Use este contador para determinar se a memória consumida pelo coletor de lixo é uma parte excessiva da memória usada pelo aplicativo.
 
   A maioria dos contadores de desempenho de memória é atualizada no final de cada coleta de lixo. Portanto, eles podem não refletir as condições atuais sobre as quais você deseja obter informações.
 
@@ -297,7 +297,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 2. Se a saída não especificar uma exceção, você precisará determinar de qual thread é a exceção de falta de memória. Digite o comando a seguir no depurador para mostrar todos os threads com suas pilhas de chamadas:
 
-    **~\*kb**
+    **~\*Kb**
 
     O thread com a pilha que tem chamadas de exceção é indicado pelo argumento `RaiseTheException`. Esse é o objeto de exceção gerenciada.
 
@@ -327,7 +327,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Neste exemplo, o tamanho da maior região livre é aproximadamente 24.000 KB (3A980 em hexadecimal). Essa região é menor do que o tamanho requerido pelo coletor de lixo para um segmento.
 
-  - ou -
+  -ou-
 
 - Use o comando **vmstat**:
 
@@ -423,7 +423,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o heap gerenciado é grande, **dumpheap** pode levar algum tempo para concluir.
 
-  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo:
+  Você pode começar a analisar pelas últimas poucas linhas da saída, pois elas listam os objetos que usam mais espaço. Por exemplo: 
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo
@@ -713,7 +713,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
 - No depurador do Visual Studio ou WinDbg com a extensão de depurador SOS carregada, digite o comando a seguir para mostrar todos os threads com suas pilhas de chamadas:
 
-  **~\*kb**
+  **~\*Kb**
 
   Esse comando exibe uma saída semelhante à seguinte.
 
@@ -794,6 +794,6 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o valor de `% Time in GC` subir ao mesmo tempo que o tempo de processamento, isso significará que a coleta de lixo está causando um alto uso da CPU. Caso contrário, crie o perfil do aplicativo para encontrar o local de ocorrência do alto uso.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

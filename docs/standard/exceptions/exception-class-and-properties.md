@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708939"
 ---
 # <a name="exception-class-and-properties"></a>Classe e propriedades da exceção
@@ -24,7 +24,7 @@ A classe <xref:System.Exception> é a classe base da qual as exceções herdam. 
 
 A classe <xref:System.Exception> tem as propriedades a seguir, que ajudam a facilitar o entendimento de uma exceção.
 
-| Nome da Propriedade | Descrição |
+| Nome da propriedade | Descrição |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | Um <xref:System.Collections.IDictionary> que contém dados arbitrários em pares chave-valor. |
 | <xref:System.Exception.HelpLink> | Pode conter uma URL (ou URN) para um arquivo de ajuda que fornece informações abrangentes sobre a causa de uma exceção. |
@@ -37,6 +37,6 @@ A maioria das classes que herdam de <xref:System.Exception> não implementa memb
 
 É recomendável gerar e capturar apenas objetos que derivam de <xref:System.Exception>, mas é possível gerar como uma exceção qualquer objeto que derive da classe <xref:System.Object>. Observe que nem todas as linguagens dão suporte à geração e captura de objetos que não derivam de <xref:System.Exception>.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Exceções](index.md)

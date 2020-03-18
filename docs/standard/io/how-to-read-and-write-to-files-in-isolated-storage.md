@@ -17,10 +17,10 @@ helpviewer_keywords:
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706680"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Como ler e gravar em arquivos no armazenamento isolado
@@ -32,7 +32,7 @@ Para ler ou gravar de um arquivo em um armazenamento isolado, use um objeto <xre
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
@@ -40,5 +40,5 @@ Para ler ou gravar de um arquivo em um armazenamento isolado, use um objeto <xre
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Arquivo e I/O do fluxo](../../../docs/standard/io/index.md)
+- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)

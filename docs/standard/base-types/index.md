@@ -8,10 +8,10 @@ helpviewer_keywords:
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103542"
 ---
 # <a name="working-with-base-types-in-net"></a>Trabalhando com tipos base no .NET
@@ -21,7 +21,7 @@ Esta seção descreve as operações de tipo base .NET, incluindo formatação, 
  [Conversão de tipos no .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
  Descreve como converter de um tipo em outro.  
   
- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)  
  Descreve como formatar cadeias de caracteres usando especificadores de formato de cadeia de caracteres.  
   
  [Manipulando cadeias de caracteres](../../../docs/standard/base-types/manipulating-strings.md)  

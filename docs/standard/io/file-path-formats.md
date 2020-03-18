@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628040"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
@@ -30,7 +30,7 @@ Um caminho DOS padrão pode consistir em três componentes:
 
 Se todos os três componentes estiverem presentes, o caminho será absoluto. Se nenhum volume ou letra da unidade for especificado e o nome do diretório começar com o [caractere separador de diretório](<xref:System.IO.Path.DirectorySeparatorChar>), o caminho será relativo na raiz da unidade atual. Caso contrário, o caminho será relativo ao diretório atual. A tabela a seguir mostra alguns possíveis caminhos de arquivo e diretório.
 
-|Caminho  |DESCRIÇÃO  |
+|Caminho  |Descrição  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Um caminho de arquivo absoluto da raiz da unidade C: |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Um caminho absoluto da raiz da unidade atual. |
@@ -44,7 +44,7 @@ Se todos os três componentes estiverem presentes, o caminho será absoluto. Se 
 
 É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
 
-O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ no prompt de comando antes de executar o exemplo.
+O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ a partir do prompt de comando antes de executar o exemplo.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -62,7 +62,7 @@ Os caminhos UNC (convenção de nomenclatura universal), usados para acessar rec
 
 Veja alguns exemplos de caminhos UNC:
 
-|Caminho  |DESCRIÇÃO  |
+|Caminho  |Descrição  |
 | -- | -- |
 | `\\system07\C$\` | O diretório raiz da unidade C: em `system07`. |
 | `\\Server2\Share\Test\Foo.txt` | O arquivo Foo.txt no diretório Teste do volume \\\\Server2\\Share.|
@@ -95,7 +95,7 @@ O caminho de dispositivo DOS tem os seguintes componentes:
 
    O primeiro segmento do caminho de dispositivo DOS depois do especificador de caminho do dispositivo identifica o volume ou a unidade. Por exemplo, `\\?\C:\` e `\\.\BootPartition\`.
 
-   Há um link específico para UNCs que é chamado, não surpreendentemente, `UNC`. Por exemplo:
+   Há um link específico para UNCs que é chamado, não surpreendentemente, `UNC`. Por exemplo: 
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
@@ -202,7 +202,7 @@ Ignorar a normalização e as verificações de tamanho do caminho é a única d
 
 Os caminhos que começam com `\\?\` ainda serão normalizados se você os passar explicitamente para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Você pode passar caminhos com mais de `MAX_PATH` caracteres para [Getfullpathname](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
+Você pode passar caminhos de mais do que `MAX_PATH` caracteres para [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiúsculas, minúsculas e o sistema de arquivos do Windows
 

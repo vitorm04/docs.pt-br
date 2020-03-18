@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: cb4dbadfa4efd0750ffd3dea88a3f661e2f85a8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239686"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173764"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (opções do compilador C#)
 A opção **-checked** especifica se uma instrução de aritmética de inteiros que resulta em um valor fora do intervalo do tipo de dados e que não está no escopo de uma palavra-chave [checked](../keywords/checked.md) ou [unchecked](../keywords/unchecked.md), causa uma exceção de tempo de execução.  
@@ -29,19 +29,19 @@ A opção **-checked** especifica se uma instrução de aritmética de inteiros 
   
  Se uma instrução de aritmética de inteiros que não está no escopo de uma palavra-chave `checked` ou `unchecked` resultar em um valor fora do intervalo do tipo de dados e **-checked+** (ou **-checked**) for usado na compilação, a instrução causará uma exceção no tempo de execução. Se **-checked-** for usado na compilação, a instrução não causará uma exceção em tempo de execução.  
   
- O valor padrão para essa opção é **-checked-** . A verificação de estouro é desabilitada.
- 
+ O valor padrão para essa opção é **-checked-**. A verificação de estouro é desabilitada.
+
  Às vezes, as ferramentas automatizadas que são usadas para compilar grandes aplicativos definem -checked como +. Um cenário para uso de -checked- é substituir o padrão global da ferramenta especificando -checked-.
- 
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
 1. Abra a página **Propriedades** do projeto. Para obter mais informações, consulte [Página Build, Designer de Projeto (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
 2. Clique na página de propriedades **Compilar**.  
   
-3. Clique no botão **Avançado** .  
+3. Clique no botão **Avançado**.  
   
-4. Modifique a propriedade **verificar estouro aritmético** .  
+4. Modifique a verificação da propriedade **de transbordamento aritmético.**  
   
  Para acessar programaticamente essa opção do compilador, confira <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
@@ -54,5 +54,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

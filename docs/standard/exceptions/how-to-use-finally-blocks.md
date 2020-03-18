@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ArgumentOutOfRangeException class
 ms.assetid: 4b9c0137-04af-4468-91d1-b9014df8ddd2
 ms.openlocfilehash: 44fbb53437c4c8f19a424227a167e2e268b77057
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708826"
 ---
 # <a name="how-to-use-finally-blocks"></a>Como usar blocos finally
@@ -30,6 +30,6 @@ O exemplo de código a seguir usa um bloco `try`/`catch` para capturar uma <xref
 [!code-csharp[CodeTryCatchFinallyExample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeTryCatchFinallyExample/CS/source2.cs#3)]
 [!code-vb[CodeTryCatchFinallyExample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeTryCatchFinallyExample/VB/source2.vb#3)]  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Exceções](index.md)

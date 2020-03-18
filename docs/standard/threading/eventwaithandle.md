@@ -9,10 +9,10 @@ helpviewer_keywords:
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138069"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
@@ -60,7 +60,7 @@ A classe <xref:System.Threading.EventWaitHandle> permite que os threads se comun
 > [!NOTE]
 > Ao contrário da classe <xref:System.Threading.EventWaitHandle>, as classes derivadas <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent> podem representar somente identificadores em espera locais. Eles não podem representar eventos nomeados do sistema.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.EventWaitHandle>
 - <xref:System.Threading.WaitHandle>

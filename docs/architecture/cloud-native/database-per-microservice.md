@@ -1,155 +1,155 @@
 ---
-title: Banco de dados por microserviço
-description: Contraste o armazenamento de dados em aplicativos monolíticos e nativos de nuvem.
+title: Banco de dados por microsserviço
+description: Contraste o armazenamento de dados em aplicativos monolíticos e nativos da nuvem.
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: e472309d3dc815070fc2d2c220bf4fe00b8c29ae
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c0c5611fa866d70f155e4bdad2eee1181b13c065
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794901"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141439"
 ---
-# <a name="database-per-microservice"></a>Banco de dados por microserviço
+# <a name="database-per-microservice"></a>Banco de dados por microsserviço
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Como vimos em todo este livro, uma abordagem nativa de nuvem altera a maneira como você projeta, implanta e gerencia aplicativos. Ele também altera a maneira como você gerencia e armazena dados.
+Como vimos ao longo deste livro, uma abordagem nativa da nuvem muda a maneira como você projeta, implanta e gerencia aplicativos. Também muda a forma como você gerencia e armazena dados.
 
 A Figura 5-1 contrasta as diferenças.
 
-![Armazenamento de dados em aplicativos nativos de nuvem](./media/distributed-data.png)
+![Armazenamento de dados em aplicativos nativos da nuvem](./media/distributed-data.png)
 
-**Figura 5-1**. Gerenciamento de dados em aplicativos nativos de nuvem
+**Figura 5-1**. Gerenciamento de dados em aplicativos nativos da nuvem
 
-Os desenvolvedores experientes reconhecerão facilmente a arquitetura no lado esquerdo da Figura 5-1. Nesse *aplicativo monolítico*, os componentes do serviço de negócios se posicionam juntos em uma camada de serviços compartilhados, compartilhando dados de um único banco de dado relacional.
+Desenvolvedores experientes reconhecerão facilmente a arquitetura no lado esquerdo da figura 5-1. Nesta *aplicação monolítica,* os componentes de serviços de negócios se agrupam em um nível de serviços compartilhados, compartilhando dados de um único banco de dados relacional.
 
-De várias maneiras, um banco de dados individual mantém o gerenciamento de dados simples. Consultar dados em várias tabelas é simples. Alterações na atualização de dados juntas ou todas elas são revertidas. [As transações ACID](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) garantem uma consistência forte e imediata.
+Em muitos aspectos, um único banco de dados mantém o gerenciamento de dados simples. Consultar dados em várias tabelas é simples. Alterações na atualização de dados em conjunto ou todas elas reversão. [As transações ACID](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) garantem consistência forte e imediata.
 
-Design para a nuvem nativa, adotamos uma abordagem diferente. No lado direito da Figura 5-1, observe como a funcionalidade de negócios é segregada em microserviços pequenos e independentes. Cada microserviço encapsula um recurso comercial específico e seus próprios dados. O banco de dados monolítico é decomposto em um modelo de dado distribuído com muitos bancos de dados menores, cada um alinhando com um microserviço. Quando a fumaça é limpa, surgemos um design que expõe um *banco de dados por microserviço*.
+Projetando para nativos da nuvem, tomamos uma abordagem diferente. No lado direito da Figura 5-1, observe como a funcionalidade do negócio se segrega em microsserviços pequenos e independentes. Cada microserviço encapsula uma capacidade de negócios específica e seus próprios dados. O banco de dados monolítico se decompõe em um modelo de dados distribuídos com muitos bancos de dados menores, cada um alinhado a um microserviço. Quando a fumaça se dissipa, emergimos com um design que expõe um *banco de dados por microserviço.*
 
 ## <a name="why"></a>Por quê?
 
-Esse banco de dados por microserviço fornece muitos benefícios, especialmente para sistemas que devem evoluir rapidamente e dar suporte a escala maciça. Com este modelo...
+Este banco de dados por microserviço oferece muitos benefícios, especialmente para sistemas que devem evoluir rapidamente e suportar escala maciça. Com este modelo...
 
 - Os dados de domínio são encapsulados dentro do serviço
-- O esquema de dados pode evoluir sem afetar diretamente outros serviços
-- Cada repositório de dados pode ser dimensionado de forma independente
+- Esquema de dados pode evoluir sem impactar diretamente outros serviços
+- Cada armazenamento de dados pode dimensionar independentemente
 - Uma falha no armazenamento de dados em um serviço não afetará diretamente outros serviços
 
-Separar dados também permite que cada microserviço implemente o tipo de armazenamento de dados que é melhor otimizado para sua carga de trabalho, necessidades de armazenamento e padrões de leitura/gravação. As opções incluem relacional, documento, chave-valor e até mesmo armazenamentos de dados baseados em grafo.
+A segregação de dados também permite que cada microserviço implemente o tipo de armazenamento de dados que é melhor otimizado para sua carga de trabalho, necessidades de armazenamento e padrões de leitura/gravação. As opções incluem armazenamentos de dados relacionais, documentos, de valor-chave e até mesmo de gráficos.
 
-A Figura 5-2 apresenta o princípio da persistência de poliglota em um sistema nativo de nuvem.
+A Figura 5-2 apresenta o princípio da persistência do poliglota em um sistema nativo da nuvem.
 
-![Persistência de dados poliglota](./media/polyglot-data-persistence.png)
+![Persistência de dados poliglotas](./media/polyglot-data-persistence.png)
 
-**Figura 5-2**. Persistência de dados poliglota
+**Figura 5-2**. Persistência de dados poliglotas
 
-Observe na figura anterior como cada microserviço dá suporte a um tipo diferente de armazenamento de dados.
+Observe na figura anterior como cada microserviço suporta um tipo diferente de armazenamento de dados.
 
-- O microserviço de catálogo de produtos consome um banco de dados relacional para acomodar a estrutura relacional avançada de seus próprios dados subjacentes.
-- O microserviço de carrinho de compras consome um cache distribuído que dá suporte a seu armazenamento de dados de valor-chave simples.
-- O microserviço de ordenação consome um banco de dados de documentos NoSql para operações de gravação, juntamente com um repositório de chave/valor altamente desnormalizado para acomodar altos volumes de operações de leitura.
+- O microserviço do catálogo de produtos consome um banco de dados relacional para acomodar a rica estrutura relacional de seus dados subjacentes.
+- O microserviço do carrinho de compras consome um cache distribuído que suporta seu simples armazenamento de dados de valor-chave.
+- O microserviço de pedidos consome tanto um banco de dados de documentos NoSql para operações de gravação, juntamente com uma loja de chaves/valor altamente desnormalizada para acomodar grandes volumes de operações de leitura.
   
-Embora os bancos de dados relacionais permaneçam relevantes para os microserviços com os complexos, eles ganharam uma popularidade considerável. Eles fornecem grande escala e alta disponibilidade. Sua natureza sem esquema permite que os desenvolvedores se afastem de uma arquitetura de classes de dados tipadas e ORMs que tornam a alteração cara e demorada. Abordamos os bancos de dados NoSQL posteriormente neste capítulo.
+Embora as bases de dados relacionais permaneçam relevantes para microserviços com dados complexos, os bancos de dados NoSQL ganharam considerável popularidade. Eles fornecem escala maciça e alta disponibilidade. Sua natureza sem esquemas permite que os desenvolvedores se afastem de uma arquitetura de classes de dados digitadas e ORMs que tornam a mudança cara e demorada. Nós cobrimos bancos de dados NoSQL mais tarde neste capítulo.
 
- Embora o encapsulamento de dados em microserviços separados possa aumentar a agilidade, o desempenho e a escalabilidade, ele também apresenta muitos desafios. Na próxima seção, discutiremos esses desafios junto com padrões e práticas para ajudar a superá-los.  
+ Embora encapsular dados em microsserviços separados possa aumentar a agilidade, o desempenho e a escalabilidade, ele também apresenta muitos desafios. Na próxima seção, discutimos esses desafios juntamente com padrões e práticas para ajudar a superá-los.  
 
-## <a name="cross-service-queries"></a>Consultas entre serviços
+## <a name="cross-service-queries"></a>Consultas de serviço cruzado
 
-Embora os microserviço sejam independentes e se concentrem em recursos funcionais específicos, como inventário, envio ou ordenação, eles frequentemente exigem integração com outros microserviços. Geralmente, a integração envolve um microserviço *consultando* outro para dados. A Figura 5-3 mostra o cenário.
+Embora os microserviços sejam independentes e se concentrem em recursos funcionais específicos, como inventário, envio ou encomenda, eles frequentemente requerem integração com outros microserviços. Muitas vezes, a integração envolve um microserviço *consultando* outro para dados. A Figura 5-3 mostra o cenário.
 
-![Consultando em microserviços](./media/cross-service-query.png)
+![Consultando microsserviços](./media/cross-service-query.png)
 
-**Figura 5-3**. Consultando em microserviços
+**Figura 5-3**. Consultando microsserviços
 
-Na figura anterior, vemos um microserviço de cesta de compras que adiciona um item à cesta de compras de um usuário. Embora o armazenamento de dados para este microserviço contenha dados de item de linha e cesta, ele não mantém os dados de produtos ou preços. Em vez disso, esses itens de dados pertencem aos microserviços de catálogo e de preços. Isso apresenta um problema. Como o microserviço da cesta de compras pode adicionar um produto à cesta de compras do usuário quando ele não tem dados de produto nem de preço em seu banco de dado?
+No número anterior, vemos um microserviço de cesta de compras que adiciona um item à cesta de compras do usuário. Embora o armazenamento de dados para este microserviço contenha dados de cesta e item de linha, ele não mantém dados de produtos ou preços. Em vez disso, esses itens de dados são de propriedade do catálogo e dos microsserviços de preços. Isso apresenta um problema. Como o microserviço da cesta de compras pode adicionar um produto à cesta de compras do usuário quando ele não tem produtos nem dados de preços em seu banco de dados?
 
-Uma opção discutida no capítulo 4 é uma [chamada http direta](service-to-service-communication.md#queries) da cesta de compras para os microserviços de catálogo e preço. No entanto, no capítulo 4, dissemos que *chamadas http síncronas agrupam* os microserviços, reduzindo sua autonomia e diminuindo seus benefícios arquitetônicos.
+Uma opção discutida no Capítulo 4 é uma [chamada HTTP direta](service-to-service-communication.md#queries) da cesta de compras para o catálogo e microsserviços de preços. No entanto, no capítulo 4, dissemos que o HTTP síncrono chama os microsserviços *de casal* juntos, reduzindo sua autonomia e diminuindo seus benefícios arquitetônicos.
 
-Também poderíamos implementar um padrão de solicitação-resposta com filas de entrada e saída separadas para cada serviço. No entanto, esse padrão é complicado e requer a inserção para correlacionar mensagens de solicitação e resposta.
-Embora ele desassocie as chamadas de microserviço de back-end, o serviço de chamada ainda deve esperar de forma síncrona a chamada seja concluída. Congestionamento de rede, falhas transitórias ou um microserviço sobrecarregado e pode resultar em operações de execução longa e até mesmo com falha.
+Também podemos implementar um padrão de solicitação-resposta com filas separadas de entrada e saída para cada serviço. No entanto, esse padrão é complicado e requer encanamento para correlacionar mensagens de solicitação e resposta.
+Embora isso desacopla as chamadas de microserviço back-end, o serviço de chamada ainda deve aguardar sincronizadamente a chamada ser concluída. Congestionamento da rede, falhas transitórias ou um microserviço sobrecarregado e pode resultar em operações de longa duração e até mesmo fracassadas.
 
-Em vez disso, um padrão amplamente aceito para remover dependências entre serviços é o [padrão de exibição materializado](https://docs.microsoft.com/azure/architecture/patterns/materialized-view), mostrado na Figura 5-4.
+Em vez disso, um padrão amplamente aceito para remover dependências de serviço cruzado é o [Padrão de Exibição Materializado,](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)mostrado na Figura 5-4.
 
-![Padrão de exibição materializada](./media/materialized-view-pattern.png)
+![Padrão de visualização materializado](./media/materialized-view-pattern.png)
 
-**Figura 5-4**. Padrão de exibição materializada
+**Figura 5-4**. Padrão de exibição materializado
 
-Com esse padrão, você coloca uma tabela de dados local (conhecida como *modelo de leitura*) no serviço de cesta de compras. Esta tabela contém uma cópia desnormalizada dos dados necessários dos microserviços de produto e preço. Copiar os dados diretamente no microserviço da cesta de compras elimina a necessidade de chamadas caras entre serviços. Com os dados locais para o serviço, você melhora o tempo de resposta e a confiabilidade do serviço. Além disso, ter sua própria cópia dos dados torna o serviço de cesta de compras mais resiliente. Se o serviço de catálogo ficar indisponível, ele não afetaria diretamente o serviço de cesta de compras. A cesta de compras pode continuar operando com os dados de seu próprio armazenamento. 
+Com este padrão, você coloca uma tabela de dados local (conhecida como *modelo de leitura*) no serviço de cesta de compras. Esta tabela contém uma cópia desnormalizada dos dados necessários do produto e dos microsserviços de preços. Copiar os dados diretamente no microserviço da cesta de compras elimina a necessidade de chamadas de serviço saqueadas caras. Com os dados locais para o serviço, você melhora o tempo de resposta e a confiabilidade do serviço. Além disso, ter sua própria cópia dos dados torna o serviço de cesta de compras mais resistente. Se o serviço de catálogo ficar indisponível, não afetaria diretamente o serviço de cesta de compras. A cesta de compras pode continuar operando com os dados de sua própria loja.
 
-O problema dessa abordagem é que agora você tem dados duplicados em seu sistema. No entanto, a duplicação *estratégica* de dados em sistemas nativos de nuvem é uma prática estabelecida e não é considerada um antipadrão ou uma prática inadequada. Tenha em mente que *um e apenas um serviço* podem possuir um conjunto de dados e ter autoridade sobre ele. Você precisará sincronizar os modelos de leitura quando o sistema de registro for atualizado. Normalmente, a sincronização é implementada por meio de mensagens assíncronas com um [padrão de publicação/assinatura](service-to-service-communication.md#events), como mostra a Figura 5,4.
+A pegadinha com essa abordagem é que agora você tem dados duplicados em seu sistema. No entanto, a duplicação *estratégica* de dados em sistemas nativos da nuvem é uma prática estabelecida e não considerada um antipadrão ou uma prática ruim. Tenha em mente que *um e apenas um serviço* pode possuir um conjunto de dados e ter autoridade sobre ele. Você precisará sincronizar os modelos de leitura quando o sistema de registro for atualizado. A sincronização é normalmente implementada através de mensagens assíncronas com um [padrão de publicação/assinatura,](service-to-service-communication.md#events)conforme mostrado na Figura 5.4.
 
 ## <a name="distributed-transactions"></a>Transações distribuídas
 
-Embora seja difícil consultar dados em microserviços, a implementação de uma transação em vários microserviços é ainda mais complexa. O desafio inerente de manter a consistência de dados entre fontes de dados independentes em diferentes microservices não pode ser subestado. A falta de transações distribuídas em aplicativos nativos de nuvem significa que você deve gerenciar transações distribuídas programaticamente. Você passa de um mundo de *consistência imediata* para a *consistência eventual*.
+Embora a consulta de dados em microsserviços seja difícil, implementar uma transação em vários microsserviços é ainda mais complexo. O desafio inerente de manter a consistência dos dados entre fontes de dados independentes em diferentes microsserviços não pode ser subestimado. A falta de transações distribuídas em aplicativos nativos da nuvem significa que você deve gerenciar as transações distribuídas de forma programática. Você passa de um mundo de *consistência imediata* para o de *consistência eventual.*
 
 A Figura 5-5 mostra o problema.
 
 ![Transação no padrão saga](./media/saga-transaction-operation.png)
 
-**Figura 5-5**. Implementando uma transação em microserviços
+**Figura 5-5**. Implementação de uma transação em microsserviços
 
-Na figura anterior, cinco microserviços independentes participam de uma transação distribuída que cria um pedido. Cada microserviço mantém seu próprio armazenamento de dados e implementa uma transação local para seu armazenamento. Para criar o pedido, a transação local para *cada* Microservice individual deve ter sucesso ou *todos* devem abortar e reverter a operação. Embora o suporte interno transacional esteja disponível dentro de cada um dos microserviços, não há suporte para uma transação distribuída que se englobe em todos os cinco serviços para manter os dados consistentes.
+No número anterior, cinco microsserviços independentes participam de uma transação distribuída que cria um pedido. Cada microserviço mantém seu próprio armazenamento de dados e implementa uma transação local para sua loja. Para criar o pedido, a transação local para *cada* microserviço individual deve ter sucesso, ou *todos* devem abortar e reverter a operação. Embora o suporte transacional incorporado esteja disponível dentro de cada um dos microserviços, não há suporte para uma transação distribuída que se estenderia por todos os cinco serviços para manter os dados consistentes.
 
-Em vez disso, você deve construir essa transação distribuída *programaticamente*.
+Em vez disso, você deve construir esta transação distribuída *de forma programática.*
 
-Um padrão popular para adicionar suporte transacional distribuído é o padrão saga. Ele é implementado agrupando transações locais em conjunto de forma programática e invocando sequencialmente cada uma. Se qualquer uma das transações locais falhar, o saga anulará a operação e invocará um conjunto de [Transações de compensação](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction). As transações de compensação desfazem as alterações feitas pelas transações locais anteriores e restauram a consistência de dados. A Figura 5-6 mostra uma transação com falha com o padrão saga.
+Um padrão popular para adicionar suporte transacional distribuído é o padrão Saga. É implementado agrupando transações locais de forma programática e sequencial invocando cada uma delas. Se alguma das transações locais falhar, a Saga aborta a operação e invoca um conjunto de [transações compensatórias.](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction) As transações compensatórias desfazem as alterações feitas pelas transações locais anteriores e restauram a consistência dos dados. A Figura 5-6 mostra uma transação fracassada com o padrão Saga.
 
-![Reverter no padrão saga](./media/saga-rollback-operation.png)
+![Reverter para trás no padrão da saga](./media/saga-rollback-operation.png)
 
-**Figura 5-6**. Reverter uma transação
+**Figura 5-6**. Revertendo uma transação
 
-Na figura anterior, a operação *Atualizar inventário* falhou no microserviço de inventário. O saga invoca um conjunto de transações de compensação (em vermelho) para ajustar as contagens de inventário, cancelar o pagamento e a ordem e retornar os dados para cada microserviço de volta para um estado consistente.
+No número anterior, a operação *Inventário de Atualização* falhou no microserviço Inventário. A Saga invoca um conjunto de transações compensatórias (em vermelho) para ajustar as contagens de estoque, cancelar o pagamento e a ordem e devolver os dados de cada microserviço de volta a um estado consistente.
 
-Os padrões de Saga geralmente são coreografado como uma série de eventos relacionados ou orquestrados como um conjunto de comandos relacionados. No capítulo 4, discutimos o padrão agregador de serviço que seria a base para uma implementação de Saga orquestrada. Também discutimos eventos em conjunto com os tópicos do barramento de serviço do Azure e da grade de eventos do Azure que seriam uma base para uma implementação coreografado saga.
+Padrões de saga são tipicamente coreografados como uma série de eventos relacionados, ou orquestrados como um conjunto de comandos relacionados. No Capítulo 4, discutimos o padrão agregador de serviços que seria a base para uma implementação orquestrada da saga. Também discutimos o evento juntamente com os tópicos Azure Service Bus e Azure Event Grid que seriam a base para uma implementação coreografada da saga.
 
 ## <a name="high-volume-data"></a>Dados de alto volume
 
-Grandes aplicativos nativos de nuvem geralmente dão suporte a requisitos de dados de alto volume. Nesses cenários, as técnicas tradicionais de armazenamento de dados podem causar gargalos. Para sistemas complexos que implantam em grande escala, o Separação das Operações de Comando e de Consulta (CQRS) e o fornecimento de eventos podem melhorar o desempenho do aplicativo.  
+Grandes aplicativos nativos da nuvem geralmente suportam requisitos de dados de alto volume. Nesses cenários, as técnicas tradicionais de armazenamento de dados podem causar gargalos. Para sistemas complexos que são implantados em larga escala, tanto a Segregação de Responsabilidade de Comando e Consulta (CQRS) quanto o Sourcing de Eventos podem melhorar o desempenho do aplicativo.  
 
 ### <a name="cqrs"></a>CQRS
 
-O [CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs), é um padrão de arquitetura que pode ajudar a maximizar o desempenho, a escalabilidade e a segurança. O padrão separa as operações que lêem dados dessas operações que gravam dados. 
+[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs), é um padrão arquitetônico que pode ajudar a maximizar o desempenho, escalabilidade e segurança. O padrão separa as operações que leem dados das operações que escrevem dados.
 
-Para cenários normais, o mesmo modelo de entidade e objeto de repositório de dados são *usados para operações* de leitura e gravação.
+Para cenários normais, o mesmo modelo de entidade e o objeto de repositório de dados são usados para operações *de* leitura e gravação.
 
-No entanto, um cenário de dados de alto volume pode se beneficiar de modelos e tabelas de dados separados para leituras e gravações. Para melhorar o desempenho, a operação de leitura pode consultar uma representação altamente desnormalizada dos dados para evitar junções de tabelas e bloqueios de tabelas repetitivas e decaradas. A operação de *gravação* , conhecida como um *comando*, seria atualizada em uma representação totalmente normalizada dos dados que garantiria a consistência. Em seguida, você precisa implementar um mecanismo para manter ambas as representações em sincronia. Normalmente, sempre que a tabela de gravação é modificada, ela publica um evento que Replica a modificação para a tabela de leitura.
+No entanto, um cenário de dados de alto volume pode beneficiar de modelos e tabelas de dados separados para leituras e gravações. Para melhorar o desempenho, a operação leitura poderia consultar uma representação altamente desnormalizada dos dados para evitar adesões de tabela repetitivas caras e bloqueios de mesa. A operação *de gravação,* conhecida como *comando,* seria atualizada contra uma representação totalmente normalizada dos dados que garantiriam consistência. Em seguida, você precisa implementar um mecanismo para manter ambas as representações em sincronia. Normalmente, sempre que a tabela de gravação é modificada, ela publica um evento que replica a modificação na tabela de leitura.
 
 A Figura 5-7 mostra uma implementação do padrão CQRS.
 
-![Separação das Operações de Comando e de Consulta](./media/cqrs-implementation.png)
+![Segregação de Responsabilidade de Comando e Consulta](./media/cqrs-implementation.png)
 
-**Figura 5-7**. Implementação de CQRS
+**Figura 5-7**. Implementação do CQRS
 
-Na figura anterior, são implementados os modelos de comando e consulta separados. Cada operação de gravação de dados é salva no repositório de gravação e, em seguida, propagada para o repositório de leitura. Preste muita atenção à forma como o processo de propagação de dados opera no princípio de [consistência eventual](http://www.cloudcomputingpatterns.org/eventual_consistency/). O modelo de leitura eventualmente sincroniza com o modelo de gravação, mas pode haver algum atraso no processo. Discutiremos a consistência eventual na próxima seção.
+Na figura anterior, modelos separados de comando e consulta são implementados. Cada operação de gravação de dados é salva no armazenamento de gravação e, em seguida, propagada para o armazenamento de leitura. Preste muita atenção em como o processo de propagação de dados opera no princípio da [eventual consistência](http://www.cloudcomputingpatterns.org/eventual_consistency/). O modelo de leitura eventualmente sincroniza com o modelo de gravação, mas pode haver alguma defasagem no processo. Discutimos uma eventual consistência na próxima seção.
 
-Essa separação permite que leituras e gravações sejam dimensionadas de forma independente. As operações de leitura usam um esquema otimizado para consultas, enquanto as gravações usam um esquema otimizado para atualizações. As consultas de leitura vão contra dados desnormalizados, enquanto a lógica de negócios complexa pode ser aplicada ao modelo de gravação. Além de isso, você pode impor uma segurança mais rígida em operações de gravação do que aquelas que expõem leituras.
+Esta separação permite que leituras e gravações dimensionem de forma independente. As operações de leitura usam um esquema otimizado para consultas, enquanto as gravações usam um esquema otimizado para atualizações. As consultas de leitura vão contra dados desnormalizados, enquanto a lógica de negócios complexa pode ser aplicada ao modelo de gravação. Além disso, você pode impor mais segurança nas operações de gravação do que aquelas que expõem leituras.
 
-A implementação do CQRS pode melhorar o desempenho do aplicativo para serviços nativos de nuvem. No entanto, isso resulta em um design mais complexo. Aplique esse princípio com cuidado e estrategicamente a essas seções de seu aplicativo nativo de nuvem que se beneficiarão dela. Para saber mais sobre o CQRS, confira os [microserviços do Microsoft book .net: arquitetura para aplicativos .net em contêineres](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
+A implementação do CQRS pode melhorar o desempenho do aplicativo para serviços nativos da nuvem. No entanto, resulta em um design mais complexo. Aplique este princípio cuidadosamente e estrategicamente às seções do seu aplicativo nativo da nuvem que se beneficiarão dele. Para obter mais informações sobre o CQRS, consulte o livro da Microsoft [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
 
-### <a name="event-sourcing"></a>Fornecimento de eventos
+### <a name="event-sourcing"></a>Sourcing de eventos
 
-Outra abordagem para otimizar cenários de dados de alto volume envolve o [fornecimento de eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+Outra abordagem para otimizar cenários de dados de alto volume envolve [o Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
-Normalmente, um sistema armazena o estado atual de uma entidade de dados. Se um usuário alterar seu número de telefone, por exemplo, o registro do cliente será atualizado com o novo número. Sempre sabemos o estado atual de uma entidade de dados, mas cada atualização substitui o estado anterior. 
+Um sistema normalmente armazena o estado atual de uma entidade de dados. Se um usuário altera seu número de telefone, por exemplo, o registro do cliente é atualizado com o novo número. Sempre sabemos o estado atual de uma entidade de dados, mas cada atualização substitui o estado anterior.
 
-Na maioria dos casos, esse modelo funciona bem. No entanto, em sistemas de alto volume, a sobrecarga do bloqueio transacional e das operações de atualização frequentes pode afetar o desempenho, a capacidade de resposta e a escalabilidade do banco de dados.
+Na maioria dos casos, esse modelo funciona bem. Em sistemas de alto volume, no entanto, a sobrecarga de operações de bloqueio transacional e de atualização frequentes pode afetar o desempenho do banco de dados, a capacidade de resposta e a escalabilidade de limite.
 
-O fornecimento de eventos usa uma abordagem diferente para capturar dados. Cada operação que afeta os dados é persistida em um repositório de eventos. Em vez de atualizar o estado de um registro de dados, acrescentamos cada alteração a uma lista sequencial de eventos passados, semelhante ao razão de um contador. O repositório de eventos torna-se o sistema de registro dos dados. Ele é usado para propagar várias exibições materializadas dentro do contexto limitado de um microserviço. A Figura 5,8 mostra o padrão.
+O Event Sourcing adota uma abordagem diferente para capturar dados. Cada operação que afeta os dados é persistindo a um armazenamento de eventos. Em vez de atualizar o estado de um registro de dados, anexamos cada alteração a uma lista seqüencial de eventos passados - semelhante ao livro-razão de um contador. O Event Store torna-se o sistema de registro dos dados. É usado para propagar várias visões materializadas dentro do contexto limitado de um microserviço. A Figura 5.8 mostra o padrão.
 
-![Fornecimento de eventos](./media/event-sourcing.png)
+![Fornecimento do evento](./media/event-sourcing.png)
 
-**Figura 5-8**. Fornecimento de eventos
+**Figura 5-8**. Fornecimento do evento
 
-Na figura anterior, observe como cada entrada (em azul) para o carrinho de compras de um usuário é anexada a um repositório de eventos subjacente. Na exibição materializada adjacente, o sistema projeta o estado atual reproduzindo todos os eventos associados a cada carrinho de compras. Esse modo de exibição ou leitura de modelo é então exposto de volta para a interface do usuário. Os eventos também podem ser integrados a sistemas e aplicativos externos ou consultados para determinar o estado atual de uma entidade. Com essa abordagem, você mantém o histórico. Você sabe não apenas o estado atual de uma entidade, mas também como chegou a esse estado.
+Na figura anterior, observe como cada entrada (em azul) para o carrinho de compras de um usuário é anexada a uma loja de eventos subjacente. Na visão materializada adjacente, o sistema projeta o estado atual reproduzindo todos os eventos associados a cada carrinho de compras. Esta visão, ou modelo de leitura, é então exposta de volta à ui. Os eventos também podem ser integrados a sistemas e aplicações externas ou consultados para determinar o estado atual de uma entidade. Com essa abordagem, você mantém a história. Você sabe não só o estado atual de uma entidade, mas também como você chegou a este estado.
 
-Falando mecânico, o fornecimento de eventos simplifica o modelo de gravação. Não há atualizações ou exclusões. Acrescentar cada entrada de dados como um evento imutável minimiza a contenção, o bloqueio e os conflitos de simultaneidade associados a bancos de dados relacionais. A criação de modelos de leitura com o padrão de exibição materializada permite desacoplar o modo de exibição do modelo de gravação e escolher o melhor armazenamento de dados para otimizar as necessidades da interface do usuário do aplicativo.
+Mecanicamente falando, o sourcing de eventos simplifica o modelo de gravação. Não há atualizações ou exclusões. Anexar cada entrada de dados como um evento imutável minimiza conflitos de contenção, bloqueio e concorrência associados a bancos de dados relacionais. Construir modelos de leitura com o padrão de visualização materializado permite desacoplar a exibição do modelo de gravação e escolher o melhor armazenamento de dados para otimizar as necessidades da interface do motorista do seu aplicativo.
 
-Para esse padrão, considere um armazenamento de dados que dá suporte diretamente a fornecimento de eventos. Azure Cosmos DB, MongoDB, Cassandra, CouchDB e RavenDB são bons candidatos.
+Para esse padrão, considere um armazenamento de dados que suporte diretamente o sourcing de eventos. Azure Cosmos DB, MongoDB, Cassandra, CouchDB e RavenDB são bons candidatos.
 
-Assim como acontece com todos os padrões e tecnologias, implemente estrategicamente e quando necessário. Embora o fornecimento de eventos possa fornecer maior desempenho e escalabilidade, ele traz a despesa de complexidade e de uma curva de aprendizado.
+Como em todos os padrões e tecnologias, implementar estrategicamente e quando necessário. Embora o sourcing de eventos possa proporcionar maior desempenho e escalabilidade, ele vem às custas da complexidade e de uma curva de aprendizado.
 
 >[!div class="step-by-step"]
->[Anterior](service-mesh-communication-infrastructure.md)
->[Próximo](relational-vs-nosql-data.md)
+>[Próximo](service-mesh-communication-infrastructure.md)
+>[anterior](relational-vs-nosql-data.md)

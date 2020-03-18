@@ -14,10 +14,10 @@ helpviewer_keywords:
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160063"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substituições em expressões regulares
@@ -25,16 +25,16 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O .NET Framework define os elementos de substituição listados na tabela a seguir.  
   
-|Substituição|DESCRIÇÃO|  
+|Substituição|Descrição|  
 |------------------|-----------------|  
-|$ *number*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo numerado](#substituting-a-numbered-group).|  
-|${ *name* }|Inclui a última subcadeia de caracteres correspondida pelo grupo nomeado que é designado por `(?<`*name*`> )` na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um grupo nomeado](#substituting-a-named-group).|  
+|$ *Número*|Inclui a última subcadeia de caracteres correspondida pelo grupo de captura que é identificado por *number*, no qual *number* é um valor decimal na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um Grupo Numerado](#substituting-a-numbered-group).|  
+|${ *name* }|Inclui a última substring combinada pelo grupo nomeado `(?<`que é designado pelo *nome* `> )` na seqüência de substituição. Para obter mais informações, consulte [Substituindo um Grupo Nomeado](#substituting-a-named-group).|  
 |$$|Inclui um único literal “$” na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo um símbolo "$"](#substituting-a--character).|  
-|$&|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a correspondência inteira](#substituting-the-entire-match).|  
-|$\`|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da correspondência](#substituting-the-text-before-the-match).|  
+|$&|Inclui uma cópia da correspondência inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o Jogo Inteiro](#substituting-the-entire-match).|  
+|$\`|Inclui todo o texto da cadeia de caracteres de entrada antes da correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto antes da partida](#substituting-the-text-before-the-match).|  
 |$'|Inclui todo o texto da cadeia de caracteres de entrada após a correspondência na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o texto após a correspondência](#substituting-the-text-after-the-match).|  
-|$+|O inclui o último grupo capturado na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o último grupo capturado](#substituting-the-last-captured-group).|  
-|$\_|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo a cadeia de caracteres de entrada inteira](#substituting-the-entire-input-string).|  
+|$+|O inclui o último grupo capturado na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo o Último Grupo Capturado](#substituting-the-last-captured-group).|  
+|$\_|Inclui a cadeia de entrada inteira na cadeia de caracteres de substituição. Para obter mais informações, consulte [Substituindo toda a cadeia de entrada .](#substituting-the-entire-input-string)|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Elementos de substituição e padrões de substituição  
  As substituições são as únicas construções especiais reconhecidas em um padrão de substituição. Nenhum dos outros elementos de linguagem de expressões regulares, incluindo caracteres de escape e o ponto final (`.`), que corresponde a qualquer caractere, são aceitos. Da mesma forma, os elementos de linguagem de substituição são reconhecidos apenas nos padrões de substituição e nunca são válidos em padrões de expressões regulares.  
@@ -42,25 +42,25 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
  O único caractere que pode aparecer em um padrão de expressão regular ou em uma substituição é o caractere `$`, embora ele tenha um significado diferente em cada contexto. Em um padrão de expressão regular, `$` é uma âncora que corresponde ao final da cadeia de caracteres. Em um padrão de substituição, `$` indica o início de uma substituição.  
   
 > [!NOTE]
-> Para uma funcionalidade semelhante a um padrão de substituição dentro de uma expressão regular, use um backreference. Para obter mais informações sobre referências inversas, consulte [Construtores de referência inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Para uma funcionalidade semelhante a um padrão de substituição dentro de uma expressão regular, use um backreference. Para obter mais informações sobre referências de fundo, consulte [Construções de referência em retrocesso](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
 
 ## <a name="substituting-a-numbered-group"></a>Substituindo um grupo numerado  
- O elemento de linguagem `$`*number* inclui a última subcadeia de caracteres correspondida pelo grupo de captura *number* na cadeia de caracteres de substituição, no qual *number* é o índice do grupo de captura. Por exemplo, o padrão de substituição `$1` indica que a subcadeia de caracteres correspondente deve ser substituída pelo primeiro grupo capturado. Para saber mais sobre os grupos de captura numerados, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ O `$`elemento de linguagem *numérica* inclui a última substringada combinada pelo grupo de captura *de números* na seqüência de substituição, onde o *número* é o índice do grupo de captura. Por exemplo, o padrão de substituição `$1` indica que a subcadeia de caracteres correspondente deve ser substituída pelo primeiro grupo capturado. Para saber mais sobre os grupos de captura numerados, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Todos os dígitos após `$` são interpretados como pertencentes ao grupo *number*. Se essa não for sua intenção, você poderá substituir um grupo nomeado. Por exemplo, você pode usar a cadeia de caracteres de substituição `${1}1` em vez de `$11` para definir a cadeia de caracteres de substituição como o valor do primeiro grupo capturado junto com o número “1 ". Para obter mais informações, consulte [Substituindo um grupo nomeado](#substituting-a-named-group).  
+ Todos os dígitos a seguir `$` são interpretados como pertencentes ao grupo *numécis.* Se essa não for sua intenção, você poderá substituir um grupo nomeado. Por exemplo, você pode usar a cadeia de caracteres de substituição `${1}1` em vez de `$11` para definir a cadeia de caracteres de substituição como o valor do primeiro grupo capturado junto com o número “1 ". Para obter mais informações, consulte [Substituindo um Grupo Nomeado](#substituting-a-named-group).  
   
- Grupos de captura, aos quais não são atribuídos nomes explicitamente usando a sintaxe `(?<`*name*`>)`, são numerados da esquerda para a direita, começando em um. Os grupos nomeados também são numerados da esquerda para a direita, começando em um maior que o índice do último grupo não nomeado. Por exemplo, na expressão regular `(\w)(?<digit>\d)`, o índice do grupo nomeado `digit` é 2.  
+ A captura de grupos que não são `(?<`explicitamente atribuídos nomes usando a sintaxe de *nome* `>)` são numeradas da esquerda para a direita a partir de um. Os grupos nomeados também são numerados da esquerda para a direita, começando em um maior que o índice do último grupo não nomeado. Por exemplo, na expressão regular `(\w)(?<digit>\d)`, o índice do grupo nomeado `digit` é 2.  
   
  Se *number* não especificar um grupo de captura válido definido no padrão de expressão regular, `$`*number* será interpretado como uma sequência de caracteres literal que será usada para substituir cada correspondência.  
   
- O exemplo a seguir usa a substituição `$`*number* para remover o símbolo de moeda de um valor decimal. Ele remove os símbolos de moeda localizados no início ou término de um valor monetário e reconhece os dois separadores decimais mais comuns (“.” e “, ").  
+ O exemplo a seguir usa a substituição `$`*número* para remover o símbolo de moeda de um valor decimal. Ele remove os símbolos de moeda localizados no início ou término de um valor monetário e reconhece os dois separadores decimais mais comuns (“.” e “, ").  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/numberedgroup1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/numberedgroup1.vb#1)]  
   
  O padrão de expressão regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -70,20 +70,20 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
 |`(\s?\d+[.,]?\d*)`|Corresponde a um espaço em branco seguido por um ou mais dígitos decimais, seguidos por zero ou um ponto ou uma vírgula, seguidos por zero ou mais dígitos decimais. Este é o primeiro grupo de captura. Como o padrão de substituição é `$1`, a chamada ao método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> substitui a subcadeia de caracteres inteira correspondente a esse grupo capturado.|  
 
 ## <a name="substituting-a-named-group"></a>Substituindo um grupo nomeado  
- O elemento de linguagem `${`*name*`}` substitui a última subcadeia de caracteres correspondida pelo grupo de captura *name*, no qual *name* é o nome de um grupo de captura definido pelo elemento de linguagem `(?<`*name*`>)`. Para saber mais sobre os grupos de captura nomeados, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ O `${`elemento de linguagem de *nome* `}` substitui a última substring a de acordo com o grupo `(?<`de captura de *nomes,* onde o *nome* é o nome de um grupo de captura definido pelo elemento de linguagem do *nome.* `>)` Para saber mais sobre os grupos de captura nomeados, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- Se *name* não especificar um grupo de captura nomeado válido, definido no padrão da expressão regular, mas consistir em dígitos, `${`*name*`}` será interpretado como um grupo numerado.  
+ Se o *nome* não especificar um grupo de captura nomeado válido definido `${`no padrão de expressão regular, mas consiste em dígitos, *o nome* `}` é interpretado como um grupo numerado.  
   
  Se *name* não especificar um grupo de captura nomeado válido nem um grupo de captura numerado válido, definido no padrão da expressão regular, `${`*name*`}` será interpretado como uma sequência de caracteres literal que será usada para substituir cada correspondência.  
   
- O exemplo a seguir usa a substituição `${`*name*`}` para remover o símbolo de moeda de um valor decimal. Ele remove os símbolos de moeda localizados no início ou término de um valor monetário e reconhece os dois separadores decimais mais comuns (“.” e “, ").  
+ O exemplo a `${`seguir usa a substituição do *nome* `}` para retirar o símbolo da moeda de um valor decimal. Ele remove os símbolos de moeda localizados no início ou término de um valor monetário e reconhece os dois separadores decimais mais comuns (“.” e “, ").  
   
  [!code-csharp[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/namedgroup1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Substitutions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/namedgroup1.vb#2)]  
   
  O padrão de expressão regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Corresponde a zero ou mais caracteres de símbolos de moedas.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
@@ -102,7 +102,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\b(\d+)(\.(\d+))?` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`\b`|Inicia a correspondência no começo de um limite de palavra.|  
 |`(\d+)`|Corresponde a um ou mais dígitos decimais. Este é o primeiro grupo de captura.|  
@@ -120,7 +120,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `^(\w+\s?)+$` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Começa a correspondência no início da cadeia de caracteres de entrada.|  
 |`(\w+\s?)+`|Corresponde ao padrão de um ou mais caracteres de palavra seguidos por zero ou um espaço em branco uma ou mais vezes.|  
@@ -129,7 +129,7 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
  O padrão de substituição `"$&"` adiciona aspas literais no início e no final de cada correspondência.  
 
 ## <a name="substituting-the-text-before-the-match"></a>Substituindo texto antes da correspondência  
- A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(exemplo fornece uma ilustração.\) se não houver nenhuma correspondência, a substituição de ``$` `` não terá nenhum efeito.  
+ A substituição ``$` `` substitui a cadeia de caracteres correspondida pela cadeia de caracteres de entrada inteira antes da correspondência. Ou seja, ela duplica a cadeia de caracteres de entrada até a correspondência e remove o texto correspondido. Qualquer texto após o texto correspondido permanece inalterado na cadeia de caracteres de resultado. Se houver várias correspondências em uma cadeia de caracteres de entrada, o texto de substituição será derivado da cadeia de caracteres de entrada original, em vez da cadeia de caracteres em que o texto foi substituído por correspondências anteriores. \(O exemplo fornece uma ilustração. \) Se não houver correspondência, a ``$` `` substituição não tem efeito.  
   
  O exemplo a seguir usa o padrão de expressão regular `\d+` para corresponder a uma sequência de um ou mais dígitos decimais na cadeia de caracteres de entrada. A cadeia de caracteres de substituição ``$` `` substitui esses dígitos pelo texto que precede a correspondência.  
   
@@ -174,10 +174,10 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
  O padrão de expressão regular `\b(\w+)\s\1\b` é definido conforme mostrado na tabela a seguir.  
   
-|Padrão|DESCRIÇÃO|  
+|Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
-|`(\w+)`|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
+|`(\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |`\s`|Corresponde a um caractere de espaço em branco.|  
 |`\1`|Corresponde ao primeiro grupo capturado.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
@@ -199,4 +199,4 @@ As substituições são elementos de linguagem que são reconhecidos apenas em p
   
 ## <a name="see-also"></a>Confira também
 
-- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

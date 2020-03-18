@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127580"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore e SemaphoreSlim
@@ -44,8 +44,8 @@ A classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
   
  Use a segurança de controle de acesso para proteger um objeto <xref:System.Threading.Semaphore> que representa um sinal com nome, preferencialmente usando um construtor que especifica um objeto <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Também é possível aplicar a segurança de controle de acesso usando o método <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, mas isso deixa uma janela de vulnerabilidade entre o momento em que o sinal é criado e o momento em que ele é protegido. Proteger sinais com a segurança de controle de acesso ajuda a impedir ataques mal-intencionados, mas não resolve o problema de colisão de nome não intencional.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>
-- [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+- [Objetos e recursos de rosca](../../../docs/standard/threading/threading-objects-and-features.md)

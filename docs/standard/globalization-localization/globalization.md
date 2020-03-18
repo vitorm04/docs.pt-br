@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239944"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174778"
 ---
 # <a name="globalization"></a>Globalização
 
@@ -38,7 +38,7 @@ Por padrão, o .NET usa cadeias de caracteres Unicode. Uma cadeia de caracteres 
 
 Muitos aplicativos e sistemas operacionais, incluindo o sistema operacional Windows, também podem usar as páginas de código para representar conjuntos de caracteres. Páginas de código geralmente contêm valores ASCII padrão de 0x00 a 0x7F e mapeiam outros caracteres para os valores restantes de 0x80 a 0xFF. A interpretação dos valores de 0x80 a 0xFF depende da página de código específica. Por isso, se possível, evite usar as páginas de código em um aplicativo globalizado.
 
-O exemplo a seguir ilustra os perigos da interpretação de dados de página de código quando a página de código padrão em um sistema é diferente da página de código no qual os dados foram salvos. (Para simular esse cenário, o exemplo especifica explicitamente páginas de código diferentes.) Primeiro, o exemplo define uma matriz que consiste nos caracteres maiúsculos do alfabeto grego. Ele os codifica em uma matriz de bytes usando a página de código 737 (também conhecida como MS-DOS grego) e salva a matriz de bytes em um arquivo. Se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 737, os caracteres originais são restaurados. No entanto, se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 1252 (ou Windows-1252, que representa os caracteres do alfabeto latino), os caracteres originais são perdidos.
+O exemplo a seguir ilustra os perigos da interpretação de dados de página de código quando a página de código padrão em um sistema é diferente da página de código no qual os dados foram salvos. (Para simular esse cenário, o exemplo especifica explicitamente diferentes páginas de código.) Primeiro, o exemplo define uma matriz que consiste nos caracteres maiúsculos do alfabeto grego. Ele os codifica em uma matriz de bytes usando a página de código 737 (também conhecida como MS-DOS grego) e salva a matriz de bytes em um arquivo. Se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 737, os caracteres originais são restaurados. No entanto, se o arquivo é recuperado e sua matriz de bytes é decodificada usando a página de código 1252 (ou Windows-1252, que representa os caracteres do alfabeto latino), os caracteres originais são perdidos.
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -66,7 +66,7 @@ Sempre que possível, você deve tratar cadeias de caracteres como cadeias de ca
 > [!TIP]
 > Você pode usar a classe <xref:System.Globalization.StringInfo> para trabalhar com os elementos de texto em vez dos caracteres individuais em uma cadeia de caracteres.
 
-Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como uma coleção de caracteres, cada um dos quais é representado por um objeto <xref:System.Char>. Na verdade, um único caractere pode ser formado por um, dois ou mais objetos <xref:System.Char>. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U + 00C0) ou como um caractere composto (duas unidades de código: U + 0041 e U + 0300). Nesse caso, o caractere é representado na instância de cadeia de caracteres por dois objetos <xref:System.Char>, U + 0041 e U + 0300. O código de exemplo chama as sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada de método tem um argumento <xref:System.Char>; ele executa uma comparação ordinal e, portanto, não é capaz de encontrar uma correspondência. A segunda chamada tem um argumento <xref:System.String>; ele executa uma comparação com diferenciação entre culturas e, portanto, encontra uma correspondência.
+Em comparações e pesquisas de cadeia de caracteres, um erro comum é tratar a cadeia de caracteres como uma coleção de caracteres, cada um dos quais é representado por um objeto <xref:System.Char>. Na verdade, um único caractere pode ser formado por um, dois ou mais objetos <xref:System.Char>. Esses caracteres são encontrados com mais frequência em cadeias de caracteres de culturas cujos alfabetos consistem em caracteres fora do intervalo de caracteres do Latim Básico Unicode (U+0021 até U+007E). O exemplo a seguir tenta localizar o índice do caractere LETRA A MAIÚSCULA COM ACENTO GRAVE LATINA (U+00C0) em uma cadeia de caracteres. No entanto, esse caractere pode ser representado de duas maneiras diferentes: como uma única unidade de código (U+00C0) ou como um caractere composto (duas unidades de código: U+0041 e U+0300). Neste caso, o caractere é representado na <xref:System.Char> instância de seqüência por dois objetos, U+0041 e U+0300. O código de exemplo chama as sobrecargas <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> e <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> para localizar a posição desse caractere na instância de cadeia de caracteres, mas elas retornam resultados diferentes. A primeira chamada de método tem um argumento <xref:System.Char>; ele executa uma comparação ordinal e, portanto, não é capaz de encontrar uma correspondência. A segunda chamada tem um argumento <xref:System.String>; ele executa uma comparação com diferenciação entre culturas e, portanto, encontra uma correspondência.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -108,7 +108,7 @@ O .NET usa tabelas para realizar classificações com detecção de cultura em d
 |----------------------------|----------------------|---------------------|
 |.NET Framework 2.0|Todos os sistemas operacionais|Unicode 4.1|
 |.NET Framework 3.0|Todos os sistemas operacionais|Unicode 4.1|
-|.NET Framework 3.5|Todos os sistemas operacionais|Unicode 4.1|
+|.NET Framework 3,5|Todos os sistemas operacionais|Unicode 4.1|
 |.NET Framework 4|Todos os sistemas operacionais|Unicode 5.0|
 |.NET Framework 4.5 e posterior no Windows 7|Unicode 5.0|
 |.NET Framework 4.5 e posterior nos sistemas operacionais Windows 8 e posteriores|Unicode 6.3.0|
@@ -336,7 +336,7 @@ Em geral, não faça suposições sobre os valores de propriedades <xref:System.
 
 - O .NET é compatível com culturas de substituição. Isso torna possível definir uma nova cultura personalizada que complementa as culturas padrão existentes ou substitui completamente uma cultura padrão existente.
 
-- Nos sistemas Windows, o usuário pode personalizar as configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que sejam apresentados ao usuário dados em um formato que ele espera.
+- Nos sistemas Windows, o usuário pode personalizar as configurações específicas da cultura usando o aplicativo **Região e Idioma** no Painel de Controle. Quando você instancia um objeto <xref:System.Globalization.CultureInfo>, é possível determinar se ele reflete as personalizações desse usuário chamando o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Normalmente, para aplicativos de usuário final, você deve respeitar as preferências do usuário para que o usuário seja apresentado com dados em um formato que eles esperam.
 
 ## <a name="see-also"></a>Confira também
 

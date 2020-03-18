@@ -9,10 +9,10 @@ helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711305"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
@@ -24,7 +24,7 @@ Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <
 |------------|---------------|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|Você desejar adicionar um novo valor para uma chave especificada e, se a chave já existir, você desejar substituir seu valor.|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|Você desejar recuperar o valor existente de uma chave especificada e, se a chave não existir, você desejar especificar um par chave/valor.|  
-|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Você desejar adicionar, obter, atualizar ou remover um par chave/valor e, se a chave já existir ou se a tentativa falhar por qualquer motivo, você desejar executar alguma ação alternativa.|  
+|<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|Você desejar adicionar, obter, atualizar ou remover um par chave/valor e, se a chave já existir ou se a tentativa falhar por qualquer motivo, você desejar executar alguma ação alternativa.|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa duas instâncias de <xref:System.Threading.Tasks.Task> para adicionar alguns elementos em um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> simultaneamente e, em seguida, gera todo o conteúdo para mostrar que os elementos foram adicionados com êxito. O exemplo também mostra como usar os métodos <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> para adicionar, atualizar e recuperar itens da coleção.  
@@ -46,7 +46,7 @@ Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <
   
  Portanto, não é garantido que os dados retornados pelo <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> sejam os mesmos que foram criados pelo valueFactory do thread. Uma sequência semelhante de eventos pode ocorrer quando <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> é chamado.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Coleções Thread-Safe](../../../../docs/standard/collections/thread-safe/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606758"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173725"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (opções do compilador C#)
 Cria um link para um recurso do .NET Framework no arquivo de saída. O arquivo de recurso não é adicionado ao arquivo de saída. Isso é diferente da opção [-resource](./resource-compiler-option.md) que insere um arquivo de recurso no arquivo de saída.  
@@ -27,7 +27,7 @@ Cria um link para um recurso do .NET Framework no arquivo de saída. O arquivo d
 -linkresource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `filename`  
  O arquivo de recurso do .NET Framework ao qual você deseja vincular do assembly.  
   
@@ -70,13 +70,13 @@ gacutil -i A.dll
   
 ```console  
 csc -t:module A.cs  
-al -out:A.dll A.netmodule -link:N.dll   
+al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Al.exe (Assembly Linker)](../../../framework/tools/al-exe-assembly-linker.md)
-- [Como trabalhar com assemblies e o cache de assembly global](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
+- [Trabalhando com assemblies e o cache de assembly global](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

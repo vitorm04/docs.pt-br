@@ -3,11 +3,11 @@ title: Novidades no C# 7.1
 description: Uma visão geral dos novos recursos no C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714589"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399703"
 ---
 # <a name="whats-new-in-c-71"></a>Novidades no C# 7.1
 
@@ -17,13 +17,13 @@ O C# 7.1 adiciona a [seleção de versão da linguagem](../language-reference/co
 
 Os novos recursos de linguagem nesta versão são:
 
-- [método de `Main` de `async`](#async-main)
+- [`async``Main` método](#async-main)
   - O ponto de entrada para um aplicativo pode ter o modificador `async`.
-- [`default` Expressões literais](#default-literal-expressions)
+- [`default`expressões literais](#default-literal-expressions)
   - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
 - [Nomes de elementos de tupla inferidos](#inferred-tuple-element-names)
   - Em muitos casos, os nomes dos elementos de tupla podem ser inferidos com base na inicialização da tupla.
-- [Correspondência de padrões em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
+- [Restrições em parâmetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
 
 Por fim, o compilador traz duas opções `-refout` e `-refonly`, que controlam a [geração de assembly de referência](#reference-assembly-generation).
@@ -114,5 +114,5 @@ A partir do C# 7.1, a expressão de padrão para o padrão de tipo `is` e `switc
 
 ## <a name="reference-assembly-generation"></a>Geração de assembly de referência
 
-Há duas novas opções do compilador que geram *assemblies somente de referência*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Existem duas novas opções de compiladores que geram *conjuntos somente de referência*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) e [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 Os artigos vinculados explicam essas opções e os assemblies de referência mais detalhadamente.

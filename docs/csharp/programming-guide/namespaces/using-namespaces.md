@@ -8,10 +8,10 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700192"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
@@ -36,7 +36,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
 ## <a name="namespace-aliases"></a>aliases de namespace
 
- Você também pode usar a [diretiva `using`](../../language-reference/keywords/using-directive.md) para criar um alias para um namespace. Use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para acessar os membros do namespace com alias. O exemplo a seguir mostra como criar e usar um alias de namespace:
+ Você também pode [ `using` ](../../language-reference/keywords/using-directive.md) usar a diretiva para criar um alias para um namespace. Use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para acessar os membros do namespace com alias. O exemplo a seguir mostra como criar e usar um alias de namespace:
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
@@ -70,7 +70,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  Em geral, use o [qualificador de alias de namespace `::`](../../language-reference/operators/namespace-alias-qualifier.md) para fazer referência a um alias de namespace ou `global::` para fazer referência ao namespace global e `.` para qualificar tipos ou membros.  
   
- É um erro usar `::` com um alias que faz referência a um tipo em vez de um namespace. Por exemplo:  
+ É um erro usar `::` com um alias que faz referência a um tipo em vez de um namespace. Por exemplo:   
   
  [!code-csharp[csProgGuideNamespaces#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#11)]  
   
@@ -90,10 +90,10 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
  Isso funciona, mas se um tipo nomeado `Alias` fosse subsequentemente introduzido, `Alias.` se associaria a esse tipo. O uso de `Alias::Exception` garante que `Alias` seja tratado como um alias de namespace e não seja confundido com um tipo.  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Namespaces](./index.md)
-- [Operador .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
-- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [. Operador](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [:: operador](../../language-reference/operators/namespace-alias-qualifier.md)
 - [Alias extern](../../language-reference/keywords/extern-alias.md)

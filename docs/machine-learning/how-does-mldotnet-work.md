@@ -4,37 +4,37 @@ description: O ML.NET oferece a capacidade de adicionar aprendizado de máquina 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794568"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185865"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
-O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo. Os aplicativos de Machine Learning fazem uso de padrões nos dados para fazer previsões em vez de precisarem ser programados explicitamente.
+O ML.NET oferece a capacidade de adicionar aprendizado de máquina a aplicativos .NET, em cenários online ou offline. Com essa funcionalidade, você pode fazer previsões automáticas usando os dados disponíveis ao seu aplicativo. Aplicações de aprendizado de máquina fazem uso de padrões nos dados para fazer previsões em vez de precisarem ser explicitamente programadas.
 
-Central para o ML.NET é um **modelo**de aprendizado de máquina. O modelo especifica as etapas necessárias para transformar os dados de entrada em uma previsão. Com o ML.NET, você pode treinar um modelo personalizado especificando um algoritmo ou pode importar modelos TensorFlow e ONNX pré-treinados.
+Central para ML.NET é um **modelo**de aprendizagem de máquina. O modelo especifica as etapas necessárias para transformar seus dados de entrada em uma previsão. Com ML.NET, você pode treinar um modelo personalizado especificando um algoritmo, ou você pode importar modelos TensorFlow e ONNX pré-treinados.
 
-Depois de ter um modelo, você pode adicioná-lo ao seu aplicativo para fazer as previsões.
+Uma vez que você tenha um modelo, você pode adicioná-lo à sua aplicação para fazer as previsões.
 
-O ML.NET é executado no Windows, no Linux e no macOS usando o .NET Core ou o Windows usando .NET Framework. Há suporte para 64 bits em todas as plataformas. Há suporte para 32 bits no Windows, exceto para a funcionalidade relacionada a TensorFlow, LightGBM e ONNX.
+ML.NET é executado no Windows, Linux e macOS usando o .NET Core ou o Windows usando o .NET Framework. 64 bits é suportado em todas as plataformas. 32 bits é suportado no Windows, exceto para as funcionalidades relacionadas ao TensorFlow, LightGBM e ONNX.
 
 Exemplos do tipo de previsões que você pode fazer com ML.NET:
 
 |||
 |-|-|
 |Classificação/Categorização|Dividir automaticamente os comentários dos clientes em categorias positivas e negativas|
-|Regressão/Prever valores contínuos|Prever o preço de residências com base em tamanho e local|
-|Detecção de Anomalias|Detectar transações bancárias fraudulentas |
+|Regressão/Prever valores contínuos|Prever o preço de residências com base em tamanho e localização|
+|Detecção de anomalias|Detectar transações bancárias fraudulentas |
 |Recomendações|Sugerir produtos que compradores online talvez queiram comprar com base em suas compras anteriores|
-|Série temporal/dados sequenciais|Prever as vendas do clima/produto|
-|Classificação de imagens|Categorizar pathologies em imagens médicas|
+|Séries tempois/dados seqüenciais|Previsão das vendas meteorológicas/de produtos|
+|Classificação de imagens|Categorizar patologias em imagens médicas|
 
 ## <a name="hello-mlnet-world"></a>Olá, Mundo do ML.NET
 
-O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências. 
+O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências.
 
  ```csharp
     using System;
@@ -101,7 +101,7 @@ O diagrama a seguir representa a estrutura de código do aplicativo, bem como o 
 
 Vamos nos aprofundar um pouco mais nesses conceitos.
 
-## <a name="machine-learning-model"></a>Modelo de machine learning
+## <a name="machine-learning-model"></a>Modelo de Machine Learning
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
@@ -123,13 +123,13 @@ Cada descrição de transação é dividida em um conjunto de recursos removendo
 
 Os modelos de preço de residência e o modelo de classificação de texto são modelos **lineares**. Dependendo da natureza de seus dados e do problema que você está resolvendo, você também pode usar modelos de **árvore de decisão**, modelos **aditivos generalizados** e outros. Você pode encontrar mais informações sobre os modelos em [Tarefas](./resources/tasks.md).
 
-## <a name="data-preparation"></a>Preparação de dados
+## <a name="data-preparation"></a>Preparação dos dados
 
-Na maioria dos casos, os dados que você tem disponíveis não são adequados para serem usados diretamente para treinar um modelo de machine learning. Os dados brutos precisam ser preparados ou pré-processados antes que possam ser usados para localizar os parâmetros do modelo. Seus dados talvez precisem ser convertidos de valores de cadeia de caracteres em uma representação numérica. Você pode ter informações redundantes em seus dados de entrada. Talvez você precise reduzir ou expandir as dimensões de seus dados de entrada. Seus dados talvez precisem ser normalizados ou dimensionados.
+Na maioria dos casos, os dados que você tem disponíveis não são adequados para serem usados diretamente para treinar um modelo de machine learning. Os dados brutos precisam ser preparados, ou pré-processados, antes de serem usados para encontrar os parâmetros do seu modelo. Seus dados talvez precisem ser convertidos de valores de cadeia de caracteres em uma representação numérica. Você pode ter informações redundantes em seus dados de entrada. Talvez você precise reduzir ou expandir as dimensões de seus dados de entrada. Seus dados talvez precisem ser normalizados ou dimensionados.
 
 Os [tutoriais do ML.NET](./tutorials/index.md) ensinam a você sobre os diferentes pipelines de processamento de dados para texto, imagem, dados numéricos e de série temporal usados para tarefas de aprendizado de máquina específicas.
 
-[Como preparar seus dados](./how-to-guides/prepare-data-ml-net.md) mostra como aplicar a preparação de dados com mais frequência.
+[Como preparar seus dados](./how-to-guides/prepare-data-ml-net.md) mostra como aplicar a preparação de dados de forma mais geral.
 
 Você pode encontrar um apêndice de todas as [transformações disponíveis](./resources/transforms.md) na seção de recursos.
 
@@ -173,7 +173,7 @@ Um aplicativo do ML.NET começa com um objeto <xref:Microsoft.ML.MLContext>. Ess
 |||||
 |-|-|-|-|
 |Salvamento e carregamento de dados||<xref:Microsoft.ML.DataOperationsCatalog>||
-|Preparação de dados||<xref:Microsoft.ML.TransformsCatalog>||
+|Preparação dos dados||<xref:Microsoft.ML.TransformsCatalog>||
 |Treinando algoritmos|Classificação binária|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||Classificação multiclasse|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Detecção de anomalias|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
@@ -212,7 +212,7 @@ Quando os objetos no pipeline foram criados, os dados podem ser usados para trei
 
 Chamar `Fit()` usa os dados de treinamento de entrada para estimar os parâmetros do modelo. Isso é conhecido como treinamento do modelo. Lembre-se de que o modelo de regressão linear acima tinha dois parâmetros de modelo: **desvio** e **peso**. Após a chamada `Fit()`, os valores dos parâmetros são conhecidos. A maioria dos modelos terá muito mais parâmetros que isso.
 
-Você pode aprender mais sobre o treinamento de modelo em [como treinar seu modelo](./how-to-guides/train-machine-learning-model-ml-net.md).
+Você pode aprender mais sobre treinamento de modelos em [Como treinar seu modelo.](./how-to-guides/train-machine-learning-model-ml-net.md)
 
 O objeto de modelo resultante implementa a interface do <xref:Microsoft.ML.ITransformer>. Ou seja, o modelo transforma dados de entrada em previsões.
 
@@ -240,7 +240,7 @@ Cada transformação no pipeline tem um esquema de entrada (nomes, tipos e taman
 
 Se o esquema de saída de uma transformação no pipeline não corresponder ao esquema de entrada da transformação seguinte, o ML.NET gerará uma exceção.
 
-Um objeto de exibição de dados tem colunas e linhas. Cada coluna tem um nome, um tipo e um comprimento. Por exemplo, as colunas de entrada no exemplo de preço da casa são **tamanho** e **preço**. Eles são ambos os tipos e são quantidades escalares em vez de vetores.
+Um objeto de exibição de dados tem colunas e linhas. Cada coluna tem um nome, um tipo e um comprimento. Por exemplo, as colunas de entrada no exemplo de preço da casa são **Tamanho** e **Preço**. Ambos são do tipo e são quantidades escalares em vez de vetores.
 
    ![Exemplo de Exibição de Dados do ML.NET com os dados de previsão de preço de residência](./media/ml-net-dataview.png)
 
@@ -278,10 +278,10 @@ Em aplicativos da vida real, seu código de avaliação e modelo de treinamento 
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
-* Saiba como criar aplicativos usando tarefas de aprendizado de máquina diferentes com conjuntos de dados mais realistas nos [tutoriais](./tutorials/index.md).
+* Aprenda a criar aplicativos usando diferentes tarefas de aprendizado de máquina com conjuntos de dados mais realistas nos [tutoriais](./tutorials/index.md).
 
-* Saiba mais sobre tópicos específicos em mais detalhes nos [guias de instruções](./how-to-guides/index.md).
+* Conheça tópicos específicos mais aprofundados no [How To Guides](./how-to-guides/index.md).
 
-* Se você estiver superando, poderá se aprofundar diretamente na [documentação de referência da API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Se você estiver super interessado, você pode mergulhar diretamente na [documentação de referência](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)da API .

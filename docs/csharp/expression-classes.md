@@ -4,12 +4,12 @@ description: Saiba mais sobre tipos de estrutura com suporte a árvores de expre
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037612"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146080"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de Framework com suporte a árvores de expressão
 
@@ -65,5 +65,5 @@ Há tipos de Nó de expressão que mapeiam para quase todos os elementos de sint
 3. Examinar a classe `ExpressionVisitor` para compilar uma árvore de expressão modificada.
 
 Você encontrará mais ao examinar cada uma dessas três áreas. Invariavelmente, você encontrará o que precisa ao começar com uma dessas três etapas.
- 
+
  [Próximo – Executar árvores de expressão](expression-trees-execution.md)

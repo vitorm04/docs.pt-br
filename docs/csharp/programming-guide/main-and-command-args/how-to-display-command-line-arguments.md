@@ -1,17 +1,17 @@
 ---
-title: Como exibir argumentos de linha de comando C# – guia de programação
+title: Como exibir argumentos de linha de comando - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712020"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Como exibir argumentos de linha de comandoC# (guia de programação)
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Como exibir argumentos de linha de comando (Guia de Programação C#)
 Os argumentos fornecidos a um executável na linha de comando são acessíveis por meio de um parâmetro opcional para `Main`. Os argumentos são fornecidos na forma de uma matriz de cadeias de caracteres. Cada elemento da matriz contém um argumento. O espaço em branco entre os argumentos é removido. Por exemplo, considere essas invocações de linha de comando de um executável fictício:  
   
 |Entrada na linha de comando|Matriz de cadeias de caracteres passada a Main|  
@@ -28,9 +28,9 @@ Os argumentos fornecidos a um executável na linha de comando são acessíveis p
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Build pela linha de comando com csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() e argumentos de linha de comando](./index.md)
-- [Valores de retorno de Main()](./main-return-values.md)
+- [Valores retornados de Main()](./main-return-values.md)

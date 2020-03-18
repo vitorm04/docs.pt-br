@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: classificar violações de integridade com o construtor de modelos'
-description: Este tutorial ilustra como criar um modelo de classificação multiclasse usando o ML.NET Model Builder para classificar a severidade de violação de integridade de restaurante em São Francisco.
+title: 'Tutorial: Classificar violações de saúde com Model Builder'
+description: Este tutorial ilustra como construir um modelo de classificação multiclasse usando ML.NET Model Builder para classificar a gravidade da violação da saúde do restaurante em São Francisco.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341561"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185832"
 ---
-# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: classificar a gravidade das violações de integridade do restaurante com o construtor de modelos
+# <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Classifique a gravidade das violações à saúde do restaurante com o Model Builder
 
-Saiba como criar um modelo de classificação multiclasse usando o construtor de modelos para categorizar o nível de risco de violações de restaurante encontradas durante as inspeções de integridade.
+Aprenda a construir um modelo de classificação multiclasse usando o Model Builder para categorizar o nível de risco de violações de restaurantes encontrados durante inspeções de saúde.
 
 Neste tutorial, você aprenderá como:
 
@@ -23,112 +23,112 @@ Neste tutorial, você aprenderá como:
 >
 > - Preparar e compreender os dados
 > - Escolha um cenário
-> - Carregar dados de um banco
+> - Carregar dados de um banco de dados
 > - Treinar o modelo
-> - Avaliar o modelo
+> - Avalie o modelo
 > - Usar o modelo para previsões
 
 > [!NOTE]
 > O Construtor de Modelo está atualmente na Versão Prévia.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-Para obter uma lista de pré-requisitos e instruções de instalação, visite o [Guia de instalação do Model Builder](../how-to-guides/install-model-builder.md).
+Para obter uma lista de pré-requisitos e instruções de instalação, visite o [guia de instalação do Model Builder](../how-to-guides/install-model-builder.md).
 
-## <a name="model-builder-multiclass-classification-overview"></a>Visão geral da classificação multiclasse do construtor de modelos
+## <a name="model-builder-multiclass-classification-overview"></a>Visão geral da classificação multiclasse do Model Builder
 
-Este exemplo cria um C# aplicativo de console .NET Core que categoriza o risco de violações de integridade usando um modelo de aprendizado de máquina criado com o construtor de modelos. Você pode encontrar o código-fonte deste tutorial no repositório do GitHub [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
+Esta amostra cria um aplicativo de console C# .NET Core que categoriza o risco de violações à saúde usando um modelo de aprendizado de máquina construído com o Model Builder. Você pode encontrar o código fonte para este tutorial no repositório GitHub [dotnet/machinelearning-samples.](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations)
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
-1. Crie um  **C# aplicativo de console do .NET Core** chamado "RestaurantViolations". Verifique se a opção **Colocar solução e projeto no mesmo diretório** está **desmarcada** (vs 2019) ou **criar diretório para solução** está **marcado** (vs 2017).
+1. Crie um **aplicativo de console C# .NET Core** chamado "RestaurantViolations". Certifique-se de que **a solução e o projeto place no mesmo diretório** não são **controlados** (VS 2019), ou **Criar diretório para solução** é **verificado** (VS 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
-> O conjunto de dados usado para treinar e avaliar o modelo de aprendizado de máquina é originalmente da [Pontuação de segurança de restaurantes do departamento de saúde pública de San Francisco](https://www.sfdph.org/dph/EH/Food/score/default.asp). Para sua conveniência, o conjunto de linhas foi condensado para incluir apenas as colunas relevantes para treinar o modelo e fazer previsões. Visite o site a seguir para saber mais sobre o [conjunto](https://data.sfgov.org/Health-and-Social-Services/Restaurant-Scores-LIVES-Standard/pyih-qa8i?row_index=0)de informações.
+> O conjunto de dados usado para treinar e avaliar o modelo de aprendizagem de máquina é originalmente do [Departamento de Saúde Pública de São Francisco.](https://www.sfdph.org/dph/EH/Food/score/default.asp) Por conveniência, o conjunto de dados foi condensado para incluir apenas as colunas relevantes para treinar o modelo e fazer previsões. Visite o site a seguir para saber mais sobre o [conjunto de dados](https://data.sfgov.org/Health-and-Social-Services/Restaurant-Scores-LIVES-Standard/pyih-qa8i?row_index=0).
 
-[Baixe o conjunto de resultados de pontos de segurança do restaurante](https://github.com/luisquintanilla/machinelearning-samples/raw/AB1608219/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantScores.zip) e descompacte-o.
+[Baixe o conjunto de dados Restaurant Safety Scores](https://github.com/luisquintanilla/machinelearning-samples/raw/AB1608219/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantScores.zip) e descompacte-o.
 
-Cada linha no conjunto de dados contém informações sobre violações observadas durante uma inspeção do departamento de integridade e uma avaliação de risco da ameaça que essas violações apresentam à integridade pública e à segurança.
+Cada linha do conjunto de dados contém informações sobre violações observadas durante uma inspeção do Departamento de Saúde e uma avaliação de risco da ameaça que essas violações apresentam à saúde e segurança pública.
 
-| De inspeção | ViolationDescription | RiskCategory |
+| Tipo de inspeção | ViolaçãoDescriçãoDescrição | Categoria de Risco |
 | --- | --- | --- |
-| Rotina-não agendada | Superfícies de contato de alimentos desfeitas ou limpas inadequadamente | Risco moderado |
-| Nova Propriedade | Infestação Vermin de alto risco | Alto risco |
-| Rotina-não agendada | Limpando os panons não limpos ou corretamente armazenados ou inadequados | Baixo risco |
+| Rotina - Não programada | Superfícies de contato com alimentos inadequadamente limpos ou higienizados | Risco Moderado |
+| Nova Propriedade | Infestação de vermes de alto risco | Alto Risco |
+| Rotina - Não programada | Enxugando panos não limpos ou armazenados corretamente ou desinfetante inadequado | Baixo Risco |
 
-- **Inspeçãotype**: o tipo de inspeção. Isso pode ser uma inspeção pela primeira vez para um novo estabelecimento, uma inspeção de rotina, uma inspeção de reclamação e muitos outros tipos.
-- **ViolationDescription**: uma descrição da violação encontrada durante a inspeção.
-- **RiskCategory**: a severidade de risco uma violação representa a integridade pública e a segurança.
+- **Tipo de inspeção**: o tipo de inspeção. Isso pode ser uma inspeção pela primeira vez para um novo estabelecimento, uma inspeção de rotina, uma inspeção de reclamações e muitos outros tipos.
+- **Descrição da violação:** uma descrição da violação encontrada durante a inspeção.
+- **Categoria de Risco**: a gravidade do risco que uma violação representa para a saúde pública e a segurança.
 
-O `label` é a coluna que você deseja prever. Ao executar uma tarefa de classificação, o objetivo é atribuir uma categoria (texto ou numérico). Nesse cenário de classificação, a severidade da violação é atribuída ao valor baixo, moderado ou alto risco. Portanto, o **RiskCategory** é o rótulo. As `features` são as entradas que você fornece ao modelo para prever o `label`. Nesse caso, o **inspeções de inspeção** e **ViolationDescription** são usados como recursos ou entradas para prever o **RiskCategory**.
+O `label` é a coluna que você deseja prever. Ao executar uma tarefa de classificação, o objetivo é atribuir uma categoria (texto ou numérico). Nesse cenário de classificação, a gravidade da violação é atribuída ao valor de baixo, moderado ou alto risco. Portanto, a **Categoria de Risco** é o rótulo. São `features` as entradas que você dá `label`ao modelo para prever o . Neste caso, o **InspectionType** e **o ViolationDescription** são usados como recursos ou entradas para prever a **Categoria de Risco**.
 
 ## <a name="choose-a-scenario"></a>Escolha um cenário
 
-![Assistente do construtor de modelos no Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
+![Assistente do Construtor de Modelos no Visual Studio](./media/sentiment-analysis-model-builder/model-builder-screen.png)
 
-Para treinar seu modelo, selecione na lista de cenários de aprendizado de máquina disponíveis fornecidos pelo construtor de modelos. Nesse caso, o cenário é a *classificação do problema*.
+Para treinar seu modelo, selecione na lista de cenários de aprendizado de máquina disponíveis fornecidos pelo Model Builder. Neste caso, o cenário é *Classificação de Problemas*.
 
-1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto *RestaurantViolations* e selecione **Adicionar** > **Machine Learning**.
-1. Para este exemplo, o cenário é classificação multiclasse. Na etapa *cenário* do construtor de modelos, selecione o cenário de **classificação do problema** .
+1. No **Solution Explorer,** clique com o botão direito do mouse no projeto *RestaurantViolações* e selecione **Adicionar** > **aprendizado de máquina**.
+1. Para esta amostra, o cenário é a classificação multiclasse. Na etapa *de cenário* do Model Builder, selecione o cenário **classificação de** problemas.
 
 ## <a name="load-the-data"></a>Carregar os dados
 
-O construtor de modelos aceita dados de um banco de SQL Server ou de um arquivo local no formato `csv` ou `tsv`.
+O Model Builder aceita dados de um banco de `csv` `tsv` dados SQL Server ou de um arquivo local dentro ou em formato.
 
-1. Na etapa dados da ferramenta Construtor de modelos, selecione **SQL Server** na lista suspensa fonte de dados.
-1. Selecione o botão ao lado da caixa de texto **conectar ao SQL Server banco de dados** .
-    1. Na caixa de diálogo **escolher dados** , selecione **Microsoft SQL Server arquivo de banco**.
-    1. Desmarque a caixa de seleção **sempre usar esta seleção** e selecione **continuar**.
-    1. Na caixa de diálogo **Propriedades da conexão** , selecione **procurar** e selecione o arquivo *RestaurantScores. MDF* baixado.
+1. Na etapa de dados da ferramenta Model Builder, selecione **SQL Server** a partir da gota de origem de dados.
+1. Selecione o botão ao lado da caixa de texto **do banco de dados Connect to SQL Server.**
+    1. Na caixa de diálogo **Escolher dados,** selecione **O arquivo de banco de dados do Microsoft SQL Server**.
+    1. Desmarque o Use sempre esta caixa **de seleção** e selecione **Continuar**.
+    1. Na caixa de diálogo Propriedades de **conexão,** **selecione Procurar** e selecione o arquivo *RestaurantScores.mdf* baixado.
     1. Selecione **OK**.
-1. Escolha **violações** na lista suspensa **nome da tabela** .
-1. Escolha **RiskCategory** na **coluna para prever (rótulo)** DropDown.
-1. Deixe as seleções de coluna padrão, **inspeções de inspeção** e **ViolationDescription**, marcadas na lista suspensa **colunas de entrada (recursos)** .
-1. Selecione o link **treinar** para mover para a próxima etapa no construtor de modelos.
+1. Escolha **Violações** na estada **nome da tabela.**
+1. Escolha **RiscoCategoria** na **coluna para prever (rótulo)** a gota.
+1. Deixe as seleções de coluna padrão, **InspectionType** e **ViolationDescription**, verificadas na parada **Colunas de entrada (Recursos).**
+1. Selecione o link **Trem** para passar para a próxima etapa do Model Builder.
 
 ## <a name="train-the-model"></a>Treinar o modelo
 
-A tarefa de aprendizado de máquina usada para treinar o modelo de classificação de problemas neste tutorial é classificação multiclasse. Durante o processo de treinamento do modelo, o construtor de modelos treina modelos separados usando diferentes algoritmos de classificação multiclasse e configurações para encontrar o melhor modelo de desempenho para seu conjunto de seus.
+A tarefa de aprendizado de máquina usada para treinar o modelo de classificação de problemas neste tutorial é a classificação multiclasse. Durante o processo de treinamento do modelo, o Model Builder treina modelos separados usando diferentes algoritmos de classificação multiclasse e configurações para encontrar o modelo de melhor desempenho para o seu conjunto de dados.
 
-O tempo necessário para o modelo treinar é proporcional à quantidade de dados. O construtor de modelos seleciona automaticamente um valor padrão para o **tempo de treinamento (segundos)** com base no tamanho da fonte de dados.
+O tempo necessário para o modelo treinar é proporcional à quantidade de dados. O Model Builder seleciona automaticamente um valor padrão para **tempo de treinar (segundos)** com base no tamanho da fonte de dados.
 
-1. Embora o construtor de modelos defina o valor de **tempo para treinar (segundos)** como 10 segundos, aumente-o para 30 segundos. O treinamento para um período de tempo maior permite que o construtor de modelos Explore um número maior de algoritmos e uma combinação de parâmetros na pesquisa do melhor modelo.
+1. Embora o Model Builder defina o valor do **Tempo para treinar (segundos)** para 10 segundos, aumente-o para 30 segundos. O treinamento por um período maior de tempo permite ao Model Builder explorar um número maior de algoritmos e combinação de parâmetros em busca do melhor modelo.
 1. Selecione **Iniciar Treinamento**.
 
     Durante o processo de treinamento, os dados de progresso são exibidos na seção `Progress` da etapa de treinamento.
 
-    - **Status** exibe o status de conclusão do processo de treinamento.
-    - A **melhor precisão** exibe a precisão do melhor modelo de desempenho encontrado pelo construtor de modelos até o momento. Maior precisão significa que o modelo é previsto mais corretamente nos dados de teste.
-    - **Melhor algoritmo** exibe o nome do algoritmo de melhor desempenho encontrado pelo construtor de modelos até o momento.
-    - **Último algoritmo** exibe o nome do algoritmo usado mais recentemente pelo construtor de modelos para treinar o modelo.
+    - **O status** exibe o status de conclusão do processo de treinamento.
+    - **A melhor precisão** mostra a precisão do modelo de melhor desempenho encontrado pelo Model Builder até agora. Maior precisão significa que o modelo é previsto mais corretamente nos dados de teste.
+    - **O melhor algoritmo** exibe o nome do algoritmo de melhor desempenho encontrado pelo Model Builder até agora.
+    - **O último algoritmo** exibe o nome do algoritmo mais recentemente usado pelo Model Builder para treinar o modelo.
 
-1. Quando o treinamento estiver concluído, selecione o link **avaliar** para passar para a próxima etapa.
+1. Uma vez que o treinamento esteja concluído, selecione o link **Avaliar** para passar para a próxima etapa.
 
-## <a name="evaluate-the-model"></a>Avaliar o modelo
+## <a name="evaluate-the-model"></a>Avalie o modelo
 
-O resultado da etapa de treinamento é um modelo que tinha o melhor desempenho. Na etapa avaliar do construtor de modelos, a seção saída contém o algoritmo usado pelo melhor modelo de desempenho na melhor entrada de **modelo** , juntamente com as métricas na **melhor precisão do modelo**. Além disso, uma tabela de resumo que contém até cinco modelos que foram explorados e suas métricas são exibidas.
+O resultado da etapa de treinamento é o modelo que teve o melhor desempenho. Na etapa de avaliação do Model Builder, a seção de saída contém o algoritmo usado pelo modelo de melhor desempenho na entrada **Do Melhor Modelo,** juntamente com as métricas em **Melhor Precisão de Modelo**. Além disso, uma tabela de resumo contendo até cinco modelos que foram explorados e suas métricas é exibida.
 
-Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de tentar melhorar a precisão do modelo são aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Caso contrário, selecione o link de **código** para mover para a etapa final no construtor de modelos.
+Se você não está satisfeito com suas métricas de precisão, algumas maneiras fáceis de tentar melhorar a precisão do modelo são aumentar o tempo para treinar o modelo ou usar mais dados. Caso contrário, selecione o link **de código** para passar para a etapa final do Model Builder.
 
 ## <a name="add-the-code-to-make-predictions"></a>Adicionar o código para fazer previsões
 
 Dois projetos são criados como resultado do processo de treinamento.
 
-- RestaurantViolationsML. ConsoleApp: um C# aplicativo de console do .NET Core que contém o treinamento do modelo e o código de consumo de exemplo.
-- RestaurantViolationsML. Model: um .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada `ConsumeModel` para fazer previsões.
+- RestaurantViolaçõesML.ConsoleApp: Um aplicativo C# .NET Core Console que contém o código de treinamento do modelo e o código de consumo de amostras.
+- RestaurantViolationsML.Model: Uma biblioteca de classe .NET Standard contendo os modelos de dados que definem o esquema de dados do modelo `ConsumeModel` de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada para fazer previsões.
 
-1. Na etapa de código do construtor de modelos, selecione **adicionar projetos** para adicionar os projetos gerados automaticamente à solução.
-1. Abra o arquivo *Program.cs* no projeto *RestaurantViolations* .
-1. Adicione a seguinte instrução using para fazer referência ao projeto *RestaurantViolationsML. Model* :
+1. Na etapa de código do Model Builder, selecione **Adicionar projetos** para adicionar os projetos gerados automaticamente à solução.
+1. Abra o arquivo *Program.cs* no projeto *RestaurantViolations.*
+1. Adicione a seguinte declaração usando para referenciar o projeto *RestaurantViolationsML.Model:*
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que a categoria de risco não faz parte da entrada. Isso ocorre porque o modelo gera a previsão para ela.
+1. Para fazer uma previsão sobre novos dados usando o `ModelInput` modelo, `Main` crie uma nova instância da classe dentro do método de sua aplicação. Observe que a categoria de risco não faz parte da entrada. Isso porque o modelo gera a previsão para ele.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados.
+1. Use `Predict` o método `ConsumeModel` da classe. O `Predict` método carrega o modelo [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) treinado, cria um para o modelo e o usa para fazer previsões sobre novos dados.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 
@@ -144,12 +144,12 @@ Dois projetos são criados como resultado do processo de treinamento.
 
 Se precisar fazer referência aos projetos gerados em um momento posterior dentro de outra solução, você poderá encontrá-los no diretório `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-Parabéns! Você criou com êxito um modelo de aprendizado de máquina para categorizar o risco de violações de integridade usando o construtor de modelos. Você pode encontrar o código-fonte deste tutorial no repositório do GitHub [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
+Parabéns! Você construiu com sucesso um modelo de aprendizado de máquina para categorizar o risco de violações à saúde usando o Model Builder. Você pode encontrar o código fonte para este tutorial no repositório GitHub [dotnet/machinelearning-samples.](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations)
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
 
 - [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
-- [Classificação Multiclasse](../resources/glossary.md#multiclass-classification)
+- [Classificação multiclasse](../resources/glossary.md#multiclass-classification)
 - [Métricas do modelo de classificação multiclasse](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

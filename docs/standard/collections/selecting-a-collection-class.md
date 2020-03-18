@@ -11,10 +11,10 @@ helpviewer_keywords:
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711344"
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
@@ -81,7 +81,7 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
  PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

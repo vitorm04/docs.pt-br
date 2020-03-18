@@ -3,10 +3,10 @@ title: Novidades no C# 7.2
 description: Uma visão geral dos novos recursos no C# 7.2.
 ms.date: 08/16/2017
 ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75694589"
 ---
 # <a name="whats-new-in-c-72"></a>Novidades no C# 7.2
@@ -26,7 +26,7 @@ Os novos recursos de linguagem nesta versão são:
   - Os argumentos nomeados podem ser seguidos por argumentos posicionais.
 - [Sublinhados à esquerda em literais numéricos](#leading-underscores-in-numeric-literals)
   - Agora os literais numéricos podem ter sublinhados à esquerda, antes dos dígitos impressos.
-- [Modificador de acesso `private protected`](#private-protected-access-modifier)
+- [`private protected`modificador de acesso](#private-protected-access-modifier)
   - O modificador de acesso `private protected` permite o acesso a classes derivadas no mesmo assembly.
 - [Expressões `ref` condicionais](#conditional-ref-expressions)
   - O resultado de uma expressão condicional (`?:`) agora já pode ser uma referência.
@@ -57,7 +57,7 @@ Agora as chamadas de método podem usar argumentos nomeados que precedem argumen
 
 A implementação de suporte para separadores de dígitos no C# 7.0 não permite que o `_` esteja no primeiro caractere do valor literal. Agora os literais numéricos binários e hexadecimais podem começar com um `_`.
 
-Por exemplo:
+Por exemplo: 
 
 ```csharp
 int binaryValue = 0b_0101_0101;

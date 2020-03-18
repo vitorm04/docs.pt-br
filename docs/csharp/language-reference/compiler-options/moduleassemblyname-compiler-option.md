@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970084"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173712"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (opção do compilador C#)
 Especifica um assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
@@ -24,7 +24,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `assembly_name`  
  O nome do assembly cujos tipos não públicos podem ser acessados por um .netmodule.  
   
@@ -56,17 +56,17 @@ using System.Runtime.CompilerServices;
   
 [assembly:InternalsVisibleTo ("csman_an_assembly")]  
   
-class An_Internal_Class   
+class An_Internal_Class
 {  
-    public void Test()   
-    {   
-        Console.WriteLine("An_Internal_Class.Test called");   
+    public void Test()
+    {
+        Console.WriteLine("An_Internal_Class.Test called");
     }  
 }  
 ```  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Sabendo que esse .netmodule será compilado dentro de um assembly chamado csman_an_assembly, é possível especificar **-moduleassemblyname**, permitindo que o .netmodule acesse tipos não públicos em um assembly que tenha concedido acesso de assembly amigável ao csman_an_assembly.  
+ Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Ao saber que este módulo .net será incorporado em um conjunto chamado csman_an_assembly, podemos especificar **-moduleassemblyname**, permitindo que o módulo .neta acesse tipos não públicos em um conjunto que concedeu acesso de reunião de amigos a csman_an_assembly.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -95,7 +95,7 @@ class A {
   
 **An_Internal_Class.Test foi chamado**
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

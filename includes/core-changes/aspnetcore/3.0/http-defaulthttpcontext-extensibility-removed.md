@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 1b4b0aba3ea24682ae972bf283ac387692c83781
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9d138f79fcede4acac837f8d7793aa343ced737c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901849"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78290738"
 ---
-### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: extensibilidade defaulthttpcontext removida
+### <a name="http-defaulthttpcontext-extensibility-removed"></a>HTTP: Extensibilidade padrãohttpcontext removido
 
-Como parte dos aprimoramentos de desempenho do ASP.NET Core 3,0, a extensibilidade do `DefaultHttpContext` foi removida. Agora, a classe é `sealed`. Para obter mais informações, consulte [dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504).
+Como parte de ASP.NET melhorias de desempenho do `DefaultHttpContext` Core 3.0, a extensibilidade foi removida. A classe `sealed`é agora. Para obter mais informações, consulte [dotnet/aspnetcore#6504](https://github.com/dotnet/aspnetcore/pull/6504).
 
-Se os testes de unidade usarem `Mock<DefaultHttpContext>`, use `Mock<HttpContext>` em vez disso.
+Se os testes `Mock<DefaultHttpContext>`da `Mock<HttpContext>` `new DefaultHttpContext()` unidade usarem, use ou em vez disso.
 
-Para obter uma discussão, consulte [dotnet/aspnetcore # 6534](https://github.com/dotnet/aspnetcore/issues/6534).
+Para discussão, consulte [dotnet/aspnetcore#6534](https://github.com/dotnet/aspnetcore/issues/6534).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -20,19 +20,19 @@ Para obter uma discussão, consulte [dotnet/aspnetcore # 6534](https://github.co
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Classes podem derivar de `DefaultHttpContext`.
+As aulas `DefaultHttpContext`podem derivar de .
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Classes não podem derivar de `DefaultHttpContext`.
+As aulas não `DefaultHttpContext`podem derivar de .
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-A extensibilidade foi inicialmente fornecida para permitir o pooling do `HttpContext`, mas introduziu uma complexidade desnecessária e impedia outras otimizações.
+A extensibilidade foi fornecida inicialmente para `HttpContext`permitir a junção do , mas introduziu complexidade desnecessária e impediu outras otimizações.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você estiver usando `Mock<DefaultHttpContext>` em seus testes de unidade, comece a usar `Mock<HttpContext>` em vez disso.
+Se você estiver `Mock<DefaultHttpContext>` usando em seus `Mock<HttpContext>` testes unitários, comece a usar em vez disso.
 
 #### <a name="category"></a>Categoria
 

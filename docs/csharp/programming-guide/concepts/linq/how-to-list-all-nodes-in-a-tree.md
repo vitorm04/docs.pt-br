@@ -1,22 +1,22 @@
 ---
-title: Como listar todos os nós em uma árvoreC#()
+title: Como listar todos os nós em uma árvore (C#)
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345872"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como listar todos os nós em uma árvoreC#()
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como listar todos os nós em uma árvore (C#)
 
 Às vezes é útil listar todos os nós em uma árvore. Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore. Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.
 
 Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas. No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.
 
 ## <a name="example"></a>Exemplo
- Este exemplo mostra uma função chamada `GetXPath` que gera uma expressão XPath específica para qualquer nó na árvore XML. Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace. As expressões XPath são geradas usando prefixos de namespace.
+ Este exemplo mostra `GetXPath` uma função nomeada que gera uma expressão XPath específica para qualquer nó na árvore XML. Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace. As expressões XPath são geradas usando prefixos de namespace.
 
  O exemplo cria uma árvore XML pequena que contém um exemplo de vários tipos de nós. Ela, em seguida, itera pelos nós descendentes e imprime a expressão XPath para cada nó.
 
@@ -316,7 +316,7 @@ class Program
 }
 ```
 
- Este exemplo gera a seguinte saída:
+ Esse exemplo gera a saída a seguir:
 
 ```output
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>

@@ -1,13 +1,13 @@
 ---
 title: Implementando o padrão de Disjuntor
 description: Saiba como implementar o padrão de disjuntor como um sistema complementar para repetições de HTTP.
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732828"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847239"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementar o padrão de disjuntor
 
@@ -15,7 +15,7 @@ Conforme observado anteriormente, você deve tratar falhas que podem consumir um
 
 Em um ambiente distribuído, chamadas para serviços e recursos remotos poderão falhar devido a falhas transitórias, como conexões lentas de rede e tempos limites ou se os recursos estiverem lentos ou temporariamente não disponíveis. Essas falhas geralmente são corrigidas automaticamente após um curto período, e um aplicativo em nuvem robusto deve estar preparado para lidar com elas usando uma estratégia como o “padrão de repetição”.
 
-No entanto, também pode haver situações em que as falhas são devido a eventos inesperados que podem levar muito mais tempo para serem corrigidos. Essas falhas podem variar em termos de gravidade de uma perda parcial de conectividade até a falha completa de um serviço. Nessas situações, talvez não tenha sentido um aplicativo repetir continuamente uma operação que provavelmente não será bem-sucedida.
+No entanto, também pode haver situações em que as falhas são devido a eventos inesperados que podem levar muito mais tempo para serem corrigidos. Essas falhas podem variar de gravidade de uma perda parcial de conectividade até a falha completa de um serviço. Nessas situações, talvez não tenha sentido um aplicativo repetir continuamente uma operação que provavelmente não será bem-sucedida.
 
 Em vez disso, o aplicativo deve ser codificado para aceitar que a operação falhou e lidar com falhas adequadamente.
 
@@ -25,11 +25,11 @@ Portanto, você precisa de algum tipo de barreira de defesa para as que solicita
 
 O padrão de disjuntor tem uma finalidade diferente do "padrão de repetição". O “padrão de repetição” permite que um aplicativo repita uma operação na expectativa de que a ela acabará sendo bem-sucedida. O padrão de disjuntor impede que um aplicativo execute uma operação que provavelmente falhará. O aplicativo pode combinar esses dois padrões. No entanto, a lógica de repetição deve reconhecer qualquer exceção retornada pelo disjuntor e deve abandonar as tentativas de repetição quando o disjuntor indica que uma falha não é transitória.
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>Implementar o padrão de disjuntor com HttpClientFactory e Polly
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>Implementar padrão de `IHttpClientFactory` disjuntor com e Polly
 
-Como durante a implementação de repetições, a abordagem recomendada para disjuntores é aproveitar as comprovadas bibliotecas do .NET, como a Polly e sua integração nativa com o HttpClientFactory.
+Como ao implementar repetições, a abordagem recomendada para disjuntores é aproveitar bibliotecas `IHttpClientFactory`comprovadas .NET como polly e sua integração nativa com .
 
-Adicionar uma política de disjuntor no pipeline do middleware de saída do HttpClientFactory é tão simples quanto adicionar uma única parte incremental de código ao que você já tem ao usar HttpClientFactory.
+Adicionar uma política de `IHttpClientFactory` disjuntor em seu pipeline de middleware de saída é `IHttpClientFactory`tão simples quanto adicionar um único pedaço de código incremental ao que você já tem ao usar .
 
 Aqui, a única adição ao código usado para repetições de chamada HTTP é o código no qual você adiciona a política de disjuntor à lista de políticas a serem usadas, conforme é mostrado no código incremental a seguir, que faz parte do método ConfigureServices().
 
@@ -61,7 +61,7 @@ Os disjuntores também devem ser usados para redirecionar solicitações a uma i
 
 Todos esses recursos são para casos em que você está gerenciando o failover de dentro do código do .NET, em vez de deixar que o Azure o gerencie automaticamente com transparência de local.
 
-De uma perspectiva de uso, ao usar o HttpClient, não é necessário adicionar nada de novo, porque o código é o mesmo que ao usar o HttpClient com o HttpClientFactory, conforme é mostrado nas seções anteriores.
+Do ponto de vista de uso, ao usar httpclient, não há necessidade de adicionar `HttpClient` nada `IHttpClientFactory`de novo aqui porque o código é o mesmo do que quando usado com , como mostrado nas seções anteriores.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testar repetições de HTTP e disjuntores no eShopOnContainers
 
@@ -94,7 +94,7 @@ Por exemplo, quando o aplicativo estiver em execução, você poderá habilitar 
 
 Em seguida, você pode verificar o status usando o URI `http://localhost:5103/failing`, como mostra a Figura 8-5.
 
-![Captura de tela da verificação do status da simulação de middleware com falha.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
+![Captura de tela de verificação do status da simulação de middleware falhando.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Figura 8-5**. Verificando o estado do middleware ASP.NET com "Falha" – neste caso, desabilitado.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Segue um resumo. A política de repetição tenta várias vezes fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de repetições atinge o número máximo definido para a política de Disjuntor (nesse caso, 5), o aplicativo gera uma BrokenCircuitException. O resultado é uma mensagem amigável, como mostra a Figura 8-6.
 
-![Captura de tela do aplicativo Web MVC com erro inoperante do serviço de cesta.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
+![Captura de tela do aplicativo web MVC com erro inoperante do serviço de cesta.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Figura 8-6**. Disjuntor retornando um erro na interface do usuário
 
@@ -144,9 +144,9 @@ Por fim, outra possibilidade do `CircuitBreakerPolicy` é usar `Isolate` (que fo
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Padrão de disjuntor**\
+- **Padrão do disjuntor**\
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[Anterior](implement-http-call-retries-exponential-backoff-polly.md)
->[Próximo](monitor-app-health.md)
+>[Próximo](implement-http-call-retries-exponential-backoff-polly.md)
+>[anterior](monitor-app-health.md)

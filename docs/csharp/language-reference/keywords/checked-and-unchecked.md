@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: a3b1ef8e6d8e496eda74ab25b3fe17f8174bac11
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8ee4c481a30dce30029fbe8cc26f4798b523a7ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713710"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173634"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Contexto verificado e não verificado (Referência de C#)
 Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um contexto marcado, o estouro aritmético gera uma exceção. Em um contexto não verificado, o estouro aritmético é ignorado, e o resultado é truncado descartando todos os bits de ordem superior que não se encaixam no tipo de destino.  
@@ -32,12 +32,12 @@ Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um co
 - Conversões numéricas explícitas entre tipos integrais ou de `float` ou `double` para um tipo integral.  
   
  Se nem `checked` ou `unchecked` for especificado, o contexto padrão de expressões de não constante (expressões que são avaliadas no tempo de execução) é definido pelo valor da opção do compilador [-checked](../compiler-options/checked-compiler-option.md). Por padrão, o valor dessa opção é removido e as operações aritméticas são executadas em um contexto não verificado.
- 
+
  Para expressões de constante (expressões que podem ser totalmente avaliadas no tempo de compilação), o contexto padrão sempre é verificado. A menos que uma expressão de constante seja explicitamente colocada em um contexto não verificado, estouros que ocorrem durante a avaliação do tempo de compilação da expressão causam erros de tempo de compilação.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Palavras-chave de instrução](statement-keywords.md)
+- [Palavras-chave de declaração](statement-keywords.md)

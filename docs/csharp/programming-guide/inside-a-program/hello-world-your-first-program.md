@@ -1,5 +1,5 @@
 ---
-title: Olá, Mundo--seu primeiro programa usando o Visual Studio no Windows ou o C# guia de programação de Mac
+title: Hello World - Seu primeiro programa usando visual studio no Windows ou Mac - C# Guia de Programação
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712137"
 ---
-# <a name="hello-world----your-first-program"></a>Olá, Mundo--seu primeiro programa
+# <a name="hello-world----your-first-program"></a>Hello World - Seu primeiro programa
 
-Neste artigo, você usará o Visual Studio para criar o "Olá, Mundo!" tradicional programa. O Visual Studio é um IDE (ambiente de desenvolvimento integrado) profissional com muitos recursos projetados para o desenvolvimento do .NET. Você usará apenas alguns dos recursos do Visual Studio para criar esse programa. Para saber mais sobre o Visual Studio, consulte [introdução com C#o Visual ](/visualstudio/ide/quickstart-csharp-console).
+Neste artigo, você usará o Visual Studio para criar o tradicional "Hello World!" programa. Visual Studio é um Ambiente de Desenvolvimento Integrado Profissional (IDE) com muitos recursos projetados para o desenvolvimento .NET. Você usará apenas alguns dos recursos do Visual Studio para criar este programa. Para saber mais sobre o Visual Studio, consulte [Getting Started with Visual C#](/visualstudio/ide/quickstart-csharp-console).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
@@ -25,22 +25,22 @@ Neste artigo, você usará o Visual Studio para criar o "Olá, Mundo!" tradicion
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-Inicie o Visual Studio. Você verá a imagem a seguir no Windows:
+Inicie o Visual Studio. Você verá a seguinte imagem no Windows:
 
 ![Tela de boas-vindas do Visual Studio no Windows](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-Selecione **criar um novo projeto** no canto inferior direito da imagem. O Visual Studio exibe a caixa de diálogo **novo projeto** :
+Selecione **Criar um novo projeto** no canto inferior direito da imagem. O Visual Studio exibe a caixa de diálogo **Do Novo Projeto:**
 
-![Tela novo projeto do Visual Studio no Windows](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
+![Visual Studio nova tela de projeto no Windows](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
 > [!NOTE]
-> Se esta for a primeira vez que você iniciou o Visual Studio, a lista de **modelos de projetos recentes** estará vazia.
+> Se esta é a primeira vez que você inicia o Visual Studio, a lista **de modelos de projeto recentes** está vazia.
 
-Na caixa de diálogo novo projeto, escolha "aplicativo de console (.NET Core)" e, em seguida, pressione **Avançar**. Dê um nome ao seu projeto, como "HelloWorld", depois pressione **criar**.
+Na nova caixa de diálogo do projeto, escolha "Console App (.NET Core)" e, em seguida, **pressione Next**. Dê um nome ao seu projeto, como "HelloWorld", e pressione **Criar**.
 
-O Visual Studio abre seu projeto. Já é um "Olá, Mundo!" básico . Pressione `Ctrl` + `F5` para executar o projeto. O Visual Studio cria seu projeto, convertendo o código-fonte em um executável. Em seguida, ele inicia uma janela de comando que executa o novo aplicativo. Você deve ver o seguinte texto na janela:
+Visual Studio abre seu projeto. Já é um "Hello World" básico! . Pressione `Ctrl`  +  `F5` para executar seu projeto. O Visual Studio constrói seu projeto, convertendo o código-fonte em um executável. Em seguida, ele lança uma janela de comando que executa seu novo aplicativo. Você deve ver o seguinte texto na janela:
 
 ```console
 Hello World!
@@ -51,22 +51,22 @@ Press any key to close this window . . .
 
 Pressione uma tecla para fechar a janela.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
-Iniciar Visual Studio para Mac. Você verá a imagem a seguir no Mac:
+Comece o Visual Studio para Mac. Você verá a seguinte imagem no Mac:
 
 ![Tela de boas-vindas do Visual Studio no Mac](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
 > [!NOTE]
-> Se esta for a primeira vez que você iniciou Visual Studio para Mac, a lista **projetos recentes** estará vazia.
+> Se esta é a primeira vez que você começa o Visual Studio para Mac, a lista **de projetos recentes** está vazia.
 
-Selecione **novo** no canto superior direito da imagem. Visual Studio para Mac exibe a caixa de diálogo **novo projeto** :
+Selecione **Novo** no canto superior direito da imagem. Visual Studio for Mac exibe a caixa de diálogo **Novo Projeto:**
 
-![Tela novo projeto do Visual Studio no Mac](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
+![Visual Studio nova tela de projeto no Mac](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-Na caixa de diálogo novo projeto, escolha ".NET Core" e "aplicativo de console" e, em seguida, pressione **Avançar**. Você precisará selecionar a estrutura de destino. O padrão é bem, então pressione Avançar. Dê um nome ao seu projeto, como "HelloWorld", depois pressione **criar**. Você pode usar o local do projeto padrão. Não adicione este projeto ao controle do código-fonte.
+Na nova caixa de diálogo do projeto, escolha ".NET Core", e "Console App" e, em seguida, **pressione Next**. Você precisará selecionar a estrutura de destino. O padrão é bom, então pressione em seguida. Dê um nome ao seu projeto, como "HelloWorld", e pressione **Criar**. Você pode usar o local padrão do projeto. Não adicione este projeto ao controle de origem.
 
-Visual Studio para Mac abre seu projeto. Já é um "Olá, Mundo!" básico . Pressione `Ctrl` + `Fn` + `F5` para executar o projeto. Visual Studio para Mac compila seu projeto, convertendo o código-fonte em um executável. Em seguida, ele inicia uma janela de comando que executa o novo aplicativo. Você deve ver o seguinte texto na janela:
+Visual Studio para Mac abre seu projeto. Já é um "Hello World" básico! . `Ctrl`  +  `Fn` Pressione  +  `F5` para executar seu projeto. O Visual Studio for Mac constrói seu projeto, convertendo o código-fonte em um executável. Em seguida, ele lança uma janela de comando que executa seu novo aplicativo. Você deve ver o seguinte texto na janela:
 
 ```console
 Hello World!
@@ -78,7 +78,7 @@ Pressione uma tecla para encerrar a sessão.
 
 ---
 
-## <a name="elements-of-a-c-program"></a>Elementos de um C# programa
+## <a name="elements-of-a-c-program"></a>Elementos de um programa C#
 
 Vamos examinar as partes importantes deste programa. A primeira linha contém um comentário. Os caracteres `//` convertem o restante da linha em um comentário.
 
@@ -92,11 +92,11 @@ Um aplicativo de console do C# deve conter um método `Main`, no qual o controle
 
 O método `Main` é um método [estático](../../language-reference/keywords/static.md) que reside dentro de uma classe ou um struct. No exemplo de "Hello World!" anterior, ele reside em uma classe chamada `Hello`. Você pode declarar o método `Main` de uma das seguintes maneiras:
 
-- Ele pode retornar `void`. Isso significa que o programa não retorna um valor.
+- Ele pode retornar `void`. Isso significa que seu programa não retorna um valor.
 
 [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- Ele também pode retornar um inteiro. O inteiro é o **código de saída** para seu aplicativo.
+- Ele também pode retornar um inteiro. O inteiro é o **código de saída** para sua aplicação.
 
 [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
@@ -104,13 +104,13 @@ O método `Main` é um método [estático](../../language-reference/keywords/sta
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-- ou -
+-ou-
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
 O parâmetro do método `Main`, `args`, é um matriz `string` que contém os argumentos de linha de comando usados para invocar o programa.
 
-Para obter mais informações sobre como usar argumentos de linha de comando, consulte os exemplos nos [argumentos principal () e de linha de comando](../main-and-command-args/index.md).
+Para obter mais informações sobre como usar argumentos de linha de comando, consulte os exemplos em [Principais() e Argumentos de linha de comando](../main-and-command-args/index.md).
 
 ## <a name="input-and-output"></a>Entrada e saída
 
@@ -122,9 +122,9 @@ Os programas em C# geralmente usam os serviços de entrada/saída fornecidos pel
 
 Para saber mais sobre os métodos de entrada/saída, veja <xref:System.IO>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)
+- [C# Guia de Programação](../index.md)
+- [Amostras e tutoriais](../../../samples-and-tutorials/index.md)
 - [Main() e argumentos de linha de comando](../main-and-command-args/index.md)
-- [Introdução com VisualC#](/visualstudio/ide/quickstart-csharp-console)
+- [Guia de Introdução ao Visual C#](/visualstudio/ide/quickstart-csharp-console)

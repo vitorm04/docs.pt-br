@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132919"
 ---
 # <a name="basic-string-operations-in-net"></a>Operações básicas de cadeias de caracteres no .NET
@@ -22,16 +22,16 @@ Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base 
  [Criando novas cadeias de caracteres](../../../docs/standard/base-types/creating-new.md)  
  Descreve maneiras básicas de converter objetos em cadeias de caracteres e de combinar cadeias de caracteres.  
   
- [Cortando e removendo caracteres](../../../docs/standard/base-types/trimming.md)  
+ [Cortar e remover caracteres](../../../docs/standard/base-types/trimming.md)  
  Descreve como cortar ou remover caracteres em uma cadeia de caracteres.  
   
- [Preenchendo cadeias de caracteres](../../../docs/standard/base-types/padding.md)  
+ [Preencher cadeias de caracteres](../../../docs/standard/base-types/padding.md)  
  Descreve como inserir caracteres ou espaços vazios em uma cadeia de caracteres.  
   
  [Comparação de cadeias de caracteres](../../../docs/standard/base-types/comparing.md)  
  Descreve como comparar o conteúdo de duas ou mais cadeias de caracteres.  
   
- [Alterando a definição de maiúsculas e minúsculas](../../../docs/standard/base-types/changing-case.md)  
+ [Caso de alteração](../../../docs/standard/base-types/changing-case.md)  
  Descreve como alterar a definição de maiúsculas e minúsculas dentro de uma cadeia de caracteres.  
   
  [Uso da classe StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
@@ -44,5 +44,5 @@ Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base 
  [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)  
  Descreve como converter de um tipo para outro.  
   
- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)  
  Descreve como formatar cadeias de caracteres usando especificadores de formato.

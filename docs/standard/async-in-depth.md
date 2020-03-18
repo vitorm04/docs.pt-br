@@ -7,15 +7,15 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70169114"
 ---
 # <a name="async-in-depth"></a>Assincronia detalhada
 
-Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o modelo assíncrono baseado em Tarefas do .NET. O modelo é exposto pelos tipos `Task` e `Task<T>` e pelas palavras-chave `async` e `await` no C# e no Visual Basic. (Recursos específicos a um idioma podem ser encontrados na seção [Consulte também](#see-also)). Este artigo explica como usar a assincronia do .NET e fornece informações sobre a estrutura de assincronia usada nos bastidores.
+Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o modelo assíncrono baseado em Tarefas do .NET. O modelo é exposto pelos tipos `Task` e `Task<T>` e pelas palavras-chave `async` e `await` no C# e no Visual Basic. (Recursos específicos do idioma são encontrados na seção [Ver também.)](#see-also) Este artigo explica como usar o .NET assync e fornece insights sobre a estrutura de sincronismo usada as capas.
 
 ## <a name="task-and-taskt"></a>Task e Task\<T>
 
@@ -78,7 +78,7 @@ A chamada para `GetStringAsync()` realiza a chamada por bibliotecas .NET de nív
 
 No segundo exemplo acima, um objeto `Task<T>` será retornado de `GetStringAsync`. O uso da palavra-chave `await` faz com que o método retorne um objeto de tarefa recém-criado. O controle retorna para o chamador desse local no método `GetFirstCharactersCountAsync`. Os métodos e propriedades do objeto [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) permitem que os chamadores monitorem o progresso da tarefa, que será concluída quando o código restante em GetFirstCharactersCountAsync for executado.
 
-Após a chamada à API do sistema, a solicitação está no espaço de kernel, trilhando seu caminho para o subsistema de rede do sistema operacional (como `/net` no Kernel do Linux).  Aqui, o sistema operacional tratará a solicitação de rede *assincronamente*.  Os detalhes podem ser diferentes dependendo do sistema operacional usado (a chamada de driver de dispositivo pode ser agendada como um sinal enviado de volta para o tempo de execução ou pode ser feita uma chamada de driver de dispositivo e *em seguida,* um sinal enviado de volta), mas, no fim, o tempo de execução será informado de que a solicitação de rede está em andamento.  Neste momento, o trabalho para o driver de dispositivo estará agendado, em andamento ou já finalizado (a solicitação já está “durante a transmissão”), mas como tudo isso está ocorrendo assincronamente, o driver do dispositivo pode manipular outra coisa imediatamente.
+Após a chamada à API do sistema, a solicitação está no espaço de kernel, trilhando seu caminho para o subsistema de rede do sistema operacional (como `/net` no Kernel do Linux).  Aqui, o sistema operacional tratará a solicitação de rede *assincronamente*.  Os detalhes podem ser diferentes dependendo do sistema operacional usado (a chamada de driver de dispositivo pode ser agendada como um sinal enviado de volta para o runtime ou pode ser feita uma chamada de driver de dispositivo e *em seguida,* um sinal enviado de volta), mas, no fim, o runtime será informado de que a solicitação de rede está em andamento.  Neste momento, o trabalho para o driver de dispositivo estará agendado, em andamento ou já finalizado (a solicitação já está “durante a transmissão”), mas como tudo isso está ocorrendo assincronamente, o driver do dispositivo pode manipular outra coisa imediatamente.
 
 Por exemplo, no Windows, um thread de sistema operacional faz uma chamada para o driver de dispositivo de rede e solicita que ele realize a operação de rede por meio de um IRP (Pacote de Solicitação de Interrupção), que representa a operação.  O driver de dispositivo recebe o IRP, faz a chamada para a rede, marca o IRP como "pendente" e retorna para o sistema operacional.  Como o thread do sistema operacional agora sabe que o IRP está "pendente", ele não tem mais nenhum trabalho para fazer para esse trabalho e “retorna” para que possa ser usado para realizar outro trabalho.
 
@@ -144,7 +144,7 @@ Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada
 
 `async` e `await` são a prática recomendada para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação assíncrona em C#](../csharp/async.md)
 - [Programação assíncrona com async e await (C#)](../csharp/programming-guide/concepts/async/index.md)

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 ms.openlocfilehash: 01e9d6b50bd7eeafea792a772ca86a81e40dafd4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708172"
 ---
 # <a name="common-io-tasks"></a>Tarefas comuns de E/S
-O namespace <xref:System.IO> fornece várias classes que permitem que várias ações, como leitura e gravação, sejam realizadas em arquivos, diretórios e fluxos. Para obter mais informações, confira [E/S de arquivo e fluxo](../../../docs/standard/io/index.md).  
+O namespace <xref:System.IO> fornece várias classes que permitem que várias ações, como leitura e gravação, sejam realizadas em arquivos, diretórios e fluxos. Para obter mais informações, consulte [Arquivo e I/O do fluxo](../../../docs/standard/io/index.md).  
   
 ## <a name="common-file-tasks"></a>Tarefas comuns de arquivos  
   
-|Para fazer isso...|Veja o exemplo neste tópico...|  
+|Para fazer isto...|Veja o exemplo neste tópico...|  
 |-------------------|--------------------------------------|  
 |Criar um arquivo de texto|Método <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.File.Create%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType>|  
-|Gravar em um arquivo de texto|[Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Como escrever um arquivo de texto (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|Gravar em um arquivo de texto|[Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Como: Escrever um arquivo de texto (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
 |Ler de um arquivo de texto|[Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |Anexar texto em um arquivo|[Como abrir e acrescentar a um arquivo de log](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> Método <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>|  
 |Renomear ou mover um arquivo|Método <xref:System.IO.File.Move%2A?displayProperty=nameWithType><br /><br /> Método <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>|  
@@ -39,7 +39,7 @@ O namespace <xref:System.IO> fornece várias classes que permitem que várias a�
   
 ## <a name="common-directory-tasks"></a>Tarefas comuns de diretório  
   
-|Para fazer isso...|Veja o exemplo neste tópico...|  
+|Para fazer isto...|Veja o exemplo neste tópico...|  
 |-------------------|--------------------------------------|  
 |Acessar um arquivo em uma pasta especial, como Meus Documentos|[Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
 |Criar um diretório|Método <xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType><br /><br /> Propriedade <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>|  
@@ -51,8 +51,8 @@ O namespace <xref:System.IO> fornece várias classes que permitem que várias a�
 |Descobrir o tamanho de um diretório|Classe <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Determinar se um diretório existe|Método <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
+- [Arquivo e I/O do fluxo](../../../docs/standard/io/index.md)
 - [Compondo fluxos](../../../docs/standard/io/composing-streams.md)
 - [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)

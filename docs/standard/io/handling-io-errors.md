@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120736"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
@@ -23,12 +23,12 @@ ms.locfileid: "73120736"
 Além das exceções que podem ser geradas em qualquer chamada de método (como um <xref:System.OutOfMemoryException> quando um sistema sofre estresse ou um <xref:System.NullReferenceException> devido a um erro do programador), os métodos do sistema de arquivos do .NET podem gerar as seguintes exceções:
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>, a classe base de todos os tipos de exceção <xref:System.IO>. Ela é gerada para erros cujos códigos retornados do sistema operacional não mapeiam diretamente para outro tipo de exceção.
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>.
 - <xref:System.ArgumentException?displayProperty=nameWithType>, gerada para caracteres de caminho inválido no .NET Framework e no .NET Core 2.0 e versões anteriores.
 - <xref:System.NotSupportedException?displayProperty=nameWithType>, gerada para dois-pontos inválidos no .NET Framework.
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>, gerada para aplicativos em execução em confiança limitada que não têm as permissões necessárias somente no .NET Framework. (Confiança total é o padrão no .NET Framework.)
@@ -83,9 +83,9 @@ No caso de um <xref:System.IO.IOException>, é possível obter outras informaç�
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tratando e gerando exceções no .NET](../exceptions/index.md)
-- [Tratamento de exceções (biblioteca de tarefas paralelas)](../parallel-programming/exception-handling-task-parallel-library.md)
-- [Práticas recomendadas para exceções](../exceptions/best-practices-for-exceptions.md)
+- [Tratamento de exceções (biblioteca de paralelismo de tarefas)](../parallel-programming/exception-handling-task-parallel-library.md)
+- [Melhores práticas para exceções](../exceptions/best-practices-for-exceptions.md)
 - [Como usar exceções específicas em um bloco catch](../exceptions/how-to-use-specific-exceptions-in-a-catch-block.md)

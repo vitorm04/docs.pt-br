@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924796"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173738"
 ---
 # <a name="-define-c-compiler-options"></a>-define (opções do compilador C#)
 A opção **-define** define `name` como um símbolo em todos os arquivos de código-fonte do seu programa.  
@@ -27,7 +27,7 @@ A opção **-define** define `name` como um símbolo em todos os arquivos de có
 -define:name[;name2]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `name`, `name2`  
  O nome de um ou mais símbolos que você deseja definir.  
   
@@ -38,7 +38,7 @@ A opção **-define** define `name` como um símbolo em todos os arquivos de có
   
  **-d** é a forma abreviada de **-define**.  
   
- Você pode definir vários símbolos com **-define**, usando um ponto e vírgula ou uma vírgula para separar os nomes dos símbolos. Por exemplo:  
+ Você pode definir vários símbolos com **-define**, usando um ponto e vírgula ou uma vírgula para separar os nomes dos símbolos. Por exemplo:   
   
 ```console  
 -define:DEBUG;TUESDAY  
@@ -55,7 +55,7 @@ A opção **-define** define `name` como um símbolo em todos os arquivos de có
   
 2. Na guia **Build**, digite o símbolo que deve ser definido na caixa **Símbolos de build condicional**. Por exemplo, se você estiver usando o exemplo de código a seguir, basta digitar `xx` na caixa de texto.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -65,11 +65,11 @@ A opção **-define** define `name` como um símbolo em todos os arquivos de có
 // or uncomment the next line  
 // #define xx  
 using System;  
-public class Test   
+public class Test
 {  
-    public static void Main()   
+    public static void Main()
     {  
-        #if (xx)   
+        #if (xx)
             Console.WriteLine("xx defined");  
         #else  
             Console.WriteLine("xx not defined");  
@@ -78,7 +78,7 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

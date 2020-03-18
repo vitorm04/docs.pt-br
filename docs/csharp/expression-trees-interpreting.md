@@ -4,12 +4,12 @@ description: Aprenda como escrever código para examinar a estrutura de um árvo
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036903"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146002"
 ---
 # <a name="interpreting-expressions"></a>Interpretando Expressões
 
@@ -260,9 +260,9 @@ Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
 Você pode ver a separação em duas possíveis respostas para realçar a mais promissora. A primeira representa expressões *associativas à direita*. A segunda representa expressões *associativas à esquerda*.
-A vantagem desses dois formatos é que o formato pode ser dimensionado para qualquer número arbitrário de expressões de adição. 
+A vantagem desses dois formatos é que o formato pode ser dimensionado para qualquer número arbitrário de expressões de adição.
 
-Se executar essa expressão por meio do visitante, você verá essa saída, verificando se a expressão de adição simples é *associativa à esquerda*. 
+Se executar essa expressão por meio do visitante, você verá essa saída, verificando se a expressão de adição simples é *associativa à esquerda*.
 
 Para executar esse exemplo e ver a árvore de expressão completa, eu precise fazer uma alteração na árvore de expressão de origem. Quando a árvore de expressão contém todas as constantes, a árvore resultante contém apenas o valor constante de `10`. O compilador executa toda a adição e reduz a expressão a sua forma mais simples. Simplesmente adicionar uma variável à expressão é suficiente para ver a árvore original:
 
@@ -349,8 +349,8 @@ O exemplo lida apenas com as árvores de expressão mais rudimentares. O código
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
-    n == 0 ? 
-    1 : 
+    n == 0 ?
+    1 :
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
@@ -509,7 +509,7 @@ The expression body is:
 
 ## <a name="extending-the-sample-library"></a>Estendendo a biblioteca de exemplo
 
-Os exemplos nesta seção mostram as principais técnicas para visitar e examinar nós em uma árvore de expressão. Eu encobri várias ações de que talvez você precise para nos concentrarmos nas tarefas principais de visitar e acessar nós em uma árvore de expressão. 
+Os exemplos nesta seção mostram as principais técnicas para visitar e examinar nós em uma árvore de expressão. Eu encobri várias ações de que talvez você precise para nos concentrarmos nas tarefas principais de visitar e acessar nós em uma árvore de expressão.
 
 Primeiro, os visitantes lidam somente com constantes que são números inteiros. Os valores das constantes podem ser de qualquer outro tipo numérico e a linguagem C# dá suporte a conversões e promoções entre esses tipos. Uma versão mais robusta desse código espelharia todos esses recursos.
 

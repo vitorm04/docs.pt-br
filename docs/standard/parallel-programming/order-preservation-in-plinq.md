@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138213"
 ---
 # <a name="order-preservation-in-plinq"></a>Preservação da ordem em PLINQ
@@ -120,7 +120,7 @@ Em PLINQ, o objetivo é maximizar o desempenho mantendo a exatidão. Uma consult
   
  Os resultados não ordenados não são ativamente embaralhados. Eles simplesmente não têm qualquer lógica de ordenação especial aplicada a eles. Em alguns casos, uma consulta não ordenada pode manter a ordenação da sequência de origem. No caso das consultas que usam o operador Select indexado, o PLINQ garante que os elementos de saída serão apresentados na ordem de índices crescentes, mas não garante quais índices serão atribuídos a quais elementos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
+- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)

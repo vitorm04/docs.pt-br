@@ -11,16 +11,16 @@ helpviewer_keywords:
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160385"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
   
- Há dois tipos principais de coleções; coleções genéricas e coleções não genéricas. Coleções genéricas foram adicionadas ao .NET Framework 2.0 e fornecem coleções que são fortemente tipadas no tempo de compilação. Por isso, coleções genéricas normalmente oferecem melhor desempenho. Coleções genéricas aceitam um parâmetro de tipo quando são criadas e não exigem que você converta de e para o tipo <xref:System.Object> ao adicionar ou remover itens da coleção.  Além disso, há suporte para a maioria das coleções genéricas em aplicativos da Windows Store. As coleções não genéricas armazenam itens como <xref:System.Object>, exigem a conversão e a maioria não tem suporte para o desenvolvimento de aplicativos da Windows Store. No entanto, você pode ver as coleções não genéricas no código mais antigo.  
+ Há dois tipos principais de coleções; coleções genéricas e coleções não genéricas. Coleções genéricas foram adicionadas ao .NET Framework 2.0 e fornecem coleções que são fortemente tipadas no tempo de compilação. Por isso, coleções genéricas normalmente oferecem melhor desempenho. Coleções genéricas aceitam um parâmetro de tipo quando são criadas e não exigem que você converta de e para o tipo <xref:System.Object> ao adicionar ou remover itens da coleção.  Além disso, a maioria das coleções genéricas são suportadas em aplicativos do Windows Store. Coleções não genéricas armazenam <xref:System.Object>itens como , requerem casting, e a maioria não é suportada para o desenvolvimento de aplicativos do Windows Store. No entanto, você pode ver as coleções não genéricas no código mais antigo.  
   
  Começando com o .NET Framework 4, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads. As classes de coleção imutáveis no namespace System.Collections.Immutable ([NuGet package](https://www.nuget.org/packages/System.Collections.Immutable)) são inerentemente thread-safe, pois as operações são executadas em uma cópia da coleção original e a coleção original não pode ser modificada.  
 
@@ -48,9 +48,9 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
   
 - **Um limite inferior consistente**  
   
-     O limite inferior de uma coleção é o índice do seu primeiro elemento. Todas as coleções indexadas nos namespaces <xref:System.Collections> têm um limite inferior de zero, indicando que são indexados em 0. <xref:System.Array> tem um limite inferior de zero por padrão, mas um limite inferior diferente pode ser definido ao criar uma instância da classe **Matriz** usando <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
+     O limite inferior de uma coleção é o índice do seu primeiro elemento. Todas as coleções indexadas nos namespaces <xref:System.Collections> têm um limite inferior de zero, indicando que são indexados em 0. <xref:System.Array>tem um limite inferior de zero por padrão, mas um limite **Array** inferior diferente <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>pode ser definido ao criar uma instância da classe Array usando .  
   
-- **Sincronização para acesso de vários threads** (<xref:System.Collections> somente classes).  
+- **Sincronização para acesso a partir de vários threads** (somente<xref:System.Collections> classes).  
   
      Tipos de coleção não genérica no namespace <xref:System.Collections> oferecem algum acesso thread-safe com sincronização; geralmente exposto por meio dos membros <xref:System.Collections.ICollection.SyncRoot%2A> e <xref:System.Collections.ICollection.IsSynchronized%2A>. Essas coleções são não thread-safe por padrão. Se você precisar de acesso com multithread escalável e eficiente para uma coleção, use uma das classes no namespace <xref:System.Collections.Concurrent> ou considere usar uma coleção imutável. Para obter mais informações, veja [Coleções thread-safe](../../../docs/standard/collections/thread-safe/index.md).  
   
@@ -72,12 +72,12 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
 <a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|DESCRIÇÃO|  
+|Title|Descrição|  
 |-----------|-----------------|  
-|[Selecionando uma Classe de Coleção](../../../docs/standard/collections/selecting-a-collection-class.md)|Descreve as diferentes coleções e ajuda a selecionar uma para o seu cenário.|  
-|[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Descreve os tipos de coleção genérica e não genérica normalmente usadas, tais como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
-|[Quando Usar Coleções Genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve o uso de tipos de coleção genérica.|  
-|[Comparações e Classificações Dentro de Coleções](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|  
+|[Selecionando uma classe de coleção](../../../docs/standard/collections/selecting-a-collection-class.md)|Descreve as diferentes coleções e ajuda a selecionar uma para o seu cenário.|  
+|[Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Descreve os tipos de coleção genérica e não genérica normalmente usadas, tais como <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
+|[Quando usar coleções genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve o uso de tipos de coleção genérica.|  
+|[Comparações e classificações dentro de coleções](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|  
 |[Tipos de Coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|  
 |[Tipos de Coleção de Tabela de Hash e Dicionário](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|  
 |[Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|  

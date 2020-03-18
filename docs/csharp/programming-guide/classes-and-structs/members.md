@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
 ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705503"
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
@@ -18,7 +18,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
   
  A tabela a seguir lista os tipos de membros que uma classe ou struct pode conter:  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |[Campos](./fields.md)|Os campos são variáveis declaradas no escopo da classe. Um campo pode ser um tipo numérico interno ou uma instância de outra classe. Por exemplo, uma classe de calendário pode ter um campo que contém a data atual.|  
 |[Constantes](./constants.md)|Constantes são campos cujo valor é definido em tempo de compilação e não pode ser alterado.|  
@@ -31,7 +31,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
 |[Finalizadores](./destructors.md)|Os finalizadores raramente são usados no C#. Eles são métodos chamados pelo mecanismo de runtime quando o objeto está prestes a ser removido da memória. Geralmente, eles são usados para garantir que recursos que devem ser liberados sejam manipulados corretamente.|  
 |[Tipos aninhados](./nested-types.md)|Os tipos aninhados são tipos declarados dentro de outro tipo. Geralmente, eles são usados para descrever objetos utilizados somente pelos tipos que os contêm.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Classes](./classes.md)

@@ -13,19 +13,19 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156433"
 ---
 # <a name="resolve-assembly-loads"></a>Resolver carregamentos de assembly
-O .NET fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicativos que exigem maior controle sobre o carregamento de assembly. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  
+.NET fornece <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> o evento para aplicações que requerem maior controle sobre o carregamento de montagem. Ao tratar esse evento, seu aplicativo pode carregar um assembly no contexto de carga de fora dos caminhos normais de investigação, selecionar qual das várias versões de assembly carregar, emitir um assembly dinâmico e retorná-lo, etc. Este tópico fornece orientação para a manipulação do evento <xref:System.AppDomain.AssemblyResolve>.  
   
 > [!NOTE]
 > Para resolver carregamentos de assembly no contexto de somente reflexão, use o evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> em vez disso.  
   
-## <a name="how-the-assemblyresolve-event-works"></a>Como o evento AssemblyResolve funciona  
+## <a name="how-the-assemblyresolve-event-works"></a>Como funciona o evento AssemblyResolve  
  Quando você registra um manipulador para o evento <xref:System.AppDomain.AssemblyResolve>, o manipulador é invocado sempre que o runtime falha ao se associar a um assembly por nome. Por exemplo, chamar os seguintes métodos usando o código do usuário pode fazer com que o evento <xref:System.AppDomain.AssemblyResolve> seja gerado:  
   
 - Uma sobrecarga de método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> ou uma sobrecarga de método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> cujo primeiro argumento é uma cadeia de caracteres que representa o nome de exibição do assembly a ser carregado (ou seja, a cadeia de caracteres retornada pela propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
@@ -37,7 +37,7 @@ O .NET fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=n
 - Uma sobrecarga de método <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> que cria uma instância de um objeto em outro domínio de aplicativo.  
   
 ### <a name="what-the-event-handler-does"></a>O que o manipulador de eventos faz  
- O manipulador do evento <xref:System.AppDomain.AssemblyResolve> recebe o nome de exibição do assembly a ser carregado na propriedade <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Se o manipulador não reconhecer o nome do assembly, ele retornará `null` (C#), `Nothing` (Visual Basic) ou `nullptr` (Visual C++).  
+ O manipulador do evento <xref:System.AppDomain.AssemblyResolve> recebe o nome de exibição do assembly a ser carregado na propriedade <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Se o manipulador não reconhecer o `null` nome do `Nothing` conjunto, ele `nullptr` retorna (C#), (Visual Basic) ou (Visual C++).  
   
  Se o manipulador reconhecer o nome do assembly, ele poderá carregar e retornar um assembly que atende à solicitação. A lista a seguir descreve alguns cenários de exemplo.  
   
@@ -64,7 +64,7 @@ O .NET fornece o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=n
   
  Para obter informações sobre os contextos, consulte a sobrecarga de método <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType>.  
   
- Várias versões do mesmo assembly podem ser carregadas no mesmo domínio do aplicativo. Essa prática não é recomendada, pois ela pode levar a problemas de atribuição de tipo. Consulte [práticas recomendadas para o carregamento de assembly](../../framework/deployment/best-practices-for-assembly-loading.md).  
+ Várias versões do mesmo assembly podem ser carregadas no mesmo domínio do aplicativo. Essa prática não é recomendada, pois ela pode levar a problemas de atribuição de tipo. Consulte [As melhores práticas para o carregamento de montagem](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
 ### <a name="what-the-event-handler-should-not-do"></a>O que o manipulador de eventos não deve fazer  
 A regra principal para tratamento do evento <xref:System.AppDomain.AssemblyResolve> é que você não deve tentar retornar um assembly que não reconhece. Ao escrever o manipulador, você deve saber quais assemblies podem fazer com que o evento seja acionado. O manipulador deve retornar nulo para outros assemblies.  
@@ -72,7 +72,7 @@ A regra principal para tratamento do evento <xref:System.AppDomain.AssemblyResol
 > [!IMPORTANT]
 > Começando com o .NET Framework 4, o evento <xref:System.AppDomain.AssemblyResolve> é gerado para assemblies satélite. Essa alteração afeta um manipulador de eventos que foi escrito para uma versão anterior do .NET Framework, se o manipulador tenta resolver todas as solicitações de carga do assembly. Os manipuladores de eventos que ignoram assemblies que eles não reconhecem não são afetados por essa alteração: eles retornam nulo, e os mecanismos normais de fallback são seguidos.  
 
-Ao carregar um assembly, o manipulador de eventos não deve usar nenhuma das sobrecargas de método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que possam fazer com que o evento <xref:System.AppDomain.AssemblyResolve> seja gerado recursivamente, pois isso poderia levar a um excedente de pilha. (Consulte a lista fornecida anteriormente neste tópico.) Isso acontece mesmo que você forneça tratamento de exceção para a solicitação de carregamento, porque nenhuma exceção é lançada até que todos os manipuladores de eventos tenham retornado. Desse modo, o seguinte código resultará em um excedente de pilha se `MyAssembly` não for encontrado:  
+Ao carregar um assembly, o manipulador de eventos não deve usar nenhuma das sobrecargas de método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> ou <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que possam fazer com que o evento <xref:System.AppDomain.AssemblyResolve> seja gerado recursivamente, pois isso poderia levar a um excedente de pilha. (Veja a lista fornecida anteriormente neste tópico.) Isso acontece mesmo se você fornecer o tratamento de exceção para a solicitação de carga, porque nenhuma exceção é lançada até que todos os manipuladores de eventos tenham retornado. Desse modo, o seguinte código resultará em um excedente de pilha se `MyAssembly` não for encontrado:  
 
 ```cpp
 using namespace System;
@@ -198,5 +198,5 @@ End Class
 
 ## <a name="see-also"></a>Confira também
 
-- [Práticas recomendadas para o carregamento de assembly](../../framework/deployment/best-practices-for-assembly-loading.md)
-- [Usar domínios de aplicativo](../../framework/app-domains/use.md)
+- [Melhores práticas para carregamento de montagem](../../framework/deployment/best-practices-for-assembly-loading.md)
+- [Use domínios de aplicativos](../../framework/app-domains/use.md)

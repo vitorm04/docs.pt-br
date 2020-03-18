@@ -12,14 +12,14 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708391"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
-Covariância e contravariância são termos que se referem à capacidade de usar um tipo mais derivado (mais específico) ou um tipo menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
+ Covariância e contravariância são termos que fazem referência à capacidade de usar um tipo mais derivado (mais específico) ou menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
   
 - `Covariance`  
   
@@ -92,7 +92,7 @@ Covariância e contravariância são termos que se referem à capacidade de usar
 > [!NOTE]
 > O último parâmetro de tipo genérico dos delegados genéricos `Func` especifica o tipo do valor de retorno na assinatura do delegado. É covariante (palavra-chave `out`), enquanto os outros parâmetros de tipo genéricos são contravariantes (palavra-chave `in`).  
   
- O código a seguir ilustra isso. O primeiro trecho de código define uma classe chamada `Base`, uma classe chamada `Derived` que herda `Base` e outra classe com um método `static` (`Shared` no Visual Basic) chamado `MyMethod`. O método usa uma instância de `Base` e retorna uma instância de `Derived`. (Se o argumento for uma instância de `Derived`, `MyMethod` o retornará; se o argumento for uma instância de `Base`, `MyMethod` retornará uma nova instância de `Derived`.) No `Main()`, o exemplo cria uma instância de `Func<Base, Derived>` (`Func(Of Base, Derived)` em Visual Basic) que representa `MyMethod`e a armazena na variável `f1`.  
+ O código a seguir ilustra isso. O primeiro trecho de código define uma classe chamada `Base`, uma classe chamada `Derived` que herda `Base` e outra classe com um método `static` (`Shared` no Visual Basic) chamado `MyMethod`. O método usa uma instância de `Base` e retorna uma instância de `Derived`. (Se o argumento for `Derived` `MyMethod` uma instância de , retorna-lo; se o argumento for uma instância de `Base`, `MyMethod` retorna uma nova instância de `Derived`.) Em `Main()`, o exemplo `Func<Base, Derived>` cria`Func(Of Base, Derived)` uma instância de `MyMethod`(no Visual Basic) `f1`que representa , e armazena-a na variável .  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
@@ -144,13 +144,13 @@ Covariância e contravariância são termos que se referem à capacidade de usar
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista de tipos de interfaces e delegados genéricos variantes
  No .NET Framework 4, os tipos de interface e de delegado a seguir têm parâmetros de tipo covariantes e/ou contravariantes.  
   
-|{1&gt;Tipo&lt;1}|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
+|Type|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> para <xref:System.Action%6016>||Sim|  
+|<xref:System.Action%601> em <xref:System.Action%6016>||Sim|  
 |<xref:System.Comparison%601>||Sim|  
 |<xref:System.Converter%602>|Sim|Sim|  
 |<xref:System.Func%601>|Sim||  
-|<xref:System.Func%602> para <xref:System.Func%6017>|Sim|Sim|  
+|<xref:System.Func%602> em <xref:System.Func%6017>|Sim|Sim|  
 |<xref:System.IComparable%601>||Sim|  
 |<xref:System.Predicate%601>||Sim|  
 |<xref:System.Collections.Generic.IComparer%601>||Sim|  
@@ -162,7 +162,7 @@ Covariância e contravariância são termos que se referem à capacidade de usar
 |<xref:System.Linq.IOrderedQueryable%601>|Sim||  
 |<xref:System.Linq.IQueryable%601>|Sim||  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

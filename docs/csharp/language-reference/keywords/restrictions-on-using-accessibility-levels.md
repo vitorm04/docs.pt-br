@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715159"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173530"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrições ao uso de níveis de acessibilidade (Referência em C#)
 
@@ -26,7 +26,7 @@ A tabela a seguir resume as restrições nos níveis de acessibilidade declarada
 |-------------|-------------|
 |[Classes](../../programming-guide/classes-and-structs/classes.md)|A classe base direta de um tipo de classe deve ser, pelo menos, tão acessível quanto o próprio tipo de classe.|
 |[Interfaces](../../programming-guide/interfaces/index.md)|As interfaces base explícitas de um tipo de interface devem ser, pelo menos, tão acessíveis quanto o próprio tipo de interface.|
-|[Delegados](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
+|[Delega](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
 |[Constantes](../../programming-guide/classes-and-structs/constants.md)|O tipo de uma constante deve ser, pelo menos, tão acessível quanto a própria constante.|
 |[Campos](../../programming-guide/classes-and-structs/fields.md)|O tipo de um campo deve ser, pelo menos, tão acessível quanto o próprio campo.|
 |[Métodos](../../programming-guide/classes-and-structs/methods.md)|O tipo de retorno e os tipos de parâmetro de um método devem ser, pelo menos, tão acessíveis quanto o próprio método.|
@@ -71,7 +71,7 @@ public class A
 
     public B MyMethod()
     {
-        // Error: The type B is less accessible 
+        // Error: The type B is less accessible
         // than the method A.MyMethod.
         return new B();
     }
@@ -85,8 +85,8 @@ public class A
     }
 
     MyDelegate d = new MyDelegate(B.MyPrivateMethod);
-    // Even when B is declared public, you still get the error: 
-    // "The parameter B.MyPrivateMethod is not accessible due to 
+    // Even when B is declared public, you still get the error:
+    // "The parameter B.MyPrivateMethod is not accessible due to
     // protection level."
 
     public static B operator +(A m1, B m2)
@@ -103,20 +103,20 @@ public class A
 }
 ```
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../../language-reference/index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../../language-reference/index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](../../language-reference/keywords/index.md)
 - [Modificadores de acesso](../../language-reference/keywords/access-modifiers.md)
 - [Domínio de acessibilidade](../../language-reference/keywords/accessibility-domain.md)
 - [Níveis de acessibilidade](../../language-reference/keywords/accessibility-levels.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../language-reference/keywords/public.md)
-- [private](../../language-reference/keywords/private.md)
-- [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
+- [público](../../language-reference/keywords/public.md)
+- [Privada](../../language-reference/keywords/private.md)
+- [Protegido](../../language-reference/keywords/protected.md)
+- [Interno](../../language-reference/keywords/internal.md)

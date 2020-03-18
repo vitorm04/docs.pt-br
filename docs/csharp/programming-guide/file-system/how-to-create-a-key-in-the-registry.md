@@ -1,5 +1,5 @@
 ---
-title: Como criar uma chave no guia de C# programação de registro
+title: Como criar uma chave no registro - Guia de Programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
 ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635438"
 ---
-# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (C# guia de programação)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (Guia de Programação C#)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
   
 ## <a name="example"></a>Exemplo  
@@ -25,7 +25,7 @@ key.SetValue("Name", "Isabella");
 key.Close();  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
   
 - Copie o código e cole-o no método `Main` de um aplicativo de console.  
   
@@ -33,7 +33,7 @@ key.Close();
   
 - Substitua o parâmetro `Name` pelo nome de um valor que existe diretamente sob o nó Names.  
   
-## <a name="robust-programming"></a>Programação Robusta  
+## <a name="robust-programming"></a>Programação robusta  
  Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.  
   
  As seguintes condições podem causar uma exceção:  
@@ -55,9 +55,9 @@ key.Close();
   
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
 - [Ler, gravar e excluir do Registro com C#](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

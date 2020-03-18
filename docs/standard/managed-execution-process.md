@@ -11,10 +11,10 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160216"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
@@ -32,7 +32,7 @@ ms.locfileid: "78160216"
   
      No tempo de execução, uma compilação JIT (just-in-time) converte o MSIL em código nativo. Durante essa compilação, o código deve passar por um processo de verificação que examina o MSIL e os metadados para descobrir se o código pode ser considerado fortemente tipado.  
   
-4. [Executando o código](#running_code).  
+4. [Código de execução](#running_code).  
   
      O Common Language Runtime fornece a infraestrutura que permite que a execução ocorra e os serviços que podem ser usados durante a execução.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "78160216"
   
  Durante a execução, o código gerenciado recebe serviços como coleta de lixo, segurança, interoperabilidade com código não gerenciado, suporte à depuração entre linguagens e suporte avançado à implantação e ao controle de versão.  
   
- No Microsoft Windows Vista, o carregador do sistema operacional verifica módulos gerenciados examinando um pouco no cabeçalho COFF. Se o bit estiver definido, o módulo será gerenciado. Se o carregador detecta módulos gerenciados, ele carrega mscoree.dll e `_CorValidateImage`, e `_CorImageUnloading` notifica o carregador quando as imagens do módulo gerenciado são carregadas e descarregadas. `_CorValidateImage` executa as seguintes ações:  
+ No Microsoft Windows Vista, o carregador do sistema operacional verifica os módulos gerenciados examinando um pouco no cabeçalho COFF. Se o bit estiver definido, o módulo será gerenciado. Se o carregador detecta módulos gerenciados, ele carrega mscoree.dll e `_CorValidateImage`, e `_CorImageUnloading` notifica o carregador quando as imagens do módulo gerenciado são carregadas e descarregadas. `_CorValidateImage` executa as seguintes ações:  
   
 1. Garante que o código seja um código gerenciado válido.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "78160216"
 - [Metadados e componentes autodescritivos](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Segurança](../../docs/standard/security/index.md)
-- [Interoperação com código não gerenciado](../../docs/framework/interop/index.md)
+- [Interoperação com Código Não Gerenciado](../../docs/framework/interop/index.md)
 - [Implantação](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblies no .NET](assembly/index.md)
-- [Domínios do aplicativo](../../docs/framework/app-domains/application-domains.md)
+- [Domínios de aplicativo](../../docs/framework/app-domains/application-domains.md)

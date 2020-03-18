@@ -1,19 +1,19 @@
 ---
-title: Como gerar XML a partir de arquivos CSVC#()
+title: Como gerar XML a partir de arquivos CSV (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635802"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a>Como gerar XML a partir de arquivos CSVC#()
-Este exemplo mostra como usar LINQ (consulta integrada à linguagem) e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gerar um arquivo XML a partir de um arquivo CSV (valores separados por vírgula).  
+# <a name="how-to-generate-xml-from-csv-files-c"></a>Como gerar XML a partir de arquivos CSV (C#)
+Este exemplo mostra como usar a Consulta Integrada [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ao Idioma (LINQ) e gerar um arquivo XML a partir de um arquivo csv (comma-separated value).  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir executa uma consulta LINQ em uma matriz de cadeias de caracteres.  
+ O código a seguir executa uma consulta LINQ em uma matriz de strings.  
   
  A consulta usa a cláusula `let` para dividir cada cadeia de caracteres em uma matriz de campos.  
   

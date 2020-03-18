@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159228"
 ---
 # <a name="framework-libraries"></a>Bibliotecas do Framework
@@ -32,13 +32,13 @@ O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáv
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) – um tipo de ponto flutuante de 32 bits.
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) – um tipo decimal de 128 bits.
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md))-um tipo booliano que representa `true` ou `false`.
+* <xref:System.Boolean?displayProperty=nameWithType>Um[bool](../csharp/language-reference/builtin-types/bool.md)tipo booleano que representa `true` ou `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) – um tipo numérico de 16 bits que representa um caractere Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
 
 ## <a name="data-structures"></a>estruturas de dados
 
-O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET. Elas são em sua maioria coleções, mas também incluem outros tipos.
+O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET.  Elas são em sua maioria coleções, mas também incluem outros tipos.
 
 * <xref:System.Array> – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
 * <xref:System.Collections.Generic.List%601> – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.

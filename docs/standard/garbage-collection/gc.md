@@ -5,11 +5,11 @@ ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
 ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685758"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61945360"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Gerenciamento automático de memória e coleta de lixo
 
@@ -45,7 +45,7 @@ Depois que o coletor de lixo executa sua primeira coleta de geração 0 e promov
 
 Para a maioria dos objetos que seu aplicativo cria, você pode confiar no coletor de lixo para executar automaticamente as tarefas de gerenciamento de memória necessárias. Entretanto, recursos não gerenciados requerem limpeza explícita. O tipo mais comum de recursos não gerenciados é um objeto que encapsula um recurso do sistema operacional, como um identificador de arquivo, um identificador de janela ou uma conexão de rede. Embora o coletor de lixo seja capaz de acompanhar o tempo de vida de um objeto gerenciado que encapsule um recurso não gerenciado, ele não tem conhecimento específico sobre como limpar o recurso. Quando você cria um objeto que encapsula um recurso não gerenciado, é recomendável fornecer o código necessário para limpar o recurso não gerenciado em um método público `Dispose`. Ao fornecer um método `Dispose`, você permite que usuários do seu objeto liberem, explicitamente, sua memória quando terminarem o objeto. Quando usa um objeto que encapsula um recurso não gerenciado, você deve estar ciente de `Dispose` e chamá-lo conforme necessário. Para obter mais informações sobre a limpeza de recursos não gerenciados e um exemplo de um padrão de design para implementar `Dispose`, veja [Coleta de lixo em .NET](index.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [System.GC](xref:System.GC)
 - [Coleta de lixo no .NET](index.md)

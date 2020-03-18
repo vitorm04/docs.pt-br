@@ -4,54 +4,54 @@ description: Saiba como documentar seu código com comentários de documentaçã
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965926"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146311"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documente seu código com comentários XML
 
 Comentários em documentação XML são um tipo especial de comentário, adicionados acima da definição de qualquer membro ou tipo definido pelo usuário.
 Eles são especiais porque podem ser processados pelo compilador para gerar um arquivo de documentação XML em tempo de compilação.
-O arquivo XML gerado pelo compilador pode ser distribuído junto com seu assembly .NET para que o Visual Studio e outros IDEs possam usar o IntelliSense para mostrar informações rápidas sobre tipos ou membros. Além disso, o arquivo XML pode ser executado por ferramentas como [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) para gerar sites de referência de API.
+O arquivo XML gerado pelo compilador pode ser distribuído junto com seu conjunto .NET para que o Visual Studio e outros IDEs possam usar o IntelliSense para mostrar informações rápidas sobre tipos ou membros. Além disso, o arquivo XML pode ser executado por ferramentas como [DocFX](https://dotnet.github.io/docfx/) e [Sandcastle](https://github.com/EWSoftware/SHFB) para gerar sites de referência de API.
 
 Comentários de documentação XML, como todos os outros comentários, são ignorados pelo compilador.
 
 É possível gerar o arquivo XML em tempo de compilação seguindo um destes procedimentos:
 
-- Se você estiver desenvolvendo um aplicativo com o .NET Core na linha de comando, poderá adicionar um elemento `GenerateDocumentationFile` à seção `<PropertyGroup>` do arquivo de projeto. csproj. Você também pode especificar o caminho para o arquivo de documentação diretamente usando [`DocumentationFile` elemento](/visualstudio/msbuild/common-msbuild-project-properties). O seguinte exemplo gera um arquivo XML no diretório do projeto com o mesmo nome de arquivo raiz do assembly:
+- Se você estiver desenvolvendo um aplicativo com o .NET `GenerateDocumentationFile` Core da `<PropertyGroup>` linha de comando, você pode adicionar um elemento à seção do arquivo de projeto .csproj. Você também pode especificar o caminho [ `DocumentationFile` ](/visualstudio/msbuild/common-msbuild-project-properties)para o arquivo de documentação diretamente usando o elemento . O seguinte exemplo gera um arquivo XML no diretório do projeto com o mesmo nome de arquivo raiz do assembly:
 
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
-   
+
    Isso é equivalente ao seguinte:
-   
+
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
 - Se estiver desenvolvendo um aplicativo usando o Visual Studio, clique com botão direito do mouse no projeto e selecione **Propriedades**. Na caixa de diálogo Propriedades, selecione a guia **Build** e marque **Arquivo de documentação XML**. Também é possível alterar o local em que o compilador grava o arquivo.
 
-- Se você estiver Compilando um aplicativo .NET Framework na linha de comando, adicione a [opção-doc do compilador](language-reference/compiler-options/doc-compiler-option.md) ao compilar.  
+- Se você estiver compilando um aplicativo .NET Framework a partir da linha de comando, adicione a [opção -doc compiler ao](language-reference/compiler-options/doc-compiler-option.md) compilar.  
 
-Comentários de documentação XML usam três barras (`///`) e o corpo do comentário formatado em XML. Por exemplo:
+Comentários de documentação XML usam três barras (`///`) e o corpo do comentário formatado em XML. Por exemplo: 
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>Passo a passo
 
-Vamos examinar a documentação de uma biblioteca matemática muito básica para facilitar que os novos desenvolvedores compreendam/contribuam e que os desenvolvedores de terceiros usem.
+Vamos percorrer a documentação de uma biblioteca matemática muito básica para facilitar o uso de novos desenvolvedores e para desenvolvedores de terceiros.
 
 Este é o código para a biblioteca de matemática simples:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-A biblioteca de exemplo dá suporte a quatro operações aritméticas principais (`add`, `subtract`, `multiply`e `divide`) nos tipos de dados `int` e `double`.
+A biblioteca de amostras suporta quatro grandes`add` `subtract`operações aritméticas ( , `multiply`, e `divide`) on `int` e `double` tipos de dados.
 
-Agora você deseja poder criar um documento de referência de API do seu código para desenvolvedores de terceiros que usam sua biblioteca, mas não têm acesso ao código-fonte.
+Agora você deseja ser capaz de criar um documento de referência de API a partir do seu código para desenvolvedores de terceiros que usam sua biblioteca, mas não têm acesso ao código-fonte.
 Como já foi mencionado, as marcas da documentação XML podem ser usadas para isso. Agora, você será apresentado às marcas XML padrão que têm suporte do compilador de C#.
 
 ## <a name="summary"></a>\<summary>
@@ -61,7 +61,7 @@ Vou demonstrar seu uso adicionando-a à definição de classe `Math` e ao primei
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-A marca `<summary>` é importante e é recomendável incluí-la porque seu conteúdo é a fonte primária do tipo ou informações de membro no IntelliSense ou em um documento de referência de API.
+A `<summary>` tag é importante, e recomendamos que você a inclua porque seu conteúdo é a principal fonte de informações de tipo ou membro no IntelliSense ou em um documento de referência da API.
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -137,7 +137,7 @@ Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
 ## <a name="param"></a>\<param>
 
-Você usa a marca `<param>` para descrever os parâmetros de um método. Veja um exemplo no método de `Add` duplo: o parâmetro que a marca descreve é especificado no atributo **obrigatório** `name`.
+Você usa a marca `<param>` para descrever os parâmetros de um método. Aqui está um exemplo `Add` sobre o método duplo: O parâmetro que a tag descreve é especificado no atributo **necessário.** `name`
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ Adicione um método genérico rápido à sua classe `Math` para verificar se uma
 
 ## <a name="paramref"></a>\<paramref>
 
-Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Como a marca de `<param>`, o nome do parâmetro é especificado no atributo **obrigatório** `name`.
+Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Como `<param>` a tag, o nome do parâmetro é especificado no atributo **necessário.** `name`
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,19 +163,19 @@ Use a marca `<typeparamref>` exatamente como a marca `<paramref>`, mas para decl
 
 ## <a name="list"></a>\<list>
 
-Você usa a marca de `<list>` para formatar informações de documentação como uma lista ordenada, lista não ordenada ou tabela. Crie uma lista não ordenada de cada operação matemática a que sua biblioteca `Math` dá suporte.
+Você usa `<list>` a tag para formatar informações de documentação como uma lista ordenada, lista não ordenada ou tabela. Crie uma lista não ordenada de cada operação matemática a que sua biblioteca `Math` dá suporte.
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 É possível fazer uma lista ordenada ou tabela alterando o atributo `type` para `number` ou `table`, respectivamente.
 
-## <a name="inheritdoc"></a>\<inheritdoc >
+## <a name="inheritdoc"></a>\<herdar>
 
-Você pode usar a marca `<inheritdoc>` para herdar comentários XML de classes base, interfaces e métodos semelhantes. Isso elimina a cópia indesejada e a colagem de comentários XML duplicados e mantém automaticamente os comentários XML sincronizados.
+Você pode `<inheritdoc>` usar a tag para herdar comentários XML de classes básicas, interfaces e métodos semelhantes. Isso elimina a cópia e a cola indesejadas de comentários XML duplicados e mantém automaticamente os comentários XML sincronizados.
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
-### <a name="put-it-all-together"></a>Junte tudo isso
+### <a name="put-it-all-together"></a>Colocar tudo isso junto
 
 Se você seguiu o tutorial e aplicou as marcas ao seu código quando necessário, seu código deve ser semelhante ao seguinte:
 
@@ -206,12 +206,12 @@ O atributo `path` representa uma consulta [XPath](../standard/data/xml/xpath-que
 
 O atributo `name` representa o especificador de nome na marca que precede os comentários.
 
-O atributo `id`, que pode ser usado no lugar de `name`, representa a ID da marca que precede os comentários.
+O `id` atributo, que pode `name`ser usado no lugar de , representa o ID para a tag que precede os comentários.
 
-### <a name="user-defined-tags"></a>Marcas definidas pelo usuário
+### <a name="user-defined-tags"></a>Tags definidas pelo usuário
 
 Todas as marcas descritas acima representam as marcas que são reconhecidas pelo compilador C#. No entanto, o usuário é livre para definir suas próprias marcas.
-Ferramentas como Sandcastle dão suporte a marcas adicionais como [> de evento\<](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) e [\<Note >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)e até mesmo dão suporte a [namespaces de documentação](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Ferramentas como o Sandcastle trazem [ \<](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) suporte para tags extras, como>de eventos e [ \<>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)de notas, e até mesmo suporte [a espaços de identificação documentando.](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)
 Ferramentas de geração de documentação internas ou personalizadas também podem ser usadas com as marcas padrão e vários formatos de saída, de HTML a PDF, podem ter suporte.
 
 ## <a name="recommendations"></a>Recomendações
@@ -223,10 +223,10 @@ Documentar o código é recomendável por vários motivos. A seguir, temos algum
 - No mínimo, os tipos e seus membros devem ter uma marca `<summary>`, porque seu conteúdo é necessário para o IntelliSense.
 - O texto da documentação deve ser escrito usando frases terminadas com ponto final.
 - Classes parciais têm suporte total e informações da documentação serão concatenadas em uma única entrada para esse tipo.
-- O compilador verifica a sintaxe das marcas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>`e `<typeparam>`.
+- O compilador verifica a sintaxe `<include>` `<param>`das `<see>` `<seealso>` `<typeparam>` `<exception>`etiquetas e etiquetas.
 - O compilador valida os parâmetros que contêm caminhos de arquivo e referências para outras partes do código.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Comentários de documentação XML (Guia de Programação em C#)](programming-guide/xmldoc/index.md)
+- [Comentários de documentação XML (Guia de Programação C#)](programming-guide/xmldoc/index.md)
 - [Marcas recomendadas para comentários de documentação (Guia de Programação em C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -1,15 +1,15 @@
 ---
-title: Analisadores de .NET Framework-.NET
-description: Saiba como usar os analisadores de .NET Framework no pacote de analisadores de .NET Framework para encontrar e resolver riscos de segurança
+title: .NET Framework Analyzers - .NET
+description: Saiba como usar os Analisadores de Framework .NET no pacote .NET Framework Analyzers para encontrar e abordar riscos de segurança
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155991"
 ---
 # <a name="the-net-framework-analyzer"></a>O Analisador do .NET Framework
@@ -20,7 +20,7 @@ O analisador é executado interativamente no Visual Studio enquanto você escrev
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Instalar e configurar o Analisador do .NET Framework
 
-Os analisadores de .NET Framework devem ser instalados como um pacote NuGet em todos os projetos em que você deseja executá-los. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
+Os Analisadores de Quadro .NET devem ser instalados como um pacote NuGet em cada projeto onde você deseja que eles sejam executados. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
 
 O Analisador do .NET Framework é fornecido no pacote do NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Esse pacote fornece apenas os analisadores específicos para o .NET Framework, que inclui os analisadores de segurança. Na maioria dos casos, você desejará o pacote do NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers).
 O pacote de agregação FxCopAnalyzers contém todos os analisadores de estrutura incluídos no pacote Framework.Analyzers, bem como os analisadores a seguir:
@@ -65,7 +65,7 @@ A captura de exceções de estado corrompido pode mascarar erros (como violaçõ
 
 Informações adicionais: [## CA2153: não capturar exceções de estado corrompido](/visualstudio/code-quality/ca2153-avoid-handling-corrupted-state-exceptions)
 
-### <a name="ca2229-implement-serialization-constructors"></a>{1&gt;{2&gt;CA2229: Implementar construtores de serialização&lt;2}&lt;1}
+### <a name="ca2229-implement-serialization-constructors"></a>CA2229: implementar construtores de serialização
 
 O analisador gera este aviso quando você cria um tipo que implementa a interface <xref:System.Runtime.Serialization.ISerializable>, mas não define o construtor de serialização necessário. Para corrigir uma violação dessa regra, implemente o construtor de serialização. Para uma classe lacrada, torne o construtor particular; do contrário, deixe-o protegido. O construtor de serialização tem a seguinte assinatura:
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345389"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
@@ -35,7 +35,7 @@ Ela é equivalente ao exemplo a seguir que usa um constructo `if`-`else`.
 
 ## <a name="the-match-expression"></a>A expressão de correspondência
 
-A expressão de correspondência fornece o valor para corresponder aos padrões nos rótulos `case`. A sintaxe é:
+A expressão de correspondência fornece o valor para corresponder aos padrões nos rótulos `case`. Sua sintaxe é:
 
 ```csharp
    switch (expr)
@@ -44,10 +44,10 @@ A expressão de correspondência fornece o valor para corresponder aos padrões 
 No C# 6 e versões anteriores, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
 
 - um [char](../builtin-types/char.md).
-- um [string](../builtin-types/reference-types.md).
+- uma [corda](../builtin-types/reference-types.md).
 - um [bool](../builtin-types/bool.md).
-- um valor [integral](../builtin-types/integral-numeric-types.md) , como um `int` ou um `long`.
-- um valor [enum](../builtin-types/enum.md).
+- um valor [integral,](../builtin-types/integral-numeric-types.md) `int` como `long`um ou um .
+- um [valor enum.](../builtin-types/enum.md)
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
 
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "o controle não pode passar de um rótulo case (\<rótulo case >) para outro".
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por causa disso, o seguinte código gera um erro de compilador, CS0163: "O controle não pode cair de uma etiqueta de caso (etiqueta\<de caso>) para outra."
 
 ```csharp
 switch (caseSwitch)
@@ -112,7 +112,7 @@ Cada instrução `case` define um padrão que, se corresponde à expressão de c
 
 ### <a name="constant-pattern"></a>Padrão de constante
 
-O padrão de constante testa se a expressão de correspondência é igual a uma constante especificada. A sintaxe é:
+O padrão de constante testa se a expressão de correspondência é igual a uma constante especificada. Sua sintaxe é:
 
 ```csharp
    case constant:
@@ -120,8 +120,8 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
-- Um literal [bool](../builtin-types/bool.md) : seja `true` ou `false`.
-- Qualquer constante [integral](../builtin-types/integral-numeric-types.md) , como uma `int`, uma `long`ou uma `byte`.
+- Um [bool](../builtin-types/bool.md) literal: ou `true` `false`ou .
+- Qualquer constante [integral,](../builtin-types/integral-numeric-types.md) `int`como `long`um , `byte`a, ou um .
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
 - Um literal [char](../builtin-types/char.md).
@@ -143,7 +143,7 @@ O exemplo a seguir usa o padrão de constante para manipular a entrada do usuár
 
 ### <a name="type-pattern"></a>Padrão de tipo
 
-O padrão de tipo permite a conversão e a avaliação do tipo concisa. Quando usado com a instrução `switch` para realizar a correspondência de padrões, testa se uma expressão pode ser convertida para um tipo especificado e, se puder, o converte em uma variável desse tipo. A sintaxe é:
+O padrão de tipo permite a conversão e a avaliação do tipo concisa. Quando usado com a instrução `switch` para realizar a correspondência de padrões, testa se uma expressão pode ser convertida para um tipo especificado e, se puder, o converte em uma variável desse tipo. Sua sintaxe é:
 
 ```csharp
    case type varname
@@ -197,10 +197,10 @@ Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` 
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [if-else](if-else.md)
-- [Correspondência Padrão](../../pattern-matching.md)
+- [se-else](if-else.md)
+- [Correspondência de padrões](../../pattern-matching.md)

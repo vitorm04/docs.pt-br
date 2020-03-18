@@ -15,10 +15,10 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159618"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
@@ -31,7 +31,7 @@ Os eventos no .NET são baseados no modelo de representante. O modelo de represe
 
 Um evento é uma mensagem enviada por um objeto para sinalizar a ocorrência de uma ação. A ação pode ser causada pela interação do usuário, como o clique em um botão, ou ser resultado de alguma outra lógica de programa, como a alteração do valor de uma propriedade. O objeto que aciona o evento é chamado de *remetente do evento*. O remetente do evento não sabe qual objeto ou método receberá (identificador) os eventos que ele aciona. O evento normalmente é membro do remetente do evento. Por exemplo, o evento <xref:System.Web.UI.WebControls.Button.Click> é membro da classe <xref:System.Web.UI.WebControls.Button> e o evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> é membro da classe que implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
-Para definir um evento, use a palavra-chave [`event`](../../csharp/language-reference/keywords/event.md) no C# ou [`Event`](../../visual-basic/language-reference/statements/event-statement.md) no Visual Basic na assinatura da sua classe de evento e especifique o tipo de representante para o evento. Os representantes são descritos na próxima seção.  
+Para definir um evento, use [`event`](../../csharp/language-reference/keywords/event.md) a palavra-chave C# ou Visual Basic [`Event`](../../visual-basic/language-reference/statements/event-statement.md) na assinatura da sua classe de evento e especifique o tipo de delegado para o evento. Os representantes são descritos na próxima seção.  
   
 Normalmente, para acionar um evento, você adiciona um método que é marcado como `protected` e `virtual` (em C#) ou `Protected` e `Overridable` (no Visual Basic). Dê a esse método o nome `On`*EventName*; por exemplo, `OnDataReceived`. O método deve usar um parâmetro que especifica um objeto de dados de evento, que é um objeto do tipo <xref:System.EventArgs> ou um tipo derivado. Você fornece esse método para permitir que as classes derivadas substituam a lógica para acionamento do evento. Uma classe derivada sempre deve chamar o método `On`*EventName* da classe base a fim de garantir que os representantes registrados recebam o evento.  
 
@@ -50,7 +50,7 @@ O .NET fornece os representantes <xref:System.EventHandler> e <xref:System.Event
   
 Os representantes são [multicast](xref:System.MulticastDelegate), o que significa que eles podem manter referências a mais de um método de manipulação de eventos. Para obter detalhes, consulte a página de referência <xref:System.Delegate>. Os representantes proporcionam flexibilidade e controle refinado na manipulação de eventos. Um representante atua como um dispatcher de evento para a classe que aciona o evento ao manter uma lista de manipuladores de eventos registrados para o evento.  
   
-Para cenários em que os representantes <xref:System.EventHandler> e <xref:System.EventHandler%601> não funcionam, você pode definir um representante. Os cenários que exigem que você defina um representante são muito raros; por exemplo, quando você deve trabalhar com código que não reconhece genéricos. Marque um representante com a palavra-chave [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) no C# e [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) no Visual Basic na declaração. O exemplo a seguir mostra como declarar um representante chamado `ThresholdReachedEventHandler`.  
+Para cenários em que os representantes <xref:System.EventHandler> e <xref:System.EventHandler%601> não funcionam, você pode definir um representante. Os cenários que exigem que você defina um representante são muito raros; por exemplo, quando você deve trabalhar com código que não reconhece genéricos. Você marca um delegado [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) com a [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) palavra-chave C# e Visual Basic na declaração. O exemplo a seguir mostra como declarar um representante chamado `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -88,7 +88,7 @@ O .NET permite que os assinantes se registrem para receber notificações de eve
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Title|DESCRIÇÃO|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Como acionar e consumir eventos](how-to-raise-and-consume-events.md)|Contém exemplos de como acionar e consumir eventos.|  
 |[Como manipular vários eventos usando propriedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Mostrar como usar propriedades de evento para manipular vários eventos.|  

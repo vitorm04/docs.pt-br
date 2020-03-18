@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606580"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173660"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (opções do compilador do C#)
 A opção **-reference** opção faz com que o compilador importe informações de tipo [public](../keywords/public.md) no arquivo especificado para o projeto atual, permitindo que você referencie metadados dos arquivos do assembly especificado.  
@@ -30,7 +30,7 @@ A opção **-reference** opção faz com que o compilador importe informações 
 -reference:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `filename`  
  O nome de um arquivo que contém um manifesto de assembly. Para importar mais de um arquivo, inclua uma opção **-reference** separada para cada arquivo.  
   
@@ -61,7 +61,7 @@ A opção **-reference** opção faz com que o compilador importe informações 
  O arquivo de resposta csc (.rsp), que referencia assemblies .NET Framework usados com frequência, é usado por padrão. Use [-noconfig](./noconfig-compiler-option.md) se você não quiser que o compilador use csc.rsp.  
   
 > [!NOTE]
-> No Visual Studio, use a caixa de diálogo **Adicionar Referência**. Para obter mais informações, confira [Como: Adicionar ou remover referências usando o Gerenciador de Referências](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantir o comportamento equivalente entre adicionar referências usando `-reference` e usando a caixa de diálogo **Adicionar Referência**, defina a propriedade **Inserir Tipos de Interoperabilidade** como **False** para o assembly que você está adicionando. **True** é o valor padrão para a propriedade.  
+> No Visual Studio, use a caixa de diálogo **Adicionar Referência**. Para obter mais informações, consulte [Como adicionar ou remover referências usando o Gerenciador de Referências](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantir o comportamento equivalente entre adicionar referências usando `-reference` e usando a caixa de diálogo **Adicionar Referência**, defina a propriedade **Inserir Tipos de Interoperabilidade** como **False** para o assembly que você está adicionando. **True** é o valor padrão para a propriedade.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como usar o recurso [alias externo](../keywords/extern-alias.md).  
@@ -89,10 +89,10 @@ GridV1::Grid
  Além disso, é possível consultar o controle de grade de `grid20.dll`, prefixando o nome do controle com `GridV2`, assim:  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

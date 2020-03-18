@@ -4,18 +4,18 @@ description: Saiba mais sobre técnicas de criação de árvores de expressão.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037103"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146041"
 ---
 # <a name="building-expression-trees"></a>Criando árvores de expressão
 
 [Anterior – Interpretando expressões](expression-trees-interpreting.md)
 
-Todas as árvores de expressão que você viu até agora foram criadas pelo compilador C#. Tudo que eu tive que fazer foi criar uma expressão lambda que foi atribuída a uma variável tipada como um `Expression<Func<T>>` ou algum tipo semelhante. Essa não é a única maneira de criar uma árvore de expressão. Para muitos cenários, você pode descobrir que precisa criar uma expressão na memória em runtime. 
+Todas as árvores de expressão que você viu até agora foram criadas pelo compilador C#. Tudo que eu tive que fazer foi criar uma expressão lambda que foi atribuída a uma variável tipada como um `Expression<Func<T>>` ou algum tipo semelhante. Essa não é a única maneira de criar uma árvore de expressão. Para muitos cenários, você pode descobrir que precisa criar uma expressão na memória em runtime.
 
 Criar árvores de expressão é complicado pelo fato de que essas árvores de expressão são imutáveis. Ser imutável significa que você precisa criar a árvore de folhas até a raiz. As APIs que você usará para criar as árvores de expressão refletem esse fato: os métodos que você usará para criar um nó usam todos os seus filhos como argumentos. Vejamos alguns exemplos para mostrar as técnicas a você.
 
@@ -71,7 +71,7 @@ Vamos criar uma árvore de expressão para criar esta expressão:
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
- 
+
 Você começará criando expressões de parâmetro para `x` e `y`:
 
 ```csharp
@@ -111,7 +111,7 @@ Depois, você precisa usar um subconjunto das APIs de reflexão para criar um ob
 
 ## <a name="building-code-in-depth"></a>Criando código profundamente
 
-Você não fica limitado ao que pode criar usando essas APIs. No entanto, quanto mais complicada for a árvore de expressão que você quer criar, mais difícil ser;a gerenciar e ler o código. 
+Você não fica limitado ao que pode criar usando essas APIs. No entanto, quanto mais complicada for a árvore de expressão que você quer criar, mais difícil ser;a gerenciar e ler o código.
 
 Vamos criar uma árvore de expressão que é o equivalente a este código:
 
@@ -128,7 +128,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-Acima, observe que eu não criei a árvore de expressão, apenas o delegado. Usando a classe `Expression`, não é possível criar lambdas de instrução. Este é o código que é necessário para criar a mesma funcionalidade. Ele é complicado pelo fato de que não há uma API para criar um loop `while`. Em vez disso, você precisa criar um loop que contém um teste condicional e um destino para o rótulo para interromper o loop. 
+Acima, observe que eu não criei a árvore de expressão, apenas o delegado. Usando a classe `Expression`, não é possível criar lambdas de instrução. Este é o código que é necessário para criar a mesma funcionalidade. Ele é complicado pelo fato de que não há uma API para criar um loop `while`. Em vez disso, você precisa criar um loop que contém um teste condicional e um destino para o rótulo para interromper o loop.
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -162,13 +162,13 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-O código para criar a árvore de expressão para a função fatorial é bem mais longo, mais complicado e está cheio de rótulos e instruções de interrupção, bem como outros elementos que gostamos de evitar em nossas tarefas de codificação cotidianas. 
+O código para criar a árvore de expressão para a função fatorial é bem mais longo, mais complicado e está cheio de rótulos e instruções de interrupção, bem como outros elementos que gostamos de evitar em nossas tarefas de codificação cotidianas.
 
 Para esta seção, também atualizei o código de visitante para visitar cada nó nessa árvore de expressão e gravar informações sobre os nós que são criados neste exemplo. Você pode [exibir ou baixar o código de exemplo](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) no repositório dotnet/docs do GitHub. Experimente por conta própria criando e executando os exemplos. Para obter instruções de download, consulte [Exemplos e tutoriais](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Examinando as APIs
 
-As APIs de árvore de expressão são algumas das mais difíceis de navegar no .NET Core, mas não tem problema. Sua finalidade é uma tarefa bastante complexa: escrever código que gera código em runtime. Eles são necessariamente complicadas para fornecer um equilíbrio entre dar suporte a todas as estruturas de controle disponíveis na linguagem C# e manter a área de superfície das APIs tão pequena quanto for razoável. Esse equilíbrio significa que muitas estruturas de controle são representadas não por seus constructos em C#, mas por constructos que representam a lógica subjacente que o compilador gera desses constructos de nível superior. 
+As APIs de árvore de expressão são algumas das mais difíceis de navegar no .NET Core, mas não tem problema. Sua finalidade é uma tarefa bastante complexa: escrever código que gera código em runtime. Eles são necessariamente complicadas para fornecer um equilíbrio entre dar suporte a todas as estruturas de controle disponíveis na linguagem C# e manter a área de superfície das APIs tão pequena quanto for razoável. Esse equilíbrio significa que muitas estruturas de controle são representadas não por seus constructos em C#, mas por constructos que representam a lógica subjacente que o compilador gera desses constructos de nível superior.
 
 Além disso, no momento, há expressões de C# que não podem ser criadas diretamente usando os métodos de classe `Expression`. Em geral, esses serão os operadores e expressões mais novos adicionadas no C# 5 e no C# 6. (Por exemplo, expressões `async` não podem ser criadas e o novo operador `?.` não pode ser criado diretamente.)
 

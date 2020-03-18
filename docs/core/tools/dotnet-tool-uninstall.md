@@ -1,52 +1,55 @@
 ---
 title: Comando dotnet tool uninstall
-description: O comando dotnet ferramenta de desinstalação desinstala a ferramenta .NET Core especificada do seu computador.
+description: O comando dotnet desinstalar a ferramenta .NET Core especificada da sua máquina.
 ms.date: 02/14/2020
-ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157039"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847827"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet tool uninstall`-desinstala a [ferramenta .NET Core](global-tools.md) especificada do seu computador.
+`dotnet tool uninstall`- Desinstala a [ferramenta .NET Core](global-tools.md) especificada da sua máquina.
 
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+
 dotnet tool uninstall <PACKAGE_NAME>
+
 dotnet tool uninstall <-h|--help>
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramentas do .NET Core do seu computador. Para usar o comando, especifique uma das seguintes opções:
+O `dotnet tool uninstall` comando fornece uma maneira de você desinstalar ferramentas .NET Core da sua máquina. Para usar o comando, você especifica uma das seguintes opções:
 
-* Para desinstalar uma ferramenta global que foi instalada no local padrão, use a opção `--global`.
-* Para desinstalar uma ferramenta global que foi instalada em um local personalizado, use a opção `--tool-path`.
-* Para desinstalar uma ferramenta local, omita as opções `--global` e `--tool-path`.
+* Para desinstalar uma ferramenta global instalada no local `--global` padrão, use a opção.
+* Para desinstalar uma ferramenta global instalada em um `--tool-path` local personalizado, use a opção.
+* Para desinstalar uma ferramenta local, omita as `--global` opções e `--tool-path` opções.
 
-**As ferramentas locais estão disponíveis a partir do SDK do .NET Core 3,0.**
+**As ferramentas locais estão disponíveis a partir do .NET Core SDK 3.0.**
 
 ## <a name="arguments"></a>Argumentos
 
 - **`PACKAGE_NAME`**
 
-  Nome/ID do pacote NuGet que contém a ferramenta .NET Core a ser desinstalada. Encontre o nome do pacote usando o comando [dotnet tool list](dotnet-tool-list.md).
+  Nome/ID do pacote NuGet que contém a ferramenta .NET Core para desinstalar. Encontre o nome do pacote usando o comando [dotnet tool list](dotnet-tool-list.md).
 
 ## <a name="options"></a>Opções
 
 - **`-g|--global`**
 
-  Especifica que a ferramenta a ser removida pertence a uma instalação de todos os usuários. Não pode ser combinada com a opção `--tool-path`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local.
+  Especifica que a ferramenta a ser removida pertence a uma instalação de todos os usuários. Não pode ser combinada com a opção `--tool-path`. Omitir ambos `--global` e `--tool-path` especificar que a ferramenta a ser removida é uma ferramenta local.
 
 - **`-h|--help`**
 
@@ -54,13 +57,13 @@ O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramen
 
 - **`--tool-path <PATH>`**
 
-  Especifica o local onde a ferramenta será desinstalada. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitir `--global` e `--tool-path` especifica que a ferramenta a ser removida é uma ferramenta local.
+  Especifica o local onde desinstalar a ferramenta. PATH pode ser absoluto ou relativo. Não pode ser combinada com a opção `--global`. Omitir ambos `--global` e `--tool-path` especificar que a ferramenta a ser removida é uma ferramenta local.
 
 ## <a name="examples"></a>Exemplos
 
 - **`dotnet tool uninstall -g dotnetsay`**
 
-  Desinstala a ferramenta global [dotnetsay](https://www.nuget.org/packages/dotnetsay/) .
+  Desinstala a ferramenta global [dotnetsay.](https://www.nuget.org/packages/dotnetsay/)
 
 - **`dotnet tool uninstall dotnetsay --tool-path c:\global-tools`**
 
@@ -68,7 +71,7 @@ O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramen
 
 - **`dotnet tool uninstall dotnetsay --tool-path ~/bin`**
 
-  Desinstala a ferramenta global [dotnetsay](https://www.nuget.org/packages/dotnetsay/) de um diretório específico do linux/MacOS.
+  Desinstala a ferramenta global [dotnetsay](https://www.nuget.org/packages/dotnetsay/) a partir de um diretório específico do Linux/macOS.
 
 - **`dotnet tool uninstall dotnetsay`**
 
@@ -76,4 +79,6 @@ O comando `dotnet tool uninstall` fornece uma maneira de desinstalar as ferramen
 
 ## <a name="see-also"></a>Confira também
 
-- [Ferramentas do .NET Core](global-tools.md)
+- [.NET Core ferramentas](global-tools.md)
+- [Tutorial: Instale e use uma ferramenta global .NET Core usando o .NET Core CLI](global-tools-how-to-use.md)
+- [Tutorial: Instale e use uma ferramenta local .NET Core usando o .NET Core CLI](local-tools-how-to-use.md)

@@ -1,5 +1,5 @@
 ---
-title: Como localizar o nome totalmente qualificado de um assembly
+title: 'Como: Encontrar o nome totalmente qualificado de uma assembléia'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -11,23 +11,23 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348193"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Como localizar o nome totalmente qualificado de um assembly
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Como: Encontrar o nome totalmente qualificado de uma assembléia
 
-Para descobrir o nome totalmente qualificado de um .NET Framework assembly no cache de assembly global, use a ferramenta global assembly cache ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)). Consulte [como: exibir o conteúdo do cache de assembly global](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
+Para descobrir o nome totalmente qualificado de um conjunto .NET Framework no cache de montagem global, use a ferramenta Global Assembly Cache[(Gacutil.exe).](../../framework/tools/gacutil-exe-gac-tool.md) [Veja Como: Veja o conteúdo do cache de montagem global](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
-Para assemblies do .NET Core e para .NET Framework assemblies que não estão no cache de assembly global, você pode obter o nome totalmente qualificado do assembly de várias maneiras:
+Para as assembléias do .NET Core e para as montagens do .NET Framework que não estão no cache de montagem global, você pode obter o nome de montagem totalmente qualificado de várias maneiras:
 
-- Você pode usar o código para gerar as informações para o console ou para uma variável, ou pode usar o [ILDASM. exe (desmontador Il)](../../framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contém o nome totalmente qualificado.
+- Você pode usar o código para produzir as informações para o console ou para uma variável, ou pode usar o [Ildasm.exe (IL Desassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do conjunto, que contém o nome totalmente qualificado.
 
-- Se o assembly já estiver carregado pelo aplicativo, você poderá recuperar o valor da propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obter o nome totalmente qualificado. Você pode usar a propriedade <xref:System.Type.Assembly> de uma <xref:System.Type> definida nesse assembly para recuperar uma referência ao objeto <xref:System.Reflection.Assembly>. O exemplo fornece uma ilustração.
+- Se o assembly já estiver carregado pelo aplicativo, você poderá recuperar o valor da propriedade <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obter o nome totalmente qualificado. Você pode <xref:System.Type.Assembly> usar a <xref:System.Type> propriedade de um conjunto definido <xref:System.Reflection.Assembly> para recuperar uma referência ao objeto. O exemplo fornece uma ilustração.
 
-- Se você souber o caminho do sistema de arquivos do assembly, poderá chamar o métodoC#`static` () ou `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> para obter o nome totalmente qualificado do assembly. Este é um exemplo simples.
+- Se você conhece o caminho do sistema de `static` arquivos do `Shared` conjunto, você <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> pode chamar o método (C#) ou (Visual Basic) para obter o nome de montagem totalmente qualificado. A seguir há um exemplo simples.
 
   ```csharp
   using System;
@@ -58,11 +58,11 @@ Para assemblies do .NET Core e para .NET Framework assemblies que não estão no
 
 - Você pode usar o [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) para examinar os metadados do assembly, que contêm o nome totalmente qualificado.
 
-Para obter mais informações sobre como definir atributos de assembly, como versão, cultura e nome do assembly, consulte [set Assembly Attributes](set-attributes.md). Para obter mais informações sobre como dar um nome forte a um assembly, consulte [criar e usar assemblies de nome forte](create-use-strong-named.md).
+Para obter mais informações sobre a definição de atributos de montagem, como versão, cultura e nome de montagem, consulte [Definir atributos de montagem](set-attributes.md). Para obter mais informações sobre como dar um nome forte a um conjunto, consulte [Criar e usar conjuntos com nomes fortes](create-use-strong-named.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como exibir o nome totalmente qualificado de um assembly que contém uma classe especificada para o console. Ele usa a propriedade <xref:System.Type.Assembly?displayProperty=nameWithType> para recuperar uma referência a um assembly de um tipo que é definido nesse assembly.
+O exemplo a seguir mostra como exibir o nome totalmente qualificado de um conjunto contendo uma classe especificada para o console. Ele usa <xref:System.Type.Assembly?displayProperty=nameWithType> a propriedade para recuperar uma referência a um conjunto de um tipo definido nessa montagem.
 
 ```cpp
 #using <System.dll>
@@ -118,10 +118,10 @@ Class asmname
 End Class
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Nomes de assembly](names.md)
 - [Criar assemblies](create.md)
-- [Criar e usar assemblies de nome forte](create-use-strong-named.md)
-- [Cache de assembly global](../../framework/app-domains/gac.md)
-- [Como o runtime localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Criar e usar assemblies com nome forte](create-use-strong-named.md)
+- [Cache de montagem global](../../framework/app-domains/gac.md)
+- [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md)

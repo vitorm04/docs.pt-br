@@ -4,12 +4,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715248"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173608"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
 
@@ -19,7 +19,7 @@ A palavra-chave `in` faz com que os argumentos sejam passados por referência. E
 
 O exemplo anterior demonstra que o modificador `in` é geralmente desnecessário no site de chamada. Ele apenas é necessário na declaração do método.
 
-> [!NOTE] 
+> [!NOTE]
 > A palavra-chave `in` também pode ser usada com um parâmetro de tipo genérico para especificar que o parâmetro de tipo é contravariante, como parte de uma instrução `foreach` ou como parte de uma cláusula `join` em uma consulta LINQ. Para obter mais informações sobre o uso da palavra-chave `in` nesses contextos, confira [in](in.md) que fornece links para todos esses usos.
   
 As variáveis passadas como argumentos `in` precisam ser inicializadas antes de serem passadas em uma chamada de método. No entanto, o método chamado não pode atribuir um valor nem modificar o argumento.  
@@ -31,7 +31,7 @@ As palavras-chave `in`, `ref` e `out` não são consideradas parte da assinatura
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on in, ref and out".
     public void SampleMethod(in int i) { }
     public void SampleMethod(ref int i) { }
@@ -50,7 +50,7 @@ class InOverloads
 
 ## <a name="overload-resolution-rules"></a>Regras de resolução de sobrecarga
 
-Você pode entender as regras de resolução de sobrecarga para métodos por valor versus argumentos `in`, compreendendo a motivação dos argumentos `in`. A definição de métodos usando parâmetros `in` é uma possível otimização de desempenho. Alguns argumentos de tipo `struct` podem ser grandes em tamanho e, quando os métodos são chamados em loops rígidos ou caminhos de código críticos, o custo da cópia dessas estruturas é crítico. Os métodos declaram parâmetros `in` para especificar que argumentos podem ser passados por referência com segurança porque o método chamado não modifica o estado desse argumento. A passagem desses argumentos por referência evita a cópia (possivelmente) dispendiosa. 
+Você pode entender as regras de resolução de sobrecarga para métodos por valor versus argumentos `in`, compreendendo a motivação dos argumentos `in`. A definição de métodos usando parâmetros `in` é uma possível otimização de desempenho. Alguns argumentos de tipo `struct` podem ser grandes em tamanho e, quando os métodos são chamados em loops rígidos ou caminhos de código críticos, o custo da cópia dessas estruturas é crítico. Os métodos declaram parâmetros `in` para especificar que argumentos podem ser passados por referência com segurança porque o método chamado não modifica o estado desse argumento. A passagem desses argumentos por referência evita a cópia (possivelmente) dispendiosa.
 
 A especificação de `in` em argumentos no site de chamada é normalmente opcional. Não há diferença semântica entre passar argumentos por valor e transmiti-los por meio de referência usando o modificador `in`. O modificador `in` no site de chamada é opcional, pois não é necessário indicar que o valor do argumento pode ser alterado. Você adiciona explicitamente o modificador `in` no site de chamada para garantir que o argumento seja passado por referência, e não por valor. O uso explícito de `in` tem dois efeitos:
 
@@ -108,7 +108,7 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 A única chamada de método em que o argumento é passado por referência é a chamada final.
 
 > [!NOTE]
-> O código anterior usa `int` como o tipo de argumento por questão de simplicidade. Como `int` não é maior que uma referência na maioria dos computadores modernos, não há nenhum benefício em passar um único `int` como uma referência readonly. 
+> O código anterior usa `int` como o tipo de argumento por questão de simplicidade. Como `int` não é maior que uma referência na maioria dos computadores modernos, não há nenhum benefício em passar um único `int` como uma referência readonly.
 
 ## <a name="limitations-on-in-parameters"></a>Limitações em parâmetros `in`
 
@@ -117,13 +117,13 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
 - Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.  
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Parâmetros de método](method-parameters.md)
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160138"
 ---
 # <a name="garbage-collection"></a>Coleta de lixo
@@ -31,15 +31,15 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|DESCRIÇÃO|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Noções básicas sobre a coleta de lixo](../../../docs/standard/garbage-collection/fundamentals.md)|Descreve como funciona a coleta de lixo, como os objetos são alocados no heap gerenciado e outros conceitos principais.|  
 |[Coleta de lixo e desempenho](../../../docs/standard/garbage-collection/performance.md)|Descreve as verificações de desempenho que você pode usar para diagnosticar problemas de desempenho e de coleta de lixo.|  
 |[Coletas Induzidas](../../../docs/standard/garbage-collection/induced.md)|Descreve como fazer uma coleta de lixo ocorrer.|  
 |[Modos de latência](../../../docs/standard/garbage-collection/latency.md)|Descreve os modos de determinam o grau de intrusão da coleta de lixo.|  
-|[Otimização para hospedagem na Web compartilhada](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descreve como otimizar a coleta de lixo em servidores compartilhados por vários sites pequenos.|  
-|[Notificações de coleta de lixo](../../../docs/standard/garbage-collection/notifications.md)|Descreve como determinar quando uma coleta de lixo completa está se aproximando e quando ela é concluída.|  
-|[Monitoramento de recursos de domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descreve como monitorar o uso de CPU e memória por um domínio do aplicativo.|  
+|[Otimização da hospedagem Web compartilhada](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Descreve como otimizar a coleta de lixo em servidores compartilhados por vários sites pequenos.|  
+|[Notificações sobre a coleta de lixo](../../../docs/standard/garbage-collection/notifications.md)|Descreve como determinar quando uma coleta de lixo completa está se aproximando e quando ela é concluída.|  
+|[Monitoramento de recursos de domínio de aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Descreve como monitorar o uso de CPU e memória por um domínio do aplicativo.|  
 |[Referências fracas](../../../docs/standard/garbage-collection/weak-references.md)|Descreve os recursos que permitem que um objeto seja, simultaneamente, coletado pelo coletor de lixo e acessado pelo aplicativo.|  
   
 ## <a name="reference"></a>Referência  

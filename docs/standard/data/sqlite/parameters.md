@@ -1,27 +1,27 @@
 ---
-title: Parâmetros
+title: parâmetros
 ms.date: 12/13/2019
-description: Saiba como usar parâmetros SQL.
+description: Aprenda a usar parâmetros SQL.
 ms.openlocfilehash: 1d2f818ad392a919faedd785394de28a9c6f56c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447184"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400452"
 ---
-# <a name="parameters"></a>Parâmetros
+# <a name="parameters"></a>parâmetros
 
-Os parâmetros são usados para proteger contra ataques de injeção de SQL. Em vez de concatenar a entrada do usuário com instruções SQL, use parâmetros para garantir que a entrada seja tratada apenas como um valor literal e nunca executada. No SQLite, os parâmetros são geralmente permitidos em qualquer lugar que um literal é permitido em instruções SQL.
+Os parâmetros são usados para proteger contra ataques de injeção SQL. Em vez de concatenar a entrada do usuário com instruções SQL, use parâmetros para garantir que a entrada seja tratada apenas como um valor literal e nunca executada. No SQLite, os parâmetros são normalmente permitidos em qualquer lugar que um literal seja permitido em declarações SQL.
 
-Os parâmetros podem ter como prefixo `:`, `@`ou `$`.
+Os parâmetros podem `:`ser `@`prefixados com ou , ou `$`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/HelloWorldSample/Program.cs?name=snippet_Parameter)]
 
-Consulte [tipos de dados](types.md) para obter detalhes sobre como os valores do .NET são mapeados para os valores do SQLite.
+Consulte [os tipos de dados](types.md) para obter detalhes sobre como os valores .NET são mapeados para os valores do SQLite.
 
-## <a name="truncation"></a>Truncamento
+## <a name="truncation"></a>Truncation
 
-Use a propriedade <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> para truncar valores de texto e BLOB.
+Use <xref:Microsoft.Data.Sqlite.SqliteParameter.Size> a propriedade para truncar valores de TEXTO e BLOB.
 
 ```csharp
 // Truncate name to 30 characters
@@ -30,24 +30,24 @@ command.Parameters.AddWithValue("$name", name).Length = 30;
 
 ## <a name="alternative-types"></a>Tipos alternativos
 
-Às vezes, talvez você queira usar um tipo SQLite alternativo. Faça isso definindo a propriedade <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType>.
+Às vezes, você pode querer usar um tipo SQLite alternativo. Faça isso definindo a <xref:Microsoft.Data.Sqlite.SqliteParameter.SqliteType> propriedade.
 
-Os mapeamentos de tipo alternativo a seguir podem ser usados. Para os mapeamentos padrão, consulte [tipos de dados](types.md).
+Os seguintes mapeamentos de tipo alternativos podem ser usados. Para os mapeamentos padrão, consulte [Tipos de dados](types.md).
 
-| Value          | Sqlitetype | Comentários          |
+| Valor          | SqliteType | Comentários          |
 | -------------- | ---------- | ---------------- |
-| Char           | Inteiro    | UTF-16           |
-| DateTime       | Real       | Valor do dia Juliano |
-| DateTimeOffset | Real       | Valor do dia Juliano |
-| {1&gt;Guid&lt;1}           | Blob       |                  |
+| Char           | Integer    | UTF-16           |
+| Datetime       | Real       | Valor do dia de Julian |
+| DateTimeOffset | Real       | Valor do dia de Julian |
+| Guid           | Blob       |                  |
 | TimeSpan       | Real       | Em dias          |
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DateAndTimeSample/Program.cs?name=snippet_SqliteType)]
 
 ## <a name="output-parameters"></a>Parâmetros de saída
 
-O SQLite não dá suporte a parâmetros de saída. Em vez disso, retorna valores nos resultados da consulta.
+O SQLite não suporta parâmetros de saída. Em vez disso, os valores de retorno nos resultados da consulta.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Tipos de dados](types.md)
