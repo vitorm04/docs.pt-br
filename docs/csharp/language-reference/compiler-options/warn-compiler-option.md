@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602399"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (opções do compilador C#)
@@ -28,9 +28,9 @@ A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.
 -warn:option  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `option`  
- O nível de aviso que você deseja exibir para a compilação: Números mais baixos mostram apenas avisos de gravidade alta; números mais altos mostram mais avisos. Os valores válidos vão de 0 a 4:  
+ O nível de aviso que você deseja que seja exibido para a compilação: números mais baixos mostram apenas avisos de gravidade alta; números mais altos mostram mais avisos. Os valores válidos vão de 0 a 4:  
   
 |Nível de aviso|Significado|  
 |-------------------|-------------|  
@@ -55,7 +55,7 @@ A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.
   
 3. Modifique a propriedade **Nível de Aviso**.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e fazer com que o compilador exiba somente avisos de nível 1:  
@@ -64,7 +64,7 @@ A opção **-warn** especifica o nível de aviso a ser exibido pelo compilador.
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

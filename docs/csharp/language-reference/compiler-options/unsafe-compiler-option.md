@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
 ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65877987"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opções do compilador C#)
@@ -56,7 +56,7 @@ Compile `in.cs` para o modo não seguro:
 csc -unsafe in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](index.md)
+- [C# Opções de compilador](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

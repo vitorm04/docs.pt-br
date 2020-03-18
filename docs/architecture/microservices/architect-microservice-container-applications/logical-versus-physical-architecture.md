@@ -3,10 +3,10 @@ title: Arquitetura lógica versus arquitetura física
 description: Entenda as diferenças entre arquiteturas lógica e física.
 ms.date: 09/20/2018
 ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834396"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Arquitetura lógica versus arquitetura física
@@ -25,7 +25,7 @@ Portanto, um microsserviço de negócios ou um Contexto limitado é uma arquitet
 
 Como mostra a Figura 4-8, o microsserviço de negócios de catálogo pode ser composto por vários serviços ou processos. Eles podem ser vários serviços do ASP.NET Web API ou qualquer outro tipo de serviços que usam HTTP ou qualquer outro protocolo. Mais importante, os serviços podem compartilhar os mesmos dados, desde que esses serviços sejam coesos em relação ao mesmo domínio de negócios.
 
-![Diagrama do microserviço de negócios do catálogo com servidores físicos.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
+![Diagrama do microserviço de negócios catálogo com servidores físicos.](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
 **Figura 4-8**. Microsserviço de negócios com vários serviços físicos
 
@@ -34,5 +34,5 @@ Os serviços no exemplo compartilham o mesmo modelo de dados, porque o serviço 
 Em resumo, a arquitetura lógica de microsserviços nem sempre precisa coincidir com a arquitetura de implantação física. Neste guia, sempre que mencionamos um microsserviço, queremos dizer um microsserviço lógico ou empresarial que pode ser mapeado para um ou mais serviços (físicos). Na maioria dos casos, esse será um único serviço, mas pode ser mais.
 
 >[!div class="step-by-step"]
->[Anterior](data-sovereignty-per-microservice.md)
->[Próximo](distributed-data-management.md)
+>[Próximo](data-sovereignty-per-microservice.md)
+>[anterior](distributed-data-management.md)

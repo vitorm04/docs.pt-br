@@ -13,10 +13,10 @@ helpviewer_keywords:
 - -? compiler option [C#]
 ms.assetid: 8d53f6ba-5c3b-4183-976e-9c0f26fd3680
 ms.openlocfilehash: bbf4fd6fd13ee267dcbc80568577d5f8aa7d625e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602914"
 ---
 # <a name="-help---c-compiler-options"></a>/help, /? (Opções do Compilador C#)
@@ -34,7 +34,7 @@ Essa opção envia uma lista de opções do compilador e uma breve descrição d
   
  Essa opção do compilador não está disponível no Visual Studio e não pode ser alterada programaticamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
 ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712670"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (referência do C#)
 
-Use o qualificador de alias de namespace `::` para acessar um membro de um namespace com alias. Você pode usar o qualificador `::` somente entre dois identificadores. O identificador à esquerda pode ser qualquer um dos seguintes aliases:
+Use o qualificador `::` de alias namespace para acessar um membro de um namespace com alias. Você pode `::` usar o qualificador apenas entre dois identificadores. O identificador à esquerda pode ser qualquer um dos seguintes aliases:
 
-- Um alias de namespace criado com uma [diretiva de alias using](../keywords/using-directive.md):
+- Um alias namespace criado com uma [diretiva de alias usando:](../keywords/using-directive.md)
 
   ```csharp
   using forwinforms = System.Drawing;
@@ -56,14 +56,14 @@ Use o qualificador de alias de namespace `::` para acessar um membro de um names
   > [!NOTE]
   > A palavra-chave `global` é o alias do namespace global apenas quando é o identificador à esquerda do qualificador `::`.
 
-Você também pode usar o [operador de `.` de acesso de membro](member-access-operators.md#member-access-operator-) para acessar um membro de um namespace com alias. No entanto, o operador de `.` também é usado para acessar um membro de tipo. O qualificador `::` garante que o identificador à esquerda dele sempre faça referência a um alias de namespace, mesmo que exista um tipo ou namespace com o mesmo nome.
+Você também pode usar o [operador de acesso `.` de membro](member-access-operators.md#member-access-operator-) para acessar um membro de um namespace com alias. No entanto, o `.` operador também é usado para acessar um membro do tipo. O qualificador `::` garante que o identificador à esquerda dele sempre faça referência a um alias de namespace, mesmo que exista um tipo ou namespace com o mesmo nome.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Saiba mais na seção [Qualificadores de alias de namespace](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
-- [Usar namespaces](../../programming-guide/namespaces/using-namespaces.md)
+- [Usando namespaces](../../programming-guide/namespaces/using-namespaces.md)

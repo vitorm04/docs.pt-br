@@ -9,10 +9,10 @@ helpviewer_keywords:
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
 ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606852"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva (opções do compilador C#)
@@ -24,7 +24,7 @@ A opção do compilador **-highentropyva** informa ao kernel do Windows se um de
 -highentropyva[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
  Essa opção especifica que um executável de 64 bits ou um executável que está marcado com a opção do compilador [-platform:anycpu](./platform-compiler-option.md) é compatível com um espaço de endereço virtual de alta entropia. A opção está desabilitada por padrão. Use **-highentropyva+** ou **-highentropyva** para habilitá-la.  
   

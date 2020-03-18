@@ -8,10 +8,10 @@ helpviewer_keywords:
 - by keyword [C#]
 ms.assetid: efe6f0e3-be40-4df2-a144-c7db968ae052
 ms.openlocfilehash: 4fa32a0dbfd8210ef8537aee849a55414b107a7b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713726"
 ---
 # <a name="by-c-reference"></a>by (Referência de C#)
@@ -24,6 +24,6 @@ O exemplo a seguir mostra o uso da palavra-chave contextual `by` em uma cláusul
 
 [!code-csharp[csrefKeywordsContextual#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#10)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ em C#](../../linq/index.md)

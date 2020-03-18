@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606400"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (opções do compilador C#)
@@ -41,7 +41,7 @@ A opção **-target:library** faz com que o compilador crie uma DLL (biblioteca 
   
 3. Modifique a propriedade **Tipo de saída**.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile `in.cs`, criando `in.dll`:  
@@ -50,7 +50,7 @@ A opção **-target:library** faz com que o compilador crie uma DLL (biblioteca 
 csc -target:library in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [-target (opções do compilador do C#)](./target-compiler-option.md)
-- [Opções do compilador de C#](./index.md)
+- [-destino (C# Opções de compilador)](./target-compiler-option.md)
+- [C# Opções de compilador](./index.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602529"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (opções do compilador C#)
@@ -27,7 +27,7 @@ Insere o recurso especificado no arquivo de saída.
 -resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `filename`  
  O arquivo de recurso do .NET Framework que você deseja inserir no arquivo de saída.  
   
@@ -38,7 +38,7 @@ Insere o recurso especificado no arquivo de saída.
  A acessibilidade do recurso: público ou privado. O padrão é público.  
   
 ## <a name="remarks"></a>Comentários  
- Use [-linkresource](./linkresource-compiler-option.md) para vincular um recurso a um assembly e não adicionar o arquivo de recurso ao arquivo de saída.  
+ Use [-linkresource](./linkresource-compiler-option.md) para vincular um recurso a um conjunto e não adicionar o arquivo de recurso ao arquivo de saída.  
   
  Por padrão, recursos são públicos no assembly quando são criados usando o compilador C#. Para tornar os recursos privados, especifique `private` como o modificador de acessibilidade. Não é permitida nenhuma outra acessibilidade diferente de `public` ou `private`.  
   
@@ -67,7 +67,7 @@ Insere o recurso especificado no arquivo de saída.
 csc -resource:rf.resource in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

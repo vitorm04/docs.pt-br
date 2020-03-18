@@ -3,13 +3,13 @@ title: Principais aspectos a serem lembrados
 description: Saiba quais são os principais aspectos a serem lembrados do guia/livro eletrônico “Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres” para ter uma visão geral de alto nível dos problemas envolvidos ao usar uma arquitetura de microsserviços, como as vantagens e desvantagens, os padrões de DDD para design e desenvolvimento, bem como a resiliência, a segurança e o uso de orquestradores.
 ms.date: 10/19/2018
 ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674453"
 ---
-# <a name="key-takeaways"></a>Principais aspectos a serem lembrados
+# <a name="key-takeaways"></a>Principais observações
 
 A seguir, encontram-se as conclusões mais importantes deste guia, que servem como um resumo dos principais aspectos a serem lembrados.
 
@@ -19,7 +19,7 @@ A seguir, encontram-se as conclusões mais importantes deste guia, que servem co
 
 **Contêineres como uma unidade de implantação.** Um contêiner do Docker está se tornando a unidade padrão de implantação para qualquer serviço ou aplicativo baseado em servidor.
 
-**Microsserviços.** A arquitetura de microsserviços está se tornando a abordagem preferencial para aplicativos críticos grandes ou complexos e distribuídos baseados em diversos subsistemas independentes na forma de serviços autônomos. Em uma arquitetura baseada em microsserviço, o aplicativo é criado em uma coleção de serviços que podem ser desenvolvidos, testados, implantados e ter as versões controladas de forma independente. Cada serviço pode incluir qualquer banco de dados autônomo relacionado.
+**Microserviços.** A arquitetura de microsserviços está se tornando a abordagem preferencial para aplicativos críticos grandes ou complexos e distribuídos baseados em diversos subsistemas independentes na forma de serviços autônomos. Em uma arquitetura baseada em microsserviço, o aplicativo é criado em uma coleção de serviços que podem ser desenvolvidos, testados, implantados e ter as versões controladas de forma independente. Cada serviço pode incluir qualquer banco de dados autônomo relacionado.
 
 **Design controlado por domínio e SOA.** Os padrões de arquitetura de microsserviços derivam da SOA (arquitetura orientada a serviços) e do DDD (design controlado por domínio). Ao projetar e desenvolver microsserviços para ambientes com necessidades e regras dos negócios em evolução, é importante considerar as abordagens e os padrões de DDD.
 

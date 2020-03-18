@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76508592"
 ---
 ### <a name="removed-controls"></a>Controles removidos
 
-A partir do .NET Core 3,1, alguns Windows Forms controles não estão mais disponíveis.
+A partir do .NET Core 3.1, alguns controles do Windows Forms não estão mais disponíveis.
 
-#### <a name="change-description"></a>Descrição das alterações
+#### <a name="change-description"></a>Descrição da alteração
 
-A partir do .NET Core 3,1, vários controles de Windows Forms não estão mais disponíveis. Os controles de substituição com design e suporte melhores foram introduzidos no .NET Framework 2,0. Os controles preteridos foram removidos anteriormente das caixas de ferramentas do designer, mas ainda estavam disponíveis para serem usados.
+Começando com o .NET Core 3.1, vários controles do Windows Forms não estão mais disponíveis. Os controles de substituição que têm melhor design e suporte foram introduzidos no .NET Framework 2.0. Os controles depreciados foram previamente removidos das caixas de ferramentas do designer, mas ainda estavam disponíveis para serem usados.
 
 Os seguintes tipos não estão mais disponíveis:
 
@@ -51,15 +51,15 @@ Os seguintes tipos não estão mais disponíveis:
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Cada controle removido tem um controle de substituição recomendado. Consulte a tabela a seguir:
+Cada controle removido tem um controle de substituição recomendado. Consulte a seguinte tabela:
 
-| Controle removido (API) | Substituição recomendada | APIs associadas que foram removidas |
+| Controle removido (API) | Substituição recomendada | APIs associadas que são removidas |
 |-|-|-|
-| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, datagridlinesstyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTesttype |
-| ToolBar | ToolStrip | ToolBarAppearance |
-| ToolBarButton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
+| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
+| ToolBar | ToolStrip | Toolbarappearance |
+| Toolbarbutton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |
-| Menu | ToolStripDropDown, ToolStripDropDownMenu | MenuItemCollection |
+| Menu | ToolStripDropDown, ToolStripDropDownMenu | Menuitemcollection |
 | MainMenu | MenuStrip | |
 | MenuItem | ToolStripMenuItem | |
 

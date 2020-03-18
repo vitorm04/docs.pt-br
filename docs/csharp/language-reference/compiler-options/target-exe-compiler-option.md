@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606458"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (opções do compilador C#)
@@ -43,7 +43,7 @@ A opção **-target:exe** faz com que o compilador crie um aplicativo de console
   
 3. Modifique a propriedade **Tipo de saída**.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Cada uma das seguintes linhas de comando compilará `in.cs`, criando `in.exe`:  
@@ -53,7 +53,7 @@ csc -target:exe in.cs
 csc in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [-target (opções do compilador do C#)](./target-compiler-option.md)
-- [Opções do compilador de C#](./index.md)
+- [-destino (C# Opções de compilador)](./target-compiler-option.md)
+- [C# Opções de compilador](./index.md)

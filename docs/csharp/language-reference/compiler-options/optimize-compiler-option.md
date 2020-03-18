@@ -13,10 +13,10 @@ helpviewer_keywords:
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606605"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (opções do compilador C#)
@@ -47,7 +47,7 @@ A opção **-optimize** habilita ou desabilita otimizações executadas pelo com
   
 3. Modifique a propriedade **Otimizar código**.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.Optimize%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile `t2.cs` e habilite as otimizações do compilador:  
@@ -56,7 +56,7 @@ A opção **-optimize** habilita ou desabilita otimizações executadas pelo com
 csc t2.cs -optimize  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

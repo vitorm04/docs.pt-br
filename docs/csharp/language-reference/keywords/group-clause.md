@@ -9,10 +9,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713463"
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
@@ -53,7 +53,7 @@ O exemplo a seguir mostra o uso de um valor booliano para uma chave dividir os r
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por alcance numérico
 
-O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para obter mais informações sobre como usar métodos em expressões de consulta com segurança, consulte [tratar exceções em expressões de consulta](../../linq/handle-exceptions-in-query-expressions.md).
+O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para obter mais informações sobre como usar métodos com segurança em expressões de consulta, consulte [Lidar com exceções em expressões de consulta](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +65,7 @@ Use uma chave composta para agrupar elementos de acordo com mais de uma chave. U
 group person by new {name = person.surname, city = person.city};
 ```
 
-Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [como implementar uma classe leve com propriedades implementadas automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [como consultar arquivos duplicados em uma árvore de diretórios](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
+Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, [consulte Como implementar uma classe leve com propriedades implementadas automaticamente](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e como consultar arquivos [duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
 
 ## <a name="example"></a>Exemplo
 
@@ -85,14 +85,14 @@ Este exemplo mostra como executar a lógica adicional nos grupos depois criá-lo
 
 No tempo de compilação, as cláusulas `group` são convertidas em chamadas para o método <xref:System.Linq.Enumerable.GroupBy%2A>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>
 - <xref:System.Linq.Enumerable.ThenBy%2A>
 - <xref:System.Linq.Enumerable.ThenByDescending%2A>
 - [Palavras-chave de consulta](query-keywords.md)
-- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
-- [Criar um grupo aninhado](../../linq/create-a-nested-group.md)
+- [Consulta Integrada ao Idioma (LINQ)](../../linq/index.md)
+- [Crie um grupo aninhado](../../linq/create-a-nested-group.md)
 - [Agrupar resultados de consultas](../../linq/group-query-results.md)
-- [Executar uma subconsulta em uma operação de agrupamento](../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Realize uma subconsulta em uma operação de agrupamento](../../linq/perform-a-subquery-on-a-grouping-operation.md)

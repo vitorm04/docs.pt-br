@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606823"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opções do compilador C#)
-A opção **-lib** especifica o local dos assemblies referenciados por meio da opção [-reference (Opções do Compilador do C#)](./reference-compiler-option.md).  
+A opção **-lib** especifica a localização dos conjuntos referenciados por meio da opção [-referência (C# Compiler Options).](./reference-compiler-option.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,7 +24,7 @@ A opção **-lib** especifica o local dos assemblies referenciados por meio da o
 -lib:dir1[,dir2]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `dir1`  
  Um diretório para o compilador examinar se um assembly referenciado não foi encontrado no diretório de trabalho atual (o diretório do qual você está invocando o compilador) ou no diretório de sistema do Common Language Runtime.  
   
@@ -58,7 +58,7 @@ A opção **-lib** especifica o local dos assemblies referenciados por meio da o
   
 3. Modifique o conteúdo da caixa de listagem.  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile t2.cs para criar um arquivo .exe. O compilador examinará referências de assembly no diretório de trabalho e no diretório raiz da unidade C.  
@@ -67,7 +67,7 @@ A opção **-lib** especifica o local dos assemblies referenciados por meio da o
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](./index.md)
+- [C# Opções de compilador](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

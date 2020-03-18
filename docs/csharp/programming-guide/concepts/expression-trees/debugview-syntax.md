@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661723"
 ---
 # <a name="debugview-syntax"></a>Sintaxe de `DebugView`
@@ -47,14 +47,14 @@ Para objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=na
 
 Para tipos numéricos que têm sufixos padrão como literais de C#, o sufixo é adicionado ao valor. A tabela a seguir mostra os sufixos associados com vários tipos numéricos.
 
-| Tipo | Palavra-chave | Sufixo |
+| Type | Palavra-chave | Sufixo |
 |--|--|--|
 | <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/builtin-types/integral-numeric-types.md) | UL |
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
+| <xref:System.Int64?displayProperty=nameWithType> | [Longas](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [Ulong](../../../language-reference/builtin-types/integral-numeric-types.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [Duplo](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [Flutuar](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [Decimal](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
 
 ### <a name="examples"></a>Exemplos
 

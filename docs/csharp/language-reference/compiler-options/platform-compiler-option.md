@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70849871"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opções do compilador C#)
@@ -25,7 +25,7 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
 -platform:string
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 `string` \
 anycpu (padrão), anycpu32bitpreferred, ARM, x64, x86 ou Itanium.
@@ -69,9 +69,9 @@ Para obter mais informações sobre o desenvolvimento de um aplicativo para ser 
 3. Modifique a propriedade **Destino da plataforma** e, para projetos que definem como destino o .NET Framework 4.5, marque ou desmarque a caixa de seleção **Preferir 32 bits**.
 
 > [!NOTE]
-> `-platform`Não está disponível no ambiente de desenvolvimento no Visual C# Express.
+> `-platform`não está disponível no ambiente de desenvolvimento no Visual C# Express.
 
-Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.
+Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.
 
 ## <a name="example"></a>Exemplo
 
@@ -81,7 +81,7 @@ O exemplo a seguir mostra como usar a opção **-platform** para especificar que
 csc -platform:anycpu filename.cs
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Opções do compilador de C#](index.md)
+- [C# Opções de compilador](index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712956"
 ---
 # <a name="using-statement-c-reference"></a>Instrução using (Referência de C#)
@@ -21,7 +21,7 @@ O exemplo a seguir mostra como usar a instrução `using`.
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-A partir C# do 8,0, você pode usar a seguinte sintaxe alternativa para a instrução de `using` que não exige chaves:
+Começando com C# 8.0, você pode usar a `using` seguinte sintaxe alternativa para a declaração que não requer aparelhos:
 
 [!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
 
@@ -35,7 +35,7 @@ A instrução `using` garante que <xref:System.IDisposable.Dispose%2A> seja cham
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-A sintaxe de instrução `using` mais recente se traduz em um código muito semelhante. O bloco de `try` é aberto onde a variável é declarada. O bloco de `finally` é adicionado ao fechamento do bloco delimitador, normalmente no final de um método.
+A nova `using` sintaxe de declaração se traduz em código muito semelhante. O `try` bloco é aberto onde a variável é declarada. O `finally` bloco é adicionado no fechamento do bloco de fechamento, normalmente no final de um método.
 
 Para obter mais informações sobre a instrução `try`-`finally`, veja o tópico [try-finally](try-finally.md).
 
@@ -53,17 +53,17 @@ Você pode criar uma instância do objeto de recurso e, em seguida, passar a var
 
 Para obter mais informações sobre como descartar objetos `IDisposable`, veja [Usando objetos que implementam IDisposable](../../../standard/garbage-collection/using-objects.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução using](~/_csharplang/spec/statements.md#the-using-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [Diretiva using](using-directive.md)
 - [Coleta de lixo](../../../standard/garbage-collection/index.md)
 - [Usando objetos que implementam IDisposable](../../../standard/garbage-collection/using-objects.md)
 - [Interface IDisposable](xref:System.IDisposable)
-- [usando a instrução C# em 8,0](~/_csharplang/proposals/csharp-8.0/using.md)
+- [usando a declaração em C# 8.0](~/_csharplang/proposals/csharp-8.0/using.md)

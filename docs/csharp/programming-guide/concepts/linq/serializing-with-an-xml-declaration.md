@@ -3,10 +3,10 @@ title: Serializando com uma declaração XML (C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
 ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483474"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Serializando com uma declaração XML (C#)
@@ -29,7 +29,7 @@ string str = File.ReadAllText("Root.xml");
 Console.WriteLine(str);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -55,12 +55,12 @@ using (XmlWriter xw = XmlWriter.Create(sb, xws)) {
 Console.WriteLine(sb.ToString());  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Serializando árvores XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

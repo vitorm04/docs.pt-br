@@ -3,10 +3,10 @@ title: Informações do chamador (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595343"
 ---
 # <a name="caller-information-c"></a>Informações do chamador (C#)
@@ -15,7 +15,7 @@ Ao usar atributos de informações do chamador, você pode obter informações s
 
 Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:
 
-|Atributo|DESCRIÇÃO|Tipo|
+|Atributo|Descrição|Type|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho do arquivo no momento da compilação.|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número da linha no arquivo fonte no qual o método é chamado.|`Integer`|
@@ -79,7 +79,7 @@ O gráfico a seguir mostra os nomes de membros que são retornados quando você 
 |Construtor de atributos|O nome do método ou propriedade ao qual o atributo se aplica. Se o atributo é qualquer elemento dentro de um membro (como um parâmetro, um valor de retorno, ou um parâmetro de tipo genérico), esse resultado é o nome do membro associado a esse elemento.|
 |Nenhum membro contentor (por exemplo, nível de assembly ou atributos que são aplicadas aos tipos)|O valor padrão do parâmetro opcional.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Atributos (C#)](./attributes/index.md)
 - [Atributos comuns (C#)](./attributes/common-attributes.md)

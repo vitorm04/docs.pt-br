@@ -1,18 +1,18 @@
 ---
-title: Programação com funcional. Programação obrigatória (C#)
+title: Programação Funcional vs. Programação Imperativa (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69594320"
 ---
-# <a name="functional-programming-vs-imperative-programming-c"></a>Programação com funcional. Programação obrigatória (C#)
+# <a name="functional-programming-vs-imperative-programming-c"></a>Programação Funcional vs. Programação Imperativa (C#)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programação com funcional. Programação imperativa  
+## <a name="functional-programming-vs-imperative-programming"></a>Programação funcional contra a programação imperativa  
  O paradigma de *programação funcional* foi criado explicitamente para dar suporte a uma abordagem funcional pura para a solução de problemas. Programação funcional é uma forma de *programação declarativa*. Por outro lado, a maioria das linguagens mais conhecidas, incluindo linguagens OOP (programação orientada a objeto), como C#, Visual Basic, C++ e Java, foram criadas para dar suporte principalmente à programação *imperativa* (de procedimento).  
   
  Com uma abordagem imperativa, um desenvolvedor escreve o código que descreve detalhadamente exigente as etapas que o computador deve executar para fazer o objetivo. Isso é às vezes chamado de programação *algorítmica*. Por outro lado, uma abordagem funcional envolve compõem o problema como um conjunto de funções a ser executadas. Você define cuidadosamente entrada a cada função, e o que cada função retorna. A tabela a seguir descreve algumas das diferenças gerais entre essas duas abordagens.  
@@ -50,7 +50,7 @@ Este tópico compara e contrasta programação funcional com programação (proc
   
  Felizmente, o C# não requer a mudança completa para programação funcional, porque dá suporte a abordagens de programação imperativas e funcionais. Um desenvolvedor pode escolher qual abordagem é a mais adequado para um cenário específico. De fato, os programas combinam geralmente as duas abordagens.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md)

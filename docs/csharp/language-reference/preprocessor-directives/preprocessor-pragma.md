@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
 ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712449"
 ---
 # <a name="pragma-c-reference"></a>#pragma (Referência de C#)
@@ -18,7 +18,7 @@ O `#pragma` fornece ao compilador instruções especiais para a compilação do 
   
  [#pragma warning](./preprocessor-pragma-warning.md)  
   
- [#pragma checksum](./preprocessor-pragma-checksum.md)  
+ [#pragma soma de verificação](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,17 +26,17 @@ O `#pragma` fornece ao compilador instruções especiais para a compilação do 
 #pragma pragma-name pragma-arguments  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pragma-name`  
  O nome de um pragma reconhecido.  
   
  `pragma-arguments`  
  Argumentos específicos do pragma.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
-- [Diretivas do pré-processador do C#](./index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
+- [C# Diretivas de pré-processador](./index.md)
 - [#pragma warning](./preprocessor-pragma-warning.md)
-- [#pragma checksum](./preprocessor-pragma-checksum.md)
+- [#pragma soma de verificação](./preprocessor-pragma-checksum.md)

@@ -3,10 +3,10 @@ title: Como usar comandos do Windows PowerShell em um DockerFile para configurar
 description: Saiba como usar o PowerShell ao trabalhar com o Docker em contêineres do Windows
 ms.date: 02/15/2019
 ms.openlocfilehash: e91d278aef1365a111e8d67ff04092dfc6a44185
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673573"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Como usar comandos do Windows PowerShell em um DockerFile para configurar contêineres do Windows (baseado em Docker padrão)
@@ -31,5 +31,5 @@ RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
->[Anterior](visual-studio-tools-for-docker.md)
->[Próximo](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
+>[Próximo](visual-studio-tools-for-docker.md)
+>[anterior](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)

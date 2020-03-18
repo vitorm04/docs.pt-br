@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: usar atributos-C#'
+title: 'Tutorial: Use atributos - C #'
 description: Saiba como os atributos funcionam em C#.
 author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937466"
 ---
-# <a name="use-attributes-in-c"></a>Usar atributos em C\#
+# <a name="use-attributes-in-c"></a>Use atributos em C\#
 
 Os atributos fornecem uma maneira de associar informações ao código de forma declarativa. Eles também podem fornecer um elemento reutilizável que pode ser aplicado a uma variedade de destinos.
 
@@ -20,18 +20,18 @@ Considere o atributo `[Obsolete]`. Ele pode ser aplicado a classes, structs, mé
 
 Neste tutorial, você verá como adicionar atributos a seu código, como criar e usar seus próprios atributos e como usar alguns atributos que são criados no .NET Core.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
-Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) .
+## <a name="prerequisites"></a>Pré-requisitos
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página [.NET Core Downloads.](https://dotnet.microsoft.com/download)
 Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker.
-Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+Será necessário instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code,](https://code.visualstudio.com/) que é um editor de código aberto e multiplataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-## <a name="create-the-application"></a>{1&gt;Criar o aplicativo&lt;1}
+## <a name="create-the-application"></a>Criar o aplicativo
 
 Agora que você instalou todas as ferramentas, crie um novo aplicativo do .NET Core. Para usar o gerador de linha de comando, execute o seguinte comando no shell de sua preferência:
 
 `dotnet new console`
 
-Este comando criará arquivos de projeto do .NET Core no básico. Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.
+Este comando criará arquivos de projeto de núcleo .NET de ossos nus. Você precisará executar `dotnet restore` para restaurar as dependências necessárias para compilar esse projeto.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -85,18 +85,18 @@ Os atributos podem ser usados em um número de "destinos". Os exemplos acima mos
 * Assembly
 * Classe
 * Construtor
-* Delegado
+* delegado
 * Enum
-* Event
+* Evento
 * Campo
 * GenericParameter
 * Interface
 * Método
 * Módulo
 * Parâmetro
-* propriedade
+* Propriedade
 * ReturnValue
-* Estrutura
+* Struct
 
 Quando você cria uma classe de atributo, por padrão, o C# permitirá que você use esse atributo em qualquer um dos destinos possíveis do atributo. Se quiser restringir seu atributo a determinados destinos, você poderá fazer isso usando o `AttributeUsageAttribute` em sua classe de atributo. É isso mesmo, um atributo em um atributo!
 
@@ -141,7 +141,7 @@ Aqui estão alguns atributos importantes incorporados às bibliotecas de classes
 * `[Conditional]`. Esse atributo está no namespace `System.Diagnostics`. Esse atributo pode ser aplicado aos métodos (ou classes de atributo). Você deve passar uma cadeia de caracteres para o construtor.
 Se essa cadeia de caracteres não corresponder a uma diretiva `#define`, todas as chamadas a esse método (mas não o próprio método) serão removidas pelo compilador C#. Normalmente, isso é usado para depuração (diagnóstico).
 
-* `[CallerMemberName]`. Esse atributo pode ser usado em parâmetros e reside no namespace `System.Runtime.CompilerServices`. Este é um atributo que é usado para injetar o nome do método que está chamando outro método. Isso normalmente é usado como uma forma de eliminar 'cadeias de caracteres mágicas' ao implementar INotifyPropertyChanged em diversas estruturas de interface do usuário. Um exemplo:
+* `[CallerMemberName]`. Esse atributo pode ser usado em parâmetros e reside no namespace `System.Runtime.CompilerServices`. Este é um atributo que é usado para injetar o nome do método que está chamando outro método. Isso normalmente é usado como uma forma de eliminar 'cadeias de caracteres mágicas' ao implementar INotifyPropertyChanged em diversas estruturas de interface do usuário. Por exemplo:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

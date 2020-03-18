@@ -11,10 +11,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715259"
 ---
 # <a name="if-else-c-reference"></a>if-else (Referência de C#)
@@ -81,7 +81,7 @@ O exemplo a seguir determina se um caractere de entrada é um número, uma letra
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Assim como uma instrução no bloco else ou no bloco then pode ser qualquer instrução válida, você pode usar qualquer expressão booliana válida para a condição. Você pode usar [operadores lógicos](../operators/boolean-logical-operators.md) tais como `!`, `&&`, `||`, `&`, `|`, e `^` para criar condições compostas. O código a seguir mostra exemplos.
+Assim como uma instrução no bloco else ou no bloco then pode ser qualquer instrução válida, você pode usar qualquer expressão booliana válida para a condição. Você pode usar [operadores lógicos](../operators/boolean-logical-operators.md) `!` `|`como `^` , `&&`, `||`, `&`, , , e fazer condições compostas. O código a seguir mostra exemplos.
 
 ```csharp
 // NOT
@@ -130,15 +130,15 @@ if (!(m >= n || m >= p))
 // Now m is the smallest.
 ```
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Operador ?:](../operators/conditional-operator.md)
+- [?: Operador](../operators/conditional-operator.md)
 - [Instrução if-else (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [Interruptor](switch.md)
