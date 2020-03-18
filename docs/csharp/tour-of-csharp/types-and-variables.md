@@ -4,19 +4,19 @@ description: Saiba mais sobre como definir tipos e declarar variáveis em C#
 ms.date: 02/25/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159085"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
-Há dois tipos em C#: *tipos de referência* e *tipos de valor*. As variáveis de tipos de valor contêm diretamente seus dados enquanto variáveis de tipos de referência armazenam referências a seus dados, o último sendo conhecido como objetos. Com os tipos de referência, é possível que duas variáveis referenciem o mesmo objeto e, assim, possíveis para operações em uma variável afetem o objeto referenciado pela outra variável. Com os tipos de valor, as variáveis têm sua própria cópia dos dados, e não é possível que as operações em um afetem a outra (com exceção das variáveis de parâmetro `ref` e `out`).
+Há dois tipos em C#: *tipos de referência* e *tipos de valor*. As variáveis de tipos de valor contêm diretamente seus dados enquanto variáveis de tipos de referência armazenam referências a seus dados, o último sendo conhecido como objetos. Com os tipos de referência, é possível que duas variáveis se refiram ao mesmo objeto e, portanto, possíveis operações em uma variável afetem o objeto referenciado pela outra variável. Com os tipos de valor, as variáveis cada uma tem sua própria cópia dos dados, e `ref` `out` não é possível que as operações em uma afetem a outra (exceto variáveis e parâmetros).
 
 Os tipos de valor do C# são divididos em *tipos simples*, *tipos de enum*, *tipos struct* e *tipos de valor anulável*. Os tipos de referência do C# são divididos em *tipos de classe*, *tipos de interface*, *tipos de matriz* e *tipos delegados*.
 
-A seguinte estrutura de tópicos fornece uma C#visão geral do sistema de tipos do.
+O esboço a seguir fornece uma visão geral do sistema de tipo c#.
 
 - [Tipos de valor][ValueTypes]
   - [Tipos simples][SimpleTypes]
@@ -26,14 +26,14 @@ A seguinte estrutura de tópicos fornece uma C#visão geral do sistema de tipos 
     - Ponto flutuante binário de IEEE: `float`, `double`
     - Ponto flutuante decimal de alta precisão: `decimal`
     - Booliano: `bool`
-  - [Tipos enumerados][EnumTypes]
+  - [Tipos de enum][EnumTypes]
     - Tipos definidos pelo usuário do formulário `enum E {...}`
   - [Tipos struct][StructTypes]
     - Tipos definidos pelo usuário do formulário `struct S {...}`
-  - [Tipos de valor anuláveis][NullableTypes]
+  - [tipos de valor anuláveis][NullableTypes]
     - Extensões de todos os outros tipos de valor com um valor `null`
 - [Tipos de referência][ReferenceTypes]
-  - [Tipos de classe][ClassTypes]
+  - [Tipos de aula][ClassTypes]
     - Classe base definitiva de todos os outros tipos: `object`
     - Cadeia de caracteres Unicode: `string`
     - Tipos definidos pelo usuário do formulário `class C {...}`
@@ -65,19 +65,19 @@ Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma dec
 
 Um tipo `class` define uma estrutura de dados que contém membros de dados (campos) e membros de função (métodos, propriedades e outros). Os tipos de classe dão suporte à herança única e ao polimorfismo, mecanismos nos quais as classes derivadas podem estender e especializar as classes base.
 
-Um tipo `struct` é semelhante a um tipo de classe que representa uma estrutura com membros de dados e membros da função. No entanto, ao contrário das classes, as structs são tipos de valor e normalmente não exigem alocação de heap. Tipos de struct não dão suporte à herança especificada pelo usuário e todos os tipos de struct herdam implicitamente do tipo `object`.
+Um tipo `struct` é semelhante a um tipo de classe que representa uma estrutura com membros de dados e membros da função. No entanto, ao contrário das classes, as estruturas são tipos de valor e normalmente não exigem alocação de pilhas. Os tipos de estruturanão suportam herança especificada pelo usuário, e todos `object`os tipos de estruturação herdam implicitamente do tipo .
 
 Um tipo `interface` define um contrato como um conjunto nomeado de membros da função pública. Um `class` ou `struct` que implementa um `interface` deve fornecer implementações de membros da função da interface. Um `interface` pode herdar de várias interfaces base e um `class` ou `struct` pode implementar várias interfaces.
 
-Um tipo `delegate` representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são análogos aos tipos de função fornecidos pelas linguagens funcionais. Eles também são semelhantes ao conceito de ponteiros de função encontrados em algumas outras linguagens. Diferentemente de ponteiros de função, os delegados são orientados a objeto e são de tipo seguro.
+Um tipo `delegate` representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são análogos aos tipos de função fornecidos pelas linguagens funcionais. Eles também são semelhantes ao conceito de ponteiros de função encontrados em algumas outras línguas. Ao contrário dos ponteiros de função, os delegados são orientados a objetos e seguros para o tipo.
 
-Os tipos `class`, `struct`, `interface`e `delegate` oferecem suporte a genéricos, no qual eles podem ser parametrizados com outros tipos.
+Os `class` `struct`, `interface`e `delegate` tipos todos suportam genéricos, pelo qual eles podem ser parametrizados com outros tipos.
 
 Um tipo `enum` é um tipo distinto com constantes nomeadas. Cada tipo `enum` tem um tipo subjacente, que deve ser um dos oito tipos integrais. O conjunto de valores de um tipo `enum` é o mesmo que o conjunto de valores do tipo subjacente.
 
-O C# dá suporte a matrizes uni e multidimensionais de qualquer tipo. Ao contrário dos tipos listados acima, os tipos de matriz não precisam ser declarados antes que possam ser usados. Em vez disso, os tipos de matriz são construídos seguindo um nome de tipo entre colchetes. Por exemplo, `int[]` é uma matriz unidimensional de `int`, `int[,]` é uma matriz bidimensional de `int`, e `int[][]` é uma matriz unidimensional da matriz unidimensional de `int`.
+O C# dá suporte a matrizes uni e multidimensionais de qualquer tipo. Ao contrário dos tipos listados acima, os tipos de array não devem ser declarados antes de serem usados. Em vez disso, os tipos de matriz são construídos seguindo um nome de tipo entre colchetes. Por exemplo, `int[]` é uma matriz unidimensional de `int`, `int[,]` é uma matriz bidimensional de `int`, e `int[][]` é uma matriz unidimensional da matriz unidimensional de `int`.
 
-Os tipos de valor anulável também não precisam ser declarados antes que possam ser usados. Para cada tipo de valor não anulável `T`, há um tipo de valor anulável correspondente `T?`, que pode conter um valor adicional `null`. Por exemplo, `int?` é um tipo que pode conter qualquer número inteiro de 32 bits ou o valor `null`.
+Os tipos de valor anulados também não devem ser declarados antes de serem usados. Para cada tipo `T`de valor não anulado, existe `T?`um tipo de valor `null`nulo correspondente, que pode conter um valor adicional, . Por exemplo, `int?` é um tipo que pode conter qualquer número inteiro de 32 bits ou o valor `null`.
 
 O sistema de tipos do C# é unificado, de modo que um valor de qualquer tipo pode ser tratado como um `object`. Cada tipo no C#, direta ou indiretamente, deriva do tipo de classe `object`, e `object` é a classe base definitiva de todos os tipos. Os valores de tipos de referência são tratados como objetos simplesmente exibindo os valores como tipo `object`. Os valores de tipos de valor são tratados como objetos, executando *conversão boxing* e *operações de conversão unboxing*. No exemplo a seguir, um valor `int` é convertido em `object` e volta novamente ao `int`.
 
@@ -105,5 +105,5 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
   - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
 
 > [!div class="step-by-step"]
-> [Anterior](program-structure.md)
-> [Próximo](expressions.md)
+> [Próximo](program-structure.md)
+> [anterior](expressions.md)

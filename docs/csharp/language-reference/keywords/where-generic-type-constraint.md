@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - where (generic type constraint) [C#]
 ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626705"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
 
-A cláusula `where` em uma definição genérica especifica restrições sobre os tipos que são usados como argumentos para parâmetros de tipo em um tipo genérico, método, delegado ou função local. As restrições podem especificar interfaces, classes base ou exigir que um tipo genérico seja uma referência, um valor ou um tipo não gerenciado. Elas declaram funcionalidades que o argumento de tipo deve ter.
+A cláusula `where` em uma definição genérica especifica restrições sobre os tipos que são usados como argumentos para parâmetros de tipo em um tipo genérico, método, delegado ou função local. As restrições podem especificar interfaces, classes básicas ou exigir que um tipo genérico seja um tipo de referência, valor ou não gerenciado. Elas declaram funcionalidades que o argumento de tipo deve ter.
 
 Por exemplo, você pode declarar uma classe genérica, `MyGenericClass`, de modo que o parâmetro de tipo `T` implementa a interface <xref:System.IComparable%601>:
 
@@ -32,10 +32,10 @@ A cláusula `where` pode especificar que o tipo é um `class` ou um `struct`. A 
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-A cláusula `where` pode incluir a restrição `notnull`. A restrição `notnull` limita o parâmetro de tipo a tipos não anuláveis. Esse tipo pode ser um tipo de [valor](../builtin-types/value-types.md) ou um tipo de referência não anulável. A restrição `notnull` está disponível a partir C# de 8,0 para o código compilado em um [contexto de`nullable enable`](../../nullable-references.md#nullable-contexts). Ao contrário de outras restrições, se um argumento de tipo violar a restrição de `notnull`, o compilador gerará um aviso em vez de um erro. Os avisos são gerados apenas em um contexto de `nullable enable`.
+A `where` cláusula pode `notnull` incluir a restrição. A `notnull` restrição limita o parâmetro de tipo a tipos não anulados. Esse tipo pode ser um [tipo de valor](../builtin-types/value-types.md) ou um tipo de referência não anulado. A `notnull` restrição está disponível a partir de C# [ `nullable enable` ](../../nullable-references.md#nullable-contexts)8.0 para código compilado em um contexto . Ao contrário de outras restrições, se um argumento de tipo violar a `notnull` restrição, o compilador gera um aviso em vez de um erro. Os avisos só `nullable enable` são gerados em um contexto.
 
 > [!IMPORTANT]
-> Declarações genéricas que incluem a restrição `notnull` podem ser usadas em um contexto alheios anulável, mas o compilador não impõe a restrição.
+> Declarações genéricas `notnull` que incluem a restrição podem ser usadas em um contexto alheio nulo, mas o compilador não impõe a restrição.
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
@@ -43,7 +43,7 @@ A cláusula `where` também pode incluir uma restrição `unmanaged`. A restriç
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-A cláusula `where` também pode incluir uma restrição de construtor, `new()`. Essa restrição torna possível criar uma instância de um parâmetro de tipo usando o operador `new`. A [restrição New ()](new-constraint.md) permite que o compilador saiba que qualquer argumento de tipo fornecido deve ter um construtor sem parâmetros acessível. Por exemplo:
+A cláusula `where` também pode incluir uma restrição de construtor, `new()`. Essa restrição torna possível criar uma instância de um parâmetro de tipo usando o operador `new`. A [nova () Restrição](new-constraint.md) permite ao compilador saber que qualquer argumento de tipo fornecido deve ter um construtor sem parâmetros acessível. Por exemplo: 
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 
@@ -65,14 +65,14 @@ Para obter informações sobre delegados genéricos, consulte [Delegados genéri
 
 Para obter detalhes sobre a sintaxe e o uso de restrições, consulte [Restrições a parâmetros de tipo](../../programming-guide/generics/constraints-on-type-parameters.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Introdução aos genéricos](../../programming-guide/generics/index.md)
-- [Restrição new](./new-constraint.md)
+- [nova Restrição](./new-constraint.md)
 - [Restrições a parâmetros de tipo](../../programming-guide/generics/constraints-on-type-parameters.md)

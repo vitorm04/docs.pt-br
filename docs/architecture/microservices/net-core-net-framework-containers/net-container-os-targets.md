@@ -3,10 +3,10 @@ title: Para qual sistema operacional direcionar com os contêineres do .NET
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Para qual sistema operacional direcionar com os contêineres do .NET
 ms.date: 01/30/2020
 ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501857"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Para qual sistema operacional direcionar com os contêineres do .NET
@@ -19,31 +19,31 @@ Para Linux, várias distribuições estão disponíveis e há compatibilidade co
 
 Na Figure 3-1, é possível ver a possível versão do sistema operacional dependendo do .NET Framework usado.
 
-![Diagrama que mostra o sistema operacional a ser usado com os contêineres .NET.](./media/net-container-os-targets/targeting-operating-systems.png)
+![Diagrama mostrando qual sistema operacional usar com os quais os contêineres .NET.](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **Figura 3-1.** Sistemas operacionais a serem direcionados dependendo das versões do .NET Framework
 
-Ao implantar aplicativos .NET Framework herdados, você precisa ter como alvo o Windows Server Core, compatível com aplicativos herdados e o IIS, mas tem uma imagem maior. Ao implantar aplicativos .NET Core, é possível definir o Windows Nano Server como destino, que é otimizado para nuvem, usa o Kestrel, é menor e inicia mais rapidamente. Também é possível definir Linux, Debian de suporte, Alpine e outros como destino. O também usa Kestrel, é menor e é iniciado mais rapidamente.
+Ao implantar aplicativos legados do .NET Framework, você tem que segmentar o Windows Server Core, compatível com aplicativos legados e IIS, mas ele tem uma imagem maior. Ao implantar aplicativos .NET Core, é possível definir o Windows Nano Server como destino, que é otimizado para nuvem, usa o Kestrel, é menor e inicia mais rapidamente. Também é possível definir Linux, Debian de suporte, Alpine e outros como destino. Também usa Kestrel, é menor, e começa mais rápido.
 
 Também é possível criar sua própria imagem do Docker em casos em que você deseja usar uma distribuição diferente do Linux ou em que você quer uma imagem com versões não fornecidas pela Microsoft. Por exemplo, você pode criar uma imagem com o ASP.NET Core em execução no .NET Framework tradicional e no Windows Server Core, que é um cenário não tão comum para Docker.
 
 > [!IMPORTANT]
-> Ao usar imagens do Windows Server Core, você pode achar que algumas DLLs estão ausentes, quando comparadas com imagens completas do Windows. Você pode resolver esse problema criando uma imagem personalizada de núcleo do servidor, adicionando os arquivos ausentes no momento da compilação da imagem, conforme mencionado neste [Comentário do GitHub](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448).
+> Ao usar imagens do Windows Server Core, você pode descobrir que alguns DLLs estão faltando, quando comparados com imagens completas do Windows. Você pode ser capaz de resolver esse problema criando uma imagem personalizada do Server Core, adicionando os arquivos ausentes no tempo de compilação de imagem, como mencionado neste comentário do [GitHub](https://github.com/microsoft/dotnet-framework-docker/issues/299#issuecomment-511537448).
 
 Ao adicionar o nome de imagem ao seu arquivo Dockerfile, é possível selecionar o sistema operacional e a versão dependendo da marcação usada, como nos seguintes exemplos:
 
 | Imagem | Comentários |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:3.1 | .NET Core 3,1 multiarquiteturas: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET Core várias arquiteturas 3,1: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. <br/> A imagem aspnetcore tem algumas otimizações para ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Tempo de execução do .NET Core 3,1 – somente no Linux Debian distribuição |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Tempo de execução do .NET Core 3,1 somente no Windows nano Server (Windows Server versão 1809) |
+| mcr.microsoft.com/dotnet/core/runtime:3.1 | Multiarquitetura .NET Core 3.1: suporta Linux e Windows Nano Server dependendo do host Docker. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1 | ASP.NET multiarquitetura Core 3.1: suporta Linux e Windows Nano Server dependendo do host Docker. <br/> A imagem aspnetcore tem algumas otimizações para ASP.NET Core. |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | .NET Core 3.1 somente runtime no Linux Debian distro |
+| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | .NET Core 3.1 somente em tempo de execução no Windows Nano Server (versão 1809 do Windows Server) |
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **BitmapDecoder falha devido a falta de WindowsCodecsExt. dll (problema do GitHub)**  
+- **BitmapDecoder falha devido à falta do WindowsCodecsExt.dll (problema do GitHub)**  
   <https://github.com/microsoft/dotnet-framework-docker/issues/299>
 
 > [!div class="step-by-step"]
-> [Anterior](container-framework-choice-factors.md)
-> [Próximo](official-net-docker-images.md)
+> [Próximo](container-framework-choice-factors.md)
+> [anterior](official-net-docker-images.md)

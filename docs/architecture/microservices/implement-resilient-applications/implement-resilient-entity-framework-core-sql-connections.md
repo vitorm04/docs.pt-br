@@ -3,10 +3,10 @@ title: Implementar conexões SQL resilientes com o Entity Framework Core
 description: Saiba como implementar conexões SQL resilientes com o Entity Framework Core. Essa técnica é importante principalmente ao usar o Banco de Dados SQL do Azure na nuvem.
 ms.date: 10/16/2018
 ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78241059"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Implementar conexões SQL resilientes com o Entity Framework Core
@@ -146,12 +146,12 @@ public class ResilientTransaction
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Resiliência de conexão e interceptação de comando com o EF em um aplicativo MVC do ASP.NET** \
+- **Resiliência de conexão e interceptação de comando com EF em uma aplicação mvc ASP.NET** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- **Cesar de la Torre. Usando conexões e transações SQL resilientes Entity Framework Core** \
+- **Cesar de la Torre. Usando conexões e transações sql do núcleo do framework da entidade resiliente** \
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
->[Anterior](implement-retries-exponential-backoff.md)
->[Próximo](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Próximo](implement-retries-exponential-backoff.md)
+>[anterior](use-httpclientfactory-to-implement-resilient-http-requests.md)

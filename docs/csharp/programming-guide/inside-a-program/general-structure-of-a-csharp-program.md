@@ -5,10 +5,10 @@ helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
 ms.openlocfilehash: 4a2340c29527ac09ba53daee03e06420b269df56
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673336"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Estrutura geral de um programa em C# (Guia de Programação em C#)
@@ -27,7 +27,7 @@ Os programas C# podem consistir em um ou mais arquivos. Cada arquivo pode conter
   
 - [Interfaces](../interfaces/index.md)  
   
-- [Delegados](../delegates/index.md)  
+- [Delega](../delegates/index.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
@@ -35,6 +35,6 @@ Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/basic
   
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Por dentro de um programa em C#](./index.md)
-- [Referência de C#](../../language-reference/index.md)
+- [C# Referência](../../language-reference/index.md)

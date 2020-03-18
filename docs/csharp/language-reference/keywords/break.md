@@ -8,10 +8,10 @@ helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
 ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713760"
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
@@ -39,23 +39,23 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo. O controle _só_ retornou um nível acima nos loops aninhados.
+Neste exemplo, a instrução `break` é usada para interromper um loop aninhado interno e retornar o controle para o loop externo. O controle _só_ é devolvido um nível acima nos loops aninhados.
 
 [!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, a instrução `break` é usada apenas para interromper a ramificação atual durante cada iteração do loop. O loop em si não é afetado pelas instâncias de `break` que pertencem à instrução [switch](./switch.md) aninhada.
+Neste exemplo, `break` a declaração só é usada para sair do ramo atual durante cada iteração do loop. O loop em si não `break` é afetado pelas instâncias que pertencem à declaração de [switch](./switch.md) aninhada.
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
-- [switch](./switch.md)
+- [Interruptor](./switch.md)

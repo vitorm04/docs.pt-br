@@ -1,50 +1,50 @@
 ---
-title: 'Tutorial: instalar e usar as ferramentas locais do .NET Core'
-description: Saiba como instalar e usar uma ferramenta .NET como uma ferramenta local.
+title: 'Tutorial: Instale e use ferramentas locais do .NET Core'
+description: Saiba como instalar e usar uma ferramenta .NET como ferramenta local.
 ms.date: 02/12/2020
 ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156693"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: instalar e usar uma ferramenta local do .NET Core usando o CLI do .NET Core
+# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: Instale e use uma ferramenta local .NET Core usando o .NET Core CLI
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 3.0 SDK e versões posteriores
 
 Este tutorial ensina como instalar e usar uma ferramenta local. Você usa uma ferramenta que você cria no [primeiro tutorial desta série](global-tools-how-to-create.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* Conclua o [primeiro tutorial desta série](global-tools-how-to-create.md).
-* Instale o tempo de execução do .NET Core 2,1.
+* Complete o [primeiro tutorial desta série.](global-tools-how-to-create.md)
+* Instale o tempo de execução do .NET Core 2.1.
 
-  Para este tutorial, você instala e usa uma ferramenta que tem como alvo o .NET Core 2,1, portanto, você precisa ter esse tempo de execução instalado em seu computador. Para instalar o tempo de execução 2,1, vá para a [página de download do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1) e localize o link de instalação de tempo de execução na coluna **executar aplicativos-tempo de execução** .
+  Para este tutorial você instala e usa uma ferramenta que tem como alvo o .NET Core 2.1, então você precisa ter esse tempo de execução instalado em sua máquina. Para instalar o tempo de execução 2.1, acesse a [página de download do .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) e encontre o link de instalação em tempo de execução na coluna Executar aplicativos - **Runtime.**
 
-## <a name="create-a-manifest-file"></a>Criar um arquivo de manifesto
+## <a name="create-a-manifest-file"></a>Criar um arquivo manifesto
 
-Para instalar uma ferramenta somente para acesso local (para o diretório e subdiretórios atuais), ela deve ser adicionada a um arquivo de manifesto.
+Para instalar uma ferramenta apenas para acesso local (para o diretório atual e subdiretórios), ele precisa ser adicionado a um arquivo manifesto.
 
-Na pasta *Microsoft. botsay* , navegue até um nível para a pasta do *repositório* :
+A partir da pasta *microsoft.botsay,* navegue até um nível até a pasta do *repositório:*
 
 ```console
 cd ..
 ```
 
-Crie um arquivo de manifesto executando o comando [dotnet novo](dotnet-new.md) :
+Crie um arquivo manifesto executando o novo comando [dotnet:](dotnet-new.md)
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-A saída indica a criação bem-sucedida do arquivo.
+A saída indica criação bem sucedida do arquivo.
 
 ```console
 The template "Dotnet local tool manifest file" was created successfully.
 ```
 
-O arquivo *. config/dotnet-Tools. JSON* ainda não tem ferramentas:
+O arquivo *.config/dotnet-tools.json* ainda não tem ferramentas:
 
 ```json
 {
@@ -54,19 +54,19 @@ O arquivo *. config/dotnet-Tools. JSON* ainda não tem ferramentas:
 }
 ```
 
-As ferramentas listadas em um arquivo de manifesto estão disponíveis para o diretório e os subdiretórios atuais. O diretório atual é aquele que contém o diretório *. config* com o arquivo de manifesto.
+As ferramentas listadas em um arquivo manifesto estão disponíveis para o diretório e subdiretórios atuais. O diretório atual é aquele que contém o diretório *.config* com o arquivo manifesto.
 
-Quando você usa um comando da CLI que se refere a uma ferramenta local, o SDK pesquisa um arquivo de manifesto no diretório atual e nos diretórios pai. Se encontrar um arquivo de manifesto, mas o arquivo não incluir a ferramenta referenciada, ele continuará a pesquisa por meio de diretórios pai. A pesquisa termina quando encontra a ferramenta referenciada ou encontra um arquivo de manifesto com `isRoot` definido como `true`.
+Quando você usa um comando CLI que se refere a uma ferramenta local, o SDK procura um arquivo manifesto no diretório atual e diretórios-pai. Se ele encontrar um arquivo manifesto, mas o arquivo não incluir a ferramenta referenciada, ele continuará a pesquisa através de diretórios-mãe. A pesquisa termina quando encontra a ferramenta referenciada `isRoot` ou `true`encontra um arquivo manifesto com set para .
 
-## <a name="install-botsay-as-a-local-tool"></a>Instalar o botsay como uma ferramenta local
+## <a name="install-botsay-as-a-local-tool"></a>Instale o botsay como uma ferramenta local
 
-Instale a ferramenta do pacote que você criou no primeiro tutorial:
+Instale a ferramenta a partir do pacote que você criou no primeiro tutorial:
 
 ```dotnetcli
 dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
-Esse comando adiciona a ferramenta ao arquivo de manifesto que você criou na etapa anterior. A saída do comando mostra qual arquivo de manifesto está em sua ferramenta recém-instalada:
+Este comando adiciona a ferramenta ao arquivo manifesto que você criou na etapa anterior. A saída de comando mostra em qual arquivo manifesto a ferramenta recém-instalada está em:
 
  ```console
  You can invoke the tool from this directory using the following command:
@@ -75,7 +75,7 @@ Esse comando adiciona a ferramenta ao arquivo de manifesto que você criou na et
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
-O arquivo *. config/dotnet-Tools. JSON* agora tem uma ferramenta:
+O arquivo *.config/dotnet-tools.json* agora tem uma ferramenta:
 
 ```json
 {
@@ -94,17 +94,17 @@ O arquivo *. config/dotnet-Tools. JSON* agora tem uma ferramenta:
 
 ## <a name="use-the-tool"></a>Usar a ferramenta
 
-Invoque a ferramenta executando o comando `dotnet tool run` da pasta do *repositório* :
+Invoque a `dotnet tool run` ferramenta executando o comando da pasta do *repositório:*
 
 ```dotnetcli
 dotnet tool run botsay hello from the bot
 ```
 
-## <a name="restore-a-local-tool-installed-by-others"></a>Restaurar uma ferramenta local instalada por outras pessoas
+## <a name="restore-a-local-tool-installed-by-others"></a>Restaurar uma ferramenta local instalada por outros
 
-Normalmente, você instala uma ferramenta local no diretório raiz do repositório. Depois de fazer o check-in do arquivo de manifesto para o repositório, outros desenvolvedores poderão obter o arquivo de manifesto mais recente. Para instalar todas as ferramentas listadas no arquivo de manifesto, elas podem executar um único comando `dotnet tool restore`.
+Você normalmente instala uma ferramenta local no diretório raiz do repositório. Depois de verificar o arquivo manifesto no repositório, outros desenvolvedores podem obter o arquivo manifesto mais recente. Para instalar todas as ferramentas listadas no arquivo `dotnet tool restore` manifesto, eles podem executar um único comando.
 
-1. Abra o arquivo *. config/dotnet-Tools. JSON* e substitua o conteúdo pelo JSON a seguir:
+1. Abra o arquivo *.config/dotnet-tools.json* e substitua o conteúdo pelo seguinte JSON:
 
    ```json
    {
@@ -127,11 +127,11 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
    }
    ```
 
-1. Substitua `<name>` pelo nome usado para criar o projeto.
+1. Substitua pelo `<name>` nome usado para criar o projeto.
 
 1. Salve suas alterações.
 
-   Fazer essa alteração é o mesmo que obter a versão mais recente do repositório depois que outra pessoa instalou o pacote `dotnetsay` para o diretório do projeto.
+   Fazer essa alteração é o mesmo que obter a versão mais recente `dotnetsay` do repositório depois que outra pessoa instalou o pacote para o diretório do projeto.
 
 1. Execute o comando `dotnet tool restore`.
 
@@ -139,7 +139,7 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
    dotnet tool restore
    ```
 
-   O comando produz uma saída semelhante ao exemplo a seguir:
+   O comando produz saída como o seguinte exemplo:
 
    ```console
    Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
@@ -153,7 +153,7 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
    dotnet tool list
    ```
 
-   A saída é uma lista de pacotes e comandos, semelhante ao exemplo a seguir:
+   A saída é uma lista de pacotes e comandos, semelhante ao seguinte exemplo:
 
    ```console
    Package Id      Version      Commands       Manifest
@@ -169,26 +169,26 @@ Normalmente, você instala uma ferramenta local no diretório raiz do repositór
    dotnet tool run botsay hello from botsay
    ```
 
-## <a name="update-a-local-tool"></a>Atualizar uma ferramenta local
+## <a name="update-a-local-tool"></a>Atualize uma ferramenta local
 
-A versão instalada da ferramenta local `dotnetsay` é 2.1.3.  A versão mais recente é 2.1.4. Use o comando [dotnet ferramenta de atualização](dotnet-tool-update.md) para atualizar a ferramenta para a versão mais recente.
+A versão instalada da `dotnetsay` ferramenta local é 2.1.3.  A versão mais recente é 2.1.4. Use o comando [dotnet tool update](dotnet-tool-update.md) para atualizar a ferramenta para a versão mais recente.
 
 ```dotnetcli
 dotnet tool update dotnetsay
 ```
 
-A saída indica o novo número de versão:
+A saída indica o novo número da versão:
 
 ```console
 Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
-O comando Update localiza o primeiro arquivo de manifesto que contém a ID do pacote e o atualiza. Se não houver nenhuma ID de pacote em nenhum arquivo de manifesto que esteja no escopo da pesquisa, o SDK adicionará uma nova entrada ao arquivo de manifesto mais próximo. O escopo da pesquisa é feito por meio de diretórios pai até que um arquivo de manifesto com `isRoot = true` seja encontrado.
+O comando update encontra o primeiro arquivo manifesto que contém o ID do pacote e o atualiza. Se não houver tal ID de pacote em qualquer arquivo manifesto que esteja no escopo da pesquisa, o SDK adiciona uma nova entrada ao arquivo manifesto mais próximo. O escopo de pesquisa é através de `isRoot = true` diretórios-mãe até que um arquivo manifesto seja encontrado.
 
 ## <a name="remove-local-tools"></a>Remover ferramentas locais
 
-Remova as ferramentas instaladas executando o comando [dotnet ferramenta de desinstalação](dotnet-tool-uninstall.md) :
+Remova as ferramentas instaladas executando o comando [de desinstalar a ferramenta dotnet:](dotnet-tool-uninstall.md)
 
 ```dotnetcli
 dotnet tool uninstall microsoft.botsay
@@ -200,8 +200,8 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Se você receber uma mensagem de erro ao seguir o tutorial, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
+Se você receber uma mensagem de erro ao seguir o tutorial, consulte [Problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Confira também
 
-Para obter mais informações, consulte [Ferramentas do .NET Core](global-tools.md)
+Para obter mais informações, consulte [as ferramentas .NET Core](global-tools.md)

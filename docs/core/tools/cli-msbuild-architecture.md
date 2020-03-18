@@ -3,10 +3,10 @@ title: Arquitetura das ferramentas de linha de comando do .NET Core
 description: Saiba mais sobre as camadas de ferramentas do .NET Core e o que foi alterado nas versões recentes.
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092909"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Visão geral de alto nível das alterações nas ferramentas do .NET Core
@@ -15,39 +15,39 @@ Este documento descreve as alterações associadas à movimentação de *project
 
 ## <a name="moving-away-from-projectjson"></a>Deixando o project.json
 
-A maior alteração nas ferramentas do .NET Core é certamente a [mudança de project.json para csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) como o sistema de projeto. As últimas versões das ferramentas de linha de comando não dão suporte a arquivos *project.json*. Isso significa que ele não pode ser usado para compilar, executar ou publicar aplicativos e bibliotecas com base em Project. JSON. Para usar esta versão das ferramentas, migre seus projetos existentes ou inicie novos.
+A maior alteração nas ferramentas do .NET Core é certamente a [mudança de project.json para csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/) como o sistema de projeto. As últimas versões das ferramentas de linha de comando não dão suporte a arquivos *project.json*. Isso significa que ele não pode ser usado para construir, executar ou publicar aplicativos e bibliotecas baseados em project.json. Para usar esta versão das ferramentas, migre seus projetos existentes ou inicie novos.
 
-Como parte dessa mudança, o mecanismo de build personalizado desenvolvido para compilar projetos project.json foi substituído por um mecanismo de build maduro e totalmente capaz, chamado [MSBuild](https://github.com/Microsoft/msbuild). O MSBuild é um mecanismo bem conhecido na Comunidade do .NET. Ele tem sido uma tecnologia fundamental desde o primeiro lançamento da plataforma. Como ele precisa criar aplicativos .NET Core, o MSBuild foi portado para o .NET Core e pode ser usado em qualquer plataforma em que o .NET Core seja executado. Uma das principais promessas do .NET Core é uma pilha de desenvolvimento de plataforma cruzada e nós garantimos que essa mudança não quebra essa promessa.
+Como parte dessa mudança, o mecanismo de build personalizado desenvolvido para compilar projetos project.json foi substituído por um mecanismo de build maduro e totalmente capaz, chamado [MSBuild](https://github.com/Microsoft/msbuild). O MSBuild é um mecanismo bem conhecido na comunidade .NET. Tem sido uma tecnologia fundamental desde o primeiro lançamento da plataforma. Como ele precisa criar aplicativos .NET Core, o MSBuild foi portado para o .NET Core e pode ser usado em qualquer plataforma em que o .NET Core seja executado. Uma das principais promessas do .NET Core é uma pilha de desenvolvimento de plataforma cruzada e nós garantimos que essa mudança não quebra essa promessa.
 
 > [!TIP]
-> Se você for novo no MSBuild e quiser saber mais sobre ele, poderá começar lendo o artigo [conceitos do MSBuild](/visualstudio/msbuild/msbuild-concepts) .
+> Se você é novo no MSBuild e gostaria de saber mais sobre ele, você pode começar lendo o artigo de conceitos do [MSBuild.](/visualstudio/msbuild/msbuild-concepts)
 
 ## <a name="the-tooling-layers"></a>As camadas de ferramentas
 
-Com a mudança no mecanismo de compilação e a movimentação para longe do sistema de projeto existente, algumas perguntas são seguidas naturalmente. Qualquer uma dessas alterações altera a "disposição" geral do ecossistema de ferramentas do .NET Core? Existem novos bits e componentes?
+Com a mudança no motor de construção e a mudança do sistema de projeto existente, algumas perguntas seguem naturalmente. Alguma dessas alterações altera a "camada" global do ecossistema de ferramentas .NET Core? Existem novos bits e componentes?
 
 Vamos começar recapitulando as camadas na Visualização 2, conforme mostrado na figura a seguir:
 
 ![A arquitetura de alto nível das ferramentas da Visualização 2](media/cli-msbuild-architecture/p2-arch.png)
 
-A disposição em camadas das ferramentas na visualização 2 é simples. Na parte inferior, a base é a CLI do .NET Core. Todas as outras ferramentas de nível superior, como o Visual Studio ou o Visual Studio Code, dependem e contam com a CLI para criar projetos, restaurar dependências e assim por diante. Por exemplo, se o Visual Studio quisesse executar uma operação de restauração, ele chamaria o comando `dotnet restore` ([ver observação](#dotnet-restore-note)) na CLI.
+A camada das ferramentas na Pré-Visualização 2 é simples. Na parte inferior, a base é o .NET Core CLI. Todas as outras ferramentas de nível superior, como visual studio ou visual studio code, dependem e dependem da CLI para construir projetos, restaurar dependências e assim por diante. Por exemplo, se o Visual Studio quisesse realizar uma `dotnet restore` operação de restauração, ele ligaria para o comando[(ver nota)](#dotnet-restore-note)na CLI.
 
 Com a mudança para o novo sistema de projeto, o diagrama anterior se altera:
 
 ![Arquitetura de alto nível do SDK 1.0.0 do .NET Core](media/cli-msbuild-architecture/p3-arch.png)
 
-A principal diferença é que a CLI não é mais a camada básica; agora, essa função é executada pelo "componente SDK compartilhado". Esse componente SDK compartilhado é um conjunto de destinos e tarefas associadas que são responsáveis por compilar código, publicá-lo, empacotar pacotes do NuGet e assim por diante. O SDK do .NET Core é de código-fonte aberto e está disponível no GitHub no [repositório do SDK](https://github.com/dotnet/sdk).
+A principal diferença é que a CLI não é mais a camada básica; agora, essa função é executada pelo "componente SDK compartilhado". Este componente SDK compartilhado é um conjunto de metas e tarefas associadas que são responsáveis por compilar códigos, publicá-lo, embalar pacotes NuGet e assim por diante. O .NET Core SDK é de código aberto e está disponível no GitHub no [repo SDK](https://github.com/dotnet/sdk).
 
 > [!NOTE]
-> Um "destino" é um termo do MSBuild que indica uma operação nomeada que o MSBuild pode invocar. Normalmente, ele está acoplado com uma ou mais tarefas que executam alguma lógica que o destino deve realizar. O MSBuild oferece suporte a muitos destinos prontos como `Copy` ou `Execute`; ele também permite aos usuários gravar suas próprias tarefas usando código gerenciado e definir metas para executar essas tarefas. Para mais informações, consulte [Tarefas do MSBuild](/visualstudio/msbuild/msbuild-tasks).
+> Um "alvo" é um termo MSBuild que indica uma operação nomeada que o MSBuild pode invocar. Normalmente, ele está acoplado com uma ou mais tarefas que executam alguma lógica que o destino deve realizar. O MSBuild oferece suporte a muitos destinos prontos como `Copy` ou `Execute`; ele também permite aos usuários gravar suas próprias tarefas usando código gerenciado e definir metas para executar essas tarefas. Para mais informações, consulte [Tarefas do MSBuild](/visualstudio/msbuild/msbuild-tasks).
 
-Todos os conjuntos de ferramentas agora consumem o componente SDK compartilhado e seus destinos, incluindo a CLI. Por exemplo, o Visual Studio 2019 não chama o comando `dotnet restore` ([consulte observação](#dotnet-restore-note)) para restaurar dependências para projetos do .NET Core. Em vez disso, ele usa o destino "Restore" diretamente. Como esses são os destinos do MSBuild, também é possível usar o MSBuild bruto para executá-los, usando o comando [dotnet msbuild](dotnet-msbuild.md).
+Todos os conjuntos de ferramentas agora consumem o componente SDK compartilhado e seus destinos, incluindo a CLI. Por exemplo, o Visual Studio 2019 `dotnet restore` não liga para o comando[(ver nota)](#dotnet-restore-note)para restaurar dependências para projetos .NET Core. Em vez disso, ele usa diretamente o alvo "Restaurar". Como esses são os destinos do MSBuild, também é possível usar o MSBuild bruto para executá-los, usando o comando [dotnet msbuild](dotnet-msbuild.md).
 
 ### <a name="cli-commands"></a>Comandos de CLI
 
-O componente SDK compartilhado significa que a maioria dos comandos existentes da CLI foi reimplementada como destinos e tarefas do MSBuild. O que isso significa para os comandos CLI e o uso do conjunto de ferramentas?
+O componente SDK compartilhado significa que a maioria dos comandos CLI existentes foram reimplementados como tarefas e alvos do MSBuild. O que isso significa para os comandos CLI e o uso do conjunto de ferramentas?
 
-De uma perspectiva de uso, ele não altera a maneira como você usa a CLI. A CLI ainda tem os comandos principais que existiam na versão do .NET Core 1,0 Preview 2:
+Do ponto de vista do uso, isso não muda a maneira como você usa a CLI. A CLI ainda tem os comandos principais que existiam na versão .NET Core 1.0 Preview 2:
 
 - `new`
 - `restore`
@@ -57,21 +57,21 @@ De uma perspectiva de uso, ele não altera a maneira como você usa a CLI. A CLI
 - `test`
 - `pack`
 
-Esses comandos ainda fazem o que você espera que eles façam (criar um projeto, compilá-lo, publicá-lo, agrupá-lo e assim por diante). Você pode consultar a tela de ajuda do comando (usando `dotnet <command> --help`) ou a documentação neste site para se familiarizar com seu comportamento.
+Esses comandos ainda fazem o que você espera que eles façam (novo projeto, construa-o, publique-o, embale-o, e assim por diante). Você pode consultar a tela de `dotnet <command> --help`ajuda do comando (usando) ou a documentação neste site para se familiarizar com seu comportamento.
 
-De uma perspectiva de execução, os comandos da CLI usam seus parâmetros e constroem uma chamada para o MSBuild "RAW" que define as propriedades necessárias e executa o destino desejado. Para ilustrar melhor, considere o seguinte comando:
+Do ponto de vista da execução, os comandos cli tomam seus parâmetros e constroem uma chamada para o MSBuild "cru" que define as propriedades necessárias e executa o alvo desejado. Para ilustrar melhor, considere o seguinte comando:
 
    ```dotnetcli
    dotnet publish -o pub -c Release
    ```
 
-Esse comando publica um aplicativo em uma pasta `pub` usando a configuração "versão". Internamente, esse comando é convertido na seguinte invocação do MSBuild:
+Este comando publica `pub` um aplicativo em uma pasta usando a configuração "Liberar". Internamente, esse comando é convertido na seguinte invocação do MSBuild:
 
    ```dotnetcli
    dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
    ```
 
-As exceções notáveis a essa regra são os comandos `new` e `run`. Eles não foram implementados como destinos do MSBuild.
+Notáveis exceções a esta `new` `run` regra são os comandos. Eles não foram implementados como alvos do MSBuild.
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

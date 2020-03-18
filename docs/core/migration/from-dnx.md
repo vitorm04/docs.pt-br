@@ -3,10 +3,10 @@ title: Migrando do DNX para a CLI do .NET Core
 description: Migre para mudar do uso de ferramentas de DNX para ferramentas da CLI do .NET Core.
 ms.date: 06/20/2016
 ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503825"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
@@ -30,9 +30,9 @@ Há algumas das mudanças gerais nas ferramentas que devem ser descritas primeir
 ### <a name="no-more-dnvm"></a>Não há mais DNVM
 DNVM, abreviação de *DotNet Version Manager* foi um script do bash/PowerShell usado para instalar um DNX em seu computador. Ele ajudou os usuários a obter o DNX necessário do feed especificado (ou padrão), bem como marcar um determinado DNX como "ativo", que o colocaria no $PATH de determinada sessão. Isso permitiria que você usasse as várias ferramentas.
 
-DNVM foi descontinuado porque seu conjunto de recursos foi tornado redundante por alterações recebidas na CLI do .NET Core.
+O DNVM foi descontinuado porque seu conjunto de recursos foi redundante por alterações que vinham no .NET Core CLI.
 
-A CLI vem empacotada de duas maneiras principais:
+A CLI vem embalada de duas maneiras principais:
 
 1. Instaladores nativos para uma determinada plataforma
 2. Instalam o script em outras situações (como servidores CI)
@@ -46,14 +46,14 @@ Se você estivesse usando o DNX, teria usado comandos de uma das suas três part
 
 A tabela a seguir mostra o mapeamento entre os comandos DNX/DNU e seus equivalentes da CLI.
 
-| Comando do DNX                    | Comando da CLI    | DESCRIÇÃO                                                                                                     |
+| Comando do DNX                    | Comando da CLI    | Descrição                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | dnx run                        | `dotnet run`     | Execute o código da origem.                                                                                           |
 | dnu build                      | `dotnet build`   | Crie um binário IL do seu código.                                                                                |
 | dnu pack                       | `dotnet pack`    | Empacote um pacote NuGet do seu código.                                                                        |
 | dnx \[comando] (por exemplo, "dnx web") | N/D\*          | No mundo DNX, execute um comando conforme definido no project.json.                                                     |
 | dnu install                    | N/D\*          | No mundo DNX, instale um pacote como uma dependência.                                                            |
-| dnu restore                    | `dotnet restore` | Restaure as dependências especificadas no seu project.json. ([veja a observação](#dotnet-restore-note))                                                            |
+| dnu restore                    | `dotnet restore` | Restaure as dependências especificadas no seu project.json. (veja[nota)](#dotnet-restore-note)                                                            |
 | dnu publish                    | `dotnet publish` | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo). |
 | dnu wrap                       | N/D\*          | No mundo DNX, encapsule um project.json em csproj.                                                                    |
 | dnu commands                   | N/D\*          | No mundo DNX, gerencie os comandos instalados globalmente.                                                           |
@@ -69,7 +69,7 @@ O DNU vinha com um conceito chamado "comandos globais". Eles eram, essencialment
 A CLI não dá suporte a esse conceito. Contudo, ela dá suporte ao conceito de adição de comandos por projeto, os quais podem ser invocados usando a sintaxe familiar do `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalar dependências
-A partir de v1, o CLI do .NET Core não tem um comando `install` para instalar dependências. Para instalar um pacote NuGet, você precisará adicioná-lo como uma dependência ao arquivo `project.json` e, em seguida, executar `dotnet restore` ([veja observação](#dotnet-restore-note)).
+A partir de v1, o .NET `install` Core CLI não tem um comando para instalar dependências. Para instalar um pacote NuGet, você precisará adicioná-lo como uma dependência ao arquivo `project.json` e, em seguida, executar `dotnet restore` ([veja observação](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Execução do código
 Há duas maneiras principais de executar o código. Uma delas é da origem, com `dotnet run`. Diferente do `dnx run`, isso não gerará nenhuma compilação na memória. Na verdade, isso invocará `dotnet build` para compilar seu código e executar o binário compilado.
@@ -84,7 +84,7 @@ Além de usar os novos comandos ao trabalhar com seu código, há três coisas p
 3. Migrar as APIs DNX para seus equivalentes de BCL.
 
 ### <a name="changing-the-globaljson-file"></a>Alterar o arquivo global.json
-O arquivo `global.json` funciona como um arquivo de solução para projetos RC1 e RC2 (ou posterior). Para que o CLI do .NET Core (bem como o Visual Studio) Diferencie entre o RC1 e versões posteriores, eles usam a propriedade `"sdk": { "version" }` para fazer a distinção de qual projeto é RC1 ou posterior. Se `global.json` não tiver esse nó, ele será considerado o mais recente.
+O arquivo `global.json` funciona como um arquivo de solução para projetos RC1 e RC2 (ou posterior). Para que o .NET Core CLI (assim como o Visual Studio) diferencie entre as versões RC1 e posteriores, eles usam a `"sdk": { "version" }` propriedade para fazer a distinção de qual projeto é RC1 ou posterior. Se `global.json` não tiver esse nó, ele será considerado o mais recente.
 
 Para atualizar o arquivo `global.json`, remova a propriedade ou defina-a para a versão exata das ferramentas que você deseja usar, neste caso **1.0.0-preview2-003121**:
 

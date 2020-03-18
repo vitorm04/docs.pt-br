@@ -4,21 +4,21 @@ description: Este artigo fornece uma visão geral e introdução ao Docker no co
 ms.date: 03/20/2019
 ms.custom: mvc
 ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157785"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
 O .NET Core pode ser facilmente executado em um contêiner do Docker. Os contêineres oferecem uma maneira leve de isolar seu aplicativo do restante do sistema do host, compartilhando apenas o kernel e usando os recursos fornecidos para seu aplicativo. Se você não estiver familiarizado com o Docker, é altamente recomendável ler a [documentação de visão geral](https://docs.docker.com/engine/docker-overview/) do Docker.
 
-Para obter mais informações sobre como instalar o Docker, consulte a página de download do [Docker desktop: Community Edition](https://www.docker.com/products/docker-desktop).
+Para obter mais informações sobre como instalar o Docker, consulte a página de download do [Docker Desktop: Community Edition](https://www.docker.com/products/docker-desktop).
 
 ## <a name="docker-basics"></a>Noções básicas do Docker
 
-Há alguns conceitos que você deve conhecer. O cliente do Docker tem uma CLI que você pode usar para gerenciar imagens e contêineres. Conforme mencionado anteriormente, você deve reservar algum tempo para ler a documentação de [visão geral do Docker](https://docs.docker.com/engine/docker-overview/).
+Há alguns conceitos que você deve conhecer. O cliente Docker tem um CLI que você pode usar para gerenciar imagens e contêineres. Conforme mencionado anteriormente, você deve reservar algum tempo para ler a documentação de [visão geral do Docker](https://docs.docker.com/engine/docker-overview/).
 
 ### <a name="images"></a>Imagens
 
@@ -40,7 +40,7 @@ O MCR (Registro de Contêiner da Microsoft) é a fonte oficial de imagens de con
 
 ### <a name="dockerfile"></a>Dockerfile
 
-Um **Dockerfile** é um arquivo que define um conjunto de instruções que cria uma imagem. Cada instrução no **Dockerfile** cria uma camada na imagem. Para a maior parte, quando você recria a imagem, somente as camadas que foram alteradas são recriadas. O **Dockerfile** pode ser distribuído para outras pessoas e permite recriar uma nova imagem da mesma maneira que você a criou. Embora isso permita distribuir as *instruções* sobre a criação de uma imagem, a principal forma de distribuir sua imagem é publicando-a em um registro.
+Um **Dockerfile** é um arquivo que define um conjunto de instruções que cria uma imagem. Cada instrução no **Dockerfile** cria uma camada na imagem. Na maioria das vezes, quando você reconstrói a imagem, apenas as camadas que foram alteradas são reconstruídas. O **Arquivo Docker** pode ser distribuído para outros e permite que eles recriem uma nova imagem da mesma maneira que você a criou. Embora isso permita distribuir as *instruções* sobre a criação de uma imagem, a principal forma de distribuir sua imagem é publicando-a em um registro.
 
 ## <a name="net-core-images"></a>Imagens do .NET Core
 
@@ -52,22 +52,22 @@ A Microsoft fornece imagens personalizadas para cenários específicos. Por exem
 
 Vários serviços do Azure oferecem suporte a contêineres. Crie uma imagem do Docker para seu aplicativo e implante-a em um dos seguintes serviços:
 
-- [AKS (Serviço de Kubernetes do Azure)](https://azure.microsoft.com/services/kubernetes-service/)\
+- [Serviço Azure Kubernetes (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Dimensione e orquestre contêineres do Linux usando o Kubernetes.
 
-- [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/containers/)\
+- [Serviço de aplicativo azure](https://azure.microsoft.com/services/app-service/containers/)\
 Implante aplicativos Web ou APIs usando contêineres do Linux em um ambiente PaaS.
 
-- [Instâncias de Contêiner do Azure](https://azure.microsoft.com/services/container-instances/)\
+- [Instâncias de contêineres azure](https://azure.microsoft.com/services/container-instances/)\
 Hospede seu contêiner na nuvem sem qualquer serviço de gerenciamento de nível superior.
 
-- [Lote do Azure](https://azure.microsoft.com/services/batch/)\
+- [Lote Azure](https://azure.microsoft.com/services/batch/)\
 Execute trabalhos de computação repetitivos usando contêineres.
 
-- [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
-Migre, mude e Modernize aplicativos .NET para os microserviços usando contêineres do Windows Server.
+- [Tecido de serviço azure](https://azure.microsoft.com/services/service-fabric/)\
+Levante, desloque e modernize os aplicativos .NET para microserviços usando contêineres do Windows Server.
 
-- [Registro de Contêiner do Azure](https://azure.microsoft.com/services/container-registry/)\
+- [Registro de Contêineres Azure](https://azure.microsoft.com/services/container-registry/)\
 Armazene e gerencie imagens de contêiner em todos os tipos de implantações do Azure.
 
 ## <a name="next-steps"></a>Próximas etapas

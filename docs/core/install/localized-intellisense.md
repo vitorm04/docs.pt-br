@@ -3,10 +3,10 @@ title: Instalar arquivos do IntelliSense localizado
 description: Saiba como configurar seu computador de desenvolvimento para usar arquivos do IntelliSense localizado para projetos do .NET Core no Visual Studio.
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157707"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>Como instalar arquivos do IntelliSense localizado para o .NET Core
@@ -16,7 +16,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
 - Como instalar a versão localizada desses arquivos.
 - Como modificar a instalação do Visual Studio para usar uma linguagem diferente.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [SDK do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.
 - [Visual Studio 2019 versão 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou uma versão posterior.
@@ -32,7 +32,7 @@ O [IntelliSense](/visualstudio/ide/using-intellisense) é um recurso de conclus�
 
 1. Extraia o conteúdo do arquivo zip.
 
-1. Navegue até a pasta .NET Core IntelliSense.
+1. Navegue até a pasta .NET Core Intellisense.
 
    1. Navegue até a pasta de instalação do .NET Core. Por padrão, ela está em *%ProgramFiles%\dotnet\packs*.
    1. Escolha o SDK para o qual você deseja instalar o IntelliSense e navegue até o caminho associado. Você tem as seguintes opções:
@@ -75,7 +75,7 @@ Para que o Visual Studio use um idioma diferente para o IntelliSense, instale o 
 Se você não instalou o pacote de idiomas desejado durante a instalação, atualize o Visual Studio da seguinte maneira para instalar o pacote de idiomas:
 
 > [!IMPORTANT]
-> Para instalar, atualizar ou modificar o Visual Studio, você deve fazer logon com uma conta que tenha permissão de administrador. Para saber mais, confira [Permissões de usuário e Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
+> Para instalar, atualizar ou modificar o Visual Studio, você deve fazer logon com uma conta que tenha permissão do administrador. Para obter mais informações, consulte [permissões de usuário e Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio).
 
 1. Localize o Instalador do Visual Studio no computador.
 
@@ -112,9 +112,9 @@ Depois de instalar os pacotes de idiomas desejados, modifique suas configuraçõ
 
 1. Na janela de início, escolha **Continuar sem código**.
 
-1. Na barra de menus, selecione **ferramentas** > **Opções**. A caixa de diálogo Opções é aberta.
+1. Na barra de menus, selecione **Opções de** > **ferramentas**. A caixa de diálogo Opções é aberta.
 
-1. No nó **ambiente** , escolha **configurações internacionais**.
+1. No nó **Meio Ambiente,** escolha **Configurações Internacionais**.
 
 1. No menu suspenso **Idioma**, selecione o idioma desejado. Escolha **OK**.
 

@@ -1,31 +1,31 @@
 ---
 ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449381"
 ---
-### <a name="change-in-default-value-of-useshellexecute"></a>Alteração no valor padrão de UseShellExecute
+### <a name="change-in-default-value-of-useshellexecute"></a>Alterar o valor padrão do UseShellExecute
 
-<xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> tem um valor padrão de `false` no .NET Core. Em .NET Framework, seu valor padrão é `true`.
+<xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType>tem um valor `false` padrão de .NET Core. No .NET Framework, seu `true`valor padrão é .
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> permite que você inicie um aplicativo diretamente, por exemplo, com um código como `Process.Start("mspaint.exe")` que inicia o Paint. Ele também permite que você inicie indiretamente um aplicativo associado se <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> estiver definido como `true`. No .NET Framework, o valor padrão de <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> é `true`, o que significa que o código como `Process.Start("mytextfile.txt")` iniciaria o bloco de notas, se você tiver associado arquivos *. txt* com esse editor. Para evitar a inicialização indireta de um aplicativo no .NET Framework, você deve definir explicitamente <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> como `false`. No .NET Core, o valor padrão para <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> é `false`. Isso significa que, por padrão, os aplicativos associados não são iniciados quando você chama `Process.Start`.
+<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>permite que você inicie um aplicativo diretamente, `Process.Start("mspaint.exe")` por exemplo, com código como o que lança o Paint. Ele também permite que você lance <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> indiretamente `true`um aplicativo associado se estiver definido como . No .NET Framework, o <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `true`valor padrão para `Process.Start("mytextfile.txt")` é , o que significa que o código como seria lançado Notepad, se você tiver associado arquivos *.txt* com esse editor. Para evitar a inicialção indireta de um aplicativo <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false`no .NET Framework, você deve definir explicitamente para . No .NET Core, o <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> `false`valor padrão para é . Isso significa que, por padrão, os aplicativos `Process.Start`associados não são lançados quando você chama .
 
-Essa alteração foi introduzida no .NET Core por motivos de desempenho. Normalmente, <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> é usado para iniciar um aplicativo diretamente. Iniciar um aplicativo diretamente não precisa envolver o Shell do Windows e incorrer no custo de desempenho associado. Para tornar esse caso padrão mais rápido, o .NET Core altera o valor padrão de <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> para `false`. Você pode aceitar o caminho mais lento se precisar dele.
+Essa mudança foi introduzida no .NET Core por razões de desempenho. Normalmente, <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> é usado para lançar um aplicativo diretamente. Lançar um aplicativo diretamente não precisa envolver o shell do Windows e incorrer no custo de desempenho associado. Para tornar este caso padrão mais rápido, <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute?displayProperty=nameWithType> o `false`.NET Core altera o valor padrão de . Você pode optar pelo caminho mais lento se precisar.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 2.1
 
 > [!NOTE]
-> Em versões anteriores do .NET Core, `UseShellExecute` não foi implementada para o Windows.
+> Em versões anteriores `UseShellExecute` do .NET Core, não foi implementado para windows.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se seu aplicativo depender do comportamento antigo, chame <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType> com <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> definido como `true` no objeto <xref:System.Diagnostics.ProcessStartInfo>.
+Se o seu aplicativo se <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType> basear no comportamento antigo, ligue com <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> set para `true` o <xref:System.Diagnostics.ProcessStartInfo> objeto.
 
 #### <a name="category"></a>Categoria
 

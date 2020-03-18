@@ -1,15 +1,15 @@
 ---
-title: Delegados com métodos nomeados vs. anônimos – guia de C# programação
+title: Delegados com Métodos Nomeados vs. Anônimos - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
 ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712371"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegados com métodos nomeados versus anônimos (Guia de Programação em C#)
@@ -36,9 +36,9 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) pode se
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Delegados](./index.md)
-- [Como combinar delegados (delegados de multicast)](./how-to-combine-delegates-multicast-delegates.md)
+- [C# Guia de Programação](../index.md)
+- [Delega](./index.md)
+- [Como combinar delegados (Delegados Multicast)](./how-to-combine-delegates-multicast-delegates.md)
 - [Eventos](../events/index.md)

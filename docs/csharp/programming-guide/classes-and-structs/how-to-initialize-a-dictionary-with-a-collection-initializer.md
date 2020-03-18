@@ -5,10 +5,10 @@ helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
 ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75741361"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Como inicializar um dicionário com um inicializador de coleção (Guia de Programação em C#)
@@ -21,9 +21,9 @@ No exemplo de código a seguir, um <xref:System.Collections.Generic.Dictionary%6
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 
-Observe os dois pares de chaves em cada elemento da coleção na primeira declaração. As chaves mais internas envolvem o inicializador de objeto para o `StudentName`e as chaves mais externas delimitam o inicializador para o par de chave/valor que será adicionado ao <xref:System.Collections.Generic.Dictionary%602>de `students`. Por fim, todo o inicializador de coleção do dicionário é colocado entre chaves. Na segunda inicialização, o lado esquerdo da atribuição é a chave e o lado direito é o valor, usando um inicializador de objeto para `StudentName`.
+Observe os dois pares de chaves em cada elemento da coleção na primeira declaração. As chaves mais internas que circundam `StudentName`o inicializador do objeto para o , e as chaves mais `students` <xref:System.Collections.Generic.Dictionary%602>externas emperram o inicializador para o par de tecla/valor que será adicionado ao . Por fim, todo o inicializador de coleção do dicionário é colocado entre chaves. Na segunda inicialização, o lado esquerdo da atribuição é a chave e o lado direito é o valor, usando um inicializador de objeto para `StudentName`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Inicializadores de objeto e coleção](./object-and-collection-initializers.md)

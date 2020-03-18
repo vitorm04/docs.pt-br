@@ -1,17 +1,18 @@
 ---
-title: Referência de comando da CLI ML.NET
+title: ML.NET referência de comando CLI
 description: Visão geral, exemplos e referência para o comando de treinamento automático na ferramenta de CLI do ML.NET.
 ms.date: 12/18/2019
-ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.custom: mlnet-tooling
+ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449693"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848919"
 ---
-# <a name="the-mlnet-cli-command-reference"></a>A referência de comando da CLI ML.NET
+# <a name="the-mlnet-cli-command-reference"></a>A referência de comando ML.NET CLI
 
-O comando `auto-train` é o principal comando fornecido pela ferramenta de CLI do ML.NET. O comando permite gerar um bom modelo de ML.NET de qualidade usando o AutoML (Machine Learning automatizado), bem como C# o código de exemplo para executar/pontuar esse modelo. Além disso, o C# código para treinar o modelo é gerado para você pesquisar o algoritmo e as configurações do modelo.
+O comando `auto-train` é o principal comando fornecido pela ferramenta de CLI do ML.NET. O comando permite gerar uma boa qualidade ML.NET modelo usando aprendizado de máquina automatizado (AutoML), bem como o exemplo de código C# para executar/marcar esse modelo. Além disso, o código C# para treinar o modelo é gerado para você pesquisar o algoritmo e as configurações do modelo.
 
 > [!NOTE]
 > Este tópico refere-se à CLI do ML.NET e ao AutoML do ML.NET, que estão atualmente em Versão Prévia. O material pode estar sujeito a alterações.
@@ -27,16 +28,16 @@ mlnet auto-train --task regression --dataset "cars.csv" --label-column-name pric
 O comando `mlnet auto-train` gera os seguintes ativos:
 
 - Um modelo serializado. zip ("melhor modelo") pronto para uso.
-- C#código para executar/pontuar o modelo gerado.
-- C#código com o código de treinamento usado para gerar esse modelo.
+- C# código para executar/marcar que gerou modelo.
+- C# código com o código de treinamento usado para gerar esse modelo.
 
-Os dois primeiros ativos podem ser usados diretamente em seus aplicativos de usuário final (ASP.NET Core aplicativo Web, serviços, aplicativo de área de trabalho e muito mais) para fazer previsões com o modelo.
+Os dois primeiros ativos podem ser usados diretamente em seus aplicativos de usuário final (ASP.NET aplicativo web Core, serviços, aplicativo de desktop e muito mais) para fazer previsões com o modelo.
 
-O terceiro ativo, o código de treinamento, mostra o que o código da API ML.NET foi usado pela CLI para treinar o modelo gerado, para que você possa investigar o algoritmo e as configurações específicas do modelo.
+O terceiro ativo, o código de treinamento, mostra o que ML.NET código de API foi usado pela CLI para treinar o modelo gerado, para que você possa investigar o algoritmo específico e as configurações do modelo.
 
 ## <a name="examples"></a>Exemplos
 
-O comando da CLI mais simples para um problema de classificação binária (AutoML infere a maior parte da configuração dos dados fornecidos):
+O comando CLI mais simples para um problema de classificação binária (O AutoML infere a maior parte da configuração a partir dos dados fornecidos):
 
 ```console
 mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
@@ -56,7 +57,7 @@ mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-
 
 ## <a name="command-options"></a>Opções de comando
 
-`mlnet auto-train` treina vários modelos com base no conjunto de um fornecido e, finalmente, seleciona o melhor modelo, salva-o como um arquivo. C# zip serializado, além de gerar código relacionado para pontuação e treinamento.
+`mlnet auto-train`treina vários modelos com base no conjunto de dados fornecido e finalmente seleciona o melhor modelo, salva-o como um arquivo serializado .zip plus gera código C# relacionado para pontuação e treinamento.
 
 ```console
 mlnet auto-train
@@ -92,7 +93,7 @@ mlnet auto-train
 
 ```
 
-As opções de entrada inválidas fazem com que a ferramenta CLI emita uma lista de entradas válidas e uma mensagem de erro.
+Opções de entrada inválidas fazem com que a ferramenta CLI emita uma lista de entradas válidas e uma mensagem de erro.
 
 ## <a name="task"></a>Tarefa
 
@@ -112,9 +113,9 @@ Uma tarefa de ML deve ser fornecida neste argumento.
 
 Esse argumento fornece o caminho do arquivo para uma das seguintes opções:
 
-- *R: todo o arquivo do conjunto de arquivos:* Se você estiver usando essa opção e o usuário não estiver fornecendo `--test-dataset` e `--validation-dataset`, em seguida, a validação cruzada (k-fold, etc.) ou abordagens de divisão de dados automatizadas serão usadas internamente para validar o modelo. Nesse caso, o usuário precisará apenas fornecer o caminho do arquivo do conjunto de dados.
+- *A: Todo o arquivo do conjunto de dados:* Se usar essa opção e `--test-dataset` o `--validation-dataset`usuário não estiver fornecendo e, em seguida, a validação cruzada (k-fold, etc.) ou abordagens automatizadas de divisão de dados serão usadas internamente para validar o modelo. Nesse caso, o usuário precisará apenas fornecer o caminho do arquivo do conjunto de dados.
 
-- *B: o arquivo do conjunto de arquivos de treinamento:* Se o usuário também estiver fornecendo conjuntos de valores para validação de modelo (usando `--test-dataset` e, opcionalmente, `--validation-dataset`), o argumento de `--dataset` significará ter apenas o "conjunto de linhas de treinamento". Por exemplo, ao usar uma abordagem de 80-20% para validar a qualidade do modelo e obter métricas de precisão, o "conjunto de dados treinamento" terá 80% dos dados e o "conjunto de dados de teste" terá 20% dos dados.
+- *B: O arquivo do conjunto de dados de treinamento:* Se o usuário também estiver fornecendo `--test-dataset` conjuntos `--validation-dataset`de dados `--dataset` para validação do modelo (usando e opcionalmente), então o argumento significa ter apenas o "conjunto de dados de treinamento". Por exemplo, ao usar uma abordagem de 80-20% para validar a qualidade do modelo e obter métricas de precisão, o "conjunto de dados treinamento" terá 80% dos dados e o "conjunto de dados de teste" terá 20% dos dados.
 
 ## <a name="test-dataset"></a>Conjunto de dados de teste
 
@@ -145,7 +146,7 @@ Basicamente, ao usar um `validation dataset` mais o `test dataset`, a fase de va
 1. Na primeira parte, você apenas examina seus modelos e seleciona a abordagem com melhor desempenho usando os dados de validação (=validation)
 2. Em seguida, você pode estimar a precisão da abordagem selecionada (=test).
 
-Portanto, a separação dos dados pode ser 80/10/10 ou 75/15/10. Por exemplo:
+Portanto, a separação dos dados pode ser 80/10/10 ou 75/15/10. Por exemplo: 
 
 - O arquivo `training-dataset` deve ter 75% dos dados.
 - O arquivo `validation-dataset` deve ter 15% dos dados.
@@ -161,13 +162,13 @@ Com este argumento, uma coluna de destino/objetivo específica (a variável que 
 
 Esse argumento é usado somente para tarefas de ML supervisionadas, tais como um *problema de classificação*. Ele não pode ser usado para tarefas de ML sem supervisão, tais como *clustering*.
 
-## <a name="label-column-index"></a>Índice de coluna de rótulo
+## <a name="label-column-index"></a>Índice da coluna de rótulos
 
 `--label-column-index | -i` (int)
 
 Com este argumento, uma coluna de destino/objetivo específico (a variável que você deseja prever) pode ser especificada usando o índice numérico da coluna no arquivo do conjunto de dados (os valores de coluna de índice começam em 1).
 
-*Observação:* Se o usuário também estiver usando o `--label-column-name`, o `--label-column-name` será usado.
+*Nota:* Se o usuário também `--label-column-name`estiver `--label-column-name` usando o , é o que está sendo usado.
 
 Esse argumento é usado apenas para a tarefa de ML supervisionada, tal como um *problema de classificação*. Ele não pode ser usado para tarefas de ML sem supervisão, tais como *clustering*.
 
@@ -219,9 +220,9 @@ No entanto, para grandes conjuntos de dados, carregar todos os dados na memória
 
 É possível especificar os seguintes valores:
 
-`on`: força o cache a ser usado durante o treinamento.
-`off`: força o cache a não ser usado durante o treinamento.
-`auto`: dependendo da heurística do AutoML, o cache será usado ou não. Em geral, conjuntos de dados pequenos/médios usarão o cache e grandes conjuntos de dados não usarão o cache se você usar a escolha `auto`.
+`on`: Forças cache a ser usado durante o treinamento.
+`off`: Forças cache não devem ser usados durante o treinamento.
+`auto`: Dependendo da heurística AutoML, o cache será usado ou não. Em geral, conjuntos de dados pequenos/médios usarão o cache e grandes conjuntos de dados não usarão o cache se você usar a escolha `auto`.
 
 Se você não especificar o parâmetro `--cache`, a configuração de cache `auto` será usada por padrão.
 
@@ -262,6 +263,6 @@ Imprime uma ajuda para o comando com uma descrição para o parâmetro de cada c
 ## <a name="see-also"></a>Confira também
 
 - [Como instalar a ferramenta de CLI do ML.NET](../how-to-guides/install-ml-net-cli.md)
-- [Visão geral da CLI do ML.NET](../automate-training-with-cli.md)
-- [Tutorial: analisar o sentimentos usando a CLI do ML.NET](../tutorials/sentiment-analysis-cli.md)
+- [Visão geral da ML.NET CLI](../automate-training-with-cli.md)
+- [Tutorial: Analise o sentimento usando o ML.NET CLI](../tutorials/sentiment-analysis-cli.md)
 - [Telemetria na CLI do ML.NET](../resources/ml-net-cli-telemetry.md)

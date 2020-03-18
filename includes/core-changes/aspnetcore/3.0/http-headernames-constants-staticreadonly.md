@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75902053"
 ---
-### <a name="http-headernames-constants-changed-to-static-readonly"></a>Constantes HTTP: Headernames alteradas para static readonly
+### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP: CabeçalhosAs constantes alteradas para leitura estática
 
-A partir do ASP.NET Core 3,0 Preview 5, os campos em <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> alterados de `const` para `static readonly`.
+A partir de ASP.NET O Núcleo 3.0 `const` `static readonly`Preview 5, os campos em <xref:Microsoft.Net.Http.Headers.HeaderNames?displayProperty=fullName> mudou de para .
 
-Para obter uma discussão, consulte [dotnet/aspnetcore # 9514](https://github.com/dotnet/aspnetcore/issues/9514).
+Para discussão, consulte [dotnet/aspnetcore#9514](https://github.com/dotnet/aspnetcore/issues/9514).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -18,28 +18,28 @@ Para obter uma discussão, consulte [dotnet/aspnetcore # 9514](https://github.co
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-Esses campos costumava ser `const`.
+Esses campos costumavam ser. `const`
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-Agora, esses campos são `static readonly`.
+Esses campos `static readonly`estão agora.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-A alteração:
+A mudança:
 
-* Impede que os valores sejam inseridos entre limites de assembly, permitindo correções de valor conforme necessário.
-* Permite verificações de igualdade de referência mais rápidas.
+* Impede que os valores sejam incorporados através dos limites de montagem, permitindo correções de valor conforme necessário.
+* Permite verificações mais rápidas de igualdade de referência.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Recompile em relação a 3,0. O código-fonte que usa esses campos das seguintes maneiras não pode mais fazer isso:
+Recompilar contra 3.0. O código-fonte que utiliza esses campos das seguintes maneiras não pode mais fazê-lo:
 
-* Como um argumento de atributo
-* Como um `case` em uma instrução `switch`
-* Ao definir outro `const`
+* Como argumento de atributo
+* Como `case` uma `switch` declaração
+* Ao definir outro`const`
 
-Para contornar a alteração significativa, alterne para usando constantes de nome de cabeçalho autodefinido ou literais de cadeia de caracteres.
+Para contornar a mudança de quebra, mude para usar constantes de nome de cabeçalho auto-definidas ou literais de seqüência.
 
 #### <a name="category"></a>Categoria
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712943"
 ---
 # <a name="using-static-directive-c-reference"></a>Diretiva using static (Referência de C#)
 
-A diretiva `using static` designa um tipo cujos membros estáticos e tipos aninhados você pode acessar sem especificar um nome de tipo. A sintaxe é:
+A diretiva `using static` designa um tipo cujos membros estáticos e tipos aninhados você pode acessar sem especificar um nome de tipo. Sua sintaxe é:
 
 ```csharp
 using static <fully-qualified-type-name>;
@@ -49,10 +49,10 @@ O exemplo a seguir usa a diretiva `using static` para tornar os membros estátic
 
 No exemplo, a diretiva `using static` também poderia ter sido aplicada ao tipo <xref:System.Double>. Isso tornaria possível chamar o método <xref:System.Double.TryParse(System.String,System.Double@)> sem especificar um nome de tipo. No entanto, isso cria código menos legível, uma vez que se torna necessário verificar as instruções `using static` para determinar qual método `TryParse` do tipo numérico é chamado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Diretiva using](using-directive.md)
-- [Referência de C#](../index.md)
+- [usando diretiva](using-directive.md)
+- [C# Referência](../index.md)
 - [Palavras-chave do C#](index.md)
 - [Usando namespaces](../../programming-guide/namespaces/using-namespaces.md)
 - [Namespaces](../../programming-guide/namespaces/index.md)

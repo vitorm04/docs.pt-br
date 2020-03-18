@@ -6,10 +6,10 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
 ms.openlocfilehash: c829414cc197b18ad0dbd9c2cf401a05f6f2fbc6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715151"
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
@@ -22,12 +22,12 @@ As instruções são instruções do programa. Exceto conforme descrito nos tóp
 |Instruções de iteração|[do](do.md), [for](for.md), [foreach](foreach-in.md), [in](foreach-in.md), [while](while.md)|
 |Instruções de salto|[break](break.md), [continue](continue.md), [default](switch.md), [goto](goto.md), [return](return.md), [yield](yield.md)|
 |Instruções para tratamento de exceções|[throw](throw.md), [try-catch](try-catch.md), [try-finally](try-finally.md), [try-catch-finally](try-catch-finally.md)|
-|[Checked e unchecked](checked-and-unchecked.md)|[checked](checked.md), [unchecked](unchecked.md)|
-[Instrução fixed](fixed-statement.md)|[fixed](fixed-statement.md)|
-|[Instrução lock](lock-statement.md)|[lock](lock-statement.md)|
+|[Verificado e desmarcado](checked-and-unchecked.md)|[checked](checked.md), [unchecked](unchecked.md)|
+[Instrução fixed](fixed-statement.md)|[Fixo](fixed-statement.md)|
+|[declaração de bloqueio](lock-statement.md)|[Bloqueio](lock-statement.md)|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Instruções](../../programming-guide/statements-expressions-operators/statements.md)
+- [C# Referência](../index.md)
+- [Declarações](../../programming-guide/statements-expressions-operators/statements.md)
 - [Palavras-chave do C#](index.md)

@@ -4,10 +4,10 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156680"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
@@ -54,7 +54,7 @@ A proteção de sua privacidade é importante para nós. Se você suspeita que a
 
 O recurso de telemetria coleta os seguintes dados:
 
-| Versões do SDK | data |
+| Versões do SDK | Dados |
 |--------------|------|
 | Todos          | Carimbo de data/hora da invocação. |
 | Todos          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
@@ -96,7 +96,7 @@ Um subconjunto de comandos envia as opções selecionadas se elas são usadas, j
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |

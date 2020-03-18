@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 6f8e6d2786d20e055c9bef63891db4d6f88bc64b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901851"
 ---
-### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Identity: o Construtor SignInManager aceita o novo parâmetro
+### <a name="identity-signinmanager-constructor-accepts-new-parameter"></a>Identidade: O construtor SignInManager aceita novo parâmetro
 
-A partir do ASP.NET Core 3,0, um novo parâmetro `IUserConfirmation<TUser>` foi adicionado ao Construtor `SignInManager`. Para obter mais informações, consulte [dotnet/aspnetcore # 8356](https://github.com/dotnet/aspnetcore/issues/8356).
+Começando com ASP.NET Núcleo 3.0, um `IUserConfirmation<TUser>` novo `SignInManager` parâmetro foi adicionado ao construtor. Para obter mais informações, consulte [dotnet/aspnetcore#8356](https://github.com/dotnet/aspnetcore/issues/8356).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 3.0
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-A motivação para a alteração foi adicionar suporte a novos fluxos de email/confirmação em identidade.
+A motivação para a mudança foi adicionar suporte para novos fluxos de e-mail/confirmação em Identidade.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você construir manualmente uma `SignInManager`, forneça uma implementação de `IUserConfirmation` ou pegue uma da injeção de dependência a ser fornecida.
+Se construir manualmente `SignInManager`um , `IUserConfirmation` forneça uma implementação ou pegue uma da injeção de dependência para fornecer.
 
 #### <a name="category"></a>Categoria
 

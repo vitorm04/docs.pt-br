@@ -3,22 +3,22 @@ title: Categorias de alteração significativa
 description: Saiba mais sobre as maneiras como as alterações da falha são categorizadas no .NET Core.
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093039"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
-A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações](index.md) que são consideradas ao avaliar a compatibilidade se enquadram nas seguintes categorias:
+A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações](index.md) que são considerados ao avaliar a compatibilidade se enquadram nas seguintes categorias:
 
-- [alteração comportamental](#behavioral-change)
+- [mudança comportamental](#behavioral-change)
 - [compatibilidade binária](#binary-compatibility)
 - [compatibilidade de origem](#source-compatibility)
-- [compatibilidade de tempo de design](#design-time-compatibility)
-- [compatibilidade com versões anteriores](#backwards-compatibility)
-- [compatibilidade com o encaminhamento](#forward-compatibility) (não é uma meta do .NET Core)
+- [compatibilidade design-tempo](#design-time-compatibility)
+- [Compatibilidade](#backwards-compatibility)
+- [compatibilidade para frente](#forward-compatibility) (não um objetivo do .NET Core)
 
 ## <a name="behavioral-change"></a>Alteração de comportamento
 
@@ -42,7 +42,7 @@ A compatibilidade de tempo de design refere-se à preservação da experiência 
 
 A compatibilidade com versões anteriores refere-se à capacidade de um consumidor existente de executar em uma nova versão quando se comporta da mesma maneira. As alterações de comportamento e as alterações na compatibilidade binária afetam a compatibilidade com versões anteriores. Se um consumidor não puder executar ou se comportar de maneira diferente ao ser executado na versão mais recente da API, a API será *incompatível com versões anteriores*.
 
-As alterações que afetam a compatibilidade com versões anteriores são desencorajadas, uma vez que os desenvolvedores esperam compatibilidade com a versão mais recente de uma API.
+Mudanças que afetam a retrocompatibilidade são desencorajadas, uma vez que os desenvolvedores esperam retrocompatibilidade em versões mais recentes de uma API.
 
 ## <a name="forward-compatibility"></a>Compatibilidade com versões posteriores
 

@@ -4,15 +4,15 @@ description: O comando dotnet nuget push efetua push de um pacote no servidor e 
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503664"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -26,7 +26,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comando push usa o servidor e detalhes de credencial encontradas no arquivo de configuração do sistema NuGet ou uma cadeia de arquivos de configuração. Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](/nuget/consume-packages/configuring-nuget-behavior). A configuração de padrão do NuGet é obtida ao carregar *%AppData%\NuGet\NuGet.config* (Windows) ou *$HOME/.local/share* (Linux/macOS) e, em seguida, carregar qualquer *nuget.config* ou *.nuget\nuget.config* da raiz da unidade e terminar no diretório atual.
 
@@ -72,7 +72,7 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
 
 - **`--skip-duplicate`**
 
-  Ao enviar vários pacotes para um servidor HTTP (S), o trata qualquer resposta de conflito 409 como um aviso para que o envio por push possa continuar. Disponível desde o SDK do .NET Core 3,1.
+  Ao empurrar vários pacotes para um servidor HTTP(S), trata qualquer resposta de conflito 409 como um aviso para que o push possa continuar. Disponível desde .NET Core 3.1 SDK.
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -94,7 +94,7 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- Envie por push o *foo. nupkg* para o servidor do NuGet oficial, especificando uma chave de API:
+- Empurre *foo.nupkg* para o servidor NuGet oficial, especificando uma chave de API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -134,7 +134,7 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
   > Se esse comando não funcionar, talvez seja devido a um bug que existia em versões mais antigas do SDK (SDK do .NET Core 2.1 e versões anteriores).
   > Para corrigir esse problema, atualize sua versão do SDK ou execute o seguinte comando em vez disso: `dotnet nuget push **/*.nupkg`
 
-- Envia todos os arquivos *. nupkg* mesmo se uma resposta de conflito 409 for retornada por um servidor http (S):
+- Empurra todos os arquivos *.nupkg* mesmo se uma resposta de conflito 409 for devolvida por um servidor HTTP(S):
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
