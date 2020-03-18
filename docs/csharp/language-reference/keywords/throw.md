@@ -10,11 +10,11 @@ helpviewer_keywords:
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713047"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399332"
 ---
 # <a name="throw-c-reference"></a>throw (Referência de C#)
 
@@ -47,7 +47,7 @@ Os chamadores do método, então, usam um bloco `try-catch` ou `try-catch-finall
 
 ## <a name="the-throw-expression"></a>A expressão `throw`
 
-Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como uma instrução. Isso permite que uma exceção seja gerada em contextos que não tinham suporte anteriormente. Elas incluem:
+Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como uma instrução. Isso permite que uma exceção seja gerada em contextos que não tinham suporte anteriormente. Eles incluem:
 
 - [o operador condicional](../operators/conditional-operator.md). O exemplo a seguir usará uma expressão `throw` para gerar um <xref:System.ArgumentException> se uma matriz de cadeia de caracteres vazia for passada para um método. Antes do C# 7.0, essa lógica precisava aparecer em uma instrução `if`/`else`.
 
@@ -61,14 +61,14 @@ Começando com o C# 7.0, o `throw` pode ser usado como uma expressão, bem como 
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
-- [try-catch](try-catch.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
+- [tentar pegar](try-catch.md)
 - [Palavras-chave do C#](index.md)
 - [Como gerar exceções explicitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

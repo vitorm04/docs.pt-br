@@ -3,12 +3,12 @@ title: Padrões Comuns para Delegados
 description: Saiba mais sobre os padrões comuns para usar delegados em seu código para evitar acoplamento forte entre os componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 40e6ced7337e32d6e9b67b12a15ad7e03a77c4b6
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 22ab88e5b139381e3a8921baa20df035f1405146
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239866"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399661"
 ---
 # <a name="common-patterns-for-delegates"></a>Padrões Comuns para Delegados
 
@@ -56,7 +56,7 @@ Vamos começar pequeno: a implementação inicial aceitará novas mensagens e as
 
 [!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-A classe estática acima é a coisa mais simples que pode funcionar. Precisamos escrever a única implementação do método que grava mensagens no console: 
+A classe estática acima é a coisa mais simples que pode funcionar. Precisamos escrever a única implementação do método que grava mensagens no console:
 
 [!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
@@ -81,7 +81,7 @@ Em seguida, vamos adicionar alguns argumentos para o método `LogMessage()` para
 [!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
 [!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-Em seguida, vamos usar aquele argumento `Severity` para filtrar as mensagens que são enviadas para o log de saída. 
+Em seguida, vamos usar aquele argumento `Severity` para filtrar as mensagens que são enviadas para o log de saída.
 
 [!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
@@ -153,4 +153,4 @@ Você já viu o início de um componente de log que poderia ser expandido com ou
 
 A classe de agente pode fazer vários aprimoramentos ou alterações sem introduzir alterações significativas. Assim como qualquer classe, você não pode modificar a API pública sem o risco de fazer alterações significativas. Mas, como o acoplamento entre o agente e qualquer mecanismo de saída ocorre somente por meio do delegado, nenhum outro tipo (como interfaces ou classes base) é envolvido. O acoplamento é o menor possível.
 
-[Próximo](events-overview.md)
+[Avançar](events-overview.md)

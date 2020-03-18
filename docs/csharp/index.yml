@@ -1,45 +1,45 @@
 ### YamlMime:Landing
 title: Documentação do C#
-summary: Saiba como escrever qualquer aplicativo usando a C# linguagem de programação na plataforma .net.
+summary: Aprenda a escrever qualquer aplicativo usando a linguagem de programação C# na plataforma .NET.
 metadata:
-  title: C#Docs-introdução, tutoriais, referência.
-  description: Aprenda C# sobre programação – para desenvolvedores iniciantes, desenvolvedores novos C#e experientes C# /desenvolvedores .net
+  title: C# docs - comece, tutoriais, referência.
+  description: Aprenda programação C# - para desenvolvedores iniciantes, desenvolvedores novos para C#, e desenvolvedores experientes C# / .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
   ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/25/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "75339166"
 landingContent:
-- title: Aprenda a programar emC#
+- title: 'Aprenda a programar em C #'
   linkLists:
   - linkListType: get-started
     links:
-    - text: Online, Olá, mundo interativo
+    - text: Online, interativo Hello mundo
       url: tutorials/intro-to-csharp/hello-world.yml
-    - text: Matemática e números emC#
+    - text: 'Matemática e números em C #'
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
-    - text: TUTORIAIS introdutórios
+    - text: Tutoriais introdutórios
       url: tutorials/intro-to-csharp/index.md
-    - text: Criar C# aplicativos com o Visual Studio
+    - text: Criar aplicativos C# com o Visual Studio
       url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
   - linkListType: video
     links:
     - text: O que é C#?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: C#série de vídeos 101
+    - text: C# 101 série de vídeo
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
     - text: Baixar o SDK do .NET Core
       url: https://dotnet.microsoft.com/download
-- title: C#conceitos básicos
+- title: C# fundamentos
   linkLists:
   - linkListType: overview
     links:
-    - text: Um tour peloC#
+    - text: 'Um tour por C #'
       url: tour-of-csharp/index.md
     - text: Por dentro de um programa em C#
       url: programming-guide/inside-a-program/index.md
@@ -47,23 +47,23 @@ landingContent:
       url: programming-guide/main-and-command-args/index.md
   - linkListType: concept
     links:
-    - text: O C# e o sistema de tipos .net
+    - text: O sistema do tipo C# e .NET
       url: programming-guide/types/index.md
-    - text: Consulta Integrada à Linguagem (LINQ)
+    - text: LINQ (Consulta Integrada à Linguagem)
       url: linq/index.md
-    - text: Async e Await
+    - text: assincronizar e esperar
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: Herança orientada a objeto
+    - text: Herança orientada a objetos
       url: tutorials/inheritance.md
-    - text: Usar o LINQ para consultar dados
+    - text: Use LINQ para consultar dados
       url: tutorials/working-with-linq.md
-    - text: Formatar texto usando interpolação de cadeia de caracteres
+    - text: Texto de formato usando interpolação de seqüência
       url: tutorials/string-interpolation.md
-    - text: Procurar em todos os tutoriais
+    - text: Navegue por todos os tutoriais
       url: tutorials/index.md
-- title: Novos recursos no C# 8,0
+- title: Novos recursos em C# 8.0
   linkLists:
   - linkListType: whats-new
     links:
@@ -81,29 +81,29 @@ landingContent:
       url: nullable-attributes.md
   - linkListType: tutorial
     links:
-    - text: Consumir e gerar fluxos assíncronos
+    - text: Consumir e gerar fluxos de sincronização
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: Desenvolver com tipos de referência anuláveis
+    - text: Desenvolver com tipos de referência anulados
       url: tutorials/nullable-reference-types.md
-    - text: Atualizar o código existente para usar tipos de referência anuláveis
+    - text: Atualize o código existente para usar tipos de referência anulados
       url: tutorials/upgrade-to-nullable-references.md
-    - text: Usar correspondência de padrão para algoritmos mais expressivos
+    - text: Use correspondência de padrões para algoritmos mais expressivos
       url: tutorials/pattern-matching.md
-    - text: Interfaces de versão com segurança com membros de interface padrão
+    - text: Interfaces de versão segura com membros de interface padrão
       url: tutorials/default-interface-methods-versions.md
-    - text: Misturar em funcionalidade com membros de interface padrão
+    - text: Misture a funcionalidade com os membros de interface padrão
       url: tutorials/mixins-with-default-interface-methods.md
-    - text: Trabalhar com subconjuntos usando intervalos e índices
+    - text: Trabalhe com subconjuntos usando faixas e índices
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: Alterações recentes no C# compilador
+    - text: Quebrando mudanças no compilador C#
       url: whats-new/breaking-changes.md
 - title: Referência da linguagem C#
   linkLists:
   - linkListType: reference
     links:
-    - text: Referência de linguagem
+    - text: Referência da linguagem
       url: language-reference/index.md
     - text: Palavras-chave de C#
       url: language-reference/keywords/index.md

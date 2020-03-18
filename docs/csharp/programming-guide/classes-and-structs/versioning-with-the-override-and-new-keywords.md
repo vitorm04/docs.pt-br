@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705386"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Controle de versão com as palavras-chave override e new (Guia de Programação em C#)
@@ -61,26 +61,26 @@ A linguagem C# foi projetada para que o controle de versão entre classes deriva
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- Usando a palavra-chave `new` informa ao compilador que sua definição oculta a definição que está contida na classe base. Este é o comportamento padrão.  
+ Usando a palavra-chave `new` informa ao compilador que sua definição oculta a definição que está contida na classe base. Esse é o comportamento padrão.  
   
 ## <a name="override-and-method-selection"></a>Seleção de método e substituição  
  Quando um método é chamado em uma classe, o compilador C# seleciona o melhor método a ser chamado se mais de um método for compatível com a chamada, como quando há dois métodos com o mesmo nome e parâmetros que são compatíveis com o parâmetro passado. Os métodos a seguir seriam compatíveis:  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- Quando `DoWork` é chamado em uma instância do `Derived`, o compilador C# tenta primeiro tornar a chamada compatível com as versões do `DoWork` originalmente declarado em `Derived`. Os métodos de substituição não são considerados como declarados em uma classe, eles são novas implementações de um método declarado em uma classe base. Somente se o compilador C# não puder corresponder a chamada de método a um método original no `Derived` ele tentará corresponder a chamada a um método com o mesmo nome e parâmetros compatíveis. Por exemplo:  
+ Quando `DoWork` é chamado em uma instância do `Derived`, o compilador C# tenta primeiro tornar a chamada compatível com as versões do `DoWork` originalmente declarado em `Derived`. Os métodos de substituição não são considerados como declarados em uma classe, eles são novas implementações de um método declarado em uma classe base. Somente se o compilador C# não puder corresponder a chamada de método a um método original no `Derived` ele tentará corresponder a chamada a um método com o mesmo nome e parâmetros compatíveis. Por exemplo:   
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- Como a variável `val` pode ser convertida para um duplo implicitamente, o compilador C# chama `DoWork(double)` em vez de `DoWork(int)`. Há duas formas de evitar isso. Primeiro, evite declarar novos métodos com o mesmo nome que os métodos virtuais. Segundo, você pode instruir o compilador C# para chamar o método virtual fazendo-o pesquisar a lista do método de classe base convertendo a instância do `Derived` para `Base`. Como o método é virtual, a implementação de `DoWork(int)` em `Derived` será chamada. Por exemplo:  
+ Como a variável `val` pode ser convertida para um duplo implicitamente, o compilador C# chama `DoWork(double)` em vez de `DoWork(int)`. Há duas formas de evitar isso. Primeiro, evite declarar novos métodos com o mesmo nome que os métodos virtuais. Segundo, você pode instruir o compilador C# para chamar o método virtual fazendo-o pesquisar a lista do método de classe base convertendo a instância do `Derived` para `Base`. Como o método é virtual, a implementação de `DoWork(int)` em `Derived` será chamada. Por exemplo:   
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  Para obter mais exemplos de `new` e `override`, consulte [Quando usar as palavras-chave override e new](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Classes e Structs](./index.md)
+- [C# Guia de Programação](../index.md)
+- [Classes e structs](./index.md)
 - [Métodos](./methods.md)
 - [Herança](./inheritance.md)

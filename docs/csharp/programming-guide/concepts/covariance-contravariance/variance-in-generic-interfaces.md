@@ -2,18 +2,18 @@
 title: Variância em interfaces genéricas (C#)
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 71225814a11074f52e4937dec88ca5e27114d6c7
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2020ea54734724de775192a1a438413a73003d17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179055"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169656"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Variância em interfaces genéricas (C#)
 
-O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces. 
+O .NET Framework 4 introduziu o suporte à variação para diversas interfaces genéricas existentes. O suporte à variação possibilita a conversão implícita de classes que implementam essas interfaces.
 
-A partir do .NET Framework 4, as seguintes interfaces são variantes:
+Começando com .NET Framework 4, as seguintes interfaces são variantes:
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T é covariante)
 
@@ -35,7 +35,7 @@ A partir do .NET Framework 4.5, as seguintes interfaces são variantes:
 
 - <xref:System.Collections.Generic.IReadOnlyCollection%601> (T é covariante)
 
-A covariância permite que um método tenha um tipo de retorno mais derivados que aquele definidos pelo parâmetro de tipo genérico da interface. Para ilustrar o recurso de covariância, considere estas interfaces genéricas: `IEnumerable<Object>` e `IEnumerable<String>`. A interface `IEnumerable<String>` não herda a interface `IEnumerable<Object>`. No entanto, o tipo `String` herda o tipo `Object` e, em alguns casos, talvez você queira atribuir objetos dessas interfaces uns aos outros. Isso será mostrado no exemplo de código a seguir.
+A covariância permite que um método tenha um tipo de retorno mais derivados que aquele definidos pelo parâmetro de tipo genérico da interface. Para ilustrar o recurso de covariância, considere estas interfaces genéricas: `IEnumerable<Object>` e `IEnumerable<String>`. A interface `IEnumerable<String>` não herda a interface `IEnumerable<Object>`. No entanto, o tipo `String` herda o tipo `Object` e, em alguns casos, talvez você queira atribuir objetos dessas interfaces uns aos outros. Isso é mostrado no exemplo de código a seguir.
 
 ```csharp
 IEnumerable<String> strings = new List<String>();
@@ -44,7 +44,7 @@ IEnumerable<Object> objects = strings;
 
 Em versões anteriores do .NET Framework, esse código causa um erro de compilação em C# e, se `Option Strict` estiver ativado, no Visual Basic. Mas agora você pode usar `strings` em vez de `objects`, conforme mostrado no exemplo anterior, porque a interface <xref:System.Collections.Generic.IEnumerable%601> é covariante.
 
-A contravariância permite que um método tenha tipos de argumentos menos derivados que aquele especificado pelo parâmetro genérico da interface. Para ilustrar a contravariância, suponha que você tenha criado uma classe `BaseComparer` para comparar instâncias da classe `BaseClass`. A classe `BaseComparer` implementa a interface `IEqualityComparer<BaseClass>`. Como a interface <xref:System.Collections.Generic.IEqualityComparer%601> agora é contravariante, você pode usar `BaseComparer` para comparar instâncias de classes que herdam a classe `BaseClass`. Isso será mostrado no exemplo de código a seguir.
+A contravariância permite que um método tenha tipos de argumentos menos derivados que aquele especificado pelo parâmetro genérico da interface. Para ilustrar a contravariância, suponha que você tenha criado uma classe `BaseComparer` para comparar instâncias da classe `BaseClass`. A classe `BaseComparer` implementa a interface `IEqualityComparer<BaseClass>`. Como a interface <xref:System.Collections.Generic.IEqualityComparer%601> agora é contravariante, você pode usar `BaseComparer` para comparar instâncias de classes que herdam a classe `BaseClass`. Isso é mostrado no exemplo de código a seguir.
 
 ```csharp
 // Simple hierarchy of classes.
@@ -98,9 +98,9 @@ Também é importante lembrar que as classes que implementam interfaces variante
 IEnumerable<Object> listObjects = new List<String>();
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Usando variação em interfaces para coleções genéricas (C#)](./using-variance-in-interfaces-for-generic-collections.md)
+- [Usando variação em interfaces para Coleções Genéricas (C#)](./using-variance-in-interfaces-for-generic-collections.md)
 - [Criando interfaces genéricas variáveis (C#)](./creating-variant-generic-interfaces.md)
 - [Interfaces genéricas](../../../../standard/generics/interfaces.md)
 - [Variação em delegados (C#)](./variance-in-delegates.md)

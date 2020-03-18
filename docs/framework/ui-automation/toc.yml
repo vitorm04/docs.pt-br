@@ -31,7 +31,7 @@
           href: ui-automation-providers-overview.md
         - name: Implementação de Provedor de Automação de Interface de Usuário do Lado do Cliente
           href: client-side-ui-automation-provider-implementation.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: ui-automation-providers-for-managed-code-how-to-topics.md
           items:
             - name: Expor um provedor de automação de interface do usuário do lado do servidor
@@ -69,7 +69,7 @@
           href: obtaining-ui-automation-elements.md
         - name: Problemas de Threading na Automação da Interface do Usuário
           href: ui-automation-threading-issues.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: ui-automation-clients-for-managed-code-how-to-topics.md
           items:
             - name: Localizar um elemento de automação de interface do usuário com base na condição de uma propriedade
@@ -93,15 +93,15 @@
       items:
         - name: Implementando o padrão de controle de encaixe da automação de interface do usuário
           href: implementing-the-ui-automation-dock-control-pattern.md
-        - name: 'Implementando o padrão de controle ExpandCollapse de interface de usuário '
+        - name: Implementando o padrão de controle ExpandCollapse de interface de usuário
           href: implementing-the-ui-automation-expandcollapse-control-pattern.md
         - name: Implementando o Padrão de Controle Grid de Automação de Interface de Usuário
           href: implementing-the-ui-automation-grid-control-pattern.md
-        - name: 'Implementando o padrão de controle GridItem de interface de usuário '
+        - name: Implementando o padrão de controle GridItem de interface de usuário
           href: implementing-the-ui-automation-griditem-control-pattern.md
         - name: Implementando o padrão de controle Invoke de automação de interface de usuário
           href: implementing-the-ui-automation-invoke-control-pattern.md
-        - name: 'Implementando o padrão de controle MultipleView de interface de usuário '
+        - name: Implementando o padrão de controle MultipleView de interface de usuário
           href: implementing-the-ui-automation-multipleview-control-pattern.md
         - name: Implementando o padrão de controle RangeValue de interface de usuário
           href: implementing-the-ui-automation-rangevalue-control-pattern.md
@@ -111,7 +111,7 @@
           href: implementing-the-ui-automation-scrollitem-control-pattern.md
         - name: Implementando o padrão de controle Selection de automação de interface do usuário
           href: implementing-the-ui-automation-selection-control-pattern.md
-        - name: 'Implementando o padrão de controle SelectionItem de interface de usuário '
+        - name: Implementando o padrão de controle SelectionItem de interface de usuário
           href: implementing-the-ui-automation-selectionitem-control-pattern.md
         - name: Implementando o padrão de controle de tabela de automação de interface de usuário
           href: implementing-the-ui-automation-table-control-pattern.md
@@ -125,7 +125,7 @@
           href: implementing-the-ui-automation-value-control-pattern.md
         - name: Implementando o Padrão Controle de Window de Automação de Interface de Usuário
           href: implementing-the-ui-automation-window-control-pattern.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: ui-automation-control-patterns-how-to-topics.md
           items:
             - name: Expor o conteúdo de uma tabela usando automação de interface do usuário
@@ -145,7 +145,7 @@
           href: ui-automation-textpattern-overview.md
         - name: TextPattern Visão geral de objetos inseridos
           href: textpattern-and-embedded-objects-overview.md
-        - name: 'Tópicos explicativos '
+        - name: Tópicos explicativos
           href: ui-automation-text-pattern-how-to-topics.md
           items:
             - name: Acrescentar Conteúdo a um Text Box Utilizando Automação de IU

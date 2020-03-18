@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711825"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código e ponteiros não seguros (Guia de Programação em C#)
@@ -40,17 +40,17 @@ O código não seguro tem as propriedades a seguir:
   
 ## <a name="related-sections"></a>Seções relacionadas
 
-Para obter mais informações, consulte .
+Para obter mais informações, consulte:
 
-- [Tipos de ponteiro](pointer-types.md)
+- [Tipos de Ponteiro](pointer-types.md)
 
 - [Buffers de tamanho fixo](fixed-size-buffers.md)
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira o tópico [Código não seguro](~/_csharplang/spec/unsafe-code.md) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [C# Guia de Programação](../index.md)
+- [Inseguro](../../language-reference/keywords/unsafe.md)

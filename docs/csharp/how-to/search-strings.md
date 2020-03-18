@@ -1,5 +1,5 @@
 ---
-title: Como Pesquisar cadeias deC# caracteres (guia)
+title: Como pesquisar strings (Guia C#)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959696"
 ---
-# <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
+# <a name="how-to-search-strings"></a>Como pesquisar strings
 
 Você pode usar duas estratégias principais para pesquisar texto em cadeias de caracteres. Os métodos da classe <xref:System.String> pesquisam por um texto específico. Expressões regulares pesquisam por padrões no texto.
 
@@ -43,22 +43,22 @@ O exemplo de código a seguir procura a palavra "the" ou "their" em uma oração
 
 O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir descreve cada elemento desse padrão de pesquisa. (A tabela abaixo usa a `\` única, que deve ser escapada como `\\` em uma cadeia de caracteres C#).
 
-| {1&gt;padrão&lt;1}  | Significado     |
+| pattern  | Significado     |
 | -------- |-------------|
-| the      | corresponder ao texto "the" |
+| o      | corresponder ao texto "the" |
 | (eir)?   | corresponder a 0 ou 1 ocorrência de "eir" |
 | \s       | corresponder a um caractere de espaço em branco    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. As expressões regulares são melhores quando você está procurando por algum padrão em uma cadeia de caracteres de origem.
+> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. Expressões regulares são melhores quando você está procurando algum padrão em uma seqüência de origem.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Uma cadeia de caracteres segue um padrão?
 
 O código a seguir usa expressões regulares para validar o formato de cada cadeia de caracteres em uma matriz. A validação requer que cada cadeia de caracteres tenha a forma de um número de telefone no qual os três grupos de dígitos são separados por traços, os dois primeiros grupos contêm três dígitos e o terceiro grupo contém quatro dígitos. O padrão de pesquisa usa a expressão regular `^\\d{3}-\\d{3}-\\d{4}$`. Para obter mais informações, consulte [Linguagem de expressões regulares – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| {1&gt;padrão&lt;1}  | Significado                             |
+| pattern  | Significado                             |
 | -------- |-------------------------------------|
 | ^        | corresponde ao início da cadeia de caracteres |
 | \d{3}    | corresponde a exatamente 3 caracteres de dígitos  |
@@ -72,14 +72,14 @@ O código a seguir usa expressões regulares para validar o formato de cada cade
 
 Este padrão de pesquisa único corresponde a várias cadeias de caracteres válidas. Expressões regulares são melhores para pesquisar por ou validar mediante um padrão, em vez de uma única cadeia de caracteres de texto.
 
-Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../programming-guide/index.md)
-- [Cadeias de Caracteres](../programming-guide/strings/index.md)
+- [C# Guia de Programação](../programming-guide/index.md)
+- [Cadeias de caracteres](../programming-guide/strings/index.md)
 - [LINQ e Cadeias de Caracteres](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguagem de expressão regular – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Práticas recomendadas para o uso de cadeias de caracteres no .NET](../../standard/base-types/best-practices-strings.md)
+- [Linguagem de Expressão Regular - Referência Rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Práticas recomendadas para usar strings em .NET](../../standard/base-types/best-practices-strings.md)

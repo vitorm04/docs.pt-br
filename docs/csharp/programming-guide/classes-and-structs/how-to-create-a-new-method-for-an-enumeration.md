@@ -1,5 +1,5 @@
 ---
-title: Como criar um novo método para um guia de C# programação de enumeração
+title: Como criar um novo método para uma enumeração - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
 ms.openlocfilehash: 0d8e562342239c8ac3c53e05086ede9c234d0b63
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705646"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Como criar um novo método para uma enumeração (C# guia de programação)
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Como criar um novo método para uma enumeração (C# Guia de Programação)
 Você pode usar métodos de extensão para adicionar funcionalidades específica para um tipo de enumeração específico.  
   
 ## <a name="example"></a>Exemplo  
@@ -23,7 +23,7 @@ Você pode usar métodos de extensão para adicionar funcionalidades específica
   
  Observe que a classe `Extensions` também contém uma variável estática atualizada dinamicamente e que o valor retornado do método de extensão reflete o valor atual dessa variável. Isso demonstra que, nos bastidores, os métodos de extensão são chamados diretamente na classe estática na qual eles são definidos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Métodos de Extensão](./extension-methods.md)
+- [C# Guia de Programação](../index.md)
+- [Métodos de extensão](./extension-methods.md)

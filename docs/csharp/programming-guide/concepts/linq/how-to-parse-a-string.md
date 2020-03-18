@@ -1,21 +1,21 @@
 ---
-title: Como analisar uma cadeia de caracteresC#()
+title: Como analisar uma corda (C#)
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
 ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345805"
 ---
-# <a name="how-to-parse-a-string-c"></a>Como analisar uma cadeia de caracteresC#()
+# <a name="how-to-parse-a-string-c"></a>Como analisar uma corda (C#)
 
 Este tópico mostra como analisar uma cadeia de caracteres para criar uma árvore XML no C#.
 
 ## <a name="example"></a>Exemplo
 
-O código C# a seguir mostra como analisar uma cadeia de caracteres XML:
+O seguinte código C# mostra como analisar uma seqüência XML:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,13 +47,13 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-O nó de `Contacts` raiz tem dois nós `Contact`. Para acessar alguns dados específicos em seu XML analisado, use o método [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) , que, nesse caso, retorna os elementos filho do nó de `Contacts` raiz. O exemplo a seguir imprime o primeiro nó `Contact` no console:
+O `Contacts` nó raiz `Contact` tem dois nódulos. Para acessar alguns dados específicos em seu XML analisado, use o método [XElement.Elements(),](xref:System.Xml.Linq.XContainer.Elements) `Contacts` que neste caso retorna os elementos filho do nó raiz. O exemplo a seguir `Contact` imprime o primeiro nó para o console:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
 Console.WriteLine(contactNodes[0]);
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Como localizar um elemento com um atributo específico (C#)](how-to-find-an-element-with-a-specific-attribute.md)
+- [Como encontrar um elemento com um atributo específico (C#)](how-to-find-an-element-with-a-specific-attribute.md)

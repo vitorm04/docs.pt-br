@@ -1,15 +1,15 @@
 ---
-title: Como usar árvores de expressão para criar consultas dinâmicasC#()
+title: Como usar árvores de expressão para construir consultas dinâmicas (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635893"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como usar árvores de expressão para criar consultas dinâmicasC#()
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Como usar árvores de expressão para construir consultas dinâmicas (C#)
 No LINQ, as árvores de expressão são usadas para representar consultas estruturadas que se destinam a fontes de dados que implementam <xref:System.Linq.IQueryable%601>. Por exemplo, o provedor LINQ implementa a interface <xref:System.Linq.IQueryable%601> para consultar repositórios de dados relacionais. O compilador do C# compila as consultas que se destinam a essas fontes de dados, no código que cria uma árvore de expressão em runtime. O provedor de consultas pode percorrer a estrutura de dados da árvore de expressão e convertê-la em uma linguagem de consulta apropriada para a fonte de dados.  
   
  As árvores de expressão também são usadas no LINQ para representar expressões lambda que são atribuídas a variáveis do tipo <xref:System.Linq.Expressions.Expression%601>.  
@@ -101,11 +101,11 @@ foreach (string company in results)
   
  Esse código usa um número fixo de expressões no predicado que é passado para o método `Queryable.Where`. No entanto, você pode escrever um aplicativo que combina um número variável de expressões de predicado que dependam da entrada do usuário. Você também pode variar os operadores de consulta padrão que são chamados na consulta, dependendo da entrada do usuário.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
   
 - Inclua o namespace System.Linq.Expressions.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Árvores de expressão (C#)](./index.md)
 - [Como executar árvores de expressão (C#)](./how-to-execute-expression-trees.md)

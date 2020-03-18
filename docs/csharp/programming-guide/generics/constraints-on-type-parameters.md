@@ -6,31 +6,31 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712228"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399794"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
 Restrições informam o compilador sobre as funcionalidades que um argumento de tipo deve ter. Sem nenhuma restrição, o argumento de tipo poderia ser qualquer tipo. O compilador pode assumir somente os membros de <xref:System.Object?displayProperty=nameWithType>, que é a classe base definitiva para qualquer tipo .NET. Para obter mais informações, consulte [Por que usar restrições](#why-use-constraints). Se o código de cliente tentar criar uma instância da classe usando um tipo não permitido por uma restrição, o resultado será um erro em tempo de compilação. Restrições são especificadas usando a palavra-chave contextual `where`. A tabela a seguir lista os sete tipos de restrições:
 
-|Restrição|Descrição|
+|Constraint|Descrição|
 |----------------|-----------------|
-|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulável. Para obter informações sobre tipos de valor anulável, consulte [tipos de valor anulável](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm um construtor acessível sem parâmetros, a restrição `struct` implica a restrição `new()` e não pode ser combinada com a restrição `new()`. Você também não pode combinar a restrição de `struct` com a restrição `unmanaged`.|
+|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulado. Para obter informações sobre tipos de valor anulados, consulte [tipos de valor anulados](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm `struct` um construtor `new()` sem parâmetros acessível, `new()` a restrição implica a restrição e não pode ser combinada com a restrição. Você também não `struct` pode `unmanaged` combinar a restrição com a restrição.|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
-|`where T : notnull`|O argumento de tipo deve ser um tipo não anulável. O argumento pode ser um tipo de referência não anulável em C# 8,0 ou posterior, ou um tipo de valor não anulável. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
-|`where T : unmanaged`|O argumento de tipo deve ser um tipo não- [gerenciado](../../language-reference/builtin-types/unmanaged-types.md)não anulável. A restrição `unmanaged` implica a restrição `struct` e não pode ser combinada com as restrições `struct` ou `new()`.|
-|`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada. A restrição `new()` não pode ser combinada com as restrições `struct` e `unmanaged`.|
-|`where T :` *\<nome da classe base >*|O argumento de tipo deve ser ou derivar da classe base especificada.|
-|`where T :` *\<nome da interface >*|O argumento de tipo deve ser ou implementar a interface especificada. Várias restrições de interface podem ser especificadas. A interface de restrição também pode ser genérica.|
+|`where T : notnull`|O argumento de tipo deve ser um tipo não anulado. O argumento pode ser um tipo de referência não anulado em C# 8.0 ou posterior, ou um tipo de valor não anulado. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
+|`where T : unmanaged`|O argumento do tipo deve ser um tipo não anulado [não gerenciado](../../language-reference/builtin-types/unmanaged-types.md). A `unmanaged` restrição `struct` implica a restrição e não pode `struct` `new()` ser combinada com as restrições ou.|
+|`where T : new()`|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada. A `new()` restrição não pode ser `struct` combinada `unmanaged` com as restrições.|
+|`where T :` *\<nome da classe base>*|O argumento de tipo deve ser ou derivar da classe base especificada.|
+|`where T :`nome da interface>* \<*|O argumento de tipo deve ser ou implementar a interface especificada. Várias restrições de interface podem ser especificadas. A interface de restrição também pode ser genérica.|
 |`where T : U`|O argumento de tipo fornecido para T deve ser ou derivar do argumento fornecido para U.|
 
 ## <a name="why-use-constraints"></a>Por que usar restrições
 
-Ao restringir o parâmetro de tipo, aumenta-se a quantidade de operações e chamadas de método permitidas àqueles com suporte do tipo de restrição e de todos os tipos de sua hierarquia de herança. Ao projetar classes ou métodos genéricos, se você estiver executando qualquer operação nos membros genéricos além da atribuição simples ou chamando quaisquer métodos sem suporte pelo <xref:System.Object?displayProperty=nameWithType>, precisará aplicar restrições ao parâmetro de tipo. Por exemplo, a restrição de classe base informa ao compilador que somente os objetos desse tipo ou derivados desse tipo serão usados como argumentos de tipo. Uma vez que o compilador tiver essa garantia, ele poderá permitir que métodos desse tipo sejam chamados na classe genérica. O exemplo de código a seguir demonstra a funcionalidade que pode ser adicionada à classe `GenericList<T>` (em [Introdução aos Genéricos](../../../standard/generics/index.md)) ao aplicar uma restrição de classe base.
+Ao restringir o parâmetro de tipo, aumenta-se a quantidade de operações e chamadas de método permitidas àqueles com suporte do tipo de restrição e de todos os tipos de sua hierarquia de herança. Quando você projeta classes ou métodos genéricos, se você estiver realizando qualquer operação nos membros <xref:System.Object?displayProperty=nameWithType>genéricos além da atribuição simples ou chamando quaisquer métodos não suportados, você terá que aplicar restrições ao parâmetro de tipo. Por exemplo, a restrição de classe base informa ao compilador que somente os objetos desse tipo ou derivados desse tipo serão usados como argumentos de tipo. Uma vez que o compilador tiver essa garantia, ele poderá permitir que métodos desse tipo sejam chamados na classe genérica. O exemplo de código a seguir demonstra a funcionalidade que pode ser adicionada à classe `GenericList<T>` (em [Introdução aos Genéricos](../../../standard/generics/index.md)) ao aplicar uma restrição de classe base.
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#9)]
 
@@ -44,7 +44,7 @@ Ao aplicar a restrição `where T : class`, evite os operadores `==` e `!=` no p
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#11)]
 
-O compilador só sabe que `T` é um tipo de referência em tempo de compilação e deve usar os operadores padrão que são válidos para todos os tipos de referência. Caso seja necessário testar a igualdade de valor, a maneira recomendada é também aplicar a restrição `where T : IEquatable<T>` ou `where T : IComparable<T>` e implementar a interface em qualquer classe que seja usada para construir a classe genérica.
+O compilador só `T` sabe que é um tipo de referência no momento da compilação e deve usar os operadores padrão válidos para todos os tipos de referência. Caso seja necessário testar a igualdade de valor, a maneira recomendada é também aplicar a restrição `where T : IEquatable<T>` ou `where T : IComparable<T>` e implementar a interface em qualquer classe que seja usada para construir a classe genérica.
 
 ## <a name="constraining-multiple-parameters"></a>Restringindo vários parâmetros
 
@@ -56,7 +56,7 @@ O compilador só sabe que `T` é um tipo de referência em tempo de compilação
 
  Os parâmetros de tipo que não têm restrições, como o T na classe pública `SampleClass<T>{}`, são denominados “parâmetros de tipo não associado”. Os parâmetros de tipo não associado têm as seguintes regras:
 
-- Os operadores de `!=` e `==` não podem ser usados porque não há garantia de que o argumento de tipo concreto dará suporte a esses operadores.
+- Os `!=` `==` operadores e operadores não podem ser usados porque não há garantia de que o argumento do tipo concreto irá apoiar esses operadores.
 - Eles podem ser convertidos para e de `System.Object` ou explicitamente convertidos para qualquer tipo de interface.
 - Você pode compará-los com [nulo](../../language-reference/keywords/null.md). Se um parâmetro não associado for comparado a `null`, a comparação sempre retornará false se o argumento de tipo for um tipo de valor.
 
@@ -74,25 +74,25 @@ Parâmetros de tipo também podem ser usados como restrições em definições d
 
 A utilidade dos parâmetros de tipo como restrições com classes genéricas é limitada, pois o compilador não pode presumir nada sobre o parâmetro de tipo, exceto que ele deriva de `System.Object`. Use parâmetros de tipo como restrições em classes genéricas em cenários nos quais deseja impor uma relação de herança entre dois parâmetros de tipo.
 
-## <a name="notnull-constraint"></a>Restrição não nula
+## <a name="notnull-constraint"></a>Não seja restrição null
 
-A partir C# do 8,0, você pode usar a restrição `notnull` para especificar que o argumento de tipo deve ser um tipo de valor não anulável ou um tipo de referência não anulável. A restrição `notnull` só pode ser usada em um contexto de `nullable enable`. O compilador gerará um aviso se você adicionar a restrição de `notnull` em um contexto de alheios anulável. 
+Começando com C# 8.0, `notnull` você pode usar a restrição para especificar que o argumento de tipo deve ser um tipo de valor não anulado ou um tipo de referência não anulado. A `notnull` restrição só pode `nullable enable` ser usada em um contexto. O compilador gera um aviso `notnull` se você adicionar a restrição em um contexto alheio anulado.
 
-Ao contrário de outras restrições, quando um argumento de tipo viola a restrição de `notnull`, o compilador gera um aviso quando esse código é compilado em um contexto de `nullable enable`. Se o código for compilado em um contexto alheios anulável, o compilador não gerará nenhum aviso ou erro.
+Ao contrário de outras restrições, quando um argumento de tipo viola a `notnull` restrição, o compilador gera um aviso quando esse código é compilado em um `nullable enable` contexto. Se o código for compilado em um contexto alheio nulo, o compilador não gerará avisos ou erros.
 
 ## <a name="unmanaged-constraint"></a>Restrição não gerenciada
 
-A partir C# do 7,3, você pode usar a restrição `unmanaged` para especificar que o parâmetro de tipo deve ser um tipo não- [gerenciado](../../language-reference/builtin-types/unmanaged-types.md)não anulável. A restrição `unmanaged` permite que você escreva rotinas reutilizáveis para trabalhar com tipos que podem ser manipulados como blocos de memória, conforme mostrado no exemplo a seguir:
+Começando com C# 7.3, `unmanaged` você pode usar a restrição para especificar que o parâmetro de tipo deve ser um tipo não anulado [não gerenciado](../../language-reference/builtin-types/unmanaged-types.md). A restrição `unmanaged` permite que você escreva rotinas reutilizáveis para trabalhar com tipos que podem ser manipulados como blocos de memória, conforme mostrado no exemplo a seguir:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
 O método anterior deve ser compilado em um contexto `unsafe` porque ele usa o operador `sizeof` em um tipo não conhecido como um tipo interno. Sem a restrição `unmanaged`, o operador `sizeof` não está disponível.
 
-A restrição `unmanaged` implica a restrição `struct` e não pode ser combinada com ela. Como a restrição `struct` implica a restrição `new()`, a restrição `unmanaged` também não pode ser combinada com a restrição `new()`.
+A `unmanaged` restrição `struct` implica a restrição e não pode ser combinada com ela. Como `struct` a restrição `new()` implica `unmanaged` a restrição, a restrição `new()` não pode ser combinada com a restrição também.
 
 ## <a name="delegate-constraints"></a>Restrições de delegado
 
-Também começando com o C# 7.3, você pode usar <xref:System.Delegate?displayProperty=nameWithType> ou <xref:System.MulticastDelegate?displayProperty=nameWithType> como uma restrição de classe base. O CLR sempre permitia essa restrição, mas a linguagem C# não a permite. A restrição `System.Delegate` permite que você escreva código que funcione com delegados de uma maneira fortemente tipada. O código a seguir define um método de extensão que combina dois delegados, desde que eles sejam do mesmo tipo:
+Também começando com o C# 7.3, você pode usar <xref:System.Delegate?displayProperty=nameWithType> ou <xref:System.MulticastDelegate?displayProperty=nameWithType> como uma restrição de classe base. O CLR sempre permitia essa restrição, mas a linguagem C# não a permite. A restrição `System.Delegate` permite que você escreva código que funcione com delegados de uma maneira fortemente tipada. O código a seguir define um método de extensão que combina dois delegados desde que sejam do mesmo tipo:
 
 [!code-csharp[using the delegate constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#16)]
 
@@ -100,7 +100,7 @@ Você pode usar o método acima para combinar delegados que são do mesmo tipo:
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#17)]
 
-Se você remover a marca de comentário na última linha, ela não será compilada. Tanto `first` quanto `test` são tipos delegados, mas são tipos delegados diferentes.
+Se você remover a marca de comentário na última linha, ela não será compilada. Ambos `first` `test` são tipos de delegados, mas são tipos diferentes de delegados.
 
 ## <a name="enum-constraints"></a>Restrições de enum
 
@@ -108,7 +108,7 @@ Começando com o C# 7.3, você também pode especificar o tipo <xref:System.Enum
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-Os métodos usados para fazer uso da reflexão, que tem implicações de desempenho. Você pode chamar esse método para criar uma coleção que é armazenada em cache e reutilizada, em vez de repetir as chamadas que exigem reflexão.
+Os métodos utilizados para fazer uso da reflexão, que tem implicações de desempenho. Você pode chamar esse método para criar uma coleção que é armazenada em cache e reutilizada, em vez de repetir as chamadas que exigem reflexão.
 
 Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e compilar um dicionário de seus nomes e valores:
 
@@ -116,10 +116,10 @@ Você pode usá-lo conforme mostrado no exemplo a seguir para criar uma enum e c
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Introdução aos genéricos](./index.md)
-- [Classes genéricas](./generic-classes.md)
-- [Restrição new](../../language-reference/keywords/new-constraint.md)
+- [Classes Genéricas](./generic-classes.md)
+- [nova Restrição](../../language-reference/keywords/new-constraint.md)

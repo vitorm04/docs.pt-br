@@ -18,7 +18,7 @@
           href: walkthrough-writing-queries.md
         - name: 'Como: criar uma lista de itens'
           href: how-to-create-a-list-of-items.md
-    - name: Visão geral dos operadores de consulta padrão
+    - name: Visão geral de operadores de consulta padrão
       href: standard-query-operators-overview.md
       items:
         - name: Sintaxe de expressão de consulta para operadores de consulta padrão

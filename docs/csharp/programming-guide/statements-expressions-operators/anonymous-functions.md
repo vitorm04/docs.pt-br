@@ -7,10 +7,10 @@ helpviewer_keywords:
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
 ms.openlocfilehash: cfb0190ee263e65e8130a8925f76357a382eafa3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711994"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Funções anônimas (Guia de Programação em C#)
@@ -27,13 +27,13 @@ Você pode usar uma [expressão lambda](lambda-expressions.md) ou um [método an
   
  [!code-csharp[csProgGuideLINQ#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#65)]  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira a seção [Expressões de função anônima](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Instruções, expressões e operadores](./index.md)
+- [Instruções, Expressões e Operadores](./index.md)
 - [Expressões Lambda](./lambda-expressions.md)
-- [Delegados](../delegates/index.md)
+- [Delega](../delegates/index.md)
 - [Árvores de expressão (C#)](../concepts/expression-trees/index.md)

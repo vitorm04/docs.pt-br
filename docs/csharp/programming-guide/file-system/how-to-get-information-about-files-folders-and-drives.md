@@ -1,17 +1,17 @@
 ---
-title: Como obter informações sobre arquivos, pastas e unidades – guia de C# programação
+title: Como obter informações sobre arquivos, pastas e unidades - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
 ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705204"
 ---
-# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Como obter informações sobre arquivos, pastas e unidades (guia deC# programação)
+# <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Como obter informações sobre arquivos, pastas e drives (C# Programming Guide)
 No .NET Framework, você pode acessar informações do sistema de arquivos usando as classes a seguir:  
   
 - <xref:System.IO.FileInfo?displayProperty=nameWithType>  
@@ -39,7 +39,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  [!code-csharp[csFilesandFolders#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#6)]  
   
-## <a name="robust-programming"></a>Programação Robusta  
+## <a name="robust-programming"></a>Programação robusta  
  Quando você processa cadeias de caracteres do caminho especificado pelo usuário, você também deve tratar exceções para as seguintes condições:  
   
 - O nome do arquivo está malformado. Por exemplo, ele contém caracteres inválidos ou somente espaço em branco.  
@@ -52,8 +52,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  Se o aplicativo não tem permissões suficientes para ler o arquivo especificado, o método `Exists` retorna `false` independentemente de se um caminho existe, o método não gera uma exceção.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Guia de Programação em C#](../index.md)
-- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)
+- [C# Guia de Programação](../index.md)
+- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)

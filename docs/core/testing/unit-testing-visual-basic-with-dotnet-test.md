@@ -5,10 +5,10 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.openlocfilehash: 9a99d9031711a3e958132416d0235df76f4a9092
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240942"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas do .NET Core no Visual Basic de teste de unidade usando dotnet test e xUnit
@@ -20,7 +20,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-vb-using-dotnet-test* para armazenar a solução.
-Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Essa prática facilita gerenciar a biblioteca de classes e o projeto de teste de unidade.
+Dentro deste novo diretório, corra [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Essa prática facilita gerenciar a biblioteca de classes e o projeto de teste de unidade.
 No diretório da solução, crie um diretório *PrimeService*. Você tem a seguinte estrutura de arquivo e diretório até aqui:
 
 ```
@@ -29,7 +29,7 @@ No diretório da solução, crie um diretório *PrimeService*. Você tem a segui
     /PrimeService
 ```
 
-Torne *PrimeService* o diretório atual e execute [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) para criar o projeto de origem. Renomeie *Class1.VB* para *PrimeService.VB*. Crie uma implementação com falha da classe `PrimeService`:
+Faça *do PrimeService* o [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) diretório atual e execute para criar o projeto de origem. Renomeie *Class1.VB* para *PrimeService.VB*. Crie uma implementação com falha da classe `PrimeService`:
 
 ```vb
 Namespace Prime.Services
@@ -41,7 +41,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Altere o diretório de volta para o diretório *unit-testing-vb-using-dotnet-test*. Execute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
+Altere o diretório de volta para o diretório *unit-testing-vb-using-dotnet-test*. Execute [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) para adicionar o projeto da biblioteca de classe à solução.
 
 ## <a name="creating-the-test-project"></a>Criando o projeto de teste
 
@@ -56,7 +56,7 @@ Em seguida, crie o diretório *PrimeService.Tests*. O seguinte esquema mostra a 
     /PrimeService.Tests
 ```
 
-Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new xunit -lang VB`](../tools/dotnet-new.md). Esse comando cria um projeto de teste que usa o xUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no *PrimeServiceTests.vbproj*:
+Faça do *diretório PrimeService.Tests* o diretório atual e [`dotnet new xunit -lang VB`](../tools/dotnet-new.md)crie um novo projeto usando . Esse comando cria um projeto de teste que usa o xUnit como a biblioteca de teste. O modelo gerado configura o executor de teste no *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
@@ -66,7 +66,7 @@ Torne o diretório *PrimeService.Tests* o diretório atual e crie um novo projet
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` na etapa anterior adicionou xUnit e o executor de xUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new` na etapa anterior adicionou xUnit e o executor de xUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use [`dotnet add reference`](../tools/dotnet-add-reference.md) o comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
@@ -87,7 +87,7 @@ Você tem o seguinte layout de pasta final:
         PrimeServiceTests.vbproj
 ```
 
-Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) no diretório *unit-testing-vb-using-dotnet-test*.
+Execute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) no diretório *de teste de unidade-vb-usando-dotnet-test.*
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 

@@ -1,14 +1,14 @@
 ---
 title: Tipos de referência anuláveis
-description: Este artigo fornece uma visão geral dos tipos de referência anuláveis C# , adicionados em 8,0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
+description: Este artigo fornece uma visão geral dos tipos de referência anulados, adicionados em C# 8.0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
 ms.openlocfilehash: bb4c2b6951a38eeb705c7de50ef5d9645350e336
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559619"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399423"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -23,7 +23,7 @@ O C# 8.0 apresenta **tipos de referência que permitem valor nulo** e **tipos de
 
 Esse novo recurso oferece benefícios significativos com relação à manipulação de variáveis de referência em versões anteriores do C#, em que a intenção do design não poderia ser determinada na declaração da variável. O compilador não forneceu segurança com relação a exceções de referência nula para tipos de referência:
 
-- **Uma referência pode ser nula**. Nenhum aviso é emitido quando um tipo de referência é inicializado como nulo, ou NULL é posteriormente atribuído a ele.
+- **Uma referência pode ser nula**. Nenhum aviso é emitido quando um tipo de referência é inicializado como nulo ou nulo é posteriormente atribuído a ele.
 - **Uma referência é considerada não nula**. O compilador não emite nenhum aviso quando os tipos de referência são desreferenciados. (Com referências que permitem valor nulo, o compilador emite avisos sempre que você desreferencia uma variável que pode ser nula).
 
 Com a adição de tipos de referência que permitem valor nulo, é possível declarar sua intenção mais claramente. O valor `null` é a maneira correta de representar que uma variável não se refere a um valor. Não use esse recurso para remover todos os valores `null` do seu código. Em vez disso, você deve declarar sua intenção par ao compilador e para outros desenvolvedores que leem seu código. Ao declarar sua intenção, o compilador informa quando você escreve um código inconsistente com essa intenção.
@@ -36,7 +36,7 @@ string? name;
 
 Qualquer variável em que o `?` não é acrescentado ao nome do tipo é um **tipo de referência que não permite valor nulo**. Isso inclui todas as variáveis de tipo de referência no código existente quando você habilitou esse recurso.
 
-O compilador usa uma análise estática para determinar se uma referência que permite valor nulo é conhecida como não nula. O compilador informa se você desreferencia uma referência quer permite valor nulo quando ela pode ser nula. Você pode substituir esse comportamento usando o [operador NULL-tolerante](language-reference/operators/null-forgiving.md) `!` seguir um nome de variável. Por exemplo, se você sabe que a variável `name` não é nula, mas o compilador emite um aviso, é possível escrever o seguinte código para substituir a análise do compilador:
+O compilador usa uma análise estática para determinar se uma referência que permite valor nulo é conhecida como não nula. O compilador informa se você desreferencia uma referência quer permite valor nulo quando ela pode ser nula. Você pode substituir esse comportamento usando o `!` [operador que perdoa nulo](language-reference/operators/null-forgiving.md) seguindo um nome variável. Por exemplo, se você sabe que a variável `name` não é nula, mas o compilador emite um aviso, é possível escrever o seguinte código para substituir a análise do compilador:
 
 ```csharp
 name!.Length;
@@ -46,26 +46,26 @@ name!.Length;
 
 Qualquer tipo de referência pode ter uma das quatro *nulidades*, que descreve quando os avisos são gerados:
 
-- Não *nulo*: nulo não pode ser atribuído a variáveis deste tipo. As variáveis desse tipo não precisam ser verificadas quanto à nulidade antes de desreferenciar.
-- *Nullable*: NULL pode ser atribuído a variáveis desse tipo. Desreferenciar variáveis desse tipo sem verificar primeiro se há `null` gera um aviso.
-- *Alheios*: esse é o estado anteriorC# a 8,0. As variáveis desse tipo podem ser desreferenciadas ou atribuídas sem avisos.
-- *Desconhecido*: isso geralmente é para parâmetros de tipo em que as restrições não dizem ao compilador que o tipo deve ser *anulável* ou não *nulo*.
+- *Não anulado*: Nulo não pode ser atribuído a variáveis deste tipo. As variáveis desse tipo não precisam ser verificadas quanto à nulidade antes de desreferenciar.
+- *Nulo*: Nulo pode ser atribuído a variáveis deste tipo. Desreferenciar variáveis desse tipo sem verificar primeiro se há `null` gera um aviso.
+- *Alheio*: Este é o estado pré-C# 8.0. As variáveis desse tipo podem ser desreferenciadas ou atribuídas sem avisos.
+- *Desconhecido*: Este é geralmente para parâmetros de tipo onde as restrições não dizem ao compilador que o tipo deve ser *anulado* ou *não anulado*.
 
 A nulidade de um tipo em uma declaração de variável é controlada pelo *contexto que permite valor nulo* no qual a variável é declarada.
 
 ## <a name="nullable-contexts"></a>Contextos que permitem valor nulo
 
-Contextos que permitem valor nulo habilitam o controle refinado para a maneira como o compilador interpreta variáveis de tipo de referência. O **contexto de anotação anulável** de qualquer linha de origem determinada é habilitado ou desabilitado. Você pode considerar o compilador pré-C# 8,0 como compilar todo o seu código em um contexto anulável desabilitado: qualquer tipo de referência pode ser nulo. O **contexto de avisos anuláveis** também pode ser habilitado ou desabilitado. O contexto de avisos que permite valor nulo especifica os avisos gerados pelo compilador usando sua análise de fluxo.
+Contextos que permitem valor nulo habilitam o controle refinado para a maneira como o compilador interpreta variáveis de tipo de referência. O contexto de **anotação anulado** de qualquer linha de origem está ativado ou desativado. Você pode pensar no compilador pré-C# 8.0 como compilando todo o seu código em um contexto anulado desativo: qualquer tipo de referência pode ser nulo. O **contexto de avisos anulados** também pode ser ativado ou desativado. O contexto de avisos que permite valor nulo especifica os avisos gerados pelo compilador usando sua análise de fluxo.
 
-O contexto de anotação anulável e o contexto de aviso anulável podem ser definidos para um projeto usando o elemento `Nullable` em seu arquivo *. csproj* . Esse elemento configura como o compilador interpreta a nulidade de tipos e quais avisos são gerados. As configurações válidas são:
+O contexto de anotação anulada e o contexto de `Nullable` aviso anulado podem ser definidos para um projeto usando o elemento em seu arquivo *.csproj.* Esse elemento configura como o compilador interpreta a nulidade de tipos e quais avisos são gerados. As configurações válidas são:
 
-- `enable`: o contexto de anotação anulável está **habilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
+- `enable`: O contexto de anotação anulado está **habilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - Variáveis de um tipo de referência, `string` por exemplo, não permitem valor nulo.  Todos os avisos de nulidade estão habilitados.
-- `warnings`: o contexto de anotação anulável está **desabilitado**. O contexto de aviso que permite valor nulo está **habilitado**.
+- `warnings`: O contexto de anotação anulado está **desativado**. O contexto de aviso que permite valor nulo está **habilitado**.
   - As variáveis de um tipo de referência são óbvias. Todos os avisos de nulidade estão habilitados.
-- `annotations`: o contexto de anotação anulável está **habilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
-  - Variáveis de um tipo de referência, String, por exemplo, são não anuláveis. Todos os avisos de nulidade estão desabilitados.
-- `disable`: o contexto de anotação anulável está **desabilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
+- `annotations`: O contexto de anotação anulado está **habilitado**. O contexto de aviso que permite valor nulo está **desabilitado**.
+  - Variáveis de um tipo de referência, string, por exemplo, não são anuladas. Todos os avisos de nulidade estão desabilitados.
+- `disable`: O contexto de anotação anulado está **desativado**. O contexto de aviso que permite valor nulo está **desabilitado**.
   - As variáveis de um tipo de referência são alheias, como as versões anteriores do C#. Todos os avisos de nulidade estão desabilitados.
 
 **Exemplo**:
@@ -76,17 +76,17 @@ O contexto de anotação anulável e o contexto de aviso anulável podem ser def
 
 Também é possível usar diretivas para definir esses mesmos contextos em qualquer lugar no seu projeto:
 
-- `#nullable enable`: define o contexto de anotação anulável e o contexto de aviso anulável como **habilitado**.
-- `#nullable disable`: define o contexto de anotação anulável e o contexto de aviso anulável como **desabilitado**.
-- `#nullable restore`: restaura o contexto de anotação anulável e o contexto de aviso anulável para as configurações do projeto.
-- `#nullable disable warnings`: defina o contexto de aviso anulável como **desabilitado**.
-- `#nullable enable warnings`: defina o contexto de aviso anulável como **habilitado**.
-- `#nullable restore warnings`: restaura o contexto de aviso anulável para as configurações do projeto.
-- `#nullable disable annotations`: defina o contexto de anotação anulável como **desabilitado**.
-- `#nullable enable annotations`: defina o contexto de anotação anulável como **habilitado**.
-- `#nullable restore annotations`: restaura o contexto de aviso de anotação para as configurações do projeto.
+- `#nullable enable`: Define o contexto de anotação nula e o contexto de aviso anulado para **habilitado**.
+- `#nullable disable`: Define o contexto de anotação nula e o contexto de aviso anulado para **desabilitado**.
+- `#nullable restore`: Restaura o contexto de anotação anulada e o contexto de aviso anulado às configurações do projeto.
+- `#nullable disable warnings`: Definir o contexto de aviso nulo para **desativado**.
+- `#nullable enable warnings`: Defina o contexto de aviso anulado para **habilitado**.
+- `#nullable restore warnings`: Restaura o contexto de aviso anulado às configurações do projeto.
+- `#nullable disable annotations`: Definir o contexto de anotação nula para **desativado**.
+- `#nullable enable annotations`: Definir o contexto de anotação anulado para **habilitado**.
+- `#nullable restore annotations`: Restaura o contexto de aviso de anotação às configurações do projeto.
 
-Por padrão, os contextos de anotação e de aviso anuláveis são **desabilitados**. Isso significa que o código existente é compilado sem alterações e sem gerar nenhum aviso novo.
+Por padrão, os contextos de anotação e aviso anulados estão **desativados**. Isso significa que seu código existente compila sem alterações e sem gerar novos avisos.
 
 ## <a name="nullable-annotation-context"></a>Contexto de anotação que permite valor nulo
 
@@ -106,7 +106,7 @@ O compilador usa as seguintes regras em um contexto de anotação que permite va
 - Qualquer tipo de referência que permite valor nulo (indicado pelo `?` após o tipo na declaração de variável) pode ser nulo. A análise estática determina se o valor é conhecido como não nulo quando ele é desreferenciado. Caso contrário, o compilador avisa.
 - É possível usar o operador tolerante a nulo para declarar que uma referência que permite valor nulo não é nula.
 
-Em um contexto de anotação que permite valor nulo habilitado, o caractere `?` acrescentado a um tipo de referência declara um **tipo de referência que permite valor nulo**. O **operador NULL-tolerante** `!` pode ser anexado a uma expressão para declarar que a expressão não é nula.
+Em um contexto de anotação que permite valor nulo habilitado, o caractere `?` acrescentado a um tipo de referência declara um **tipo de referência que permite valor nulo**. O `!` **operador que perdoa nulos** pode ser anexado a uma expressão para declarar que a expressão não é nula.
 
 ## <a name="nullable-warning-context"></a>Contexto de aviso que permite valor nulo
 
@@ -115,10 +115,10 @@ O contexto de aviso que permite valor nulo é diferente do contexto de anotaçã
 1. A variável foi atribuída definitivamente a um valor não nulo.
 1. A variável ou expressão foi marcada novamente como nula antes de desreferenciá-la.
 
-O compilador gera avisos sempre que você desreferenciar uma variável ou expressão em um estado **talvez NULL** quando o contexto de aviso anulável estiver habilitado. Além disso, os avisos são gerados quando uma variável ou expressão **nula pode** ser atribuída a um tipo de referência não nulo em um contexto de anotação anulável habilitado.
+O compilador gera avisos sempre que você desreferencia uma variável ou expressão em um estado **talvez nulo** quando o contexto de aviso anulado é ativado. Além disso, os avisos são gerados quando uma variável ou expressão **talvez nula** é atribuída a um tipo de referência não anulado em um contexto de anotação anulada habilitado.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Especificação de tipos de referência Nullable de rascunho](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Especificação de tipos de referência anulados de rascunho](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [Introdução ao tutorial de referências que permitem valor nulo](tutorials/nullable-reference-types.md)
 - [Migrar uma base de código para referências que permitem valor nulo](tutorials/upgrade-to-nullable-references.md)

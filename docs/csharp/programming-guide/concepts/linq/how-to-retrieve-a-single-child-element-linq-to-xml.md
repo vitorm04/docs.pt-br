@@ -1,15 +1,15 @@
 ---
-title: Como recuperar um único elemento filho (LINQ to XML) (C#)
+title: Como recuperar um único elemento filho (LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347469"
 ---
-# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Como recuperar um único elemento filho (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>Como recuperar um único elemento filho (LINQ para XML) (C#)
 Este tópico explica como recuperar um único elemento filho, considerando o nome do elemento filho. Quando você souber que o nome do elemento filho e que há apenas um elemento com esse nome, pode ser conveniente recuperar apenas um elemento, em vez de uma coleção.  
   
  O método <xref:System.Xml.Linq.XContainer.Element%2A> retorna o primeiro filho <xref:System.Xml.Linq.XElement> com o <xref:System.Xml.Linq.XName> especificado.  
@@ -29,7 +29,7 @@ XElement e = po.Element("DeliveryNotes");
 Console.WriteLine(e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <DeliveryNotes>Please leave packages in shed by driveway.</DeliveryNotes>  
@@ -47,12 +47,12 @@ XElement e = po.Element(aw + "DeliveryNotes");
 Console.WriteLine(e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

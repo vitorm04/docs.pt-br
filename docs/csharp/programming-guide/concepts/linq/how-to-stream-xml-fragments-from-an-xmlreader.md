@@ -3,10 +3,10 @@ title: Como transmitir fragmentos XML de um XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
 ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714649"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Como transmitir fragmentos XML de um XmlReader (C#)
@@ -19,12 +19,12 @@ Quando você tem que processa grandes arquivos XML, talvez não seja possível c
   
  Se você desejar criar uma árvore parcial, você pode criar uma instância <xref:System.Xml.XmlReader>, posiciona o leitor no nó que você deseja converter a <xref:System.Xml.Linq.XElement> uma árvore e em seguida, cria o objeto de <xref:System.Xml.Linq.XElement> .  
   
-O tópico [como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) contém informações e um exemplo de como transmitir um documento mais complexo.
+O tópico [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md) contém informações e um exemplo sobre como transmitir um documento mais complexo.
   
- O tópico [como executar a transformação de streaming de documentos XML grandesC#()](./how-to-perform-streaming-transform-of-large-xml-documents.md) contém um exemplo de como usar LINQ to XML para transformar documentos XML extremamente grandes enquanto mantém uma pequena superfície de memória.  
+ O tópico [Como realizar a transformação de streaming de grandes documentos XML (C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md) contém um exemplo de uso de LINQ para XML para transformar documentos XML extremamente grandes, mantendo uma pequena pegada de memória.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo cria um método personalizado do eixo. Você pode consultá-lo usando uma consulta LINQ. O método de eixo personalizado `StreamRootChildDoc` é um método que foi projetado especificamente para ler um documento que tenha um elemento `Child` de repetição.  
+ Este exemplo cria um método personalizado do eixo. Você pode consultar usando uma consulta LINQ. O método de eixo personalizado `StreamRootChildDoc` é um método que foi projetado especificamente para ler um documento que tenha um elemento `Child` de repetição.  
   
 ```csharp  
 static IEnumerable<XElement> StreamRootChildDoc(StringReader stringReader)  
@@ -74,7 +74,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 bbb  

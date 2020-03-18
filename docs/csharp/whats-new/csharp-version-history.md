@@ -4,11 +4,11 @@ description: Qual era a aparência da linguagem nas primeiras versões e como el
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673271"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399682"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -22,13 +22,13 @@ As ferramentas de compilação do C# consideram a versão mais recente da lingua
 - [C# 7.3](csharp-7-3.md):
   - O C# 7.3 está disponível a partir do [Visual Studio 2017 versão 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 - [C# 7.2](csharp-7-2.md):
-  - C#7,2 está disponível a partir do [Visual Studio 2017 versão 15,5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2,0](../../core/whats-new/dotnet-core-2-0.md).
+  - C# 7.2 está disponível a partir da [versão 15.5 do Visual Studio 2017](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 - [C# 7.1](csharp-7-1.md):
   - O C# 7.1 está disponível a partir do [Visual Studio 2017 versão 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) e do [SDK do .NET Core 2.0](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# versão 1.0
 
-Quando voltar e olhar, C# a versão 1,0, lançada com o Visual Studio .NET 2002, ficou muito parecida com o Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
+Quando você volta e olha, c# versão 1.0, lançado com Visual Studio .NET 2002, parecia muito com Java. Como [parte de suas metas de design declaradas para ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html), ela buscava ser uma "linguagem simples, moderna, de uso geral e orientada a objeto".  No momento, parece que o Java alcançou essas metas de design iniciais.
 
 Mas agora, se examinar novamente a C# 1.0, você poderá se sentir um pouco confuso. Carecia das funcionalidades assíncronas internas e algumas das funcionalidades relacionadas a genéricos que você nem valoriza. Na verdade, ela não tinha nada relacionado a genéricos.  E a [LINQ](../linq/index.md)? Ainda não estava disponível. Essas adições levariam alguns anos para sair.
 
@@ -41,14 +41,14 @@ Os principais recursos do C# 1.0 incluíam:
 - [Interfaces](../programming-guide/interfaces/index.md)
 - [Eventos](../events-overview.md)
 - [Propriedades](../properties.md)
-- [Delegados](../delegates-overview.md)
+- [Delega](../delegates-overview.md)
 - [Expressões](../programming-guide/statements-expressions-operators/expressions.md)
-- [Instruções](../programming-guide/statements-expressions-operators/statements.md)
+- [Declarações](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
 
 ## <a name="c-version-12"></a>C# versão 1.2
 
-C#a versão 1,2 foi fornecida com o Visual Studio .NET 2003. Ele continha algumas pequenas melhorias na linguagem. Muito notável é que, a partir desta versão, o código gerado em um loop `foreach` chamou <xref:System.IDisposable.Dispose%2A>, em um <xref:System.Collections.IEnumerator>, quando o <xref:System.Collections.IEnumerator> implementou <xref:System.IDisposable>.
+C# versão 1.2 enviado com Visual Studio .NET 2003. Ele continha algumas pequenas melhorias na linguagem. Muito notável é que, a partir desta versão, o código gerado em um loop `foreach` chamou <xref:System.IDisposable.Dispose%2A>, em um <xref:System.Collections.IEnumerator>, quando o <xref:System.Collections.IEnumerator> implementou <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# versão 2.0
 
@@ -57,8 +57,8 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciais](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anônimos](../language-reference/operators/delegate-operator.md)
-- [Tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
-- [Iteradores](../programming-guide/concepts/iterators.md)
+- [tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
+- [Iterators](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Outros recursos do C# 2.0 adicionaram funcionalidades a recursos existentes:
@@ -86,9 +86,9 @@ O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, p
 - [Expressões lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Árvores de expressão](../expression-trees.md)
 - [Métodos de extensão](../programming-guide/classes-and-structs/extension-methods.md)
-- [Variáveis locais implicitamente tipadas](../language-reference/keywords/var.md)
+- [Variáveis locais de tipo implícito](../language-reference/keywords/var.md)
 - [Métodos parciais](../language-reference/keywords/partial-method.md)
-- [Inicializadores de objeto e de coleção](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Iniciadores de objetos e coleções](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Numa retrospectiva, muitos desses recursos parecerem inevitáveis e inseparáveis. Todos eles se encaixam estrategicamente. Costuma-se pensar que o recurso irresistível dessa versão do C# foi a expressão de consulta, também conhecida como LINQ (consulta integrada à linguagem).
 
@@ -100,14 +100,14 @@ Levou algum tempo para que as pessoas entendessem e integrassem o conceito, mas 
 
 ## <a name="c-version-40"></a>C# versão 4.0
 
-C#a versão 4,0, lançada com o Visual Studio 2010, teria tido um tempo difícil de viver até o status inovador da versão 3,0. Com a versão 3.0, o C# tirou verdadeiramente a linguagem da sombra do Java e a colocou em proeminência. A linguagem foi rapidamente se tornando elegante.
+C# versão 4.0, lançado com visual studio 2010, teria tido dificuldade em fazer jus ao status inovador da versão 3.0. Com a versão 3.0, o C# tirou verdadeiramente a linguagem da sombra do Java e a colocou em proeminência. A linguagem foi rapidamente se tornando elegante.
 
 A próxima versão introduziu alguns novos recursos interessantes:
 
 - [Associação dinâmica](../language-reference/builtin-types/reference-types.md)
 - [Argumentos opcionais/nomeados](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Genérico covariante e contravariante](../../standard/generics/covariance-and-contravariance.md)
-- [Tipos de interoperabilidade inseridos](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [Tipos de interop incorporados](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 Os tipos de interoperabilidade inseridos atenuaram um problema de implantação. A contravariância e a covariância genérica oferecem maior capacidade para usar genéricos, mas eles são um tanto acadêmicos e provavelmente mais apreciados por autores de estruturas e bibliotecas. Os parâmetros nomeados e opcionais permitem eliminar várias sobrecargas de método e oferecem conveniência. Mas nenhum desses recursos é exatamente uma alteração de paradigma.
 
@@ -117,7 +117,7 @@ Associação dinâmica tem potencial de erros, mas também grande eficiência na
 
 ## <a name="c-version-50"></a>C# versão 5.0
 
-C#a versão 5,0, lançada com o Visual Studio 2012, foi uma versão focada da linguagem. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
+C# versão 5.0, lançado com visual studio 2012, era uma versão focada do idioma. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
 
 - [Membros assíncronos](../async.md)
 - [Atributos de informações do chamador](../programming-guide/concepts/caller-information.md)
@@ -132,15 +132,15 @@ Mas `async` e `await` são as verdadeiras estrelas dessa versão. Quando esses r
 
 ## <a name="c-version-60"></a>C# versão 6.0
 
-Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6,0, lançada com o Visual Studio 2015, ela desapareceria com um recurso de Killer dominante e, em vez disso, C# lançaria muitos recursos menores que tornaram a programação mais produtiva. Eis algumas delas:
+Nas versões 3.0 e 5.0, o C# recebeu alguns novos recursos importantes em uma linguagem orientada a objeto. Com a versão 6.0, lançada com o Visual Studio 2015, ele iria longe de fazer um recurso matador dominante e, em vez disso, lançaria muitos recursos menores que tornaram a programação C# mais produtiva. Eis algumas delas:
 
 - [Importações estáticas](./csharp-6.md#using-static)
 - [Filtros de exceção](./csharp-6.md#exception-filters)
 - [Inicializadores de propriedade automática](./csharp-6.md#auto-property-initializers)
 - [Membros aptos para expressão](./csharp-6.md#expression-bodied-function-members)
 - [Propagador nulo](./csharp-6.md#null-conditional-operators)
-- [Interpolação de cadeia de caracteres](./csharp-6.md#string-interpolation)
-- [Operador nameof](./csharp-6.md#the-nameof-expression)
+- [Interpolação de cadeias de caracteres](./csharp-6.md#string-interpolation)
+- [operador nameof](./csharp-6.md#the-nameof-expression)
 - [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 Outros novos recursos incluem:
@@ -154,9 +154,9 @@ Fizeram ainda outra coisa com esta versão, embora não seja um recurso de lingu
 
 ## <a name="c-version-70"></a>C# versão 7.0
 
-A versão principal mais recente é C# a versão 7,0, lançada com o Visual Studio 2017. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
+A versão principal mais recente é c# versão 7.0, lançada com visual studio 2017. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
 
-- [Variáveis Out](./csharp-7.md#out-variables)
+- [Variáveis out](./csharp-7.md#out-variables)
 - [Tuplas e desconstrução](./csharp-7.md#tuples)
 - [Correspondência de padrões](./csharp-7.md#pattern-matching)
 - [Funções locais](./csharp-7.md#local-functions)
@@ -173,4 +173,4 @@ Todas essas funcionalidades oferecem novos recursos interessantes para desenvolv
 
 Mas o C# está sendo colocado para um uso cada vez mais amplo. Agora o .NET Core tem qualquer sistema operacional como destino e tem a visão firme na nuvem e na portabilidade.  Essas novas funcionalidades certamente ocupam a mente e o tempo dos designers da linguagem, além de levarem a novos recursos.
 
-_Artigo_ [_publicado originalmente no blog do NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, cortesia de Erik Dietrich e Patrick Smacchia._
+_Artigo_ [_originalmente publicado no blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, cortesia de Erik Dietrich e Patrick Smacchia._

@@ -3,11 +3,11 @@ title: Novidades no C# 6 – Guia do C#
 description: Aprenda os novos recursos da versão 6 do C#
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971378"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399388"
 ---
 # <a name="whats-new-in-c-6"></a>Novidades no C# 6
 
@@ -131,7 +131,7 @@ Para familiarizar-se com a interpolação de cadeia de caracteres, confira o tut
 
 ## <a name="exception-filters"></a>Filtros de exceção
 
-Os *Filtros de Exceção* são cláusulas que determinam quando uma determinada cláusula catch deve ser aplicada. Se a expressão usada para um filtro de exceção é avaliada como `true`, a cláusula catch realiza seu processamento normal em uma exceção. Se a expressão for avaliada como `false`, a cláusula `catch` será ignorada. Um uso é examinar informações sobre uma exceção para determinar se uma cláusula `catch` pode processar a exceção:
+*Exceção Filtros* são cláusulas que determinam quando uma determinada cláusula de captura deve ser aplicada. Se a expressão usada para um filtro de exceção é avaliada como `true`, a cláusula catch realiza seu processamento normal em uma exceção. Se a expressão for avaliada como `false`, a cláusula `catch` será ignorada. Um uso é examinar informações sobre uma exceção para determinar se uma cláusula `catch` pode processar a exceção:
 
 [!code-csharp[ExceptionFilter](../../../samples/snippets/csharp/new-in-6/NetworkClient.cs#ExceptionFilter)]
 

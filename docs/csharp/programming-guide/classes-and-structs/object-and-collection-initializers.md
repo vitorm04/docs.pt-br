@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714761"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170189"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicializadores de objeto e coleção (Guia de Programação em C#)
 
@@ -22,7 +22,7 @@ Os inicializadores de objeto permitem atribuir valores a quaisquer campos ou pro
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
- 
+
 A sintaxe dos inicializadores de objetos permite que você crie uma instância, e depois atribui o objeto recém-criado, com suas propriedades atribuídas, à variável na atribuição.
 
 Começando com o C# 6, os inicializadores de objeto podem definir indexadores, além de atribuir campos e propriedades. Considere esta classe `Matrix` básica:
@@ -57,13 +57,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>Inicializadores de objeto com tipos anônimos
 
-Embora os inicializadores de objeto possam ser usados em qualquer contexto, eles são especialmente úteis em expressões de consulta LINQ. Expressões de consulta fazem uso frequente de [tipos anônimos](./anonymous-types.md), que podem ser inicializados somente usando um inicializador de objeto, como mostrado na declaração a seguir.  
+Embora os iniciadores de objetos possam ser usados em qualquer contexto, eles são especialmente úteis em expressões de consulta LINQ. Expressões de consulta fazem uso frequente de [tipos anônimos](./anonymous-types.md), que podem ser inicializados somente usando um inicializador de objeto, como mostrado na declaração a seguir.  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-Os tipos anônimos habilitam a cláusula `select` em uma expressão de consulta LINQ para transformar objetos da sequência original em objetos cujo valor e forma possam ser diferentes do original. Isso será útil se você desejar armazenar apenas uma parte das informações de cada objeto em uma sequência. No exemplo a seguir, suponha que um objeto de produto (`p`) contenha vários campos e métodos e que você esteja apenas interessado em criar uma sequência de objetos que contenha o nome do produto e o preço unitário.  
+Os tipos `select` anônimos permitem que a cláusula em uma expressão de consulta LINQ transforme objetos da seqüência original em objetos cujo valor e forma podem diferir do original. Isso será útil se você desejar armazenar apenas uma parte das informações de cada objeto em uma sequência. No exemplo a seguir, suponha que um objeto de produto (`p`) contenha vários campos e métodos e que você esteja apenas interessado em criar uma sequência de objetos que contenha o nome do produto e o preço unitário.  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 
@@ -102,7 +102,7 @@ Você poderá especificar [nulo](../../language-reference/keywords/null.md) como
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-O exemplo anterior gera o código que chama o <xref:System.Collections.Generic.Dictionary%602.Item(%600)> para definir os valores. Antes C# de 6, você poderia inicializar dicionários e outros contêineres associativos usando a sintaxe a seguir. Observe que, em vez da sintaxe do indexador, com parênteses e uma atribuição, ele usa um objeto com vários valores:
+O exemplo anterior gera o código que chama o <xref:System.Collections.Generic.Dictionary%602.Item(%600)> para definir os valores. Antes de C# 6, você pode inicializar dicionários e outros recipientes associativos usando a seguinte sintaxe. Observe que, em vez da sintaxe do indexador, com parênteses e uma atribuição, ele usa um objeto com vários valores:
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -122,8 +122,8 @@ Os métodos `Add` podem usar a palavra-chave `params` para obter um número vari
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [LINQ em C#](../../linq/index.md)
 - [Tipos Anônimos](anonymous-types.md)

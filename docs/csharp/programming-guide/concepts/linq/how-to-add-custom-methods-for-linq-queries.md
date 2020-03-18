@@ -3,10 +3,10 @@ title: Como adicionar métodos personalizados para consultas LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
 ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141478"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Como adicionar métodos personalizados para consultas LINQ (C#)
@@ -214,7 +214,7 @@ foreach (var element in query)
 */
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Métodos de Extensão](../../classes-and-structs/extension-methods.md)
+- [Métodos de extensão](../../classes-and-structs/extension-methods.md)

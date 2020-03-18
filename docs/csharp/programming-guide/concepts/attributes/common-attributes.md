@@ -3,20 +3,20 @@ title: Atributos comuns (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595464"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399752"
 ---
 # <a name="common-attributes-c"></a>Atributos comuns (C#)
 Este tópico descreve os atributos que são mais comumente usados nos programas em C#.  
   
-- [Atributos globais](#Global)  
+- [Atributos Globais](#Global)  
   
 - [Atributo obsoleto](#Obsolete)  
   
-- [Atributo condicional](#Conditional)  
+- [Atributo Condicional](#Conditional)  
   
 - [Atributos de informações do chamador](#CallerInfo)  
   
@@ -72,8 +72,8 @@ Este tópico descreve os atributos que são mais comumente usados nos programas 
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Define um atributo personalizado que especifica uma configuração de assembly (como comercial ou de depuração) para um manifesto do assembly. assembly.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Define um alias amigável padrão para um manifesto do assembly|  
   
-## <a name="Obsolete"></a> Atributo obsoleto  
- O atributo `Obsolete` marca uma entidade programa como não recomendada para uso. Cada uso de uma entidade marcada como obsoleta gerará subsequentemente um aviso ou erro, dependendo de como o atributo é configurado. Por exemplo:  
+## <a name="Obsolete"></a>Atributo obsoleto  
+ O atributo `Obsolete` marca uma entidade programa como não recomendada para uso. Cada uso de uma entidade marcada como obsoleta gerará subsequentemente um aviso ou erro, dependendo de como o atributo é configurado. Por exemplo:   
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -216,12 +216,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="CallerInfo"></a> Atributos de informações do chamador  
+## <a name="CallerInfo"></a>Atributos de informações do chamador  
  Ao usar atributos de informações do chamador, você pode obter informações sobre o chamador de um método. Você pode obter o caminho do arquivo do código-fonte, o número de linha no código-fonte e o nome do membro do chamador.  
   
  Para obter informações do chamador do membro, você usa os atributos que são aplicados aos parâmetros opcionais. Cada parâmetro opcional especifica um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace de <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|DESCRIÇÃO|Tipo|  
+|Atributo|Descrição|Type|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho em tempo de compilação.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de linha no arquivo de origem do qual o método é chamado.|`Integer`|  
@@ -229,11 +229,11 @@ class SampleClass
   
  Para obter mais informações sobre os atributos de informações do chamador, consulte [Informações do chamador (C#)](../caller-information.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guia de Programação em C#](../../index.md)
+- [C# Guia de Programação](../../index.md)
 - [Atributos](../../../../standard/attributes/index.md)
 - [Reflexão (C#)](../reflection.md)
 - [Acessando atributos usando reflexão (C#)](./accessing-attributes-by-using-reflection.md)

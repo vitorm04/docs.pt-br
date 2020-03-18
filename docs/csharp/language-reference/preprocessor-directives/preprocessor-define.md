@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 7457b05ae827675969398792bcb02f025f3028fb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c08d6f42c11184a4d14aa6712f9f0f8706a72cab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712579"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173426"
 ---
 # <a name="define-c-reference"></a>#define (Referência de C#)
 Use `#define` para definir um símbolo. Quando você usa o símbolo como a expressão passada para a diretiva [#if](./preprocessor-if.md), a expressão será avaliada como `true`, conforme mostra o exemplo a seguir:  
- 
+
  ```csharp
  #define DEBUG
  ```
@@ -29,7 +29,7 @@ Use `#define` para definir um símbolo. Quando você usa o símbolo como a expre
   
  É possível definir um símbolo, mas não é possível atribuir um valor a um símbolo. A diretiva `#define` deve ser exibida no arquivo antes de usar as instruções que também não são diretivas de pré-processador.  
   
- Você também pode definir um símbolo com a opção do compilador [-define](../compiler-options/define-compiler-option.md). É possível excluir um símbolo com [#undef](./preprocessor-undef.md).  
+ Você também pode definir um símbolo com a opção [-definir](../compiler-options/define-compiler-option.md) compilador. É possível excluir um símbolo com [#undef](./preprocessor-undef.md).  
   
  Um símbolo definido com `-define` ou com `#define` não entra em conflito com uma variável do mesmo nome. Ou seja, um nome de variável não deve ser passado para uma diretiva de pré-processador e um símbolo apenas pode ser avaliado por uma diretiva de pré-processador.  
   
@@ -63,11 +63,11 @@ public class TestDefine
   
  Para obter um exemplo de como excluir um símbolo, consulte [#undef](./preprocessor-undef.md).  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
-- [Diretivas do pré-processador do C#](./index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
+- [C# Diretivas de pré-processador](./index.md)
 - [const](../keywords/const.md)
 - [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [#undef](./preprocessor-undef.md)

@@ -4,10 +4,10 @@ description: A API de ML automatizado do ML.NET automatiza o processo de criaç�
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636556"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Como usar a API de aprendizado de máquina automatizado do ML.NET
@@ -72,7 +72,7 @@ Criar configurações de experimento para o tipo de tarefa de ML determinado:
 
 Os experimentos são altamente configuráveis. Veja os [documentos de API de AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) para obter uma lista completa de definições de configuração.
 
-Eis alguns exemplos:
+Alguns exemplos incluem:
 
 1. Especifique o tempo máximo pelo qual o experimento pode ser executado.
 
@@ -117,13 +117,13 @@ A lista de treinadores com suporte por tarefa de ML pode ser encontrada no link 
 * [Algoritmos de Classificação Binária com Suporte](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmos de Classificação Multiclasse com Suporte](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmos de Regressão com Suporte](xref:Microsoft.ML.AutoML.RegressionTrainer)
-* [Algoritmos de recomendação com suporte](xref:Microsoft.ML.AutoML.RecommendationTrainer)
+* [Algoritmos de recomendação suportados](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Métrica de otimização
 
 A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica a ser otimizada durante o treinamento de modelo. A métrica de otimização que você pode selecionar é determinada pelo tipo de tarefa que você escolher. Abaixo está uma lista de métricas disponíveis.
 
-|[Classificação Binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificação Multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressão & recomendação](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Classificação Binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificação multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Recomendação de & de regressão](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Precisão| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -134,16 +134,16 @@ A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica 
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>Pré-processamento de dados e personalização
+## <a name="data-pre-processing-and-featurization"></a>Pré-processamento e personalização de dados
 
 > [!NOTE]
-> A coluna de recursos tem suporte apenas para tipos de <xref:System.Boolean>, <xref:System.Single>e <xref:System.String>.
+> A coluna de recursos <xref:System.Boolean>só <xref:System.Single>suportava tipos de , e <xref:System.String>.
 
 O pré-processamento de dados ocorre por padrão e as etapas a seguir são executadas automaticamente para você:
 
 1. Remover os recursos sem informações úteis
 
-    Remover os recursos sem informações úteis de conjuntos de treinamento e validação. Incluem recursos com todos os valores ausentes, com o mesmo valor em todas as linhas ou com cardinalidade muito alta (por exemplo, hashes, IDs ou GUIDs).
+    Remova recursos sem informações úteis do treinamento e dos conjuntos de validação. Eles incluem recursos com todos os valores ausentes, o mesmo valor em todas as linhas ou cardinalidade extremamente alta (por exemplo, hashes, IDs ou GUIDs).
 
 1. Imputação e indicação de valor ausente
 
@@ -151,11 +151,11 @@ O pré-processamento de dados ocorre por padrão e as etapas a seguir são execu
 
 1. Gerar recursos adicionais
 
-    Para recursos de texto: recursos de conjunto de palavras usando unigrams e Tri-Character-grams.
+    Para recursos de texto: Recursos de saco de palavras usando unigramas e três caracteres-gramas.
 
-    Para recursos categóricos: codificação One-Hot para recursos de cardinalidade baixa e codificação de hash One-Hot para recursos categóricos de alta cardinalidade.
+    Para características categóricas: Codificação de um quente para características de baixa cardinalidade, e codificação de hash de um hot-hot para características categóricas de alta cardinalidade.
 
-1. Codificações e transformações
+1. Transformações e codificações
 
     Recursos de texto com poucos valores exclusivos transformados em recursos categóricos. Dependendo da cardinalidade de recursos categóricos, execute codificação one-hot ou codificação one-hot hash.
 
@@ -174,7 +174,7 @@ Defina os critérios para concluir sua tarefa:
     experimentSettings.CancellationToken = cts.Token;
     ```
 
-## <a name="create-an-experiment"></a>Criar um experimento
+## <a name="create-an-experiment"></a>Criar uma experiência
 
 Depois de definir as configurações de teste, você está pronto para criar o experimento.
 
@@ -182,7 +182,7 @@ Depois de definir as configurações de teste, você está pronto para criar o e
 RegressionExperiment experiment = mlContext.Auto().CreateRegressionExperiment(experimentSettings);
 ```
 
-## <a name="run-the-experiment"></a>Executar o experimento
+## <a name="run-the-experiment"></a>Execute o experimento
 
 Executar o experimento dispara o pré-processamento de dados, a seleção do algoritmo de aprendizado e o ajuste de hiperparâmetro. AutoML continuará a gerar combinações de personalização, algoritmos de aprendizado e hiperparâmetros até o `MaxExperimentTimeInSeconds` ser atingido ou o experimento ser encerrado.
 
@@ -203,15 +203,15 @@ O AutoML oferece um método de execução de experimento sobrecarregado que poss
 experiment.Execute(trainDataView);
 ```
 
-### <a name="custom-validation-dataset"></a>Conjunto de dados de validação personalizado
+### <a name="custom-validation-dataset"></a>Conjunto de dados de validação personalizados
 
-Use o conjunto de dados de validação personalizado se divisão aleatória não for aceitável, como normalmente é o caso para dados de série temporal. Você pode especificar seu próprio conjunto de dados de validação. O modelo será avaliado em relação ao conjunto de dados de validação especificado, em vez de um ou mais conjuntos de dados aleatórios.
+Use o conjunto de dados de validação personalizado se divisão aleatória não for aceitável, como normalmente é o caso para dados de série temporal. É possível especificar seu próprio conjunto de dados de validação. O modelo será avaliado em relação ao conjunto de dados de validação especificado, em vez de um ou mais conjuntos de dados aleatórios.
 
 ```csharp
 experiment.Execute(trainDataView, validationDataView);
 ```
 
-## <a name="explore-model-metrics"></a>Explore as métricas do modelo
+## <a name="explore-model-metrics"></a>Explorar as métricas do modelo
 
 Depois de cada iteração de um experimento de ML, as métricas relacionadas à tarefa são armazenadas.
 
@@ -227,8 +227,8 @@ Estas são todas as métricas disponíveis por tarefa de ML:
 
 * [Métricas de classificação binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Métricas de classificação multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Regressão & métricas de recomendação](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Métricas de recomendação de regressão &](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 Para exemplos de código completos e muito mais, acesse o repositório do GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state).

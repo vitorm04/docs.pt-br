@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336719"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141127"
 ---
-# <a name="contributing"></a>Contribuição
+# <a name="contributing"></a>Participante
 
 Agradecemos seu interesse em contribuir com a documentação do .NET.
 
@@ -15,32 +15,36 @@ Agradecemos seu interesse em contribuir com a documentação do .NET.
 
 O documento aborda o processo para contribuir para os artigos e exemplos de código hospedados no [site de documentação do .NET](https://docs.microsoft.com/dotnet). As contribuições podem ser tão simples quanto correções de erro de digitação ou tão complexas quanto novos artigos.
 
-- [O que FAZER e o que NÃO FAZER](#dos-and-donts)
+- [DOs e DON'Ts](#dos-and-donts)
 - [Processo de contribuição](#process-for-contributing)
 - [A experiência interativa em C#](#the-c-interactive-experience)
 - [Contrato de Licença do Colaborador](#contributor-license-agreement)
 
 Esse repositório contém a documentação conceitual do .NET. O site de documentação do .NET foi criado com base em vários repositórios, além desse:
 
-- [Exemplos de código e trechos](https://github.com/dotnet/samples) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
-- [Referência da API .net](https://github.com/dotnet/dotnet-api-docs) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/dotnet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
-- [Referência do SDK do .net Compiler Platform](https://github.com/dotnet/roslyn-api-docs) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Amostras de código e trechos](https://github.com/dotnet/samples) Problemas e tarefas para este repositório são rastreados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Referência de API .NET](https://github.com/dotnet/dotnet-api-docs) Problemas e tarefas para este repositório são rastreados em [dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Referência SDK da plataforma do compilador .NET](https://github.com/dotnet/roslyn-api-docs) Problemas e tarefas para este repo são rastreados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+
+### <a name="contributing-to-international-content"></a>Contribuindo para o conteúdo internacional
+
+As contribuições para o conteúdo de MT (Machine Translated) não são aceitas no momento. Em um esforço para melhorar a qualidade do conteúdo MT, fizemos a transição para um motor Neural MT. Aceitamos e incentivamos contribuições para o conteúdo de Human Translated (HT), que é usado para treinar o motor Neural MT. Assim, com o tempo, as contribuições para o conteúdo HT melhorarão a qualidade tanto do HT quanto do MT. Os tópicos do MT terão uma isenção de responsabilidade afirmando que parte do tópico pode ser MT, e o botão **Editar** não será exibido como desativado.
 
 ## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
 
 A lista a seguir mostra algumas regras de orientação que você deve considerar ao contribuir para a documentação do .NET:
 
-- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso. Para alterações em massa, divida o trabalho em PRs menores (até 100 arquivos). Essa diretriz é altamente recomendável se sua PR não seguir as diretrizes a seguir.
-- **Examine o** atual [para obter](https://github.com/dotnet/docs/labels/up-for-grabs) problemas de sugestões de tarefas.
-- **Crie uma** PR para cada tarefa. PRs que incluem várias alterações não relacionadas são muito mais difíceis de examinar. Isso atrasa as revisões e a mesclagem de PRs. Essa diretriz também se aplica a revisões: Nós tentamos não sugerir alterações não relacionadas em revisões; Pedimos que as revisões da Comunidade sigam essa orientação.
-- **Forneça uma** descrição clara do trabalho em sua pr. Diga-nos o que mudou e por quê. A descrição padrão de "Update article.md" não é útil para revisores.
-- **Não** envie PRS para alterações somente de estilo sem discussão anterior. Esses PRs levam mais tempo para revisar a precisão e mesclá-los geralmente causa conflitos de mesclagem com outras atualizações importantes. Estamos trabalhando para seguir um estilo consistente, mas estamos balanceando esse trabalho com outras tarefas. Os artigos são levados em conformidade com o estilo quando fazemos atualizações importantes por outros motivos.
-- **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md). Novas adições devem seguir estas diretrizes.
+- **NÃO** nos surpreenda com solicitações de pull grandes. Em vez disso, registre um problema e inicie uma discussão para que possamos concordar sobre o que fazer antes de você gastar muito tempo nisso. Para alterações em massa, quebre o trabalho em PRs menores (até 100 arquivos). Esta diretriz é fortemente recomendada se o seu RP não seguir as seguintes diretrizes.
+- **FAÇA** uma olhada nas [questões](https://github.com/dotnet/docs/labels/up-for-grabs) atuais para obter sugestões sobre tarefas.
+- **CRIE** um RP para cada tarefa. PRs que incluem várias alterações não relacionadas são muito mais difíceis de revisar. Isso atrasa as revisões e a fusão de PRs. Esta diretriz também se aplica às revisões: tentamos não sugerir alterações não relacionadas nas revisões; pedimos que as revisões da comunidade aderam a esta diretriz.
+- **FAÇA** fornecer uma descrição clara do trabalho em seu RP. Diga-nos o que mudou e por quê. A descrição padrão de "update article.md" não é útil para os revisores.
+- **NÃO** envie PRs para alterações somente de estilo sem discussão prévia. Esses PRs levam tempo extra para revisar a precisão, e fundi-los muitas vezes causa conflitos de mesclagem com outras atualizações importantes. Estamos trabalhando para seguir um estilo consistente, mas estamos equilibrando esse trabalho com outras tarefas. Os artigos são trazidos para a conformidade de estilo quando fazemos grandes atualizações por outras razões.
+- **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md). Novas adições devem seguir essas diretrizes.
 - **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
 - **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
 - **FAZER:** faça postagem em blogs e no Twitter (ou em outros) sobre suas contribuições, com frequência.
 
-Essas diretrizes nos ajudam a respeitar o tempo de todos. Muitas pessoas contribuem para esses repositórios. Seguir essas diretrizes facilita a análise e a mesclagem de sua PR em tempo hábil. Essas práticas minimizam conflitos com o PRs de outros membros da Comunidade e nossa equipe. Como PRs que não seguem essas diretrizes geralmente causam trabalho extra para nós e membros da Comunidade, esses PRs podem ser rejeitados. Se você quiser uma exceção, comece criando um problema.
+Essas diretrizes nos ajudam a respeitar o tempo de todos. Muitas pessoas contribuem para esses repositórios. Seguir essas diretrizes torna mais fácil para nós rever e fundir seu RP em tempo hábil. Essas práticas minimizam conflitos com PRs de outros membros da comunidade e de nossa equipe. Como as PRs que não seguem essas diretrizes muitas vezes causam trabalho extra para nós e membros da comunidade, essas PRs podem ser rejeitadas. Se você quiser uma exceção, comece criando um problema.
 
 > Observação: você pode observar que, no momento, alguns dos tópicos não estão seguindo todas as diretrizes especificadas aqui e também no [guia de estilo](./styleguide/template.md). Estamos trabalhando para atingir a consistência em todo o site.
 
@@ -48,22 +52,22 @@ Essas diretrizes nos ajudam a respeitar o tempo de todos. Muitas pessoas contrib
 
 Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Etapa 1:** Ignore esta etapa para alterações pequenas (por exemplo, se você estiver corrigindo um erro de digitação ou imediatamente abrindo uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
+**Passo 1:** Pule esta etapa para pequenas alterações (por exemplo, se você estiver corrigindo um erro de digitação ou abrindo imediatamente uma solicitação de puxar para resolver um problema que você encontrar nos docs). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
 O conteúdo dentro da pasta *docs* é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
-- ou -
+-ou-
 
 Também é possível escolher entre as questões existentes, para as quais contribuições da comunidade são bem-vindas. [Projetos para os colaboradores da comunidade do .NET](https://github.com/dotnet/docs/projects/35) lista vários itens de trabalho que estão disponíveis para os colaboradores da comunidade. Dependendo de seus interesses e nível de compromisso, você pode escolher entre questões nas seguintes categorias:
 
 - **Manutenção**. Essa categoria inclui contribuições bastante simples, como corrigir links corrompidos ou incorretos, adicionar exemplos de código ausentes ou abordar problemas de conteúdo limitado. Em alguns casos, essas questões podem envolver grandes quantidades de arquivos. Nesse caso, informe-nos com o que você gostaria de trabalhar antes de começar.
 
-- **Atualizações de conteúdo**. Considerando a enormidade do conjunto de documentos, o conteúdo se torna facilmente desatualizado e precisa de revisão. Além disso, por vários motivos, algum conteúdo foi duplicado ou uniformemente preenvolvido. A atualização do conteúdo envolve garantir que os tópicos individuais sejam atuais, ou revisar o conteúdo em uma área para eliminar duplicação e se certificar que todo conteúdo exclusivo seja preservado no menor conjunto de documentação.
+- **Atualizações de conteúdo**. Considerando a enormidade do conjunto de documentos, o conteúdo se torna facilmente desatualizado e precisa de revisão. Além disso, por uma variedade de razões, alguns conteúdos foram duplicados ou até triplicados. A atualização do conteúdo envolve garantir que os tópicos individuais sejam atuais, ou revisar o conteúdo em uma área para eliminar duplicação e se certificar que todo conteúdo exclusivo seja preservado no menor conjunto de documentação.
 
 - **Criação de novo conteúdo**. Se você estiver interessado na criação do seu próprio tópico, estas questões listam tópicos que gostaríamos de adicionar ao nosso conjunto de documentos. Fale conosco antes de começar a trabalhar em um tópico, no entanto. Se você estiver interessado em escrever um tópico que não está listado aqui, abra uma questão.
 
 Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição.
 
-**Etapa 2:** bifurque os repositórios `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` conforme necessário e crie um branch para suas alterações.
+**Passo 2:** Bifurque `dotnet/docs` `dotnet/samples` os `dotnet/dotnet-api-docs` , ou repositórios conforme necessário e crie um ramo para suas alterações.
 
 Para pequenas alterações, você pode usar a interface da Web do GitHub. Basta clicar em **Editar o arquivo na sua bifurcação deste projeto** no arquivo que você deseja alterar. O GitHub cria o novo branch para você após enviar as alterações.
 
@@ -92,9 +96,9 @@ docs
             portability_report.png
 ```
 
-**Etapa 4:** Envie uma solicitação de pull (PR) de seu Branch para `dotnet/docs/master`, `dotnet/dotnet-api-docs/master`ou `dotnet/samples/master`.
+**Passo 4:** Envie uma solicitação de tração (PR) do seu ramo para, `dotnet/docs/master` `dotnet/dotnet-api-docs/master`ou `dotnet/samples/master`.
 
-Sua PR deve *sempre* direcionar a ramificação padrão do repositório (a menos que você esteja trabalhando em um Branch de lançamento). Para dotnet/docs, a ramificação mestre é a ramificação padrão. Para os repositórios localizados, o Live Branch é o padrão. Você *nunca* deve abrir uma PR que tenha como alvo a ramificação ao vivo em dotNet/docs.
+Seu RP deve *sempre* atingir o ramo padrão do repositório (a menos que você esteja trabalhando em uma filial de liberação). Para dotnet/docs, o ramo principal é o ramo padrão. Para os repositórios localizados, o ramo vivo é o padrão. Você *nunca* deve abrir um RP que tenha como alvo o ramo vivo em dotnet/docs.
 
 Cada PR normalmente deve lidar com uma questão por vez. A PR pode modificar um ou vários arquivos. Se você está abordando várias correções em diferentes arquivos, é preferível usar PRs separadas.
 
@@ -119,7 +123,7 @@ Fazemos a seguinte distinção para o código existente em nosso repositório:
 Todos os códigos residem no repositório [dotnet/samples](https://github.com/dotnet/samples). Estamos trabalhando para criar um modelo em que nossa estrutura de pastas de amostras corresponda à nossa estrutura de pastas de documentos. Os padrões que seguimos são:
 
 - A pasta *snippets* de nível superior contém snippets para amostras pequenas e dedicadas.
-- Exemplos de referência de API ficam em uma pasta seguindo este padrão: *snippets/\<idioma>/api/\<namespace>/\<nomeapi>* .
+- Exemplos de referência de API ficam em uma pasta seguindo este padrão: *snippets/\<idioma>/api/\<namespace>/\<nomeapi>*.
 - Outras pastas de nível superior correspondem às pastas de nível superior do repositório *docs*. Por exemplo, o repositório docs tem uma pasta *machine-learning/tutorials*, e as amostras para tutoriais de aprendizado por máquina estão na pasta *samples/machine-learning/tutorials*.
 
 Além disso, todas as amostras nas pastas *core* e *standard* devem ser compiladas e executadas em todas as plataformas compatíveis com o .NET Core. Nosso sistema de build de CI força isso. A pasta de nível superior *framework* contém exemplos que só são compilados e validados no Windows.
@@ -135,7 +139,7 @@ Para saber mais, confira o [Leiame da amostra](https://github.com/dotnet/samples
 
 ## <a name="the-c-interactive-experience"></a>A experiência interativa em C#
 
-Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Os exemplos de código embutido usam a marca de `csharp-interactive`, para trechos incluídos da origem, use a marca de `code-csharp-interactive`.) Esses exemplos de código exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra.
+Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Amostras de código `csharp-interactive` inline usam a tag, para `code-csharp-interactive` trechos incluídos na fonte, use a tag.) Essas amostras de código exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra.
 
 A experiência interativa em C# altera o modo como trabalhamos com amostras. Os visitantes podem executar a amostra para ver os resultados. Uma série de fatores ajuda a determinar se a amostra ou o texto correspondente deve incluir informações sobre a saída.
 

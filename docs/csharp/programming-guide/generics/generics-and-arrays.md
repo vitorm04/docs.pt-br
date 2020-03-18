@@ -6,10 +6,10 @@ helpviewer_keywords:
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
 ms.openlocfilehash: a8fad38fac07b9e8d51529d3ab7070328a333dbb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703007"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>Genéricos e matrizes (Guia de Programação em C#)
@@ -19,10 +19,10 @@ No C# 2.0 e versões posteriores, matrizes unidimensionais que têm um limite in
   
  [!code-csharp[csProgGuideGenerics#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#35)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Genéricos](./index.md)
 - [Matrizes](../arrays/index.md)
 - [Genéricos](../../../standard/generics/index.md)

@@ -3,11 +3,11 @@ title: Projetando um microsserviço orientado a DDD
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda o design do microsserviço de pedidos orientado a DDD e suas camadas de aplicativo.
 ms.date: 10/08/2018
 ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739942"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401693"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
@@ -37,13 +37,13 @@ Ao lidar com complexidade, é importante ter um modelo de domínio controlado po
 
 A Figura 7-5 mostra como um design em camadas é implementado no aplicativo eShopOnContainers.
 
-![Diagrama mostrando as camadas em um microserviço de design controlado por domínio.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
+![Diagrama mostrando as camadas em um microserviço de design orientado por domínio.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Figura 7-5**. Camadas DDD no microsserviço de ordenação em eShopOnContainers
 
 As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: a camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure. Você deseja criar o sistema de modo que cada camada se comunique apenas com determinadas outras camadas. Isso poderá ser mais fácil de impor se as camadas forem implementadas como bibliotecas de classes diferentes, porque você pode identificar claramente que dependências são definidas entre bibliotecas. Por exemplo, a camada de modelo de domínio não deve receber uma dependência de nenhuma outra camada (as classes de modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) ou Plain Old CLR Objects). Conforme mostrado na Figura 7-6, a biblioteca de camada **Ordering.Domain** tem dependências apenas de bibliotecas .NET Core ou pacotes NuGet, mas não de nenhuma outra biblioteca personalizada, como a biblioteca de dados ou a biblioteca de persistência.
 
-![Captura de tela de ordenação de dependências. domain.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
+![Captura de tela de Ordenação.Dependências de domínio.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Figura 7-6**. Camadas implementadas como bibliotecas permitem melhor controle de dependências entre as camadas
 
@@ -85,7 +85,7 @@ Conforme mencionado anteriormente nos princípios de [Ignorância de Persistênc
 
 Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 7-7.
 
-![Diagrama mostrando dependências que existem entre as camadas de serviço do DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
+![Diagrama mostrando dependências existentes entre camadas de serviço DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Figura 7-7**. Dependências entre camadas em DDD
 
@@ -93,15 +93,15 @@ Dependências em um serviço de DDD, a camada de aplicativo depende do domínio 
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **DevIQ.**  \ de princípio de ignorância de persistência
+- **O DevIQ. Princípio da ignorância da persistência** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. \ de infraestrutura ignorância**
+- **Oren Eini. Ignorância da infra-estrutura** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Anjo Lopez. Arquitetura em camadas em \ de design controlado por domínio**
+- **Angel Lopez. Arquitetura em camadas em design orientado por domínio** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[Anterior](cqrs-microservice-reads.md)
->[Próximo](microservice-domain-model.md)
+>[Próximo](cqrs-microservice-reads.md)
+>[anterior](microservice-domain-model.md)

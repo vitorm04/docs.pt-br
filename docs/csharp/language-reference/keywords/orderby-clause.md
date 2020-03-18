@@ -8,16 +8,16 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cd76b2c33fe1a1a986bc05e3c3ed5f22809686ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713304"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173569"
 ---
 # <a name="orderby-clause-c-reference"></a>Cláusula orderby (Referência de C#)
 
-Em uma expressão de consulta, a cláusula `orderby` faz com que a sequência ou subsequência (grupo) retornada seja classificada em ordem crescente ou decrescente. Várias chaves podem ser especificadas para executar uma ou mais operações de classificação secundárias. A classificação é executada pelo comparador padrão para o tipo do elemento. A ordem de classificação crescente é padrão. Também é possível especificar um comparador personalizado. No entanto, está disponível somente por meio da sintaxe baseada em método. Para obter mais informações, consulte [Classificando dados](../../programming-guide/concepts/linq/sorting-data.md).
+Em uma expressão de consulta, a cláusula `orderby` faz com que a sequência ou subsequência (grupo) retornada seja classificada em ordem crescente ou decrescente. Várias chaves podem ser especificadas para executar uma ou mais operações de classificação secundárias. A classificação é executada pelo comparador padrão para o tipo do elemento. A ordem de classificação padrão é crescente. Também é possível especificar um comparador personalizado. No entanto, está disponível somente por meio da sintaxe baseada em método. Para obter mais informações, consulte [Classificando dados](../../programming-guide/concepts/linq/sorting-data.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -35,10 +35,10 @@ O exemplo a seguir executa uma classificação primária pelos sobrenomes dos al
 
 Em tempo de compilação, a cláusula `orderby` é convertida em uma chamada para o método <xref:System.Linq.Enumerable.OrderBy%2A>. Várias chaves na cláusula `orderby` são traduzidas para chamadas de método <xref:System.Linq.Enumerable.ThenBy%2A>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Palavras-chave de Consulta (LINQ)](query-keywords.md)
-- [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
+- [C# Referência](../index.md)
+- [Palavras-chave de consulta (LINQ)](query-keywords.md)
+- [LINQ em C#](../../linq/index.md)
 - [Cláusula group](group-clause.md)
-- [Introdução a LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Consulta Integrada ao Idioma (LINQ)](../../programming-guide/concepts/linq/index.md)

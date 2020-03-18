@@ -8,10 +8,10 @@ helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
 ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712787"
 ---
 # <a name="while-c-reference"></a>while (Referência de C#)
@@ -30,13 +30,13 @@ O exemplo a seguir mostra o uso da instrução `while`. Selecione **Executar** p
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [A instrução while](~/_csharplang/spec/statements.md#the-while-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Instrução do](do.md)
+- [fazer declaração](do.md)

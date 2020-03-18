@@ -2,12 +2,12 @@
 title: Programação assíncrona em C#
 description: Uma visão geral do suporte de linguagem C# para programação assíncrona usando async, await, Task e Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 633da9485c5f74efb6e57234a31f0404e39605ec
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 4cbbff0f2c48f0ec2f8befa234ea5023465a1c5d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552438"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169903"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programação assíncrona com async e await
 
@@ -26,13 +26,13 @@ Se tivesse experiência em culinária, você executaria essas instruções **ass
 
 Preparar o café da manhã é um bom exemplo de trabalho assíncrono que não é paralelo. Uma pessoa (ou um thread) pode lidar com todas essas tarefas. Continuando com a analogia do café da manhã, uma pessoa pode fazer café da manhã assincronamente iniciando a tarefa seguinte antes de concluir a primeira. O preparo progride independentemente de haver alguém observando. Assim que inicia o aquecimento da frigideira para os ovos, você pode começar a fritar o bacon. Quando começar a preparar o bacon, você pode colocar o pão na torradeira.
 
-Para um algoritmo paralelo, você precisaria de vários cozinheiros (ou threads). Um prepararia os ovos, outro o bacon e assim por diante. Cada um se concentraria apenas naquela tarefa específica. Cada cozinheiro (ou thread) ficaria bloqueado de forma síncrona, esperando que o bacon estivesse pronto para ser virado ou que a torrada pulasse. 
+Para um algoritmo paralelo, você precisaria de vários cozinheiros (ou threads). Um prepararia os ovos, outro o bacon e assim por diante. Cada um se concentraria apenas naquela tarefa específica. Cada cozinheiro (ou thread) ficaria bloqueado de forma síncrona, esperando que o bacon estivesse pronto para ser virado ou que a torrada pulasse.
 
 Agora, considere essas mesmas instruções escritas como instruções em C#:
 
 [!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
 
-Os computadores não interpretam essas instruções da mesma forma que as pessoas. O computador ficará bloqueado em cada instrução até que o trabalho seja concluído, antes de passar para a próxima instrução. Isso cria um café da manhã insatisfatório. As tarefas posteriores não seriam iniciadas até que as tarefas anteriores fossem concluídas. Levaria muito mais tempo para criar o café da manhã e alguns itens ficariam frios antes de serem servidos. 
+Os computadores não interpretam essas instruções da mesma forma que as pessoas. O computador ficará bloqueado em cada instrução até que o trabalho seja concluído, antes de passar para a próxima instrução. Isso cria um café da manhã insatisfatório. As tarefas posteriores não seriam iniciadas até que as tarefas anteriores fossem concluídas. Levaria muito mais tempo para criar o café da manhã e alguns itens ficariam frios antes de serem servidos.
 
 Se você quiser que o computador execute as instruções acima de forma assíncrona, deverá escrever o código assíncrono.
 
@@ -42,7 +42,7 @@ Aplicativos modernos bem-sucedidos exigem código assíncrono. Sem suporte de li
 
 ## <a name="dont-block-await-instead"></a>Não bloquear, mas aguardar
 
-O código anterior demonstra uma prática inadequada: construção de código síncrono para realizar operações assíncronas. Como escrito, esse código bloqueia o thread que o está executando, impedindo-o de realizar qualquer outra tarefa. Ele não será interrompido enquanto qualquer uma das tarefas estiver em andamento. Seria como se você fixasse o olhar na torradeira depois de colocar o pão. Você ignoraria qualquer pessoa que estivesse conversando com você até que a torrada pulasse. 
+O código anterior demonstra uma prática inadequada: construção de código síncrono para realizar operações assíncronas. Como escrito, esse código bloqueia o thread que o está executando, impedindo-o de realizar qualquer outra tarefa. Ele não será interrompido enquanto qualquer uma das tarefas estiver em andamento. Seria como se você fixasse o olhar na torradeira depois de colocar o pão. Você ignoraria qualquer pessoa que estivesse conversando com você até que a torrada pulasse.
 
 Vamos começar atualizando esse código para que o thread não seja bloqueado enquanto houver tarefas em execução. A palavra-chave `await` oferece uma maneira sem bloqueio de iniciar uma tarefa e, em seguida, continuar a execução quando essa tarefa for concluída. Uma versão assíncrona simples do código de fazer café da manhã ficaria como o snippet a seguir:
 

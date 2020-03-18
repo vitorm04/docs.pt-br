@@ -6,10 +6,10 @@ helpviewer_keywords:
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
 ms.openlocfilehash: c0f28716926d4c9d74cde58fd00e27d1fdfa7ce1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75705360"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
@@ -43,19 +43,19 @@ Um [delegado](../../language-reference/builtin-types/reference-types.md) é um t
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [Usando delegados](./using-delegates.md)  
+- [Usar delegados](./using-delegates.md)  
   
 - [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [Delegados com métodos nomeados vs. anônimos](./delegates-with-named-vs-anonymous-methods.md)  
+- [Delegados com métodos nomeados versus anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
-- [Usando Variação em Delegações](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [Usando variação em delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Como combinar delegados (delegados de multicast)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Como combinar delegados (Delegados Multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Como declarar, instanciar e usar um delegado](./how-to-declare-instantiate-and-use-a-delegate.md)
+- [Como declarar e usar um delegado e criar uma instância dele](./how-to-declare-instantiate-and-use-a-delegate.md)
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
 Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
@@ -64,8 +64,8 @@ Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md)
   
  [Delegados e eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Delegate>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Eventos](../events/index.md)

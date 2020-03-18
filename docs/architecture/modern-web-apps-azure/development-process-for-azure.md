@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450031"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
@@ -26,7 +26,7 @@ ms.locfileid: "77450031"
 
 Seja qual for sua preferência, um IDE avançado e completo ou um editor leve e ágil, a Microsoft oferece as ferramentas que você pode usar para desenvolver aplicativos ASP.NET Core.
 
-**Visual Studio 2019.** O Visual Studio 2019 é o melhor IDE para desenvolver aplicativos para ASP.NET Core. Ele oferece uma série de recursos que aumentam a produtividade do desenvolvedor. Você pode usá-lo para desenvolver o aplicativo e, em seguida, analisar seu desempenho e outras características. O depurador integrado permite pausar a execução de código e avançar e voltar pelo código imediatamente conforme ele está em execução. O executor de teste interno permite organizar seus testes e seus resultados e pode até mesmo executar testes de unidade ao vivo enquanto você está codificando. Usando Live Share, você pode colaborar em tempo real com outros desenvolvedores, compartilhando sua sessão de código diretamente pela rede. E quando estiver pronto, o Visual Studio incluirá tudo o que você precisa para publicar seu aplicativo no Azure ou onde quer que possa hospedá-lo.
+**Visual Studio 2019.** O Visual Studio 2019 é o melhor IDE da classe para o desenvolvimento de aplicações para ASP.NET Core. Ele oferece uma série de recursos que aumentam a produtividade do desenvolvedor. Você pode usá-lo para desenvolver o aplicativo, em seguida, analisar seu desempenho e outras características. O depurador integrado permite pausar a execução do código e dar um passo para frente e para trás através do código em tempo real enquanto ele está em execução. O corredor de teste incorporado permite que você organize seus testes e seus resultados e pode até mesmo realizar testes de unidade ao vivo enquanto você está codificando. Usando o Live Share, você pode colaborar em tempo real com outros desenvolvedores, compartilhando sua sessão de código perfeitamente pela rede. E quando você estiver pronto, o Visual Studio inclui tudo o que você precisa para publicar seu aplicativo no Azure ou onde você pode hospedá-lo.
 
 [Baixar o Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
@@ -70,7 +70,7 @@ Depois que o pipeline de CI/CD for configurado, basta fazer atualizações no ap
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Fluxo de trabalho de desenvolvimento para aplicativos ASP.NET Core hospedados no Azure
 
-Depois de configurar sua conta do Azure e o processo de CI/CD, o desenvolvimento de aplicativos ASP.NET Core hospedados no Azure é simples. A seguir estão as etapas básicas que você geralmente adota ao criar um aplicativo ASP.NET Core, hospedado no serviço Azure App como um aplicativo Web, como ilustrado na Figura 10-2.
+Depois de configurar sua conta do Azure e o processo de CI/CD, o desenvolvimento de aplicativos ASP.NET Core hospedados no Azure é simples. A seguir, os passos básicos que você geralmente toma ao construir um aplicativo ASP.NET Core, hospedado no Azure App Service como um Aplicativo web, conforme ilustrado na Figura 10-2.
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
@@ -106,5 +106,5 @@ Durante a execução do Aplicativo Web, você pode monitorar a integridade do ap
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Anterior](test-asp-net-core-mvc-apps.md)
->[Próximo](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Próximo](test-asp-net-core-mvc-apps.md)
+>[anterior](azure-hosting-recommendations-for-asp-net-web-apps.md)

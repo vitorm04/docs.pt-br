@@ -1,5 +1,5 @@
 ---
-title: Como converter entre cadeias de caracteres hexadecimais e tipos C# numéricos – guia de programação
+title: Como converter entre cordas hexadecimais e tipos numéricos - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
 ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75698515"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Como converter entre cadeias de caracteres hexadecimais e tiposC# numéricos (guia de programação)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Como converter entre cordas hexadecimais e tipos numéricos (Guia de Programação C#)
 Estes exemplos mostram como realizar as seguintes tarefas:  
   
 - Obter o valor hexadecimal de cada caractere em uma [cadeia de caracteres](../../language-reference/builtin-types/reference-types.md).  
@@ -33,7 +33,7 @@ Estes exemplos mostram como realizar as seguintes tarefas:
  [!code-csharp[csProgGuideTypes#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#30)]  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo analisa um `string` de valores hexadecimais e gera o caractere correspondente a cada valor hexadecimal. Primeiro, ele chama o método [Split(Char\[\])](xref:System.String.Split(System.Char[])) para obter cada valor hexadecimal como um `string` individual em uma matriz. Em seguida, ele chama <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> para converter o valor hexadecimal em um valor decimal representado como um [int](../../language-reference/builtin-types/integral-numeric-types.md). Ele mostra duas maneiras diferentes de obter o caractere correspondente a esse código de caractere. A primeira técnica usa <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, que retorna o caractere correspondente ao argumento de inteiro como um `string`. A segunda técnica converte explicitamente o `int` em um [char](../../language-reference/builtin-types/char.md).  
+ Este exemplo analisa um `string` de valores hexadecimais e gera o caractere correspondente a cada valor hexadecimal. Primeiro ele chama o método [Split (Char\[\])](xref:System.String.Split(System.Char[])) para obter cada `string` valor hexadecimal como um indivíduo em uma matriz. Em seguida, ele chama <xref:System.Convert.ToInt32%28System.String%2CSystem.Int32%29> para converter o valor hexadecimal em um valor decimal representado como um [int](../../language-reference/builtin-types/integral-numeric-types.md). Ele mostra duas maneiras diferentes de obter o caractere correspondente a esse código de caractere. A primeira técnica usa <xref:System.Char.ConvertFromUtf32%28System.Int32%29>, que retorna o caractere correspondente ao argumento de inteiro como um `string`. A segunda técnica converte explicitamente o `int` em um [char](../../language-reference/builtin-types/char.md).  
   
  [!code-csharp[csProgGuideTypes#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#31)]  
   
@@ -52,8 +52,8 @@ Estes exemplos mostram como realizar as seguintes tarefas:
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Strings de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md)
 - [Tipos](./index.md)
 - [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

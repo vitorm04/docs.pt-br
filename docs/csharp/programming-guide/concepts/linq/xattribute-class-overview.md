@@ -3,16 +3,16 @@ title: Visão geral da classe XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
 ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635659"
 ---
 # <a name="xattribute-class-overview-c"></a>Visão geral da classe XAttribute (C#)
 Os atributos são pares nome/valor que são associados a um elemento. A classe de <xref:System.Xml.Linq.XAttribute> representa atributos XML.  
   
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}  
+## <a name="overview"></a>Visão geral  
  Trabalhar com atributos em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é semelhante a trabalhar com elementos. Os construtores são semelhantes. Os métodos que você usa para recuperar coleções deless são semelhantes. Uma expressão de consulta LINQ para uma coleção de atributos parece muito semelhante a uma expressão de consulta LINQ para uma coleção de elementos.  
   
  A ordem em que os atributos foram adicionados a um elemento é preservada. Isto é, quando você itera através de atributos, você ver na mesma ordem que foram adicionados.  
@@ -22,7 +22,7 @@ Os atributos são pares nome/valor que são associados a um elemento. A classe d
   
 |Construtor|Descrição|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Cria um objeto de <xref:System.Xml.Linq.XAttribute> . O argumento de `name` especifica o nome do atributo; `content` especifica o conteúdo de atributo.|  
+|`XAttribute(XName name, object content)`|Cria um objeto <xref:System.Xml.Linq.XAttribute>. O argumento de `name` especifica o nome do atributo; `content` especifica o conteúdo de atributo.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Criando um elemento com um atributo  
  O código a seguir mostra a tarefa comum de criar um elemento que contém um atributo:  
@@ -34,7 +34,7 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>  
@@ -60,7 +60,7 @@ XElement c = new XElement("Customers",
 Console.WriteLine(c);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Customers>  
@@ -79,6 +79,6 @@ Console.WriteLine(c);
   
  Essa distinção importante é primeiro somente para os desenvolvedores que estão escrevendo código que funciona com as árvores XML no nível do nó. Muitos desenvolvedores não serão preocupados com essa distinção.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral da programação LINQ to XML (C#)](./linq-to-xml-overview.md)

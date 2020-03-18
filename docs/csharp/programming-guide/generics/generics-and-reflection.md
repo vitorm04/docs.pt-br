@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
 ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712163"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Genéricos e reflexão (Guia de Programação em C#)
@@ -44,9 +44,9 @@ Como o tempo de execução do CLR (Common Language Runtime) tem acesso às infor
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Retorna verdadeiro se o <xref:System.Reflection.MethodInfo> atual representar a definição de um método genérico.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Substitui os elementos de uma matriz de tipos pelos parâmetros de tipo da definição de método genérico atual e retorna um objeto <xref:System.Reflection.MethodInfo> que representa o método construído resultante.|  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Genéricos](./index.md)
 - [Reflexão e tipos genéricos](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [Genéricos](../../../standard/generics/index.md)

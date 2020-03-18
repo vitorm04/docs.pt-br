@@ -1,15 +1,15 @@
 ---
-title: Como localizar nós irmãos (XPath-LINQ to XML) (C#)
+title: Como encontrar nós de irmãos (XPath-LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141016"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169201"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como localizar nós irmãos (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Como encontrar nós de irmãos (XPath-LINQ para XML) (C#)
 Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico. A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.  
   
  A expressão XPath é:  
@@ -24,7 +24,7 @@ Você pode desejar localizar todos os seus irmãos de um nó que têm um nome es
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Elements("Book")  
@@ -49,7 +49,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 Results are identical  
@@ -59,7 +59,7 @@ Results are identical
   <Genre>Computer</Genre>  
   <Price>44.95</Price>  
   <PublishDate>2000-10-01</PublishDate>  
-  <Description>An in-depth look at creating applications   
+  <Description>An in-depth look at creating applications
       with XML.</Description>  
 </Book>  
 <Book id="bk102">  
@@ -68,8 +68,8 @@ Results are identical
   <Genre>Fantasy</Genre>  
   <Price>5.95</Price>  
   <PublishDate>2000-12-16</PublishDate>  
-  <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+  <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
 </Book>  
 ```  

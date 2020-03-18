@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: categorizar problemas de suporte-classificação multiclasse'
+title: 'Tutorial: Categorize problemas de suporte - classificação multiclasse'
 description: Descubra como usar o ML.NET em um cenário de classificação multiclasse para classificar os problemas do GitHub a fim de atribuí-los a uma determinada área.
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
 ms.openlocfilehash: 50980cd933054825bf21f955b0341dd8e66f3e62
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78239931"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML.NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: Categorize problemas de suporte usando classificação multiclasse com ML.NET
 
 Este tutorial de exemplo ilustra o uso do ML.NET para criar uma classificação de problema do GitHub para treinar um modelo que classifica e prevê o rótulo de área de um problema do GitHub por meio de um aplicativo de console do .NET Core usando C# no Visual Studio.
 
@@ -27,9 +27,9 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho ".NET Core cross-platform development" instalada.
 
 * O [arquivo de problemas do Github separados por tabulação (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * O [arquivo de testes de problemas do Github separados por tabulação (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
@@ -38,11 +38,11 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 ### <a name="create-a-project"></a>Criar um projeto
 
-1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Nome**, digite "GitHubIssueClassification" e selecione o botão **OK**.
+1. Abra o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)**. Na caixa de texto **Nome**, digite "GitHubIssueClassification" e selecione o botão **OK**.
 
 2. Crie um diretório chamado *Data* no seu projeto para salvar seus arquivos do conjunto de dados:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
 
 3. Crie um diretório chamado *Modelos* em seu projeto para salvar seu modelo:
 
@@ -50,17 +50,17 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 4. Instalar o **Pacote NuGet Microsoft.ML**:
 
-    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia procurar, procure **Microsoft.ml** e selecione o botão **instalar** . Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
+    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia Procurar, procure **Microsoft.ML** e selecione o botão **Instalar.** Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
 
 ### <a name="prepare-your-data"></a>Preparar seus dados
 
 1. Baixe os conjuntos de dados [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) e [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) e salve-os na pasta *Dados* criada anteriormente. O primeiro conjunto de dados treina o modelo de aprendizado de máquina e o segundo pode ser usado para avaliar a precisão do seu modelo.
 
-2. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos \*.tsv e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
+2. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos \*.tsv e selecione **Propriedades**. Em **Avançado,** altere o valor de **Copiar para Diretório de Saída** para Copiar se mais **novo**.
 
 ### <a name="create-classes-and-define-paths"></a>Criar classes e definir demarcadores
 
-Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*:
+Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*: 
 
 [!code-csharp[AddUsings](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddUsings)]
 
@@ -102,9 +102,9 @@ Use o atributo [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute)
 * a terceira coluna `Title` (título do problema de GitHub) é o primeiro `feature` usado para prever o `Area`
 * a quarta coluna `Description` é o segundo `feature` usado para prever o `Area`
 
-`IssuePrediction` é a classe usada para previsão depois que o modelo foi treinado. Ele tem um único `string` (`Area`) e um atributo de `ColumnName` de `PredictedLabel`.  O `PredictedLabel` é usado durante a previsão e avaliação. Para avaliação, uma entrada com dados de treinamento, os valores previstos e o modelo são usados.
+`IssuePrediction` é a classe usada para previsão depois que o modelo foi treinado. Tem um `string` único`Area`( `PredictedLabel` `ColumnName` ) e um atributo.  O `PredictedLabel` é usado durante a previsão e avaliação. Para avaliação, uma entrada com dados de treinamento, os valores previstos e o modelo são usados.
 
-Todas as operações do ML.NET iniciam na classe [MLContext](xref:Microsoft.ML.MLContext). Inicializar `mlContext` cria um novo ambiente do ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelo. É similar, conceitualmente, a `DBContext` em `Entity Framework`.
+Todas as operações ML.NET começam na classe [MLContext.](xref:Microsoft.ML.MLContext) Inicializar `mlContext` cria um novo ambiente do ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelo. É similar, conceitualmente, a `DBContext` em `Entity Framework`.
 
 ### <a name="initialize-variables-in-main"></a>Inicializar variáveis em Main
 
@@ -272,13 +272,13 @@ Observe o uso do método [Transform()](xref:Microsoft.ML.ITransformer.Transform%
 
 As métricas a seguir são avaliadas para classificação multiclasse:
 
-* Microprecisão – todo par de classe/exemplo contribui igualmente para a métrica de precisão.  Você deseja que o micro exatidão seja o mais próximo possível.
+* Microprecisão – todo par de classe/exemplo contribui igualmente para a métrica de precisão.  Você quer que a Micro Accuracy esteja o mais perto possível de uma.
 
-* Macroprecisão – toda classe contribui igualmente para a métrica de precisão. Classes minoritárias recebem o mesmo peso que as classes maiores. Você deseja que a precisão da macro seja o mais próximo possível.
+* Macroprecisão – toda classe contribui igualmente para a métrica de precisão. Classes minoritárias recebem o mesmo peso que as classes maiores. Você quer que a Precisão macro seja o mais próximo possível de um.
 
 * Perda de log – consulte [Perda de log](../resources/glossary.md#log-loss). Convém que a Perda de log seja tão próxima de zero quanto possível.
 
-* Redução de perda de log – intervalos de [-inf, 1, 0], em que 1, 0 são previsões perfeitas e 0 indica previsões médias. Você deseja que a redução da perda de log seja o mais próximo possível.
+* Redução de perdas de log - Varia de [-inf, 1,00], onde 1,00 são previsões perfeitas e 0 indica previsões médias. Você quer que a redução de perda de log seja o mais próximo possível de um.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Exibir as métricas para validação de modelo
 
@@ -301,7 +301,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-Adicione o código a seguir ao método `SaveModelAsFile`. Esse código usa o método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) para serializar e armazenar o modelo treinado como um arquivo zip.
+Adicione o código a seguir ao método `SaveModelAsFile`. Este código [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) usa o método para serializar e armazenar o modelo treinado como um arquivo zip.
 
 [!code-csharp[SnippetSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetSaveModel)]
 
@@ -340,7 +340,7 @@ Como você fez anteriormente, crie uma instância de `PredictionEngine` com o c�
 
 [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine)]
 
-O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite realizar uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)não é seguro para rosca. É aceitável usar em ambientes de um único fio ou protótipo. Para melhorar o desempenho e a segurança `PredictionEnginePool` dos fios nos [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ambientes de produção, use o serviço, que cria um objeto para uso em toda a sua aplicação. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API web ASP.NET.](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.

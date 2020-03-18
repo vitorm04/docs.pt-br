@@ -4,24 +4,24 @@ description: Saiba como usar tipos de delegado genérico para declarar tipos per
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: efdbef39d0e6bf2f07cde2c9621cec173e921752
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 798e8b597389bc99d10e587ec417a4e717f28abc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037353"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146197"
 ---
 # <a name="strongly-typed-delegates"></a>Delegados Fortemente Tipados
 
 [Anterior](delegate-class.md)
 
-No artigo anterior, você viu como criar tipos de delegado específicos usando a palavra-chave `delegate`. 
+No artigo anterior, você viu como criar tipos de delegado específicos usando a palavra-chave `delegate`.
 
 A classe de delegado abstrata fornece a infraestrutura para a invocação e acoplamento fraco. Os tipos de delegado concretos se tornam muito mais úteis adotando e impondo a segurança de tipos para os métodos que são adicionados à lista de invocação para um objeto delegado. Quando você usa a palavra-chave `delegate` e define um tipo de delegado concreto, o compilador gera esses métodos.
 
 Na prática, isso poderia levar à criação de novos tipos de delegado sempre que precisar de uma assinatura de método diferente. Esse trabalho pode se tornar entediante depois de um tempo. Cada novo recurso exige novos tipos de delegado.
 
-Felizmente, isso não é necessário. O .NET Core Framework contém vários tipos que podem ser reutilizados sempre que você precisar de tipos de delegado. Essas são definições [genéricas](programming-guide/generics/index.md) para que você possa declarar personalizações quando precisar de novas declarações de método. 
+Felizmente, isso não é necessário. O .NET Core Framework contém vários tipos que podem ser reutilizados sempre que você precisar de tipos de delegado. Essas são definições [genéricas](programming-guide/generics/index.md) para que você possa declarar personalizações quando precisar de novas declarações de método.
 
 O primeiro desses tipos é o tipo <xref:System.Action> e diversas variações:
 
@@ -55,8 +55,8 @@ O tipo do resultado é sempre o último parâmetro de tipo em todas as declaraç
 
 Use um dos tipos `Func` para qualquer tipo de delegado que retorna um valor.
 
-Também há um <xref:System.Predicate%601> especializado 
-tipo para um delegado que retorna um teste em um único valor:
+Há também um especializado<xref:System.Predicate%601>
+digite para um delegado que retorna um teste em um único valor:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -72,7 +72,7 @@ Predicate<string> AnotherTestForString;
 Você pode pensar que esses dois tipos são equivalentes. Eles não são.
 Essas duas variáveis não podem ser usadas alternadamente. Uma variável de um tipo não pode ser atribuída o outro tipo. O sistema de tipo do C# usa os nomes dos tipos definidos, não a estrutura.
 
-Todas essas definições de tipo de delegado na Biblioteca do .NET Core devem significar que você não precisa definir um novo tipo de delegado para qualquer novo recurso criado que exige delegados. Essas definições genéricas devem fornecer todos os tipos de delegado necessários na maioria das situações. Você pode simplesmente instanciar um desses tipos com os parâmetros de tipo necessários. No caso de algoritmos que podem ser tornados genéricos, esses delegados podem ser usados como tipos genéricos. 
+Todas essas definições de tipo de delegado na Biblioteca do .NET Core devem significar que você não precisa definir um novo tipo de delegado para qualquer novo recurso criado que exige delegados. Essas definições genéricas devem fornecer todos os tipos de delegado necessários na maioria das situações. Você pode simplesmente instanciar um desses tipos com os parâmetros de tipo necessários. No caso de algoritmos que podem ser tornados genéricos, esses delegados podem ser usados como tipos genéricos.
 
 Isso deve economizar tempo e minimizar o número de novos tipos de que você precisa criar a fim de trabalhar com delegados.
 

@@ -4,10 +4,10 @@ description: Este tutorial fornece instruções passo a passo para criar um anal
 ms.date: 08/01/2018
 ms.custom: mvc
 ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240544"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
@@ -16,12 +16,12 @@ O SDK da .NET Compiler Platform fornece as ferramentas necessárias para criar a
 
 Neste tutorial, você explorará a criação de um **analisador** e uma **correção de código** que o acompanha, usando as APIs do Roslyn. Um analisador é uma maneira de executar a análise de código-fonte e relatar um problema para o usuário. Opcionalmente, um analisador também pode fornecer uma correção de código que representa uma modificação no código-fonte do usuário. Este tutorial cria um analisador que localiza as declarações de variável local que poderiam ser declaradas usando o modificador `const`, mas não o são. A correção de código anexa modifica essas declarações para adicionar o modificador `const`.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Você precisará instalar o **SDK do .net Compiler Platform** por meio do instalador do Visual Studio:
+Você precisará instalar o **SDK da plataforma do compilador .NET** através do Visual Studio Installer:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -52,7 +52,7 @@ Console.WriteLine(x);
 A análise para determinar se uma variável pode ser tornada constante está envolvida, exigindo análise sintática, análise constante da expressão de inicializador e também análise de fluxo de dados, para garantir que nunca ocorram gravações na variável. O .NET Compiler Platform fornece APIs que facilitam essa análise. A primeira etapa é criar um novo em projeto de **Analisador com correção de código** do C#.
 
 - No Visual Studio, escolha **Arquivo > Novo > Projeto...** para exibir a caixa de diálogo Novo Projeto.
-- Em **Visual C# > Extensibilidade**, escolha **Analisador com correção de código (.NET Standard)** .
+- Em **Visual C# > Extensibilidade**, escolha **Analisador com correção de código (.NET Standard)**.
 - Nomeie seu projeto como "**MakeConst**" e clique em OK.
 
 O analisador com modelo de correção de código cria três projetos: um contém o analisador e a correção de código, o segundo é um projeto de teste de unidade e o terceiro é o projeto VSIX. O projeto de inicialização padrão é o projeto VSIX. Pressione **F5** para iniciar o projeto VSIX. Isso inicia uma segunda instância do Visual Studio que tenha carregado o seu novo analisador.
@@ -60,7 +60,7 @@ O analisador com modelo de correção de código cria três projetos: um contém
 > [!TIP]
 > Quando você executa seu analisador, você pode iniciar uma segunda cópia do Visual Studio. Essa segunda cópia usa um hive do Registro diferente para armazenar configurações. Isso lhe permite diferenciar as configurações visuais em duas cópias do Visual Studio. Você pode escolher um tema diferente para a execução experimental do Visual Studio. Além disso, não use perfil móvel de suas configurações nem faça logon na conta do Visual Studio usando a execução experimental do Visual Studio. Isso mantém as diferenças entre as configurações.
 
-Na segunda instância do Visual Studio que você acabou de iniciar, crie um C# novo projeto de aplicativo de console (.NET Core ou .NET Framework projeto funcionará – os analisadores funcionam no nível de origem). Passe o mouse sobre o token com um sublinhado ondulado e o texto de aviso fornecido por um analisador é exibido.
+Na segunda instância do Visual Studio que você acabou de iniciar, crie um novo projeto de aplicativo de console C# (o projeto .NET Core ou o .NET Framework funcionarão -- os analisadores funcionam no nível de origem.) Passar o tempo sobre o token com um sublinhado ondulado, e o texto de aviso fornecido por um analisador aparece.
 
 O modelo cria um analisador que relata um aviso em cada declaração de tipo em que o nome do tipo contém letras minúsculas, conforme mostrado na figura a seguir:
 

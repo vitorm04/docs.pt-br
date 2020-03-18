@@ -3,15 +3,15 @@ title: Comando dotnet store
 description: O comando "dotnet store" armazena os assemblies especificados no repositório de pacotes de runtime.
 ms.date: 02/14/2020
 ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503586"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -23,7 +23,7 @@ ms.locfileid: "77503586"
 dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 `dotnet store` armazena os assemblies especificados no [repositório de pacotes de runtime](../deploying/runtime-store.md). Por padrão, os assemblies são otimizados para a estrutura e o runtime de destino. Para obter mais informações, consulte o tópico [repositório de pacotes de runtime](../deploying/runtime-store.md).
 
@@ -39,7 +39,7 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  O [identificador do runtime](../rid-catalog.md) a ser usado como destino.
+  O [identificador de tempo de execução](../rid-catalog.md) para o alvo.
 
 ## <a name="optional-options"></a>Opções opcionais
 
@@ -87,4 +87,4 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
 ## <a name="see-also"></a>Confira também
 
-- [Repositório de pacote de runtime](../deploying/runtime-store.md)
+- [Repositório de pacotes de runtime](../deploying/runtime-store.md)

@@ -4,10 +4,10 @@ description: Aprenda os conceitos de teste de unidade no .NET Core por meio de u
 author: rprouse
 ms.date: 10/04/2018
 ms.openlocfilehash: a33447457344b241b4c2376d777b0deb7f556874
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240916"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do .NET Core do Visual Basic usando dotnet test e NUnit
@@ -16,7 +16,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou editor de código de sua escolha.
@@ -84,7 +84,7 @@ O comando [dotnet new](../tools/dotnet-new.md) cria um projeto de teste que usa 
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `PrimeService` como outra dependência ao projeto. Use [`dotnet add reference`](../tools/dotnet-add-reference.md) o comando:
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj

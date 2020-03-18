@@ -1,18 +1,18 @@
 ---
-title: Como definir propriedades abstratas – C# guia de programação
+title: Como definir propriedades abstratas - Guia de Programação C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705607"
 ---
-# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como definir propriedades abstratas (C# guia de programação)
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>Como definir propriedades abstratas (Guia de Programação C#)
 O exemplo a seguir mostra como definir propriedades [abstract](../../language-reference/keywords/abstract.md). Uma declaração de propriedade abstract não fornece uma implementação dos acessadores da propriedade – ela declara que a classe dá suporte às propriedades, mas deixa a implementação do acessador para classes derivadas. O exemplo a seguir demonstra como implementar as propriedades abstract herdadas de uma classe base.  
   
  Esse exemplo consiste em três arquivos, cada um deles é compilado individualmente e seu assembly resultante é referenciado pela próxima compilação:  
@@ -34,7 +34,7 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../language-re
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- Os modificadores da propriedade são colocados na própria declaração de propriedade. Por exemplo:  
+- Os modificadores da propriedade são colocados na própria declaração de propriedade. Por exemplo:   
   
     ```csharp  
     public abstract double Area  
@@ -52,9 +52,9 @@ O exemplo a seguir mostra como definir propriedades [abstract](../../language-re
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Classes e Structs](./index.md)
-- [Classes e membros de classes abstract e sealed](./abstract-and-sealed-classes-and-class-members.md)
+- [C# Guia de Programação](../index.md)
+- [Classes e structs](./index.md)
+- [Classes e membros de classes abstratas e lacradas](./abstract-and-sealed-classes-and-class-members.md)
 - [Propriedades](./properties.md)

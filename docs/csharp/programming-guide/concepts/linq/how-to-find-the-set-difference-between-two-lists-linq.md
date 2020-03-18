@@ -1,26 +1,26 @@
 ---
-title: Como localizar a diferença de conjunto entre duas listas (LINQ) (C#)
+title: Como encontrar a diferença de conjunto entre duas listas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 227405428a1b418cbe6ceb3d0e3274595307e5ef
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345938"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169175"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Como localizar a diferença de conjunto entre duas listas (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Como encontrar a diferença de conjunto entre duas listas (LINQ) (C#)
 Este exemplo mostra como usar o LINQ para comparar duas listas de cadeias de caracteres e retornar as linhas que estão no names1.txt, mas não no names2.txt.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
   
-1. Copie names1. txt e names2. txt para a pasta da solução, conforme mostrado em [como combinar e comparar as coleções de cadeiasC#de caracteres (LINQ) ()](./how-to-combine-and-compare-string-collections-linq.md).  
+1. Copiar nomes1.txt e names2.txt para sua pasta de solução, conforme mostrado em [Como combinar e comparar coleções de strings (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md).  
   
 ## <a name="example"></a>Exemplo  
   
 ```csharp  
 class CompareLists  
-{          
+{
     static void Main()  
     {  
         // Create the IEnumerable data sources.  
@@ -54,9 +54,9 @@ class CompareLists
   
  Alguns tipos de operações de consulta em C#, tais como <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A> e <xref:System.Linq.Enumerable.Concat%2A>, só podem ser expressas em sintaxe baseada em método.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)

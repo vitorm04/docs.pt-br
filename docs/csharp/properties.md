@@ -4,11 +4,11 @@ description: Saiba mais sobre propriedades C#, que incluem recursos de validaç�
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
 ms.openlocfilehash: bda8a4f58f71b57248296dd4ba9f9bf4cbed40d4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039752"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399409"
 ---
 # <a name="properties"></a>Propriedades
 
@@ -141,7 +141,7 @@ A última situação em que você precisa escrever código em um acessador de pr
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-O operador `?.` é chamado de *operador condicional nulo*. Ele verifica uma referência nula antes de avaliar o lado direito do operador. O resultado final é que, se não houver nenhum assinante para o evento `PropertyChanged`, o código para acionar o evento não é executado. Ela lançaria uma `NullReferenceException` sem essa verificação, nesse caso. Para obter mais informações, consulte [`events`](events-overview.md). Este exemplo também usa o novo operador `nameof` para converter o símbolo de nome da propriedade em sua representação de texto.
+O operador `?.` é chamado de *operador condicional nulo*. Ele verifica uma referência nula antes de avaliar o lado direito do operador. O resultado final é que, se não houver nenhum assinante para o evento `PropertyChanged`, o código para acionar o evento não é executado. Ela lançaria uma `NullReferenceException` sem essa verificação, nesse caso. Para obter mais [`events`](events-overview.md)informações, consulte . Este exemplo também usa o novo operador `nameof` para converter o símbolo de nome da propriedade em sua representação de texto.
 O uso de `nameof` pode reduzir erros no local em que você digitou errado o nome da propriedade.
 
 Novamente, a implementação de <xref:System.ComponentModel.INotifyPropertyChanged> é um exemplo de um caso em que você pode escrever o código nos acessadores para dar suporte aos cenários necessários.

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713859"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referência de C#)
@@ -40,7 +40,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
   
 - Declarações de método abstrato são permitidas apenas em classes abstratas.  
   
-- Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura. Por exemplo:  
+- Como uma declaração de método abstrato não fornece nenhuma implementação real, não há nenhum corpo de método, a declaração do método simplesmente termina com um ponto e vírgula e não há chaves ({ }) após a assinatura. Por exemplo:   
   
     ```csharp  
     public abstract void MyMethod();  
@@ -60,7 +60,7 @@ O modificador `abstract` indica que o item que está sendo modificado tem uma im
   
  Uma classe abstrata deve fornecer uma implementação para todos os membros de interface.  
   
- Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos. Por exemplo:  
+ Uma classe abstrata que implementa uma interface pode mapear os métodos de interface em métodos abstratos. Por exemplo:   
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
@@ -77,14 +77,14 @@ BaseClass bc = new BaseClass();   // Error
   
 Você receberá uma mensagem de erro informando que o compilador não pode criar uma instância da classe abstrata "BaseClass".  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Modificadores](index.md)
-- [virtual](./virtual.md)
-- [override](./override.md)
+- [Virtual](./virtual.md)
+- [Substituir](./override.md)
 - [Palavras-chave do C#](./index.md)

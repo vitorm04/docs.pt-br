@@ -13,36 +13,36 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: c8452ab1f90bb2873a591b483b5432311a9f9b79
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239620"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399297"
 ---
 # <a name="-and--operators-c-reference"></a>Operadores + e += (referência de C#)
 
-Os operadores de `+` e `+=` têm suporte dos tipos numéricos de [ponto flutuante](../builtin-types/floating-point-numeric-types.md) e [integral](../builtin-types/integral-numeric-types.md) internos, o tipo de [cadeia de caracteres](../builtin-types/reference-types.md#the-string-type) e os tipos [delegados](../builtin-types/reference-types.md#the-delegate-type) .
+Os `+` `+=` operadores e operadores são suportados pelos tipos numéricos [integrais](../builtin-types/integral-numeric-types.md) e [flutuantes,](../builtin-types/floating-point-numeric-types.md) o tipo [de corda](../builtin-types/reference-types.md#the-string-type) e os tipos [de delegados.](../builtin-types/reference-types.md#the-delegate-type)
 
 Para obter informações sobre o operador `+` aritmético, consulte as seções [Operadores de adição e subtração unários](arithmetic-operators.md#unary-plus-and-minus-operators) e [Operador de adição +](arithmetic-operators.md#addition-operator-) do artigo [Operadores aritméticos](arithmetic-operators.md).
 
-## <a name="string-concatenation"></a>{1&gt;Concatenação de cadeia de caracteres&lt;1}
+## <a name="string-concatenation"></a>Concatenação de cadeia de caracteres
 
 Quando um ou os dois operandos forem do tipo [cadeia de caracteres](../builtin-types/reference-types.md#the-string-type), o operador `+` concatenará as representações de cadeia de caracteres de seus operandos:
 
-[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
+[!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
-A partir C# do 6, a [interpolação de cadeia de caracteres](../tokens/interpolated.md) fornece uma maneira mais conveniente de Formatar cadeias:
+Começando com C# 6, [a interpolação de strings](../tokens/interpolated.md) fornece uma maneira mais conveniente de formatar strings:
 
-[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
+[!code-csharp-interactive[string interpolation](snippets/AdditionOperator.cs#UseStringInterpolation)]
 
 ## <a name="delegate-combination"></a>Combinação de delegados
 
 Para operandos do mesmo tipo [delegado](../builtin-types/reference-types.md#the-delegate-type), o operador `+` retorna uma nova instância de delegado que, quando invocada, chama o operando esquerdo e, em seguida, chama o operando direito. Se qualquer um dos operandos for `null`, o operador `+` retornará o valor de outro operando (que também pode ser `null`). O exemplo a seguir mostra como os delegados podem ser combinados com o operador `+`:
 
-[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
+[!code-csharp-interactive[delegate combination](snippets/AdditionOperator.cs#AddDelegates)]
 
-Para executar a remoção de delegado, use o [operador `-`](subtraction-operator.md#delegate-removal).
+Para realizar a remoção do delegado, use o [ `-` operador](subtraction-operator.md#delegate-removal).
 
 Para obter mais informações sobre tipos de delegado, veja [Delegados](../../programming-guide/delegates/index.md).
 
@@ -64,7 +64,7 @@ exceto que `x` é avaliado apenas uma vez.
 
 O exemplo a seguir demonstra o uso do operador `+=`:
 
-[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
+[!code-csharp-interactive[+= examples](snippets/AdditionOperator.cs#AddAndAssign)]
 
 Você também usará o operador `+=` para especificar um método de manipulador de eventos ao assinar um [evento](../keywords/event.md). Para obter mais informações, confira [Como assinar e cancelar a assinatura de eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
@@ -78,9 +78,9 @@ Para obter mais informações, veja as seções [Operador de adição unário](~
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
-- [Como concatenar várias cadeias de caracteres](../../how-to/concatenate-multiple-strings.md)
+- [Como concatenar várias strings](../../how-to/concatenate-multiple-strings.md)
 - [Eventos](../../programming-guide/events/index.md)
-- [Operadores aritméticos](arithmetic-operators.md)
-- [Operadores - e -=](subtraction-operator.md)
+- [Operadores de aritmética](arithmetic-operators.md)
+- [- e -= operadores](subtraction-operator.md)

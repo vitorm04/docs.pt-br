@@ -1,5 +1,5 @@
 ---
-title: C# referência de instrução for
+title: para declaração - Referência C#
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
 ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74552264"
 ---
 # <a name="for-c-reference"></a>for (referência de C#)
@@ -73,7 +73,7 @@ i < 5
 
 ### <a name="the-iterator-section"></a>A seção *iterador*
 
-A seção *iterador* define o que acontece depois de cada iteração do corpo do loop. A seção *iterador* contém zero ou mais das seguintes expressões de instrução, separadas por vírgulas:
+A seção *iterator* define o que acontece após cada iteração do corpo do loop. A seção *iterator* contém zero ou mais das seguintes expressões de declaração, separadas por commas:
 
 - instrução de [atribuição](../operators/assignment-operator.md)
 
@@ -103,13 +103,13 @@ O exemplo a seguir define o loop `for` infinito:
 
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira a seção [A instrução for](~/_csharplang/spec/statements.md#the-for-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
 - [foreach, in](foreach-in.md)

@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713517"
 ---
 # <a name="fixed-statement-c-reference"></a>Instrução fixed (Referência de C#)
@@ -62,17 +62,17 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, use o [operador `stackalloc`](../operators/stackalloc.md).
+É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, use o [ `stackalloc` operador](../operators/stackalloc.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [A instrução corrigida](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [unsafe](unsafe.md)
-- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Inseguro](unsafe.md)
+- [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Buffers de tamanho fixo](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

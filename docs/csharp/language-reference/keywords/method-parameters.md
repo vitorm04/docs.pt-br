@@ -7,10 +7,10 @@ helpviewer_keywords:
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
 ms.openlocfilehash: 2cc7f9178fa5c1a040be9d45ba66fac292bb0e28
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713384"
 ---
 # <a name="method-parameters-c-reference"></a>Parâmetros de método (Referência de C#)
@@ -27,8 +27,8 @@ Os parâmetros declarados para um método sem [in](./in-parameter-modifier.md), 
   
 - [out](./out-parameter-modifier.md) especifica que esse parâmetro é passado por referência e é gravado pelo método chamado.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)

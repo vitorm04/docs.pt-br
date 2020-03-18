@@ -5,10 +5,10 @@ helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711981"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membros aptos para expressão (Guia de Programação em C#)
@@ -23,16 +23,16 @@ em que *expression* é uma expressão válida.
 
 O suporte para definições de corpo da expressão foi introduzido para métodos e propriedades somente leitura no C# 6 e foi expandido no C# 7.0. As definições de corpo da expressão podem ser usadas com os membros de tipo listados na tabela a seguir:
 
-|{1&gt;Membro&lt;1}  |Com suporte desde... |
+|Membro  |Com suporte desde... |
 |---------|---------|
 |[Método](#methods)  |C# 6 |
 |[Propriedade somente leitura](#read-only-properties)   |C# 6  |
-|[Property](#properties)  |C# 7.0 |
+|[Propriedade](#properties)  |C# 7.0 |
 |[Construtor](#constructors)   |C# 7.0 |
-|[Finalizador](#finalizers)     |C# 7.0 |
+|[Finalizer](#finalizers)     |C# 7.0 |
 |[Indexador](#indexers)       |C# 7.0 |
 
-## <a name="methods"></a>{1&gt;Métodos&lt;1}
+## <a name="methods"></a>Métodos
 
 Um método apto para expressão consiste em uma única expressão que retorna um valor cujo tipo corresponde ao tipo de retorno do método, ou, para métodos que retornam `void`, que executam uma operação. Por exemplo, os tipos que substituem o método <xref:System.Object.ToString%2A> normalmente incluem uma única expressão que retorna a representação da cadeia de caracteres do objeto atual.
 
@@ -56,7 +56,7 @@ O exemplo a seguir define uma classe `Location` cuja propriedade somente leitura
 
 Para obter mais informações sobre as propriedades, confira [Propriedades (Guia de Programação em C#)](../classes-and-structs/properties.md).
 
-## <a name="properties"></a>{1&gt;Propriedades&lt;1}
+## <a name="properties"></a>Propriedades
 
 Começando no C# 7.0, você pode usar as definições de corpo da expressão para implementar a propriedade `get` e os acessadores `set`. O exemplo a seguir demonstra como fazer isso:
 
@@ -64,7 +64,7 @@ Começando no C# 7.0, você pode usar as definições de corpo da expressão par
 
 Para obter mais informações sobre as propriedades, confira [Propriedades (Guia de Programação em C#)](../classes-and-structs/properties.md).
 
-## <a name="constructors"></a>{1&gt;Construtores&lt;1}
+## <a name="constructors"></a>Construtores
 
 Uma definição de corpo da expressão para um construtor normalmente consiste em uma expressão de atribuição simples ou uma chamada de método que manipula os argumentos do construtor ou inicializa o estado da instância.
 
@@ -86,9 +86,9 @@ Para obter mais informações, consulte [Finalizadores (Guia de Programação em
 
 ## <a name="indexers"></a>Indexadores
 
-Assim como as propriedades, o indexador `get` e os acessadores de `set` consistem em definições de corpo da expressão se o acessador `get` consiste em uma única expressão que retorna um valor ou o acessador `set` executa uma atribuição simples.
+Como nas propriedades, `get` `set` o indexador e os `get` acessórios consistem em definições de corpo `set` de expressão se o acessório consiste em uma única expressão que retorna um valor ou o acessório executa uma atribuição simples.
 
-O exemplo a seguir define uma classe chamada `Sports` que inclui uma matriz <xref:System.String> interna que contém os nomes de vários esportes. Os acessadores `get` e `set` do indexador são implementados como definições do corpo da expressão.
+O exemplo a seguir define uma classe chamada `Sports` que inclui uma matriz <xref:System.String> interna que contém os nomes de vários esportes. Tanto o `get` indexador quanto `set` os acessórios são implementados como definições de corpo de expressão.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 

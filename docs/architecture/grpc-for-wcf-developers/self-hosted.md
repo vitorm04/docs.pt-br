@@ -1,23 +1,23 @@
 ---
-title: Aplicativos gRPC de hospedagem interna – gRPC para desenvolvedores do WCF
-description: Implantando ASP.NET Core aplicativos gRPC como serviços hospedados internamente.
+title: Aplicativos gRPC auto-hospedados - gRPC para desenvolvedores WCF
+description: Implantação de ASP.NET principais aplicativos gRPC como serviços auto-hospedados.
 ms.date: 09/02/2019
-ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542983"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147796"
 ---
 # <a name="self-hosted-grpc-applications"></a>Aplicativos gRPC auto-hospedados
 
-Embora ASP.NET Core aplicativos 3,0 possam ser hospedados no IIS no Windows Server, atualmente não é possível hospedar um aplicativo gRPC no IIS porque não há suporte para algumas das funcionalidades HTTP/2. Essa funcionalidade é uma meta para uma atualização futura do Windows Server.
+Embora ASP.NET aplicativos Core 3.0 possam ser hospedados no IIS no Windows Server, atualmente não é possível hospedar um aplicativo gRPC no IIS porque algumas das funcionalidades HTTP/2 não são suportadas. Essa funcionalidade é uma meta para uma futura atualização para o Windows Server.
 
-Você pode executar seu aplicativo como um serviço do Windows. Ou você pode executá-lo como um serviço do Linux controlado pelo [sistema](https://en.wikipedia.org/wiki/Systemd), devido aos novos recursos nas extensões de hospedagem do .net Core 3,0.
+Você pode executar seu aplicativo como um serviço do Windows. Ou você pode executá-lo como um serviço Linux controlado por [sistema,](https://en.wikipedia.org/wiki/Systemd)devido a novos recursos nas extensões de hospedagem .NET Core 3.0.
 
-## <a name="run-your-app-as-a-windows-service"></a>Executar seu aplicativo como um serviço do Windows
+## <a name="run-your-app-as-a-windows-service"></a>Execute seu aplicativo como um serviço do Windows
 
-Para configurar seu aplicativo ASP.NET Core para ser executado como um serviço do Windows, instale o pacote [Microsoft. Extensions. Hosting. WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) do NuGet. Em seguida, adicione uma chamada para `UseWindowsService` ao método `CreateHostBuilder` no `Program.cs`.
+Para configurar o aplicativo ASP.NET Core para ser executado como um serviço do Windows, instale o pacote [Microsoft.Extensions.Hosting.WindowsServices](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.WindowsServices) da NuGet. Em seguida, `UseWindowsService` adicione `CreateHostBuilder` uma `Program.cs`chamada ao método em .
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -30,44 +30,44 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> Se o aplicativo não estiver sendo executado como um serviço do Windows, o método `UseWindowsService` não fará nada.
+> Se o aplicativo não estiver sendo executado `UseWindowsService` como um serviço do Windows, o método não fará nada.
 
-Agora, publique seu aplicativo usando um destes métodos:
+Agora publique seu aplicativo usando um desses métodos:
 
-* No Visual Studio, clicando com o botão direito do mouse no projeto e selecionando **publicar** no menu de atalho.
-* Do CLI do .NET Core.
+* No Visual Studio clicando com o botão direito do mouse no projeto e selecionando **Publish** no menu de atalho.
+* Do .NET Core CLI.
 
-Ao publicar um aplicativo .NET Core, você pode optar por criar uma implantação *dependente da estrutura* ou uma implantação *independente* . As implantações dependentes da estrutura exigem que o tempo de execução compartilhado do .NET Core seja instalado no host onde eles são executados. As implantações independentes são publicadas com uma cópia completa do tempo de execução e da estrutura do .NET Core e podem ser executadas em qualquer host. Para obter mais informações, incluindo as vantagens e desvantagens de cada abordagem, consulte a documentação de [implantação de aplicativos do .NET Core](../../core/deploying/index.md) .
+Quando você publica um aplicativo .NET Core, você pode optar por criar uma implantação *dependente da estrutura* ou uma implantação *independente.* As implantações dependentes de framework exigem que o .NET Core Shared Runtime seja instalado no host onde são executados. As implantações independentes são publicadas com uma cópia completa do tempo de execução e da estrutura do .NET Core e podem ser executadas em qualquer host. Para obter mais informações, incluindo as vantagens e desvantagens de cada abordagem, consulte a documentação de implantação do [aplicativo .NET Core.](../../core/deploying/index.md)
 
-Para publicar uma compilação independente do aplicativo que não exige que o tempo de execução do .NET Core 3,0 seja instalado no host, especifique o tempo de execução a ser incluído no aplicativo. Use o sinalizador `-r` (ou `--runtime`).
+Para publicar uma compilação independente do aplicativo que não exija que o tempo de execução do .NET Core 3.0 seja instalado no host, especifique o tempo de execução a ser incluído no aplicativo. Use `-r` a `--runtime`(ou) bandeira.
 
 ```dotnetcli
 dotnet publish -c Release -r win-x64 -o ./publish
 ```
 
-Para publicar uma compilação dependente de estrutura, omita o sinalizador `-r`.
+Para publicar uma compilação dependente da `-r` estrutura, omita a bandeira.
 
 ```dotnetcli
 dotnet publish -c Release -o ./publish
 ```
 
-Copie todo o conteúdo do diretório `publish` para uma pasta de instalação. Em seguida, use a [ferramenta SC](/windows/desktop/services/controlling-a-service-using-sc) para criar um serviço do Windows para o arquivo executável.
+Copie o conteúdo `publish` completo do diretório para uma pasta de instalação. Em seguida, use a [ferramenta sc](/windows/desktop/services/controlling-a-service-using-sc) para criar um serviço do Windows para o arquivo executável.
 
 ```console
 sc create MyService binPath=C:\MyService\MyService.exe
 ```
 
-### <a name="log-to-the-windows-event-log"></a>Registrar no log de eventos do Windows
+### <a name="log-to-the-windows-event-log"></a>Faça login no registro de eventos do Windows
 
-O método `UseWindowsService` adiciona automaticamente um provedor de [log](/aspnet/core/fundamentals/logging/) que grava mensagens de log no log de eventos do Windows. Você pode configurar o log para esse provedor adicionando uma entrada de `EventLog` à seção `Logging` de `appsettings.json` ou outra fonte de configuração. 
+O `UseWindowsService` método adiciona automaticamente um provedor [de registro](/aspnet/core/fundamentals/logging/) que grava mensagens de registro no registro de eventos do Windows. Você pode configurar o registro para `EventLog` este `Logging` provedor `appsettings.json` adicionando uma entrada na seção de ou outra fonte de configuração.
 
-Você pode substituir o nome de origem usado no log de eventos definindo uma propriedade `SourceName` nessas configurações. Se você não especificar um nome, o nome do aplicativo padrão (normalmente, o nome do assembly executável) será usado.
+Você pode substituir o nome de origem usado `SourceName` no registro de eventos definindo uma propriedade nessas configurações. Se você não especificar um nome, o nome padrão do aplicativo (normalmente o nome de montagem executável) será usado.
 
-Mais informações sobre o registro em log estão no final deste capítulo.
+Mais informações sobre o registro estão no final deste capítulo.
 
-## <a name="run-your-app-as-a-linux-service-with-systemd"></a>Execute seu aplicativo como um serviço Linux com o sistema
+## <a name="run-your-app-as-a-linux-service-with-systemd"></a>Execute seu aplicativo como um serviço Linux com sistema
 
-Para configurar seu aplicativo ASP.NET Core para ser executado como um serviço do Linux (ou *daemon* no linguagem Linux), instale o pacote [Microsoft. Extensions. Hosting. systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd) do NuGet. Em seguida, adicione uma chamada para `UseSystemd` ao método `CreateHostBuilder` no `Program.cs`.
+Para configurar seu aplicativo ASP.NET Core para ser executado como um serviço Linux (ou *daemon* no Linux), instale o pacote [Microsoft.Extensions.Hosting.Systemd](https://www.nuget.org/packages/Microsoft.Extensions.Hosting.Systemd) do NuGet. Em seguida, `UseSystemd` adicione `CreateHostBuilder` uma `Program.cs`chamada ao método em .
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -80,20 +80,20 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 ```
 
 > [!NOTE]
-> Se o aplicativo não estiver sendo executado como um serviço do Linux, o método `UseSystemd` não fará nada.
+> Se o aplicativo não estiver sendo executado `UseSystemd` como um serviço Linux, o método não fará nada.
 
-Agora, publique seu aplicativo. O aplicativo pode ser dependente da estrutura ou independente para o tempo de execução do Linux relevante (por exemplo, `linux-x64`). Você pode publicar usando um destes métodos:
+Agora publique seu aplicativo. O aplicativo pode ser dependente de estrutura ou independente para o `linux-x64`tempo de execução do Linux relevante (por exemplo, ). Você pode publicar usando um desses métodos:
 
-* No Visual Studio, clicando com o botão direito do mouse no projeto e selecionando **publicar** no menu de atalho. 
-* No CLI do .NET Core, usando o seguinte comando:
+* No Visual Studio clicando com o botão direito do mouse no projeto e selecionando **Publish** no menu de atalho.
+* A partir do .NET Core CLI, usando o seguinte comando:
 
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
   
-Copie todo o conteúdo do diretório `publish` para uma pasta de instalação no host do Linux. O registro do serviço requer um arquivo especial, chamado *arquivo de unidade*, a ser adicionado ao diretório `/etc/systemd/system`. Você precisará de permissão de raiz para criar um arquivo nessa pasta. Nomeie o arquivo com o identificador que você deseja que `systemd` use e a extensão `.service`. Por exemplo, use `/etc/systemd/system/myapp.service`.
+Copie o conteúdo `publish` completo do diretório para uma pasta de instalação no host Linux. O registro do serviço requer um arquivo especial, chamado `/etc/systemd/system` de arquivo *unitário,* para ser adicionado ao diretório. Você precisará de permissão de raiz para criar um arquivo nesta pasta. Nomeie o arquivo com `systemd` o identificador `.service` que deseja usar e a extensão. Por exemplo, use `/etc/systemd/system/myapp.service`.
 
-O arquivo de serviço usa o formato INI, conforme mostrado neste exemplo:
+O arquivo de serviço usa o formato INI, como mostrado neste exemplo:
 
 ```ini
 [Unit]
@@ -107,16 +107,16 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-A propriedade `Type=notify` informa `systemd` que o aplicativo irá notificá-lo na inicialização e no desligamento. A configuração de `WantedBy=multi-user.target` fará com que o serviço seja iniciado quando o sistema Linux atingir "runlevel 2", o que significa que um shell de vários usuários não gráficos está ativo.
+O `Type=notify` imóvel `systemd` informa que o aplicativo irá notificá-lo sobre inicialização e desligamento. A `WantedBy=multi-user.target` configuração fará com que o serviço seja inicializado quando o sistema Linux atingir o "runlevel 2", o que significa que um shell multiusuário não gráfico está ativo.
 
-Antes que `systemd` reconheça o serviço, ele precisa recarregar sua configuração. Você controla `systemd` usando o comando `systemctl`. Após o recarregamento, use o subcomando `status` para confirmar que o aplicativo foi registrado com êxito.
+Antes `systemd` de reconhecer o serviço, ele precisa recarregar sua configuração. Você `systemd` controla `systemctl` usando o comando. Após a recarga, use o `status` subcomando para confirmar se o aplicativo foi registrado com sucesso.
 
 ```console
 sudo systemctl daemon-reload
 sudo systemctl status myapp
 ```
 
-Se você tiver configurado o serviço corretamente, obterá a seguinte saída:
+Se você configurou o serviço corretamente, você terá a seguinte saída:
 
 ```text
 myapp.service - My gRPC Application
@@ -124,52 +124,52 @@ myapp.service - My gRPC Application
  Active: inactive (dead)
 ```
 
-Use o comando `start` para iniciar o serviço.
+Use `start` o comando para iniciar o serviço.
 
 ```console
 sudo systemctl start myapp.service
 ```
 
 > [!TIP]
-> A extensão de `.service` é opcional quando você está usando `systemctl start`.
+> A `.service` extensão é opcional `systemctl start`quando você está usando .
 
-Para informar `systemd` iniciar o serviço automaticamente na inicialização do sistema, use o comando `enable`.
+Para `systemd` dizer para iniciar o serviço automaticamente `enable` na inicialização do sistema, use o comando.
 
 ```console
 sudo systemctl enable myapp
 ```
 
-### <a name="log-to-journald"></a>Log no diário
+### <a name="log-to-journald"></a>Log para diário
 
-O equivalente do Linux do log de eventos do Windows é `journald`, um serviço de sistema de registro em log estruturado que faz parte do `systemd`. As mensagens de log gravadas na saída padrão por um daemon do Linux são gravadas automaticamente no `journald`. Para configurar os níveis de log, use a seção `Console` da configuração de log. O método `UseSystemd` host Builder configura automaticamente o formato de saída do console para se adequar ao diário.
+O equivalente ao Linux do `journald`registro de eventos do Windows é `systemd`, um serviço de sistema de registro estruturado que faz parte de . As mensagens de log escritas na saída padrão por `journald`um daemon Linux são automaticamente escritas para . Para configurar os níveis `Console` de registro, use a seção da configuração de registro. O `UseSystemd` método host builder configura automaticamente o formato de saída do console para se adequar ao diário.
 
-Como `journald` é o padrão para os logs do Linux, uma variedade de ferramentas integra-se a ele. Você pode rotear facilmente os logs de `journald` para um sistema de log externo. Trabalhando localmente no host, você pode usar o comando `journalctl` para exibir os logs da linha de comando.
+Porque `journald` é o padrão para logs Linux, uma variedade de ferramentas se integram a ele. Você pode facilmente direcionar `journald` logs de um sistema de registro externo. Trabalhando localmente no host, `journalctl` você pode usar o comando para exibir logs da linha de comando.
 
 ```console
 sudo journalctl -u myapp
 ```
 
 > [!TIP]
-> Se você tiver um ambiente de GUI disponível em seu host, alguns visualizadores de log gráficos estarão disponíveis para Linux, como *QJournalctl* e *logs GNOME*.
+> Se você tiver um ambiente de GUI disponível no seu host, alguns espectadores de log gráfico estão disponíveis para Linux, como *QJournalctl* e *gnomo-logs*.
 
-Para saber mais sobre como consultar o diário de `systemd` da linha de comando usando `journalctl`, consulte [as páginas do manual](https://manpages.debian.org/buster/systemd/journalctl.1).
+Para saber mais sobre `systemd` como consultar o diário `journalctl`a partir da linha de comando usando , consulte [as páginas do homem](https://manpages.debian.org/buster/systemd/journalctl.1).
 
-## <a name="https-certificates-for-self-hosted-applications"></a>Certificados HTTPS para aplicativos de hospedagem interna
+## <a name="https-certificates-for-self-hosted-applications"></a>Certificados HTTPS para aplicativos auto-hospedados
 
-Quando você estiver executando um aplicativo gRPC em produção, deverá usar um certificado TLS de uma autoridade de certificação confiável (CA). Essa autoridade de certificação pode ser uma CA pública ou uma interna para sua organização.
+Quando você está executando um aplicativo gRPC em produção, você deve usar um certificado TLS de uma autoridade de certificado confiável (CA). Este CA pode ser um CA público, ou um interno para sua organização.
 
-Em hosts do Windows, você pode carregar o certificado de um [repositório de certificados](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro usando a classe <xref:System.Security.Cryptography.X509Certificates.X509Store>. Você também pode usar a classe `X509Store` com o armazenamento de chaves OpenSSL em alguns hosts Linux.
+Nos hosts do Windows, você pode carregar o <xref:System.Security.Cryptography.X509Certificates.X509Store> certificado de uma loja de [certificados](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro usando a classe. Você também pode `X509Store` usar a classe com a loja de chaves OpenSSL em alguns hosts Linux.
 
-Você também pode criar certificados usando um dos [construtores X509Certificate2](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A), de:
+Você também pode criar certificados usando um dos [construtores X509Certificate2,](xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor%2A)de qualquer um:
 
-* Um arquivo, como um arquivo de `.pfx` protegido por uma senha forte
-* Dados binários recuperados de um serviço de armazenamento seguro, como [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
+* Um arquivo, como `.pfx` um arquivo protegido por uma senha forte
+* Dados binários recuperados de um serviço de armazenamento seguro, como [o Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 
-Você pode configurar o Kestrel para usar um certificado de duas maneiras: da configuração ou no código.
+Você pode configurar o Kestrel para usar um certificado de duas maneiras: a partir da configuração ou em código.
 
-### <a name="set-https-certificates-by-using-configuration"></a>Definir certificados HTTPS usando a configuração
+### <a name="set-https-certificates-by-using-configuration"></a>Defina certificados HTTPS usando a configuração
 
-A abordagem de configuração requer a definição do caminho para o arquivo de `.pfx` de certificado e a senha na seção de configuração Kestrel. No `appsettings.json`, isso teria a seguinte aparência:
+A abordagem de configuração `.pfx` requer a definição do caminho para o arquivo de certificado e a senha na seção de configuração do Kestrel. Em `appsettings.json`, que seria assim:
 
 ```json
 {
@@ -184,14 +184,14 @@ A abordagem de configuração requer a definição do caminho para o arquivo de 
 }
 ```
 
-Forneça a senha usando uma fonte de configuração segura, como o Azure Key Vault ou o cofre Hashicorp.
+Forneça a senha usando uma fonte de configuração segura, como o Azure Key Vault ou o Hashicorp Vault.
 
 > [!IMPORTANT]
 > Não armazene senhas não criptografadas em arquivos de configuração.
 
-### <a name="set-https-certificates-in-code"></a>Definir certificados HTTPS no código
+### <a name="set-https-certificates-in-code"></a>Defina certificados HTTPS em código
 
-Para configurar HTTPS em Kestrel no código, use o método `ConfigureKestrel` em `IWebHostBuilder` na classe `Program`.
+Para configurar HTTPS no Código Kestrel, `IWebHostBuilder` use `Program` o `ConfigureKestrel` método ligado na classe.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -209,8 +209,8 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
         });
 ```
 
-Novamente, certifique-se de armazenar a senha para o arquivo de `.pfx` no e recuperá-lo do, uma fonte de configuração segura.
+Novamente, certifique-se de armazenar `.pfx` a senha do arquivo e recuperá-la de uma fonte de configuração segura.
 
 >[!div class="step-by-step"]
->[Anterior](grpc-in-production.md)
->[Próximo](docker.md)
+>[Próximo](grpc-in-production.md)
+>[anterior](docker.md)

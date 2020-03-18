@@ -2,12 +2,12 @@
 title: Usando variação em interfaces para Coleções Genéricas (C#)
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 53aaf49ee0802c0d207e0b0a29661cee7c628b4d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b891ccde93e18baf5d5e814911666e9c6268e009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595211"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169734"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Usando variação em interfaces para Coleções Genéricas (C#)
 Uma interface de covariante permite que seus métodos retornem mais tipos derivados daquelas especificadas na interface. Uma interface de contravariante permite que seus métodos aceitem parâmetros de tipos menos derivados do que os especificados na interface.  
@@ -45,7 +45,7 @@ class Program
     {  
         IEnumerable<Employee> employees = new List<Employee>();  
   
-        // You can pass IEnumerable<Employee>,   
+        // You can pass IEnumerable<Employee>,
         // although the method expects IEnumerable<Person>.  
   
         PrintFullName(employees);  
@@ -73,11 +73,11 @@ public class Employee : Person { }
 class PersonComparer : IEqualityComparer<Person>  
 {  
     public bool Equals(Person x, Person y)  
-    {              
+    {
         if (Object.ReferenceEquals(x, y)) return true;  
         if (Object.ReferenceEquals(x, null) ||  
             Object.ReferenceEquals(y, null))  
-            return false;              
+            return false;
         return x.FirstName == y.FirstName && x.LastName == y.LastName;  
     }  
     public int GetHashCode(Person person)  
@@ -100,7 +100,7 @@ class Program
                new Employee() {FirstName = "Jeff", LastName = "Price"}  
             };  
   
-        // You can pass PersonComparer,   
+        // You can pass PersonComparer,
         // which implements IEqualityComparer<Person>,  
         // although the method expects IEqualityComparer<Employee>.  
   
@@ -113,6 +113,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Variância em interfaces genéricas (C#)](./variance-in-generic-interfaces.md)

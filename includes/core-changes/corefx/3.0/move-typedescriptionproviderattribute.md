@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 4d479636f41095610eaf39f92ad0dad4863ab8b5
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 57ca2ad839aab8d61da1a929660920efe1190334
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568137"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147530"
 ---
-### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute movido para outro assembly
+### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute movido para outro conjunto
 
-A classe de <xref:System.ComponentModel.TypeDescriptionProviderAttribute> foi movida.
+A <xref:System.ComponentModel.TypeDescriptionProviderAttribute> classe foi movida.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-No .NET Core 2,2 e versões anteriores, a classe <xref:System.ComponentModel.TypeDescriptionProviderAttribute> é encontrada no assembly *System. ComponentModel. TypeConverter* .
+Nas versões .NET Core 2.2 e anteriores, a <xref:System.ComponentModel.TypeDescriptionProviderAttribute> classe é encontrada no conjunto *System.ComponentModel.TypeConverter.*
 
-A partir do .NET Core 3,0, ele é encontrado no assembly *System. ObjectModel* .
+A partir do .NET Core 3.0, ele é encontrado no conjunto *System.ObjectModel.*
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -22,7 +22,7 @@ A partir do .NET Core 3,0, ele é encontrado no assembly *System. ObjectModel* .
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Essa alteração afeta apenas os aplicativos que usam a reflexão para carregar o tipo de <xref:System.ComponentModel.TypeDescriptionProviderAttribute> chamando um método como <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ou uma sobrecarga de <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que assume que o tipo está em um assembly específico. Se esse for o caso, o assembly referenciado na chamada do método deverá ser atualizado para refletir o novo local do assembly do tipo.
+Essa alteração afeta apenas aplicativos que usam <xref:System.ComponentModel.TypeDescriptionProviderAttribute> reflexão para carregar <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o tipo <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> chamando um método como ou uma sobrecarga que assume que o tipo está em um conjunto específico. Se esse for o caso, a montagem referenciada na chamada do método deve ser atualizada para refletir o novo local de montagem do tipo.
 
 #### <a name="category"></a>Categoria
 
@@ -30,7 +30,7 @@ Windows Forms
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-- {1&gt;Nenhum&lt;1}
+Nenhum.
 
 <!--
 

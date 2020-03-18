@@ -1,5 +1,5 @@
 ---
-title: Como assinar e cancelar a assinatura de eventos – C# guia de programação
+title: Como se inscrever e cancelar a inscrição de eventos - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705321"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como assinar e cancelar a assinatura de eventos (C# guia de programação)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como se inscrever e cancelar a inscrição de eventos (C# Guia de Programação)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para assinar eventos usando o IDE do Visual Studio  
@@ -97,10 +97,10 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
      Quando todos os assinantes tiverem cancelado a assinatura de um evento, a instância do evento na classe do publicador será definida como `null`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eventos](./index.md)
-- [event](../../language-reference/keywords/event.md)
-- [Como publicar eventos que estão em conformidade com as diretrizes de .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operadores - e -=](../../language-reference/operators/subtraction-operator.md)
-- [Operadores + e +=](../../language-reference/operators/addition-operator.md)
+- [Evento](../../language-reference/keywords/event.md)
+- [Como publicar eventos em conformidade com as diretrizes do .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [- e -= operadores](../../language-reference/operators/subtraction-operator.md)
+- [+ e += operadores](../../language-reference/operators/addition-operator.md)

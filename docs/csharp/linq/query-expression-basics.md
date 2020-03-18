@@ -3,12 +3,12 @@ title: Noções básicas sobre expressões de consulta (LINQ em C#)
 description: Apresenta os conceitos relacionados a expressões de consulta
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 83beaa82d4b4b42ff9da5230edddd391b33a0717
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635854"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173348"
 ---
 # <a name="query-expression-basics"></a>Noções básicas sobre expressões de consulta
 
@@ -94,7 +94,7 @@ Uma expressão de consulta pode conter várias cláusulas `from`. Use cláusulas
 
 [!code-csharp[csrefQueryExpBasics#54](~/samples/snippets/csharp/concepts/linq/query-expression-basics_10.cs)]
 
-Para obter mais informações, consulte [Cláusula from](../language-reference/keywords/from-clause.md).
+Para obter mais informações, consulte [a cláusula](../language-reference/keywords/from-clause.md).
 
 ### <a name="ending-a-query-expression"></a>Encerrando uma expressão de consulta
 
@@ -138,7 +138,7 @@ Use a cláusula `where` para filtrar os elementos dos dados de origem com base e
 
 [!code-csharp[csrefQueryExpBasics#59](~/samples/snippets/csharp/concepts/linq/query-expression-basics_15.cs)]
 
-Para obter mais informações, consulte [Cláusula where](../language-reference/keywords/where-clause.md).
+Para obter mais informações, consulte [onde a cláusula](../language-reference/keywords/where-clause.md).
 
 #### <a name="orderby-clause"></a>Cláusula orderby
 
@@ -150,13 +150,13 @@ A palavra-chave `ascending` é opcional. Será a ordem de classificação padrã
 
 #### <a name="join-clause"></a>Cláusula join
 
-Use a cláusula `join` para associar e/ou combinar elementos de uma fonte de dados com elementos de outra fonte de dados com base em uma comparação de igualdade entre as chaves especificadas em cada elemento. Na LINQ, as operações join são executadas em sequências de objetos cujos elementos são de tipos diferentes. Após ter unido duas sequências, você deve usar uma instrução `select` ou `group` para especificar qual elemento armazenar na sequência de saída. Você também pode usar um tipo anônimo para combinar propriedades de cada conjunto de elementos associados em um novo tipo para a sequência de saída. O exemplo a seguir associa objetos `prod` cuja propriedade `Category` corresponde a uma das categorias na matriz de cadeias de caracteres `categories`. Os produtos cujo `Category` não corresponde a nenhuma cadeia de caracteres no `categories` são filtrados. A instrução `select` projeta um novo tipo cujas propriedades são obtidas de `cat` e `prod`.
+Use a cláusula `join` para associar e/ou combinar elementos de uma fonte de dados com elementos de outra fonte de dados com base em uma comparação de igualdade entre as chaves especificadas em cada elemento. Na LINQ, as operações join são executadas em sequências de objetos cujos elementos são de tipos diferentes. Após ter unido duas sequências, você deve usar uma instrução `select` ou `group` para especificar qual elemento armazenar na sequência de saída. Você também pode usar um tipo anônimo para combinar propriedades de cada conjunto de elementos associados em um novo tipo para a sequência de saída. O exemplo a seguir associa objetos `prod` cuja propriedade `Category` corresponde a uma das categorias na matriz de cadeias de caracteres `categories`. Os `Category` produtos que não `categories` correspondem a nenhuma corda são filtrados. A `select` declaração projeta um novo tipo `cat` `prod`cujas propriedades são retiradas de ambos e .
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
-Você também pode executar uma junção de grupo armazenando os resultados da operação `join` em uma variável temporária usando a palavra-chave [into](../language-reference/keywords/into.md). Para obter mais informações, consulte [Cláusula join](../language-reference/keywords/join-clause.md).
+Você também pode executar uma junção de grupo armazenando os resultados da operação `join` em uma variável temporária usando a palavra-chave [into](../language-reference/keywords/into.md). Para obter mais informações, consulte [a cláusula de adesão](../language-reference/keywords/join-clause.md).
 
-#### <a name="let-clause"></a>Cláusula let 
+#### <a name="let-clause"></a>cláusula Let
 
 Use a cláusula `let` para armazenar o resultado de uma expressão, como uma chamada de método, em uma nova variável de intervalo. No exemplo a seguir, a variável de intervalo `firstName` armazena o primeiro elemento da matriz de cadeias de caracteres que é retornado pelo `Split`.
 
@@ -170,11 +170,11 @@ Uma cláusula de consulta pode conter uma expressão de consulta, que às vezes 
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Para obter mais informações, consulte [executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md).
+Para obter mais informações, consulte [Executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de programação em C#](../programming-guide/index.md)
-- [LINQ (Consulta Integrada à Linguagem)](index.md)
+- [Consulta Integrada ao Idioma (LINQ)](index.md)
 - [Palavras-chave de consulta (LINQ)](../language-reference/keywords/query-keywords.md)
 - [Visão geral de operadores de consulta padrão](../programming-guide/concepts/linq/standard-query-operators-overview.md)

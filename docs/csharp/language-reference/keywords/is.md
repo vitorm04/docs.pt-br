@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239645"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399633"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -36,7 +36,7 @@ Ao usar o padrão de tipo para realizar a correspondência de padrões, `is` tes
    expr is type varname
 ```
 
-Em que *expr* é uma expressão que é avaliada como uma instância de algum tipo, *digite* é o nome do tipo para o qual o resultado de *expr* deve ser convertido e *VarName* é o objeto para o qual o resultado de *expr* é convertido se o teste de `is` for `true`. 
+Quando *expr* é uma expressão que avalia para uma instância de algum tipo, *tipo* é o nome do tipo para o qual o resultado de *expr* deve `true`ser convertido, e *varname* é o objeto para o qual o resultado de *expr* é convertido se o `is` teste for .
 
 A expressão `is` será `true` se *expr* não for `null` e qualquer um dos seguintes for verdadeiro:
 
@@ -106,21 +106,21 @@ O exemplo a seguir demonstra uma comparação de verificações de `null`:
 
 ### <a name="var-pattern"></a>Padrão var
 
-Uma correspondência de padrão com o padrão de `var` sempre é realizada com sucesso. Sua sintaxe é:
+Um padrão combina `var` com o padrão sempre tem sucesso. Sua sintaxe é:
 
 ```csharp
    expr is var varname
 ```
 
-Em que o valor de *expr* sempre é atribuído a uma variável local chamada *VarName*. *VarName* é uma variável do mesmo tipo que o tipo de *expr*de tempo de compilação. 
+Quando o valor de *expr* é sempre atribuído a uma variável local chamada *varname*. *varname* é uma variável do mesmo tipo que o tipo de tempo de compilação de *expr*.
 
-Se *expr* for avaliada como `null`, a expressão `is` produzirá `true` e atribuirá `null` a *VarName*. O padrão var é um dos poucos usos de `is` que produz `true` para um valor `null`.
+Se *expr* avaliar `null`, `is` a `true` expressão produz `null` e atribui ao *varname*. O padrão var é um `is` dos poucos usos que produz `true` por um `null` valor.
 
-Você pode usar o padrão de `var` para criar uma variável temporária dentro de uma expressão booliana, como mostra o exemplo a seguir:
+Você pode `var` usar o padrão para criar uma variável temporária dentro de uma expressão booleana, como mostra o exemplo a seguir:
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-No exemplo anterior, a variável temporária é usada para armazenar o resultado de uma operação cara. A variável pode ser usada várias vezes.
+No exemplo anterior, a variável temporária é usada para armazenar o resultado de uma operação cara. A variável pode então ser usada várias vezes.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
   
@@ -131,6 +131,6 @@ Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expression
   
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Palavras-chave do C#](index.md)
+- [Referência do C#](../index.md)
+- [C# palavras-chave](index.md)
 - [Operadores cast e teste de tipo](../operators/type-testing-and-cast.md)

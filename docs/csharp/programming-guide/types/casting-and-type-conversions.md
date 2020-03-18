@@ -10,10 +10,10 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711890"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Coerções e conversões de tipo (Guia de Programação em C#)
@@ -29,11 +29,11 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversões implícitas**: nenhuma sintaxe especial é necessária porque a conversão é de tipo seguro e nenhum dado será perdido. Exemplos incluem conversões de tipos integrais menores para maiores e conversões de classes derivadas para classes base.  
   
-- **Conversões explícitas (conversão)** : conversões explícitas exigem o [operador cast `()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). A conversão é necessária quando as informações podem ser perdidas na conversão ou quando a conversão pode não funcionar por outros motivos. Exemplos típicos incluem a conversão numérica para um tipo que tem menos precisão ou um intervalo menor e a conversão de uma instância de classe base para uma classe derivada.  
+- **Conversões explícitas (moldes)**: Conversões explícitas requerem o [ `()`operador de elenco ](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). A conversão é necessária quando as informações podem ser perdidas na conversão ou quando a conversão pode não funcionar por outros motivos. Exemplos típicos incluem a conversão numérica para um tipo que tem menos precisão ou um intervalo menor e a conversão de uma instância de classe base para uma classe derivada.  
   
 - **Conversões definidas pelo usuário**: as conversões definidas pelo usuário são realizadas por métodos especiais que podem ser definidos para habilitar conversões explícitas e implícitas entre tipos personalizados que não têm uma relação de classe base/classe derivada. Para saber mais, confira [Operadores de conversão definidos pelo usuário](../../language-reference/operators/user-defined-conversion-operators.md).  
   
-- **Conversões com classes auxiliares**: para converter entre tipos não compatíveis, assim como inteiros e objetos <xref:System.DateTime?displayProperty=nameWithType>, ou cadeias de caracteres hexadecimais e matrizes de bytes, você pode usar a classe <xref:System.BitConverter?displayProperty=nameWithType>, a classe <xref:System.Convert?displayProperty=nameWithType> e os métodos `Parse` dos tipos numéricos internos, tais como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [como converter uma matriz de bytes em um int](./how-to-convert-a-byte-array-to-an-int.md), [como converter uma cadeia de caracteres em um número](./how-to-convert-a-string-to-a-number.md)e [como converter entre cadeias de caracteres hexadecimais e tipos numéricos](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
+- **Conversões com classes auxiliares**: para converter entre tipos não compatíveis, assim como inteiros e objetos <xref:System.DateTime?displayProperty=nameWithType>, ou cadeias de caracteres hexadecimais e matrizes de bytes, você pode usar a classe <xref:System.BitConverter?displayProperty=nameWithType>, a classe <xref:System.Convert?displayProperty=nameWithType> e os métodos `Parse` dos tipos numéricos internos, tais como <xref:System.Int32.Parse%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [Como converter uma matriz de bytes em um int](./how-to-convert-a-byte-array-to-an-int.md), como converter uma string para um [número](./how-to-convert-a-string-to-a-number.md)e como converter [entre strings hexadecimais e tipos numéricos](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
   
 ## <a name="implicit-conversions"></a>Conversões implícitas
 
@@ -41,7 +41,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- Para obter uma lista completa de todas as conversões numéricas implícitas, consulte a seção [conversões numéricas implícitas](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) do artigo sobre [conversões numéricas internas](../../language-reference/builtin-types/numeric-conversions.md) .
+ Para obter uma lista completa de todas as conversões numéricas implícitas, consulte a seção [Conversões numéricas implícitas](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions) do artigo [Conversões numéricas incorporadas.](../../language-reference/builtin-types/numeric-conversions.md)
   
  Para tipos de referência, uma conversão implícita sempre existe de uma classe para qualquer uma das suas interfaces ou classes base diretas ou indiretas. Nenhuma sintaxe especial é necessária porque uma classe derivada sempre contém todos os membros de uma classe base.  
   
@@ -52,11 +52,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>Conversões explícitas
 
- No entanto, se uma conversão não puder ser realizada sem o risco de perda de informações, o compilador exigirá que você execute uma conversão explícita, que é chamada de *cast*. Uma conversão é uma maneira de informar explicitamente ao compilador que você pretende fazer a conversão e que você está ciente de que poderá ocorrer perda de dados. Para executar uma conversão, especifique entre parênteses o tipo para o qual você está convertendo, na frente do valor ou da variável a ser convertida. O programa a seguir converte um [Double](../../language-reference/builtin-types/floating-point-numeric-types.md) em um [int](../../language-reference/builtin-types/integral-numeric-types.md). O programa não será compilado sem a conversão.  
+ No entanto, se uma conversão não puder ser realizada sem o risco de perda de informações, o compilador exigirá que você execute uma conversão explícita, que é chamada de *cast*. Uma conversão é uma maneira de informar explicitamente ao compilador que você pretende fazer a conversão e que você está ciente de que poderá ocorrer perda de dados. Para executar uma conversão, especifique entre parênteses o tipo para o qual você está convertendo, na frente do valor ou da variável a ser convertida. O programa a seguir lança um [duplo](../../language-reference/builtin-types/floating-point-numeric-types.md) para um [int](../../language-reference/builtin-types/integral-numeric-types.md). O programa não será compilado sem o elenco.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- Para obter uma lista completa de conversões numéricas explícitas com suporte, consulte a seção de [conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [embutir conversões numéricas](../../language-reference/builtin-types/numeric-conversions.md) .
+ Para obter uma lista completa de conversões numéricas explícitas suportadas, consulte a seção [Conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [Conversões numéricas incorporadas.](../../language-reference/builtin-types/numeric-conversions.md)
   
  Para tipos de referência, uma conversão explícita será necessária se você precisar converter de um tipo base para um tipo derivado:  
   
@@ -82,17 +82,17 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- O C# fornece o operador [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) para habilitar o teste de compatibilidade antes de realmente executar uma conversão. Para obter mais informações, consulte [como converter com segurança usando correspondência de padrões e os operadores as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ O C# fornece o operador [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) para habilitar o teste de compatibilidade antes de realmente executar uma conversão. Para obter mais informações, consulte [Como lançar com segurança usando a correspondência de padrões e os operadores como e é](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Conversões](~/_csharplang/spec/conversions.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Tipos](./index.md)
 - [Operador cast ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
-- [Operadores de conversão definidos pelo usuário](../../language-reference/operators/user-defined-conversion-operators.md)
+- [Operadores de conversões definidas pelo usuário](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversão de tipos generalizados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Como converter uma cadeia de caracteres em um número](./how-to-convert-a-string-to-a-number.md)

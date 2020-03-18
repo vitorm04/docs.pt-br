@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568093"
 ---
-### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>Comportamento de análise e formatação de ponto flutuante alterado
+### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>O comportamento de formatação e análise de pontos flutuantes mudou
 
-A análise de ponto flutuante e o comportamento de formatação (pelos tipos <xref:System.Double> e <xref:System.Single>) agora são compatíveis com IEEE.
+O comportamento de análise e formatação <xref:System.Double> <xref:System.Single> de pontos flutuantes (pelos e tipos) agora está em conformidade com o IEEE.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-No .NET Core 2,2 e versões anteriores, a formatação com <xref:System.Double.ToString%2A?displayProperty=nameWithType> e <xref:System.Single.ToString%2A?displayProperty=nameWithType>e a análise com <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType>, <xref:System.Single.Parse%2A?displayProperty=nameWithType>e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> não são compatíveis com IEEE. Como resultado, é impossível garantir que um valor seja arvoltado com qualquer cadeia de caracteres de formato padrão ou personalizada com suporte. Para algumas entradas, a tentativa de analisar um valor formatado pode falhar e, para outros, o valor analisado não é igual ao valor original.
+Em .NET Core 2.2 e versões anteriores, formatação <xref:System.Single.Parse%2A?displayProperty=nameWithType>com <xref:System.Single.TryParse%2A?displayProperty=nameWithType> <xref:System.Double.ToString%2A?displayProperty=nameWithType> e <xref:System.Single.ToString%2A?displayProperty=nameWithType>, e parsing com <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType>, , e não são compatíveis com IEEE. Como resultado, é impossível garantir que um valor irá fazer uma ida e volta com qualquer seqüência de formato padrão ou personalizado suportado. Para algumas entradas, a tentativa de analisar um valor formatado pode falhar, e para outros, o valor analisado não é igual ao valor original.
 
-A partir do .NET Core 3,0, as operações de análise e formatação são compatíveis com o IEEE 754. Isso garante que o comportamento dos tipos de ponto flutuante no .NET corresponda ao de linguagens compatíveis com IEEE, C#como. Para obter mais informações, consulte a postagem de [ponto flutuante e melhorias de formatação no blog do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) .
+Começando com o .NET Core 3.0, as operações de análise e formatação são compatíveis com o IEEE 754. Isso garante que o comportamento dos tipos de ponto flutuante no .NET corresponda ao de linguagens compatíveis com o IEEE, como C#. Para obter mais informações, consulte as melhorias de análise e formatação de pontos flutuantes no post do blog [.NET Core 3.0.](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -22,7 +22,7 @@ A partir do .NET Core 3,0, as operações de análise e formatação são compat
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-A seção "impacto potencial para código existente" das [melhorias de análise de ponto flutuante e de formatação na](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) postagem de blog do .net Core 3,0 sugere alterações no código se você observar uma alteração de comportamento quando comparada aos aplicativos .net Core 2,2 em geral, isso envolve o uso de uma cadeia de caracteres de formato padrão ou personalizada diferente para impor o comportamento desejado. Alguns resultados podem não ter uma solução alternativa se eles estavam incorretos anteriormente.
+A seção "Impacto potencial ao código existente" da análise de ponto flutuante e melhorias de formatação no post do blog [.NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/) sugere alterações no seu código se você observar uma mudança de comportamento quando comparado com aplicativos .NET Core 2.2 Geralmente, isso envolve o uso de uma seqüência de formato padrão ou personalizado diferente para impor o comportamento desejado. Alguns resultados podem não ter uma solução se estiverem anteriormente incorretos.
 
 #### <a name="category"></a>Categoria
 

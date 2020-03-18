@@ -1,15 +1,15 @@
 ---
-title: Como criar um documento com namespaces (C#) (LINQ to XML)
+title: Como criar um documento com namespaces (C#) (LINQ para XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141329"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ para XML)
 Este tópico mostra como criar documentos com namespaces.  
   
 ## <a name="example"></a>Exemplo  
@@ -26,7 +26,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com">  
@@ -47,7 +47,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -76,7 +76,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root xmlns="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -106,7 +106,7 @@ XElement root = new XElement(aw + "Root",
 Console.WriteLine(root);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com" xmlns:fc="www.fourthcoffee.com">  
@@ -134,7 +134,7 @@ XElement root = new XElement("{http://www.adventure-works.com}Root",
 Console.WriteLine(root);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Root xmlns:aw="http://www.adventure-works.com">  
@@ -142,6 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral sobre namespaces (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

@@ -1,17 +1,17 @@
 ---
-title: dotnet Adicionar comando de referência
+title: dotnet adicionar comando de referência
 description: O comando dotnet add reference fornece uma opção conveniente para adicionar referências projeto a projeto.
 ms.date: 02/14/2020
 ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503793"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "77503793"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
-O comando `dotnet add reference` fornece uma opção conveniente para adicionar referências de projeto a um projeto. Depois de executar o comando, os elementos de `<ProjectReference>` são adicionados ao arquivo de projeto.
+O comando `dotnet add reference` fornece uma opção conveniente para adicionar referências de projeto a um projeto. Depois de executar o comando, os elementos `<ProjectReference>` são adicionados ao arquivo de projeto.
 
 ```xml
 <ItemGroup>
@@ -55,7 +55,7 @@ O comando `dotnet add reference` fornece uma opção conveniente para adicionar 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Adiciona referências de projeto somente quando há uma [estrutura](../../standard/frameworks.md) específica como destino.
+  Adiciona referências de projeto somente ao direcionar uma [estrutura](../../standard/frameworks.md)específica .
 
 - **`--interactive`**
 

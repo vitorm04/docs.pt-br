@@ -3,15 +3,15 @@ title: Comando dotnet list package
 description: O comando 'dotnet list package' fornece uma opção conveniente para listar as referências de pacote de um projeto ou solução.
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157226"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,2 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.2 SDK e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -25,7 +25,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>DESCRIÇÃO
+## <a name="description"></a>Descrição
 
 O comando `dotnet list package` fornece uma opção conveniente para listar todas as referências de pacotes do NuGet para um projeto específico ou uma solução. Primeiro, você precisa criar o projeto para ter os recursos necessários para que esse comando seja processado. O exemplo a seguir mostra a saída do comando `dotnet list package` para o projeto [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis):
 

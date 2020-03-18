@@ -6,10 +6,10 @@ helpviewer_keywords:
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
 ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705698"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrizes denteadas (Guia de Programação em C#)
@@ -26,7 +26,7 @@ Uma matriz denteada é uma matriz cujos elementos são matrizes. Os elementos de
   
  Cada um dos elementos é uma matriz unidimensional de inteiros. O primeiro elemento é uma matriz de 5 inteiros, o segundo é uma matriz de 4 inteiros e o terceiro é uma matriz de 2 inteiros.  
   
- Também é possível usar os inicializadores para preencher os elementos matriz com valores, caso em que não é necessário o tamanho da matriz. Por exemplo:  
+ Também é possível usar os inicializadores para preencher os elementos matriz com valores, caso em que não é necessário o tamanho da matriz. Por exemplo:   
   
  [!code-csharp[csProgGuideArrays#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#21)]  
   
@@ -64,10 +64,10 @@ Uma matriz denteada é uma matriz cujos elementos são matrizes. Os elementos de
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Array>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Matrizes](./index.md)
-- [Matrizes unidimensionais](./single-dimensional-arrays.md)
-- [Matrizes multidimensionais](./multidimensional-arrays.md)
+- [Matrizes Unidimensionais](./single-dimensional-arrays.md)
+- [Matrizes Multidimensionais](./multidimensional-arrays.md)

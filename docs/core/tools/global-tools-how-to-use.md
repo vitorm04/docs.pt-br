@@ -1,35 +1,35 @@
 ---
-title: 'Tutorial: instalar e usar uma ferramenta global do .NET Core'
-description: Saiba como instalar e usar uma ferramenta .NET como uma ferramenta global.
+title: 'Tutorial: Instale e use uma ferramenta global .NET Core'
+description: Aprenda a instalar e usar uma ferramenta .NET como ferramenta global.
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156732"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Tutorial: instalar e usar uma ferramenta global do .NET Core usando o CLI do .NET Core
+# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Tutorial: Instale e use uma ferramenta global .NET Core usando o .NET Core CLI
 
-**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
 Este tutorial ensina como instalar e usar uma ferramenta global. Você usa uma ferramenta que você cria no [primeiro tutorial desta série](global-tools-how-to-create.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* Conclua o [primeiro tutorial desta série](global-tools-how-to-create.md).
+* Complete o [primeiro tutorial desta série.](global-tools-how-to-create.md)
 
-## <a name="use-the-tool-as-a-global-tool"></a>Usar a ferramenta como uma ferramenta global
+## <a name="use-the-tool-as-a-global-tool"></a>Use a ferramenta como uma ferramenta global
 
-1. Instale a ferramenta do pacote executando o comando [dotnet ferramenta de instalação](dotnet-tool-install.md) na pasta *Microsoft. botsay* Project:
+1. Instale a ferramenta do pacote executando o comando de instalação da [ferramenta dotnet](dotnet-tool-install.md) na pasta de projeto *microsoft.botsay:*
 
    ```dotnetcli
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   O parâmetro `--global` informa ao CLI do .NET Core para instalar os binários da ferramenta em um local padrão que é adicionado automaticamente à variável de ambiente PATH.
+   O `--global` parâmetro informa ao .NET Core CLI para instalar os binários da ferramenta em um local padrão que é adicionado automaticamente à variável de ambiente PATH.
 
-   O parâmetro `--add-source` informa ao CLI do .NET Core para usar temporariamente o diretório *./nupkg* como um feed de origem adicional para pacotes NuGet. Você deu ao seu pacote um nome exclusivo para certificar-se de que ele só será encontrado no diretório *./nupkg* , não no site do NuGet.org.
+   O `--add-source` parâmetro informa ao .NET Core CLI que use temporariamente o diretório *./nupkg* como um feed de origem adicional para pacotes NuGet. Você deu ao seu pacote um nome exclusivo para ter certeza de que ele só será encontrado no diretório *./nupkg,* não no site Nuget.org.
 
    A saída mostra o comando usado para chamar a ferramenta e a versão instalada:
 
@@ -45,17 +45,17 @@ Este tutorial ensina como instalar e usar uma ferramenta global. Você usa uma f
    ```
 
    > [!NOTE]
-   > Se esse comando falhar, talvez seja necessário abrir um novo terminal para atualizar o caminho.
+   > Se este comando falhar, talvez seja necessário abrir um novo terminal para atualizar o PATH.
 
-1. Remova a ferramenta executando o comando [dotnet ferramenta de desinstalação](dotnet-tool-uninstall.md) :
+1. Remova a ferramenta executando o comando [de saque da ferramenta dotnet:](dotnet-tool-uninstall.md)
 
    ```dotnetcli
    dotnet tool uninstall -g microsoft.botsay
    ```
 
-## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Usar a ferramenta como uma ferramenta global instalada em um local personalizado
+## <a name="use-the-tool-as-a-global-tool-installed-in-a-custom-location"></a>Use a ferramenta como uma ferramenta global instalada em um local personalizado
 
-1. Instale a ferramenta do pacote.
+1. Instale a ferramenta a partir do pacote.
 
    No Windows:
 
@@ -69,7 +69,7 @@ Este tutorial ensina como instalar e usar uma ferramenta global. Você usa uma f
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   O parâmetro `--tool-path` informa ao CLI do .NET Core para instalar os binários da ferramenta no local especificado. Se o diretório não existir, ele será criado. Esse diretório não é adicionado automaticamente à variável de ambiente PATH.
+   O `--tool-path` parâmetro informa ao .NET Core CLI para instalar os binários da ferramenta no local especificado. Se o diretório não existe, ele é criado. Este diretório não é adicionado automaticamente à variável de ambiente PATH.
 
    A saída mostra o comando usado para chamar a ferramenta e a versão instalada:
 
@@ -92,7 +92,7 @@ Este tutorial ensina como instalar e usar uma ferramenta global. Você usa uma f
    ~/bin/botsay hello from the bot
    ```
 
-1. Remova a ferramenta executando o comando [dotnet ferramenta de desinstalação](dotnet-tool-uninstall.md) :
+1. Remova a ferramenta executando o comando [de saque da ferramenta dotnet:](dotnet-tool-uninstall.md)
 
    No Windows:
 
@@ -108,11 +108,11 @@ Este tutorial ensina como instalar e usar uma ferramenta global. Você usa uma f
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Se você receber uma mensagem de erro ao seguir o tutorial, consulte [solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
+Se você receber uma mensagem de erro ao seguir o tutorial, consulte [Problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você instalou e usou uma ferramenta como uma ferramenta global. Para instalar e usar a mesma ferramenta como uma ferramenta local, avance para o próximo tutorial.
+Neste tutorial, você instalou e usou uma ferramenta como ferramenta global. Para instalar e usar a mesma ferramenta de uma ferramenta local, avance para o próximo tutorial.
 
 > [!div class="nextstepaction"]
-> [Instalar e usar ferramentas locais](local-tools-how-to-use.md)
+> [Instale e use ferramentas locais](local-tools-how-to-use.md)
