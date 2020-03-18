@@ -7,52 +7,52 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238826"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847281"
 ---
-# <a name="sizeof-operator-c-reference"></a><span data-ttu-id="7f246-102">Operador sizeof (referência em C#)</span><span class="sxs-lookup"><span data-stu-id="7f246-102">sizeof operator (C# reference)</span></span>
+# <a name="sizeof-operator-c-reference"></a><span data-ttu-id="13b3e-102">Operador sizeof (referência em C#)</span><span class="sxs-lookup"><span data-stu-id="13b3e-102">sizeof operator (C# reference)</span></span>
 
-<span data-ttu-id="7f246-103">O operador `sizeof` retorna o número de bytes ocupados por uma variável de um determinado tipo.</span><span class="sxs-lookup"><span data-stu-id="7f246-103">The `sizeof` operator returns the number of bytes occupied by a variable of a given type.</span></span> <span data-ttu-id="7f246-104">O argumento do operador `sizeof` deve ser o nome de um [tipo não gerenciado](../builtin-types/unmanaged-types.md) ou um parâmetro de tipo que seja [restrito](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) a um tipo não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="7f246-104">The argument to the `sizeof` operator must be the name of an [unmanaged type](../builtin-types/unmanaged-types.md) or a type parameter that is [constrained](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) to be an unmanaged type.</span></span>
+<span data-ttu-id="13b3e-103">O operador `sizeof` retorna o número de bytes ocupados por uma variável de um determinado tipo.</span><span class="sxs-lookup"><span data-stu-id="13b3e-103">The `sizeof` operator returns the number of bytes occupied by a variable of a given type.</span></span> <span data-ttu-id="13b3e-104">O argumento do operador `sizeof` deve ser o nome de um [tipo não gerenciado](../builtin-types/unmanaged-types.md) ou um parâmetro de tipo que seja [restrito](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) a um tipo não gerenciado.</span><span class="sxs-lookup"><span data-stu-id="13b3e-104">The argument to the `sizeof` operator must be the name of an [unmanaged type](../builtin-types/unmanaged-types.md) or a type parameter that is [constrained](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint) to be an unmanaged type.</span></span>
 
-<span data-ttu-id="7f246-105">O operador `sizeof` exige um contexto [não seguro](../keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="7f246-105">The `sizeof` operator requires an [unsafe](../keywords/unsafe.md) context.</span></span> <span data-ttu-id="7f246-106">No entanto, as expressões apresentadas na tabela a seguir são avaliadas em tempo de compilação para os valores constantes correspondentes e não exigem um contexto não seguro:</span><span class="sxs-lookup"><span data-stu-id="7f246-106">However, the expressions presented in the following table are evaluated in compile time to the corresponding constant values and don't require an unsafe context:</span></span>
+<span data-ttu-id="13b3e-105">O operador `sizeof` exige um contexto [não seguro](../keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="13b3e-105">The `sizeof` operator requires an [unsafe](../keywords/unsafe.md) context.</span></span> <span data-ttu-id="13b3e-106">No entanto, as expressões apresentadas na tabela a seguir são avaliadas em tempo de compilação para os valores constantes correspondentes e não exigem um contexto não seguro:</span><span class="sxs-lookup"><span data-stu-id="13b3e-106">However, the expressions presented in the following table are evaluated in compile time to the corresponding constant values and don't require an unsafe context:</span></span>
 
-|<span data-ttu-id="7f246-107">Expression</span><span class="sxs-lookup"><span data-stu-id="7f246-107">Expression</span></span>|<span data-ttu-id="7f246-108">Valor constante</span><span class="sxs-lookup"><span data-stu-id="7f246-108">Constant value</span></span>|
+|<span data-ttu-id="13b3e-107">Expression</span><span class="sxs-lookup"><span data-stu-id="13b3e-107">Expression</span></span>|<span data-ttu-id="13b3e-108">Valor constante</span><span class="sxs-lookup"><span data-stu-id="13b3e-108">Constant value</span></span>|
 |---------|---------------|
-|`sizeof(sbyte)`|<span data-ttu-id="7f246-109">1</span><span class="sxs-lookup"><span data-stu-id="7f246-109">1</span></span>|
-|`sizeof(byte)`|<span data-ttu-id="7f246-110">1</span><span class="sxs-lookup"><span data-stu-id="7f246-110">1</span></span>|
-|`sizeof(short)`|<span data-ttu-id="7f246-111">2</span><span class="sxs-lookup"><span data-stu-id="7f246-111">2</span></span>|
-|`sizeof(ushort)`|<span data-ttu-id="7f246-112">2</span><span class="sxs-lookup"><span data-stu-id="7f246-112">2</span></span>|
-|`sizeof(int)`|<span data-ttu-id="7f246-113">4</span><span class="sxs-lookup"><span data-stu-id="7f246-113">4</span></span>|
-|`sizeof(uint)`|<span data-ttu-id="7f246-114">4</span><span class="sxs-lookup"><span data-stu-id="7f246-114">4</span></span>|
-|`sizeof(long)`|<span data-ttu-id="7f246-115">8</span><span class="sxs-lookup"><span data-stu-id="7f246-115">8</span></span>|
-|`sizeof(ulong)`|<span data-ttu-id="7f246-116">8</span><span class="sxs-lookup"><span data-stu-id="7f246-116">8</span></span>|
-|`sizeof(char)`|<span data-ttu-id="7f246-117">2</span><span class="sxs-lookup"><span data-stu-id="7f246-117">2</span></span>|
-|`sizeof(float)`|<span data-ttu-id="7f246-118">4</span><span class="sxs-lookup"><span data-stu-id="7f246-118">4</span></span>|
-|`sizeof(double)`|<span data-ttu-id="7f246-119">8</span><span class="sxs-lookup"><span data-stu-id="7f246-119">8</span></span>|
-|`sizeof(decimal)`|<span data-ttu-id="7f246-120">16</span><span class="sxs-lookup"><span data-stu-id="7f246-120">16</span></span>|
-|`sizeof(bool)`|<span data-ttu-id="7f246-121">1</span><span class="sxs-lookup"><span data-stu-id="7f246-121">1</span></span>|
+|`sizeof(sbyte)`|<span data-ttu-id="13b3e-109">1</span><span class="sxs-lookup"><span data-stu-id="13b3e-109">1</span></span>|
+|`sizeof(byte)`|<span data-ttu-id="13b3e-110">1</span><span class="sxs-lookup"><span data-stu-id="13b3e-110">1</span></span>|
+|`sizeof(short)`|<span data-ttu-id="13b3e-111">2</span><span class="sxs-lookup"><span data-stu-id="13b3e-111">2</span></span>|
+|`sizeof(ushort)`|<span data-ttu-id="13b3e-112">2</span><span class="sxs-lookup"><span data-stu-id="13b3e-112">2</span></span>|
+|`sizeof(int)`|<span data-ttu-id="13b3e-113">4</span><span class="sxs-lookup"><span data-stu-id="13b3e-113">4</span></span>|
+|`sizeof(uint)`|<span data-ttu-id="13b3e-114">4</span><span class="sxs-lookup"><span data-stu-id="13b3e-114">4</span></span>|
+|`sizeof(long)`|<span data-ttu-id="13b3e-115">8</span><span class="sxs-lookup"><span data-stu-id="13b3e-115">8</span></span>|
+|`sizeof(ulong)`|<span data-ttu-id="13b3e-116">8</span><span class="sxs-lookup"><span data-stu-id="13b3e-116">8</span></span>|
+|`sizeof(char)`|<span data-ttu-id="13b3e-117">2</span><span class="sxs-lookup"><span data-stu-id="13b3e-117">2</span></span>|
+|`sizeof(float)`|<span data-ttu-id="13b3e-118">4</span><span class="sxs-lookup"><span data-stu-id="13b3e-118">4</span></span>|
+|`sizeof(double)`|<span data-ttu-id="13b3e-119">8</span><span class="sxs-lookup"><span data-stu-id="13b3e-119">8</span></span>|
+|`sizeof(decimal)`|<span data-ttu-id="13b3e-120">16</span><span class="sxs-lookup"><span data-stu-id="13b3e-120">16</span></span>|
+|`sizeof(bool)`|<span data-ttu-id="13b3e-121">1</span><span class="sxs-lookup"><span data-stu-id="13b3e-121">1</span></span>|
 
-<span data-ttu-id="7f246-122">Você também não precisará usar um contexto não seguro quando o operando do operador `sizeof` for o nome de um tipo [enumerado](../builtin-types/enum.md).</span><span class="sxs-lookup"><span data-stu-id="7f246-122">You also don't need to use an unsafe context when the operand of the `sizeof` operator is the name of an [enum](../builtin-types/enum.md) type.</span></span>
+<span data-ttu-id="13b3e-122">Você também não precisará usar um contexto não seguro quando o operando do operador `sizeof` for o nome de um tipo [enumerado](../builtin-types/enum.md).</span><span class="sxs-lookup"><span data-stu-id="13b3e-122">You also don't need to use an unsafe context when the operand of the `sizeof` operator is the name of an [enum](../builtin-types/enum.md) type.</span></span>
 
-<span data-ttu-id="7f246-123">O exemplo a seguir demonstra o uso do operador `sizeof`:</span><span class="sxs-lookup"><span data-stu-id="7f246-123">The following example demonstrates the usage of the `sizeof` operator:</span></span>
+<span data-ttu-id="13b3e-123">O exemplo a seguir demonstra o uso do operador `sizeof`:</span><span class="sxs-lookup"><span data-stu-id="13b3e-123">The following example demonstrates the usage of the `sizeof` operator:</span></span>
 
-[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
-<span data-ttu-id="7f246-124">O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common Language Runtime na memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="7f246-124">The `sizeof` operator returns a number of bytes that would be allocated by the common language runtime in managed memory.</span></span> <span data-ttu-id="7f246-125">Para tipos [struct](../builtin-types/struct.md), esse valor inclui todo o preenchimento, como demonstra o exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="7f246-125">For [struct](../builtin-types/struct.md) types, that value includes any padding, as the preceding example demonstrates.</span></span> <span data-ttu-id="7f246-126">O resultado do operador `sizeof` pode ser diferente do resultado do método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, que retorna o tamanho de um tipo na memória *não gerenciada*.</span><span class="sxs-lookup"><span data-stu-id="7f246-126">The result of the `sizeof` operator might differ from the result of the <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> method, which returns the size of a type in *unmanaged* memory.</span></span>
+<span data-ttu-id="13b3e-124">O operador `sizeof` retorna o número de bytes que seriam alocados pelo Common Language Runtime na memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="13b3e-124">The `sizeof` operator returns a number of bytes that would be allocated by the common language runtime in managed memory.</span></span> <span data-ttu-id="13b3e-125">Para tipos [struct](../builtin-types/struct.md), esse valor inclui todo o preenchimento, como demonstra o exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="13b3e-125">For [struct](../builtin-types/struct.md) types, that value includes any padding, as the preceding example demonstrates.</span></span> <span data-ttu-id="13b3e-126">O resultado do operador `sizeof` pode ser diferente do resultado do método <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>, que retorna o tamanho de um tipo na memória *não gerenciada*.</span><span class="sxs-lookup"><span data-stu-id="13b3e-126">The result of the `sizeof` operator might differ from the result of the <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> method, which returns the size of a type in *unmanaged* memory.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="7f246-127">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="7f246-127">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="13b3e-127">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="13b3e-127">C# language specification</span></span>
 
-<span data-ttu-id="7f246-128">Para obter mais informações, confira a seção [O operador sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator), nas [especificações da linguagem C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="7f246-128">For more information, see [The sizeof operator](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="13b3e-128">Para obter mais informações, confira a seção [O operador sizeof](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator), nas [especificações da linguagem C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="13b3e-128">For more information, see [The sizeof operator](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7f246-129">Confira também</span><span class="sxs-lookup"><span data-stu-id="7f246-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13b3e-129">Confira também</span><span class="sxs-lookup"><span data-stu-id="13b3e-129">See also</span></span>
 
-- [<span data-ttu-id="7f246-130">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="7f246-130">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="7f246-131">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="7f246-131">C# operators</span></span>](index.md)
-- [<span data-ttu-id="7f246-132">Operadores relacionados a ponteiro</span><span class="sxs-lookup"><span data-stu-id="7f246-132">Pointer related operators</span></span>](pointer-related-operators.md)
-- [<span data-ttu-id="7f246-133">Tipos de ponteiro</span><span class="sxs-lookup"><span data-stu-id="7f246-133">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [<span data-ttu-id="7f246-134">Tipos relativos a memória e extensão</span><span class="sxs-lookup"><span data-stu-id="7f246-134">Memory and span-related types</span></span>](../../../standard/memory-and-spans/index.md)
-- [<span data-ttu-id="7f246-135">Genéricos no .NET</span><span class="sxs-lookup"><span data-stu-id="7f246-135">Generics in .NET</span></span>](../../../standard/generics/index.md)
+- [<span data-ttu-id="13b3e-130">Referência do C#</span><span class="sxs-lookup"><span data-stu-id="13b3e-130">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="13b3e-131">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="13b3e-131">C# operators</span></span>](index.md)
+- [<span data-ttu-id="13b3e-132">Operadores relacionados a ponteiro</span><span class="sxs-lookup"><span data-stu-id="13b3e-132">Pointer related operators</span></span>](pointer-related-operators.md)
+- [<span data-ttu-id="13b3e-133">Tipos de Ponteiro</span><span class="sxs-lookup"><span data-stu-id="13b3e-133">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [<span data-ttu-id="13b3e-134">Tipos relacionados a memória e extensão</span><span class="sxs-lookup"><span data-stu-id="13b3e-134">Memory and span-related types</span></span>](../../../standard/memory-and-spans/index.md)
+- [<span data-ttu-id="13b3e-135">Genéricos no .NET</span><span class="sxs-lookup"><span data-stu-id="13b3e-135">Generics in .NET</span></span>](../../../standard/generics/index.md)
