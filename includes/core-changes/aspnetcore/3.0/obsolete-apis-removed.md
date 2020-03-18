@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394092"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="fe192-101">APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas</span><span class="sxs-lookup"><span data-stu-id="fe192-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="d864a-101">Antiforgery obsoleto, CORS, Diagnósticos, MVC e APIs de roteamento removidos</span><span class="sxs-lookup"><span data-stu-id="d864a-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
 
-<span data-ttu-id="fe192-102">Os membros obsoletos e as opções de compatibilidade no ASP.NET Core 2,2 foram removidos.</span><span class="sxs-lookup"><span data-stu-id="fe192-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
+<span data-ttu-id="d864a-102">Membros obsoletos e switches de compatibilidade em ASP.NET Core 2.2 foram removidos.</span><span class="sxs-lookup"><span data-stu-id="d864a-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="fe192-103">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="fe192-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="d864a-103">Versão introduzida</span><span class="sxs-lookup"><span data-stu-id="d864a-103">Version introduced</span></span>
 
-<span data-ttu-id="fe192-104">3.0</span><span class="sxs-lookup"><span data-stu-id="fe192-104">3.0</span></span>
+<span data-ttu-id="d864a-104">3.0</span><span class="sxs-lookup"><span data-stu-id="d864a-104">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="fe192-105">Motivo da alteração</span><span class="sxs-lookup"><span data-stu-id="fe192-105">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="d864a-105">Motivo da mudança</span><span class="sxs-lookup"><span data-stu-id="d864a-105">Reason for change</span></span>
 
-<span data-ttu-id="fe192-106">Melhoria da superfície da API ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="fe192-106">Improvement of API surface over time.</span></span>
+<span data-ttu-id="d864a-106">Melhoria da superfície da API ao longo do tempo.</span><span class="sxs-lookup"><span data-stu-id="d864a-106">Improvement of API surface over time.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="fe192-107">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="fe192-107">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="d864a-107">Ação recomendada</span><span class="sxs-lookup"><span data-stu-id="d864a-107">Recommended action</span></span>
 
-<span data-ttu-id="fe192-108">Embora tenha como alvo o .NET Core 2,2, siga as orientações nas mensagens de compilação obsoletas para adotar novas APIs em vez disso.</span><span class="sxs-lookup"><span data-stu-id="fe192-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
+<span data-ttu-id="d864a-108">Ao direcionar o .NET Core 2.2, siga a orientação nas mensagens de compilação obsoletas para adotar novas APIs.</span><span class="sxs-lookup"><span data-stu-id="d864a-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="fe192-109">Categoria</span><span class="sxs-lookup"><span data-stu-id="fe192-109">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="d864a-109">Categoria</span><span class="sxs-lookup"><span data-stu-id="d864a-109">Category</span></span>
 
-<span data-ttu-id="fe192-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="fe192-110">ASP.NET Core</span></span>
+<span data-ttu-id="d864a-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="d864a-110">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="fe192-111">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="fe192-111">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="d864a-111">APIs afetadas</span><span class="sxs-lookup"><span data-stu-id="d864a-111">Affected APIs</span></span>
 
-<span data-ttu-id="fe192-112">Os seguintes tipos e membros foram marcados como obsoletos para ASP.NET Core 2,1 e 2,2:</span><span class="sxs-lookup"><span data-stu-id="fe192-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
+<span data-ttu-id="d864a-112">Os seguintes tipos e membros foram marcados como obsoletos para ASP.NET Núcleo 2.1 e 2.2:</span><span class="sxs-lookup"><span data-stu-id="d864a-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
 
-<span data-ttu-id="fe192-113">**Tipos**</span><span class="sxs-lookup"><span data-stu-id="fe192-113">**Types**</span></span>
+<span data-ttu-id="d864a-113">**Tipos**</span><span class="sxs-lookup"><span data-stu-id="d864a-113">**Types**</span></span>
 
 - <xref:Microsoft.AspNetCore.Diagnostics.Views.WelcomePage?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue?displayProperty=nameWithType>
@@ -43,7 +43,7 @@ ms.locfileid: "72394092"
 - <xref:Microsoft.AspNetCore.Routing.IRouteValuesAddressMetadata?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Routing.RouteValuesAddressMetadata?displayProperty=nameWithType>
 
-<span data-ttu-id="fe192-114">**Construtores**</span><span class="sxs-lookup"><span data-stu-id="fe192-114">**Constructors**</span></span>
+<span data-ttu-id="d864a-114">**Construtores**</span><span class="sxs-lookup"><span data-stu-id="d864a-114">**Constructors**</span></span>
 
 - <xref:Microsoft.AspNetCore.Cors.Infrastructure.CorsService.%23ctor(Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions})?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Routing.Tree.TreeRouteBuilder.%23ctor(Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.Extensions.ObjectPool.ObjectPool{Microsoft.AspNetCore.Routing.Internal.UriBuildingContext},Microsoft.AspNetCore.Routing.IInlineConstraintResolver)?displayProperty=fullName>
@@ -79,7 +79,7 @@ ms.locfileid: "72394092"
 - <xref:Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.%23ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Text.Encodings.Web.HtmlEncoder,System.Text.Encodings.Web.JavaScriptEncoder,Microsoft.AspNetCore.Mvc.Routing.IUrlHelperFactory)?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.RazorPageAdapter.%23ctor(Microsoft.AspNetCore.Mvc.Razor.RazorPageBase)?displayProperty=fullName>
 
-<span data-ttu-id="fe192-115">**Propriedades**</span><span class="sxs-lookup"><span data-stu-id="fe192-115">**Properties**</span></span>
+<span data-ttu-id="d864a-115">**Propriedades**</span><span class="sxs-lookup"><span data-stu-id="d864a-115">**Properties**</span></span>
 
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieName?displayProperty=fullName>
@@ -104,7 +104,7 @@ ms.locfileid: "72394092"
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowDefaultHandlingForOptionsRequests?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowMappingHeadRequestsToGetHandler?displayProperty=fullName>
 
-<span data-ttu-id="fe192-116">**Métodos**</span><span class="sxs-lookup"><span data-stu-id="fe192-116">**Methods**</span></span>
+<span data-ttu-id="d864a-116">**Métodos**</span><span class="sxs-lookup"><span data-stu-id="d864a-116">**Methods**</span></span>
 
 - <xref:Microsoft.AspNetCore.Mvc.LocalRedirectResult.ExecuteResult(Microsoft.AspNetCore.Mvc.ActionContext)?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RedirectResult.ExecuteResult(Microsoft.AspNetCore.Mvc.ActionContext)?displayProperty=fullName>

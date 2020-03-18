@@ -13,7 +13,7 @@
       href: containerized-lifecycle/
     - name: 'Microsserviços .NET: arquitetura para aplicativos .NET em contêineres'
       href: microservices/
-    - name: 'Aplicativos sem servidor: Arquitetura, padrões e implementação no Azure'
+    - name: 'Aplicativos sem servidor: arquitetura, padrões e implementação no Azure'
       href: serverless/
 - name: Visualizar e-books
   expanded: true

@@ -7,43 +7,43 @@
         - name: Consultas no LINQ to Entities
           href: queries-in-linq-to-entities.md
           items:
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Projeção'
+            - name: 'Exemplos de sintaxe da consulta baseada em método: projeção'
               href: method-based-query-syntax-examples-projection.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Filtragem'
+            - name: 'Exemplos de sintaxe da consulta baseada em método: filtragem'
               href: method-based-query-syntax-examples-filtering.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Ordenando'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Classificação'
               href: method-based-query-syntax-examples-ordering.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Operadores de agregação'
+            - name: 'Exemplos de sintaxe da consulta com base em método: operadores de agregação'
               href: method-based-query-syntax-examples-aggregate-operators.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Particionamento'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Divisão'
               href: method-based-query-syntax-examples-partitioning.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Conversão'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Conversão'
               href: method-based-query-syntax-examples-conversion.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Operadores de junção'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Adição a operadores'
               href: method-based-query-syntax-examples-join-operators.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Operadores de elemento'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Operadores de elemento'
               href: method-based-query-syntax-examples-element-operators.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Agrupamento'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Clustering'
               href: method-based-query-syntax-examples-grouping.md
-            - name: 'Exemplos de sintaxe de consulta baseada em método: Relações de navegação'
+            - name: 'Exemplos de sintaxe da consulta com base em método: Navegando em relações'
               href: method-based-query-syntax-examples-navigating-relationships.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Projeção'
+            - name: 'Exemplos de sintaxe de expressão de consulta: projeção'
               href: query-expression-syntax-examples-projection.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Filtragem'
+            - name: 'Exemplos de sintaxe de expressão de consulta: filtragem'
               href: query-expression-syntax-examples-filtering.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Ordenando'
+            - name: 'Exemplos de sintaxe da expressão de consulta: Classificação'
               href: query-expression-syntax-examples-ordering.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Operadores de agregação'
+            - name: 'Consulte exemplos de sintaxe de expressão: Operadores agregados'
               href: query-expression-syntax-examples-aggregate-operators.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Particionamento'
+            - name: 'Consulte exemplos de sintaxe de expressão: Divisão'
               href: query-expression-syntax-examples-partitioning.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Operadores de junção'
+            - name: 'Exemplos de sintaxe de expressão de consulta: operadores de junção'
               href: query-expression-syntax-examples-join-operators.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Operadores de elemento'
+            - name: 'Exemplos de sintaxe da expressão de consulta: Operadores de elemento'
               href: query-expression-syntax-examples-element-operators.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Agrupamento'
+            - name: 'Exemplos de sintaxe de expressão de consulta: agrupamento'
               href: query-expression-syntax-examples-grouping.md
-            - name: 'Exemplos de sintaxe de expressão de consulta: Relações de navegação'
+            - name: 'Exemplos de sintaxe da expressão de consulta: Navegando em relações'
               href: query-expression-syntax-examples-navigating-relationships.md
         - name: Expressões em consultas LINQ to Entities
           href: expressions-in-linq-to-entities-queries.md
@@ -59,15 +59,15 @@
         - name: Chamando funções em consultas no LINQ to Entities
           href: calling-functions-in-linq-to-entities-queries.md
           items:
-            - name: 'Como: Chamar funções canônicas'
+            - name: 'Como: Funções canônicas de chamada'
               href: how-to-call-canonical-functions.md
-            - name: 'Como: Chamar funções de banco de dados'
+            - name: 'Como: Funções de base de dados de chamada'
               href: how-to-call-database-functions.md
-            - name: 'Como: Chamar funções personalizadas de banco de dados'
+            - name: 'Como: Funções de base de dados personalizados de chamada'
               href: how-to-call-custom-database-functions.md
-            - name: 'Como: Chamar funções definidas por modelo em consultas'
+            - name: 'Como: o chamar funções definidas em consultas'
               href: how-to-call-model-defined-functions-in-queries.md
-            - name: 'Como: Chamar funções definidas por modelo como métodos de objeto'
+            - name: 'Como: o chamar funções definidas como métodos de objeto'
               href: how-to-call-model-defined-functions-as-object-methods.md
         - name: Consultas compiladas (LINQ to Entities)
           href: compiled-queries-linq-to-entities.md
@@ -97,9 +97,9 @@
               href: type-system-entity-sql.md
             - name: Definições de tipo
               href: type-definitions-entity-sql.md
-            - name: Construir tipos
+            - name: Construindo tipos
               href: constructing-types-entity-sql.md
-            - name: Cache de plano de consulta
+            - name: Plano Caching de consulta
               href: query-plan-caching-entity-sql.md
             - name: Namespaces
               href: namespaces-entity-sql.md
@@ -113,7 +113,7 @@
               href: unsupported-expressions-entity-sql.md
             - name: Literais
               href: literals-entity-sql.md
-            - name: Literais nulos e inferência de tipos
+            - name: Literais e inferência de tipos nulos
               href: null-literals-and-type-inference-entity-sql.md
             - name: Conjunto de caracteres de entrada
               href: input-character-set-entity-sql.md
@@ -136,7 +136,7 @@
               href: comparison-semantics-entity-sql.md
             - name: Composta consultas aninhadas Entity SQL
               href: composing-nested-entity-sql-queries.md
-            - name: Tipos estruturados que permitem valor nulo
+            - name: Tipos estruturados anulável
               href: nullable-structured-types-entity-sql.md
         - name: Referência de Entity SQL
           href: entity-sql-reference.md
@@ -159,9 +159,9 @@
               href: and-entity-sql.md
             - name: '|| (OR)'
               href: or-entity-sql.md
-            - name: '! (NOT)'
+            - name: '! (NÃO)'
               href: not-entity-sql.md
-            - name: = (É igual a)
+            - name: = (Igual)
               href: equals-entity-sql.md
             - name: '> (Maior que)'
               href: greater-than-entity-sql.md
@@ -171,9 +171,9 @@
               href: less-than-entity-sql.md
             - name: <= (Menor ou igual a)
               href: less-than-or-equal-to-entity-sql.md
-            - name: '!= (Não é igual a)'
+            - name: '!= (não é igual a)'
               href: not-equal-to-entity-sql.md
-            - name: . (Acesso a membro)
+            - name: . (Member Access)
               href: member-access-entity-sql.md
             - name: '-- (Comentário)'
               href: comment-entity-sql.md
