@@ -1,17 +1,17 @@
 - name: Guia do .NET Framework
   href: index.md
-- name: O Que Há de Novo
+- name: O que há de novo
   href: whats-new/
 - name: Introdução
   href: get-started/
 - name: Guia de instalação
   href: install/
-- name: Guia de Migração
+- name: Guia de migração
   href: migration-guide/
-- name: Guia de Desenvolvimento
+- name: Guia de desenvolvimento
   href: development-guide.md
   items:
-    - name: Domínios do aplicativo e assemblies
+    - name: Domínios de aplicativo e assemblies
       href: app-domains/
     - name: Recursos em aplicativos de área de trabalho
       href: resources/
@@ -20,27 +20,28 @@
     - name: Dados e modelagem
       href: data/
     - name: Aplicativos cliente
-      href: develop-client-apps.md
       items:
+        - name: Visão geral
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
           href: winforms/
-    - name: Aplicativos orientados a serviço com WCF
+    - name: Aplicativos orientados a serviços com WCF
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
-    - name: Aplicativos de Serviço Windows
+    - name: Aplicativos de serviço do Windows
       href: windows-services/
     - name: Aplicativos de 64 bits
       href: 64-bit-apps.md
-    - name: Aplicativos Web com o ASP.NET
+    - name: Aplicativos Web com ASP.NET
       href: develop-web-apps-with-aspnet.md
-    - name: Programação de rede no .NET Framework
+    - name: Programação de rede
       href: network-programming/
-    - name: Configurando aplicativos
+    - name: Configurar aplicativos
       href: configure-apps/
-    - name: Compilando aplicativos com o .NET Nativo
+    - name: Compilar aplicativos com o .NET Nativo
       href: net-native/
     - name: 'Depuração, rastreamento e criação de perfil'
       href: debug-trace-profile/
@@ -52,7 +53,7 @@
       href: reflection-and-codedom/
     - name: MEF (Managed Extensibility Framework)
       href: mef/
-    - name: Interoperação com código não gerenciado
+    - name: Interoperar com código não gerenciado
       href: interop/
     - name: Referência de API não gerenciada
       href: unmanaged-api/
@@ -60,5 +61,5 @@
       href: ../desktop-wpf/xaml-services/
 - name: Ferramentas
   href: tools/
-- name: APIs e Bibliotecas de Classes Adicionais
+- name: Bibliotecas de classes e APIs adicionais
   href: additional-apis/
