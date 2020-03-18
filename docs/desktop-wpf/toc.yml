@@ -18,7 +18,7 @@
       href: fundamentals/xaml-resources-define.md
     - name: Estilos e modelos
       items:
-        - name: Visão geral
+        - name: Visão Geral
           href: fundamentals/styles-templates-overview.md
         - name: Criar e aplicar um estilo
           href: fundamentals/styles-templates-create-apply-style.md

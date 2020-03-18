@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: 4d99d0b6e99a7a9b976cf11832b33ad3bdc6d299
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901587"
 ---
-### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hospedagem: objectpoolprovider removido de dependências WebHostBuilder
+### <a name="hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies"></a>Hospedagem: ObjectPoolProvider removido das dependências do WebHostBuilder
 
-Como parte de fazer ASP.NET Core mais Pay for Play, o `ObjectPoolProvider` foi removido do conjunto principal de dependências. Os componentes específicos que dependem de `ObjectPoolProvider` agora o adicionam.
+Como parte de fazer ASP.NET Core `ObjectPoolProvider` pagar mais pelo jogo, o foi removido do conjunto principal de dependências. Componentes específicos que `ObjectPoolProvider` dependem agora adicionam-no eles mesmos.
 
-Para obter uma discussão, consulte [dotnet/aspnetcore # 5944](https://github.com/dotnet/aspnetcore/issues/5944).
+Para discussão, consulte [dotnet/aspnetcore#5944](https://github.com/dotnet/aspnetcore/issues/5944).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -18,19 +18,19 @@ Para obter uma discussão, consulte [dotnet/aspnetcore # 5944](https://github.co
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`WebHostBuilder` fornece `ObjectPoolProvider` por padrão no contêiner DI.
+`WebHostBuilder`fornece `ObjectPoolProvider` por padrão no recipiente DI.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`WebHostBuilder` não fornece mais `ObjectPoolProvider` por padrão no contêiner DI.
+`WebHostBuilder`não fornece `ObjectPoolProvider` mais por padrão no contêiner DI.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Essa alteração foi feita para fazer ASP.NET Core mais Pay for Play.
+Essa mudança foi feita para fazer ASP.NET Core pagar mais pelo jogo.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se seu componente exigir `ObjectPoolProvider`, ele precisará ser adicionado às suas dependências por meio do `IServiceCollection`.
+Se o `ObjectPoolProvider`seu componente precisar, ele precisa ser `IServiceCollection`adicionado às suas dependências através do .
 
 #### <a name="category"></a>Categoria
 
@@ -38,7 +38,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-{1&gt;Nenhum&lt;1}
+Nenhum
 
 <!-- 
 

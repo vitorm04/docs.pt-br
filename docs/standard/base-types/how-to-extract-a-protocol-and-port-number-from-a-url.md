@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
 ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138728"
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Como extrair um protocolo e um número de porta de uma URL
@@ -34,7 +34,7 @@ O exemplo a seguir extrai um protocolo e um número da porta de uma URL.
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`^`|Comece a correspondência no início da cadeia de caracteres.|  
-|`(?<proto>\w+)`|Corresponde a um ou mais caracteres de palavra. Nomeie esse grupo como `proto`.|  
+|`(?<proto>\w+)`|Fazer a correspondência a um ou mais caracteres de palavra. Nomeie esse grupo como `proto`.|  
 |`://`|Fazer a correspondência de um sinal de dois-pontos seguido por duas barras "/".|  
 |`[^/]+?`|Fazer a correspondência de uma ou mais ocorrências (mas o menor número possível) de qualquer caractere que não seja uma barra "/".|  
 |`(?<port>:\d+)?`|Fazer a correspondência de zero ou uma ocorrência de um sinal de dois-pontos seguido por um ou mais caracteres de dígito. Nomeie esse grupo como `port`.|  
@@ -47,6 +47,6 @@ O exemplo a seguir extrai um protocolo e um número da porta de uma URL.
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

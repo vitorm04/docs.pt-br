@@ -1,17 +1,17 @@
 ---
-title: 'Tutorial: prever os preços usando a regressão'
+title: 'Tutorial: Prever preços usando a regressão'
 description: Este tutorial mostra como criar um modelo de regressão usando do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
 ms.openlocfilehash: 51cef97178c2dbc6a5b572a7045bdad4bc382ba0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78240981"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: prever preços usando regressão com ML.NET
+# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Prever preços usando regressão com ML.NET
 
 Este tutorial mostra como criar um [modelo de regressão](../resources/glossary.md#regression) usando do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 
@@ -25,9 +25,9 @@ Neste tutorial, você aprenderá como:
 > * Avalie o modelo
 > * Usar o modelo para previsões
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho ".NET Core cross-platform development" instalada.
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
@@ -35,15 +35,15 @@ Neste tutorial, você aprenderá como:
 
 1. Crie um diretório chamado *Dados* em seu projeto para armazenar o conjunto de dados e arquivos de modelo.
 
-1. Instale o pacote NuGet **Microsoft.ML**:
+1. Instale o **pacote Microsoft.ML** NuGet:
 
-    No **Gerenciador de Soluções**, clique com o botão direito no projeto e escolha **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia **Procurar**, pesquise por **Microsoft.ML**, selecione o pacote na lista e selecione o botão **Instalar**. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados. Faça o mesmo para o pacote NuGet **Microsoft.ML.FastTree**.
+    No **Gerenciador de Soluções**, clique com o botão direito no projeto e escolha **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia **Procurar**, pesquise por **Microsoft.ML**, selecione o pacote na lista e selecione o botão **Instalar**. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados. Faça o mesmo para o pacote **Microsoft.ML.FastTree** NuGet.
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
-1. Baixe os conjuntos de dados [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) e salve-os na pasta *Data* criada na etapa anterior. Esses conjuntos de dados são usados para treinar o modelo de aprendizado de máquina e, em seguida, avaliar a precisão dele. Esses conjuntos de dados são originalmente do [Conjunto de dados NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+1. Baixe os conjuntos de dados [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) e [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) e salve-os na pasta *Dados* criada na etapa anterior. Esses conjuntos de dados são usados para treinar o modelo de aprendizado de máquina e, em seguida, avaliar a precisão dele. Esses conjuntos de dados são originalmente do [Conjunto de dados NYC TLC Taxi Trip](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse em cada um dos arquivos \*.csv e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
+1. No **Solution Explorer,** clique com \*o botão direito do mouse em cada um dos arquivos .csv e selecione **Propriedades**. Em **Avançado,** altere o valor de **Copiar para Diretório de Saída** para Copiar se mais **novo**.
 
 1. Abra o conjunto de dados **taxi-fare-train.csv** e observe os cabeçalhos de coluna na primeira linha. Dê uma olhada em cada uma das colunas. Compreenda os dados e decida quais colunas são **recursos** e qual é o **rótulo**.
 
@@ -54,7 +54,7 @@ O conjunto de dados fornecido contém as seguintes colunas:
 * **vendor_id:** o ID do taxista é um recurso.
 * **rate_code:** o tipo de tarifa da viagem de táxi é um recurso.
 * **passenger_count:** o número de passageiros na viagem é um recurso.
-* **trip_time_in_secs:** a quantidade de tempo que a viagem levou. Você deseja prever a tarifa da viagem antes de sua conclusão. Nesse momento, você não sabe por quanto tempo levaria a duração. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
+* **trip_time_in_secs:** a quantidade de tempo que a viagem levou. Você deseja prever a tarifa da viagem antes de sua conclusão. Nesse momento, você não sabe quanto tempo a viagem levaria. Portanto, o tempo da viagem não é um recurso e você excluirá essa coluna do modelo.
 * **trip_distance:** a distância da viagem é um recurso.
 * **payment_type:** o método de pagamento (dinheiro ou cartão de crédito) é um recurso.
 * **fare_amount:** a tarifa total de táxi paga é o rótulo.
@@ -75,14 +75,14 @@ Remova a definição de classe existente e adicione o seguinte código, que tem 
 
 `TaxiTrip` é a classe de dados de entrada e tem definições para cada uma das colunas do conjunto de dados. Use o atributo <xref:Microsoft.ML.Data.LoadColumnAttribute> para especificar os índices das colunas de origem no conjunto de dados.
 
-A classe `TaxiTripFarePrediction` representa os resultados previstos. Ele tem um único campo float, `FareAmount`, com um atributo `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> aplicado. No caso da tarefa de regressão, a coluna de **Pontuação** contém valores de rótulo previstos.
+A classe `TaxiTripFarePrediction` representa os resultados previstos. Tem um único campo `FareAmount`flutuante, `Score` <xref:Microsoft.ML.Data.ColumnNameAttribute> com um atributo aplicado. No caso da tarefa de regressão, a coluna **Pontuação** contém valores de rótulo previstos.
 
 > [!NOTE]
 > Use o tipo `float` para representar valores de ponto flutuante nas classes de dados de entrada e previsão.
 
 ### <a name="define-data-and-model-paths"></a>Definir dados e caminhos de modelo
 
-Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*:
+Adicione as seguintes instruções `using` adicionais ao início do arquivo *Program.cs*: 
 
 [!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#1 "Add necessary usings")]
 
@@ -130,11 +130,11 @@ O ML.NET usa a [classe IDataView](xref:Microsoft.ML.IDataView) como uma maneira 
 
 [!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
 
-Como você deseja prever a tarifa da corrida de táxi, a coluna `FareAmount` é a `Label` que você irá prever (a saída do modelo). Use a classe de transformação `CopyColumnsEstimator` para copiar `FareAmount`e adicione o seguinte código:
+Como você quer prever a tarifa `FareAmount` de `Label` viagem de táxi, a coluna é a que você vai prever (a saída do modelo). Use `CopyColumnsEstimator` a classe `FareAmount`de transformação para copiar e adicione o seguinte código:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-O algoritmo que treina o modelo requer recursos **numéricos**, então, é necessário transformar os valores de dados categóricos (`VendorId`, `RateCode` e `PaymentType`) em números (`VendorIdEncoded`, `RateCodeEncoded` e `PaymentTypeEncoded`). Para fazer isso, use a classe de transformação [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer), que atribui valores de chave numérica diferentes para os diferentes valores em cada uma das colunas e adicione o seguinte código:
+O algoritmo que treina o modelo requer características **numéricas,** então`VendorId`você `RateCode`tem `PaymentType`que transformar`VendorIdEncoded`os `RateCodeEncoded`dados `PaymentTypeEncoded`categóricos ( , e ) valores em números ( , , e ). Para fazer isso, use a classe de transformação [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer), que atribui valores de chave numérica diferentes para os diferentes valores em cada uma das colunas e adicione o seguinte código:
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
@@ -245,7 +245,7 @@ Use o `PredictionEngine` para prever a tarifa adicionando o seguinte código a `
 
 [!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
 
-O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
+O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite realizar uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)não é seguro para rosca. É aceitável usar em ambientes de um único fio ou protótipo. Para melhorar o desempenho e a segurança `PredictionEnginePool` dos fios nos [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ambientes de produção, use o serviço, que cria um objeto para uso em toda a sua aplicação. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API web ASP.NET.](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.

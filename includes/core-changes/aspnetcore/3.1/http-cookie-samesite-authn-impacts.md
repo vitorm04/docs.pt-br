@@ -1,140 +1,140 @@
 ---
-ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 3cc07eef109b9096bc5a5fbcd1ea098a23b2155f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901677"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968143"
 ---
-### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: navegador SameSite alterações de impacto na autenticação
+### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: O Navegador SameSite altera a autenticação de impacto
 
-Alguns navegadores, como Chrome e Firefox, fizeram alterações significativas em suas implementações de `SameSite` para cookies. As alterações afetam os cenários de autenticação remota, como OpenID Connect e WS-Federation, que devem ser recusadas com o envio de `SameSite=None`. No entanto, `SameSite=None` quebras no iOS 12 e em algumas versões mais antigas de outros navegadores. O aplicativo precisa farejar essas versões e omitir `SameSite`.
+Alguns navegadores, como Chrome e Firefox, fizeram `SameSite` alterações em suas implementações de cookies. As alterações afetam cenários de autenticação remota, como OpenID Connect `SameSite=None`e WS-Federation, que devem optar pelo envio . No `SameSite=None` entanto, quebra sustam o iOS 12 e algumas versões mais antigas de outros navegadores. O aplicativo precisa farejar essas `SameSite`versões e omitir .
 
-Para obter uma discussão sobre esse problema, consulte [dotnet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
+Para discussão sobre este assunto, consulte [dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
-3,1 visualização 1
+3.1 Pré-visualização 1
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`SameSite` é uma extensão padrão de rascunho 2016 para cookies HTTP. Ele se destina a reduzir a falsificação de solicitação entre sites (CSRF). Isso foi originalmente projetado como um recurso que os servidores optaram por adicionar os novos parâmetros. ASP.NET Core 2,0 adicionou suporte inicial para `SameSite`.
+`SameSite`é uma extensão padrão de rascunho de 2016 para cookies HTTP. Destina-se a mitigar a Falsificação de Solicitações Entre Sites (CSRF). Isso foi originalmente projetado como um recurso que os servidores optariam adicionando os novos parâmetros. ASP.NET Núcleo 2.0 adicionou suporte inicial para `SameSite`.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-O Google propôs um novo padrão de rascunho que não é compatível com versões anteriores. O padrão altera o modo padrão para `Lax` e adiciona uma nova entrada `None` para recusar. `Lax` é suficiente para a maioria dos cookies de aplicativo; no entanto, ele interrompe cenários entre sites como o OpenID Connect e o logon do WS-Federation. A maioria dos logons OAuth não é afetada devido a diferenças em como a solicitação flui. O novo parâmetro `None` causa problemas de compatibilidade com clientes que implementaram o padrão de rascunho anterior (por exemplo, iOS 12). O Chrome 80 incluirá as alterações. Consulte [atualizações do SameSite](https://www.chromium.org/updates/same-site) para a linha do tempo de lançamento do produto Chrome.
+O Google propôs um novo padrão de rascunho que não é retrocompatível. O padrão altera o `Lax` modo padrão `None` e adiciona uma nova entrada para desativar. `Lax` basta para a maioria dos cookies de aplicativos; no entanto, ele quebra cenários entre sites como OpenID Connect e ws-federation login. A maioria dos logins OAuth não são afetados por causa de diferenças na forma como a solicitação flui. O `None` novo parâmetro causa problemas de compatibilidade com clientes que implementaram o padrão de rascunho anterior (por exemplo, o iOS 12). O Chrome 80 incluirá as alterações. Consulte [as atualizações do mesmosite](https://www.chromium.org/updates/same-site) para a linha do tempo de lançamento do produto Chrome.
 
-ASP.NET Core 3,1 foi atualizado para implementar o novo comportamento de `SameSite`. A atualização redefine o comportamento de `SameSiteMode.None` para emitir `SameSite=None` e adiciona um novo valor `SameSiteMode.Unspecified` para omitir o atributo `SameSite`. Todas as APIs de cookie agora são padronizadas para `Unspecified`, embora alguns componentes que usam os cookies definam valores mais específicos para seus cenários, como a correlação do OpenID Connect e os cookies de nonce.
+ASP.NET O Core 3.1 foi `SameSite` atualizado para implementar o novo comportamento. A atualização redefine o `SameSiteMode.None` comportamento `SameSite=None` de emitir `SameSiteMode.Unspecified` e adiciona `SameSite` um novo valor para omitir o atributo. Todas as APIs `Unspecified`de cookies agora são padrão, embora alguns componentes que usam cookies definam valores mais específicos para seus cenários, como a correlação OpenID Connect e os cookies nonce.
 
-Para outras alterações recentes nessa área, consulte [http: alguns padrões de SameSite de cookie foram alterados para nenhum](/dotnet/core/compatibility/2.2-3.0#http-some-cookie-samesite-defaults-changed-to-none). No ASP.NET Core 3,0, a maioria dos padrões foi alterada de <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> para <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> (mas ainda usando o padrão anterior).
+Para outras alterações recentes nesta área, consulte [HTTP: Alguns padrões do Cookie SameSite alterados para Nenhum](/dotnet/core/compatibility/2.2-3.0#http-some-cookie-samesite-defaults-changed-to-none). Em ASP.NET Núcleo 3.0, a <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> maioria <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> dos padrões foi alterada de (mas ainda usando o padrão anterior).
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Alterações de navegador e especificação, conforme descrito no texto anterior.
+Alterações de navegador e especificação conforme descrito no texto anterior.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Os aplicativos que interagem com sites remotos, como por logon de terceiros, precisam:
+Aplicativos que interagem com sites remotos, como por meio de login de terceiros, precisam:
 
 * Teste esses cenários em vários navegadores.
-* Aplique o navegador de política de cookie a mitigação de detecção discutida em [suporte a navegadores mais antigos](#support-older-browsers).
+* Aplique a mitigação de sniffing do navegador de política de cookies discutida no [suporte a navegadores mais antigos](#support-older-browsers).
 
-Para testar e obter instruções de detecção de navegador, consulte a seção a seguir.
+Para obter instruções de teste e de farejamento do navegador, consulte a seção a seguir.
 
 ##### <a name="determine-if-youre-affected"></a>Determine se você é afetado
 
-Teste seu aplicativo Web usando uma versão do cliente que pode optar pelo novo comportamento. O Chrome, o Firefox e o Microsoft Edge Chromium têm novos sinalizadores de recurso de aceitação que podem ser usados para teste. Verifique se seu aplicativo é compatível com versões mais antigas do cliente depois de aplicar os patches, especialmente o Safari. Para obter mais informações, consulte [suporte a navegadores mais antigos](#support-older-browsers).
+Teste seu aplicativo web usando uma versão cliente que pode optar pelo novo comportamento. Chrome, Firefox e Microsoft Edge Chromium têm novos sinalizadores de recurso opt-in que podem ser usados para testes. Verifique se seu aplicativo é compatível com versões mais antigas do cliente depois de aplicar os patches, especialmente o Safari. Para obter mais informações, consulte [Suporte a navegadores mais antigos](#support-older-browsers).
 
 ##### <a name="chrome"></a>Chrome
 
-O Chrome 78 e posterior geram resultados de teste enganosos. Essas versões têm uma mitigação temporária em vigor e permitem cookies com menos de dois minutos de idade. Com os sinalizadores de teste apropriados habilitados, o Chrome 76 e o 77 geram resultados mais precisos. Para testar o novo comportamento, alterne `chrome://flags/#same-site-by-default-cookies` para habilitado. O Chrome 75 e versões anteriores são relatados para falha com a nova configuração de `None`. Para obter mais informações, consulte [suporte a navegadores mais antigos](#support-older-browsers).
+O Chrome 78 e posteriormente produzem resultados de teste enganosos. Essas versões têm uma atenuação temporária e permitem cookies com menos de dois minutos de idade. Com os sinalizadores de teste apropriados ativados, os Chrome 76 e 77 produzem resultados mais precisos. Para testar o novo comportamento, alterne `chrome://flags/#same-site-by-default-cookies` para ativado. O Chrome 75 e anteriormente `None` são relatados como falha com a nova configuração. Para obter mais informações, consulte [Suporte a navegadores mais antigos](#support-older-browsers).
 
-O Google não disponibiliza versões mais antigas do Chrome. No entanto, você pode baixar versões mais antigas do Chromium, o que será suficiente para teste. Siga as instruções em [baixar o Chromium](https://www.chromium.org/getting-involved/download-chromium).
+O Google não disponibiliza versões mais antigas do Chrome. Você pode, no entanto, baixar versões mais antigas do Chromium, o que será suficiente para testes. Siga as instruções em [Download Chromium](https://www.chromium.org/getting-involved/download-chromium).
 
-* [Chromium 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
-* [Chromium 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
+* [Cromo 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
+* [Cromo 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 
 ##### <a name="safari"></a>Safari
 
-O Safari 12 implementou estritamente o rascunho anterior e falha se ele vê o novo valor de `None` em cookies. Isso deve ser evitado por meio do código de detecção do navegador mostrado em [suporte a navegadores mais antigos](#support-older-browsers). Certifique-se de testar o Safari 12 e 13, bem como OS logons de estilo do sistema operacional baseados em WebKit usando a MSAL (biblioteca de autenticação da Microsoft), a ADAL (Biblioteca de Autenticação do Active Directory) ou qualquer biblioteca que você esteja usando. O problema depende da versão subjacente do sistema operacional. O OSX Mojave 10,14 e o iOS 12 são conhecidos por ter problemas de compatibilidade com o novo comportamento. A atualização para OSX Catalina 10,15 ou iOS 13 corrige o problema. No momento, o Safari não tem um sinalizador de aceitação para testar o novo comportamento de especificação.
+O Safari 12 implementou estritamente o rascunho `None` anterior e falha se vir o novo valor em cookies. Isso deve ser evitado através do código de farejador do navegador mostrado no [Suporte a navegadores mais antigos](#support-older-browsers). Certifique-se de testar o Safari 12 e 13, bem como logins baseados no WebKit, no estilo sO, usando a Microsoft Authentication Library (MSAL), a Active Directory Authentication Library (ADAL) ou qualquer biblioteca que você esteja usando. O problema depende da versão do sistema operacional subjacente. Sabe-se que os OSX Mojave 10.14 e iOS 12 têm problemas de compatibilidade com o novo comportamento. A atualização para o OSX Catalina 10.15 ou iOS 13 corrige o problema. Atualmente, o Safari não tem um sinalizador de opt-in para testar o novo comportamento de especificação.
 
 ##### <a name="firefox"></a>Firefox
 
-O suporte do Firefox para o novo padrão pode ser testado na versão 68 e posterior, optando na página de `about:config` com o sinalizador de recurso `network.cookie.sameSite.laxByDefault`. Nenhum problema de compatibilidade foi relatado em versões mais antigas do Firefox.
+O suporte ao Firefox para o novo padrão pode ser testado `about:config` na versão `network.cookie.sameSite.laxByDefault`68 e posteriormente optando na página com o sinalizador de recurso . Nenhum problema de compatibilidade foi relatado em versões mais antigas do Firefox.
 
 ##### <a name="microsoft-edge"></a>Microsoft Edge
 
-Embora o Microsoft Edge dê suporte ao antigo `SameSite` Standard, a partir da versão 44, não havia nenhum problema de compatibilidade com o novo padrão.
+Embora o Microsoft Edge `SameSite` suporte o antigo padrão, a partir da versão 44 não teve nenhum problema de compatibilidade com o novo padrão.
 
-##### <a name="microsoft-edge-chromium"></a>Chromium do Microsoft Edge
+##### <a name="microsoft-edge-chromium"></a>Cromo Da Borda da Microsoft
 
-O sinalizador de recurso é `edge://flags/#same-site-by-default-cookies`. Nenhum problema de compatibilidade foi observado durante o teste com o Microsoft Edge Chromium 78.
+A bandeira `edge://flags/#same-site-by-default-cookies`de recurso é . Não foram observados problemas de compatibilidade durante os testes com o Microsoft Edge Chromium 78.
 
-##### <a name="electron"></a>Digital
+##### <a name="electron"></a>Elétron
 
-As versões do at-SS são versões mais antigas do Chromium. Por exemplo, a versão do at-SS de uso da Microsoft Teams é Chromium 66, que exibe o comportamento mais antigo. Execute seus próprios testes de compatibilidade com a versão do uso de digital que seu produto usa. Para obter mais informações, consulte [suporte a navegadores mais antigos](#support-older-browsers).
+Versões de Electron incluem versões mais antigas do Chromium. Por exemplo, a versão do Electron usada pelo Microsoft Teams é o Chromium 66, que exibe o comportamento mais antigo. Realize seus próprios testes de compatibilidade com a versão da Electron que seu produto usa. Para obter mais informações, consulte [Suporte a navegadores mais antigos](#support-older-browsers).
 
 ##### <a name="support-older-browsers"></a>Suporte a navegadores mais antigos
 
-A 2016 `SameSite` padrão exigiu que valores desconhecidos sejam tratados como valores de `SameSite=Strict`. Consequentemente, todos os navegadores mais antigos que dão suporte ao padrão original podem ser interrompidos quando veem uma propriedade `SameSite` com um valor de `None`. Os aplicativos Web devem implementar a detecção de navegador se pretenderem dar suporte a esses navegadores antigos. ASP.NET Core não implementa a detecção de navegador para você porque `User-Agent` valores de cabeçalho de solicitação são altamente instáveis e mudam semanalmente. Em vez disso, um ponto de extensão na política de cookie permite que você adicione uma lógica específica de `User-Agent`.
+A norma de `SameSite` 2016 determinava `SameSite=Strict` que valores desconhecidos fossem tratados como valores. Consequentemente, todos os navegadores mais antigos que `SameSite` suportam o `None`padrão original podem quebrar quando virem uma propriedade com um valor de . Os aplicativos da Web devem implementar o sniffing do navegador se eles pretendem suportar esses navegadores antigos. ASP.NET Core não implementa o sniffing do navegador para você porque `User-Agent` os valores de cabeçalho de solicitação são altamente instáveis e mudam semanalmente. Em vez disso, um ponto de `User-Agent`extensão na política de cookies permite adicionar uma lógica específica.
 
-No *Startup.cs*, adicione o seguinte código:
+Em *Startup.cs,* adicione o seguinte código:
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)
 {
-    if (options.SameSite == SameSiteMode.None) 
-    { 
+    if (options.SameSite == SameSiteMode.None)
+    {
         var userAgent = httpContext.Request.Headers["User-Agent"].ToString();
-        // TODO: Use your User Agent library of choice here. 
-        if (/* UserAgent doesn't support new behavior */) 
-        { 
+        // TODO: Use your User Agent library of choice here.
+        if (/* UserAgent doesn't support new behavior */)
+        {
             options.SameSite = SameSiteMode.Unspecified;
         }
     }
 }
 
-public void ConfigureServices(IServiceCollection services) 
-{ 
-    services.Configure<CookiePolicyOptions>(options => 
-    { 
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<CookiePolicyOptions>(options =>
+    {
         options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
         options.OnAppendCookie = cookieContext =>
             CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
         options.OnDeleteCookie = cookieContext =>
             CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-    }); 
-} 
+    });
+}
 
-public void Configure(IApplicationBuilder app) 
-{ 
+public void Configure(IApplicationBuilder app)
+{
     // Before UseAuthentication or anything else that writes cookies.
     app.UseCookiePolicy();
 
-    app.UseAuthentication(); 
+    app.UseAuthentication();
     // code omitted for brevity
 }
 ```
 
-##### <a name="opt-out-switches"></a>Opções de recusa
+##### <a name="opt-out-switches"></a>Interruptores de exclusão
 
-A opção de compatibilidade `Microsoft.AspNetCore.SuppressSameSiteNone` permite recusar temporariamente o novo comportamento de cookie ASP.NET Core. Adicione o JSON a seguir a um arquivo *runtimeconfig. Template. JSON* em seu projeto:
+O `Microsoft.AspNetCore.SuppressSameSiteNone` switch de compatibilidade permite que você opte temporariamente pelo novo comportamento de cookies ASP.NET Core. Adicione o JSON a seguir a um arquivo *runtimeconfig.template.json* em seu projeto:
 
 ```json
-{ 
-  "configProperties": { 
-    "Microsoft.AspNetCore.SuppressSameSiteNone": "true" 
-  } 
+{
+  "configProperties": {
+    "Microsoft.AspNetCore.SuppressSameSiteNone": "true"
+  }
 }
 ```
 
 ##### <a name="other-versions"></a>Outras versões
 
-Os patches de `SameSite` relacionados estarão disponíveis para:
+Patches `SameSite` relacionados estão próximos para:
 
-* ASP.NET Core 2,1, 2,2 e 3,0
-* `Microsoft.Owin` 4,1
-* `System.Web` (para .NET Framework 4.7.2 e posterior)
+* ASP.NET Core 2.1, 2.2 e 3.0
+* `Microsoft.Owin`4.1
+* `System.Web`(para .NET Framework 4.7.2 e posteriores)
 
 #### <a name="category"></a>Categoria
 

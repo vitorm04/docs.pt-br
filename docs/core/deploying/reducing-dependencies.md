@@ -4,10 +4,10 @@ description: Reduza as dependências do pacote ao criar bibliotecas com base no 
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740832"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
@@ -16,13 +16,13 @@ Este artigo aborda o que você precisa saber sobre como reduzir suas dependênci
 
 ## <a name="why-its-important"></a>Por que isso é importante
 
-O .NET Core é um produto composto por pacotes NuGet.  Um pacote essencial é o [metapacote .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que é um pacote NuGet composto por outros pacotes. Ele fornece o conjunto de pacotes que têm garantia de trabalho em várias implementações do .NET, como .NET Framework, .NET Core e Xamarin/mono.
+O .NET Core é um produto composto por pacotes NuGet.  Um pacote essencial é o [metapacote .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que é um pacote NuGet composto por outros pacotes. Ele fornece o conjunto de pacotes que são garantidos para trabalhar em várias implementações .NET, como .NET Framework, .NET Core e Xamarin/Mono.
 
 No entanto, há uma boa chance de que a biblioteca não use todos os pacotes que ele contém.  Ao criar uma biblioteca e distribuí-la com o NuGet, é uma melhor prática “cortar” suas dependências para deixar apenas os pacotes que realmente serão usados.  Isso resulta em uma menor superfície geral de pacotes NuGet.
 
 ## <a name="how-to-do-it"></a>Como fazer isso
 
-Atualmente, não há nenhum comando `dotnet` oficial que corte as referências do pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
+Atualmente, não há `dotnet` um comando oficial que corte as referências do pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
 
 1. Faça referência à `NETStandard.Library` versão `1.6.0` em uma seção `dependencies` de seu `project.json`.
 2. Restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)) por meio da linha de comando.

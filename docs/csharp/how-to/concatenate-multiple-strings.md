@@ -1,5 +1,5 @@
 ---
-title: Como concatenar várias cadeias deC# caracteres (guia)
+title: Como concatenar várias strings (Guia C#)
 description: Há várias maneiras para concatenar cadeias de caracteres em C#. Conheça as opções e os motivos subjacentes por trás de diferentes escolhas.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713894"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Como concatenar várias cadeias deC# caracteres (guia)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Como concatenar várias strings (Guia C#)
 
 *Concatenação* é o processo de acrescentar uma cadeia de caracteres ao final de outra cadeia de caracteres. Você concatena cadeias de caracteres usando o operador `+`. Para literais de cadeia de caracteres e constantes de cadeia de caracteres, a concatenação ocorre em tempo de compilação; não ocorre nenhuma concatenação de tempo de execução. Para variáveis de cadeia de caracteres, a concatenação ocorre somente em tempo de execução.
 
@@ -24,7 +24,7 @@ O exemplo a seguir usa a concatenação para dividir um literal de cadeia de car
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
 
-Para concatenar variáveis de cadeia de caracteres, você pode usar os operadores `+` ou `+=`, a [interpolação de cadeia de caracteres](../language-reference/tokens/interpolated.md) ou os métodos <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. O operador `+` é fácil de usar e torna o código intuitivo. Mesmo ao usar vários operadores `+` em uma instrução, o conteúdo da cadeia de caracteres será copiado apenas uma vez. O código a seguir mostra dois exemplos de como usar os operadores `+` e `+=` para concatenar cadeias de caracteres:
+Para concatenar variáveis de seqüência, você pode usar <xref:System.String.Format%2A?displayProperty=nameWithType> <xref:System.String.Concat%2A?displayProperty=nameWithType>os <xref:System.String.Join%2A?displayProperty=nameWithType> `+` ou `+=` operadores, [interpolação de cordas](../language-reference/tokens/interpolated.md) ou os métodos ou <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> métodos. O operador `+` é fácil de usar e torna o código intuitivo. Mesmo ao usar vários operadores `+` em uma instrução, o conteúdo da cadeia de caracteres será copiado apenas uma vez. O código a seguir mostra dois exemplos de como usar os operadores `+` e `+=` para concatenar cadeias de caracteres:
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -41,7 +41,7 @@ Em outros casos, você pode combinar cadeias de caracteres em um loop em que voc
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-Você pode ler mais sobre os [motivos para escolher a concatenação de cadeia de caracteres ou a classe `StringBuilder`](xref:System.Text.StringBuilder#StringAndSB).
+Você pode ler mais sobre as [razões `StringBuilder` para escolher a concatenação de cordas ou a classe](xref:System.Text.StringBuilder#StringAndSB).
 
 Outra opção para unir cadeias de caracteres de uma coleção é usar o método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use o método <xref:System.String.Join%2A?displayProperty=nameWithType> se desejar separar as cadeias de caracteres de origem por um delimitador. O código a seguir combina uma matriz de palavras usando os dois métodos:
 
@@ -51,11 +51,11 @@ Por fim, você pode usar [LINQ](../programming-guide/concepts/linq/index.md) e o
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-Você pode experimentar estes exemplos examinando o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>
-- [Guia de Programação em C#](../programming-guide/index.md)
-- [Cadeias de Caracteres](../programming-guide/strings/index.md)
+- [C# Guia de Programação](../programming-guide/index.md)
+- [Cadeias de caracteres](../programming-guide/strings/index.md)

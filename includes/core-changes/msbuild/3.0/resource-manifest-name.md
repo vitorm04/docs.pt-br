@@ -1,26 +1,26 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451871"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968253"
 ---
-### <a name="resource-manifest-file-names"></a>Nomes de arquivo de manifesto de recurso
+### <a name="resource-manifest-file-names"></a>Nomes de arquivos de manifesto de recursos
 
-A partir do .NET Core 3,0, o nome do arquivo de manifesto do recurso gerado foi alterado.
+A partir do .NET Core 3.0, o nome do arquivo de manifesto de recurso gerado foi alterado.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 3.0
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-Antes do .NET Core 3,0, quando os metadados do [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) eram definidos para um arquivo de recurso ( *. resx*) no arquivo de projeto do MSBuild, o nome do manifesto gerado era *namespace. ClassName. Resources*. Quando [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) não foi definido, o nome de manifesto gerado era *namespace. ClassName. FolderPathRelativeToRoot. Culture. Resources*.
+Antes do .NET Core 3.0, quando [dependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) metadata foi definido para um arquivo de recurso *(.resx)* no arquivo do projeto MSBuild, o nome do manifesto gerado era *Namespace.Classname.resources*. Quando [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) não foi definido, o nome do manifesto gerado era *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.
 
-A partir do .NET Core 3,0, quando um arquivo *. resx* é colocado com um arquivo de origem com o mesmo nome, por exemplo, em aplicativos Windows Forms, o nome do manifesto do recurso é gerado a partir do nome completo do primeiro tipo no arquivo de origem. Por exemplo, se *Type.cs* estiver colocalizado com *Type. resx*, o nome de manifesto gerado será *namespace. ClassName. Resources*. No entanto, se você modificar qualquer um dos atributos na propriedade `EmbeddedResource` para o arquivo *. resx* , o nome do arquivo de manifesto gerado poderá ser diferente:
+A partir do .NET Core 3.0, quando um arquivo *.resx* é localizado com um arquivo de origem de mesmo nome, por exemplo, nos aplicativos Do Windows Forms, o nome do manifesto de recursos é gerado a partir do nome completo do primeiro tipo no arquivo de origem. Por exemplo, se *Type.cs* for localizado com *Type.resx,* o nome do manifesto gerado é *Namespace.Classname.resources*. No entanto, se você modificar `EmbeddedResource` qualquer um dos atributos na propriedade para o arquivo *.resx,* o nome do arquivo manifesto gerado pode ser diferente:
 
-- Se o atributo `LogicalName` na propriedade `EmbeddedResource` for definido, esse valor será usado como o nome do arquivo de manifesto do recurso.
+- Se `LogicalName` o atributo na `EmbeddedResource` propriedade for definido, esse valor será usado como o nome do arquivo manifesto de recursos.
 
   Exemplos:
 
@@ -30,9 +30,9 @@ A partir do .NET Core 3,0, quando um arquivo *. resx* é colocado com um arquivo
   <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
   ```
 
-  **Nome do arquivo de manifesto de recurso gerado**: *somename. Resources* (independentemente do nome do arquivo *. resx* ou da cultura ou de qualquer outro metadado).
+  **Nome do arquivo de manifesto de recursos gerado**: *SomeName.resources* (independentemente do nome ou cultura do arquivo *.resx* ou qualquer outro metadados).
 
-- Se `LogicalName` não estiver definido, mas o atributo `ManifestResourceName` na propriedade `EmbeddedResource` for definido, seu valor, combinado com a extensão de arquivo *. Resources*, será usado como o nome do arquivo de manifesto de recurso.
+- Se `LogicalName` não for definido, mas o atributo `ManifestResourceName` na `EmbeddedResource` propriedade for definido, seu valor, combinado com a extensão de arquivo *.resources,* é usado como o nome do arquivo manifesto de recursos.
 
   Exemplos:
 
@@ -42,9 +42,9 @@ A partir do .NET Core 3,0, quando um arquivo *. resx* é colocado com um arquivo
   <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
   ```
 
-  **Nome do arquivo de manifesto de recurso gerado**: *somename. Resources* ou *somename.fr-fr. Resources*.
+  **Nome do arquivo de manifesto de recursos gerado:** *SomeName.resources* ou *SomeName.fr-FR.resources*.
 
-- Se as regras anteriores não se aplicarem e o atributo `DependentUpon` no elemento `EmbeddedResource` for definido como um arquivo de origem, o nome do tipo da primeira classe no arquivo de origem será usado no nome do arquivo de manifesto do recurso. Mais especificamente, o nome de arquivo gerado é *namespace. Classname\[. Culture]. Resources*.
+- Se as regras anteriores não `DependentUpon` se aplicarem e o atributo no `EmbeddedResource` elemento for definido como um arquivo de origem, o nome de tipo da primeira classe no arquivo de origem será usado no nome do arquivo manifesto de recursos. Mais especificamente, o nome do arquivo gerado é *\[Namespace.Classname . Cultura].recursos*.
 
   Exemplos:
 
@@ -54,32 +54,32 @@ A partir do .NET Core 3,0, quando um arquivo *. resx* é colocado com um arquivo
   <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
   ```
 
-  **Nome do arquivo de manifesto de recurso gerado**: *namespace. ClassName. Resources* ou *namespace.ClassName.fr-fr. Resources* (em que `Namespace.Classname` é o nome da primeira classe em *myTypes.cs*).
+  **Nomea** *namespace.classname.resources* ou *recursos Namespace.Classname.fr-FR.(onde* `Namespace.Classname` está o nome da primeira classe em *MyTypes.cs*).
 
-- Se as regras anteriores não se aplicarem, `EmbeddedResourceUseDependentUponConvention` é `true` (o padrão para .NET Core) e há um arquivo de origem colocalizado com um arquivo *. resx* que tem o mesmo nome de arquivo base, o arquivo *. resx* é tornado dependente do arquivo de origem correspondente e o nome gerado é o mesmo da regra anterior. Essa é a regra de "configurações padrão" para projetos do .NET Core.
+- Se as regras anteriores `EmbeddedResourceUseDependentUponConvention` não `true` se aplicarem, é (o padrão para .NET Core), e há um arquivo de origem localizado com um arquivo *.resx* que tem o mesmo nome de arquivo base, o arquivo *.resx* é feito dependendo do arquivo de origem correspondente, e o nome gerado é o mesmo que na regra anterior. Esta é a regra "configurações padrão" para projetos .NET Core.
   
   Exemplos:
   
-  Os arquivos *myTypes.cs* e *myTypes. resx* ou *myTypes.fr-fr. resx* existem na mesma pasta.
+  Os *arquivos MyTypes.cs* e *MyTypes.resx* ou *MyTypes.fr-FR.resx* existem na mesma pasta.
   
-  **Nome do arquivo de manifesto de recurso gerado**: *namespace. ClassName. Resources* ou *namespace.ClassName.fr-fr. Resources* (em que `Namespace.Classname` é o nome da primeira classe em *myTypes.cs*).
-    
-- Se nenhuma das regras anteriores se aplicar, o nome do arquivo de manifesto de recurso gerado será *RootNamespace. RelativePathWithDotsForSlashes.\[Culture.] recursos*do. O caminho relativo é o valor do atributo `Link` do elemento `EmbeddedResource` se ele estiver definido. Caso contrário, o caminho relativo é o valor do atributo `Identity` do elemento `EmbeddedResource`. No Visual Studio, esse é o caminho da raiz do projeto para o arquivo em Gerenciador de Soluções.
+  **Nomea** *namespace.classname.resources* ou *recursos Namespace.Classname.fr-FR.(onde* `Namespace.Classname` está o nome da primeira classe em *MyTypes.cs*).
+
+- Se nenhuma das regras anteriores se aplicar, o nome do arquivo de manifesto de recurso gerado é *RootNamespace.RelativePathWithDotsForSlashes.\[ Cultura.] recursos*. O caminho relativo é `Link` o `EmbeddedResource` valor do atributo do elemento se ele estiver definido. Caso contrário, o caminho relativo `Identity` é `EmbeddedResource` o valor do atributo do elemento. No Visual Studio, este é o caminho da raiz do projeto para o arquivo no Solution Explorer.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você não estiver satisfeito com os nomes de manifesto gerados, poderá:
+Se você não está satisfeito com os nomes manifestos gerados, você pode:
 
-- Modifique os metadados do arquivo de recursos de acordo com uma das regras de nomenclatura descritas anteriormente.
+- Modifique os metadados do arquivo de recursos de acordo com uma das regras de nomeação descritas anteriormente.
 
-- Defina `EmbeddedResourceUseDependentUponConvention` para `false` no arquivo de projeto para recusar totalmente a nova Convenção:
+- `EmbeddedResourceUseDependentUponConvention` Defina `false` em seu arquivo de projeto para desativar totalmente a nova convenção:
 
    ```xml
    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
    ```
 
    > [!NOTE]
-   > Se os atributos `LogicalName` ou `ManifestResourceName` estiverem presentes, seus valores ainda serão usados para o nome de arquivo gerado.
+   > Se `LogicalName` os `ManifestResourceName` atributos estiverem presentes, seus valores ainda serão usados para o nome do arquivo gerado.
 
 #### <a name="category"></a>Categoria
 

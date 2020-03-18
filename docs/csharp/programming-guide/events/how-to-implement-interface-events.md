@@ -1,18 +1,18 @@
 ---
-title: Como implementar eventos de interface – C# guia de programação
+title: Como implementar eventos de interface - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712332"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167473"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (C# guia de programação)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (C# Programming Guide)
 Um [interface](../../language-reference/keywords/interface.md) pode declarar uma [evento](../../language-reference/keywords/event.md). O exemplo a seguir mostra como implementar eventos de interface em uma classe. Basicamente, as regras são as mesmas aplicadas à implementação de qualquer método ou propriedade de interface.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Implementar eventos de interface em uma classe  
@@ -26,7 +26,7 @@ namespace ImplementInterfaceEvents
     {  
         event EventHandler ShapeChanged;  
     }  
-    public class MyEventArgs : EventArgs   
+    public class MyEventArgs : EventArgs
     {  
         // class members  
     }  
@@ -39,7 +39,7 @@ namespace ImplementInterfaceEvents
 
             OnShapeChanged(new MyEventArgs(/*arguments*/));  
 
-            // or do something here after the event.   
+            // or do something here after the event.
         }  
         protected virtual void OnShapeChanged(MyEventArgs e)  
         {  
@@ -57,10 +57,10 @@ Ao fornecer acessadores próprios, é possível especificar se os dois eventos s
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Eventos](./index.md)
-- [Delegados](../delegates/index.md)
-- [Implementação de interface explícita](../interfaces/explicit-interface-implementation.md)
-- [Como gerar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)
+- [Delega](../delegates/index.md)
+- [Implementação explícita da interface](../interfaces/explicit-interface-implementation.md)
+- [Como acionar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)

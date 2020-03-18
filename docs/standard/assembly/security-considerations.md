@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972304"
 ---
 # <a name="assembly-security-considerations"></a>Considerações sobre a segurança do assembly
@@ -29,7 +29,7 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
 - A evidência de entrada é mesclada com a evidência coletada pelo carregador para criar um conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load**, **Assembly.LoadFrom** e **Activator.CreateInstance**.  
   
-- A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()** .  
+- A evidência de entrada é usada inalterada como o conjunto final de evidências usado na resolução da política. Entre os métodos que usam essa semântica estão **Assembly.Load(byte[])** e **AppDomain.DefineDynamicAssembly()**.  
   
   Permissões opcionais podem ser concedidas pelo conjunto de [políticas de segurança](../../framework/misc/code-access-security-basics.md) no computador em que o assembly será executado. Se quiser que o código identifique todas as exceções de segurança em potencial, você poderá seguir um destes procedimentos:  
   
@@ -42,7 +42,7 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
  No momento do carregamento, a evidência do assembly é usada como entrada para uma política de segurança. A política de segurança é estabelecida pela empresa e pelo administrador do computador, bem como por configurações de política do usuário e determina o conjunto de permissões concedido a todo o código gerenciado quando executado. A política de segurança pode ser estabelecida para o editor do assembly (se ele tiver uma assinatura gerada por uma ferramenta de assinatura), para o site e a zona (em termos do Internet Explorer) de onde o assembly foi baixado, ou para o nome forte do assembly. Por exemplo, um administrador de computador pode estabelecer uma política de segurança que permite que todo código baixado de um site e assinado por uma determinada empresa de software acesse um banco de dados em um computador, mas não dê acesso para gravar no disco do computador.  
   
-## <a name="strong-named-assemblies-and-signing-tools"></a>Assemblies de nome forte e ferramentas de assinatura  
+## <a name="strong-named-assemblies-and-signing-tools"></a>Assembléias com nomes fortes e ferramentas de assinatura  
 
  > [!WARNING]
  > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
@@ -60,8 +60,8 @@ Ao criar um assembly, você pode especificar um conjunto de permissões que o as
   
  Como a nomenclatura forte e a assinatura usando o [SignTool.exe (Ferramenta de assinatura)](../../framework/tools/signtool-exe.md) garantem integridade, você pode basear a política de segurança de acesso a códigos nessas duas formas de evidência do assembly. Nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md) garantem a integridade por meio de certificados e assinaturas digitais. Todas as tecnologias mencionadas — verificação de hash, nomenclatura forte e assinatura usando o [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md) — funcionam juntas para garantir que o assembly não tenha sido alterado de forma alguma.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Assemblies de nome forte](strong-named.md)
+- [Assembléias com nomes fortes](strong-named.md)
 - [Assemblies no .NET](index.md)
 - [SignTool.exe (Ferramenta de Assinatura)](../../framework/tools/signtool-exe.md)

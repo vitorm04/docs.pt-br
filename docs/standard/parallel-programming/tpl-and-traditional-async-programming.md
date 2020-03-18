@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139942"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
@@ -117,6 +117,6 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
 ## <a name="using-the-streamextensions-sample-code"></a>Usando o Código de Exemplo StreamExtensions  
  O arquivo Streamextensions.cs, em [Amostras para programação paralela com o .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples), contém várias implementações de referência que usam objetos de Tarefa para arquivos assíncronos e E/S de rede.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

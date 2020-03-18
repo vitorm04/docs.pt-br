@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106586"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
@@ -140,8 +140,8 @@ A estrutura <xref:System.Threading.SpinWait?displayProperty=nameWithType> oferec
 
 Para obter mais informações, veja o artigo [SpinWait](spinwait.md) e a referência da API <xref:System.Threading.SpinWait>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Coleções thread-safe](../collections/thread-safe/index.md)
+- [Coleções seguras para segmentos](../collections/thread-safe/index.md)
 - [Objetos e recursos de threading](threading-objects-and-features.md)

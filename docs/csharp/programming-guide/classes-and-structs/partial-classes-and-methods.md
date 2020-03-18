@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673349"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399815"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 
@@ -92,13 +92,13 @@ Há várias regras para seguir quando você está trabalhando com definições d
 
   - [público](../../language-reference/keywords/public.md)
 
-  - [private](../../language-reference/keywords/private.md)
+  - [Privada](../../language-reference/keywords/private.md)
 
-  - [protected](../../language-reference/keywords/protected.md)
+  - [Protegido](../../language-reference/keywords/protected.md)
 
-  - [internal](../../language-reference/keywords/internal.md)
+  - [Interno](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../language-reference/keywords/abstract.md)
+  - [Abstrata](../../language-reference/keywords/abstract.md)
 
   - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -112,7 +112,7 @@ Para obter mais informações, consulte [Restrições a parâmetros de tipo](../
 
 ## <a name="example-1"></a>Exemplo 1
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarados em uma definição de classe parcial e o membro, `PrintCoords`, é declarado em outra definição de classe parcial.
 
@@ -122,7 +122,7 @@ No exemplo a seguir, os campos e o construtor da classe, `Coords`, são declarad
 
 ## <a name="example-2"></a>Exemplo 2
 
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 O exemplo a seguir mostra que você também pode desenvolver interfaces e structs parciais.
 
@@ -171,8 +171,8 @@ Para obter mais informações, veja [Tipos parciais](~/_csharplang/spec/classes.
 
 ## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Classes](./classes.md)
 - [Tipos de estrutura](../../language-reference/builtin-types/struct.md)
 - [Interfaces](../interfaces/index.md)
-- [(partial (tipo)](../../language-reference/keywords/partial-type.md)
+- [parcial (Tipo)](../../language-reference/keywords/partial-type.md)

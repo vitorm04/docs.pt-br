@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158162"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Padrão assíncrono baseado em tarefa (TAP)
@@ -189,7 +189,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Title|DESCRIÇÃO|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Padrões de programação assíncrona](../../../docs/standard/asynchronous-programming-patterns/index.md)|Apresenta os três padrões para execução de operações assíncronas: TAP (Padrão Assíncrono Baseado em Tarefas), APM (Modelo de Programação Assíncrona) e EAP (Padrão Assíncrono Baseado em Eventos).|  
 |[Implementando o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Descreve como implementar o TAP de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação de compilador com o método manual.|  

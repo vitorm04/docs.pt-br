@@ -3,10 +3,10 @@ title: Projetando validações na camada de modelo de domínio
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Compreenda conceitos-chave de validações de modelo de domínio.
 ms.date: 10/08/2018
 ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899676"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Projetar validações na camada de modelo de domínio
@@ -61,7 +61,7 @@ Tendo esclarecido a diferença conceitual, você ainda poderá usar anotações 
 
 Você ainda pode implementar a validação personalizada na classe de entidade usando anotações de dados e o método `IValidatableObject.Validate`, substituindo o método SaveChanges do DbContext.
 
-Você pode ver um exemplo de implementação para validar entidades `IValidatableObject`[neste comentário no GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Esse exemplo não faz validações baseadas em atributo, mas elas devem ser fáceis de implementar usando reflexão na mesma substituição.
+Você pode ver um exemplo de implementação para validar entidades `IValidatableObject`[neste comentário no GitHub](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539). Essa amostra não faz validações baseadas em atributos, mas deve ser fácil de implementar usando a reflexão na mesma substituição.
 
 No entanto, de um ponto de vista de DDD, o modelo de domínio é mantido mais enxuto com o uso de exceções em seus métodos de comportamento da entidade ou implementando os padrões de Especificação e Notificação para impor regras de validação.
 
@@ -85,27 +85,27 @@ Usando a validação de campo com anotações de dados, por exemplo, você não 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Rachel Appel. Introdução à validação de modelo no ASP.NET Core MVC** \
+- **Rachel Appel. Introdução à validação de modelo sin ASP.NETd MVC do Núcleo** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Adicionando** \ de validação
+- **Rick Anderson. Adicionando validação** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler. Substituindo exceções de lançamento com notificação em validações** \
+- **Martin Fowler. Substituindo exceções de arremesso por notificação em validações** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **Especificação e padrões de notificação** \
+- **Padrões de especificação e notificação** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Nível Gorodinski. Validação no design controlado por domínio (DDD)**  \
+- **Lev Gorodinski. Validação em DDD (Domain-Driven Design, design orientado por domínio)** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Tomada Colin.**  \ de validação de modelo de domínio
+- **Colin Jack. Validação do modelo de domínio** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard. Validação em um mundo DDD** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [Anterior](enumeration-classes-over-enum-types.md)
-> [Próximo](client-side-validation.md)
+> [Próximo](enumeration-classes-over-enum-types.md)
+> [anterior](client-side-validation.md)

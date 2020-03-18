@@ -15,10 +15,10 @@ helpviewer_keywords:
 - storing data using isolated storage, creating files and directories
 ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 ms.openlocfilehash: 83e8c800dc74d9689f1bfdb506a6b454e87b36ca
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707864"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Como criar arquivos e diretórios no armazenamento isolado
@@ -36,8 +36,8 @@ Depois de obter um repositório isolado, você pode criar diretórios e arquivos
  [!code-csharp[Conceptual.IsolatedStorage#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source.cs#1)]
  [!code-vb[Conceptual.IsolatedStorage#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
-- [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)
+- [Armazenamento isolado](../../../docs/standard/io/isolated-storage.md)

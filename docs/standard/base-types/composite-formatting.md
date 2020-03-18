@@ -14,11 +14,11 @@ helpviewer_keywords:
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159306"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400340"
 ---
 # <a name="composite-formatting"></a>Formatação de composição
 
@@ -43,7 +43,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 - O método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que grava um método informativo para rastrear ouvintes.  
   
 ## <a name="composite-format-string"></a>Cadeia de formato de composição  
- Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de caracteres de formato composto consiste de zero ou mais execuções de texto fixo misturadas a um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.  
+ Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de formato de composição consiste em zero ou mais sequências de texto fixo intercaladas com um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.  
   
  Considere o fragmento de código <xref:System.String.Format%2A> a seguir.  
   
@@ -55,7 +55,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 ## <a name="format-item-syntax"></a>Sintaxe do item de formato  
  Cada item de formato assume a forma a seguir e consiste nos seguintes componentes:  
   
- `{` *índice*[ *alinhamento*de`,`] [`:`*FormatString*]`}`  
+ `{`*índice*`,`[*alinhamento*`:`*][formatString*]`}`  
   
  As chaves correspondentes ("{" e "}") são necessárias.  
   
@@ -65,12 +65,12 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de caracteres de formato composto, como: "0x{0:X} {0:E} {0:N}", como mostra o exemplo a seguir.  
+ Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e{0:X} {0:E} {0:N}numérico especificando uma seqüência de formato composto como : "0x", como mostra o exemplo a seguir.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você poderá formatar o segundo, o primeiro e o terceiro objeto especificando uma cadeia de caracteres de formato composto como esta: "{1} {0} {2}". Um objeto que não é referenciado por um item de formato é ignorado. Uma <xref:System.FormatException> será lançada no runtime se um especificador de parâmetro designar um item fora dos limites da lista de objetos.  
+ Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você pode formatar o segundo, primeiro e{1} {0} {2}terceiro objeto especificando uma seqüência de formato composto como esta: " ". Um objeto que não é referenciado por um item de formato é ignorado. Uma <xref:System.FormatException> será lançada no runtime se um especificador de parâmetro designar um item fora dos limites da lista de objetos.  
   
 ### <a name="alignment-component"></a>Componente de alinhamento  
  O componente opcional *alignment* é um inteiro com sinal que indica a largura preferencial do campo formatado. Se o valor de *alignment* for menor que o comprimento da cadeia de caracteres formatada, *alignment* será ignorado e o comprimento da cadeia de caracteres formatada será usado como a largura do campo. Os dados formatados no campo serão alinhados à direita se *alignment* for positivo e serão alinhados à esquerda se *alignment* for negativo. Se for necessário preenchimento, espaços em branco serão usados. A vírgula é necessária se *alignment* for especificado.  
@@ -87,9 +87,9 @@ O recurso de formatação de composição tem suporte de métodos como:
   
 |Tipo ou categoria de tipo|Consulte|  
 |---------------------------|---------|  
-|Tipos de data e hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Tipos de enumeração (todos os tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|Tipos de data e hora (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Strings personalizadas de formato de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Tipos de enumeração (todos os tipos derivados de <xref:System.Enum?displayProperty=nameWithType>)|[Cordas do formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Tipos numéricos (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Strings de formato numérico personalizados](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -163,11 +163,11 @@ O recurso de formatação de composição tem suporte de métodos como:
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [Interpolação de cadeia de caracteres (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [Interpolação de cadeia de caracteres (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Strings de formato numérico personalizados](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora padrão](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Strings personalizadas de formato de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato TimeSpan padrão](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Cadeias de Caracteres de Formato de Enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Cordas do formato de enumeração](../../../docs/standard/base-types/enumeration-format-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: enumerar diretórios e arquivos'
+title: 'Como: Enumerar diretórios e arquivos'
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 ms.openlocfilehash: 6a26d0ef529b81976c4d2caafed34bb5f08d8d46
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707739"
 ---
-# <a name="how-to-enumerate-directories-and-files"></a>Como: enumerar diretórios e arquivos
+# <a name="how-to-enumerate-directories-and-files"></a>Como: Enumerar diretórios e arquivos
 Coleções enumeráveis fornecem um desempenho melhor do que matrizes ao trabalhar com coleções grandes de arquivos e diretórios. Para enumerar diretórios e arquivos, use métodos que retornam uma coleção enumerável de nomes de diretório ou arquivo ou seus objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>.  
   
 Caso deseje pesquisar e retornar somente os nomes de diretórios ou arquivos, use os métodos de enumeração da classe <xref:System.IO.Directory>. Caso deseje pesquisar e retornar outras propriedades de diretórios ou arquivos, use as classes <xref:System.IO.DirectoryInfo> e <xref:System.IO.FileSystemInfo>.  
@@ -37,7 +37,7 @@ A seguinte tabela resume os métodos que retornam coleções enumeráveis de arq
 > [!NOTE]
 > Embora você possa enumerar imediatamente todos os arquivos nos subdiretórios de um diretório pai usando a opção <xref:System.IO.SearchOption.AllDirectories> da enumeração <xref:System.IO.SearchOption> opcional, os erros <xref:System.UnauthorizedAccessException> podem tornar a enumeração incompleta. Capture essas exceções enumerando primeiro os diretórios e, em seguida, os arquivos.  
   
-## <a name="examples-use-the-directory-class"></a>Exemplos: usar a classe de diretório  
+## <a name="examples-use-the-directory-class"></a>Exemplos: Use a classe Diretório  
   
 O exemplo a seguir usa o método <xref:System.IO.Directory.EnumerateDirectories%28System.String%29?displayProperty=nameWithType> para obter uma lista dos nomes de diretório de nível superior em um caminho especificado.  
 
@@ -49,7 +49,7 @@ O exemplo a seguir usa o método <xref:System.IO.Directory.EnumerateFiles%28Syst
 [!code-csharp[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/cs/program.cs#1)]
 [!code-vb[System.IO.Directory.EnumerateFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directory.enumeratefiles/vb/program.vb#1)]  
   
-## <a name="examples-use-the-directoryinfo-class"></a>Exemplos: usar a classe DirectoryInfo  
+## <a name="examples-use-the-directoryinfo-class"></a>Exemplos: Use a classe DirectoryInfo  
   
 O exemplo a seguir usa o método <xref:System.IO.DirectoryInfo.EnumerateDirectories%2A?displayProperty=nameWithType> para listar uma coleção de diretórios de nível superior cuja <xref:System.IO.FileSystemInfo.CreationTimeUtc> é anterior a determinado valor <xref:System.DateTime>.  
 
@@ -61,6 +61,6 @@ O exemplo a seguir usa o método <xref:System.IO.DirectoryInfo.EnumerateFiles%2A
 [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
 [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)

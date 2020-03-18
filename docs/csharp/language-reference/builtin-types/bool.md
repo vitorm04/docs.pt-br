@@ -1,5 +1,5 @@
 ---
-title: referência de C# tipo bool
+title: tipo bool - referência C#
 ms.date: 11/26/2019
 f1_keywords:
 - bool
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 0e01c183ef07c23203619e0cbbf550c6268bdd46
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239827"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846439"
 ---
-# <a name="bool-c-reference"></a>bool (C# referência)
+# <a name="bool-c-reference"></a>bool (referência C#)
 
-A palavra-chave Type de `bool` é um alias para o tipo de estrutura .NET <xref:System.Boolean?displayProperty=nameWithType> que representa um valor booliano, que pode ser `true` ou `false`.
+A `bool` palavra-chave tipo é um <xref:System.Boolean?displayProperty=nameWithType> alias para o tipo de estrutura .NET `false`que representa um valor booleano, que pode ser ou `true` .
 
-Para executar operações lógicas com valores do tipo `bool`, use operadores [lógicos boolianos](../operators/boolean-logical-operators.md) . O tipo de `bool` é o tipo de resultado de operadores de [comparação](../operators/comparison-operators.md) e de [igualdade](../operators/equality-operators.md) . Uma expressão de `bool` pode ser uma expressão condicional de controle nas instruções [If](../keywords/if-else.md) [, do,](../keywords/do.md) [while](../keywords/while.md)e [for](../keywords/for.md) e no [operador condicional `?:`](../operators/conditional-operator.md).
+Para realizar operações lógicas com valores do `bool` tipo, use operadores [lógicos booleanos.](../operators/boolean-logical-operators.md) O `bool` tipo é o tipo de resultado de [comparação](../operators/comparison-operators.md) e [igualdade](../operators/equality-operators.md) dos operadores. Uma `bool` expressão pode ser uma expressão condicional controladora no [if](../keywords/if-else.md), [do](../keywords/do.md), [while](../keywords/while.md), e [para](../keywords/for.md) declarações e no [operador `?:`condicional ](../operators/conditional-operator.md).
 
-O valor padrão do tipo de `bool` é `false`.
+O valor padrão `bool` do `false`tipo é .
 
 ## <a name="literals"></a>Literais
 
-Você pode usar os literais `true` e `false` para inicializar uma variável `bool` ou para passar um valor de `bool`:
+Você pode `true` usar `false` o e literals para inicializar uma `bool` variável ou para passar um `bool` valor:
 
-[!code-csharp-interactive[bool literals](~/samples/snippets/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>Lógica booleana de três valores
 
-Use o tipo de `bool?` anulável, se você precisar dar suporte à lógica de três valores, por exemplo, ao trabalhar com bancos de dados que dão suporte a um tipo booliano de três valores. Para os operandos `bool?`, os operadores `&` e `|` predefinidos oferecem suporte à lógica de três valores. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](../operators/boolean-logical-operators.md).
+Use o `bool?` tipo anulado, se você precisar suportar a lógica de três valores, por exemplo, quando você trabalha com bancos de dados que suportam um tipo booleano de três valores. Para os operandos `bool?`, os operadores `&` e `|` predefinidos oferecem suporte à lógica de três valores. Para obter mais informações, confira a seção [Operadores lógicos booleanos anuláveis](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) do artigo [Operadores lógicos boolianos](../operators/boolean-logical-operators.md).
 
-Para obter mais informações sobre tipos de valor anulável, consulte [tipos de valor anulável](nullable-value-types.md).
+Para obter mais informações sobre tipos de valor anulados, consulte [tipos de valor anulados](nullable-value-types.md).
 
 ## <a name="conversions"></a>Conversões
 
-C#fornece apenas duas conversões que envolvem o tipo de `bool`. Essas são uma conversão implícita para o tipo de `bool?` anulável correspondente e uma conversão explícita do tipo `bool?`. No entanto, o .NET fornece métodos adicionais que você pode usar para converter de ou para o tipo de `bool`. Para obter mais informações, consulte a seção [convertendo de valores booleanos](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) na página de referência da API <xref:System.Boolean?displayProperty=nameWithType>.
+C# fornece apenas duas conversões que envolvem o `bool` tipo. São uma conversão implícita para `bool?` o tipo nulo `bool?` correspondente e uma conversão explícita do tipo. No entanto, o .NET fornece métodos adicionais `bool` que você pode usar para converter para ou a partir do tipo. Para obter mais informações, consulte a [seção Conversão para e de valores booleanos](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) da página de referência da <xref:System.Boolean?displayProperty=nameWithType> API.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
-Para obter mais informações, consulte [a seção tipo bool](~/_csharplang/spec/types.md#the-bool-type) da [ C# especificação da linguagem](~/_csharplang/spec/introduction.md).
+Para obter mais informações, consulte A seção [do tipo bool](~/_csharplang/spec/types.md#the-bool-type) da [especificação do idioma C#.](~/_csharplang/spec/introduction.md)
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Tipos de valor](value-types.md)
 - [operadores true e false](../operators/true-false-operators.md)

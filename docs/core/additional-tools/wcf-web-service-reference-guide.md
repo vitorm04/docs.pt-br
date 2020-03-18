@@ -5,10 +5,10 @@ author: dasetser
 ms.date: 10/29/2019
 ms.custom: mvc
 ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715678"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Usar a ferramenta WCF Web Service Reference Provider
@@ -18,18 +18,18 @@ Ao longo dos anos, muitos desenvolvedores do Visual Studio têm apreciado a prod
 > [!IMPORTANT]
 > Você só deve fazer referência a serviços de uma fonte confiável. A adição de referências de uma fonte não confiável pode comprometer a segurança.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 versão 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ou versões posteriores
+- [Visual Studio 2017 versão 15.5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) ou posterior versões
 
 ## <a name="how-to-use-the-extension"></a>Como usar a extensão
 
 > [!NOTE]
 > A opção **WCF Web Service Reference** é aplicável a projetos criados com o uso dos seguintes modelos de projeto:
 >
-> - **Visual C#**  >  **.NET Core**
-> - **Visual C#**  >  **.NET Standard**
-> - **Visual C#**  > **Web** > **Aplicativo Web ASP.NET Core**
+> - **Núcleo Visual C#** > **.NET**
+> - **Visual C#** > **.NET Padrão**
+> - **Visual C#** > **Web** > **ASP.NET Web**
 
 Ao usar o modelo de projeto **Aplicativo Web ASP.NET Core** como um exemplo, este artigo o orienta na adição de uma referência de serviço WCF ao projeto:
 
@@ -76,16 +76,16 @@ Enquanto exibe o andamento, a ferramenta:
 
 Quando esses processos forem concluídos, você poderá criar uma instância do tipo de cliente do WCF gerado e invocar as operações de serviço.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Introdução aos aplicativos Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
-- [Serviços de Windows Communication Foundation e WCF Data Services no Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
-- [Recursos com suporte do WCF no .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
+- [Comece com os aplicativos da Windows Communication Foundation](../../framework/wcf/getting-started-tutorial.md)
+- [Serviços da Windows Communication Foundation e serviços de dados WCF no Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio)
+- [Recursos suportados pelo WCF no .NET Core](https://github.com/dotnet/wcf/blob/master/release-notes/SupportedFeatures-v2.1.0.md)
 
 ## <a name="feedback--questions"></a>Perguntas e comentários
 
-Se você tiver dúvidas ou comentários, denuncie-o na [comunidade de desenvolvedores](https://developercommunity.visualstudio.com/) usando o [relatório uma ferramenta problemática](/visualstudio/ide/how-to-report-a-problem-with-visual-studio) .
+Se você tiver alguma dúvida ou feedback, denuncie-o na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/) usando o Relatório como uma ferramenta [de problema.](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)
 
-## <a name="release-notes"></a>Notas de Versão
+## <a name="release-notes"></a>Notas de versão
 
 - Consulte as [Notas de versão](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) para obter informações de versão atualizadas, incluindo problemas conhecidos.

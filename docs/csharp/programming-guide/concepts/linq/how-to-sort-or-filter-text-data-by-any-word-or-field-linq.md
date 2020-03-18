@@ -3,10 +3,10 @@ title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo 
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
 ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347357"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)
@@ -14,7 +14,7 @@ O exemplo a seguir mostra como classificar linhas de texto estruturado, como val
   
 ### <a name="to-create-a-file-that-contains-data"></a>Para criar um arquivo que contém dados  
   
-1. Copie os dados Scores. csv do tópico [como unir conteúdo de arquivos diferentes (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) e salve-o em sua pasta de solução.  
+1. Copie os dados scores.csv do tópico [Como juntar conteúdo de arquivos diferentes (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo na pasta de soluções.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -74,10 +74,10 @@ public class SortLines
   
  Este exemplo também demonstra como retornar uma variável de consulta de um método.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
 
 Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)

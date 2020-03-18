@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
 ms.openlocfilehash: a53a21d3028e588f5c4d5ce7bf35fad8d3720a08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75702981"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos em tempo de execução (Guia de Programação em C#)
@@ -46,9 +46,9 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
   
  Além disso, quando uma classe genérica do C# for instanciada usando um tipo de valor ou parâmetro de tipo de referência, a reflexão pode consultá-la em runtime e o seu tipo real e parâmetro de tipo podem ser determinados.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Generic>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Introdução aos genéricos](./index.md)
 - [Genéricos](../../../standard/generics/index.md)

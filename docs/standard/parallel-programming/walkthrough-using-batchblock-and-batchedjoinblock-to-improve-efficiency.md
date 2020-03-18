@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 ms.openlocfilehash: 4b2b6a6124bf8cc0fb3b379607135283678e3268
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091356"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Explicação passo a passo: Usando BatchBlock e BatchedJoinBlock para aumentar a eficiência
@@ -22,7 +22,7 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 1. Leia a seção Blocos de ingresso no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de começar este passo a passo.
 
@@ -33,13 +33,13 @@ A Biblioteca de Fluxo de dados TPL fornece as classes <xref:System.Threading.Tas
 
 Este passo a passo contém as seguintes seções:
 
-- [Criar o Aplicativo de Console](#creating)
+- [Criando o Aplicativo de Console](#creating)
 
 - [Definir a classe do funcionário](#employeeClass)
 
 - [Definir as operações de banco de dados do funcionário](#operations)
 
-- [Adicionar dados de funcionário ao banco de dados sem o uso de buffer](#nonBuffering)
+- [Adicionando dados de funcionários ao banco de dados sem usar buffering](#nonBuffering)
 
 - [Usar o armazenamento em buffer para adicionar dados de funcionário ao banco de dados](#buffering)
 
@@ -51,7 +51,7 @@ Este passo a passo contém as seguintes seções:
 
 ## <a name="creating-the-console-application"></a>Criando o Aplicativo de Console
 
-1. No Visual Studio, crie um projeto de **aplicativo de console** do Visual Basic ou do Visual C#. Neste documento, o projeto é chamado `DataflowBatchDatabase`.
+1. No Visual Studio, crie um projeto visual C# ou visual basic **console application.** Neste documento, o projeto é chamado `DataflowBatchDatabase`.
 
 2. Em seu projeto, adicione uma referência ao System.Data.SqlServerCe.dll e uma referência a System.Threading.Tasks.Dataflow.dll.
 
@@ -129,6 +129,6 @@ O exemplo a seguir mostra todo o código. O método `Main` compara o tempo neces
 [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
 [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

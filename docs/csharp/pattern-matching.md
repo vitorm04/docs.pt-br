@@ -4,12 +4,12 @@ description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78241007"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170378"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -47,7 +47,7 @@ Nesta versão atualizadas, a expressão `is` testa a variável e a atribui a uma
 
 As regras da linguagem para expressões de correspondência de padrões ajudam a evitar usar incorretamente os resultados de uma expressão de correspondência. No exemplo acima, as variáveis `s`, `c` e `r` estão somente no escopo e são atribuídas definitivamente quando as expressões de correspondência de padrão têm resultados `true`. Se você tentar usar qualquer variável em outro local, seu código gerará erros de compilador.
 
-Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeAreaModernIs`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo que a instrução `if` (o método nesse caso.) Esse comportamento não é específico da correspondência de padrões, mas é o comportamento definido para escopos de variáveis e instruções `if` e `else`.
+Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeAreaModernIs`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as `if` variáveis declaradas na declaração estão no mesmo escopo da `if` declaração (o método neste caso.) Esse comportamento não é específico para a correspondência de padrões, mas é o comportamento definido para escopos e `if` declarações `else` variáveis.
 
 As variáveis `c` e `s` são atribuídas quando as respectivas instruções `if` são verdadeiras por causa do mecanismo atribuído definitivamente quando elas são verdadeiras.
 
@@ -59,7 +59,7 @@ Essas regras significam que é improvável que você acesse acidentalmente o res
 
 ## <a name="using-pattern-matching-switch-statements"></a>Usando instruções `switch` de correspondência de padrões
 
-Com o tempo, talvez seja necessário dar suporte a outros tipos de forma. Conforme o número de condições sendo testadas aumenta, você descobrirá que usar as expressões de correspondência de padrões `is` pode se tornar complicado. Além de exigirem instruções `if` em cada tipo que você deseja verificar, as expressões `is` são limitadas a testar se a entrada corresponder a um único tipo. Nesse caso, você descobrirá que as expressões de correspondência de padrões `switch` se tornam uma opção melhor. 
+Com o tempo, talvez seja necessário dar suporte a outros tipos de forma. Conforme o número de condições sendo testadas aumenta, você descobrirá que usar as expressões de correspondência de padrões `is` pode se tornar complicado. Além de exigirem instruções `if` em cada tipo que você deseja verificar, as expressões `is` são limitadas a testar se a entrada corresponder a um único tipo. Nesse caso, você descobrirá que as expressões de correspondência de padrões `switch` se tornam uma opção melhor.
 
 A instrução `switch` tradicional era uma expressão padrão: ela dava suporte ao padrão de constante.
 Você poderia comparar uma variável a qualquer constante usada em uma instrução `case`:
@@ -100,7 +100,7 @@ Depois de adicionar essas formas com a área 0, vamos adicionar mais alguns tipo
 
 [!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
- Esse conjunto de alterações adiciona rótulos `case` para o caso de degeneração e rótulos e blocos para cada uma das novas formas. 
+ Esse conjunto de alterações adiciona rótulos `case` para o caso de degeneração e rótulos e blocos para cada uma das novas formas.
 
 Por fim, você pode adicionar um case `null` para garantir que o argumento não seja `null`:
 
@@ -139,4 +139,4 @@ Compare o código deste exemplo com o design que viria após a criação de uma 
 
 ## <a name="see-also"></a>Confira também
 
-- [Tutorial: usando recursos de correspondência de padrões para estender tipos de dados](tutorials/pattern-matching.md)
+- [Tutorial: Usando recursos de correspondência de padrões para ampliar os tipos de dados](tutorials/pattern-matching.md)

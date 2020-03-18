@@ -9,10 +9,10 @@ helpviewer_keywords:
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
 ms.openlocfilehash: 08a1b45759b1b78368f867161a13cf2af4db1a60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123199"
 ---
 # <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Processamento paralelo, simultaneidade e programação assíncrona no .NET
@@ -22,7 +22,7 @@ O .NET fornece várias maneiras de escrever código assíncrono para tornar seu 
  [Programação Assíncrona](../../docs/standard/async.md)  
  Descreve mecanismos para programação assíncrona fornecida pelo .NET.  
   
- [Programação paralela](../../docs/standard/parallel-programming/index.md)  
+ [Programação Paralela](../../docs/standard/parallel-programming/index.md)  
  Descreve um modelo de programação baseado em tarefa que simplifica o desenvolvimento paralelo, permitindo escrever código paralelo refinado, eficiente e escalonável em uma linguagem natural sem a necessidade de trabalhar diretamente com threads ou o pool de threads.  
 
  [Threading](../../docs/standard/threading/index.md)  

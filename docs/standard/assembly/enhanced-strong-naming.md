@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141166"
 ---
 # <a name="enhanced-strong-naming"></a>Nomenclatura forte aprimorada
@@ -31,13 +31,13 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
   
 - Desenvolvedores que criam novos assemblies e não se preocupam com assinaturas de nome forte pre-existente podem usar os algoritmos SHA-2 mais seguros e assinar os assemblies como de costume.  
   
-## <a name="use-enhanced-strong-names"></a>Usar nomes fortes aprimorados  
+## <a name="use-enhanced-strong-names"></a>Use nomes fortes aprimorados  
  Chaves de nome forte consistem em uma chave de assinatura e uma chave de identidade. O assembly é assinado com a chave de assinatura e é identificado pela chave de identidade. Antes do .NET Framework 4.5, essas duas chaves eram idênticas. Do .NET Framework 4.5 em diante, a chave de identidade permanece a mesma que nas versões anteriores do .NET Framework, mas a chave de assinatura foi aprimorada com um algoritmo de hash mais forte. Além disso, a chave de assinatura é assinada com a chave de identidade para criar uma referenda.  
   
  O atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> permite que os metadados de assembly usem a chave pública pré-existente para a identidade do assembly, permitindo que referências ao assembly antigo continuem a funcionar.  O atributo <xref:System.Reflection.AssemblySignatureKeyAttribute> usa a referenda para garantir que o proprietário da nova chave de assinatura também seja o proprietário da chave de identidade antiga.  
   
-### <a name="sign-with-sha-2-without-key-migration"></a>Assinar com SHA-2, sem a migração de chave  
- Execute os seguintes comandos em um prompt de comando para assinar um assembly sem migrar uma assinatura de nome forte:  
+### <a name="sign-with-sha-2-without-key-migration"></a>Assine com sha-2, sem migração de chaves  
+ Execute os seguintes comandos a partir de um prompt de comando para assinar uma assembléia sem migrar uma assinatura de nome forte:  
   
 1. Gere a nova chave de identidade (se necessário).  
   
@@ -63,8 +63,8 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
     sn -Ra MyAssembly.exe IdentityKey.snk  
     ```  
   
-### <a name="sign-with-sha-2-with-key-migration"></a>Assinar com SHA-2, com a migração de chave  
- Execute os comandos a seguir em um prompt de comando para assinar um assembly com uma assinatura de nome forte migrada.  
+### <a name="sign-with-sha-2-with-key-migration"></a>Assine com sha-2, com migração de chaves  
+ Execute os seguintes comandos a partir de um prompt de comando para assinar um conjunto com uma assinatura de nome forte migrada.  
   
 1. Gere um par de chaves de identidade e de assinatura (se necessário).  
   
@@ -131,6 +131,6 @@ Uma assinatura de nome forte é um mecanismo de identidade no .NET Framework par
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Criar e usar assemblies de nome forte](create-use-strong-named.md)
+- [Criar e usar assemblies com nome forte](create-use-strong-named.md)

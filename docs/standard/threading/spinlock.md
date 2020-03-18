@@ -6,10 +6,10 @@ helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
 ms.openlocfilehash: eac9a1be38ea81e8ccee1d05d9061ceeb597627f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106168"
 ---
 # <a name="spinlock"></a>SpinLock
@@ -21,8 +21,8 @@ A estrutura <xref:System.Threading.SpinLock> é uma primitiva de sincronização
   
  Confira mais informações sobre como usar este tipo em <xref:System.Threading.SpinLock?displayProperty=nameWithType>. Veja um exemplo em [Como: usar o SpinLock para sincronização de nível inferior](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md).  
   
- O <xref:System.Threading.SpinLock> oferece suporte a um modo de *controle* de *thread*- que pode ser usado durante a fase de desenvolvimento para ajudar a controlar o thread que está mantendo o bloqueio em um momento específico. O modo de controle de thread é muito útil para depuração, mas é recomendável desativá-lo na versão de lançamento do seu programa porque ele pode reduzir o desempenho. Confira mais informações em [Como: habilitar o modo de controle de thread no SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
+ <xref:System.Threading.SpinLock>suporta um modo*de rastreamento de* *rosca*-que você pode usar durante a fase de desenvolvimento para ajudar a rastrear o segmento que está segurando o bloqueio em um momento específico. O modo de controle de thread é muito útil para depuração, mas é recomendável desativá-lo na versão de lançamento do seu programa porque ele pode reduzir o desempenho. Confira mais informações em [Como: habilitar o modo de controle de thread no SpinLock](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Objetos e recursos de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+- [Objetos e recursos de rosca](../../../docs/standard/threading/threading-objects-and-features.md)

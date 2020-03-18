@@ -5,10 +5,10 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240955"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
@@ -43,8 +43,8 @@ Escrever testes para seu código o desacoplará naturalmente, porque seria mais 
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de um bom teste de unidade
 
-- **Rápido**. Não é incomum para projetos maduros ter milhares de testes de unidade. Os testes de unidade devem levar muito pouco tempo para serem executados. Milissegundos.
-- **Isolado**. Testes de unidade são autônomos, podem ser executados em isolamento e não têm dependências em nenhum fator externo, como um sistema de arquivos ou o banco de dados.
+- **Rápido.** Não é incomum para projetos maduros ter milhares de testes de unidade. Os testes de unidade devem levar muito pouco tempo para serem executados. Milissegundos.
+- **Isolado.** Testes de unidade são autônomos, podem ser executados em isolamento e não têm dependências em nenhum fator externo, como um sistema de arquivos ou o banco de dados.
 - **Repetível**. A execução de um teste de unidade deve ser consistente com seus resultados, ou seja, ele sempre retornará o mesmo resultado se você não alterar nada entre execuções.
 - **Verificação automática**. O teste deve ser capaz de detectar automaticamente se ele foi aprovado ou reprovado sem nenhuma interação humana.
 - **Em tempo hábil**. Um teste de unidade não deve levar um tempo desproporcionalmente longo para ser escrito comparado com o código que está sendo testado. Se você achar que o teste do código está levando uma grande quantidade de tempo comparado com a escrita do código, considere um design mais testável.
@@ -127,7 +127,7 @@ Testes são mais do que apenas verificar se seu código funciona; eles também f
 **Organizar, Agir, Declarar** é um padrão comum ao testar unidades. Como o nome implica, ele é composto por três ações principais:
 
 - *Organizar* seus objetos, criando e configurando-os conforme necessário.
-- *Agir* sobre um objeto.
+- *Aja* em um objeto.
 - *Declarar* que algo está conforme o esperado.
 
 #### <a name="why"></a>Por quê?

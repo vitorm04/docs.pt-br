@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 30580b3fde5b8a99862896bb7d31c6c4024f97e8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568234"
 ---
-### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>Operações de análise de ponto flutuante não falham mais ou geram uma estourexception
+### <a name="floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception"></a>As operações de análise de ponto flutuante não falham mais ou lançam uma Exceção de Estouro
 
-Os métodos de análise de ponto flutuante não lançam mais um <xref:System.OverflowException> ou retornam `false` quando analisam uma cadeia de caracteres cujo valor numérico está fora do intervalo do <xref:System.Single> ou <xref:System.Double> tipo de ponto flutuante.
+Os métodos de análise de ponto <xref:System.OverflowException> flutuante `false` já não jogam um ou retornam quando analisam <xref:System.Single> uma <xref:System.Double> seqüência cujo valor numérico está fora do alcance do tipo ou ponto flutuante.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição da alteração
 
-No .NET Core 2,2 e versões anteriores, os métodos <xref:System.Double.Parse%2A?displayProperty=nameWithType> e <xref:System.Single.Parse%2A?displayProperty=nameWithType> geram uma <xref:System.OverflowException> para valores que estão fora do intervalo de seus respectivos tipos. Os métodos <xref:System.Double.TryParse%2A?displayProperty=nameWithType> e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> retornam `false` para as representações de cadeia de caracteres de valores numéricos fora do intervalo.
+Em .NET Core 2.2 e <xref:System.Double.Parse%2A?displayProperty=nameWithType> <xref:System.Single.Parse%2A?displayProperty=nameWithType> versões <xref:System.OverflowException> anteriores, os métodos e os métodos lançam um para valores que estão fora do alcance de seu respectivo tipo. Os <xref:System.Double.TryParse%2A?displayProperty=nameWithType> <xref:System.Single.TryParse%2A?displayProperty=nameWithType> métodos `false` retornam para as representações de string de valores numéricos fora do alcance.
 
-A partir do .NET Core 3,0, os métodos <xref:System.Double.Parse%2A?displayProperty=nameWithType>, <xref:System.Double.TryParse%2A?displayProperty=nameWithType>, <xref:System.Single.Parse%2A?displayProperty=nameWithType>e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> não falham mais ao analisar cadeias de caracteres numéricas fora do intervalo. Em vez disso, os métodos de análise de <xref:System.Double> retornam <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> para valores que excedem <xref:System.Double.MaxValue?displayProperty=nameWithType>e retornam <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> para valores menores que <xref:System.Double.MinValue?displayProperty=nameWithType>. Da mesma forma, os métodos de análise de <xref:System.Single> retornam <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> para valores que excedem <xref:System.Single.MaxValue?displayProperty=nameWithType>e retornam <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> para valores menores que <xref:System.Single.MinValue?displayProperty=nameWithType>.
+Começando com .NET Core 3.0, <xref:System.Double.Parse%2A?displayProperty=nameWithType>os <xref:System.Double.TryParse%2A?displayProperty=nameWithType> <xref:System.Single.Parse%2A?displayProperty=nameWithType>métodos e <xref:System.Single.TryParse%2A?displayProperty=nameWithType> métodos não falham mais ao analisar strings numéricas fora de alcance. Em vez <xref:System.Double> disso, os <xref:System.Double.PositiveInfinity?displayProperty=nameWithType> métodos de <xref:System.Double.MaxValue?displayProperty=nameWithType>análise retornam <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> para valores <xref:System.Double.MinValue?displayProperty=nameWithType>que excedem , e eles retornam para valores inferiores a . Da mesma <xref:System.Single> forma, os métodos de <xref:System.Single.PositiveInfinity?displayProperty=nameWithType> <xref:System.Single.MaxValue?displayProperty=nameWithType>análise retornam <xref:System.Single.NegativeInfinity?displayProperty=nameWithType> para valores que <xref:System.Single.MinValue?displayProperty=nameWithType>excedem , e eles retornam para valores inferiores a .
 
-Essa alteração foi feita para melhorar a conformidade com o IEEE 754:2008.
+Essa mudança foi feita para uma melhor conformidade do IEEE 754:2008.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -24,11 +24,11 @@ Essa alteração foi feita para melhorar a conformidade com o IEEE 754:2008.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Essa alteração pode afetar o código de uma das duas maneiras:
+Essa alteração pode afetar seu código de duas maneiras:
 
-- Seu código depende do manipulador para que o <xref:System.OverflowException> seja executado quando ocorrer um estouro. Nesse caso, você deve remover a instrução `catch` e inserir qualquer código necessário em uma instrução `If` que testa se <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> ou <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType> é `true`.
+- Seu código depende do manipulador <xref:System.OverflowException> para ser executado quando ocorre um estouro. Neste caso, você deve `catch` remover a declaração `If` e colocar <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType> qualquer <xref:System.Single.IsInfinity%2A?displayProperty=nameWithType> `true`código necessário em uma declaração que teste se ou é .
 
-- Seu código supõe que os valores de ponto flutuante não são `Infinity`. Nesse caso, você deve adicionar o código necessário para verificar se há valores de ponto flutuante de `PositiveInfinity` e `NegativeInfinity`.
+- Seu código pressupõe que os `Infinity`valores de ponto flutuante não são . Neste caso, você deve adicionar o código necessário para `PositiveInfinity` `NegativeInfinity`verificar se há valores de ponto flutuante de e .
 
 #### <a name="category"></a>Categoria
 

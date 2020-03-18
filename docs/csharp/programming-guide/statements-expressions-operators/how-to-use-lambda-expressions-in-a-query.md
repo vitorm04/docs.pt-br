@@ -1,17 +1,17 @@
 ---
-title: Como usar expressões lambda em um guia de C# programação de consulta
+title: Como usar expressões lambda em uma consulta - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 ms.openlocfilehash: 92bdbf842c5c30b2f32e06f622f3e08f3c7a878f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711955"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como usar expressões lambda em uma consulta (C# guia de programação)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como usar expressões lambda em uma consulta (C# Guia de Programação)
 Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa em chamadas de método e as expressões de consulta podem conter chamadas de método. Na verdade, algumas operações de consulta podem ser expressas na sintaxe de método. Para obter mais informações sobre a diferença entre a sintaxe de consulta e sintaxe de método, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Exemplo  
@@ -26,10 +26,10 @@ Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa
   
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
- Para executar esse código, copie e cole o método no `StudentClass` fornecido em [consultar uma coleção de objetos](../../linq/query-a-collection-of-objects.md) e chame-o do método `Main`.
+## <a name="compiling-the-code"></a>Compilando o código  
+ Para executar este código, copie e `StudentClass` cole o método no que é fornecido no `Main` [Query uma coleção de objetos](../../linq/query-a-collection-of-objects.md) e chamá-lo do método.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Expressões Lambda](./lambda-expressions.md)
 - [Árvores de expressão (C#)](../concepts/expression-trees/index.md)

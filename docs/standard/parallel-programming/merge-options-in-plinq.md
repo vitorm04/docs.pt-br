@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203994"
 ---
 # <a name="merge-options-in-plinq"></a>Opções de mesclagem em PLINQ
@@ -32,7 +32,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
   
 - `Not Buffered`  
   
-     A opção <xref:System.Linq.ParallelMergeOptions.NotBuffered> faz com que cada elemento processado seja retornado de cada thread assim que ele for produzido. Esse comportamento é semelhante a fazer "streaming" da saída. Se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> estiver presente na consulta, `NotBuffered` preservará a ordem dos elementos de origem. Embora `NotBuffered` comece a produzir os resultados assim que estiverem disponíveis, o tempo total para produzir todos os resultados ainda pode ser maior do que usar uma das outras opções de mesclagem.  
+     A opção <xref:System.Linq.ParallelMergeOptions.NotBuffered> faz com que cada elemento processado seja retornado de cada thread assim que ele for produzido. Esse comportamento é semelhante a fazer "streaming" da saída. Se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> estiver presente na consulta, `NotBuffered` preservará a ordem dos elementos de origem. Embora `NotBuffered` comece a produzir resultados assim que estiverem disponíveis, o tempo total para produzir todos os resultados ainda pode ser maior do que usar uma das outras opções de fusão.  
   
 - `Auto Buffered`  
   
@@ -45,7 +45,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
 ## <a name="query-operators-that-support-merge-options"></a>Operadores de consulta que dão suporte a opções de mesclagem  
  A tabela a seguir lista os operadores que dão suporte a todos os modos de opções de mesclagem sujeitos às restrições especificadas.  
   
-|Operador|{1&gt;Restrições&lt;1}|  
+|Operador|Restrições|  
 |--------------|------------------|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nenhum|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nenhum|  
@@ -63,7 +63,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
   
  A capacidade de alguns operadores para lidar com as opções de mesclagem depende do tipo da sequência de origem e se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> foi usado anteriormente na consulta. <xref:System.Linq.ParallelEnumerable.ForAll%2A> é sempre <xref:System.Linq.ParallelMergeOptions.NotBuffered>; ele suspende seus elementos imediatamente. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> é sempre <xref:System.Linq.ParallelMergeOptions.FullyBuffered>; ele precisa classificar a lista inteira antes de suspendê-la.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Como especificar opções de mesclagem em PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

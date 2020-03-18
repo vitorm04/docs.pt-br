@@ -10,19 +10,19 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131542"
 ---
 # <a name="garbage-collection-notifications"></a>Notificações sobre a coleta de lixo
-Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema particularmente com servidores que processam grandes volumes de solicitações; Nesse caso, uma longa coleta de lixo pode causar um tempo limite de solicitação. Para evitar que uma coleção completa ocorra durante um período crítico, você pode ser notificado de que uma coleta de lixo completa está se aproximando e, em seguida, tomará medidas para redirecionar a carga de trabalho para outra instância de servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
+Há situações em que uma coleta de lixo completa (ou seja, uma coleta de geração 2) pelo common language runtime pode afetar negativamente o desempenho. Isso pode ser um problema especialmente com servidores que processam grandes volumes de solicitações; neste caso, uma longa coleta de lixo pode causar um tempo de solicitação. Para evitar que uma coleta completa ocorra durante um período crítico, você pode ser notificado de que uma coleta completa de lixo está se aproximando e, em seguida, tomar medidas para redirecionar a carga de trabalho para outra instância do servidor. Você também pode induzir uma coleta por conta própria, desde que a instância atual do servidor não precise processar solicitações.  
   
- O método <xref:System.GC.RegisterForFullGCNotification%2A> registra uma notificação para ser gerado quando o tempo de execução detectar que uma coleta de lixo completa está se aproximando. Essa notificação é composta por duas partes: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa for concluída.  
+ O método <xref:System.GC.RegisterForFullGCNotification%2A> registra uma notificação para ser gerado quando o runtime detectar que uma coleta de lixo completa está se aproximando. Essa notificação é composta por duas partes: quando a coleta de lixo completa está se aproximando e quando a coleta de lixo completa for concluída.  
   
 > [!WARNING]
-> Apenas o bloqueio de coletas de lixo geram notificações. Quando o elemento de configuração [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) estiver habilitado, as coletas de lixo em segundo plano não gerarão notificações.  
+> Apenas o bloqueio de coletas de lixo geram notificações. Quando [ \<](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) o elemento de configuração do>gcConcurrent estiver ativado, as coletas de lixo em segundo plano não levantarão notificações.  
   
  Para determinar quando uma notificação foi gerada, use os métodos <xref:System.GC.WaitForFullGCApproach%2A> e <xref:System.GC.WaitForFullGCComplete%2A>. Normalmente, você pode usar esses métodos em um loop `while` para obter continuamente uma enumeração <xref:System.GCNotificationStatus> que mostra o status da notificação. Se esse valor for <xref:System.GCNotificationStatus.Succeeded>, você pode fazer o seguinte:  
   
@@ -120,6 +120,6 @@ Há situações em que uma coleta de lixo completa (ou seja, uma coleta de gera�
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

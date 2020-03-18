@@ -1,13 +1,13 @@
 ---
 title: Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda como a CQRS é implementada no microsserviço de pedidos no eShopOnContainers.
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674123"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847148"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
@@ -23,7 +23,7 @@ Os padrões DDD apresentados neste guia não devem ser aplicados universalmente.
 
 Um desses padrões é o padrão de agregação, que examinaremos mais nas seções posteriores. Resumidamente, no padrão de agregação, você trata muitos objetos de domínio como uma única unidade como resultado de sua relação no domínio. Você nem sempre pode obter vantagens desse padrão em consultas; ele pode aumentar a complexidade da lógica de consulta. Para consultas somente leitura, você não obtém as vantagens de tratar vários objetos como uma única agregação. Você somente obtém a complexidade.
 
-Conforme mostrado na Figura 7-2, este guia sugere usar padrões DDD apenas na área transacional/de atualizações do seu microsserviço (ou seja, como disparado por comandos). As consultas podem seguir uma abordagem mais simples e devem estar separadas de comandos, seguindo uma abordagem CQRS.
+Como mostrado na Figura 7-2 na seção anterior, este guia sugere o uso de padrões DDD apenas na área transacional/atualizações do seu microserviço (isto é, como acionado por comandos). As consultas podem seguir uma abordagem mais simples e devem estar separadas de comandos, seguindo uma abordagem CQRS.
 
 Para implementar o "lado das consultas", é possível escolher entre muitas abordagens, do seu ORM completo como EF Core, projeções do AutoMapper, procedimentos armazenados, exibições, exibições materializadas ou um micro ORM.
 
@@ -41,15 +41,15 @@ Há apenas uma arquitetura de aplicativo: a arquitetura do sistema ou o aplicati
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Martin Fowler. CQRS** \
+- **Martin Fowler. Cqrs** \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Greg Young. Documentos CQRS** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan. CQRS esclarecida** \
+- **Udi Dahan. CQRS esclarecido** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[Anterior](apply-simplified-microservice-cqrs-ddd-patterns.md)
->[Próximo](cqrs-microservice-reads.md)
+>[Próximo](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[anterior](cqrs-microservice-reads.md)

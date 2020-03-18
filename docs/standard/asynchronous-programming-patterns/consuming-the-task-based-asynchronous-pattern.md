@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139819"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Consumindo o padrão assíncrono baseado em tarefa
@@ -631,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Operações intercaladas
- Há um problema de desempenho potencial com o uso do método <xref:System.Threading.Tasks.Task.WhenAny%2A> para dar suporte a um cenário de intercalação quando você está trabalhando com grandes conjuntos de tarefas. Todas as chamadas para <xref:System.Threading.Tasks.Task.WhenAny%2A> fazem uma continuação ser registrada com cada tarefa. Para N número de tarefas, isso resulta em o (N<sup>2</sup>) de continuação criadas durante o tempo de vida da operação de intercalação. Se você estiver trabalhando com um grande conjunto de tarefas, poderá usar um combinador (`Interleaved` no exemplo a seguir) para resolver o problema de desempenho:
+ Há um problema de desempenho potencial com o uso do método <xref:System.Threading.Tasks.Task.WhenAny%2A> para dar suporte a um cenário de intercalação quando você está trabalhando com grandes conjuntos de tarefas. Todas as chamadas para <xref:System.Threading.Tasks.Task.WhenAny%2A> fazem uma continuação ser registrada com cada tarefa. Para n número de tarefas, isso resulta em continuações O(N<sup>2</sup>) criadas ao longo da vida útil da operação de inter-saída. Se você estiver trabalhando com um grande conjunto de`Interleaved` tarefas, você pode usar um combinador (no exemplo a seguir) para resolver a questão do desempenho:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -833,7 +833,7 @@ private static void Produce(int data)
 > [!NOTE]
 > O namespace <xref:System.Threading.Tasks.Dataflow> está disponível no .NET Framework 4.5 por meio de **NuGet**. Para instalar o assembly que contém o namespace <xref:System.Threading.Tasks.Dataflow>, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu Projeto e procure online pelo pacote Microsoft.Tpl.Dataflow.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [TAP (Padrão Assíncrono Baseado em Tarefa)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Implementando o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)

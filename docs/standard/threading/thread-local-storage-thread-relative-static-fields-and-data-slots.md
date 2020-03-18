@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127516"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Armazenamento local de thread: campos estáticos relativos a thread e slots de dados
@@ -55,7 +55,7 @@ Você pode usar o armazenamento local de thread (TLS) gerenciado para armazenar 
   
  Os slots nomeados podem ser convenientes, pois você pode recuperar o slot quando necessário, passando seu nome para o método <xref:System.Threading.Thread.GetNamedDataSlot%2A>, em vez de manter uma referência a um slot sem nome. No entanto, se outro componente usa o mesmo nome para seu armazenamento relativo ao thread e um thread executa o código do seu componente e do outro componente, os dois componentes podem corromper os dados uns dos outros. (Este cenário pressupõe que ambos os componentes estão sendo executados no mesmo domínio de aplicativo e que eles não foram projetados para compartilhar os mesmos dados).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>

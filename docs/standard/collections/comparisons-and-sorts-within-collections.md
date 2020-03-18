@@ -13,16 +13,16 @@ helpviewer_keywords:
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 ms.openlocfilehash: 3360652f22ed39ccfd99f9863052fe584b78562f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159254"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparações e classificações dentro de coleções
 As classes <xref:System.Collections> executam comparações em quase todos os processos envolvidos no gerenciamento de coleções, seja procura pelo elemento para remoção ou retorno do valor de um par de chaves e valores.  
   
- As coleções normalmente usam um comparador de igualdade e/ou um comparador de classificação. Dois constructos são usados para comparações.  
+ As coleções normalmente usam um comparador de igualdade e/ou um comparador de ordenação. Dois constructos são usados para comparações.  
   
 <a name="BKMK_Checkingforequality"></a>
 ## <a name="checking-for-equality"></a>Verificando a igualdade  

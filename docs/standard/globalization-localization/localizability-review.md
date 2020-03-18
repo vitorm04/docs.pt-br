@@ -17,10 +17,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120859"
 ---
 # <a name="localizability-review"></a>Revisão de localização
@@ -59,7 +59,7 @@ O .NET não dá suporte de programação em várias áreas, que podem variar amp
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
-## <a name="test-your-application"></a>Testar seu aplicativo
+## <a name="test-your-application"></a>Teste seu aplicativo
 
 Antes de localizar seu aplicativo, você deve testá-lo usando dados internacionais em versões internacionais do sistema operacional. Apesar de grande parte da interface do usuário não estar localizada neste ponto, você será capaz de detectar problemas, como os seguintes:
 
@@ -77,7 +77,7 @@ Antes de localizar seu aplicativo, você deve testá-lo usando dados internacion
 
 Se você tiver seguido as recomendações de globalização ao desenvolver seu aplicativo, sendo tratadas corretamente, tratado os recursos sensíveis à cultura e identificado e resolvido os problemas de localização que surgiram durante o teste, você poderá prosseguir para a próxima etapa, [Localização](../../../docs/standard/globalization-localization/localization.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
 - [Localização](../../../docs/standard/globalization-localization/localization.md)

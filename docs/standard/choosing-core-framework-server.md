@@ -4,15 +4,15 @@ description: Um guia sobre qual implementação de .NET você deve considerar ao
 author: cartermp
 ms.date: 06/19/2018
 ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159969"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
-Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo fornece diretrizes sobre quando usar cada uma.
+Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo diretrizes sobre quando usar cada um.
 
 Use o .NET Core para o aplicativo para servidores se:
 
@@ -27,7 +27,7 @@ Use o .NET Framework para o aplicativo para servidores se:
 - Seu aplicativo usar o .NET Framework atualmente (a recomendação é estender em vez de migrar).
 - Seu aplicativo usa bibliotecas .NET de terceiros ou pacotes NuGet não disponíveis para o .NET Core.
 - Seu aplicativo usa tecnologias .NET que não estão disponíveis para o .NET Core.
-- Seu aplicativo usa uma plataforma que não oferece suporte ao .NET Core. Windows, macOS e Linux dão suporte ao .NET Core.
+- Seu aplicativo usa uma plataforma que não oferece suporte ao .NET Core. Suporte ao Windows, macOS e Linux .NET Core.
 
 ## <a name="when-to-choose-net-core"></a>Quando escolher o .NET Core
 
@@ -37,7 +37,7 @@ As seguintes seções oferecem uma explicação mais detalhada sobre os motivos 
 
 Se seu aplicativo (web/serviço) precisa ser executado em várias plataformas (Windows, Linux e macOS), use o .NET Core.
 
-O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. O Visual Studio fornece um IDE (ambiente de desenvolvimento integrado) para Windows e macOS. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](https://www.omnisharp.net/). Você também pode evitar qualquer editor de código e usar diretamente o [CLI do .NET Core](../core/tools/index.md), disponível para todas as plataformas com suporte.
+O .NET Core dá suporte aos sistemas operacionais mencionados anteriormente como sua estação de trabalho de desenvolvimento. O Visual Studio fornece um IDE (ambiente de desenvolvimento integrado) para Windows e macOS. Você também pode usar o Visual Studio Code, que é executado no Windows, Linux e macOS. O Visual Studio Code dá suporte ao .NET Core, incluindo IntelliSense e depuração. A maioria dos editores de terceiros, como Sublime, Emacs e VI, trabalham com o .NET Core. Esses editores de terceiros obtém o IntelliSense do editor usando o [Omnisharp](https://www.omnisharp.net/). Você também pode evitar qualquer editor de código e usar diretamente o [.NET Core CLI](../core/tools/index.md), disponível para todas as plataformas suportadas.
 
 ### <a name="microservices-architecture"></a>Arquitetura de microsserviços
 
@@ -45,7 +45,7 @@ Uma arquitetura de microsserviços possibilita uma combinação de tecnologias e
 
 Há muitas plataformas de infraestrutura disponíveis. O [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) é criado para sistemas de microsserviço grandes e complexos. O [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/) é uma boa escolha para microsserviços sem monitoração de estado. Alternativas de microsserviços baseadas em Docker se adaptam a qualquer tipo de abordagem de microsserviços, conforme explicado na seção [Contêineres](#containers). Todas essas plataformas oferecem suporte ao .NET Core e são ideais para hospedar microsserviços.
 
-Para obter mais informações sobre a arquitetura de microserviços, consulte [microservices do .net. Arquitetura para aplicativos .NET em contêineres](../architecture/microservices/index.md).
+Para obter mais informações sobre arquitetura de microsserviços, consulte [.NET Microservices. Arquitetura para aplicativos .NET em contêiner](../architecture/microservices/index.md).
 
 ### <a name="containers"></a>Contêineres
 
@@ -94,7 +94,7 @@ Algumas tecnologias do .NET Framework não estão disponíveis no .NET Core. Alg
 
 - Suporte de linguagem: atualmente há suporte para Visual Basic e F# no .NET Core, mas não para todos os tipos de projeto. Para obter uma lista de modelos de projeto com suporte, consulte [Opções de modelo para o dotnet new](../core/tools/dotnet-new.md#arguments).
 
-Além do roteiro oficial, há outras estruturas a serem transferidas para o .NET Core. Para obter uma lista completa, consulte os problemas de CoreFX marcados como [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Essa lista não representa um compromisso da Microsoft para levar esses componentes para o .NET Core. Ela simplesmente captura o desejo da comunidade para que isso seja feito. Se você se importa com qualquer um dos componentes marcados como `port-to-core`, participe das discussões no GitHub. E se você acreditar que algo está faltando, execute um novo problema no [repositório do .net](https://github.com/dotnet/runtime/issues/new).
+Além do roteiro oficial, há outras estruturas a serem transferidas para o .NET Core. Para obter uma lista completa, consulte os problemas de CoreFX marcados como [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core). Essa lista não representa um compromisso da Microsoft para levar esses componentes para o .NET Core. Ela simplesmente captura o desejo da comunidade para que isso seja feito. Se você se importa com qualquer um dos componentes marcados como `port-to-core`, participe das discussões no GitHub. E se você acha que algo está faltando, faça um novo problema no [repositório .NET](https://github.com/dotnet/runtime/issues/new).
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>Necessidade de usar uma plataforma que não oferece suporte a .NET Core
 
@@ -106,7 +106,7 @@ Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Co
 - [ASP.NET Core direcionado para o .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
 - [Estruturas de destino](frameworks.md)
 - [Guia do .NET Core](../core/index.md)
-- [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)
+- [Portabilidade do .NET Framework para o .NET Core](../core/porting/index.md)
 - [Introdução ao .NET e ao Docker](../core/docker/introduction.md)
-- [Visão Geral dos Componentes .NET](components.md)
-- [Microserviços .NET. Arquitetura para aplicativos .NET em contêineres](../architecture/microservices/index.md)
+- [Visão Geral dos Componentes do .NET](components.md)
+- [.NET Microservices. Arquitetura para aplicativos .NET em contêiner](../architecture/microservices/index.md)

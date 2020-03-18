@@ -11,10 +11,10 @@ helpviewer_keywords:
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 ms.openlocfilehash: 14cd6fef80ff9ae3a9d78531785edab0da7cc6b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130908"
 ---
 # <a name="applying-attributes"></a>Aplicando atributos
@@ -42,7 +42,7 @@ Use o processo a seguir para aplicar um atributo a um elemento do código.
  [!code-vb[Conceptual.Attributes.Usage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source1.vb#3)]  
   
 ## <a name="applying-attributes-at-the-assembly-level"></a>Aplicar atributos no nível de assembly  
- Se você quiser aplicar um atributo no nível de assembly, use a palavra-chave **assembly** (`Assembly` no Visual Basic). O código a seguir mostra o **AssemblyTitleAttribute** aplicado no nível de assembly.  
+ Se você quiser aplicar um atributo no **assembly** nível`Assembly` de montagem, use a palavra-chave montagem (no Visual Basic). O código a seguir mostra o **AssemblyTitleAttribute** aplicado no nível de assembly.  
   
  [!code-cpp[Conceptual.Attributes.Usage#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source1.cpp#2)]
  [!code-csharp[Conceptual.Attributes.Usage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source1.cs#2)]
@@ -50,7 +50,7 @@ Use o processo a seguir para aplicar um atributo a um elemento do código.
   
  Quando esse atributo é aplicado, a cadeia de caracteres `"My Assembly"` é colocada no manifesto do assembly na parte de metadados do arquivo. Você pode exibir o atributo usando o [Desmontador de MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ou criando um programa personalizado para recuperar o atributo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Atributos](../../../docs/standard/attributes/index.md)
 - [Recuperando informações armazenadas em atributos](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711331"
 ---
 # <a name="sorted-collection-types"></a>Tipos de coleção Sorted
@@ -46,9 +46,9 @@ A classe <xref:System.Collections.SortedList?displayProperty=nameWithType>, a cl
   
  A partir do .NET Framework 4, a classe <xref:System.Collections.Generic.SortedSet%601> fornece uma árvore de balanceamento automático que mantém os dados na ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe <xref:System.Collections.Generic.HashSet%601> implementam a interface <xref:System.Collections.Generic.ISet%601>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602>
-- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)

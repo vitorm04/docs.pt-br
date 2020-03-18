@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78238982"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
@@ -33,7 +33,7 @@ O padrão de descarte tem duas variações:
   
 Para ajudar a garantir que os recursos sejam sempre limpos corretamente, um método <xref:System.IDisposable.Dispose%2A> deve poder ser chamado várias vezes sem gerar uma exceção.  
   
-O exemplo de código fornecido para o método <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> mostra como a coleta de lixo pode fazer com que um finalizador seja executado, enquanto uma referência não gerenciada para o objeto ou seus membros ainda está em uso. Pode fazer sentido utilizar <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> para tornar o objeto inelegível para coleta de lixo do início da rotina atual até o ponto em que esse método é chamado.
+O exemplo de código <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> fornecido para o método mostra como a coleta de lixo pode fazer com que um finalizador seja executado, enquanto uma referência não gerenciada ao objeto ou seus membros ainda está em uso. Pode fazer sentido <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> utilizar para tornar o objeto inelegível para coleta de lixo desde o início da rotina atual até o ponto em que esse método é chamado.
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() e Dispose(Boolean)  
@@ -166,5 +166,5 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 - <xref:Microsoft.Win32.SafeHandles>
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
-- [Como definir e consumir classes e structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
+- [Como definir e consumir classes e estruturas (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
 - [Padrão de descarte](implementing-dispose.md)

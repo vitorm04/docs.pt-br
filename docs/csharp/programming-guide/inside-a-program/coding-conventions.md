@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452000"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399731"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenções de codificação em C# (Guia de Programação em C#)
 
@@ -25,7 +25,7 @@ As convenções de codificação atendem às seguintes finalidades:
   
 - Demonstram as práticas recomendadas do C#.  
 
-As diretrizes neste artigo são usadas pela Microsoft para desenvolver exemplos e documentação.  
+As diretrizes deste artigo são usadas pela Microsoft para desenvolver amostras e documentação.  
   
 ## <a name="naming-conventions"></a>Convenções de nomenclatura  
   
@@ -97,20 +97,20 @@ As seções a seguir descrevem práticas que a equipe de C# segue para preparar 
   
 - Evite o uso de `var` em vez de [dynamic](../../language-reference/builtin-types/reference-types.md).  
   
-- Use a digitação implícita para determinar o tipo da variável de loop nos loops [for](../../language-reference/keywords/for.md) .  
+- Use digitação implícita para determinar o tipo da variável loop em [loops.](../../language-reference/keywords/for.md)  
   
      O exemplo a seguir usa digitação implícita em uma instrução `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- Não use a digitação implícita para determinar o tipo da variável de loop em loops [foreach](../../language-reference/keywords/foreach-in.md) .
+- Não use digitação implícita para determinar o tipo da variável loop em [loops foreach.](../../language-reference/keywords/foreach-in.md)
 
-     O exemplo a seguir usa a digitação explícita em uma instrução `foreach`.
+     O exemplo a seguir `foreach` usa digitação explícita em uma instrução.
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Tenha cuidado para não alterar acidentalmente um tipo de elemento da coleção iterável. Por exemplo, é fácil mudar de <xref:System.Linq.IQueryable?displayProperty=nameWithType> para <xref:System.Collections.IEnumerable?displayProperty=nameWithType> em uma instrução `foreach`, que altera a execução de uma consulta.
+     > Tenha cuidado para não mudar acidentalmente um tipo de elemento da coleção iterável. Por exemplo, é fácil <xref:System.Linq.IQueryable?displayProperty=nameWithType> mudar <xref:System.Collections.IEnumerable?displayProperty=nameWithType> de `foreach` uma declaração para uma declaração, que altera a execução de uma consulta.
 
 ### <a name="unsigned-data-type"></a>Tipo de Dados Sem Sinal  
   
@@ -142,7 +142,7 @@ Use a sintaxe concisa ao criar instâncias de um tipo delegado.
   
 ### <a name="-and-124124-operators"></a>Operadores && e &#124;&#124;  
   
-Para evitar exceções e aumentar o desempenho ignorando comparações desnecessárias, use [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) em vez de [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) e [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) em vez de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) ao executar comparações, conforme mostrado no exemplo a seguir.  
+Para evitar exceções e aumentar o desempenho [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) pulando [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) comparações desnecessárias, use em vez de [e&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) em vez de [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) quando você executar comparações, como mostrado no exemplo a seguir.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 ms.openlocfilehash: 183078b1f7a3eb3530fea8af06dbb59055d7d25d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120792"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Executando operações de cadeia de caracteres que não levam em conta a cultura
@@ -40,7 +40,7 @@ A maioria dos métodos do .NET Framework que executam operações de cadeia de c
  [Operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Descreve por que você deve estar ciente da cultura ao executar operações em cadeias de caracteres, e fornece diretrizes para quando executar operações sensíveis à cultura e quando executar operações insensíveis à cultura.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Classificação de tabelas de peso (para .NET em sistemas Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Tabela do elemento de ordenação Unicode padrão (para .NET Core em Linux e macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

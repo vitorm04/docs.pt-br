@@ -13,10 +13,10 @@ helpviewer_keywords:
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091737"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilação e reutilização em expressões regulares
@@ -32,7 +32,7 @@ No entanto, a MSIL gerada não pode ser descarregada. A única maneira de descar
  Você precisa ser cuidadoso para limitar o número de expressões regulares diferentes que compila com a opção <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> para evitar consumir recursos em demasia. Se um aplicativo precisar usar um número grande ou ilimitado de expressões regulares, cada expressão deve ser interpretada, não compilada. No entanto, se um número pequeno de expressões regulares forem usadas repetidamente, elas devem ser compiladas com <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> para melhorar o desempenho. Uma alternativa é usar expressões regulares pré-compiladas. Você pode compilar todas as suas expressões em uma DLL reutilizável usando o método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A>. Isso evita a necessidade de compilar no runtime enquanto ainda se beneficia da velocidade das expressões regulares compiladas.  
   
 ## <a name="the-regular-expressions-cache"></a>Cache de expressões regulares  
- Para melhorar o desempenho, o mecanismo de expressões regulares mantém um cache em todo o aplicativo com as expressões regulares compiladas. O cache armazena padrões de expressões regulares que são usados somente em chamadas de método estático. (Padrões de expressão regular fornecidos para métodos de instância não são armazenados em cache.) Isso evita a necessidade de analisar novamente uma expressão em um código de byte de alto nível sempre que ela for usada.  
+ Para melhorar o desempenho, o mecanismo de expressões regulares mantém um cache em todo o aplicativo com as expressões regulares compiladas. O cache armazena padrões de expressões regulares que são usados somente em chamadas de método estático. (Os padrões de expressão regulares fornecidos aos métodos de ocorrência não são armazenados em cache.) Isso evita a necessidade de reparse uma expressão em código de byte de alto nível cada vez que é usado.  
   
  O número máximo de expressões regulares em cache é determinado pelo valor da propriedade `static` (`Shared` no Visual Basic) <xref:System.Text.RegularExpressions.Regex.CacheSize%2A?displayProperty=nameWithType>. Por padrão, o mecanismo de expressões regulares armazena em cache até 15 expressões regulares compiladas. Se o número de expressões regulares compiladas ultrapassar o tamanho do cache, a expressão regular menos utilizada recentemente será descartada e a nova expressão regular será armazenada em cache.  
   
@@ -44,6 +44,6 @@ No entanto, a MSIL gerada não pode ser descarregada. A única maneira de descar
   
  Devido à sobrecarga da instanciação de objetos e à compilação da expressão regular, criar e destruir rapidamente vários objetos <xref:System.Text.RegularExpressions.Regex> é um processo muito caro. Para aplicativos que usam um grande número de expressões regulares diferentes, você pode otimizar o desempenho usando chamadas para métodos `Regex` estáticos e, possivelmente, aumentando o tamanho do cache de expressão regular.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

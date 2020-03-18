@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
 ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711370"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de coleção Hashtable e Dictionary
@@ -34,7 +34,7 @@ A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as 
   
  As classes <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> têm a mesma funcionalidade que a classe <xref:System.Collections.Hashtable>. Um <xref:System.Collections.Generic.Dictionary%602> de um tipo específico (diferente de <xref:System.Object>) fornece desempenho melhor do que um <xref:System.Collections.Hashtable> para tipos de valor. Isso ocorre porque os elementos de <xref:System.Collections.Hashtable> são do tipo <xref:System.Object>; portanto, conversões boxing e unboxing normalmente ocorrem quando você armazena ou recupera um tipo de valor. A classe <xref:System.Collections.Concurrent.ConcurrentDictionary%602> deve ser usada quando vários threads podem estar acessando a coleção simultaneamente.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>
@@ -42,4 +42,4 @@ A classe <xref:System.Collections.Hashtable?displayProperty=nameWithType>, e as 
 - <xref:System.Collections.Generic.Dictionary%602>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>
-- [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)
+- [Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)

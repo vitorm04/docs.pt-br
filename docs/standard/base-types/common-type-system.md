@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159319"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400487"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -40,9 +40,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - [Definições de tipo](#type_definitions)  
   
-- [Membros de tipos](#type_members)  
+- [Tipo Membros](#type_members)  
   
-- [Características de membros de tipo](#characteristics_of_type_members)  
+- [Características dos Membros do Tipo](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>
 ## <a name="types-in-net"></a>Tipos no .NET  
@@ -62,7 +62,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - [Interfaces](#Interfaces)  
   
-- [Delegados](#Delegates)  
+- [Delega](#Delegates)  
   
 <a name="Classes"></a>
 ### <a name="classes"></a>Classes  
@@ -70,11 +70,11 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  A tabela a seguir descreve algumas das características que uma classe pode ter. Cada linguagem que dá suporte ao runtime fornece uma maneira para indicar que uma classe ou um membro da classe tem uma ou mais dessas características. No entanto, as linguagens de programação individuais que segmentam o .NET não podem disponibilizar todas essas características.  
   
-|Característica|DESCRIÇÃO|  
+|Característica|Descrição|  
 |--------------------|-----------------|  
-|lacrados|Especifica que outra classe não pode ser derivada desse tipo.|  
+|sealed|Especifica que outra classe não pode ser derivada desse tipo.|  
 |implementa|Indica que a classe usa uma ou mais interfaces, fornecendo implementações de membros da interface.|  
-|{1&gt;abstract&lt;1}|Indica que a classe não pode ser instanciada. Para usá-la, você deve derivar outra classe a partir dela.|  
+|abstract|Indica que a classe não pode ser instanciada. Para usá-la, você deve derivar outra classe a partir dela.|  
 |herda|Indica que as instâncias da classe podem ser usadas em qualquer lugar em que a classe base for especificada. Uma classe derivada que herda de uma classe base pode usar a implementação de todos os membros públicos fornecidos pela classe base ou a classe derivada pode substituir a implementação dos membros públicos com sua própria implementação.|  
 |exportado ou não exportado|Indica se uma classe está visível fora do assembly em que ela está definida. Essa característica só se aplica a classes de nível superior e não a classes aninhadas.|  
   
@@ -187,7 +187,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ### <a name="type-accessibility"></a>Acessibilidade de tipo  
  Todos os tipos têm um modificador que rege sua acessibilidade de outros tipos. A tabela a seguir descreve as acessibilidades de tipo que o runtime dá suporte.  
   
-|Acessibilidade|DESCRIÇÃO|  
+|Acessibilidade|Descrição|  
 |-------------------|-----------------|  
 |público|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
@@ -215,7 +215,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
  No entanto, a maioria das linguagens impõe restrições adicionais em nomes de tipo. Todas as comparações são feitas em uma base byte por byte e, assim, diferenciam maiúsculas de minúsculas e são independentes de localidade.  
   
- Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte do compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Os nomes de tipo precisam ser exclusivos somente dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.  
+ Embora um tipo possa referenciar tipos de outros módulos e assemblies, um tipo deve ser totalmente definido em um módulo do .NET. (Dependendo do suporte ao compilador, no entanto, ele pode ser dividido em vários arquivos de código-fonte.) Os nomes de digitaprecisam ser únicos apenas dentro de um namespace. Para identificar totalmente um tipo, o nome de tipo deve ser qualificado pelo namespace que contém a implementação do tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipos de base e interfaces  
  Um tipo pode herdar valores e comportamentos de outro tipo. O Common Type System não permite que tipos sejam herdados de mais de um tipo de base.  
@@ -226,7 +226,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="type-members"></a>Membros de tipo  
  O runtime permite que você defina os membros do tipo, o que especifica o comportamento e o estado de um tipo. Os membros de tipo incluem o seguinte:  
   
-- [Fields](#Fields)  
+- [Campos](#Fields)  
   
 - [Propriedades](#Properties)  
   
@@ -258,7 +258,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Além de incluir a própria propriedade, a MSIL (Microsoft Intermediate Language) para um tipo que contém uma propriedade legível inclui um método `get_`*propertyname* e a MSIL para um tipo que contém uma propriedade gravável inclui um método `set_`*propertyname*.  
+ Além de incluir a propriedade em si, a linguagem intermediária da Microsoft (MSIL) para um tipo que contém uma propriedade legível `get_`inclui um método de nome de *propriedade,* e o MSIL para um tipo que contém uma propriedade gravável inclui um `set_`método de nome de *propriedade.*  
   
 <a name="Methods"></a>
 ### <a name="methods"></a>Métodos  
@@ -276,7 +276,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 <a name="Events"></a>
 ### <a name="events"></a>Eventos  
- Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado. Para obter mais informações, consulte [Events](../../../docs/standard/events/index.md).  
+ Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado. Para obter mais informações, consulte [Eventos](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>
 ### <a name="nested-types"></a>Tipos aninhados  
@@ -288,9 +288,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="characteristics-of-type-members"></a>Características de membros de tipo  
  O Common Type System permite que os membros de tipo tenham várias características. No entanto, as linguagens não necessariamente dão suporte a todas elas. A tabela a seguir descreve as características de um membro.  
   
-|Característica|Pode ser aplicado a|DESCRIÇÃO|  
+|Característica|Pode ser aplicado a|Descrição|  
 |--------------------|------------------|-----------------|  
-|{1&gt;abstract&lt;1}|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
+|abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
 |privado, família, assembly, família e assembly, família ou assembly ou público|Todos|Define a acessibilidade de um membro:<br /><br /> privado<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> público<br /> Acessíveis dentro de qualquer tipo.|  
 |final|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
 |initialize-only|Campos|O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.|  
@@ -316,5 +316,5 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
 ## <a name="see-also"></a>Confira também
 
 - [Navegador de API .NET](/dotnet/api)
-- [Common Language Runtime](../../../docs/standard/clr.md)
+- [Tempo de execução do idioma comum](../../../docs/standard/clr.md)
 - [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)

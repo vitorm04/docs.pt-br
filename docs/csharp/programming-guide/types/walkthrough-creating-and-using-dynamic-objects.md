@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3b5a92948a3e692a734f3ddee3c7238d5d27588f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417584"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157046"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)
 
@@ -32,7 +32,7 @@ Os objetos dinâmicos expõem membros como propriedades e métodos em tempo de e
   
 - Criar um projeto que usa uma biblioteca `IronPython`.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
 
 É necessário ter o [IronPython](https://ironpython.net/) para .NET para concluir este passo a passo. Navegue até a respectiva [página de download](https://ironpython.net/download/) para obter a versão mais recente.
   
@@ -46,9 +46,9 @@ O primeiro projeto que você cria neste passo a passo define um objeto dinâmico
   
 1. Inicie o Visual Studio.  
   
-2. No menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
+2. No **menu Arquivo,** aponte para **Novo** e clique em **Projeto**.  
   
-3. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicSample` e clique em **OK**. O novo projeto é criado.  
+3. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicSample` e clique em **OK**. Quando um novo projeto é criado.  
   
 4. Clique com botão direito do mouse no projeto DynamicSample e aponte para **Adicionar** e, em seguida, clique em **Classe**. Na caixa **Nome**, digite `ReadOnlyFile` e clique em **OK**. É adicionado um novo arquivo que contém a classe ReadOnlyFile.  
   
@@ -72,7 +72,7 @@ O primeiro projeto que você cria neste passo a passo define um objeto dinâmico
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
   
-9. Adicione o seguinte método de `GetPropertyValue` a classe de `ReadOnlyFile` . O método `GetPropertyValue` usa, como entrada, critérios de pesquisa e retorna as linhas de um arquivo de texto que correspondem a esse critério de pesquisa. Os métodos dinâmicos fornecidos pela classe `ReadOnlyFile` chamam o método `GetPropertyValue` para recuperar seus respectivos resultados.  
+9. Adicione o seguinte método `GetPropertyValue` à classe `ReadOnlyFile`. O método `GetPropertyValue` usa, como entrada, critérios de pesquisa e retorna as linhas de um arquivo de texto que correspondem a esse critério de pesquisa. Os métodos dinâmicos fornecidos pela classe `ReadOnlyFile` chamam o método `GetPropertyValue` para recuperar seus respectivos resultados.  
   
     [!code-csharp[VbDynamicWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#5)]
     [!code-vb[VbDynamicWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#5)]  
@@ -104,10 +104,10 @@ O primeiro projeto que você cria neste passo a passo define um objeto dinâmico
     Customer: Preston, Chris  
     Customer: Hines, Patrick  
     Customer: Cameron, Maria  
-    Supplier: Graphic Design Institute (https://www.graphicdesigninstitute.com/)   
-    Supplier: Fabrikam, Inc. (https://www.fabrikam.com/)   
+    Supplier: Graphic Design Institute (https://www.graphicdesigninstitute.com/)
+    Supplier: Fabrikam, Inc. (https://www.fabrikam.com/)
     Customer: Seubert, Roxanne  
-    Supplier: Proseware, Inc. (http://www.proseware.com/)   
+    Supplier: Proseware, Inc. (http://www.proseware.com/)
     Customer: Adolphi, Stephan  
     Customer: Koch, Paul  
     ```  
@@ -131,11 +131,11 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 ### <a name="to-create-a-custom-dynamic-class"></a>Para criar uma classe dinâmica personalizada
   
-1. No Visual Studio, no menu **Arquivo**, aponte para **Novo** e clique em **Projeto**.  
+1. No Visual Studio, no menu **Arquivo,** aponte para **Novo** e clique em **Projeto**.  
   
-2. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicIronPythonSample` e clique em **OK**. O novo projeto é criado.  
+2. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicIronPythonSample` e clique em **OK**. Quando um novo projeto é criado.  
   
-3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **referências** . Clique no botão **Adicionar** . Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
+3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **Referências.** Clique no botão **Adicionar.** Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
   
 4. Na guia **Procurar**, navegue até a pasta em que as bibliotecas do IronPython estão instaladas. Por exemplo, C:\Program Files\IronPython 2.6 for .NET 4.0. Selecione as bibliotecas **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Clique em **OK**.  
   
@@ -158,11 +158,11 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 9. Salve o arquivo e pressione CTRL+F5 para compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Usando o tipo dynamic](./using-type-dynamic.md)
-- [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/builtin-types/reference-types.md)
-- [Implementando interfaces dinâmicas (PDF baixável do Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
+- [Usando o Tipo dynamic](./using-type-dynamic.md)
+- [Associação inicial e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [dinâmico](../../language-reference/builtin-types/reference-types.md)
+- [Implementando interfaces dinâmicas (PDF para download do Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

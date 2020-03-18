@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423034"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
@@ -27,11 +27,11 @@ Se seus tipos usam recursos não gerenciados, você deve fazer o seguinte:
 
 - Implementar o [padrão de descarte](implementing-dispose.md). Isso exige que você forneça uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para habilitar a liberação determinística dos recursos não gerenciados. Um consumidor do seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.
 
-- Fazer com que seus recursos não gerenciados sejam liberados se um consumidor do seu tipo esquecer chamar <xref:System.IDisposable.Dispose%2A>. Há duas formas de fazer isso:
+- Fazer com que seus recursos não gerenciados sejam liberados se um consumidor do seu tipo esquecer chamar <xref:System.IDisposable.Dispose%2A>. Há duas maneiras de fazer isso:
 
-  - Usar um identificador seguro para encapsular o recurso não gerenciado. Esta é a técnica recomendada. Os identificadores seguros são derivados da classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> e incluem um método <xref:System.Object.Finalize%2A> robusto. Ao usar um identificador seguro, você simplesmente implementa a interface <xref:System.IDisposable> e chama o método <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> do seu identificador seguro em sua implementação do <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. O finalizador do identificador seguro é chamado automaticamente pelo coletor de lixo quando seu método <xref:System.IDisposable.Dispose%2A> não é chamado.
+  - Usar um identificador seguro para encapsular o recurso não gerenciado. Essa é a técnica recomendada. Os identificadores seguros são derivados da classe <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> e incluem um método <xref:System.Object.Finalize%2A> robusto. Ao usar um identificador seguro, você simplesmente implementa a interface <xref:System.IDisposable> e chama o método <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> do seu identificador seguro em sua implementação do <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. O finalizador do identificador seguro é chamado automaticamente pelo coletor de lixo quando seu método <xref:System.IDisposable.Dispose%2A> não é chamado.
 
-    —ou—
+    — ou —
 
   - Substituir o método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. A finalização habilita a liberação não determinística de recursos não gerenciados quando o consumidor de um tipo não chama <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para fazer o descarte de forma determinística. No entanto, como a finalização de objetos pode ser uma operação complexa e propensa a erros, recomendamos que você use um identificador seguro em vez de fornecer seu próprio finalizador.
 

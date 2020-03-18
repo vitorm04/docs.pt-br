@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712475"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Referência de C#)
@@ -22,7 +22,7 @@ Gera somas de verificação para os arquivos de origem para ajudar na depuraçã
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `"filename"`  
  O nome do arquivo que exige o monitoramento de alterações ou atualizações.  
   
@@ -53,8 +53,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
-- [Diretivas do pré-processador do C#](./index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
+- [C# Diretivas de pré-processador](./index.md)

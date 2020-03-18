@@ -3,10 +3,10 @@ title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344775"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
@@ -36,11 +36,11 @@ O termo "LINQ to Objects" refere-se ao uso de consultas LINQ com qualquer coleç
  [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)  
  Explica como a LINQ pode ser usada para interagir com sistemas de arquivos. Também inclui links para tópicos que demonstram esses conceitos.  
   
- [Como consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
+ [Como consultar uma arraylist com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)  
  Demonstra como consultar um ArrayList no C#.  
   
  [Como adicionar métodos personalizados para consultas LINQ (C#)](./how-to-add-custom-methods-for-linq-queries.md)  
  Explica como estender o conjunto de métodos que você pode usar para consultas LINQ, adicionando os métodos de extensão à interface <xref:System.Collections.Generic.IEnumerable%601>.  
   
- [LINQ (consulta integrada à linguagem) (C#)](./index.md)  
+ [LINQ (Consulta Integrada à Linguagem) (C#)](./index.md)  
  Fornece links para tópicos que explicam a LINQ e fornecem exemplos de código que realizam consultas.

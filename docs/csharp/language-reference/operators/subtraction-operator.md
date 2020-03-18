@@ -12,16 +12,16 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: ccf3572df99f5c3de127c9ada690a977843648af
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2017aade92e8d7ad2af7101a107122fa8d7b9e27
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238831"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847645"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - e -= (referência do C#)
 
-Os operadores de `-` e `-=` são suportados pelos tipos numéricos [internos e de](../builtin-types/integral-numeric-types.md) [ponto flutuante](../builtin-types/floating-point-numeric-types.md) e tipos [delegados](../builtin-types/reference-types.md#the-delegate-type) .
+Os `-` `-=` operadores e operadores são apoiados pelos tipos numéricos [integrais](../builtin-types/integral-numeric-types.md) e [flutuantes](../builtin-types/floating-point-numeric-types.md) embutidos e de ponto [flutuante.](../builtin-types/reference-types.md#the-delegate-type)
 
 Para obter informações sobre o operador `-` aritmético, consulte as seções [Operadores de adição e subtração unários](arithmetic-operators.md#unary-plus-and-minus-operators) e [Operador de subtração -](arithmetic-operators.md#subtraction-operator--) do artigo [Operadores aritméticos](arithmetic-operators.md).
 
@@ -31,19 +31,19 @@ Para operandos do mesmo tipo [delegado](../builtin-types/reference-types.md#the-
 
 - Se ambos os operandos forem não nulos e a lista de invocação do operando à direita for uma sublista contígua apropriada da lista de invocação do operando à esquerda, o resultado da operação será uma nova lista de invocação obtida removendo-se as entradas do operando à direita da lista de invocação do operando à esquerda. Se a lista do operando à direita corresponder a várias sublistas contíguas na lista do operando à esquerda, somente a sublista correspondente mais à direita será removida. Se a remoção resultar em uma lista vazia, o resultado será `null`.
 
-  [!code-csharp-interactive[delegate removal](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+  [!code-csharp-interactive[delegate removal](snippets/SubtractionOperator.cs#DelegateRemoval)]
 
 - Se a lista de invocação do operando à direita não for uma sublista contígua apropriada da lista de invocação do operando à esquerda, o resultado da operação será o operando à esquerda. Por exemplo, a remoção de um delegado que não faz parte do delegado multicast não tem consequências, e o delegado multicast permanece inalterado.
 
-  [!code-csharp-interactive[delegate removal with no effect](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+  [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   O exemplo anterior também demonstra que, durante a remoção de delegados, as instâncias de delegado são comparadas. Por exemplo, delegados produzidos pela avaliação de [expressões lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) idênticas não são iguais. Para saber mais sobre a igualdade de delegados, confira a seção [Operadores de igualdade de delegados](~/_csharplang/spec/expressions.md#delegate-equality-operators) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
 - Se o operando à esquerda for `null`, o resultado da operação será `null`. Se o operando à direita for `null`, o resultado da operação será o operando à esquerda.
 
-  [!code-csharp-interactive[delegate removal and null](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
+  [!code-csharp-interactive[delegate removal and null](snippets/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-Para combinar delegados, use o [operador `+`](addition-operator.md#delegate-combination).
+Para combinar delegados, [ `+` ](addition-operator.md#delegate-combination)use o operador .
 
 Para obter mais informações sobre tipos de delegado, veja [Delegados](../../programming-guide/delegates/index.md).
 
@@ -65,9 +65,9 @@ exceto que `x` é avaliado apenas uma vez.
 
 O exemplo a seguir demonstra o uso do operador `-=`:
 
-[!code-csharp-interactive[-= examples](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
+[!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
 
-Você também usará o operador `-=` para especificar um método de manipulador de eventos a remover ao cancelar a assinatura de um [evento](../keywords/event.md). Para obter mais informações, consulte [como assinar e cancelar a assinatura de eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Você também usará o operador `-=` para especificar um método de manipulador de eventos a remover ao cancelar a assinatura de um [evento](../keywords/event.md). Para obter mais informações, consulte [Como se inscrever e cancelar a inscrição de eventos](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -79,8 +79,8 @@ Para obter mais informações, veja as seções [Operador de subtração unário
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
 - [Eventos](../../programming-guide/events/index.md)
-- [Operadores aritméticos](arithmetic-operators.md)
-- [Operadores + e +=](addition-operator.md)
+- [Operadores de aritmética](arithmetic-operators.md)
+- [+ e += operadores](addition-operator.md)

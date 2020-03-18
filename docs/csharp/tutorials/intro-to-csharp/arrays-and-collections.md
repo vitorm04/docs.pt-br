@@ -3,18 +3,18 @@ title: Trabalhar com coleções – Introdução ao tutorial do C#
 description: Aprenda C# explorando a Coleção de lista neste tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834145"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156683"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Saiba como gerenciar coleções de dados usando o tipo de lista genérico
 
 Este tutorial de introdução fornece uma introdução à linguagem C# e os conceitos básicos da classe <xref:System.Collections.Generic.List%601>.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS. Uma visão geral de comandos que você usará está em [Familiarizar-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Uma visão geral de comandos que você usará está em [Familiarizar-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="a-basic-list-example"></a>Um exemplo de lista básica
 
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-Substitua `<name>` pelo seu nome. Salve *Program.cs*. Digite `dotnet run` na janela de console para testá-lo.
+Substitua `<name>` pelo seu nome. Salve o *Program.cs*. Digite `dotnet run` na janela de console para testá-lo.
 
 Você criou uma lista de cadeias de caracteres, adicionou três nomes a essa lista e imprimiu os nomes em MAIÚSCULAS. Você está usando conceitos que aprendeu em tutoriais anteriores para executar um loop pela lista.
 
@@ -138,7 +138,7 @@ namespace list_tutorial
             WorkingWithStrings();
         }
 
-        public static void WorkingWithStrings()
+        static void WorkingWithStrings()
         {
             var names = new List<string> { "<name>", "Ana", "Felipe" };
             foreach (var name in names)
@@ -161,10 +161,25 @@ namespace list_tutorial
             Console.WriteLine($"The list has {names.Count} people in it");
 
             var index = names.IndexOf("Felipe");
-            Console.WriteLine($"The name {names[index]} is at index {index}");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+            }
 
-            var notFound = names.IndexOf("Not Found");
-            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+            index = names.IndexOf("Not Found");
+            if (index == -1)
+            {
+                Console.WriteLine($"When an item is not found, IndexOf returns {index}");
+            }
+            else
+            {
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            }
 
             names.Sort();
             foreach (var name in names)

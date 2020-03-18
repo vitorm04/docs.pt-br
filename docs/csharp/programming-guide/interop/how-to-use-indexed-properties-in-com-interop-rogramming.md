@@ -1,5 +1,5 @@
 ---
-title: Como usar propriedades indexadas no guia de C# programação da interoperabilidade com
+title: Como usar propriedades indexadas na programação interop COM - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexed properties [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
 ms.openlocfilehash: 864e2274f0e0e79b4843e0bb67b5c4384eac8588
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712059"
 ---
-# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Como usar propriedades indexadas na programação de interoperabilidade COM (guia deC# programação)
+# <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Como usar propriedades indexadas na programação interop COM (Guia de Programação C#)
 As *propriedades indexadas* melhoram a maneira na qual as propriedades COM que têm parâmetros são consumidas na programação em C#. As propriedades indexadas trabalham juntamente com outras funcionalidades no Visual C#, como [argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md), um novo tipo ([dinâmico](../../language-reference/builtin-types/reference-types.md)) e [informações de tipo inseridas](../../../standard/assembly/embed-types-visual-studio.md) para melhorar a programação do Microsoft Office.  
   
  Nas versões anteriores do C#, os métodos são acessíveis como propriedades apenas se o método `get` não tem parâmetros e o método `set` tem apenas um parâmetro de valor. No entanto, nem todas as propriedades COM atendem a essas restrições. Por exemplo, a propriedade <xref:Microsoft.Office.Interop.Excel.Range.Range%2A> do Excel tem um acessador `get` que requer um parâmetro para o nome do intervalo. No passado, como não era possível acessar a propriedade `Range` diretamente, era necessário usar o método `get_Range` em vez disso, conforme mostrado no exemplo a seguir.  
@@ -38,15 +38,15 @@ As *propriedades indexadas* melhoram a maneira na qual as propriedades COM que t
  Não é possível criar propriedades indexadas de sua preferência. O recurso dá suporte apenas ao consumo de propriedades indexadas existentes.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir mostra um exemplo completo. Para obter mais informações sobre como configurar um projeto que acessa a API do Office, consulte [como acessar objetos de interoperabilidade do Office C# usando recursos](./how-to-access-office-onterop-objects.md).
+ O código a seguir mostra um exemplo completo. Para obter mais informações sobre como configurar um projeto que acessa a API do Office, consulte [Como acessar objetos interop do Office usando recursos C#](./how-to-access-office-onterop-objects.md).
   
  [!code-csharp[csProgGuideIndexedProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#5)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md)
-- [dynamic](../../language-reference/builtin-types/reference-types.md)
-- [Usando o tipo dynamic](../types/using-type-dynamic.md)
+- [dinâmico](../../language-reference/builtin-types/reference-types.md)
+- [Usando o Tipo dynamic](../types/using-type-dynamic.md)
 - [Como usar argumentos nomeados e opcionais na programação do Office](../classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Como acessar objetos de interoperabilidade do C# Office usando recursos](./how-to-access-office-onterop-objects.md)
+- [Como acessar objetos de interoperabilidade do Office usando recursos do C#](./how-to-access-office-onterop-objects.md)
 - [Passo a passo: programação do Office](./walkthrough-office-programming.md)

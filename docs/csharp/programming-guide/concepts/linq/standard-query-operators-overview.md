@@ -2,12 +2,12 @@
 title: Visão geral de operadores de consulta padrão (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 76c2c4684f33c3fb30748b5f08efd215548661ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590982"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167849"
 ---
 # <a name="standard-query-operators-overview-c"></a>Visão geral de operadores de consulta padrão (C#)
 Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.  
@@ -63,7 +63,7 @@ foreach (var obj in query)
 // Words of length 5:  
 // QUICK  
 // BROWN  
-// JUMPS   
+// JUMPS
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintaxe de expressão de consulta  
@@ -103,11 +103,11 @@ foreach (var obj in query)
   
  [Operações de agregação (C#)](./aggregation-operations.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Introdução a consultas LINQ (C#)](./introduction-to-linq-queries.md)
 - [Sintaxe de expressão de consulta para operadores de consulta padrão (C#)](./query-expression-syntax-for-standard-query-operators.md)
 - [Classificação de operadores de consulta padrão pelo modo de execução (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Métodos de Extensão](../../classes-and-structs/extension-methods.md)
+- [Métodos de extensão](../../classes-and-structs/extension-methods.md)

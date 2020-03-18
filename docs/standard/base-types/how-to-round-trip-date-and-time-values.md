@@ -13,10 +13,10 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132001"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Como aplicar uma viagem de ida e volta a valores de data e hora
@@ -38,7 +38,7 @@ O exemplo a seguir mostra como fazer a viagem de ida e volta de um valor <xref:S
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Fazendo a viagem de ida e volta de um valor <xref:System.DateTime>, essa técnica consegue preservar o horário para todos os horários locais e universais. Por exemplo, se um valor de <xref:System.DateTime> local for salvo em um sistema no fuso horário padrão do Pacífico americano e for restaurado em um sistema no fuso horário padrão central dos EUA, a data e a hora restauradas serão duas horas depois da hora original , que reflete a diferença de tempo entre os dois fusos horários. No entanto, essa técnica não é necessariamente exata para horários não especificados. Todos os valores <xref:System.DateTime> cuja propriedade <xref:System.DateTime.Kind%2A> é <xref:System.DateTimeKind.Unspecified> são tratados como se fossem horários locais. Se não for o caso, <xref:System.DateTime> não conseguirá identificar o momento correto. A solução alternativa para essa limitação é acoplar rigorosamente um valor de data e hora com seu fuso horário para salvar e restaurar a operação.
+Fazendo a viagem de ida e volta de um valor <xref:System.DateTime>, essa técnica consegue preservar o horário para todos os horários locais e universais. Por exemplo, se <xref:System.DateTime> um valor local é salvo em um sistema no fuso horário padrão do Pacífico dos EUA e é restaurado em um sistema no fuso horário padrão padrão dos EUA, a data e hora restauradas serão duas horas mais tarde do que o horário original, o que reflete a diferença de tempo entre os dois fusos horários. No entanto, essa técnica não é necessariamente exata para horários não especificados. Todos os valores <xref:System.DateTime> cuja propriedade <xref:System.DateTime.Kind%2A> é <xref:System.DateTimeKind.Unspecified> são tratados como se fossem horários locais. Se não for o caso, <xref:System.DateTime> não conseguirá identificar o momento correto. A solução alternativa para essa limitação é acoplar rigorosamente um valor de data e hora com seu fuso horário para salvar e restaurar a operação.
 
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Para fazer uma viagem de ida e volta de um valor DateTimeOffset
 
@@ -87,17 +87,17 @@ Esses exemplos precisam de:
 
   - <xref:System> (apenas para C#).
 
-  - <xref:System.Globalization?displayProperty=nameWithType>
+  - <xref:System.Globalization?displayProperty=nameWithType>.
 
-  - <xref:System.IO?displayProperty=nameWithType>
+  - <xref:System.IO?displayProperty=nameWithType>.
 
-  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
+  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
 
 - Cada exemplo de código, exceto a classe `DateInTimeZone`, deve ser incluído em uma classe ou um módulo do Visual Basic, empacotado em métodos e chamado do método `Main`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124211"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Como: Executar ações quando um bloco de fluxo de dados recebe dados
@@ -29,7 +29,7 @@ Os tipos de *Blocos de fluxo de dados de execução* chamam um representante for
   
  Embora você possa fornecer uma expressão lambda para um objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, este exemplo usa <xref:System.Func%602> para habilitar outro código para usar o método `CountBytes`. O objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> usa uma expressão lambda porque o trabalho a ser executado é específico dessa tarefa e provavelmente não será útil para outro código. Para obter mais informações sobre como as expressões lambda funcionam na Biblioteca de paralelismo de tarefas, confira [Expressões lambda no PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
- A seção Resumo de tipos de representantes no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) resume os tipos de representantes que você pode oferecer aos objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. A tabela também especifica se o tipo de representante opera de forma síncrona ou assíncrona.  
+ A seção Resumo dos Tipos de Delegados no documento [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) resume os tipos de delegados que você pode fornecer <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>e <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> objetos. A tabela também especifica se o tipo de representante opera de forma síncrona ou assíncrona.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Este exemplo fornece um representante do tipo <xref:System.Func%602> ao objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> para executar a tarefa do bloco de fluxo de dados de forma síncrona. Para habilitar o bloco de fluxo de dados para se comportar de forma assíncrona, forneça um representante do tipo <xref:System.Func%601> ao bloco de fluxo de dados. Quando um bloco de fluxo de dados se comporta de forma assíncrona, a tarefa do bloco de fluxo de dados só será concluída quando o objeto <xref:System.Threading.Tasks.Task%601>retornado for concluído. O exemplo a seguir modifica o método `CountBytes` e usa os operadores [async](../../csharp/language-reference/keywords/async.md) e [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) e [Await](../../visual-basic/language-reference/operators/await-operator.md) em Visual Basic) para calcular de forma assíncrona o número total de bytes que tem o valor zero no arquivo fornecido. O método <xref:System.IO.FileStream.ReadAsync%2A> executa operações de leitura de arquivo de forma assíncrona.  
@@ -42,6 +42,6 @@ Os tipos de *Blocos de fluxo de dados de execução* chamam um representante for
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

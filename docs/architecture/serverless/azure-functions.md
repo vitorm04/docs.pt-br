@@ -1,93 +1,93 @@
 ---
-title: Aplicativos Azure Functions-sem servidor
-description: O Azure Functions fornece recursos sem servidor em váriosC#idiomas (, JavaScript, Java) e plataformas para fornecer código de escala instantânea controlado por eventos.
+title: Funções do Azure - Aplicativos sem servidor
+description: As funções do Azure fornecem recursos sem servidor em vários idiomas (C#, JavaScript, Java) e plataformas para fornecer código de escala instantânea orientado a eventos.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920972"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401609"
 ---
-# <a name="azure-functions"></a>Verificação de
+# <a name="azure-functions"></a>Funções do Azure
 
-O Azure Functions fornece uma experiência de computação sem servidor. Uma função é invocada por um *gatilho* (como o acesso a um ponto de extremidade http ou um temporizador) e executa um bloco de código ou lógica de negócios. As funções também dão suporte a *associações* especializadas que se conectam a recursos como armazenamento e filas.
+As funções do Azure proporcionam uma experiência de computação sem servidor. Uma função é invocada por um *gatilho* (como acesso a um ponto final HTTP ou um temporizador) e executa um bloco de código ou lógica de negócios. As funções também suportam *vinculações especializadas* que se conectam a recursos como armazenamento e filas.
 
-![Logotipo do Azure Functions](./media/azure-functions-logo.png)
+![Logotipo de funções do Azure](./media/azure-functions-logo.png)
 
-Há duas versões do Azure Functions Framework. A versão herdada dá suporte ao .NET Framework completo e o novo tempo de execução dá suporte a aplicativos .NET Core de plataforma cruzada. Há suporte para C# idiomas adicionais, além F#de JavaScript, e Java. As funções criadas no portal fornecem uma sintaxe de script avançada. As funções criadas como projetos autônomos podem ser implantadas com recursos e suporte completos à plataforma.
+Existem duas versões da estrutura de Funções do Azure. A versão herdada suporta o Framework .NET completo e o novo tempo de execução suporta aplicativos .NET Core multiplataforma. Linguagens adicionais além de C# como JavaScript, F#e Java são suportadas. As funções criadas no portal fornecem uma rica sintaxe de scripts. Funções criadas como projetos autônomos podem ser implantadas com suporte e recursos completos da plataforma.
 
-Para obter mais informações, consulte a [documentação do Azure Functions](https://docs.microsoft.com/azure/azure-functions).
+Para obter mais informações, consulte [a documentação funções do Azure](https://docs.microsoft.com/azure/azure-functions).
 
-## <a name="functions-v1-vs-v2"></a>Funções V1 versus V2
+## <a name="functions-v1-vs-v2"></a>Funções v1 vs. v2
 
-Há duas versões do tempo de execução de Azure Functions: 1. x e 2. x. A versão 1. x está disponível para o público geral (GA). Ele dá suporte ao desenvolvimento .NET do portal ou de máquinas Windows e usa o .NET Framework. 1. x dá C#suporte a, JavaScript F#e, com suporte experimental para Python, PHP, TypeScript, lote, bash e PowerShell.
+Existem duas versões do tempo de execução das funções do Azure: 1.x e 2.x. A versão 1.x está geralmente disponível (GA). Ele suporta o desenvolvimento .NET a partir do portal ou máquinas Windows e usa o .NET Framework. O 1.x suporta C#, JavaScript e F#, com suporte experimental para Python, PHP, TypeScript, Batch, Bash e PowerShell.
 
-A [versão 2. x também está geralmente disponível agora](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Ele aproveita o .NET Core e dá suporte ao desenvolvimento de plataforma cruzada em computadores Windows, macOS e Linux. 2. x adiciona o suporte de primeira classe para Java, mas ainda não dá suporte diretamente a qualquer uma das linguagens experimentais. A versão 2. x usa um novo modelo de extensibilidade de associação que permite extensões de terceiros para a plataforma, controle de versão independente de associações e um ambiente de execução mais simplificado.
+[A versão 2.x também está geralmente disponível agora](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Ele aproveita o .NET Core e suporta o desenvolvimento entre plataformas em máquinas Windows, macOS e Linux. 2.x adiciona suporte de primeira classe para Java, mas ainda não suporta diretamente nenhuma das linguagens experimentais. A versão 2.x usa um novo modelo de extensibilidade de vinculação que permite extensões de terceiros à plataforma, versão independente de vinculações e um ambiente de execução mais simplificado.
 
-> **Há um problema conhecido em 1. x com [suporte para redirecionamento de associação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico do desenvolvimento do .NET. Os projetos com dependências em bibliotecas que são uma versão diferente das bibliotecas incluídas no tempo de execução são afetados. A equipe de funções se comprometeu a fazer o progresso concreto do problema. A equipe abordará redirecionamentos de associação em 2. x antes de entrar em disponibilidade geral. A declaração de equipe oficial com correções e soluções alternativas sugeridas está disponível aqui: [resolução de assembly em Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
+> **Há um problema conhecido em 1.x com [suporte de redirecionamento de vinculação](https://github.com/Azure/azure-functions-host/issues/992).** O problema é específico para o desenvolvimento .NET. Projetos com dependências de bibliotecas que são uma versão diferente das bibliotecas incluídas no tempo de execução são impactados. A equipe de funções se comprometeu a fazer progressos concretos sobre o problema. A equipe abordará redirecionamentos de vinculação em 2.x antes de entrar em disponibilidade geral. A declaração oficial da equipe com correções e soluçãos sugeridas está disponível aqui: [Resolução da montagem em Funções Azure](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
-Para obter mais informações, consulte [comparar 1. x e 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
+Para obter mais informações, consulte [Compare 1.x e 2.x](https://docs.microsoft.com/azure/azure-functions/functions-versions).
 
 ## <a name="programming-language-support"></a>Suporte à linguagem de programação
 
-Os idiomas a seguir têm suporte em disponibilidade geral (GA), visualização ou experimental.
+Os idiomas a seguir são suportados em disponibilidade geral (GA), visualização ou experimental.
 
-|{1&gt;Idioma&lt;1}      |1.x         |2.x      |
+|Linguagem      |1.x         |2. x      |
 |--------------|------------|---------|
-|**C#**        |GA          |{1&gt;Preview&lt;1}  |
-|**JavaScript**|GA          |{1&gt;Preview&lt;1}  |
-|**F#**        |GA          |         |
-|**Java**      |            |{1&gt;Preview&lt;1}  |
-|**Python**    |Habilitação|         |
-|**PHP**       |Habilitação|         |
-|**TypeScript**|Habilitação|         |
-|**Lote**     |Habilitação|         |
-|**Raso**      |Habilitação|         |
-|**PowerShell**|Habilitação|         |
+|**C #**        |GA          |Visualização  |
+|**Javascript**|GA          |Visualização  |
+|**F #**        |GA          |         |
+|**Java**      |            |Visualização  |
+|**Python**    |Experimental|         |
+|**Php**       |Experimental|         |
+|**TypeScript**|Experimental|         |
+|**Batch**     |Experimental|         |
+|**Bash**      |Experimental|         |
+|**Powershell**|Experimental|         |
 
-Para obter mais informações, consulte [idiomas com suporte](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+Para obter mais informações, consulte [idiomas suportados](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
-## <a name="app-service-plans"></a>Planos do serviço de aplicativo
+## <a name="app-service-plans"></a>Planos de serviço de aplicativos
 
-As funções são apoiadas por um *plano do serviço de aplicativo*. O plano define os recursos usados pelo aplicativo de funções. Você pode atribuir planos a uma região, determinar o tamanho e o número de máquinas virtuais que serão usadas e escolher um tipo de preço. Para uma abordagem verdadeira sem servidor, os aplicativos de função podem usar o plano de **consumo** . O plano de consumo dimensionará o back-end automaticamente com base na carga.
+As funções são apoiadas por um *plano de serviço de aplicativo.* O plano define os recursos utilizados pelo aplicativo de funções. Você pode atribuir planos a uma região, determinar o tamanho e o número de máquinas virtuais que serão usadas e escolher um nível de preço. Para uma abordagem sem servidor, os aplicativos de função podem usar o plano **de consumo.** O plano de consumo irá dimensionar o back-end automaticamente com base na carga.
 
-Para obter mais informações, consulte [planos do serviço de aplicativo](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
+Para obter mais informações, consulte [os planos de serviço do App](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
 
 ## <a name="create-your-first-function"></a>Criar sua primeira função
 
-Há três maneiras comuns de criar aplicativos de funções.
+Existem três maneiras comuns de criar aplicativos de função.
 
-- Funções de script no Portal.
-- Crie os recursos necessários usando o CLI do Azure.
+- O script funciona no portal.
+- Crie os recursos necessários usando o Azure CLI.
 - Crie funções localmente usando seu IDE favorito e publique-as no Azure.
 
-Para obter mais informações sobre como criar uma função com script no portal, consulte [criar sua primeira função no portal do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
+Para obter mais informações sobre a criação de uma função de script no portal, consulte [Criar sua primeira função no portal Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
 
-Para criar a partir do CLI do Azure, consulte [criar sua primeira função usando o CLI do Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli).
+Para construir a partir do Cli azure, consulte [Criar sua primeira função usando o Azure CLI](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli).
 
-Para criar uma função do Visual Studio, consulte [criar sua primeira função usando o Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+Para criar uma função no Visual Studio, consulte [Criar sua primeira função usando o Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
-## <a name="understand-triggers-and-bindings"></a>Entender gatilhos e associações
+## <a name="understand-triggers-and-bindings"></a>Entenda os gatilhos e ligações
 
-As funções são invocadas por um *gatilho* e podem ter exatamente uma. Além de invocar a função, determinados gatilhos também servem como associações. Você também pode definir várias associações além do gatilho. As *associações* fornecem uma maneira declarativa de conectar dados ao seu código. Eles podem ser passados (entrada) ou receber dados (saída). Os gatilhos e as associações facilitam o trabalho com as funções. As associações removem a sobrecarga de criar manualmente as conexões do banco de dados ou do sistema de arquivos. Todas as informações necessárias para as associações estão contidas em um arquivo *functions. JSON* especial para scripts ou declarados com atributos no código.
+As funções são invocadas por um *gatilho* e podem ter exatamente uma. Além de invocar a função, certos gatilhos também servem como ligações. Você também pode definir várias ligações além do gatilho. *As vinculações* fornecem uma maneira declarativa de conectar dados ao seu código. Eles podem ser passados (entrada) ou receber dados (saída). Gatilhos e amarras facilitam o trabalho. As vinculações removem a sobrecarga da criação manual de conexões de banco de dados ou sistema de arquivos. Todas as informações necessárias para as vinculações estão contidas em um arquivo *special functions.json* para scripts ou declaradas com atributos em código.
 
 Alguns gatilhos comuns incluem:
 
-- Armazenamento de BLOBs: invoque sua função quando um arquivo ou pasta for carregado ou alterado no armazenamento.
+- Blob Storage: invoque sua função quando um arquivo ou pasta for carregado ou alterado no armazenamento.
 - HTTP: invoque sua função como uma API REST.
-- Fila: invoque sua função quando houver itens em uma fila.
-- Temporizador: invocar sua função em uma cadência regular.
+- Fila: invoque sua função quando os itens existirem em uma fila.
+- Temporizador: invoque sua função em uma cadência regular.
 
-Exemplos de associações incluem:
+Exemplos de vinculações incluem:
 
-- CosmosDB: Conecte-se facilmente ao banco de dados para carregar ou salvar arquivos.
-- Armazenamento de tabelas: trabalhe com o armazenamento de chave/valor do seu aplicativo de funções.
-- Armazenamento de filas: recuperar facilmente itens de uma fila ou colocar novos itens na fila.
+- CosmosDB: conecte-se facilmente ao banco de dados para carregar ou salvar arquivos.
+- Armazenamento de tabela: trabalhe com armazenamento de chave/valor do seu aplicativo de função.
+- Armazenamento na fila: recupere facilmente itens de uma fila ou coloque novos itens na fila.
 
-O arquivo *functions. JSON* de exemplo a seguir define um gatilho e uma associação:
+O exemplo a seguir *funções.json* arquivo define um gatilho e uma vinculação:
 
 ```json
 {
@@ -111,9 +111,9 @@ O arquivo *functions. JSON* de exemplo a seguir define um gatilho e uma associa�
 }
 ```
 
-Neste exemplo, a função é disparada por uma alteração no armazenamento de BLOBs no contêiner de `images`. As informações para o arquivo são passadas para que o gatilho também atue como uma associação. Existe outra associação para colocar informações em uma fila chamada `images`.
+Neste exemplo, a função é acionada por uma alteração `images` para o armazenamento de bolhas no recipiente. As informações para o arquivo são passadas, então o gatilho também age como uma vinculação. Existe outra vinculação para colocar informações `images`em uma fila chamada .
 
-Este é o C# script para a função:
+Aqui está o script C# para a função:
 
 ```csharp
 public static string Run(Stream myBlob, string name, TraceWriter log)
@@ -123,27 +123,27 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 }
 ```
 
-O exemplo é uma função simples que usa o nome do arquivo que foi modificado ou carregado no armazenamento de BLOBs e o coloca em uma fila para processamento posterior.
+O exemplo é uma função simples que leva o nome do arquivo que foi modificado ou carregado para armazenamento blob, e coloca-o em uma fila para processamento posterior.
 
-Para obter uma lista completa de gatilhos e associações, consulte [Azure Functions os conceitos de gatilhos e associações](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Para obter uma lista completa de gatilhos e vinculações, consulte [Os gatilhos e conceitos de vinculações do Azure](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
 ## <a name="proxies"></a>Proxies
 
-Os proxies fornecem funcionalidade de redirecionamento para seu aplicativo. Os proxies expõem um ponto de extremidade e mapeiam esse ponto de extremidade para outro recurso. Com proxies, você pode:
+Os proxies fornecem funcionalidade de redirecionamento para o seu aplicativo. Proxies expõem um ponto final e mapeiam esse ponto final para outro recurso. Com proxies, você pode:
 
-- Redirecionar uma solicitação de entrada para outro ponto de extremidade.
-- Modifique a solicitação de entrada antes de ela ser passada.
+- Redirecione uma solicitação recebida para outro ponto final.
+- Modifique a solicitação de entrada antes de ser transmitida.
 - Modifique ou forneça uma resposta.
 
-Os proxies são usados para cenários como:
+Proxies são usados para cenários como:
 
-- Simplificando, reduzindo ou alterando a URL.
-- Fornecer um prefixo de API consistente para vários serviços de back-end.
-- Simulação de uma resposta a um ponto de extremidade que está sendo desenvolvido.
-- Fornecer uma resposta estática para um ponto de extremidade bem conhecido.
-- Manter um ponto de extremidade de API consistente enquanto o back-end é movido ou migrado.
+- Simplificando, encurtando ou alterando a URL.
+- Fornecendo um prefixo de API consistente para vários serviços back-end.
+- Zombando de uma resposta a um ponto final sendo desenvolvido.
+- Fornecendo uma resposta estática a um ponto final bem conhecido.
+- Manter um ponto final de API consistente enquanto a parte traseira é movida ou migrada.
 
-Os proxies são armazenados como definições de JSON. Veja um exemplo:
+Os proxies são armazenados como definições JSON. Veja um exemplo:
 
 ```json
 {
@@ -169,16 +169,16 @@ Os proxies são armazenados como definições de JSON. Veja um exemplo:
 }
 ```
 
-O proxy de `Domain Redirect` usa uma rota reduzida e a mapeia para o recurso de função mais longo. A transformação é semelhante a:
+O `Domain Redirect` proxy pega uma rota encurtada e mapeia-a para o recurso de função mais longa. A transformação parece:
 
 `https://--shorturl--/123` -> `https://--longurl--.azurewebsites.net/api/UrlRedirect/123`
 
-O proxy de `Root` faz algo enviado para a URL raiz (`https://--shorturl--/`) e o redireciona para o site de documentação.
+O `Root` proxy pega qualquer coisa`https://--shorturl--/`enviada para a URL raiz ( ) e redireciona-a para o site de documentação.
 
-Um exemplo de uso de proxies é mostrado no vídeo [Azure: Traga seu aplicativo para a nuvem com Azure Functions sem servidor](https://channel9.msdn.com/events/Connect/2017/E102). Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a nuvem do Azure. Os proxies são usados para ajudar a refatorar um projeto de API Web tradicional para usar funções.
+Um exemplo de uso de proxies é mostrado no vídeo [Azure: Traga seu aplicativo para a nuvem com funções azure sem servidor](https://channel9.msdn.com/events/Connect/2017/E102). Em tempo real, um aplicativo ASP.NET Core em execução no SQL Server local é migrado para a Nuvem Azure. Os proxies são usados para ajudar a refatorar um projeto de API web tradicional para usar funções.
 
-Para obter mais informações sobre proxies, consulte [trabalhar com proxies do Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
+Para obter mais informações sobre proxies, consulte [Trabalhe com Proxies de Funções Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies).
 
 >[!div class="step-by-step"]
->[Anterior](azure-serverless-platform.md)
->[Próximo](application-insights.md)
+>[Próximo](azure-serverless-platform.md)
+>[anterior](application-insights.md)

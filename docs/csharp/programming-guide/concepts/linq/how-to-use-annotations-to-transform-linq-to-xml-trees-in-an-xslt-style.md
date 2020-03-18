@@ -1,15 +1,15 @@
 ---
-title: Como usar anotações para transformar LINQ to XML árvores em um estilo XSLT (C#)
+title: Como usar anotações para transformar LINQ em árvores XML em um estilo XSLT (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347289"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168551"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Como usar anotações para transformar LINQ to XML árvores em um estilo XSLT (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>Como usar anotações para transformar LINQ em árvores XML em um estilo XSLT (C#)
 As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.  
   
  Alguns documentos XML são “centralizado no documento misturado com conteúdo.” Como com documentos, você não souber necessariamente a forma de nós filho de um elemento. Por exemplo, um nó que contém o texto pode ter esta aparência:  
@@ -68,7 +68,7 @@ XElement newRoot = XForm(root);
 Console.WriteLine(newRoot);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Root>  
@@ -120,7 +120,7 @@ Console.WriteLine("----------------");
 Console.WriteLine(newData);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 Before Transform  
@@ -148,7 +148,7 @@ After Transform
 - O código pseudo- para a função é bastante simples:  
   
 ```text  
-The function takes an XElement as an argument and returns an XElement.   
+The function takes an XElement as an argument and returns an XElement.
 If an element has an XElement annotation, then  
     Return a new XElement  
         The name of the new XElement is the annotation element's name.  
@@ -233,7 +233,7 @@ static XElement XForm(XElement source)
                 )  
         );  
     }  
-}   
+}
 ```  
   
 ## <a name="complete-example"></a>Exemplo completo  
@@ -391,7 +391,7 @@ class Program
 }  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 Before Transform  

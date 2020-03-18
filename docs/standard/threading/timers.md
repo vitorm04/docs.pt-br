@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128944"
 ---
 # <a name="timers"></a>Temporizadores
@@ -55,8 +55,8 @@ Ao criar um objeto <xref:System.Timers.Timer?displayProperty=nameWithType>, voc�
 
 Para obter mais informações e exemplos, consulte <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>
-- [Objetos e recursos de threading](threading-objects-and-features.md)
+- [Objetos e recursos de rosca](threading-objects-and-features.md)

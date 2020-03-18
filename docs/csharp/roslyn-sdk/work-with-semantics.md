@@ -3,12 +3,12 @@ title: Trabalhar com o modelo semântico do SDK do .NET Compiler Platform
 description: Esta visão geral fornece uma compreensão do tipo que pode ser usado para entender e manipular o modelo semântico do código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105663"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156929"
 ---
 # <a name="work-with-semantics"></a>Trabalhar com semântica
 
@@ -19,7 +19,7 @@ As [árvores de sintaxe](work-with-syntax.md) representam a estrutura lexical e 
 - um método
 - uma variável local
 
-Embora cada um deles seja exclusivamente diferente, determinar a qual deles um identificador, de fato, se refere exige uma compreensão profunda das regras da linguagem. 
+Embora cada um deles seja exclusivamente diferente, determinar a qual deles um identificador, de fato, se refere exige uma compreensão profunda das regras da linguagem.
 
 Há elementos do programa representados no código-fonte e os programas também podem se referir a bibliotecas compiladas anteriormente, empacotadas em arquivos do assembly. Embora nenhum código-fonte e, portanto, nenhum nó ou árvore de sintaxe, esteja disponível para assemblies, os programas ainda podem se referir a elementos contidos neles.
 
@@ -29,7 +29,7 @@ Além de um modelo sintático do código-fonte, um modelo semântico encapsula a
 
 ## <a name="compilation"></a>Compilação
 
-Uma compilação é uma representação de tudo o que é necessário para compilar um programa do C# ou Visual Basic, que inclui todas as referências de assembly, opções do compilador e arquivos de origem. 
+Uma compilação é uma representação de tudo o que é necessário para compilar um programa do C# ou Visual Basic, que inclui todas as referências de assembly, opções do compilador e arquivos de origem.
 
 Como todas essas informações estão em um só lugar, os elementos contidos no código-fonte podem ser descritos mais detalhadamente. A compilação representa cada tipo, membro ou variável declarada como um símbolo. A compilação contém uma variedade de métodos que ajudam você encontrar e identificar os símbolos que foram declarados no código-fonte ou importados como metadados de um assembly.
 
@@ -37,7 +37,7 @@ Semelhantes às árvores de sintaxe, as compilações são imutáveis. Depois de
 
 ## <a name="symbols"></a>Símbolos
 
-Um símbolo representa um elemento distinto declarado pelo código-fonte ou importado de um assembly como metadados. Cada namespace, tipo, método, propriedade, campo, evento, parâmetro ou variável local é representado por um símbolo. 
+Um símbolo representa um elemento distinto declarado pelo código-fonte ou importado de um assembly como metadados. Cada namespace, tipo, método, propriedade, campo, evento, parâmetro ou variável local é representado por um símbolo.
 
 Uma variedade de métodos e propriedades no tipo <xref:Microsoft.CodeAnalysis.Compilation> ajudam você a encontrar símbolos. Por exemplo, encontre um símbolo para um tipo declarado pelo seu nome comum de metadados. Também acesse a tabela inteira de símbolos como uma árvore de símbolos com raiz no namespace global.
 
@@ -49,7 +49,7 @@ Símbolos são semelhantes em conceito ao sistema de tipos CLR, conforme represe
 
 ## <a name="semantic-model"></a>Modelo semântico
 
-Um modelo semântico representa todas as informações semânticas de um único arquivo de origem. Use-o para descobrir o seguinte: 
+Um modelo semântico representa todas as informações semânticas de um único arquivo de origem. Use-o para descobrir o seguinte:
 
 - Os símbolos referenciados em um local específico na fonte.
 - O tipo resultante de qualquer expressão.

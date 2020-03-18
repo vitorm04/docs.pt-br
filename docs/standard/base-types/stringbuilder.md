@@ -17,10 +17,10 @@ helpviewer_keywords:
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121674"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Uso da classe StringBuilder no .NET
@@ -76,7 +76,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
 ### <a name="appendformat"></a>AppendFormat  
- O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre formatação, consulte [tipos de formatação](../../../docs/standard/base-types/formatting-types.md).) Você pode usar esse método para personalizar o formato de variáveis e acrescentar esses valores a um <xref:System.Text.StringBuilder>. O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
+ O método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> adiciona texto ao final do objeto <xref:System.Text.StringBuilder>. Ele dá suporte ao recurso de formatação de composição (para obter mais informações, confira [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)) chamando a implementação <xref:System.IFormattable> do objeto ou objetos a serem formatados. Portanto, aceita as cadeias de caracteres de formato padrão para valores numéricos, data e hora e enumeração, cadeias de caracteres de formato personalizado para valores numéricos e de data e hora e cadeias de caracteres de formato definidas para tipos personalizados. (Para obter informações sobre formatação, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md).) Você pode usar este método para personalizar o formato de <xref:System.Text.StringBuilder>variáveis e anexar esses valores a um . O exemplo a seguir usa o método <xref:System.Text.StringBuilder.AppendFormat%2A> para colocar um valor inteiro, formatado como um valor de moeda, no final de um objeto <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
@@ -96,7 +96,7 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Substituir  
+### <a name="replace"></a>Substitua  
  O método **Replace** pode ser usado para substituir caracteres dentro do objeto <xref:System.Text.StringBuilder> com outro caractere especificado. O exemplo a seguir usa o método **Replace** para pesquisar, em um objeto <xref:System.Text.StringBuilder>, todas as instâncias do caractere de ponto de exclamação (!) e substituí-los com o caractere de ponto de interrogação (?).  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
@@ -104,13 +104,13 @@ O objeto <xref:System.String> é imutável. Sempre que usa um dos métodos na cl
  [!code-vb[Conceptual.StringBuilder#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#8)]  
   
 ## <a name="converting-a-stringbuilder-object-to-a-string"></a>Convertendo um objeto StringBuilder em uma cadeia de caracteres  
- Você deve converter o objeto <xref:System.Text.StringBuilder> em um objeto <xref:System.String> para transmitir a cadeia de caracteres representada pelo objeto <xref:System.Text.StringBuilder> para um método que tem um parâmetro <xref:System.String> ou exibi-lo na interface do usuário. Você faz essa conversão chamando o método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType>. O exemplo a seguir chama vários métodos <xref:System.Text.StringBuilder> e chama o método <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> para exibir a cadeia de caracteres:  
+ Você deve converter o objeto <xref:System.Text.StringBuilder> em um objeto <xref:System.String>para transmitir a cadeia de caracteres representada pelo objeto <xref:System.Text.StringBuilder> para um método que tem um parâmetro <xref:System.String> ou exibi-lo na interface do usuário. Você faz essa conversão chamando o método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType>. O exemplo a seguir chama vários métodos <xref:System.Text.StringBuilder> e chama o método <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> para exibir a cadeia de caracteres.  
   
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)

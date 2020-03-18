@@ -1,19 +1,19 @@
 ---
-title: Atualizar para tipos de referência anuláveis
-description: Este tutorial avançado demonstra como migrar código existente com tipos de referência anuláveis.
+title: Upgrade para tipos de referência anulados
+description: Este tutorial avançado demonstra como migrar o código existente para tipos de referência anulados.
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 38619f9efa5da1f9b3264b3d4240103f0869afea
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9767493059623e770cc100b83b9284e8d0bdf0f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240022"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156448"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: migrar código existente com tipos de referência anuláveis
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migre o código existente com tipos de referência anulados
 
-O C# 8 introduz **tipos de referência que permitem valor nulo** que complementam os tipos de referência da mesma maneira que os tipos de valor que permitem valor nulo complementam os tipos de valor. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis *devem sempre ter um valor*, outras *podem ter um valor* ausente. Quaisquer variáveis existentes de um tipo de referência seriam interpretadas como um tipo de referência não anulável. 
+O C# 8 introduz **tipos de referência que permitem valor nulo** que complementam os tipos de referência da mesma maneira que os tipos de valor que permitem valor nulo complementam os tipos de valor. Para declarar que uma variável é um **tipo de referência que permite valor nulo**, anexe um `?` ao tipo. Por exemplo, `string?` representa uma `string` que permite valor nulo. Você pode usar esses novos tipos para expressar mais claramente sua intenção de design: algumas variáveis * devem sempre ter um valor *, outras * podem ter um valor * ausente. Quaisquer variáveis existentes de um tipo de referência seriam interpretadas como um tipo de referência não anulável.
 
 Neste tutorial, você aprenderá como:
 
@@ -24,9 +24,9 @@ Neste tutorial, você aprenderá como:
 > - Gerenciar a interface entre contextos habilitados para anulável e desabilitados para anulável.
 > - Controlar contextos de anotação anuláveis.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
+Você precisará configurar sua máquina para executar o .NET Core, incluindo o compilador C# 8.0. O compilador C# 8 está disponível a partir da [versão 16.3 do Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -40,7 +40,7 @@ Sua meta ao migrar um projeto deve ser aproveitar os novos recursos de linguagem
 
 ## <a name="upgrade-the-projects-to-c-8"></a>Atualizar os projetos para C# 8
 
-Primeiro, determine o escopo da tarefa de migração. Comece atualizando o projeto para C# 8.0 (ou mais recente). Adicione o elemento `LangVersion` ao PropertyGroup em ambos os arquivos csproj para o projeto Web e o projeto de teste de unidade:
+Primeiro, determine o escopo da tarefa de migração. Comece atualizando o projeto para C# 8.0 (ou mais recente). Adicione `LangVersion` o elemento ao PropertyGroup em ambos os arquivos csproj para o projeto web e no projeto de teste da unidade:
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -94,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de runtime do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Essa técnica pode ser adequada quando outras alterações forçam alterações muito maiores em uma base de código, mas nesse aplicativo há uma solução relativamente rápida e melhor: tornar o `NewsStoryViewModel` um tipo imutável em que todas as propriedades são definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
+A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de runtime do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Esta técnica pode ser conveniente quando outras mudanças forçam mudanças muito maiores em uma `NewsStoryViewModel` base de código, mas nesta aplicação há uma solução relativamente rápida e melhor: Faça um tipo imutável onde todas as propriedades estão definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
 
 [!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -108,7 +108,7 @@ O código mapeia as propriedades do objeto `ISyndicationItem` para as propriedad
 
 Note que como essa classe é pequena, e você examinou cuidadosamente, ative a diretiva `#nullable enable` acima dessa declaração de classe. A alteração no construtor poderia ter quebrado algo, portanto, vale a pena executar todos os testes e testar o aplicativo antes de prosseguir.
 
-O primeiro conjunto de alterações mostrou como descobrir quando o design original indicou que as variáveis não devem ser definidas como `null`. A técnica é conhecida como **corrigir pela construção**. Você declara que um objeto e suas propriedades não podem ser `null` quando ele é construído. A análise de fluxo do compilador fornece garantia de que essas propriedades não são definidas como `null` após a construção. Observe que esse construtor é chamado pelo código externo, e que o código é **indiferente ao anulável**. A nova sintaxe não fornece uma verificação de runtime. O código externo pode enganar a análise de fluxo do compilador. 
+O primeiro conjunto de alterações mostrou como descobrir quando o design original indicou que as variáveis não devem ser definidas como `null`. A técnica é conhecida como **corrigir pela construção**. Você declara que um objeto e suas propriedades não podem ser `null` quando ele é construído. A análise de fluxo do compilador fornece garantia de que essas propriedades não são definidas como `null` após a construção. Observe que esse construtor é chamado pelo código externo, e que o código é **indiferente ao anulável**. A nova sintaxe não fornece uma verificação de runtime. O código externo pode enganar a análise de fluxo do compilador.
 
 Outras vezes, a estrutura de uma classe fornece dicas sobre diferentes sobre a intenção. Abra o arquivo *Error.cshtml.cs* na pasta *Páginas*. O `ErrorViewModel` contém o seguinte código:
 
@@ -126,7 +126,7 @@ Com frequência, a correção para um conjunto de avisos cria novos avisos no c�
 
 [!code-csharp[StarterIndexModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-Adicione a diretiva `#nullable enable` e você verá dois avisos. Nem a propriedade `ErrorText`, ou a propriedade `NewsItems` é inicializada. Um exame dessa classe o levaria a acreditar que ambas as propriedades devem ser tipos de referência anuláveis: ambas têm setters privados. Exatamente um é atribuído no método `OnGet`. Antes de fazer alterações, examine os consumidores das duas propriedades. Na própria página, o `ErrorText` é verificado em relação ao valor nulo antes de gerar a marcação dos erros. A coleção `NewsItems` é verificada com relação a `null` e verificada para garantir que a coleção tenha itens. Uma correção rápida seria transformar as duas propriedades em tipos de referência anuláveis. Uma correção melhor seria transformar a coleção em um tipo de referência não anulável e adicionar itens à coleção existente ao recuperar notícias. A primeira correção é adicionar o `?` ao tipo `string` para o `ErrorText`:
+Adicione a diretiva `#nullable enable` e você verá dois avisos. Nem a propriedade `ErrorText`, ou a propriedade `NewsItems` é inicializada. Um exame desta classe levaria você a acreditar que ambas as propriedades devem ser tipos de referência anulados: Ambos têm setters privados. Exatamente um é atribuído no método `OnGet`. Antes de fazer alterações, examine os consumidores das duas propriedades. Na própria página, o `ErrorText` é verificado em relação ao valor nulo antes de gerar a marcação dos erros. A coleção `NewsItems` é verificada com relação a `null` e verificada para garantir que a coleção tenha itens. Uma correção rápida seria transformar as duas propriedades em tipos de referência anuláveis. Uma correção melhor seria transformar a coleção em um tipo de referência não anulável e adicionar itens à coleção existente ao recuperar notícias. A primeira correção é adicionar o `?` ao tipo `string` para o `ErrorText`:
 
 [!code-csharp[UpdateErrorText](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
@@ -167,4 +167,4 @@ O parâmetro `IMapper` é tipado como uma referência não anulável. Ele é cha
 
 Você corrigiu os avisos identificados na compilação de teste inicial, portanto, agora você pode ativar o contexto de anotação anulável para os dois projetos. Recompile os projetos; o compilador não relatará nenhum aviso. Você pode obter o código do projeto concluído no repositório do GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished).
 
-Os novos recursos que dão suporte aos tipos de referência anuláveis ajudam você a encontrar e corrigir possíveis erros no modo de manipulação de valores `null` em seu código. A habilitação do contexto de anotação anulável permite que você expresse sua intenção de design: algumas variáveis nunca devem ser nulas, outras variáveis podem conter valores nulos. Esses recursos facilitam a declaração de sua intenção de design. Da mesma forma, o contexto de aviso anulável instrui o compilador a emitir avisos quando você violar essa intenção. Esses avisos servirão como orientação para criar atualizações que tornem seu código mais resiliente e menos propensa a lançar uma `NullReferenceException` durante a execução. Você pode controlar o escopo desses contextos para se concentrar na migração de áreas locais do código, enquanto a base de código restante permanece inalterada. Na prática, você pode tornar essa tarefa de migração uma parte da manutenção regular das suas classes. Este tutorial demonstrou o processo para migrar um aplicativo a fim de usar tipos de referência anuláveis. Você pode explorar um exemplo real maior desse processo examinando a solicitação de pull feita por [Jon Skeet](https://github.com/jskeet) para incorporar tipos de referência anuláveis em [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Ou apenas além disso, você pode aprender técnicas para usar tipos de referência anuláveis com Entity Framework Core em [Entity Framework Core-trabalhando com tipos de referência anuláveis](/ef/core/miscellaneous/nullable-reference-types).
+Os novos recursos que dão suporte aos tipos de referência anuláveis ajudam você a encontrar e corrigir possíveis erros no modo de manipulação de valores `null` em seu código. A habilitação do contexto de anotação anulável permite que você expresse sua intenção de design: algumas variáveis nunca devem ser nulas, outras variáveis podem conter valores nulos. Esses recursos facilitam a declaração de sua intenção de design. Da mesma forma, o contexto de aviso anulável instrui o compilador a emitir avisos quando você violar essa intenção. Esses avisos servirão como orientação para criar atualizações que tornem seu código mais resiliente e menos propensa a lançar uma `NullReferenceException` durante a execução. Você pode controlar o escopo desses contextos para se concentrar na migração de áreas locais do código, enquanto a base de código restante permanece inalterada. Na prática, você pode tornar essa tarefa de migração uma parte da manutenção regular das suas classes. Este tutorial demonstrou o processo para migrar um aplicativo a fim de usar tipos de referência anuláveis. Você pode explorar um exemplo real maior desse processo examinando a solicitação de pull feita por [Jon Skeet](https://github.com/jskeet) para incorporar tipos de referência anuláveis em [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Ou apenas Além disso, você pode aprender técnicas para usar tipos de referência anulados com o Entity Framework Core no [Entity Framework Core - Trabalhando com tipos de referência anulados](/ef/core/miscellaneous/nullable-reference-types).

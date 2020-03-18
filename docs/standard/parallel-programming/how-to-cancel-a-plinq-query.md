@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134227"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Como cancelar uma consulta PLINQ
@@ -50,7 +50,7 @@ Para garantir a capacidade de resposta do sistema, recomendamos que você verifi
 
 Quando um enumerador é descartado, por exemplo, quando o código foge de um loop foreach (For Each no Visual Basic) que está iterando sobre os resultados da consulta, a consulta é cancelada, mas nenhuma exceção é lançada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.ParallelEnumerable>
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

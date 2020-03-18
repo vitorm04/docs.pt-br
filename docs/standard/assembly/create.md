@@ -8,10 +8,10 @@ helpviewer_keywords:
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740511"
 ---
 # <a name="create-assemblies"></a>Criar assemblies
@@ -38,16 +38,16 @@ Você tem várias opções ao agrupar módulos de código e recursos em assembli
 
      Agrupe módulos que contêm tipos que exigem as mesmas permissões de segurança.
 
-- Definição de escopo
+- Scoping
 
      Agrupe módulos que contêm tipos cuja visibilidade deve ser restrita ao mesmo assembly.
 
-Há considerações especiais ao tornar Common Language Runtime assemblies disponíveis para aplicativos COM não gerenciados. Para obter mais informações sobre como trabalhar com código não gerenciado, consulte [expor .NET Framework Components to com](../../framework/interop/exposing-dotnet-components-to-com.md).
+Existem considerações especiais ao disponibilizar conjuntos de tempo de execução de idiomas comuns para aplicativos COM não gerenciados. Para obter mais informações sobre como trabalhar com código não gerenciado, consulte [Expor os componentes do Quadro .NET em COM](../../framework/interop/exposing-dotnet-components-to-com.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Controle de versão do assembly](versioning.md)
-- [Como criar um assembly de arquivo único](../../framework/app-domains/build-single-file-assembly.md)
-- [Como compilar um assembly de multiarquivos](../../framework/app-domains/build-multifile-assembly.md)
-- [Como o runtime localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Assemblies de multiarquivo](../../framework/app-domains/multifile-assemblies.md)
+- [Como: Construir um conjunto de arquivos únicos](../../framework/app-domains/build-single-file-assembly.md)
+- [Como: Construir um conjunto de vários arquivos](../../framework/app-domains/build-multifile-assembly.md)
+- [Como o tempo de execução localiza conjuntos](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Assemblies de vários arquivos](../../framework/app-domains/multifile-assemblies.md)

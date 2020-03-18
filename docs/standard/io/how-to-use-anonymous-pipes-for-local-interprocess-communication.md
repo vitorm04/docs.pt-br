@@ -14,10 +14,10 @@ helpviewer_keywords:
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627988"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Como usar pipes anônimos para comunicação entre processos locais
@@ -48,4 +48,4 @@ Os pipes anônimos fornecem comunicação entre processos em um computador local
 ## <a name="see-also"></a>Confira também
 
 - [Pipes](../../../docs/standard/io/pipe-operations.md)
-- [Como usar pipes nomeados para comunicação entre processos na rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Como usar pipes nomeados para comunicação entre processos em uma rede](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

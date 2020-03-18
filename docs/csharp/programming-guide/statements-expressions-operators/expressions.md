@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699087"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
@@ -32,11 +32,11 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>Estouros
 
- Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [marcado e desmarcado](../../language-reference/keywords/checked-and-unchecked.md) e a seção de [conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [embutir conversões numéricas](../../language-reference/builtin-types/numeric-conversions.md) .
+ Expressões numéricas podem causar estouros se o valor for maior que o valor máximo do tipo de valor. Para obter mais informações, consulte [Verificação e Desmarcada](../../language-reference/keywords/checked-and-unchecked.md) e a seção [Conversões numéricas explícitas](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) do artigo [Conversões numéricas incorporadas.](../../language-reference/builtin-types/numeric-conversions.md)
   
 ## <a name="operator-precedence-and-associativity"></a>Precedência e associatividade do operador
 
- A maneira pela qual uma expressão é avaliada é regida pelas regras de capacidade de associação e de precedência de operador. Para obter mais informações, consulte [Operators](../../language-reference/operators/index.md).  
+ A maneira pela qual uma expressão é avaliada é regida pelas regras de capacidade de associação e de precedência de operador. Para obter mais informações, consulte [Operadores](../../language-reference/operators/index.md).  
   
  A maioria das expressões, exceto expressões de atribuição e de invocação de método, deve ser inserida em uma instrução. Para obter mais informações, consulte [Instruções](./statements.md).  
   
@@ -82,15 +82,15 @@ O C# dá suporte a *membros aptos para expressão*, o que permite que você forn
 
  Sempre que o acesso a uma variável, propriedade de objeto ou indexador de objeto for identificado de uma expressão, o valor desse item será usado como o valor da expressão. Uma expressão pode ser colocada em qualquer lugar no C# em que um valor ou o objeto for necessário, desde que a expressão seja avaliada como o tipo solicitado.  
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Expressões](~/_csharplang/spec/expressions.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Operadores](../../language-reference/operators/index.md)
 - [Métodos](../classes-and-structs/methods.md)
-- [Delegados](../delegates/index.md)
+- [Delega](../delegates/index.md)
 - [Tipos](../types/index.md)
-- [LINQ](../../linq/index.md)
+- [Linq](../../linq/index.md)

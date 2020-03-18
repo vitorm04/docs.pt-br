@@ -1,16 +1,16 @@
 ---
 ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901970"
 ---
-### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Proteção de dados: dataprotection. AzureStorage usa novas APIs de armazenamento do Azure
+### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>Proteção de dados: DataProtection.AzureStorage usa novas APIs de armazenamento do Azure
 
-<xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> depende das [bibliotecas de armazenamento do Azure](https://github.com/Azure/azure-storage-net). Essas bibliotecas renomeam seus assemblies, pacotes e namespaces. A partir do ASP.NET Core 3,0, `Microsoft.AspNetCore.DataProtection.AzureStorage` usa os novos pacotes e APIs prefixados `Microsoft.Azure.Storage.`.
+<xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName>depende das [bibliotecas de armazenamento Azure.](https://github.com/Azure/azure-storage-net) Essas bibliotecas renomearam seus conjuntos, pacotes e espaços de nome. A partir de ASP.NET `Microsoft.AspNetCore.DataProtection.AzureStorage` Core 3.0, usa as novas `Microsoft.Azure.Storage.`APIs e pacotes prefixados.
 
-Para perguntas sobre as APIs de armazenamento do Azure, use <https://github.com/Azure/azure-storage-net>. Para obter uma discussão sobre esse problema, consulte [dotnet/aspnetcore # 8472](https://github.com/dotnet/aspnetcore/issues/8472).
+Para dúvidas sobre as APIs <https://github.com/Azure/azure-storage-net>de armazenamento do Azure, use . Para discussão sobre este assunto, consulte [dotnet/aspnetcore#8472](https://github.com/dotnet/aspnetcore/issues/8472).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -18,21 +18,21 @@ Para perguntas sobre as APIs de armazenamento do Azure, use <https://github.com/
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-O pacote referenciou o `WindowsAzure.Storage` pacote NuGet.
+O pacote fazia `WindowsAzure.Storage` referência ao pacote NuGet.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-O pacote faz referência ao pacote NuGet `Microsoft.Azure.Storage.Blob`.
+O pacote faz `Microsoft.Azure.Storage.Blob` referência ao pacote NuGet.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Essa alteração permite que `Microsoft.AspNetCore.DataProtection.AzureStorage` migrem para os pacotes de armazenamento do Azure recomendados.
+Essa alteração `Microsoft.AspNetCore.DataProtection.AzureStorage` permite migrar para os pacotes recomendados do Azure Storage.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se você ainda precisar usar as APIs mais antigas do armazenamento do Azure com o ASP.NET Core 3,0, adicione uma dependência direta ao pacote [WindowsAzure. Storage](https://www.nuget.org/packages/WindowsAzure.Storage/) . Esse pacote pode ser instalado junto com as novas APIs de `Microsoft.Azure.Storage`.
+Se você ainda precisar usar as APIs de armazenamento azure mais antigas com ASP.NET Core 3.0, adicione uma dependência direta ao pacote [WindowsAzure.Storage.](https://www.nuget.org/packages/WindowsAzure.Storage/) Este pacote pode ser instalado `Microsoft.Azure.Storage` junto com as novas APIs.
 
-Em muitos casos, a atualização envolve apenas a alteração das instruções `using` para usar os novos namespaces:
+Em muitos casos, a atualização `using` envolve apenas alterar as instruções para usar os novos namespaces:
 
 ```diff
 - using Microsoft.WindowsAzure.Storage;
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-{1&gt;Nenhum&lt;1}
+Nenhum
 
 <!-- 
 

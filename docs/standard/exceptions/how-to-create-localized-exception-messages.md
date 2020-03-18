@@ -7,24 +7,24 @@ dev_langs:
 - vb
 ms.date: 09/13/2019
 ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160177"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 
-Neste artigo, você aprenderá a criar exceções definidas pelo usuário que são herdadas da classe base <xref:System.Exception> com mensagens de exceção localizadas usando assemblies satélite.
+Neste artigo, você aprenderá a criar exceções definidas pelo <xref:System.Exception> usuário que são herdadas da classe base com mensagens de exceção localizadas usando conjuntos de satélites.
 
 ## <a name="create-custom-exceptions"></a>Criar exceções personalizadas
 
-O .NET contém muitas exceções diferentes que você pode usar. No entanto, em alguns casos, quando nenhum deles atende às suas necessidades, você pode criar suas próprias exceções personalizadas.
+.NET contém muitas exceções diferentes que você pode usar. No entanto, em alguns casos, quando nenhum deles atende às suas necessidades, você pode criar suas próprias exceções personalizadas.
 
-Vamos supor que você deseja criar um `StudentNotFoundException` que contenha uma propriedade `StudentName`.
+Vamos supor que você `StudentNotFoundException` queira `StudentName` criar um que contenha uma propriedade.
 Para criar uma exceção personalizada, siga estas etapas:
 
-1. Crie uma classe serializável que herda de <xref:System.Exception>. O nome da classe deve terminar em "Exception":
+1. Crie uma classe serializável <xref:System.Exception>que herde de . O nome da classe deve terminar em "Exceção":
 
     ```csharp
     [Serializable]
@@ -38,7 +38,7 @@ Para criar uma exceção personalizada, siga estas etapas:
     End Class
     ```
 
-1. Adicione os construtores padrão:
+1. Adicionar os construtores padrão:
 
     ```csharp
     [Serializable]
@@ -123,7 +123,7 @@ Para criar uma exceção personalizada, siga estas etapas:
 
 ## <a name="create-localized-exception-messages"></a>Criar mensagens de exceção localizadas
 
-Você criou uma exceção personalizada e pode jogá-la em qualquer lugar com um código semelhante ao seguinte:
+Você criou uma exceção personalizada, e você pode jogá-la em qualquer lugar com código como o seguinte:
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
@@ -133,24 +133,24 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
 Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
-O problema com a linha anterior é que `"The student cannot be found."` é apenas uma cadeia de caracteres constante. Em um aplicativo localizado, você deseja ter mensagens diferentes dependendo da cultura do usuário.
-Os [assemblies satélite](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) são uma boa maneira de fazer isso. Um assembly satélite é uma. dll que contém recursos para um idioma específico. Quando você solicita recursos específicos em tempo de execução, o CLR encontra esse recurso dependendo da cultura do usuário. Se nenhum assembly satélite for encontrado para essa cultura, os recursos da cultura padrão serão usados.
+O problema com a `"The student cannot be found."` linha anterior é que é apenas uma seqüência constante. Em um aplicativo localizado, você deseja ter mensagens diferentes dependendo da cultura do usuário.
+[Conjuntos de satélites](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) são uma boa maneira de fazer isso. Uma montagem via satélite é uma .dll que contém recursos para uma língua específica. Quando você pede recursos específicos no tempo de execução, o CLR encontra esse recurso dependendo da cultura do usuário. Se não for encontrado nenhum conjunto de satélite para essa cultura, os recursos da cultura padrão serão usados.
 
 Para criar as mensagens de exceção localizadas:
 
-1. Crie uma nova pasta chamada *recursos* para armazenar os arquivos de recurso.
-1. Adicione um novo arquivo de recurso a ele. Para fazer isso no Visual Studio, clique com o botão direito do mouse na pasta em **Gerenciador de soluções**e selecione **Adicionar** > **novo item** > **arquivo de recursos**. Nomeie o arquivo *ExceptionMessages. resx*. Esse é o arquivo de recursos padrão.
-1. Adicione um par de nome/valor à mensagem de exceção, como mostra a imagem a seguir:
+1. Crie uma nova pasta chamada *Resources* para manter os arquivos de recursos.
+1. Adicione um novo arquivo de recursos a ele. Para fazer isso no Visual Studio, clique com o botão direito do mouse na pasta no **Solution Explorer**e selecione **Adicionar** > **novo arquivo de** > **recursos de**itens . Nomeie o arquivo *ExceptionMessages.resx*. Este é o arquivo de recursos padrão.
+1. Adicione um par de nome/valor para sua mensagem de exceção, como mostra a seguinte imagem:
 
    ![Adicionar recursos à cultura padrão](media/add-resources-to-default-culture.jpg)
 
-1. Adicione um novo arquivo de recurso para francês. Nomeie-o *ExceptionMessages.fr-fr. resx*.
-1. Adicione um par nome/valor à mensagem de exceção novamente, mas com um valor em francês:
+1. Adicione um novo arquivo de recursos para francês. *Nomeie-o ExceptionMessages.fr-FR.resx*.
+1. Adicione um par de nome/valor para a mensagem de exceção novamente, mas com um valor francês:
 
    ![Adicionar recursos à cultura fr-FR](media/add-resources-to-fr-culture.jpg)
 
-1. Depois de compilar o projeto, a pasta de saída da compilação deve conter a pasta *fr-fr* com um arquivo *. dll* , que é o assembly satélite.
-1. Você lança a exceção com um código semelhante ao seguinte:
+1. Depois de construir o projeto, a pasta de saída de compilação deve conter a pasta *fr-FR* com um arquivo *.dll,* que é o conjunto de satélites.
+1. Você lança a exceção com código como o seguinte:
 
     ```csharp
     var resourceManager = new ResourceManager("FULLY_QIALIFIED_NAME_OF_RESOURCE_FILE", Assembly.GetExecutingAssembly());
@@ -163,11 +163,11 @@ Para criar as mensagens de exceção localizadas:
     ```
 
     > [!NOTE]
-    > Se o nome do projeto for `TestProject` e o arquivo de recurso *ExceptionMessages. resx* residir na pasta *Resources* do projeto, o nome totalmente qualificado do arquivo de recurso será `TestProject.Resources.ExceptionMessages`.
+    > Se o nome `TestProject` do projeto for e o arquivo de recursos *ExceptionMessages.resx* residir na `TestProject.Resources.ExceptionMessages`pasta *Recursos* do projeto, o nome totalmente qualificado do arquivo de recurso será .
 
 ## <a name="see-also"></a>Confira também
 
 - [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
-- [Criando assemblies satélite para aplicativos da área de trabalho](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
-- [base (C# referência)](../../csharp/language-reference/keywords/base.md)
-- [isso (C# referência)](../../csharp/language-reference/keywords/this.md)
+- [Criando assemblies satélite para aplicativos de área de trabalho](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
+- [base (Referência de C#)](../../csharp/language-reference/keywords/base.md)
+- [this (Referência de C#)](../../csharp/language-reference/keywords/this.md)

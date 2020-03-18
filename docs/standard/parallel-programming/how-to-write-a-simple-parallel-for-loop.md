@@ -11,10 +11,10 @@ helpviewer_keywords:
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139661"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Como escrever um loop Parallel.For simples
@@ -22,7 +22,7 @@ ms.locfileid: "73139661"
 Este tópico contém dois exemplos que ilustram o método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. O primeiro usa a sobrecarga do método <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> e o segundo usa a sobrecarga <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, as duas sobrecargas mais simples do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Você pode usar essas duas sobrecargas do método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> quando não for preciso cancelar o loop, dividir as iterações do loop ou manter qualquer estado local do thread.
 
 > [!NOTE]
-> Esta documentação usa expressões lambda para definir delegados na TLP. Se você não estiver familiarizado com expressões lambda no C# ou no Visual Basic, veja [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
+> Esta documentação usa expressões lambda para definir delegados na TLP. Se você não estiver familiarizado com expressões lambda em C# ou Visual Basic, consulte [Expressões Lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).
 
 O primeiro exemplo calcula o tamanho dos arquivos em um único diretório. O segundo calcula o produto de duas matrizes.
 
@@ -68,9 +68,9 @@ As chamadas síncronas para recursos compartilhados, como o Console ou o Sistema
 
 Copie e cole esse código em um projeto do Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
+- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)

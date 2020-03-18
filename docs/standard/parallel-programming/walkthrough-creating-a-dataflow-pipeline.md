@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139863"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Explicação passo a passo: Criando um pipeline de fluxo de dados
@@ -34,7 +34,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
   
 6. Aguarde até que o pipeline conclua todo o trabalho.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Pré-requisitos  
  Leia sobre o [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) antes de iniciar essa explicação passo a passo.  
   
 ## <a name="creating-a-console-application"></a>Criar um Aplicativo de console  
@@ -53,7 +53,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Membro|Digite|Descrição|  
+|Membro|Type|Descrição|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Baixa o texto do catálogo na Web.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Separa o texto do catálogo em uma matriz de palavras.|  
@@ -108,6 +108,6 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
   
  Você também pode conectar um bloco de fluxo de dados de origem a vários blocos de destino para criar uma *rede de fluxo de dados*. A versão sobrecarregada do método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> usa um objeto <xref:System.Predicate%601> que define se o bloco de destino aceita cada mensagem com base em seu valor. A maioria dos tipos de blocos de fluxo de dados que agem como fontes fornecem mensagens para todos os blocos de destino conectados, na ordem em que estavam conectados, até que um dos blocos aceite essa mensagem. Com esse mecanismo de filtragem, é possível criar sistemas de blocos de fluxo de dados conectados que direcionam determinados dados por um caminho e outros dados por meio de outro caminho. Para ver um exemplo que usa a filtragem para criar uma rede de fluxo de dados, confira [Explicação passo a passo: usar o fluxo de dados em um aplicativo do Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de dados](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

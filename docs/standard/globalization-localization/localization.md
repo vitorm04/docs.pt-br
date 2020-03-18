@@ -15,10 +15,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120866"
 ---
 # <a name="localization"></a>Localização
@@ -31,9 +31,9 @@ Para cada versão localizada do aplicativo, adicione um novo assembly satélite 
 
 O SDK (Software Development Kit) do Windows fornece o Editor de Recursos do Windows Forms (Winres.exe), que permite localizar rapidamente o Windows Forms para as culturas de destino. Para saber mais sobre como usar essa ferramenta, confira [Winres.exe (Windows Forms Resource Editor)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização e localização](../../../docs/standard/globalization-localization/index.md)
-- [Análise de possibilidade de localização](../../../docs/standard/globalization-localization/localizability-review.md)
+- [Revisão de localização](../../../docs/standard/globalization-localization/localizability-review.md)
 - [Globalização](../../../docs/standard/globalization-localization/globalization.md)
 - [Recursos em aplicativos de área de trabalho](../../../docs/framework/resources/index.md)

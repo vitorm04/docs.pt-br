@@ -16,10 +16,10 @@ helpviewer_keywords:
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140068"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Como definir e usar provedores de formatos numéricos personalizados
@@ -49,7 +49,7 @@ O .NET Framework oferece controle abrangente sobre a representação de cadeias 
   
     1. Opcionalmente, verifique se o método é legitimamente destinado a fornecer serviços de formatação examinando o parâmetro `provider`. Para formatar objetos que implementam <xref:System.IFormatProvider> e <xref:System.ICustomFormatter>, isso envolve testar o parâmetro `provider` para igualdade com o objeto de formatação atual.  
   
-    2. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser de saída no formato NANP e um "I" pode indicar a saída no formato de recomendação E. 123 do ITU-T.) Se os especificadores de formato forem usados, o método deve lidar com o especificador de formato específico. Ele é passado para o método no parâmetro `format`. Se nenhum especificador estiver presente, o valor do parâmetro `format` será <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser produzido no formato NANP, e um "I" pode indicar saída no formato ITU-T Recommendation E.123.) Se forem utilizados especificadores de formato, o método deve lidar com o especificador de formato específico. Ele é passado para o método no parâmetro `format`. Se nenhum especificador estiver presente, o valor do parâmetro `format` será <xref:System.String.Empty?displayProperty=nameWithType>.  
   
     3. Recupere o valor numérico passado para o método como o parâmetro `arg`. Execute as manipulações que forem necessárias para convertê-lo em sua representação de cadeia de caracteres.  
   
@@ -86,6 +86,6 @@ O .NET Framework oferece controle abrangente sobre a representação de cadeias 
   
  No caso deste exemplo, o método que implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> se destina a servir como um método de retorno de chamada para o método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Portanto, ele examina o parâmetro `formatProvider` para determinar se ele contém uma referência ao objeto `TelephoneFormatter` atual. No entanto, o método também pode ser chamado diretamente do código. Nesse caso, você pode usar o parâmetro `formatProvider` para fornecer um objeto <xref:System.Globalization.CultureInfo> ou <xref:System.Globalization.NumberFormatInfo> que fornece informações de formatação específicas da cultura.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)

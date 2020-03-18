@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
 ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75711851"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Usando o tipo dynamic (Guia de Programação em C#)
@@ -65,7 +65,7 @@ O DLR (Dynamic Language Runtime) é uma nova API no .NET Framework 4. Ele fornec
 
 O C# 4 inclui vários recursos que aprimoram a experiência de interoperar com APIs COM, como as APIs de Automação do Office. Entre os aperfeiçoamentos estão o uso do tipo `dynamic` e de [argumentos nomeados e opcionais](../classes-and-structs/named-and-optional-arguments.md).
 
-Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`. Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#. Se você compilar usando a opção [-link (C# opções do compilador)](../../language-reference/compiler-options/link-compiler-option.md) , a introdução do tipo de `dynamic` permite tratar as ocorrências de `object` em assinaturas com como se fossem do tipo `dynamic`e, portanto, evitar grande parte da conversão. Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.
+Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno, especificando os tipos como `object`. Isso exigiu a conversão explícita dos valores para coordenar com variáveis fortemente tipadas no C#. Se você compilar usando a opção [link (C# Compiler Options),](../../language-reference/compiler-options/link-compiler-option.md) a introdução do `dynamic` tipo permite que você trate as ocorrências de `object` assinaturas em COM como se fossem do tipo `dynamic`e, assim, evitar grande parte do casting. Por exemplo, as seguintes instruções de contrastam como acessar uma célula em uma planilha do Microsoft Office Excel com o tipo `dynamic` e sem o tipo `dynamic`.
 
 [!code-csharp[csOfficeWalkthrough#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#12)]
 
@@ -73,9 +73,9 @@ Muitos métodos COM permitem variação nos tipos de argumento e tipo de retorno
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Cargo|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
-|[dynamic](../../language-reference/builtin-types/reference-types.md)|Descreve o uso da palavra-chave `dynamic`.|
-|[Visão geral do Dynamic Language Runtime](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).|
-|[Passo a passo: Criando e usando objetos dinâmicos](walkthrough-creating-and-using-dynamic-objects.md)|Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.|
-|[Como acessar objetos de interoperabilidade do C# Office usando recursos](../interop/how-to-access-office-onterop-objects.md)|Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.|
+|[dinâmico](../../language-reference/builtin-types/reference-types.md)|Descreve o uso da palavra-chave `dynamic`.|
+|[Visão geral do tempo de execução do idioma dinâmico](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Fornece uma visão geral do DLR, que é um ambiente de tempo de execução que adiciona um conjunto de serviços para as linguagens dinâmicas para o CLR (Common Language Runtime).|
+|[Passo a passo: Criando e Usando Objetos Dinâmicos](walkthrough-creating-and-using-dynamic-objects.md)|Fornece instruções passo a passo para criar um objeto dinâmico personalizado e para criar um projeto que acessa uma biblioteca `IronPython`.|
+|[Como acessar objetos de interoperabilidade do Office usando recursos do C#](../interop/how-to-access-office-onterop-objects.md)|Demonstra como criar um projeto que usa argumentos nomeados e opcionais, o tipo `dynamic` e outros aprimoramentos que simplificam o acesso aos objetos de API do Office.|

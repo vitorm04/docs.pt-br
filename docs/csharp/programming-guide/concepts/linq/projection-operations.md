@@ -2,28 +2,28 @@
 title: Operações de projeção (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: a2a2ae762d63d5ff26c7018caef1a83558042fb5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f76eeeb779ab08a575e758a9d974573b700ae652
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346524"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168330"
 ---
 # <a name="projection-operations-c"></a>Operações de projeção (C#)
 Projeção refere-se à operação de transformar um objeto em um novo formulário que geralmente consiste apenas nas propriedades que serão usadas posteriormente. Usando a projeção, você pode construir um novo tipo que é criado de cada objeto. É possível projetar uma propriedade e executar uma função matemática nela. Também é possível projetar o objeto original sem alterá-lo.  
   
  Os métodos de operador de consulta padrão que realizam a projeção estão listados na seção a seguir.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais Informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Seleção|Projeta valores com base em uma função de transformação.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
+|Selecionar|Projeta valores com base em uma função de transformação.|`select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|Projeta sequências de valores baseados em uma função de transformação e os mescla em uma sequência.|Use várias cláusulas `from`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Exemplos de sintaxe de expressão de consulta  
   
-### <a name="select"></a>Seleção  
+### <a name="select"></a>Selecionar  
  O exemplo a seguir usa a cláusula `select` para projetar a primeira letra de cada cadeia de caracteres em uma lista de cadeias de caracteres.  
   
 ```csharp  
@@ -101,7 +101,7 @@ static void SelectVsSelectMany()
         new Bouquet{ Flowers = new List<string> { "larkspur", "lilac", "iris", "dahlia" }}  
     };  
   
-    // *********** Select ***********              
+    // *********** Select ***********
     IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);  
   
     // ********* SelectMany *********  
@@ -159,10 +159,10 @@ static void SelectVsSelectMany()
 }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
-- [Cláusula select](../../../language-reference/keywords/select-clause.md)
+- [cláusula de seleção](../../../language-reference/keywords/select-clause.md)
 - [Como preencher coleções de objetos de várias fontes (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

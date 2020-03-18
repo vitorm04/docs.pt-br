@@ -11,10 +11,10 @@ helpviewer_keywords:
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 ms.openlocfilehash: da7634758f5c4319fa18612d216682dc141318fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155952"
 ---
 # <a name="enumeration-format-strings"></a>Cadeias de caracteres de formato de enumeração
@@ -70,4 +70,4 @@ O método `Color.ToString(System.String)` pode, então, ser usado para exibir o 
 
 ## <a name="see-also"></a>Confira também
 
-- [Formatando Tipos](formatting-types.md)
+- [Formatar tipos](formatting-types.md)

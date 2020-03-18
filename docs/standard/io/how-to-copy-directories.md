@@ -1,5 +1,5 @@
 ---
-title: Como copiar diretórios
+title: 'Como: Copiar diretórios'
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159449"
 ---
-# <a name="how-to-copy-directories"></a>Como copiar diretórios
+# <a name="how-to-copy-directories"></a>Como: Copiar diretórios
 Este tópico demonstra como usar classes de E/S para copiar de forma síncrona o conteúdo de um diretório para outra localização.
 
 Para obter um exemplo de cópia assíncrona de arquivo, confira [E/S assíncrona de arquivo](../../../docs/standard/io/asynchronous-file-i-o.md).
@@ -38,5 +38,5 @@ Este exemplo copia os subdiretórios definindo o `copySubDirs` do método `Direc
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
 - [E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)
-- [Tarefas comuns de E/S](../../../docs/standard/io/common-i-o-tasks.md)
-- [E/S assíncrona de arquivo](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Tarefas comuns de I/O](../../../docs/standard/io/common-i-o-tasks.md)
+- [I/O do arquivo assíncrono](../../../docs/standard/io/asynchronous-file-i-o.md)

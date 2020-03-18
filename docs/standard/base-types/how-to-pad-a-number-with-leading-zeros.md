@@ -12,10 +12,10 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131984"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Como preencher um número com zeros à esquerda
@@ -83,7 +83,7 @@ O exemplo a seguir formata diversos valores numéricos com zeros à esquerda. Co
 
     1. Caso o símbolo esteja presente, determine a quantidade de caracteres à esquerda do ponto decimal.
 
-         \- ou -
+         -ou-
 
          Caso o símbolo de decimal não esteja presente, determine o comprimento da cadeia de caracteres.
 
@@ -100,8 +100,8 @@ O exemplo a seguir acrescenta dois valores <xref:System.Double> com cinco dígit
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md)
+- [Strings de formato numérico personalizados](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Formatação composta](../../../docs/standard/base-types/composite-formatting.md)

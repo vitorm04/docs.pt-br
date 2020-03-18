@@ -1,23 +1,23 @@
 ---
-title: Como unir duas coleções (LINQ to XML) (C#)
+title: Como participar de duas coleções (LINQ a XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345856"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Como unir duas coleções (LINQ to XML) (C#)
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>Como participar de duas coleções (LINQ a XML) (C#)
 
-Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contém uma lista de clientes e uma lista de pedidos. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um elemento `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.
+Um elemento ou atributo em um documento XML, algumas vezes, pode fazer referência a outro elemento ou atributo. Por exemplo, o documento XML [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) contém uma lista de clientes e uma lista de pedidos. Cada elemento `Customer` contém um atributo `CustomerID`. Cada elemento `Order` contém um atributo `CustomerID`. O elemento `CustomerID` em cada pedido faz referência ao atributo `CustomerID` em um cliente.
 
 O tópico [Arquivo XSD de exemplo: clientes e pedidos](./sample-xsd-file-customers-and-orders1.md) contém um XSD que pode ser usado para validar esse documento. Usa os recursos de XSD `xs:key` e `xs:keyref` para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave, e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order`, e o atributo `CustomerID` em cada elemento `Customer`.
 
 Com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], você pode tirar proveito dessa relação usando a cláusula `join`.
 
-Como não há índice disponível, essa junção terá um desempenho insatisfatório em tempo de execução.
+Como não há índice disponível, essa adesão terá um desempenho de tempo de execução ruim.
 
 Para obter informações mais detalhadas sobre `join`, consulte [Operações de junção (C#)](./join-operations.md).
 
@@ -33,7 +33,7 @@ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e p
 
 Este exemplo usa o seguinte esquema XSD: [Arquivo XSD de exemplo: clientes e pedidos](./sample-xsd-file-customers-and-orders1.md).
 
-Unir dessa maneira não terá um bom desempenho. As junções são executadas por meio de uma pesquisa linear. Não há nenhuma tabela de hash ou índice para ajudar no desempenho.
+Juntar-se a esta moda não vai ter um bom desempenho. As junções são executadas por meio de uma pesquisa linear. Não há nenhuma tabela de hash ou índice para ajudar no desempenho.
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

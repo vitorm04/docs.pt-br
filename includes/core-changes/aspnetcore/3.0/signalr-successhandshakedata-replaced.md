@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: 1d8bcaf68d44f27642048c1c207b52c55b604690
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901722"
 ---
-### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>Signalr: HandshakeProtocol. SuccessHandshakeData substituído
+### <a name="signalr-handshakeprotocolsuccesshandshakedata-replaced"></a>SignalR: HandshakeProtocol.SuccessHandshakeData substituído
 
-O campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) foi removido e substituído por um método auxiliar que gera uma resposta de handshake bem-sucedida devido a um `IHubProtocol`específico.
+O campo [HandshakeProtocol.SuccessHandshakeData](https://github.com/dotnet/aspnetcore/blob/c5b2bc0df2a0027832bf7d01dfb19ca39cd08ae6/src/SignalR/common/SignalR.Common/src/Protocol/HandshakeProtocol.cs#L27) foi removido e substituído por um método auxiliar `IHubProtocol`que gera uma resposta de aperto de mão bem sucedida dada uma resposta específica .
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -16,19 +16,19 @@ O campo [HandshakeProtocol. SuccessHandshakeData](https://github.com/dotnet/aspn
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`HandshakeProtocol.SuccessHandshakeData` foi um campo de `public static ReadOnlyMemory<byte>`.
+`HandshakeProtocol.SuccessHandshakeData`era `public static ReadOnlyMemory<byte>` um campo.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-`HandshakeProtocol.SuccessHandshakeData` foi substituído por um método de `GetSuccessfulHandshake(IHubProtocol protocol)` de `static` que retorna uma `ReadOnlyMemory<byte>` com base no protocolo especificado.
+`HandshakeProtocol.SuccessHandshakeData`foi substituído por `static` `GetSuccessfulHandshake(IHubProtocol protocol)` um método `ReadOnlyMemory<byte>` que retorna um com base no protocolo especificado.
 
-#### <a name="reason-for-change"></a>Motivo da alteração
+#### <a name="reason-for-change"></a>Motivo da mudança
 
-Campos adicionais foram adicionados à _resposta_ de handshake que são não constantes e mudam dependendo do protocolo selecionado.
+Campos adicionais foram adicionados à _resposta_ de aperto de mão que não são constantes e mudam dependendo do protocolo selecionado.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Nenhuma. Esse tipo não é projetado para uso do código do usuário. É `public`, portanto, pode ser compartilhado entre o servidor e o cliente do Signalr. Ele também pode ser usado por clientes do Signalr do cliente escritos em .NET. **Os usuários** do signalr não devem ser afetados por essa alteração.
+Nenhum. Este tipo não foi projetado para ser usado a partir do código do usuário. É `public`, para que possa ser compartilhado entre o servidor SignalR e o cliente. Também pode ser usado por clientes SignalR gravados em .NET. **Os usuários** do SignalR não devem ser afetados por essa mudança.
 
 #### <a name="category"></a>Categoria
 

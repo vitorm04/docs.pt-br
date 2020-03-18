@@ -19,10 +19,10 @@ helpviewer_keywords:
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73101667"
 ---
 # <a name="comparing-strings-in-net"></a>Comparando cadeias de caracteres em .NET
@@ -33,9 +33,9 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|Compara os valores das duas cadeias de caracteres. Retorna um valor inteiro.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|Compara duas cadeias de caracteres sem considerar a cultura local. Retorna um valor inteiro.|  
 |<xref:System.String.CompareTo%2A?displayProperty=nameWithType>|Compara o objeto atual de cadeia de caracteres a outra cadeia de caracteres. Retorna um valor inteiro.|  
-|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Determina se uma cadeia de caracteres começa com a cadeia de caracteres passada. Representa um valor Booliano.|  
-|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Determina se uma cadeia de caracteres termina com a cadeia de caracteres passada. Representa um valor Booliano.|  
-|<xref:System.String.Equals%2A?displayProperty=nameWithType>|Determina se duas cadeias de caracteres são iguais. Representa um valor Booliano.|  
+|<xref:System.String.StartsWith%2A?displayProperty=nameWithType>|Determina se uma cadeia de caracteres começa com a cadeia de caracteres passada. Retorna um valor booliano.|  
+|<xref:System.String.EndsWith%2A?displayProperty=nameWithType>|Determina se uma cadeia de caracteres termina com a cadeia de caracteres passada. Retorna um valor booliano.|  
+|<xref:System.String.Equals%2A?displayProperty=nameWithType>|Determina se duas cadeias de caracteres são iguais. Retorna um valor booliano.|  
 |<xref:System.String.IndexOf%2A?displayProperty=nameWithType>|Retorna a posição do índice de um caractere ou uma cadeia de caracteres, começando do início da cadeia de caracteres que você está examinando. Retorna um valor inteiro.|  
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Retorna a posição do índice de um caractere ou uma cadeia de caracteres, começando do fim da cadeia de caracteres que você está examinando. Retorna um valor inteiro.|  
   
@@ -44,9 +44,9 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
 |Valor retornado|Condição|  
 |------------------|---------------|  
-|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> \- ou -<br /><br /> A primeira cadeia de caracteres é `null`.|  
-|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> \- ou -<br /><br /> Ambas as cadeias de caracteres são `null`.|  
-|Um inteiro positivo<br /><br /> \- ou -<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> \- ou -<br /><br /> A segunda cadeia de caracteres é `null`.|  
+|Um inteiro negativo|A primeira cadeia de caracteres precede a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A primeira cadeia de caracteres é `null`.|  
+|0|A primeira cadeia de caracteres e a segunda cadeia de caracteres são iguais.<br /><br /> -ou-<br /><br /> Ambas as cadeias de caracteres são `null`.|  
+|Um número inteiro positivo<br /><br /> -ou-<br /><br /> 1|A primeira cadeia de caracteres segue a segunda cadeia de caracteres na ordem de classificação.<br /><br /> -ou-<br /><br /> A segunda cadeia de caracteres é `null`.|  
   
 > [!IMPORTANT]
 > O método <xref:System.String.Compare%2A?displayProperty=nameWithType> destina-se principalmente para uso em ordenação ou classificação de cadeias de caracteres. Você não deve usar o método <xref:System.String.Compare%2A?displayProperty=nameWithType> para testar a igualdade (ou seja, para procurar explicitamente um valor retornado de 0 sem considerar se uma cadeia de caracteres é menor que ou maior que a outra). Em vez disso, para determinar se duas cadeias de caracteres são iguais, use o método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.  
@@ -91,7 +91,7 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Todas as sobrecargas do método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> executam comparações que diferenciam a cultura e com diferenciação de maiúsculas e minúsculas por padrão. Nenhuma sobrecarga desse método é fornecida que permite que você execute uma comparação sem diferenciação de cultura. Para ter maior clareza do código, é recomendável usar o método **String.Compare**, especificando <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> para operações que diferenciam a cultura ou <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para operações que não diferenciam a cultura. Confira exemplos que demonstram como usar o método **String.Compare** para realizar comparações de cadeia de caracteres que diferenciam a cultura e não em [Executando comparações de cadeias de caracteres que não diferenciam a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md).  
   
-## <a name="equals"></a>Igual a  
+## <a name="equals"></a>É igual a  
  O método **String.Equals** pode facilmente determinar se duas cadeias de caracteres são as mesmas. Esse método que diferencia maiúsculas de minúsculas retorna um valor Booliano **true** ou **false**. Ele pode ser usado de uma classe existente, conforme ilustrado no exemplo a seguir. O exemplo a seguir usa o método **Equals** para determinar se um objeto de cadeia de caracteres contém a frase "Hello World".  
   
  [!code-cpp[Conceptual.String.BasicOps#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/compare.cpp#9)]
@@ -148,9 +148,9 @@ O .NET fornece vários métodos para comparar os valores de cadeias de caractere
   
  Os dois métodos são úteis quando usados em conjunto com o método **String.Remove**. Você pode usar tanto o método **IndexOf** quanto o **LastIndexOf** para recuperar a posição de um caractere e, em seguida, fornecer essa posição para o método **Remove** para remover um caractere ou uma palavra que começa com esse caractere.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Classificação de tabelas de peso (para .NET em Windows)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [Tabela do elemento de ordenação Unicode padrão (para .NET Core em Linux e macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

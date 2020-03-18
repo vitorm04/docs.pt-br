@@ -16,10 +16,10 @@ helpviewer_keywords:
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159982"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Como cortar e remover caracteres das cadeias de caracteres no .NET
@@ -49,7 +49,7 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
 
  O método **String.TrimEnd** remove os caracteres do final de uma cadeia de caracteres, criando um novo objeto de cadeia de caracteres. Uma matriz de caracteres é passada para este método para especificar os caracteres a seres removidos. A ordem dos elementos na matriz de caracteres não afeta a operação de corte. O corte é interrompido quando um caractere não especificado na matriz é encontrado.  
   
- O exemplo a seguir remove as últimas letras de uma cadeia de caracteres usando o método **TrimEnd**. Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
+ O exemplo a seguir remove as últimas letras de uma seqüência usando o método **TrimEnd.** Neste exemplo, as posições do caractere `'r'` e do caractere `'W'` estão invertidas para ilustrar que a ordem dos caracteres na matriz não importa. Observe que este código remove a última palavra de `MyString` mais uma parte da primeira.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -96,4 +96,4 @@ Se estiver analisando as palavras individuais de uma sentença, você poderá en
   
 ## <a name="see-also"></a>Confira também
 
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)

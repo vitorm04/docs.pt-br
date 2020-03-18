@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 ms.openlocfilehash: 788fa2a6793e14189def4c30a0baf0d4a5cf6b0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128088"
 ---
 # <a name="regular-expression-examples"></a>Exemplos de expressões regulares
@@ -27,10 +27,10 @@ Esta seção contém exemplos de código que mostram o uso de expressões regula
  [Exemplo: Alterando formatos de data](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
  Fornece um exemplo que substitui as datas no formato mm/dd/aa por datas no formato dd-mm-aa.  
   
- [Como extrair um protocolo e um número da porta de uma URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
+ [Como extrair um protocolo e um número de porta de uma URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
  Fornece um exemplo que extrai um protocolo e o número da porta de uma cadeia de caracteres que contém uma URL. Por exemplo, "http://www.contoso.com:8080/letters/readme.html" retorna "http:8080".  
   
- [Como retirar caracteres inválidos de uma cadeia de caracteres](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
+ [Como: Tirar caracteres inválidos de uma string](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Fornece um exemplo que retira caracteres não alfanuméricos inválidos de uma cadeia de caracteres.  
   
  [Como verificar se cadeias de caracteres estão em um formato de email válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
@@ -47,8 +47,8 @@ Esta seção contém exemplos de código que mostram o uso de expressões regula
  [O modelo de objeto de expressão regular](../../../docs/standard/base-types/the-regular-expression-object-model.md)  
  Descreve as classes de expressões regulares contidas no namespace `System.Text.RegularExpression` e fornece exemplos de uso.  
   
- [Detalhes do comportamento da expressão regular](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)  
+ [Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)  
  Oferece informações sobre os recursos e o comportamento das expressões regulares do .NET.  
   
- [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+ [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  Oferece informações sobre o conjunto de caracteres, operadores e constructos que você pode usar para definir expressões regulares.

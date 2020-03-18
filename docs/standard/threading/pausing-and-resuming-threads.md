@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129000"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausando e interrompendo threads
@@ -47,11 +47,11 @@ As formas mais comuns para sincronizar as atividades de threads são segmentos d
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ativa um thread de qualquer espera em que ele possa estar e faz com que um <xref:System.Threading.ThreadAbortException> seja gerado no thread. Para obter detalhes, confira [Destruindo threads](../../../docs/standard/threading/destroying-threads.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
 - [Threading](../../../docs/standard/threading/index.md)
 - [Usando threads e threading](../../../docs/standard/threading/using-threads-and-threading.md)
-- [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [Visão geral dos Primitivos da Sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

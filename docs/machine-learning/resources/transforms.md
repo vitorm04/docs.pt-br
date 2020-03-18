@@ -3,11 +3,11 @@ title: Transformações de dados
 description: Explore os componentes de engenharia de recursos com suporte no ML.NET.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739597"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398919"
 ---
 # <a name="data-transformations"></a>Transformações de dados
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084190"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Exemplo de expressão regular: Alterando formatos de data
-O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para substituir datas com o formato *mm*/*dd*/*aa* por datas com o formato *dd*-*mm*-*aa*.  
+O exemplo de <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> código a seguir usa o método para substituir datas que possuem o formulário *mm*/*dd*/*yy* por datas que tenham o formulário *dd*-*mm*-*yy*.  
   
 ## <a name="example"></a>Exemplo  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
@@ -37,7 +37,7 @@ O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`(?<month>\d{1,2})`|Corresponder a um ou dois dígitos decimais. Este é o grupo capturado do `month`.|  
 |`/`|Corresponde à barra.|  
 |`(?<day>\d{1,2})`|Corresponder a um ou dois dígitos decimais. Este é o grupo capturado do `day`.|  
@@ -55,6 +55,6 @@ O exemplo de código a seguir usa o método <xref:System.Text.RegularExpressions
 |`-`|Adicionar um hífen.|  
 |`$(year)`|Adicionar a cadeia de caracteres capturada pelo grupo de captura `year`.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET](../../../docs/standard/base-types/regular-expressions.md)

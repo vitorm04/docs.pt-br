@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741347"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Tratando e gerando exceções no .NET
@@ -56,15 +56,15 @@ A tabela a seguir lista algumas exceções comuns com exemplos do que pode caus�
 | <xref:System.ArgumentNullException> | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Classe e propriedades da exceção](exception-class-and-properties.md)
+- [Classe Exception e suas propriedades](exception-class-and-properties.md)
 - [Como usar o bloco try-catch para capturar exceções](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [Como usar exceções específicas em um bloco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Como: Usar exceções específicas em um bloco de captura](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Como gerar exceções explicitamente](how-to-explicitly-throw-exceptions.md)
-- [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
+- [Como: Criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
 - [Usando manipuladores de exceção filtrados por usuário](using-user-filtered-exception-handlers.md)
 - [Como usar blocos finally](how-to-use-finally-blocks.md)
 - [Manipulando exceções de interoperabilidade COM](handling-com-interop-exceptions.md)
 - [Práticas recomendadas para exceções](best-practices-for-exceptions.md)
-- [O que todo desenvolvedor precisa saber sobre exceções no runtime](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
+- [O que todo Dev precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

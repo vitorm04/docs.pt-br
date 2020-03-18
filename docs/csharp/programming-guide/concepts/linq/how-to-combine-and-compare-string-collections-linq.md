@@ -1,15 +1,15 @@
 ---
-title: Como combinar e comparar coleções de cadeias de caracteres (C#LINQ) ()
+title: Como combinar e comparar coleções de strings (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141423"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169448"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como combinar e comparar coleções de cadeias de caracteres (C#LINQ) ()
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Como combinar e comparar coleções de strings (LINQ) (C#)
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar o projeto e os arquivos de texto  
@@ -74,7 +74,7 @@ class MergeStrings
                 fileA.Intersect(fileB);  
             OutputQueryResults(commonNamesQuery, "Merge based on intersect:");  
   
-            // Find the matching fields in each list. Merge the two   
+            // Find the matching fields in each list. Merge the two
             // results by using Concat, and then  
             // sort using the default string comparer.  
             string nameMatch = "Garcia";  
@@ -171,7 +171,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>Compilando o código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)
