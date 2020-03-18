@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141646"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Como percorrer uma árvore binária com tarefas paralelas
@@ -24,6 +24,6 @@ O exemplo a seguir mostra duas maneiras pelas quais tarefas paralelas podem ser 
   
  Os dois métodos mostrados são funcionalmente equivalentes. Usando o método <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> para criar e executar as tarefas, você obter um identificador de tarefas que pode ser usado para aguardar as tarefas e manipular exceções.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

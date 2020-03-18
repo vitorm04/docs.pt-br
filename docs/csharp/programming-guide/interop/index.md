@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75712046"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidade (Guia de Programação em C#)
@@ -23,13 +23,13 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
  [Visão geral sobre interoperabilidade](./interoperability-overview.md)  
  Descreve métodos para fins de interoperabilidade entre código gerenciado em C# e código não gerenciado.  
   
- [Como acessar objetos de interoperabilidade do C# Office usando recursos](./how-to-access-office-onterop-objects.md)  
+ [Como acessar objetos de interoperabilidade do Office usando recursos do C#](./how-to-access-office-onterop-objects.md)  
  Descreve os recursos que são introduzidos no Visual C# para facilitar a programação do Office.  
   
- [Como usar propriedades indexadas na programação de interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Como usar propriedades indexadas na programação para interoperabilidade COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Descreve como usar propriedades indexadas para acesso propriedades COM que têm parâmetros.  
   
- [Como usar a invocação de plataforma para reproduzir um arquivo WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Como usar invocação de plataforma para executar um arquivo WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Descreve como usar os serviços de invocação de plataforma para reproduzir um arquivo de som .wav no sistema operacional Windows.  
   
  [Passo a passo: programação do Office](./walkthrough-office-programming.md)  
@@ -38,13 +38,13 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
  [Exemplo de classe COM](./example-com-class.md)  
  Demonstra como expor uma classe C# como um objeto COM.  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
 Para obter mais informações, veja [Noções básicas](~/_csharplang/spec/unsafe-code.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
-- [Guia de Programação em C#](../index.md)
-- [Interoperação com código não gerenciado](../../../framework/interop/index.md)
+- [C# Guia de Programação](../index.md)
+- [Interoperação com Código Não Gerenciado](../../../framework/interop/index.md)
 - [Passo a passo: programação do Office](./walkthrough-office-programming.md)

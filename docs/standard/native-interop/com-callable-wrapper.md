@@ -13,11 +13,11 @@ helpviewer_keywords:
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120728"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400375"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper
 
@@ -45,13 +45,13 @@ Para criar essa abordagem direta, o CCW fabrica interfaces COM tradicionais, com
 
 ![Diagrama que mostra como a CCW fabrica interfaces COM.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
-Além de expor as interfaces que são implementadas explicitamente por uma classe no ambiente gerenciado, o runtime do .NET fornece implementações das interfaces COM listadas na tabela a seguir em nome do objeto. Uma classe .NET pode substituir o comportamento padrão fornecendo sua própria implementação dessas interfaces. No entanto, o tempo de execução sempre fornece a implementação para as interfaces **IUnknown** e **IDispatch**.
+Além de expor as interfaces que são implementadas explicitamente por uma classe no ambiente gerenciado, o runtime do .NET fornece implementações das interfaces COM listadas na tabela a seguir em nome do objeto. Uma classe .NET pode substituir o comportamento padrão fornecendo sua própria implementação dessas interfaces. No entanto, o runtime sempre fornece a implementação para as interfaces **IUnknown** e **IDispatch**.
 
 |Interface|Descrição|
 |---------------|-----------------|
 |**IDispatch**|Fornece um mecanismo de associação tardia ao tipo.|
 |**IErrorInfo**|Fornece uma descrição textual do erro, sua origem, um arquivo de Ajuda, um contexto de Ajuda e o GUID da interface que definiu o erro (sempre **GUID_NULL** para classes do .NET).|
-|**IProvideClassInfo**|Permite aos clientes COM obter acesso à interface **ITypeInfo** implementada por uma classe gerenciada. Retorna `COR_E_NOTSUPPORTED` no .NET Core para tipos não importados do COM. |
+|**Iprovideclassinfo**|Permite aos clientes COM obter acesso à interface **ITypeInfo** implementada por uma classe gerenciada. Retorna `COR_E_NOTSUPPORTED` no .NET Core para tipos não importados do COM. |
 |**ISupportErrorInfo**|Permite a um cliente COM determinar se o objeto gerenciado dá suporte à interface **IErrorInfo**. Nesse caso, permite ao cliente obter um ponteiro para o último objeto de exceção. Todos os tipos gerenciados dão suporte à interface **IErrorInfo**.|
 |**ITypeInfo** (somente .NET Framework)|Fornece informações de tipo de uma classe que são exatamente iguais às informações de tipo produzidas pelo Tlbexp.exe.|
 |**IUnknown**|Fornece a implementação padrão da interface **IUnknown** com a qual o cliente COM gerencia o tempo de vida do CCW e fornece a coerção de tipo.|
@@ -62,7 +62,7 @@ Além de expor as interfaces que são implementadas explicitamente por uma class
 |---------------|-----------------|
 |A interface de classe (\_*classname*)|Interface, exposta pelo runtime e não definida explicitamente, que expõe todas as interfaces públicas, métodos, propriedades e campos que são expostos explicitamente em um objeto gerenciado.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interface para objetos que dão origem a eventos baseados em representante (uma interface para o registro de assinantes do evento).|
-|**IDispatchEx** (somente .NET Framework)|Interface fornecida pelo tempo de execução se a classe implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|
+|**IDispatchEx** (somente .NET Framework)|Interface fornecida pelo runtime se a classe implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|
 |**IEnumVARIANT**|Interface para classes de tipo de coleção, que enumera os objetos na coleção, se a classe implementa **IEnumerable**.|
 
 ## <a name="introducing-the-class-interface"></a>Introdução à interface de classe
@@ -192,11 +192,11 @@ Se o seu aplicativo exigir chamadas early-bound para métodos de interface de ev
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Wrappers COM](com-wrappers.md)
-- [Expondo componentes do .NET Framework ao COM](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [Invólucros COM](com-wrappers.md)
+- [Expondo componentes do .NET Framework para COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Como expor componentes do .NET Core ao COM](../../core/native-interop/expose-components-to-com.md)
-- [Qualificando tipos .NET para interoperação](qualify-net-types-for-interoperation.md)
+- [Qualificando tipos do .NET para interoperação](qualify-net-types-for-interoperation.md)
 - [RCW (Runtime Callable Wrapper)](runtime-callable-wrapper.md)

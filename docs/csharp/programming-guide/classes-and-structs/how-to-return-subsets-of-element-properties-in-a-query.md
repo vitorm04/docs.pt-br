@@ -1,17 +1,17 @@
 ---
-title: Como retornar subconjuntos de propriedades de elemento em um guia C# de programação de consulta
+title: Como retornar subconjuntos de propriedades de elementos em uma consulta - C# Guia de programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
 ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714866"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Como retornar subconjuntos de propriedades de elemento em uma consultaC# (guia de programação)
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Como retornar subconjuntos de propriedades de elemento em uma consulta (C# Guia de programação)
 Use um tipo anônimo em uma expressão de consulta quando essas duas condições se aplicarem:  
   
 - Você deseja retornar apenas algumas das propriedades de cada elemento de origem.  
@@ -41,12 +41,12 @@ select new { First = student.FirstName, Last = student.LastName };
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
   
 Para executar esse código, copie e cole a classe em um aplicativo de console em C# com uma diretiva `using` para System.Linq.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Tipos Anônimos](./anonymous-types.md)
 - [LINQ em C#](../../linq/index.md)

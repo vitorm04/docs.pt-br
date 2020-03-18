@@ -16,10 +16,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 ms.openlocfilehash: 13a9f4896a37be4297f2a1a11435b85ade381c66
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353669"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Executando operações de cadeia de caracteres que não levam em conta a cultura em coleções
@@ -27,7 +27,7 @@ ms.locfileid: "74353669"
 Há classes e membros no namespace <xref:System.Collections> que fornecem, por padrão, o comportamento sensível à cultura. Os construtores sem parâmetros para as classes <xref:System.Collections.CaseInsensitiveComparer> e <xref:System.Collections.CaseInsensitiveHashCodeProvider> inicializam uma nova instância usando a propriedade <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Todas as sobrecargas do método <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> criam uma nova instância da classe <xref:System.Collections.Hashtable> usando a propriedade `Thread.CurrentCulture` por padrão. As sobrecargas do método <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> executam, por padrão, classificações sensíveis à cultura usando `Thread.CurrentCulture`. A classificação e a pesquisa em uma <xref:System.Collections.SortedList> podem ser afetadas por `Thread.CurrentCulture`, quando as cadeias de caracteres são usadas como as chaves. Siga as recomendações de uso fornecidas nesta seção para obter os resultados insensíveis à cultura dessas classes e métodos no namespace `Collections`.
 
 > [!NOTE]
-> A passagem de <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para um método de comparação executa uma comparação que não diferencia a cultura. No entanto, não causa uma comparação não linguística, por exemplo, para caminhos de arquivos, chaves do Registro e variáveis de ambiente. Também não oferece suporte a decisões de segurança com base no resultado da comparação. Para obter uma comparação não linguística ou suporte para decisões de segurança com base no resultado, o aplicativo deve usar um método de comparação que aceite um valor <xref:System.StringComparison>. Assim, o aplicativo deve passar <xref:System.StringComparison>.
+> Passar <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> para um método de comparação faz uma comparação insensível à cultura. No entanto, não causa uma comparação não linguística, por exemplo, para caminhos de arquivos, chaves do Registro e variáveis de ambiente. Também não oferece suporte a decisões de segurança com base no resultado da comparação. Para obter uma comparação não linguística ou suporte para decisões de segurança com base no resultado, o aplicativo deve usar um método de comparação que aceite um valor <xref:System.StringComparison>. Assim, o aplicativo deve passar <xref:System.StringComparison>.
 
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Usar as classes CaseInsensitiveHashCodeProvider e CaseInsensitiveComparer
 
@@ -137,7 +137,7 @@ Em geral, se você usar `SortedList` em cadeias de caracteres sem especificar um
 
 Sobrecargas do método `ArrayList.Sort` executam, por padrão, classificações sensíveis à cultura usando a propriedade `Thread.CurrentCulture`. Os resultados podem variar de acordo com a cultura, devido a ordens de classificação diferentes. Para eliminar o comportamento sensível à cultura, use as sobrecargas desse método para aceitar uma implementação `IComparer`. Para o parâmetro `comparer`, especifique uma classe de comparação invariável personalizada que usa `CultureInfo.InvariantCulture`. Um exemplo de uma classe de comparação invariável personalizada é fornecido no tópico [Usar a classe SortedList](#cpconperformingculture-insensitivestringoperationsincollectionsanchor1).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.CaseInsensitiveComparer>
 - <xref:System.Collections.CaseInsensitiveHashCodeProvider>

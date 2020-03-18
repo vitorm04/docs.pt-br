@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, partitioners
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 ms.openlocfilehash: 8caea6d8a97b8c0daf7c59718479ea2e12a52d78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141560"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Particionadores personalizados para PLINQ e TPL
@@ -47,10 +47,10 @@ A tabela a seguir lista as sobrecargas disponíveis do método <xref:System.Coll
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>|Sempre|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28%60%600%5B%5D%2CSystem.Boolean%29>|Quando o argumento Boolean é especificado como true|
 |<xref:System.Collections.Concurrent.Partitioner.Create%60%601%28System.Collections.Generic.IList%7B%60%600%7D%2CSystem.Boolean%29>|Quando o argumento Boolean é especificado como true|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Nunca|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Nunca|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Nunca|
-|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Nunca|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%29>|Never|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int32%2CSystem.Int32%2CSystem.Int32%29>|Never|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%29>|Never|
+|<xref:System.Collections.Concurrent.Partitioner.Create%28System.Int64%2CSystem.Int64%2CSystem.Int64%29>|Never|
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Configurando particionadores de intervalo estático para Parallel.ForEach
 
@@ -125,8 +125,8 @@ Ao implementar um particionador personalizado, siga estas diretrizes para garant
 
 - Todos os índices devem ser não negativos. Se essa regra não for seguida, PLINQ/TPL poderão gerar exceções.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação paralela](../../../docs/standard/parallel-programming/index.md)
-- [Como implementar partições dinâmicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
+- [Programação Paralela](../../../docs/standard/parallel-programming/index.md)
+- [como implementar partições dinâmicas](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)
 - [Como implementar um particionador para particionamento estático](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

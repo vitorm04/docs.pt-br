@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715179"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399360"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -41,7 +41,7 @@ Os membros de uma classe não podem ter assinaturas que se diferem somente por `
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -81,7 +81,7 @@ Um valor retornado por referência é definido usando a palavra-chave `ref`:
 public ref decimal GetCurrentPrice()
 ```
 
-- Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo:
+- Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo: 
 
 ```csharp
 return ref DecimalArray[0];
@@ -91,7 +91,7 @@ Para que o chamador modifique o estado do objeto, o valor retornado de referênc
 
 O método chamado também poderá declarar o valor retornado como `ref readonly` para retornar o valor por referência e, em seguida, impor que o código de chamada não possa modificar o valor retornado. O método de chamada pode evitar a cópia retornada com um valor ao armazenar o valor em um local [ref readonly](#ref-readonly-locals) variável.
 
-Para obter um exemplo, consulte [Um exemplo de ref returns e ref locals](#a-ref-returns-and-ref-locals-example).
+Por exemplo, veja [A ref returns e ref locals exemplo](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Ref locals
 
@@ -115,9 +115,11 @@ Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os
 
 A partir do C# 7.3, a variável de iteração da instrução `foreach` pode ser ref local ou a variável local ref readonly. Para saber mais, confira o artigo [Instrução foreach](foreach-in.md).
 
+Também começando com C# 7.3, você pode reatribuir um árbitro local ou ref readonly variável local com o [operador de atribuição de ref](../operators/assignment-operator.md#ref-assignment-operator).
+
 ## <a name="ref-readonly-locals"></a>Locais somente leitura de referência
 
-Um local ref readonly é usado para fazer referência a valores retornados pelo método ou propriedade que tem `ref readonly` na sua assinatura e usa `return ref`. Uma variável `ref readonly` combina as propriedades de uma variável `ref` local com uma variável `readonly`: é um alias para o armazenamento ao qual está atribuído e não pode ser modificado. 
+Um local ref readonly é usado para fazer referência a valores retornados pelo método ou propriedade que tem `ref readonly` na sua assinatura e usa `return ref`. Uma variável `ref readonly` combina as propriedades de uma variável `ref` local com uma variável `readonly`: é um alias para o armazenamento ao qual está atribuído e não pode ser modificado.
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Um exemplo de ref returns e ref locals
 
@@ -137,7 +139,7 @@ A meta de manter um tipo `ref struct` como uma variável alocada na pilha aprese
 
 - Você não pode encaixotar um `ref struct`. Você não pode atribuir um tipo `ref struct` a uma variável do tipo `object`, `dynamic` ou de qualquer tipo de interface.
 - Tipos `ref struct` não podem implementar interfaces.
-- Você não pode declarar um `ref struct` como um membro de campo de uma classe ou de um struct normal. Isso inclui a declaração de uma propriedade autoimplementada, que cria um campo de suporte gerado pelo compilador. 
+- Você não pode declarar um `ref struct` como um membro de campo de uma classe ou de um struct normal. Isso inclui a declaração de uma propriedade autoimplementada, que cria um campo de suporte gerado pelo compilador.
 - Você não pode declarar variáveis locais que são do tipo `ref struct` em métodos assíncronos. Você pode declará-las em métodos síncronos que retornam tipos semelhantes a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
 - Você não pode declarar as variáveis locais `ref struct` em iteradores.
 - Você não pode capturar as variáveis `ref struct` em expressões lambda ou em funções locais.
@@ -146,18 +148,17 @@ Essas restrições garantem que você não use acidentalmente um `ref struct` de
 
 Você pode combinar modificadores para declarar um struct como `readonly ref`. Um `readonly ref struct` combina os benefícios e as restrições de declarações `ref struct` e `readonly struct`.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
-- [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Ref returns e ref locals](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Operador de atribuição ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parâmetros de método](method-parameters.md)
-- [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
+- [C# Referência](../index.md)
+- [C# Guia de Programação](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)

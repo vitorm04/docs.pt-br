@@ -18,29 +18,29 @@ helpviewer_keywords:
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346625"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
 
-Uma cadeia de caracteres de formato de <xref:System.TimeSpan> padrão usa um único especificador de formato para definir a representação de texto de um valor de <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para obter mais informações, consulte [cadeias de caracteres de formato de TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
+ Uma cadeia de caracteres de formato padrão <xref:System.TimeSpan> usa um único especificador de formato para definir a representação de texto de um valor <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para obter mais informações, consulte [strings de formato Custom TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
   
  As representações de sequência de valores <xref:System.TimeSpan> são produzidas por chamadas para as sobrecargas do método <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, bem como por métodos que oferecem suporte à formatação composta, como <xref:System.String.Format%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md) e [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md). O exemplo a seguir ilustra o uso de sequências de formato padrão em operações de formatação.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- As sequências de formato <xref:System.TimeSpan> padrão são usadas também pelos métodos <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> para definir o formato necessário de sequências de caracteres de entrada para análise de operações. (A análise converte a representação de cadeia de caracteres de um valor para esse valor.) O exemplo a seguir ilustra o uso de cadeias de caracteres de formato padrão em operações de análise.  
+ As sequências de formato <xref:System.TimeSpan> padrão são usadas também pelos métodos <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> e <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> para definir o formato necessário de sequências de caracteres de entrada para análise de operações. (O analisar converte a representação de string de um valor a esse valor.) O exemplo a seguir ilustra o uso de strings de formato padrão em operações de análise.  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
 A tabela a seguir lista os especificadores de formato de intervalo de tempo padrão.  
   
-|Especificador de formato|Name|Descrição|Exemplos|  
+|Especificador de formato|Nome|Descrição|Exemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato de constante (invariável)|Esse especificador não é sensível à cultura. Ele assume o formato `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (As sequências de formato "t" e "T" produzem os mesmos resultados).<br /><br /> Mais informações: [o especificador de formato de constante ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato curto geral|Esse especificador gera apenas o que é necessário. Ele é sensível à cultura e assume o formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Mais informações: [o especificador de formato curto geral ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -56,11 +56,11 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
-|*d*|O número opcional de dias, sem zeros à esquerda.|  
-|*hh*|O número de horas, que varia de "00" a "23".|  
-|*mm*|O número de minutos, que varia de "00" a "59".|  
+|*D*|O número opcional de dias, sem zeros à esquerda.|  
+|*Hh*|O número de horas, que varia de "00" a "23".|  
+|*Mm*|O número de minutos, que varia de "00" a "59".|  
 |*ss*|O número de segundos, que varia de "00" a "59".|  
-|*fffffff*|A parte de fração opcional de um segundo.  Seu valor pode variar de "0000001" (um pulso ou um décimo milionésimo de segundo) até "9999999" (9.999.999 dez milionésimos de segundo ou um segundo menos um pulso).|  
+|*Fffffff*|A parte de fração opcional de um segundo.  Seu valor pode variar de "0000001" (um pulso ou um décimo milionésimo de segundo) até "9999999" (9.999.999 dez milionésimos de segundo ou um segundo menos um pulso).|  
   
  Ao contrário dos especificadores de formato de "g" e "G", o especificador de formato "c" não é sensível à cultura. Ele produz a representação de cadeia de caracteres de um valor <xref:System.TimeSpan> que é invariável e é comum a todas as versões anteriores do .NET Framework, antes do .NET Framework 4. "c"é a cadeia de caracteres de formato <xref:System.TimeSpan> padrão, o método <xref:System.TimeSpan.ToString?displayProperty=nameWithType> formata um valor de intervalo de tempo usando a sequência de formato "c".  
   
@@ -82,12 +82,12 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
-|*d*|O número opcional de dias, sem zeros à esquerda.|  
-|*h*|O número de horas, que varia de "0" a "23", sem zeros à esquerda.|  
-|*mm*|O número de minutos, que varia de "00" a "59".|  
+|*D*|O número opcional de dias, sem zeros à esquerda.|  
+|*H*|O número de horas, que varia de "0" a "23", sem zeros à esquerda.|  
+|*Mm*|O número de minutos, que varia de "00" a "59".|  
 |*ss*|O número de minutos, que varia de "00" a "59".|  
 |*.*|O separador de fração de segundo. É equivalente à propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> da cultura especificada sem substituições pelo usuário.|  
-|*FFFFFFF*|As frações de segundo. Uma vez que é exibido o mínimo de dígitos possível.|  
+|*Fffffff*|As frações de segundo. Uma vez que é exibido o mínimo de dígitos possível.|  
   
  Como o especificador de formato "G", o especificador de formato "g" é localizado. Seu separador de fração de segundo se baseia na cultura atual ou de uma propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> da cultura especificada.  
   
@@ -99,19 +99,19 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
 ## <a name="the-general-long-g-format-specifier"></a>O especificador de formato longo geral ("G")  
  O especificador de formato <xref:System.TimeSpan> de "G" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato longo que sempre inclui dias e a fração de segundo. A sequência que resulta do especificador de formato padrão "G" tem o seguinte formato:  
   
- [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ [-] *d:**hh*:*mm*:*ss*. *fffffff*  
   
  Os elementos entre colchetes ([ e ]) são opcionais. Os dois pontos (:) são um símbolo literal. A tabela a seguir descreve os elementos restantes.  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |*-*|Um sinal negativo opcional, que indica um intervalo de tempo negativo.|  
-|*d*|O número de dias, sem zeros à esquerda.|  
-|*hh*|O número de horas, que varia de "00" a "23".|  
-|*mm*|O número de minutos, que varia de "00" a "59".|  
+|*D*|O número de dias, sem zeros à esquerda.|  
+|*Hh*|O número de horas, que varia de "00" a "23".|  
+|*Mm*|O número de minutos, que varia de "00" a "59".|  
 |*ss*|O número de segundos, que varia de "00" a "59".|  
 |*.*|O separador de fração de segundo. É equivalente à propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> da cultura especificada sem substituições pelo usuário.|  
-|*fffffff*|As frações de segundo.|  
+|*Fffffff*|As frações de segundo.|  
   
  Como o especificador de formato "G", o especificador de formato "g" é localizado. Seu separador de fração de segundo se baseia na cultura atual ou de uma propriedade <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> da cultura especificada.  
   
@@ -120,8 +120,8 @@ A tabela a seguir lista os especificadores de formato de intervalo de tempo padr
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
 - [Cadeias de caracteres de formato TimeSpan personalizado](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Análise de cadeias de caracteres](../../../docs/standard/base-types/parsing-strings.md)

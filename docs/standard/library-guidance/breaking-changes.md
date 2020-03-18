@@ -3,13 +3,13 @@ title: Alterações da falha e bibliotecas do .NET
 description: Práticas recomendadas para navegar por alterações da falha ao criar bibliotecas .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731470"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400417"
 ---
-# <a name="breaking-changes"></a>Alterações da falha
+# <a name="breaking-changes"></a>Alterações de quebra
 
 É importante que uma biblioteca .NET encontre um equilíbrio entre a estabilidade para usuários existentes e a inovação para o futuro. Autores de biblioteca tendem a refatorar e repensar o código até que ele fique perfeito, mas causar falhas para seus usuários existentes tem um impacto negativo, especialmente para bibliotecas de baixo nível.
 
@@ -25,11 +25,11 @@ O modo como uma biblioteca é usada pela comunidade do .NET altera o efeito das 
 
   Bibliotecas de alto nível são referenciadas diretamente em um aplicativo do usuário final. Se ocorrerem alterações da falha, o desenvolvedor poderá optar por atualizar para a versão mais recente ou poderá modificar seu aplicativo para funcionar com a alteração da falha.
 
-✔️ Pense em como sua biblioteca será usada. Que efeito as alterações da falha terão sobre aplicativos e bibliotecas que a usam?
+✔️ PENSE em como sua biblioteca será usada. Que efeito as alterações da falha terão sobre aplicativos e bibliotecas que a usam?
 
-✔️ minimizar as alterações significativas ao desenvolver uma biblioteca .NET de nível baixo.
+✔️ MINIMIZE as alterações da falha ao desenvolver uma biblioteca do .NET de baixo nível.
 
-✔️ CONSIDERAR a publicação de uma regravação principal de uma biblioteca como um novo pacote NuGet.
+✔️ CONSIDERE a possibilidade de publicar uma nova versão significativamente diferente da biblioteca como um novo pacote do NuGet.
 
 ## <a name="types-of-breaking-changes"></a>Tipos de alterações da falha
 
@@ -56,7 +56,7 @@ Adicionar recursos e melhorar maus comportamentos são uma coisa boa, mas fazê-
 
 Por exemplo, o ASP.NET Core MVC tem o conceito de uma [versão de compatibilidade](/aspnet/core/mvc/compatibility-version) que modifica os recursos habilitados e desabilitados em `MvcOptions`.
 
-✔️ Considere deixar os novos recursos desativados por padrão, se eles afetarem os usuários existentes e permitir que os desenvolvedores aceitem o recurso com uma configuração.
+✔️ CONSIDERE a possibilidade de deixar novos recursos desativados por padrão se eles afetam os usuários existentes e permitir que os desenvolvedores escolham usar o recurso com uma configuração.
 
 ### <a name="binary-breaking-change"></a>Alteração da falha binária
 
@@ -64,15 +64,15 @@ Uma alteração da falha binária acontece quando você altera a API pública de
 
 Um alteração da falha binária também pode interromper um **assembly inteiro**. Renomear um assembly com `AssemblyName` alterará a identidade do assembly, o que também ocorrerá ao adicionar, remover ou alterar a chave de nomenclatura forte do assembly. Uma alteração da identidade de um assembly interromperá todo o código compilado que o utiliza.
 
-❌ não alterar um nome de assembly.
+❌NÃO mude um nome de montagem.
 
-❌ não adicionar, remover ou alterar a chave de nomenclatura forte.
+❌NÃO adicione, remova ou altere a chave de nomeação forte.
 
-✔️ Considere o uso de classes base abstratas em vez de interfaces.
+✔️ CONSIDERE a possibilidade de usar classes base abstratas em vez de interfaces.
 
 > Adicionar qualquer coisa a uma interface fará com que os tipos existentes que a implementam falhem. Uma classe base abstrata permite que você adicione uma implementação de virtual padrão.
 
-✔️ Considere colocar o <xref:System.ObsoleteAttribute> em tipos e membros que você pretende remover. O atributo deve ter instruções para atualizar o código para não usar mais a API obsoleta.
+✔️ CONSIDERE a possibilidade de colocar o <xref:System.ObsoleteAttribute> nos tipos e membros que você pretende remover. O atributo deve ter instruções para atualizar o código para não usar mais a API obsoleta.
 
 > Código que chamar tipos e métodos com o <xref:System.ObsoleteAttribute> gerará um aviso de build com a mensagem fornecida ao atributo. Os avisos dão, às pessoas que usam a superfície de API obsoleta, tempo para migrar, de modo que quando a API obsoleta é removida, a maioria já não está a usando mais.
 
@@ -92,15 +92,15 @@ public class Document
 }
 ```
 
-✔️ Considere manter os tipos e métodos com o <xref:System.ObsoleteAttribute> indefinidamente em bibliotecas de nível baixo e médio.
+✔️ CONSIDERE a possibilidade de manter os tipos e métodos com o <xref:System.ObsoleteAttribute> indefinidamente em bibliotecas de nível médio e baixo.
 
 > Remover APIs é uma alteração da falha binária. Considere a possibilidade de manter métodos e tipos obsoletos se mantê-los tem baixo custo e não adiciona muitas dívidas técnicas à sua biblioteca. Não remover tipos e métodos pode ajudar a evitar os piores cenários mencionados acima.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Considerações sobre versão e atualização para os desenvolvedores de C#](../../csharp/whats-new/version-update-considerations.md)
 - [Um guia definitivo para as alterações da falha de API no .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [Regras de alteração significativa do .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
+- [.NET quebrando regras de mudança](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Anterior](versioning.md)

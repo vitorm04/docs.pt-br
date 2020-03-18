@@ -3,10 +3,10 @@ title: Como preencher coleções de objetos de várias fontes (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
 ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345750"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como preencher coleções de objetos de várias fontes (LINQ) (C#)
@@ -18,7 +18,7 @@ Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de
 
 ## <a name="to-create-the-data-file"></a>Para criar o arquivo de dados
 
-Copie os arquivos names. csv e Scores. csv para a pasta do projeto, conforme descrito em [como unir conteúdo de arquivos diferentes (LINQ)C#()](./how-to-join-content-from-dissimilar-files-linq.md).
+Copie os arquivos names.csv e scores.csv na pasta do projeto, conforme descrito em [Como juntar conteúdo de arquivos diferentes (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -139,7 +139,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [Inicializadores de objeto e coleção](../../classes-and-structs/object-and-collection-initializers.md)

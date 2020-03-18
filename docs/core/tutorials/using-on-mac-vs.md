@@ -3,27 +3,27 @@ title: Introdução ao .NET Core usando o Visual Studio para Mac
 description: Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
 ms.date: 12/19/2019
 ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740486"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
 
-O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este artigo orienta você pela criação de um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
+O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este artigo orienta você a construir um aplicativo de console simples usando o Visual Studio para Mac e .NET Core.
 
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
 >
-> * No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bugs. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/8/index.html).
-> * Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso levará você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> * No Visual Studio for Mac, selecione **Ajudar** > **a relatar um problema** no menu ou relatar um **problema** na tela Bem-vindo, que abrirá uma janela para a apresentação de um relatório de bugs. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/8/index.html).
+> * Para fazer uma sugestão, **selecione Ajuda** > **Forneça uma sugestão** do menu ou forneça uma **sugestão** da tela De boas-vindas, que o levará ao Visual Studio for Mac Developer [Community webpage](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Pré-requisitos
 
-Consulte o artigo [dependências e requisitos do .NET Core](../install/dependencies.md?pivots=os-macos) .
+Consulte o artigo [sobre dependências e requisitos do .NET Core.](../install/dependencies.md?pivots=os-macos)
 
-Verifique o artigo de [suporte do .NET Core](/visualstudio/mac/net-core-support) para garantir que você esteja usando uma versão com suporte do .NET Core.
+Verifique o artigo [do .NET Core Support](/visualstudio/mac/net-core-support) para garantir que você está usando uma versão suportada do .NET Core.
 
 ## <a name="get-started"></a>Introdução
 
@@ -33,7 +33,7 @@ Baixe o [Instalador do Visual Studio para Mac](https://visualstudio.microsoft.co
 
 ## <a name="creating-a-project"></a>Criar um projeto
 
-1. Selecione **novo** na janela iniciar.
+1. Selecione **Novo** na janela inicial.
 
    ![O botão Novo na tela de Boas-vindas do Visual Studio para Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
@@ -57,6 +57,6 @@ Execute o aplicativo no modo de Depurar usando ⌘ ↵ (Command+Enter) ou no mod
 
 ![O painel Saída do Aplicativo mostra Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
-## <a name="next-step"></a>Próximas etapas
+## <a name="next-step"></a>Próxima etapa
 
 O tópico [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](using-on-mac-vs-full-solution.md) mostra como compilar uma solução completa do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.

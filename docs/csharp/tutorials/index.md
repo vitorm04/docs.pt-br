@@ -3,10 +3,10 @@ title: Tutoriais do C#
 description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
 ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346793"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
@@ -15,44 +15,44 @@ Bem-vindo aos tutoriais do C#. Eles começam com lições interativas que podem 
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriais interativos de introdução ao C#
 
-Se você quiser iniciar sua exploração em formato de vídeo, a [ C# série de vídeos 101](https://aka.ms/dotnet3-csharp) fornece uma introdução C#ao. Você aprenderá sobre os conceitos que pode explorar nesses tutoriais.
+Se você quiser iniciar sua exploração em formato de vídeo, a [série de vídeo C# 101](https://aka.ms/dotnet3-csharp) fornece uma introdução ao C#. Você aprenderá sobre conceitos que você pode explorar nestes tutoriais.
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
 
-## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Olá, Mundo](intro-to-csharp/hello-world.yml)
+## <a name="hello-world"></a>[Olá, mundo](intro-to-csharp/hello-world.yml)
 
 No tutorial [Olá, Mundo](intro-to-csharp/hello-world.yml), você criará o programa C# mais básico. Você explorará o tipo `string` e como trabalhar com texto.
 
-## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Números em C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-c"></a>[Números em C#](intro-to-csharp/numbers-in-csharp.yml)
 
 No tutorial [Números em C#](intro-to-csharp/numbers-in-csharp.yml), você aprenderá como os computadores armazenam números e como executar cálculos com diferentes tipos de número. Você aprenderá os conceitos básicos de arredondamento e como executar cálculos matemáticos usando C#. Este tutorial também está disponível [para execução local no seu computador](intro-to-csharp/numbers-in-csharp-local.md).
 
 Esse tutorial pressupõe a conclusão da lição [Olá, Mundo](intro-to-csharp/hello-world.yml).
 
-## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Ramificações e loops](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Ramificações e loops](intro-to-csharp/branches-and-loops.yml)
 
 O tutorial [Branches e loops](intro-to-csharp/branches-and-loops.yml) ensina os conceitos básicos da seleção de diferentes caminhos de execução de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes. Este tutorial também está disponível [para execução local no seu computador](intro-to-csharp/branches-and-loops-local.md).
 
 Esse tutorial pressupõe a conclusão das lições [Olá, Mundo](intro-to-csharp/hello-world.yml) e [Números em C#](intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Coleções de lista](intro-to-csharp/list-collection.yml)
+## <a name="list-collection"></a>[Coleções de lista](intro-to-csharp/list-collection.yml)
 
 A lição [Coleções de lista](intro-to-csharp/list-collection.yml) fornece um tour pelo tipo Coleções de lista que armazena as sequências de dados. Você aprenderá a adicionar e remover itens, pesquisar itens e classificar listas. Você explorará os diferentes tipos de listas. Este tutorial também está disponível [para execução local no seu computador](intro-to-csharp/arrays-and-collections.md).
 
 Esse tutorial pressupõe a conclusão das lições listadas acima.
 
-## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Introdução ao C# – trabalhar localmente](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locally"></a>[Introdução ao C# – trabalhar localmente](intro-to-csharp/local-environment.md)
 
 Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão disponíveis em seu próprio ambiente de desenvolvimento local. No final de cada tutorial, você decidirá se deseja continuar com a próxima lição online ou no próprio computador. Há links para ajudar você a configurar seu ambiente e continuar com o próximo tutorial no computador.
 
 ## <a name="explore-new-features-in-c"></a>Explore novos recursos no C\#
 
-* [Experimente os novos recursos C# em 6 de forma interativa](exploration/csharp-6.yml): Explore os recursos adicionados em [ C# 6](../whats-new/csharp-6.md) de forma interativa em seu navegador.
+* [Experimente novos recursos em C# 6 interativamente](exploration/csharp-6.yml): Explore os recursos adicionados em [C# 6](../whats-new/csharp-6.md) interativamente em seu navegador.
 * [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra como usar interpolação de cadeia de caracteres para criar cadeias de caracteres formatadas em C#.
 * [Tipos de referência nula](nullable-reference-types.md): demonstra como usar tipos de referência nula para expressar sua intenção para referências nulas.
 * [Atualizar um projeto para usar tipos de referência que permitem valor nulo](upgrade-to-nullable-references.md): demonstra técnicas para atualizar um projeto existente a fim de usar tipos de referência que permitem valor nulo.
 * [Estender recursos de dados usando a correspondência de padrões](pattern-matching.md): demonstra como usar a correspondência de padrões a fim de estender os tipos para além dos principais recursos.
-* [Trabalhar com sequências de dados usando índices e intervalos](ranges-indexes.md): demonstra uma nova sintaxe conveniente para acessar elementos únicos ou intervalos de um contêiner de dados sequenciais.
+* [Trabalhe com seqüências de dados usando índices e faixas](ranges-indexes.md): Demonstra nova sintaxe conveniente para acessar elementos únicos ou intervalos de um contêiner de dados seqüencial.
 
 ## <a name="general-tutorials"></a>Tutoriais gerais
 

@@ -5,10 +5,10 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714261"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testar a saída publicada com dotnet vstest
@@ -33,10 +33,10 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Observação: se seu aplicativo for destinado a uma estrutura diferente de `netcoreapp`, você ainda poderá executar o comando `dotnet vstest` passando a estrutura de destino com um sinalizador de estrutura. Por exemplo, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 atualização 5 e posteriores, a estrutura desejada é detectada automaticamente.
+> Nota: Se o aplicativo tiver `netcoreapp`como alvo uma `dotnet vstest` estrutura diferente, você ainda pode executar o comando passando no framework alvo com uma bandeira de quadro. Por exemplo, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 Update 5 e posterior, a estrutura desejada é detectada automaticamente.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Teste de unidade com dotnet test e xUnit](unit-testing-with-dotnet-test.md)
+- [Teste unitário com teste dotnet e xUnit](unit-testing-with-dotnet-test.md)
 - [Teste de unidade com dotnet test e NUnit](unit-testing-with-nunit.md)
-- [Teste de unidade com dotnet test e MSTest](unit-testing-with-mstest.md)
+- [Teste de unidade com teste dotnet e MSTest](unit-testing-with-mstest.md)
