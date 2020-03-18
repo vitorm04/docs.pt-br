@@ -1,6 +1,6 @@
 - name: Documentação sobre associação de dados
   href: index.md
-- name: Visão geral
+- name: Visão Geral
   href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
 - name: Origens de associação
   href: binding-sources-overview.md
@@ -84,11 +84,11 @@
       href: how-to-bind-to-a-web-service.md
 - name: Associação de dados com o LINQ to XML
   items:
-    - name: Visão geral
+    - name: Visão Geral
       href: wpf-data-binding-with-linq-to-xml-overview.md
     - name: Propriedades dinâmicas do LINQ to XML
       items:
-        - name: Visão geral
+        - name: Visão Geral
           displayName: LINQ to XML dynamic properties
           href: linq-to-xml-dynamic-properties.md
         - name: Propriedades dinâmicas de XAttribute

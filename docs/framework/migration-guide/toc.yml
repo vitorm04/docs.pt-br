@@ -4,7 +4,7 @@
   items:
     - name: Compatibilidade de aplicativos
       items:
-        - name: Visão geral
+        - name: Visão Geral
           displayName: App compatibility
           href: application-compatibility.md
         - name: Alterações em runtime

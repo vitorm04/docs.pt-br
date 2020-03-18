@@ -26,7 +26,7 @@
       href: automatic-memory-management.md
 - name: CLR (Common Language Runtime)
   href: clr.md
-- name: Independência de linguagem
+- name: Independência de Linguagem
   href: language-independence.md
   items:
     - name: Independência da linguagem e componentes independentes da linguagem
@@ -38,14 +38,14 @@
       href: class-library-overview.md
     - name: Tipos de Base
       href: base-types/
-- name: Bibliotecas de classes do .NET
+- name: Bibliotecas de Classe do .NET
   href: class-libraries.md
 - name: Analisadores
   href: analyzers/index.md
   items:
     - name: Analisador de API
       href: analyzers/api-analyzer.md
-    - name: Analisador de portabilidade
+    - name: Analisador de Portabilidade
       href: analyzers/portability-analyzer.md
     - name: Analisador de estrutura
       href: analyzers/framework-analyzer.md
@@ -69,7 +69,7 @@
     - name: Programação assíncrona
       href: async.md
       items:
-        - name: Programação assíncrona em camadas
+        - name: Programação assíncrona em detalhes
           href: async-in-depth.md
         - name: Padrões de programação assíncrona
           href: asynchronous-programming-patterns/
@@ -125,7 +125,7 @@
   href: managed-execution-process.md
 - name: Metadados e componentes autodescritivos
   href: metadata-and-self-describing-components.md
-- name: Como compilar aplicativos de console
+- name: Compilando aplicativos de console
   href: building-console-apps.md
 - name: Fundamentos do aplicativo
   href: application-essentials.md

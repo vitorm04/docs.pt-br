@@ -12,10 +12,10 @@ metadata:
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: A coleção de lista
   ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969423"
 items:
 - durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 - title: Tomar decisões usando a instrução if
   durationInMinutes: 4
   content: >
-    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa e selecione **executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **Entrar no modo foco.** Em seguida, digite o seguinte bloco de código na janela interativa e selecione **Executar**:
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Se você estiver executando isso em seu ambiente, deverá seguir as instruções para a [versão local](branches-and-loops-local.md) em vez disso.
+    Se você estiver executando isso em seu ambiente, você deve seguir as instruções para a [versão local](branches-and-loops-local.md) em vez disso.
 
 
     Modifique a declaração de `b` para que a soma seja inferior a 10:
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Selecione o botão **executar** novamente. Como a resposta é inferior a 10, nada é impresso. A **condição** que você está testando é falsa. Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.
+    Selecione novamente o botão **Executar.** Como a resposta é inferior a 10, nada é impresso. A **condição** que você está testando é falsa. Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.
 
 
     > [!TIP]
@@ -61,7 +61,7 @@ items:
     > Esse exercício ajudará você a conhecer a estrutura do código C#.
 
 
-    Este primeiro exemplo mostra o poder do `if` e dos tipos boolianos. Um *booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
+    Este primeiro exemplo mostra o poder do `if` e dos tipos boolianos. Um *booleano* é uma variável que `true` pode `false`ter um dos dois valores: ou . C# define um tipo especial, `bool` para variáveis boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
 
 
     Esse processo de verificação de condições e execução de instruções com base nessas condições é muito eficiente. Vamos explorar mais.
@@ -72,7 +72,7 @@ items:
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Faça if e else funcionam juntas
   durationInMinutes: 10
-  content: "\nPara executar um código diferente nos branches true e false, crie um branch `else` que será executado quando a condição for false. Experimente isto:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nA instrução após a palavra-chave `else` é executada somente quando a condição que estiver sendo testada for `false`. A combinação de `if` e `else` com condições boolianas fornece todos os recursos que você precisa.\n\n> [!IMPORTANT]\n> O recuo sob as instruções `if` e `else` é para leitores humanos.\n> A linguagem C# não considera recuos ou espaços em branco como significativos.\n> A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.\n\nComo o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Experimente.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> No restante deste tutorial, todos os exemplos de código incluem as chaves, seguindo as práticas aceitas.\n\nVocê pode testar condições mais complicadas:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nO símbolo `==` testa a *igualdade*. Usar `==` distingue o teste de igualdade de atribuição, que você viu em `a = 5`.\n\nO `&&` representa \"e\". Isso significa que as duas condições devem ser verdadeiras para executar a instrução no branch verdadeiro.  Estes exemplos também mostram que você pode ter várias instruções em cada branch condicional, desde que você coloque-as entre `{` e `}`.\n\nVocê também pode usar `||` representar \"ou\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nModifique os valores de `a`, `b` e `c` e alterne entre `&&` e `||` para explorar. Você obterá mais compreensão de como os operadores `&&` e `||` funcionam.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "\nPara executar um código diferente nos branches true e false, crie um branch `else` que será executado quando a condição for false. Tente o seguinte:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nA instrução após a palavra-chave `else` é executada somente quando a condição que estiver sendo testada for `false`. A combinação de `if` e `else` com condições boolianas fornece todos os recursos que você precisa.\n\n> [!IMPORTANT]\n> O recuo sob as instruções `if` e `else` é para leitores humanos.\n> A linguagem C# não considera recuos ou espaços em branco como significativos.\n> A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.\n\nComo o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Experimente.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> No restante deste tutorial, todos os exemplos de código incluem as chaves, seguindo as práticas aceitas.\n\nVocê pode testar condições mais complicadas:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nO símbolo `==` testa a *igualdade*. Usar `==` distingue o teste de igualdade de atribuição, que você viu em `a = 5`.\n\nO `&&` representa \"e\". Isso significa que as duas condições devem ser verdadeiras para executar a instrução no branch verdadeiro.  Estes exemplos também mostram que você pode ter várias instruções em cada branch condicional, desde que você coloque-as entre `{` e `}`.\n\nVocê também pode usar `||` representar \"ou\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nModifique os valores de `a`, `b` e `c` e alterne entre `&&` e `||` para explorar. Você obterá mais compreensão de como os operadores `&&` e `||` funcionam.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Use loops para repetir operações
   durationInMinutes: 6
   content: >
@@ -104,7 +104,7 @@ items:
     > Verifique se a condição de loop `while` muda para false quando ao executar o código. Caso contrário, crie um **loop infinito**, para que seu programa nunca termine. Não vamos demonstrar isso porque o mecanismo que executa o código ultrapassará o tempo limite, e você não verá uma saída de seu programa.
 
 
-    O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. É semelhante ao seguinte:
+    O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. Ele tem esta aparência:
 
 
     ```csharp
@@ -150,13 +150,13 @@ items:
     Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
 
-    A primeira parte é o **inicializador for**: `int counter = 0;` declara que `counter` é a variável do loop, e define seu valor inicial como `0`.
+    A primeira parte é o `int counter = 0;` para `counter` **inicializador**: declara que é `0`a variável loop, e define seu valor inicial para .
 
 
-    A parte central é a **condição for**: `counter < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.
+    A parte do meio `counter < 10` é a `for` **condição para**: declara que este loop continua a ser executado desde que o valor do contador seja menor que 10.
 
 
-    A parte final é o **iterador for**: `counter++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`. Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.
+    A parte final é o `counter++` **para iterator**: especifica como modificar a `for` variável loop após a execução do bloco após a declaração. Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.
 
 
     Experimente você mesmo. Tente o seguinte:
@@ -221,16 +221,16 @@ items:
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Parabéns!
   content: >-
-    Você concluiu o tutorial interativo "branches e loops". Você pode selecionar o link de **coleção de lista** abaixo para iniciar o próximo tutorial interativo ou pode visitar o [site do .net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
+    Você concluiu o tutorial interativo "branches e loops". Você pode selecionar o link de **coleta de listas** abaixo para iniciar o próximo tutorial interativo, ou você pode visitar o site [.NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o .NET Core SDK, criar um projeto em sua máquina e manter a codificação. A seção "Próximos passos" traz você de volta a esses tutoriais.
 
 
     Saiba mais sobre esses conceitos nestes tópicos:
 
 
-    - [Instrução If e else](../../language-reference/keywords/if-else.md)
+    - [Instrução if e else](../../language-reference/keywords/if-else.md)
 
-    - [Instrução while](../../language-reference/keywords/while.md)
+    - [Enquanto declaração](../../language-reference/keywords/while.md)
 
-    - [Instrução Do](../../language-reference/keywords/do.md)
+    - [Instrução do](../../language-reference/keywords/do.md)
 
-    - [Instrução for](../../language-reference/keywords/for.md)
+    - [Para declaração](../../language-reference/keywords/for.md)

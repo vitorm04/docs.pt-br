@@ -1,72 +1,72 @@
 ---
-title: Tutorial de depuração de perda de memória
+title: Depurar um tutorial de vazamento de memória
 description: Saiba como depurar um vazamento de memória no .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
 ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737734"
 ---
-# <a name="tutorial-debug-a-memory-leak-in-net-core"></a><span data-ttu-id="8e859-103">Tutorial: Depurar um vazamento de memória no .NET Core</span><span class="sxs-lookup"><span data-stu-id="8e859-103">Tutorial: Debug a memory leak in .NET Core</span></span>
+# <a name="tutorial-debug-a-memory-leak-in-net-core"></a><span data-ttu-id="5c5a9-103">Tutorial: Depurar um vazamento de memória no .NET Core</span><span class="sxs-lookup"><span data-stu-id="5c5a9-103">Tutorial: Debug a memory leak in .NET Core</span></span>
 
-<span data-ttu-id="8e859-104">**Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="8e859-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
+<span data-ttu-id="5c5a9-104">**Este artigo se aplica a:** ✔️ .NET Core 3.0 SDK e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="5c5a9-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
 
-<span data-ttu-id="8e859-105">Este tutorial demonstra as ferramentas para analisar um vazamento de memória do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="8e859-105">This tutorial demonstrates the tools to analyze a .NET Core memory leak.</span></span>
+<span data-ttu-id="5c5a9-105">Este tutorial demonstra as ferramentas para analisar um vazamento de memória .NET Core.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-105">This tutorial demonstrates the tools to analyze a .NET Core memory leak.</span></span>
 
-<span data-ttu-id="8e859-106">Este tutorial usa um aplicativo de exemplo, que é projetado para vazar a memória intencionalmente.</span><span class="sxs-lookup"><span data-stu-id="8e859-106">This tutorial uses a sample app, which is designed to intentionally leak memory.</span></span> <span data-ttu-id="8e859-107">O exemplo é fornecido como um exercício.</span><span class="sxs-lookup"><span data-stu-id="8e859-107">The sample is provided as an exercise.</span></span> <span data-ttu-id="8e859-108">Você pode analisar um aplicativo que está vazando involuntariamente a memória também.</span><span class="sxs-lookup"><span data-stu-id="8e859-108">You can analyze an app that is unintentionally leaking memory too.</span></span>
+<span data-ttu-id="5c5a9-106">Este tutorial usa um aplicativo de exemplo, que foi projetado para vazar intencionalmente a memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-106">This tutorial uses a sample app, which is designed to intentionally leak memory.</span></span> <span data-ttu-id="5c5a9-107">A amostra é fornecida como um exercício.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-107">The sample is provided as an exercise.</span></span> <span data-ttu-id="5c5a9-108">Você pode analisar um aplicativo que está vazando memória involuntariamente também.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-108">You can analyze an app that is unintentionally leaking memory too.</span></span>
 
-<span data-ttu-id="8e859-109">Neste tutorial, você irá:</span><span class="sxs-lookup"><span data-stu-id="8e859-109">In this tutorial, you will:</span></span>
+<span data-ttu-id="5c5a9-109">Neste tutorial, você irá:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-109">In this tutorial, you will:</span></span>
 
 > [!div class="checklist"]
 >
-> - <span data-ttu-id="8e859-110">Examine o uso de memória gerenciada com os [contadores dotnet](dotnet-counters.md).</span><span class="sxs-lookup"><span data-stu-id="8e859-110">Examine managed memory usage with [dotnet-counters](dotnet-counters.md).</span></span>
-> - <span data-ttu-id="8e859-111">Gerar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="8e859-111">Generate a dump file.</span></span>
-> - <span data-ttu-id="8e859-112">Analise o uso de memória usando o arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="8e859-112">Analyze the memory usage using the dump file.</span></span>
+> - <span data-ttu-id="5c5a9-110">Examine o uso gerenciado da memória com [contadores de dotnet](dotnet-counters.md).</span><span class="sxs-lookup"><span data-stu-id="5c5a9-110">Examine managed memory usage with [dotnet-counters](dotnet-counters.md).</span></span>
+> - <span data-ttu-id="5c5a9-111">Gerar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-111">Generate a dump file.</span></span>
+> - <span data-ttu-id="5c5a9-112">Analise o uso da memória usando o arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-112">Analyze the memory usage using the dump file.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="8e859-113">{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="8e859-113">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="5c5a9-113">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="5c5a9-113">Prerequisites</span></span>
 
-<span data-ttu-id="8e859-114">O tutorial usa:</span><span class="sxs-lookup"><span data-stu-id="8e859-114">The tutorial uses:</span></span>
+<span data-ttu-id="5c5a9-114">O tutorial usa:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-114">The tutorial uses:</span></span>
 
-- <span data-ttu-id="8e859-115">[SDK do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.</span><span class="sxs-lookup"><span data-stu-id="8e859-115">[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) or a later version.</span></span>
-- <span data-ttu-id="8e859-116">[dotnet – rastreamento](dotnet-trace.md) para listar processos.</span><span class="sxs-lookup"><span data-stu-id="8e859-116">[dotnet-trace](dotnet-trace.md) to list processes.</span></span>
-- <span data-ttu-id="8e859-117">[dotnet-contadores](dotnet-counters.md) para verificar o uso de memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="8e859-117">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
-- <span data-ttu-id="8e859-118">[dotnet-despejo](dotnet-dump.md) para coletar e analisar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="8e859-118">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>
-- <span data-ttu-id="8e859-119">Um aplicativo de [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) para diagnosticar.</span><span class="sxs-lookup"><span data-stu-id="8e859-119">A [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) app to diagnose.</span></span>
+- <span data-ttu-id="5c5a9-115">[SDK do .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core) ou uma versão posterior.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-115">[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) or a later version.</span></span>
+- <span data-ttu-id="5c5a9-116">[dotnet-trace](dotnet-trace.md) para processos de lista.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-116">[dotnet-trace](dotnet-trace.md) to list processes.</span></span>
+- <span data-ttu-id="5c5a9-117">[contadores dotnet](dotnet-counters.md) para verificar o uso gerenciado da memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-117">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
+- <span data-ttu-id="5c5a9-118">[dotnet-dump](dotnet-dump.md) para coletar e analisar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-118">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>
+- <span data-ttu-id="5c5a9-119">Um aplicativo [de destino de depuração de amostra](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) para diagnosticar.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-119">A [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) app to diagnose.</span></span>
 
-<span data-ttu-id="8e859-120">O tutorial pressupõe que o exemplo e as ferramentas estejam instalados e prontos para uso.</span><span class="sxs-lookup"><span data-stu-id="8e859-120">The tutorial assumes the sample and tools are installed and ready to use.</span></span>
+<span data-ttu-id="5c5a9-120">O tutorial pressupõe que a amostra e as ferramentas estão instaladas e prontas para uso.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-120">The tutorial assumes the sample and tools are installed and ready to use.</span></span>
 
-## <a name="examine-managed-memory-usage"></a><span data-ttu-id="8e859-121">Examinar o uso de memória gerenciada</span><span class="sxs-lookup"><span data-stu-id="8e859-121">Examine managed memory usage</span></span>
+## <a name="examine-managed-memory-usage"></a><span data-ttu-id="5c5a9-121">Examine o uso gerenciado da memória</span><span class="sxs-lookup"><span data-stu-id="5c5a9-121">Examine managed memory usage</span></span>
 
-<span data-ttu-id="8e859-122">Antes de começar a coletar dados de diagnóstico para ajudar a raiz a causar esse cenário, você precisa certificar-se de que está realmente vendo um vazamento de memória (aumento de memória).</span><span class="sxs-lookup"><span data-stu-id="8e859-122">Before you start collecting diagnostics data to help us root cause this scenario, you need to make sure you're actually seeing a memory leak (memory growth).</span></span> <span data-ttu-id="8e859-123">Você pode usar a ferramenta [dotnet-Counters](dotnet-counters.md) para confirmar isso.</span><span class="sxs-lookup"><span data-stu-id="8e859-123">You can use the [dotnet-counters](dotnet-counters.md) tool to confirm that.</span></span>
+<span data-ttu-id="5c5a9-122">Antes de começar a coletar dados de diagnóstico para nos ajudar a criar esse cenário, você precisa ter certeza de que está realmente vendo um vazamento de memória (crescimento de memória).</span><span class="sxs-lookup"><span data-stu-id="5c5a9-122">Before you start collecting diagnostics data to help us root cause this scenario, you need to make sure you're actually seeing a memory leak (memory growth).</span></span> <span data-ttu-id="5c5a9-123">Você pode usar a ferramenta [dotnet-counters](dotnet-counters.md) para confirmar isso.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-123">You can use the [dotnet-counters](dotnet-counters.md) tool to confirm that.</span></span>
 
-<span data-ttu-id="8e859-124">Abra uma janela de console e navegue até o diretório em que você baixou e descompactou o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/).</span><span class="sxs-lookup"><span data-stu-id="8e859-124">Open a console window and navigate to the directory where you downloaded and unzipped the [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/).</span></span> <span data-ttu-id="8e859-125">Execute o destino:</span><span class="sxs-lookup"><span data-stu-id="8e859-125">Run the target:</span></span>
+<span data-ttu-id="5c5a9-124">Abra uma janela do console e navegue até o diretório onde você baixou e descompactou o [alvo de depuração de amostra](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/).</span><span class="sxs-lookup"><span data-stu-id="5c5a9-124">Open a console window and navigate to the directory where you downloaded and unzipped the [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/).</span></span> <span data-ttu-id="5c5a9-125">Executar o alvo:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-125">Run the target:</span></span>
 
 ```dotnetcli
 dotnet run
 ```
 
-<span data-ttu-id="8e859-126">Em um console separado, localize a ID do processo usando a ferramenta [dotnet-Trace](dotnet-trace.md) :</span><span class="sxs-lookup"><span data-stu-id="8e859-126">From a separate console, find the process ID using the [dotnet-trace](dotnet-trace.md) tool:</span></span>
+<span data-ttu-id="5c5a9-126">A partir de um console separado, encontre o ID do processo usando a ferramenta [dotnet-trace:](dotnet-trace.md)</span><span class="sxs-lookup"><span data-stu-id="5c5a9-126">From a separate console, find the process ID using the [dotnet-trace](dotnet-trace.md) tool:</span></span>
 
 ```console
 dotnet-trace ps
 ```
 
-<span data-ttu-id="8e859-127">A saída deve ser semelhante a:</span><span class="sxs-lookup"><span data-stu-id="8e859-127">The output should be similar to:</span></span>
+<span data-ttu-id="5c5a9-127">A saída deve ser semelhante a:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-127">The output should be similar to:</span></span>
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios
 ```
 
-<span data-ttu-id="8e859-128">Agora, verifique o uso de memória gerenciada com a ferramenta [dotnet-Counters](dotnet-counters.md) .</span><span class="sxs-lookup"><span data-stu-id="8e859-128">Now, check managed memory usage with the [dotnet-counters](dotnet-counters.md) tool.</span></span> <span data-ttu-id="8e859-129">O `--refresh-interval` especifica o número de segundos entre as atualizações:</span><span class="sxs-lookup"><span data-stu-id="8e859-129">The `--refresh-interval` specifies the number of seconds between refreshes:</span></span>
+<span data-ttu-id="5c5a9-128">Agora, verifique o uso gerenciado da memória com a ferramenta [dotnet-counters.](dotnet-counters.md)</span><span class="sxs-lookup"><span data-stu-id="5c5a9-128">Now, check managed memory usage with the [dotnet-counters](dotnet-counters.md) tool.</span></span> <span data-ttu-id="5c5a9-129">O `--refresh-interval` especifica o número de segundos entre as atualizações:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-129">The `--refresh-interval` specifies the number of seconds between refreshes:</span></span>
 
 ```console
 dotnet-counters monitor --refresh-interval 1 -p 4807
 ```
 
-<span data-ttu-id="8e859-130">A saída ao vivo deve ser semelhante a:</span><span class="sxs-lookup"><span data-stu-id="8e859-130">The live output should be similar to:</span></span>
+<span data-ttu-id="5c5a9-130">A saída ao vivo deve ser semelhante a:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-130">The live output should be similar to:</span></span>
 
 ```console
 Press p to pause, r to resume, q to quit.
@@ -94,61 +94,61 @@ Press p to pause, r to resume, q to quit.
     Working Set (MB)                                  83
 ```
 
-<span data-ttu-id="8e859-131">Concentrando-se nesta linha:</span><span class="sxs-lookup"><span data-stu-id="8e859-131">Focusing on this line:</span></span>
+<span data-ttu-id="5c5a9-131">Focando nesta linha:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-131">Focusing on this line:</span></span>
 
 ```console
     GC Heap Size (MB)                                  4
 ```
 
-<span data-ttu-id="8e859-132">Você pode ver que a memória de heap gerenciada é de 4 MB logo após a inicialização.</span><span class="sxs-lookup"><span data-stu-id="8e859-132">You can see that the managed heap memory is 4 MB right after startup.</span></span>
+<span data-ttu-id="5c5a9-132">Você pode ver que a memória de pilha gerenciada é de 4 MB logo após a inicialização.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-132">You can see that the managed heap memory is 4 MB right after startup.</span></span>
 
-<span data-ttu-id="8e859-133">Agora, pressione a URL `http://localhost:5000/api/diagscenario/memleak/20000`.</span><span class="sxs-lookup"><span data-stu-id="8e859-133">Now, hit the URL `http://localhost:5000/api/diagscenario/memleak/20000`.</span></span>
+<span data-ttu-id="5c5a9-133">Agora, aperte `http://localhost:5000/api/diagscenario/memleak/20000`a URL .</span><span class="sxs-lookup"><span data-stu-id="5c5a9-133">Now, hit the URL `http://localhost:5000/api/diagscenario/memleak/20000`.</span></span>
 
-<span data-ttu-id="8e859-134">Observe que o uso de memória cresceu para 30 MB.</span><span class="sxs-lookup"><span data-stu-id="8e859-134">Observe that the memory usage has grown to 30 MB.</span></span>
+<span data-ttu-id="5c5a9-134">Observe que o uso da memória cresceu para 30 MB.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-134">Observe that the memory usage has grown to 30 MB.</span></span>
 
 ```console
     GC Heap Size (MB)                                 30
 ```
 
-<span data-ttu-id="8e859-135">Ao assistir ao uso de memória, você pode dizer com segurança que a memória está crescendo ou vazando.</span><span class="sxs-lookup"><span data-stu-id="8e859-135">By watching the memory usage, you can safely say that memory is growing or leaking.</span></span> <span data-ttu-id="8e859-136">A próxima etapa é coletar os dados certos para análise de memória.</span><span class="sxs-lookup"><span data-stu-id="8e859-136">The next step is to collect the right data for memory analysis.</span></span>
+<span data-ttu-id="5c5a9-135">Observando o uso da memória, você pode dizer com segurança que a memória está crescendo ou vazando.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-135">By watching the memory usage, you can safely say that memory is growing or leaking.</span></span> <span data-ttu-id="5c5a9-136">O próximo passo é coletar os dados certos para análise de memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-136">The next step is to collect the right data for memory analysis.</span></span>
 
-### <a name="generate-memory-dump"></a><span data-ttu-id="8e859-137">Gerar despejo de memória</span><span class="sxs-lookup"><span data-stu-id="8e859-137">Generate memory dump</span></span>
+### <a name="generate-memory-dump"></a><span data-ttu-id="5c5a9-137">Gerar despejo de memória</span><span class="sxs-lookup"><span data-stu-id="5c5a9-137">Generate memory dump</span></span>
 
-<span data-ttu-id="8e859-138">Ao analisar possíveis vazamentos de memória, você precisa ter acesso ao heap de memória do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="8e859-138">When analyzing possible memory leaks, you need access to the app's memory heap.</span></span> <span data-ttu-id="8e859-139">Em seguida, você pode analisar o conteúdo da memória.</span><span class="sxs-lookup"><span data-stu-id="8e859-139">Then you can analyze the memory contents.</span></span> <span data-ttu-id="8e859-140">Examinando relações entre objetos, você cria teorias sobre o motivo pelo qual a memória não está sendo liberada.</span><span class="sxs-lookup"><span data-stu-id="8e859-140">Looking at relationships between objects, you create theories on why memory isn't being freed.</span></span> <span data-ttu-id="8e859-141">Uma fonte de dados de diagnóstico comum é um despejo de memória no Windows ou o dump de núcleo equivalente no Linux.</span><span class="sxs-lookup"><span data-stu-id="8e859-141">A common diagnostics data source is a memory dump on Windows or the equivalent core dump on Linux.</span></span> <span data-ttu-id="8e859-142">Para gerar um despejo de um aplicativo .NET Core, você pode usar a ferramenta [dotnet-dump)](dotnet-dump.md) .</span><span class="sxs-lookup"><span data-stu-id="8e859-142">To generate a dump of a .NET Core application, you can use the [dotnet-dump)](dotnet-dump.md) tool.</span></span>
+<span data-ttu-id="5c5a9-138">Ao analisar possíveis vazamentos de memória, você precisa acessar o monte de memória do aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-138">When analyzing possible memory leaks, you need access to the app's memory heap.</span></span> <span data-ttu-id="5c5a9-139">Então você pode analisar o conteúdo da memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-139">Then you can analyze the memory contents.</span></span> <span data-ttu-id="5c5a9-140">Olhando para as relações entre objetos, você cria teorias sobre por que a memória não está sendo liberada.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-140">Looking at relationships between objects, you create theories on why memory isn't being freed.</span></span> <span data-ttu-id="5c5a9-141">Uma fonte de dados de diagnóstico comum é um despejo de memória no Windows ou o despejo de núcleo equivalente no Linux.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-141">A common diagnostics data source is a memory dump on Windows or the equivalent core dump on Linux.</span></span> <span data-ttu-id="5c5a9-142">Para gerar um dump de um aplicativo .NET Core, você pode usar a ferramenta [dotnet-dump).](dotnet-dump.md)</span><span class="sxs-lookup"><span data-stu-id="5c5a9-142">To generate a dump of a .NET Core application, you can use the [dotnet-dump)](dotnet-dump.md) tool.</span></span>
 
-<span data-ttu-id="8e859-143">Usando o [destino de depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) iniciado anteriormente, execute o seguinte comando para gerar um despejo de núcleo do Linux:</span><span class="sxs-lookup"><span data-stu-id="8e859-143">Using the [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) previously started, run the following command to generate a Linux core dump:</span></span>
+<span data-ttu-id="5c5a9-143">Usando o [destino de depuração de amostra](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) iniciado anteriormente, execute o seguinte comando para gerar um dump do núcleo do Linux:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-143">Using the [sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) previously started, run the following command to generate a Linux core dump:</span></span>
 
 ```dotnetcli
 dotnet-dump collect -p 4807
 ```
 
-<span data-ttu-id="8e859-144">O resultado é um dump principal localizado na mesma pasta.</span><span class="sxs-lookup"><span data-stu-id="8e859-144">The result is a core dump located in the same folder.</span></span>
+<span data-ttu-id="5c5a9-144">O resultado é um despejo de núcleo localizado na mesma pasta.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-144">The result is a core dump located in the same folder.</span></span>
 
 ```console
 Writing minidump with heap to ./core_20190430_185145
 Complete
 ```
 
-### <a name="restart-the-failed-process"></a><span data-ttu-id="8e859-145">Reiniciar o processo com falha</span><span class="sxs-lookup"><span data-stu-id="8e859-145">Restart the failed process</span></span>
+### <a name="restart-the-failed-process"></a><span data-ttu-id="5c5a9-145">Reiniciar o processo de falha</span><span class="sxs-lookup"><span data-stu-id="5c5a9-145">Restart the failed process</span></span>
 
-<span data-ttu-id="8e859-146">Depois que o despejo for coletado, você deverá ter informações suficientes para diagnosticar o processo com falha.</span><span class="sxs-lookup"><span data-stu-id="8e859-146">Once the dump is collected, you should have sufficient information to diagnose the failed process.</span></span> <span data-ttu-id="8e859-147">Se o processo com falha estiver em execução em um servidor de produção, agora é o momento ideal para a remediação de curto prazo reiniciando o processo.</span><span class="sxs-lookup"><span data-stu-id="8e859-147">If the failed process is running on a production server, now it's the ideal time for short-term remediation by restarting the process.</span></span>
+<span data-ttu-id="5c5a9-146">Uma vez que o despejo é coletado, você deve ter informações suficientes para diagnosticar o processo falho.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-146">Once the dump is collected, you should have sufficient information to diagnose the failed process.</span></span> <span data-ttu-id="5c5a9-147">Se o processo de falha está sendo executado em um servidor de produção, agora é o momento ideal para remediação a curto prazo, reiniciando o processo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-147">If the failed process is running on a production server, now it's the ideal time for short-term remediation by restarting the process.</span></span>
 
-<span data-ttu-id="8e859-148">Neste tutorial, você está pronto para o destino de [depuração de exemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) e pode fechá-lo.</span><span class="sxs-lookup"><span data-stu-id="8e859-148">In this tutorial, you're now done with the [Sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) and you can close it.</span></span> <span data-ttu-id="8e859-149">Navegue até o terminal que iniciou o servidor e pressione `Control-C`.</span><span class="sxs-lookup"><span data-stu-id="8e859-149">Navigate to the terminal that started the server and press `Control-C`.</span></span>
+<span data-ttu-id="5c5a9-148">Neste tutorial, você está pronto com o [destino de depuração Sample](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) e você pode fechá-lo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-148">In this tutorial, you're now done with the [Sample debug target](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) and you can close it.</span></span> <span data-ttu-id="5c5a9-149">Navegue até o terminal que `Control-C`iniciou o servidor e pressione .</span><span class="sxs-lookup"><span data-stu-id="5c5a9-149">Navigate to the terminal that started the server and press `Control-C`.</span></span>
 
-### <a name="analyze-the-core-dump"></a><span data-ttu-id="8e859-150">Analisar o dump principal</span><span class="sxs-lookup"><span data-stu-id="8e859-150">Analyze the core dump</span></span>
+### <a name="analyze-the-core-dump"></a><span data-ttu-id="5c5a9-150">Analisar o despejo do núcleo</span><span class="sxs-lookup"><span data-stu-id="5c5a9-150">Analyze the core dump</span></span>
 
-<span data-ttu-id="8e859-151">Agora que você tem um dump principal gerado, use a ferramenta [dotnet-dump)](dotnet-dump.md) para analisar o despejo:</span><span class="sxs-lookup"><span data-stu-id="8e859-151">Now that you have a core dump generated, use the [dotnet-dump)](dotnet-dump.md) tool to analyze the dump:</span></span>
+<span data-ttu-id="5c5a9-151">Agora que você tem um dump de núcleo gerado, use a ferramenta [dotnet-dump)](dotnet-dump.md) para analisar o dump:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-151">Now that you have a core dump generated, use the [dotnet-dump)](dotnet-dump.md) tool to analyze the dump:</span></span>
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
 ```
 
-<span data-ttu-id="8e859-152">Em que `core_20190430_185145` é o nome do dump principal que você deseja analisar.</span><span class="sxs-lookup"><span data-stu-id="8e859-152">Where `core_20190430_185145` is the name of the core dump you want to analyze.</span></span>
+<span data-ttu-id="5c5a9-152">Onde `core_20190430_185145` está o nome do despejo do núcleo que você quer analisar.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-152">Where `core_20190430_185145` is the name of the core dump you want to analyze.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8e859-153">Se você vir um erro reclamando que *libdl.so* não pode ser encontrado, talvez seja necessário instalar o pacote *libc6-dev* .</span><span class="sxs-lookup"><span data-stu-id="8e859-153">If you see an error complaining that *libdl.so* cannot be found, you may have to install the *libc6-dev* package.</span></span> <span data-ttu-id="8e859-154">Para saber mais, confira [Pré-requisitos para o .NET Core no Linux](../linux-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="8e859-154">For more information, see [Prerequisites for .NET Core on Linux](../linux-prerequisites.md).</span></span>
+> <span data-ttu-id="5c5a9-153">Se você vir um erro reclamando que *libdl.so* não pode ser encontrado, você pode ter que instalar o pacote *libc6-dev.*</span><span class="sxs-lookup"><span data-stu-id="5c5a9-153">If you see an error complaining that *libdl.so* cannot be found, you may have to install the *libc6-dev* package.</span></span> <span data-ttu-id="5c5a9-154">Para saber mais, confira [Pré-requisitos para o .NET Core no Linux](../linux-prerequisites.md).</span><span class="sxs-lookup"><span data-stu-id="5c5a9-154">For more information, see [Prerequisites for .NET Core on Linux](../linux-prerequisites.md).</span></span>
 
-<span data-ttu-id="8e859-155">Você verá um prompt onde pode inserir comandos SOS.</span><span class="sxs-lookup"><span data-stu-id="8e859-155">You'll be presented with a prompt where you can enter SOS commands.</span></span> <span data-ttu-id="8e859-156">Normalmente, a primeira coisa que você deseja examinar é o estado geral do heap gerenciado:</span><span class="sxs-lookup"><span data-stu-id="8e859-156">Commonly, the first thing you want to look at is the overall state of the managed heap:</span></span>
+<span data-ttu-id="5c5a9-155">Você será apresentado com um prompt onde você pode inserir comandos SOS.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-155">You'll be presented with a prompt where you can enter SOS commands.</span></span> <span data-ttu-id="5c5a9-156">Geralmente, a primeira coisa que você quer olhar é o estado geral do monte gerenciado:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-156">Commonly, the first thing you want to look at is the overall state of the managed heap:</span></span>
 
 ```console
 > dumpheap -stat
@@ -168,9 +168,9 @@ Statistics:
 Total 428516 objects
 ```
 
-<span data-ttu-id="8e859-157">Aqui você pode ver que a maioria dos objetos são `String` ou `Customer` objetos.</span><span class="sxs-lookup"><span data-stu-id="8e859-157">Here you can see that most objects are either `String` or `Customer` objects.</span></span>
+<span data-ttu-id="5c5a9-157">Aqui você pode ver que `String` `Customer` a maioria dos objetos são ou objetos.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-157">Here you can see that most objects are either `String` or `Customer` objects.</span></span>
 
-<span data-ttu-id="8e859-158">Você pode usar o comando `dumpheap` novamente com a tabela de métodos (MT) para obter uma lista de todas as instâncias de `String`:</span><span class="sxs-lookup"><span data-stu-id="8e859-158">You can use the `dumpheap` command again with the method table (MT) to get a list of all the `String` instances:</span></span>
+<span data-ttu-id="5c5a9-158">Você pode `dumpheap` usar o comando novamente com a tabela de métodos (MT) para obter uma lista de todas as `String` instâncias:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-158">You can use the `dumpheap` command again with the method table (MT) to get a list of all the `String` instances:</span></span>
 
 ```console
 > dumpheap -mt 00007faddaa50f90
@@ -191,7 +191,7 @@ Statistics:
 Total 206770 objects
 ```
 
-<span data-ttu-id="8e859-159">Agora você pode usar o comando `gcroot` em uma instância `System.String` para ver como e por que o objeto tem raiz.</span><span class="sxs-lookup"><span data-stu-id="8e859-159">You can now use the `gcroot` command on a `System.String` instance to see how and why the object is rooted.</span></span> <span data-ttu-id="8e859-160">Seja paciente porque esse comando leva vários minutos com um heap de 30 MB:</span><span class="sxs-lookup"><span data-stu-id="8e859-160">Be patient because this command takes several minutes with a 30-MB heap:</span></span>
+<span data-ttu-id="5c5a9-159">Agora você pode `gcroot` usar `System.String` o comando em uma instância para ver como e por que o objeto está enraizado.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-159">You can now use the `gcroot` command on a `System.String` instance to see how and why the object is rooted.</span></span> <span data-ttu-id="5c5a9-160">Seja paciente porque este comando leva vários minutos com um monte de 30 MB:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-160">Be patient because this command takes several minutes with a 30-MB heap:</span></span>
 
 ```console
 > gcroot -all 00007f6ad09421f8
@@ -220,26 +220,26 @@ HandleTable:
 Found 2 roots.
 ```
 
-<span data-ttu-id="8e859-161">Você pode ver que o `String` é mantido diretamente pelo objeto `Customer` e é indiretamente mantido por um objeto `CustomerCache`.</span><span class="sxs-lookup"><span data-stu-id="8e859-161">You can see that the `String` is directly held by the `Customer` object and indirectly held by a `CustomerCache` object.</span></span>
+<span data-ttu-id="5c5a9-161">Você pode ver `String` que o `Customer` é diretamente mantido pelo `CustomerCache` objeto e indiretamente mantido por um objeto.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-161">You can see that the `String` is directly held by the `Customer` object and indirectly held by a `CustomerCache` object.</span></span>
 
-<span data-ttu-id="8e859-162">Você pode continuar despejando objetos para ver que a maioria dos objetos `String` seguem um padrão semelhante.</span><span class="sxs-lookup"><span data-stu-id="8e859-162">You can continue dumping out objects to see that most `String` objects follow a similar pattern.</span></span> <span data-ttu-id="8e859-163">Neste ponto, a investigação forneceu informações suficientes para identificar a causa raiz em seu código.</span><span class="sxs-lookup"><span data-stu-id="8e859-163">At this point, the investigation provided sufficient information to identify the root cause in your code.</span></span>
+<span data-ttu-id="5c5a9-162">Você pode continuar despejando objetos para ver que a maioria dos `String` objetos segue um padrão semelhante.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-162">You can continue dumping out objects to see that most `String` objects follow a similar pattern.</span></span> <span data-ttu-id="5c5a9-163">Neste ponto, a investigação forneceu informações suficientes para identificar a causa raiz em seu código.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-163">At this point, the investigation provided sufficient information to identify the root cause in your code.</span></span>
 
-<span data-ttu-id="8e859-164">Esse procedimento geral permite que você identifique a origem dos principais vazamentos de memória.</span><span class="sxs-lookup"><span data-stu-id="8e859-164">This general procedure allows you to identify the source of major memory leaks.</span></span>
+<span data-ttu-id="5c5a9-164">Este procedimento geral permite identificar a fonte de grandes vazamentos de memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-164">This general procedure allows you to identify the source of major memory leaks.</span></span>
 
-## <a name="clean-up-resources"></a><span data-ttu-id="8e859-165">Limpar recursos</span><span class="sxs-lookup"><span data-stu-id="8e859-165">Clean up resources</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="5c5a9-165">Limpar recursos</span><span class="sxs-lookup"><span data-stu-id="5c5a9-165">Clean up resources</span></span>
 
-<span data-ttu-id="8e859-166">Neste tutorial, você iniciou um servidor Web de exemplo.</span><span class="sxs-lookup"><span data-stu-id="8e859-166">In this tutorial, you started a sample web server.</span></span> <span data-ttu-id="8e859-167">Esse servidor deve ter sido desligado, conforme explicado na seção [reiniciar o processo com falha](#restart-the-failed-process) .</span><span class="sxs-lookup"><span data-stu-id="8e859-167">This server should have been shut down as explained in the [Restart the failed process](#restart-the-failed-process) section.</span></span>
+<span data-ttu-id="5c5a9-166">Neste tutorial, você começou um servidor web de exemplo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-166">In this tutorial, you started a sample web server.</span></span> <span data-ttu-id="5c5a9-167">Este servidor deveria ter sido desligado conforme explicado na seção Reiniciar a seção [de processo com falha.](#restart-the-failed-process)</span><span class="sxs-lookup"><span data-stu-id="5c5a9-167">This server should have been shut down as explained in the [Restart the failed process](#restart-the-failed-process) section.</span></span>
 
-<span data-ttu-id="8e859-168">Você também pode excluir o arquivo de despejo que foi criado.</span><span class="sxs-lookup"><span data-stu-id="8e859-168">You can also delete the dump file that was created.</span></span>
+<span data-ttu-id="5c5a9-168">Você também pode excluir o arquivo de despejo que foi criado.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-168">You can also delete the dump file that was created.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="8e859-169">{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="8e859-169">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="5c5a9-169">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="5c5a9-169">Next steps</span></span>
 
-<span data-ttu-id="8e859-170">Parabéns por concluir este tutorial.</span><span class="sxs-lookup"><span data-stu-id="8e859-170">Congratulations on completing this tutorial.</span></span>
+<span data-ttu-id="5c5a9-170">Parabéns por completar este tutorial.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-170">Congratulations on completing this tutorial.</span></span>
 
-<span data-ttu-id="8e859-171">Ainda estamos publicando mais tutoriais de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="8e859-171">We're still publishing more diagnostic tutorials.</span></span> <span data-ttu-id="8e859-172">Você pode ler as versões de rascunho no repositório [dotnet/diagnóstico](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) .</span><span class="sxs-lookup"><span data-stu-id="8e859-172">You can read the draft versions on the [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) repository.</span></span>
+<span data-ttu-id="5c5a9-171">Ainda estamos publicando mais tutoriais de diagnóstico.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-171">We're still publishing more diagnostic tutorials.</span></span> <span data-ttu-id="5c5a9-172">Você pode ler as versões de rascunho no repositório [dotnet/diagnóstico.](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial)</span><span class="sxs-lookup"><span data-stu-id="5c5a9-172">You can read the draft versions on the [dotnet/diagnostics](https://github.com/dotnet/diagnostics/tree/master/documentation/tutorial) repository.</span></span>
 
-<span data-ttu-id="8e859-173">Este tutorial abordou as noções básicas sobre as principais ferramentas de diagnóstico do .NET.</span><span class="sxs-lookup"><span data-stu-id="8e859-173">This tutorial covered the basics of key .NET diagnostic tools.</span></span> <span data-ttu-id="8e859-174">Para uso avançado, consulte a seguinte documentação de referência:</span><span class="sxs-lookup"><span data-stu-id="8e859-174">For advanced usage, see the following reference documentation:</span></span>
+<span data-ttu-id="5c5a9-173">Este tutorial cobriu o básico das principais ferramentas de diagnóstico .NET.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-173">This tutorial covered the basics of key .NET diagnostic tools.</span></span> <span data-ttu-id="5c5a9-174">Para uso avançado, consulte a seguinte documentação de referência:</span><span class="sxs-lookup"><span data-stu-id="5c5a9-174">For advanced usage, see the following reference documentation:</span></span>
 
-* <span data-ttu-id="8e859-175">[dotnet – rastreamento](dotnet-trace.md) para listar processos.</span><span class="sxs-lookup"><span data-stu-id="8e859-175">[dotnet-trace](dotnet-trace.md) to list processes.</span></span>
-* <span data-ttu-id="8e859-176">[dotnet-contadores](dotnet-counters.md) para verificar o uso de memória gerenciada.</span><span class="sxs-lookup"><span data-stu-id="8e859-176">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
-* <span data-ttu-id="8e859-177">[dotnet-despejo](dotnet-dump.md) para coletar e analisar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="8e859-177">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>
+* <span data-ttu-id="5c5a9-175">[dotnet-trace](dotnet-trace.md) para processos de lista.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-175">[dotnet-trace](dotnet-trace.md) to list processes.</span></span>
+* <span data-ttu-id="5c5a9-176">[contadores dotnet](dotnet-counters.md) para verificar o uso gerenciado da memória.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-176">[dotnet-counters](dotnet-counters.md) to check managed memory usage.</span></span>
+* <span data-ttu-id="5c5a9-177">[dotnet-dump](dotnet-dump.md) para coletar e analisar um arquivo de despejo.</span><span class="sxs-lookup"><span data-stu-id="5c5a9-177">[dotnet-dump](dotnet-dump.md) to collect and analyze a dump file.</span></span>

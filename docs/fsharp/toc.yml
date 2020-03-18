@@ -163,7 +163,7 @@
           href: language-reference/members/constructors.md
         - name: Eventos
           href: language-reference/members/events.md
-        - name: 'Campos explícitos: A palavra-chave `val`'
+        - name: 'Campos explícitos: a palavra-chave `val`'
           href: language-reference/members/explicit-fields-the-val-keyword.md
     - name: Extensões de tipo
       href: language-reference/type-extensions.md
@@ -183,7 +183,7 @@
       href: language-reference/access-control.md
     - name: 'Expressões condicionais: if...then...else'
       href: language-reference/conditional-expressions-if-then-else.md
-    - name: Expressões de correspondência
+    - name: Expressões match
       href: language-reference/match-expressions.md
     - name: Correspondência padrão
       href: language-reference/pattern-matching.md
@@ -220,7 +220,7 @@
       href: language-reference/namespaces.md
     - name: Módulos
       href: language-reference/modules.md
-    - name: 'Declarações de importação: A palavra-chave open'
+    - name: 'Declarações de importação: a palavra-chave open'
       href: language-reference/import-declarations-the-open-keyword.md
     - name: Arquivos de assinatura
       href: language-reference/signature-files.md

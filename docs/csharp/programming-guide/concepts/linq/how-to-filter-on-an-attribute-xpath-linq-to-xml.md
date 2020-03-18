@@ -1,25 +1,25 @@
 ---
-title: Como filtrar em um atributo (XPath-LINQ to XML) (C#)
+title: Como filtrar um atributo (XPath-LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
 ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141279"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="4a5b7-102">Como filtrar em um atributo (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4a5b7-102">How to filter on an attribute (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="4a5b7-103">Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.</span><span class="sxs-lookup"><span data-stu-id="4a5b7-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="c7b18-102">Como filtrar um atributo (XPath-LINQ para XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="c7b18-102">How to filter on an attribute (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="c7b18-103">Este tópico mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.</span><span class="sxs-lookup"><span data-stu-id="c7b18-103">This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.</span></span>  
   
- <span data-ttu-id="4a5b7-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="4a5b7-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="c7b18-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="c7b18-104">The XPath expression is:</span></span>  
   
  `.//Address[@Type='Shipping']`  
   
-## <a name="example"></a><span data-ttu-id="4a5b7-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4a5b7-105">Example</span></span>  
- <span data-ttu-id="4a5b7-106">Este exemplo localiza os elementos dos descendentes com o nome de `Address`, e com um atributo de `Type` com um valor de “enviar”.</span><span class="sxs-lookup"><span data-stu-id="4a5b7-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
+## <a name="example"></a><span data-ttu-id="c7b18-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c7b18-105">Example</span></span>  
+ <span data-ttu-id="c7b18-106">Este exemplo localiza os elementos dos descendentes com o nome de `Address`, e com um atributo de `Type` com um valor de “enviar”.</span><span class="sxs-lookup"><span data-stu-id="c7b18-106">This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".</span></span>  
   
- <span data-ttu-id="4a5b7-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="4a5b7-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="c7b18-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="c7b18-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +42,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="4a5b7-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4a5b7-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="c7b18-108">Esse exemplo gera a saída a seguir:</span><span class="sxs-lookup"><span data-stu-id="c7b18-108">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
