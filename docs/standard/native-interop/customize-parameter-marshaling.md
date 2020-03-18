@@ -3,11 +3,11 @@ title: Como personalizar o marshaling de parâmetro – .NET
 description: Saiba como personalizar a forma como o .NET realiza marshalling em seus parâmetros para uma representação nativa.
 ms.date: 01/18/2019
 ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159605"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400361"
 ---
 # <a name="customizing-parameter-marshaling"></a>Como personalizar o marshaling de parâmetro
 

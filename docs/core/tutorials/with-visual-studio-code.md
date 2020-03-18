@@ -3,22 +3,22 @@ title: Introdução ao C# e ao Visual Studio Code
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: ef7134e26c1ded3926faa51748c1b6d4a461008f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156602"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398877"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
-O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (preenchimento de código inteligente) e depuração.
+O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-1. Instale o [Visual Studio Code](https://code.visualstudio.com/).
-2. Instale o [SDK do .NET Core](https://dotnet.microsoft.com/download).
-3. Instale a [extensão de C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) para o Visual Studio Code. Para saber mais sobre como instalar extensões no Visual Studio Code, confira [Marketplace de extensão de código do VS](https://code.visualstudio.com/docs/editor/extension-gallery).
+1. Instale [o Visual Studio Code](https://code.visualstudio.com/).
+2. Instale o [.NET Core SDK](https://dotnet.microsoft.com/download).
+3. Instale a [extensão de C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) para o Visual Studio Code. Para saber mais sobre como instalar extensões no Visual Studio Code, confira [Marketplace de extensão de código do VS](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Olá, Mundo
 
@@ -27,8 +27,8 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 1. Abra um projeto:
 
     - Abra o Visual Studio Code.
-    - Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**; ou.
-    - Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta em que você deseja armazenar seu projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
+    - Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**.
+    - Selecione >  **''Abrir'pasta**de**arquivos'** no menu principal para abrir a pasta que deseja que seu projeto C# esteja dentro e clique em **Selecionar pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
       ![Pasta aberta do Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
@@ -36,11 +36,11 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
     - Abra o Terminal Integrado do Visual Studio Code selecionando **Exibir** > **Terminal Integrado** no menu principal.
     - Na janela do terminal, digite `dotnet new console`.
-    - Este comando cria um arquivo *Program.cs* em sua pasta com um programa simples de "Olá, mundo" já gravado, juntamente com C# um arquivo de projeto chamado *HelloWorld. csproj*.
+    - Este comando cria um arquivo *Program.cs* em sua pasta com um simples programa "Hello World" já escrito, juntamente com um arquivo de projeto C# chamado *HelloWorld.csproj*.
 
       ![O novo comando dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Resolva as dependências de build:
+3. Resolva os ativos do build:
 
     - Para o **.NET Core 1.x**, digite `dotnet restore`. Executar `dotnet restore` fornece acesso a pacotes .NET Core que são necessários para compilar seu projeto.
 
@@ -48,7 +48,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. Execute o programa "Hello, World":
+4. Execute o programa "Olá, Mundo":
 
     - Digite `dotnet run`.
 
@@ -62,15 +62,15 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. O Visual Studio Code solicitará que você adicione os ativos ausentes para compilar e depurar seu projeto. Selecione **Sim** na barra superior.
+2. O Visual Studio Code deverá solicitar que você adicione os ativos ausentes para compilar e depurar o aplicativo. Selecione **Sim**.
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
-3. Para exibir as ferramentas de Depuração, clique no ícone de depuração no menu do lado esquerdo.
+3. Para abrir e exibição Depuração, clique no ícone Depuração no menu do lado esquerdo.
 
     ![Abrir a guia Depurar no Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Localize a seta verde na parte superior do painel. Certifique-se de que a lista suspensa ao lado dele tenha a **inicialização do .NET Core (console)** selecionada.
+4. Localize a seta verde na parte superior do painel. Certifique-se de que a queda ao lado dele tenha **o .NET Core Launch (console)** selecionado.
 
     ![Selecionando o .NET Core no Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
@@ -90,9 +90,9 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
 ## <a name="add-a-class"></a>Adicionar uma classe
 
-1. Para adicionar uma nova classe, clique com o botão direito do mouse no VSCode Explorer e selecione **novo arquivo**. Isso adiciona um novo arquivo à pasta que você abriu no VSCode.
-2. Nomeie o arquivo *MyClass.cs*. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
-3. Adicione o código a seguir para criar sua primeira classe. Certifique-se de incluir o namespace correto para que você possa referenciá-lo do arquivo *Program.cs* :
+1. Para adicionar uma nova classe, clique com o botão direito do mouse no VSCode Explorer e selecione **Novo Arquivo**. Isso adiciona um novo arquivo à pasta que você abriu no VSCode.
+2. Nomeie seu arquivo *MyClass.cs*. Salve-o com uma extensão `.cs` no final para que ele seja reconhecido como um arquivo csharp.
+3. Adicione o código a seguir para criar sua primeira classe. Certifique-se de incluir o namespace correto para que você possa referencia-lo a partir de seu arquivo *Program.cs:*
 
     ``` csharp
     using System;
@@ -109,7 +109,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
     }
     ```
 
-4. Chame sua nova classe de seu método principal no *Program.cs* adicionando o código abaixo:
+4. Ligue para sua nova classe a partir do seu método principal em *Program.cs* adicionando o código abaixo:
 
     ```csharp
     using System;
@@ -143,9 +143,9 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Faltam os ativos necessários para compilar e depurar C# no Visual Studio Code. Meu depurador diz: "Nenhuma configuração".
 
-A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não gerar os ativos em seguida, você ainda poderá executar esse comando abrindo a paleta de comandos (**Exibição > Paleta de comandos**) e digitando">.NET: Generate Assets for Build and Debug". Selecionar isso gera os arquivos de configuração *. vscode*, *Launch. JSON*e *Tasks. JSON* necessários.
+A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não gerar os ativos em seguida, você ainda poderá executar esse comando abrindo a paleta de comandos (**Exibição > Paleta de comandos**) e digitando">.NET: Generate Assets for Build and Debug". A seleção disso gera os arquivos de configuração *.vscode,* *launch.json*e *tasks.json* que você precisa.
 
 ## <a name="see-also"></a>Confira também
 
-- [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+- [Configurar o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [Depurar no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

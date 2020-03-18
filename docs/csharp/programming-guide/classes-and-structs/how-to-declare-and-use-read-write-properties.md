@@ -1,5 +1,5 @@
 ---
-title: Como declarar e usar as propriedades de leitura/ C# gravação – guia de programação
+title: Como declarar e usar as propriedades de gravação de leitura - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - get accessor [C#], declaring properties
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: 5b880cfc3ace197a3bad2f707cf55543dbe7b78e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4b9db5f15746ab9a1f42239150c6783154723371
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714925"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170280"
 ---
-# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como declarar e usar as propriedades de leitura/C# gravação (guia de programação)
+# <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como declarar e usar as propriedades de gravação de leitura (C# Guia de programação)
 As propriedades oferecem a conveniência de membros de dados públicos sem os riscos associados ao acesso sem proteção, sem controle e não verificado aos dados de um objeto. Isso é feito por meio de *acessadores*: métodos especiais que atribuem e recuperam valores do membro de dados subjacente. O acessador [set](../../language-reference/keywords/set.md) habilita a atribuição de membros de dados e o acessador [get](../../language-reference/keywords/get.md) recupera valores do membro de dados.  
   
  Este exemplo mostra uma classe `Person` que tem duas propriedades: `Name` (string) e `Age` (int). Ambas as propriedades fornecem acessadores `get` e `set`, portanto, são consideradas propriedades de leitura/gravação.  
@@ -23,7 +23,7 @@ As propriedades oferecem a conveniência de membros de dados públicos sem os ri
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
   
-## <a name="robust-programming"></a>Programação Robusta  
+## <a name="robust-programming"></a>Programação robusta  
  No exemplo anterior, as propriedades `Name` e `Age` são [públicas](../../language-reference/keywords/public.md) e incluem os acessadores `get` e `set`. Isso permite que qualquer objeto leia e grave essas propriedades. No entanto, às vezes é desejável excluir um os acessadores. Omitir o acessador `set`, por exemplo, torna a propriedade somente leitura:  
   
  [!code-csharp[csProgGuideObjects#87](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#87)]  
@@ -45,7 +45,7 @@ As propriedades oferecem a conveniência de membros de dados públicos sem os ri
  Se métodos `set` e `get` separados fossem usados para modelar propriedades, o código equivalente se pareceria com isto:  
   
 ```csharp  
-person.SetAge(person.GetAge() + 1);   
+person.SetAge(person.GetAge() + 1);
 ```  
   
  O método `ToString` é substituído neste exemplo:  
@@ -54,8 +54,8 @@ person.SetAge(person.GetAge() + 1);
   
  Observe que `ToString` não é usado explicitamente no programa. Ele é invocado por padrão pelas chamadas `WriteLine`.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Propriedades](./properties.md)
-- [Classes e Structs](./index.md)
+- [Classes e structs](./index.md)

@@ -2,19 +2,19 @@
 title: Localizando o estilo de parágrafo padrão (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204108"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169526"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Localizando o estilo de parágrafo padrão (C#)
 A primeira tarefa no tutorial Manipulando informações em um documento de WordprocessingML é localizar o estilo padrão dos parágrafos no documento.  
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  O exemplo a seguir abre um documento do Office Open XML WordprocessingML, encontrar as partes do documento e estilo de pacote em seguida, executa uma consulta que localize o nome padrão de estilo. Para obter informações sobre pacotes de documento do Office Open XML, bem como as partes que os compõem, consulte em [Detalhes de documentos do Office Open XML WordprocessingML (C#)](./wordprocessingml-document-with-styles.md).  
   
  A consulta encontrar um nó chamado `w:style` que tem um atributo chamado `w:type` com um valor de “parágrafo”, e também tem um atributo chamado `w:default` com um valor de “1 ". Haverá porque apenas um nó XML com esses atributos, a consulta usa o operador de <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> para converter uma coleção para um único. Então obtém o valor do atributo com o nome `w:styleId`.  
@@ -65,7 +65,7 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
 }  
   
 // The following query finds all the paragraphs that have the default style.  
-string defaultStyle =   
+string defaultStyle =
     (string)(  
         from style in styleDoc.Root.Elements(w + "style")  
         where (string)style.Attribute(w + "type") == "paragraph"&&  
@@ -77,7 +77,7 @@ Console.WriteLine("The default style is: {0}", defaultStyle);
 ```  
   
 ### <a name="comments"></a>Comentários  
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 The default style is: Normal  

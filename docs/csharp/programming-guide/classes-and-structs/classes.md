@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714972"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170306"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 
@@ -53,11 +53,11 @@ Embora eles sejam usados algumas vezes de maneira intercambiável, uma classe e 
  ```
 
  Quando uma instância de uma classe é criada, uma referência ao objeto é passada de volta para o programador. No exemplo anterior, `object1` é uma referência a um objeto que é baseado em `Customer`. Esta referência refere-se ao novo objeto, mas não contém os dados de objeto. Na verdade, você pode criar uma referência de objeto sem criar um objeto:  
- 
+
 ```csharp
  Customer object2;
 ```
- 
+
  Não recomendamos a criação de referências de objeto como essa, que não faz referência a um objeto, porque tentar acessar um objeto por meio de uma referência desse tipo falhará em tempo de execução. Entretanto, essa referência pode ser feita para se referir a um objeto, criando um novo objeto ou atribuindo-a a um objeto existente, como abaixo:  
 
  ```csharp
@@ -85,24 +85,24 @@ Quando uma classe declara uma classe base, ela herda todos os membros da classe 
   
 Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base. No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base. Além disso, uma classe pode implementar diretamente mais de uma interface. Para obter mais informações, consulte [Interfaces](../interfaces/index.md).  
   
-Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](abstract-and-sealed-classes-and-class-members.md).  
+Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes Abstratas e Lacradas e Membros de Classe](abstract-and-sealed-classes-and-class-members.md).  
   
-As definições de classe podem ser divididas entre arquivos de origem diferentes. Para obter mais informações, consulte [Classes e métodos parciais](partial-classes-and-methods.md).  
+As definições de classe podem ser divididas entre arquivos de origem diferentes. Para obter mais informações, consulte [Classes parciais e métodos](partial-classes-and-methods.md).  
   
 ## <a name="example"></a>Exemplo
 
 No exemplo a seguir, é definida uma classe pública que contém uma [propriedade autoimplementada](auto-implemented-properties.md), um método e um método especial chamado construtor. Para obter mais informações, consulte os tópicos [Propriedades](properties.md), [Métodos](methods.md), e [Construtores](constructors.md). As instâncias da classe são então instanciadas com a palavra-chave `new`.  
   
-[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
+[!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)]
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da Linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Programação Orientada a Objeto](../concepts/object-oriented-programming.md)
+- [C# Guia de Programação](../index.md)
+- [Programação orientada a objeto](../concepts/object-oriented-programming.md)
 - [Polimorfismo](polymorphism.md)
 - [Nomes de identificadores](../inside-a-program/identifier-names.md)
 - [Membros](members.md)

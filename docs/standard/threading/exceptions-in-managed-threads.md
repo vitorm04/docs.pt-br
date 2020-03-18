@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159644"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceções em threads gerenciados
@@ -78,4 +78,4 @@ A partir do .NET Framework versão 2.0, o common language runtime permite que a 
   
 ## <a name="see-also"></a>Confira também
 
-- [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)
+- [Noções básicas de rosca gerenciadas](../../../docs/standard/threading/managed-threading-basics.md)

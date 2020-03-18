@@ -11,13 +11,13 @@ helpviewer_keywords:
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124416"
 ---
-# <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
+# <a name="best-practices-for-regular-expressions-in-net"></a>Melhores práticas para expressões regulares em .NET
 
 O mecanismo de expressões regulares no .NET é uma ferramenta poderosa e repleta de recursos que processa o texto com base em correspondências de padrões em vez de em comparar e corresponder o texto literal. Na maioria dos casos, ele realiza a correspondência de padrões de forma rápida e eficiente. No entanto, em alguns casos, o mecanismo de expressões regulares pode parecer ser muito lento. Em casos extremos, pode até mesmo parecer parar de responder enquanto processa uma entrada relativamente pequena em um período de horas ou até mesmo dias.
 
@@ -53,7 +53,7 @@ Como essa expressão regular foi desenvolvida considerando apenas a correspondê
 
 Para resolver este problema, você pode fazer o seguinte:
 
-- Ao desenvolver um padrão, você deve considerar como o retrocesso pode afetar o desempenho do mecanismo de expressões regulares, especialmente se a expressão regular for criada para processar entradas sem restrição. Para obter mais informações, consulte a seção [Tome conta do retrocesso](#take-charge-of-backtracking).
+- Ao desenvolver um padrão, você deve considerar como o retrocesso pode afetar o desempenho do mecanismo de expressões regulares, especialmente se a expressão regular for criada para processar entradas sem restrição. Para obter mais informações, consulte a [seção Take Charge of Backtracking.](#take-charge-of-backtracking)
 
 - Teste rigorosamente sua expressão regular usando entradas inválidas e quase válidas, bem como entradas válidas. Para gerar entradas para uma expressão regular específica aleatoriamente, você pode usar [Rex](https://www.microsoft.com/research/project/rex-regular-expression-exploration/), que é uma ferramenta de exploração de expressões regulares da Microsoft Research.
 
@@ -81,7 +81,7 @@ A maneira específica como você chama métodos de correspondência de expressõ
 
 ### <a name="static-regular-expressions"></a>Expressões regulares estáticas
 
-Os métodos de expressões regulares estáticas são recomendados como uma alternativa a criar repetidamente instâncias de um objeto de expressão regular com a mesma expressão regular. Ao contrário dos padrões de expressão regulares usados por objetos de expressão regular, os códigos de operação ou a MSIL (Microsoft Intermediate Language) compilada dos padrões usados em chamadas de método estáticos são armazenados em cache internamente pelo mecanismo de expressão regular.
+Os métodos de expressões regulares estáticas são recomendados como uma alternativa a criar repetidamente instâncias de um objeto de expressão regular com a mesma expressão regular. Ao contrário dos padrões de expressão regulares usados por objetos de expressão regulares, os códigos de operação ou a linguagem intermediária da Microsoft compilada (MSIL) a partir de padrões usados em chamadas de método séptico são armazenados em cache interno pelo mecanismo de expressão regular.
 
 Por exemplo, um manipulador de eventos chama frequentemente outro método para validar a entrada do usuário. Isso é refletido no código a seguir, no qual o evento <xref:System.Windows.Forms.Button> de um controle <xref:System.Windows.Forms.Control.Click> é usado para chamar um método `IsValidCurrency`, o qu al verifica se o usuário inseriu um símbolo de moeda seguido por pelo menos um dígito decimal.
 
@@ -125,14 +125,14 @@ O padrão de expressão regular usado neste exemplo, `\b(\w+((\r?\n)|,?\s))*\w+[
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começa a correspondência em um limite de palavra.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |<code>(\r?\n)&#124;,?\s)</code>|Corresponde a um zero ou um retorno de carro seguido por um caractere de nova linha, ou zero ou uma vírgula seguida por um caractere de espaço em branco.|
 |<code>(\w+((\r?\n)&#124;,?\s))*</code>|Corresponde a zero ou mais ocorrências de um ou mais caracteres de palavra que são seguidos por zero ou por retornos de carro e por um caractere de nova linha ou por zero ou uma vírgula seguida por um caractere de espaço em branco.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |`[.?:;!]`|Corresponde a um ponto, um ponto de interrogação, dois-pontos, ponto-e-vírgula ou ponto de exclamação.|
 
-### <a name="regular-expressions-compiled-to-an-assembly"></a>Expressões regulares: compiladas para um assembly
+### <a name="regular-expressions-compiled-to-an-assembly"></a>Expressões regulares: Compilados para uma montagem
 
 O .NET também permite criar um assembly que contém expressões regulares compiladas. Isso move a ocorrência de desempenho da compilação de expressões regulares do tempo de execução para o tempo de design. No entanto, também envolve trabalho extra: você deve definir as expressões regulares com antecedência e compilá-las em um assembly. O compilador pode então fazer referência a esse assembly ao compilar código-fonte que usa expressões regulares do assembly. Cada expressão regular compilada no assembly é representada por uma classe que deriva de <xref:System.Text.RegularExpressions.Regex>.
 
@@ -146,7 +146,7 @@ Recomendamos que você compile as expressões regulares em um assembly nestas si
 
 Se estiver usando expressões regulares compiladas para otimizar o desempenho, não use reflexão para criar o assembly, carregar o mecanismo de expressões regulares e executar os métodos de correspondência de padrões. Isso requer que você evite criar padrões de expressões regulares dinamicamente, e que você especifique as opções de correspondência de padrões (como correspondência de padrões sem diferenciação de maiúsculas e minúsculas) no momento em que o assembly é criado. Exige também que você separe o código que cria o assembly do código que usa a expressão regular.
 
-O exemplo a seguir mostra como criar um assembly que contém uma expressão regular compilada. Ele cria um assembly chamado `RegexLib.dll` com uma única classe de expressão regular, `SentencePattern`, que contém o padrão de expressão regular de correspondência de sentença usado na seção de [expressões regulares interpretadas versus compiladas](#interpreted-vs-compiled-regular-expressions) .
+O exemplo a seguir mostra como criar um assembly que contém uma expressão regular compilada. Ele cria uma `RegexLib.dll` montagem nomeada com `SentencePattern`uma única classe de expressão regular, que contém o padrão de expressão regular correspondente a frases usado na seção [''Expressões regulares'.](#interpreted-vs-compiled-regular-expressions)
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]
@@ -169,14 +169,14 @@ Frequentemente, os aplicativos pagam uma penalidade de desempenho por usar o ret
 
 |Padrão|Descrição|
 |-|-|
-|`\b`|Começa a correspondência em um limite de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
 |`\p{Lu}`|Corresponder a um caractere maiúsculo.|
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|
 |`\b`|Termina a correspondência em um limite de palavra.|
 
 Como um limite de palavra não é o mesmo que ou um subconjunto de, um caractere de palavra, não há nenhuma possibilidade de o mecanismo de expressões regulares cruzar um limite de palavra ao corresponder caracteres de palavra. Isso significa que, para esta expressão regular, o retrocesso nunca pode contribuir para o êxito total de qualquer correspondência – ele só pode prejudicar o desempenho, pois o mecanismo de expressões regulares é forçado a salvar o estado para cada correspondência preliminar bem-sucedida de um caractere de palavra.
 
-Se você determinar que o retrocesso não é necessário, poderá desabilitá-lo usando o elemento de linguagem `(?>subexpression)`, conhecido como um grupo atômico. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.
+Se você determinar que o retrocesso não é necessário, `(?>subexpression)` você pode desativá-lo usando o elemento de linguagem, conhecido como um grupo atômico. O exemplo a seguir analisa uma cadeia de caracteres de entrada usando duas expressões regulares. A primeira, `\b\p{Lu}\w*\b`, depende do retrocesso. A segunda, `\b\p{Lu}(?>\w*)\b`, desabilita o retrocesso. Conforme mostrado pela saída do exemplo, ambas produzem o mesmo resultado.
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -206,7 +206,7 @@ O exemplo a seguir ilustra o uso dessa expressão regular para corresponder a um
 
 A linguagem de expressões regulares no .NET inclui os seguintes elementos de linguagem que você pode usar para eliminar quantificadores aninhados. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-|Elemento Language|Descrição|
+|Elemento de linguagem|Descrição|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Lookahead positivo de largura zero. Examine além da posição atual para determinar se `subexpression` coincide com a cadeia de caracteres de entrada.|
 |`(?!` `subexpression` `)`|Lookahead negativo de largura zero. Examine além da posição atual para determinar se `subexpression` não coincide com a cadeia de caracteres de entrada.|
@@ -217,7 +217,7 @@ A linguagem de expressões regulares no .NET inclui os seguintes elementos de li
 
 Se suas expressões regulares processarem entradas quase correspondentes ao padrão da expressão regular, elas poderão frequentemente confiar no retrocesso excessivo, o que afeta significativamente o desempenho. Além de considerar cuidadosamente o uso do retrocesso e testar a expressão regular contra entradas quase correspondentes, você deve sempre definir um valor de tempo limite para garantir que o impacto do retrocesso excessivo, caso ocorra, seja minimizado.
 
-O intervalo de tempo limite de expressão regular define o período de tempo que o mecanismo de expressão regular procurará por uma única correspondência antes de atingir o tempo limite. O intervalo de tempo limite padrão é <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, o que significa que a expressão regular não atingirá o tempo limite. Você pode substituir esse valor e definir um intervalo de tempo limite da seguinte maneira:
+O intervalo de tempo de tempo de expressão regular define o período de tempo que o mecanismo de expressão regular procurará por uma única correspondência antes de se esporem. O intervalo de tempo <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>padrão é, o que significa que a expressão regular não terá tempo. Você pode substituir esse valor e definir um intervalo de tempo de saída da seguinte forma:
 
 - Ao fornecer um valor de tempo limite ao criar uma instância de um objeto <xref:System.Text.RegularExpressions.Regex> ao chamar o construtor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.
 
@@ -234,7 +234,7 @@ O exemplo a seguir define um método `GetWordData` que instancia uma expressão 
 
 ## <a name="capture-only-when-necessary"></a>Capture somente quando necessário
 
-As expressões regulares no .NET dão suporte a vários constructos de agrupamento, que permitem a você agrupar um padrão de expressão regular em uma ou mais subexpressões. Os constructos de agrupamento mais usados na linguagem de expressões regulares no .NET são `(`*subexpression*`)`, que define um grupo de captura numerado, e `(?<`*name*`>`*subexpression*`)`, que define um grupo de captura nomeado. Os construtores de agrupamento são essenciais para criar referências reversas e definir uma subexpressão à qual um quantificador é aplicado.
+As expressões regulares no .NET dão suporte a vários constructos de agrupamento, que permitem a você agrupar um padrão de expressão regular em uma ou mais subexpressões. Os construtos de agrupamento mais usados `(`na linguagem de expressão regular .NET são `(?<` *a subexpressão*`)`, que define um grupo de captura numerado e a*subexpressão*`)` *de nome,*`>`que define um grupo de captura chamado. Os construtores de agrupamento são essenciais para criar referências reversas e definir uma subexpressão à qual um quantificador é aplicado.
 
 No entanto, o uso desses elementos de linguagem tem um custo. Eles fazem com que o objeto <xref:System.Text.RegularExpressions.GroupCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> seja preenchido com as capturas sem nome ou nomeadas mais recentes. Além disso, se uma única construção de agrupamento capturou várias subcadeias de caracteres na cadeia de caracteres de entrada, também preenchem o objeto <xref:System.Text.RegularExpressions.CaptureCollection> retornado pela propriedade <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> de um grupo de captura específico com vários objetos <xref:System.Text.RegularExpressions.Capture>.
 
@@ -242,8 +242,8 @@ Muitas vezes, os construtores de agrupamento são usados somente em uma express�
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começa a correspondência em um limite de palavra.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |`[;,]?`|Corresponde a zero ou uma vírgula ou ponto e vírgula.|
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|
 |`(\w+[;,]?\s?)+`|Corresponde a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por uma vírgula opcional ou por ponto-e-vírgula seguido por um caractere de espaço em branco opcional. Isso define o primeiro grupo de captura, que é necessário para que a combinação de vários caracteres de palavra (ou seja, uma palavra) seguido por um símbolo de pontuação opcional seja repetida até que o mecanismo de expressões regulares atinja o final de uma sentença.|
@@ -271,8 +271,8 @@ Quando você usa subexpressões apenas para aplicar quantificadores a elas e nã
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|{1&gt;Título&lt;1}|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
-|[Detalhes do comportamento da expressão regular](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina a implementação do mecanismo de expressões regulares no .NET. O tópico concentra-se na flexibilidade de expressões regulares e explica a responsabilidade do desenvolvedor para garantir o funcionamento eficiente e robusto do mecanismo de expressões regulares.|
+|[Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina a implementação do mecanismo de expressões regulares no .NET. O tópico concentra-se na flexibilidade de expressões regulares e explica a responsabilidade do desenvolvedor para garantir o funcionamento eficiente e robusto do mecanismo de expressões regulares.|
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica o que é o retrocesso é como ele afeta o desempenho da expressão regular e examina os elementos de linguagem que fornecem alternativas ao retrocesso.|
-|[Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Descreve os elementos de linguagem de expressões regulares do .NET e fornece links para a documentação detalhada de cada elemento da linguagem.|
+|[Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Descreve os elementos de linguagem de expressões regulares do .NET e fornece links para a documentação detalhada de cada elemento da linguagem.|

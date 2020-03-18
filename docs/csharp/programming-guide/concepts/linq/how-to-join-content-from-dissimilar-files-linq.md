@@ -1,15 +1,15 @@
 ---
-title: Como unir conteúdo de arquivos diferentes (LINQ) (C#)
+title: Como juntar conteúdo de arquivos diferentes (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345881"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169084"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como unir conteúdo de arquivos diferentes (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Como juntar conteúdo de arquivos diferentes (LINQ) (C#)
 
 Este exemplo mostra como unir dados de dois arquivos delimitados por vírgulas que compartilham um valor comum que é usado como uma chave correspondente. Essa técnica pode ser útil se você precisa combinar dados de duas planilhas ou de uma planilha e um arquivo com outro formato, em um novo arquivo. Você pode modificar o exemplo para funcionar com qualquer tipo de texto estruturado.  
   
@@ -62,7 +62,7 @@ class JoinStrings
     {  
         // Join content from dissimilar files that contain  
         // related information. File names.csv contains the student  
-        // name plus an ID number. File scores.csv contains the ID   
+        // name plus an ID number. File scores.csv contains the ID
         // and a set of four test scores. The following query joins  
         // the scores to the student names by using ID as a  
         // matching key.  
@@ -84,7 +84,7 @@ class JoinStrings
             from id in scores  
             let scoreFields = id.Split(',')  
             where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
-            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
+            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
         // Pass a query variable to a method and execute it  
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

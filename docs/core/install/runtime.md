@@ -1,27 +1,27 @@
 ---
-title: Instalar o tempo de execução do .NET Core no Windows, Linux e macOS – .NET Core
+title: Instale o tempo de execução do .NET Core no Windows, Linux e macOS - .NET Core
 description: Saiba como instalar o .NET Core no Windows, Linux e macOS. Descubra as dependências necessárias para executar aplicativos .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: ca55b8fab4aa9ca9f7e308cce57181e2c7e89f4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399010"
 ---
-# <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
+# <a name="install-the-net-core-runtime"></a>Instale o tempo de execução do .NET Core
 
-Neste artigo, você aprenderá a baixar e instalar o tempo de execução do .NET Core. O tempo de execução do .NET Core é usado para executar aplicativos criados com o .NET Core.
+Neste artigo, você aprenderá como baixar e instalar o tempo de execução do .NET Core. O tempo de execução do .NET Core é usado para executar aplicativos criados com o .NET Core.
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-an-installer"></a>Instalar com um instalador
+## <a name="install-with-an-installer"></a>Instale com um instalador
 
-O Windows tem instaladores autônomos que podem ser usados para instalar o .NET Core 3,1 Runtime:
+O Windows tem instaladores autônomos que podem ser usados para instalar o tempo de execução do .NET Core 3.1:
 
 - [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 - [CPUs x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
@@ -30,17 +30,17 @@ O Windows tem instaladores autônomos que podem ser usados para instalar o .NET 
 
 ::: zone pivot="os-macos"
 
-## <a name="install-with-an-installer"></a>Instalar com um instalador
+## <a name="install-with-an-installer"></a>Instale com um instalador
 
-o macOS tem instaladores autônomos que podem ser usados para instalar o .NET Core 3,1 Runtime:
+O macOS possui instaladores autônomos que podem ser usados para instalar o tempo de execução do .NET Core 3.1:
 
 - [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+## <a name="download-and-manually-install"></a>Baixe e instale manualmente
 
-Como alternativa para os instaladores do macOS para .NET Core, você pode baixar e instalar manualmente o tempo de execução.
+Como uma alternativa aos instaladores do macOS para .NET Core, você pode baixar e instalar manualmente o tempo de execução.
 
-Para instalar o tempo de execução e habilitar os comandos de CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir. Supõe-se que o tempo de execução seja baixado para o arquivo de `~/Downloads/dotnet-runtime.pkg`.
+Para instalar o tempo de execução e ativar os comandos .NET Core CLI disponíveis no terminal, [primeiro baixe](#all-net-core-downloads) uma versão binária .NET Core. Em seguida, abra um terminal e execute os seguintes comandos. Presume-se que o tempo de `~/Downloads/dotnet-runtime.pkg` execução seja baixado para o arquivo.
 
 ```bash
 mkdir -p $HOME/dotnet
@@ -53,15 +53,15 @@ export PATH=$PATH:$HOME/dotnet
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>Instalar com um Gerenciador de pacotes
+## <a name="install-with-a-package-manager"></a>Instale com um gerenciador de pacotes
 
-Você pode instalar o tempo de execução do .NET Core com muitos dos gerenciadores de pacotes do Linux comuns. Para obter mais informações, consulte [Gerenciador de pacotes do Linux – instalar o .NET Core](linux-package-managers.md).
+Você pode instalar o .NET Core Runtime com muitos dos gerentes de pacotes Linux comuns. Para obter mais informações, consulte [O Linux Package Manager - Install .NET Core](linux-package-managers.md).
 
-A instalação com um Gerenciador de pacotes só tem suporte na arquitetura x64. Se você estiver instalando o tempo de execução do .NET Core com uma arquitetura diferente, como o ARM, siga as instruções na seção [baixar e instalar manualmente](#download-and-manually-install) . Para obter mais informações sobre quais arquiteturas têm suporte, consulte [dependências e requisitos do .NET Core](dependencies.md).
+Instalá-lo com um gerenciador de pacotes só é suportado na arquitetura x64. Se você estiver instalando o .NET Core Runtime com uma arquitetura diferente, como o ARM, siga as instruções na seção [Download e instale manualmente.](#download-and-manually-install) Para obter mais informações sobre quais arquiteturas são suportadas, consulte [as dependências e os requisitos do .NET Core](dependencies.md).
 
-## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+## <a name="download-and-manually-install"></a>Baixe e instale manualmente
 
-Para extrair o tempo de execução e tornar os comandos do CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir.
+Para extrair o tempo de execução e disponibilizar os comandos .NET Core CLI no terminal, [primeiro baixe](#all-net-core-downloads) uma versão binária .NET Core. Em seguida, abra um terminal e execute os seguintes comandos.
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
@@ -70,42 +70,42 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> Os comandos de `export` anteriores disponibilizam apenas os comandos CLI do .NET Core disponíveis para a sessão de terminal na qual ele foi executado.
+> Os `export` comandos anteriores só disponibilizam os comandos .NET Core CLI para a sessão de terminal em que foi executado.
 >
-> Você pode editar seu perfil de Shell para adicionar os comandos permanentemente. Há vários shells diferentes disponíveis para o Linux e cada um deles tem um perfil diferente. Por exemplo:
+> Você pode editar seu perfil shell para adicionar permanentemente os comandos. Existem vários shells diferentes disponíveis para Linux e cada um tem um perfil diferente. Por exemplo: 
 >
-> - **Shell bash**: *~/. bash_profile*, *~/.bashrc*
-> - **Shell Korn**: *~/.Kshrc* ou *. Profile*
-> - **Shell Z**: *~/.zshrc* ou *. zprofile*
+> - **Bash Shell**: *~/.bash_profile*, *~/.bashrc*
+> - **Korn Shell**: *~/.kshrc* ou *.profile*
+> - **Z Shell**: *~/.zshrc* ou *.zprofile*
 >
-> Edite o arquivo de origem apropriado para o Shell e adicione `:$HOME/dotnet` ao final da instrução `PATH` existente. Se nenhuma instrução de `PATH` for incluída, adicione uma nova linha com `export PATH=$PATH:$HOME/dotnet`.
+> Edite o arquivo de origem `:$HOME/dotnet` apropriado para o `PATH` shell e adicione ao final da declaração existente. Se `PATH` nenhuma declaração estiver incluída, `export PATH=$PATH:$HOME/dotnet`adicione uma nova linha com .
 >
 > Além disso, adicione `export DOTNET_ROOT=$HOME/dotnet` ao final do arquivo.
 
-Essa abordagem permite que você instale versões diferentes em locais separados e escolha explicitamente qual deles usar por qual aplicativo.
+Essa abordagem permite instalar diferentes versões em locais separados e escolher explicitamente qual usar por qual aplicativo.
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>Instalar com a automação do PowerShell
+## <a name="install-with-powershell-automation"></a>Instale com a automação PowerShell
 
-Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para automação e instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
+Os [scripts de instalação dotnet](../tools/dotnet-install-script.md) são usados para automação e instalações não-admin do tempo de execução. Você pode baixar o script da página de [referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a opção `Channel`. Inclua a opção `Runtime` para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](sdk.md).
+O script é padrão para instalar a versão [lts (support) de longo prazo](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) mais recente, que é o .NET Core 3.1. Você pode escolher uma versão `Channel` específica especificando o switch. Inclua `Runtime` o interruptor para instalar um tempo de execução. Caso contrário, o script instala o [SDK](sdk.md).
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 ```
 
 > [!NOTE]
-> O comando acima instala o tempo de execução de ASP.NET Core para compatibilidade máxima. O tempo de execução de ASP.NET Core também inclui o tempo de execução padrão do .NET Core.
+> O comando acima instala o tempo de execução do ASP.NET Core para máxima compatibilidade. O tempo de execução do ASP.NET Core também inclui o tempo de execução padrão do .NET Core.
 
-## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+## <a name="download-and-manually-install"></a>Baixe e instale manualmente
 
-Para extrair o tempo de execução e tornar os comandos do CLI do .NET Core disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, crie um diretório para instalar, por exemplo `%USERPROFILE%\dotnet`. Por fim, extraia o arquivo zip baixado para esse diretório.
+Para extrair o tempo de execução e disponibilizar os comandos .NET Core CLI no terminal, [primeiro baixe](#all-net-core-downloads) uma versão binária .NET Core. Em seguida, crie um diretório para `%USERPROFILE%\dotnet`instalar, por exemplo. Finalmente, extraia o arquivo zip baixado nesse diretório.
 
-Por padrão, CLI do .NET Core comandos e aplicativos não usarão o .NET Core instalado dessa maneira. Você precisa optar por usá-lo explicitamente. Para fazer isso, altere as variáveis de ambiente com as quais um aplicativo é iniciado:
+Por padrão, os comandos e aplicativos .NET Core CLI não usarão o .NET Core instalado desta forma. Você tem que escolher explicitamente usá-lo. Para isso, altere as variáveis de ambiente com as quais um aplicativo é iniciado:
 
 ```console
 set DOTNET_ROOT=%USERPROFILE%\dotnet
@@ -114,7 +114,7 @@ set PATH=%USERPROFILE%\dotnet;%PATH%
 
 Essa abordagem permite que você instale várias versões em locais separados e escolha explicitamente qual local de instalação um aplicativo deve usar executando o aplicativo com variáveis de ambiente apontando para esse local.
 
-Mesmo quando essas variáveis de ambiente são definidas, o .NET Core ainda considera o local de instalação global padrão ao selecionar a melhor estrutura para executar o aplicativo. Normalmente, o padrão é `C:\Program Files\dotnet`, que os instaladores usam. Você pode instruir o tempo de execução para usar apenas o local de instalação personalizado definindo essa variável de ambiente também:
+Mesmo quando essas variáveis de ambiente são definidas, o .NET Core ainda considera o local de instalação global padrão ao selecionar a melhor estrutura para executar o aplicativo. O padrão é `C:\Program Files\dotnet`tipicamente , que os instaladores usam. Você pode instruir o tempo de execução para usar apenas o local de instalação personalizado definindo essa variável de ambiente também:
 
 ```console
 set DOTNET_MULTILEVEL_LOOKUP=0
@@ -124,18 +124,18 @@ set DOTNET_MULTILEVEL_LOOKUP=0
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>Instalar com a automação do bash
+## <a name="install-with-bash-automation"></a>Instale com automação de bash
 
-Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para automação e instalações não administrativas do tempo de execução. Você pode baixar o script na [página de referência de script dotnet-install](../tools/dotnet-install-script.md).
+Os [scripts de instalação dotnet](../tools/dotnet-install-script.md) são usados para automação e instalações não-admin do tempo de execução. Você pode baixar o script da página de [referência de script dotnet-install](../tools/dotnet-install-script.md).
 
-O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a opção `current`. Inclua a opção `runtime` para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](sdk.md).
+O script é padrão para instalar a versão [lts (support) de longo prazo](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) mais recente, que é o .NET Core 3.1. Você pode escolher uma versão `current` específica especificando o switch. Inclua `runtime` o interruptor para instalar um tempo de execução. Caso contrário, o script instala o [SDK](sdk.md).
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]
-> O comando acima instala o tempo de execução de ASP.NET Core para compatibilidade máxima. O tempo de execução de ASP.NET Core também inclui o tempo de execução padrão do .NET Core.
+> O comando acima instala o tempo de execução do ASP.NET Core para máxima compatibilidade. O tempo de execução do ASP.NET Core também inclui o tempo de execução padrão do .NET Core.
 
 ::: zone-end
 
@@ -143,20 +143,18 @@ O script assume como padrão a instalação da versão mais recente do [LTS (sup
 
 Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
 
-- [Downloads do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Downloads do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [Downloads do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [Downloads do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
+- [.NET Core 3.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [.NET Core 2.1 downloads](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 
-Os contêineres fornecem uma maneira leve de isolar seu aplicativo do restante do sistema host. Os contêineres no mesmo computador compartilham apenas o kernel e usam os recursos fornecidos ao seu aplicativo.
+Os contêineres fornecem uma maneira leve de isolar sua aplicação do resto do sistema host. Os contêineres na mesma máquina compartilham apenas o kernel e usam os recursos dados à sua aplicação.
 
-O .NET Core pode ser executado em um contêiner do Docker. As imagens oficiais do Docker do .NET Core são publicadas no MCR (Registro de Contêiner da Microsoft) e podem ser encontradas no [repositório do Hub do Docker do .NET Core da Microsoft](https://hub.docker.com/_/microsoft-dotnet-core/). Cada repositório contém imagens para diferentes combinações do .NET (SDK ou Runtime) e do sistema operacional que você pode usar.
+O .NET Core pode ser executado em um contêiner Docker. As imagens oficiais do Docker do .NET Core são publicadas no MCR (Registro de Contêiner da Microsoft) e podem ser encontradas no [repositório do Hub do Docker do .NET Core da Microsoft](https://hub.docker.com/_/microsoft-dotnet-core/). Cada repositório contém imagens para diferentes combinações do .NET (SDK ou Runtime) e do sistema operacional que você pode usar.
 
 A Microsoft fornece imagens personalizadas para cenários específicos. Por exemplo, o [repositório do ASP.NET Core](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) fornece imagens que são criadas para a execução de aplicativos ASP.NET Core na produção.
 
-Para obter mais informações sobre como usar o .NET Core em um contêiner do Docker, consulte [introdução ao .net e ao Docker](../docker/introduction.md) e [amostras](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
+Para obter mais informações sobre como usar o .NET Core em um contêiner Docker, consulte [Introdução a .NET e Docker](../docker/introduction.md) e [Samples](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
 
 ## <a name="next-steps"></a>Próximas etapas
 

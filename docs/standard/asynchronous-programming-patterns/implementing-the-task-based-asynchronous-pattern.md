@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124295"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
@@ -27,7 +27,7 @@ Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três f
 Do .NET Framework 4.5 em diante, qualquer método que seja atribuído com a palavra-chave `async` (`Async` no Visual Basic) é considerado um método assíncrono e os compiladores de C# e do Visual Basic realizam as transformações necessárias para implementar o método de forma assíncrona usando o TAP. Um método assíncrono deve retornar um objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou um objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Para o último, o corpo da função deve retornar um `TResult`, e o compilador garante que esse resultado seja disponibilizado por meio do objeto de tarefa resultante. Da mesma forma, quaisquer exceções que passem para o corpo do método sem tratamento são empacotadas na tarefa de saída e fazem com que a tarefa resultante termine no estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. A exceção é quando uma <xref:System.OperationCanceledException> (ou um tipo derivado) passa sem tratamento e, nesse caso, a tarefa resultante termina no estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
 
 ### <a name="generating-tap-methods-manually"></a>Gerando métodos do TAP manualmente
-Você pode implementar o padrão TAP manualmente para obter maior controle sobre a implementação. O compilador depende da área de superfície pública exposta no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType> e dos tipos de suporte no namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Para implementar o TAP você mesmo, crie um objeto <xref:System.Threading.Tasks.TaskCompletionSource%601>, execute a operação assíncrona e quando ela estiver concluída, chame o método <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou a versão `Try` de um desses métodos. Quando você implementa um método do TAP manualmente, deverá concluir a tarefa resultante quando a operação assíncrona representada for concluída. Por exemplo:
+Você pode implementar o padrão TAP manualmente para obter maior controle sobre a implementação. O compilador depende da área de superfície pública exposta no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType> e dos tipos de suporte no namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Para implementar o TAP você mesmo, crie um objeto <xref:System.Threading.Tasks.TaskCompletionSource%601>, execute a operação assíncrona e quando ela estiver concluída, chame o método <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou a versão `Try` de um desses métodos. Quando você implementa um método do TAP manualmente, deverá concluir a tarefa resultante quando a operação assíncrona representada for concluída. Por exemplo: 
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]
@@ -58,7 +58,7 @@ Você pode gerar tarefas associadas ao cálculo de uma das seguintes maneiras:
 
 - Use os métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType>. Esses métodos criam uma nova tarefa que é agendada quando todos ou nenhum dos conjuntos de tarefas for concluído. Esses métodos também fornecem sobrecargas para controlar o agendamento e a execução dessas tarefas.
 
-Nas tarefas associadas ao cálculo, o sistema pode impedir a execução de uma tarefa agendada se ele receber uma solicitação de cancelamento antes de iniciar a execução da tarefa. Assim, se você fornecer um token de cancelamento (objeto <xref:System.Threading.CancellationToken>), poderá passar esse token para o código assíncrono que monitora o token. Também é possível fornecer o token para um dos métodos mencionados anteriormente, tais como `StartNew` ou `Run` para que o tempo de execução da `Task` também possa monitorar o token.
+Nas tarefas associadas ao cálculo, o sistema pode impedir a execução de uma tarefa agendada se ele receber uma solicitação de cancelamento antes de iniciar a execução da tarefa. Assim, se você fornecer um token de cancelamento (objeto <xref:System.Threading.CancellationToken>), poderá passar esse token para o código assíncrono que monitora o token. Também é possível fornecer o token para um dos métodos mencionados anteriormente, tais como `StartNew` ou `Run` para que o runtime da `Task` também possa monitorar o token.
 
 Por exemplo, considere um método assíncrono que renderiza uma imagem. O corpo da tarefa pode sondar o token de cancelamento para que o código possa sair antecipadamente se uma solicitação de cancelamento chegar durante a renderização. Além disso, se a solicitação de cancelamento chegar antes do início da renderização, você desejará impedir a operação de renderização:
 
@@ -99,7 +99,7 @@ Os métodos assíncronos não estão limitados apenas a operações associadas a
 
 Esse exemplo também demonstra como um token de cancelamento único pode ser encadeado por meio de várias operações assíncronas. Para saber mais, veja a seção de uso de cancelamento em [Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [TAP (Padrão Assíncrono Baseado em Tarefa)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [Consumindo o padrão assíncrono baseado em tarefa](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

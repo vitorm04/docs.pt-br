@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139691"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Como gravar um loop Parallel.ForEach com variáveis locais de partição
@@ -48,7 +48,7 @@ O exemplo a seguir chama a sobrecarga <xref:System.Threading.Tasks.Parallel.ForE
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Como escrever um loop Parallel.For com variáveis locais de thread](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)

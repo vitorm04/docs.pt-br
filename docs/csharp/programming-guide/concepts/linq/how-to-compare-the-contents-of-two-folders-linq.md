@@ -2,12 +2,12 @@
 title: Como comparar o conteúdo de duas pastas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 44dc97d6d48bed5e8b4d0376838e4dada2e8300c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346531"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169396"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Como comparar o conteúdo de duas pastas (LINQ) (C#)
 Este exemplo demonstra três modos de se comparar duas listagens de arquivo:  
@@ -34,7 +34,7 @@ namespace QueryCompareTwoDirs
         static void Main(string[] args)  
         {  
   
-            // Create two identical or different temporary folders   
+            // Create two identical or different temporary folders
             // on a local drive and change these file paths.  
             string pathA = @"C:\TestDir";  
             string pathB = @"C:\TestDir2";  
@@ -64,7 +64,7 @@ namespace QueryCompareTwoDirs
                 Console.WriteLine("The two folders are not the same");  
             }  
   
-            // Find the common files. It produces a sequence and doesn't   
+            // Find the common files. It produces a sequence and doesn't
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
@@ -111,7 +111,7 @@ namespace QueryCompareTwoDirs
                     f1.Length == f2.Length);  
         }  
   
-        // Return a hash that reflects the comparison criteria. According to the   
+        // Return a hash that reflects the comparison criteria. According to the
         // rules for IEqualityComparer<T>, if Equals is true, then the hash codes must  
         // also be equal. Because equality as defined here is a simple value equality, not  
         // reference identity, it is possible that two or more objects will produce the same  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

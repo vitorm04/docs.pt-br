@@ -12,10 +12,10 @@ helpviewer_keywords:
 - threading [.NET Framework], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 ms.openlocfilehash: a628cbb4c9ec8e1c9ccd9fd73e72a82ecf2b2836
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138099"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Criando threads e passando dados na hora de início
@@ -57,7 +57,7 @@ Nenhum dos delegados <xref:System.Threading.ThreadStart> e <xref:System.Threadin
  [!code-csharp[System.Threading.ThreadStart2#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source4.cs#4)]
  [!code-vb[System.Threading.ThreadStart2#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.ThreadStart2/VB/source4.vb#4)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadStart>

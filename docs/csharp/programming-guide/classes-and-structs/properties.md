@@ -7,12 +7,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 4f83d574357aa725b955870e3d93aa1f8222723a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714705"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170098"
 ---
 # <a name="properties-c-programming-guide"></a>Propriedades (Guia de Programação em C#)
 
@@ -28,13 +28,13 @@ Uma propriedade é um membro que oferece um mecanismo flexível para ler, gravar
 - As propriedades podem ser de *leitura/gravação* (elas têm um acessador `get` e `set`), *somente leitura* (elas têm um acessador `get`, mas nenhum `set`) ou *somente gravação* (elas têm um acessador `set`, mas nenhum `get`). As propriedades somente gravação são raras e são mais comumente usadas para restringir o acesso a dados confidenciais.
 
 - As propriedades simples que não exigem nenhum código de acessador personalizado podem ser implementadas como definições de corpo da expressão ou como [propriedades autoimplementadas](./auto-implemented-properties.md).
- 
+
 ## <a name="properties-with-backing-fields"></a>Propriedades com campos de suporte
 
 Um padrão básico para implementar uma propriedade envolve o uso de um campo de suporte particular da propriedade para definir e recuperar o valor da propriedade. O acessador `get` retorna o valor do campo particular e o acessador `set` pode realizar alguma validação de dados antes de atribuir um valor ao campo particular. Os dois acessadores também podem realizar alguma conversão ou cálculo nos dados antes de eles serem armazenados ou retornados.
 
-O exemplo a seguir ilustra esse padrão. Neste exemplo, a classe `TimePeriod` representa um intervalo de tempo. Internamente, a classe armazena o intervalo de tempo em segundos em um campo particular chamado `_seconds`. Uma propriedade de leitura/gravação chamada `Hours` permite que o cliente especifique o intervalo de tempo em horas. Tanto o acessador `get` quanto o `set` executam a conversão necessária entre horas e segundos. Além disso, o acessador `set` valida os dados e gera um <xref:System.ArgumentOutOfRangeException> se o número de horas é inválido. 
-   
+O exemplo a seguir ilustra esse padrão. Neste exemplo, a classe `TimePeriod` representa um intervalo de tempo. Internamente, a classe armazena o intervalo de tempo em segundos em um campo particular chamado `_seconds`. Uma propriedade de leitura/gravação chamada `Hours` permite que o cliente especifique o intervalo de tempo em horas. Tanto o acessador `get` quanto o `set` executam a conversão necessária entre horas e segundos. Além disso, o acessador `set` valida os dados e gera um <xref:System.ArgumentOutOfRangeException> se o número de horas é inválido.
+
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>Definições de corpo de expressão  
@@ -46,12 +46,12 @@ O exemplo a seguir ilustra esse padrão. Neste exemplo, a classe `TimePeriod` re
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  Começando com o C# 7.0, os acessadores `get` e `set` podem ser implementados como membros aptos para expressão. Nesse caso, as palavras-chave `get` e `set` devem estar presentes. O exemplo a seguir ilustra o uso de definições de corpo de expressão para ambos os acessadores. Observe que a palavra-chave `return` não é usada com o acessador `get`.
- 
+
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>Propriedades autoimplementadas
 
-Em alguns casos, os acessadores `get` e `set` da propriedade apenas atribuem um valor ou recuperam um valor de um campo de suporte sem incluir nenhuma lógica adicional. Usando propriedades autoimplementadas, você pode simplificar o código enquanto o compilador C# fornece de forma transparente o campo de suporte para você. 
+Em alguns casos, os acessadores `get` e `set` da propriedade apenas atribuem um valor ou recuperam um valor de um campo de suporte sem incluir nenhuma lógica adicional. Usando propriedades autoimplementadas, você pode simplificar o código enquanto o compilador C# fornece de forma transparente o campo de suporte para você.
 
 Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverão ser autoimplementados. Você define uma propriedade autoimplementada usando as palavras-chave `get` e `set` sem fornecer qualquer implementação. O exemplo a seguir repete o anterior, exceto que `Name` e `Price` são propriedades autoimplementadas. Observe que o exemplo também remove o construtor com parâmetros, de modo que objetos `SaleItem` agora são inicializados com uma chamada para o construtor sem parâmetros e um [inicializador de objeto](object-and-collection-initializers.md).
 
@@ -67,15 +67,15 @@ Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverã
   
 - [Restringindo a acessibilidade ao acessador](./restricting-accessor-accessibility.md)  
   
-- [Propriedades Autoimplementadas](./auto-implemented-properties.md)  
+- [Propriedades auto-implementadas](./auto-implemented-properties.md)  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
 Para obter mais informações, veja [Propriedades](~/_csharplang/spec/classes.md#properties) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Usando propriedades](./using-properties.md)
 - [Indexadores](../indexers/index.md)
 - [Palavra-chave get](../../language-reference/keywords/get.md)

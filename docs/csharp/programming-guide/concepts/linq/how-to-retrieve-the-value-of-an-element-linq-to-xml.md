@@ -1,15 +1,15 @@
 ---
-title: Como recuperar o valor de um elemento (LINQ to XML) (C#)
+title: Como recuperar o valor de um elemento (LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347426"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168681"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Como recuperar o valor de um elemento (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Como recuperar o valor de um elemento (LINQ para XML) (C#)
 Este tópico mostra como obter o valor de elementos. Há duas maneiras principais de fazer isso. Uma maneira é converter <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> para o tipo desejado. O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável. Outra opção é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> ou a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  Entretanto, com C#, a conversão geralmente é a melhor abordagem. Se você converter o elemento ou o atributo em um tipo anulável, o código será mais simples de criar ao recuperar o valor de um elemento (ou de um atributo) que pode ou não existir. O último exemplo deste tópico demonstra isso. No entanto, você não pode definir o conteúdo de um elemento por meio de conversão, como faria usando a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
@@ -23,7 +23,7 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (string)e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 <StringElement>abcde</StringElement>  
@@ -39,7 +39,7 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (int)e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 <Age>44</Age>  
@@ -54,12 +54,12 @@ Value of e:44
  É possível usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A> para recuperar o conteúdo de um elemento:  
   
 ```csharp  
-XElement e = new XElement("StringElement", "abcde");   
+XElement e = new XElement("StringElement", "abcde");
 Console.WriteLine(e);  
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```output  
 <StringElement>abcde</StringElement>  
@@ -145,6 +145,6 @@ v4:element does not exist
   
  Em geral, você pode criar um código mais simples ao usar a conversão para recuperar o conteúdo de elementos e atributos.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

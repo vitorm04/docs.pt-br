@@ -1,15 +1,15 @@
 ---
-title: Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
+title: Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347315"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168564"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como dividir um arquivo em vários arquivos usando grupos (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Como dividir um arquivo em muitos arquivos usando grupos (LINQ) (C#)
 Este exemplo mostra uma maneira de mesclar o conteúdo de dois arquivos e, em seguida, criar um conjunto de novos arquivos que organizam os dados em uma nova forma.  
   
 ### <a name="to-create-the-data-files"></a>Para criar os arquivos de dados  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -124,11 +124,11 @@ class SplitWithGroups
   
  O programa grava um arquivo separado para cada grupo na mesma pasta que os arquivos de dados.  
   
-## <a name="compiling-the-code"></a>Compilando o Código
+## <a name="compiling-the-code"></a>Compilando o código
 
 Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

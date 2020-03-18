@@ -4,20 +4,20 @@ description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120127"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156747"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
 Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens de programação orientadas a objeto que permite a definição de uma classe base que, por sua vez, fornece uma funcionalidade específica (dados e comportamento), e a definição de classes derivadas que herdam ou substituem essa funcionalidade.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-Este tutorial pressupõe que você instalou o SDK do .NET Core. Visite a página de [downloads do .NET Core](https://dotnet.microsoft.com/download) para baixá-lo. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
+Este tutorial pressupõe que você instalou o .NET Core SDK. Visite a página [.NET Core Downloads](https://dotnet.microsoft.com/download) para baixá-la. Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
 
 ## <a name="running-the-examples"></a>Como executar os exemplos
 
@@ -44,7 +44,7 @@ Nem todos os membros de uma classe base são herdados por classes derivadas. Os 
 
 - [Construtores de instância](../programming-guide/classes-and-structs/constructors.md), que você chama para criar uma nova instância da classe. Cada classe deve definir seus próprios construtores.
 
-- [Finalizadores](../programming-guide/classes-and-structs/destructors.md), que são chamados pelo coletor de lixo do tempo de execução para destruir as instâncias de uma classe.
+- [Finalizadores](../programming-guide/classes-and-structs/destructors.md), que são chamados pelo coletor de lixo do runtime para destruir as instâncias de uma classe.
 
 Enquanto todos os outros membros de uma classe base são herdados por classes derivadas, o fato de serem visíveis ou não depende de sua acessibilidade. A acessibilidade de um membro afeta sua visibilidade para classes derivadas da seguinte maneira:
 
@@ -141,7 +141,7 @@ A tabela a seguir lista as categorias de tipos que você pode criar em C#, e os 
 
 | Categoria do tipo | Herda implicitamente de                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| classe         | <xref:System.Object>                                                          |
+| class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | delegado      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
@@ -165,7 +165,7 @@ Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>Criação da classe base e das classes derivadas
 
-Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma classe base, `Publication`, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um diário, um artigo, etc. Você também definirá uma classe `Book` que deriva de `Publication`. É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
+Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, você definirá uma `Publication`classe base, que representa uma publicação de qualquer tipo, como um livro, uma revista, um jornal, um jornal, um artigo, etc. Você também definirá `Book` uma classe `Publication`que deriva de . É possível estender facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
 
 ### <a name="the-base-publication-class"></a>A classe base de Publicação
 
@@ -216,7 +216,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
   `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`.
 
-  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. Ele deve ser um número positivo, caso contrário, será gerada uma exceção do tipo <xref:System.ArgumentOutOfRangeException>.
+  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. O lançamento deve ser de um número positivo ou de um <xref:System.ArgumentOutOfRangeException>.
 
 - Membros relacionados ao publicador
 
@@ -266,7 +266,7 @@ Além dos membros herdados de `Publication`, a classe `Book` define os seguintes
 
   A menos que seja substituído, o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> testa a igualdade de referência. Ou seja, duas variáveis de objeto são consideradas iguais se fizerem referência ao mesmo objeto. Na classe `Book`, por outro lado, dois objetos `Book` devem ser iguais quando têm o mesmo ISBN.
 
-  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo tempo de execução para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como você substituiu <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> para retornar `true`, se as propriedades de ISBN de dois objetos `Book` forem iguais, retorne o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
+  Ao substituir o método <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>, substitua também o método <xref:System.Object.GetHashCode%2A>, que retorna um valor usado pelo runtime para armazenar itens em coleções de hash para uma recuperação eficiente. O código de hash deve retornar um valor que é consistente com o teste de igualdade. Como você substituiu <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> para retornar `true`, se as propriedades de ISBN de dois objetos `Book` forem iguais, retorne o código hash computado chamando o método <xref:System.String.GetHashCode%2A> da cadeia de caracteres retornada pela propriedade `ISBN`.
 
 A figura a seguir ilustra o relacionamento entre a classe `Book` e `Publication`, sua classe base.
 
@@ -291,11 +291,11 @@ Em seguida, você pode derivar algumas classes de `Shape` que representam formas
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. O runtime recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`. 
+O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. O runtime recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Classes e objetos](../tour-of-csharp/classes-and-objects.md)
-- [Herança (Guia de programação em C#)](../programming-guide/classes-and-structs/inheritance.md)
+- [Herança (Guia de Programação em C#)](../programming-guide/classes-and-structs/inheritance.md)

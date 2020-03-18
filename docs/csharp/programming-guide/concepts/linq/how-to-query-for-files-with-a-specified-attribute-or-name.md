@@ -2,12 +2,12 @@
 title: Como consultar arquivos com um atributo ou nome especificado (C#)
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 8ecf3263dcee9b54d01dd0b577ba8bec2a199da9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc6456f159887b7ad109e8ad48f0f79999d53e09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346723"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168863"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Como consultar arquivos com um atributo ou nome especificado (C#)
 Este exemplo mostra como localizar todos os arquivos que têm uma extensão de nome de arquivo especificada (por exemplo ".txt") em uma árvore de diretório especificada. Ele também mostra como retornar tanto os arquivos mais recentes como os mais antigo na árvore com base na hora de criação.  
@@ -44,8 +44,8 @@ class FindFileByExtension
             Console.WriteLine(fi.FullName);  
         }  
   
-        // Create and execute a new query by using the previous   
-        // query as a starting point. fileQuery is not   
+        // Create and execute a new query by using the previous
+        // query as a starting point. fileQuery is not
         // executed again until the call to Last()  
         var newestFile =  
             (from file in fileQuery  
@@ -63,10 +63,10 @@ class FindFileByExtension
 }  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
   Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

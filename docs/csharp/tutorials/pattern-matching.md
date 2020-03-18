@@ -4,14 +4,14 @@ description: Este tutorial avançado demonstra como usar as técnicas de corresp
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240048"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156526"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: usando recursos de correspondência de padrões para estender tipos de dados
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Usando recursos de correspondência de padrões para ampliar os tipos de dados
 
 O C#7 introduziu recursos básicos de correspondência de padrões. Esses recursos foram estendidos no C# 8 com novos padrões e expressões. É possível escrever uma funcionalidade que se comporte como se você tivesse estendido tipos que poderiam estar em outras bibliotecas. Outro uso dos padrões é criar a funcionalidade de que seu aplicativo precisa, mas que não é um recurso fundamental do tipo que está sendo estendido.
 
@@ -23,9 +23,9 @@ Neste tutorial, você aprenderá como:
 > - Usar expressões de correspondência de padrões para implementar o comportamento com base em tipos e valores de propriedade.
 > - Combinar a correspondência de padrões com outras técnicas para criar algoritmos completos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-Você precisará configurar seu computador para executar o .NET Core, incluindo o C# compilador 8,0. O C# compilador 8 está disponível a partir do [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou do [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download).
+Você precisará configurar sua máquina para executar o .NET Core, incluindo o compilador C# 8.0. O compilador C# 8 está disponível a partir da [versão 16.3 do Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download).
 
 Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluindo o Visual Studio ou a CLI do .NET Core.
 
@@ -138,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-Esse código é incluído no projeto inicial, mas é comentado. Remova os comentários e você pode testar o que escreveu.
+Esse código está incluído no projeto inicial, mas é comentado. Remova os comentários e você pode testar o que escreveu.
 
 Você está começando a ver como os padrões podem ajudar a criar algoritmos em que o código e os dados estão separados. A expressão `switch` testa o tipo e produz valores diferentes com base nos resultados. Mas isso é somente o começo.
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -301,21 +301,21 @@ A tabela a seguir mostra as combinações de valores de entrada e multiplicador 
 | Dia        | Hora         | Direção | Premium |
 | ---------- | ------------ | --------- |--------:|
 | Weekday    | horário de pico da manhã | entrada   | x 2,00  |
-| Weekday    | horário de pico da manhã | Saída do  | x 1,00  |
+| Weekday    | horário de pico da manhã | saída  | x 1,00  |
 | Weekday    | hora do dia      | entrada   | x 1,50  |
-| Weekday    | hora do dia      | Saída do  | x 1,50  |
+| Weekday    | hora do dia      | saída  | x 1,50  |
 | Weekday    | horário de pico do fim da tarde | entrada   | x 1,00  |
-| Weekday    | horário de pico do fim da tarde | Saída do  | x 2,00  |
+| Weekday    | horário de pico do fim da tarde | saída  | x 2,00  |
 | Weekday    | noite e madrugada    | entrada   | x 0,75  |
-| Weekday    | noite e madrugada    | Saída do  | x 0,75  |
+| Weekday    | noite e madrugada    | saída  | x 0,75  |
 | Fim de Semana    | horário de pico da manhã | entrada   | x 1,00  |
-| Fim de Semana    | horário de pico da manhã | Saída do  | x 1,00  |
+| Fim de Semana    | horário de pico da manhã | saída  | x 1,00  |
 | Fim de Semana    | hora do dia      | entrada   | x 1,00  |
-| Fim de Semana    | hora do dia      | Saída do  | x 1,00  |
+| Fim de Semana    | hora do dia      | saída  | x 1,00  |
 | Fim de Semana    | horário de pico do fim da tarde | entrada   | x 1,00  |
-| Fim de Semana    | horário de pico do fim da tarde | Saída do  | x 1,00  |
+| Fim de Semana    | horário de pico do fim da tarde | saída  | x 1,00  |
 | Fim de Semana    | noite e madrugada    | entrada   | x 1,00  |
-| Fim de Semana    | noite e madrugada    | Saída do  | x 1,00  |
+| Fim de Semana    | noite e madrugada    | saída  | x 1,00  |
 
 Há 16 combinações diferentes das três variáveis. Ao combinar algumas das condições, você simplificará a expressão switch.
 

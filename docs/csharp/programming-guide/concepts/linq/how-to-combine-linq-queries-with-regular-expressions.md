@@ -2,12 +2,12 @@
 title: Como combinar consultas LINQ com expressões regulares (C#)
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141401"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169423"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Como combinar consultas LINQ com expressões regulares (C#)
 Este exemplo mostra como usar a classe <xref:System.Text.RegularExpressions.Regex> para criar uma expressão regular para correspondências mais complexas em cadeias de texto. A consulta LINQ torna fácil a aplicação de filtro exatamente nos arquivos que você deseja pesquisar com a expressão regular e formatar os resultados.  
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -98,7 +98,7 @@ class QueryWithRegEx
 ## <a name="compiling-the-code"></a>Compilando o código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

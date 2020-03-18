@@ -3,10 +3,10 @@ title: Publicar um pacote NuGet
 description: Práticas recomendadas para a publicação de bibliotecas .NET para NuGet.
 ms.date: 10/02/2018
 ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744559"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicar um pacote NuGet
@@ -22,24 +22,24 @@ Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embor
 > [!NOTE]
 > O NuGet.org [não permite que um pacote seja excluído](/nuget/policies/deleting-packages) depois que ele foi carregado. Um pacote pode ser não listado para que não seja visível publicamente na interface do usuário, mas o `*.nupkg` ainda pode ser baixado na restauração. Além disso, o nuget.org não permite versões duplicadas do pacote. Para corrigir um pacote NuGet com um erro, você precisa remover o pacote incorreto, aumentar o número de versão e publicar uma nova versão do pacote.
 
-✔️ [publicar pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) nos quais você deseja que os comentários da Comunidade NuGet.org.
+✔️ DO [publique pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) que você deseja que o feedback da comunidade NuGet.org.
 
-✔️ Considere a publicação de pacotes de pré-lançamento em um feed MyGet de uma compilação de integração contínua.
+✔️ CONSIDERE: publique pacotes de pré-lançamento no feed MyGet de uma compilação de integração contínua.
 
-✔️ Considere o teste de pacotes em seu ambiente de desenvolvimento usando um feed local ou MyGet. Verifique se o pacote funciona e publique-o no NuGet.org.
+✔️ CONSIDERE: teste os pacotes no ambiente de desenvolvimento usando um feed local ou MyGet. Verifique se o pacote funciona e publique-o no NuGet.org.
 
 ## <a name="nugetorg-security"></a>Segurança no NuGet.org
 
 É importante que os invasores não possam acessar sua conta do NuGet e carregar uma versão mal-intencionado da sua biblioteca. O NuGet.org oferece autenticação de dois fatores e notificações por email quando um pacote é publicado. Habilite esses recursos após fazer logon no NuGet.org, na página **Configurações de conta**.
 
-![alt text](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
+![alt texto](./media/publish-nuget-package/nuget-2fa.png "NuGet Segurança da conta")
 
-✔️ usar um conta Microsoft para entrar no NuGet.
+✔️ SIM: use uma conta da Microsoft para entrar no NuGet.
 
-✔️ habilitar a autenticação de dois fatores para acessar o NuGet.
+✔️ SIM: habilite a autenticação de dois fatores para acessar o NuGet.
 
-✔️ habilitar a notificação por email quando um pacote for publicado.
+✔️ SIM: habilite a notificação por email quando um pacote é publicado.
 
 >[!div class="step-by-step"]
->[Anterior](sourcelink.md)
->[Próximo](versioning.md)
+>[Próximo](sourcelink.md)
+>[anterior](versioning.md)

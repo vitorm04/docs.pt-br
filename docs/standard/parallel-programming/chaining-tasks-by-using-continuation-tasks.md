@@ -9,10 +9,10 @@ helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159358"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Encadeando tarefas com tarefas de continuação
@@ -45,7 +45,7 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
  Você cria uma continuação que é executada quando seu antecessor é concluído chamando o método <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. O exemplo a seguir mostra o padrão básico (para esclarecer, o tratamento de exceções é omitido). Ela executa uma tarefa antecessora, `taskA`, que retorna um objeto <xref:System.DayOfWeek> que indica o nome do dia da semana atual. Quando a antecessora é concluída, a tarefa de continuação, `continuation`, recebe a antecessora e exibe uma cadeia de caracteres que inclui seu resultado.
 
 > [!NOTE]
-> Os exemplos de C# neste artigo usam o modificador `async` no método `Main`. Este recurso está disponível no C# 7.1 e versões posteriores. As versões anteriores geram [`CS5001`](../../csharp/misc/cs5001.md) ao compilar este código de exemplo. Você precisará definir a versão da linguagem de programação para C# 7.1 ou mais recente. Você pode aprender como configurar a versão da linguagem de programação no artigo sobre [configuração da versão da linguagem](../../csharp/language-reference/configure-language-version.md).
+> Os exemplos de C# neste artigo usam o modificador `async` no método `Main`. Este recurso está disponível no C# 7.1 e versões posteriores. Versões [`CS5001`](../../csharp/misc/cs5001.md) anteriores geram ao compilar este código de amostra. Você precisará definir a versão da linguagem de programação para C# 7.1 ou mais recente. Você pode aprender como configurar a versão da linguagem de programação no artigo sobre [configuração da versão da linguagem](../../csharp/language-reference/configure-language-version.md).
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  
@@ -152,4 +152,4 @@ Na programação assíncrona, é comum para uma operação assíncrona, após a 
   
 ## <a name="see-also"></a>Confira também
 
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Biblioteca de tarefas paralelas (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

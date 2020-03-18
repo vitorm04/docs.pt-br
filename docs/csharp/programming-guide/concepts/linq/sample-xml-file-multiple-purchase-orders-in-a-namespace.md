@@ -1,15 +1,15 @@
 ---
-title: 'Arquivo XML de exemplo: Várias ordens de compra em um Namespace2'
+title: 'Arquivo XML de exemplo: várias ordens de compra em um namespace2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 05eb5dd7e6a73b03b693375441eb14f533105894
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: f525f73854b52b8a4d70ff842c19d3bdda9c38d5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483718"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168181"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de exemplo: Várias ordens de compra em um namespace
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Arquivo XML de Exemplo: Vários pedidos de compra em um namespace
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém várias ordens de compra. XML é em um namespace.  
   
 ## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
@@ -108,4 +108,3 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
   </aw:PurchaseOrder>  
 </aw:PurchaseOrders>  
 ```  
- 

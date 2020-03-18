@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parallel for loops, how to cancel
 ms.assetid: 9d19b591-ea95-4418-8ea7-b6266af9905b
 ms.openlocfilehash: 67f1f91f235cc88deaa97d412f368819ae0a8cda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134239"
 ---
 # <a name="how-to-cancel-a-parallelfor-or-foreach-loop"></a>Como cancelar um loop Parallel.For ou ForEach
@@ -27,7 +27,7 @@ Os métodos <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWit
   
  Se o token que sinaliza o cancelamento for o mesmo token que é especificado na instância <xref:System.Threading.Tasks.ParallelOptions>, o loop paralelo lançará uma única <xref:System.OperationCanceledException> no cancelamento. Se algum outro token causar o cancelamento, o loop lançará uma <xref:System.AggregateException> com uma <xref:System.OperationCanceledException> como um InnerException.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Paralelismo de dados](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

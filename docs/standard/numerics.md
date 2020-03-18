@@ -12,10 +12,10 @@ helpviewer_keywords:
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091599"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
@@ -26,14 +26,14 @@ O .NET fornece uma variedade de inteiros numéricos e primitivos de ponto flutua
 
 O .NET dá suporte a tipos inteiros tanto com sinal quanto sem sinal de 8, 16, 32 e 64 bits, que estão listados na tabela a seguir:
   
-|Digite|Assinado/não assinado|Tamanho (em bytes)|Valor mínimo|Valor máximo|  
+|Type|Assinado/não assinado|Tamanho (em bytes)|Valor mínimo|Valor máximo|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Não assinado|1|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|Assinado|2|-32,768|32,767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Assinado|4|-2,147,483,648|2,147,483,647|  
-|<xref:System.Int64?displayProperty=nameWithType>|Assinado|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
-|<xref:System.SByte?displayProperty=nameWithType>|Assinado|1|-128|127|  
-|<xref:System.UInt16?displayProperty=nameWithType>|Não assinado|2|0|65,535|  
+|<xref:System.Int16?displayProperty=nameWithType>|Com sinal|2|-32,768|32.767|  
+|<xref:System.Int32?displayProperty=nameWithType>|Com sinal|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=nameWithType>|Com sinal|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=nameWithType>|Com sinal|1|-128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|Não assinado|2|0|65.535|  
 |<xref:System.UInt32?displayProperty=nameWithType>|Não assinado|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|Não assinado|8|0|18,446,744,073,709,551,615|  
   
@@ -52,7 +52,7 @@ A estrutura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> é um
 
 O .NET inclui três primitivos tipos de ponto flutuante, que estão listados na tabela a seguir:
   
-|Digite|Tamanho (em bytes)|Intervalo aproximado|Precisão|  
+|Type|Tamanho (em bytes)|Intervalo aproximado|Precisão|  
 |----------|--------|---------------------|--------------------|  
 |<xref:System.Single?displayProperty=nameWithType>|4|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|~6 a 9 dígitos|  
 |<xref:System.Double?displayProperty=nameWithType>|8|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|~15 a 17 dígitos|  
@@ -69,7 +69,7 @@ Os tipos <xref:System.Double> e <xref:System.Single> destinam-se a ser usados pa
 > [!NOTE]
 > O tipo <xref:System.Decimal> não elimina a necessidade de arredondamento. Em vez disso, ele minimiza erros devido a arredondamento.
   
-## <a name="complex"></a>Complexo
+## <a name="complex"></a>Complex
 
 A estrutura <xref:System.Numerics.Complex?displayProperty=nameWithType> representa um número complexo, ou seja, um número com uma parte de número real e uma parte de número imaginário. Dá suporte a um conjunto padrão de aritmética, de comparação, de igualdade, de conversões explícita e implícita, bem como a métodos matemáticos, algébricos e trigonométricos.  
   
@@ -93,7 +93,7 @@ Os tipos habilitados para SIMD do .NET incluem o seguinte:
   
 Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar instruções SIMD, seus aplicativos de 64 bits devem ser executados pelo runtime que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4.6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fundamentos do aplicativo](application-essentials.md)
-- [Cadeias de Caracteres de Formato Numérico Padrão](base-types/standard-numeric-format-strings.md)
+- [Strings de formato numérico padrão](base-types/standard-numeric-format-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: Como criar um arquivo ou guia de programação C# de pasta
+title: Como criar um arquivo ou pasta - C# Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705243"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167551"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou uma pasta (C# guia de programação)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou pasta (C# Guia de Programação)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  
   
 ## <a name="example"></a>Exemplo  
@@ -37,7 +37,7 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
 - Substitua a instrução `if`-`else` pela instrução `using` no código a seguir.  
   
     ```csharp  
-    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
+    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))
     {  
         for (byte i = 0; i < 100; i++)  
         {  
@@ -67,8 +67,8 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
   
  Se você não tiver permissão para criar a pasta, o exemplo gerará uma instância da classe <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Guia de Programação em C#](../index.md)
-- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)
+- [C# Guia de Programação](../index.md)
+- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)

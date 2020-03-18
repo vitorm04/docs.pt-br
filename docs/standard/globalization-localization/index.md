@@ -12,10 +12,10 @@ helpviewer_keywords:
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120878"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizando e localizando aplicativos do .NET
@@ -26,7 +26,7 @@ O desenvolvimento de um aplicativo que possa ser usado em todo o mundo, incluind
 
 Esta etapa envolve a criação e a codificação de um aplicativo que seja independente de cultura e idioma, bem como que ofereça suporte a interfaces de usuário localizadas e dados regionais para todos os usuários. Ela envolve a tomada de decisões de design e de programação que não sejam baseadas em suposições para culturas específicas. Mesmo quando um aplicativo globalizado não está localizado, ele foi criado e escrito para que possa ser localizado posteriormente em um ou mais idiomas com relativa facilidade.
 
-[Análise de possibilidade de localização](localizability-review.md)
+[Revisão de localização](localizability-review.md)
 
 Essa etapa envolve a verificação do código e do design de um aplicativo para garantir que ele possa ser facilmente localizado e para identificar potenciais obstáculos à localização, bem como verificar se o código executável do aplicativo está separado de seus recursos. Se a fase de globalização foi eficaz, a análise de capacidade de localização confirmará as opções de design e codificação feitas durante a globalização. O estágio de localizabilidade também pode identificar todos os problemas restantes para que o código-fonte do aplicativo não precise ser modificado durante o estágio de localização.
 
@@ -50,7 +50,7 @@ Confira mais informações na [Documentação de globalização](/globalization/
 
 Discute o primeiro estágio da criação de um aplicativo pronto para o mundo, o que envolve o projeto e a codificação de um aplicativo independente de cultura e idioma.
 
-[Análise de possibilidade de localização](localizability-review.md)
+[Revisão de localização](localizability-review.md)
 
 Discute o segundo estágio da criação de um aplicativo localizado, o que envolve a identificação de obstáculos potenciais à localização.
 
@@ -58,7 +58,7 @@ Discute o segundo estágio da criação de um aplicativo localizado, o que envol
 
 Discute o estágio final da criação de um aplicativo localizado, o que envolve a personalização da interface de usuário de um aplicativo para regiões ou culturas específicas.
 
-[Operações de cadeia de caracteres sem diferenciação de cultura](culture-insensitive-string-operations.md)
+[Operações de strings insensíveis à cultura](culture-insensitive-string-operations.md)
 
 Descreve como usar métodos e classes do .NET sensíveis a culturas por padrão para obter resultados sem diferenciação de cultura.
 

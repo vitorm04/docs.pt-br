@@ -1,12 +1,12 @@
 ---
 title: 'Passo a passo: Persistindo um objeto usando o C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 9531909bdf1ed61305c292411ef2cd08b7b67465
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240461"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167564"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Passo a passo: persistir um objeto usando o C\#
 
@@ -20,7 +20,7 @@ Neste passo a passo, você criará um objeto `Loan` básico e persistirá seus d
 > [!IMPORTANT]
 > Este exemplo armazena dados em um arquivo de formato binário. Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - Para criar e executar, instale o [SDK do .NET Core](https://dotnet.microsoft.com/download).
 
@@ -29,7 +29,7 @@ Neste passo a passo, você criará um objeto `Loan` básico e persistirá seus d
 > [!TIP]
 > Precisa instalar um editor de código? Experimente o [Visual Studio](https://visualstudio.com/downloads)!
 
-- O exemplo exige C# 7.3. Confira [Selecionar a versão da linguagem C#](../../../language-reference/configure-language-version.md) 
+- O exemplo exige C# 7.3. Confira [Selecionar a versão da linguagem C#](../../../language-reference/configure-language-version.md)
 
 Examine o código de exemplo online [no repositório GitHub de amostras do .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 
@@ -102,4 +102,4 @@ Neste ponto, você pode compilar e executar o aplicativo novamente. Na primeira 
 ## <a name="see-also"></a>Confira também
 
 - [Serialização (C#)](index.md)
-- [Guia de Programação em C#](../..//index.md)
+- [C# Guia de Programação](../..//index.md)

@@ -1,5 +1,5 @@
 ---
-title: <include> - C# guia de programação
+title: <include> - Guia de programação C#
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793427"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156968"
 ---
-# <a name="include-c-programming-guide"></a>\<incluir > (C# guia de programação)
+# <a name="include-c-programming-guide"></a>\<incluir> (guia de programação C#)
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -23,7 +23,7 @@ ms.locfileid: "76793427"
 <include file='filename' path='tagpath[@name="id"]' />
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 - `filename`
 
@@ -49,11 +49,11 @@ A marca \<include> usa a sintaxe XML XPath. Consulte a documentação do XPath p
 
 ## <a name="example"></a>Exemplo
 
-Este é um exemplo de vários arquivos. Este é o primeiro arquivo, que usa \<incluir >.
+Este é um exemplo de vários arquivos. A seguir está o primeiro \<arquivo, que usa>.
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-O segundo arquivo, *xml_include_tag. doc*, contém os comentários de documentação a seguir.
+O segundo arquivo, *xml_include_tag.doc,* contém os seguintes comentários de documentação.
 
 ```xml
 <MyDocs>
@@ -86,19 +86,19 @@ A seguinte saída é gerada quando você compila as classes Test e Test2 com a s
     <members>
         <member name="T:Test">
             <summary>
-The summary for this type.   
-</summary>   
-        </member>   
-        <member name="T:Test2">   
-            <summary>   
-The summary for this other type.   
-</summary>   
-        </member>   
-    </members>   
-</doc>   
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
-- [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)
+- [C# Guia de Programação](../index.md)
+- [Tags recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

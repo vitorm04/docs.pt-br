@@ -10,17 +10,17 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127550"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading gerenciado e não gerenciado no Windows
 
-O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O runtime monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o tempo de execução expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) e da invocação de plataforma.  
+O gerenciamento de todos os threads, inclusive de threads criados pelo Common Language Runtime e fora do tempo de execução que ingressam no ambiente gerenciado para executar o código, é feito pela classe <xref:System.Threading.Thread>. O runtime monitora todos os threads de seu processo que já executaram o código no ambiente de execução gerenciado. Ele não rastreia nenhum outro thread. Os threads podem ingressar no ambiente de execução gerenciado por meio da interoperabilidade COM (porque o runtime expõe os objetos gerenciados como objetos COM ao mundo não gerenciado), da função COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) e da invocação de plataforma.  
   
- Quando um thread não gerenciado, por exemplo, um COM Callable Wrapper, ingressa no tempo de execução, o sistema verifica o repositório de threads locais do thread em questão para procurar um objeto <xref:System.Threading.Thread> interno gerenciado. Caso o sistema encontre um thread desse tipo, o runtime fica ciente sobre ele. Caso contrário, o tempo de execução compila um novo objeto <xref:System.Threading.Thread> e o instala no repositório de threads locais do thread em questão.  
+ Quando um thread não gerenciado, por exemplo, um COM Callable Wrapper, ingressa no runtime, o sistema verifica o repositório de threads locais do thread em questão para procurar um objeto <xref:System.Threading.Thread> interno gerenciado. Caso o sistema encontre um thread desse tipo, o runtime fica ciente sobre ele. Caso contrário, o runtime compila um novo objeto <xref:System.Threading.Thread> e o instala no repositório de threads locais do thread em questão.  
   
  No threading gerenciado, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> é a identificação estável do thread gerenciado. Durante seu tempo de vida, o thread não colidirá com os valores de outros threads, independente do domínio do aplicativo para o qual você obtém esse valor.  
   
@@ -37,18 +37,18 @@ O gerenciamento de todos os threads, inclusive de threads criados pelo Common La
 |**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
 |**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
 |**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
-|**Sleep**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
+|**Modo de suspensão**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
 |**WaitForSingleObject** no identificador de thread|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
-|**ExitThread**|Não há equivalência|  
+|**ExitThread**|Sem equivalente|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
-|Não há equivalência|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
-|Não há equivalência|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
+|Sem equivalente|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
+|Sem equivalente|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |Próximo a **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Threads gerenciados e apartments COM
 
-Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](/windows/desktop/com/single-threaded-apartments) ou um [multithread apartament](/windows/desktop/com/multithreaded-apartments). (Para obter mais informações sobre a arquitetura de Threading COM, consulte [Processes, threads e Apartments](/windows/desktop/com/processes--threads--and-apartments).) Os métodos <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A>e <xref:System.Threading.Thread.TrySetApartmentState%2A> da classe <xref:System.Threading.Thread> retornam e atribuem o estado de apartamento de um thread. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [single-threaded apartament](/windows/desktop/com/single-threaded-apartments) ou um [multithread apartament](/windows/desktop/com/multithreaded-apartments). (Para obter mais informações sobre a arquitetura de threading COM, consulte [Processos, Threads e Apartamentos](/windows/desktop/com/processes--threads--and-apartments).) Os <xref:System.Threading.Thread.GetApartmentState%2A> <xref:System.Threading.Thread.SetApartmentState%2A>, <xref:System.Threading.Thread.TrySetApartmentState%2A> e os <xref:System.Threading.Thread> métodos da classe retornam e atribuem o estado do apartamento de um fio. Se o estado não tiver sido definido, <xref:System.Threading.Thread.GetApartmentState%2A> retorna <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Você só pode definir uma propriedade quando o thread estiver no estado <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType>; ela só pode ser definida uma vez por thread.  
   
@@ -65,13 +65,13 @@ Um thread gerenciado pode ser marcado para indicar que ele irá hospedar um [sin
   
 ## <a name="blocking-issues"></a>Problemas de bloqueio  
 
-Se um thread fizer uma chamada não gerenciada no sistema operacional que bloqueou o thread no código não gerenciado, o tempo de execução não assumirá o controle para <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> nem <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. No caso do <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, o tempo de execução marca o thread como **Abortar** e assume o controle dele quando esse ingressa no código gerenciado. Recomendamos que você use bloqueios gerenciados, em vez de não gerenciados. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, entre outros, respondem a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e a <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Além disso, se seu thread estiver em um single-threaded apartment, todas essas operações de bloqueio gerenciado enviarão mensagens para seu apartment enquanto o thread estiver bloqueado.  
+Se um thread fizer uma chamada não gerenciada no sistema operacional que bloqueou o thread no código não gerenciado, o runtime não assumirá o controle para <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> nem <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. No caso do <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, o runtime marca o thread como **Abortar** e assume o controle dele quando esse ingressa no código gerenciado. Recomendamos que você use bloqueios gerenciados, em vez de não gerenciados. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, entre outros, respondem a <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> e a <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Além disso, se seu thread estiver em um single-threaded apartment, todas essas operações de bloqueio gerenciado enviarão mensagens para seu apartment enquanto o thread estiver bloqueado.  
 
 ## <a name="threads-and-fibers"></a>Threads e fibras
 
 Modelo de threading do .NET não é compatível com [fibras](/windows/desktop/procthread/fibers). Você não deve chamar nenhuma função não gerenciada implementada usando fibras. Essas chamadas podem resultar em uma falha de runtime do .NET.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>
 - <xref:System.Threading.ThreadState>

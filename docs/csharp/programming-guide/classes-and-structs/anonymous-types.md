@@ -5,12 +5,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 81d97748383aa0585185176a366e6325f51688d2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 63bc5560ba19ff36764465a6b89b81c13beec97a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714988"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170332"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anônimos (Guia de Programação em C#)
 
@@ -28,7 +28,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- Os tipos anônimos são normalmente usados na cláusula [select](../../language-reference/keywords/select-clause.md) de uma expressão de consulta para retornar um subconjunto das propriedades de cada objeto na sequência de origem. Para obter mais informações sobre consultas, consulte [LINQ C#in ](../../linq/index.md).  
+ Os tipos anônimos são normalmente usados na cláusula [select](../../language-reference/keywords/select-clause.md) de uma expressão de consulta para retornar um subconjunto das propriedades de cada objeto na sequência de origem. Para obter mais informações sobre consultas, consulte [LINQ em C#](../../linq/index.md).  
   
  Os tipos anônimos contêm uma ou mais propriedades públicas somente leitura. Nenhum outro tipo de membros da classe, como métodos ou eventos, é válido. A expressão que é usada para inicializar uma propriedade não pode ser `null`, uma função anônima ou um tipo de ponteiro.  
   
@@ -55,9 +55,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  Como os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> em tipos anônimos são definidos em termos dos métodos das propriedades `Equals` e `GetHashCode`, duas instâncias do mesmo tipo anônimo são iguais somente se todas as suas propriedades forem iguais.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Inicializadores de objeto e coleção](./object-and-collection-initializers.md)
-- [Introdução a LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/)
+- [Começando com linq em C #](../concepts/linq/index.md)
 - [LINQ em C#](../../linq/index.md)

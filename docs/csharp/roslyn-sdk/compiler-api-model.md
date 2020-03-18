@@ -3,16 +3,16 @@ title: Conceitos e modelo de objeto do SDK do .NET Compiler Platform
 description: Esta visão geral fornece o contexto necessário para trabalhar efetivamente com o SDK do .NET Compiler. Você aprenderá sobre as camadas de API, os principais tipos envolvidos e o modelo de objeto geral.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675700"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156955"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Entender o modelo do SDK do .NET Compiler Platform
 
-Os compiladores processam o código escrito seguindo regras estruturadas que geralmente diferem da forma como os humanos leem e entendem um código. Uma compreensão básica do modelo usado pelos compiladores é essencial para compreender as APIs usadas ao criar ferramentas baseadas no Roslyn. 
+Os compiladores processam o código escrito seguindo regras estruturadas que geralmente diferem da forma como os humanos leem e entendem um código. Uma compreensão básica do modelo usado pelos compiladores é essencial para compreender as APIs usadas ao criar ferramentas baseadas no Roslyn.
 
 ## <a name="compiler-pipeline-functional-areas"></a>Áreas funcionais do pipeline do compilador
 
@@ -30,7 +30,7 @@ Correspondente a cada uma dessas fases, o SDK do .NET Compiler Platform expõe u
 
 Cada compilador combina esses componentes como um único inteiro de ponta a ponta.
 
-Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de formatação e estrutura de tópicos do código usam as árvores de sintaxe, o Pesquisador de Objetos e os recursos de navegação usam a tabela de símbolos, as refatorações e o recurso Ir para Definição usam o modelo semântico e o recurso Editar e Continuar usa todos eles, incluindo a API de Emissão. 
+Essas APIs são as mesmas usadas pelo Visual Studio. Por exemplo, os recursos de formatação e estrutura de tópicos do código usam as árvores de sintaxe, o Pesquisador de Objetos e os recursos de navegação usam a tabela de símbolos, as refatorações e o recurso Ir para Definição usam o modelo semântico e o recurso Editar e Continuar usa todos eles, incluindo a API de Emissão.
 
 ## <a name="api-layers"></a>Camadas de API
 
@@ -48,7 +48,7 @@ Como parte de sua análise, o compilador pode produzir um conjunto de diagnósti
 
 ### <a name="scripting-apis"></a>APIs de script
 
-APIs de hospedagem e script fazem parte da camada do compilador. Você pode usá-las para execução de snippets de código e acúmulo de um contexto de execução em tempo de execução.
+APIs de hospedagem e script fazem parte da camada do compilador. Você pode usá-las para execução de snippets de código e acúmulo de um contexto de execução em runtime.
 O REPL (Loop de Leitura-Avaliação-Impressão) interativo do C# usa essas APIs. O REPL permite usar o C# como a linguagem de scripts, executando o código de forma interativa à medida que ele é escrito.
 
 ### <a name="workspaces-apis"></a>APIs dos workspaces

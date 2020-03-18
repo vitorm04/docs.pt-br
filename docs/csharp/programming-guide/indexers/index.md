@@ -7,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702942"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167521"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexadores (Guia de Programação em C#)
 
@@ -26,14 +26,14 @@ Os indexadores permitem que instâncias de uma classe ou struct sejam indexados 
 > Para mais exemplos, consulte as [seções relacionadas](./index.md#BKMK_RelatedSections).  
   
 ## <a name="expression-body-definitions"></a>Definições de corpo de expressão  
- 
+
 É comum para um acessador get ou set de um indexador ser constituído de uma única instrução que retorna ou define um valor. Os membros de expressão fornecem uma sintaxe simplificada para dar suporte a esse cenário. Começando do C# 6, um indexador somente leitura pode ser implementado como um membro de expressão, como mostra o exemplo a seguir.
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-Observe que `=>` apresenta o corpo da expressão e que a palavra-chave `get` não é usada. 
+Observe que `=>` apresenta o corpo da expressão e que a palavra-chave `get` não é usada.
 
-Começando do C# 7.0, os acessadores get e set podem ser implementados como membros aptos para expressão. Nesse caso, as palavras-chave `get` e `set` devem ser usadas. Por exemplo:
+Começando do C# 7.0, os acessadores get e set podem ser implementados como membros aptos para expressão. Nesse caso, as palavras-chave `get` e `set` devem ser usadas. Por exemplo: 
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -53,7 +53,7 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 - Os indexadores podem ter mais de um parâmetro formal, por exemplo, ao acessar uma matriz bidimensional.  
   
-## <a name="BKMK_RelatedSections"></a> Seções relacionadas  
+## <a name="BKMK_RelatedSections"></a>Seções relacionadas  
   
 - [Usando indexadores](./using-indexers.md)  
   
@@ -63,11 +63,11 @@ Começando do C# 7.0, os acessadores get e set podem ser implementados como memb
   
 - [Restringindo a acessibilidade ao acessador](../classes-and-structs/restricting-accessor-accessibility.md)  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
 Para obter mais informações, veja [Indexadores](~/_csharplang/spec/classes.md#indexers) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Propriedades](../classes-and-structs/properties.md)

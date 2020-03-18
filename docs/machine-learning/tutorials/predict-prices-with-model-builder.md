@@ -1,21 +1,21 @@
 ---
-title: 'Tutorial: prever os preços usando a regressão com o construtor de modelos'
+title: 'Tutorial: Prever preços usando a regressão com o Model Builder'
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 254f3c4c05a2c18f6182fc5f18d93114e20ed953
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: c027fe57f571c791784b0bdb7ad9503fc49daa1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344984"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187703"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: prever os preços usando a regressão com o construtor de modelos
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: Prever preços usando a regressão com o Model Builder
 
-Saiba como usar o ML.NET Model Builder para criar um modelo de regressão para prever os preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
+Saiba como usar o Construtor de Modelo do ML.NET para criar um modelo de regressão e prever preços.  O aplicativo de console do .NET que você desenvolve neste tutorial prevê as tarifas de táxi com base em dados históricos de tarifas de táxi em Nova York.
 
 O modelo de previsão de preço do Construtor de Modelo pode ser usado em qualquer cenário que exija um valor de previsão numérico. Exemplos de cenários incluem: previsão de preço, previsão de demanda e previsão de vendas de casas.
 
@@ -26,7 +26,7 @@ Neste tutorial, você aprenderá como:
 > - Escolha um cenário
 > - Carregar os dados
 > - Treinar o modelo
-> - Avaliar o modelo
+> - Avalie o modelo
 > - Usar o modelo para previsões
 
 > [!NOTE]
@@ -38,7 +38,7 @@ Para obter uma lista de pré-requisitos e instruções de instalação, visite o
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
-1. Crie um  **C# aplicativo de console do .NET Core** chamado "TaxiFarePrediction". Verifique se a opção **Colocar solução e projeto no mesmo diretório** está **desmarcada** (vs 2019) ou **criar diretório para solução** está **marcado** (vs 2017).
+1. Crie um **aplicativo de console C# .NET Core** chamado "TaxiFarePrediction". Certifique-se de que **a solução e o projeto place no mesmo diretório** não são **controlados** (VS 2019), ou **Criar diretório para solução** é **verificado** (VS 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
@@ -52,7 +52,7 @@ Para obter uma lista de pré-requisitos e instruções de instalação, visite o
 
     1. Use a opção **Salvar como Diálogo** para salvar o arquivo na pasta *Dados* criada na etapa anterior.
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *taxi-fare-train.csv* e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *taxi-fare-train.csv* e selecione **Propriedades**. Em **Avançado,** altere o valor de **Copiar para Diretório de Saída** para Copiar se mais **novo**.
 
 Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de corridas feitas por um táxi.
 
@@ -68,7 +68,7 @@ Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de cor
     - **payment_type:** o método de pagamento (dinheiro ou cartão de crédito) é um recurso.
     - **fare_amount:** a tarifa total de táxi paga é o rótulo.
 
-O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Nesse caso, o restante das colunas com exceção de **trip_time_in_secs** são usadas como recursos ou entradas para prever o valor da tarifa.
+O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Neste caso, as demais colunas com exceção de **trip_time_in_secs** são usadas como recursos ou entradas para prever o valor da tarifa.
 
 ## <a name="choose-a-scenario"></a>Escolha um cenário
 
@@ -83,16 +83,16 @@ O Construtor de Modelo aceita dados de duas fontes: um banco de dados do SQL Ser
 
 1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione *Arquivo* na lista suspensa da fonte de dados.
 1. Selecione o botão ao lado da caixa de texto *Selecionar um arquivo* e use o Explorador de Arquivos para procurar e selecionar o *taxi-fare-test.csv* no diretório de *Dados*
-1. Escolha *fare_amount* na *coluna para prever (rótulo)* suspenso.
-1. Expanda a lista suspensa *colunas de entrada (recursos)* e desmarque a coluna *trip_time_in_secs* para excluí-la como um recurso durante o treinamento.  Navegue até a etapa treinar da ferramenta Construtor de modelos.
+1. Escolha *fare_amount* na coluna para prever a queda *(Rótulo).*
+1. Expanda a lista de *colunas de entrada (Recursos)* e desmarque a coluna *trip_time_in_secs* para excluí-la como um recurso durante o treinamento.  Navegue até a etapa de trem da ferramenta Model Builder.
 
 ## <a name="train-the-model"></a>Treinar o modelo
 
 A tarefa de aprendizado de máquina usada para treinar o modelo de previsão de preço neste tutorial é a regressão. Durante o processo de treinamento de modelo, o Construtor de Modelo treina modelos separados usando algoritmos de regressão diferentes e configurações para localizar o modelo com melhor desempenho para seu conjunto de dados.
 
-O tempo necessário para treinar o modelo é proporcional à quantidade de dados. O construtor de modelos seleciona automaticamente um valor padrão para o **tempo de treinamento (segundos)** com base no tamanho da fonte de dados.
+O tempo necessário para treinar o modelo é proporcional à quantidade de dados. O Model Builder seleciona automaticamente um valor padrão para **tempo de treinar (segundos)** com base no tamanho da fonte de dados.
 
-1. Deixe o valor padrão como está para o *tempo de treinamento (segundos)* , a menos que você prefira treinar por um tempo maior.
+1. Deixe o valor padrão como está para *Tempo de treinar (segundos)* a menos que você prefira treinar por mais tempo.
 2. Selecione *Iniciar Treinamento*.
 
 Durante o processo de treinamento, os dados de progresso são exibidos na seção `Progress` da etapa de treinamento.
@@ -104,9 +104,9 @@ Durante o processo de treinamento, os dados de progresso são exibidos na seçã
 
 Após a conclusão do treinamento, navegue até a etapa de avaliação.
 
-## <a name="evaluate-the-model"></a>Avaliar o modelo
+## <a name="evaluate-the-model"></a>Avalie o modelo
 
-O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)* . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
+O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)*. Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
 
 Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Ou navegue até a etapa do código.
 
@@ -114,19 +114,19 @@ Se você não estiver satisfeito com suas métricas de precisão, algumas maneir
 
 Dois projetos serão criados como resultado do processo de treinamento.
 
-- TaxiFarePredictionML. ConsoleApp: um aplicativo de console do .NET Core que contém o treinamento do modelo e o código de consumo de exemplo.
-- TaxiFarePredictionML. Model: um .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema dos dados de modelo de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada `ConsumeModel` para fazer previsões.
+- TaxiFarePredictionML.ConsoleApp: Um aplicativo .NET Core Console que contém o código de treinamento do modelo e o código de consumo de amostras.
+- TaxiFarePredictionML.Modelo: Uma biblioteca de classe .NET Standard contendo os modelos de dados que definem o esquema de dados do modelo `ConsumeModel` de entrada e saída, a versão salva do modelo de melhor desempenho durante o treinamento e uma classe auxiliar chamada para fazer previsões.
 
 1. Na etapa de código da ferramenta do Construtor de Modelo, escolha **Adicionar Projetos** para adicionar os projetos gerados automaticamente à solução.
 1. Abra o arquivo *Program.cs* no projeto *TaxiFarePrediction*.
-1. Adicione a seguinte instrução using para fazer referência ao projeto *TaxiFarePredictionML. Model* :
+1. Adicione a seguinte declaração usando para referenciar o projeto *TaxiFarePredictionML.Model:*
 
     ```csharp
     using System;
     using TaxiFarePredictionML.Model;
     ```
 
-1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que o valor da tarifa não faz parte da entrada. Isso acontece porque o modelo gerará a previsão para ela.
+1. Para fazer uma previsão sobre novos dados usando o `ModelInput` modelo, `Main` crie uma nova instância da classe dentro do método de sua aplicação. Observe que o valor da tarifa não faz parte da entrada. Isso acontece porque o modelo gerará a previsão para ela.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
     };
     ```
 
-1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados.
+1. Use `Predict` o método `ConsumeModel` da classe. O `Predict` método carrega o modelo [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) treinado, cria um para o modelo e o usa para fazer previsões sobre novos dados.
 
     ```csharp
     // Make prediction
@@ -163,14 +163,14 @@ Se precisar fazer referência aos projetos gerados em um momento posterior dentr
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Neste tutorial, você aprendeu como:
+Neste tutorial, você aprendeu a:
 > [!div class="checklist"]
 >
 > - Preparar e compreender os dados
 > - Escolha um cenário
 > - Carregar os dados
 > - Treinar o modelo
-> - Avaliar o modelo
+> - Avalie o modelo
 > - Usar o modelo para previsões
 
 ### <a name="additional-resources"></a>Recursos adicionais

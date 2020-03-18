@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239879"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398863"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
 O .NET Core 2.1 contém melhorias e novos recursos nas seguintes áreas:
 
 - [Ferramentas](#tooling)
-- [Efetuar roll forward](#roll-forward)
+- [Role para a frente](#roll-forward)
 - [Implantação](#deployment)
 - [Pacote de Compatibilidade do Windows](#windows-compatibility-pack)
 - [Aprimoramentos da compilação JIT](#jit-compiler-improvements)
-- [Alterações na API](#api-changes)
+- [Alterações de API](#api-changes)
 
 ## <a name="tooling"></a>Ferramentas
 
@@ -43,7 +43,7 @@ Um dos principais focos do .NET Core 2.1 é melhorar o desempenho de tempo de bu
 
 ### <a name="new-cli-commands"></a>Novos comandos da CLI
 
-Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetCliToolReference`](../tools/extensibility.md) agora estão disponíveis como parte do SDK do .NET Core. Essas ferramentas incluem:
+Várias ferramentas que estavam disponíveis apenas por projeto usando `DotnetCliToolReference` agora estão disponíveis como parte do SDK do .NET Core. Essas ferramentas incluem:
 
 - `dotnet watch` fornece um observador do sistema de arquivos que aguarda que um arquivo seja alterado antes de executar um conjunto designado de comandos. Por exemplo, o comando a seguir recria automaticamente o projeto atual e gera uma saída detalhada sempre que um arquivo é alterado nele:
 
@@ -53,7 +53,7 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetC
 
    Observe a opção `--` que precede a opção `--verbose`. Isso delimita as opções passadas diretamente para o comando `dotnet watch` dos argumentos que são passados para o processo `dotnet` filho. Sem isso, a opção `--verbose` se aplica ao comando `dotnet watch`, não ao comando `dotnet build`.
   
-   Para obter mais informações, consulte [desenvolver ASP.NET Core aplicativos usando o relógio dotnet](/aspnet/core/tutorials/dotnet-watch).
+   Para obter mais informações, consulte [Desenvolver aplicativos ASP.NET Core usando o relógio dotnet](/aspnet/core/tutorials/dotnet-watch).
 
 - `dotnet dev-certs` gera e gerencia os certificados usados durante o desenvolvimento de aplicativos do ASP.NET Core.
 
@@ -65,9 +65,9 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando [`DotnetC
 
 ### <a name="global-tools"></a>Ferramentas Globais
 
-O .NET Core 2.1 oferece suporte a *Ferramentas Globais*, ou seja, ferramentas personalizadas que estão disponíveis globalmente a partir da linha de comando. O modelo de extensibilidade em versões anteriores do .NET Core disponibilizava ferramentas personalizadas apenas por projeto usando [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
+O .NET Core 2.1 oferece suporte a *Ferramentas Globais*, ou seja, ferramentas personalizadas que estão disponíveis globalmente a partir da linha de comando. O modelo de extensibilidade em versões anteriores do .NET Core disponibilizava ferramentas personalizadas apenas por projeto usando `DotnetCliToolReference`.
 
-Para instalar uma Ferramenta Global, use o comando [dotnet tool install](../tools/dotnet-tool-install.md). Por exemplo:
+Para instalar uma Ferramenta Global, use o comando [dotnet tool install](../tools/dotnet-tool-install.md). Por exemplo: 
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -79,13 +79,13 @@ Uma vez instalada, a ferramenta pode ser executada a partir da linha de comando,
 
 No SDK do .NET Core 2.1, todas as operações de ferramentas usam o comando `dotnet tool`. As seguintes opções estão disponíveis:
 
-- [`dotnet tool install`](../tools/dotnet-tool-install.md) para instalar uma ferramenta.
+- [`dotnet tool install`](../tools/dotnet-tool-install.md)para instalar uma ferramenta.
 
-- [`dotnet tool update`](../tools/dotnet-tool-update.md) para desinstalar e reinstalar uma ferramenta, o que a atualiza com eficiência.
+- [`dotnet tool update`](../tools/dotnet-tool-update.md)para desinstalar e reinstalar uma ferramenta, que efetivamente a atualiza.
 
-- [`dotnet tool list`](../tools/dotnet-tool-list.md) para listar ferramentas atualmente instaladas.
+- [`dotnet tool list`](../tools/dotnet-tool-list.md)para listar ferramentas instaladas atualmente.
 
-- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) para desinstalar ferramentas atualmente instaladas.
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)para desinstalar ferramentas instaladas atualmente.
 
 ## <a name="roll-forward"></a>Efetuar roll forward
 
@@ -112,7 +112,7 @@ Modifique essa configuração de uma das três maneiras:
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Ao usar o [CLI do .NET Core](../tools/index.md), adicione a opção a seguir com o valor desejado a um comando do .NET Core, como `run`:
+- Ao usar o [.NET Core CLI,](../tools/index.md)adicione a seguinte opção com o `run`valor desejado a um comando .NET Core, como:
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,11 +124,11 @@ O roll forward da versão de patch é independente dessa configuração e é fei
 
 ### <a name="self-contained-application-servicing"></a>Serviço de aplicativo autocontido
 
-`dotnet publish` agora publica aplicativos autocontidos com uma versão de runtime atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de runtime atendido conhecida por esse SDK. Quando você faz upgrade para o SDK mais recente, publica com a versão mais recente do runtime do .NET Core. Isso se aplica aos runtimes do .NET Core 1.0 e posteriores.
+`dotnet publish` agora publica aplicativos autocontidos com uma versão de runtime atendido. Quando você publica um aplicativo autocontido com o SDK do .NET Core 2.1 (v 2.1.300), seu aplicativo inclui a versão mais recente de runtime atendido conhecida por esse SDK. Quando você atualizar para o SDK mais recente, você publicará com a versão de tempo de execução mais recente do .NET Core. Isso se aplica aos runtimes do .NET Core 1.0 e posteriores.
 
-A publicação independente depende das versões de tempo de execução no NuGet.org. Você não precisa ter o tempo de execução de serviço em seu computador.
+A publicação independente depende de versões em tempo de execução em NuGet.org. Você não precisa ter o tempo de execução reparado em sua máquina.
 
-Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o runtime do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de runtime maior para um aplicativo autocontido. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
+Com o uso do SDK do .NET Core 2.0, os aplicativos autocontidos são publicados com o runtime do .NET Core 2.0.0, a menos que uma versão diferente seja especificada por meio da propriedade `RuntimeFrameworkVersion`. Com esse novo comportamento, você não precisará mais definir essa propriedade para selecionar uma versão de tempo de execução mais alta para um aplicativo independente. A abordagem mais fácil daqui para frente é sempre publicar com o SDK do .NET Core 2.1 (v 2.1.300).
 
 Veja mais informações em [Efetuar roll forward de runtime de implantação autossuficiente](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pacote de Compatibilidade do Windows
@@ -211,7 +211,7 @@ O .NET Core 2.1 inclui vários aprimoramentos para a APIs de criptografia:
 
 - O método estático <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> preenche um <xref:System.Span%601> com valores aleatórios.
 
-- Agora há suporte para o <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> no Linux e no macOS.
+- O <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> agora é suportado no Linux e macOS.
 
 - A curva elíptica Diffie-Hellman (ECDH) agora está disponível na família de classes <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. A área de superfície é o mesmo que no .NET Framework.
 
@@ -247,7 +247,7 @@ No Linux e no macOS, só é possível configurar <xref:System.Net.Http.HttpClien
 
 ### <a name="breaking-changes"></a>Alterações de quebra
 
-Para obter informações sobre alterações significativas, consulte [alterações recentes de migração da versão 2,0 para 2,1](../compatibility/2.0-2.1.md).
+Para obter informações sobre como quebrar alterações, consulte [Alterações de quebra para migração da versão 2.0 para 2.1](../compatibility/2.0-2.1.md).
 
 ## <a name="see-also"></a>Confira também
 

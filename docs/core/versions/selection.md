@@ -5,11 +5,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450993"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398821"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -38,7 +38,7 @@ Você pode aproveitar os recursos e as melhorias mais recentes do SDK mesmo ao d
 
 Em raras ocasiões, talvez você precise usar uma versão anterior do SDK. Nesse caso, especifique essa versão em um [arquivo *global. JSON*](../tools/global-json.md). A política "usar versão mais recente" significa usar o *global.json* somente para especificar uma versão do SDK do .NET Core anterior à versão mais recente instalada.
 
-O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão do SDK estiver instalada, essa versão será usada. Se o SDK especificado no *global. JSON* não for encontrado, a CLI do .NET usará [regras de correspondência](../tools/global-json.md#matching-rules) para selecionar um SDK compatível ou falhará se nenhum for encontrado.
+O *global.json* pode ser colocado em qualquer lugar na hierarquia de arquivos. A CLI procura no diretório do projeto em diante até encontrar o primeiro *global.json*. Você controla a quais projetos um determinado *global.json* se aplica a pelo seu lugar no sistema de arquivos. A CLI do .NET procura um arquivo *global.json* navegando iterativamente do caminho do diretório de trabalho atual em diante. O primeiro arquivo *global.json* encontrado especifica a versão usada. Se essa versão SDK estiver instalada, essa versão será usada. Se o SDK especificado no *global.json* não for encontrado, o .NET CLI usará [regras correspondentes](../tools/global-json.md#matching-rules) para selecionar um SDK compatível ou falhar se nenhum for encontrado.
 
 O exemplo a seguir mostra a sintaxe *global.json*:
 
@@ -78,7 +78,7 @@ As estruturas de destino do .NET Standard também são limitadas à estrutura de
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Roll foward de aplicativos dependentes da estrutura
 
-Quando você executa um aplicativo da fonte com [`dotnet run`](../tools/dotnet-run.md), de uma [**implantação dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com [`dotnet myapp.dll`](../tools/dotnet.md#description) ou de um [**arquivo executável dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com `myapp.exe`, o arquivo executável `dotnet` é o **host** do aplicativo.
+Quando você executa um [`dotnet run`](../tools/dotnet-run.md)aplicativo a partir da origem com , a partir `myapp.exe`de `dotnet` uma implantação dependente [**de estrutura**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description)com , ou de um [**executável dependente de estrutura**](../deploying/index.md#publish-runtime-dependent) com , o executável é o **host** para o aplicativo.
 
 O host escolhe a versão de patch mais recente instalada no computador. Por exemplo, se você especificar `netcoreapp2.0` em seu arquivo de projeto e `2.0.4` for o runtime mais recente do .NET instalado, o runtime `2.0.4` será usado.
 

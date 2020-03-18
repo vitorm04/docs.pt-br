@@ -1,15 +1,15 @@
 ---
-title: Como escrever um método de eixo de LINQ to XMLC#()
+title: Como escrever um método de eixo LINQ para XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: fc602f91dc6da16c4a019bb42ff178ae3de4ea03
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7810afd1a181523fb30f6702993bc0ad469f66aa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348356"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168538"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Como escrever um método de eixo de LINQ to XMLC#()
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Como escrever um método de eixo LINQ para XML (C#)
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  
   
 ## <a name="example"></a>Exemplo  
@@ -42,7 +42,7 @@ public static class MyExtensions
     private static string NameWithPredicate(XElement el)  
     {  
         if (el.Parent != null && el.Parent.Elements(el.Name).Count() != 1)  
-            return GetQName(el) + "[" +   
+            return GetQName(el) + "[" +
                 (el.ElementsBeforeSelf(el.Name).Count() + 1) + "]";  
         else  
             return GetQName(el);  

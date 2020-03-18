@@ -9,10 +9,10 @@ helpviewer_keywords:
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 ms.openlocfilehash: 120777ca3c26b1634bd2143863547cfa4ea5deac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141335"
 ---
 # <a name="weak-references"></a>Referências fracas
@@ -31,11 +31,11 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
 ## <a name="short-and-long-weak-references"></a>Referências fracas curtas e longas  
  Você pode criar uma referência fraca curta ou uma referência fraca longa:  
   
-- Abreviado  
+- Short  
   
      O destino de uma referência fraca curta se torna `null` quando o objeto é recuperado pela coleta de lixo. A referência fraca é um objeto gerenciado e está sujeita à coleta de lixo assim como qualquer outro objeto gerenciado.  Uma referência fraca curta é o construtor sem parâmetros para <xref:System.WeakReference>.  
   
-- Long  
+- long  
   
      Uma referência fraca longa é mantida após o método <xref:System.Object.Finalize%2A> do objeto ter sido chamado. Isso permite que o objeto seja recriado, mas o estado do objeto permanece imprevisível. Para usar uma referência longa, especifique `true` no construtor <xref:System.WeakReference>.  
   
@@ -50,6 +50,6 @@ O coletor de lixo não pode coletar um objeto em uso por um aplicativo enquanto 
   
  Evite usar referências fracas como uma solução automática para problemas de gerenciamento de memória. Em vez disso, desenvolva uma política de cache efetiva para lidar com os objetos do seu aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

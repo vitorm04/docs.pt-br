@@ -27,10 +27,10 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156303"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
@@ -131,14 +131,14 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
 
 ## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Title|DESCRIÇÃO|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Coleções genéricas no .NET](../../../docs/standard/generics/collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET.|  
 |[Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Descreve delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.|  
 |[Interfaces genéricas](../../../docs/standard/generics/interfaces.md)|Descreve interfaces genéricas que fornecem funcionalidade comum entre famílias de tipos genéricos.|  
-|[Covariância e Contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)|Descreve covariância e contravariância em parâmetros de tipo genérico.|  
-|[Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornece informações de resumo sobre as características e os cenários de uso dos tipos de coleção no .NET, incluindo tipos genéricos.|  
-|[Quando Usar Coleções Genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve regras gerais para determinar quando usar tipos de coleção genérica.|  
+|[Covariância e contravariância](../../../docs/standard/generics/covariance-and-contravariance.md)|Descreve covariância e contravariância em parâmetros de tipo genérico.|  
+|[Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)|Fornece informações de resumo sobre as características e os cenários de uso dos tipos de coleção no .NET, incluindo tipos genéricos.|  
+|[Quando usar coleções genéricas](../../../docs/standard/collections/when-to-use-generic-collections.md)|Descreve regras gerais para determinar quando usar tipos de coleção genérica.|  
 |[Como definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Explica como gerar assemblies dinâmicos que incluem tipos e métodos genéricos.|  
 |[Tipos genéricos no Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|Descreve o recurso genérico para usuários do Visual Basic, incluindo tópicos de instruções para uso e definição de tipos genéricos.|  
 |[Introdução aos genéricos](../../csharp/programming-guide/generics/index.md)|Fornece uma visão geral da definição e do uso de tipos genéricos para usuários do C#.|  

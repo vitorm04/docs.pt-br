@@ -2,19 +2,19 @@
 title: Usando variação em delegações (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168355"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169760"
 ---
 # <a name="using-variance-in-delegates-c"></a>Usando variação em delegações (C#)
 Quando você atribui um método a um delegado, a *covariância* e a *contravariância* fornece flexibilidade para corresponder um tipo de delegado a uma assinatura de método. A covariância permite que um método tenha o tipo de retorno mais derivado do que o definido no delegado. A contravariância permite que um método que tem tipos de parâmetro menos derivados do que no tipo delegado.  
   
-## <a name="example-1-covariance"></a>Exemplo 1: Covariância  
+## <a name="example-1-covariance"></a>Exemplo 1: covariância  
   
-### <a name="description"></a>DESCRIÇÃO  
+### <a name="description"></a>Descrição  
  Este exemplo demonstra como delegados podem ser usados com métodos que têm tipos de retorno que são derivados do tipo de retorno na assinatura do delegado. O tipo de dados retornado por `DogsHandler` é do tipo `Dogs`, que deriva do tipo `Mammals` definido no delegado.  
   
 ### <a name="code"></a>Código  
@@ -48,9 +48,9 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>Exemplo 2: Contravariância  
+## <a name="example-2-contravariance"></a>Exemplo 2: contravariância  
   
-### <a name="description"></a>DESCRIÇÃO
+### <a name="description"></a>Descrição
 
 Este exemplo demonstra como representantes podem ser usados com métodos que têm parâmetros cujos tipos são tipos base do tipo de parâmetro de assinatura do representante. Com a contravariância, você pode usar um manipulador de eventos em vez de manipuladores separados. O seguinte exemplo usa dois representantes:
 
@@ -66,7 +66,7 @@ Este exemplo demonstra como representantes podem ser usados com métodos que tê
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)
    ```
 
-O exemplo define um manipulador de eventos com um parâmetro <xref:System.EventArgs> e o usa para manipular os eventos `Button.KeyDown` e `Button.MouseClick`. Ele pode fazer isso porque <xref:System.EventArgs> é um tipo base de <xref:System.Windows.Forms.KeyEventArgs> e <xref:System.Windows.Forms.MouseEventArgs>. 
+O exemplo define um manipulador de eventos com um parâmetro <xref:System.EventArgs> e o usa para manipular os eventos `Button.KeyDown` e `Button.MouseClick`. Ele pode fazer isso porque <xref:System.EventArgs> é um tipo base de <xref:System.Windows.Forms.KeyEventArgs> e <xref:System.Windows.Forms.MouseEventArgs>.
   
 ### <a name="code"></a>Código  
   
@@ -85,14 +85,14 @@ public Form1()
     // although the event expects the KeyEventArgs parameter.  
     this.button1.KeyDown += this.MultiHandler;  
   
-    // You can use the same method   
+    // You can use the same method
     // for an event that expects the MouseEventArgs parameter.  
     this.button1.MouseClick += this.MultiHandler;  
   
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Variação em delegados (C#)](./variance-in-delegates.md)
 - [Usando variação para delegados genéricos Func e Action (C#)](./using-variance-for-func-and-action-generic-delegates.md)

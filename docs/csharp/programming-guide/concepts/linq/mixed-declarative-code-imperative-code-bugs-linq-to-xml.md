@@ -2,12 +2,12 @@
 title: Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 76a9bb5abf6ce2700a2a0698ebc109f65e2b7eb1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591628"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168343"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
@@ -110,7 +110,7 @@ foreach (XElement e in root.Elements().ToList())
 Console.WriteLine(root);  
 ```  
   
- Isso gerencia a saída a seguir:  
+ Isso gera a saída a seguir:  
   
 ```xml  
 <Root />  
@@ -146,7 +146,7 @@ var z =
   
  Você pode para evitar esses problemas.  
   
-## <a name="guidance"></a>Diretrizes  
+## <a name="guidance"></a>Orientação  
  Primeiro, não mistura o código declarativo e obrigatório.  
   
  Mesmo se você souber exatamente a semântica das coleções e semântica dos métodos que modificam a árvore XML, se você escrever qualquer código inteligente que impede essas categorias de problemas, seu código deverá ser mantido no futuro por outros desenvolvedores, e não podem ser como o espaço livre nos problemas. Se você mistura estilos declarativo e obrigatórias de codificação, seu código será mais frágil.  
@@ -167,4 +167,3 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
- 

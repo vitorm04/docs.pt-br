@@ -1,42 +1,42 @@
 ---
-title: Serviços de streaming versus campos repetidos-gRPC para desenvolvedores do WCF
-description: Compare campos repetidos com serviços de streaming como maneiras de passar coleções de dados usando gRPC.
+title: Serviços de streaming vs. campos repetidos - gRPC para desenvolvedores WCF
+description: Compare campos repetidos com serviços de streaming como formas de passar coletas de dados usando gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: 0e717df57ba2bb52d63a063072d8a45bf0f7e395
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 542ebc393f9c9c1ad717d02d01fab33d85c18917
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503377"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147744"
 ---
-# <a name="grpc-streaming-services-vs-repeated-fields"></a>serviços de streaming gRPC versus campos repetidos
+# <a name="grpc-streaming-services-vs-repeated-fields"></a>Serviços de streaming gRPC versus campos repetidos
 
-os serviços gRPCs fornecem duas maneiras de retornar conjuntos de valores ou listas de objetos. A especificação de mensagem buffers de protocolo usa a palavra-chave `repeated` para declarar listas ou matrizes de mensagens em outra mensagem. A especificação de serviço gRPC usa a palavra-chave `stream` para declarar uma conexão persistente de execução longa. Através dessa conexão, várias mensagens são enviadas e podem ser processadas individualmente. 
+Os serviços gRPC fornecem duas maneiras de retornar conjuntos de dados ou listas de objetos. A especificação de mensagem `repeated` Buffers de protocolo usa a palavra-chave para declarar listas ou matrizes de mensagens em outra mensagem. A especificação de serviço `stream` gRPC usa a palavra-chave para declarar uma conexão persistente de longa duração. Sobre essa conexão, várias mensagens são enviadas e podem ser processadas individualmente.
 
-Você também pode usar o recurso `stream` para dados temporais de longa execução, como notificações ou mensagens de log. Mas este capítulo considerará seu uso para retornar um único conjunto de um.
+Você também pode `stream` usar o recurso para dados temporais de longa duração, como notificações ou mensagens de registro. Mas este capítulo considerará seu uso para retornar um único conjunto de dados.
 
-Que você deve usar depende de fatores como:
+O que você deve usar depende de fatores como:
 
-- O tamanho geral do conjunto de datas.
-- O tempo necessário para criar o conjunto de um DataSet no cliente ou no servidor final.
-- Se o consumidor do conjunto de dado pode começar a agir assim que o primeiro item estiver disponível ou precisar que o conjunto de dado completo faça algo útil.
+- O tamanho geral do conjunto de dados.
+- O tempo que levou para criar o conjunto de dados no cliente ou no final do servidor.
+- Se o consumidor do conjunto de dados pode começar a agir sobre ele assim que o primeiro item estiver disponível, ou precisa do conjunto de dados completo para fazer qualquer coisa útil.
 
-## <a name="when-to-use-repeated-fields"></a>Quando usar campos de `repeated`
+## <a name="when-to-use-repeated-fields"></a>Quando usar `repeated` campos
 
-Para qualquer conjunto de banco de forma restrito em tamanho e que possa ser gerado em sua totalidade em um curto tempo – digamos, em um segundo, você deve usar um campo de `repeated` em uma mensagem de Protobuf comum. Por exemplo, em um sistema de comércio eletrônico, para criar uma lista de itens em um pedido é provavelmente rápido e a lista não será muito grande. Retornar uma única mensagem com um campo de `repeated` é uma ordem de magnitude mais rápido do que usar `stream` e incorre em menos sobrecarga de rede.
+Para qualquer conjunto de dados que esteja limitado em tamanho e que possa ser gerado em sua totalidade `repeated` em um curto espaço de tempo — digamos, em menos de um segundo — você deve usar um campo em uma mensagem Protobuf regular. Por exemplo, em um sistema de comércio eletrônico, construir uma lista de itens dentro de um pedido é provavelmente rápido e a lista não será muito grande. Devolver uma única mensagem com um `repeated` campo é `stream` uma ordem de magnitude mais rápida do que usar e incorre em menos sobrecarga de rede.
 
-Se o cliente precisar de todos os dados antes de começar a processá-lo e se o conjunto for pequeno o suficiente para construir na memória, considere usar um campo de `repeated`. Considere-o mesmo se a criação do conjunto de uma na memória no servidor for mais lenta.
+Se o cliente precisar de todos os dados antes de começar a processá-los `repeated` e o conjunto de dados for pequeno o suficiente para construir na memória, então considere usar um campo. Considere-o mesmo que a criação do conjunto de dados na memória no servidor seja mais lenta.
 
-## <a name="when-to-use-stream-methods"></a>Quando usar os métodos de `stream`
+## <a name="when-to-use-stream-methods"></a>Quando usar `stream` métodos
 
-Quando os objetos de mensagem em seus conjuntos de valores são potencialmente muito grandes, é melhor transferi-los usando solicitações de streaming ou respostas. É mais eficiente construir um objeto grande na memória, gravá-lo na rede e, em seguida, liberar os recursos. Essa abordagem melhorará a escalabilidade do seu serviço.
+Quando os objetos de mensagem em seus conjuntos de dados são potencialmente muito grandes, é melhor transferi-los usando solicitações de streaming ou respostas. É mais eficiente construir um objeto grande na memória, escrevê-lo para a rede e, em seguida, liberar os recursos. Essa abordagem melhorará a escalabilidade do seu serviço.
 
-Da mesma forma, você deve enviar conjuntos de datas de tamanho irrestrito sobre fluxos para evitar ficar sem memória ao construí-los.
+Da mesma forma, você deve enviar conjuntos de dados de tamanho não restrito sobre fluxos para evitar ficar sem memória ao construí-los.
 
-Para conjuntos de clientes em que o consumidor pode processar cada item separadamente, você deve considerar o uso de um fluxo se isso significa que o progresso pode ser indicado para o usuário. O uso de um fluxo pode melhorar a capacidade de resposta de um aplicativo, mas você deve equilibrá-lo em relação ao desempenho geral do aplicativo.
+Para conjuntos de dados onde o consumidor pode processar separadamente cada item, você deve considerar o uso de um fluxo se isso significar que o progresso pode ser indicado para o usuário. O uso de um fluxo pode melhorar a capacidade de resposta de um aplicativo, mas você deve equilibrá-lo em relação ao desempenho geral do aplicativo.
 
-Outro cenário em que os fluxos podem ser úteis é onde uma mensagem está sendo processada em vários serviços. Se cada serviço em uma cadeia retornar um fluxo, o serviço de terminal (ou seja, o último na cadeia) poderá começar a retornar mensagens. Essas mensagens podem ser processadas e passadas de volta ao longo da cadeia para o solicitante original. O solicitante pode retornar um fluxo ou agregar os resultados em uma única mensagem de resposta. Essa abordagem se presta bem a padrões como o MapReduce.
+Outro cenário onde os fluxos podem ser úteis é onde uma mensagem está sendo processada em vários serviços. Se cada serviço em uma cadeia retornar um fluxo, então o serviço de terminal (ou seja, o último da cadeia) pode começar a retornar mensagens. Essas mensagens podem ser processadas e transmitidas ao longo da cadeia para o solicitante original. O solicitante pode retornar um fluxo ou agregar os resultados em uma única mensagem de resposta. Essa abordagem se presta bem a padrões como MapReduce.
 
 >[!div class="step-by-step"]
->[Anterior](migrate-duplex-services.md)
->[Próximo](client-libraries.md)
+>[Próximo](migrate-duplex-services.md)
+>[anterior](client-libraries.md)

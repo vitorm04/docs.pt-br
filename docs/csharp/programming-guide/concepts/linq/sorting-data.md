@@ -2,31 +2,31 @@
 title: Classificando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 8db5ab2ead0e59b8d41d83704ff237d4493155c3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 29a5e3e685bdc73536961b7783f4986796b46bdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346462"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167901"
 ---
 # <a name="sorting-data-c"></a>Classificando dados (C#)
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.  
   
- A ilustração a seguir mostra os resultados de uma operação de classificação alfabética em uma sequência de caracteres: 
+ A ilustração a seguir mostra os resultados de uma operação de classificação alfabética em uma sequência de caracteres:
   
  ![Gráfico que mostra uma operação de classificação alfabética.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Os métodos de operador de consulta padrão que classificam dados estão listados na seção a seguir.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais Informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Classifica valores em ordem crescente.|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Classifica valores em ordem decrescente.|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
 |ThenBy|Executa uma classificação secundária em ordem crescente.|`orderby …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|  
 |ThenByDescending|Executa uma classificação secundária em ordem decrescente.|`orderby …, … descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|  
-|Inverter|Inverte a ordem dos elementos em uma coleção.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
+|Reverse|Inverte a ordem dos elementos em uma coleção.|Não aplicável.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>Exemplos de sintaxe de expressão de consulta  
   
@@ -126,7 +126,7 @@ foreach (string str in query)
 */  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)

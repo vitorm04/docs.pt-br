@@ -14,10 +14,10 @@ helpviewer_keywords:
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
 ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127620"
 ---
 # <a name="padding-strings-in-net"></a>Como preencher cadeias de caracteres no .NET
@@ -47,6 +47,6 @@ Use um dos métodos <xref:System.String> a seguir para criar uma nova cadeia de 
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]
  [!code-vb[Conceptual.String.BasicOps#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#4)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
+- [Operações básicas de string](../../../docs/standard/base-types/basic-string-operations.md)

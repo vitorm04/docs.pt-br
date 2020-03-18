@@ -20,26 +20,26 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627264"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399640"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referência internos (Referência de C#)
 
-O C# tem um número de tipos de referência internos. Eles têm palavras-chave ou operadores que são sinônimos de um tipo na biblioteca do .NET. 
+O C# tem um número de tipos de referência internos. Eles têm palavras-chave ou operadores que são sinônimos de um tipo na biblioteca do .NET.
 
 ## <a name="the-object-type"></a>O tipo de objeto
 
-O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do tipo `object` é convertida em um tipo de valor, ela é considerada *desemoldurada*. Para obter mais informações, consulte [Boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável `object` de tipo é convertida em um tipo de valor, diz-se que *ela não está encaixotada*. Para obter mais informações, consulte [Conversões boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>O tipo de cadeia de caracteres
 
 O tipo `string` representa uma sequência de zero ou mais caracteres Unicode. `string` é um alias de <xref:System.String?displayProperty=nameWithType> no .NET.
 
-Embora `string` seja um tipo de referência, os [operadores de igualdade `==` e `!=`](../operators/equality-operators.md#string-equality) são definidos para comparar os valores de objetos `string`, não referências. Isso torna o teste de igualdade de cadeia de caracteres mais intuitivo. Por exemplo:
+Embora `string` seja um tipo de referência, os [operadores de igualdade `==` e `!=`](../operators/equality-operators.md#string-equality) são definidos para comparar os valores de objetos `string`, não referências. Isso torna o teste de igualdade de cadeia de caracteres mais intuitivo. Por exemplo: 
 
 ```csharp-interactive
 string a = "hello";
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-O [operador](../operators/member-access-operators.md#indexer-operator-) `[]` pode ser usado para acesso somente leitura a caracteres individuais de uma cadeia de caracteres. Os valores de índice válidos começam em `0` e devem ser menores que o comprimento da cadeia de caracteres:
+O `[]` [operador](../operators/member-access-operators.md#indexer-operator-) pode ser usado para ler apenas acesso a caracteres individuais de uma string. Os valores `0` de índice válidos começam e devem ser menores do que o comprimento da seqüência:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-De maneira semelhante, o operador de `[]` também pode ser usado para iterar em cada caractere em uma cadeia de caracteres:
+Da mesma forma, o `[]` operador também pode ser usado para iterar sobre cada caractere em uma seqüência:
 
 ```csharp-interactive
 string str = "test";
@@ -84,7 +84,7 @@ for (int i = 0; i < str.Length; i++)
   Console.Write(str[i] + " ");
 }
 // Output: t e s t
-``` 
+```
 
 Literais de cadeia de caracteres são do tipo `string` e podem ser escritos de duas formas, entre aspas e `@`. Os literais de cadeia de caracteres entre aspas são colocados entre aspas duplas ("):
 
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > O código de escape `\udddd` (em que `dddd` é um número de quatro dígitos) representa o caractere Unicode U+`dddd`. Os códigos de escape Unicode de oito dígitos também são reconhecidos: `\Udddddddd`.
 
-Os [literais de cadeia de caracteres textuais](../tokens/verbatim.md) começam com `@` e também são colocados entre aspas duplas. Por exemplo:
+Os [literais de cadeia de caracteres textuais](../tokens/verbatim.md) começam com `@` e também são colocados entre aspas duplas. Por exemplo: 
 
 ```csharp
 @"good morning"  // a string literal
@@ -136,7 +136,7 @@ No .NET, os tipos `System.Action` e `System.Func` fornecem definições genéric
 
 Um `delegate` é um tipo de referência que pode ser usado para encapsular um método nomeado ou anônimo. Representantes são semelhantes a ponteiros de função em C++. No entanto, os representantes são fortemente tipados e seguros. Para aplicativos de representantes, consulte [Representantes](../../programming-guide/delegates/index.md) e [Representantes genéricos](../../programming-guide/generics/generic-delegates.md). Os representantes são a base dos [Eventos](../../programming-guide/events/index.md). Um delegado pode ser instanciado associando-o a um método nomeado ou anônimo.
 
-O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação permitido na assinatura do método, consulte [Variação em representantes](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos. 
+O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação permitido na assinatura do método, consulte [Variação em representantes](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md). Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos.
 
 ## <a name="the-dynamic-type"></a>O tipo dinâmico
 
@@ -168,17 +168,17 @@ O exemplo a seguir usa `dynamic` em várias declarações. O método `Main` tamb
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Confira também
 
-- [Referência de C#](../index.md)
+- [C# Referência](../index.md)
 - [Palavras-chave do C#](../keywords/index.md)
 - [Eventos](../../programming-guide/events/index.md)
-- [Usando o tipo dynamic](../../programming-guide/types/using-type-dynamic.md)
+- [Usando o Tipo dynamic](../../programming-guide/types/using-type-dynamic.md)
 - [Melhores práticas para o uso de cadeias de caracteres](../../../standard/base-types/best-practices-strings.md)
-- [Operações básicas de cadeias de caracteres](../../../standard/base-types/basic-string-operations.md)
+- [Operações básicas de string](../../../standard/base-types/basic-string-operations.md)
 - [Criando novas cadeias de caracteres](../../../standard/base-types/creating-new.md)
 - [Operadores cast e teste de tipo](../operators/type-testing-and-cast.md)
-- [Como converter com segurança usando correspondência de padrões e os operadores as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Como lançar com segurança usando a correspondência de padrões e os operadores como e é](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Passo a passo: Criando e usando objetos dinâmicos](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

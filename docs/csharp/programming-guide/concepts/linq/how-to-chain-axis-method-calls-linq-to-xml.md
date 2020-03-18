@@ -1,15 +1,15 @@
 ---
-title: Como encadear chamadas de método de eixo (LINQ to XMLC#) ()
+title: Como acorrentar as chamadas do método do eixo (LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: ccfbf516a7fddbef357bfb0072288e250768616b
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 56fa5c9e8358883d838b68e99664240aa97f347f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141437"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169461"
 ---
-# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como encadear chamadas de método de eixo (LINQ to XMLC#) ()
+# <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como acorrentar as chamadas do método do eixo (LINQ para XML) (C#)
 Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.  
   
  Há dois eixos com o nome de `Elements` que retornam uma coleção de elementos: o método de <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> e o método de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> . Você pode combinar esses dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.  
@@ -31,7 +31,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Name>Ellen Adams</Name>  
@@ -73,14 +73,14 @@ foreach (XElement e in names)
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  
-IEnumerable<XElement> configParameters =   
+IEnumerable<XElement> configParameters =
     root.Elements("Customer").Elements("Config").  
     Elements("ConfigParameter");  
 foreach (XElement cp in configParameters)  
     Console.WriteLine(cp);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <ConfigParameter>FirstConfigParameter</ConfigParameter>  
@@ -105,7 +105,7 @@ foreach (XElement e in names)
     Console.WriteLine(e);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <aw:Name xmlns:aw="http://www.adventure-works.com">Ellen Adams</aw:Name>  
@@ -116,6 +116,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Eixos do LINQ to XML (C#)](linq-to-xml-axes-overview.md)

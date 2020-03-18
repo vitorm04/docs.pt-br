@@ -4,11 +4,11 @@ description: Descubra o significado de termos selecionados usados na documentaç
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160086"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400431"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -38,7 +38,7 @@ Confira [Documentação do ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>assembly
 
-Um arquivo *.dll*/ *.exe* que contém uma coleção de APIs que podem ser chamadas por aplicativos ou outros assemblies.
+Um arquivo *.dll*/*.exe* que pode conter uma coleção de APIs que podem ser chamadas por aplicativos ou outros conjuntos.
 
 Um assembly pode incluir tipos como interfaces, classes, estruturas, enumerações e delegados. Às vezes, os assemblies em uma pasta *bin* de projeto são chamados de *binários*. Consulte também [biblioteca](#library).
 
@@ -46,7 +46,7 @@ Um assembly pode incluir tipos como interfaces, classes, estruturas, enumeraçõ
 
 Common Language Runtime.
 
-O significado exato depende do contexto, mas geralmente se refere ao runtime do .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código dinamicamente usando um compilador [JIT](#jit). A implementação atual do CLR da Microsoft é somente para Windows.
+O significado exato depende do contexto, mas geralmente se refere ao runtime do .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código sem parar usando um compilador [JIT.](#jit) A implementação atual do CLR da Microsoft é somente para Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -58,7 +58,7 @@ Esse CLR é criado com a mesma base de código que o CLR. Originalmente, o CoreC
 
 BCL (biblioteca de classes base) do .NET Core
 
-Um conjunto de bibliotecas que compõem o sistema.\* os namespaces (e em uma extensão limitada Microsoft.\*). A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core. O código-fonte da BCL do .NET Core está contido no [repositório do .NET Core Runtime](https://github.com/dotnet/runtime). No entanto, a maioria das APIs do .NET Core também estão disponíveis no .NET Framework, portanto você pode pensar no CoreFX como um fork da BCL do .NET Framework.
+Um conjunto de bibliotecas que compõem o Sistema. \* (e até certo ponto, Microsoft.\*) espaços de nome. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core. O código-fonte do .NET Core BCL está contido no [repositório de tempo de execução .NET Core](https://github.com/dotnet/runtime). No entanto, a maioria das APIs do .NET Core também estão disponíveis no .NET Framework, portanto você pode pensar no CoreFX como um fork da BCL do .NET Framework.
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ runtime do .NET Core.
 
 Ao contrário do CLR/CoreCLR, o CoreRT não é uma máquina virtual, o que significa que ele não inclui os recursos para gerar e executar código dinamicamente, já que não inclui um [JIT](#jit). No entanto, ele inclui a [GC](#gc) e a capacidade de RTTI (identificação de tipo de runtime) e reflexão. Contudo, seu sistema de tipos é projetado para que os metadados para reflexão não sejam necessários. Isso permite ter uma cadeia de ferramentas [AOT](#aot) que possa desvincular metadados supérfluos e, mais importante, identificar código que o aplicativo não usa. O CoreRT está em desenvolvimento.
 
-Consulte [introdução a .net Native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
+Consulte [Intro para .NET Native e CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
 
 ## <a name="cross-platform"></a>várias plataformas
 
@@ -167,7 +167,7 @@ Consulte [.NET Core](../core/index.md).
 
 Uma cadeia de ferramentas multiplataforma para o desenvolvimento de aplicativos .NET Core.
 
-Consulte [CLI do .NET Core](../core/tools/index.md).
+Consulte [.NET Core CLI](../core/tools/index.md).
 
 ## <a name="net-core-sdk"></a>SDK do .Net Core
 
@@ -269,12 +269,12 @@ Consulte [Estruturas de destino](frameworks.md).
 
 Plataforma Universal do Windows.
 
-Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos C++em C#,, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET Core.
+Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs .NET são fornecidas pelo .NET Core.
 
 ## <a name="see-also"></a>Confira também
 
 - [Guia do .NET](index.md)
 - [Guia do .NET Framework](../framework/index.md)
 - [.NET Core](../core/index.md)
-- [Visão geral do ASP.NET](/aspnet/index#pivot=aspnet)
+- [visão geral ASP.NET](/aspnet/index#pivot=aspnet)
 - [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)

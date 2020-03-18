@@ -15,11 +15,11 @@ helpviewer_keywords:
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346657"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400333"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 
@@ -36,7 +36,7 @@ Cadeias de caracteres de formato de data e hora padrão podem ser usadas tanto c
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a> A tabela a seguir descreve os especificadores de formato de data e hora padrão. Salvo indicação em contrário, um determinado especificador de formato de data e hora padrão produz uma representação de cadeia de caracteres idêntica independente de ela ser usada com um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Consulte a seção [Observações](#Notes) para obter informações adicionais sobre como usar as cadeias de caracteres de formato de data e hora padrão.
+<a name="table"></a>A tabela a seguir descreve os especificadores de data e hora padrão. Salvo indicação em contrário, um determinado especificador de formato de data e hora padrão produz uma representação de cadeia de caracteres idêntica independente de ela ser usada com um valor <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Consulte a seção [Observações](#Notes) para obter informações adicionais sobre como usar as cadeias de caracteres de formato de data e hora padrão.
 
 |Especificador de formato|Descrição|Exemplos|
 |----------------------|-----------------|--------------|
@@ -85,7 +85,7 @@ Em alguns casos, a cadeia de caracteres de formato padrão funciona como uma abr
 
 |Cadeias de caracteres de formato padrão|Definidas pela propriedade DateTimeFormatInfo.InvariantInfo|Cadeia de caracteres de formato personalizado|
 |----------------------------|----------------------------------------------------------|--------------------------|
-|"O" ou "o"|{1&gt;Nenhum&lt;1}|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
+|"O" ou "o"|Nenhum|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|
 |"R" ou "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|
@@ -105,7 +105,7 @@ O especificador de formato padrão “d” representa uma cadeia de caracteres d
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Define a cadeia de caracteres que separa o ano, o mês e os componentes de dia de uma data.|
@@ -125,7 +125,7 @@ O especificador de formato padrão “D” representa uma cadeia de caracteres d
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|
@@ -146,7 +146,7 @@ O especificador de formato padrão "f" representa uma combinação dos padrões 
 
 A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|
@@ -171,7 +171,7 @@ O especificador de formato padrão “F” representa uma cadeia de caracteres d
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|
@@ -195,7 +195,7 @@ O especificador de formato padrão "g" representa uma combinação dos padrões 
 
 A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato que é retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|
@@ -219,7 +219,7 @@ O especificador de formato padrão "G" representa uma combinação dos padrões 
 
 A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador personalizado de formato que é retornado pelas propriedades <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> e <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Define o formato do componente de data da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|
@@ -243,7 +243,7 @@ O especificador de formato padrão “M” ou "m" representa uma cadeia de carac
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define os nomes dos meses localizados que podem aparecer na cadeia de caracteres de resultado.|
@@ -275,7 +275,7 @@ Como o especificador de formato padrão "O" ou "o" está de acordo com um padrã
 
 As cadeias de caracteres passadas para os métodos `Parse`, `TryParse`, `ParseExact` e `TryParseExact` de <xref:System.DateTime> e <xref:System.DateTimeOffset> podem ser analisadas usando o especificador de formato "O" ou "o", caso estejam em um desses formatos. No caso de objetos <xref:System.DateTime>, a sobrecarga de análise chamada também inclui um parâmetro `styles` com um valor de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Se chamar um método de análise com a cadeia de caracteres de formato personalizado correspondente ao especificador de formato "O" ou "o", você não terá os mesmos resultados de "O" ou "o". Isso porque os métodos de análise que usam uma cadeia de caracteres de formato personalizado não podem analisar a representação da cadeia de caracteres de valores de data e hora que não tenham um componente de fuso horário ou usem "Z" para indicar o UTC.
 
-O exemplo a seguir usa o especificador de formato "o" para exibir uma série de valores de <xref:System.DateTime> e um valor de <xref:System.DateTimeOffset> em um sistema no fuso horário do Pacífico dos EUA.
+O exemplo a seguir usa o especificador de <xref:System.DateTime> formato <xref:System.DateTimeOffset> "o" para exibir uma série de valores e um valor em um sistema no fuso horário do Pacífico dos EUA.
 
 [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]
@@ -295,7 +295,7 @@ O especificador de formato padrão “R” ou "r" representa uma cadeia de carac
 
 A cadeia de caracteres de resultado é afetada pelas seguintes propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> que representa a cultura invariável.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Define o formato da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Define os nomes de dias abreviados que podem aparecer na cadeia de caracteres de resultado.|
@@ -335,7 +335,7 @@ O especificador de formato padrão “t” representa uma cadeia de caracteres d
 
 A cadeia de caracteres do resultado é afetada pelas informações de formatação de um objeto <xref:System.Globalization.DateTimeFormatInfo> específico. A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define a cadeia de caracteres que separa os componentes de hora, minuto e segundo de uma hora.|
@@ -357,7 +357,7 @@ O especificador de formato padrão “T” representa uma cadeia de caracteres d
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define o formato do componente de hora da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define a cadeia de caracteres que separa os componentes de hora, minuto e segundo de uma hora.|
@@ -394,7 +394,7 @@ O especificador de formato padrão “U” representa uma cadeia de caracteres d
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que podem controlar a formatação da cadeia de caracteres retornada. O especificador de formato personalizado que é retornado pela propriedade <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de algumas culturas não pode usar todas as propriedades.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Define os nomes de dias localizados que podem aparecer na cadeia de caracteres de resultado.|
@@ -420,7 +420,7 @@ O especificador de formato padrão “Y” ou "y" representa uma cadeia de carac
 
 A tabela a seguir lista as propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> que controlam a formatação da cadeia de caracteres retornada.
 
-|propriedade|Descrição|
+|Propriedade|Descrição|
 |--------------|-----------------|
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Define o formato geral da cadeia de caracteres de resultado.|
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define os nomes dos meses localizados que podem aparecer na cadeia de caracteres de resultado.|
@@ -434,7 +434,7 @@ O exemplo a seguir utiliza o especificador de formato "y" para exibir um valor d
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>{1&gt;Observações&lt;1}
+## <a name="notes"></a>Observações
 
 ### <a name="control-panel-settings"></a>Configurações do Painel de Controle
 
@@ -446,11 +446,11 @@ Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28Sy
 
 A formatação é influenciada pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual, que é fornecido implicitamente pela cultura de thread atual ou explicitamente pelo parâmetro <xref:System.IFormatProvider> do método que invoca a formatação. Para o parâmetro <xref:System.IFormatProvider>, seu aplicativo deve especificar um objeto <xref:System.Globalization.CultureInfo>, que representa uma cultura, ou um objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa as convenções de formatação de data e hora de uma determinada cultura. Muitos dos especificadores de formato padrão de data e hora são aliases para padrões de formatação definidos pelas propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato padrão de data e hora alterando os padrões de formatação de data e hora correspondentes da propriedade <xref:System.Globalization.DateTimeFormatInfo>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
-- [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadeias de caracteres de formato de data e hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
+- [Strings personalizadas de formato de data e hora](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

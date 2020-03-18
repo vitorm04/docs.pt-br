@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139237"
 ---
 # <a name="managed-threading-basics"></a>Noções básicas de threading gerenciado
@@ -22,17 +22,17 @@ Os cinco primeiros tópicos desta seção destinam-se a ajudá-lo a determinar q
  O restante dos tópicos desta seção abordam tópicos avançados, incluindo a interação de threading gerenciado com o sistema operacional Windows.  
   
 > [!NOTE]
-> No .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs para o paralelismo de tarefa e dados em programas multithreading. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
+> No .NET Framework 4, a biblioteca de paralelismo de tarefas e o PLINQ fornecem APIs para o paralelismo de tarefa e dados em programas multithreading. Para obter mais informações, consulte [Programação Paralela](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Nesta seção
 
- [Threads e threading](../../../docs/standard/threading/threads-and-threading.md)  
+ [Linhas e Roscas](../../../docs/standard/threading/threads-and-threading.md)  
  São discutidas as vantagens e desvantagens de vários threads e são descritos os cenários em que você pode criar threads ou usar threads de pool.  
   
  [Exceções em threads gerenciados](../../../docs/standard/threading/exceptions-in-managed-threads.md)  
  É descrito o comportamento de exceções sem tratamento em threads para diferentes versões do .NET Framework, em particular as situações em que elas resultam no encerramento do aplicativo.  
   
- [Sincronizando dados para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+ [Sincronização de dados para multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  São descritas as estratégias para sincronizar dados em classes que serão usadas com vários threads.  
   
  [Threads em primeiro plano e em segundo plano](../../../docs/standard/threading/foreground-and-background-threads.md)  
@@ -54,11 +54,11 @@ Os cinco primeiros tópicos desta seção destinam-se a ajudá-lo a determinar q
   
 ## <a name="related-sections"></a>Seções relacionadas
 
- [Visão geral dos primitivos de sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+ [Visão geral dos Primitivos da Sincronização](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  São descritas as classes gerenciadas usadas para sincronizar as atividades de vários threads.  
   
- [Práticas recomendadas de threading gerenciado](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Práticas recomendadas de rosca gerenciadas](../../../docs/standard/threading/managed-threading-best-practices.md)  
  São descritos problemas comuns com o multithreading e estratégias para evitar problemas.  
   
- [Programação paralela](../../../docs/standard/parallel-programming/index.md)  
+ [Programação Paralela](../../../docs/standard/parallel-programming/index.md)  
  É descrita a biblioteca de paralelismo de tarefas e o PLINQ, que simplifica muito o trabalho de criação de aplicativos do .NET Framework de multithreading e assíncronos.

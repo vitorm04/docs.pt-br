@@ -2,12 +2,12 @@
 title: Valores ref return e ref local (Guia de C#)
 description: Saiba como definir e usar os valores ref return e ref local
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736823"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170067"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -25,7 +25,7 @@ Há algumas restrições quanto à expressão que um método pode retornar como 
 
 - O valor retornado não pode ser um `null` literal. Retornar `null` gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
-   Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (sem instanciação) ou um [tipo de valor anulável](../../language-reference/builtin-types/nullable-value-types.md) para um tipo de valor.
+   Um método com retorno de árbitro pode retornar um alias a uma variável cujo valor é atualmente o valor nulo (não instanciado) ou um [tipo de valor anulado](../../language-reference/builtin-types/nullable-value-types.md) para um tipo de valor.
 
 - O valor retornado não pode ser uma constante, um membro de enumeração, o valor retornado por valor de uma propriedade ou um método `class` ou `struct`. Violar essa regra gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 O uso subsequente de `p` é o mesmo que usar a variável retornada pelo `GetContactInformation` porque `p` é um alias dessa variável. As alterações em `p` também alteram a variável retornada de `GetContactInformation`.
 
-A palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método. 
+A palavra-chave `ref` é usada antes da declaração de variável local *e* antes da chamada de método.
 
 Você pode acessar um valor por referência da mesma maneira. Em alguns casos, acessar um valor por referência aumenta o desempenho, evitando uma operação de cópia potencialmente dispendiosa. Por exemplo, a instrução a seguir mostra como é possível definir um valor de local de ref que é usado para fazer referência a um valor.
 
@@ -90,7 +90,7 @@ Você pode acessar um valor por referência da mesma maneira. Em alguns casos, a
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-A palavra-chave `ref` é usada antes da declaração da variável local *e* antes do valor, no segundo exemplo. A falha ao incluir as palavras-chave `ref` na declaração e na atribuição da variável nos dois exemplos resulta no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor." 
+A palavra-chave `ref` é usada antes da declaração da variável local *e* antes do valor, no segundo exemplo. A falha ao incluir as palavras-chave `ref` na declaração e na atribuição da variável nos dois exemplos resulta no erro do compilador CS8172, "Não é possível inicializar uma variável por referência com um valor."
 
 Antes do C# 7.3, variáveis locais de referência não podiam ser reatribuídas para se referir a um armazenamento diferente depois de serem inicializadas. Essa restrição foi removida. O exemplo a seguir mostra uma transferência:
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Ref returns e ref locals: um exemplo
 
-O exemplo a seguir define uma classe `NumberStore` que armazena uma matriz de valores inteiros. O método `FindNumber` retorna por referência o primeiro número maior ou igual ao número passado como um argumento. Se nenhum número for maior ou igual ao argumento, o método retornará o número no índice 0. 
+O exemplo a seguir define uma classe `NumberStore` que armazena uma matriz de valores inteiros. O método `FindNumber` retorna por referência o primeiro número maior ou igual ao número passado como um argumento. Se nenhum número for maior ou igual ao argumento, o método retornará o número no índice 0.
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
@@ -119,7 +119,7 @@ A exemplo a seguir mostra como o método `FindNumber` poderia ser reescrito apó
 
 Essa segunda versão é mais eficiente, com sequências mais longas em cenários em que o número procurado é mais próximo ao final da matriz.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [ref keyword](../../language-reference/keywords/ref.md)
-- [Gravação de código segura e eficiente](../../write-safe-efficient-code.md)
+- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)

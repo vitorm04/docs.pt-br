@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715021"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170293"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
 Os finalizadores (que também são chamados de **destruidores**) são usados para executar qualquer limpeza final necessária, quando uma instância da classe está sendo coletada pelo coletor de lixo.  
@@ -57,9 +57,9 @@ protected override void Finalize()
 > [!NOTE]
 > Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
   
- O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto. 
- 
- Em aplicativos .NET Framework (mas não em aplicativos .NET Core), os finalizadores também são chamados quando o programa é encerrado. 
+ O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto.
+
+ Em aplicativos .NET Framework (mas não em aplicativos .NET Core), os finalizadores também são chamados quando o programa é encerrado.
   
  É possível forçar a coleta de lixo chamando <xref:System.GC.Collect%2A>, mas na maioria das vezes, isso deve ser evitado porque pode criar problemas de desempenho.  
   
@@ -73,22 +73,22 @@ protected override void Finalize()
   
 - [Limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md)  
   
-- [Implementando um método dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementando um método de descarte](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [Instrução using](../../language-reference/keywords/using-statement.md)  
+- [usando a Declaração](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria três classes que compõem uma cadeia de herança. A classe `First` é a classe base, `Second` é derivado de `First` e `Third` é derivado de `Second`. Todas as três têm finalizadores. Em `Main`, uma instância da classe mais derivada é criada. Quando o programa for executado, observe que os finalizadores das três classes são chamados automaticamente e em ordem, do mais derivado para o menos derivado.  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
-## <a name="c-language-specification"></a>Especificação da linguagem C#  
+## <a name="c-language-specification"></a>especificação da linguagem C#  
 
 Para obter mais informações, confira a seção [Destruidores](~/_csharplang/spec/classes.md#destructors) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IDisposable>
-- [Guia de Programação em C#](../index.md)
+- [C# Guia de Programação](../index.md)
 - [Construtores](./constructors.md)
 - [Coleta de lixo](../../../standard/garbage-collection/index.md)

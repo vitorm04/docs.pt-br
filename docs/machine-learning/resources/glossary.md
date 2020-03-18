@@ -4,11 +4,11 @@ description: Um glossário de termos essenciais sobre o aprendizado de máquina,
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739880"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398933"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -36,7 +36,7 @@ No ML.NET, um catálogo é uma coleção de funções de extensão agrupadas por
 
 Por exemplo, cada tarefa de aprendizado de máquina (classificação binária, regressão, classificação etc.) tem um catálogo de algoritmos de aprendizado de máquina disponível (treinadores). O catálogo para os treinadores de classificação binária é: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>Classificação
+## <a name="classification"></a>classificação
 
 Quando os dados são usados ​​para prever uma categoria, a tarefa de [aprendizado de máquina supervisionado](#supervised-machine-learning) é chamada de classificação. [Classificação binária](#binary-classification) refere-se à previsão de apenas duas categorias (por exemplo, classificar uma imagem como uma figura de um "gato" ou um "cachorro"). [Classificação multiclasse](#multiclass-classification) refere-se à previsão de várias categorias (por exemplo, ao classificar uma imagem como uma imagem de uma raça específica de cão).
 
@@ -72,7 +72,7 @@ Uma propriedade mensurável do fenômeno que está sendo medido, normalmente um 
 
 A engenharia de recursos é o processo que envolve a definição de um conjunto de [recursos](#feature) e o desenvolvimento de software que produz vetores de recursos a partir de dados de fenômenos disponíveis, ou seja, a extração de recursos. Para obter mais informações, consulte o artigo [Engenharia de recursos](https://en.wikipedia.org/wiki/Feature_engineering) na Wikipédia.
 
-## <a name="f-score"></a>Classificação de F
+## <a name="f-score"></a>F-score
 
 Na [classificação](#classification), uma métrica de avaliação que equilibra [precisão](#precision) e [recall](#recall).
 
@@ -122,11 +122,11 @@ Um vetor de [recurso](#feature) consistindo apenas em valores numéricos. Simila
 
 Todas as operações necessárias para ajustar um modelo a um conjunto de dados. Um pipeline consiste em etapas de importação, transformação, personalização e aprendizado de dados. Uma vez que um pipeline é treinado, ele se torna um modelo.
 
-## <a name="precision"></a>Precision
+## <a name="precision"></a>Precisão
 
 Na [classificação](#classification), a precisão de uma classe é o número de itens preditos corretamente como pertencentes a essa classe dividido pelo número total de itens previstos como pertencentes à classe.
 
-## <a name="recall"></a>Recall
+## <a name="recall"></a>Recuperação
 
 Na [classificação](#classification), o recall de uma classe é o número de itens preditos corretamente como pertencentes a essa classe dividido pelo número total de itens que realmente pertencem à classe.
 
@@ -135,7 +135,7 @@ Na [classificação](#classification), o recall de uma classe é o número de it
  Regularização penaliza um modelo linear por ser complicado demais. Há dois tipos de regularização:
 
 - A regularização $L_1$ zera pesos para recursos insignificantes. O tamanho do modelo salvo pode ficar menor após esse tipo de regularização.
-- $L _2 $ regularização minimiza o intervalo de peso para recursos insignificantes. Esse é um processo mais geral e é menos sensível a exceções.
+- a regularização $L_2$ minimiza a faixa de peso para recursos insignificantes. Este é um processo mais geral e é menos sensível aos outliers.
 
 ## <a name="regression"></a>Regressão
 
@@ -145,7 +145,7 @@ Uma tarefa de [aprendizado de máquina supervisionado](#supervised-machine-learn
 
 Na [regressão](#regression), uma métrica de avaliação que é a soma de todos os erros absolutos dividida pela soma das distâncias entre os valores de [rótulo](#label) corretos e a média de todos os valores de rótulo corretos.
 
-## <a name="relative-squared-error"></a>Erro ao quadrado relativo
+## <a name="relative-squared-error"></a>Erro quadrático relativo
 
 Na [regressão](#regression), uma métrica de avaliação que é a soma de todos os erros absolutos quadráticos dividida pela soma das distâncias quadráticas entre os valores de [rótulo](#label) corretos e a média de todos os valores de rótulo corretos.
 

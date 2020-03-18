@@ -2,12 +2,12 @@
 title: Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344560"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168759"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (C#)
 Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:  
@@ -96,7 +96,7 @@ class QueryBySize
         }  
   
         // Group the files according to their size, leaving out  
-        // files that are less than 200000 bytes.   
+        // files that are less than 200000 bytes.
         var querySizeGroups =  
             from file in fileList  
             let len = GetFileLength(file)  
@@ -142,10 +142,10 @@ class QueryBySize
   
  A consulta chama um método separado para obter o tamanho do arquivo em bytes para consumir a exceção possível que ocorrerá caso um arquivo tenha sido excluído em outro thread no período desde que o objeto <xref:System.IO.FileInfo> foi criado na chamada para `GetFiles`. Embora o objeto <xref:System.IO.FileInfo> já tenha sido criado, a exceção poderá ocorrer porque um objeto <xref:System.IO.FileInfo> tentará atualizar sua propriedade <xref:System.IO.FileInfo.Length%2A> usando o tamanho mais atual em bytes na primeira vez que a propriedade foi acessada. Ao colocar essa operação em um bloco try-catch fora da consulta, nós seguimos a regra de evitar operações em consultas que podem causar efeitos colaterais. Em geral, deve-se ter muito cuidado ao consumir exceções para garantir que um aplicativo não seja deixado em um estado desconhecido.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
 Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.
- 
-## <a name="see-also"></a>Veja também
+
+## <a name="see-also"></a>Confira também
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

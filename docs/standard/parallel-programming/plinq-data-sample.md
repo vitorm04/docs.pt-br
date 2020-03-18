@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140018"
 ---
 # <a name="plinq-data-sample"></a>Exemplo de dados PLINQ
@@ -29,7 +29,7 @@ Este exemplo contém dados de exemplo no formato .csv e os métodos que os trans
   
 2. Substitua o conteúdo de Module1.vb ou de Program.cs usando o código que segue estas etapas.  
   
-3. No menu **Projeto**, clique em **Adicionar Novo Item**. Escolha **Arquivo de Texto** e, em seguida, clique em **OK**. Copie os dados neste tópico e então cole-os no novo arquivo de texto. No menu **Arquivo**, clique em **Salvar**, nomeie o arquivo Plinqdata.csv e salve-o na pasta que contém os arquivos de código-fonte.  
+3. No menu **Projeto** , clique em **Adicionar Novo Item**. Escolha **Arquivo de Texto** e, em seguida, clique em **OK**. Copie os dados neste tópico e então cole-os no novo arquivo de texto. No menu **Arquivo**, clique em **Salvar**, nomeie o arquivo Plinqdata.csv e salve-o na pasta que contém os arquivos de código-fonte.  
   
 4. Pressione F5 para verificar se o projeto compila e executa corretamente. A saída a seguir deve ser exibida na janela do console.  
   
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

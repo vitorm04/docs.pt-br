@@ -2,12 +2,12 @@
 title: Criando árvores XML em C# (LINQ para XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594626"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169539"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Criando árvores XML em C# (LINQ to XML)
 Esta seção fornece informações sobre a criação de árvores XML em C#.  
@@ -25,7 +25,7 @@ Esta seção fornece informações sobre a criação de árvores XML em C#.
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>Construtores de XElement  
  A classe <xref:System.Xml.Linq.XElement> usa os seguintes construtores na construção funcional. Observe que há outros construtores para <xref:System.Xml.Linq.XElement>, mas como eles não são usados na construção funcional, eles não são listados aqui.  
   
-|Construtor|DESCRIÇÃO|  
+|Construtor|Descrição|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|Cria um <xref:System.Xml.Linq.XElement>. O parâmetro `name` especifica o nome do elemento; `content` especifica o conteúdo do elemento.|  
 |`XElement(XName name)`|Cria um <xref:System.Xml.Linq.XElement> com seu <xref:System.Xml.Linq.XName> inicializado para o nome especificado.|  
@@ -70,7 +70,7 @@ XElement n = new XElement("Customer", "Adventure Works");
 Console.WriteLine(n);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
@@ -83,7 +83,7 @@ XElement n = new XElement("Cost", 324.50);
 Console.WriteLine(n);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Cost>324.5</Cost>  
@@ -101,7 +101,7 @@ XElement shippingUnit = new XElement("ShippingUnit",
 Console.WriteLine(shippingUnit);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <ShippingUnit>  
@@ -122,7 +122,7 @@ XElement address = new XElement("Address",
 Console.WriteLine(address);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Address>  
@@ -139,7 +139,7 @@ Console.WriteLine(address);
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),                                                   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -152,7 +152,7 @@ XElement contacts =
 Console.WriteLine(contacts);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Contacts>  
@@ -179,11 +179,11 @@ XElement phone = new XElement("Phone",
 Console.WriteLine(phone);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
-```   
+```
 
 ### <a name="creating-an-empty-element"></a>Criando um elemento vazio  
  Para criar um <xref:System.Xml.Linq.XElement> vazio, você não passa conteúdo para o construtor. O seguinte exemplo cria um elemento vazio:  
@@ -193,7 +193,7 @@ XElement n = new XElement("Customer");
 Console.WriteLine(n);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ Esse exemplo gera a saída a seguir:  
   
 ```xml  
 <Customer />  
@@ -234,6 +234,6 @@ Console.WriteLine("Child2 was {0}",
 //    Child2 was attached  
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criando árvores XML (C#)](./linq-to-xml-overview.md)

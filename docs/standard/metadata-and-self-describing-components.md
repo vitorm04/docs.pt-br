@@ -16,10 +16,10 @@ helpviewer_keywords:
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121942"
 ---
 # <a name="metadata-and-self-describing-components"></a>Metadados e componentes autodescritivos
@@ -92,7 +92,7 @@ Quando um programa é compilado para o Common Language Runtime, ele é convertid
 
 |Seção PE|Conteúdo da seção PE|
 |----------------|----------------------------|
-|Cabeçalho PE|O índice das seções principais do arquivo PE e o endereço do ponto de entrada.<br /><br /> O ambiente de execução usa essas informações para identificar o arquivo como um arquivo PE e determinar onde a execução começa ao carregar o programa na memória.|
+|Cabeçalho PE|O índice das seções principais do arquivo PE e o endereço do ponto de entrada.<br /><br /> O ambiente de runtime usa essas informações para identificar o arquivo como um arquivo PE e determinar onde a runtime começa ao carregar o programa na memória.|
 |Instruções MSIL|As instruções MSIL que compõem o seu código. Muitas instruções MSIL são acompanhadas de tokens de metadados.|
 |Metadados|Tabelas e heaps de metadados. O runtime usa esta seção para registrar informações todos os tipos e membros em seu código. Esta seção também inclui atributos personalizados e informações de segurança.|
 
@@ -153,24 +153,24 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-O compilador JIT lê o MSIL para o método inteiro o analisa-o por completo, além de gerar instruções nativas eficientes para o método. No `IL_000d`, um token de metadados do método `Add` (`/*` `06000003 */`) é encontrado e o tempo de execução usa o token para consultar a terceira linha da tabela **MethodDef**.
+O compilador JIT lê o MSIL para o método inteiro o analisa-o por completo, além de gerar instruções nativas eficientes para o método. No `IL_000d`, um token de metadados do método `Add` ( `/*` `06000003 */`) é encontrado e o runtime usa o token para consultar a terceira linha da tabela **MethodDef**.
 
 A tabela a seguir mostra parte da tabela **MethodDef** referenciada pelo token de metadados que descreve o método `Add`. Embora haja outras tabelas de metadados nesse assembly e elas tenham seus próprios valores exclusivos, somente essa tabela é examinada.
 
-|Linha|RVA (endereço virtual relativo)|ImplFlags|Sinalizadores|Name<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
+|Linha|RVA (endereço virtual relativo)|ImplFlags|Flags|Nome<br /><br /> (Aponta para o heap da cadeia de caracteres.)|Assinatura (Aponta para o heap de blob.)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Gerenciado|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
-|2|0x00002058|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|Cadeia de Caracteres|
-|3|0x0000208c|IL<br /><br /> Gerenciado|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
+|1|0x00002050|IL<br /><br /> Gerenciada|Público<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (construtor)||
+|2|0x00002058|IL<br /><br /> Gerenciada|Público<br /><br /> Estático<br /><br /> ReuseSlot|Principal|String|
+|3|0x0000208c|IL<br /><br /> Gerenciada|Público<br /><br /> Estático<br /><br /> ReuseSlot|Adicionar|int, int, int|
 
-Cada coluna da tabela contém informações importantes sobre seu código. A coluna **RVA** permite que o tempo de execução calcule o endereço de memória inicial do MSIL que define esse método. As colunas **ImplFlags** e **Flags** contêm bitmasks que descrevem o método (por exemplo, se o método é público ou particular). A coluna **Nome** indexa o nome do método com base no heap da cadeia de caracteres. A coluna **Assinatura** indexa a definição da assinatura do método no heap de blob.
+Cada coluna da tabela contém informações importantes sobre seu código. A coluna **RVA** permite que o runtime calcule o endereço de memória inicial do MSIL que define esse método. As colunas **ImplFlags** e **Flags** contêm bitmasks que descrevem o método (por exemplo, se o método é público ou particular). A coluna **Nome** indexa o nome do método com base no heap da cadeia de caracteres. A coluna **Assinatura** indexa a definição da assinatura do método no heap de blob.
 
-O tempo de execução calcula o endereço de deslocamento desejado com base na coluna **RVA** na terceira linha e retorna esse endereço para o compilador JIT, que depois passa para o novo endereço. O compilador JIT continua processando o MSIL no novo endereço até encontrar outro token de metadados, e o processo é repetido.
+O runtime calcula o endereço de deslocamento desejado com base na coluna **RVA** na terceira linha e retorna esse endereço para o compilador JIT, que depois passa para o novo endereço. O compilador JIT continua processando o MSIL no novo endereço até encontrar outro token de metadados, e o processo é repetido.
 
 Usando metadados, o ambiente de runtime tem acesso a todas as informações necessárias para carregar seu código e processá-lo em instruções de máquina nativas. Dessa maneira, os metadados permitem arquivos autodescritivos e, com o CTS, a herança entre linguagens.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Atributos](../../docs/standard/attributes/index.md)|Descreve como aplicar atributos, escrever atributos personalizados e recuperar informações armazenadas em atributos.|

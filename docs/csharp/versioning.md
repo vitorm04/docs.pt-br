@@ -4,12 +4,12 @@ description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: ee123893ac8baa0a55bdf69ce49fb6fcb87601b4
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239996"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156461"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -35,35 +35,36 @@ Também há maneiras de especificar outros cenários, como versões de pré-lan�
 ### <a name="backwards-compatibility"></a>Compatibilidade com versões anteriores
 
 Conforme você lança novas versões de sua biblioteca, a compatibilidade com versões anteriores provavelmente será uma de suas principais preocupações.
-Uma nova versão da biblioteca será compatível com a origem de uma versão anterior se o código que depende da versão anterior puder, quando recompilado, trabalhar com a nova versão. Uma nova versão da biblioteca será compatível de forma binária se um aplicativo que dependia da versão anterior puder, sem recompilação, trabalhar com a nova versão.
+Uma nova versão da biblioteca será compatível com a origem de uma versão anterior se o código que depende da versão anterior puder, quando recompilado, trabalhar com a nova versão.
+Uma nova versão da biblioteca será compatível de forma binária se um aplicativo que dependia da versão anterior puder, sem recompilação, trabalhar com a nova versão.
 
 Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilidade com versões mais antigas de sua biblioteca:
 
 - Métodos virtuais: quando você torna um método em virtual não virtual na nova versão, significa que projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
-- Assinaturas de método: ao atualizar um comportamento de método exige que você altere sua assinatura também, em vez disso, você deve criar uma sobrecarga para que o código que chama esse método ainda funcione.
+- Assinaturas do método: Ao atualizar um comportamento de método requer que você altere sua assinatura também, você deve, em vez disso, criar uma sobrecarga para que a chamada de código para esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
 - [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): você pode usar esse atributo no seu código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
 - Argumentos de método opcionais: quando você tornar argumentos de método que antes eram opcionais em compulsórios ou alterar seu valor padrão, todo código que não fornece esses argumentos precisará ser atualizado.
 
 > [!NOTE]
-> Tornar os argumentos compulsórios opcionais deve ter muito pouco efeito, especialmente se ele não alterar o comportamento do método.
+> Tornar os argumentos obrigatórios opcionais deve ter muito pouco efeito, especialmente se não mudar o comportamento do método.
 
 Quanto mais fácil for para os usuários atualizarem para a nova versão da sua biblioteca, mais provável será que eles atualizem o quanto antes.
 
-### <a name="application-configuration-file"></a>Arquivo de configuração do aplicativo
+### <a name="application-configuration-file"></a>Arquivo de Configuração do Aplicativo
 
 Como um desenvolvedor de .NET, há uma chance muito grande de você já ter encontrado o [arquivo o `app.config`](../framework/configure-apps/file-schema/index.md) na maioria dos tipos de projeto.
-Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Em geral, você deve criar suas bibliotecas de forma que as informações que provavelmente forem alteradas regularmente sejam armazenadas no arquivo de `app.config`, dessa forma, quando essas informações forem atualizadas, o arquivo de configuração de versões mais antigas precisará ser substituído pelo novo sem a necessidade de recompilação da biblioteca.
+Esse arquivo de configuração simples pode fazer muita diferença para melhorar a distribuição de novas atualizações. Você geralmente deve projetar suas bibliotecas de tal forma que as informações `app.config` que provavelmente mudarão regularmente no arquivo, desta forma, quando essas informações são atualizadas, o arquivo de configuração de versões mais antigas só precisa ser substituído pelo novo sem a necessidade de recompilação da biblioteca.
 
 ## <a name="consuming-libraries"></a>Consumindo bibliotecas
 
 Como um desenvolvedor que consome bibliotecas .NET criadas por outros desenvolvedores, vocês provavelmente está ciente de que uma nova versão de uma biblioteca pode não ser totalmente compatível com seu projeto e pode acabar precisando atualizar seu código para trabalhar com essas alterações.
 
-Sorte para você, C# e o ecossistema .net vem com recursos e técnicas que nos permitem atualizar facilmente nosso aplicativo para trabalhar com novas versões de bibliotecas que podem introduzir alterações significativas.
+Para sua sorte, c# e o ecossistema .NET vem com recursos e técnicas que nos permitem atualizar facilmente nosso aplicativo para trabalhar com novas versões de bibliotecas que podem introduzir mudanças de ruptura.
 
 ### <a name="assembly-binding-redirection"></a>Redirecionamento de associação de assembly
 
-Você pode usar o arquivo *app. config* para atualizar a versão de uma biblioteca que seu aplicativo usa. Ao adicionar o que é chamado de [*redirecionamento de associação*](../framework/configure-apps/redirect-assembly-versions.md), você pode usar a nova versão da biblioteca sem precisar recompilar seu aplicativo. O exemplo a seguir mostra como você atualizaria o arquivo *app. config* do aplicativo para usar a versão `1.0.1` patch do `ReferencedLibrary` em vez da versão do `1.0.0` com a qual foi originalmente compilado.
+Você pode usar o arquivo *app.config* para atualizar a versão de uma biblioteca que seu aplicativo usa. Adicionando o que é chamado [*de redirecionamento de vinculação,*](../framework/configure-apps/redirect-assembly-versions.md)você pode usar a nova versão da biblioteca sem ter que recompilar seu aplicativo. O exemplo a seguir mostra como você atualizaria o `1.0.1` arquivo *app.config* do seu aplicativo para usar a versão de patch em `ReferencedLibrary` vez da `1.0.0` versão com a qual foi originalmente compilado.
 
 ```xml
 <dependentAssembly>
@@ -111,4 +112,4 @@ Derived Method One: Derived Method One
 
 O modificador `override` é avaliado em tempo de compilação e o compilador gerará um erro se não encontrar um membro virtual para substituir.
 
-Seu conhecimento das técnicas discutidas e sua compreensão das situações em que elas serão usadas, será um longo caminho para facilitar a transição entre as versões de uma biblioteca.
+Seu conhecimento das técnicas discutidas e sua compreensão das situações em que usá-las, irá percorrer um longo caminho para facilitar a transição entre as versões de uma biblioteca.

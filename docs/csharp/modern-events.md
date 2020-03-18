@@ -4,12 +4,12 @@ description: Saiba como o padrão de evento do .NET Core permite flexibilidade c
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c8858158ede761db8a3002beb26e521880f77feb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039788"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170430"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>O padrão de eventos atualizado do .NET Core Event
 
@@ -59,7 +59,7 @@ Você precisa conciliar essas diretrizes opostas. De alguma forma, você precisa
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
 {
-    try 
+    try
     {
         await DoWorkAsync();
     }
@@ -72,7 +72,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-Primeiro, observe que o manipulador está marcado como um manipulador assíncrono. Como está sendo atribuído a um tipo de delegado de manipulador de eventos, ele terá um tipo de retorno nulo. Isso significa que você deve seguir o padrão mostrado no manipulador e não permitir que qualquer exceção seja gerada fora do contexto do manipulador assíncrono. Como ele não retorna uma tarefa, não há nenhuma tarefa que pode relatar o erro entrando no estado de falha. Como o método é assíncrono, ele não pode simplesmente gerar a exceção. (O método de chamada continuou a execução porque está `async`.) O comportamento real do tempo de execução será definido de forma diferente para ambientes diferentes. Ele pode encerrar o thread ou o processo que possui o thread ou deixar o processo em um estado indeterminado. Todos esses resultados potenciais são altamente indesejáveis.
+Primeiro, observe que o manipulador está marcado como um manipulador assíncrono. Como está sendo atribuído a um tipo de delegado de manipulador de eventos, ele terá um tipo de retorno nulo. Isso significa que você deve seguir o padrão mostrado no manipulador e não permitir que qualquer exceção seja gerada fora do contexto do manipulador assíncrono. Como ele não retorna uma tarefa, não há nenhuma tarefa que pode relatar o erro entrando no estado de falha. Como o método é assíncrono, ele não pode simplesmente gerar a exceção. (O método de chamada continuou `async`a execução porque é .) O comportamento de tempo de execução real será definido de forma diferente para diferentes ambientes. Ele pode encerrar o segmento ou o processo que possui o segmento, ou deixar o processo em um estado indeterminado. Todos esses resultados potenciais são altamente indesejáveis.
 
 É por isso que você deve encapsular a instrução await para a tarefa assíncrona em seu próprio bloco de teste. Se isso causar uma tarefa com falha, você pode registrar o erro em log. Se for um erro do qual não é possível recuperar o aplicativo, você pode sair do programa rápida e normalmente
 

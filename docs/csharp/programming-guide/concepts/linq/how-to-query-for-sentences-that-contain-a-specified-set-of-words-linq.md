@@ -2,12 +2,12 @@
 title: Como consultar frases que contenham um conjunto especificado de palavras (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: efb0eb60a9695c19e16b507d29ef6994e904cff9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df279f57d9965d796397cbcf7a0f3ba05bf9e5c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347692"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168850"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Como consultar frases que contenham um conjunto especificado de palavras (LINQ) (C#)
 Este exemplo mostra como localizar frases em um arquivo de texto que contenham correspondências para cada conjunto de palavras especificado. Embora a matriz de termos de pesquisa esteja embutida em código neste exemplo, ela também poderia ser populada dinamicamente em runtime. Neste exemplo, a consulta retorna as frases que contêm as palavras "Historically", "data" e "integrated".  
@@ -46,7 +46,7 @@ class FindSentences
   
         // Execute the query. Note that you can explicitly type  
         // the iteration variable here even though sentenceQuery  
-        // was implicitly typed.   
+        // was implicitly typed.
         foreach (string str in sentenceQuery)  
         {  
             Console.WriteLine(str);  
@@ -66,9 +66,9 @@ Historically, the world of data and the world of objects have not been well inte
   
  Na chamada para <xref:System.String.Split%2A>, as marcas de pontuação são usadas como separadores para removê-las da cadeia de caracteres. Se não fizer isso, por exemplo, você poderia ter uma cadeia de caracteres "Historically" que não corresponderia a "Historically" na matriz `wordsToMatch`. Talvez você precise usar separadores adicionais, dependendo dos tipos de pontuação encontrados no texto de origem.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
 Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)

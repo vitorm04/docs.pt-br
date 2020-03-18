@@ -2,12 +2,12 @@
 title: Coleções (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418702"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169877"
 ---
 # <a name="collections-c"></a>Coleções (C#)
 
@@ -15,7 +15,7 @@ Para muitos aplicativos, você desejará criar e gerenciar grupos de objetos rel
 
 As matrizes são mais úteis ao criar e trabalhar com um número fixo de objetos fortemente tipados. Para obter informações sobre matrizes, consulte [Matrizes](../arrays/index.md).
 
-As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas. Para algumas coleções, você pode atribuir uma chave para qualquer objeto que colocar na coleção para que você possa recuperar rapidamente o objeto, usando a chave.
+As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário das matrizes, o grupo de objetos com o qual você trabalha pode crescer e reduzir dinamicamente conforme as necessidades do aplicativo são alteradas. Para algumas coleções, você pode atribuir uma chave para qualquer objeto que coloque na coleção para que você possa recuperar rapidamente o objeto usando a chave.
 
 Uma coleção é uma classe, portanto você deve declarar uma instância da classe antes de adicionar elementos a essa coleção.
 
@@ -44,7 +44,7 @@ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar
 
 - [Definindo uma coleção personalizada](#BKMK_CustomCollection)
 
-- [Iteradores](#BKMK_Iterators)
+- [Iterators](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -200,7 +200,7 @@ Você pode criar uma coleção genérica usando uma das classes no namespace <xr
 
 A tabela a seguir lista algumas das classes frequentemente usadas do namespace <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Class|Descrição|
+|Classe|Descrição|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Representa uma coleção de pares chave-valor organizados com base na chave.|
 |<xref:System.Collections.Generic.List%601>|Representa uma lista de objetos que podem ser acessados por índice. Fornece métodos para pesquisar, classificar e modificar listas.|
@@ -230,7 +230,7 @@ Sempre que possível, você deve usar as coleções genéricas no namespace <xre
 
 A tabela a seguir lista algumas das classes frequentemente usadas no namespace `System.Collections`:
 
-|Class|Descrição|
+|Classe|Descrição|
 |---|---|
 |<xref:System.Collections.ArrayList>|Representa uma matriz de objetos cujo tamanho é aumentado dinamicamente conforme necessário.|
 |<xref:System.Collections.Hashtable>|Representa uma coleção de pares chave-valor organizados com base no código hash da chave.|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>Usando LINQ para acessar uma coleção
 
-A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Introdução à LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/).
+A LINQ (consulta integrada à linguagem) pode ser usada para acessar coleções. As consultas LINQ fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [Getting Started with LINQ in C#](linq/index.md).
 
 O exemplo a seguir executa uma consulta LINQ em uma `List` genérica. A consulta LINQ retorna uma coleção diferente que contém os resultados.
 
@@ -596,7 +596,7 @@ private static IEnumerable<int> EvenSequence(
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
 - [Conceitos de programação (C#)](./index.md)
@@ -604,6 +604,6 @@ private static IEnumerable<int> EvenSequence(
 - [LINQ to Objects (C#)](./linq/linq-to-objects.md)
 - [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
-- [Selecionando uma Classe de Coleção](../../../standard/collections/selecting-a-collection-class.md)
-- [Comparações e Classificações Dentro de Coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [Quando Usar Coleções Genéricas](../../../standard/collections/when-to-use-generic-collections.md)
+- [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)
+- [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)

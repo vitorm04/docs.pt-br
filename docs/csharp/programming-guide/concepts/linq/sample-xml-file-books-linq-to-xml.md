@@ -1,15 +1,15 @@
 ---
-title: 'Arquivo XML de exemplo: Livros (LINQ to XML)'
+title: 'Arquivo XML de exemplo: livros (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: d2e3971119812862fc9c059ea947dc46cf7fe1ad
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: bcdc402fc32278a1cd3ddde52a0b102f0d939005
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483819"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168266"
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>Arquivo XML de exemplo: Livros (LINQ to XML)
+# <a name="sample-xml-file-books-linq-to-xml"></a>Arquivo XML de exemplo: livros (LINQ to XML)
 O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. O arquivo contém informações sobre livros.  
   
 ## <a name="booksxml"></a>books.xml  
@@ -23,7 +23,7 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
       <Genre>Computer</Genre>  
       <Price>44.95</Price>  
       <PublishDate>2000-10-01</PublishDate>  
-      <Description>An in-depth look at creating applications   
+      <Description>An in-depth look at creating applications
       with XML.</Description>  
    </Book>  
    <Book id="bk102">  
@@ -32,8 +32,8 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
       <Genre>Fantasy</Genre>  
       <Price>5.95</Price>  
       <PublishDate>2000-12-16</PublishDate>  
-      <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+      <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
    </Book>  
 </Catalog>  

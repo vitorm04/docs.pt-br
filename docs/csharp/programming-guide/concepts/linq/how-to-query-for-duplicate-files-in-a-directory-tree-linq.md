@@ -1,16 +1,16 @@
 ---
-title: Como consultar arquivos duplicados em uma árvore de diretórios (LINQ) (C#)
+title: Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 7c84dba3e87077077f28bc2e665ea3774cf44d3b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0578d6c85c7d2e38c840c278c7ad2775467ac741
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347874"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168876"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Como consultar arquivos duplicados em uma árvore de diretórios (LINQ) (C#)
-Às vezes, arquivos que têm o mesmo nome podem ser localizados em mais de uma pasta. Por exemplo, sob a pasta de instalação do Visual Studio, várias pastas têm um arquivo readme.htm. Este exemplo mostra como consultar esses nomes de arquivos duplicados sob uma pasta raiz especificada. O segundo exemplo mostra como consultar arquivos cujo tamanho e LastWrite vezes também correspondem.  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (C#)
+Às vezes, arquivos que têm o mesmo nome podem ser localizados em mais de uma pasta. Por exemplo, sob a pasta de instalação do Visual Studio, várias pastas têm um arquivo readme.htm. Este exemplo mostra como consultar esses nomes de arquivos duplicados sob uma pasta raiz especificada. O segundo exemplo mostra como consultar arquivos cujo tamanho e tempos de LastWrite também correspondem.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -99,7 +99,7 @@ class QueryDuplicateFileNames
         // A named type is used to enable the query to be  
         // passed to another method. Anonymous types can also be used  
         // for composite keys but cannot be passed across method boundaries  
-        //   
+        //
         var queryDupFiles =  
             from file in fileList  
             group file.FullName.Substring(charsToSkip) by  
@@ -169,10 +169,10 @@ class QueryDuplicateFileNames
   
  A primeira consulta usa uma chave simples para determinar uma correspondência. Ela localiza arquivos que têm o mesmo nome, mas cujo conteúdo pode ser diferente. A segunda consulta usa uma chave composta para comparar em relação a três propriedades do objeto <xref:System.IO.FileInfo>. É muito mais provável que essa consulta localize arquivos que têm o mesmo nome e conteúdo semelhante ou idêntico.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compiling-the-code"></a>Compilando o código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ e diretórios de arquivos (C#)](./linq-and-file-directories.md)

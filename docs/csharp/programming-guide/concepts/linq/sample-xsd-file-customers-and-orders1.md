@@ -2,17 +2,17 @@
 title: 'Arquivo XSD de exemplo: clientes e pedidos'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: ff893053e5ed29b95a0ede1f172915df2e83ffa2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2e8fdcd9100ea608828371ff5dce6cf0d040292f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346482"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167940"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Arquivo XSD de exemplo: clientes e pedidos
 O arquivo XSD a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém uma definição de esquema para o [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md). O esquema usa os recursos `xs:key` e `xs:keyref` de XSD para estabelecer que o atributo `CustomerID` do elemento `Customer` é uma chave e para estabelecer uma relação entre o elemento `CustomerID` em cada elemento `Order` e o atributo `CustomerID` em cada elemento `Customer`.  
   
- Para obter um exemplo de como escrever consultas LINQ que aproveitam essa relação usando a cláusula `Join`, consulte [como unir duas coleções (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
+ Para um exemplo de escrever consultas LINQ que `Join` se aproveitam dessa relação usando a cláusula, consulte [Como juntar duas coleções (LINQ a XML) (C#)](./how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   
@@ -92,4 +92,3 @@ O arquivo XSD a seguir é usado em vários exemplos na documentação do [!INCLU
   </xs:complexType>  
 </xs:schema>  
 ```  
- 
