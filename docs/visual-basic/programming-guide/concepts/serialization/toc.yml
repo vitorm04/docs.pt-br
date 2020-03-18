@@ -1,9 +1,9 @@
 - name: Serialização
   href: index.md
   items:
-    - name: 'Como: gravar dados de objeto em um arquivo XML'
+    - name: Como gravar dados de objeto em um arquivo XML
       href: how-to-write-object-data-to-an-xml-file.md
-    - name: 'Como: ler dados de objeto de um arquivo XML'
+    - name: Como ler dados de objeto a partir de um arquivo XML
       href: how-to-read-object-data-from-an-xml-file.md
-    - name: 'Passo a passo: Persistir um objeto'
+    - name: 'Instruções passo a passo: mantendo um objeto'
       href: walkthrough-persisting-an-object-in-visual-studio.md

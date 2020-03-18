@@ -3,49 +3,49 @@ title: Comando dotnet remove package
 description: O comando dotnet remove package fornece uma opção conveniente para remover uma referência de pacote NuGet de um projeto.
 ms.date: 02/14/2020
 ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503636"
 ---
-# <a name="dotnet-remove-package"></a><span data-ttu-id="cf2fa-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="cf2fa-103">dotnet remove package</span></span>
+# <a name="dotnet-remove-package"></a><span data-ttu-id="000a1-103">dotnet remove package</span><span class="sxs-lookup"><span data-stu-id="000a1-103">dotnet remove package</span></span>
 
-<span data-ttu-id="cf2fa-104">**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="cf2fa-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
+<span data-ttu-id="000a1-104">**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores</span><span class="sxs-lookup"><span data-stu-id="000a1-104">**This article applies to:** ✔️ .NET Core 2.x SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="cf2fa-105">Nome</span><span class="sxs-lookup"><span data-stu-id="cf2fa-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="000a1-105">Nome</span><span class="sxs-lookup"><span data-stu-id="000a1-105">Name</span></span>
 
-<span data-ttu-id="cf2fa-106">`dotnet remove package` – remove a referência de pacote de um arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-106">`dotnet remove package` - Removes package reference from a project file.</span></span>
+<span data-ttu-id="000a1-106">`dotnet remove package` – remove a referência de pacote de um arquivo de projeto.</span><span class="sxs-lookup"><span data-stu-id="000a1-106">`dotnet remove package` - Removes package reference from a project file.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="cf2fa-107">Sinopse</span><span class="sxs-lookup"><span data-stu-id="cf2fa-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="000a1-107">Sinopse</span><span class="sxs-lookup"><span data-stu-id="000a1-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
 ```
 
-## <a name="description"></a><span data-ttu-id="cf2fa-108">DESCRIÇÃO</span><span class="sxs-lookup"><span data-stu-id="cf2fa-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="000a1-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="000a1-108">Description</span></span>
 
-<span data-ttu-id="cf2fa-109">O comando `dotnet remove package` fornece uma opção conveniente para remover uma referência de pacote NuGet de um projeto.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-109">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
+<span data-ttu-id="000a1-109">O comando `dotnet remove package` fornece uma opção conveniente para remover uma referência de pacote NuGet de um projeto.</span><span class="sxs-lookup"><span data-stu-id="000a1-109">The `dotnet remove package` command provides a convenient option to remove a NuGet package reference from a project.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="cf2fa-110">Argumentos</span><span class="sxs-lookup"><span data-stu-id="cf2fa-110">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="000a1-110">Argumentos</span><span class="sxs-lookup"><span data-stu-id="000a1-110">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="cf2fa-111">Especifica o arquivo do projeto.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-111">Specifies the project file.</span></span> <span data-ttu-id="cf2fa-112">Se não for especificado, o comando pesquisará um no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-112">If not specified, the command searches the current directory for one.</span></span>
+<span data-ttu-id="000a1-111">Especifica o arquivo do projeto.</span><span class="sxs-lookup"><span data-stu-id="000a1-111">Specifies the project file.</span></span> <span data-ttu-id="000a1-112">Se não for especificado, o comando pesquisará um no diretório atual.</span><span class="sxs-lookup"><span data-stu-id="000a1-112">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-<span data-ttu-id="cf2fa-113">A referência de pacote a ser removida.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-113">The package reference to remove.</span></span>
+<span data-ttu-id="000a1-113">A referência de pacote a ser removida.</span><span class="sxs-lookup"><span data-stu-id="000a1-113">The package reference to remove.</span></span>
 
-## <a name="options"></a><span data-ttu-id="cf2fa-114">Opções</span><span class="sxs-lookup"><span data-stu-id="cf2fa-114">Options</span></span>
+## <a name="options"></a><span data-ttu-id="000a1-114">Opções</span><span class="sxs-lookup"><span data-stu-id="000a1-114">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="cf2fa-115">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="cf2fa-115">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="000a1-115">Imprime uma ajuda breve para o comando.</span><span class="sxs-lookup"><span data-stu-id="000a1-115">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="cf2fa-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="cf2fa-116">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="000a1-116">Exemplos</span><span class="sxs-lookup"><span data-stu-id="000a1-116">Examples</span></span>
 
-- <span data-ttu-id="cf2fa-117">Remova `Newtonsoft.Json` pacote NuGet de um projeto no diretório atual:</span><span class="sxs-lookup"><span data-stu-id="cf2fa-117">Remove `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
+- <span data-ttu-id="000a1-117">Remover `Newtonsoft.Json` o pacote NuGet de um projeto no diretório atual:</span><span class="sxs-lookup"><span data-stu-id="000a1-117">Remove `Newtonsoft.Json` NuGet package from a project in the current directory:</span></span>
 
   ```dotnetcli
   dotnet remove package Newtonsoft.Json

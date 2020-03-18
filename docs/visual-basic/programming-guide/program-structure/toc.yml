@@ -1,9 +1,9 @@
 - name: Comentários no código
   href: comments-in-code.md
   items:
-    - name: Documentar o código com XML
+    - name: Documentando o código com XML
       href: documenting-your-code-with-xml.md
-    - name: Processar o arquivo XML
+    - name: Processando o arquivo XML
       href: processing-the-xml-file.md
-    - name: 'Como: criar documentação XML'
+    - name: Como criar documentação XML
       href: how-to-create-xml-documentation.md
