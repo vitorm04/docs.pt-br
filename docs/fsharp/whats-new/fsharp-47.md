@@ -1,25 +1,25 @@
 ---
-title: O que há de F# novo no F# guia de 4,7
-description: Obtenha uma visão geral dos novos recursos disponíveis em F# 4,7.
+title: O que há de novo em F# 4.7 - F# Guide
+description: Obtenha uma visão geral dos novos recursos disponíveis em F# 4.7.
 ms.date: 11/27/2019
-ms.openlocfilehash: 203b258466cb9f1f50215ecf8884e92e7e86416b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7a6e744a398719bcb55d168dd700459e0b122dd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644064"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185872"
 ---
-# <a name="whats-new-in-f-47"></a>O que há de F# novo no 4,7
+# <a name="whats-new-in-f-47"></a>O que há de novo em F# 4.7
 
-F#4,7 adiciona várias melhorias ao F# idioma.
+F# 4.7 adiciona várias melhorias ao idioma F#.
 
 ## <a name="get-started"></a>Introdução
 
-F#o 4,7 está disponível em todas as distribuições do .NET Core e ferramentas do Visual Studio. [Introdução F# ](../get-started/index.md) ao para saber mais.
+F# 4.7 está disponível em todas as distribuições .NET Core e ferramentas do Visual Studio. [Comece com F#](../get-started/index.md) para aprender mais.
 
 ## <a name="language-version"></a>Versão da linguagem
 
-O F# compilador 4,7 apresenta a capacidade de definir sua versão de linguagem em vigor por meio de uma propriedade no arquivo de projeto:
+O compilador F# 4.7 introduz a capacidade de definir sua versão de idioma eficaz através de uma propriedade no arquivo do projeto:
 
 ```xml
 <PropertyGroup>
@@ -27,52 +27,52 @@ O F# compilador 4,7 apresenta a capacidade de definir sua versão de linguagem e
 </PropertyGroup>
 ```
 
-Você pode defini-lo com os valores `4.6`, `4.7`, `latest`e `preview`. O padrão é `latest`.
+Você pode defini-lo `4.6` `4.7`para `latest`os `preview`valores, e . O padrão é `latest`.
 
-Se você defini-lo como `preview`, o compilador ativará F# todos os recursos de visualização implementados em seu compilador.
+Se você configurá-lo para `preview`, seu compilador ativará todos os recursos de visualização F# que são implementados em seu compilador.
 
-## <a name="implicit-yields"></a>Rendimento implícito
+## <a name="implicit-yields"></a>Rendimentos implícitos
 
-Você não precisa mais aplicar a palavra-chave `yield` em matrizes, listas, sequências ou expressões de computação em que o tipo pode ser inferido. No exemplo a seguir, as duas expressões exigiam a instrução `yield` para cada entrada F# antes de 4,7:
+Você não precisa mais `yield` aplicar a palavra-chave em matrizes, listas, seqüências ou expressões de computação onde o tipo pode ser inferido. No exemplo a seguir, ambas `yield` as expressões exigiram a declaração para cada entrada antes do F# 4.7:
 
 ```fsharp
 let s = seq { 1; 2; 3; 4; 5 }
 
 let daysOfWeek includeWeekend =
-    [ 
+    [
         "Monday"
         "Tuesday"
         "Wednesday"
         "Thursday"
         "Friday"
-        if includeWeekend then 
+        if includeWeekend then
             "Saturday"
             "Sunday"
-    ] 
+    ]
 ```
 
-Se você introduzir uma única palavra-chave `yield`, todos os outros itens também deverão ter `yield` aplicado a ela.
+Se você introduzir `yield` uma única palavra-chave, `yield` todos os outros itens também devem ter aplicado a ela.
 
-Os resultados implícitos não são ativados quando usados em uma expressão que também usa `yield!` para fazer algo como nivelar uma sequência. Você deve continuar a usar o `yield` hoje nesses casos.
+Os rendimentos implícitos não são ativados quando usados em uma expressão que também usa `yield!` para fazer algo como achatar uma seqüência. Você deve continuar `yield` a usar hoje nestes casos.
 
 ## <a name="wildcard-identifiers"></a>Identificadores curinga
 
-No F# código que envolve classes, o autoidentifier precisa sempre ser explícito em declarações de membro. Mas, nos casos em que o autoidentificador nunca é usado, tradicionalmente, ele tem uma Convenção para usar um caractere de sublinhado duplo para indicar um autoidentificador sem nome. Agora você pode usar um sublinhado simples:
+No código F# envolvendo classes, o auto-identificador precisa ser sempre explícito nas declarações dos membros. Mas nos casos em que o auto-identificador nunca é usado, tradicionalmente tem sido convenção usar um sublinhado duplo para indicar um auto-identificador sem nome. Agora você pode usar um único sublinhado:
 
 ```fsharp
 type C() =
     member _.M() = ()
 ```
 
-Isso também se aplica a loops de `for`:
+Isso também se `for` aplica a loops:
 
 ```fsharp
 for _ in 1..10 do printfn "Hello!"
 ```
 
-## <a name="indentation-relaxations"></a>Reduções de recuo
+## <a name="indentation-relaxations"></a>Relaxamentos de recuo
 
-Antes de F# 4,7, os requisitos de recuo para o construtor primário e os argumentos de membro estáticos exigiam recuo excessivo. Agora, eles só exigem um único escopo de recuo:
+Antes do F# 4.7, os requisitos de recuo para argumentos de membros primários e estáticos exigiam recuo excessivo. Eles agora exigem apenas um único escopo de recuo:
 
 ```fsharp
 type OffsideCheck(a:int,

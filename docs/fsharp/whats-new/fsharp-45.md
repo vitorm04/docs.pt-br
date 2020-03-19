@@ -1,30 +1,30 @@
 ---
-title: O que há de F# novo no F# guia de 4,5
-description: Obtenha uma visão geral dos novos recursos disponíveis em F# 4,5.
+title: O que há de novo em F# 4.5 - F# Guide
+description: Obtenha uma visão geral dos novos recursos disponíveis em F# 4.5.
 ms.date: 11/27/2019
-ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715698"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186131"
 ---
-# <a name="whats-new-in-f-45"></a>O que há de F# novo no 4,5
+# <a name="whats-new-in-f-45"></a>O que há de novo em F# 4.5
 
-F#4,5 adiciona várias melhorias ao F# idioma. Muitos desses recursos foram adicionados juntos para permitir que você escreva um código eficiente no F# enquanto também garante que esse código seja seguro. Fazer isso significa adicionar alguns conceitos à linguagem e uma quantidade significativa de análise do compilador ao usar essas construções.
+F# 4.5 adiciona várias melhorias ao idioma F#. Muitos desses recursos foram adicionados para permitir que você escreva código eficiente em F# e, ao mesmo tempo, garanta que esse código seja seguro. Fazer isso significa adicionar alguns conceitos à linguagem e uma quantidade significativa de análise de compilador ao usar esses construtos.
 
 ## <a name="get-started"></a>Introdução
 
-F#o 4,5 está disponível em todas as distribuições do .NET Core e ferramentas do Visual Studio. [Introdução F# ](../get-started/index.md) ao para saber mais.
+F# 4.5 está disponível em todas as distribuições .NET Core e ferramentas do Visual Studio. [Comece com F#](../get-started/index.md) para aprender mais.
 
-## <a name="span-and-byref-like-structs"></a>Estruturas do tipo "span" e "ByRef"
+## <a name="span-and-byref-like-structs"></a>Span e structs byref-like
 
-O tipo de <xref:System.Span%601> introduzido no .NET Core permite que você represente buffers na memória de maneira fortemente tipada, que agora é permitido F# a partir F# de 4,5. O exemplo a seguir mostra como você pode usar novamente uma função operando em um <xref:System.Span%601> com diferentes representações de buffer:
+O <xref:System.Span%601> tipo introduzido no .NET Core permite que você represente buffers na memória de uma maneira fortemente digitada, o que agora é permitido em F# começando com F# 4.5. O exemplo a seguir mostra como você pode <xref:System.Span%601> reutilizar uma função operando em um com diferentes representações de buffer:
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
     let mutable sum = 0
-    for i in 0 .. bytes.Length - 1 do 
+    for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
     sum
 
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-Um aspecto importante disso é que o span e outras [estruturas do tipo ByRef](../language-reference/structures.md#byreflike-structs) têm uma análise estática muito rígida executada pelo compilador que restringe seu uso de maneiras que você talvez ache inesperado. Essa é a compensação fundamental entre o desempenho, a expressividade e a segurança que é introduzida em F# 4,5.
+Um aspecto importante para isso é que Span e [outras estruturas semelhantes](../language-reference/structures.md#byreflike-structs) a byref têm uma análise estática muito rígida realizada pelo compilador que restringe seu uso de maneiras que você pode achar inesperada. Esta é a troca fundamental entre desempenho, expressividade e segurança que é introduzida no F# 4.5.
 
-## <a name="revamped-byrefs"></a>Byrefs remodelados
+## <a name="revamped-byrefs"></a>Byrefs renovados
 
-Antes de F# 4,5, os [byrefs](../language-reference/byrefs.md) em F# eram inseguros e insons para vários aplicativos. Os problemas de barulho em relação a byrefs foram F# resolvidos em 4,5 e a mesma análise estática feita para estruturas de span e de ByRef também foi aplicada.
+Antes do F# 4.5, [byrefs](../language-reference/byrefs.md) em F# eram inseguros e insalubres para inúmeras aplicações. Problemas de solidez em torno de byrefs foram abordados em F # 4.5 e a mesma análise estática feita para extensão e estruturas semelhantes a byref também foi aplicada.
 
-### <a name="inreft-and-outreft"></a>inref < > e outref < ' t >
+### <a name="inreft-and-outreft"></a>inref<'T> e outref<'T>
 
-Para representar a noção de um ponteiro gerenciado somente leitura, somente gravação e leitura/gravação, F# 4,5 apresenta a `inref<'T>`, `outref<'T>` tipos para representar ponteiros somente leitura e somente gravação, respectivamente. Cada uma tem uma semântica diferente. Por exemplo, você não pode gravar em um `inref<'T>`:
+Para representar a noção de ponteiro gerenciado somente leitura, gravação e leitura/gravação, o `inref<'T>` `outref<'T>` F# 4.5 introduz os tipos para representar ponteiros somente leitura e somente gravação, respectivamente. Cada um tem semântica diferente. Por exemplo, você não `inref<'T>`pode escrever para um:
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-Por padrão, a inferência de tipos inferirá ponteiros gerenciados como `inref<'T>` estar em linha com F# a natureza imutável do código, a menos que algo já tenha sido declarado como mutável. Para tornar algo gravável, você precisará declarar um tipo como `mutable` antes de passar seu endereço para uma função ou um membro que o manipule. Para saber mais, confira [byrefs](../language-reference/byrefs.md).
+Por padrão, a inferência de tipo `inref<'T>` inferirá ponteiros gerenciados como estar em consonância com a natureza imutável do código F#, a menos que algo já tenha sido declarado como mutável. Para fazer algo gravável, você precisará declarar `mutable` um tipo como antes de passar seu endereço para uma função ou membro que o manipule. Para saber mais, consulte [Byrefs](../language-reference/byrefs.md).
 
-## <a name="readonly-structs"></a>Structs ReadOnly
+## <a name="readonly-structs"></a>Structs somente leitura
 
-A partir F# do 4,5, você pode anotar uma struct com <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> como tal:
+Começando com F # 4.5, você pode anotar <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> uma estrutura com como tal:
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-Isso não permite que você declarasse um membro mutável na estrutura e emita metadados que permitam F# e C# tratá-lo como ReadOnly quando consumido de um assembly. Para saber mais, consulte [structs ReadOnly](../language-reference/structures.md#readonly-structs).
+Isso o impede de declarar um membro mutável na estrutura e emite metadados que permitem que F# e C# o tratem como lido somente quando consumidos de uma montagem. Para saber mais, consulte [ReadOnly structs](../language-reference/structures.md#readonly-structs).
 
-## <a name="void-pointers"></a>Ponteiros void
+## <a name="void-pointers"></a>Ponteiros vazios
 
-O tipo de `voidptr` é adicionado F# a 4,5, assim como as seguintes funções:
+O `voidptr` tipo é adicionado ao F# 4.5, assim como as seguintes funções:
 
-* `NativePtr.ofVoidPtr` converter um ponteiro void em um ponteiro int nativo
-* `NativePtr.toVoidPtr` converter um ponteiro int nativo para um ponteiro void
+* `NativePtr.ofVoidPtr`para converter um ponteiro vazio em um ponteiro int nativo
+* `NativePtr.toVoidPtr`para converter um ponteiro int nativo para um ponteiro vazio
 
-Isso é útil ao interoperar com um componente nativo que utiliza ponteiros void.
+Isso é útil ao interagir com um componente nativo que faz uso de ponteiros vazios.
 
 ## <a name="the-match-keyword"></a>A palavra-chave `match!`
 
-A palavra-chave `match!` aprimora a correspondência de padrões quando dentro de uma expressão de computação:
+A `match!` palavra-chave aumenta a correspondência de padrões quando dentro de uma expressão de computação:
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -101,21 +101,21 @@ let checkBananaAsync (s: string) =
         else
             return None
     }
-    
+
 // Now you can use 'match!'
 let funcWithString (s: string) =
-    async { 
+    async {
         match! checkBananaAsync s with
         | Some bananaString -> printfn "It's banana!"
         | None -> printfn "%s" s
 }
 ```
 
-Isso permite que você encurte o código que geralmente envolve a combinação de opções (ou outros tipos) com expressões de computação, como Async. Para saber mais, consulte [correspondência!](../language-reference/computation-expressions.md#match).
+Isso permite encurtar o código que muitas vezes envolve misturar opções (ou outros tipos) com expressões de computação, como assincronismo. Para saber mais, veja [o match!](../language-reference/computation-expressions.md#match).
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Requisitos de upcast reduzidos em expressões de matriz, lista e sequência
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>Requisitos de upcasting relaxados em expressões de matriz, lista e seqüência
 
-A combinação de tipos em que um pode herdar de outro dentro de expressões de matriz, lista e sequência exigiu tradicionalmente que você converta qualquer tipo derivado em seu tipo pai com `:>` ou `upcast`. Isso agora é relaxado, demonstrado da seguinte maneira:
+A mistura de tipos onde se pode herdar de outro dentro de array, list e sequence expressões `:>` `upcast`tradicionalmente exigiu que você upcast qualquer tipo derivado para o seu tipo pai com ou . Isso agora é relaxado, demonstrado da seguinte forma:
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,13 +125,13 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Relaxamento de recuo para expressões de matriz e lista
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>Relaxamento de recuo para array e expressões de lista
 
-Antes de F# 4,5, você precisava recuar excessivamente as expressões de matriz e de lista quando passavam como argumentos para chamadas de método. Isso não é mais necessário:
+Antes do F# 4.5, você precisava de matriz de recuo excessiva mente e expressar expressões quando passadocomo argumentos para chamadas de método. Isso não é mais necessário:
 
 ```fsharp
-module NoExcessiveIndenting = 
-    System.Console.WriteLine(format="{0}", arg = [| 
+module NoExcessiveIndenting =
+    System.Console.WriteLine(format="{0}", arg = [|
         "hello"
     |])
     System.Console.WriteLine([|

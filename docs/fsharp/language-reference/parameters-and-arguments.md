@@ -1,33 +1,33 @@
 ---
 title: Parâmetros e argumentos
-description: Saiba mais F# sobre o suporte a idiomas para definir parâmetros e passar argumentos para funções, métodos e propriedades.
+description: Aprenda sobre o suporte à linguagem F# para definir parâmetros e passar argumentos para funções, métodos e propriedades.
 ms.date: 12/04/2019
 ms.openlocfilehash: b234ef939128e7cf09d35f9580d4d5010d7dc639
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837123"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400193"
 ---
 # <a name="parameters-and-arguments"></a>Parâmetros e argumentos
 
-Este tópico descreve o suporte a idiomas para definir parâmetros e passar argumentos para funções, métodos e propriedades. Ele inclui informações sobre como passar por referência e como definir e usar métodos que podem usar um número variável de argumentos.
+Este tópico descreve o suporte à linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Ele inclui informações sobre como passar por referência, e como definir e usar métodos que podem levar um número variável de argumentos.
 
 ## <a name="parameters-and-arguments"></a>Parâmetros e argumentos
 
-O *parâmetro* Term é usado para descrever os nomes de valores que devem ser fornecidos. O *argumento* de termo é usado para os valores fornecidos para cada parâmetro.
+O *parâmetro* de termo é usado para descrever os nomes para valores que devem ser fornecidos. O termo *argumento* é usado para os valores previstos para cada parâmetro.
 
-Os parâmetros podem ser especificados no formulário tupla ou na forma curried, ou em alguma combinação dos dois. Você pode passar argumentos usando um nome de parâmetro explícito. Parâmetros de métodos podem ser especificados como opcionais e recebem um valor padrão.
+Os parâmetros podem ser especificados em tuple ou curried forma, ou em alguma combinação dos dois. Você pode passar argumentos usando um nome de parâmetro explícito. Os parâmetros dos métodos podem ser especificados como opcionais e dado um valor padrão.
 
-## <a name="parameter-patterns"></a>Padrões de parâmetro
+## <a name="parameter-patterns"></a>Padrões de parâmetros
 
-Os parâmetros fornecidos a funções e métodos são, em geral, padrões separados por espaços. Isso significa que, em princípio, qualquer um dos padrões descritos em [expressões de correspondência](match-expressions.md) pode ser usado em uma lista de parâmetros para uma função ou um membro.
+Os parâmetros fornecidos às funções e métodos são, em geral, padrões separados por espaços. Isso significa que, em princípio, qualquer um dos padrões descritos em [Match Expressions](match-expressions.md) pode ser usado em uma lista de parâmetros para uma função ou membro.
 
-Normalmente, os métodos usam a forma de tupla de argumentos de passagem. Isso alcança um resultado mais claro da perspectiva de outras linguagens .NET porque o formulário de tupla corresponde à maneira como os argumentos são passados em métodos .NET.
+Os métodos geralmente usam a forma tuplo de argumentos de passagem. Isso alcança um resultado mais claro da perspectiva de outras línguas .NET porque a forma tupla corresponde à maneira como os argumentos são passados nos métodos .NET.
 
-O formulário na forma curried é usado com mais frequência com funções criadas usando associações de `let`.
+A forma curried é mais frequentemente usada `let` com funções criadas usando amarras.
 
-O pseudocódigo a seguir mostra exemplos de argumentos de tupla e na forma curried.
+O pseudocódigo a seguir mostra exemplos de argumentos tuplos e curried.
 
 ```fsharp
 // Tuple form.
@@ -36,21 +36,21 @@ member this.SomeMethod(param1, param2) = ...
 let function1 param1 param2 = ...
 ```
 
-Formulários combinados são possíveis quando alguns argumentos estão em tuplas e outros não são.
+Formas combinadas são possíveis quando alguns argumentos estão em tuplas e alguns não.
 
 ```fsharp
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-Outros padrões também podem ser usados em listas de parâmetros, mas se o padrão de parâmetro não corresponder a todas as entradas possíveis, poderá haver uma correspondência incompleta no tempo de execução. A exceção `MatchFailureException` é gerada quando o valor de um argumento não corresponde aos padrões especificados na lista de parâmetros. O compilador emite um aviso quando um padrão de parâmetro permite correspondências incompletas. Pelo menos um outro padrão é normalmente útil para listas de parâmetros, e esse é o padrão curinga. Você usa o padrão curinga em uma lista de parâmetros quando simplesmente deseja ignorar todos os argumentos fornecidos. O código a seguir ilustra o uso do padrão curinga em uma lista de argumentos.
+Outros padrões também podem ser usados em listas de parâmetros, mas se o padrão de parâmetro não corresponder a todas as entradas possíveis, pode haver uma correspondência incompleta no tempo de execução. A `MatchFailureException` exceção é gerada quando o valor de um argumento não corresponde aos padrões especificados na lista de parâmetros. O compilador emite um aviso quando um padrão de parâmetro permite correspondências incompletas. Pelo menos um outro padrão é comumente útil para listas de parâmetros, e esse é o padrão curinga. Você usa o padrão curinga em uma lista de parâmetros quando você simplesmente quer ignorar quaisquer argumentos que são fornecidos. O código a seguir ilustra o uso do padrão curinga em uma lista de argumentos.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
-O padrão curinga pode ser útil sempre que você não precisar dos argumentos passados, como no ponto de entrada principal para um programa, quando você não estiver interessado nos argumentos de linha de comando que normalmente são fornecidos como uma matriz de cadeia de caracteres, como no código a seguir.
+O padrão curinga pode ser útil sempre que você não precisar dos argumentos passados, como no ponto de entrada principal de um programa, quando você não está interessado nos argumentos de linha de comando que normalmente são fornecidos como uma matriz de strings, como no código a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Outros padrões que às vezes são usados em argumentos são o padrão de `as` e os padrões de identificador associados a uniões discriminadas e padrões ativos. Você pode usar o padrão de união discriminada de caso único da seguinte maneira.
+Outros padrões que às vezes `as` são usados em argumentos são o padrão, e padrões identificadores associados a sindicatos discriminados e padrões ativos. Você pode usar o padrão sindical discriminado em caso único da seguinte forma.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
@@ -61,7 +61,7 @@ Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
 
-Os padrões ativos podem ser úteis como parâmetros, por exemplo, ao transformar um argumento em um formato desejado, como no exemplo a seguir:
+Padrões ativos podem ser úteis como parâmetros, por exemplo, ao transformar um argumento em um formato desejado, como no exemplo a seguir:
 
 ```fsharp
 type Point = { x : float; y : float }
@@ -73,29 +73,29 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-Você pode usar o padrão de `as` para armazenar um valor correspondente como um valor local, como é mostrado na linha de código a seguir.
+Você pode `as` usar o padrão para armazenar um valor compatível como um valor local, como é mostrado na seguinte linha de código.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
-Outro padrão usado ocasionalmente é uma função que deixa o último argumento sem nome, fornecendo, como o corpo da função, uma expressão lambda que executa imediatamente uma correspondência de padrão no argumento implícito. Um exemplo disso é a linha de código a seguir.
+Outro padrão que é usado ocasionalmente é uma função que deixa o último argumento sem nome, fornecendo, como o corpo da função, uma expressão lambda que imediatamente executa uma correspondência padrão no argumento implícito. Um exemplo disso é a seguinte linha de código.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Esse código define uma função que usa uma lista genérica e retorna `true` se a lista estiver vazia e `false` caso contrário. O uso dessas técnicas pode tornar o código mais difícil de ler.
+Este código define uma função que pega `true` uma lista genérica `false` e retorna se a lista estiver vazia, e de outra forma. O uso de tais técnicas pode tornar o código mais difícil de ler.
 
-Ocasionalmente, os padrões que envolvem correspondências incompletas são úteis, por exemplo, se você souber que as listas em seu programa têm apenas três elementos, você pode usar um padrão como o seguinte em uma lista de parâmetros.
+Ocasionalmente, padrões que envolvem correspondências incompletas são úteis, por exemplo, se você sabe que as listas em seu programa têm apenas três elementos, você pode usar um padrão como o seguinte em uma lista de parâmetros.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
 
-O uso de padrões que têm correspondências incompletas é melhor reservado para rápida criação de protótipos e outros usos temporários. O compilador emitirá um aviso para esse código. Tais padrões não podem abranger o caso geral de todas as entradas possíveis e, portanto, não são adequadas para APIs de componente.
+O uso de padrões que têm correspondências incompletas é melhor reservado para prototipagem rápida e outros usos temporários. O compilador emitirá um aviso para tal código. Tais padrões não podem cobrir o caso geral de todas as entradas possíveis e, portanto, não são adequados para APIs componentes.
 
 ## <a name="named-arguments"></a>Argumentos nomeados
 
-Argumentos para métodos podem ser especificados por posição em uma lista de argumentos separados por vírgulas ou podem ser passados para um método explicitamente fornecendo o nome, seguido por um sinal de igual e o valor a ser passado. Se especificado fornecendo o nome, eles podem aparecer em uma ordem diferente da usada na declaração.
+Os argumentos para métodos podem ser especificados por posição em uma lista de argumentos separada por comma, ou podem ser passados para um método explicitamente fornecendo o nome, seguido de um sinal igual e o valor a ser passado. Se especificado fornecendo o nome, eles podem aparecer em uma ordem diferente da usada na declaração.
 
-Os argumentos nomeados podem tornar o código mais legível e mais adaptável para determinados tipos de alterações na API, como uma reordenação de parâmetros de método.
+Argumentos nomeados podem tornar o código mais legível e mais adaptável a certos tipos de alterações na API, como uma reordenação de parâmetros de método.
 
-Os argumentos nomeados são permitidos somente para métodos, não para funções `let`associadas, valores de função ou expressões lambda.
+Argumentos nomeados são permitidos apenas `let`para métodos, não para funções vinculadas, valores de função ou expressões lambda.
 
 O exemplo de código a seguir demonstra o uso de argumentos nomeados.
 
@@ -105,15 +105,15 @@ Em uma chamada para um construtor de classe, você pode definir os valores das p
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-Para obter mais informações, consulte [construtores (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
+Para obter mais informações, consulte [Construtores (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Parâmetros opcionais
 
-Você pode especificar um parâmetro opcional para um método usando um ponto de interrogação na frente do nome do parâmetro. Os parâmetros opcionais são interpretados como o tipo de opção, de modo que você pode consultá-los de forma regular que os F# tipos de opção são consultados, usando uma expressão de `match` com `Some` e `None`. Parâmetros opcionais são permitidos somente em membros, não em funções criadas usando `let` associações.
+Você pode especificar um parâmetro opcional para um método usando um ponto de interrogação na frente do nome do parâmetro. Os parâmetros opcionais são interpretados como o tipo de opção F#, para que você `match` possa `Some` consultá-los da maneira regular que os tipos de opção são consultados, usando uma expressão com e `None`. Os parâmetros opcionais são permitidos apenas em `let` membros, não em funções criadas usando vinculações.
 
-Você pode passar valores opcionais existentes para o método por nome de parâmetro, como `?arg=None` ou `?arg=Some(3)` ou `?arg=arg`. Isso pode ser útil ao criar um método que passe argumentos opcionais para outro método.
+Você pode passar valores opcionais existentes para `?arg=None` o `?arg=Some(3)` `?arg=arg`método por nome de parâmetro, como ou ou . Isso pode ser útil ao construir um método que passe argumentos opcionais para outro método.
 
-Você também pode usar uma função `defaultArg`, que define um valor padrão de um argumento opcional. A função `defaultArg` usa o parâmetro opcional como o primeiro argumento e o valor padrão como o segundo.
+Você também pode `defaultArg`usar uma função , que define um valor padrão de um argumento opcional. A `defaultArg` função toma o parâmetro opcional como o primeiro argumento e o valor padrão como o segundo.
 
 O exemplo a seguir ilustra o uso de parâmetros opcionais.
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-Para fins de C# e Visual Basic interoperabilidade, você pode usar os atributos F#`[<Optional; DefaultParameterValue<(...)>]` no, para que os chamadores vejam um argumento como opcional. Isso é equivalente a definir o argumento como opcional no C# como no `MyMethod(int i = 3)`.
+Para os fins de C# e Visual Basic `[<Optional; DefaultParameterValue<(...)>]` interop você pode usar os atributos em F#, para que os chamadores vejam um argumento como opcional. Isso equivale a definir o argumento como `MyMethod(int i = 3)`opcional em C# como em .
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-Você também pode especificar um novo objeto como um valor de parâmetro padrão. Por exemplo, o membro `Foo` poderia ter um `CancellationToken` opcional como entrada, em vez disso:
+Você também pode especificar um novo objeto como um valor de parâmetro padrão. Por exemplo, `Foo` o membro `CancellationToken` poderia ter uma entrada opcional em vez disso:
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-O valor fornecido como argumento para `DefaultParameterValue` deve corresponder ao tipo do parâmetro. Por exemplo, o seguinte não é permitido:
+O valor dado `DefaultParameterValue` como argumento deve corresponder ao tipo do parâmetro. Por exemplo, o seguinte não é permitido:
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-Nesse caso, o compilador gera um aviso e ignorará os dois atributos completamente. Observe que o valor padrão `null` precisa ser anotado por tipo, como caso contrário, o compilador infere o tipo errado, ou seja, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
+Neste caso, o compilador gera um aviso e ignorará ambos os atributos completamente. Observe que o `null` valor padrão precisa ser anotado por tipo, pois caso contrário, o compilador `[<Optional; DefaultParameterValue(null:obj)>] o:obj`infere o tipo errado, ou seja.
 
-## <a name="passing-by-reference"></a>Passando por referência
+## <a name="passing-by-reference"></a>Passando por Referência
 
-A passagem F# de um valor por referência envolve [byrefs](byrefs.md), que são tipos de ponteiros gerenciados. As diretrizes para o tipo a ser usado são as seguintes:
+Passar um valor F# por referência envolve [byrefs](byrefs.md), que são tipos de ponteiro gerenciados. A orientação para qual tipo de uso é a seguinte:
 
-- Use `inref<'T>` se você precisar apenas ler o ponteiro.
-- Use `outref<'T>` se você precisar apenas gravar no ponteiro.
-- Use `byref<'T>` se você precisar ler e gravar no ponteiro.
+- Use `inref<'T>` se você só precisa ler o ponteiro.
+- Use `outref<'T>` se você só precisa escrever para o ponteiro.
+- Use `byref<'T>` se você precisar ler e escrever para o ponteiro.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -187,21 +187,21 @@ let test () =
     example3 &y // Now 'y' is 3
 ```
 
-Como o parâmetro é um ponteiro e o valor é mutável, todas as alterações no valor são mantidas após a execução da função.
+Como o parâmetro é um ponteiro e o valor é mutável, quaisquer alterações no valor são retidas após a execução da função.
 
-Você pode usar uma tupla como um valor de retorno para armazenar quaisquer parâmetros de `out` nos métodos de biblioteca do .NET. Como alternativa, você pode tratar o parâmetro `out` como um parâmetro `byref`. O exemplo de código a seguir ilustra as duas maneiras.
+Você pode usar uma tupla como `out` um valor de retorno para armazenar quaisquer parâmetros nos métodos de biblioteca .NET. Alternativamente, você pode `out` tratar o `byref` parâmetro como um parâmetro. O exemplo de código a seguir ilustra os dois sentidos.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Matrizes de parâmetros
 
-Ocasionalmente, é necessário definir uma função que usa um número arbitrário de parâmetros de tipo heterogêneo. Não seria prático criar todos os métodos sobrecarregados possíveis para considerar todos os tipos que poderiam ser usados. As implementações do .NET fornecem suporte para esses métodos por meio do recurso de matriz de parâmetros. Um método que usa uma matriz de parâmetros em sua assinatura pode ser fornecido com um número arbitrário de parâmetros. Os parâmetros são colocados em uma matriz. O tipo dos elementos da matriz determina os tipos de parâmetro que podem ser passados para a função. Se você definir a matriz de parâmetros com `System.Object` como o tipo de elemento, o código do cliente poderá passar valores de qualquer tipo.
+Ocasionalmente, é necessário definir uma função que leva um número arbitrário de parâmetros do tipo heterogêneo. Não seria prático criar todos os métodos sobreponderados possíveis para explicar todos os tipos que poderiam ser usados. As implementações .NET fornecem suporte para esses métodos através do recurso de matriz de parâmetros. Um método que leva uma matriz de parâmetros em sua assinatura pode ser fornecido com um número arbitrário de parâmetros. Os parâmetros são colocados em uma matriz. O tipo de elementos da matriz determina os tipos de parâmetros que podem ser passados para a função. Se você definir a `System.Object` matriz de parâmetros com como o tipo de elemento, então o código do cliente pode passar valores de qualquer tipo.
 
-No F#, as matrizes de parâmetros só podem ser definidas em métodos. Eles não podem ser usados em funções ou funções autônomas definidas em módulos.
+Em F#, matrizes de parâmetros só podem ser definidas em métodos. Eles não podem ser usados em funções ou funções autônomas definidas em módulos.
 
-Você define uma matriz de parâmetros usando o atributo `ParamArray`. O atributo `ParamArray` só pode ser aplicado ao último parâmetro.
+Você define uma matriz de `ParamArray` parâmetros usando o atributo. O `ParamArray` atributo só pode ser aplicado ao último parâmetro.
 
-O código a seguir ilustra como chamar um método .NET que usa uma matriz de parâmetros e a definição de um F# tipo em que tem um método que usa uma matriz de parâmetros.
+O código a seguir ilustra tanto a chamada de um método .NET que leva uma matriz de parâmetros quanto a definição de um tipo em F# que tem um método que leva uma matriz de parâmetros.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 
@@ -217,6 +217,6 @@ a 1 10 Hello world 1 True
 true
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Membros](./members/index.md)
