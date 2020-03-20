@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450222"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175753"
 ---
-# <a name="imetadataemitdefinetypedef-method"></a><span data-ttu-id="80da0-102">Método IMetaDataEmit::DefineTypeDef</span><span class="sxs-lookup"><span data-stu-id="80da0-102">IMetaDataEmit::DefineTypeDef Method</span></span>
-<span data-ttu-id="80da0-103">Cria uma definição de tipo para um tipo de Common Language Runtime e Obtém um token de metadados para essa definição de tipo.</span><span class="sxs-lookup"><span data-stu-id="80da0-103">Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.</span></span>  
+# <a name="imetadataemitdefinetypedef-method"></a><span data-ttu-id="a7330-102">Método IMetaDataEmit::DefineTypeDef</span><span class="sxs-lookup"><span data-stu-id="a7330-102">IMetaDataEmit::DefineTypeDef Method</span></span>
+<span data-ttu-id="a7330-103">Cria uma definição de tipo para um tipo de tempo de execução de idioma comum e obtém um token de metadados para essa definição de tipo.</span><span class="sxs-lookup"><span data-stu-id="a7330-103">Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80da0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="80da0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a7330-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a7330-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="80da0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="80da0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a7330-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="a7330-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="80da0-106">no O nome do tipo em Unicode.</span><span class="sxs-lookup"><span data-stu-id="80da0-106">[in] The name of the type in Unicode.</span></span>  
+ <span data-ttu-id="a7330-106">[em] O nome do tipo em Unicode.</span><span class="sxs-lookup"><span data-stu-id="a7330-106">[in] The name of the type in Unicode.</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="80da0-107">[in] `TypeDef` atributos.</span><span class="sxs-lookup"><span data-stu-id="80da0-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="80da0-108">Este é um bitmask de valores de `CoreTypeAttr`.</span><span class="sxs-lookup"><span data-stu-id="80da0-108">This is a bitmask of `CoreTypeAttr` values.</span></span>  
+ <span data-ttu-id="a7330-107">[em] `TypeDef` atributos.</span><span class="sxs-lookup"><span data-stu-id="a7330-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="a7330-108">Isto é uma `CoreTypeAttr` pequena máscara de valores.</span><span class="sxs-lookup"><span data-stu-id="a7330-108">This is a bitmask of `CoreTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="80da0-109">no O token da classe base.</span><span class="sxs-lookup"><span data-stu-id="80da0-109">[in] The token of the base class.</span></span> <span data-ttu-id="80da0-110">Ele deve ser um `mdTypeDef` ou um token de `mdTypeRef`.</span><span class="sxs-lookup"><span data-stu-id="80da0-110">It must be either an `mdTypeDef` or an `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="a7330-109">[em] O símbolo da classe base.</span><span class="sxs-lookup"><span data-stu-id="a7330-109">[in] The token of the base class.</span></span> <span data-ttu-id="a7330-110">Deve ser um `mdTypeDef` ou `mdTypeRef` um símbolo.</span><span class="sxs-lookup"><span data-stu-id="a7330-110">It must be either an `mdTypeDef` or an `mdTypeRef` token.</span></span>  
   
  `rtkImplements`  
- <span data-ttu-id="80da0-111">no Uma matriz de tokens que especifica as interfaces que essa classe ou interface implementa.</span><span class="sxs-lookup"><span data-stu-id="80da0-111">[in] An array of tokens specifying the interfaces that this class or interface implements.</span></span>  
+ <span data-ttu-id="a7330-111">[em] Uma matriz de tokens especificando as interfaces que esta classe ou interface implementa.</span><span class="sxs-lookup"><span data-stu-id="a7330-111">[in] An array of tokens specifying the interfaces that this class or interface implements.</span></span>  
   
  `ptd`  
- <span data-ttu-id="80da0-112">fora O token de `mdTypeDef` atribuído.</span><span class="sxs-lookup"><span data-stu-id="80da0-112">[out] The `mdTypeDef` token assigned.</span></span>  
+ <span data-ttu-id="a7330-112">[fora] O `mdTypeDef` token atribuído.</span><span class="sxs-lookup"><span data-stu-id="a7330-112">[out] The `mdTypeDef` token assigned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="80da0-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="80da0-113">Remarks</span></span>  
- <span data-ttu-id="80da0-114">Um sinalizador em `dwTypeDefFlags` especifica se o tipo que está sendo criado é um tipo de referência de Common Type System (classe ou interface) ou um tipo de valor de Common Type System.</span><span class="sxs-lookup"><span data-stu-id="80da0-114">A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a7330-113">Comentários</span><span class="sxs-lookup"><span data-stu-id="a7330-113">Remarks</span></span>  
+ <span data-ttu-id="a7330-114">Um sinalizador `dwTypeDefFlags` em especifica se o tipo que está sendo criado é um tipo de referência de sistema de tipo comum (classe ou interface) ou um tipo de valor de tipo comum.</span><span class="sxs-lookup"><span data-stu-id="a7330-114">A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.</span></span>  
   
- <span data-ttu-id="80da0-115">Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um registro de `mdInterfaceImpl` para cada interface herdada ou implementada por esse tipo.</span><span class="sxs-lookup"><span data-stu-id="80da0-115">Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type.</span></span> <span data-ttu-id="80da0-116">No entanto, esse método não retorna nenhum desses tokens `mdInterfaceImpl`.</span><span class="sxs-lookup"><span data-stu-id="80da0-116">However, this method does not return any of these `mdInterfaceImpl` tokens.</span></span> <span data-ttu-id="80da0-117">Se um cliente quiser adicionar ou modificar um token de `mdInterfaceImpl` posteriormente, ele deverá usar a interface `IMetaDataImport` para enumerá-los.</span><span class="sxs-lookup"><span data-stu-id="80da0-117">If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them.</span></span> <span data-ttu-id="80da0-118">Se você quiser usar semântica COM da interface `[default]`, deverá fornecer a interface padrão como o primeiro elemento em `rtkImplements`; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que é sempre considerada a primeira `mdInterfaceImpl` token declarada para a classe).</span><span class="sxs-lookup"><span data-stu-id="80da0-118">If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).</span></span>  
+ <span data-ttu-id="a7330-115">Dependendo dos parâmetros fornecidos, este método, como `mdInterfaceImpl` efeito colateral, também pode criar um registro para cada interface herdada ou implementada por esse tipo.</span><span class="sxs-lookup"><span data-stu-id="a7330-115">Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type.</span></span> <span data-ttu-id="a7330-116">No entanto, este método `mdInterfaceImpl` não retorna nenhum desses tokens.</span><span class="sxs-lookup"><span data-stu-id="a7330-116">However, this method does not return any of these `mdInterfaceImpl` tokens.</span></span> <span data-ttu-id="a7330-117">Se um cliente quiser adicionar `mdInterfaceImpl` ou modificar um token posteriormente, ele deve usar a `IMetaDataImport` interface para enumera-los.</span><span class="sxs-lookup"><span data-stu-id="a7330-117">If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them.</span></span> <span data-ttu-id="a7330-118">Se você quiser usar a semântica COM da `[default]` interface, você `rtkImplements`deve fornecer a interface padrão como o primeiro elemento em ; um atributo personalizado definido na classe indicará que a classe tem uma `mdInterfaceImpl` interface padrão (que é sempre assumida como o primeiro token declarado para a classe).</span><span class="sxs-lookup"><span data-stu-id="a7330-118">If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).</span></span>  
   
- <span data-ttu-id="80da0-119">Cada elemento da matriz de `rtkImplements` contém um `mdTypeDef` ou `mdTypeRef` token.</span><span class="sxs-lookup"><span data-stu-id="80da0-119">Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token.</span></span> <span data-ttu-id="80da0-120">O último elemento na matriz deve ser `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="80da0-120">The last element in the array must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="a7330-119">Cada elemento `rtkImplements` da matriz `mdTypeDef` `mdTypeRef` contém um ou token.</span><span class="sxs-lookup"><span data-stu-id="a7330-119">Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token.</span></span> <span data-ttu-id="a7330-120">O último elemento na `mdTokenNil`matriz deve ser .</span><span class="sxs-lookup"><span data-stu-id="a7330-120">The last element in the array must be `mdTokenNil`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80da0-121">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="80da0-121">Requirements</span></span>  
- <span data-ttu-id="80da0-122">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80da0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a7330-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a7330-121">Requirements</span></span>  
+ <span data-ttu-id="a7330-122">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a7330-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80da0-123">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="80da0-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a7330-123">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="a7330-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="80da0-124">**Biblioteca:** Usado como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="80da0-124">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a7330-124">**Biblioteca:** Usado como recurso em MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a7330-124">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="80da0-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80da0-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a7330-125">**.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a7330-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80da0-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="80da0-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7330-126">Confira também</span><span class="sxs-lookup"><span data-stu-id="a7330-126">See also</span></span>
 
-- [<span data-ttu-id="80da0-127">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="80da0-127">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="80da0-128">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="80da0-128">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="a7330-127">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="a7330-127">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="a7330-128">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="a7330-128">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

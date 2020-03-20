@@ -1,5 +1,5 @@
 ---
-title: Determinar itens marcados no controle CheckedListBox
+title: Determine itens verificados no controle checklistbox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743246"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182200"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="6658b-102">Como determinar itens verificados no controle CheckedListBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6658b-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
-<span data-ttu-id="6658b-103">Ao apresentar dados em um Windows Forms <xref:System.Windows.Forms.CheckedListBox> controle, você pode iterar pela coleção armazenada na propriedade <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> ou percorrer a lista usando o método <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> para determinar quais itens estão marcados.</span><span class="sxs-lookup"><span data-stu-id="6658b-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="6658b-104">O método <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> usa um número de índice de item como seu argumento e retorna `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="6658b-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="6658b-105">Ao contrário do que você pode esperar, as propriedades <xref:System.Windows.Forms.ListBox.SelectedItems%2A> e <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> não determinam quais itens são verificados; Eles determinam quais itens são realçados.</span><span class="sxs-lookup"><span data-stu-id="6658b-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a><span data-ttu-id="5057c-102">Como determinar itens verificados no controle CheckedListBox dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5057c-102">How to: Determine Checked Items in the Windows Forms CheckedListBox Control</span></span>
+<span data-ttu-id="5057c-103">Ao apresentar dados em <xref:System.Windows.Forms.CheckedListBox> um controle do Windows Forms, você pode <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> iterar através da <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> coleta armazenada na propriedade ou passar pela lista usando o método para determinar quais itens são verificados.</span><span class="sxs-lookup"><span data-stu-id="5057c-103">When presenting data in a Windows Forms <xref:System.Windows.Forms.CheckedListBox> control, you can either iterate through the collection stored in the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> property, or step through the list using the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method to determine which items are checked.</span></span> <span data-ttu-id="5057c-104">O <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> método toma um número de índice `true` `false`de item como argumento e retorna ou .</span><span class="sxs-lookup"><span data-stu-id="5057c-104">The <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method takes an item index number as its argument and returns `true` or `false`.</span></span> <span data-ttu-id="5057c-105">Ao contrário do que <xref:System.Windows.Forms.ListBox.SelectedItems%2A> você <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> pode esperar, as propriedades e as propriedades não determinam quais itens são verificados; eles determinam quais itens são destacados.</span><span class="sxs-lookup"><span data-stu-id="5057c-105">Contrary to what you might expect, the <xref:System.Windows.Forms.ListBox.SelectedItems%2A> and <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> properties do not determine which items are checked; they determine which items are highlighted.</span></span>  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="6658b-106">Como determinar itens marcados em um controle CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="6658b-106">To determine checked items in a CheckedListBox control</span></span>  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a><span data-ttu-id="5057c-106">Como determinar itens marcados em um controle CheckedListBox</span><span class="sxs-lookup"><span data-stu-id="5057c-106">To determine checked items in a CheckedListBox control</span></span>  
   
-1. <span data-ttu-id="6658b-107">Itere pela coleção de <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>, começando em 0, pois a coleção é baseada em zero.</span><span class="sxs-lookup"><span data-stu-id="6658b-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="6658b-108">Observe que esse método lhe fornecerá o número de item na lista de itens marcados, não na lista global.</span><span class="sxs-lookup"><span data-stu-id="6658b-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="6658b-109">Portanto, se o primeiro item na lista não estiver marcado e o segundo item estiver marcado, o código a seguir exibirá o texto como "Item marcado 1 = MyListItem2".</span><span class="sxs-lookup"><span data-stu-id="6658b-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
+1. <span data-ttu-id="5057c-107">Iterado através <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> da coleção, começando em 0 já que a coleção é baseada em zero.</span><span class="sxs-lookup"><span data-stu-id="5057c-107">Iterate through the <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> collection, starting at 0 since the collection is zero-based.</span></span> <span data-ttu-id="5057c-108">Observe que esse método lhe fornecerá o número de item na lista de itens marcados, não na lista global.</span><span class="sxs-lookup"><span data-stu-id="5057c-108">Note that this method will give you the item number in the list of checked items, not the overall list.</span></span> <span data-ttu-id="5057c-109">Portanto, se o primeiro item na lista não estiver marcado e o segundo item estiver marcado, o código a seguir exibirá o texto como "Item marcado 1 = MyListItem2".</span><span class="sxs-lookup"><span data-stu-id="5057c-109">So if the first item in the list is not checked and the second item is checked, the code below will display text like "Checked Item 1 = MyListItem2".</span></span>  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +66,9 @@ ms.locfileid: "76743246"
     }  
     ```  
   
-     - <span data-ttu-id="6658b-110">ou –</span><span class="sxs-lookup"><span data-stu-id="6658b-110">or -</span></span>  
+     - <span data-ttu-id="5057c-110">ou –</span><span class="sxs-lookup"><span data-stu-id="5057c-110">or -</span></span>  
   
-2. <span data-ttu-id="6658b-111">Percorra a coleção de <xref:System.Windows.Forms.CheckedListBox.Items%2A>, começando em 0, uma vez que a coleção é baseada em zero e chame o método <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> para cada item.</span><span class="sxs-lookup"><span data-stu-id="6658b-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="6658b-112">Observe que esse método lhe fornecerá o número de item na lista geral, portanto, se o primeiro item na lista não estiver marcado e o segundo item estiver marcado, ele exibirá algo como "Item 2 = MyListItem2".</span><span class="sxs-lookup"><span data-stu-id="6658b-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
+2. <span data-ttu-id="5057c-111">Passe pela <xref:System.Windows.Forms.CheckedListBox.Items%2A> coleção, começando em 0, já que a <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> coleção é baseada em zero, e chame o método para cada item.</span><span class="sxs-lookup"><span data-stu-id="5057c-111">Step through the <xref:System.Windows.Forms.CheckedListBox.Items%2A> collection, starting at 0 since the collection is zero-based, and call the <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> method for each item.</span></span> <span data-ttu-id="5057c-112">Observe que esse método lhe fornecerá o número de item na lista geral, portanto, se o primeiro item na lista não estiver marcado e o segundo item estiver marcado, ele exibirá algo como "Item 2 = MyListItem2".</span><span class="sxs-lookup"><span data-stu-id="5057c-112">Note that this method will give you the item number in the overall list, so if the first item in the list is not checked and the second item is checked, it will display something like "Item 2 = MyListItem2".</span></span>  
   
     ```vb  
     Dim i As Integer  
@@ -84,7 +84,7 @@ ms.locfileid: "76743246"
   
     ```csharp  
     int i;  
-    string s;   
+    string s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1.Items.Count-1); i++)  
     {  
@@ -98,7 +98,7 @@ ms.locfileid: "76743246"
   
     ```cpp  
     int i;  
-    String ^ s;   
+    String ^ s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1->Items->Count-1); i++)  
     {  
@@ -111,6 +111,6 @@ ms.locfileid: "76743246"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="6658b-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6658b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5057c-113">Confira também</span><span class="sxs-lookup"><span data-stu-id="5057c-113">See also</span></span>
 
-- [<span data-ttu-id="6658b-114">Controles dos Windows Forms usados para listar opções</span><span class="sxs-lookup"><span data-stu-id="6658b-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="5057c-114">Controles dos Windows Forms usados para listar opções</span><span class="sxs-lookup"><span data-stu-id="5057c-114">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
