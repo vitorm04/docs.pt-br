@@ -15,63 +15,63 @@ helpviewer_keywords:
 ms.assetid: 14218249-bdec-48ae-b5fc-9f57f7ca8501
 topic_type:
 - apiref
-ms.openlocfilehash: 04e0fabfc0d70c9d922e0715f32bd07237ce8741
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 492c37540ad68b5b134520218eedc59013c68519
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442315"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175922"
 ---
 # <a name="imetadatadispenseropenscopeonmemory-method"></a>Método IMetaDataDispenser::OpenScopeOnMemory
-Abre uma área de memória que contém os metadados existentes. Ou seja, esse método abre uma área especificada de memória na qual os dados existentes são tratados como metadados.  
+Abre uma área de memória que contém metadados existentes. Ou seja, este método abre uma área especificada de memória na qual os dados existentes são tratados como metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT OpenScopeOnMemory (  
-    [in]  LPCVOID     pData,   
-    [in]  ULONG       cbData,   
-    [in]  DWORD       dwOpenFlags,   
-    [in]  REFIID      riid,   
+    [in]  LPCVOID     pData,
+    [in]  ULONG       cbData,
+    [in]  DWORD       dwOpenFlags,
+    [in]  REFIID      riid,
     [out] IUnknown    **ppIUnk  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pData`  
- no Um ponteiro que especifica o endereço inicial da área de memória.  
+ [em] Um ponteiro que especifica o endereço inicial da área de memória.  
   
  `cbData`  
- no O tamanho da área de memória, em bytes.  
+ [em] O tamanho da área de memória, em bytes.  
   
  `dwOpenFlags`  
- no Um valor da enumeração [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) para especificar o modo (leitura, gravação e assim por diante) para abertura.  
+ [em] Um valor da enumeração [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) para especificar o modo (ler, gravar e assim por diante) para abertura.  
   
  `riid`  
- no A IID da interface de metadados desejada a ser retornada; o chamador usará a interface para importar (ler) ou emitir (gravar) metadados.  
+ [em] O IID da interface de metadados desejada a ser devolvida; o chamador usará a interface para importar (ler) ou emitir metadados (gravar).  
   
- O valor de `riid` deve especificar uma das interfaces "Import" ou "Emit". Os valores válidos são IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 ou IID_IMetaDataImport2.  
+ O valor `riid` de deve especificar uma das interfaces "importação" ou "emitir". Os valores válidos são IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 ou IID_IMetaDataImport2.  
   
  `ppIUnk`  
- fora O ponteiro para a interface retornada.  
+ [fora] O ponteiro para a interface retornada.  
   
 ## <a name="remarks"></a>Comentários  
- A cópia na memória dos metadados pode ser consultada usando métodos de uma das interfaces "Import" ou adicionadas ao uso de métodos de uma das interfaces "Emit".  
+ A cópia na memória dos metadados pode ser consultada usando métodos de uma das interfaces de "importação" ou adicionada ao uso de métodos a partir de uma das interfaces "emitidas".  
   
- O método `OpenScopeOnMemory` é semelhante ao método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) , exceto que os metadados de interesse já existem na memória, em vez de em um arquivo no disco.  
+ O `OpenScopeOnMemory` método é semelhante ao [método IMetaDataDispenser::OpenScope,](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) exceto que os metadados de interesse já existem na memória, em vez de em um arquivo em disco.  
   
- Se a área de destino da memória não contiver metadados de Common Language Runtime (CLR), o método `OpenScopeOnMemory` falhará.  
+ Se a área de destino da memória não contiver metadados `OpenScopeOnMemory` de tempo de execução de linguagem comum (CLR), o método falhará.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
 - [Interface IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)

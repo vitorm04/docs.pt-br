@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-ms.openlocfilehash: 578851bed188921324e3c25e533b3466068dee3d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446788"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180535"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitindo métodos e assemblies dinâmicos
 
@@ -34,24 +34,20 @@ A emissão de reflexão fornece os seguintes recursos:
   
 Além dos tipos gerenciados no namespace <xref:System.Reflection.Emit>, há interfaces de metadados não gerenciados que são descritos na documentação de referência de [Interfaces de Metadados](../unmanaged-api/metadata/metadata-interfaces.md). A emissão de reflexão gerenciada fornece verificação de erros semânticos mais potente e um nível mais alto de abstração de metadados que as interfaces de metadados não gerenciadas.  
   
-Outro recurso útil para trabalhar com metadados e MSIL é a documentação da CLI (Common Language Infrastructure), especialmente a “Partição II: definição e semântica de metadados” e a “Partição III: conjunto de instruções de CIL”. A documentação está disponível online no [site da ECMA](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+Outro recurso útil para trabalhar com metadados e MSIL é a documentação da CLI (Common Language Infrastructure), especialmente a “Partição II: definição e semântica de metadados” e a “Partição III: conjunto de instruções de CIL”. A documentação está disponível online no [site da Ecma.](https://www.ecma-international.org/publications/standards/Ecma-335.htm)  
   
 ## <a name="in-this-section"></a>Nesta seção
   
-[Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)  
+[Questões de segurança em reflexão emitidas](security-issues-in-reflection-emit.md)  
 Descreve os problemas de segurança relacionados à criação de assemblies dinâmicos usando emissão de reflexão.  
 
-[Como definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md)   
-Mostra como executar um método dinâmico simples e um método dinâmico vinculado a uma instância de uma classe.
+[Como: Definir e executar métodos dinâmicos](how-to-define-and-execute-dynamic-methods.md) Mostra como executar um método dinâmico simples e um método dinâmico vinculado a uma instância de uma classe.
 
-[Como definir um tipo genérico com a emissão de reflexão](how-to-define-a-generic-type-with-reflection-emit.md)   
-Mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar restrições especiais, de classe e de interface aos parâmetros de tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetro e tipos de retorno.
+[Como: Definir um tipo genérico com reflexão emitida](how-to-define-a-generic-type-with-reflection-emit.md) Mostra como criar um tipo genérico simples com dois parâmetros de tipo, como aplicar classe, interface e restrições especiais aos parâmetros do tipo e como criar membros que usam os parâmetros de tipo da classe como tipos de parâmetros e tipos de retorno.
 
-[Como definir um método genérico com a emissão de reflexão](how-to-define-a-generic-method-with-reflection-emit.md)   
-Mostra como criar, emitir e invocar um método genérico simples.
+[Como: Definir um método genérico com reflexão emitida](how-to-define-a-generic-method-with-reflection-emit.md) Mostra como criar, emitir e invocar um método genérico simples.
 
-[Assemblies de coleção para geração de tipos dinâmicos](collectible-assemblies.md)   
-Apresenta os assemblies de coleção, que são assemblies dinâmicos que podem ser descarregados sem descarregar o domínio do aplicativo no qual eles foram criados.
+[Montagens colecionáveis para geração de tipo dinâmico](collectible-assemblies.md) Introduz conjuntos colecionáveis, que são conjuntos dinâmicos que podem ser descarregados sem descarregar o domínio do aplicativo no qual foram criados.
   
 ## <a name="reference"></a>Referência  
 

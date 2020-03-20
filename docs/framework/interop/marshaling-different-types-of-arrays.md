@@ -8,19 +8,19 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124389"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181359"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshaling de diversos tipos de matrizes
 Uma matriz é um tipo de referência em código gerenciado que contém um ou mais elementos do mesmo tipo. Embora as matrizes sejam tipos de referência, elas são passadas como parâmetros para funções não gerenciadas. Esse comportamento é inconsistente com a maneira que matrizes gerenciadas são passadas para objetos gerenciados, que é na forma de parâmetros de In/Out. Para obter detalhes adicionais, consulte [Copiando e fixando](copying-and-pinning.md).  
   
  A tabela a seguir lista as opções de marshaling para matrizes e descreve o uso delas.  
   
-|Matriz|Descrição|  
+|Array|Descrição|  
 |-----------|-----------------|  
 |De inteiros por valor.|Passa uma matriz de inteiros como um parâmetro In.|  
 |De inteiros por referência.|Passa uma matriz de inteiros como um parâmetro In/Out.|  
@@ -89,14 +89,14 @@ Uma matriz é um tipo de referência em código gerenciado que contém um ou mai
 ```cpp
 typedef struct _MYPOINT  
 {  
-   int x;   
-   int y;   
+   int x;
+   int y;
 } MYPOINT;  
   
 typedef struct _MYPERSON  
 {  
-   char* first;   
-   char* last;   
+   char* first;
+   char* last;
 } MYPERSON;  
 ```  
   
@@ -112,7 +112,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Tipos de dados de invocação de plataforma](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Plataforma invoca tipos de dados](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)

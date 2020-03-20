@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123872"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181403"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Como mapear HRESULTs e exceções
 Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando exceções. O runtime manipula a transição entre os dois. Cada classe de exceção do .NET Framework mapeia para um HRESULT.  
@@ -25,7 +25,7 @@ Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando
   
  Se você criar uma classe que estenda **System.Exception**, você deverá definir o campo HRESULT durante a construção. Caso contrário, a classe base atribui o valor de HRESULT. Você pode mapear as novas classes de exceção para um HRESULT existente, fornecendo o valor no construtor da exceção.  
   
- Observe que o tempo de execução, às vezes, ignorará um `HRESULT` em casos nos quais um `IErrorInfo` estiver presente no thread.  Esse comportamento poderá ocorrer nos casos em que o `HRESULT` e o `IErrorInfo` não representarem o mesmo erro.  
+ Observe que o runtime, às vezes, ignorará um `HRESULT` em casos nos quais um `IErrorInfo` estiver presente no thread.  Esse comportamento poderá ocorrer nos casos em que o `HRESULT` e o `IErrorInfo` não representarem o mesmo erro.  
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Para criar uma nova classe de exceção e mapeá-la para um HRESULT  
   
@@ -35,7 +35,7 @@ Métodos COM relatam erros retornando HRESULTs; métodos .NET os relatam gerando
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Exceção**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND ou ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -95,7 +95,7 @@ CMyClass::MethodThatThrows
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
+|**COR_E_NULLREFERENCE ou E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY ou**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG ou ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW ou ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_SYSTEM**|**Systemexception**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -122,25 +122,25 @@ CMyClass::MethodThatThrows
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
 |**Todos os outros HRESULTs**|**COMException**|  
   
- Para recuperar informações sobre erros estendidos, o cliente gerenciado deve examinar os campos do objeto de exceção gerado. Para o objeto de exceção fornecer informações úteis sobre o erro, o objeto COM deve implementar a interface **IErrorInfo**. O tempo de execução usa as informações fornecidas por **IErrorInfo** para inicializar o objeto de exceção.  
+ Para recuperar informações sobre erros estendidos, o cliente gerenciado deve examinar os campos do objeto de exceção gerado. Para o objeto de exceção fornecer informações úteis sobre o erro, o objeto COM deve implementar a interface **IErrorInfo**. O runtime usa as informações fornecidas por **IErrorInfo** para inicializar o objeto de exceção.  
   
- Se o objeto COM não dá suporte a **IErrorInfo**, o tempo de execução inicializa um objeto de exceção com valores padrão. A tabela a seguir lista cada campo associado a um objeto de exceção e identifica a origem das informações padrão quando o objeto COM dá suporte a **IErrorInfo**.  
+ Se o objeto COM não dá suporte a **IErrorInfo**, o runtime inicializa um objeto de exceção com valores padrão. A tabela a seguir lista cada campo associado a um objeto de exceção e identifica a origem das informações padrão quando o objeto COM dá suporte a **IErrorInfo**.  
   
- Observe que o tempo de execução, às vezes, ignorará um `HRESULT` em casos nos quais um `IErrorInfo` estiver presente no thread.  Esse comportamento poderá ocorrer nos casos em que o `HRESULT` e o `IErrorInfo` não representarem o mesmo erro.  
+ Observe que o runtime, às vezes, ignorará um `HRESULT` em casos nos quais um `IErrorInfo` estiver presente no thread.  Esse comportamento poderá ocorrer nos casos em que o `HRESULT` e o `IErrorInfo` não representarem o mesmo erro.  
   
 |Campo de exceção|Origem das informações do COM|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|HRESULT retornado da chamada.|  
+|**Errorcode**|HRESULT retornado da chamada.|  
 |**HelpLink**|Se **IErrorInfo->HelpContext** é diferente de zero, a cadeia de caracteres é formada pela concatenação de **IErrorInfo->GetHelpFile** e "#" e **IErrorInfo->GetHelpContext**. Caso contrário, a cadeia de caracteres é retornada de **IErrorInfo->GetHelpFile**.|  
-|**InnerException**|É sempre uma referência nula (**Nothing** no Visual Basic).|  
-|**Message**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
-|**Source**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
-|**StackTrace**|O rastreamento de pilha.|  
+|**InnerException**|Sempre uma referência nula (**Nada** no Visual Básico).|  
+|**Mensagem**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
+|**Fonte**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
+|**Stacktrace**|O rastreamento de pilha.|  
 |**TargetSite**|O nome do método que retornou o HRESULT com falha.|  
   
  Campos de exceção, tais como **Message**, **Source** e **StackTrace**, não estão disponíveis para o **StackOverflowException**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Exceções](../../standard/exceptions/index.md)

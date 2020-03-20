@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 1a4f7703536bcfdae75b0bcffae8dca0734e9e0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437569"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175389"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Método IMetaDataImport::GetFieldMarshal
-Obtém um ponteiro para o tipo nativo não gerenciado do campo representado pelo token de metadados do campo especificado.  
+Obtém um ponteiro para o tipo nativo e não gerenciado do campo representado pelo token de metadados de campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetFieldMarshal (  
-   [in]  mdToken             tk,   
+   [in]  mdToken             tk,
    [out] PCCOR_SIGNATURE     *ppvNativeType,  
-   [out] ULONG               *pcbNativeType   
+   [out] ULONG               *pcbNativeType
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tk`  
- no O token de metadados que representa o campo para obter informações de marshaling de interoperabilidade para.  
+ [em] O token de metadados que representa o campo para obter informações de marshaling interop para.  
   
  `ppvNativeType`  
- fora Um ponteiro para a assinatura de metadados do tipo nativo do campo.  
+ [fora] Um ponteiro para a assinatura de metadados do tipo nativo do campo.  
   
  `pcbNativeType`  
- fora O tamanho em bytes de `ppvNativeType`.  
+ [fora] O tamanho em bytes de `ppvNativeType`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: enviar dados para o filho MDI ativo'
+title: Como enviar dados para o filhos MDI ativos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 563be8494cb84dc74b45985d3ba74e4b6a07eb8a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947838"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182489"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Como: enviar dados para o filho MDI ativo
-Muitas vezes, dentro do contexto de [aplicativos de interface de vários documentos (MDI)](multiple-document-interface-mdi-applications.md), você precisará enviar dados para a janela filho ativa, como quando o usuário cola dados da área de transferência em um aplicativo MDI.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Como enviar dados para o filhos MDI ativos
+Muitas vezes, dentro do contexto de [Aplicativos de Interface de Vários Documentos (MDI),](multiple-document-interface-mdi-applications.md)você precisará enviar dados para a janela ativa do filho, como quando o usuário cola dados da Área de Transferência em um aplicativo MDI.  
   
 > [!NOTE]
-> Para obter informações sobre como verificar qual janela filho tem foco e enviar seu conteúdo para a área de transferência, consulte [determinando o filho MDI ativo](how-to-determine-the-active-mdi-child.md).  
+> Para obter informações sobre como verificar qual janela filho tem foco e enviar seu conteúdo para a Área de Transferência, consulte [Determinando o MDI Active Child](how-to-determine-the-active-mdi-child.md).  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Para enviar dados para a janela filho MDI ativa da área de transferência  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Para enviar dados para a janela de criança MDI ativa da área de transferência  
   
-1. Dentro de um método, copie o texto na área de transferência para o controle ativo do formulário filho ativo.  
+1. Dentro de um método, copie o texto na Área de Transferência para o controle ativo da forma criança ativa.  
   
     > [!NOTE]
-    > Este exemplo supõe que haja um formulário pai MDI (`Form1`) que tenha uma ou mais janelas filho MDI que contenham um <xref:System.Windows.Forms.RichTextBox> controle. Para obter mais informações, consulte [Criando formulários pai MDI](how-to-create-mdi-parent-forms.md).  
+    > Este exemplo assume que há um`Form1`formulário pai MDI ( ) que <xref:System.Windows.Forms.RichTextBox> tem uma ou mais janelas de criançaS MDI contendo um controle. Para obter mais informações, consulte [Criando formulários pai MDI](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -45,7 +45,7 @@ Muitas vezes, dentro do contexto de [aplicativos de interface de vários documen
              If (Not theBox Is Nothing) Then  
                 ' Create a new instance of the DataObject interface.  
                 Dim data As IDataObject = Clipboard.GetDataObject()  
-                ' If the data is text, then set the text of the   
+                ' If the data is text, then set the text of the
                 ' RichTextBox to the text in the clipboard.  
                 If (data.GetDataPresent(DataFormats.Text)) Then  
                    theBox.SelectedText = data.GetData(DataFormats.Text).ToString()  
@@ -68,22 +68,22 @@ Muitas vezes, dentro do contexto de [aplicativos de interface de vários documen
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
        {  
-          try   
+          try
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
              if (theBox != null)  
              {  
                 // Create a new instance of the DataObject interface.  
                 IDataObject data = Clipboard.GetDataObject();  
-                // If the data is text, then set the text of the   
+                // If the data is text, then set the text of the
                 // RichTextBox to the text in the clipboard.  
                 if (data.GetDataPresent(DataFormats.Text))  
                 {  
-                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();                 
+                   theBox.SelectedText = data.GetData(DataFormats.Text).ToString();
                 }  
              }  
           }  
-          catch   
+          catch
           {  
              MessageBox.Show("You need to select a RichTextBox.");  
           }  
@@ -91,10 +91,10 @@ Muitas vezes, dentro do contexto de [aplicativos de interface de vários documen
     }  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Aplicativos da interface MDI (Interface de Vários Documentos)](multiple-document-interface-mdi-applications.md)
-- [Como: Criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
-- [Como: Criar formulários filho MDI](how-to-create-mdi-child-forms.md)
-- [Como: Determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
-- [Como: Organizar formulários filho MDI](how-to-arrange-mdi-child-forms.md)
+- [Como criar formulários pai MDI](how-to-create-mdi-parent-forms.md)
+- [Como criar formulários filho MDI](how-to-create-mdi-child-forms.md)
+- [Como determinar o filho MDI ativo](how-to-determine-the-active-mdi-child.md)
+- [Como Organizar Formulários Filho MDI](how-to-arrange-mdi-child-forms.md)

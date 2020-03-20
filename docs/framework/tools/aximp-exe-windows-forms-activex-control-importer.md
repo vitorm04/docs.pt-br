@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6d58d1df81780c3033eab7c1ac3e860adeb374b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715777"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180420"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -34,20 +34,20 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentários  
   
-|Argument|Descrição|  
+|Argumento|Descrição|  
 |--------------|-----------------|  
-|*file*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
+|*Arquivo*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
   
 |Opção|Descrição|  
 |------------|-----------------|  
 |`/delaysign`|Especifica Aximp.exe para assinar o controle resultante usando-se a assinatura com atraso. Você deve especificar essa opção com a opção `/keycontainer:`, `/keyfile:` ou `/publickey:`. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Exibe sintaxe de comando e opções para a ferramenta.|  
-|*contêineres* `/keycontainer:`|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
-|*nome de arquivo* `/keyfile:`|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
+|`/keycontainer:`*containerName*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
+|`/keyfile:`*nome de arquivo*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
 |`/nologo`|Suprime a exibição do banner de inicialização da Microsoft.|  
-|*nome de arquivo* `/out:`|Especifica o nome do assembly a ser criado.|  
-|*nome de arquivo* `/publickey:`|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
-|*nome de arquivo* `/rcw:`|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|`/out:`*nome de arquivo*|Especifica o nome do assembly a ser criado.|  
+|`/publickey:`*nome de arquivo*|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
+|`/rcw:`*nome de arquivo*|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime a exibição de mensagens de sucesso.|  
 |`/source`|Gera o código-fonte do C# para o wrapper do Windows Forms.|  
 |`/verbose`|Especifica o modo detalhado; exibe informações de andamento adicionais.|  
@@ -73,11 +73,11 @@ aximp [options]{file.dll | file.ocx}
 ## <a name="example"></a>Exemplo  
  O comando a seguir gera MediaPlayer.dll e AxMediaPlayer.dll para o controle `msdxm.ocx` do Media Player.  
   
-```console 
+```console
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)

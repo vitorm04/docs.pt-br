@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 031996813718a074eebab62ff54a2de52b898c22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450222"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175753"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
-Cria uma definição de tipo para um tipo de Common Language Runtime e Obtém um token de metadados para essa definição de tipo.  
+Cria uma definição de tipo para um tipo de tempo de execução de idioma comum e obtém um token de metadados para essa definição de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineTypeDef (   
-    [in]  LPCWSTR     szTypeDef,   
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
+HRESULT DefineTypeDef (
+    [in]  LPCWSTR     szTypeDef,
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `szTypeDef`  
- no O nome do tipo em Unicode.  
+ [em] O nome do tipo em Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` atributos. Este é um bitmask de valores de `CoreTypeAttr`.  
+ [em] `TypeDef` atributos. Isto é uma `CoreTypeAttr` pequena máscara de valores.  
   
  `tkExtends`  
- no O token da classe base. Ele deve ser um `mdTypeDef` ou um token de `mdTypeRef`.  
+ [em] O símbolo da classe base. Deve ser um `mdTypeDef` ou `mdTypeRef` um símbolo.  
   
  `rtkImplements`  
- no Uma matriz de tokens que especifica as interfaces que essa classe ou interface implementa.  
+ [em] Uma matriz de tokens especificando as interfaces que esta classe ou interface implementa.  
   
  `ptd`  
- fora O token de `mdTypeDef` atribuído.  
+ [fora] O `mdTypeDef` token atribuído.  
   
 ## <a name="remarks"></a>Comentários  
- Um sinalizador em `dwTypeDefFlags` especifica se o tipo que está sendo criado é um tipo de referência de Common Type System (classe ou interface) ou um tipo de valor de Common Type System.  
+ Um sinalizador `dwTypeDefFlags` em especifica se o tipo que está sendo criado é um tipo de referência de sistema de tipo comum (classe ou interface) ou um tipo de valor de tipo comum.  
   
- Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um registro de `mdInterfaceImpl` para cada interface herdada ou implementada por esse tipo. No entanto, esse método não retorna nenhum desses tokens `mdInterfaceImpl`. Se um cliente quiser adicionar ou modificar um token de `mdInterfaceImpl` posteriormente, ele deverá usar a interface `IMetaDataImport` para enumerá-los. Se você quiser usar semântica COM da interface `[default]`, deverá fornecer a interface padrão como o primeiro elemento em `rtkImplements`; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que é sempre considerada a primeira `mdInterfaceImpl` token declarada para a classe).  
+ Dependendo dos parâmetros fornecidos, este método, como `mdInterfaceImpl` efeito colateral, também pode criar um registro para cada interface herdada ou implementada por esse tipo. No entanto, este método `mdInterfaceImpl` não retorna nenhum desses tokens. Se um cliente quiser adicionar `mdInterfaceImpl` ou modificar um token posteriormente, ele deve usar a `IMetaDataImport` interface para enumera-los. Se você quiser usar a semântica COM da `[default]` interface, você `rtkImplements`deve fornecer a interface padrão como o primeiro elemento em ; um atributo personalizado definido na classe indicará que a classe tem uma `mdInterfaceImpl` interface padrão (que é sempre assumida como o primeiro token declarado para a classe).  
   
- Cada elemento da matriz de `rtkImplements` contém um `mdTypeDef` ou `mdTypeRef` token. O último elemento na matriz deve ser `mdTokenNil`.  
+ Cada elemento `rtkImplements` da matriz `mdTypeDef` `mdTypeRef` contém um ou token. O último elemento na `mdTokenNil`matriz deve ser .  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

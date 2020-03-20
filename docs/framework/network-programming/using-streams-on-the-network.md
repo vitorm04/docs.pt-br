@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046870"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180617"
 ---
 # <a name="using-streams-on-the-network"></a>Usando fluxos na rede
 Os recursos de rede são representados no .NET Framework como fluxos. Tratando os fluxos de forma genérica, o .NET Framework oferece as seguintes funcionalidades:  
@@ -35,10 +35,10 @@ Os recursos de rede são representados no .NET Framework como fluxos. Tratando o
   
  O namespace <xref:System.Net.Sockets> contém uma classe **NetworkStream** que implementa a classe <xref:System.IO.Stream> especificamente para uso com recursos de rede. As classes do namespace <xref:System.Net.Sockets> usam a classe **NetworkStream** para representar fluxos.  
   
- Para enviar dados para a rede usando o fluxo retornado, chame <xref:System.Net.WebRequest.GetRequestStream%2A> na <xref:System.Net.WebRequest>. A **WebRequest** enviará cabeçalhos de solicitação para o servidor; em seguida, você poderá enviar dados para o recurso de rede chamando o método <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> ou <xref:System.IO.Stream.Write%2A> no fluxo retornado. Alguns protocolos, como HTTP, podem exigir a definição de propriedades específicas ao protocolo antes de enviar dados. O exemplo de código a seguir mostra como definir propriedades específicas de HTTP para envio de dados. Ele supõe que a variável `sendData` contém os dados a serem enviados e que a variável `sendLength` é o número de bytes de dados a serem enviados.  
+ Para enviar dados para a rede usando o fluxo retornado, chame <xref:System.Net.WebRequest.GetRequestStream%2A> na <xref:System.Net.WebRequest>. O **WebRequest** enviará cabeçalhos de solicitação para o servidor; então você pode enviar dados para <xref:System.IO.Stream.BeginWrite%2A>o <xref:System.IO.Stream.EndWrite%2A>recurso <xref:System.IO.Stream.Write%2A> de rede chamando o método , ou método no fluxo retornado. Alguns protocolos, como HTTP, podem exigir a definição de propriedades específicas ao protocolo antes de enviar dados. O exemplo de código a seguir mostra como definir propriedades específicas de HTTP para envio de dados. Ele supõe que a variável `sendData` contém os dados a serem enviados e que a variável `sendLength` é o número de bytes de dados a serem enviados.  
   
 ```csharp  
-HttpWebRequest request =   
+HttpWebRequest request =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 request.Method = "POST";  
 request.ContentLength = sendLength;  
@@ -86,7 +86,7 @@ End Try
 // Create a response object.  
 WebResponse response = request.GetResponse();  
 // Get a readable stream from the server.  
-StreamReader sr =   
+StreamReader sr =
    new StreamReader(response.GetResponseStream(), Encoding.ASCII);  
 // Use the stream. Remember when you are through with the stream to close it.  
 sr.Close();  
@@ -96,13 +96,13 @@ sr.Close();
 ' Create a response object.  
 Dim response As WebResponse = request.GetResponse()  
 ' Get a readable stream from the server.  
-Dim sr As _   
+Dim sr As _
    New StreamReader(response.GetResponseStream(), Encoding.ASCII)  
 ' Use the stream. Remember when you are through with the stream to close it.  
 sr.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: Solicitar dados usando a classe WebRequest](how-to-request-data-using-the-webrequest-class.md)
+- [Como solicitar dados usando a classe WebRequest](how-to-request-data-using-the-webrequest-class.md)
 - [Solicitando dados](requesting-data.md)

@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5af59e158a34b06d304a98db1dfaa46585b22eb6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436855"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177203"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>Método IMetaDataImport::GetSigFromToken
-Obtém a assinatura de metadados binários associada ao token especificado.  
+Obtém a assinatura binária de metadados associada ao token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetSigFromToken (   
-   [in]   mdSignature        mdSig,   
-   [out]  PCCOR_SIGNATURE    *ppvSig,   
-   [out]  ULONG              *pcbSig   
+HRESULT GetSigFromToken (
+   [in]   mdSignature        mdSig,
+   [out]  PCCOR_SIGNATURE    *ppvSig,
+   [out]  ULONG              *pcbSig
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `mdSig`  
- no O token para o qual retornar a assinatura de metadados binários.  
+ [em] O token para retornar a assinatura binária de metadados para.  
   
  `ppvSig`  
- fora Um ponteiro para a assinatura de metadados retornada.  
+ [fora] Um ponteiro para a assinatura de metadados retornado.  
   
  `pcbSig`  
- fora O tamanho em bytes da assinatura de metadados binários.  
+ [fora] O tamanho em bytes da assinatura binária de metadados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

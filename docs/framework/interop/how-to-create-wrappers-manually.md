@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: a647e4b434d0c38a2a84e9faec1d603d2bc4bb11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123924"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181423"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Como criar wrappers manualmente
 Se você decidir declarar tipos COM manualmente no código-fonte gerenciado, o melhor lugar para começar é com um arquivo de linguagem IDL ou uma biblioteca de tipos existente. Quando você não tem o arquivo IDL ou não pode gerar um arquivo de biblioteca de tipos, pode simular os tipos COM criando declarações gerenciadas e exportando o assembly resultante para uma biblioteca de tipos.  
@@ -47,7 +47,7 @@ pointer_default(unique)
  ]  
 interface ISATest : IDispatch  
  {  
-[id(1), helpstring("method InSArray")]   
+[id(1), helpstring("method InSArray")]
 HRESULT InSArray([in] SAFEARRAY(int) *ppsa, [out,retval] int *pSum);  
  };  
  [  
@@ -81,7 +81,7 @@ namespace SAServer
   // MethodCodeType=MethodCodeType.Runtime)]  
   int InSArray( [MarshalAs(UnmanagedType.SafeArray,  
       SafeArraySubType=VarEnum.VT_I4)] ref int[] param );  
- }   
+ }
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
  [ClassInterface(ClassInterfaceType.None)]  
@@ -89,19 +89,19 @@ namespace SAServer
  public class SATest : ISATest  
  {  
   [DispId(1)]  
-  [MethodImpl(MethodImplOptions.InternalCall,   
+  [MethodImpl(MethodImplOptions.InternalCall,
   MethodCodeType=MethodCodeType.Runtime)]  
-  extern int ISATest.InSArray( [MarshalAs(UnmanagedType.SafeArray,   
+  extern int ISATest.InSArray( [MarshalAs(UnmanagedType.SafeArray,
   SafeArraySubType=VarEnum.VT_I4)] ref int[] param );  
  }  
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Personalizando RCWs (Runtime Callable Wrappers)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Tipos de dados COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [How to: Edit Interop Assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)) (Como editar assemblies de interoperabilidade)
+- [Como editar assemblies de interoperabilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 93aeecb9-7fef-4545-8daf-f566dfc47084
 topic_type:
 - apiref
-ms.openlocfilehash: 0370c74bde9ca5bdbd0fd03515f4b174ddd0a39a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c743064b8ca645cf45d02b8800c88187bf4c6c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132312"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179279"
 ---
 # <a name="cor_segment-structure"></a>Estrutura COR_SEGMENT
 Contém informações sobre uma região da memória no heap gerenciado.  
@@ -28,10 +28,10 @@ Contém informações sobre uma região da memória no heap gerenciado.
   
 ```cpp  
 typedef struct _COR_SEGMENT {  
-    CORDB_ADDRESS start;            
-    CORDB_ADDRESS end;              
-    CorDebugGenerationTypes gen;    
-    ULONG heap;                     
+    CORDB_ADDRESS start;
+    CORDB_ADDRESS end;
+    CorDebugGenerationTypes gen;
+    ULONG heap;
 } COR_SEGMENT;  
 ```  
   
@@ -42,7 +42,7 @@ typedef struct _COR_SEGMENT {
 |`start`|O endereço inicial da região de memória.|  
 |`end`|O endereço final da região de memória.|  
 |`gen`|Um membro de enumeração [CorDebugGenerationTypes](cordebuggenerationtypes-enumeration.md) que indica a geração da região de memória.|  
-|`heap`|O número de heap no qual reside a região de memória. Consulte a seção Comentários para obter mais informações.|  
+|`heap`|O número de heap no qual reside a região de memória. Para obter mais informações, consulte a seção Comentários.|  
   
 ## <a name="remarks"></a>Comentários  
  A estrutura `COR_SEGMENTS` representa uma região da memória no heap gerenciado.  Objetos `COR_SEGMENTS` são membros do objeto da coleção [ICorDebugHeapRegionEnum](icordebugheapsegmentenum-interface.md), que é preenchido chamando o método [ICorDebugProcess5::EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md).  
@@ -56,9 +56,9 @@ typedef struct _COR_SEGMENT {
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de depuração](debugging-structures.md)
 - [Depuração](index.md)

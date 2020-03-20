@@ -2,12 +2,12 @@
 title: Restrições declarativas
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 321021e3d73daecae07268f33807c992414a7b4c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945815"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182956"
 ---
 # <a name="declarative-constraints"></a>Restrições declarativas
 As restrições declarativas fornecem um método poderoso de validação para uma atividade e suas relações com outras atividades. As restrições são configuradas para uma atividade durante o processo de design, mas as restrições adicionais podem também ser especificadas pelo host de fluxo de trabalho. Este tópico fornece uma visão geral do uso de restrições declarativas para fornecer validação de atividade.  
@@ -71,58 +71,58 @@ public sealed class CreateState : CodeActivity
     public CreateState()  
     {  
         base.Constraints.Add(CheckParent());  
-        this.Cities = new List<Activity>();              
+        this.Cities = new List<Activity>();
     }  
   
     public List<Activity> Cities { get; set; }  
   
-    public string Name { get; set; }    
+    public string Name { get; set; }
   
     static Constraint CheckParent()  
     {  
         DelegateInArgument<CreateState> element = new DelegateInArgument<CreateState>();  
-        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();                          
+        DelegateInArgument<ValidationContext> context = new DelegateInArgument<ValidationContext>();
         Variable<bool> result = new Variable<bool>();  
         DelegateInArgument<Activity> parent = new DelegateInArgument<Activity>();  
   
         return new Constraint<CreateState>  
-        {                                     
+        {
             Body = new ActivityAction<CreateState,ValidationContext>  
-            {                      
+            {
                 Argument1 = element,  
                 Argument2 = context,  
                 Handler = new Sequence  
                 {  
                     Variables =  
                     {  
-                        result   
+                        result
                     },  
                     Activities =  
                     {  
                         new ForEach<Activity>  
-                        {                                  
+                        {
                             Values = new GetParentChain  
                             {  
-                                ValidationContext = context                                      
+                                ValidationContext = context
                             },  
                             Body = new ActivityAction<Activity>  
-                            {     
-                                Argument = parent,   
+                            {
+                                Argument = parent,
                                 Handler = new If()  
-                                {                                            
-                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),                                          
+                                {
+                                    Condition = new InArgument<bool>((env) => object.Equals(parent.Get(env).GetType(),typeof(CreateCountry))),
                                     Then = new Assign<bool>  
                                     {  
                                         Value = true,  
                                         To = result  
                                     }  
                                 }  
-                            }                                  
+                            }
                         },  
                         new AssertValidation  
                         {  
                             Assertion = new InArgument<bool>(result),  
-                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),                                                                  
+                            Message = new InArgument<string> ("CreateState has to be inside a CreateCountry activity"),
                         }  
                     }  
                 }  
@@ -151,7 +151,7 @@ ValidationSettings settings = new ValidationSettings()
   
     AdditionalConstraints =  
     {  
-        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},       
+        {typeof(Activity), new List<Constraint> {ActivityDisplayNameIsNotSetWarning()}},
     }  
 };  
   
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. Para obter mais informações sobre como invocar a validação, consulte [invocando a validação de atividade](invoking-activity-validation.md).
+ Se a propriedade de <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> é `true`, então somente as restrições adicionais especificadas são avaliadas quando a validação é chamada chamando o <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Isso pode ser útil para inspecionar fluxos de trabalho para configurações específicas de validação. Observe entretanto que quando o fluxo de trabalho é chamado, a lógica de validação configurou no fluxo de trabalho é avaliado e deve passar para o fluxo de trabalho inicia com êxito. Para obter mais informações sobre a invocação da validação, consulte [Invocação da Validação da Atividade](invoking-activity-validation.md).

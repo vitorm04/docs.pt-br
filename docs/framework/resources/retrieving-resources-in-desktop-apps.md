@@ -18,18 +18,18 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445748"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180456"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 
-Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar recursos em aplicativos da loja do Windows 8. x, consulte [criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar recursos em aplicativos do Windows 8.x Store, consulte [Criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
-<a name="from_assembly"></a>   
+<a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperando recursos dos assemblies  
  A classe <xref:System.Resources.ResourceManager> fornece acesso a recursos em tempo de execução. Você usa o método <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> para recuperar os recursos de cadeia de caracteres e o método <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> ou <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> para recuperar recursos que não são cadeias de caracteres. Cada método possui duas sobrecargas:  
   
@@ -143,13 +143,13 @@ GetObject.exe
   
  Para obter mais informações sobre controle de versão do assembly, consulte [Controle de versão do Assembly](../../standard/assembly/versioning.md) e [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
   
-<a name="from_file"></a>   
+<a name="from_file"></a>
 ## <a name="retrieving-resources-from-resources-files"></a>Para recuperar recursos dos arquivos .resources  
  Se você optar por não implantar recursos em assemblies satélites, ainda poderá usar um objeto <xref:System.Resources.ResourceManager> para acessar recursos de arquivos .resources diretamente. Para fazer isso, você deve implantar os arquivos .resources corretamente. Em seguida, você usa o método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> para criar instâncias de um objeto <xref:System.Resources.ResourceManager> e especificar o diretório que contém os arquivos .resources autônomos.  
   
 ### <a name="deploying-resources-files"></a>Implantando arquivos .resources  
- Quando você incorporar arquivos .resources em um assembly de aplicativo e assemblies satélites, cada assembly satélite possui o mesmo nome de arquivo, mas é colocado em um subdiretório que reflete a cultura do assembly satélite. Por outro lado, quando você acessar diretamente os recursos dos arquivos .resources, você pode colocar todos os arquivos .resources em um único diretório, geralmente um subdiretório do diretório do aplicativo. O nome do arquivo .resources do aplicativo padrão consiste em um nome de raiz, sem nenhuma indicação de sua cultura (por exemplo, strings.resources). Os recursos de cada cultura localizada são armazenados em um arquivo cujo nome consiste no nome de raiz seguido pela cultura (por exemplo, strings.ja.resources ou strings.de-DE.resources). 
- 
+ Quando você incorporar arquivos .resources em um assembly de aplicativo e assemblies satélites, cada assembly satélite possui o mesmo nome de arquivo, mas é colocado em um subdiretório que reflete a cultura do assembly satélite. Por outro lado, quando você acessar diretamente os recursos dos arquivos .resources, você pode colocar todos os arquivos .resources em um único diretório, geralmente um subdiretório do diretório do aplicativo. O nome do arquivo .resources do aplicativo padrão consiste em um nome de raiz, sem nenhuma indicação de sua cultura (por exemplo, strings.resources). Os recursos de cada cultura localizada são armazenados em um arquivo cujo nome consiste no nome de raiz seguido pela cultura (por exemplo, strings.ja.resources ou strings.de-DE.resources).
+
  A ilustração a seguir mostra onde os arquivos de recurso devem estar localizados na estrutura de diretórios. Ela também fornece as convenções de nomenclatura para arquivos .resource.  
 
  ![Ilustração que mostra o diretório principal do aplicativo.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
@@ -172,7 +172,7 @@ Prompt=What is your name?
   
  Recursos para a cultura francês (França) são armazenados no seguinte arquivo, que é chamado Strings.fr-FR.txt:  
   
-```text 
+```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
@@ -200,7 +200,7 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Resources.ResourceManager>
 - [Recursos em aplicativos de área de trabalho](index.md)

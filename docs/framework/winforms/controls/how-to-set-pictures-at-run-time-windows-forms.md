@@ -13,25 +13,25 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: bd0509c05fd9c1cfc0c631fcd613c64d20296f6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cd599ac7e07b5210f8bcff1ffbc76b3d9ee563d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746743"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182110"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Como definir imagens em tempo de execução (Windows Forms)
-Você pode definir programaticamente a imagem exibida por um controle de <xref:System.Windows.Forms.PictureBox> de Windows Forms.  
+Você pode definir programáticamente a imagem <xref:System.Windows.Forms.PictureBox> exibida por um controle do Windows Forms.  
   
-### <a name="to-set-a-picture-programmatically"></a>Para definir uma imagem programaticamente  
+### <a name="to-set-a-picture-programmatically"></a>Para definir uma imagem programática  
   
-- Defina a propriedade <xref:System.Windows.Forms.PictureBox.Image%2A> usando o método <xref:System.Drawing.Image.FromFile%2A> da classe <xref:System.Drawing.Image>.  
+- Defina <xref:System.Windows.Forms.PictureBox.Image%2A> a <xref:System.Drawing.Image.FromFile%2A> propriedade usando <xref:System.Drawing.Image> o método da classe.  
   
-     No exemplo abaixo, o caminho definido para o local da imagem é a pasta Meus Documentos. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.PictureBox> já adicionado.  
+     No exemplo abaixo, o caminho definido para o local da imagem é a pasta Meus Documentos. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo abaixo assume um <xref:System.Windows.Forms.PictureBox> formulário com um controle já adicionado.  
   
     ```vb  
     Private Sub LoadNewPict()  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -42,7 +42,7 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
   
     ```csharp  
     private void LoadNewPict(){  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        pictureBox1.Image = Image.FromFile  
@@ -56,7 +56,7 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
     private:  
        void LoadNewPict()  
        {  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
@@ -67,7 +67,7 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
   
 ### <a name="to-clear-a-graphic"></a>Para limpar um gráfico  
   
-- Primeiro, libere a memória que está sendo usada pela imagem e, em seguida, limpe o gráfico. A coleta de lixo liberará a memória mais tarde se o gerenciamento de memória se tornar um problema.  
+- Primeiro, libere a memória que está sendo usada pela imagem e, em seguida, limpe o gráfico. A coleta de lixo liberará a memória mais tarde se o gerenciamento da memória se tornar um problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -77,7 +77,7 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
     ```  
   
     ```csharp  
-    if (pictureBox1.Image != null)   
+    if (pictureBox1.Image != null)
     {  
        pictureBox1.Image.Dispose();  
        pictureBox1.Image = null;  
@@ -93,15 +93,15 @@ Você pode definir programaticamente a imagem exibida por um controle de <xref:S
     ```  
   
     > [!NOTE]
-    > Para obter mais informações sobre por que você deve usar o método <xref:System.Drawing.Image.Dispose%2A> dessa forma, consulte [limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md).  
+    > Para obter mais informações sobre <xref:System.Drawing.Image.Dispose%2A> por que você deve usar o método desta forma, consulte [Limpar recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md).  
   
-     Esse código limpará a imagem mesmo que um gráfico tenha sido carregado no controle em tempo de design.  
+     Este código limpará a imagem mesmo que um gráfico tenha sido carregado no controle na hora do design.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [Visão geral do controle PictureBox](picturebox-control-overview-windows-forms.md)
 - [Como carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Como modificar o tamanho ou o posicionamento de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Como modificar o tamanho ou a colocação de uma imagem em tempo de execução](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Controle PictureBox](picturebox-control-windows-forms.md)

@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714896"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183555"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
-Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando a classe <xref:System.Runtime.Serialization.DataContractResolver>. Este exemplo mostra como adicionar tipos conhecidos dinamicamente durante a serialização e desserialização.  
+Esta amostra demonstra como os processos de serialização e <xref:System.Runtime.Serialization.DataContractResolver> desserialização podem ser personalizados usando a classe. Esta amostra mostra como adicionar dinamicamente tipos conhecidos durante a serialização e desserialização.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
- Este exemplo é composto de quatro projetos. Um deles corresponde ao serviço, para ser hospedado pelo IIS, que define o seguinte contrato de serviço.  
+ Esta amostra é composta de quatro projetos. Um deles corresponde ao serviço, a ser hospedado pelo IIS, que define o seguinte contrato de prestação de serviços.  
   
 ```csharp
 // Definition of a service contract.  
@@ -38,7 +38,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- O contrato de serviço é implementado conforme mostrado no exemplo a seguir.  
+ O contrato de serviço é implementado como mostrado no exemplo a seguir.  
   
 ```csharp
 // Service class that implements the service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Outro projeto corresponde ao cliente, que se comunica com o servidor e invoca os métodos que ele expõe. A definição do cliente é mostrada no exemplo a seguir.  
+ Outro projeto corresponde ao cliente, que se comunica com o servidor e invoca os métodos que expõe. A definição do cliente é mostrada no exemplo a seguir.  
   
 ```csharp  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- A definição do contrato de serviço é marcada com o atributo `KnownAssembly`. Esse atributo contém o nome de uma biblioteca de tipos, que todos se tornam conhecidos em tempo de execução tanto pelo serviço quanto pelo cliente.  
+ A definição do contrato de `KnownAssembly` serviço está marcada com o atributo. Este atributo contém o nome de uma biblioteca de tipos, que todos se tornam conhecidos em tempo de execução pelo serviço e pelo cliente.  
   
- O atributo `KnownAssembly` implementa `IContractBehavior` para definir um `DataContractSerializer` com um `DataContractResolver` definido para cada um dos comportamentos de operação. O `DataContractResolver` reflete sobre o assembly quando ele é criado e cria o dicionário com o mapeamento entre os tipos e nomes a serem usados ao serializar e desserializar os diferentes tipos. Dessa forma, os tipos `ResolveType` e `ResolveName` devem Pesquisar os dados necessários no dicionário.  
+ O `KnownAssembly` atributo `IContractBehavior` implementa-se `DataContractSerializer` para `DataContractResolver` definir um com um definido para cada um dos comportamentos da operação. O `DataContractResolver` reflete sobre a montagem quando ela é criada, e cria o dicionário com o mapeamento entre tipos e nomes a serem usados ao serializar e desserializar os diferentes tipos. Dessa forma, `ResolveType` os `ResolveName` e os tipos devem procurar os dados necessários no dicionário.  
   
- O `DataContractResolver` definido para este exemplo é mostrado no exemplo a seguir.  
+ O `DataContractResolver` definido para esta amostra é mostrado no exemplo a seguir.  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -245,7 +245,7 @@ public class MyDataContractResolver : DataContractResolver
        }  
   
        // Used at deserialization  
-        // Allows users to map xsi:type name to any Type   
+        // Allows users to map xsi:type name to any Type
         public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)  
        {  
            XmlDictionaryString tName;  
@@ -275,9 +275,9 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- A biblioteca de tipos usados neste exemplo é mostrada no exemplo a seguir.  
+ A biblioteca de tipos usados nesta amostra é mostrada no exemplo a seguir.  
   
-```csharp 
+```csharp
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- Observe que `ComplexNumber` não precisa saber estaticamente o tipo de `ComplexNumberWithMagnitude`, pois ele se torna conhecido em tempo de execução.  
+ Note `ComplexNumber` que não precisa saber `ComplexNumberWithMagnitude` esteticamente o tipo, porque ele se torna conhecido em tempo de execução.  
   
- Quando o exemplo é compilado e executado, essa é a saída esperada obtida no cliente:  
+ Quando a amostra é construída e executada, esta é a saída esperada obtida no cliente:  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,29 +344,29 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a>Para configurar, executar e compilar o exemplo  
+#### <a name="to-set-up-run-and-build-the-sample"></a>Para configurar, executar e construir a amostra  
   
 1. Clique com o botão direito do mouse na solução **KnownAssemblyAttribute** e selecione **Propriedades**.  
   
-2. Em **Propriedades comuns**, selecione **projeto de inicialização**e clique em **vários projetos de inicialização**.  
+2. Em **Propriedades Comuns,** selecione **Projeto de Inicialização**e clique em **Vários projetos de inicialização**.  
   
-3. Adicione a ação **Iniciar** aos projetos **serviço** e **cliente** .  
+3. Adicione a ação **Iniciar** aos projetos **Serviço** e **Cliente.**  
   
-4. Clique em **OK**e pressione **F5** para executar o exemplo.  
+4. Clique **em OK**e pressione **F5** para executar a amostra.  
   
-5. Se o aplicativo não for executado corretamente, siga estas etapas para verificar se o seu ambiente foi configurado corretamente:  
+5. Se o aplicativo não for executado corretamente, siga estas etapas para garantir que o ambiente tenha sido configurado corretamente:  
   
-6. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Fundação de Comunicação do Windows](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7. Para criar a solução, siga as instruções em [criando o Windows Communication Foundation exemplo](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Para construir a solução, siga as instruções em [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9ca2167e66ac3aa5bcc0e92ff357eed18d366c67
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179410"
 ---
 # <a name="exportnestedtype-method"></a>Método ExportNestedType
-Especifica os tipos aninhados como exportáveis. O [método ExportType](exporttype-method.md) também pode exportar tipos aninhados, mas esse método é mais rápido.  
+Especifica tipos aninhados como exportáveis. O [Método ExportarTipo](exporttype-method.md) também pode exportar tipos aninhados, mas este método é mais rápido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,38 +36,38 @@ HRESULT ExportNestedType(
     LPCWSTR         pszTypename,  
     DWORD           dwFlags,  
     mdExportedType* pType  
-) PURE;   
+) PURE;
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `AssemblyID`  
- ID do assembly do qual exportar.  
+ ID de montagem para exportação.  
   
  `FileToken`  
- Token de arquivo ou assembly de arquivo que define o tipo a ser tornado exportável.  
+ Token de arquivo ou montagem de arquivo que define o tipo a ser exportável.  
   
  `TypeToken`  
- Tipo de token do tipo a ser tornado exportável.  
+ Digite o tipo de tipo a ser exportável.  
   
  `ParentType`  
- Token do tipo pai.  
+ Símbolo do tipo pai.  
   
  `pszTypename`  
  Nome de tipo totalmente qualificado para exportar.  
   
  `dwFlags`  
- `ComType` sinalizadores como `tdPublic` ou `tdNested`. Esse valor pode ser passado para o [método DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType`bandeiras `tdPublic` como `tdNested`ou . Esse valor pode ser passado para [o método DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Recebe o token para o tipo exportado.  
+ Recebe token para o tipo exportado.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna S_OK se o método tiver sucesso.  
+ Retorna S_OK se o método for bem sucedido.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- Requer ALink. h  
+## <a name="requirements"></a>Requisitos  
+ Requer alink.h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink](ialink-interface.md)
 - [Interface IALink2](ialink2-interface.md)

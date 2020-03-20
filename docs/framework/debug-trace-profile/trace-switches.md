@@ -12,12 +12,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217206"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181724"
 ---
 # <a name="trace-switches"></a>Opções de rastreamento
 As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída de rastreamento. Elas são objetos que existem no código e podem ser configuradas externamente por meio do arquivo .config. Há três tipos de opções de rastreamento fornecidas no .NET Framework: a classe <xref:System.Diagnostics.BooleanSwitch>, a classe <xref:System.Diagnostics.TraceSwitch> e a classe <xref:System.Diagnostics.SourceSwitch>. A classe <xref:System.Diagnostics.BooleanSwitch> atua como uma opção de alternância, habilitando ou desabilitando uma variedade de instruções de rastreamento. As classes <xref:System.Diagnostics.TraceSwitch> e <xref:System.Diagnostics.SourceSwitch> permitem habilitar uma opção de rastreamento para um nível de rastreamento específico, de modo que as mensagens <xref:System.Diagnostics.Trace> ou <xref:System.Diagnostics.TraceSource> especificadas para o nível e todos os níveis inferiores a ele sejam exibidas. Se você desabilitar a opção, as mensagens de rastreamento não serão exibidas. Todas essas classes são derivadas da classe **Switch** abstrata (**MustInherit**), assim como todas as opções desenvolvidas pelo usuário.  
@@ -55,7 +55,7 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
   
  As propriedades **TraceSwitch** indicam o nível máximo de rastreamento da opção. Ou seja, as informações de rastreamento são gravadas para o nível especificado, bem como para todos os níveis inferiores. Por exemplo, se **TraceInfo** for **true**, **TraceError** e **TraceWarning** também serão **true**, mas **TraceVerbose** poderá ser **false**.  
   
- Essas propriedades são somente leitura. O objeto **TraceSwitch** define-as automaticamente quando a propriedade **TraceLevel** é definida. Por exemplo:  
+ Essas propriedades são somente leitura. O objeto **TraceSwitch** define-as automaticamente quando a propriedade **TraceLevel** é definida. Por exemplo:   
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  
@@ -68,10 +68,10 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString())
 ```  
   
 ```csharp  
-System.Diagnostics.TraceSwitch myTraceSwitch =   
+System.Diagnostics.TraceSwitch myTraceSwitch =
    new System.Diagnostics.TraceSwitch("SwitchOne", "The first switch");  
 myTraceSwitch.Level = System.Diagnostics.TraceLevel.Info;  
-// This message box displays true, because setting the level to   
+// This message box displays true, because setting the level to
 // TraceLevel.Info sets all lower levels to true as well.  
 MessageBox.Show(myTraceSwitch.TraceWarning.ToString());  
 // This message box displays false.  
@@ -84,5 +84,5 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="see-also"></a>Confira também
 
 - [Ouvintes de rastreamento](trace-listeners.md)
-- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
-- [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
+- [Como adicionar instruções de rastreamento ao código de um aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Rastreamento e instrumentação de aplicativos](tracing-and-instrumenting-applications.md)

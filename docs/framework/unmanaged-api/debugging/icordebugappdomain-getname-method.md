@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110303"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179083"
 ---
 # <a name="icordebugappdomaingetname-method"></a>Método ICorDebugAppDomain::GetName
 Obtém o nome do domínio do aplicativo.  
@@ -31,23 +31,23 @@ Obtém o nome do domínio do aplicativo.
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cchName`  
- no O tamanho da matriz de `szName`. Defina esse valor como zero para colocar esse método no modo de consulta.  
+ [em] O tamanho `szName` da matriz. Defina esse valor como zero para colocar este método no modo de consulta.  
   
  `pcchName`  
- fora Um ponteiro para o tamanho do nome ou o número de caracteres realmente retornados em `szName`. No modo de consulta, esse valor permite que o chamador saiba quanto tamanho um buffer deve ser alocado para o nome.  
+ [fora] Um ponteiro para o tamanho do nome ou o `szName`número de caracteres realmente retornado em . No modo de consulta, este valor permite que o chamador saiba o tamanho de um buffer para alocar para o nome.  
   
  `szName`  
- fora Uma matriz que armazena o nome do domínio do aplicativo.  
+ [fora] Uma matriz que armazena o nome do domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- Um depurador chama o método `GetName` uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada, para obter o tamanho do nome, é referida como modo de *consulta*.  
+ Um depurador `GetName` chama o método uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada, para obter o tamanho do nome, é referida como *modo de consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,4 +56,4 @@ HRESULT GetName (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

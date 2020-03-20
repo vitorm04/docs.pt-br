@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02943f28435fc00aad8e319aa260a24cca5e307
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434320"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177596"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>Método IMetaDataEmit::GetTokenFromSig
 Obtém um token para a assinatura de metadados especificada.  
@@ -28,33 +28,33 @@ Obtém um token para a assinatura de metadados especificada.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetTokenFromSig (   
-    [in]  PCCOR_SIGNATURE pvSig,   
-    [in]  ULONG       cbSig,   
-    [out] mdSignature *pmsig   
+HRESULT GetTokenFromSig (
+    [in]  PCCOR_SIGNATURE pvSig,
+    [in]  ULONG       cbSig,
+    [out] mdSignature *pmsig
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pvSig`  
- no A assinatura a ser persistida e armazenada.  
+ [em] A assinatura a ser persistida e armazenada.  
   
  `cbSig`  
- no A contagem de bytes em `pvSig`.  
+ [em] A contagem de `pvSig`bytes em .  
   
  `pmsig`  
- fora O token de `mdSignature` atribuído.  
+ [fora] O `mdSignature` token atribuído.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
