@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448747"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176091"
 ---
 # <a name="iceegencomputepointer-method"></a>Método ICeeGen::ComputePointer
 Determina o buffer para a seção de código especificada.  
   
- Este método é obsoleto e não deve ser usado.  
+ Este método é obsoleto e não deve ser utilizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
-    [in]  ULONG        RVA,   
+    [in]  ULONG        RVA,
     [out] UCHAR        **lpBuffer  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `section`  
- no A seção de código para a qual retornar um buffer.  
+ [em] A seção de código para a qual retornar um buffer.  
   
  `RVA`  
- no O endereço virtual relativo do método para o qual obter um ponteiro.  
+ [em] O endereço virtual relativo do método para o qual obter um ponteiro.  
   
  `lpBuffer`  
- fora Um ponteiro para o buffer retornado.  
+ [fora] Um ponteiro para o buffer devolvido.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

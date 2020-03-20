@@ -3,20 +3,20 @@ title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: c901daf4d442a206345301795c7a4bdc076329cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252098"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152743"
 ---
-# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-Registra um Gerenciador de autenticação de declarações para as declarações de entrada.  
+# <a name="claimsauthenticationmanager"></a>\<> de autenticação de autenticação
+Registra um gerente de autenticação de sinistros para as reclamações recebidas.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> claimsAuthenticationManager**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<claimsAuthenticationManager>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,28 +37,28 @@ Registra um Gerenciador de autenticação de declarações para as declarações
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|Especifica um tipo personalizado que deriva da <xref:System.Security.Claims.ClaimsAuthenticationManager> classe. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado].|  
+|type|Especifica um tipo personalizado que <xref:System.Security.Claims.ClaimsAuthenticationManager> deriva da classe. Para obter mais informações `type` sobre como especificar o atributo, consulte [Referências de tipo personalizado].|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Se não houver nenhum `type` atributo ou se o `type` atributo fizer referência à <xref:System.Security.Claims.ClaimsAuthenticationManager> classe, o `<claimsAuthenticationManager>` elemento não assumirá elementos filho; no entanto, as <xref:System.Security.Claims.ClaimsAuthenticationManager> classes derivadas de podem definir elementos de configuração filho.  
+ Se não `type` houver atributo, `type` ou se <xref:System.Security.Claims.ClaimsAuthenticationManager> o `<claimsAuthenticationManager>` atributo fizer referência à classe, o elemento não leva elementos da criança; no entanto, <xref:System.Security.Claims.ClaimsAuthenticationManager> classes derivadas podem definir elementos de configuração filho.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](identityconfiguration.md)|Especifica as configurações de identidade de nível de serviço.|  
+|[\<>de configuração de identidade](identityconfiguration.md)|Especifica as configurações de identidade em nível de serviço.|  
   
 ## <a name="remarks"></a>Comentários  
- O comportamento padrão fornecido por meio <xref:System.Security.Claims.ClaimsAuthenticationManager> da classe ecoa as declarações de entrada. Se nenhum `type` atributo for especificado ou se o `type` atributo especificar a <xref:System.Security.Claims.ClaimsAuthenticationManager> classe, o `<claimsAuthenticationManager>` elemento não assumirá elementos filho. Você pode especificar o `type` atributo para registrar um tipo derivado <xref:System.Security.Claims.ClaimsAuthenticationManager> da classe para implementar o comportamento personalizado. Classes derivadas podem dar suporte à configuração por meio de `<claimsAuthenticationManager>` elementos filho do elemento <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> , substituindo o método para lidar com esses elementos. O esquema definido para os elementos filho é até o designer da classe.  
+ O comportamento padrão fornecido <xref:System.Security.Claims.ClaimsAuthenticationManager> através da classe ecoa as reivindicações recebidas. Se `type` nenhum atributo for `type` especificado ou <xref:System.Security.Claims.ClaimsAuthenticationManager> se `<claimsAuthenticationManager>` o atributo especificar a classe, o elemento não levará elementos da criança. Você pode `type` especificar o atributo para <xref:System.Security.Claims.ClaimsAuthenticationManager> registrar um tipo derivado da classe para implementar comportamento personalizado. Classes derivadas podem suportar a `<claimsAuthenticationManager>` configuração através <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> de elementos infantis do elemento, substituindo o método para lidar com esses elementos. O esquema definido para os elementos infantis cabe ao designer da classe.  
   
- O `<claimsAuthenticationManager>` elemento define a <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> propriedade.  
+ O `<claimsAuthenticationManager>` elemento <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType> define a propriedade.  
   
 ## <a name="example"></a>Exemplo  
   
 ```xml  
 <system.identityModel>  
     <identityConfiguration name="MyIdentity">  
-      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>          
+      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>
     </identityConfiguration>  
 </system.identityModel>  
 ```

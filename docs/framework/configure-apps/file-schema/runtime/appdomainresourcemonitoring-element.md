@@ -5,24 +5,24 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3c6092b6c34bb13c0ad0e66df2d3b7e65ac3de7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118248"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154370"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<elemento de > appDomainResourceMonitoring
+# <a name="appdomainresourcemonitoring-element"></a>\<aplicativoDomínioElemento de>deMonitoramento de recursos
 Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativos no processo durante toda a vida do processo.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<appDomínioDomínioMonitorando>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<appDomainResourceMonitoring    
+<appDomainResourceMonitoring
    enabled="true|false"/>  
 ```  
   
@@ -33,17 +33,17 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução coleta estatísticas para o monitoramento de recursos de domínio do aplicativo.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução coleta estatísticas para monitoramento de recursos de domínio de aplicativos.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`true`|As estatísticas de monitoramento de recursos de domínio de aplicativo são coletadas.|  
-|`false`|As estatísticas para o monitoramento de recursos de domínio de aplicativo não são coletadas.|  
+|`true`|Estatísticas para monitoramento de recursos de domínio de aplicativos são coletadas.|  
+|`false`|As estatísticas para monitoramento de recursos de domínio de aplicativos não são coletadas.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -53,14 +53,14 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- O monitoramento de recursos de domínio de aplicativo está disponível por meio da classe de domínio do aplicativo gerenciado, da interface [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) de hospedagem e do ETW (rastreamento de eventos para Windows). Quando o monitoramento está habilitado, as estatísticas são coletadas para todos os domínios de aplicativo no processo durante a vida útil do processo.  
+ O monitoramento de recursos de domínio de aplicativos está disponível através da classe de domínio de aplicativo gerenciado, da interface [de hospedagem ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) e do rastreamento de eventos para O Windows (ETW). Quando o monitoramento é ativado, as estatísticas são coletadas para todos os domínios de aplicativos no processo de vida do processo.  
   
- Para habilitar o monitoramento do código gerenciado, use a propriedade <xref:System.AppDomain.MonitoringIsEnabled%2A>.  
+ Para habilitar o monitoramento a <xref:System.AppDomain.MonitoringIsEnabled%2A> partir do código gerenciado, use a propriedade.  
   
  Este elemento de configuração está disponível apenas no .NET Framework 4 e posterior.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como habilitar o monitoramento de recursos de domínio do aplicativo.  
+ O exemplo a seguir mostra como ativar o monitoramento de recursos de domínio de aplicativos.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ Instrui o runtime a coletar estatísticas sobre todos os domínios de aplicativo
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
-- [Esquema de configurações do tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações do runtime](index.md)
+- [Esquema de arquivo de configuração](../index.md)

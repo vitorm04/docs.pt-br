@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440014"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177366"
 ---
 # <a name="imetadataimportenumevents-method"></a>Método IMetaDataImport::EnumEvents
-Enumera os tokens de definição de evento para o token de TypeDef especificado.  
+Enumera tokens de definição de evento para o token TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `phEnum`  
- [entrada, saída] Um ponteiro para o enumerador.  
+ [dentro, fora] Um ponteiro para o enumerador.  
   
  `td`  
- no O token de TypeDef cujas definições de evento devem ser enumeradas.  
+ [em] O token TypeDef cujas definições de evento devem ser enumeradas.  
   
  `rEvents`  
- fora A matriz de eventos retornados.  
+ [fora] A matriz de eventos retornados.  
   
  `cMax`  
- no O tamanho máximo da matriz de `rEvents`.  
+ [em] O tamanho máximo `rEvents` da matriz.  
   
  `pcEvents`  
- fora O número real de eventos retornados em `rEvents`.  
+ [fora] O número real de `rEvents`eventos retornou em .  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` retornado com êxito.|  
-|`S_FALSE`|Não há eventos a serem enumerados. Nesse caso, `pcEvents` é zero.|  
+|`S_OK`|`EnumEvents`retornou com sucesso.|  
+|`S_FALSE`|Não há eventos para enumerar. Nesse caso, `pcEvents` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

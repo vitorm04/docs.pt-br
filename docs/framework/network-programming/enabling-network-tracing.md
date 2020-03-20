@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 62a24e45339b93af2c62db440f0611f16705116d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 61ffd422463ca70cc34c39dd216ce8e660809dcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048532"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180875"
 ---
 # <a name="enabling-network-tracing"></a>Habilitando o rastreamento de rede
 O rastreamento de rede fornece acesso a informações sobre invocações de método e o tráfego de rede gerados por um aplicativo gerenciado. Você deve concluir as seguintes tarefas para habilitar o rastreamento de rede no aplicativo:  
   
-- Compile o código com o rastreamento habilitado. Confira [Como Compilar condicionalmente com Trace e Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obter mais informações sobre as opções do compilador necessárias para habilitar o rastreamento.  
+- Compile o código com o rastreamento habilitado. Consulte [Como compilar condicionalmente com Trace e Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) para obter mais informações sobre as opções do compilador necessárias para habilitar o rastreamento.  
   
 - Especifique um destino para a saída de rastreamento.  
   
-- Configure o comportamento do rastreamento de rede. Confira [Como Configurar o rastreamento de rede](how-to-configure-network-tracing.md) para obter informações detalhadas.  
+- Configure o comportamento do rastreamento de rede. Consulte [Como configurar o rastreamento de rede](how-to-configure-network-tracing.md) para obter informações detalhadas.  
   
  Os destinos de rastreamento mais comuns, também conhecidos como ouvintes de rastreamento, são o ouvinte padrão e o arquivo de log.  
   
@@ -40,13 +40,13 @@ O rastreamento de rede fornece acesso a informações sobre invocações de mét
   <trace autoflush="true" indentsize="4">  
     <listeners>  
       <add name="file" type="System.Diagnostics.TextWriterTraceListener" initializeData="trace.log"/>  
-    </listeners>   
+    </listeners>
   </trace>  
 </system.diagnostics>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interpretando o rastreamento de rede](interpreting-network-tracing.md)
 - [Rastreamento de rede no .NET Framework](network-tracing.md)
-- [Rastreando e instrumentando aplicativos](../debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [Rastreamento e instrumentação de aplicativos](../debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: < elemento > System. Diagnostics
+title: <system.diagnostics> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699191"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153201"
 ---
-# <a name="systemdiagnostics-element"></a>\<elemento > System. Diagnostics
+# <a name="systemdiagnostics-element"></a>\<system.diagnostics> Element
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<System. diagnostics >**  
+[**\<>de configuração**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.diagnostics>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<system.diagnostics>   
+<system.diagnostics>
 </system.diagnostics>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- None.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<assert>](assert-element.md)|Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.|  
-|[\<performanceCounters>](performancecounters-element.md)|Especifica o tamanho da memória global compartilhada por contadores de desempenho.|  
-|[\<sharedListeners>](sharedlisteners-element.md)|Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento. Os ouvintes identificados como ouvintes compartilhados podem ser adicionados a fontes ou rastreamentos por nome.|  
-|[\<sources>](sources-element.md)|Especifica fontes de rastreamento que iniciam mensagens de rastreamento.|  
-|[\<switches>](switches-element.md)|Contém opções de rastreamento e os níveis em que as opções de rastreamento são definidas.|  
-|[\<trace>](trace-element.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
+|[\<afirmar>](assert-element.md)|Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.|  
+|[\<desempenhoContadores>](performancecounters-element.md)|Especifica o tamanho da memória global compartilhada por contadores de desempenho.|  
+|[\<>de ouvintes compartilhados](sharedlisteners-element.md)|Contém os ouvintes que podem ser referenciados por qualquer elemento de origem ou de rastreamento. Os ouvintes identificados como ouvintes compartilhados podem ser adicionados a fontes ou vestígios pelo nome.|  
+|[\<fontes>](sources-element.md)|Especifica fontes de rastreamento que iniciam o rastreamento de mensagens.|  
+|[\<interruptores>](switches-element.md)|Contém interruptores de rastreamento e os níveis onde os interruptores de rastreamento estão definidos.|  
+|[\<traçar>](trace-element.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
- O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do elemento **\<System. diagnostics >** . A opção de rastreamento de `General` é definida como o nível de <xref:System.Diagnostics.TraceLevel>. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como incorporar um interruptor de rastreamento e um ouvinte de rastreamento dentro do ** \<elemento>sistema.diagnósticos.** O `General` interruptor de rastreamento <xref:System.Diagnostics.TraceLevel> está definido para o nível. O ouvinte `myListener` de rastreamento `MyListener.log` cria um arquivo chamado e grava a saída para o arquivo.  
   
 > [!NOTE]
-> No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
+> No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você `true` pode <xref:System.Diagnostics.BooleanSwitch> especificar para um ou usar o `Error` texto <xref:System.Diagnostics.TraceSwitch>representando um valor de enumeração, como para um . A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>

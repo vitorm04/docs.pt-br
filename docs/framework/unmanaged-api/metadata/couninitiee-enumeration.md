@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5cbd8c5b1bb048088fe137b1359d0bb9e29af20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436442"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176117"
 ---
 # <a name="couninitiee-enumeration"></a>Enumeração COUNINITIEE
-Especifica constantes usadas por [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ao inicializar o Common Language Runtime.  
+Especifica as constantes usadas pelo [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ao inicializar o tempo de execução do idioma comum.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
 {  
-    COUNINITEE_DEFAULT  = 0x0,   
+    COUNINITEE_DEFAULT  = 0x0,
     COUNINITEE_DLL      = 0x1  
 } COUNINITIEE;  
 ```  
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`COUNINITEE_DEFAULT`|Indica o modo de não inicialização padrão.|  
-|`COUNINITEE_DLL`|Indica o modo de não inicialização para descarregar um assembly.|  
+|`COUNINITEE_DLL`|Indica modo de desinicialização para descarregar um conjunto.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

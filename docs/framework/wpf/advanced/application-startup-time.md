@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487184"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145417"
 ---
 # <a name="application-startup-time"></a>Tempo de inicialização do aplicativo
 A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode variar consideravelmente. Este tópico descreve diversas técnicas para reduzir o tempo de inicialização percebido e real de um aplicativo do WPF (Windows Presentation Foundation).  
@@ -24,9 +24,9 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  A inicialização a quente ocorre quando a maioria das páginas dos componentes principais do CLR (Common Language Runtime) já está carregada na memória, o que economiza tempo valioso de acesso a disco. É por isso que um aplicativo gerenciado é iniciado mais rapidamente quando é executado pela segunda vez.  
   
 ## <a name="implement-a-splash-screen"></a>Implementar uma tela inicial  
- Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir do .NET Framework 3.5 SP1, você pode usar o <xref:System.Windows.SplashScreen> classe para implementar uma tela inicial. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Em casos em que há um atraso significativo e inevitável entre o início de um aplicativo e a exibição da primeira interface do usuário, otimize o tempo de inicialização percebido através de uma *tela inicial*. Essa abordagem exibe uma imagem quase que imediatamente após o usuário iniciar o aplicativo. Quando o aplicativo estiver pronto para exibir sua primeira interface do usuário, a tela inicial desaparece. A partir do .NET Framework 3.5 SP1, você pode usar a <xref:System.Windows.SplashScreen> classe para implementar uma tela de respingo. Para obter mais informações, consulte [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
- Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exiba sua implementação antes do <xref:System.Windows.Application.Run%2A> método é chamado.  
+ Você também pode implementar sua própria tela inicial, usando gráficos do Win32 nativos. Exiba sua <xref:System.Windows.Application.Run%2A> implementação antes que o método seja chamado.  
   
 ## <a name="analyze-the-startup-code"></a>Analisar o código de inicialização  
  Determine o motivo de uma inicialização a frio lenta. A E/S do disco pode ser a responsável, mas nem sempre é o caso. Em geral, você deve minimizar o uso de recursos externos, como rede, serviços Web ou disco.  
@@ -65,7 +65,7 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Ter módulos Ngen e JIT pode ter o efeito pior. Isso ocorre porque a mscorjit.dll deve ser carregada e quando o compilador JIT trabalha em seu código, muitas páginas nas imagens Ngen devem ser acessadas quando o compilador JIT lê os metadados dos assemblies.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen e ClickOnce  
- A maneira como você planeja implantar seu aplicativo também pode fazer diferença no tempo de carregamento. A implantação do aplicativo ClickOnce não dá suporte a Ngen. Se você decidir usar o Ngen.exe para o seu aplicativo, terá que usar outro mecanismo de implantação, como o Windows Installer.  
+ A maneira como você planeja implantar seu aplicativo também pode fazer diferença no tempo de carregamento. A implantação do aplicativo ClickOnce não suporta Ngen. Se você decidir usar o Ngen.exe para o seu aplicativo, terá que usar outro mecanismo de implantação, como o Windows Installer.  
   
  Para obter mais informações, consulte [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -81,17 +81,17 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
   
  Considere a instalação do Certificado de Autoridade de Certificação no computador cliente ou evite o uso de Authenticode quando for possível. Se você sabe que seu aplicativo não precisa de prova do editor, não é necessário pagar pelo custo da verificação de assinatura.  
   
- A partir do .NET Framework 3.5, há uma opção de configuração que permite a verificação de Authenticode seja ignorada. Para fazer isso, adicione a seguinte configuração no arquivo app.exe.config:  
+ A partir do .NET Framework 3.5, há uma opção de configuração que permite que a verificação Do Authenticode seja ignorada. Para fazer isso, adicione a seguinte configuração no arquivo app.exe.config:  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- Para obter mais informações, consulte [Elemento \<generatePublisherEvidence >](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Para obter mais informações, consulte [ \<gerarO Elemento> do PublisherEvidence](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Comparar o desempenho no Windows Vista  
  O gerenciador de memória no Windows Vista tem uma tecnologia chamada SuperFetch. O SuperFetch analisa os padrões de uso de memória ao longo do tempo para determinar o conteúdo de memória ideal para um usuário específico. Ele funciona continuamente para manter esse conteúdo em todos os momentos.  
@@ -104,30 +104,30 @@ A quantidade de tempo que é necessário para iniciar um aplicativo do WPF pode 
  Para um melhor desempenho, imponha uma comunicação eficiente entre domínios, reduzindo as chamadas entre domínios. Quando possível, use chamadas sem argumentos ou com argumentos de tipo primitivo.  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>Usar o atributo NeutralResourcesLanguage  
- Use o <xref:System.Resources.NeutralResourcesLanguageAttribute> para especificar a cultura neutra para o <xref:System.Resources.ResourceManager>. Essa abordagem evita pesquisas de assembly sem êxito.  
+ Use <xref:System.Resources.NeutralResourcesLanguageAttribute> o para especificar <xref:System.Resources.ResourceManager>a cultura neutra para o . Essa abordagem evita pesquisas de assembly sem êxito.  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>Usar a classe BinaryFormatter para serialização  
- Se você deve usar a serialização, use o <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe, em vez do <xref:System.Xml.Serialization.XmlSerializer> classe. O <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe é implementada na classe biblioteca BCL (Base) no assembly mscorlib. dll. O <xref:System.Xml.Serialization.XmlSerializer> é implementado no assembly de DLL, que pode ser uma DLL adicional para carregar.  
+ Se você deve usar serialização, use a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe em vez da <xref:System.Xml.Serialization.XmlSerializer> classe. A <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> classe é implementada na Biblioteca de Classe Base (BCL) na montagem mscorlib.dll. O <xref:System.Xml.Serialization.XmlSerializer> é implementado no conjunto System.Xml.dll, que pode ser um DLL adicional para carregar.  
   
- Se você precisar usar o <xref:System.Xml.Serialization.XmlSerializer> classe, você pode obter o melhor desempenho se você gerar previamente o assembly de serialização.  
+ Se você deve <xref:System.Xml.Serialization.XmlSerializer> usar a classe, você pode obter um melhor desempenho se você pré-gerar o conjunto de serialização.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configurar o ClickOnce para verificar se há atualizações após a inicialização  
- Se seu aplicativo usa o ClickOnce, evite o acesso à rede na inicialização Configurando ClickOnce para verificar o site de implantação para atualizações depois que o aplicativo é iniciado.  
+ Se o aplicativo usar o ClickOnce, evite o acesso à rede na inicialização, configurando o ClickOnce para verificar o site de implantação para obter atualizações após o início do aplicativo.  
   
- Se você usar o modelo de aplicativo (XBAP) de navegador XAML, lembre-se de que o ClickOnce verifica o site de implantação para atualizações, mesmo se o XBAP já esteja no cache do ClickOnce. Para obter mais informações, consulte [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Se você usar o modelo xal de aplicativo de navegador (XBAP), tenha em mente que o ClickOnce verifica o site de implantação para obter atualizações, mesmo que o XBAP já esteja no cache ClickOnce. Para obter mais informações, consulte [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Configurar o serviço PresentationFontCache para iniciar automaticamente  
  O primeiro aplicativo do WPF a ser executado após um reinício é o serviço PresentationFontCache. O serviço armazena em cache as fontes do sistema, melhora o acesso à fonte e melhora o desempenho geral. Há uma sobrecarga na inicialização do serviço e, em alguns ambientes controlados, considere a possibilidade de configurar o serviço para iniciar automaticamente quando o sistema for reiniciado.  
   
 ## <a name="set-data-binding-programmatically"></a>Definir a vinculação de dados programaticamente  
- Em vez de usar XAML para definir a <xref:System.Windows.FrameworkElement.DataContext%2A> declarativamente para a janela principal, considere configurá-lo por meio de programação no <xref:System.Windows.Application.OnActivated%2A> método.  
+ Em vez de usar XAML para definir o <xref:System.Windows.FrameworkElement.DataContext%2A> declaratively para a <xref:System.Windows.Application.OnActivated%2A> janela principal, considere defini-lo programáticamente no método.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Adicionar uma tela inicial a um aplicativo WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Adicionar uma tela inicial a um aplicativo do WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (Gerador de Imagens Nativas)](../../tools/ngen-exe-native-image-generator.md)
-- [Elemento \<generatePublisherEvidence >](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<geraro Elemento> do PublisherEvidence](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

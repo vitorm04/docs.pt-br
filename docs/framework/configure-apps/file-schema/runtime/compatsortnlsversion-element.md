@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969250"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154264"
 ---
-# <a name="compatsortnlsversion-element"></a>\<elemento de > CompatSortNLSVersion
+# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion> Element
 Especifica que o runtime deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<CompatSortNLSVersion>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<CompatSortNLSVersion    
+<CompatSortNLSVersion
    enabled="4096"/>  
 ```  
   
@@ -42,10 +42,10 @@ Especifica que o runtime deve usar as ordens de classificação herdadas ao exec
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|4096|A ID de localidade que representa uma ordem de classificação alternativa. Nesse caso, 4096 representa a ordem de classificação do .NET Framework 3,5 e versões anteriores.|  
+|4096|A ID de localidade que representa uma ordem de classificação alternativa. Neste caso, 4096 representa a ordem de classificação do .NET Framework 3.5 e versões anteriores.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -55,7 +55,7 @@ Especifica que o runtime deve usar as ordens de classificação herdadas ao exec
 |`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
- Como as operações de comparação de cadeia de caracteres, classificação e maiúsculas e minúsculas executadas pela classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> no .NET Framework 4 estão em conformidade com o padrão Unicode 5,1, os resultados de métodos de comparação de cadeia de caracteres como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> e <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> podem ser diferentes das versões anteriores do .NET Framework. Se seu aplicativo depender de comportamento herdado, você poderá restaurar a comparação de cadeias de caracteres e as regras de classificação usadas no .NET Framework 3,5 e em versões anteriores, incluindo o elemento `<CompatSortNLSVersion>` no arquivo de configuração do aplicativo.  
+ Como as operações de comparação, classificação <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> e invólucro de seqüência de caracteres realizadas pela classe <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> no <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> Quadro .NET 4 estão em conformidade com a norma Unicode 5.1, os resultados de métodos de comparação de strings, como e podem diferir das versões anteriores do Quadro .NET. Se o aplicativo depender do comportamento legado, você pode restaurar as regras de comparação e classificação `<CompatSortNLSVersion>` de strings usadas no .NET Framework 3.5 e versões anteriores, incluindo o elemento no arquivo de configuração do aplicativo.  
   
 > [!IMPORTANT]
 > Restaurar a comparação e as regras de classificação de cadeia de caracteres herdadas também requer que a biblioteca de vínculo dinâmico do arquivo sort00001000.dll esteja disponível no sistema local.  
@@ -74,13 +74,13 @@ Especifica que o runtime deve usar as ordens de classificação herdadas ao exec
 sta follows a in the sort order.  
 ```  
   
- Isso é completamente diferente da saída que é exibida quando você executa o exemplo no .NET Framework 3,5:
+ Isso é completamente diferente da saída exibida quando você executa o exemplo no .NET Framework 3.5:
   
 ```console
 sta equals a in the sort order.  
 ```  
   
- No entanto, se você adicionar o seguinte arquivo de configuração ao diretório do exemplo e, em seguida, executar o exemplo no .NET Framework 4, a saída será idêntica à produzida pelo exemplo quando for executada no .NET Framework 3,5.  
+ No entanto, se você adicionar o seguinte arquivo de configuração ao diretório do exemplo e, em seguida, executar o exemplo no .NET Framework 4, a saída é idêntica à produzida pelo exemplo quando é executada no .NET Framework 3.5.  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -91,7 +91,7 @@ sta equals a in the sort order.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Esquema de configurações do runtime](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de arquivo de configuração](../index.md)

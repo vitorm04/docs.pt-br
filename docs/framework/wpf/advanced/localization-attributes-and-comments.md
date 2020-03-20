@@ -5,19 +5,19 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7281ca6d76f0d2ffb5020feba236b4e4cf948bdd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004900"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141582"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos de localização e comentários
-Os comentários de localização [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] são propriedades, dentro do código-fonte XAML, fornecidas pelos desenvolvedores para fornecer regras e dicas para localização. Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contêm dois conjuntos de informações: atributos de possibilidade de localização e comentários de localização de forma livre. Os atributos de possibilidade de localização são usados pela API de localização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar quais recursos devem ser localizados. Os comentários de forma livre são todas as informações que o criador do aplicativo desejar incluir.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]os comentários de localização são propriedades, dentro do código fonte XAML, fornecidos pelos desenvolvedores para fornecer regras e dicas para localização. Os comentários de localização de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contêm dois conjuntos de informações: atributos de possibilidade de localização e comentários de localização de forma livre. Os atributos de possibilidade de localização são usados pela API de localização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar quais recursos devem ser localizados. Os comentários de forma livre são todas as informações que o criador do aplicativo desejar incluir.  
 
-<a name="Localizer_Comments_"></a>   
+<a name="Localizer_Comments_"></a>
 ## <a name="localization-comments"></a>Comentários de localização  
- Se os autores de aplicativos de marcação tiverem requisitos para elementos específicos em XAML, como restrições de tamanho de texto, família de fontes ou tamanhos de fontes, eles poderão transmitir essas informações aos localizadores com comentários no código XAML. O processo para adicionar comentários ao código-fonte é o seguinte:  
+ Se os autores do aplicativo de marcação tiverem requisitos para elementos específicos no XAML, como restrições no comprimento do texto, na família da fonte ou no tamanho da fonte, eles podem transmitir essas informações para localizadores com comentários no código XAML. O processo para adicionar comentários ao código-fonte é o seguinte:  
   
 1. O desenvolvedor de aplicativos adiciona comentários de localização ao código-fonte XAML.  
   
@@ -33,7 +33,7 @@ Os comentários de localização [!INCLUDE[TLA#tla_winclient](../../../../includ
   
     - **All** – remove os comentários e os atributos do assembly e os coloca em um LocFile separado.  
   
-4. Quando recursos localizáveis são extraídos do BAML, os atributos de possibilidade de localização são respeitados pela API de localizações de BAML.  
+4. Quando os recursos localizados são extraídos do BAML, os atributos de localização são respeitados pela API de localização baml.  
   
 5. Os arquivos de comentário de localização, que contém apenas comentários de forma livre, são incorporados ao processo de localização em um momento posterior.  
   
@@ -82,7 +82,7 @@ Os comentários de localização [!INCLUDE[TLA#tla_winclient](../../../../includ
   
  Esses atributos podem ser especificados em qualquer ordem delimitada por um espaço. No caso de atributos duplicados serem especificados, o último atributo substituirá os antigos. Por exemplo, Localization.Attributes = "Modificável não modificável" define Modificabilidade como Modificável porque é o último valor.  
   
- Modificabilidade e Legibilidade são autoexplicativos. O atributo Categoria fornece categorias predefinidas que ajudam o localizador durante a tradução do texto. As categorias, como Texto, Rótulo e Título, fornecem informações ao localizador sobre como traduzir o texto. Também há categorias especiais: Nenhum, herdar, ignorar e NeverLocalize.  
+ Modificabilidade e Legibilidade são autoexplicativos. O atributo Categoria fornece categorias predefinidas que ajudam o localizador durante a tradução do texto. As categorias, como Texto, Rótulo e Título, fornecem informações ao localizador sobre como traduzir o texto. Também há categorias especiais: Nenhum, Herdar, Ignorar e NeverLocalize.  
   
  A tabela a seguir mostra o significado das categorias especiais.  
   
@@ -93,13 +93,13 @@ Os comentários de localização [!INCLUDE[TLA#tla_winclient](../../../../includ
 |Ignorar|O valor de destino é ignorado no processo de localização. Ignorar afeta somente o valor atual. Ela não afetará os nós filho.|  
 |NeverLocalize|O valor atual não pode ser localizado. Esta categoria é herdada pelos filhos de um elemento.|  
   
-<a name="Localization_Comments"></a>   
+<a name="Localization_Comments"></a>
 ## <a name="localization-comments"></a>Comentários de localização  
  Localization.Comments contém cadeias de caracteres de formato livre sobre o valor de destino. Os desenvolvedores de aplicativos podem adicionar informações para fornecer dicas aos localizadores sobre como o texto dos aplicativos deve ser traduzido. O formato dos comentários pode ser qualquer cadeia de caracteres cercada por "()". Use '\\' para os caracteres de escape.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Globalização para WPF](globalization-for-wpf.md)
 - [Usar layout automático para criar um botão](how-to-use-automatic-layout-to-create-a-button.md)
 - [Usar uma grade para layout automático](how-to-use-a-grid-for-automatic-layout.md)
-- [Localizar um aplicativo](how-to-localize-an-application.md)
+- [Localize um aplicativo](how-to-localize-an-application.md)

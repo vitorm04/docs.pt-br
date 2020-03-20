@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: 5b4b0682b2bddff96cb3d720900ed3aa39f06f9d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6825a5198976cc7ab2c04ebd6e782418dcf4a8f7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431843"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177687"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>Método IMetaDataEmit::DefineImportType
-Cria uma referência ao tipo especificado que é definido fora do escopo atual e define um token para essa referência.  
+Cria uma referência ao tipo especificado definido fora do escopo atual e define um token para essa referência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineImportType (   
-    [in]  IMetaDataAssemblyImport  *pAssemImport,   
-    [in]  const void               *pbHashValue,   
-    [in]  ULONG                    cbHashValue,    
-    [in]  IMetaDataImport          *pImport,   
-    [in]  mdTypeDef                tdImport,   
-    [in]  IMetaDataAssemblyEmit    *pAssemEmit,   
+HRESULT DefineImportType (
+    [in]  IMetaDataAssemblyImport  *pAssemImport,
+    [in]  const void               *pbHashValue,
+    [in]  ULONG                    cbHashValue,
+    [in]  IMetaDataImport          *pImport,
+    [in]  mdTypeDef                tdImport,
+    [in]  IMetaDataAssemblyEmit    *pAssemEmit,
     [out] mdTypeRef                *ptr  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pAssemImport`  
- no Uma interface [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) que representa o assembly do qual o tipo de destino é importado.  
+ [em] Uma interface [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) que representa o conjunto a partir do qual o tipo de destino é importado.  
   
  `pbHashValue`  
- no Uma matriz que contém o hash para o assembly especificado por `pAssemImport`.  
+ [em] Uma matriz que contém o hash `pAssemImport`para a montagem especificada por .  
   
  `cbHashValue`  
- no O número de bytes na matriz de `pbHashValue`.  
+ [em] O número de bytes na `pbHashValue` matriz.  
   
  `pImport`  
- no Uma interface [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa o escopo de metadados do qual o tipo de destino é importado.  
+ [em] Uma interface [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa o escopo de metadados a partir do qual o tipo de destino é importado.  
   
  `tdImport`  
- no Um token `mdTypeDef` que especifica o tipo de destino.  
+ [em] Um `mdTypeDef` token que especifica o tipo de destino.  
   
  `pAssemEmit`  
- no Uma interface [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) que representa o assembly no qual o tipo de destino é importado.  
+ [em] Uma interface [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) que representa o conjunto no qual o tipo de destino é importado.  
   
  `ptr`  
- fora O token de `mdTypeRef` que é definido no escopo atual para a referência de tipo.  
+ [fora] O `mdTypeRef` token definido no escopo atual para a referência do tipo.  
   
 ## <a name="remarks"></a>Comentários  
- Antes de chamar o método [IMetaDataEmit::D efineimportmember](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) , você pode usar o método `DefineImportType` para criar uma referência de tipo, no escopo atual, para a classe pai ou a interface pai do membro.  
+ Antes de chamar o método [IMetaDataEmit::DefineImportMember,](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md) você pode usar o `DefineImportType` método para criar uma referência de tipo, no escopo atual, para a classe pai do membro ou interface pai.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

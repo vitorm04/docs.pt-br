@@ -2,12 +2,12 @@
 title: Armazenamento em cache do plano de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a0e84f40aed2cff146e4e203cca73a9110de0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319401"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149980"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Armazenamento em cache do plano de consulta (Entity SQL)
 Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consulta pesquisa seu cache do plano de consulta para ver se a consulta exata já está compilada e disponível. Em caso afirmativo, reutiliza o plano armazenado em cachê em vez de criar um novo. Se uma correspondência não for encontrada no cache do plano de consulta, a consulta é criada e armazenadas em cachê. Uma consulta é identificada por sua coleção de texto e o parâmetro de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (nomes e tipos). Todas as comparações de texto diferenciam maiúsculas de minúsculas.  
@@ -25,7 +25,7 @@ Sempre que uma tentativa de executar uma consulta é feita, o pipeline de consul
  ```csharp
  var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
  ```
- 
+
  Se você usar consultas gerados dinamicamente, considere desativar o cachê do plano de consulta para evitar desnecessário consumo de memória para as entradas de cache que são improvável de ser reutilizado.  
   
  Consulte o cachê de fundo em consultas estáticos e consultas parametrizadas podem fornecer benefícios de desempenho. A seguir está um exemplo de uma consulta estático:  
@@ -50,6 +50,6 @@ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";
   
 - Alterações ao texto dentro de comentários.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão geral do Entity SQL](entity-sql-overview.md)
+- [Visão geral da Entity SQL](entity-sql-overview.md)

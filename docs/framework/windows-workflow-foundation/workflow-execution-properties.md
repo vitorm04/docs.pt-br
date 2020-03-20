@@ -2,12 +2,12 @@
 title: Propriedades de execução de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988593"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182658"
 ---
 # <a name="workflow-execution-properties"></a>Propriedades de execução de fluxo de trabalho
 Com o armazenamento local (TLS) de segmento, CLR mantém um contexto de execução para cada segmento. Este contexto de execução determina propriedades de segmento conhecidos como a identidade da thread, a transação ambiente, e o conjunto de permissões atual além de propriedades definidos pelo usuário do segmento como slots nomeados.  
@@ -75,14 +75,14 @@ public sealed class ConsoleColorScope : NativeActivity
 ```csharp  
 Activity wf = new Parallel  
 {  
-    Branches =   
+    Branches =
     {  
         new ConsoleColorScope  
         {  
             Color = ConsoleColor.Blue,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -104,7 +104,7 @@ Activity wf = new Parallel
             Color = ConsoleColor.Red,  
             Body = new Sequence  
             {  
-                Activities =   
+                Activities =
                 {  
                     new WriteLine  
                     {  
@@ -123,7 +123,7 @@ Activity wf = new Parallel
         },  
         new Sequence  
         {  
-            Activities =   
+            Activities =
             {  
                 new WriteLine  
                 {  
@@ -161,7 +161,7 @@ End default text.
   
  As propriedades de execução de fluxo de trabalho podem ser usadas por autores personalizados de atividade, e também fornecem um mecanismo para o gerenciamento de forma para atividades como as atividades de <xref:System.ServiceModel.Activities.CorrelationScope> e de <xref:System.Activities.Statements.TransactionScope> .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>

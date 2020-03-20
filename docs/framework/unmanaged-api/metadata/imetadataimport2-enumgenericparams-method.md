@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: d0377ade5265bba9b313d6ed2e91c446497fac6e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 55709e79cd8bdb36fe1e32ee8a699fccb1b1bbc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428312"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175298"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>Método IMetaDataImport2::EnumGenericParams
-Obtém um enumerador para uma matriz de tokens de parâmetro genéricos associados ao TypeDef ou token MethodDef especificado.  
+Obtém um enumerador para uma matriz de tokens de parâmetrogenéricos associados ao token TypeDef ou MethodDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp
 HRESULT EnumGenericParams (  
-   [in, out] HCORENUM     *phEnum,   
+   [in, out] HCORENUM     *phEnum,
    [in]  mdToken          tk,  
-   [out] mdGenericParam   rGenericParams[],   
-   [in]  ULONG            cMax,   
+   [out] mdGenericParam   rGenericParams[],
+   [in]  ULONG            cMax,
    [out] ULONG            *pcGenericParams  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `phEnum`  
- [entrada, saída] Um ponteiro para o enumerador.  
+ [dentro, fora] Um ponteiro para o enumerador.  
   
  `tk`  
- no O TypeDef ou o token MethodDef cujos parâmetros genéricos devem ser enumerados.  
+ [em] O token TypeDef ou MethodDef cujos parâmetros genéricos devem ser enumerados.  
   
  `rGenericParams`  
- fora A matriz de parâmetros genéricos a ser enumerada.  
+ [fora] A matriz de parâmetros genéricos para enumerar.  
   
  `cMax`  
- no O número máximo solicitado de tokens a serem colocados no `rGenericParams`.  
+ [em] O número máximo solicitado de tokens para colocar em `rGenericParams`.  
   
  `pcGenericParams`  
- fora O número retornado de tokens colocados em `rGenericParams`.  
+ [fora] O número retornado de tokens colocados em `rGenericParams`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` retornado com êxito.|  
-|`S_FALSE`|`phEnum` não tem elementos de membro. Nesse caso, `pcGenericParams` é definido como 0 (zero).|  
+|`S_OK`|`EnumGenericParams`retornou com sucesso.|  
+|`S_FALSE`|`phEnum`não tem elementos membros. Neste caso, `pcGenericParams` está definido como 0 (zero).|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

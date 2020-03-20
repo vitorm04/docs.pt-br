@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: f10c55abcc044b5bbdbb940001a25f530a4688e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 489fa217744e41ccb5d27d088790131c15e1ee52
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431227"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177394"
 ---
 # <a name="imetadataerroronerror-method"></a>Método IMetaDataError::OnError
-Fornece uma notificação de erros que ocorrem durante a mesclagem de metadados.  
+Fornece notificação de erros que ocorrem durante a fusão de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT OnError (  
-    [in] HRESULT   hrError,   
+    [in] HRESULT   hrError,
     [in] mdToken   token  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `hrError`  
- no O valor de erro HRESULT retornado ao método de chamada.  
+ [em] O valor de erro HRESULT retornou ao método de chamada.  
   
  `token`  
- no O token de metadados do objeto de código que estava sendo mesclado quando o erro ocorreu.  
+ [em] O token de metadados do objeto de código que estava sendo mesclado quando o erro ocorreu.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

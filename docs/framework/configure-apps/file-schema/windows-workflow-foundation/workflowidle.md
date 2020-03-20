@@ -3,22 +3,22 @@ title: <workflowIdle>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-ms.openlocfilehash: 1d8ddaf5d69d87ff6112b5cbb285f0ccfda724e2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: d9eb182ef9c35d2e4c6f5d434e6b200ae2e7ca26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397531"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151839"
 ---
-# <a name="workflowidle"></a>\<> workflowIdle
+# <a name="workflowidle"></a>\<fluxo de trabalho> de locomoção
 Um comportamento de serviço que controla quando instâncias de fluxo de trabalho ocioso são descarregadas e persistidas.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> workflowIdle**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistema.>de modelo de serviço**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamentos>**](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviçocomportamentos>**](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<comportamento>**](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<fluxo de trabalho>de risada**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ Um comportamento de serviço que controla quando instâncias de fluxo de trabalh
 <behaviors>
   <serviceBehaviors>
     <behavior name="String">
-      <workflowIdle timeToPersist="TimeSpan" 
+      <workflowIdle timeToPersist="TimeSpan"
                     timeToUnload="TimeSpan" />
     </behavior>
   </serviceBehaviors>
@@ -40,19 +40,19 @@ Um comportamento de serviço que controla quando instâncias de fluxo de trabalh
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|timeToPersist|Um valor TimeSpan que especifica a duração entre a hora em que o fluxo de trabalho se torna ocioso e é persistido. O valor padrão é TimeSpan. MaxValue.<br /><br /> A duração começa a decorrer quando a instância de fluxo de trabalho fica ociosa. Esse atributo será útil se você quiser persistir uma instância de fluxo de trabalho de forma mais agressiva enquanto mantém a instância na memória o mais longo possível. Esse atributo só será válido se seu valor for menor que o atributo **TimeToUnload** . Se for maior, ela será ignorada. Se esse atributo decorrer antes do valor especificado pelo atributo **TimeToUnload** , a persistência deverá ser concluída antes que o fluxo de trabalho seja descarregado. Isso significa que a operação pode ser atrasada até que o fluxo de trabalho é mantido. A camada de persistência é responsável por gerenciar quaisquer tentativas de erros transitórios e apenas lança exceções em erros não recuperáveis. Portanto, todas as exceções geradas durante a persistência são tratadas como fatal e a instância de fluxo de trabalho será anulada.|  
-|timeToUnload|Um valor de Timespan que especifica a duração entre o momento em que o fluxo de trabalho fica ocioso e é descarregado. O valor padrão é 1 minuto.<br /><br /> Descarregar um fluxo de trabalho significa que ele também é mantido. Se esse atributo for definido como zero, a instância do fluxo de trabalho será persistida e descarregada imediatamente depois que o fluxo de trabalho se tornar ocioso. Definir esse atributo como TimeSpan. MaxValue desabilita efetivamente a operação de descarregamento. Instâncias de fluxo de trabalho ocioso nunca são descarregadas.|  
+|timeToPersist|Um valor de Timespan que especifica a duração entre o momento em que o fluxo de trabalho fica ocioso e é mantido. O valor padrão é TimeSpan. MaxValue.<br /><br /> A duração começa a decorrer quando a instância de fluxo de trabalho fica ociosa. Esse atributo é útil se você quiser manter uma instância de fluxo de trabalho mais agressivamente enquanto mantém a instância na memória para o máximo possível. Este atributo só é válido se seu valor for menor do que o atributo **timeToUnload.** Se for maior, ela será ignorada. Se esse atributo se escorrer antes do valor especificado pelo atributo **timeToUnload,** a persistência deve ser concluída antes que o fluxo de trabalho seja descarregado. Isso significa que a operação pode ser atrasada até que o fluxo de trabalho é mantido. A camada de persistência é responsável por gerenciar quaisquer tentativas de erros transitórios e apenas lança exceções em erros não recuperáveis. Portanto, todas as exceções geradas durante a persistência são tratadas como fatal e a instância de fluxo de trabalho será anulada.|  
+|timeToUnload|Um valor de Timespan que especifica a duração entre o momento em que o fluxo de trabalho fica ocioso e é descarregado. O valor padrão é 1 minuto.<br /><br /> Descarregar um fluxo de trabalho significa que ele também é mantido. Se esse atributo for definido como zero, a instância de fluxo de trabalho é mantida e descarregada imediatamente após o fluxo de trabalho fica ocioso. Definir esse atributo como TimeSpan efetivamente desabilita a operação. Instâncias de fluxo de trabalho ocioso nunca são descarregadas.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<comportamento > de \<percomportamentos >](behavior-of-servicebehaviors-of-workflow.md)|Especifica um elemento de comportamento.|  
+|[\<> de \<comportamento de>de serviços](behavior-of-servicebehaviors-of-workflow.md)|Especifica um elemento de comportamento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowIdleElement>

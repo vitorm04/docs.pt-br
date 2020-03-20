@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123595"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181476"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -39,7 +39,7 @@ BSTR MethodOne (BSTR b) {
   
  No entanto, se você definir o método como um protótipo de invocação de plataforma, substituir cada tipo **BSTR** por um tipo <xref:System.String> e chamar `MethodOne`, o Common Language Runtime tentará liberar `b` duas vezes. Altere o comportamento de marshaling usando tipos <xref:System.IntPtr>, em vez de tipos **String**.  
   
- O tempo de execução sempre usa o método **CoTaskMemFree** para liberar memória. Se a memória com a qual você está trabalhando não foi alocada com o método **CoTaskMemAlloc**, use um **IntPtr** e libere a memória manualmente usando o método apropriado. Da mesma forma, evite a liberação automática de memória em situações em que a memória nunca deve ser liberada, como ao usar a função **GetCommandLine** no Kernel32.dll, que retorna um ponteiro para a memória do kernel. Para obter detalhes sobre como liberar a memória manualmente, consulte a [Amostra de buffers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
+ O runtime sempre usa o método **CoTaskMemFree** para liberar memória. Se a memória com a qual você está trabalhando não foi alocada com o método **CoTaskMemAlloc**, use um **IntPtr** e libere a memória manualmente usando o método apropriado. Da mesma forma, evite a liberação automática de memória em situações em que a memória nunca deve ser liberada, como ao usar a função **GetCommandLine** no Kernel32.dll, que retorna um ponteiro para a memória do kernel. Para obter detalhes sobre como liberar a memória manualmente, consulte a [Amostra de buffers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshaling padrão para classes  
  As classes podem ter o marshaling realizado somente pela interoperabilidade COM e sempre têm o marshaling realizado como interfaces. Em alguns casos, a interface usada para realizar marshaling da classe é conhecida como a interface de classe. Para obter informações sobre como substituir a interface de classe por uma interface de sua preferência, confira [Apresentando a interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
@@ -90,10 +90,10 @@ using System.Runtime.InteropServices;
   
 public interface DelegateTest {  
 void m1(Delegate d);  
-void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);     
-void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);    
-void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);   
-void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);     
+void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);
+void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);
+void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);
+void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
@@ -132,10 +132,10 @@ public class CallBackClass {
 internal class DelegateTest {  
    public static void Test() {  
       CallBackClass cb = new CallBackClass();  
-      // Caution: The following reference on the cb object does not keep the   
-      // object from being garbage collected after the Main method   
+      // Caution: The following reference on the cb object does not keep the
+      // object from being garbage collected after the Main method
       // executes.  
-      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));     
+      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));
    }  
 }  
 ```  
@@ -152,7 +152,7 @@ internal class DelegateTest {
    }  
    // Called after using the callback function for the last time.  
    public static void RemoveChangeHandler() {  
-      // The cb object can be collected now. The unmanaged code is   
+      // The cb object can be collected now. The unmanaged code is
       // finished with the callback function.  
       cb = null;  
    }  
@@ -207,7 +207,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
    public int x;  
    public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -269,14 +269,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
    public class SystemTime {  
-   public ushort wYear;   
+   public ushort wYear;
    public ushort wMonth;  
-   public ushort wDayOfWeek;   
-   public ushort wDay;   
-   public ushort wHour;   
-   public ushort wMinute;   
-   public ushort wSecond;   
-   public ushort wMilliseconds;   
+   public ushort wDayOfWeek;
+   public ushort wDay;
+   public ushort wHour;
+   public ushort wMinute;
+   public ushort wSecond;
+   public ushort wMilliseconds;
 }  
 ```  
   
@@ -321,7 +321,7 @@ End Class
 [StructLayout(LayoutKind.Sequential)]  
 public class Point {  
    int x, y;  
-   public void SetXY(int x, int y){   
+   public void SetXY(int x, int y){
       this.x = x;  
       this.y = y;  
    }  
@@ -352,7 +352,7 @@ interface _Graphics {
 > Estruturas que têm o valor de enumeração <xref:System.Runtime.InteropServices.LayoutKind> definido como **Explicit** não podem ser usadas na interoperabilidade COM porque a biblioteca de tipos exportada não pode expressar um layout explícito.  
   
 ### <a name="system-value-types"></a>Tipos de valor do sistema  
- O namespace <xref:System> tem vários tipos de valor que representam o formato demarcado dos tipos primitivos de tempo de execução. Por exemplo, a estrutura <xref:System.Int32?displayProperty=nameWithType> do tipo de valor representa o formato demarcado de **ELEMENT_TYPE_I4**. Em vez de realizar marshaling desses tipos como estruturas, assim como ocorre com outros tipos formatados, realize marshaling deles da mesma maneira como os tipos primitivos demarcados por eles. Portanto, **System.Int32** tem o marshaling realizado como **ELEMENT_TYPE_I4**, em vez de como uma estrutura que contém um único membro do tipo **long**. A tabela a seguir contém uma lista dos tipos de valor no namespace **System** que são representações demarcadas de tipos primitivos.  
+ O namespace <xref:System> tem vários tipos de valor que representam o formato demarcado dos tipos primitivos de runtime. Por exemplo, a estrutura <xref:System.Int32?displayProperty=nameWithType> do tipo de valor representa o formato demarcado de **ELEMENT_TYPE_I4**. Em vez de realizar marshaling desses tipos como estruturas, assim como ocorre com outros tipos formatados, realize marshaling deles da mesma maneira como os tipos primitivos demarcados por eles. Portanto, **System.Int32** tem o marshaling realizado como **ELEMENT_TYPE_I4**, em vez de como uma estrutura que contém um único membro do tipo **long**. A tabela a seguir contém uma lista dos tipos de valor no namespace **System** que são representações demarcadas de tipos primitivos.  
   
 |Tipo de valor do sistema|Tipo de elemento|  
 |-----------------------|------------------|  
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |Tipo de valor do sistema|Tipo de IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**Data**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**Decimal**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  O código a seguir mostra a definição dos tipos não gerenciados **DATE**, **GUID**, **DECIMAL** e **OLE_COLOR** na biblioteca de tipos Stdole2.  
@@ -437,7 +437,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Copiando e fixando](copying-and-pinning.md)

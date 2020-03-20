@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138969"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178507"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>Método ICorDebugStringValue::GetString
-Obtém a cadeia de caracteres referenciada por este ICorDebugStringValue.  
+Obtém a seqüência de stringreferenciada por este ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,20 +31,20 @@ Obtém a cadeia de caracteres referenciada por este ICorDebugStringValue.
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cchString`  
- no O tamanho da matriz de `szString`.  
+ [em] O tamanho `szString` da matriz.  
   
  `pcchString`  
- fora Um ponteiro para o número de caracteres retornados na matriz de `szString`.  
+ [fora] Um ponteiro para o número de `szString` caracteres retornado na matriz.  
   
  `szString`  
- fora Uma matriz que armazena a cadeia de caracteres recuperada.  
+ [fora] Uma matriz que armazena a seqüência recuperada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -53,4 +53,4 @@ HRESULT GetString (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

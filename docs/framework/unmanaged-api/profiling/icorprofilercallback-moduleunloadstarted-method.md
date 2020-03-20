@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: 7e43f58f619aaa63fa2294dd3e989026dcdfc604
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866124"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175142"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>Método ICorProfilerCallback::ModuleUnloadStarted
-Notifica o criador de perfil de que um módulo está sendo descarregado.  
+Notifica o profiler de que um módulo está sendo descarregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT ModuleUnloadStarted(  
-    [in] ModuleID moduleId);   
+    [in] ModuleID moduleId);
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `moduleId`  
- no A ID do módulo que está sendo descarregado.  
+ [em] A id do módulo que está sendo descarregado.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `moduleId` não é válido para uma solicitação de informações após o retorno do método `ModuleUnloadStarted` — essa é a última chance do criador de perfil obter informações sobre esse módulo.  
+ O valor `moduleId` do não é válido `ModuleUnloadStarted` para uma solicitação de informações após o retorno do método — esta é a última chance do profiler obter informações sobre este módulo.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf. idl, CorProf. h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorProfilerCallback](icorprofilercallback-interface.md)
 - [Método ModuleUnloadFinished](icorprofilercallback-moduleunloadfinished-method.md)

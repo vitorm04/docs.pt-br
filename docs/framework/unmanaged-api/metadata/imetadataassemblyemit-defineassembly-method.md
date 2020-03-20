@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 20628e708261076c6e172ff30c366a0d69c2e0f2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432125"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177895"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>Método IMetaDataAssemblyEmit::DefineAssembly
-Cria uma estrutura de `Assembly` que contém metadados para o assembly especificado e retorna o token de metadados associado.  
+Cria `Assembly` uma estrutura contendo metadados para o conjunto especificado e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,47 +32,47 @@ HRESULT DefineAssembly (
     [in]  void                 *pbPublicKey,  
     [in]  ULONG                cbPublicKey,  
     [in]  ULONG                uHashAlgId,  
-    [in]  LPCWSTR              szName,   
+    [in]  LPCWSTR              szName,
     [in]  ASSEMBLYMETADATA     *pMetaData,  
     [in]  DWORD                dwAssemblyFlags,  
     [out] mdAssembly           *pmda  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pbPublicKey`  
- no A chave pública que identifica o editor do assembly ou NULL se o assembly não tiver um nome forte.  
+ [em] A chave pública que identifica o editor da montagem, ou NULL se a montagem não for fortemente nomeada.  
   
  `cbPublicKey`  
- no O tamanho em bytes de `pbPublicKey`.  
+ [em] O tamanho em bytes de `pbPublicKey`.  
   
  `uHashAlgId`  
- no O identificador do algoritmo de hash a ser usado para criptografar os arquivos no assembly ou nulo para especificar o algoritmo SHA-1.  
+ [em] O identificador do algoritmo de hashing para usar para criptografar os arquivos no conjunto, ou NULL para especificar o algoritmo SHA-1.  
   
  `szName`  
- no O nome de texto legível por humanos do assembly. Esse valor não deve exceder 1024 caracteres.  
+ [em] O nome de texto de leitura humana da assembléia. Este valor não deve exceder 1024 caracteres.  
   
  `pMetaData`  
- no Um ponteiro para uma instância ASSEMBLYMETADATA que contém a versão, a plataforma e as informações de localidade para o assembly.  
+ [em] Um ponteiro para uma instância ASSEMBLYMETADATA que contém as informações de versão, plataforma e local para o conjunto.  
   
  `dwAssemblyFlags`  
- no Uma combinação de valores [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que descrevem os recursos do assembly.  
+ [em] Uma combinação de valores [corassemblyflags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) que descrevem características do conjunto.  
   
  `pmda`  
- fora Um ponteiro para o token de metadados.  
+ [fora] Um ponteiro para o token de metadados.  
   
 ## <a name="remarks"></a>Comentários  
- Somente uma estrutura de metadados `Assembly` pode ser definida em um manifesto.  
+ Apenas `Assembly` uma estrutura de metadados pode ser definida dentro de um manifesto.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

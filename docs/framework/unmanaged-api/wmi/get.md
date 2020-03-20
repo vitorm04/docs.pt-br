@@ -1,6 +1,6 @@
 ---
 title: Obter função (referência de API não gerenciada)
-description: A função Get recupera o valor da propriedade especificada.
+description: A função Obter recupera o valor de propriedade especificado.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 67fcfb301eebfcf4ed4fdcaa5c9ddf85c47a6073
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120321"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174973"
 ---
 # <a name="get-function"></a>Função Get
 
-Recupera o valor da propriedade especificada, se existir.
+Recupera o valor de propriedade especificado se ele existir.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -31,73 +31,73 @@ Recupera o valor da propriedade especificada, se existir.
 
 ```cpp
 HRESULT Get (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
-); 
+);
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 `vFunc`\
-no Este parâmetro não é usado.
+[em] Este parâmetro não é usado.
 
 `ptr`\
-no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+[em] Um ponteiro para uma instância [IWbemClassObject.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
 
 `wszName`\
-no O nome da propriedade.
+[em] O nome da propriedade.
 
 `lFlags`\
-[in] Reservado. Esse parâmetro deve ser 0.
+[in] Reservado. Este parâmetro deve ser 0.
 
 `pVal`\
-fora Se a função retornar com êxito, conterá o valor da propriedade `wszName`. O argumento `pval` é atribuído ao tipo e valor corretos para o qualificador.
+[fora] Se a função retornar com sucesso, contém o valor da `wszName` propriedade. O `pval` argumento é atribuído ao tipo e valor corretos para o qualificador.
 
 `pvtType`\
-fora Se a função retornar com êxito, conterá uma [constante do tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica o tipo de propriedade. Seu valor também pode ser `null`. 
+[fora] Se a função retornar com sucesso, contém uma [constante do tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica o tipo de propriedade. Seu valor também `null`pode ser .
 
 `plFlavor`\
-fora Se a função retornar com êxito, o receberá informações sobre a origem da propriedade. Seu valor pode ser `null`ou uma das seguintes constantes WBEM_FLAVOR_TYPE definidas no arquivo de cabeçalho *WbemCli. h* : 
+[fora] Se a função retornar com sucesso, recebe informações sobre a origem da propriedade. Seu valor `null`pode ser , ou uma das seguintes WBEM_FLAVOR_TYPE constantes definidas no arquivo de cabeçalho *WbemCli.h:*
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | A propriedade é uma propriedade padrão do sistema. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: a propriedade é herdada da classe pai. <br> Para uma instância: a propriedade, embora herdada da classe pai, não foi modificada pela instância.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: a propriedade pertence à classe derivada. <br> Para uma instância: a propriedade é modificada pela instância; ou seja, um valor foi fornecido ou um qualificador foi adicionado ou modificado. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para uma classe: A propriedade é herdada da classe dos pais. <br> Por exemplo: a propriedade, embora herdada da classe pai, não foi modificada pela instância.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para uma classe: A propriedade pertence à classe derivada. <br> Por exemplo: A propriedade é modificada pela instância; ou seja, um valor foi fornecido, ou um qualificador foi adicionado ou modificado. |
 
 ## <a name="return-value"></a>Valor retornado
 
-Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por esta função são definidos no arquivo de cabeçalho *WbemCli.h,* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Houve uma falha geral. |
+|`WBEM_E_FAILED` | 0x80041001 | Houve um fracasso geral. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | A propriedade especificada não foi encontrada. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Não há memória disponível suficiente para concluir a operação. |
-|`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
+|`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem sucedida.  |
 
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o método [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
+Esta função envolve uma chamada para o método [IWbemClassObject::Get.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)
 
-A função `Get` também pode retornar propriedades do sistema.
+A `Get` função também pode retornar as propriedades do sistema.
 
-O argumento `pVal` é atribuído ao tipo e valor corretos para o qualificador e a função [VARIANTINIT](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) com
+O `pVal` argumento é atribuído ao tipo e valor corretos para o qualificador e a função COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)
 
 ## <a name="requirements"></a>Requisitos
 
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
- **Cabeçalho:** WMINet_Utils. idl
+ **Cabeçalho:** WMINet_Utils.idl
 
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

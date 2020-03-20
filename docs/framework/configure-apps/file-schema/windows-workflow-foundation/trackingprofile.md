@@ -3,22 +3,22 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 3120d6f5d1bb5a5cf452567e96766231534f3f41
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 8985da7e1223ac117cf1b68227140634f9c85d3a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151883"
 ---
-# <a name="trackingprofile"></a>\<trackingProfile>
-Representa uma seção de configuração para criar uma assinatura para registros de rastreamento de fluxo de trabalho em um participante de rastreamento. Um perfil de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em tempo de execução. As consultas definidas no perfil de rastreamento seção definem os tipos de eventos que são retornados pela assinatura.  
+# <a name="trackingprofile"></a>\<> de rastreamentoperfil
+Representa uma seção de configuração para criar uma assinatura para controlar os registros em um participante de rastreamento de fluxo de trabalho. Um perfil de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em runtime. As consultas definidas no perfil de rastreamento seção definem os tipos de eventos que são retornados pela assinatura.  
   
- Para obter mais informações sobre o rastreamento de fluxo de trabalho e sua configuração, consulte rastreamento de [fluxo de trabalho e rastreamento](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) e [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md).  
+ Para obter mais informações sobre o rastreamento do fluxo de trabalho e sua configuração, consulte Perfis de [rastreamento e rastreamento de fluxo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) [de](../../../windows-workflow-foundation/tracking-profiles.md)trabalho .  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> trackingProfile**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistema.>de modelo de serviço**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<rastreando>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de rastreamentoPerfil**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -27,14 +27,14 @@ Representa uma seção de configuração para criar uma assinatura para registro
   <tracking>
     <profiles>
       <participants>
-        <add name="String" 
-             profileName="String" 
+        <add name="String"
+             profileName="String"
              type="String" />
       </participants>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -53,15 +53,15 @@ Representa uma seção de configuração para criar uma assinatura para registro
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -91,24 +91,24 @@ Representa uma seção de configuração para criar uma assinatura para registro
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<participants>](participants.md)|Um elemento de configuração que contém todas as consultas de um fluxo de trabalho específico identificado pelo <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> propriedade.|  
+|[\<participantes>](participants.md)|Um elemento de configuração que contém todas as consultas de um fluxo de trabalho específico identificado pelo <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId%2A?displayProperty=nameWithType> propriedade.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<tracking>](tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.|  
+|[\<rastreando>](tracking.md)|Representa uma seção de configuração para definir configurações de controle para um serviço de fluxo de trabalho.|  
   
 ## <a name="remarks"></a>Comentários  
- Perfis de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em tempo de execução. Dependendo dos requisitos de monitoramento que você pode escrever um perfil que é muito simples, que assina a um pequeno conjunto de alterações de estado de alto nível em um fluxo de trabalho. Por outro lado, você pode criar um perfil muito específico cujos eventos resultantes são ricos reconstruir um fluxo de execução detalhado mais adiante.  
+ Perfis de rastreamento contém consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em runtime. Dependendo dos requisitos de monitoramento que você pode escrever um perfil que é muito simples, que assina a um pequeno conjunto de alterações de estado de alto nível em um fluxo de trabalho. Por outro lado, você pode criar um perfil muito específico cujos eventos resultantes são ricos reconstruir um fluxo de execução detalhado mais adiante.  
   
- Controlando os perfis são estruturados como as assinaturas declarativas para controlar os registros que permitem que você possa ver o tempo de execução de fluxo de trabalho para o controle específico registro. Há alguns tipos de consulta que permitem que você assine diferentes classes de <xref:System.Activities.Tracking.TrackingRecord> objetos. Para obter uma lista completa de consultas, consulte [ \<participantes >](participants.md) e [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)..  
+ Controlando os perfis são estruturados como as assinaturas declarativas para controlar os registros que permitem que você possa ver o runtime de fluxo de trabalho para o controle específico registro. Existem um punhado de tipos de consulta que <xref:System.Activities.Tracking.TrackingRecord> permitem que você se inscreva em diferentes classes de objetos. Para obter uma lista completa de consultas, consulte [ \<participantes>](participants.md) e [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)..  
   
- O exemplo a seguir mostra um perfil de controle em um arquivo de configuração que permite que um participante de `Started` controle `Completed` assine os eventos de fluxo de trabalho e.  
+ O exemplo a seguir mostra um perfil de rastreamento em `Started` um `Completed` arquivo de configuração que permite que um participante de rastreamento se inscreva nos eventos do fluxo de trabalho e do fluxo de trabalho.  
   
 ```xml  
 <system.serviceModel>  
-  <tracking>    
+  <tracking>
     <trackingProfile name="Sample Tracking Profile">  
       <workflow activityDefinitionId="*">  
          <workflowInstanceQueries>  
@@ -120,13 +120,13 @@ Representa uma seção de configuração para criar uma assinatura para registro
           </workflowInstanceQuery>  
         </workflowInstanceQueries>  
       </workflow>  
-    </trackingProfile>          
+    </trackingProfile>
    </profiles>  
   </tracking>  
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>

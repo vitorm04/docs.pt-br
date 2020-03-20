@@ -3,22 +3,22 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 76eeea635fd65486a1c16bea15a49018876dae99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 30ce69a35cfdd34e0dfea5c682347eb9187e04ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251688"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152444"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-Fornece a configuração opcional para <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> a classe ou classes derivadas.  
+Fornece configuração <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> opcional para as classes de classe ou derivadas.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Adicionar >** ](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> x509SecurityTokenHandlerRequirement**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de segurançaTokenHandlers**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<adicionar>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509SecurityTokenHandlerRequirement>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,11 +47,11 @@ Fornece a configuração opcional para <xref:System.IdentityModel.Tokens.X509Sec
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|certificateValidationMode|Um <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica o modo de validação a ser usado para o certificado X. 509. O valor padrão é "PeerOrChainTrust".|  
-|mapToWindows|Especifica se o manipulador de token deve mapear o token de validação para uma conta do Windows usando a declaração UPN de entrada. O padrão é "false".|  
-|revocationMode|Um <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica o modo de revogação a ser usado para o certificado X. 509. O valor padrão é "online".|  
-|trustedStoreLocation|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica o repositório de certificados X. 509. O valor padrão é "LocalMachine".|  
-|certificateValidator|Um tipo personalizado que deriva de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Se o `certificateValidationMode` atributo for "Custom", uma instância desse tipo será usada para validação do certificado do emissor.|  
+|modo de validação de certificados|Um <xref:System.ServiceModel.Security.X509CertificateValidationMode> valor que especifica o modo de validação a ser usado para o certificado X.509. O valor padrão é "PeerOrChainTrust".|  
+|mapToWindows|Especifica se o manipulador de tokens deve mapear o token de validação para uma conta do Windows usando a reclamação UPN de entrada. O padrão é "falso".|  
+|Revocationmode|Um <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> valor que especifica o modo de revogação a ser usado para o certificado X.509. O valor padrão é "Online".|  
+|trustedStoreLocalização|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica a loja de certificados X.509. O valor padrão é "LocalMachine".|  
+|validador de certificado|Um tipo personalizado que <xref:System.IdentityModel.Selectors.X509CertificateValidator>deriva de . Se `certificateValidationMode` o atributo for "Personalizado", uma instância desse tipo será usada para validação de certificado de emissor.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -60,15 +60,15 @@ Fornece a configuração opcional para <xref:System.IdentityModel.Tokens.X509Sec
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<add>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção de manipulador de token.|  
+|[\<adicionar>](add.md)|Adiciona o manipulador de token de segurança especificado à coleção do manipulador de tokens.|  
   
 ## <a name="example"></a>Exemplo  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
-    <x509SecurityTokenHandlerRequirement mapToWindows="true"   
-                                         certificateValidationMode="PeerOrChainTrust"   
-                                         revocationMode="Online"   
+    <x509SecurityTokenHandlerRequirement mapToWindows="true"
+                                         certificateValidationMode="PeerOrChainTrust"
+                                         revocationMode="Online"
                                          trustedStoreLocation="LocalMachine" />  
 </add>  
 ```

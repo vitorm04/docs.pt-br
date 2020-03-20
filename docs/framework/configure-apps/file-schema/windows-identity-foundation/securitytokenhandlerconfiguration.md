@@ -3,21 +3,21 @@ title: <securityTokenHandlerConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
-ms.openlocfilehash: 330e52bd73a8032e4073fe434c852e5bdf8e1d47
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e3e65820fa4dc341371d4f67689a288cd3f63951
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251884"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152561"
 ---
-# <a name="securitytokenhandlerconfiguration"></a>\<securityTokenHandlerConfiguration>
-Fornece a configuração para a coleção de manipuladores de token.  
+# <a name="securitytokenhandlerconfiguration"></a>\<> de configuração dedecontatosdeproblemas de segurança
+Fornece configuração para a coleção de manipuladores de tokens.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> securityTokenHandlers**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> securityTokenHandlerConfiguration**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de segurançaTokenHandlers**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<Configuradodefalha>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,36 +40,36 @@ Fornece a configuração para a coleção de manipuladores de token.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|saveBootstrapContext|Especifica se os tokens de inicialização devem ser incluídos no token de sessão. O valor também pode ser definido em uma coleção de manipuladores de token `saveBootstrapContext` , definindo o atributo [ \<no elemento identityConfiguration >](identityconfiguration.md) . Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|  
-|maximumClockSkew|Um <xref:System.TimeSpan> valor que especifica a distorção máxima permitida do relógio. Controla o máximo permitido de distorção de relógio ao executar operações sensíveis ao tempo, como validar o tempo de expiração de uma sessão de entrada. O padrão é 5 minutos, "00:05:00". Para obter mais informações sobre como especificar <xref:System.TimeSpan> valores, consulte [valores de TimeSpan](../windows-workflow-foundation/index.md). A distorção máxima do relógio também pode ser definida no nível de serviço definindo `maximumClockSkew` o atributo [ \<no elemento identityConfiguration >](identityconfiguration.md) . Um valor definido na coleção de manipuladores de token substitui o valor definido no serviço.|  
+|salvarBootstrapContext|Especifica se os tokens bootstrap devem ser incluídos no token da sessão. O valor também pode ser definido em uma `saveBootstrapContext` coleção de manipuladores de tokens definindo o atributo no elemento [ \<identityConfiguration>.](identityconfiguration.md) Um valor definido na coleção do manipulador de tokens substitui o valor definido no serviço.|  
+|máximoClockSkew|A <xref:System.TimeSpan> que especifica a distorção máxima permitida do relógio. Controla a distorção máxima do relógio permitida ao realizar operações sensíveis ao tempo, como validar o tempo de expiração de uma sessão de login. O padrão é 5 minutos, "00:05:00". Para obter mais informações <xref:System.TimeSpan> sobre como especificar valores, consulte [Timespan Values](../windows-workflow-foundation/index.md). A distorção máxima do relógio também pode ser `maximumClockSkew` definida no nível de serviço, definindo o atributo no elemento [ \<identityConfiguration>.](identityconfiguration.md) Um valor definido na coleção do manipulador de tokens substitui o valor definido no serviço.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<audienceUris>](audienceuris.md)|Especifica o conjunto de URIs que são identificadores aceitáveis dessa terceira parte confiável. Opcional.|  
-|[\<caches>](caches.md)|Registra os caches usados para tokens de sessão e detecção de reprodução de token. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de token de segurança. Opcional.|  
-|[\<certificateValidation>](certificatevalidation.md)|Controla as configurações que os manipuladores de token usam para validar certificados. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de token de segurança. Essas configurações serão substituídas se um manipulador específico estiver configurado com seu próprio validador. Opcional.|  
-|[\<issuerNameRegistry>](issuernameregistry.md)|Configura o registro de nome do emissor que é usado pelos manipuladores na coleção de manipuladores de token. Opcional.|  
-|[\<issuerTokenResolver>](issuertokenresolver.md)|Registra o resolvedor de token do emissor que é usado por manipuladores na coleção de manipulador de token. O resolvedor de token do emissor é usado para resolver o token de assinatura em mensagens e tokens de entrada. Opcional.|  
-|[\<serviceTokenResolver>](servicetokenresolver.md)|Registra o resolvedor de token de serviço que é usado pelos manipuladores na coleção de manipuladores de token. O resolvedor de token de serviço é usado para resolver o token de criptografia em mensagens e tokens de entrada. Opcional.|  
-|[\<tokenReplayDetection>](tokenreplaydetection.md)|Habilita a detecção de reprodução de token e especifica o tempo de expiração para tokens. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de token de segurança. Opcional.|  
+|[\<audiênciaUris>](audienceuris.md)|Especifica o conjunto de URIs que são identificadores aceitáveis desta parte que depende. Opcional.|  
+|[\<caches>](caches.md)|Registra os caches usados para tokens de sessão e detecção de replay de tokens. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de tokens de segurança. Opcional.|  
+|[\<>de validação de certificados](certificatevalidation.md)|Controla as configurações que os manipuladores de tokens usam para validar certificados. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de tokens de segurança. Essas configurações são substituídas se um manipulador específico estiver configurado com seu próprio validador. Opcional.|  
+|[\<emissorNomeregistro>](issuernameregistry.md)|Configura o registro de nome do emissor que é usado pelos manipuladores na coleção do manipulador de tokens. Opcional.|  
+|[\<emissorTokenResolver>](issuertokenresolver.md)|Registra o resolver token emissor usado pelos manipuladores na coleção de manipuladores de tokens. O resolver token do emissor é usado para resolver o token de assinatura em tokens e mensagens recebidas. Opcional.|  
+|[\<serviceTokenResolver>](servicetokenresolver.md)|Registra o resolver token de serviço que é usado pelos manipuladores na coleção de manipuladores de tokens. O resolvede token de serviço é usado para resolver o token de criptografia em tokens e mensagens recebidas. Opcional.|  
+|[\<ReproduçãoDetecção de erros>](tokenreplaydetection.md)|Permite a detecção de replay de token e especifica o tempo de expiração dos tokens. Pode ser especificado no nível de serviço ou em uma coleção de manipulador de tokens de segurança. Opcional.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](securitytokenhandlers.md)|Especifica uma coleção de manipuladores de token de segurança que são registrados com o ponto de extremidade.|  
+|[\<>de segurançaTokenHandlers](securitytokenhandlers.md)|Especifica uma coleção de manipuladores de tokens de segurança que estão registrados com o ponto final.|  
   
 ## <a name="remarks"></a>Comentários  
- Esta seção fornece valores de propriedade para <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> um objeto. As configurações definidas nesta seção substituem aquelas configuradas no serviço. Por sua vez, algumas dessas configurações podem ser substituídas pelas configurações que são especificadas quando um manipulador é adicionado à coleção do manipulador de token de segurança.  
+ Esta seção fornece <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> valores de propriedade para um objeto. As configurações configuradas nesta seção sobrepõem as configuradas no serviço. Algumas dessas configurações podem, por sua vez, ser substituídas por configurações especificadas quando um manipulador é adicionado à coleção de manipuladores de tokens de segurança.  
   
 ## <a name="example"></a>Exemplo  
   
 ```xml  
 <system.identityModel>  
   <identityConfiguration>  
-    <securityTokenHandlers>   
+    <securityTokenHandlers>
       <securityTokenHandlerConfiguration>  
   
         <audienceUris>  

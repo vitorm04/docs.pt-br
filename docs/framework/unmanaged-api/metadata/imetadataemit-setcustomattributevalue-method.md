@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25b7f478ae0bd05b82fa960561fb8534efe2b4db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448130"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175662"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>Método IMetaDataEmit::SetCustomAttributeValue
-Define ou atualiza o valor de um atributo personalizado definido por uma chamada anterior para [IMetaDataEmit::D efinecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Define ou atualiza o valor de um atributo personalizado definido por uma chamada anterior ao [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT SetCustomAttributeValue (   
-    [in]  mdCustomAttribute       pcv,   
-    [in]  void const              *pCustomAttribute,    
-    [in]  ULONG                   cbCustomAttribute   
+HRESULT SetCustomAttributeValue (
+    [in]  mdCustomAttribute       pcv,
+    [in]  void const              *pCustomAttribute,
+    [in]  ULONG                   cbCustomAttribute
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pcv`  
- no O token do atributo personalizado de destino.  
+ [em] O símbolo do atributo personalizado do alvo.  
   
  `pCustomAttribute`  
- no Um ponteiro para a matriz que contém o atributo personalizado.  
+ [em] Um ponteiro para a matriz que contém o atributo personalizado.  
   
  `cbCustomAttribute`  
- no O tamanho, em bytes, do atributo personalizado.  
+ [em] O tamanho, em bytes, do atributo personalizado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -1,6 +1,6 @@
 ---
 title: Função ResetSecurity (referência de API não gerenciada)
-description: A função ResetSecurity atribui um token de representação ao thread atual.
+description: A função ResetSecurity atribui um token de representação ao segmento atual.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ce74494455c6cc7fe382a4ea4ef2ff0c4e98c61b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120204"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174856"
 ---
 # <a name="resetsecurity-function"></a>Função ResetSecurity
-Atribui o token de representação fornecido para o thread atual.   
+Atribui o token de representação fornecido para o thread atual.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -31,27 +31,27 @@ Atribui o token de representação fornecido para o thread atual.
 ```cpp  
 HRESULT ResetSecurity (
    [in] HANDLE token
-); 
+);
 ```  
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 `token`  
-no O token de representação a ser associado ao thread atual. Seu valor pode ser `null`. 
+[em] O token de representação para associar com o segmento atual. Seu valor pode ser `null`.
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será `S_OK` (0).
+Se a função for bem `S_OK` sucedida, o valor de retorno será (0).
 
-Se a função falhar, o valor de retorno será um código de erro diferente de zero. Para obter informações de erro estendidas, chame a função [GetErrorInfo](geterrorinfo.md) .
+Se a função falhar, o valor de retorno será um código de erro não-zero. Para obter informações de erro estendidas, ligue para a função [GetErrorInfo.](geterrorinfo.md)
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils. idl  
+ **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

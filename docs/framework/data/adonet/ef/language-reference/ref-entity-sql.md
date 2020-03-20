@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 40a5afd7eb99dba7cae8fe14ed0a45213fda94a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319386"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149941"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 Retorna uma referência a uma instância de entidade.  
@@ -15,10 +15,10 @@ Retorna uma referência a uma instância de entidade.
 ## <a name="syntax"></a>Sintaxe  
   
 ```sql  
-REF( expression )   
+REF( expression )
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `expression`  
  Qualquer expressão válida que produzir uma instância de um tipo de objeto.  
   
@@ -33,16 +33,16 @@ REF( expression )
 ## <a name="example"></a>Exemplo  
  A seguinte consulta SQL Entity usa o operador de referência para retornar a referência para um argumento de entidade de entrada. A mesma consulta desreferencia a referência porque estamos usando uma operação de extração de propriedade (.) para acessar uma propriedade de entidade do produto. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [como executar uma consulta que retorna os resultados de primitivatype](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga o procedimento em [Como: Executar uma consulta que retorna resultados do PrimitiveType](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   
  [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [DEREF](deref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)
-- [KEY](key-entity-sql.md)
+- [Chave](key-entity-sql.md)
 - [Referência de Entity SQL](entity-sql-reference.md)
 - [Definições de tipo](type-definitions-entity-sql.md)

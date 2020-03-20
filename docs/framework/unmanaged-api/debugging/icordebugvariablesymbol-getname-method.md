@@ -1,33 +1,33 @@
 ---
-title: 'Método ICorDebugVariableSymbol:: GetName'
+title: ICorDebugVariableSymbol::Método GetName
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: 172eea452442aa94ea010e2c434908ab8d040a93
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: abc0e368f259df1a3542b0fc8e7fbfd7e06cf6eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790919"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178448"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>Método ICorDebugVariableSymbol:: GetName
-Obtém o nome de uma variável.  
+# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::Método GetName
+Recebe o nome de uma variável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetName(  
-   [in] ULONG32 cchName,   
-   [out] ULONG32 *pcchName,   
+   [in] ULONG32 cchName,
+   [out] ULONG32 *pcchName,
    [out, size_is(cchName), length_is(*pcchName)] WCHAR szName[]  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cchName`  
- no O número de caracteres no buffer de `szName`.  
+ [em] O número de `szName` caracteres no buffer.  
   
  `pcchName`  
- fora Um ponteiro para o número de caracteres realmente gravados no buffer de `szName`.  
+ [fora] Um ponteiro para o número de `szName` caracteres realmente escrito no buffer.  
   
  `szName`  
  Um ponteiro para uma matriz de caracteres que contém o nome da variável.  
@@ -35,18 +35,18 @@ HRESULT GetName(
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Esse método está disponível somente com .NET Native.  
+> Este método está disponível apenas com .NET Native.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)

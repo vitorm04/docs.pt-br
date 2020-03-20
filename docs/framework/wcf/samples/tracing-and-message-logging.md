@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 448eef6ea147b725600b774026155acc1fca6d36
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ffb7a99540b953fc93a22d2296caf86f294d25d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094859"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143818"
 ---
 # <a name="tracing-and-message-logging"></a>Registro de mensagem e rastreamento
-Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os rastreamentos e os logs de mensagens resultantes são exibidos usando a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Esta amostra demonstra como ativar o rastreamento e o registro de mensagens. Os traços e registros de mensagens resultantes são visualizados usando a [Ferramenta de Visualização de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
-> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
+> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
   
 ## <a name="tracing"></a>Rastreamento  
- Windows Communication Foundation (WCF) usa o mecanismo de rastreamento definido no namespace <xref:System.Diagnostics>. Nesse modelo de rastreamento, os dados de rastreamento são produzidos por fontes de rastreamento que os aplicativos implementam. Cada fonte é identificada por um nome. Os consumidores de rastreamento criam ouvintes de rastreamento para as fontes de rastreamento para as quais desejam recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a origem do rastreamento. No WCF, isso pode ser feito adicionando o código a seguir ao arquivo de configuração do cliente ou do serviço definindo a fonte de rastreamento do modelo de serviço `switchValue`:  
+ A Windows Communication Foundation (WCF) usa <xref:System.Diagnostics> o mecanismo de rastreamento definido no namespace. Neste modelo de rastreamento, os dados de rastreamento são produzidos por fontes de rastreamento que os aplicativos implementam. Cada fonte é identificada por um nome. Os consumidores de rastreamento criam rastreadores para as fontes de rastreamento para as quais eles querem recuperar informações. Para receber dados de rastreamento, você deve criar um ouvinte para a fonte de rastreamento. No WCF, isso pode ser feito adicionando o seguinte código ao arquivo de configuração `switchValue`do serviço ou do cliente, definindo a fonte de rastreamento do Modelo de Serviço:  
   
 ```xml  
 <system.diagnostics>  
@@ -43,25 +43,25 @@ Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os ra
 </system.diagnostics>  
 ```  
   
- Para obter mais informações sobre fontes de rastreamento, consulte a seção origem do rastreamento no tópico [Configurando o rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) .  
+ Para obter mais informações sobre as fontes de rastreamento, consulte a seção Trace Source no tópico [Configurando rastreamento.](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
   
-## <a name="activity-tracing-and-propagation"></a>Rastreamento e propagação de atividades  
- Ter `ActivityTracing` habilitados e `propagateActivity` definido como `true` nas fontes de rastreamento de `system.ServiceModel` para o cliente e o serviço fornecem a correlação de rastreamentos dentro de unidades lógicas de processamento (atividades), entre as atividades nos pontos de extremidade (por meio de transferências de atividade) e entre as atividades que abrangem vários pontos de extremidade (por meio da propagação de ID de atividade).  
+## <a name="activity-tracing-and-propagation"></a>Rastreamento e Propagação de Atividades  
+ Tendo `ActivityTracing` ativado `propagateActivity` e `true` definido `system.ServiceModel` nas fontes de rastreamento tanto para o cliente quanto para o serviço, fornecem correlação de traços dentro de unidades lógicas de processamento (atividades), em atividades dentro de endpoints (através de transferências de atividades) e em atividades que abrangem vários pontos finais (através da propagação de ID de atividade).  
   
- Esses três mecanismos (atividades, transferências e propagação) podem ajudá-lo a localizar a causa raiz de um erro mais rapidamente usando a ferramenta do Visualizador de rastreamento de serviço. Para obter mais informações, consulte [usando o Visualizador de rastreamento de serviço para exibir rastreamentos correlacionados e solução de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Esses três mecanismos (atividades, transferências e propagação) podem ajudá-lo a localizar a causa raiz de um erro mais rapidamente usando a ferramenta Visualizador de rastreamento de serviço. Para obter mais informações, consulte [Usando o Visualizador de rastreamento de serviço para visualizar traços correlacionados e solução de problemas](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
- É possível estender o rastreamento fornecido pelo ServiceModel criando rastreamentos de atividade definidos pelo usuário. O rastreamento de atividade definido pelo usuário permite que o usuário crie atividades de rastreamento para:  
+ É possível estender o rastreamento fornecido pelo ServiceModel criando traços de atividade definidos pelo usuário. O rastreamento de atividades definido pelo usuário permite que o usuário crie atividades de rastreamento para:  
   
-- Agrupa rastreamentos em unidades lógicas de trabalho.  
+- Traços de grupo em unidades lógicas de trabalho.  
   
-- Correlacione atividades por meio de transferências e propagação.  
+- Correlacionar atividades através de transferências e propagação.  
   
-- Diminua o custo de desempenho do rastreamento do WCF (por exemplo, o custo de espaço em disco de um arquivo de log).  
+- Diminuir o custo de desempenho do rastreamento WCF (por exemplo, o custo do espaço em disco de um arquivo de log).  
   
- Para obter mais informações sobre o rastreamento de atividade definido pelo usuário, consulte o exemplo de [rastreamento de extensão](../../../../docs/framework/wcf/samples/extending-tracing.md) .  
+ Para obter mais informações sobre o rastreamento de atividade definido pelo usuário, consulte a amostra [de rastreamento de extensão.](../../../../docs/framework/wcf/samples/extending-tracing.md)  
   
 ## <a name="message-logging"></a>Registro em log de mensagens  
- O log de mensagens pode ser habilitado no cliente e no serviço de qualquer aplicativo WCF. Para habilitar o log de mensagens, você deve adicionar o seguinte código ao cliente ou ao serviço:  
+ O registro de mensagens pode ser ativado tanto no cliente quanto no serviço de qualquer aplicativo WCF. Para habilitar o registro de mensagens, você deve adicionar o seguinte código ao cliente ou ao serviço:  
   
 ```xml  
 <configuration>  
@@ -79,9 +79,9 @@ Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os ra
 </configuration>  
 ```  
   
- Quando uma mensagem é gravada, o tipo de rastreamento depende se ele está sendo rastreado no cliente ou no servidor. Por exemplo, uma mensagem "Adicionar" enviada a um cliente é rastreada sob a categoria "TransportWrite" no cliente, enquanto a mesma mensagem é rastreada sob a categoria "TransportRead" no serviço.  
+ Quando uma mensagem é gravada, o tipo de rastreamento depende se ela está sendo rastreada no cliente ou no servidor. Por exemplo, uma mensagem "Adicionar" enviada a um cliente é rastreada na categoria "TransportWrite" no cliente, enquanto a mesma mensagem é rastreada na categoria "TransportRead" no serviço.  
   
- Configure o ouvinte de rastreamento adicionando o código a seguir à seção <xref:System.Diagnostics> do arquivo app. config do cliente ou do arquivo Web. config do serviço:  
+ Configure o ouvinte de rastreamento adicionando <xref:System.Diagnostics> o seguinte código à seção do arquivo App.config do cliente ou ao arquivo Web.config do serviço:  
   
 ```xml  
 <system.diagnostics>  
@@ -106,33 +106,33 @@ Este exemplo demonstra como habilitar o rastreamento e o log de mensagens. Os ra
   </system.diagnostics>  
 ```  
   
- As mensagens são registradas em formato XML no diretório de destino especificado no arquivo de configuração.  
+ As mensagens são registradas no formato XML no diretório de destino especificado no arquivo de configuração.  
   
 > [!NOTE]
-> Os arquivos de rastreamento não são criados sem criar inicialmente o diretório de log. Verifique se o diretório C:\logs\ existe ou especifique um diretório de log alternativo na configuração do ouvinte. Consulte as instruções de instalação inicial no final deste documento para obter mais informações.  
+> Os arquivos trace não são criados sem criar inicialmente o diretório de log. Certifique-se de que o diretório C:\logs\ existe ou especifique um diretório de registro alternativo na configuração do ouvinte. Consulte as instruções iniciais de configuração no final deste documento para obter mais informações.  
   
- Para obter mais informações sobre o log de mensagens, consulte o tópico [Configurando o log de mensagens](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) .  
+ Para obter mais informações sobre o registro de mensagens, consulte o tópico [Configurando registro de mensagens.](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Antes de executar o rastreamento e o log de mensagens de exemplo, crie o diretório C:\logs\ para o serviço para o qual gravar os arquivos. svclog Connector. O nome desse diretório é definido no arquivo de configuração como o caminho para os rastreamentos e mensagens a serem registrados e podem ser alterados. Conceda ao serviço de rede do usuário acesso de gravação ao diretório de logs.  
+2. Antes de executar a amostra De rastreamento e registro de mensagens, crie o diretório C:\logs\ para que o serviço escreva os arquivos .svclog para. O nome deste diretório é definido no arquivo de configuração como o caminho para que os traços e mensagens sejam registrados e possam ser alterados. Dê ao usuário Network Service para gravar acesso ao diretório de logs.  
   
-3. Para criar a C#edição C++do, ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para construir a edição C#, C++ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar a amostra em uma configuração de computador único ou cruzado, siga as instruções em [Executar as amostras da Fundação](../../../../docs/framework/wcf/samples/running-the-samples.md)de Comunicação do Windows .  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Confira também
 
 - [Rastreamento](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric que monitora Exemplos](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

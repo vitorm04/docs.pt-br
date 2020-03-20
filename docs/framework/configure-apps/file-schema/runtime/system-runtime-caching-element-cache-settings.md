@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - system.runtime.caching element
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
-ms.openlocfilehash: 70573f92f1799a54116bc91f7a39d157a7ae5b36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df4887c8801dcf8af06b3826673a03cbc7dbc9b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153848"
 ---
-# <a name="systemruntimecaching-element-cache-settings"></a>\<o elemento System. Runtime. Caching > (configurações de cache)
+# <a name="systemruntimecaching-element-cache-settings"></a>\<system.runtime.cacheching> Element (Configurações de cache)
 
-Fornece a configuração para a implementação de <xref:System.Runtime.Caching.ObjectCache> na memória padrão por meio da entrada de `memoryCache` no arquivo de configuração.  
+Fornece configuração para a <xref:System.Runtime.Caching.ObjectCache> implementação `memoryCache` in-memory padrão através da entrada no arquivo de configuração.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. Runtime. caching >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.runtime.cache>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,34 +40,34 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<memoryCache>](memorycache-element-cache-settings.md)|Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>.|  
+|[\<memória>de cache](memorycache-element-cache-settings.md)|Define um elemento usado para configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelo Common Language Runtime e .NET Framework aplicativos.|  
+|[\<>de configuração](../configuration-element.md)|Especifica o elemento raiz em cada arquivo de configuração que é usado pelos aplicativos common language runtime e .NET Framework.|  
   
 ## <a name="remarks"></a>Comentários
 
-As classes nesse namespace fornecem uma maneira de usar recursos de caching como aqueles em ASP.NET, mas sem uma dependência no assembly `System.Web`. Para obter mais informações, consulte [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
+As aulas neste namespace fornecem uma maneira de usar instalações de cache `System.Web` como as de ASP.NET, mas sem dependência da montagem. Para obter mais informações, consulte [Cache em .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
-> A funcionalidade e os tipos de cache de saída no namespace <xref:System.Runtime.Caching> são novos no .NET Framework 4.  
+> A funcionalidade de cache de <xref:System.Runtime.Caching> saída e os tipos no namespace são novos no .NET Framework 4.  
   
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como configurar um cache baseado na classe <xref:System.Runtime.Caching.MemoryCache>. O exemplo mostra como configurar uma instância da entrada de `namedCaches` para o cache de memória. O nome do cache é definido como o nome da entrada de cache padrão, definindo o atributo `name` como "padrão".  
+O exemplo a seguir mostra como configurar um <xref:System.Runtime.Caching.MemoryCache> cache baseado na classe. O exemplo mostra como configurar uma `namedCaches` instância da entrada para cache de memória. O nome do cache é definido como nome `name` de entrada de cache padrão definindo o atributo como "Padrão".  
   
-O atributo `cacheMemoryLimitMegabytes` e o atributo `physicalMemoryPercentage` são definidos como zero. Definir esses atributos como zero significa que a heurística de dimensionamento automático de <xref:System.Runtime.Caching.MemoryCache> é usada por padrão. A implementação de cache deve comparar a carga de memória atual com os limites de memória absolutos e baseados em porcentagem a cada dois minutos.  
+O `cacheMemoryLimitMegabytes` atributo `physicalMemoryPercentage` e o atributo são definidos como zero. Definir esses atributos como <xref:System.Runtime.Caching.MemoryCache> zero significa que a heurística autosizante é usada por padrão. A implementação do cache deve comparar a carga de memória atual com os limites de memória absolutos e baseados em porcentagem a cada dois minutos.  
   
 ```xml  
 <configuration>  
   <system.runtime.caching>  
     <memoryCache>  
       <namedCaches>  
-          <add name="Default"   
-               cacheMemoryLimitMegabytes="0"   
+          <add name="Default"
+               cacheMemoryLimitMegabytes="0"
                physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
@@ -76,6 +76,6 @@ O atributo `cacheMemoryLimitMegabytes` e o atributo `physicalMemoryPercentage` s
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [\<elemento de > memoryCache (configurações de cache)](memorycache-element-cache-settings.md)
+- [\<memóriaElemento> cache (configurações de cache)](memorycache-element-cache-settings.md)

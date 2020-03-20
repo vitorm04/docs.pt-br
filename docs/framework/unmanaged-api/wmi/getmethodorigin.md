@@ -1,6 +1,6 @@
 ---
 title: Função GetMethodOrigin (referência de API não gerenciada)
-description: A função GetMethodOrigin determina a classe na qual um método é declarado.
+description: A função GetMethodOrigin determina a classe em que um método é declarado.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -14,68 +14,68 @@ helpviewer_keywords:
 - GetMethodOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1f669d5721a7bd9434f0ce4b1e2290c0633e1b46
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b4609b6649be875aea7dfcf52ba36b1e98ab7bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102540"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176793"
 ---
 # <a name="getmethodorigin-function"></a>Função GetMethodOrigin
 Determina a classe na qual um método é declarado.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetMethodOrigin (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LPCWSTR             wszMethodName,
    [out] BSTR*              pstrClassName
-); 
+);
 ```  
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 `vFunc`  
-no Este parâmetro não é usado.
+[em] Este parâmetro não é usado.
 
 `ptr`  
-no Um ponteiro para uma instância de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
+[em] Um ponteiro para uma instância [IWbemClassObject.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
 
 `wszMethodName`  
-no O nome do método para o objeto cuja classe proprietária está sendo solicitada. 
+[em] O nome do método para o objeto cuja classe de possuir está sendo solicitado.
 
 `pstrClassName`  
-fora Recebe o nome da classe que possui o método.
+[fora] Recebe o nome da classe que possui o método.
 
 ## <a name="return-value"></a>Valor retornado
 
-Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:
+Os seguintes valores retornados por esta função são definidos no arquivo de cabeçalho *WbemCli.h,* ou você pode defini-los como constantes em seu código:
 
 |Constante  |Valor  |Descrição  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | O método especificado não foi encontrado. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Um ou mais parâmetros não são válidos. |
-|`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem-sucedida.  |
+|`WBEM_S_NO_ERROR` | 0 | A chamada de função foi bem sucedida.  |
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o método [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
+Esta função envolve uma chamada para o método [IWbemClassObject::GetMethodOrigin.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod)
 
-Como uma classe pode herdar métodos de uma ou mais classes base, os desenvolvedores geralmente desejam determinar a classe na qual um determinado método é definido.
+Como uma classe pode herdar métodos de uma ou mais classes básicas, os desenvolvedores muitas vezes querem determinar a classe na qual um determinado método é definido.
 
-O parâmetro `pstrClassName` não deve apontar para um `BSTR` válido antes que a função seja chamada porque este é um parâmetro `out`; Esse ponteiro não é desalocado depois que a função retorna.
+O `pstrClassName` parâmetro não deve apontar `BSTR` para um válido antes `out` que a função seja chamada porque este é um parâmetro; este ponteiro não é desalocado após o retorno da função.
 
 ## <a name="requirements"></a>Requisitos  
 **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils. idl  
+ **Cabeçalho:** WMINet_Utils.idl  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

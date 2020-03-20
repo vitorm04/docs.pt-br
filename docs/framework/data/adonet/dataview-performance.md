@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 51ea09965c423f04c220260248c3501e061820cb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7c81619bf4ac6ed084ea63349345dbf3b7f139b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784148"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150682"
 ---
 # <a name="dataview-performance"></a>Desempenho de um DataView
 Este tópico aborda os benefícios de desempenho de usar <xref:System.Data.DataView.Find%2A> e métodos de <xref:System.Data.DataView.FindRows%2A> de <xref:System.Data.DataView> classe, e para armazenar em cachê <xref:System.Data.DataView> em um aplicativo da Web.  
   
 ## <a name="find-and-findrows"></a>Localize e FindRows  
- <xref:System.Data.DataView> constrói um índice. Um índice contém as chaves criadas de uma ou mais colunas na tabela ou na exibição. Essas chaves são armazenadas em uma estrutura que permite <xref:System.Data.DataView> para encontrar a linha ou linhas associada com os valores da chave rapidamente e com eficiência. As operações que usam o índice, como filtragem e classificação, confiram aumentos de desempenho significativos. O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Criar <xref:System.Data.DataView> e então defina a classificação ou informações de filtragem causam posteriormente o índice a ser compilado pelo menos duas vezes: uma vez que quando <xref:System.Data.DataView> é criado, e novamente quando algumas de tipo ou propriedades de filtragem são alteradas. Para obter mais informações sobre filtragem e classificação <xref:System.Data.DataView>com o, consulte [filtrando com DataView](filtering-with-dataview-linq-to-dataset.md) e [classificando com DataView](sorting-with-dataview-linq-to-dataset.md).  
+ <xref:System.Data.DataView> constrói um índice. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura que permite <xref:System.Data.DataView> para encontrar a linha ou linhas associada com os valores da chave rapidamente e com eficiência. Operações que utilizam o índice, como filtragem e classificação, vêem aumentos significativos de desempenho. O índice de um <xref:System.Data.DataView> é compilado quando <xref:System.Data.DataView> é criado e quando qualquer informação de classificação ou de filtragem é modificada. Criar <xref:System.Data.DataView> e então defina a classificação ou informações de filtragem causam posteriormente o índice a ser compilado pelo menos duas vezes: uma vez que quando <xref:System.Data.DataView> é criado, e novamente quando algumas de tipo ou propriedades de filtragem são alteradas. Para obter mais informações sobre <xref:System.Data.DataView>filtragem e classificação com , consulte [Filtragem com DataView](filtering-with-dataview-linq-to-dataset.md) e [Classificação com DataView](sorting-with-dataview-linq-to-dataset.md).  
   
- Se você quiser retornar os resultados de uma consulta específica nos dados, ao contrário de fornecer uma exibição dinâmica de um subconjunto dos dados, você poderá usar os métodos <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> de <xref:System.Data.DataView>, em vez de definir a propriedade <xref:System.Data.DataView.RowFilter%2A>. A propriedade <xref:System.Data.DataView.RowFilter%2A> é melhor usada em um aplicativo associado a dados onde um controle de associação exibe resultados filtrados. Definir a propriedade <xref:System.Data.DataView.RowFilter%2A> reconstrói o índice para os dados, adicionando a sobrecarga ao seu aplicativo e diminuindo o desempenho. Os métodos <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> usam o índice atual sem exigir que o índice seja reconstruído. Se você chamar <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> apenas uma vez, deverá usar o <xref:System.Data.DataView> existente. Se você chamar <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> várias vezes, deverá criar um novo <xref:System.Data.DataView> para recriar o índice na coluna em que você deseja pesquisar e, em seguida, chamar os métodos <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A>. Para obter mais informações sobre <xref:System.Data.DataView.Find%2A> os <xref:System.Data.DataView.FindRows%2A> métodos e, consulte [Localizando linhas](./dataset-datatable-dataview/finding-rows.md).  
+ Se você quiser retornar os resultados de uma consulta específica nos dados, ao contrário de fornecer uma exibição dinâmica de um subconjunto dos dados, você poderá usar os métodos <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> de <xref:System.Data.DataView>, em vez de definir a propriedade <xref:System.Data.DataView.RowFilter%2A>. A propriedade <xref:System.Data.DataView.RowFilter%2A> é melhor usada em um aplicativo associado a dados onde um controle de associação exibe resultados filtrados. Definir a propriedade <xref:System.Data.DataView.RowFilter%2A> reconstrói o índice para os dados, adicionando a sobrecarga ao seu aplicativo e diminuindo o desempenho. Os métodos <xref:System.Data.DataView.Find%2A> e <xref:System.Data.DataView.FindRows%2A> usam o índice atual sem exigir que o índice seja reconstruído. Se você chamar <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> apenas uma vez, deverá usar o <xref:System.Data.DataView> existente. Se você chamar <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A> várias vezes, deverá criar um novo <xref:System.Data.DataView> para recriar o índice na coluna em que você deseja pesquisar e, em seguida, chamar os métodos <xref:System.Data.DataView.Find%2A> ou <xref:System.Data.DataView.FindRows%2A>. Para obter mais <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView.FindRows%2A> informações sobre os métodos e métodos, consulte [Finding Rows](./dataset-datatable-dataview/finding-rows.md).  
   
  O exemplo a seguir usa o método de <xref:System.Data.DataView.Find%2A> para localizar um contato com o sobrenome “Zhu”.  
   
@@ -65,7 +65,7 @@ GridView1.DataBind()
 ```csharp  
 if (Cache["ordersView"] == null)  
 {  
-   // Fill the DataSet.                  
+   // Fill the DataSet.
    DataSet dataSet = FillDataSet();  
   
    DataTable orders = dataSet.Tables["SalesOrderHeader"];  
@@ -86,6 +86,6 @@ GridView1.DataSource = ordersView;
 GridView1.DataBind();  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Associação de dados e LINQ to DataSet](data-binding-and-linq-to-dataset.md)

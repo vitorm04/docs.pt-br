@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 83e2d1231b85086c2e65813cf427df3de36405b7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785307"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179152"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
 Lê dados do endereço de memória virtual especificado no buffer especificado.  
@@ -30,35 +30,35 @@ Lê dados do endereço de memória virtual especificado no buffer especificado.
 ```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [out, size_is(bytesRequested), length_is(*bytesRead)]   
+    [out, size_is(bytesRequested), length_is(*bytesRead)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesRead  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `address`  
- no Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
+ [em] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
   
  `buffer`  
- fora Um ponteiro para um buffer que recebe os dados.  
+ [fora] Um ponteiro para um buffer que recebe os dados.  
   
  `bytesRequested`  
- no O comprimento do buffer.  
+ [em] O comprimento do tampão.  
   
  `bytesRead`  
- fora Um ponteiro para o número de bytes retornados.  
+ [fora] Um ponteiro para o número de bytes devolvido.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData. idl, ClrData. h  
+ **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRDataTarget](iclrdatatarget-interface.md)

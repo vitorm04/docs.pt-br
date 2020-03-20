@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f876187624d066b9e672fbf44a984d6d02a54c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432688"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175870"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>Método IMetaDataEmit::ApplyEditAndContinue
-Atualiza o escopo do assembly atual com as alterações feitas nos metadados especificados.  
+Atualiza o escopo de montagem atual com as alterações feitas nos metadados especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT ApplyEditAndContinue (   
+HRESULT ApplyEditAndContinue (
     [in]  IUnknown    *pImport  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pImport`  
- \[em\] ponteiro para um objeto [IUnknown](/cpp/atl/iunknown) que representa os metadados delta do arquivo executável portátil (PE).
+ \[em\] Pointer para um objeto [IUnknown](/cpp/atl/iunknown) que representa os metadados delta do arquivo executável portátil (PE).
   
- Os metadados delta são o bloco de metadados que inclui as alterações feitas na cópia dos metadados reais do módulo.  
+ Os metadados delta são o bloco de metadados que inclui as alterações que foram feitas na cópia dos metadados reais do módulo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

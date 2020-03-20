@@ -3,18 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152498"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
-A seção de configuração para autenticação usando o protocolo WS-Federation.  
+Seção de configuração para autenticação usando o protocolo WS-Federation.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<System. identityModel. Services >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.identityModel.services>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,21 +35,21 @@ A seção de configuração para autenticação usando o protocolo WS-Federation
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|Contém as configurações que definem <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> os módulos http (WSFAM <xref:System.IdentityModel.Services.SessionAuthenticationModule> ) e (Sam).|  
+|[\<federaçãoconfiguração>](federationconfiguration.md)|Contém as configurações que <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> configuram os módulos <xref:System.IdentityModel.Services.SessionAuthenticationModule> HTTP (WSFAM) e (SAM).|  
   
 ### <a name="parent-elements"></a>Elementos pai  
  Nenhum  
   
 ## <a name="remarks"></a>Comentários  
- Adicione uma `<system.identityModel.services>` seção ao arquivo de configuração do aplicativo para fornecer as configurações para o Sam e o WSFAM.  
+ Adicione `<system.identityModel.services>` uma seção ao arquivo de configuração do aplicativo para fornecer configurações para o SAM e o WSFAM.  
   
 > [!IMPORTANT]
-> Ao usar o <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> ou a <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe para fornecer controle de acesso baseado em declarações em seu código, o Gerenciador de autorização<xref:System.Security.Claims.ClaimsAuthorizationManager>de declarações () e a política que é usada para tomar decisões de `<identityConfiguration>` autorização são configurados por meio de um elemento que é implicitamente ou explicitamente referenciado de `<federationConfiguration>` um elemento nesta seção. Para obter mais informações, consulte os **comentários** no [ \<elemento federationConfiguration >](federationconfiguration.md) .  
+> Ao usar <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> a <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> classe ou a classe para fornecer controle de<xref:System.Security.Claims.ClaimsAuthorizationManager>acesso baseado em sinistros em seu código, `<identityConfiguration>` o gerenciador de autorização de sinistros ( ) e a política que é usada para tomar decisões de autorização são configurados através de um elemento que é implicitamente ou explicitamente referenciado a partir de um `<federationConfiguration>` elemento nesta seção. Para obter mais informações, consulte as **Observações** o elemento [ \<>de configuração da federação.](federationconfiguration.md)  
   
- A `<system.identityModel.services>` seção é representada <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> pela classe. A coleção de elementos `<federationConfiguration>` filho configurados na seção é representada <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> pela classe.  
+ A `<system.identityModel.services>` seção é <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> representada pela classe. A coleção `<federationConfiguration>` de elementos infantis configurados <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> na seção é representada pela classe.  
   
 ## <a name="example"></a>Exemplo  
- O XML a seguir mostra como adicionar uma `<system.identityModel.services>` seção a um arquivo de configuração. Você deve primeiro adicionar declarações de seção para a `<system.identityModel.services>` seção e as `<system.identityModel>` seções. (Ao adicionar uma `<system.identityModel.services>` seção, você também deve adicionar uma declaração para a `<system.identityModel>` seção para garantir que uma seção padrão `<identityConfiguration>` possa ser criada pelo tempo de execução, se necessário.) Depois que as declarações de seção tiverem sido adicionadas, você poderá definir as configurações `<system.identityModel.services>` de autenticação federada no elemento.  
+ O XML a seguir `<system.identityModel.services>` mostra como adicionar uma seção a um arquivo de configuração. Você deve primeiro adicionar declarações `<system.identityModel.services>` de `<system.identityModel>` seção para a seção e as seções. (Quando você `<system.identityModel.services>` adiciona uma seção, você `<system.identityModel>` também deve adicionar `<identityConfiguration>` uma declaração para a seção para garantir que uma seção padrão possa ser criada pelo tempo de execução, se necessário.) Depois que as declarações de seção foram adicionadas, você `<system.identityModel.services>` pode configurar configurações de autenticação federada o elemento.  
   
 ```xml  
 <configuration>  
@@ -62,12 +62,12 @@ A seção de configuração para autenticação usando o protocolo WS-Federation
   
   <system.identityModel.services>  
     <federationConfiguration>  
-      <wsFederation passiveRedirectEnabled="true"   
-        issuer="http://localhost:15839/wsFederationSTS/Issue"   
-        realm="http://localhost:50969/" reply="http://localhost:50969/"   
-        requireHttps="false"   
-        signOutReply="http://localhost:50969/SignedOutPage.html"   
-        signOutQueryString="Param1=value2&Param2=value2"   
+      <wsFederation passiveRedirectEnabled="true"
+        issuer="http://localhost:15839/wsFederationSTS/Issue"
+        realm="http://localhost:50969/" reply="http://localhost:50969/"
+        requireHttps="false"
+        signOutReply="http://localhost:50969/SignedOutPage.html"
+        signOutQueryString="Param1=value2&Param2=value2"
         persistentCookiesOnPassiveRedirects="true" />  
       <cookieHandler requireSsl="false" />  
     </federationConfiguration>  

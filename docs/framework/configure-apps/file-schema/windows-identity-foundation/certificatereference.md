@@ -3,21 +3,21 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: 782ca3344774b8412a18e3cf13bff5f969751ea3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47d432a84d070476ddffd9b98a4ba46d8163bdc3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252152"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152808"
 ---
-# <a name="certificatereference"></a>\<certificateReference>
-Especifica as configurações que são usadas para localizar e validar um certificado X. 509 em um repositório de certificados.  
+# <a name="certificatereference"></a>\<certificado> de referência
+Especifica as configurações usadas para encontrar e validar um certificado X.509 em uma loja de certificados.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel. Services >** ](system-identitymodel-services.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> federationConfiguration**](federationconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de certificados**](servicecertificate.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> certificateReference**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<federaçãoconfiguração>**](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de>de certificados de serviço**](servicecertificate.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificado>de referência**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -25,7 +25,7 @@ Especifica as configurações que são usadas para localizar e validar um certif
 <system.identityModel.services>  
   <federationConfiguration>  
     <serviceCertificate>  
-      <certificateReference   
+      <certificateReference
         storeName="AddressBook||AuthRoot||CertificateAuthority||Disallowed||My||Root||TrustedPeople||TrustedPublisher"  
         storeLocation="CurrentUser||LocalMachine"  
         x509FindType="FindByThumbprint||FindBySubjectName||FindBySubjectDistinguishedName||FindByIssuerName||FindByIssuerDistinguishedName||FindBySerialNumber||FindByTimeValid||FindByTimeNotYetValid||FindByTimeExpired||FindByTemplateName||FindByApplicationPolicy||FindByCertificatePolicy||FindByExtension||FindByKeyUsage||FindBySubjectKeyIdentifier"  
@@ -44,11 +44,11 @@ Especifica as configurações que são usadas para localizar e validar um certif
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|storeName|O nome do repositório de certificados X.509. O padrão é "My". Opcional.|  
-|storeLocation|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica o local do repositório de certificados X. 509. O valor padrão é "LocalMachine". Opcional.|  
-|x509FindType|Um <xref:System.Security.Cryptography.X509Certificates.X509FindType> valor que especifica o tipo de pesquisa que deve ser executada. O padrão é "FindBySubjectDistinguishedName". Opcional.|  
-|findValue|O valor a ser pesquisado no repositório de certificados X.509. Opcional.|  
-|isChainIncluded|Especifica se a validação deve ser executada usando a cadeia de certificados. O padrão é "true"; a validação é executada usando a cadeia de certificados. Opcional.|  
+|storeName|O nome do repositório de certificados X.509. O padrão é "Meu". Opcional.|  
+|storeLocation|Um <xref:System.Security.Cryptography.X509Certificates.StoreLocation> valor que especifica a localização da loja de certificados X.509. O valor padrão é "LocalMachine". Opcional.|  
+|X509findtype|Um <xref:System.Security.Cryptography.X509Certificates.X509FindType> valor que especifica o tipo de pesquisa a ser executado. O padrão é "FindBySubjectDistinguishedName". Opcional.|  
+|Findvalue|O valor a ser pesquisado no repositório de certificados X.509. Opcional.|  
+|isChainIncluded|Especifica se a validação deve ser realizada usando a cadeia de certificados. O padrão é "verdadeiro"; a validação é realizada usando a cadeia de certificados. Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -57,7 +57,7 @@ Especifica as configurações que são usadas para localizar e validar um certif
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](servicecertificate.md)|Configura o certificado que é usado para criptografar e descriptografar tokens.|  
+|[\<>de>de certificados de serviço](servicecertificate.md)|Configura o certificado usado para criptografar e descriptografar tokens.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<certificateReference>` elemento especifica as configurações que são usadas para localizar e validar um certificado X. 509 em um repositório de certificados. Quando é especificado como o elemento filho do `<serviceCertificate>` elemento, ele especifica as configurações de localização e verificação do certificado X. 509 que é usado para criptografar e descriptografar tokens. O `<certificateReference>` elemento é representado <xref:System.ServiceModel.Configuration.CertificateReferenceElement> pela classe.
+ O `<certificateReference>` elemento especifica as configurações usadas para encontrar e validar um certificado X.509 em uma loja de certificados. Quando ele é especificado como `<serviceCertificate>` o elemento filho do elemento, ele especifica as configurações de localização e verificação do certificado X.509 que é usado para criptografar e descriptografar tokens. O `<certificateReference>` elemento é <xref:System.ServiceModel.Configuration.CertificateReferenceElement> representado pela classe.

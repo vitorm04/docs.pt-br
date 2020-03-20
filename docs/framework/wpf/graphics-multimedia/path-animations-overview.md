@@ -8,46 +8,46 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07628d26c8222c7c01f58826a36a15e13dc31ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008209"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181873"
 ---
 # <a name="path-animations-overview"></a>Visão geral de animações do caminho
 <a name="introduction"></a> Este tópico apresenta animações de caminho, que permitem que você use um caminho geométrico para gerar valores de saída. Animações de caminho são úteis para mover e girar objetos junto em caminhos complexos.  
   
-<a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
- Para entender esse tópico, você deve estar familiarizado com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] recursos de animações. Para obter uma introdução a recursos de animação, consulte o [visão geral da animação](animation-overview.md).  
+<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Pré-requisitos  
+ Para entender este tópico, você [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve estar familiarizado com os recursos de animações. Para obter uma introdução aos recursos de animação, consulte a [visão geral da animação](animation-overview.md).  
   
- Porque você usa um <xref:System.Windows.Media.PathGeometry> objeto para definir uma animação de caminho, você também deve estar familiarizado com <xref:System.Windows.Media.PathGeometry> e os diferentes tipos de <xref:System.Windows.Media.PathSegment> objetos. Para obter mais informações, consulte o [visão geral de geometria](geometry-overview.md).  
+ Como você <xref:System.Windows.Media.PathGeometry> usa um objeto para definir uma animação <xref:System.Windows.Media.PathGeometry> de caminho, <xref:System.Windows.Media.PathSegment> você também deve estar familiarizado com e os diferentes tipos de objetos. Para obter mais informações, consulte a [visão geral da geometria](geometry-overview.md).  
   
-<a name="what_is_a_path_animation"></a>   
+<a name="what_is_a_path_animation"></a>
 ## <a name="what-is-a-path-animation"></a>O que é uma animação de caminho?  
- Uma animação de caminho é um tipo de <xref:System.Windows.Media.Animation.AnimationTimeline> que usa um <xref:System.Windows.Media.PathGeometry> como sua entrada. Em vez de definir um From, a propriedade, ou By (como faria para um de/para/por animação) ou usando quadros-chave (que você usa para uma animação de quadro-chave), você define um caminho geométrico e usá-lo para definir o `PathGeometry` propriedade de animação de caminho. Conforme a animação de caminho progride, ela lê x, y e informações de ângulo do caminho e usa essas informações para gerar a saída.  
+ Uma animação de caminho <xref:System.Windows.Media.Animation.AnimationTimeline> é <xref:System.Windows.Media.PathGeometry> um tipo de que usa um como sua entrada. Em vez de definir uma propriedade De, Para ou Por (como você faz para uma animação De/Para/Por) ou usar quadros-chave (como você usa para uma animação de quadro-chave), você define um caminho geométrico e usa-o para definir a `PathGeometry` propriedade da animação de caminho. Conforme a animação de caminho progride, ela lê x, y e informações de ângulo do caminho e usa essas informações para gerar a saída.  
   
- Animações de caminho são muito úteis para animar um objeto ao longo de um caminho complexo. É uma maneira de mover um objeto ao longo de um caminho é usar um <xref:System.Windows.Media.MatrixTransform> e um <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> para transformar um objeto ao longo de um caminho complexo. O exemplo a seguir demonstra essa técnica, usando o <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> objeto para animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade de um <xref:System.Windows.Media.MatrixTransform>. O <xref:System.Windows.Media.MatrixTransform> é aplicado a um botão e faz com que ele se mova ao longo de um caminho curvo. Porque o <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> estiver definida como `true`, o retângulo gira junto da tangente do caminho.  
+ Animações de caminho são muito úteis para animar um objeto ao longo de um caminho complexo. Uma maneira de mover um objeto ao <xref:System.Windows.Media.MatrixTransform> longo <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> de um caminho é usar um e um para transformar um objeto ao longo de um caminho complexo. O exemplo a seguir demonstra <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> essa técnica <xref:System.Windows.Media.MatrixTransform.Matrix%2A> usando o <xref:System.Windows.Media.MatrixTransform>objeto para animar a propriedade de um . O <xref:System.Windows.Media.MatrixTransform> é aplicado a um botão e faz com que ele se mova ao longo de um caminho curvo. Como <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> a propriedade `true`está definida para , o retângulo gira ao longo da tangente do caminho.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- Para obter mais informações sobre a sintaxe de caminho que é usada na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo, consulte a [sintaxe de marcação de caminho](path-markup-syntax.md) visão geral. Para o exemplo completo, consulte [exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Para obter mais informações sobre a sintaxe de caminho usada no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo, consulte a visão geral do Path [Markup Syntax.](path-markup-syntax.md) Para obter a amostra completa, consulte [Path Animation Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations).  
   
- Você pode aplicar uma animação de caminho a uma propriedade usando um <xref:System.Windows.Media.Animation.Storyboard> na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e de código ou usando o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método no código. Você também pode usar uma animação de caminho para criar um <xref:System.Windows.Media.Animation.AnimationClock> e aplicá-lo a uma ou mais propriedades. Para obter mais informações sobre os diferentes métodos para aplicação de animações, consulte [visão geral das técnicas de animação de propriedade](property-animation-techniques-overview.md).  
+ Você pode aplicar uma animação de <xref:System.Windows.Media.Animation.Storyboard> caminho [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] a uma propriedade <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> usando um in e código, ou usando o método em código. Você também pode usar uma <xref:System.Windows.Media.Animation.AnimationClock> animação de caminho para criar um e aplicá-lo a uma ou mais propriedades. Para obter mais informações sobre os diferentes métodos para aplicar animações, consulte [Visão geral das técnicas de animação de propriedade](property-animation-techniques-overview.md).  
   
-<a name="animation_types"></a>   
+<a name="animation_types"></a>
 ## <a name="path-animation-types"></a>Tipos de animação de caminho  
- Como as animações geram valores de propriedade, existem diferentes tipos de animação para diferentes tipos de propriedades. Para animar uma propriedade que utiliza um <xref:System.Double> (como o <xref:System.Windows.Media.TranslateTransform.X%2A> propriedade de uma <xref:System.Windows.Media.TranslateTransform>), use uma animação que produz <xref:System.Double> valores. Para animar uma propriedade que utiliza um <xref:System.Windows.Point>, use uma animação que produz <xref:System.Windows.Point> valores e assim por diante.  
+ Como as animações geram valores de propriedade, existem diferentes tipos de animação para diferentes tipos de propriedades. Para animar uma propriedade <xref:System.Double> que leva <xref:System.Windows.Media.TranslateTransform.X%2A> um (como a propriedade de <xref:System.Windows.Media.TranslateTransform> <xref:System.Double> um), você usa uma animação que produz valores. Para animar uma propriedade <xref:System.Windows.Point>que leva um , <xref:System.Windows.Point> você usa uma animação que produz valores, e assim por diante.  
   
- Classes de animação de caminho pertencem ao <xref:System.Windows.Media.Animation> namespace e use a seguinte convenção de nomenclatura:  
+ As classes de <xref:System.Windows.Media.Animation> animação path pertencem ao namespace e usam a seguinte convenção de nomeação:  
   
- *\<Type>* `AnimationUsingPath`  
+ * \<Digite>*`AnimationUsingPath`  
   
- Em que *\<Type>* é o tipo de valor animado pela classe.  
+ Onde * \<o tipo>* é o tipo de valor que a classe anima.  
   
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece as classes de animação de caminho a seguir.  
   
@@ -57,17 +57,17 @@ ms.locfileid: "62008209"
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animar um objeto ao longo de um caminho (animação de matriz)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animar um objeto ao longo de um caminho (animação de ponto)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
- Um <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> gera <xref:System.Windows.Media.Matrix> os valores do seu <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. Quando usado com um <xref:System.Windows.Media.MatrixTransform>, um <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> pode mover um objeto ao longo de um caminho. Se você definir a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> propriedade do <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> para `true`, ele também gira o objeto ao longo da curvas do caminho.  
+ A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> <xref:System.Windows.Media.Matrix> gera valores a partir de sua <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. Quando usado <xref:System.Windows.Media.MatrixTransform>com <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> um , pode mover um objeto ao longo de um caminho. Se você <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> definir a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> `true`propriedade do to, ele também gira o objeto ao longo das curvas do caminho.  
   
- Um <xref:System.Windows.Media.Animation.PointAnimationUsingPath> gera <xref:System.Windows.Point> valores a partir de coordenadas x e y de seu <xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>. Usando um <xref:System.Windows.Media.Animation.PointAnimationUsingPath> animar uma propriedade que utiliza <xref:System.Windows.Point> valores, você pode mover um objeto ao longo de um caminho. Um <xref:System.Windows.Media.Animation.PointAnimationUsingPath> não pode girar objetos.  
+ A <xref:System.Windows.Media.Animation.PointAnimationUsingPath> <xref:System.Windows.Point> gera valores a partir das coordenadas x e y de sua <xref:System.Windows.Media.Animation.PointAnimationUsingPath.PathGeometry%2A>. Usando um <xref:System.Windows.Media.Animation.PointAnimationUsingPath> para animar uma <xref:System.Windows.Point> propriedade que leva valores, você pode mover um objeto ao longo de um caminho. Um <xref:System.Windows.Media.Animation.PointAnimationUsingPath> não pode girar objetos.  
   
- Um <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> gera <xref:System.Double> os valores do seu <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>. Definindo o <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A> propriedade, você pode especificar se o <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> usa a coordenada x, a coordenada y ou o ângulo do caminho como sua saída. Você pode usar um <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> para girar um objeto ou movê-lo ao longo do eixo x ou y.  
+ A <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> <xref:System.Double> gera valores a partir de sua <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.PathGeometry%2A>. Ao definir <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath.Source%2A> a propriedade, você <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> pode especificar se o uso da coordenada x, coordenada y ou ângulo do caminho como sua saída. Você pode <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> usar um para girar um objeto ou movê-lo ao longo do eixo x ou eixo y.  
   
-<a name="pathanimationinput"></a>   
+<a name="pathanimationinput"></a>
 ## <a name="path-animation-input"></a>Entrada de animação de caminho  
- Cada classe de animação de caminho fornece uma <xref:System.Windows.Media.PathGeometry> propriedade para especificar sua entrada. A animação de caminho usa o <xref:System.Windows.Media.PathGeometry> para gerar seus valores de saída. O <xref:System.Windows.Media.PathGeometry> classe permite que você descreva várias figuras complexas que são compostas de linhas, arcos e curvas.  
+ Cada classe de <xref:System.Windows.Media.PathGeometry> animação de caminho fornece uma propriedade para especificar sua entrada. A animação de <xref:System.Windows.Media.PathGeometry> caminho usa o para gerar seus valores de saída. A <xref:System.Windows.Media.PathGeometry> classe permite descrever múltiplas figuras complexas que são compostas de arcos, curvas e linhas.  
   
- No coração de um <xref:System.Windows.Media.PathGeometry> é uma coleção de <xref:System.Windows.Media.PathFigure> objetos; esses objetos são assim chamados porque cada figura descreve uma forma distinta no <xref:System.Windows.Media.PathGeometry>. Cada <xref:System.Windows.Media.PathFigure> consiste em um ou mais <xref:System.Windows.Media.PathSegment> objetos, cada um deles descreve um segmento da figura.  
+ No coração de <xref:System.Windows.Media.PathGeometry> um está <xref:System.Windows.Media.PathFigure> uma coleção de objetos; esses objetos são assim chamados porque cada figura descreve <xref:System.Windows.Media.PathGeometry>uma forma discreta no . Cada <xref:System.Windows.Media.PathFigure> um consiste de <xref:System.Windows.Media.PathSegment> um ou mais objetos, cada um dos quais descreve um segmento da figura.  
   
  Há muitos tipos de segmentos.  
   
@@ -81,17 +81,17 @@ ms.locfileid: "62008209"
 |<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Cria uma série de curvas de Bézier quadráticas.|  
 |<xref:System.Windows.Media.QuadraticBezierSegment>|Cria uma curva de Bezier quadrática.|  
   
- Os segmentos em um <xref:System.Windows.Media.PathFigure> são combinados em uma única forma geométrica, que usa o ponto de extremidade de um segmento como o ponto de início do próximo segmento. O <xref:System.Windows.Media.PathFigure.StartPoint%2A> propriedade de um <xref:System.Windows.Media.PathFigure> Especifica o ponto do qual o primeiro segmento é desenhado. Cada segmento subsequente começa no ponto de extremidade do segmento anterior. Por exemplo, uma linha vertical da `10,50` para `10,150` pode ser definida ao configurar o <xref:System.Windows.Media.PathFigure.StartPoint%2A> propriedade a ser `10,50` e a criação de um <xref:System.Windows.Media.LineSegment> com um <xref:System.Windows.Media.LineSegment.Point%2A> configuração da propriedade de `10,150`.  
+ Os segmentos <xref:System.Windows.Media.PathFigure> em a são combinados em uma única forma geométrica, que usa o ponto final de um segmento como ponto de partida do próximo segmento. A <xref:System.Windows.Media.PathFigure.StartPoint%2A> propriedade <xref:System.Windows.Media.PathFigure> de um especifica o ponto a partir do qual o primeiro segmento é desenhado. Cada segmento subsequente começa no ponto de extremidade do segmento anterior. Por exemplo, uma `10,50` linha `10,150` vertical de para <xref:System.Windows.Media.PathFigure.StartPoint%2A> dado pode ser definida definindo a propriedade para `10,50` e criando <xref:System.Windows.Media.LineSegment> uma com uma <xref:System.Windows.Media.LineSegment.Point%2A> configuração de propriedade de `10,150`.  
   
- Para obter mais informações sobre <xref:System.Windows.Media.PathGeometry> objetos, consulte a [visão geral de geometria](geometry-overview.md).  
+ Para obter <xref:System.Windows.Media.PathGeometry> mais informações sobre objetos, consulte a [visão geral da geometria](geometry-overview.md).  
   
- Na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você também pode usar uma sintaxe abreviada especial para definir o <xref:System.Windows.Media.PathGeometry.Figures%2A> propriedade de um <xref:System.Windows.Media.PathGeometry>. Para obter mais informações, consulte [sintaxe de marcação de caminho](path-markup-syntax.md) visão geral.  
+ Em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], você também pode usar uma sintaxe <xref:System.Windows.Media.PathGeometry.Figures%2A> abreviada <xref:System.Windows.Media.PathGeometry>especial para definir a propriedade de um . Para obter mais informações, consulte visão geral [da Path Markup Syntax.](path-markup-syntax.md)  
   
- Para obter mais informações sobre a sintaxe de caminho que é usada na [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo, consulte a [sintaxe de marcação de caminho](path-markup-syntax.md) visão geral.  
+ Para obter mais informações sobre a sintaxe de caminho usada no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] exemplo, consulte a visão geral do Path [Markup Syntax.](path-markup-syntax.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Exemplo de animação de caminho](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)
 - [Sintaxe de marcação de caminho](path-markup-syntax.md)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)
 - [Visão geral da animação](animation-overview.md)

@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438128"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178325"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>Método ISymUnmanagedWriter3::OpenMethod2
-Abre um método e fornece seu deslocamento de seção real na imagem.  
+Abre um método e fornece sua real compensação de seção na imagem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT OpenMethod2(   
+HRESULT OpenMethod2(
     [in] mdMethodDef method,  
     [in] ULONG32 isect,  
     [in] ULONG32 offset);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `method`  
- no O token de metadados para o método a ser aberto.  
+ [em] O token de metadados para o método a ser aberto.  
   
  `isect`  
- no O deslocamento da seção na imagem.  
+ [em] A seção deslocada na imagem.  
   
  `offset`  
- no O deslocamento na imagem.  
+ [em] O deslocamento na imagem.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método for bem sucedido; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- **Cabeçalho:** CorSym. idl, CorSym. h  
+## <a name="requirements"></a>Requisitos  
+ **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedWriter3](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
 - [Método OpenMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

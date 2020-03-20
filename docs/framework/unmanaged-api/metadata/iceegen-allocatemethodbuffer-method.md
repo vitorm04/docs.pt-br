@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 34636f1ca8e42c452aa41f6145d439a26f01b0a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436398"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177923"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>Método ICeeGen::AllocateMethodBuffer
-Cria um buffer do tamanho especificado para um método e Obtém o endereço virtual relativo do método.  
+Cria um buffer do tamanho especificado para um método e obtém o endereço virtual relativo do método.  
   
- Este método é obsoleto e não deve ser usado.  
+ Este método é obsoleto e não deve ser utilizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT AllocateMethodBuffer (   
-    [in]  ULONG    cchBuffer,   
+HRESULT AllocateMethodBuffer (
+    [in]  ULONG    cchBuffer,
     [out] UCHAR    **lpBuffer,  
     [out] ULONG    *RVA  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cchBuffer`  
- no O comprimento do buffer a ser criado.  
+ [em] O comprimento do buffer para criar.  
   
  `lpBuffer`  
- fora O buffer retornado.  
+ [fora] O tampão devolvido.  
   
  `RVA`  
- fora O endereço virtual relativo do método.  
+ [fora] O endereço virtual relativo do método.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -3,21 +3,21 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: 30f81dd5948a7d366c1116cffd347c85a396f5ae
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3f3d79d3567c1714a79423b7767ce3f454b9d52d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152782"
 ---
-# <a name="certificatevalidator"></a>\<certificateValidator>
-Especifica um tipo personalizado para validação de certificado. Esse tipo será usado somente se o `certificateValidationMode` atributo [ \<](certificatevalidation.md) do elemento de > CertificateValidation for definido como "Custom".  
+# <a name="certificatevalidator"></a>\<> do validador de certificados
+Especifica um tipo personalizado para validação de certificado. Esse tipo só é `certificateValidationMode` usado se o atributo do [ \<elemento validar>certificado](certificatevalidation.md) estiver definido como "Personalizado".  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. identityModel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> identityConfiguration**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> certificateValidation**](certificatevalidation.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> certificateValidator**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de configuração de identidade**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de validação de certificados**](certificatevalidation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>do validador de certificados**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Especifica um tipo personalizado para validação de certificado. Esse tipo ser�
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|tipo|Especifica um tipo personalizado que deriva da <xref:System.IdentityModel.Selectors.X509CertificateValidator> classe. Defina o `certificateValidationMode` atributo [ \<](certificatevalidation.md) do elemento de > CertificateValidation como "Custom" para usar esse tipo. Para obter mais informações sobre como especificar o `type` atributo, consulte [referências de tipo personalizado](../windows-workflow-foundation/index.md). Opcional.|  
+|type|Especifica um tipo personalizado que <xref:System.IdentityModel.Selectors.X509CertificateValidator> deriva da classe. Defina `certificateValidationMode` o atributo do [ \<certificadoValidação>](certificatevalidation.md) elemento como "Personalizado" para usar esse tipo. Para obter mais informações `type` sobre como especificar o atributo, consulte [Referências de tipo personalizadas](../windows-workflow-foundation/index.md). Opcional.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,7 +48,7 @@ Especifica um tipo personalizado para validação de certificado. Esse tipo ser�
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<certificateValidation>](certificatevalidation.md)|Controla as configurações que os manipuladores de token usam para validar certificados.|  
+|[\<>de validação de certificados](certificatevalidation.md)|Controla as configurações que os manipuladores de tokens usam para validar certificados.|  
   
 ## <a name="example"></a>Exemplo  
   
@@ -56,6 +56,6 @@ Especifica um tipo personalizado para validação de certificado. Esse tipo ser�
 <certificateValidation certificateValidationMode="Custom"  
                        revocationMode="Online"  
                        trustedStoreLocation="LocalMachine">  
-    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />    
-</certificateValidation>        
+    <certificateValidator type="MyNamespace.CustomValidator, MyAssembly" />
+</certificateValidation>
 ```

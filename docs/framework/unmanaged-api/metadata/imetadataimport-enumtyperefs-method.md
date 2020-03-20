@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449987"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175428"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Método IMetaDataImport::EnumTypeRefs
-Enumera tokens TypeRef definidos no escopo de metadados atual.  
+Enumera tokens TypeRef definidos no escopo de metadados atuais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `phEnum`  
- [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
+ [dentro, fora] Um ponteiro para o enumerador. Isto deve ser NULO para a primeira chamada deste método.  
   
  `rTypeRefs`  
- fora A matriz usada para armazenar os tokens TypeRef.  
+ [fora] A matriz usada para armazenar os tokens TypeRef.  
   
  `cMax`  
- no O tamanho máximo da matriz de `rTypeRefs`.  
+ [em] O tamanho máximo `rTypeRefs` da matriz.  
   
  `pcTypeRefs`  
- fora Um ponteiro para o número de tokens TypeRef retornado em `rTypeRefs`.  
+ [fora] Um ponteiro para o número de tokens TypeRef retornado em `rTypeRefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` retornado com êxito.|  
+|`S_OK`|`EnumTypeRefs`retornou com sucesso.|  
 |`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeRefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -62,13 +62,13 @@ HRESULT EnumTypeRefs (
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

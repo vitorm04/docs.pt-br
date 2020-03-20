@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450119"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177934"
 ---
 # <a name="corregflags-enumeration"></a>Enumeração CorRegFlags
-Fornece valores de sinalizador usados para registro ao instalar um módulo ou uma imagem composta.  
+Fornece valores de bandeira usados para registro ao instalar um módulo ou imagem composta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     regNoCopy  = 0x00000001,  
     regConfig  = 0x00000002,  
@@ -37,21 +37,21 @@ typedef enum
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`regNoCopy`|Especifica que os arquivos não devem ser copiados para o destino.|  
 |`regConfig`|Especifica que o módulo ou composto é uma configuração.|  
 |`regHasRefs`|Especifica que o módulo ou composto tem referências de classe.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

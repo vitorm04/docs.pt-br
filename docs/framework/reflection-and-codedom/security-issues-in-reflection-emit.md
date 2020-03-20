@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130038"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180471"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -32,9 +32,9 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 > [!NOTE]
 > As permissões que são necessárias para refletir o código e emitir o código foram alteradas com versões posteriores do .NET Framework. Consulte [Informações de versão](#Version_Information) posteriormente neste tópico.  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Assemblies Dinâmicos  
- Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Consulte [alterações de segurança](../security/security-changes.md).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
+ Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Veja [alterações de segurança](../security/security-changes.md).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
   
 > [!NOTE]
 > Os atributos aplicados ao assembly dinâmico após ele ser criado, usando o método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>, não entram em vigor até que o assembly tenha sido salvo no disco e carregado na memória novamente.  
@@ -57,7 +57,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 - Os símbolos de depuração não são gerados. (Os conjuntos de permissões `Internet` e `LocalIntranet` não incluem as permissões necessárias.)  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>Métodos Dinâmicos Hospedados Anonimamente  
  Os métodos dinâmicos hospedados anonimamente são criados usando os dois construtores <xref:System.Reflection.Emit.DynamicMethod> que não especificam um módulo ou tipo associado, <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> e <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>. Esses construtores colocam os métodos dinâmicos em um assembly transparente de segurança totalmente confiável fornecido pelo sistema. Não é necessária nenhuma permissão para usar esses construtores ou para emitir o código para os métodos dinâmicos.  
   
@@ -90,7 +90,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 > [!NOTE]
 > Os métodos dinâmicos não têm suporte para símbolos de depuração.  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Métodos Dinâmicos Associados a Assemblies Existentes  
  Para associar um método dinâmico a um tipo ou um módulo em um assembly existente, use qualquer um dos construtores <xref:System.Reflection.Emit.DynamicMethod> que especificam o módulo ou tipo associado. As permissões necessárias para chamar esses construtores variam, pois associar um método dinâmico a um módulo ou tipo existente fornece ao método dinâmico o acesso aos membros e tipos não públicos:  
   
@@ -135,8 +135,8 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 > [!NOTE]
 > Os métodos dinâmicos não têm suporte para símbolos de depuração.  
   
-<a name="Version_Information"></a>   
-## <a name="version-information"></a>Informações de versão  
+<a name="Version_Information"></a>
+## <a name="version-information"></a>Informações sobre versão  
  Do .NET Framework 4 em diante, a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](../security/security-changes.md).  
   
  Desde o .NET Framework 2.0 Service Pack 1, <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> não é mais necessário ao emitir métodos dinâmicos e assemblies dinâmicos. Esse sinalizador é exigido em todas as versões anteriores do .NET Framework.  
@@ -151,7 +151,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
 ### <a name="obtaining-information-on-types-and-members"></a>Obtendo informações sobre tipos e membros  
  A partir do .NET Framework 2.0, não é necessária nenhuma permissão para obter informações sobre membros e tipos não públicos. A reflexão é usada para obter as informações necessárias para emitir métodos dinâmicos. Por exemplo, os objetos <xref:System.Reflection.MethodInfo> são usados para emitir chamadas de método. As versões anteriores do .NET Framework exigem <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obter mais informações, consulte [Security Considerations for Reflection](security-considerations-for-reflection.md) (Considerações sobre segurança relacionadas à reflexão).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Considerações sobre segurança relacionadas à reflexão](security-considerations-for-reflection.md)
 - [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)

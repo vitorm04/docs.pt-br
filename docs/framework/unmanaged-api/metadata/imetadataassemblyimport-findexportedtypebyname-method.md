@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449452"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175987"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Método IMetaDataAssemblyImport::FindExportedTypeByName
-Obtém um ponteiro para um tipo exportado, dado seu nome e tipo de delimitador.  
+Obtém um ponteiro para um tipo exportado, dado o seu nome e tipo de fechamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `szName`  
- no O nome do tipo exportado.  
+ [em] O nome do tipo exportado.  
   
  `mdtExportedType`  
- no O token de metadados para a classe de circunscrição do tipo exportado. Esse valor será `mdExportedTypeNil` se o tipo exportado solicitado não for um tipo aninhado.  
+ [em] O token de metadados para a classe de fechamento do tipo exportado. Este valor `mdExportedTypeNil` é se o tipo exportado solicitado não for um tipo aninhado.  
   
  `ptkExportedType`  
- fora Um ponteiro para o `mdExportedType` token que representa o tipo exportado.  
+ [fora] Um ponteiro `mdExportedType` para o token que representa o tipo exportado.  
   
 ## <a name="remarks"></a>Comentários  
- O método `FindExportedTypeByName` usa as regras padrão empregadas pelo Common Language Runtime para resolver referências.  
+ O `FindExportedTypeByName` método usa as regras padrão empregadas pelo tempo de execução da linguagem comum para resolver referências.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [Como o runtime localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

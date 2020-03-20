@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783248"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149239"
 ---
 # <a name="performing-catalog-operations"></a>Executar operações de catálogo
-Para executar um comando para modificar um banco de dados ou catálogo, como a instrução CREATE TABLE ou criar procedimento, crie um objeto de **comando** usando as instruções SQL apropriadas e um objeto de **conexão** . Execute o comando com o método **ExecuteNonQuery** do objeto **Command** .  
+Para executar um comando para modificar um banco de dados ou catálogo, como a instrução CRIAR TABELA ou CRIAR PROCEDIMENTO, crie um objeto **Command** usando as instruções SQL apropriadas e um objeto **Conexão.** Execute o comando com o método **ExecuteNonQuery** do objeto **Comando.**  
   
- O exemplo de código a seguir cria um procedimento armazenado em um banco de dados Microsoft SQL Server.  
+ O exemplo de código a seguir cria um procedimento armazenado em um banco de dados do Microsoft SQL Server.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   
@@ -45,8 +45,8 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando os comandos para modificar dados](using-commands-to-modify-data.md)
-- [Comandos e parâmetros](commands-and-parameters.md)
-- [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)
+- [Comandos e Parâmetros](commands-and-parameters.md)
+- [Visão geral do ADO.NET](ado-net-overview.md)

@@ -15,21 +15,21 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453033"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177094"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>Enumeração COR_PRF_REJIT_FLAGS
-Contém valores que indicam como a API [ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) deve se comportar.  
+Contém valores que indicam como a API [ICorProfilerInfo10:RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) deve se comportar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef enum  
-{      
+{
     COR_PRF_REJIT_BLOCK_INLINING = 0x1,
     COR_PRF_REJIT_INLINING_CALLBACKS    = 0x2
 } COR_PRF_REJIT_FLAGS;  
@@ -37,19 +37,19 @@ typedef enum
   
 ## <a name="members"></a>Membros  
   
-|Membro|DESCRIÇÃO|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| Os métodos ReJITted serão impedidos de serem embutidos em outros métodos. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| Receba `GetFunctionParameters` retornos de chamada para os métodos que embutiram os métodos solicitados a serem ReJITteddos. |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| Os métodos rejitted serão impedidos de serem informais em outros métodos. |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| Receba `GetFunctionParameters` retornos de chamada para quaisquer métodos que inlineos os métodos solicitados para serem ReJITted. |  
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
+ **Plataformas:** Consulte [os sistemas operacionais suportados pelo .NET Core](../../../core/install/dependencies.md?pivots=os-windows).  
   
- **Cabeçalho:** CorProf. idl, CorProf. h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
+ **.NET Framework Versions:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
 ## <a name="see-also"></a>Confira também
 

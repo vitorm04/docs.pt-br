@@ -3,25 +3,25 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 695fccf88ac0d8a672e710ccc632ea58dd2fc693
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: a02d71811709b2c285ab7081b89ee3082ec5b43d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152203"
 ---
-# <a name="customtrackingquery"></a>\<customTrackingQuery>
+# <a name="customtrackingquery"></a>\<> de personalTrackingQuery
 Representa uma coleção de consultas que são usados para controlar os eventos que você define em suas atividades de código. A consulta é necessária para um participante de rastreamento assinar registros personalizados de rastreamento.  
   
- Para obter mais informações sobre consultas de perfil de rastreamento, consulte [perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
+ Para obter mais informações sobre o rastreamento de consultas de perfil, consulte [Perfis de rastreamento](../../../windows-workflow-foundation/tracking-profiles.md)  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<sistema. > ServiceModel**](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<acompanhamento de >** ](tracking.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> trackingProfile**](trackingprofile.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de fluxo de trabalho**](workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> customTrackingQueries**](customtrackingqueries.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> customTrackingQuery**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<Sistema.>de modelo de serviço**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<rastreando>**](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de rastreamentoPerfil**](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de fluxo de trabalho**](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de rastreamento personalizado**](customtrackingqueries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de rastreamento personalizado**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,7 +30,7 @@ Representa uma coleção de consultas que são usados para controlar os eventos 
   <trackingProfile name="Name">
     <workflow>
       <customTrackingQueries>
-        <customTrackingQuery activityName="String" 
+        <customTrackingQuery activityName="String"
                              name="String" />
       </customTrackingQueries>
     </workflow>
@@ -45,19 +45,19 @@ Representa uma coleção de consultas que são usados para controlar os eventos 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Nome_da_atividade|Uma cadeia de caracteres que especifica o nome da atividade que gerou o registro de rastreamento.|  
+|activityName|Uma cadeia de caracteres que especifica o nome da atividade que gerou o registro de rastreamento.|  
 |name|Uma cadeia de caracteres que especifica o nome do registro de controle personalizado que é emitido.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<customTrackingQuery>](customtrackingquery.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
+|[\<>de rastreamento personalizado](customtrackingquery.md)|Uma consulta que é usada para controlar os eventos que você define em suas atividades de código.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>

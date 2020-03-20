@@ -15,70 +15,70 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 6966d0ad2fefd8401b19d8e8dcf7776799a066b2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9598be850604f16ee8cc62187e1fed7ecf3a7e4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432560"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175844"
 ---
 # <a name="imetadataemitdefineevent-method"></a>Método IMetaDataEmit::DefineEvent
-Cria uma definição para um evento com a assinatura de metadados especificada e Obtém um token para essa definição de evento.  
+Cria uma definição para um evento com a assinatura de metadados especificada e obtém um token para essa definição de evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineEvent (   
-    [in]  mdTypeDef    td,   
-    [in]  LPCWSTR      szEvent,   
-    [in]  DWORD        dwEventFlags,   
-    [in]  mdToken      tkEventType,   
-    [in]  mdMethodDef  mdAddOn,   
-    [in]  mdMethodDef  mdRemoveOn,   
-    [in]  mdMethodDef  mdFire,   
-    [in]  mdMethodDef  rmdOtherMethods[],   
-    [out] mdEvent      *pmdEvent   
+HRESULT DefineEvent (
+    [in]  mdTypeDef    td,
+    [in]  LPCWSTR      szEvent,
+    [in]  DWORD        dwEventFlags,
+    [in]  mdToken      tkEventType,
+    [in]  mdMethodDef  mdAddOn,
+    [in]  mdMethodDef  mdRemoveOn,
+    [in]  mdMethodDef  mdFire,
+    [in]  mdMethodDef  rmdOtherMethods[],
+    [out] mdEvent      *pmdEvent
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `td`  
- no O token para a classe ou interface de destino. É um token `mdTypeDef` ou `mdTypeDefNil`.  
+ [em] O token para a classe de destino ou interface. Isso é `mdTypeDef` um `mdTypeDefNil` símbolo.  
   
  `szEvent`  
- no O nome do evento.  
+ [em] O nome do evento.  
   
  `dwEventFlags`  
- no Sinalizadores de eventos.  
+ [em] Bandeiras de eventos.  
   
  `tkEventType`  
- no O token para a classe de evento. Este é um `mdTypeDef`, um `mdTypeRef`ou um token `mdTokenNil`.  
+ [em] O símbolo para a aula de eventos. Isto `mdTypeDef`é `mdTypeRef`um, `mdTokenNil` a, ou um símbolo.  
   
  `mdAddOn`  
- no O método usado para assinar o evento ou nulo.  
+ [em] O método usado para subscrever o evento, ou nulo.  
   
  `mdRemoveOn`  
- no O método usado para cancelar a assinatura do evento, ou NULL.  
+ [em] O método usado para cancelar a inscrição do evento, ou nulo.  
   
  `mdFire`  
- no O método usado (por uma classe derivada) para gerar o evento.  
+ [em] O método utilizado (por uma classe derivada) para elevar o evento.  
   
  `rmdOtherMethods[]`  
- no Uma matriz de tokens para outros métodos associados ao evento. A matriz é encerrada com um token `mdMethodDefNil`.  
+ [em] Uma matriz de tokens para outros métodos associados ao evento. A matriz é encerrada `mdMethodDefNil` com um token.  
   
  `pmdEvent`  
- fora O token de metadados atribuído ao evento.  
+ [fora] O token de metadados atribuído ao evento.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

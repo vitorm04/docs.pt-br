@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448061"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175701"
 ---
 # <a name="imetadataemitmerge-method"></a>Método IMetaDataEmit::Merge
 Adiciona o escopo importado especificado à lista de escopos a serem mesclados.  
@@ -28,36 +28,36 @@ Adiciona o escopo importado especificado à lista de escopos a serem mesclados.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT Merge (   
-    [in]  IMetaDataImport  *pImport,   
-    [in]  IMapToken        *pHostMapToken,   
-    [in]  IUnknown         *pHandler   
+HRESULT Merge (
+    [in]  IMetaDataImport  *pImport,
+    [in]  IMapToken        *pHostMapToken,
+    [in]  IUnknown         *pHandler
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pImport`  
- no Um ponteiro para um objeto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que identifica o escopo importado a ser mesclado.  
+ [em] Um ponteiro para um objeto [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que identifica o escopo importado a ser mesclado.  
   
  `pIMap`  
- no Um ponteiro para um objeto [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) que especifica o novo mapeamento do token.  
+ [em] Um ponteiro para um objeto [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) que especifica o remapa do token.  
   
  `pHandler`  
- no Um ponteiro para um objeto [IUnknown](/cpp/atl/iunknown) que especifica os erros.  
+ [em] Um ponteiro para um objeto [IUnknown](/cpp/atl/iunknown) que especifica os erros.  
   
 ## <a name="remarks"></a>Comentários  
- Chame [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) para disparar a fusão de metadados em um único escopo.  
+ Chamada [IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md) para desencadear a fusão de metadados em um único escopo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

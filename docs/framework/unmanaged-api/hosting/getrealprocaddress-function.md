@@ -14,52 +14,52 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 9dffc3d197b05bb71443aa60c101260daabadadd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4c914e00987053b1c1e9e00bf8e54632175e1de8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136400"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178170"
 ---
 # <a name="getrealprocaddress-function"></a>Função GetRealProcAddress
-Obtém o endereço da função especificada que é exportada da versão mais recente instalada do Common Language Runtime (CLR).  
+Obtém o endereço da função especificada que é exportada a partir da versão mais recente instalada do tempo de execução do idioma comum (CLR).  
   
- Essa função foi preterida no .NET Framework 4.  
+ Esta função foi depreciada no Quadro .NET 4.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetRealProcAddress (  
-    [in]  LPCSTR  pwszProcName,   
+    [in]  LPCSTR  pwszProcName,
     [out] VOID  **ppv  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pwszProcName`  
- no O nome da função.  
+ [em] O nome da função.  
   
  `ppv`  
- fora O local que recebe um ponteiro para o endereço da função.  
+ [fora] O local que recebe um ponteiro para o endereço da função.  
   
 ## <a name="return-value"></a>Valor retornado  
- Esse método retorna códigos de erro padrão de Component Object Model (COM), conforme definido no WinError. h, além dos valores a seguir definidos em CorError. h.  
+ Este método retorna códigos de erro com o Modelo de Objeto Componente padrão (COM), conforme definido em WinError.h, além dos seguintes valores definidos em CorError.h.  
   
 |Código de retorno|Descrição|  
 |-----------------|-----------------|  
-|S_OK|O método foi concluído com êxito.|  
+|S_OK|O método foi concluído com sucesso.|  
 |E_POINTER|`ppv` não é válido.|  
-|CLR_E_SHIM_RUNTIMEEXPORT|A função não é exportada do tempo de execução.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|A função não é exportada a partir do tempo de execução.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE. h  
+ **Cabeçalho:** MSCorEE.h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** Mscoree.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

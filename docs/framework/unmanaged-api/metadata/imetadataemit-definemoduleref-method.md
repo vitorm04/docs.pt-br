@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94261b7796166cf482a7de990551890e4722dd3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431736"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177730"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>Método IMetaDataEmit::DefineModuleRef
 Cria a assinatura de metadados para um módulo com o nome especificado.  
@@ -28,29 +28,29 @@ Cria a assinatura de metadados para um módulo com o nome especificado.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineModuleRef (     
-    [in]  LPCWSTR           szName,   
-    [out] mdModuleRef       *pmur   
+HRESULT DefineModuleRef (
+    [in]  LPCWSTR           szName,
+    [out] mdModuleRef       *pmur
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `szName`  
- no O nome do outro arquivo de metadados, normalmente uma DLL. Este é o nome do arquivo apenas. Não use um nome de caminho completo.  
+ [em] O nome do outro arquivo de metadados, tipicamente um DLL. Este é apenas o nome do arquivo. Não use um nome de caminho completo.  
   
  `pmur`  
- fora O token de `mdModuleRef` atribuído.  
+ [fora] O token atribuído. `mdModuleRef`  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

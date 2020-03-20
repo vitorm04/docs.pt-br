@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175883"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Método IMetaDataEmit::DefineCustomAttribute
-Cria uma definição para um atributo personalizado com a assinatura de metadados especificada, a ser anexada ao objeto especificado e Obtém um token para essa definição de atributo personalizado.  
+Cria uma definição para um atributo personalizado com a assinatura de metadados especificada, a ser anexada ao objeto especificado e obtém um token para essa definição de atributo personalizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineCustomAttribute (   
-    [in]  mdToken     tkObj,   
-    [in]  mdToken     tkType,   
-    [in]  void const  *pCustomAttribute,   
-    [in]  ULONG       cbCustomAttribute,   
-    [out] mdCustomAttribute *pcv   
+HRESULT DefineCustomAttribute (
+    [in]  mdToken     tkObj,
+    [in]  mdToken     tkType,
+    [in]  void const  *pCustomAttribute,
+    [in]  ULONG       cbCustomAttribute,
+    [out] mdCustomAttribute *pcv
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tkObj`  
- no O token para o item de proprietário.  
+ [em] O token para o item do proprietário.  
   
  `tkType`  
- no O token que identifica o atributo personalizado.  
+ [em] O token que identifica o atributo personalizado.  
   
  `pCustomAttribute`  
- no Um ponteiro para o atributo personalizado.  
+ [em] Um ponteiro para o atributo personalizado.  
   
  `cbCustomAttribute`  
- no A contagem de bytes em `pCustomAttribute`.  
+ [em] A contagem de `pCustomAttribute`bytes em .  
   
  `pcv`  
- fora O token de `mdCustomAttribute` atribuído.  
+ [fora] O `mdCustomAttribute` token atribuído.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

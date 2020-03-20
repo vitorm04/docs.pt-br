@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126799"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176390"
 ---
 # <a name="iceefilegen-class"></a>Classe ICeeFileGen
-Fornece a funcionalidade para criar um arquivo PE (executável portátil) nativo. A interface normalmente será usada pelos compiladores para gerar o executável de saída compilado.  
+Fornece funcionalidade para criar um arquivo nativo portátil executável (PE). A interface normalmente será usada por compiladores para gerar sua saída compilada executável.  
   
 > [!NOTE]
-> o `ICeeFileGen` dá suporte à infraestrutura de .NET Framework e não se destina a ser usado diretamente do seu código.  
+> `ICeeFileGen`suporta a infra-estrutura .NET e não se destina a ser usada diretamente do seu código.  
   
  Esta interface foi preterida e será removida em uma versão futura.  
   
@@ -149,7 +149,7 @@ public:
         HCEESECTION section, ULONG num, ULONG size, ULONG offset = 0);  
   
     virtual HRESULT EmitMetaDataEx (HCEEFILE ceeFile,  
-        IMetaDataEmit *emitter);   
+        IMetaDataEmit *emitter);
   
     virtual HRESULT EmitLibraryNameEx (HCEEFILE ceeFile,  
         IMetaDataEmit *emitter);  
@@ -237,10 +237,10 @@ public:
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ICeeFileGen. h  
+ **Cabeçalho:** ICeeFileGen.h  
   
- **Versão do .NET Framework:** 1,0  
+ **.NET Framework Versão:** 1.0  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Hospedagem de Interfaces](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Interfaces de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

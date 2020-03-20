@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450103"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176130"
 ---
 # <a name="corsavesize-enumeration"></a>Enumeração CorSaveSize
 Contém valores que indicam o nível de precisão necessário ao consultar o tamanho de uma operação de salvamento.  
@@ -28,29 +28,29 @@ Contém valores que indicam o nível de precisão necessário ao consultar o tam
   
 ```cpp  
 typedef enum CorSaveSize {  
-    cssAccurate                = 0x0000,   
-    cssQuick                   = 0x0001,   
+    cssAccurate                = 0x0000,
+    cssQuick                   = 0x0001,
     cssDiscardTransientCAs     = 0x0002  
 } CorSaveSize;  
 ```  
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`cssAccurate`|Especifica que o valor de retorno deve ser exato.|  
 |`cssQuick`|Especifica que o valor de retorno deve ser estimado.|  
-|`cssDiscardTransientCAs`|Especifica que os tipos descartados devem ser removidos.|  
+|`cssDiscardTransientCAs`|Especifica que os tipos descartáveis devem ser removidos.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr. h  
+ **Cabeçalho:** CorHdr.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

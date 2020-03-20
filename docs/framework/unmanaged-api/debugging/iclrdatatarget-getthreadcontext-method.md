@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: b5f6a830cbe601443f03cd91a356c7e49450e7f3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3777ad4b12c7d0593c095c470aba81088137a859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179177"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>Método ICLRDataTarget::GetThreadContext
-Obtém o contexto de execução atual para o thread determinado no processo de destino. Esse método é chamado pelo Common Language Runtime Data Access Services.  
+Obtém o contexto de execução atual para o segmento dado no processo de destino. Esse método é chamado pelos serviços comuns de acesso a dados em tempo de execução do idioma.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,38 +32,38 @@ HRESULT GetThreadContext (
     [in] ULONG32            threadID,  
     [in] ULONG32            contextFlags,  
     [in] ULONG32            contextSize,  
-    [out, size_is(contextSize)]   
+    [out, size_is(contextSize)]
         BYTE                *context  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `threadID`  
- no O identificador do sistema operacional de um thread no processo de destino.  
+ [em] O identificador do sistema operacional de um segmento no processo de destino.  
   
  `contextFlags`  
- no Sinalizadores que especificam quais partes do contexto retornar. A implementação retornará pelo menos essas partes do contexto.  
+ [em] Sinalizadores que especificam quais partes do contexto retornar. A implementação retornará pelo menos essas partes do contexto.  
   
  `contextSize`  
- no O tamanho do contexto.  
+ [em] O tamanho do contexto.  
   
  `context`  
- fora Ponteiro para um buffer no qual o contexto será colocado.  
+ [fora] Ponteiro para um buffer no qual colocar o contexto.  
   
- Os dados no buffer de `context` devem estar no formato da estrutura de `CONTEXT` do Win32. O contexto especifica dados de registro específicos do processador, portanto, a definição da estrutura de `CONTEXT` do Win32 depende da arquitetura do processador. Consulte o arquivo de cabeçalho WinNT. h para obter a definição da estrutura de `CONTEXT` do Win32.  
+ Os dados `context` no buffer devem estar no formato `CONTEXT` da estrutura Win32. O contexto especifica dados de registro específicos do processador, `CONTEXT` de modo que a definição da estrutura Win32 depende da arquitetura do processador. Consulte o arquivo de cabeçalho WinNT.h `CONTEXT` para a definição da estrutura Win32.  
   
 ## <a name="remarks"></a>Comentários  
  Este método é implementado pelo autor do aplicativo de depuração.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData. idl, ClrData. h  
+ **Cabeçalho:** ClrData.idl, ClrData.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRDataTarget](iclrdatatarget-interface.md)

@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 055499230f500cb7249746e1acbf46b4548d25bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175233"
 ---
 # <a name="imetadatatablesgetstring-method"></a>Método IMetaDataTables::GetString
-Obtém a cadeia de caracteres no índice especificado da coluna de tabela no escopo de referência atual.  
+Obtém a seqüência no índice especificado da coluna de tabela no escopo de referência atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetString (   
+HRESULT GetString (
     [in]  ULONG       ixString,  
     [out] const char  **ppString  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `ixString`  
- no O índice no qual começar a procurar o próximo valor.  
+ [em] O índice para começar a procurar o próximo valor.  
   
  `ppString`  
- fora Um ponteiro para um ponteiro para o valor de cadeia de caracteres retornado.  
+ [fora] Um ponteiro para um ponteiro para o valor da seqüência retornado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

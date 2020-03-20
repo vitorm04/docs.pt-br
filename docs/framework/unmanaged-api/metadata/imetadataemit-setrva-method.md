@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 0a1d244a4bf077970d2031c3c3b2bc56a0dd3d79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe0b4b7fef0d05c4acc06dad5bc8a4eaf0722c9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426812"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175571"
 ---
 # <a name="imetadataemitsetrva-method"></a>Método IMetaDataEmit::SetRVA
 Define o endereço virtual relativo do método especificado.  
@@ -29,28 +29,28 @@ Define o endereço virtual relativo do método especificado.
   
 ```cpp  
 HRESULT SetRVA (  
-    [in]  mdMethodDef  md,   
-    [in]  ULONG        ulRVA   
+    [in]  mdMethodDef  md,
+    [in]  ULONG        ulRVA
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `md`  
- no O token para o método de destino ou a implementação do método.  
+ [em] O token para a implementação do método de destino ou método.  
   
  `ulRVA`  
- no O endereço do código ou da área de dados.  
+ [em] O endereço do código ou área de dados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

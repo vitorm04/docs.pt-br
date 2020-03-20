@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb3f4486bc0ee7a85975770f94a8241999f10e0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9662a14b4ea97aed16968083489324d46c38dda2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442121"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177518"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>Método IMetaDataEmit::SetMethodProps
-Define ou atualiza o recurso, armazenado no endereço virtual relativo especificado, de um método definido por uma chamada anterior para [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
+Define ou atualiza o recurso, armazenado no endereço virtual relativo especificado, de um método definido por uma chamada anterior ao [IMetaDataEmit::DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT SetMethodProps (   
-    [in]  mdMethodDef md,   
+HRESULT SetMethodProps (
+    [in]  mdMethodDef md,
     [in]  DWORD       dwMethodFlags,  
-    [in]  ULONG       ulCodeRVA,   
-    [in]  DWORD       dwImplFlags   
+    [in]  ULONG       ulCodeRVA,
+    [in]  DWORD       dwImplFlags
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `md`  
- no O token para o método a ser alterado.  
+ [em] O token para que o método seja alterado.  
   
  `dwMethodFlags`  
- no Os atributos de membro.  
+ [em] Os atributos do membro.  
   
  `ulCodeRVA`  
- no O endereço do código.  
+ [em] O endereço do código.  
   
  `dwImplFlags`  
- no Os sinalizadores de implementação para o método.  
+ [em] As bandeiras de implementação para o método.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a494b1aaa762549528e92ab93d18929ef73eb8da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434872"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176078"
 ---
 # <a name="iceegengetsectionblock-method"></a>Método ICeeGen::GetSectionBlock
 Obtém um bloco de seção da base de código.  
   
- Este método é obsoleto e não deve ser usado.  
+ Este método é obsoleto e não deve ser utilizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetSectionBlock (  
-    [in]  HCEESECTION    section,     
+    [in]  HCEESECTION    section,
     [in]  ULONG          len,  
     [in]  ULONG          align     = 1,  
     [out] void           **ppBytes = 0  
-);   
+);
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `section`  
- no A seção da qual recuperar um bloco da base de código.  
+ [em] A seção a partir da qual recuperar um bloco da base de código.  
   
  `len`  
- no O comprimento do bloco a ser recuperado.  
+ [em] O comprimento do bloco a ser recuperado.  
   
  `align`  
- no O byte, em relação ao início da seção, com o qual alinhar o primeiro byte do bloco. Essa é a posição do bloco dentro da seção.  
+ [em] O byte, relativo ao início da seção, com o qual alinhar o primeiro byte do bloco. Esta é a posição do bloco dentro da seção.  
   
  `ppBytes`  
- fora Um ponteiro para um local que recebe o endereço do bloco recuperado.  
+ [fora] Um ponteiro para um local que recebe o endereço do bloco recuperado.  
   
 ## <a name="remarks"></a>Comentários  
- Chame `GetSectionBlock` somente se você tiver requisitos de seção especiais que não são tratados por outros métodos.  
+ Ligue `GetSectionBlock` somente se tiver requisitos especiais de seção que não sejam tratados por outros métodos.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

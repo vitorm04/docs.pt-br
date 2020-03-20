@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 01f9a59b-7679-4d42-9ced-4a8981625c3d
 topic_type:
 - apiref
-ms.openlocfilehash: 37da471aaa8e9f802a8430d7b3289b375ff1b40a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64e0c466edcd8863244e6ed184c18422b5f66875
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136983"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178266"
 ---
 # <a name="cor_gc_thread_stats-structure"></a>Estrutura COR_GC_THREAD_STATS
-Contém estatísticas por thread referentes à coleta de lixo.  
+Contém estatísticas por segmento relativas à coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
-    ULONGLONG  PerThreadAllocation;   
-    ULONG      Flags;   
+    ULONGLONG  PerThreadAllocation;
+    ULONG      Flags;
 } COR_GC_THREAD_STATS;  
 ```  
   
@@ -37,22 +37,22 @@ typedef struct _COR_GC_THREAD_STATS {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`PerThreadAllocation`|O número de bytes de memória alocados no thread que está associado à instância de `COR_GC_THREAD_STATS` atual. Esse número é limpo para zero sempre que uma coleta de lixo de geração zero ocorre.|  
-|`Flags`|O número de bytes promovidos para uma geração mais alta na coleta de lixo mais recente.|  
+|`PerThreadAllocation`|O número de bytes de memória alocados no `COR_GC_THREAD_STATS` segmento que está associado à instância atual. Esse número é zerado a cada vez que ocorre uma coleta de lixo de geração zero.|  
+|`Flags`|O número de bytes promovido a uma geração maior na mais recente coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- [ICLRTask:: GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) usa um parâmetro de saída do tipo `COR_GC_THREAD_STATS`.  
+ [ICLRTask::GetMemStats](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md) leva um parâmetro `COR_GC_THREAD_STATS`de saída do tipo .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** GCHost. idl  
+ **Cabeçalho:** GCHost.idl  
   
- **Biblioteca:** Incluído como um recurso em MSCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Estruturas de hospedagem](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [Interface IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177550"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>Método IMetaDataEmit::SetFieldProps
-Define ou atualiza o valor padrão para o campo referenciado pelo token do campo especificado.  
+Define ou atualiza o valor padrão para o campo referenciado pelo token de campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetFieldProps (  
-    [in]  mdFieldDef  fd,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+    [in]  mdFieldDef  fd,
+    [in]  DWORD       dwFieldFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `fd`  
- no O token para o campo de destino.  
+ [em] O símbolo para o campo alvo.  
   
  `dwFieldFlags`  
- no Atributos de campo. Este é um bitmask de valores de `CorFieldAttr`.  
+ [em] Atributos de campo. Isto é uma `CorFieldAttr` pequena máscara de valores.  
   
  `dwCPlusTypeFlag`  
- no O `ELEMENT_TYPE_` *\** para o valor constante. Esse é um valor `CorElementType`. Se uma constante não estiver sendo definida, defina esse valor como `ELEMENT_TYPE_END`.  
+ [em] O `ELEMENT_TYPE_` *\** pelo valor constante. Isso é `CorElementType` um valor. Se uma constante não estiver sendo `ELEMENT_TYPE_END`definida, defina esse valor para .  
   
  `pValue`  
- no O valor constante para o campo.  
+ [em] O valor constante para o campo.  
   
  `cchValue`  
- no O tamanho, em caracteres Unicode, de `pValue`.  
+ [em] O tamanho, em caracteres `pValue`Unicode, de .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

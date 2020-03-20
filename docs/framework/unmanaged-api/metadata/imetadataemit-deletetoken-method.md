@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4926d0a-261b-46b1-9994-82633661a64b
 topic_type:
 - apiref
-ms.openlocfilehash: e8c145632911817e8e19d587bb8afead0a6c33af
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8aed6522b1c7eb2d8916f71d8a66b367623765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434338"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177602"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>Método IMetaDataEmit::DeleteToken
 Exclui o token especificado do escopo de metadados atual.  
@@ -28,25 +28,25 @@ Exclui o token especificado do escopo de metadados atual.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DeleteToken (   
-    [in]  mdToken     tkObj   
+HRESULT DeleteToken (
+    [in]  mdToken     tkObj
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tkObj`  
- no O token a ser excluído.  
+ [em] O token a ser excluído.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

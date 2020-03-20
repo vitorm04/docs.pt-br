@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216678"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174765"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA dangerousThreadingAPI
 O MDA (assistente para depuração gerenciada) `dangerousThreadingAPI` é ativado quando o método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> é chamado em um thread que não seja o thread atual.  
@@ -59,7 +59,7 @@ void FireMda()
 Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
-    t.Suspend();   
+    t.Suspend();
     t.Resume();  
     t.Join();  
 }  
@@ -68,5 +68,5 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.Thread>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Instrução lock](../../csharp/language-reference/keywords/lock-statement.md)

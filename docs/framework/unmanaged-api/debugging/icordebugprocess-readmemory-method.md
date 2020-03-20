@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178659"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>Método ICorDebugProcess::ReadMemory
-Lê uma área especificada de memória para esse processo.  
+Lê uma área de memória especificada para este processo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT ReadMemory(  
-    [in]  CORDB_ADDRESS address,   
+    [in]  CORDB_ADDRESS address,
     [in]  DWORD size,  
     [out, size_is(size), length_is(size)] BYTE buffer[],  
     [out] SIZE_T *read);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `address`  
- no Um valor `CORDB_ADDRESS` que especifica o endereço base da memória a ser lida.  
+ [em] Um `CORDB_ADDRESS` valor que especifica o endereço base da memória a ser lido.  
   
  `size`  
- no O número de bytes a serem lidos da memória.  
+ [em] O número de bytes a serem lidos na memória.  
   
  `buffer`  
- fora Um buffer que recebe o conteúdo da memória.  
+ [fora] Um buffer que recebe o conteúdo da memória.  
   
  `read`  
- fora Um ponteiro para o número de bytes transferidos para o buffer especificado.  
+ [fora] Um ponteiro para o número de bytes transferidos para o buffer especificado.  
   
 ## <a name="remarks"></a>Comentários  
- O método `ReadMemory` destina-se principalmente a ser usado pela depuração de interoperabilidade para inspecionar regiões de memória que estão sendo usadas pela parte não gerenciada do depurador. Esse método também pode ser usado para ler o código MSIL (Microsoft Intermediate Language) e o código compilado por JIT nativo.  
+ O `ReadMemory` método destina-se principalmente a ser usado pela depuração de interop para inspecionar regiões de memória que estão sendo usadas pela porção não gerenciada da depuração. Este método também pode ser usado para ler o código de linguagem intermediária da Microsoft (MSIL) e o código nativo compilado pelo JIT.  
   
- Todos os pontos de interrupção gerenciados serão removidos dos dados retornados no parâmetro `buffer`. Nenhum ajuste será feito para pontos de interrupção nativos definidos por [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Quaisquer pontos de interrupção gerenciados serão removidos dos `buffer` dados que são devolvidos no parâmetro. Não serão feitos ajustes para os breakpoints nativos definidos por [ICorDebugProcess2::SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Nenhum cache de memória de processo é executado.  
+ Nenhum cache de memória do processo é realizado.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

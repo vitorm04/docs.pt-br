@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 5f83cb96e39b257a1d35786130cd5ed31d071de7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443874"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176195"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumeração CorAttributeTargets
-{1&gt;Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.&lt;1}  
+Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +44,15 @@ typedef enum CorAttributeTargets
     catDelegate            = 0x1000,  
     catGenericParameter    = 0x4000,  
   
-    catAll                 =   
-        catAssembly | catModule | catClass | catStruct |   
-        catEnum | catConstructor | catMethod | catProperty |   
-        catField | catEvent | catInterface | catParameter |   
+    catAll                 =
+        catAssembly | catModule | catClass | catStruct |
+        catEnum | catConstructor | catMethod | catProperty |
+        catField | catEvent | catInterface | catParameter |
         catDelegate | catGenericParameter,  
   
-    catClassMembers        =   
-        catClass | catStruct | catEnum | catConstructor |   
-        catMethod | catProperty | catField | catEvent |   
+    catClassMembers        =
+        catClass | catStruct | catEnum | catConstructor |
+        catMethod | catProperty | catField | catEvent |
         catDelegate | catInterface  
   
 } CorAttributeTargets;  
@@ -60,10 +60,10 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`catAssembly`|O atributo pode ser aplicado a um assembly.|  
-|`catModule`|O atributo pode ser aplicado a um módulo executável portátil (. dll ou. exe).|  
+|`catModule`|O atributo pode ser aplicado a um módulo executável portátil (.dll ou .exe).|  
 |`catClass`|O atributo pode ser aplicado a uma classe.|  
 |`catStruct`|Atributo pode ser aplicado a uma estrutura; ou seja, um tipo de valor.|  
 |`catEnum`|O atributo pode ser aplicado a uma enumeração.|  
@@ -77,20 +77,20 @@ typedef enum CorAttributeTargets
 |`catDelegate`|O atributo pode ser aplicado a um delegado.|  
 |`catGenericParameter`|O atributo pode ser aplicado a um parâmetro genérico.|  
 |`catAll`|O atributo pode ser aplicado a qualquer elemento de aplicativo.|  
-|`catClassMembers`|O atributo pode ser aplicado a um membro de uma classe.|  
+|`catClassMembers`|Atributo pode ser aplicado a um membro de uma classe.|  
   
 ## <a name="remarks"></a>Comentários  
- Os valores de enumeração de `CorAttributeTargets` podem ser combinados com uma operação OR bit a bit para obter a combinação preferida.  
+ Os `CorAttributeTargets` valores de enumeração podem ser combinados com uma operação or pouco sábia para obter a combinação preferida.  
   
- O `CorAttributeTargets` paraleliza a enumeração de <xref:System.AttributeTargets?displayProperty=nameWithType> gerenciada.  
+ Os `CorAttributeTargets` paralelos da <xref:System.AttributeTargets?displayProperty=nameWithType> enumeração gerenciada.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr. h  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

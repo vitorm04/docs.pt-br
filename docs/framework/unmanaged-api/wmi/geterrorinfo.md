@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 062dc62dfe53af3bf5158cb1add0897eccc1df60
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 802ee66a5be213ac7a599b193ec6de589773ea17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73102608"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176806"
 ---
 # <a name="geterrorinfo-function"></a>Função GetErrorInfo
 Recupera informações de erro da chamada de função anterior.  
@@ -29,24 +29,24 @@ Recupera informações de erro da chamada de função anterior.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-IErrorInfo* GetErrorInfo(); 
+IErrorInfo* GetErrorInfo();
 ```  
 
 ## <a name="return-value"></a>Valor retornado
 
-Um ponteiro para um objeto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se a chamada de função for bem-sucedida ou `null` se falhar.
+Um ponteiro para um objeto [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) se `null` a chamada de função for bem sucedida ou se falhar.
   
 ## <a name="remarks"></a>Comentários
 
-Essa função encapsula uma chamada para o método [IComThreadingInfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) .
+Esta função envolve uma chamada para o método [IComThreadingInfo::GetErrorInfo.](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)
 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils. def  
+ **Cabeçalho:** WMINet_Utils.def  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

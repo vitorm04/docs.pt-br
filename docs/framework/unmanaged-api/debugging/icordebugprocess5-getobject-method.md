@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792359"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178606"
 ---
 # <a name="icordebugprocess5getobject-method"></a>Método ICorDebugProcess5::GetObject
 Converte um endereço de objeto em um objeto "ICorDebugObjectValue".  
@@ -29,31 +29,31 @@ Converte um endereço de objeto em um objeto "ICorDebugObjectValue".
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `addr`  
- no O endereço do objeto.  
+ [em] O endereço do objeto.  
   
  `ppObject`  
- fora Um ponteiro para o endereço de um objeto "ICorDebugObjectValue".  
+ [fora] Um ponteiro para o endereço de um objeto "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Comentários  
- Se `addr` não apontar para um objeto gerenciado válido, o método `GetObject` retornará `E_FAIL`.  
+ Se `addr` não apontar para um objeto `GetObject` gerenciado `E_FAIL`válido, o método retorna .  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugProcess5](icordebugprocess5-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)
