@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119803"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155557"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Como instalar um assembly no cache de assembly global
 
-O cache de assembly global armazena os assemblies que vários aplicativos compartilham. Instale um assembly no [cache de assembly global](gac.md) com um dos seguintes componentes: 
+O cache de assembly global armazena os assemblies que vários aplicativos compartilham. Instale um assembly no [cache de assembly global](gac.md) com um dos seguintes componentes:
 
-- [Windows Installer](#windows-installer)
-- [Ferramenta cache de assembly global](#global-assembly-cache-tool)
+- [Instalador do Windows](#windows-installer)
+- [Ferramenta Global Assembly Cache](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Você pode instalar somente assemblies de nome forte no cache de assembly global. Para obter informações sobre como criar um assembly de nome forte, consulte [como assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md).
+> Você pode instalar apenas conjuntos com nome forte no cache de montagem global. Para obter informações sobre como criar um conjunto com nome forte, consulte [Como: Assinar uma montagem com um nome forte](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Windows Installer
 
@@ -32,7 +32,7 @@ O cache de assembly global armazena os assemblies que vários aplicativos compar
 
 ## <a name="global-assembly-cache-tool"></a>Ferramenta Cache de Assembly Global
 
-Você pode usar o [Utilitário de cache de assembly global do .net (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) para adicionar assemblies ao cache de assembly global e para exibir o conteúdo do cache de assembly global.
+Você pode usar o [utilitário .NET Global Assembly Cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) para adicionar montagens ao cache de montagem global e visualizar o conteúdo do cache de montagem global.
 
    > [!NOTE]
    > O *gacutil.exe* é indicado apenas para fins de desenvolvimento. Não o use para instalar assemblies de produção no cache de assembly global.
@@ -43,9 +43,9 @@ A sintaxe para usar o *gacutil.exe* para instalar um assembly no cache de assemb
 gacutil -i <assembly name>
 ```
 
-Nesse comando, *\<assembly name>* é o nome do assembly a ser instalado no cache de assembly global.
+Neste comando, * \<o nome de montagem>* é o nome do conjunto a ser instalado no cache de montagem global.
 
-Se o *Gacutil. exe* não estiver no caminho do sistema, use o [prompt de comando do desenvolvedor para o VS *\<versão >* ](../tools/developer-command-prompt-for-vs.md).
+Se *gacutil.exe* não estiver no caminho do sistema, use o [prompt de comando do Desenvolvedor para>de * \<versão *VS ](../tools/developer-command-prompt-for-vs.md).
 
 O exemplo a seguir instala um assembly com o nome do arquivo *hello.dll* no cache de assembly global.
 
@@ -56,9 +56,9 @@ gacutil -i hello.dll
 > [!NOTE]
 > Nas versões anteriores do .NET Framework, a extensão do shell do Windows *Shfusion.dll* permitia a instalação de assemblies arrastando-os no Explorador de Arquivos. Começando no .NET Framework 4, a *Shfusion.dll* ficou obsoleta.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Como: remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)
-- [Gacutil. exe (ferramenta global assembly cache)](../tools/gacutil-exe-gac-tool.md)
-- [Como assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md)
+- [Trabalhe com montagens e o cache de montagem global](working-with-assemblies-and-the-gac.md)
+- [Como: Remover uma montagem do cache de montagem global](how-to-remove-an-assembly-from-the-gac.md)
+- [Gacutil.exe (ferramenta Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Como: Assinar uma assembléia com um nome forte](../../standard/assembly/sign-strong-name.md)

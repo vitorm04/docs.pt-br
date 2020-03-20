@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153913"
 ---
-# <a name="qualifyassembly-element"></a>\<elemento de > qualifyAssembly
+# <a name="qualifyassembly-element"></a>\<qualificarElemento> Assembly
 Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<montagem>vinculante**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<qualificar>de montagem**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,11 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`partialName`|Atributo obrigatório.<br /><br /> Especifica o nome parcial do assembly como ele aparece no código.|  
-|`fullName`|Atributo obrigatório.<br /><br /> Especifica o nome completo do assembly como ele aparece no cache de assembly global.|  
+|`partialName`|Atributo obrigatório.<br /><br /> Especifica o nome parcial do conjunto como aparece no código.|  
+|`fullName`|Atributo obrigatório.<br /><br /> Especifica o nome completo da montagem como ela aparece no cache de montagem global.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -54,18 +54,18 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> usando nomes de assembly parciais faz com que a Common Language Runtime procure o assembly somente no diretório base do aplicativo. Use o elemento **\<qualifyAssembly >** no arquivo de configuração do aplicativo para fornecer as informações completas do assembly (nome, versão, token de chave pública e cultura) e fazer com que a Common Language Runtime procure o assembly no global cache de assembly.  
+ Chamar <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o método usando nomes de montagem parciais faz com que o tempo de execução do idioma comum procure o conjunto apenas no diretório base do aplicativo. Use ** \<** o elemento qualifyAssembly>no arquivo de configuração do aplicativo para fornecer as informações completas de montagem (nome, versão, token de chave pública e cultura) e faça com que o tempo de execução do idioma comum procure a montagem no cache de montagem global.  
   
- O atributo **FullName** deve incluir os quatro campos da identidade do assembly: nome, versão, token de chave pública e cultura. O atributo **partialName** deve fazer referência parcial a um assembly. Você deve especificar pelo menos o nome de texto do assembly (o caso mais comum), mas também pode incluir a versão, o token de chave pública ou a cultura (ou qualquer combinação dos quatro, mas não todos os quatro). O **partialName** deve corresponder ao nome especificado em sua chamada. Por exemplo, você não pode especificar `"math"` como o atributo **partialName** no arquivo de configuração e chamar `Assembly.Load("math, Version=3.3.3.3")` em seu código.  
+ O atributo **fullName** deve incluir os quatro campos de identidade de montagem: nome, versão, token de chave pública e cultura. O **atributo Nome parcial** deve fazer referência parcial a um conjunto. Você deve especificar pelo menos o nome de texto da assembléia (o caso mais comum), mas você também pode incluir versão, token de chave pública ou cultura (ou qualquer combinação dos quatro, mas não todos os quatro). A **parcialNome** deve corresponder ao nome especificado em sua chamada. Por exemplo, você `"math"` não pode especificar como o `Assembly.Load("math, Version=3.3.3.3")` atributo nome **parcial** em seu arquivo de configuração e chamar em seu código.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir transforma logicamente a chamada `Assembly.Load("math")` em `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`.  
+ O exemplo a seguir, `Assembly.Load("math")` `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`logicamente, transforma a chamada em .  
   
 ```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <qualifyAssembly partialName="math"   
+         <qualifyAssembly partialName="math"
                          fullName=  
 "math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral"/>  
       </assemblyBinding>  
@@ -73,8 +73,8 @@ Especifica o nome completo do assembly que deve ser carregado dinamicamente quan
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
-- [Como o tempo de execução localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Referências parciais de assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Esquema de configurações do runtime](index.md)
+- [Como o runtime localiza assemblies](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Referências parciais a assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

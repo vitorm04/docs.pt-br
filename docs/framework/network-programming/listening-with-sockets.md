@@ -15,17 +15,17 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: cf8316ede6888b99a8b0c87cfa3426b33be18b7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736785"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180735"
 ---
 # <a name="listening-with-sockets"></a>Escutando com soquetes
 Soquetes de ouvinte ou de servidor abrem uma porta na rede e aguardam até que um cliente se conecte a essa porta. Embora existam outros protocolos e famílias de endereços de rede, este exemplo mostra como criar um serviço remoto para uma rede TCP/IP.  
   
- O endereço exclusivo de um serviço de TCP/IP é definido combinando-se o endereço IP do host com o número da porta do serviço para criar um ponto de extremidade para o serviço. A classe <xref:System.Net.Dns> fornece métodos que retornam informações sobre os endereços de rede com suporte pelo dispositivo de rede local. Quando o dispositivo de rede local tem mais de um endereço de rede ou se o sistema local dá suporte a mais de um dispositivo de rede, a classe **Dns** retorna informações sobre todos os endereços de rede e o aplicativo deve escolher o endereço adequado para o serviço. A IANA (Internet Assigned Numbers Authority) define os números da porta de serviços comuns. Para obter mais informações, consulte [Registro de número da porta do protocolo de transporte e nome de serviço](https://www.iana.org/assignments/port-numbers). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535.  
+ O endereço exclusivo de um serviço de TCP/IP é definido combinando-se o endereço IP do host com o número da porta do serviço para criar um ponto de extremidade para o serviço. A classe <xref:System.Net.Dns> fornece métodos que retornam informações sobre os endereços de rede com suporte pelo dispositivo de rede local. Quando o dispositivo de rede local tem mais de um endereço de rede ou se o sistema local dá suporte a mais de um dispositivo de rede, a classe **Dns** retorna informações sobre todos os endereços de rede e o aplicativo deve escolher o endereço adequado para o serviço. A Autoridade de Números Atribuídos à Internet (Iana) define números de portas para serviços comuns; para obter mais informações, consulte [O Registro do Número da Porta do Protocolo de Transporte e nome do serviço](https://www.iana.org/assignments/port-numbers). Outros serviços podem ter números de porta registrados no intervalo de 1.024 a 65.535.  
   
  O exemplo a seguir cria um <xref:System.Net.IPEndPoint> para um servidor ao combinar o primeiro endereço IP retornado pelo **Dns** para o computador host com um número da porta escolhido dentre o intervalo de números da porta registrados.  
   
@@ -45,7 +45,7 @@ IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  
-    SocketType.Stream, ProtocolType.Tcp) 
+    SocketType.Stream, ProtocolType.Tcp)
 listener.Bind(localEndPoint)  
 listener.Listen(100)  
 ```  
@@ -59,10 +59,10 @@ listener.Listen(100);
   
  O método **Listen** usa um único parâmetro que especifica quantas conexões pendentes para o **soquete** são permitidas antes que um erro de servidor ocupado seja retornado para o cliente em processo de conexão. Nesse caso, até 100 clientes são colocados na fila de conexão antes que uma resposta de servidor ocupado seja retornada ao cliente número 101.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando um soquete de servidor síncrono](using-a-synchronous-server-socket.md)
 - [Usando um soquete de servidor assíncrono](using-an-asynchronous-server-socket.md)
 - [Usando soquetes do cliente](using-client-sockets.md)
-- [Como: Criar um soquete](how-to-create-a-socket.md)
+- [Como criar um soquete](how-to-create-a-socket.md)
 - [Soquetes](sockets.md)

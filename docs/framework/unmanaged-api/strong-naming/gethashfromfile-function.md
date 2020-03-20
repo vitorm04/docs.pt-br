@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-ms.openlocfilehash: ffa25b1ec6fda80099f333c1d0a4cf57b76379e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea2b70f37668587fb02513ab54da6c1915e2918d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140683"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176975"
 ---
 # <a name="gethashfromfile-function"></a>Função GetHashFromFile
 Gera um hash sobre o conteúdo do arquivo especificado.  
   
- Esta função foi preterida. Em vez disso, use o método [ICLRStrongName:: GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md) .  
+ Esta função foi preterida. Use o método [ICLRStrongName::GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
-    [in, out] unsigned int   *piHashAlg,   
-    [out] BYTE     *pbHash,      
-    [in]  DWORD    cchHash,      
+    [in, out] unsigned int   *piHashAlg,
+    [out] BYTE     *pbHash,
+    [in]  DWORD    cchHash,
     [out] DWORD    *pchHash  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `szFilePath`  
- no O nome do arquivo para hash.  
+ [em] O nome do arquivo para hash.  
   
  `piHashAlg`  
- [entrada, saída] O algoritmo a ser usado ao gerar o hash. Os algoritmos válidos são aqueles definidos pelo CryptoAPI do Win32. Se `piHashAlg` for definido como 0, o algoritmo padrão CALG_SHA-1 será usado.  
+ [dentro, fora] O algoritmo para usar ao gerar o hash. Algoritmos válidos são aqueles definidos pelo Win32 CryptoAPI. Se `piHashAlg` for definido como 0, o algoritmo padrão CALG_SHA-1 é usado.  
   
  `pbHash`  
- fora Uma matriz de bytes que contém o hash gerado.  
+ [fora] Uma matriz de byte contendo o hash gerado.  
   
  `cchHash`  
- no O tamanho máximo do buffer ao qual `pbHash` aponta.  
+ [em] O tamanho máximo do `pbHash` buffer que aponta para.  
   
  `pchHash`  
- fora O tamanho, em bytes, do `pbHash`retornado.  
+ [fora] O tamanho, em bytes, `pbHash`do devolvido.  
   
 ## <a name="remarks"></a>Comentários  
- Essa função é a mesma que [GetHashFromFileW](gethashfromfilew-function.md), exceto que a especificação de nome de arquivo é ANSI em vez de Unicode.  
+ Esta função é a mesma [de GetHashFromFileW,](gethashfromfilew-function.md)exceto que a especificação do nome do arquivo é ANSI em vez de Unicode.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** StrongName. h  
+ **Cabeçalho:** StrongName.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Método GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)
 - [Método GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md)

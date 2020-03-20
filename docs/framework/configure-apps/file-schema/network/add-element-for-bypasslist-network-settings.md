@@ -10,62 +10,62 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699605"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155071"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<adicionar o elemento > para BypassList (configurações de rede)
-Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<adicionar> Elemento para lista de desvios (Configurações de rede)
+Adiciona um endereço IP ou nome DNS à lista de desvio proxy.  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<adicionar >**  
+[**\<>de configuração**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de proxy padrão**](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de bypasslist**](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<adicionar>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<add   
-  address="regular expression"   
+<add
+  address="regular expression"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descrição**|  
+|**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|**address**|Uma expressão regular que descreve um endereço IP ou nome DNS.|  
+|**Endereço**|Uma expressão regular descrevendo um endereço IP ou nome DNS.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- None.  
+ Nenhum.  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[bypasslist](bypasslist-element-network-settings.md)|Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `add` insere expressões regulares descrevendo endereços IP ou nomes de servidor DNS na lista de endereços que ignoram um servidor proxy.  
+ O `add` elemento insere expressões regulares descrevendo endereços IP ou nomes de servidor DNS na lista de endereços que contornam um servidor proxy.  
   
- O valor do atributo `address` deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
+ O valor `address` do atributo deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.  
   
- Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] +\\. contoso\\. com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] +\\. contoso\\. com $".  
+ Você deve ter cuidado ao especificar uma expressão regular para este elemento. A expressão regular\\"[a-z]+\\.contoso .com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para combinar apenas um host no domínio contoso.com, use uma âncora ("$"): "[a-z]+\\.contoso\\.com$".  
   
- Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).  
+ Para obter mais informações sobre expressões regulares, consulte . [.NET Framework Expressões Regulares](../../../../standard/base-types/regular-expressions.md).  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de configuração  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
- O exemplo a seguir adiciona dois endereços à lista de bypass. O primeiro ignora o proxy para todos os servidores no domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192,168.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir adiciona dois endereços à lista de desvios. O primeiro ignora o proxy para todos os servidores do domínio contoso.com; o segundo ignora o proxy para todos os servidores cujo endereço IP começa com 192.168.  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ Adiciona um endereço IP ou nome DNS à lista de bypass de proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de configurações de rede](index.md)

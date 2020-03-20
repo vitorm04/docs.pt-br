@@ -1,19 +1,19 @@
 ---
-title: Indicadores-WF
+title: Marcadores - WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: c5bd8130ee623599e80014777baf92986c3b6969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868927"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183019"
 ---
 # <a name="bookmarks"></a>Indicadores
-Indexadores são o mecanismo que permite uma atividade para esperar passiva entrada sem conter um segmento de fluxo de trabalho. Quando uma atividade sinaliza que está esperando estímulo, pode criar um indexador. Isso indica o tempo de execução que a execução da atividade não deve ser considerada completo mesmo quando o método atualmente em execução (que criou <xref:System.Activities.Bookmark>) retorna.  
+Indexadores são o mecanismo que permite uma atividade para esperar passiva entrada sem conter um segmento de fluxo de trabalho. Quando uma atividade sinaliza que está esperando estímulo, pode criar um indexador. Isso indica o runtime que a execução da atividade não deve ser considerada completo mesmo quando o método atualmente em execução (que criou <xref:System.Activities.Bookmark>) retorna.  
   
 ## <a name="bookmark-basics"></a>Noções básicas do indexador  
- <xref:System.Activities.Bookmark> representa um ponto em que a execução pode ser continuada (e através de entrada que pode ser entregada) em uma instância de fluxo de trabalho. Normalmente, <xref:System.Activities.Bookmark> é dado um nome e host (ou extensão) o código externo é responsável para continuar o indexador com dados relevantes. Quando <xref:System.Activities.Bookmark> é que, o tempo de execução de fluxo de trabalho agenda o representante de <xref:System.Activities.BookmarkCallback> que foi associado com esse <xref:System.Activities.Bookmark> na altura do projeto.  
+ <xref:System.Activities.Bookmark> representa um ponto em que a execução pode ser continuada (e através de entrada que pode ser entregada) em uma instância de fluxo de trabalho. Normalmente, <xref:System.Activities.Bookmark> é dado um nome e host (ou extensão) o código externo é responsável para continuar o indexador com dados relevantes. Quando <xref:System.Activities.Bookmark> é que, o runtime de fluxo de trabalho agenda o representante de <xref:System.Activities.BookmarkCallback> que foi associado com esse <xref:System.Activities.Bookmark> na altura do projeto.  
   
 ## <a name="bookmark-options"></a>Opções do indexador  
  A classe de <xref:System.Activities.BookmarkOptions> especifica o tipo de <xref:System.Activities.Bookmark> que está sendo criado. Os valores não mutuamente exclusivos possíveis são <xref:System.Activities.BookmarkOptions.None>, <xref:System.Activities.BookmarkOptions.MultipleResume>, e <xref:System.Activities.BookmarkOptions.NonBlocking>. Use <xref:System.Activities.BookmarkOptions.None>, a opção, ao criar <xref:System.Activities.Bookmark> que seja continuada exatamente uma vez. Use <xref:System.Activities.BookmarkOptions.MultipleResume> ao criar <xref:System.Activities.Bookmark> que pode ser que várias vezes. Use <xref:System.Activities.BookmarkOptions.NonBlocking> ao criar <xref:System.Activities.Bookmark> que pode ser que nunca. Ao contrário dos indicadores criados usando <xref:System.Activities.BookmarkOptions>padrão, os indicadores de <xref:System.Activities.BookmarkOptions.NonBlocking> não impede que uma atividade terminar.  
@@ -30,12 +30,12 @@ public sealed class ReadLine : NativeActivity<string>
     protected override void Execute(NativeActivityContext context)  
     {  
         // Create a Bookmark and wait for it to be resumed.  
-        context.CreateBookmark(BookmarkName.Get(context),   
+        context.CreateBookmark(BookmarkName.Get(context),
             new BookmarkCallback(OnResumeBookmark));  
     }  
   
-    // NativeActivity derived activities that do asynchronous operations by calling   
-    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext   
+    // NativeActivity derived activities that do asynchronous operations by calling
+    // one of the CreateBookmark overloads defined on System.Activities.NativeActivityContext
     // must override the CanInduceIdle property and return true.  
     protected override bool CanInduceIdle  
     {  

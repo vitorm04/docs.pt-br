@@ -11,15 +11,15 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 9bb094ce0b7945f23a2e9b8614e56c9492d5f832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: fea813d7b9fe585e35b729b8b64e3a5f414ef76d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736031"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141960"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Como modificar o tamanho ou a colocação de uma imagem em tempo de execução (Windows Forms)
-Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms em um formulário, poderá definir a propriedade <xref:System.Windows.Forms.PictureBox.SizeMode%2A> para:  
+Se você usar <xref:System.Windows.Forms.PictureBox> o controle do Windows Forms <xref:System.Windows.Forms.PictureBox.SizeMode%2A> em um formulário, você pode definir a propriedade nele para:  
   
 - Alinhe o canto superior esquerdo da imagem com o canto superior esquerdo do controle  
   
@@ -33,16 +33,16 @@ Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Para definir a propriedade SizeMode em tempo de execução  
   
-1. Defina <xref:System.Windows.Forms.PictureBox.SizeMode%2A> como <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (o padrão), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>ou <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> significa que a imagem é colocada no canto superior esquerdo do controle; se a imagem for maior do que o controle, suas bordas inferior e direita serão recortadas. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> significa que a imagem está centralizada dentro do controle; se a imagem for maior que o controle, as bordas externas da imagem serão recortadas. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> significa que o tamanho do controle é ajustado para o tamanho da imagem. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> é o inverso e significa que o tamanho da imagem é ajustado para o tamanho do controle.  
+1. Definir <xref:System.Windows.Forms.PictureBox.SizeMode%2A> <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> como (o <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>padrão), <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>ou . <xref:System.Windows.Forms.PictureBoxSizeMode.Normal>significa que a imagem é colocada no canto superior esquerdo do controle; se a imagem for maior que o controle, suas bordas inferior e direita são cortadas. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>significa que a imagem está centrada dentro do controle; se a imagem for maior que o controle, as bordas externas da imagem são cortadas. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>significa que o tamanho do controle é ajustado ao tamanho da imagem. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>é o inverso, e significa que o tamanho da imagem é ajustado ao tamanho do controle.  
   
-     No exemplo abaixo, o caminho definido para o local da imagem é a pasta Meus Documentos. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.PictureBox> já adicionado.  
+     No exemplo abaixo, o caminho definido para o local da imagem é a pasta Meus Documentos. Isso acontece porque presumimos que a maioria dos computadores rodando o sistema operacional Windows vai incluir este diretório. Isso também permite que usuários com níveis mínimos de acesso ao sistema executem com segurança o aplicativo. O exemplo abaixo assume um <xref:System.Windows.Forms.PictureBox> formulário com um controle já adicionado.  
   
     ```vb  
     Private Sub StretchPic()  
        ' Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage  
        ' Load the picture into the control.  
-       ' You should replace the bold image   
+       ' You should replace the bold image
        ' in the sample below with an icon of your own choosing.  
        PictureBox1.Image = Image.FromFile _  
        (System.Environment.GetFolderPath _  
@@ -56,7 +56,7 @@ Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms
        // Stretch the picture to fit the control.  
        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;  
        // Load the picture into the control.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        PictureBox1.Image = Image.FromFile _  
@@ -73,7 +73,7 @@ Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms
           // Stretch the picture to fit the control.  
           pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  
           // Load the picture into the control.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           pictureBox1->Image = Image::FromFile(String::Concat(  
              System::Environment::GetFolderPath(  
@@ -82,7 +82,7 @@ Se você usar o controle de <xref:System.Windows.Forms.PictureBox> Windows Forms
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Como carregar uma imagem usando o designer](how-to-load-a-picture-using-the-designer-windows-forms.md)

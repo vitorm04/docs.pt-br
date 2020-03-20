@@ -1,5 +1,5 @@
 ---
-title: 'Como: desenhar com pincéis opacos e semitransparentes'
+title: Como desenhar com pincéis opacos e semitransparentes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: 1be3fd2ce10f6681e531559a6e9594fe3d021f5f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1e48bbd563f6377380848949325962b568fa432c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582585"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142401"
 ---
-# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Como: desenhar com pincéis opacos e semitransparentes
-Ao preencher uma forma, você deve passar uma <xref:System.Drawing.Brush> objeto para um dos métodos de preenchimento do <xref:System.Drawing.Graphics> classe. O parâmetro do construtor de <xref:System.Drawing.SolidBrush.%23ctor%2A> construtor é um <xref:System.Drawing.Color> objeto. Para preencher uma forma opaca, defina o componente alfa da cor como 255. Para preencher uma forma semitransparente, defina o componente alfa para qualquer valor de 1 a 254.  
+# <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Como desenhar com pincéis opacos e semitransparentes
+Quando você preenche uma forma, <xref:System.Drawing.Brush> você deve passar um objeto <xref:System.Drawing.Graphics> para um dos métodos de preenchimento da classe. O único parâmetro <xref:System.Drawing.SolidBrush.%23ctor%2A> do construtor <xref:System.Drawing.Color> é um objeto. Para preencher uma forma opaca, defina o componente alfa da cor como 255. Para preencher uma forma semitransparente, defina o componente alfa para qualquer valor de 1 a 254.  
   
  Ao preencher uma forma semitransparente, a cor da forma é combinada com as cores da tela de fundo. O componente alfa especifica como as cores da tela de fundo e da forma são misturadas; valores alfa próximos a 0 colocam mais peso nas cores da tela de fundo e valores alfabéticos próximos 255 colocam mais peso na cor da forma.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir desenha um bitmap e, em seguida, preenche três elipses que sobrepõem o bitmap. A primeira elipse usa um componente alfa de 255, portanto, é opaca. As segunda e terceira elipses usam um componente alfa de 128, para que sejam semitransparentes; É possível ver a imagem da tela de fundo pelas elipses. A chamada que define o <xref:System.Drawing.Graphics.CompositingQuality%2A> propriedade faz com que a combinação da terceira elipse seja feita em conjunto com a correção gama.  
+ O exemplo a seguir desenha um bitmap e, em seguida, preenche três elipses que sobrepõem o bitmap. A primeira elipse usa um componente alfa de 255, portanto, é opaca. As segunda e terceira elipses usam um componente alfa de 128, para que sejam semitransparentes; É possível ver a imagem da tela de fundo pelas elipses. A chamada que <xref:System.Drawing.Graphics.CompositingQuality%2A> define a propriedade faz com que a mistura para a terceira elipse seja feita em conjunto com a correção gama.  
 
  [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
 
- A ilustração a seguir mostra a saída do código a seguir: 
+ A ilustração a seguir mostra a saída do seguinte código:
   
- ![Ilustração que mostra a saída opaca e semitransparente.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
+ ![Ilustração que mostra saída opaca e semitransparente.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- O exemplo anterior foi projetado para uso com o Windows Forms e requer <xref:System.Windows.Forms.PaintEventArgs> `e`, que é um parâmetro de <xref:System.Windows.Forms.PaintEventHandler>.  
+ O exemplo anterior foi projetado para ser <xref:System.Windows.Forms.PaintEventArgs> `e`usado com formulários <xref:System.Windows.Forms.PaintEventHandler>do Windows, e requer , que é um parâmetro de .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Combinação Alfa em Linhas e Preenchimentos](alpha-blending-lines-and-fills.md)
-- [Como: Dar ao controle uma tela de fundo transparente](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Como: Desenhar linhas opacas e semitransparentes](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Como dar ao controle um plano de fundo transparente](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Como desenhar linhas opacas e semitransparentes](how-to-draw-opaque-and-semitransparent-lines.md)

@@ -1,5 +1,5 @@
 ---
-title: Campo HttpWebRequest. _AutoRedirects
+title: HttpWebRequest._AutoRedirects Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-ms.openlocfilehash: da7acdd890d0bff267fb592e81ceb6553421323f
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ff4b9b430bdb9ebc82a945012dcb53ed83b1e48f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215706"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156292"
 ---
-# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest. Campo de redirecionamento de\_
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest. \_Campo AutoRedirects
 
-`HttpWebRequest._AutoRedirects` é um <xref:System.Int32> que reflete o número de redirecionamentos feitos para essa <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects`é <xref:System.Int32> um que reflete o número de <xref:System.Net.HttpWebRequest>redirecionamentos feitos para isso.
 
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,14 +28,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> O campo `HttpWebRequest._AutoRedirects` é interno e não deve ser usado diretamente no seu código.
-> 
-> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
+> O `HttpWebRequest._AutoRedirects` campo é interno e não deve ser usado diretamente em seu código.
+>
+> A Microsoft não suporta o uso deste campo em um aplicativo de produção nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espaço de nome:**<xref:System.Net>
 
-**Assembly:** Sistema (em System. dll)
+**Montagem:** Sistema (em System.dll)
 
-**.NET Framework versões:** Disponível desde 2,0.
+**Versões do Framework .NET:** Disponível desde 2.0.

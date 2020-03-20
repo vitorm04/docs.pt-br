@@ -1,23 +1,23 @@
 ---
-title: Expressões-WF
+title: Expressões - WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 62b278825de6242075e89e3b243b6d6d8ef4d599
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 93fe449e8fa6c50f715d842c2ef6a9ecbd31aff2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306200"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182936"
 ---
 # <a name="expressions"></a>Expressões
 
-Uma expressão Windows Workflow Foundation (WF) é qualquer atividade que retorne um resultado. Todas as atividades de expressão derivam indiretamente de <xref:System.Activities.Activity%601>, que contém uma propriedade de <xref:System.Activities.OutArgument> nomeada <xref:System.Activities.Activity%601.Result%2A> como o valor de retorno da atividade. O [!INCLUDE[wf1](../../../includes/wf1-md.md)] é fornecido com uma ampla gama de atividades de expressão simples como <xref:System.Activities.Expressions.VariableValue%601> e <xref:System.Activities.Expressions.VariableReference%601>, que fornecem acesso à variável única de fluxo de trabalho por meio de atividades do operador, a atividades complexas como <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> e <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> que oferecem acesso à largura máxima da linguagem Visual Basic para produzir o resultado. As atividades adicionais da expressão podem ser criadas derivando de <xref:System.Activities.CodeActivity%601> ou <xref:System.Activities.NativeActivity%601>.
+Uma expressão WF (Windows Workflow Foundation) é qualquer atividade que retorna um resultado. Todas as atividades de expressão derivam indiretamente de <xref:System.Activities.Activity%601>, que contém uma propriedade de <xref:System.Activities.OutArgument> nomeada <xref:System.Activities.Activity%601.Result%2A> como o valor de retorno da atividade. O [!INCLUDE[wf1](../../../includes/wf1-md.md)] é fornecido com uma ampla gama de atividades de expressão simples como <xref:System.Activities.Expressions.VariableValue%601> e <xref:System.Activities.Expressions.VariableReference%601>, que fornecem acesso à variável única de fluxo de trabalho por meio de atividades do operador, a atividades complexas como <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> e <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> que oferecem acesso à largura máxima da linguagem Visual Basic para produzir o resultado. As atividades adicionais da expressão podem ser criadas derivando de <xref:System.Activities.CodeActivity%601> ou <xref:System.Activities.NativeActivity%601>.
 
 ## <a name="using-expressions"></a>Usando expressões
  O designer de fluxo de trabalho usa <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> e <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> para todas as expressões em projetos do Visual Basic, e <xref:Microsoft.CSharp.Activities.CSharpValue%601> e <xref:Microsoft.CSharp.Activities.CSharpReference%601> para expressões em projetos de fluxo de trabalho C#.
 
 > [!NOTE]
-> O suporte C# para expressões em projetos de fluxo de trabalho foi introduzido no .NET Framework 4,5. Para obter mais informações, consulte [ C# expressões](csharp-expressions.md).
+> O suporte às expressões C# em projetos de fluxo de trabalho foi introduzido no Quadro .NET 4.5. Para obter mais informações, consulte [C# Expressões](csharp-expressions.md).
 
  Os fluxos de trabalho gerados pelo designer são salvos em XAML, onde as expressões aparecem incluídas entre colchetes, como no exemplo a seguir.
 
@@ -40,7 +40,7 @@ Uma expressão Windows Workflow Foundation (WF) é qualquer atividade que retorn
 </Sequence>
 ```
 
- Ao definir um fluxo de trabalho em código, as atividades de expressão podem ser usadas. O exemplo a seguir mostra o uso de uma composição de atividades de operador para adicionar três números:
+ Ao definir um fluxo de trabalho em código, as atividades de expressão podem ser usadas. O exemplo a seguir mostra o uso de uma composição das atividades do operador para adicionar três números:
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -69,7 +69,7 @@ Sequence w = new Sequence
 };
 ```
 
- O mesmo fluxo de trabalho pode ser expresso de forma mais C# compacta usando expressões lambda, conforme mostrado no exemplo a seguir:
+ O mesmo fluxo de trabalho pode ser expresso de forma mais compacta usando expressões C# lambda, como mostrado no exemplo a seguir:
   
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -80,7 +80,7 @@ Variable<int> r = new Variable<int>("r", 0);
 Sequence w = new Sequence
 {
     Variables = { a, b, c, r },
-    Activities = 
+    Activities =
     {
         new Assign {
             To = new OutArgument<int>(r),
@@ -119,7 +119,7 @@ namespace ExpressionsDemo
 }
 ```
 
- Com essa nova atividade, você pode reescrever o fluxo de trabalho anterior que adicionou três valores, conforme mostrado no exemplo a seguir:
+ Com esta nova atividade, você pode reescrever o fluxo de trabalho anterior que adicionou três valores como mostrado no exemplo a seguir:
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -146,4 +146,4 @@ Sequence w = new Sequence
 };
 ```
 
- Para obter mais informações sobre como usar expressões em código, consulte [criação de fluxos de trabalho, atividades e expressões usando código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md).
+ Para obter mais informações sobre o uso de expressões em código, consulte [Autoring Workflows, Activities and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).

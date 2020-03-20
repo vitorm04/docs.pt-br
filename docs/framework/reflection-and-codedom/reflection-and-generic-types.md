@@ -16,15 +16,15 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 0a7d38c8177aa8f2c5f45dcc62a0ae6e5aaca2a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180491"
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
-Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico está associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  
+ Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo comum é que um tipo genérico tem associado a ele um conjunto de parâmetros de tipo (se for uma definição de tipo genérico) ou argumentos de tipo (se for um tipo construído). Um método genérico é diferente de um método comum da mesma maneira.  
   
  Há duas chaves para entender como a reflexão trata tipos e métodos genéricos:  
   
@@ -50,7 +50,7 @@ Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo c
  As definições de tipo e método genéricos são os modelos dos quais os tipos instanciáveis são criados. Os tipos genéricos na biblioteca de classes do .NET Framework, como <xref:System.Collections.Generic.Dictionary%602>, são definições de tipo genérico.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>O tipo ou o método é aberto ou fechado?  
- Um tipo ou método genérico será fechado se os tipos instanciáveis tiverem sido substituídos para todos os seus parâmetros de tipo, incluindo todos os parâmetros de tipo de todos os tipos delimitadores. Você poderá criar uma instância de um tipo genérico somente se ele for fechado. A propriedade <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> retornará `true` se um tipo for aberto. Para métodos, o método <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> executa a mesma função.   
+ Um tipo ou método genérico será fechado se os tipos instanciáveis tiverem sido substituídos para todos os seus parâmetros de tipo, incluindo todos os parâmetros de tipo de todos os tipos delimitadores. Você poderá criar uma instância de um tipo genérico somente se ele for fechado. A propriedade <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> retornará `true` se um tipo for aberto. Para métodos, o método <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> executa a mesma função.
 
 ## <a name="generating-closed-generic-types"></a>Gerando tipos genéricos fechados  
  Quando você tiver uma definição de método ou tipo genérico, use o método <xref:System.Type.MakeGenericType%2A> para criar um tipo genérico fechado ou o método <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> para criar um <xref:System.Reflection.MethodInfo> para um método genérico fechado.  
@@ -60,7 +60,7 @@ Do ponto de vista da reflexão, a diferença entre um tipo genérico e um tipo c
   
  Por exemplo, se você tiver um objeto <xref:System.Type> representando `Dictionary<int, string>` (`Dictionary(Of Integer, String)` no Visual Basic) e desejar criar o tipo `Dictionary<string, MyClass>`, poderá usar o método <xref:System.Type.GetGenericTypeDefinition%2A> para obter um <xref:System.Type> representando `Dictionary<TKey, TValue>` e, em seguida, usar o método <xref:System.Type.MakeGenericType%2A> para produzir um <xref:System.Type> representando `Dictionary<int, MyClass>`.  
   
- Para obter um exemplo de um tipo genérico aberto que não é um tipo genérico, consulte "Parâmetro de tipo ou argumento de tipo" posteriormente neste tópico.   
+ Para obter um exemplo de um tipo genérico aberto que não é um tipo genérico, consulte "Parâmetro de tipo ou argumento de tipo" posteriormente neste tópico.
 
 ## <a name="examining-type-arguments-and-type-parameters"></a>Examinando os parâmetros de tipo e os argumentos de tipo  
  Use o método <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> para obter uma matriz de objetos <xref:System.Type> que representam os parâmetros de tipo ou os argumentos de tipo de um tipo genérico e use o método <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> para fazer o mesmo para um método genérico.  
@@ -114,14 +114,14 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Para determinar se um parâmetro de tipo é covariante ou contravariante, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, o parâmetro de tipo será invariável. Consulte [Covariância e contravariância](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Restrições especiais  
- Para determinar as restrições especiais de um parâmetro de tipo, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, não haverá nenhuma restrição especial. Um parâmetro de tipo pode ser restringido para ser um tipo de referência, para ser um tipo de valor não nulo e para ter um construtor sem parâmetros.    
+ Para determinar as restrições especiais de um parâmetro de tipo, aplique a máscara <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> ao valor <xref:System.Reflection.GenericParameterAttributes> retornado pela propriedade <xref:System.Type.GenericParameterAttributes%2A>. Se o resultado for <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>, não haverá nenhuma restrição especial. Um parâmetro de tipo pode ser restringido para ser um tipo de referência, para ser um tipo de valor não nulo e para ter um construtor sem parâmetros.
 
 ## <a name="invariants"></a>Invariáveis  
  Para obter uma tabela de condições invariáveis para termos comuns na reflexão de tipos genéricos, consulte <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Para encontrar termos adicionais relacionados aos métodos genéricos, consulte <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
 
-## <a name="related-topics"></a>Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos Relacionados  
   
-|Título|Descrição|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Como examinar tipos genéricos e criar instâncias deles com a reflexão](how-to-examine-and-instantiate-generic-types-with-reflection.md)|Mostra como usar as propriedades e os métodos de <xref:System.Type> e <xref:System.Reflection.MethodInfo> para examinar tipos genéricos.|  
 |[Genéricos](../../standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  

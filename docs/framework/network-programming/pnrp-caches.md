@@ -3,10 +3,10 @@ title: Caches PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
 ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64622988"
 ---
 # <a name="pnrp-caches"></a>Caches PNRP
@@ -35,6 +35,6 @@ Caches de protocolo PNRP são coleções locais de pontos de extremidade de par 
   
  Pares podem registrar interesse em receber objetos de outros pares. Quando um objeto é atualizado, o aplicativo de colaboração é notificado e o novo objeto é passado para todos os assinantes do aplicativo. Por exemplo, um par em um aplicativo de chat de grupo pode registrar interesse em receber informações do aplicativo, que ele envie todos os registros de chat como dados de aplicativo.  Isso permite monitorar a atividade de chat dentro da nuvem.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.PeerToPeer>

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716473"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181657"
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
 A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em processo para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
   
-## <a name="background"></a>Segundo Plano  
+## <a name="background"></a>Segundo plano  
  O .NET Framework sempre forneceu a hospedagem lado a lado para aplicativos de código gerenciado, mas antes do .NET Framework 4, ele não fornecia essa funcionalidade para componentes COM gerenciados. No passado, os componentes COM gerenciados que eram carregados em um processo eram executados com a versão do runtime que já estava carregada ou com a versão mais recente instalada do .NET Framework. Se essa versão não era compatível com o componente COM, ele falhava.  
   
  O .NET Framework 4 fornece uma nova abordagem para hospedagem lado a lado que garante o seguinte:  
@@ -36,27 +36,27 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
   
      Conforme mostrado pela tabela a seguir, os componentes que foram criados com o .NET Framework versão 1.1 podem ser executados lado a lado com os componentes da versão 4, mas não podem ser executados com componentes da versão 2.0, 3.0 ou 3.5, pois a hospedagem lado a lado não está disponível para essas versões.  
   
-    |Versão do .NET Framework|1.1|2.0 – 3.5|4|  
+    |Versão do .NET Framework|1,1|2.0 – 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Não aplicável|Não|Sim|  
+    |1,1|Não aplicável|Não|Sim|  
     |2.0 – 3.5|Não|Não aplicável|Sim|  
     |4|Sim|Sim|Não aplicável|  
   
 > [!NOTE]
 > As versões 3.0 e 3.5 do .NET Framework são criadas de forma incremental na versão 2.0 e não precisam ser executadas lado a lado. Elas são inerentemente a mesma versão.  
   
-<a name="scenarios"></a>   
+<a name="scenarios"></a>
 ## <a name="common-side-by-side-hosting-scenarios"></a>Cenários comuns de hospedagem lado a lado  
   
 - **Cenário 1:** aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework.  
   
-     .NET Framework versões instaladas: a .NET Framework 4 e todas as outras versões do .NET Framework usadas pelos componentes COM.  
+     Versões do Framework .NET instaladas: O .NET Framework 4 e todas as outras versões do .NET Framework usado pelos componentes COM.  
   
      O que fazer: nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
   
-- **Cenário 2**: aplicativo gerenciado criado com o .NET Framework 2,0 SP1 que você prefere executar com o .NET Framework 2,0, mas que está disposto a ser executado no .NET Framework 4 se a versão 2,0 não estiver presente.  
+- **Cenário 2**: Aplicativo gerenciado construído com o .NET Framework 2.0 SP1 que você prefere executar com o .NET Framework 2.0, mas está disposto a ser executado no .NET Framework 4 se a versão 2.0 não estiver presente.  
   
-     .NET Framework versões instaladas: uma versão anterior do .NET Framework e o .NET Framework 4.  
+     .NET Framework versões instaladas: Uma versão anterior do .NET Framework e do .NET Framework 4.  
   
      O que fazer: no [arquivo de configuração de aplicativo](../configure-apps/index.md) no diretório do aplicativo, use o [elemento \<startup](../configure-apps/file-schema/startup/startup-element.md) e o [elemento \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) definidos da seguinte forma:  
   
@@ -69,9 +69,9 @@ A partir do .NET Framework 4, você pode usar a hospedagem lado a lado em proces
     </configuration>  
     ```  
   
-- **Cenário 3:** Aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework que você deseja executar com o .NET Framework 4.  
+- **Cenário 3:** Aplicativo nativo que usa componentes COM construídos com versões anteriores do .NET Framework que você deseja executar com o .NET Framework 4.  
   
-     .NET Framework versões instaladas: o .NET Framework 4.  
+     .NET Framework versões instaladas: O .NET Framework 4.  
   
      O que fazer: no arquivo de configuração de aplicativo no diretório do aplicativo, use o elemento `<startup>` com o atributo `useLegacyV2RuntimeActivationPolicy` definido como `true` e o elemento `<supportedRuntime>` definido da seguinte forma:  
   
@@ -151,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDispatch* pPrintInfo;  
     pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
     OLECHAR FAR* szMethod[1];  
-    szMethod[0]=OLESTR("PrintInfo");   
+    szMethod[0]=OLESTR("PrintInfo");
     hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
     DISPPARAMS dispparams;  
     dispparams.cNamedArgs = 0;  
@@ -171,7 +171,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Elemento \<startup>](../configure-apps/file-schema/startup/startup-element.md)
-- Elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<> de startup Element](../configure-apps/file-schema/startup/startup-element.md)
+- [\<suporteElemento de> runtime](../configure-apps/file-schema/startup/supportedruntime-element.md)

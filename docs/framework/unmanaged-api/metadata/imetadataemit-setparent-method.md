@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432445"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175597"
 ---
 # <a name="imetadataemitsetparent-method"></a>Método IMetaDataEmit::SetParent
-Estabelece que o membro especificado, conforme definido por uma chamada anterior a [IMetaDataEmit::D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), é um membro do tipo especificado, conforme definido por uma chamada anterior para [IMetaDataEmit::D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Estabelece que o membro especificado, conforme definido por uma chamada anterior ao [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), é um membro do tipo especificado, conforme definido por uma chamada anterior ao [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT SetParent (   
-    [in]  mdMemberRef mr,   
-    [in]  mdToken     tk   
+HRESULT SetParent (
+    [in]  mdMemberRef mr,
+    [in]  mdToken     tk
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `mr`  
- no O token de `mdMemberRef` para receber um novo pai.  
+ [em] O `mdMemberRef` símbolo para receber um novo pai.  
   
  `tk`  
- no O `mdToken` para o novo pai.  
+ [em] O `mdToken` para o novo pai.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5002d7a180e480b0e1d38f1c1180fe565dc5e1dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105013"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180374"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Gerador de Classe Fortemente Tipada de Gerenciamento)
 A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gerar rapidamente uma classe gerenciada Early Bound para uma classe WMI (Instrumentação de Gerenciamento do Windows) especificada. A classe gerada simplifica o código que você deve gravar para acessar uma instância da classe WMI.  
@@ -24,8 +24,8 @@ A ferramenta Gerador de Classes Fortemente Tipadas de Gerenciamento permite gera
 ## <a name="syntax"></a>Sintaxe  
   
 ```console  
-mgmtclassgen   
-WMIClass [options]   
+mgmtclassgen
+WMIClass [options]
 ```  
   
 |Argumento|Descrição|  
@@ -36,7 +36,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l**  *language*|Especifica a linguagem na qual gerar a classe gerenciada Early Bound. É possível especificar **CS** (C#, padrão), **VB** (Visual Basic), **MC** (C++) ou **JS** (JScript) como o argumento da linguagem.|  
 |**/m**  *machine*|Especifica o computador ao qual se conectar, em que a classe WMI reside. O padrão é o computador local.|  
-|**/n** *path*|Especifica o caminho para o namespace WMI que contém a classe WMI. Se você não especificar essa opção, a ferramenta gerará o código para *WMIClass* no namespace **Root\cimv2** padrão.|  
+|**/n**  *path*|Especifica o caminho para o namespace WMI que contém a classe WMI. Se você não especificar essa opção, a ferramenta gerará o código para *WMIClass* no namespace **Root\cimv2** padrão.|  
 |**/o**  *classnamespace*|Especifica o namespace do .NET no qual gerar a classe de código gerenciada. Se você não especificar essa opção, a ferramenta gerará o namespace usando o namespace WMI e o prefixo do esquema. O prefixo do esquema é a parte do nome da classe que antecede o caractere de sublinhado. Por exemplo, para a classe **Win32_OperatingSystem** no namespace **Root\cimv2**, a ferramenta geraria a classe em **ROOT.CIMV2.Win32**.|  
 |**/p**  *filepath*|Especifica o caminho para o arquivo no qual o código gerado deve ser salvo. Se você não especificar essa opção, a ferramenta criará o arquivo no diretório atual. Ela nomeia a classe e o arquivo em que gera a classe que usa o argumento *WMIClass*. O nome da classe e do arquivo são iguais ao de *WMIClass.* Se *WMIClass* contiver um caractere de sublinhado, a ferramenta usará a parte do nome de classe depois do caractere de sublinhado. Por exemplo, se o nome *WMIClass* estiver no formato **Win32_LogicalDisk**, a classe e o arquivo gerados serão chamados de "logicaldisk". Se já existir um arquivo, a ferramenta substituirá o arquivo existente.|  
 |**/pw**  *password*|Especifica a senha a ser usada durante o logon em um computador especificado pela opção **/m**.|  
@@ -52,7 +52,7 @@ WMIClass [options]
   
 |Tipo CIM|Tipo de dados na classe gerada|  
 |--------------|--------------------------------------|  
-|CIM_SINT8|**SByte**|  
+|CIM_SINT8|**Sbyte**|  
 |CIM_UINT8|**Byte**|  
 |CIM_SINT16|**Int16**|  
 |CIM_UINT16|**UInt16**|  
@@ -60,15 +60,15 @@ WMIClass [options]
 |SIM_UINT32|**UInt32**|  
 |CIM_SINT64|**Int64**|  
 |CIM_UINT64|**UInt64**|  
-|CIM_REAL32|**Simples**|  
+|CIM_REAL32|**Single**|  
 |CIM_REAL64|**Duplo**|  
-|CIM_BOOLEAN|**Booliano**|  
+|CIM_BOOLEAN|**Boolean**|  
 |CIM_String|**Cadeia de caracteres**|  
 |CIM_DATETIME|**DateTime** ou **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Object**|  
+|CIM_IUNKNOWN|**Objeto**|  
 |CIM_ARRAY|Matriz dos objetos mencionados acima|  
   
  Observer os seguintes comportamentos quando você gera uma classe WMI:  
@@ -105,11 +105,11 @@ Imports System
 Imports System.Management  
 Imports ROOT.CIMV2.Win32  
   
-Public Class App     
-   Public Shared Sub Main()        
+Public Class App
+   Public Shared Sub Main()
       ' Enumerate instances of the Win32_process.  
       ' Print the Name property of the instance.  
-      Dim ps As Process     
+      Dim ps As Process
       For Each ps In  Process.GetInstances()  
          Console.WriteLine(ps.Name)  
       Next ps  
@@ -148,7 +148,7 @@ public class App
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>

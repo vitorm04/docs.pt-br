@@ -1,5 +1,5 @@
 ---
-title: <filter> elemento para <add> para <listeners> para <source>
+title: <filter>Elemento <add> para <listeners> para para<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088904"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153510"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filtrar o elemento > para \<Adicionar > para os ouvintes \<> para \<fonte >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filtrar> \<Elemento \<para adicionar \<> para os ouvintes> para> de origem
 Adiciona um filtro a um ouvinte na coleção `Listeners` de uma origem de rastreamento.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**fontes**](sources-element.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**fonte >** ](source-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**ouvintes**](listeners-element-for-source.md) >\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<adicionar >** ](add-element-for-listeners-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**filtro >**
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<fontes>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>fonte**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<ouvintes>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<adicionar>**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de filtro**
 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<filter   
-  type="traceFilterClassName"   
+<filter
+  type="traceFilterClassName"
   initializeData="data" />  
 ```  
   
@@ -42,11 +42,11 @@ Adiciona um filtro a um ouvinte na coleção `Listeners` de uma origem de rastre
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`type`|Atributo obrigatório.<br /><br /> Especifica o tipo do filtro, que deve herdar da classe <xref:System.Diagnostics.TraceFilter>. Você pode usar o nome qualificado de namespace do tipo, que corresponde à propriedade de <xref:System.Type.FullName%2A> do tipo, ou pode usar o nome de tipo totalmente qualificado, incluindo as informações de assembly, que correspondem à propriedade <xref:System.Type.AssemblyQualifiedName%2A>. Para obter informações sobre nomes de tipo totalmente qualificados, consulte [especificando nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Atributo opcional.<br /><br /> A cadeia de caracteres passada para o construtor da classe de filtro especificada.|  
+|`type`|Atributo obrigatório.<br /><br /> Especifica o tipo do filtro, que <xref:System.Diagnostics.TraceFilter> deve herdar da classe. Você pode usar o nome qualificado do tipo, que corresponde <xref:System.Type.FullName%2A> à propriedade do tipo, ou pode usar o nome do <xref:System.Type.AssemblyQualifiedName%2A> tipo totalmente qualificado, incluindo as informações de montagem, que correspondem à propriedade. Para obter informações sobre nomes de tipo totalmente qualificados, consulte [Especificando nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Atributo opcional.<br /><br /> A seqüência passou para o construtor para a classe de filtro especificada.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -56,27 +56,27 @@ Adiciona um filtro a um ouvinte na coleção `Listeners` de uma origem de rastre
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
 |`sources`|Contém as origens de rastreamento que iniciam as mensagens de rastreamento.|  
 |`source`|Especifica uma origem de rastreamento que inicia as mensagens de rastreamento.|  
-|`listeners`|Contém ouvintes que coletam, armazenam e roteiam mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.|  
+|`listeners`|Contém ouvintes que coletam, armazenam e encaminham mensagens. Os ouvintes direcionam a saída de rastreamento para um alvo apropriado.|  
 |`add`|Adiciona um ouvinte na coleção `Listeners` de uma origem de rastreamento.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `<filter>` deve estar contido em um elemento `<add>` para um ouvinte de origem de rastreamento que especifica o tipo do ouvinte, não apenas o nome de um ouvinte definido em um [> de sharedListeners\<](sharedlisteners-element.md). Se o ouvinte for definido em uma [\<sharedListeners](sharedlisteners-element.md), o filtro desse ouvinte deverá ser definido nesse elemento.  
+ O `<filter>` elemento deve ser `<add>` contido em um elemento para um ouvinte de origem de rastreamento que especifique o tipo do ouvinte, não apenas o nome de um ouvinte definido em um [ \<>de ouvintes compartilhados ](sharedlisteners-element.md). Se o ouvinte for definido em um [ \<>de Ouvintes compartilhados, ](sharedlisteners-element.md)o filtro para esse ouvinte deve ser definido nesse elemento.  
   
- Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
+ Esse elemento pode ser usado no arquivo de configuração da máquina (Machine.config) e no arquivo de configuração do aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento `<filter>` para adicionar um filtro ao ouvinte `console` na coleção de `Listeners` para a origem de rastreamento `myTraceSource`, especificando o nível de evento de filtro como `Error`.  
+ O exemplo a seguir `<filter>` mostra como usar o elemento `console` para `Listeners` adicionar um `myTraceSource`filtro ao ouvinte na `Error`coleção para a origem do rastreamento, especificando o nível de evento do filtro como .  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="myTraceSource" switchName="SourceSwitch"   
+      <source name="myTraceSource" switchName="SourceSwitch"
         switchType="System.Diagnostics.SourceSwitch"  >  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener" >  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error" />  
           </add>  
           <remove name="Default" />  
@@ -90,7 +90,7 @@ Adiciona um filtro a um ouvinte na coleção `Listeners` de uma origem de rastre
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>

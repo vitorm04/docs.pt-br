@@ -1,5 +1,5 @@
 ---
-title: Campo HttpWebRequest. _HttpResponse
+title: campo httpWebRequest._HttpResponse
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 236298921ecd286ddba4e74dbce1b63e96055412
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156240"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. Campo\_HttpResponse
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest. \_Campo httpresponse
 
-`HttpWebRequest._HttpResponse` é um <xref:System.Net.HttpWebResponse> que contém detalhes de resposta HTTP de uma solicitação HTTP. Ele pode ser `null` até que uma resposta HTTP seja recebida.
+`HttpWebRequest._HttpResponse`é <xref:System.Net.HttpWebResponse> uma resposta HTTP contendo detalhes de uma solicitação HTTP. Pode ser `null` até que uma resposta HTTP seja recebida.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,14 +28,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> O campo `HttpWebRequest._HttpResponse` é interno e não deve ser usado diretamente no seu código.
-> 
-> A Microsoft não oferece suporte ao uso deste campo em um aplicativo de produção em qualquer circunstância.
+> O `HttpWebRequest._HttpResponse` campo é interno e não deve ser usado diretamente em seu código.
+>
+> A Microsoft não suporta o uso deste campo em um aplicativo de produção nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espaço de nome:**<xref:System.Net>
 
-**Assembly:** Sistema (em System. dll)
+**Montagem:** Sistema (em System.dll)
 
-**.NET Framework versões:** Disponível desde 2,0.
+**Versões do Framework .NET:** Disponível desde 2.0.

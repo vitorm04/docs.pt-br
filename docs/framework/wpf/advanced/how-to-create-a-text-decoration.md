@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar uma decoração de texto'
+title: Como criar uma decoração de texto
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,30 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: d586eef8d1308070da38a0a54c63c3ba64d30c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf3b3c3bcb75153a0be4f7ced03b38134b79a930
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185930"
 ---
-# <a name="how-to-create-a-text-decoration"></a>Como: Criar uma decoração de texto
-Um <xref:System.Windows.TextDecoration> objeto é um Ornamento visual que você pode adicionar ao texto. Há quatro tipos de decoração de texto: sublinhado, linha de base, tachado e linha sobreposta. O exemplo a seguir mostra os locais das decorações de texto em relação ao texto.  
+# <a name="how-to-create-a-text-decoration"></a>Como criar uma decoração de texto
+Um <xref:System.Windows.TextDecoration> objeto é uma ornamentação visual que você pode adicionar ao texto. Há quatro tipos de decoração de texto: sublinhado, linha de base, tachado e linha sobreposta. O exemplo a seguir mostra os locais das decorações de texto em relação ao texto.  
   
  ![Diagrama de tipos de decoração de texto](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
- Para adicionar uma decoração de texto ao texto, crie um <xref:System.Windows.TextDecoration> do objeto e modifique suas propriedades. Use o <xref:System.Windows.TextDecoration.Location%2A> propriedade para especificar onde a decoração de texto aparece, como sublinhado. Use o <xref:System.Windows.TextDecoration.Pen%2A> propriedade para especificar a aparência da decoração do texto, como um preenchimento sólido ou a cor do gradiente. Se você não especificar um valor para o <xref:System.Windows.TextDecoration.Pen%2A> propriedade, os padrões de decoração para a mesma cor do texto. Depois que você tiver definido uma <xref:System.Windows.TextDecoration> do objeto, adicione-o para o <xref:System.Windows.TextDecorations> coleção do objeto texto desejado.  
+ Para adicionar uma decoração de <xref:System.Windows.TextDecoration> texto ao texto, crie um objeto e modifique suas propriedades. Use <xref:System.Windows.TextDecoration.Location%2A> a propriedade para especificar onde a decoração do texto aparece, como sublinhar. Use <xref:System.Windows.TextDecoration.Pen%2A> a propriedade para especificar a aparência da decoração do texto, como um preenchimento sólido ou cor gradiente. Se você não especificar <xref:System.Windows.TextDecoration.Pen%2A> um valor para a propriedade, a decoração será padrão para a mesma cor do texto. Depois de definir <xref:System.Windows.TextDecoration> um objeto, <xref:System.Windows.TextDecorations> adicione-o à coleção do objeto de texto desejado.  
   
  O exemplo a seguir mostra uma decoração de texto que foi estilizada com um pincel de gradiente linear e uma caneta tracejada.  
   
- ![Decoração de texto com sublinhado de gradiente linear](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
+ ![Decoração de texto com sublinhado em gradiente linear](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
- O <xref:System.Windows.Documents.Hyperlink> objeto é um elemento de conteúdo de fluxo de nível embutido que permite hospedar hiperlinks dentro do conteúdo de fluxo. Por padrão, <xref:System.Windows.Documents.Hyperlink> usa um <xref:System.Windows.TextDecoration> objeto para exibir um sublinhado. <xref:System.Windows.TextDecoration> objetos podem ser desempenho intenso para instanciar, especialmente se você tiver muitos <xref:System.Windows.Documents.Hyperlink> objetos. Se você fizer uso extensivo de <xref:System.Windows.Documents.Hyperlink> elementos, você talvez queira considerar a mostrar um sublinhado somente ao disparar um evento, como o <xref:System.Windows.ContentElement.MouseEnter> eventos.  
+ O <xref:System.Windows.Documents.Hyperlink> objeto é um elemento de conteúdo de fluxo de nível inline que permite hospedar hiperlinks dentro do conteúdo de fluxo. Por padrão, <xref:System.Windows.Documents.Hyperlink> <xref:System.Windows.TextDecoration> usa um objeto para exibir um sublinhado. <xref:System.Windows.TextDecoration>objetos podem ser intensivos em desempenho <xref:System.Windows.Documents.Hyperlink> para instanciar, especialmente se você tiver muitos objetos. Se você fizer <xref:System.Windows.Documents.Hyperlink> uso extensivo de elementos, você pode considerar mostrar um <xref:System.Windows.ContentElement.MouseEnter> sublinhado apenas ao desencadear um evento, como o evento.  
   
- No exemplo a seguir, o sublinhado para o link "My MSN" é dinâmico — ele aparece somente quando o <xref:System.Windows.ContentElement.MouseEnter> evento é disparado.  
+ No exemplo a seguir, o sublinhado para o link "Meu MSN" é dinâmico — ele só aparece quando o <xref:System.Windows.ContentElement.MouseEnter> evento é acionado.  
   
- ![Hiperlinks exibindo TextDecorations](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
-   
+ ![Hiperlinks que exibem TextDecorations](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+
  Para obter mais informações, consulte [Especificar se um hiperlink está sublinhado](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
 ## <a name="example"></a>Exemplo  
@@ -61,7 +61,7 @@ Um <xref:System.Windows.TextDecoration> objeto é um Ornamento visual que você 
  [!code-vb[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextDecorationSnippets/visualbasic/window1.xaml.vb#textdecorationsnippets3)]
  [!code-xaml[TextDecorationSnippets#TextDecorationSnippets3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextDecorationSnippets/CSharp/Window1.xaml#textdecorationsnippets3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>

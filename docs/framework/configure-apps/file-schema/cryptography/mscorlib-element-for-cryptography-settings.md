@@ -8,31 +8,31 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d1d805f7154c18dba2dcd4eb7228cc200d8da811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699742"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155175"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > elemento para configurações de criptografia
-Contém o [elemento\<cryptographySettings >](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib> Element para configurações de criptografia
+Contém [ \<o elemento> criptografiaConfigurações>](cryptographysettings-element.md).  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<mscorlib >**  
+[**\<>de configuração**](../configuration-element.md)  
+&nbsp;&nbsp;**\<mscorlib>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-      <mscorlib>   
+      <mscorlib>
 </mscorlib>  
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
+ As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- None.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -40,14 +40,14 @@ Contém o [elemento\<cryptographySettings >](cryptographysettings-element.md).
 |-------------|-----------------|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
   
-### <a name="parent-elements"></a>Elementos Pai  
+### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
- O exemplo a seguir mostra como usar o elemento **\<mscorlib >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir mostra como usar o ** \<elemento mscorlib>** para referenciar uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> string "RSA" para o método e usar o <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
   
 ```xml  
 <configuration>  
@@ -68,11 +68,11 @@ Contém o [elemento\<cryptographySettings >](cryptographysettings-element.md).
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de arquivo de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
 - [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431934"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177847"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>Método IMetaDataAssemblyEmit::SetExportedTypeProps
-Modifica a estrutura de metadados de `ExportedType` especificada.  
+Modifica a estrutura `ExportedType` de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
-    [in] mdExportedType   ct,   
+    [in] mdExportedType   ct,
     [in] mdToken          tkImplementation,  
     [in] mdTypeDef        tkTypeDef,  
     [in] DWORD            dwExportedTypeFlags  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `ct`  
- no O token de metadados que especifica a estrutura de metadados `ExportedType` a ser modificada.  
+ [em] O token de metadados `ExportedType` que especifica a estrutura de metadados a ser modificada.  
   
  `tkImplementation`  
- no O token, do tipo `File`, `AssemblyRef`ou `ExportedType`, que especifica como esse tipo é implementado.  
+ [em] O token, `File`do `AssemblyRef`tipo, ou `ExportedType`, que especifica como este tipo é implementado.  
   
  `tkTypeDef`  
- no O token de `TypeDef` referenciado no arquivo de código.  
+ [em] O `TypeDef` token referenciado no arquivo de código.  
   
  `dwExportedTypeFlags`  
- no Uma combinação de bits de valores que especifica atributos do tipo.  
+ [em] Uma combinação bitwise de valores que especificam atributos do tipo.  
   
 ## <a name="remarks"></a>Comentários  
- Para criar uma estrutura de metadados `ExportedType`, use o método [IMetaDataAssemblyEmit::D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) .  
+ Para criar `ExportedType` uma estrutura de metadados, use o método [IMetaDataAssemblyEmit::DefineExportedType.](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

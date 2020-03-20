@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 53a75b8e7edd15cd233577e0a3714fb5d981495f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432330"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177482"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>Método IMetaDataEmit::SetPermissionSetProps
-Define ou atualiza recursos da assinatura de metadados de um conjunto de permissões definido por uma chamada anterior para [IMetaDataEmit::D efinepermissionset](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Define ou atualiza os recursos da assinatura de metadados de um conjunto de permissões definido por uma chamada anterior ao [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT SetPermissionSetProps (   
-    [in]  mdToken         tk,   
-    [in]  DWORD           dwAction,   
-    [in]  void const      *pvPermission,   
-    [in]  ULONG           cbPermission,   
-    [out] mdPermission    *ppm   
+HRESULT SetPermissionSetProps (
+    [in]  mdToken         tk,
+    [in]  DWORD           dwAction,
+    [in]  void const      *pvPermission,
+    [in]  ULONG           cbPermission,
+    [out] mdPermission    *ppm
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tk`  
- no Um token de metadados que representa o objeto a ser decorado.  
+ [em] Um token de metadados que representa o objeto a ser decorado.  
   
  `dwAction`  
- no Um valor de [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) que especifica o tipo de segurança declarativa a ser usado.  
+ [em] Um valor [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) que especifica o tipo de segurança declarativa a ser usada.  
   
  `pvPermission`  
- no O BLOB de permissão.  
+ [em] A permissão BLOB.  
   
  `cbPermission`  
- no O tamanho, em bytes, de `pvPermission`.  
+ [em] O tamanho, em bytes, de `pvPermission`.  
   
  `ppm`  
- fora Um `mdPermission` token de metadados que representa as permissões atualizadas.  
+ [fora] Um `mdPermission` token de metadados que representa as permissões atualizadas.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

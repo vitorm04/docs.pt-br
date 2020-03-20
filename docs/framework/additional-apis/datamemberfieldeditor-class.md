@@ -11,16 +11,16 @@ api_type:
 ms.assetid: 27ae39b7-3491-40f9-9b33-2de798f123ad
 topic_type:
 - apiref
-ms.openlocfilehash: 6d57fa30c9221b2b9405b2e146af54b2d6458962
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8539cea6697cee5b008be18192d9dee52842d8bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215697"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156032"
 ---
 # <a name="datamemberfieldeditor-class"></a>Classe DataMemberFieldEditor
 
-Fornece a interface do usuário para editar propriedades de objetos associados a dados, listando todas as propriedades do objeto `DataSource` para selecionar a origem do valor.  
+Fornece interface de usuário para editar propriedades de objetos `DataSource` vinculados a dados, listando todas as propriedades do objeto para selecionar a fonte de valor de.  
   
 ## <a name="syntax"></a>Sintaxe
   
@@ -29,17 +29,17 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> A classe `DataMemberFieldEditor` é interna e não deve ser usada diretamente no seu código.
-> 
-> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
+> A `DataMemberFieldEditor` classe é interna e não deve ser usada diretamente em seu código.
+>
+> A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Espaço de nome:**<xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Assembly:** System. Design (em System. Design. dll)  
+**Montagem:** System.Design (em System.Design.dll)  
   
-**.NET Framework versões:** Disponível desde 2,0.  
+**Versões do Framework .NET:** Disponível desde 2.0.  
   
 ## <a name="see-also"></a>Confira também
 

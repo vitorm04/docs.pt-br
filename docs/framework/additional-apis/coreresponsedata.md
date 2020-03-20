@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: fd0ffb982c22b0a8b6cb5dd677faafb9921bf5d9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 39a14a3df5059cc47cd4879e4d4ba351cc7b655b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741026"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156110"
 ---
 # <a name="coreresponsedata-class"></a>Classe CoreResponseData
 
-A classe `CoreResponseData` representa a análise dos cabeçalhos HTTP e o corpo da resposta.
+A `CoreResponseData` classe representa a análise dos cabeçalhos HTTP e do corpo de resposta.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> Essa API é interna e não deve ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede. Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
+> Esta API é interna e não deve ser usada diretamente em seu código. Em vez disso, <xref:System.Diagnostics.DiagnosticSource> você deve usar um código de rede para conectar. Consulte [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espaço de nome:**<xref:System.Net>
 
-**Assembly:** Sistema (em System. dll)
+**Montagem:** Sistema (em System.dll)
 
-**.NET Framework versões:** Disponível desde 2,0.
+**Versões do Framework .NET:** Disponível desde 2.0.

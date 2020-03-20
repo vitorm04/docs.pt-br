@@ -14,39 +14,39 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4932e1fd6294f4a01264e982835dd0707324082a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178229"
 ---
 # <a name="_corimageunloading-function"></a>Função _CorImageUnloading
 Notifica o carregador quando as imagens do módulo gerenciado são descarregadas.  
   
- Esta função não está implementada. Se chamado, ele retornará E_NOTIMPL.  
+ Esta função não é implementada. Se for chamado, ele retorna E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-STDAPI (VOID) _CorImageUnloading(   
+STDAPI (VOID) _CorImageUnloading(
    [in] PVOID* ImageBase  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `ImageBase`  
- no Um ponteiro para o local inicial da imagem a ser descarregada.  
+ [em] Um ponteiro para o local de partida da imagem para descarregar.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

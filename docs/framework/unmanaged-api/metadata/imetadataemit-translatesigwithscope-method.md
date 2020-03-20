@@ -15,78 +15,78 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440482"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175537"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Método IMetaDataEmit::TranslateSigWithScope
-Importa um assembly para o escopo atual e obtém uma nova assinatura de metadados para o escopo mesclado.  
+Importa uma montagem no escopo atual e obtém uma nova assinatura de metadados para o escopo mesclado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pAssemImport`  
- no A interface para importar assembly (onde a assinatura é definida).  
+ [em] A interface para montagem de importação (onde a assinatura é definida).  
   
  `pbHashValue`  
- no O blob de hash para o assembly.  
+ [em] A bolha de hash para a assembléia.  
   
  `cbHashValue`  
- no A contagem de bytes em `pbHashValue`.  
+ [em] A contagem de `pbHashValue`bytes em .  
   
  `import`  
- no A interface para o escopo de metadados de importação.  
+ [em] A interface para escopo de metadados de importação.  
   
  `pbSigBlob`  
- no A assinatura a ser importada.  
+ [em] A assinatura a ser importada.  
   
  `cbSigBlob`  
- no O tamanho, em bytes, de `pbSigBlob`.  
+ [em] O tamanho, em bytes, de `pbSigBlob`.  
   
  `pAssemEmit`  
- no A interface para o assembly de exportação.  
+ [em] A interface para montagem de exportação.  
   
  `emit`  
- no A interface para o escopo de metadados de exportação.  
+ [em] A interface para escopo de metadados de exportação.  
   
  `pvTranslatedSig`  
- fora O buffer para armazenar o blob de assinatura traduzido.  
+ [fora] O buffer para segurar a bolha de assinatura traduzida.  
   
  `cbTranslatedSigMax`  
- no A capacidade, em bytes, de `pvTranslatedSig`.  
+ [em] A capacidade, em bytes, de `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- fora O número de bytes reais na assinatura traduzida.  
+ [fora] O número de bytes reais na assinatura traduzida.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
