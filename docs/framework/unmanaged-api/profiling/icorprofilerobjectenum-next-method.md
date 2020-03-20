@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861119"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177001"
 ---
-# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="fc34b-102">Método ICorProfilerObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="fc34b-102">ICorProfilerObjectEnum::Next Method</span></span>
-<span data-ttu-id="fc34b-103">Obtém o número especificado de objetos contíguos de uma coleção sequencial de objetos, começando na posição atual do enumerador na sequência.</span><span class="sxs-lookup"><span data-stu-id="fc34b-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
+# <a name="icorprofilerobjectenumnext-method"></a><span data-ttu-id="f720a-102">Método ICorProfilerObjectEnum::Next</span><span class="sxs-lookup"><span data-stu-id="f720a-102">ICorProfilerObjectEnum::Next Method</span></span>
+<span data-ttu-id="f720a-103">Obtém o número especificado de objetos contíguos de uma coleção seqüencial de objetos, começando pela posição atual do enumerador na seqüência.</span><span class="sxs-lookup"><span data-stu-id="f720a-103">Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fc34b-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fc34b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f720a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f720a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fc34b-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fc34b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f720a-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="f720a-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="fc34b-106">no O número de objetos a serem recuperados.</span><span class="sxs-lookup"><span data-stu-id="fc34b-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="f720a-106">[em] O número de objetos a serem recuperados.</span><span class="sxs-lookup"><span data-stu-id="f720a-106">[in] The number of objects to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="fc34b-107">fora Uma matriz de valores de `ObjectID`, cada um representando um objeto recuperado.</span><span class="sxs-lookup"><span data-stu-id="fc34b-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
+ <span data-ttu-id="f720a-107">[fora] Uma matriz `ObjectID` de valores, cada um dos quais representa um objeto recuperado.</span><span class="sxs-lookup"><span data-stu-id="f720a-107">[out] An array of `ObjectID` values, each of which represents a retrieved object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="fc34b-108">fora Um ponteiro para o número de elementos realmente retornados na matriz de `objects`.</span><span class="sxs-lookup"><span data-stu-id="fc34b-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
+ <span data-ttu-id="f720a-108">[fora] Um ponteiro para o número de `objects` elementos realmente retornado na matriz.</span><span class="sxs-lookup"><span data-stu-id="f720a-108">[out] A pointer to the number of elements actually returned in the `objects` array.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fc34b-109">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="fc34b-109">Requirements</span></span>  
- <span data-ttu-id="fc34b-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc34b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f720a-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f720a-109">Requirements</span></span>  
+ <span data-ttu-id="f720a-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f720a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fc34b-111">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="fc34b-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f720a-111">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f720a-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fc34b-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc34b-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f720a-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f720a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fc34b-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc34b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f720a-113">**.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f720a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fc34b-114">Veja também</span><span class="sxs-lookup"><span data-stu-id="fc34b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f720a-114">Confira também</span><span class="sxs-lookup"><span data-stu-id="f720a-114">See also</span></span>
 
-- [<span data-ttu-id="fc34b-115">Interface ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="fc34b-115">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)
+- [<span data-ttu-id="f720a-115">Interface ICorProfilerObjectEnum</span><span class="sxs-lookup"><span data-stu-id="f720a-115">ICorProfilerObjectEnum Interface</span></span>](icorprofilerobjectenum-interface.md)

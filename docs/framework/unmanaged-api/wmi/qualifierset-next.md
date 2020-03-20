@@ -1,5 +1,5 @@
 ---
-title: Função QualifierSet_Next (referência de API não gerenciada)
+title: QualifierSet_Next função (referência de API não gerenciada)
 description: A função QualifierSet_Next recupera o próximo qualificador em uma enumeração.
 ms.date: 11/06/2017
 api_name:
@@ -14,78 +14,72 @@ helpviewer_keywords:
 - QualifierSet_Next function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: c9c824b0158618848c13183d92f88604460d5099
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d3702426bc409d601ccfc6b7a8e93e8d9729c64e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141715"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174869"
 ---
-# <a name="qualifierset_next-function"></a><span data-ttu-id="8f03a-103">Função QualifierSet_Next</span><span class="sxs-lookup"><span data-stu-id="8f03a-103">QualifierSet_Next function</span></span>
-<span data-ttu-id="8f03a-104">Recupera o próximo qualificador em uma enumeração que começou com uma chamada para a função [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="8f03a-104">Retrieves the next qualifier in an enumeration that started with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>   
+# <a name="qualifierset_next-function"></a><span data-ttu-id="0d6c3-103">Função QualifierSet_Next</span><span class="sxs-lookup"><span data-stu-id="0d6c3-103">QualifierSet_Next function</span></span>
+<span data-ttu-id="0d6c3-104">Recupera o próximo qualificador em uma enumeração que começou com uma chamada para a função [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c3-104">Retrieves the next qualifier in an enumeration that started with a call to the [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) function.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="8f03a-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8f03a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d6c3-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0d6c3-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT QualifierSet_Next (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LONG                 lFlags,
-   [out] BSTR*               pstrName,        
+   [out] BSTR*               pstrName,
    [out] VARIANT*            pVal,
-   [out] LONG*               plFlavor                 
-); 
+   [out] LONG*               plFlavor
+);
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="8f03a-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8f03a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0d6c3-106">parâmetros</span><span class="sxs-lookup"><span data-stu-id="0d6c3-106">Parameters</span></span>
 
-`vFunc`   
-<span data-ttu-id="8f03a-107">no Este parâmetro não é usado.</span><span class="sxs-lookup"><span data-stu-id="8f03a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="0d6c3-107">`vFunc`[em] Este parâmetro não é usado.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-107">`vFunc` [in] This parameter is unused.</span></span>
 
-`ptr`   
-<span data-ttu-id="8f03a-108">no Um ponteiro para uma instância de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .</span><span class="sxs-lookup"><span data-stu-id="8f03a-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="0d6c3-108">`ptr`[em] Um ponteiro para uma instância [IWbemQualifierSet.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)</span><span class="sxs-lookup"><span data-stu-id="0d6c3-108">`ptr` [in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
-`lFlags`   
-<span data-ttu-id="8f03a-109">[in] Reservado.</span><span class="sxs-lookup"><span data-stu-id="8f03a-109">[in] Reserved.</span></span> <span data-ttu-id="8f03a-110">Esse parâmetro deve ser 0.</span><span class="sxs-lookup"><span data-stu-id="8f03a-110">This parameter must be 0.</span></span>
+<span data-ttu-id="0d6c3-109">`lFlags`[em] Reservados.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-109">`lFlags` [in] Reserved.</span></span> <span data-ttu-id="0d6c3-110">Este parâmetro deve ser 0.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-110">This parameter must be 0.</span></span>
 
-`pstrName`   
-<span data-ttu-id="8f03a-111">fora O nome do qualificador.</span><span class="sxs-lookup"><span data-stu-id="8f03a-111">[out] The name of the qualifier.</span></span> <span data-ttu-id="8f03a-112">Se `null`, esse parâmetro será ignorado; caso contrário, `pstrName` não deve apontar para um `BSTR` válido ou ocorrerá um vazamento de memória.</span><span class="sxs-lookup"><span data-stu-id="8f03a-112">If `null`, this parameter is ignored; otherwise, `pstrName` should not point to a valid `BSTR` or a memory leak occurs.</span></span> <span data-ttu-id="8f03a-113">Se não for NULL, a função sempre alocará um novo `BSTR` quando ele retornar `WBEM_S_NO_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="8f03a-113">If not null, the function always allocates a new `BSTR` when it returns `WBEM_S_NO_ERROR`.</span></span>
+<span data-ttu-id="0d6c3-111">`pstrName`[fora] O nome da qualificatória.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-111">`pstrName` [out] The name of the qualifier.</span></span> <span data-ttu-id="0d6c3-112">Se `null`, este parâmetro é ignorado; caso contrário, `pstrName` não deve `BSTR` apontar para um vazamento válido ou de memória.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-112">If `null`, this parameter is ignored; otherwise, `pstrName` should not point to a valid `BSTR` or a memory leak occurs.</span></span> <span data-ttu-id="0d6c3-113">Se não for nula, a `BSTR` função `WBEM_S_NO_ERROR`sempre aloca um novo quando retorna .</span><span class="sxs-lookup"><span data-stu-id="0d6c3-113">If not null, the function always allocates a new `BSTR` when it returns `WBEM_S_NO_ERROR`.</span></span>
 
-`pVal`   
-<span data-ttu-id="8f03a-114">fora Quando for bem-sucedido, o valor do qualificador.</span><span class="sxs-lookup"><span data-stu-id="8f03a-114">[out] When successful, the value for the qualifier.</span></span> <span data-ttu-id="8f03a-115">Se a função falhar, o `VARIANT` apontado por `pVal` não será modificado.</span><span class="sxs-lookup"><span data-stu-id="8f03a-115">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="8f03a-116">Se esse parâmetro for `null`, o parâmetro será ignorado.</span><span class="sxs-lookup"><span data-stu-id="8f03a-116">If this parameter is `null`, the parameter is ignored.</span></span>
+<span data-ttu-id="0d6c3-114">`pVal`[fora] Quando bem sucedido, o valor para o qualificador.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-114">`pVal` [out] When successful, the value for the qualifier.</span></span> <span data-ttu-id="0d6c3-115">Se a função `VARIANT` falhar, `pVal` o apontado por não é modificado.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-115">If the function fails, the `VARIANT` pointed to by `pVal` is not modified.</span></span> <span data-ttu-id="0d6c3-116">Se este parâmetro `null`for, o parâmetro é ignorado.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-116">If this parameter is `null`, the parameter is ignored.</span></span>
 
-`plFlavor`   
-<span data-ttu-id="8f03a-117">fora Um ponteiro para um longo que recebe o tipo de qualificador.</span><span class="sxs-lookup"><span data-stu-id="8f03a-117">[out] A pointer to a LONG that receives the qualifier flavor.</span></span> <span data-ttu-id="8f03a-118">Se as informações do tipo não forem desejadas, esse parâmetro poderá ser `null`.</span><span class="sxs-lookup"><span data-stu-id="8f03a-118">If flavor information is not desired, this parameter can be `null`.</span></span> 
+<span data-ttu-id="0d6c3-117">`plFlavor`[fora] Um ponteiro para um LONG que recebe o sabor qualificado.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-117">`plFlavor` [out] A pointer to a LONG that receives the qualifier flavor.</span></span> <span data-ttu-id="0d6c3-118">Se a informação do sabor não for `null`desejada, este parâmetro pode ser .</span><span class="sxs-lookup"><span data-stu-id="0d6c3-118">If flavor information is not desired, this parameter can be `null`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="8f03a-119">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="8f03a-119">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="0d6c3-119">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="0d6c3-119">Return value</span></span>
 
-<span data-ttu-id="8f03a-120">Os valores a seguir retornados por essa função são definidos no arquivo de cabeçalho *WbemCli. h* ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="8f03a-120">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="0d6c3-120">Os seguintes valores retornados por esta função são definidos no arquivo de cabeçalho *WbemCli.h,* ou você pode defini-los como constantes em seu código:</span><span class="sxs-lookup"><span data-stu-id="0d6c3-120">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="8f03a-121">Constante</span><span class="sxs-lookup"><span data-stu-id="8f03a-121">Constant</span></span>  |<span data-ttu-id="8f03a-122">Valor</span><span class="sxs-lookup"><span data-stu-id="8f03a-122">Value</span></span>  |<span data-ttu-id="8f03a-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="8f03a-123">Description</span></span>  |
+|<span data-ttu-id="0d6c3-121">Constante</span><span class="sxs-lookup"><span data-stu-id="0d6c3-121">Constant</span></span>  |<span data-ttu-id="0d6c3-122">Valor</span><span class="sxs-lookup"><span data-stu-id="0d6c3-122">Value</span></span>  |<span data-ttu-id="0d6c3-123">Descrição</span><span class="sxs-lookup"><span data-stu-id="0d6c3-123">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="8f03a-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="8f03a-124">0x80041008</span></span> | <span data-ttu-id="8f03a-125">Um parâmetro não é válido.</span><span class="sxs-lookup"><span data-stu-id="8f03a-125">A parameter is not valid.</span></span> |
-|`WBEM_E_UNEXPECTED` | <span data-ttu-id="8f03a-126">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="8f03a-126">0x8004101d</span></span> | <span data-ttu-id="8f03a-127">O chamador não chamou [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="8f03a-127">The caller did not call [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="8f03a-128">0x80041006</span><span class="sxs-lookup"><span data-stu-id="8f03a-128">0x80041006</span></span> | <span data-ttu-id="8f03a-129">Não há memória suficiente disponível para iniciar uma nova enumeração.</span><span class="sxs-lookup"><span data-stu-id="8f03a-129">Not enough memory is available to begin a new enumeration.</span></span> |
-| `WBEM_S_NO_MORE_DATA` | <span data-ttu-id="8f03a-130">0x40005</span><span class="sxs-lookup"><span data-stu-id="8f03a-130">0x40005</span></span> | <span data-ttu-id="8f03a-131">Nenhum qualificador mais é deixado na enumeração.</span><span class="sxs-lookup"><span data-stu-id="8f03a-131">No more qualifiers are left in the enumeration.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="8f03a-132">0</span><span class="sxs-lookup"><span data-stu-id="8f03a-132">0</span></span> | <span data-ttu-id="8f03a-133">A chamada de função foi bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="8f03a-133">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="0d6c3-124">0x80041008</span><span class="sxs-lookup"><span data-stu-id="0d6c3-124">0x80041008</span></span> | <span data-ttu-id="0d6c3-125">Um parâmetro não é válido.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-125">A parameter is not valid.</span></span> |
+|`WBEM_E_UNEXPECTED` | <span data-ttu-id="0d6c3-126">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="0d6c3-126">0x8004101d</span></span> | <span data-ttu-id="0d6c3-127">O interlocutor não [ligou para QualifierSet_BeginEnumeration.](qualifierset-beginenumeration.md)</span><span class="sxs-lookup"><span data-stu-id="0d6c3-127">The caller did not call [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md).</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="0d6c3-128">0x80041006</span><span class="sxs-lookup"><span data-stu-id="0d6c3-128">0x80041006</span></span> | <span data-ttu-id="0d6c3-129">Não há memória suficiente disponível para começar uma nova enumeração.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-129">Not enough memory is available to begin a new enumeration.</span></span> |
+| `WBEM_S_NO_MORE_DATA` | <span data-ttu-id="0d6c3-130">0x40005</span><span class="sxs-lookup"><span data-stu-id="0d6c3-130">0x40005</span></span> | <span data-ttu-id="0d6c3-131">Não restam mais qualificações na enumeração.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-131">No more qualifiers are left in the enumeration.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="0d6c3-132">0</span><span class="sxs-lookup"><span data-stu-id="0d6c3-132">0</span></span> | <span data-ttu-id="0d6c3-133">A chamada de função foi bem sucedida.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-133">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="8f03a-134">Comentários</span><span class="sxs-lookup"><span data-stu-id="8f03a-134">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0d6c3-134">Comentários</span><span class="sxs-lookup"><span data-stu-id="0d6c3-134">Remarks</span></span>
 
-<span data-ttu-id="8f03a-135">Essa função encapsula uma chamada para o método [IWbemQualifierSet:: Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) .</span><span class="sxs-lookup"><span data-stu-id="8f03a-135">This function wraps a call to the [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) method.</span></span>
+<span data-ttu-id="0d6c3-135">Esta função envolve uma chamada para o [método IWbemQualifierSet:::Next.](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next)</span><span class="sxs-lookup"><span data-stu-id="0d6c3-135">This function wraps a call to the [IWbemQualifierSet::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-next) method.</span></span>
 
-<span data-ttu-id="8f03a-136">Você chama a função `QualifierSet_Next` repetidamente para enumerar todos os qualificadores até que a função retorne `WBEM_S_NO_MORE_DATA`.</span><span class="sxs-lookup"><span data-stu-id="8f03a-136">You call the `QualifierSet_Next` function repeatedly to enumerate all the qualifiers until the function return `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="8f03a-137">Para encerrar a enumeração antecipadamente, chame a função [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="8f03a-137">To terminate the enumeration early, call the [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) function.</span></span>
+<span data-ttu-id="0d6c3-136">Você chama `QualifierSet_Next` a função repetidamente para enumerar todas `WBEM_S_NO_MORE_DATA`as qualificações até que a função retorne .</span><span class="sxs-lookup"><span data-stu-id="0d6c3-136">You call the `QualifierSet_Next` function repeatedly to enumerate all the qualifiers until the function return `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="0d6c3-137">Para encerrar a enumeração mais cedo, chame a função [QualifierSet_EndEnumeration.](qualifierset-endenumeration.md)</span><span class="sxs-lookup"><span data-stu-id="0d6c3-137">To terminate the enumeration early, call the [QualifierSet_EndEnumeration](qualifierset-endenumeration.md) function.</span></span>
 
-<span data-ttu-id="8f03a-138">A ordem dos qualificadores retornados durante a enumeração é indefinida.</span><span class="sxs-lookup"><span data-stu-id="8f03a-138">The order of the qualifiers returned during the enumeration is undefined.</span></span>
+<span data-ttu-id="0d6c3-138">A ordem das qualificatórias devolvidas durante a enumeração é indefinida.</span><span class="sxs-lookup"><span data-stu-id="0d6c3-138">The order of the qualifiers returned during the enumeration is undefined.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8f03a-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8f03a-139">Requirements</span></span>  
- <span data-ttu-id="8f03a-140">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f03a-140">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d6c3-139">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0d6c3-139">Requirements</span></span>  
+ <span data-ttu-id="0d6c3-140">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d6c3-140">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f03a-141">**Cabeçalho:** WMINet_Utils. idl</span><span class="sxs-lookup"><span data-stu-id="8f03a-141">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="0d6c3-141">**Cabeçalho:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="0d6c3-141">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="8f03a-142">**Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8f03a-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="0d6c3-142">**.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0d6c3-142">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f03a-143">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8f03a-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d6c3-143">Confira também</span><span class="sxs-lookup"><span data-stu-id="0d6c3-143">See also</span></span>
 
-- [<span data-ttu-id="8f03a-144">WMI e contadores de desempenho (referência de API não gerenciada)</span><span class="sxs-lookup"><span data-stu-id="8f03a-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="0d6c3-144">WMI e Contadores de Desempenho (Referência de API Não Gerenciada)</span><span class="sxs-lookup"><span data-stu-id="0d6c3-144">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

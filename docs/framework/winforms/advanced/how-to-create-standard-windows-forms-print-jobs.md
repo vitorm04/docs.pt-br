@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 4850dc901630179cc44fefda7e25bbabcfb4725f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d9607de7c74132e0d7dce605b16d62c79b7dbccb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741511"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182577"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="b5d2e-102">Como criar trabalhos de impressão padrão do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b5d2e-102">How to: Create Standard Windows Forms Print Jobs</span></span>
-<span data-ttu-id="b5d2e-103">A base da impressão no Windows Forms é o componente <xref:System.Drawing.Printing.PrintDocument> – mais especificamente, o evento <xref:System.Drawing.Printing.PrintDocument.PrintPage>.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="b5d2e-104">Ao escrever código para manipular o evento de <xref:System.Drawing.Printing.PrintDocument.PrintPage>, você pode especificar o que imprimir e como imprimi-lo.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a><span data-ttu-id="980a9-102">Como criar trabalhos de impressão padrão do Windows Forms</span><span class="sxs-lookup"><span data-stu-id="980a9-102">How to: Create Standard Windows Forms Print Jobs</span></span>
+<span data-ttu-id="980a9-103">A base da impressão no <xref:System.Drawing.Printing.PrintDocument> Windows Forms é <xref:System.Drawing.Printing.PrintDocument.PrintPage> o componente — mais especificamente, o evento.</span><span class="sxs-lookup"><span data-stu-id="980a9-103">The foundation of printing in Windows Forms is the <xref:System.Drawing.Printing.PrintDocument> component—more specifically, the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span> <span data-ttu-id="980a9-104">Ao escrever código <xref:System.Drawing.Printing.PrintDocument.PrintPage> para lidar com o evento, você pode especificar o que imprimir e como imprimi-lo.</span><span class="sxs-lookup"><span data-stu-id="980a9-104">By writing code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event, you can specify what to print and how to print it.</span></span>  
   
-### <a name="to-create-a-print-job"></a><span data-ttu-id="b5d2e-105">Para criar um trabalho de impressão</span><span class="sxs-lookup"><span data-stu-id="b5d2e-105">To create a print job</span></span>  
+### <a name="to-create-a-print-job"></a><span data-ttu-id="980a9-105">Para criar um trabalho de impressão</span><span class="sxs-lookup"><span data-stu-id="980a9-105">To create a print job</span></span>  
   
-1. <span data-ttu-id="b5d2e-106">Adicione um componente <xref:System.Drawing.Printing.PrintDocument> ao formulário.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
+1. <span data-ttu-id="980a9-106">Adicione <xref:System.Drawing.Printing.PrintDocument> um componente ao seu formulário.</span><span class="sxs-lookup"><span data-stu-id="980a9-106">Add a <xref:System.Drawing.Printing.PrintDocument> component to your form.</span></span>  
   
-2. <span data-ttu-id="b5d2e-107">Escreva o código para manipular o evento <xref:System.Drawing.Printing.PrintDocument.PrintPage>.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-107">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span>  
+2. <span data-ttu-id="980a9-107">Escreva código para <xref:System.Drawing.Printing.PrintDocument.PrintPage> lidar com o evento.</span><span class="sxs-lookup"><span data-stu-id="980a9-107">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event.</span></span>  
   
-     <span data-ttu-id="b5d2e-108">Você terá de codificar sua própria lógica de impressão.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-108">You will have to code your own printing logic.</span></span> <span data-ttu-id="b5d2e-109">Além disso, precisará especificar o material a ser impresso.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-109">Additionally, you will have to specify the material to be printed.</span></span>  
+     <span data-ttu-id="980a9-108">Você terá de codificar sua própria lógica de impressão.</span><span class="sxs-lookup"><span data-stu-id="980a9-108">You will have to code your own printing logic.</span></span> <span data-ttu-id="980a9-109">Além disso, precisará especificar o material a ser impresso.</span><span class="sxs-lookup"><span data-stu-id="980a9-109">Additionally, you will have to specify the material to be printed.</span></span>  
   
-     <span data-ttu-id="b5d2e-110">No exemplo de código a seguir, um gráfico de exemplo na forma de um retângulo vermelho é criado no manipulador de eventos <xref:System.Drawing.Printing.PrintDocument.PrintPage> para atuar como material a ser impresso.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-110">In the following code example, a sample graphic in the shape of a red rectangle is created in the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler to act as material to be printed.</span></span>  
+     <span data-ttu-id="980a9-110">No exemplo de código a seguir, um gráfico de amostra na <xref:System.Drawing.Printing.PrintDocument.PrintPage> forma de um retângulo vermelho é criado no manipulador de eventos para agir como material a ser impresso.</span><span class="sxs-lookup"><span data-stu-id="980a9-110">In the following code example, a sample graphic in the shape of a red rectangle is created in the <xref:System.Drawing.Printing.PrintDocument.PrintPage> event handler to act as material to be printed.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -37,10 +37,10 @@ ms.locfileid: "76741511"
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Red,   
+       e.Graphics.FillRectangle(Brushes.Red,
          new Rectangle(500, 500, 500, 500));  
     }  
     ```  
@@ -55,7 +55,7 @@ ms.locfileid: "76741511"
        }  
     ```  
   
-     <span data-ttu-id="b5d2e-111">(Visual C# e Visual C++) Coloque o código a seguir no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-111">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="980a9-111">(Visual C# e Visual C++) Coloque o seguinte código no construtor do formulário para registrar o manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="980a9-111">(Visual C# and Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,14 +69,14 @@ ms.locfileid: "76741511"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     <span data-ttu-id="b5d2e-112">Talvez você também queira escrever código para os eventos <xref:System.Drawing.Printing.PrintDocument.BeginPrint> e <xref:System.Drawing.Printing.PrintDocument.EndPrint>, talvez incluindo um inteiro que representa o número total de páginas a serem impressas, uma vez que cada página é impressa.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-112">You may also want to write code for the <xref:System.Drawing.Printing.PrintDocument.BeginPrint> and <xref:System.Drawing.Printing.PrintDocument.EndPrint> events, perhaps including an integer representing the total number of pages to print that is decremented as each page prints.</span></span>  
+     <span data-ttu-id="980a9-112">Você também pode querer escrever <xref:System.Drawing.Printing.PrintDocument.BeginPrint> <xref:System.Drawing.Printing.PrintDocument.EndPrint> código para os eventos e eventos, talvez incluindo um inteiro representando o número total de páginas para imprimir que é decretada à medida que cada página imprime.</span><span class="sxs-lookup"><span data-stu-id="980a9-112">You may also want to write code for the <xref:System.Drawing.Printing.PrintDocument.BeginPrint> and <xref:System.Drawing.Printing.PrintDocument.EndPrint> events, perhaps including an integer representing the total number of pages to print that is decremented as each page prints.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="b5d2e-113">Você pode adicionar um componente <xref:System.Windows.Forms.PrintDialog> ao formulário para fornecer uma interface do usuário (IU) limpa e eficiente aos seus usuários.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-113">You can add a <xref:System.Windows.Forms.PrintDialog> component to your form to provide a clean and efficient user interface (UI) to your users.</span></span> <span data-ttu-id="b5d2e-114">Definir a propriedade <xref:System.Windows.Forms.PrintDialog.Document%2A> do componente <xref:System.Windows.Forms.PrintDialog> permite que você defina as propriedades relacionadas ao documento de impressão com o qual você está trabalhando no formulário.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-114">Setting the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> component enables you to set properties related to the print document you are working with on your form.</span></span> <span data-ttu-id="b5d2e-115">Para obter mais informações sobre o componente <xref:System.Windows.Forms.PrintDialog>, consulte [componente PrintDialog](../controls/printdialog-component-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="b5d2e-115">For more information about the <xref:System.Windows.Forms.PrintDialog> component, see [PrintDialog Component](../controls/printdialog-component-windows-forms.md).</span></span>  
+    > <span data-ttu-id="980a9-113">Você pode <xref:System.Windows.Forms.PrintDialog> adicionar um componente ao seu formulário para fornecer uma interface de usuário (UI) limpa e eficiente aos seus usuários.</span><span class="sxs-lookup"><span data-stu-id="980a9-113">You can add a <xref:System.Windows.Forms.PrintDialog> component to your form to provide a clean and efficient user interface (UI) to your users.</span></span> <span data-ttu-id="980a9-114">A <xref:System.Windows.Forms.PrintDialog.Document%2A> configuração <xref:System.Windows.Forms.PrintDialog> da propriedade do componente permite definir propriedades relacionadas ao documento de impressão com o que você está trabalhando em seu formulário.</span><span class="sxs-lookup"><span data-stu-id="980a9-114">Setting the <xref:System.Windows.Forms.PrintDialog.Document%2A> property of the <xref:System.Windows.Forms.PrintDialog> component enables you to set properties related to the print document you are working with on your form.</span></span> <span data-ttu-id="980a9-115">Para obter mais <xref:System.Windows.Forms.PrintDialog> informações sobre o componente, consulte [PrintDialog Component](../controls/printdialog-component-windows-forms.md).</span><span class="sxs-lookup"><span data-stu-id="980a9-115">For more information about the <xref:System.Windows.Forms.PrintDialog> component, see [PrintDialog Component](../controls/printdialog-component-windows-forms.md).</span></span>  
   
-     <span data-ttu-id="b5d2e-116">Para obter mais informações sobre as especificidades de Windows Forms trabalhos de impressão, incluindo como criar um trabalho de impressão programaticamente, consulte <xref:System.Drawing.Printing.PrintPageEventArgs>.</span><span class="sxs-lookup"><span data-stu-id="b5d2e-116">For more information about the specifics of Windows Forms print jobs, including how to create a print job programmatically, see <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
+     <span data-ttu-id="980a9-116">Para obter mais informações sobre as especificidades dos trabalhos de impressão do <xref:System.Drawing.Printing.PrintPageEventArgs>Windows Forms, incluindo como criar um trabalho de impressão programáticamente, consulte .</span><span class="sxs-lookup"><span data-stu-id="980a9-116">For more information about the specifics of Windows Forms print jobs, including how to create a print job programmatically, see <xref:System.Drawing.Printing.PrintPageEventArgs>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5d2e-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5d2e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="980a9-117">Confira também</span><span class="sxs-lookup"><span data-stu-id="980a9-117">See also</span></span>
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [<span data-ttu-id="b5d2e-118">Suporte à impressão nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b5d2e-118">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
+- [<span data-ttu-id="980a9-118">Suporte à impressão no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="980a9-118">Windows Forms Print Support</span></span>](windows-forms-print-support.md)
