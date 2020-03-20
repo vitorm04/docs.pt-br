@@ -1,5 +1,5 @@
 ---
-title: 'Como: Baixar arquivos com FTP'
+title: Como baixar arquivos com FTP
 description: Este artigo mostra como baixar um arquivo de um servidor FTP.
 ms.date: 06/26/2018
 dev_langs:
@@ -7,17 +7,17 @@ dev_langs:
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632977"
 ---
-# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="3f146-103">Como: Baixar arquivos com FTP</span><span class="sxs-lookup"><span data-stu-id="3f146-103">How to: Download files with FTP</span></span>
+# <a name="how-to-download-files-with-ftp"></a><span data-ttu-id="c1907-103">Como baixar arquivos com FTP</span><span class="sxs-lookup"><span data-stu-id="c1907-103">How to: Download files with FTP</span></span>
 
-<span data-ttu-id="3f146-104">Este exemplo mostra como baixar um arquivo de um servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="3f146-104">This sample shows how to download a file from an FTP server.</span></span>
+<span data-ttu-id="c1907-104">Este exemplo mostra como baixar um arquivo de um servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="c1907-104">This sample shows how to download a file from an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3f146-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="3f146-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c1907-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c1907-105">Example</span></span>
 
 ```csharp
 using System;

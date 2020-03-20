@@ -20,16 +20,16 @@ helpviewer_keywords:
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
 ms.openlocfilehash: 9a1ad701e1e8f4ee9966ebd56922c29e2bae7a03
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048910"
 ---
-# <a name="basic-and-digest-authentication"></a><span data-ttu-id="38046-102">Autenticação Básica e Digest</span><span class="sxs-lookup"><span data-stu-id="38046-102">Basic and Digest Authentication</span></span>
-<span data-ttu-id="38046-103">A implementação <xref:System.Net> da autenticação Básica e Digest está em conformidade com o RFC2617 – Autenticação HTTP: Autenticação Básica e Digest (disponível no site do [World Wide Web Consortium](https://www.w3.org)).</span><span class="sxs-lookup"><span data-stu-id="38046-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the [World Wide Web Consortium's](https://www.w3.org) website).</span></span>  
+# <a name="basic-and-digest-authentication"></a><span data-ttu-id="6e173-102">Autenticação Básica e Digest</span><span class="sxs-lookup"><span data-stu-id="6e173-102">Basic and Digest Authentication</span></span>
+<span data-ttu-id="6e173-103">A implementação <xref:System.Net> da autenticação básica e digest está em conformidade com o RFC2617 – Autenticação HTTP: Autenticação Básica e Digest (disponível no site da [World Wide Web Consortium](https://www.w3.org)).</span><span class="sxs-lookup"><span data-stu-id="6e173-103">The <xref:System.Net> implementation of basic and digest authentication complies with RFC2617 – HTTP Authentication: Basic and Digest Authentication (available on the [World Wide Web Consortium's](https://www.w3.org) website).</span></span>  
   
- <span data-ttu-id="38046-104">Para usar a autenticação básica e digest, um aplicativo deve fornecer um nome de usuário e uma senha na propriedade <xref:System.Net.WebRequest.Credentials%2A> do objeto <xref:System.Net.WebRequest> usado para solicitar dados da Internet, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="38046-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
+ <span data-ttu-id="6e173-104">Para usar a autenticação básica e digest, um aplicativo deve fornecer um nome de usuário e uma senha na propriedade <xref:System.Net.WebRequest.Credentials%2A> do objeto <xref:System.Net.WebRequest> usado para solicitar dados da Internet, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="6e173-104">To use basic and digest authentication, an application must provide a user name and password in the <xref:System.Net.WebRequest.Credentials%2A> property of the <xref:System.Net.WebRequest> object that it uses to request data from the Internet, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -44,9 +44,9 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
-> <span data-ttu-id="38046-105">Os dados enviados com a Autenticação Básica e Digest não são criptografados e, portanto, os dados podem ser vistos por um adversário.</span><span class="sxs-lookup"><span data-stu-id="38046-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="38046-106">Além disso, as credenciais da Autenticação Básica (nome de usuário e senha) são enviadas de modo transparente e podem ser interceptadas.</span><span class="sxs-lookup"><span data-stu-id="38046-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
+> <span data-ttu-id="6e173-105">Os dados enviados com a Autenticação Básica e Digest não são criptografados e, portanto, os dados podem ser vistos por um adversário.</span><span class="sxs-lookup"><span data-stu-id="6e173-105">Data sent with Basic and Digest Authentication is not encrypted, so the data can be seen by an adversary.</span></span> <span data-ttu-id="6e173-106">Além disso, as credenciais da Autenticação Básica (nome de usuário e senha) são enviadas de modo transparente e podem ser interceptadas.</span><span class="sxs-lookup"><span data-stu-id="6e173-106">Additionally, Basic Authentication credentials (user name and password) are sent in the clear and can be intercepted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38046-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38046-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e173-107">Confira também</span><span class="sxs-lookup"><span data-stu-id="6e173-107">See also</span></span>
 
-- [<span data-ttu-id="38046-108">Autenticação Kerberos e NTLM</span><span class="sxs-lookup"><span data-stu-id="38046-108">NTLM and Kerberos Authentication</span></span>](ntlm-and-kerberos-authentication.md)
-- [<span data-ttu-id="38046-109">Autenticação da Internet</span><span class="sxs-lookup"><span data-stu-id="38046-109">Internet Authentication</span></span>](internet-authentication.md)
+- [<span data-ttu-id="6e173-108">Autenticação NTLM e Kerberos</span><span class="sxs-lookup"><span data-stu-id="6e173-108">NTLM and Kerberos Authentication</span></span>](ntlm-and-kerberos-authentication.md)
+- [<span data-ttu-id="6e173-109">Autenticação da Internet</span><span class="sxs-lookup"><span data-stu-id="6e173-109">Internet Authentication</span></span>](internet-authentication.md)

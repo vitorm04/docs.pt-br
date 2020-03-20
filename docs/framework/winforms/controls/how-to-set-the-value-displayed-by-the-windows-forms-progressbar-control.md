@@ -1,5 +1,5 @@
 ---
-title: Definir o valor exibido pelo controle ProgressBar
+title: Defina o valor exibido pelo Controle da Barra de Progresso
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d295079a96ca19a4e4c98e113a3f3051c6403182
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743804"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141805"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a><span data-ttu-id="5587b-102">Como definir o valor exibido pelo controle ProgressBar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5587b-102">How to: Set the Value Displayed by the Windows Forms ProgressBar Control</span></span>
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a><span data-ttu-id="7ea87-102">Como definir o valor exibido pelo controle ProgressBar dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7ea87-102">How to: Set the Value Displayed by the Windows Forms ProgressBar Control</span></span>
 > [!IMPORTANT]
-> <span data-ttu-id="5587b-103">O controle <xref:System.Windows.Forms.ToolStripProgressBar> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ProgressBar>, no entanto, o controle <xref:System.Windows.Forms.ProgressBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.</span><span class="sxs-lookup"><span data-stu-id="5587b-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+> <span data-ttu-id="7ea87-103">O controle <xref:System.Windows.Forms.ToolStripProgressBar> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.ProgressBar>, no entanto, o controle <xref:System.Windows.Forms.ProgressBar> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado.</span><span class="sxs-lookup"><span data-stu-id="7ea87-103">The <xref:System.Windows.Forms.ToolStripProgressBar> control replaces and adds functionality to the <xref:System.Windows.Forms.ProgressBar> control; however, the <xref:System.Windows.Forms.ProgressBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="5587b-104">O .NET Framework oferece várias maneiras diferentes de exibir um determinado valor dentro do controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-104">The .NET Framework gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control.</span></span> <span data-ttu-id="5587b-105">A abordagem que você escolher dependerá da tarefa em mãos ou do problema que está resolvendo.</span><span class="sxs-lookup"><span data-stu-id="5587b-105">Which approach you choose will depend on the task at hand or the problem you are solving.</span></span> <span data-ttu-id="5587b-106">A tabela a seguir mostra as abordagens que você pode escolher.</span><span class="sxs-lookup"><span data-stu-id="5587b-106">The following table shows the approaches you can choose.</span></span>  
+ <span data-ttu-id="7ea87-104">O Quadro .NET oferece várias maneiras diferentes de exibir um determinado valor dentro do <xref:System.Windows.Forms.ProgressBar> controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-104">The .NET Framework gives you several different ways to display a given value within the <xref:System.Windows.Forms.ProgressBar> control.</span></span> <span data-ttu-id="7ea87-105">A abordagem que você escolher dependerá da tarefa em mãos ou do problema que está resolvendo.</span><span class="sxs-lookup"><span data-stu-id="7ea87-105">Which approach you choose will depend on the task at hand or the problem you are solving.</span></span> <span data-ttu-id="7ea87-106">A tabela a seguir mostra as abordagens que você pode escolher.</span><span class="sxs-lookup"><span data-stu-id="7ea87-106">The following table shows the approaches you can choose.</span></span>  
   
-|<span data-ttu-id="5587b-107">Abordagem</span><span class="sxs-lookup"><span data-stu-id="5587b-107">Approach</span></span>|<span data-ttu-id="5587b-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="5587b-108">Description</span></span>|  
+|<span data-ttu-id="7ea87-107">Abordagem</span><span class="sxs-lookup"><span data-stu-id="7ea87-107">Approach</span></span>|<span data-ttu-id="7ea87-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="7ea87-108">Description</span></span>|  
 |--------------|-----------------|  
-|<span data-ttu-id="5587b-109">Defina o valor do controle de <xref:System.Windows.Forms.ProgressBar> diretamente.</span><span class="sxs-lookup"><span data-stu-id="5587b-109">Set the value of the <xref:System.Windows.Forms.ProgressBar> control directly.</span></span>|<span data-ttu-id="5587b-110">Essa abordagem é útil para as tarefas em que você sabe que o total do item medido será envolvido, como ler os registros de uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="5587b-110">This approach is useful for tasks where you know the total of the item measured that will be involved, such as reading records from a data source.</span></span> <span data-ttu-id="5587b-111">Além disso, se você precisar definir o valor uma ou duas vezes, esta será uma maneira fácil de realizar esta tarefa.</span><span class="sxs-lookup"><span data-stu-id="5587b-111">Additionally, if you only need to set the value once or twice, this is an easy way to do it.</span></span> <span data-ttu-id="5587b-112">Por fim, use esse processo se você precisar diminuir o valor exibido pela barra de progresso.</span><span class="sxs-lookup"><span data-stu-id="5587b-112">Finally, use this process if you need to decrease the value displayed by the progress bar.</span></span>|  
-|<span data-ttu-id="5587b-113">Aumente a exibição de <xref:System.Windows.Forms.ProgressBar> por um valor fixo.</span><span class="sxs-lookup"><span data-stu-id="5587b-113">Increase the <xref:System.Windows.Forms.ProgressBar> display by a fixed value.</span></span>|<span data-ttu-id="5587b-114">Essa abordagem será útil quando você estiver exibindo uma contagem simples entre o mínimo e máximo, como o tempo decorrido ou o número de arquivos que foram processados de um total conhecido.</span><span class="sxs-lookup"><span data-stu-id="5587b-114">This approach is useful when you are displaying a simple count between the minimum and maximum, such as elapsed time or the number of files that have been processed out of a known total.</span></span>|  
-|<span data-ttu-id="5587b-115">Aumente a exibição de <xref:System.Windows.Forms.ProgressBar> por um valor que varia.</span><span class="sxs-lookup"><span data-stu-id="5587b-115">Increase the <xref:System.Windows.Forms.ProgressBar> display by a value that varies.</span></span>|<span data-ttu-id="5587b-116">Essa abordagem será útil quando você precisar alterar o valor exibido várias vezes em volumes diferentes.</span><span class="sxs-lookup"><span data-stu-id="5587b-116">This approach is useful when you need to change the displayed value a number of times in different amounts.</span></span> <span data-ttu-id="5587b-117">Um exemplo seria mostrar a quantidade de espaço em disco consumida durante a gravação de uma série de arquivos no disco.</span><span class="sxs-lookup"><span data-stu-id="5587b-117">An example would be showing the amount of hard-disk space being consumed while writing a series of files to the disk.</span></span>|  
+|<span data-ttu-id="7ea87-109">Defina o <xref:System.Windows.Forms.ProgressBar> valor do controle diretamente.</span><span class="sxs-lookup"><span data-stu-id="7ea87-109">Set the value of the <xref:System.Windows.Forms.ProgressBar> control directly.</span></span>|<span data-ttu-id="7ea87-110">Essa abordagem é útil para as tarefas em que você sabe que o total do item medido será envolvido, como ler os registros de uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="7ea87-110">This approach is useful for tasks where you know the total of the item measured that will be involved, such as reading records from a data source.</span></span> <span data-ttu-id="7ea87-111">Além disso, se você precisar definir o valor uma ou duas vezes, esta será uma maneira fácil de realizar esta tarefa.</span><span class="sxs-lookup"><span data-stu-id="7ea87-111">Additionally, if you only need to set the value once or twice, this is an easy way to do it.</span></span> <span data-ttu-id="7ea87-112">Por fim, use esse processo se você precisar diminuir o valor exibido pela barra de progresso.</span><span class="sxs-lookup"><span data-stu-id="7ea87-112">Finally, use this process if you need to decrease the value displayed by the progress bar.</span></span>|  
+|<span data-ttu-id="7ea87-113">Aumente <xref:System.Windows.Forms.ProgressBar> o display por um valor fixo.</span><span class="sxs-lookup"><span data-stu-id="7ea87-113">Increase the <xref:System.Windows.Forms.ProgressBar> display by a fixed value.</span></span>|<span data-ttu-id="7ea87-114">Essa abordagem será útil quando você estiver exibindo uma contagem simples entre o mínimo e máximo, como o tempo decorrido ou o número de arquivos que foram processados de um total conhecido.</span><span class="sxs-lookup"><span data-stu-id="7ea87-114">This approach is useful when you are displaying a simple count between the minimum and maximum, such as elapsed time or the number of files that have been processed out of a known total.</span></span>|  
+|<span data-ttu-id="7ea87-115">Aumente <xref:System.Windows.Forms.ProgressBar> o display por um valor que varia.</span><span class="sxs-lookup"><span data-stu-id="7ea87-115">Increase the <xref:System.Windows.Forms.ProgressBar> display by a value that varies.</span></span>|<span data-ttu-id="7ea87-116">Essa abordagem será útil quando você precisar alterar o valor exibido várias vezes em volumes diferentes.</span><span class="sxs-lookup"><span data-stu-id="7ea87-116">This approach is useful when you need to change the displayed value a number of times in different amounts.</span></span> <span data-ttu-id="7ea87-117">Um exemplo seria mostrar a quantidade de espaço em disco consumida durante a gravação de uma série de arquivos no disco.</span><span class="sxs-lookup"><span data-stu-id="7ea87-117">An example would be showing the amount of hard-disk space being consumed while writing a series of files to the disk.</span></span>|  
   
- <span data-ttu-id="5587b-118">A maneira mais direta de definir o valor exibido por uma barra de progresso é definindo a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A>.</span><span class="sxs-lookup"><span data-stu-id="5587b-118">The most direct way to set the value displayed by a progress bar is by setting the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span> <span data-ttu-id="5587b-119">Isso pode ser feito no tempo de design ou no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="5587b-119">This can be done either at design time or at run time.</span></span>  
+ <span data-ttu-id="7ea87-118">A maneira mais direta de definir o valor exibido <xref:System.Windows.Forms.ProgressBar.Value%2A> por uma barra de progresso é definindo a propriedade.</span><span class="sxs-lookup"><span data-stu-id="7ea87-118">The most direct way to set the value displayed by a progress bar is by setting the <xref:System.Windows.Forms.ProgressBar.Value%2A> property.</span></span> <span data-ttu-id="7ea87-119">Isso pode ser feito no tempo de design ou no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="7ea87-119">This can be done either at design time or at run time.</span></span>  
   
-### <a name="to-set-the-progressbar-value-directly"></a><span data-ttu-id="5587b-120">Para definir o valor de ProgressBar diretamente</span><span class="sxs-lookup"><span data-stu-id="5587b-120">To set the ProgressBar value directly</span></span>  
+### <a name="to-set-the-progressbar-value-directly"></a><span data-ttu-id="7ea87-120">Para definir o valor de ProgressBar diretamente</span><span class="sxs-lookup"><span data-stu-id="7ea87-120">To set the ProgressBar value directly</span></span>  
   
-1. <span data-ttu-id="5587b-121">Defina os valores de <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> do controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-121">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
+1. <span data-ttu-id="7ea87-121">Defina <xref:System.Windows.Forms.ProgressBar> os <xref:System.Windows.Forms.ProgressBar.Minimum%2A> valores e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> os valores do controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-121">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2. <span data-ttu-id="5587b-122">No código, defina a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> do controle como um valor inteiro entre os valores mínimo e máximo que você estabeleceu.</span><span class="sxs-lookup"><span data-stu-id="5587b-122">In code, set the control's <xref:System.Windows.Forms.ProgressBar.Value%2A> property to an integer value between the minimum and maximum values you have established.</span></span>  
+2. <span data-ttu-id="7ea87-122">Em código, defina <xref:System.Windows.Forms.ProgressBar.Value%2A> a propriedade do controle como um valor inteiro entre os valores mínimo e máximo estabelecidos.</span><span class="sxs-lookup"><span data-stu-id="7ea87-122">In code, set the control's <xref:System.Windows.Forms.ProgressBar.Value%2A> property to an integer value between the minimum and maximum values you have established.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="5587b-123">Se você definir a propriedade <xref:System.Windows.Forms.ProgressBar.Value%2A> fora dos limites estabelecidos pelas propriedades <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A>, o controle lançará uma exceção de <xref:System.ArgumentException>.</span><span class="sxs-lookup"><span data-stu-id="5587b-123">If you set the <xref:System.Windows.Forms.ProgressBar.Value%2A> property outside the boundaries established by the <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> properties, the control throws an <xref:System.ArgumentException> exception.</span></span>  
+    > <span data-ttu-id="7ea87-123">Se você <xref:System.Windows.Forms.ProgressBar.Value%2A> definir a propriedade fora dos <xref:System.Windows.Forms.ProgressBar.Minimum%2A> <xref:System.Windows.Forms.ProgressBar.Maximum%2A> limites estabelecidos pelas <xref:System.ArgumentException> propriedades e propriedades, o controle lançará uma exceção.</span><span class="sxs-lookup"><span data-stu-id="7ea87-123">If you set the <xref:System.Windows.Forms.ProgressBar.Value%2A> property outside the boundaries established by the <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> properties, the control throws an <xref:System.ArgumentException> exception.</span></span>  
   
-     <span data-ttu-id="5587b-124">O exemplo de código a seguir ilustra como definir o valor de <xref:System.Windows.Forms.ProgressBar> diretamente.</span><span class="sxs-lookup"><span data-stu-id="5587b-124">The following code example illustrates how to set the <xref:System.Windows.Forms.ProgressBar> value directly.</span></span> <span data-ttu-id="5587b-125">O código lerá os registros de uma fonte de dados e atualizará a barra de progresso e o rótulo sempre que um registro de dados for lido.</span><span class="sxs-lookup"><span data-stu-id="5587b-125">The code reads records from a data source and updates the progress bar and label every time a data record is read.</span></span> <span data-ttu-id="5587b-126">Este exemplo requer que o formulário tenha um controle de <xref:System.Windows.Forms.Label>, um controle de <xref:System.Windows.Forms.ProgressBar> e uma tabela de dados com uma linha chamada `CustomerRow` com `FirstName` e `LastName` campos.</span><span class="sxs-lookup"><span data-stu-id="5587b-126">This example requires that your form has a <xref:System.Windows.Forms.Label> control, a <xref:System.Windows.Forms.ProgressBar> control, and a data table with a row called `CustomerRow` with `FirstName` and `LastName` fields.</span></span>  
+     <span data-ttu-id="7ea87-124">O exemplo de código a <xref:System.Windows.Forms.ProgressBar> seguir ilustra como definir o valor diretamente.</span><span class="sxs-lookup"><span data-stu-id="7ea87-124">The following code example illustrates how to set the <xref:System.Windows.Forms.ProgressBar> value directly.</span></span> <span data-ttu-id="7ea87-125">O código lerá os registros de uma fonte de dados e atualizará a barra de progresso e o rótulo sempre que um registro de dados for lido.</span><span class="sxs-lookup"><span data-stu-id="7ea87-125">The code reads records from a data source and updates the progress bar and label every time a data record is read.</span></span> <span data-ttu-id="7ea87-126">Este exemplo requer que <xref:System.Windows.Forms.Label> seu formulário <xref:System.Windows.Forms.ProgressBar> tenha um controle, um `CustomerRow` controle `FirstName` `LastName` e uma tabela de dados com uma linha chamada com e campos.</span><span class="sxs-lookup"><span data-stu-id="7ea87-126">This example requires that your form has a <xref:System.Windows.Forms.Label> control, a <xref:System.Windows.Forms.ProgressBar> control, and a data table with a row called `CustomerRow` with `FirstName` and `LastName` fields.</span></span>  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "76743804"
     }  
     ```  
   
-     Se você estiver exibindo o progresso que prossegue por um intervalo fixo, poderá definir o valor e, em seguida, chamar um método que aumenta o valor do controle de <xref:System.Windows.Forms.ProgressBar> por esse intervalo. <span data-ttu-id="5587b-128">Isso é útil para temporizadores e outros cenários em que você não esteja medindo o andamento como um percentual do todo.</span><span class="sxs-lookup"><span data-stu-id="5587b-128">This is useful for timers and other scenarios where you are not measuring progress as a percentage of the whole.</span></span>  
+     Se você estiver exibindo o progresso que prossegue por um intervalo fixo, <xref:System.Windows.Forms.ProgressBar> você pode definir o valor e, em seguida, chamar um método que aumenta o valor do controle por esse intervalo. <span data-ttu-id="7ea87-128">Isso é útil para temporizadores e outros cenários em que você não esteja medindo o andamento como um percentual do todo.</span><span class="sxs-lookup"><span data-stu-id="7ea87-128">This is useful for timers and other scenarios where you are not measuring progress as a percentage of the whole.</span></span>  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a><span data-ttu-id="5587b-129">Para aumentar a barra de progresso com um valor fixo</span><span class="sxs-lookup"><span data-stu-id="5587b-129">To increase the progress bar by a fixed value</span></span>  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a><span data-ttu-id="7ea87-129">Para aumentar a barra de progresso com um valor fixo</span><span class="sxs-lookup"><span data-stu-id="7ea87-129">To increase the progress bar by a fixed value</span></span>  
   
-1. <span data-ttu-id="5587b-130">Defina os valores de <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> do controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-130">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
+1. <span data-ttu-id="7ea87-130">Defina <xref:System.Windows.Forms.ProgressBar> os <xref:System.Windows.Forms.ProgressBar.Minimum%2A> valores e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> os valores do controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-130">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2. <span data-ttu-id="5587b-131">Defina a propriedade <xref:System.Windows.Forms.ProgressBar.Step%2A> do controle como um inteiro que representa o valor para aumentar o valor exibido da barra de progresso.</span><span class="sxs-lookup"><span data-stu-id="5587b-131">Set the control's <xref:System.Windows.Forms.ProgressBar.Step%2A> property to an integer representing the amount to increase the progress bar's displayed value.</span></span>  
+2. <span data-ttu-id="7ea87-131">Defina a <xref:System.Windows.Forms.ProgressBar.Step%2A> propriedade do controle como um inteiro representando o valor para aumentar o valor exibido da barra de progresso.</span><span class="sxs-lookup"><span data-stu-id="7ea87-131">Set the control's <xref:System.Windows.Forms.ProgressBar.Step%2A> property to an integer representing the amount to increase the progress bar's displayed value.</span></span>  
   
-3. <span data-ttu-id="5587b-132">Chame o método <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> para alterar o valor exibido pelo valor definido na propriedade <xref:System.Windows.Forms.ProgressBar.Step%2A>.</span><span class="sxs-lookup"><span data-stu-id="5587b-132">Call the <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> method to change the value displayed by the amount set in the <xref:System.Windows.Forms.ProgressBar.Step%2A> property.</span></span>  
+3. <span data-ttu-id="7ea87-132">Chame <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> o método para alterar o valor exibido <xref:System.Windows.Forms.ProgressBar.Step%2A> pelo valor definido na propriedade.</span><span class="sxs-lookup"><span data-stu-id="7ea87-132">Call the <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> method to change the value displayed by the amount set in the <xref:System.Windows.Forms.ProgressBar.Step%2A> property.</span></span>  
   
-     <span data-ttu-id="5587b-133">O exemplo de código a seguir ilustra como uma barra de progresso pode manter uma contagem de arquivos em uma operação de cópia.</span><span class="sxs-lookup"><span data-stu-id="5587b-133">The following code example illustrates how a progress bar can maintain a count of the files in a copy operation.</span></span>  
+     <span data-ttu-id="7ea87-133">O exemplo de código a seguir ilustra como uma barra de progresso pode manter uma contagem de arquivos em uma operação de cópia.</span><span class="sxs-lookup"><span data-stu-id="7ea87-133">The following code example illustrates how a progress bar can maintain a count of the files in a copy operation.</span></span>  
   
-     <span data-ttu-id="5587b-134">No exemplo a seguir, como cada arquivo é lido na memória, a barra de progresso e o rótulo são atualizados para refletir a quantidade total de arquivos lidos.</span><span class="sxs-lookup"><span data-stu-id="5587b-134">In the following example, as each file is read into memory, the progress bar and label are updated to reflect the total files read.</span></span> <span data-ttu-id="5587b-135">Este exemplo requer que o formulário tenha um controle de <xref:System.Windows.Forms.Label> e um controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-135">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
+     <span data-ttu-id="7ea87-134">No exemplo a seguir, como cada arquivo é lido na memória, a barra de progresso e o rótulo são atualizados para refletir a quantidade total de arquivos lidos.</span><span class="sxs-lookup"><span data-stu-id="7ea87-134">In the following example, as each file is read into memory, the progress bar and label are updated to reflect the total files read.</span></span> <span data-ttu-id="7ea87-135">Este exemplo requer que <xref:System.Windows.Forms.Label> sua forma <xref:System.Windows.Forms.ProgressBar> tenha um controle e um controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-135">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,30 +149,30 @@ ms.locfileid: "76743804"
     }  
     ```  
   
-     Por fim, você pode aumentar o valor exibido por uma barra de progresso para que cada aumento seja um valor exclusivo. <span data-ttu-id="5587b-137">Isso será útil quando você estiver controlando uma série de operações exclusivas, como gravar arquivos de tamanhos diferentes em um disco rígido ou medir o progresso como um percentual do todo.</span><span class="sxs-lookup"><span data-stu-id="5587b-137">This is useful when you are keeping track of a series of unique operations, such as writing files of different sizes to a hard disk, or measuring progress as a percentage of the whole.</span></span>  
+     Por fim, você pode aumentar o valor exibido por uma barra de progresso para que cada aumento seja um valor exclusivo. <span data-ttu-id="7ea87-137">Isso será útil quando você estiver controlando uma série de operações exclusivas, como gravar arquivos de tamanhos diferentes em um disco rígido ou medir o progresso como um percentual do todo.</span><span class="sxs-lookup"><span data-stu-id="7ea87-137">This is useful when you are keeping track of a series of unique operations, such as writing files of different sizes to a hard disk, or measuring progress as a percentage of the whole.</span></span>  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a><span data-ttu-id="5587b-138">Para aumentar a barra de progresso com um valor dinâmico</span><span class="sxs-lookup"><span data-stu-id="5587b-138">To increase the progress bar by a dynamic value</span></span>  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a><span data-ttu-id="7ea87-138">Para aumentar a barra de progresso com um valor dinâmico</span><span class="sxs-lookup"><span data-stu-id="7ea87-138">To increase the progress bar by a dynamic value</span></span>  
   
-1. <span data-ttu-id="5587b-139">Defina os valores de <xref:System.Windows.Forms.ProgressBar.Minimum%2A> e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> do controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-139">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
+1. <span data-ttu-id="7ea87-139">Defina <xref:System.Windows.Forms.ProgressBar> os <xref:System.Windows.Forms.ProgressBar.Minimum%2A> valores e <xref:System.Windows.Forms.ProgressBar.Maximum%2A> os valores do controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-139">Set the <xref:System.Windows.Forms.ProgressBar> control's <xref:System.Windows.Forms.ProgressBar.Minimum%2A> and <xref:System.Windows.Forms.ProgressBar.Maximum%2A> values.</span></span>  
   
-2. <span data-ttu-id="5587b-140">Chame o método <xref:System.Windows.Forms.ProgressBar.Increment%2A> para alterar o valor exibido por um inteiro especificado por você.</span><span class="sxs-lookup"><span data-stu-id="5587b-140">Call the <xref:System.Windows.Forms.ProgressBar.Increment%2A> method to change the value displayed by an integer you specify.</span></span>  
+2. <span data-ttu-id="7ea87-140">Chame <xref:System.Windows.Forms.ProgressBar.Increment%2A> o método para alterar o valor exibido por um inteiro especificado.</span><span class="sxs-lookup"><span data-stu-id="7ea87-140">Call the <xref:System.Windows.Forms.ProgressBar.Increment%2A> method to change the value displayed by an integer you specify.</span></span>  
   
-     <span data-ttu-id="5587b-141">O exemplo de código a seguir ilustra como uma barra de progresso pode calcular a quantidade de espaço em disco usado durante uma operação de cópia.</span><span class="sxs-lookup"><span data-stu-id="5587b-141">The following code example illustrates how a progress bar can calculate how much disk space has been used during a copy operation.</span></span>  
+     <span data-ttu-id="7ea87-141">O exemplo de código a seguir ilustra como uma barra de progresso pode calcular a quantidade de espaço em disco usado durante uma operação de cópia.</span><span class="sxs-lookup"><span data-stu-id="7ea87-141">The following code example illustrates how a progress bar can calculate how much disk space has been used during a copy operation.</span></span>  
   
-     <span data-ttu-id="5587b-142">No exemplo a seguir, como cada arquivo é gravado no disco rígido, a barra de progresso e o rótulo são atualizados para refletir a quantidade de espaço em disco disponível.</span><span class="sxs-lookup"><span data-stu-id="5587b-142">In the following example, as each file is written to the hard disk, the progress bar and label are updated to reflect the amount of hard-disk space available.</span></span> <span data-ttu-id="5587b-143">Este exemplo requer que o formulário tenha um controle de <xref:System.Windows.Forms.Label> e um controle de <xref:System.Windows.Forms.ProgressBar>.</span><span class="sxs-lookup"><span data-stu-id="5587b-143">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
+     <span data-ttu-id="7ea87-142">No exemplo a seguir, como cada arquivo é gravado no disco rígido, a barra de progresso e o rótulo são atualizados para refletir a quantidade de espaço em disco disponível.</span><span class="sxs-lookup"><span data-stu-id="7ea87-142">In the following example, as each file is written to the hard disk, the progress bar and label are updated to reflect the amount of hard-disk space available.</span></span> <span data-ttu-id="7ea87-143">Este exemplo requer que <xref:System.Windows.Forms.Label> sua forma <xref:System.Windows.Forms.ProgressBar> tenha um controle e um controle.</span><span class="sxs-lookup"><span data-stu-id="7ea87-143">This example requires that your form has a <xref:System.Windows.Forms.Label> control and a <xref:System.Windows.Forms.ProgressBar> control.</span></span>  
   
     ```vb  
     Public Sub ReadFiles()  
-       ' Sets the progress bar's minimum value to a number   
+       ' Sets the progress bar's minimum value to a number
        ' representing the hard disk space before the files are read in.  
        ' You will most likely have to set this using a system call.  
        ' NOTE: The code below is meant to be an example and  
        ' will not compile.  
        ProgressBar1.Minimum = AvailableDiskSpace()  
-       ' Sets the progress bar's maximum value to a number   
+       ' Sets the progress bar's maximum value to a number
        ' representing the total hard disk space.  
        ' You will most likely have to set this using a system call.  
-       ' NOTE: The code below is meant to be an example   
+       ' NOTE: The code below is meant to be an example
        ' and will not compile.  
        ProgressBar1.Maximum = TotalDiskSpace()  
   
@@ -183,11 +183,11 @@ ms.locfileid: "76743804"
        ' so it will execute the loop 5 times.  
        For i = 1 To 5  
           ' Insert code to read a file into memory and update file size.  
-          ' Increases the progress bar's value based on the size of   
+          ' Increases the progress bar's value based on the size of
           ' the file currently being written.  
           ProgressBar1.Increment(FileSize)  
           ' Updates the label to show available drive space.  
-          Label1.Text = "Current Disk Space Used = " &_   
+          Label1.Text = "Current Disk Space Used = " &_
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
@@ -196,16 +196,16 @@ ms.locfileid: "76743804"
     ```csharp  
     public void readFiles()  
     {  
-       // Sets the progress bar's minimum value to a number   
+       // Sets the progress bar's minimum value to a number
        // representing the hard disk space before the files are read in.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example and   
+       // NOTE: The code below is meant to be an example and
        // will not compile.  
        progressBar1.Minimum = AvailableDiskSpace();  
-       // Sets the progress bar's maximum value to a number   
+       // Sets the progress bar's maximum value to a number
        // representing the total hard disk space.  
        // You will most likely have to set this using a system call.  
-       // NOTE: The code below is meant to be an example   
+       // NOTE: The code below is meant to be an example
        // and will not compile.  
        progressBar1.Maximum = TotalDiskSpace();  
   
@@ -215,7 +215,7 @@ ms.locfileid: "76743804"
        for (int i = 1; i<= 5; i++)  
        {  
           // Insert code to read a file into memory and update file size.  
-          // Increases the progress bar's value based on the size of   
+          // Increases the progress bar's value based on the size of
           // the file currently being written.  
           progressBar1.Increment(FileSize);  
           // Updates the label to show available drive space.  
@@ -224,9 +224,9 @@ ms.locfileid: "76743804"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="5587b-144">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5587b-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7ea87-144">Confira também</span><span class="sxs-lookup"><span data-stu-id="7ea87-144">See also</span></span>
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [<span data-ttu-id="5587b-145">Visão geral do controle ProgressBar</span><span class="sxs-lookup"><span data-stu-id="5587b-145">ProgressBar Control Overview</span></span>](progressbar-control-overview-windows-forms.md)
-- [<span data-ttu-id="5587b-146">Controle ProgressBar</span><span class="sxs-lookup"><span data-stu-id="5587b-146">ProgressBar Control</span></span>](progressbar-control-windows-forms.md)
+- [<span data-ttu-id="7ea87-145">Visão geral do controle ProgressBar</span><span class="sxs-lookup"><span data-stu-id="7ea87-145">ProgressBar Control Overview</span></span>](progressbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="7ea87-146">Controle da Barra de Progresso</span><span class="sxs-lookup"><span data-stu-id="7ea87-146">ProgressBar Control</span></span>](progressbar-control-windows-forms.md)

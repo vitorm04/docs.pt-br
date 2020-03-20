@@ -1,5 +1,5 @@
 ---
-title: Designar um botão como o botão aceitar
+title: Designe um botão como o botão aceitar
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 1063f649768cac2c866390718b261a21e18ec4d3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ca5f691fb26db5c4adcb48405c9600b54827104c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743273"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142141"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="b605f-102">Como designar um botão dos Windows Forms como o botão Aceitar</span><span class="sxs-lookup"><span data-stu-id="b605f-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
-<span data-ttu-id="b605f-103">Em qualquer formulário do Windows, você pode designar um controle de <xref:System.Windows.Forms.Button> para ser o botão aceitar, também conhecido como o botão padrão.</span><span class="sxs-lookup"><span data-stu-id="b605f-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="b605f-104">Sempre que o usuário pressiona a tecla ENTER, o botão padrão é clicado, independentemente de qual outro controle no formulário tenha o foco.</span><span class="sxs-lookup"><span data-stu-id="b605f-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="0bd53-102">Como designar um botão dos Windows Forms como o botão Aceitar</span><span class="sxs-lookup"><span data-stu-id="0bd53-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
+<span data-ttu-id="0bd53-103">Em qualquer formulário do Windows, você pode designar um <xref:System.Windows.Forms.Button> controle para ser o botão de aceitação, também conhecido como botão padrão.</span><span class="sxs-lookup"><span data-stu-id="0bd53-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="0bd53-104">Sempre que o usuário pressiona a tecla ENTER, o botão padrão é clicado independentemente de qual outro controle no formulário tenha o foco.</span><span class="sxs-lookup"><span data-stu-id="0bd53-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b605f-105">As exceções a isso são quando o controle com foco é outro botão — nesse caso, o botão com o foco será clicado — ou uma caixa de texto de várias linhas ou um controle personalizado que intercepta a tecla ENTER.</span><span class="sxs-lookup"><span data-stu-id="b605f-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
+> <span data-ttu-id="0bd53-105">As exceções para isso são quando o controle com foco é outro botão — nesse caso, o botão com o foco será clicado — ou uma caixa de texto multilinha, ou um controle personalizado que prende a tecla ENTER.</span><span class="sxs-lookup"><span data-stu-id="0bd53-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
   
-### <a name="to-designate-the-accept-button"></a><span data-ttu-id="b605f-106">Para designar o botão aceitar</span><span class="sxs-lookup"><span data-stu-id="b605f-106">To designate the accept button</span></span>  
+### <a name="to-designate-the-accept-button"></a><span data-ttu-id="0bd53-106">Para designar o botão aceitar</span><span class="sxs-lookup"><span data-stu-id="0bd53-106">To designate the accept button</span></span>  
   
-1. <span data-ttu-id="b605f-107">Defina a propriedade <xref:System.Windows.Forms.Form.AcceptButton%2A> do formulário como o controle de <xref:System.Windows.Forms.Button> apropriado.</span><span class="sxs-lookup"><span data-stu-id="b605f-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1. <span data-ttu-id="0bd53-107">Defina a <xref:System.Windows.Forms.Form.AcceptButton%2A> propriedade do <xref:System.Windows.Forms.Button> formulário para o controle apropriado.</span><span class="sxs-lookup"><span data-stu-id="0bd53-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
-      Me.AcceptButton = myDefaultBtn   
+      Me.AcceptButton = myDefaultBtn
     End Sub  
     ```  
   
@@ -49,11 +49,11 @@ ms.locfileid: "76743273"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b605f-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b605f-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0bd53-108">Confira também</span><span class="sxs-lookup"><span data-stu-id="0bd53-108">See also</span></span>
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [<span data-ttu-id="b605f-109">Visão geral do controle de botão</span><span class="sxs-lookup"><span data-stu-id="b605f-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="b605f-110">Formas de selecionar um controle de botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b605f-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
-- [<span data-ttu-id="b605f-111">Como responder a cliques no botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b605f-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="b605f-112">Como designar um botão dos Windows Forms como o botão Cancelar</span><span class="sxs-lookup"><span data-stu-id="b605f-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
-- [<span data-ttu-id="b605f-113">Controle de botão</span><span class="sxs-lookup"><span data-stu-id="b605f-113">Button Control</span></span>](button-control-windows-forms.md)
+- [<span data-ttu-id="0bd53-109">Visão geral do controle Button</span><span class="sxs-lookup"><span data-stu-id="0bd53-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="0bd53-110">Forma de selecionar um controle de botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0bd53-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
+- [<span data-ttu-id="0bd53-111">Como responder a cliques no botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0bd53-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="0bd53-112">Como designar um botão dos Windows Forms como o botão Cancelar</span><span class="sxs-lookup"><span data-stu-id="0bd53-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [<span data-ttu-id="0bd53-113">Controle de botão</span><span class="sxs-lookup"><span data-stu-id="0bd53-113">Button Control</span></span>](button-control-windows-forms.md)
