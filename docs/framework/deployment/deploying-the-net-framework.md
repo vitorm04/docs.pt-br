@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 ms.openlocfilehash: cc4f9c38138a37b6068d33ffa4229a955db08c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716541"
 ---
 # <a name="deploying-the-net-framework"></a>Implantando o .NET Framework
@@ -20,9 +20,9 @@ Esta seção da documentação do .NET Framework fornece informações para dese
  Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.  
   
  [Guia de implantação para administradores](guide-for-administrators.md)  
- Explica como um administrador do sistema pode implantar o .NET Framework e suas dependências do sistema em uma rede usando o Microsoft Endpoint Configuration Manager.  
+ Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o Microsoft Endpoint Configuration Manager.  
   
- [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md)  
+ [Redução das reinicializações do sistema durante as instalações do Framework .NET 4.5](reducing-system-restarts.md)  
  Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.  
   
  [Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)  
@@ -34,6 +34,6 @@ Esta seção da documentação do .NET Framework fornece informações para dese
  [Como depurar problemas de ativação do CLR](how-to-debug-clr-activation-issues.md)  
  Explica como exibir e depurar os logs de ativação do CLR para resolver problemas que você pode encontrar para fazer com que seu aplicativo seja executado com a versão correta do CLR.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de desenvolvimento](../development-guide.md)

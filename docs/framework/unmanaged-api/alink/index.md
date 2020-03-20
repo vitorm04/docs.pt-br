@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 ms.openlocfilehash: f44482d0be70a8c5651bf440a264468a4446f009
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74445655"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>API ALink (referência de API não gerenciada)
@@ -37,6 +37,6 @@ Tem suporte para a criação de módulos não associados e assemblies do .NET Fr
   
  [Interface IALink3](ialink3-interface.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de API não gerenciada](../index.md)

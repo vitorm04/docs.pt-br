@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716501"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Como depurar problemas de ativação do CLR
@@ -116,7 +116,7 @@ No exemplo a seguir de um log de ativação, as informações mais úteis são r
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Implantação](index.md)
-- [Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Como: Configurar um aplicativo para suportar versões .NET Framework 4 ou posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

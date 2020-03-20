@@ -1,5 +1,5 @@
 ---
-title: 'Como: Associar dados ao controle MaskedTextBox'
+title: Como associar dados ao controle MaskedTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: f10a19433c70eb0a1dacf99925f70d6796727da9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0cbb239e24b254c37c453486590185e934adf482
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612414"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142167"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Como: Associar dados ao controle MaskedTextBox
-Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> controlar exatamente como faria para qualquer outro controle de formulários do Windows. No entanto, se o formato dos seus dados no banco de dados não corresponder ao formato esperado pela sua definição de máscara, será necessário reformatar os dados. O procedimento a seguir demonstra como fazer isso usando o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos do <xref:System.Windows.Forms.Binding> classe para exibir o número de telefone separados e campos de banco de dados de extensão de telefone como um único campo editável.  
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Como associar dados ao controle MaskedTextBox
+Você pode vincular <xref:System.Windows.Forms.MaskedTextBox> dados a um controle da forma como você pode a qualquer outro controle do Windows Forms. No entanto, se o formato dos seus dados no banco de dados não corresponder ao formato esperado pela sua definição de máscara, será necessário reformatar os dados. O procedimento a seguir demonstra <xref:System.Windows.Forms.Binding.Format> como <xref:System.Windows.Forms.Binding.Parse> fazer <xref:System.Windows.Forms.Binding> isso usando os eventos da classe para exibir os campos de banco de dados de número de telefone e extensão telefônica separados como um único campo editável.  
   
  O procedimento a seguir requer que você tenha acesso a um banco de dados do SQL Server com o banco de dados Northwind de exemplo instalado.  
   
@@ -26,11 +26,11 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
   
 1. Criar um novo projeto dos Windows Forms.  
   
-2. Arraste duas <xref:System.Windows.Forms.TextBox> controles para seu formulário; nomeie-as `FirstName` e `LastName`.  
+2. Arraste <xref:System.Windows.Forms.TextBox> dois controles para o seu formulário; nomeá-los `FirstName` e `LastName`.  
   
-3. Arraste uma <xref:System.Windows.Forms.MaskedTextBox> de controle para seu formulário; nomeie- `PhoneMask`.  
+3. Arraste <xref:System.Windows.Forms.MaskedTextBox> um controle para o seu formulário; nomeá-lo `PhoneMask`.  
   
-4. Defina as <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade de `PhoneMask` para `(000) 000-0000 x9999`.  
+4. Defina <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> a `PhoneMask` `(000) 000-0000 x9999`propriedade de .  
   
 5. Adicione as seguintes importações de namespace ao formulário.  
   
@@ -42,7 +42,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     Imports System.Data.SqlClient  
     ```  
   
-6. Clique com o botão direito do mouse do formulário e escolha **Exibir código**. Coloque esse código em qualquer lugar em sua classe de formulário.  
+6. Clique com o botão direito do mouse no formulário e escolha **Exibir Código**. Coloque esse código em qualquer lugar em sua classe de formulário.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -72,8 +72,8 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
         dataConnect.Fill(employeesTable, "Employees");  
   
         // Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        // before adding them to the control - otherwise, we won't get a Format event on the   
-        // initial load.   
+        // before adding them to the control - otherwise, we won't get a Format event on the
+        // initial load.
         try  
         {  
             currentBinding = new Binding("Text", employeesTable, "Employees.FirstName");  
@@ -120,7 +120,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
         DataConnect.Fill(EmployeesTable, "Employees")  
   
         ' Now bind MaskedTextBox to appropriate field. Note that we must create the Binding objects  
-        ' before adding them to the control - otherwise, we won't get a Format event on the   
+        ' before adding them to the control - otherwise, we won't get a Format event on the
         ' initial load.  
         Try  
             CurrentBinding = New Binding("Text", EmployeesTable, "Employees.FirstName")  
@@ -136,7 +136,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     End Sub  
     ```  
   
-7. Adicionar manipuladores de eventos para o <xref:System.Windows.Forms.Binding.Format> e <xref:System.Windows.Forms.Binding.Parse> eventos para combinar e separar o `PhoneNumber` e `Extension` campos base no limite <xref:System.Data.DataSet>.  
+7. Adicione manipuladores de <xref:System.Windows.Forms.Binding.Format> <xref:System.Windows.Forms.Binding.Parse> eventos para os `PhoneNumber` eventos `Extension` e combinar <xref:System.Data.DataSet>e separar os campos e os campos do limite .  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -144,10 +144,10 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
         String ext;  
   
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
-        if (currentRow["Extension"] == null)   
+        if (currentRow["Extension"] == null)
         {  
             ext = "";  
-        } else   
+        } else
         {  
             ext = currentRow["Extension"].ToString();  
         }  
@@ -163,7 +163,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
         String ext = phoneNumberAndExt.Substring(extIndex).Trim();  
         String phoneNumber = phoneNumberAndExt.Substring(0, extIndex).Trim();  
   
-        //Get the current binding object, and set the new extension manually.   
+        //Get the current binding object, and set the new extension manually.
         DataRowView currentRow = (DataRowView)BindingContext[employeesTable, "Employees"].Current;  
         // Remove the "x" from the extension.  
         currentRow["Extension"] = ext.Substring(1);  
@@ -194,7 +194,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
         Dim Ext As String = PhoneNumberAndExt.Substring(ExtIndex).Trim()  
         Dim PhoneNumber As String = PhoneNumberAndExt.Substring(0, ExtIndex).Trim()  
   
-        ' Get the current binding object, and set the new extension manually.   
+        ' Get the current binding object, and set the new extension manually.
         Dim CurrentRow As DataRowView = CType(Me.BindingContext(EmployeesTable, "Employees").Current, DataRowView)  
         ' Remove the "x" from the extension.  
         CurrentRow("Extension") = CObj(Ext.Substring(1))  
@@ -204,7 +204,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     End Sub  
     ```  
   
-8. Adicione dois <xref:System.Windows.Forms.Button> controles ao formulário. Nomeie-os como `previousButton` e `nextButton`. Clique duas vezes em cada botão para adicionar um <xref:System.Windows.Forms.Control.Click> manipulador de eventos e preencha os manipuladores de eventos, conforme mostrado no exemplo de código a seguir.  
+8. Adicione <xref:System.Windows.Forms.Button> dois controles ao formulário. Nomeie-os `previousButton` e `nextButton`. Clique duas vezes em <xref:System.Windows.Forms.Control.Click> cada botão para adicionar um manipulador de eventos e preencha os manipuladores de eventos, conforme mostrado no exemplo de código a seguir.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  
@@ -228,7 +228,7 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
     End Sub  
     ```  
   
-9. Executar o exemplo. Edite os dados e use o **Previous** e **próxima** botões para ver o que os dados são mantidos corretamente o <xref:System.Data.DataSet>.  
+9. Execute o exemplo. Edite os dados e use os botões **Anterior** e **Seguinte** para <xref:System.Data.DataSet>ver se os dados são adequadamente persistidos para o .  
   
 ## <a name="example"></a>Exemplo  
  O exemplo de código a seguir é a lista de código completa resultante da conclusão do procedimento anterior.  
@@ -239,9 +239,9 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-- Criar um Visual C# ou o projeto do Visual Basic.  
+- Crie um projeto Visual C# ou Visual Basic.  
   
-- Adicione a <xref:System.Windows.Forms.TextBox> e <xref:System.Windows.Forms.MaskedTextBox> controles ao formulário, conforme descrito no procedimento anterior.  
+- Adicione <xref:System.Windows.Forms.TextBox> os <xref:System.Windows.Forms.MaskedTextBox> controles e controles ao formulário, conforme descrito no procedimento anterior.  
   
 - Abra o arquivo de código-fonte para o formulário de padrão do projeto.  
   
@@ -249,6 +249,6 @@ Você pode associar dados a um <xref:System.Windows.Forms.MaskedTextBox> control
   
 - Compile o aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Passo a passo: Trabalhando com o controle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+- [Passo a passo: trabalhando com o controle MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

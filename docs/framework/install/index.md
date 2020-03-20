@@ -3,10 +3,10 @@ title: Guia de instalação do .NET Framework
 description: Saiba como instalar o .NET Framework no Windows.
 ms.date: 08/03/2017
 ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716360"
 ---
 # <a name="installation-guide"></a>Guia de instalação
@@ -25,9 +25,9 @@ ms.locfileid: "75716360"
 
 - [Windows XP e Windows Server 2003](on-windows-xp.md)
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Baixar o .NET Framework](https://dotnet.microsoft.com/download)
+- [Baixe o Quadro .NET](https://dotnet.microsoft.com/download)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Instalar o .NET Framework para desenvolvedores](guide-for-developers.md)
 - [Implantar o .NET Framework para desenvolvedores](../deployment/deployment-guide-for-developers.md)

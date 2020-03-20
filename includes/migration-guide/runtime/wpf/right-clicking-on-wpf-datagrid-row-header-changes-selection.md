@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 3b36bc1ed9c35722478bdb31b82a79bed1a18914
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8332aca6e72346c92e80ce28979b83eec496b0e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858528"
 ---
 ### <a name="right-clicking-on-a-wpf-datagrid-row-header-changes-the-datagrid-selection"></a>Clicar com o botão direito do mouse em um cabeçalho de linha do DataGrid do WPF altera a seleção de DataGrid
@@ -14,6 +14,5 @@ ms.locfileid: "67858528"
 |Sugestão|Esse problema foi corrigido no .NET Framework 4.6 e pode ser resolvido com o upgrade para essa versão do .NET Framework.|
 |Escopo|Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
+|Type|Runtime|
 |APIs afetadas|<ul><li><xref:System.Windows.Controls.DataGrid.%23ctor?displayProperty=nameWithType></li></ul>|
-

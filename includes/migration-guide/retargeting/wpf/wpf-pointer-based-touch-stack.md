@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a620028a4e286799a6762c57145264ac0e2dbaf9
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859138"
 ---
 ### <a name="wpf-pointer-based-touch-stack"></a>Pilha de toque baseada em ponteiro do WPF
@@ -14,5 +14,4 @@ ms.locfileid: "67859138"
 |Sugestão|Desenvolvedores que desejam habilitar essa pilha podem adicionar/mesclar o seguinte ao arquivo app.config do aplicativo:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Input.Stylus.EnablePointerSupport=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Remover isso ou definir o valor como false desabilita essa pilha opcional. Observe que essa pilha está disponível somente na Atualização do Windows 10 para Criadores e superiores.|
 |Escopo|Microsoft Edge|
 |Versão|4.7|
-|Tipo|Redirecionando|
-
+|Type|Redirecionando|

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 192fe629493947ffe4e0aa8ade417b7701ff95b4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004603"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186210"
 ---
 # <a name="commanding-overview"></a>Visão geral dos comandos
 <a name="introduction"></a> Os comandos são um mecanismo de entrada do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que oferecem manipulação de entrada em um nível mais semântico do que a entrada do dispositivo. Os exemplos de comandos são as operações **Copiar**, **Recortar** e **Colar**, encontradas em muitos aplicativos.  
   
  Esta visão geral define quais comandos estão no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], quais classes fazem parte do modelo de comandos e como utilizar e criar comandos nos seus aplicativos.  
   
- Esse tópico contém as seguintes seções:  
+ Este tópico contém as seguintes seções:  
   
 - [O que são comandos?](#commands_at_10000_feet)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72004603"
   
 - [Criando comandos personalizados](#creating_commands)  
   
-<a name="commands_at_10000_feet"></a>   
+<a name="commands_at_10000_feet"></a>
 ## <a name="what-are-commands"></a>O que são comandos?  
  Os comandos têm várias finalidades. A primeira finalidade é separar a semântica e o objeto que invoca um comando da lógica que o executa. Isso permite que fontes múltiplas e distintas invoquem a mesma lógica de comando, além de permitir que a lógica de comando seja personalizada para destinos diferentes. Por exemplo, as operações de edição **Copiar**, **Recortar** e **Colar**, que são encontradas em muitos aplicativos, podem ser invocadas por meio de ações do usuário diferentes se forem implementadas por meio do uso de comandos. Um aplicativo pode permitir que um usuário recorte texto ou objetos selecionados ao clicar em um botão, escolher um item em um menu ou usar uma combinação de teclas, como CTRL+X. Usando comandos, é possível associar cada tipo de ação do usuário à mesma lógica.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72004603"
   
  A semântica de um comando pode ser consistente entre aplicativos e classes; porém, a lógica da ação é específica para o objeto específico da ação. A combinação de teclas CTRL+X invoca o comando **Recortar** em classes de texto, classes de imagens e navegadores da Web, enquanto a lógica real para executar a operação **Recortar** é definida pelo aplicativo que faz o recorte. Um <xref:System.Windows.Input.RoutedCommand> permite que os clientes implementem a lógica. Um objeto de texto poderá recortar o texto selecionado na área de transferência, enquanto um objeto de imagem poderá recortar a imagem selecionada. Quando um aplicativo manipula o evento <xref:System.Windows.Input.CommandManager.Executed>, ele tem acesso ao destino do comando e pode executar a ação adequada, dependendo do tipo de destino.  
   
-<a name="simple_command"></a>   
+<a name="simple_command"></a>
 ## <a name="simple-command-example-in-wpf"></a>Exemplo de comando simples no WPF  
  A maneira mais simples de usar um comando no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é usar um <xref:System.Windows.Input.RoutedCommand> predefinido de uma das classes da biblioteca de comandos, usar um controle que tenha suporte nativo para manipular o comando e usar um controle que tenha suporte nativo para invocar um comando.  O comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> é um dos comandos predefinidos na classe <xref:System.Windows.Input.ApplicationCommands>.  O controle <xref:System.Windows.Controls.TextBox> tem uma lógica interna para manipular o comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A>.  Além disso, a classe <xref:System.Windows.Controls.MenuItem> tem suporte nativo para invocar comandos.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72004603"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Four_main_Concepts"></a>   
+<a name="Four_main_Concepts"></a>
 ## <a name="four-main-concepts-in-wpf-commanding"></a>Quatro conceitos principais em comandos do WPF  
  O modelo de comando roteado no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode ser dividido em quatro conceitos principais: o comando, a fonte do comando, o destino do comando e a associação do comando:  
   
@@ -70,8 +70,8 @@ ms.locfileid: "72004603"
   
  No exemplo anterior, o comando <xref:System.Windows.Input.ApplicationCommands.Paste%2A> é o comando, o <xref:System.Windows.Controls.MenuItem> é a origem de comando, a <xref:System.Windows.Controls.TextBox> é o destino de comando, e a associação de comando é fornecida pelo controle <xref:System.Windows.Controls.TextBox>.  Vale a pena observar que nem sempre a <xref:System.Windows.Input.CommandBinding> é fornecida pelo controle que é a classe de destino de comando.  Com muita frequência, a <xref:System.Windows.Input.CommandBinding> precisa ser criada pelo desenvolvedor de aplicativos, ou a <xref:System.Windows.Input.CommandBinding> pode ser anexada a um ancestral do destino de comando.  
   
-<a name="Commands"></a>   
-### <a name="commands"></a>Commands  
+<a name="Commands"></a>
+### <a name="commands"></a>Comandos  
  Os comandos do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são criados pela implementação da interface <xref:System.Windows.Input.ICommand>.  <xref:System.Windows.Input.ICommand> expõe dois métodos, <xref:System.Windows.Input.ICommand.Execute%2A>, e <xref:System.Windows.Input.ICommand.CanExecute%2A>e um evento <xref:System.Windows.Input.ICommand.CanExecuteChanged>. <xref:System.Windows.Input.ICommand.Execute%2A> executa as ações associadas ao comando. <xref:System.Windows.Input.ICommand.CanExecute%2A> determina se o comando pode ser executado no destino de comando atual. <xref:System.Windows.Input.ICommand.CanExecuteChanged> é acionado quando o gerenciador de comandos que centraliza as operações de comandos detecta uma alteração na origem de comando que pode invalidar um comando que foi acionado, mas que ainda não foi executado pela associação de comando.  A implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de <xref:System.Windows.Input.ICommand> é a classe <xref:System.Windows.Input.RoutedCommand> e é o foco desta visão geral.  
   
  As principais fontes de entrada no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são o mouse, o teclado, tinta e comandos roteados.  As entradas mais orientadas ao dispositivo usam um <xref:System.Windows.RoutedEvent> para notificar aos objetos em uma página de aplicativo que ocorreu um evento de entrada.  Um <xref:System.Windows.Input.RoutedCommand> não é diferente.  Os métodos <xref:System.Windows.Input.RoutedCommand.Execute%2A> e <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> de um <xref:System.Windows.Input.RoutedCommand> não contêm a lógica do aplicativo para o comando, mas acionam eventos roteados que passam por um túnel e se propagam pela árvore de elementos até encontrarem um objeto com uma <xref:System.Windows.Input.CommandBinding>.  A <xref:System.Windows.Input.CommandBinding> contém os manipuladores para esses eventos e são os manipuladores que executam o comando.  Para obter mais informações sobre o roteamento de eventos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [Visão geral de eventos roteados](routed-events-overview.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "72004603"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um conjunto de comandos roteados comuns distribuídos em várias classes: <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.ComponentCommands> e <xref:System.Windows.Documents.EditingCommands>.  Essas classes consistem apenas nos objetos <xref:System.Windows.Input.RoutedCommand> e não na lógica de implementação do comando.  A lógica de implementação é de responsabilidade do objeto no qual o comando está sendo executado.  
   
-<a name="Command_Sources"></a>   
+<a name="Command_Sources"></a>
 ### <a name="command-sources"></a>Fontes de comando  
  Uma fonte do comando é o objeto que invoca o comando.  Alguns exemplos de origem de comando são <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.Button> e <xref:System.Windows.Input.KeyGesture>.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "72004603"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
-<a name="Command_Binding"></a>   
+<a name="Command_Binding"></a>
 ### <a name="commandbinding"></a>CommandBinding  
  Uma <xref:System.Windows.Input.CommandBinding> associa um comando aos manipuladores de eventos que implementam o comando.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "72004603"
   
  Em algumas situações, a <xref:System.Windows.Input.CommandBinding> está anexada ao próprio destino de comando, como ocorre com a classe <xref:System.Windows.Controls.TextBox> e os comandos <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A> e <xref:System.Windows.Input.ApplicationCommands.Paste%2A>. No entanto, muitas vezes, é mais conveniente anexar a <xref:System.Windows.Input.CommandBinding> a um ancestral do destino de comando, como a <xref:System.Windows.Window> principal ou o objeto Application, especialmente se a mesma <xref:System.Windows.Input.CommandBinding> pode ser usada para vários destinos de comando.  São decisões de design que você deverá considerar no momento de criar sua infraestrutura de comando.  
   
-<a name="Commane_Target"></a>   
+<a name="Commane_Target"></a>
 ### <a name="command-target"></a>Destino do comando  
  O destino do comando é o elemento no qual o comando é executado.  Com relação a um <xref:System.Windows.Input.RoutedCommand>, o destino de comando é o elemento no qual o roteamento do <xref:System.Windows.Input.CommandManager.Executed> e do <xref:System.Windows.Input.CommandManager.CanExecute> é iniciado.  Conforme observado anteriormente, no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a propriedade <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> em <xref:System.Windows.Input.ICommandSource> só é aplicável quando o <xref:System.Windows.Input.ICommand> é um <xref:System.Windows.Input.RoutedCommand>.  Se o <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> estiver definido em uma <xref:System.Windows.Input.ICommandSource> e o comando correspondente não for um <xref:System.Windows.Input.RoutedCommand>, o destino de comando será ignorado.  
   
@@ -163,27 +163,27 @@ ms.locfileid: "72004603"
  [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
  [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
-<a name="Command_Manager"></a>   
+<a name="Command_Manager"></a>
 ### <a name="the-commandmanager"></a>O CommandManager  
  O <xref:System.Windows.Input.CommandManager> fornece várias funções relacionadas a um comando.  Ele fornece um conjunto de métodos estáticos para adicionar os manipuladores de eventos <xref:System.Windows.Input.CommandManager.PreviewExecuted>, <xref:System.Windows.Input.CommandManager.Executed>, <xref:System.Windows.Input.CommandManager.PreviewCanExecute> e <xref:System.Windows.Input.CommandManager.CanExecute> a um elemento específico e removê-los de um deles.  Ele fornece um meio para registrar objetos <xref:System.Windows.Input.CommandBinding> e <xref:System.Windows.Input.InputBinding> em uma classe específica.  O <xref:System.Windows.Input.CommandManager> também fornece um meio, por meio do evento <xref:System.Windows.Input.CommandManager.RequerySuggested>, para notificar um comando quando ele deve acionar o evento <xref:System.Windows.Input.ICommand.CanExecuteChanged>.  
   
  O método <xref:System.Windows.Input.CommandManager.InvalidateRequerySuggested%2A> força o <xref:System.Windows.Input.CommandManager> a acionar o evento <xref:System.Windows.Input.CommandManager.RequerySuggested>.  Isso é útil em condições que devem desabilitar/habilitar um comando, mas que não são condições reconhecidas pelo <xref:System.Windows.Input.CommandManager>.  
   
-<a name="Command_Library"></a>   
+<a name="Command_Library"></a>
 ## <a name="command-library"></a>Biblioteca de comandos  
  O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece um conjunto de comandos predefinidos.  A biblioteca de comandos consiste nas seguintes classes: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, <xref:System.Windows.Documents.EditingCommands> e o <xref:System.Windows.Input.ComponentCommands>.  Essas classes fornecem comandos como <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> e <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>, <xref:System.Windows.Input.MediaCommands.Play%2A>, <xref:System.Windows.Input.MediaCommands.Stop%2A> e <xref:System.Windows.Input.MediaCommands.Pause%2A>.  
   
- Muitos desses comandos incluem um conjunto de associações de entrada padrão.  Por exemplo, se você especificar que seu aplicativo manipula o comando de cópia, você obtém automaticamente a ligação de teclado "CTRL + C". você também obtém associações para outros dispositivos de entrada, como gestos de caneta do Tablet PC e informações de fala.  
+ Muitos desses comandos incluem um conjunto de associações de entrada padrão.  Por exemplo, se você especificar que seu aplicativo lida com o comando de cópia, você automaticamente obterá a vinculação do teclado "CTRL+C" Você também obterá vinculações para outros dispositivos de entrada, como gestos de caneta tablet PC e informações de fala.  
   
- Quando você faz referência a comandos nas várias bibliotecas de comandos usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], geralmente é possível omitir o nome de classe da classe da biblioteca que expõe a propriedade de comando estático. De modo geral, os nomes dos comandos são cadeias de caracteres não ambíguas; os tipos de propriedade existem para fornecer um agrupamento lógico de comandos, mas não são necessários para eliminar a ambiguidade. Por exemplo, é possível especificar o `Command="Cut"` em vez do `Command="ApplicationCommands.Cut"`, mais detalhado. Trata-se de um mecanismo de conveniência interno do processador [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para comandos (mais precisamente, é um comportamento de conversor de tipo do <xref:System.Windows.Input.ICommand>, que o processador [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] referencia no momento do carregamento).  
+ Quando você faz referência a comandos nas várias bibliotecas de comandos usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], geralmente é possível omitir o nome de classe da classe da biblioteca que expõe a propriedade de comando estático. De modo geral, os nomes dos comandos são cadeias de caracteres não ambíguas; os tipos de propriedade existem para fornecer um agrupamento lógico de comandos, mas não são necessários para eliminar a ambiguidade. Por exemplo, é possível especificar o `Command="Cut"` em vez do `Command="ApplicationCommands.Cut"`, mais detalhado. Este é um mecanismo de conveniência [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que é incorporado ao processador para comandos <xref:System.Windows.Input.ICommand>(mais [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] precisamente, é um comportamento de conversor de tipo de , que o processador faz referência na hora da carga).  
   
-<a name="creating_commands"></a>   
+<a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>Criando comandos personalizados  
  Se os comandos nas classes de biblioteca de comandos não satisfizerem suas necessidades, você poderá criar seus próprios comandos.  Há duas maneiras de criar um comando personalizado.  A primeira é começar do início e implementar a interface <xref:System.Windows.Input.ICommand>.  A outra forma, e a abordagem mais comum, é criar um <xref:System.Windows.Input.RoutedCommand> ou <xref:System.Windows.Input.RoutedUICommand>.  
   
  Para obter um exemplo de como criar um <xref:System.Windows.Input.RoutedCommand> personalizado, confira [Criar uma amostra de um RoutedCommand personalizado](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>

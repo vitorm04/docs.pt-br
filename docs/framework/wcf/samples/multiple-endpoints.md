@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: d0e39920703ef5c1f31bc2d630497f73c242323a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2cc65a65d0b5dbf697052abed018877b22bf2a4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714717"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144325"
 ---
 # <a name="multiple-endpoints"></a>Vários pontos de extremidade
-O exemplo de vários pontos de extremidade demonstra como configurar vários pontos de extremidade em um serviço e como comunicar-se com cada um dos clientes. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). A configuração de serviço foi modificada para definir dois pontos de extremidade que dão suporte ao contrato de `ICalculator`, mas cada um em um endereço diferente usando uma associação diferente. A configuração do cliente e o código foram modificados para se comunicar com os dois pontos de extremidade de serviço.  
+A amostra De múltiplos pontos finais demonstra como configurar vários pontos finais em um serviço e como se comunicar com cada ponto final de um cliente. Esta amostra é baseada no [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md). A configuração do serviço foi modificada `ICalculator` para definir dois pontos finais que suportam o contrato, mas cada um em um endereço diferente usando uma vinculação diferente. A configuração e o código do cliente foram modificados para se comunicar com ambos os pontos finais do serviço.  
   
 > [!NOTE]
-> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
+> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
   
- O arquivo Web. config do serviço foi modificado para definir dois pontos de extremidade, cada um com suporte para o mesmo contrato de `ICalculator`, mas em endereços diferentes usando associações diferentes. O primeiro ponto de extremidade é definido no endereço base usando uma associação de `basicHttpBinding`, que não tem segurança habilitada. O segundo ponto de extremidade é definido em {BaseAddress}/Secure usando uma associação `wsHttpBinding`, que é segura por padrão, usando o WS-Security com a autenticação do Windows.  
+ O arquivo Web.config de serviço foi modificado para definir `ICalculator` dois pontos finais, cada um suportando o mesmo contrato, mas em endereços diferentes usando diferentes vinculações. O primeiro ponto final é definido `basicHttpBinding` no endereço base usando uma vinculação, que não tem a segurança ativada. O segundo ponto final é definido em {baseaddress}/secure usando uma `wsHttpBinding` vinculação, que é segura por padrão, usando o WS-Security com autenticação do Windows.  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">  
   <!-- This endpoint is exposed at the base address provided by host:  
@@ -37,26 +37,26 @@ O exemplo de vários pontos de extremidade demonstra como configurar vários pon
 </service>  
 ```  
   
- Os dois pontos de extremidade também são configurados no cliente. Esses pontos de extremidade recebem nomes para que o chamador possa passar o nome do ponto de extremidades desejado para o construtor do cliente.  
+ Ambos os pontos finais também estão configurados no cliente. Esses pontos finais são dados nomes para que o chamador possa passar o nome de ponto final desejado para o construtor do cliente.  
   
 ```xml  
 <client>  
   <!-- Passing "basic" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="basic"  
-            address="http://localhost/servicemodelsamples/service.svc"   
-            binding="basicHttpBinding"   
+            address="http://localhost/servicemodelsamples/service.svc"
+            binding="basicHttpBinding"
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
   <!-- Passing "secure" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="secure"  
-            address="http://localhost/servicemodelsamples/service.svc/secure"   
-            binding="wsHttpBinding"   
+            address="http://localhost/servicemodelsamples/service.svc/secure"
+            binding="wsHttpBinding"
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
 ```  
   
- O cliente usa os dois pontos de extremidade, conforme mostrado no código a seguir.  
+ O cliente usa ambos os pontos finais como mostrado no código a seguir.  
   
 ```csharp  
 static void Main()  
@@ -85,7 +85,7 @@ static void Main()
 }  
 ```  
   
- Quando você executa o cliente, as interações com ambos os pontos de extremidade são exibidas.  
+ Quando você executa o cliente, as interações com ambos os pontos finais são exibidas.  
   
 ```console
 Communicate with basic endpoint.  
@@ -104,17 +104,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  

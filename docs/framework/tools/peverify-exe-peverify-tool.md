@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104975"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (Ferramenta PEVerify)
@@ -30,27 +30,27 @@ A ferramenta PEVerify ajuda desenvolvedores que geram MSIL (Microsoft Intermedia
 peverify filename [options]  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|*filename*|O arquivo PE (Portable Executable) para o qual MSIL e metadados devem ser verificados.|  
+|*Filename*|O arquivo PE (Portable Executable) para o qual MSIL e metadados devem ser verificados.|  
   
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Anula a verificação depois de erros *maxErrorCount*.<br /><br /> Esse parâmetro não é compatível no .NET Framework versão 2.0 ou posterior.|  
-|**/clock**|Mede e relata os seguintes tempos de verificação em milissegundos:<br /><br /> **MD Val. cycle**<br /> Ciclo de validação dos metadados<br /><br /> **MD Val. pure**<br /> Validação dos metadados pura<br /><br /> **IL Ver. cycle**<br /> Ciclo de verificação MSIL<br /><br /> **IL Ver pure**<br /> Verificação MSIL pura<br /><br /> Os tempos de **MD Val. cycle** e **IL Ver. cycle** incluem o tempo necessário para a realização de procedimentos de inicialização e desligamento necessários. Os tempos de **MD Val. pure** e **IL Ver pure** refletem o tempo necessário para a realização da validação ou apenas da verificação.|  
+|**/relógio**|Mede e relata os seguintes tempos de verificação em milissegundos:<br /><br /> **MD Val. cycle**<br /> Ciclo de validação dos metadados<br /><br /> **MD Val. pure**<br /> Validação dos metadados pura<br /><br /> **IL Ver. cycle**<br /> Ciclo de verificação MSIL<br /><br /> **IL Ver pure**<br /> Verificação MSIL pura<br /><br /> Os tempos de **MD Val. cycle** e **IL Ver. cycle** incluem o tempo necessário para a realização de procedimentos de inicialização e desligamento necessários. Os tempos de **MD Val. pure** e **IL Ver pure** refletem o tempo necessário para a realização da validação ou apenas da verificação.|  
 |**/help**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/hresult**|Exibe códigos de erro em formato hexadecimal.|  
 |**/ignore=** *hex.code* [, *hex.code*]|Ignora os códigos de erro especificados.|  
 |**/ignore=@** *responseFile*|Ignora os códigos de erro listados no arquivo de resposta especificado.|  
-|**/il**|Realiza verificação de segurança do tipo MSIL dos métodos implementados no assembly especificado por *filename*. A ferramenta retorna descrições detalhadas para cada problema encontrado, a menos que você especifique a opção **/quiet**.|  
+|**(iI).**|Realiza verificação de segurança do tipo MSIL dos métodos implementados no assembly especificado por *filename*. A ferramenta retorna descrições detalhadas para cada problema encontrado, a menos que você especifique a opção **/quiet**.|  
 |**/md**|Realiza verificações de validação de metadados no assembly especificado por *filename*. Isso analisa a estrutura de metadados completa dentro do arquivo e relata todos os problemas de validação encontrados.|  
 |**/nologo**|Suprime a exibição da versão do produto e as informações de direitos autorais.|  
 |**/nosymbols**|No .NET Framework versão 2.0, suprime números de linha para compatibilidade com versões anteriores.|  
 |**/quiet**|Especifica o modo silencioso; suprime saída dos relatórios de problema de verificação. Peverify.exe ainda relata se o arquivo é fortemente tipado, mas não relata informações sobre problemas que impeçam a verificação de segurança do tipo.|  
 |`/transparent`|Verifique apenas os métodos transparentes.|  
-|**/unique**|Ignora códigos de erro repetidos.|  
+|**/único**|Ignora códigos de erro repetidos.|  
 |**/verbose**|No .NET Framework versão 2.0, exibe informações adicionais em mensagens de verificação MSIL.|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
@@ -118,7 +118,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 0xABCD1234  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Escrevendo um código fortemente tipado verificável](../misc/code-access-security-basics.md#typesafe_code)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974950"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidade de versão no .NET Framework
 
 Compatibilidade com versões anteriores significa que um aplicativo desenvolvido para uma versão específica de uma plataforma será executado em versões posteriores dessa plataforma. O .NET Framework tenta maximizar a compatibilidade com versões anteriores: o código-fonte gravado para uma versão do .NET Framework deve compilar em versões posteriores do .NET Framework e os binários executados em uma versão do .NET Framework devem se comportar de forma idêntica em versões posteriores do .NET Framework.
 
-## <a name="Apps"></a> Compatibilidade de versão para aplicativos
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> Compatibilidade de versão para aplicativos
 
 Por padrão, um aplicativo executado na versão do .NET Framework para o qual foi compilado. Se essa versão não estiver presente e o arquivo de configuração de aplicativos não definir versões compatíveis, um erro de inicialização do .NET Framework poderá ocorrer. Nesse caso, a tentativa de executar o aplicativo falhará.
 
-Para definir as versões específicas nas quais seu aplicativo é executado, adicione um ou mais elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração de aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do runtime, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
+Para definir as versões específicas em que [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) o aplicativo é executado, adicione um ou mais elementos de>de runtime suportados ao arquivo de configuração do aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do runtime, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
 
 ```xml
 <configuration>
@@ -49,7 +49,7 @@ Na prática, essa compatibilidade pode ser desfeita por alterações aparentemen
 
 Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framework 4.5 (incluindo suas versões de ponto, o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8), use as seguintes listas de verificação:
 
-- Se seu aplicativo foi desenvolvido para ser executado em qualquer versão do .NET Framework a partir do .NET Framework 4,0, consulte [compatibilidade de aplicativos](application-compatibility.md) para gerar listas de alterações entre sua versão de .NET Framework de destino e a versão na qual seu aplicativo está sendo executado.
+- Se o seu aplicativo foi desenvolvido para ser executado em qualquer versão do .NET Framework a partir do .NET Framework 4.0, consulte [compatibilidade de aplicativos](application-compatibility.md) para gerar listas de alterações entre a versão .NET Framework direcionada e a versão em que o aplicativo está sendo executado.
 
 - Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
@@ -67,10 +67,10 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 Se você não conseguir encontrar uma solução alternativa adequada para seu problema, lembre-se de que o .NET Framework 4.5 (ou uma de suas versões pontuais) é executado lado a lado com as versões 1.1, 2.0 e 3.5, além de ser uma atualização in-loco que substitui a versão 4. Para aplicativos que segmentam as versões 1.1, 2.0 e 3.5, é possível instalar a versão do .NET Framework adequada no computador de destino para executar o aplicativo em seu melhor ambiente. Para saber mais sobre a execução lado a lado, confira [Side-by-Side Execution](../deployment/side-by-side-execution.md) (Execução lado a lado).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Novidades](../whats-new/index.md)
-- [O que está obsoleto na Biblioteca de Classes](../whats-new/whats-obsolete.md)
+- [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md)
 - [Compatibilidade de aplicativos](../migration-guide/application-compatibility.md)
-- [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [.NET Framework política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)

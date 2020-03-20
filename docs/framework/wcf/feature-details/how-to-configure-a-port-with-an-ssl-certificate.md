@@ -9,41 +9,41 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 99a08c9714e8f8cef0c1c96ac7f890d163324b44
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 90d5424e12bb770dc3da85e1b2738206f4777c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095015"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185104"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como configurar uma porta com um certificado SSL
 
-Ao criar um serviço de Windows Communication Foundation (WCF) auto-hospedado com a classe <xref:System.ServiceModel.WSHttpBinding> que usa a segurança de transporte, você também deve configurar uma porta com um certificado X. 509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [segurança de transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Ao criar um serviço de WCF (Windows Communication <xref:System.ServiceModel.WSHttpBinding> Foundation) auto-hospedado com a classe que usa segurança de transporte, você também deve configurar uma porta com um certificado X.509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [HTTP Transport Security](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para configurar uma porta, a ferramenta usada depende do sistema operacional que está sendo executado no computador.  
   
- Se você estiver executando o Windows Server 2003, use a ferramenta HttpCfg. exe. No Windows Server 2003, essa ferramenta está instalada. Para obter mais informações, consulte a [visão geral do Httpcfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). A [documentação das ferramentas de suporte do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) explica a sintaxe da ferramenta Httpcfg. exe.  
+ Se você estiver executando o Windows Server 2003, use a ferramenta HttpCfg.exe. No Windows Server 2003, esta ferramenta está instalada. Para obter mais informações, consulte [httpcfg Visão geral](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). A [documentação do Windows Support Tools](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) explica a sintaxe da ferramenta Httpcfg.exe.  
   
- Se você estiver executando o Windows Vista, use a ferramenta Netsh. exe que já está instalada. 
+ Se você estiver executando o Windows Vista, use a ferramenta Netsh.exe que já está instalada.
   
 > [!NOTE]
-> A modificação de certificados armazenados no computador requer privilégios administrativos.  
+> Modificar certificados armazenados no computador requer privilégios administrativos.  
   
-## <a name="determine-how-ports-are-configured"></a>Determinar como as portas são configuradas  
+## <a name="determine-how-ports-are-configured"></a>Determine como as portas estão configuradas  
   
-1. No Windows Server 2003 ou no Windows XP, use a ferramenta HttpCfg. exe para exibir a configuração da porta atual, usando os comutadores **SSL** e de **consulta** , conforme mostrado no exemplo a seguir.  
+1. No Windows Server 2003 ou no Windows XP, use a ferramenta HttpCfg.exe para visualizar a configuração atual da porta, usando os switches **de consulta** e **ssl,** como mostrado no exemplo a seguir.  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. No Windows Vista, use a ferramenta Netsh. exe para exibir a configuração da porta atual, conforme mostrado no exemplo a seguir.  
+2. No Windows Vista, use a ferramenta Netsh.exe para visualizar a configuração atual da porta, como mostrado no exemplo a seguir.  
   
     ```console  
     netsh http show sslcert  
     ```  
   
-## <a name="get-a-certificates-thumbprint"></a>Obter a impressão digital de um certificado  
+## <a name="get-a-certificates-thumbprint"></a>Obtenha a impressão digital de um certificado  
   
 1. Use o snap-in do MMC dos Certificados para localizar um certificado X.509 cuja finalidade seja a autenticação de cliente. Para saber mais, consulte [Como Exibir Certificados com o Snap-in do MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
@@ -53,61 +53,61 @@ Ao criar um serviço de Windows Communication Foundation (WCF) auto-hospedado co
   
 4. Remova todos os espaços entre os caracteres hexadecimais. Uma maneira de fazer isso é usar o recurso localizar e substituir do editor de texto e substituir cada espaço com um caractere nulo.  
   
-## <a name="bind-an-ssl-certificate-to-a-port-number"></a>Associar um certificado SSL a um número de porta  
+## <a name="bind-an-ssl-certificate-to-a-port-number"></a>Vincule um certificado SSL a um número de porta  
   
-1. No Windows Server 2003 ou no Windows XP, use a ferramenta HttpCfg. exe no modo "set" no repositório de protocolo SSL (SSL) para associar o certificado a um número de porta. A ferramenta usa a impressão digital para identificar o certificado, conforme mostrado no exemplo o seguir.  
+1. No Windows Server 2003 ou no Windows XP, use a ferramenta HttpCfg.exe no modo "set" na loja Secure Sockets Layer (SSL) para vincular o certificado a um número de porta. A ferramenta usa a impressão digital para identificar o certificado, conforme mostrado no exemplo o seguir.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    - A opção **-i** tem a sintaxe de `IP`:`port` e instrui a ferramenta a definir o certificado para a porta 8012 do computador. Opcionalmente, os quatro zeros que precedem o número também podem ser substituídos pelo endereço IP real do computador.  
+    - O **interruptor -i** tem a `IP``port` sintaxe de : e instrui a ferramenta a definir o certificado para a porta 8012 do computador. Opcionalmente, os quatro zeros que precedem o número também podem ser substituídos pelo endereço IP real do computador.  
   
-    - A opção **-h** especifica a impressão digital do certificado.  
+    - O interruptor **-h** especifica a impressão digital do certificado.  
   
-2. No Windows Vista, use a ferramenta Netsh. exe, conforme mostrado no exemplo a seguir.  
+2. No Windows Vista, use a ferramenta Netsh.exe, como mostrado no exemplo a seguir.  
   
     ```console  
-    netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}   
+    netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}
     ```  
   
     - O parâmetro **certhash** especifica a impressão digital do certificado.  
   
-    - O parâmetro **ipport** especifica o endereço IP e a porta e funciona exatamente como a opção **-i** da ferramenta Httpcfg. exe descrita.  
+    - O parâmetro **ipport** especifica o endereço IP e a porta e funciona como o switch **-i** da ferramenta Httpcfg.exe descrita.  
   
-    - O parâmetro **AppID** é um GUID que pode ser usado para identificar o aplicativo proprietário.  
+    - O **parâmetro appid** é um GUID que pode ser usado para identificar o aplicativo de owning.  
   
-## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Associar um certificado SSL a um número de porta e a certificados de cliente de suporte  
+## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Vincule um certificado SSL a um número de porta e suporte aos certificados do cliente  
   
-1. No Windows Server 2003 ou no Windows XP, para dar suporte a clientes que se autenticam com certificados X. 509 na camada de transporte, siga o procedimento anterior, mas passe um parâmetro de linha de comando adicional para HttpCfg. exe, conforme mostrado no exemplo a seguir.  
+1. No Windows Server 2003 ou no Windows XP, para dar suporte aos clientes que autenticam com certificados X.509 na camada de transporte, siga o procedimento anterior, mas passe um parâmetro adicional de linha de comando para HttpCfg.exe, como mostrado no exemplo a seguir.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     A opção **-f** tem a sintaxe de `n` em que n é um número entre 1 e 7. Um valor de 2, conforme mostrado no exemplo anterior, permite certificados do cliente na camada de transporte. Um valor de 3 permite certificados do cliente e mapeia esses certificados para uma conta do Windows. Consulte a Ajuda do HttpCfg.exe para obter o comportamento de outros valores.  
+     O **interruptor -f** tem a `n` sintaxe de onde n é um número entre 1 e 7. Um valor de 2, conforme mostrado no exemplo anterior, permite certificados do cliente na camada de transporte. Um valor de 3 permite certificados do cliente e mapeia esses certificados para uma conta do Windows. Consulte a Ajuda do HttpCfg.exe para obter o comportamento de outros valores.  
   
-2. No Windows Vista, para dar suporte a clientes que se autenticam com certificados X. 509 na camada de transporte, siga o procedimento anterior, mas com um parâmetro adicional, conforme mostrado no exemplo a seguir.  
+2. No Windows Vista, para apoiar clientes que autenticam com certificados X.509 na camada de transporte, siga o procedimento anterior, mas com um parâmetro adicional, como mostrado no exemplo a seguir.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF} clientcertnegotiation=enable  
     ```  
   
-## <a name="delete-an-ssl-certificate-from-a-port-number"></a>Excluir um certificado SSL de um número de porta  
+## <a name="delete-an-ssl-certificate-from-a-port-number"></a>Exclua um certificado SSL de um número de porta  
   
-1. Use a ferramenta HttpCfg.exe ou Netsh.exe para ver as portas e as impressões digitais de todas as associações no computador. Para imprimir as informações em disco, use o caractere de redirecionamento ">", conforme mostrado no exemplo a seguir.  
+1. Use a ferramenta HttpCfg.exe ou Netsh.exe para ver as portas e as impressões digitais de todas as associações no computador. Para imprimir as informações em disco, use o caractere de redirecionamento ">", como mostrado no exemplo a seguir.  
   
     ```console  
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. No Windows Server 2003 ou no Windows XP, use a ferramenta HttpCfg. exe com as palavras-chave de **exclusão** e **SSL** . Use a opção **-i** para especificar o número `IP`:`port` e a opção **-h** para especificar a impressão digital.  
+2. No Windows Server 2003 ou No Windows XP, use a ferramenta HttpCfg.exe com as palavras-chave **delete** e **ssl.** Use o **switch -i** para especificar o `IP``port` número e o interruptor **-h** para especificar a impressão digital.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. No Windows Vista, use a ferramenta Netsh. exe, conforme mostrado no exemplo a seguir.  
+3. No Windows Vista, use a ferramenta Netsh.exe, como mostrado no exemplo a seguir.  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  

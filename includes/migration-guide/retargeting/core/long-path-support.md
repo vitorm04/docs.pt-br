@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: f672645fb98f511f7e1326c9c584b287a0fae7dc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859335"
 ---
 ### <a name="long-path-support"></a>Suporte a caminho longo
 
 |   |   |
 |---|---|
-|Detalhes|A partir dos aplicativos destinados ao .NET Framework 4.6.2, caminhos longos (de até 32K caracteres) têm suporte e a limitação de 260 caracteres (ou <code>MAX_PATH</code>) para o tamanho dos caminhos foi removida. Para aplicativos recompilados para serem destinados ao .NET Framework 4.6.2, os caminhos de código que lançavam um <xref:System.IO.PathTooLongException?displayProperty=name> porque um caminho ultrapassava 260 caracteres agora lançam um <xref:System.IO.PathTooLongException?displayProperty=name> apenas sob as seguintes condições:<ul><li>O tamanho do caminho é superior a <xref:System.Int16.MaxValue> (32.767) caracteres.</li><li>O sistema operacional retorna <code>COR_E_PATHTOOLONG</code> ou seu equivalente.</li></ul>Para aplicativos destinados ao .NET Framework 4.6.1 e versões anteriores, a tempo de execução gera automaticamente um <xref:System.IO.PathTooLongException?displayProperty=name> sempre que um caminho ultrapassa 260 caracteres.|
+|Detalhes|A partir dos aplicativos destinados ao .NET Framework 4.6.2, caminhos longos (de até 32K caracteres) têm suporte e a limitação de 260 caracteres (ou <code>MAX_PATH</code>) para o tamanho dos caminhos foi removida. Para aplicativos recompilados para serem destinados ao .NET Framework 4.6.2, os caminhos de código que lançavam um <xref:System.IO.PathTooLongException?displayProperty=name> porque um caminho ultrapassava 260 caracteres agora lançam um <xref:System.IO.PathTooLongException?displayProperty=name> apenas sob as seguintes condições:<ul><li>O tamanho do caminho é superior a <xref:System.Int16.MaxValue> (32.767) caracteres.</li><li>O sistema operacional retorna <code>COR_E_PATHTOOLONG</code> ou seu equivalente.</li></ul>Para aplicativos destinados ao .NET Framework 4.6.1 e versões anteriores, a runtime gera automaticamente um <xref:System.IO.PathTooLongException?displayProperty=name> sempre que um caminho ultrapassa 260 caracteres.|
 |Sugestão|Para aplicativos destinados ao .NET Framework 4.6.2, é possível recusar o suporte para caminhos longos se ele não for desejável adicionando o seguinte à seção <code>&lt;runtime&gt;</code> do arquivo <code>app.config</code>:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Para aplicativos destinados a versões anteriores do .NET Framework mas executados no .NET Framework 4.6.2 ou posterior, é possível aceitar o suporte para caminhos longos adicionando o seguinte à seção <code>&lt;runtime&gt;</code> do arquivo <code>app.config</code>:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.BlockLongPaths=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Escopo|Secundário|
+|Escopo|Secundária|
 |Versão|4.6.2|
-|Tipo|Redirecionando|
-
+|Type|Redirecionando|

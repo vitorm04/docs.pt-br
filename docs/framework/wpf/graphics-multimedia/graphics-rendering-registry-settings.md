@@ -8,38 +8,38 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 04bf2d2ec78a02e8fd3d71200c64a807b874bc97
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452598"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186421"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
 
-<a name="overview"></a>   
+<a name="overview"></a>
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Quando usar Configurações do Registro de renderização dos elementos gráficos  
  Essas configurações do Registro são fornecidas para fins de suporte do produto, depuração e solução de problemas. Como as alterações no Registro afetam todos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, seu aplicativo nunca deve alterar essas chaves do Registro automaticamente ou durante a instalação.  
   
-<a name="xpdmandwddm"></a>   
+<a name="xpdmandwddm"></a>
 ## <a name="what-are-xpdm-and-wddm"></a>O que são XPDM e WDDM?  
- Algumas das configurações do Registro de renderização de elementos gráficos têm valores padrão diferentes, dependendo se a placa de vídeo usa um driver XPDM ou WDDM. XPDM é o modelo de driver de vídeo do Microsoft Windows XP e o WDDM é o modelo de driver de vídeo do Windows. O WDDM está disponível em computadores que executam o Windows Vista e o Windows 7. O XPDM está disponível em computadores que executam o Windows Vista, o Microsoft Windows XP e o Microsoft Windows Server 2003. Para obter mais informações sobre o WDDM, consulte o [Guia de design do Windows Display Driver Model (WDDM)](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide).  
+ Algumas das configurações do Registro de renderização de elementos gráficos têm valores padrão diferentes, dependendo se a placa de vídeo usa um driver XPDM ou WDDM. XPDM é o Modelo de Driver de Exibição do Microsoft Windows XP e WDDM é o modelo de driver de exibição do Windows. WdDM está disponível em computadores que executam o Windows Vista e o Windows 7. O XPDM está disponível em computadores que executam o Windows Vista, Microsoft Windows XP e Microsoft Windows Server 2003. Para obter mais informações sobre o WDDM, consulte [o Guia de Design do Modelo do Driver de Exibição do Windows (WDDM).](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide)  
   
-<a name="registry_settings"></a>   
+<a name="registry_settings"></a>
 ## <a name="registry-settings"></a>Configurações do registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece quatro configurações do Registro para controlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderização:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece quatro configurações do Registro para controlar a renderização [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Configuração|DESCRIÇÃO|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**Desabilitar Opção de Aceleração de hardware**|Especifica se a aceleração de hardware deve ser habilitada.|  
-|**Valor máximo de Multisample**|Especifica o grau de multiamostragem para conteúdo de anti-aliasing 3-D.|  
+|**Valor máximo de Multisample**|Especifica o grau de multiamostragem para antialiasing de conteúdo 3D.|  
 |**Driver de vídeo configuração de data necessário**|Especifica se o sistema desabilita a aceleração de hardware para drivers lançados antes de novembro de 2004.|  
-|**Use a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
+|**Usar a opção de rasterizador de referência**|Especifica se [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deve utilizar o rasterizador de referência.|  
   
- Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows.  
+ Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o Editor de Registro do Windows.  
   
-<a name="disablehardwareacceleration"></a>   
+<a name="disablehardwareacceleration"></a>
 ## <a name="disable-hardware-acceleration-option"></a>Desabilitar Opção de Aceleração de hardware  
   
 |Chave do Registro|Tipo de valor|  
@@ -50,27 +50,27 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  A opção **desabilitar aceleração de hardware** é um valor DWORD 0 ou 1. Um valor de 1 desabilita a aceleração de hardware. Um valor de 0 permite a aceleração de hardware, desde que o sistema atenda aos requisitos de aceleração; para obter mais informações, consulte [Camadas de renderização de elementos gráficos](../advanced/graphics-rendering-tiers.md).  
   
-<a name="maxmultisample"></a>   
+<a name="maxmultisample"></a>
 ## <a name="maximum-multisample-value"></a>Valor máximo de Multisample  
   
 |Chave do Registro|Tipo de valor|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- O **valor máximo de multiamostrações** permite ajustar a quantidade máxima de anti-aliasing do conteúdo de 3 D. Use esse nível para desabilitar a anti-aliasing 3D no Windows Vista.  
+ O **valor máximo de multiamostra** permite ajustar a quantidade máxima de antialiasing de conteúdo 3D. Use este nível para desativar a antialiasing 3D no Windows Vista.  
   
- O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Lembre-se de que definir esse valor de chave do registro em computadores que usam drivers XPDM fará com que os aplicativos usem uma grande quantidade de memória de vídeo adicional, diminua o desempenho da renderização 3D e tenha o potencial de introduzir erros de renderização e estabilidade ocorre.  
+ O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Cuidado que a definição desse valor-chave de registro em computadores que usam drivers XPDM fará com que os aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuam o desempenho da renderização 3D e tenham o potencial de introduzir erros de renderização e estabilidade Problemas.  
   
  Quando essa chave do Registro não está definida, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] volta para o padrão 0 para drivers XPDM e 4 para drivers WDDM.  
   
-<a name="requiredvideodriverdatesetting"></a>   
+<a name="requiredvideodriverdatesetting"></a>
 ## <a name="required-video-driver-date-setting"></a>Driver de vídeo configuração de data necessário  
   
 |Chave do Registro|Tipo de valor|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
- Em novembro de 2004, a Microsoft lançou uma nova versão das diretrizes de teste de driver; os drivers gravados após essa data oferecem melhor estabilidade. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará o pipeline de aceleração de hardware para esses drivers e restabelecerá a renderização de software para drivers XPDM publicados antes desta data.  
+ Em novembro de 2004, a Microsoft lançou uma nova versão das diretrizes de teste de driver; os drivers escritos após esta data oferecem melhor estabilidade. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará o pipeline de aceleração de hardware para esses drivers e restabelecerá a renderização de software para drivers XPDM publicados antes desta data.  
   
  A **configuração de data do driver de vídeo necessária** permite que você especifique uma data mínima alternativa para drivers XPDM. Especifique somente uma data anterior a novembro de 2004 se você tiver certeza de que o driver de vídeo é estável o suficiente para oferecer suporte a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -78,18 +78,18 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 | |  
 |-|  
-|*Aaaa* `/` *mm* `/` *DD*|  
+|*Yyyy* `/` *MM* `/` *DD*|  
   
  Em que *AAAA* é o ano de quatro dígitos, *MM* é o mês de dois dígitos, e *DD* é o dia de dois dígitos. Quando esse valor não for definido, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa de novembro de 2004 como a data do driver de vídeo necessária.  
   
-<a name="usereferencerasterizeroption"></a>   
+<a name="usereferencerasterizeroption"></a>
 ## <a name="use-reference-rasterizer-option"></a>Usar a opção de rasterizador de referência  
   
 |Chave do Registro|Tipo de valor|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- A **opção usar rasterizador de referência** permite que você force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um modo de renderização de hardware simulado para depuração: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra no modo de hardware, mas usa o rasterizador de software de referência do Microsoft Direct3D, d3dref9. dll, em vez de um dispositivo de hardware real.  
+ A **opção rasterizador de referência de uso** permite que você force [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um modo de renderização de hardware simulado para depuração: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra no modo hardware, mas usa o rasterizador de software de referência Microsoft Direct3D, d3dref9.dll, em vez de um dispositivo de hardware real.  
   
  O rasterizador de referência é muito lento, mas ignora o driver de vídeo para evitar problemas de renderização causados por problemas de driver. Por esse motivo, você pode usar o rasterizador de referência para determinar se os problemas de renderização são causados pelo driver de vídeo. O arquivo d3dref9.dll deve estar em um local onde o aplicativo pode acessá-lo, como em qualquer local no caminho do sistema ou no diretório local do aplicativo.  
   

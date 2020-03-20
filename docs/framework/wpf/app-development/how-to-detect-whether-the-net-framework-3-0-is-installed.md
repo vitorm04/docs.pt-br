@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 41010e615b6b3d10ebf6adc0e3f871873e94f409
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 60868661df442849db3f5421f8ea33f790fd83fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124449"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187360"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Como detectar se o .NET Framework 3.0 está instalado
-Antes que os administradores possam implantar aplicativos Microsoft .NET Framework em um sistema, eles devem primeiro confirmar que o tempo de execução .NET Framework está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework está presente em um sistema.  
+Antes que os administradores possam implantar aplicativos Microsoft .NET Framework em um sistema, eles devem primeiro confirmar que o tempo de execução do .NET Framework está presente. Este tópico fornece um script escrito em HTML/JavaScript que os administradores podem usar para determinar se o .NET Framework está presente em um sistema.  
   
 > [!NOTE]
-> Para obter informações mais detalhadas sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão em [implantando o Microsoft .NET Framework versão 3,0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).  
+> Para obter informações mais detalhadas sobre como instalar, implantar e detectar o Microsoft .NET Framework, consulte a discussão na [Implantação do Microsoft .NET Framework Versão 3.0](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480198(v=msdn.10)).  
   
-<a name="content_expiration"></a>   
+<a name="content_expiration"></a>
 ## <a name="detect-the-net-clr-user-agent-string"></a>Detectar a cadeia de caracteres de agente de usuário ".NET CLR"  
- Quando .NET Framework é instalado, o MSI adiciona ".NET CLR" e o número de versão à cadeia de caracteres UserAgent. O exemplo a seguir mostra um script inserido em uma página HTML simples. O script pesquisa a cadeia de caracteres UserAgent para determinar se o .NET Framework está instalado e exibe uma mensagem de status nos resultados da pesquisa.  
+ Quando o .NET Framework é instalado, o MSI adiciona ".NET CLR" e o número da versão à seqüência UserAgent. O exemplo a seguir mostra um script inserido em uma página HTML simples. O script pesquisa a seqüência UserAgent para determinar se o .NET Framework está instalado e exibe uma mensagem de status nos resultados da pesquisa.  
   
 ```html  
 <HTML>  
