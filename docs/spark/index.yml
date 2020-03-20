@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: Documentação do .NET para Apache Spark
-summary: Saiba como usar o .NET para Apache Spark processar lotes de dados, fluxos em tempo real, aprendizado de máquina e consultas ad hoc com Apache Spark em qualquer lugar em que você escrever código .NET.
+title: .NET para documentação Apache Spark
+summary: 'Aprenda a usar o .NET para Apache Spark para processar lotes de dados, fluxos em tempo real, aprendizado de máquina e consultas ad-hoc com o Apache Spark em qualquer lugar que você escreva código .NET.'
 metadata:
-  title: Documentação do .NET para Apache Spark
-  description: Saiba como usar o .NET para Apache Spark processar lotes de dados, fluxos em tempo real, aprendizado de máquina e consultas ad hoc com Apache Spark em qualquer lugar em que você escrever código .NET.
+  title: .NET para documentação Apache Spark
+  description: 'Aprenda a usar o .NET para Apache Spark para processar lotes de dados, fluxos em tempo real, aprendizado de máquina e consultas ad-hoc com o Apache Spark em qualquer lugar que você escreva código .NET.'
   services: service
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,50 +11,44 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
-  ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
-  ms.translationtype: MT
-  ms.contentlocale: pt-BR
-  ms.lasthandoff: 02/21/2020
-  ms.locfileid: "77542800"
 landingContent:
-- title: Sobre o .NET para Apache Spark
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: Novidades nos documentos do .NET
-      url: /dotnet/whats-new/index
-  - linkListType: overview
-    links:
-    - text: O que é o .NET para o Apache Spark?
-      url: what-is-apache-spark-dotnet.md
-  - linkListType: reference
-    links:
-    - text: Referência de API
-      url: /dotnet/api/?view=spark-dotnet
-    - text: GitHub
-      url: https://github.com/dotnet/spark
-- title: Introdução
-  linkLists:
-  - linkListType: tutorial
-    links:
-    - text: Introdução ao .NET para Apache Spark
-      url: tutorials/get-started.md
-  - linkListType: learn
-    links:
-    - text: Comece em 10 minutos no Windows ou no Linux
-      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
-- title: Implantar seu .NET para Apache Spark aplicativo
-  linkLists:
-  - linkListType: deploy
-    links:
-    - text: Implantar no Azure HDInsight
-      url: tutorials/hdinsight-deployment.md
-    - text: Implantar no AWS EMR Spark
-      url: tutorials/amazon-emr-spark-deployment.md
-    - text: Implantar no Databricks
-      url: tutorials/databricks-deployment.md
-  - linkListType: how-to-guide
-    links:
-    - text: Depurar seu aplicativo
-      url: how-to-guides/debug.md
+  - title: Sobre .NET para Apache Spark
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: Novidades nos documentos do .NET
+            url: /dotnet/whats-new/index
+      - linkListType: overview
+        links:
+          - text: O que é o .NET para o Apache Spark?
+            url: what-is-apache-spark-dotnet.md
+      - linkListType: reference
+        links:
+          - text: Referência de API
+            url: /dotnet/api/?view=spark-dotnet
+          - text: GitHub
+            url: 'https://github.com/dotnet/spark'
+  - title: Introdução
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Introdução ao .NET para Apache Spark
+            url: tutorials/get-started.md
+      - linkListType: learn
+        links:
+          - text: Comece em 10 minutos no Windows ou Linux
+            url: 'https://dotnet.microsoft.com/learn/data/spark-tutorial/intro'
+  - title: Implante seu aplicativo .NET para Apache Spark
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Implantar no Azure HDInsight
+            url: tutorials/hdinsight-deployment.md
+          - text: Implantar no AWS EMR Spark
+            url: tutorials/amazon-emr-spark-deployment.md
+          - text: Implantar no Databricks
+            url: tutorials/databricks-deployment.md
+      - linkListType: how-to-guide
+        links:
+          - text: Depurar seu aplicativo
+            url: how-to-guides/debug.md
