@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 68491da9cb7d2b460eb70ccbf4fc8de20db815a5
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 8b21a85ae4e745a3d71261414e79dafbf3384131
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802686"
 ---
 ### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>Correção de uma parada quando ListBox contém tipos de valor duplicados
@@ -13,5 +13,4 @@ ms.locfileid: "67802686"
 |Detalhes|Correção de um problema em que um <xref:System.Windows.Controls.ItemsControl> de virtualização pode parar de responder durante a rolagem quando a respectiva coleção Itens contém objetos com tipos de valor duplicados.|
 |Escopo|Principal|
 |Versão|4.8|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

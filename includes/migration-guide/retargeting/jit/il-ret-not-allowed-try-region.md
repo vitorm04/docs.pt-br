@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 060da3ebc60057554fd572bd2569652afee6bd0f
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 1687b1b9a1a6861f9569a0e29426de7f32ffc32b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804450"
 ---
 ### <a name="il-ret-not-allowed-in-a-try-region"></a>IL ret não é permitido em uma região try
@@ -14,5 +14,4 @@ ms.locfileid: "67804450"
 |Sugestão|Se um aplicativo estiver gerando uma IL que inclua um opcode ret em uma região try, o aplicativo poderá ser direcionado ao .NET Framework 4.5 para usar o JIT antigo e evitar essa interrupção. Como alternativa, a IL gerada pode ser atualizado para retornar após a região try.|
 |Escopo|Microsoft Edge|
 |Versão|4.6|
-|Tipo|Redirecionando|
-
+|Type|Redirecionando|

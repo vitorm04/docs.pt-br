@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048883"
 ---
 # <a name="cache-management-for-network-applications"></a>Gerenciamento de cache para aplicativos de rede
@@ -23,7 +23,7 @@ Este tópico e seus subtópicos relacionados descrevem o cache para recursos obt
  Devido a preocupações de segurança, o cache **não** é recomendado para cenários de camada intermediária.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Política de cache](cache-policy.md)  
+ [Política de Cache](cache-policy.md)  
  Explica o que é uma política de cache e como definir uma.  
   
  [Políticas de cache baseadas na localização](location-based-cache-policies.md)  

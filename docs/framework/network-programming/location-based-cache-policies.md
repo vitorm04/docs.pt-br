@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: e6896452fce89f69b40f1d03332355df72d93211
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047674"
 ---
 # <a name="location-based-cache-policies"></a>Políticas de cache baseadas na localização
-Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache válidas de acordo com o local em que o recurso solicitado pode ser obtido. Um recurso em cache é válido se usá-lo não viola os requisitos de revalidação especificados pelo servidor. Uma política de cache baseada na localização é criada programaticamente usando um construtor de classe <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>. O tipo de política baseada na localização é passado para o construtor usando um valor de enumeração <xref:System.Net.Cache.RequestCacheLevel> ou <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obter exemplos de código que criam políticas de cache baseadas na localização, confira [Como: Definir uma política de cache baseada na localização para um aplicativo](how-to-set-a-location-based-cache-policy-for-an-application.md). As seções a seguir explicam cada tipo de política de cache baseada na localização para recursos de protocolo HTTP (http e https).  
+Uma política de cache baseada na localização define a atualização das entradas armazenadas em cache válidas de acordo com o local em que o recurso solicitado pode ser obtido. Um recurso em cache é válido se usá-lo não viola os requisitos de revalidação especificados pelo servidor. Uma política de cache baseada na localização é criada programaticamente usando um construtor de classe <xref:System.Net.Cache.RequestCachePolicy> ou <xref:System.Net.Cache.HttpRequestCachePolicy>. O tipo de política baseada na localização é passado para o construtor usando um valor de enumeração <xref:System.Net.Cache.RequestCacheLevel> ou <xref:System.Net.Cache.HttpRequestCacheLevel>. Para obter exemplos de código que criam políticas de cache baseadas na localização, consulte [Como definir uma política de cache baseada na localização para um aplicativo](how-to-set-a-location-based-cache-policy-for-an-application.md). As seções a seguir explicam cada tipo de política de cache baseada na localização para recursos de protocolo HTTP (http e https).  
   
 ## <a name="cache-if-available-policy"></a>Política de armazenar em cache se disponível  
  Se um recurso solicitado válido estiver no cache local, o recurso armazenado em cache será usado; caso contrário, a solicitação para o recurso será enviada ao servidor. Se o recurso solicitado estiver disponível em qualquer cache entre o cliente e o servidor, a solicitação poderá ser atendida por um cache intermediário.  
@@ -46,10 +46,10 @@ Uma política de cache baseada na localização define a atualização das entra
 ## <a name="revalidate-policy"></a>Política de revalidar  
  Compara a cópia do recurso no cache com a cópia no servidor. Se a cópia no servidor for mais recente, ela será usada para atender à solicitação e substituirá a cópia em cache. Se a cópia em cache for igual à cópia do servidor, a cópia armazenada em cache será usada. No protocolo de cache HTTP, isso é feito usando uma solicitação condicional.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Gerenciamento de cache para aplicativos de rede](cache-management-for-network-applications.md)
-- [Política de cache](cache-policy.md)
+- [Política de Cache](cache-policy.md)
 - [Políticas de cache baseadas em tempo](time-based-cache-policies.md)
 - [Configurando o cache em aplicativos de rede](configuring-caching-in-network-applications.md)
-- [\<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+- [\<solicitarO elemento> (Configurações de rede)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

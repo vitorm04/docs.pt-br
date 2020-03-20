@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: c1a2d76b4e596acc395da6cefed008078e57a336
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 22f8e3bb1ba72379b3f5fc87a077e5fe57f89bf8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858544"
 ---
 ### <a name="null-coalescer-values-are-not-visible-in-debugger-until-one-step-later"></a>Valores nulos de união não são visíveis no depurador até uma etapa posterior
@@ -14,5 +14,4 @@ ms.locfileid: "67858544"
 |Sugestão|Colocar um tempo adicional no depurador fará com que o valor do local/campo seja atualizado corretamente. Além disso, esse problema foi corrigido no .NET Framework 4.6 e pode ser resolvido com o upgrade para essa versão do .NET Framework.|
 |Escopo|Microsoft Edge|
 |Versão|4.5|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

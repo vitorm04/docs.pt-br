@@ -12,10 +12,10 @@ helpviewer_keywords:
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047353"
 ---
 # <a name="proxy-configuration"></a>Configuração de proxy
@@ -28,7 +28,7 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
   
  Alterações no ambiente de rede podem exigir que o sistema use um novo conjunto de proxies. Se uma conexão de rede ficar inoperante ou uma nova conexão de rede for inicializada, o sistema deve descobrir a origem correta do script de configuração no novo ambiente e executar o novo script.  
   
- Você pode usar o atributo `usesystemdefault` do elemento [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) no seu arquivo de configuração. O atributo `usesystemdefault` controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lidas das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, as configurações de proxy estático do Internet Explorer serão usadas. Se esse valor for `false` ou não estiver definido, as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.  
+ Você pode `usesystemdefault` usar o [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) atributo do elemento em seu arquivo de configuração. O atributo `usesystemdefault` controla se as configurações de proxy estático (endereço de proxy, lista de ignoráveis e ignorar no local) devem ser lidas das configurações de proxy do Internet Explorer para o usuário. Se esse valor for definido como `true`, as configurações de proxy estático do Internet Explorer serão usadas. Se esse valor for `false` ou não estiver definido, as configurações de proxy estático poderão ser especificadas na configuração e substituirão as configurações de proxy do Internet Explorer. Esse valor também deve ser definido como `false` ou não estar definido para que proxies adaptáveis sejam habilitados.  
   
  O exemplo a seguir mostra uma configuração de proxy adaptável típica.  
   
@@ -75,7 +75,7 @@ Um servidor proxy manipula as solicitações de clientes para recursos. Um proxy
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.GlobalProxySelection>

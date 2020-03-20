@@ -13,26 +13,26 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71049041"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Acessando a Internet por meio de um proxy
 Se o site usar um proxy para fornecer acesso à Internet, você deverá configurar uma instância do proxy para permitir que o aplicativo se comunique com o proxy Web.  
   
- Esta seção inclui os seguintes tópicos:  
+ Esta seção inclui os tópicos a seguir:  
   
-- [Configuração de proxy](proxy-configuration.md)  
+- [Configuração do proxy](proxy-configuration.md)  
   
 - [Detecção automática de proxy](automatic-proxy-detection.md)  
   
-- [Como: Habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Como habilitar uma WebRequest a usar um proxy para se comunicar com a Internet](how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
-- [Como: Substituir uma seleção de proxy global](how-to-override-a-global-proxy-selection.md)  
+- [Como substituir uma seleção de proxy global](how-to-override-a-global-proxy-selection.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando protocolos de aplicativo](using-application-protocols.md)
-- [Programação de rede no .NET Framework](index.md)
+- [Programação de rede no Framework .NET](index.md)

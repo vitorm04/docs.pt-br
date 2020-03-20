@@ -2,12 +2,12 @@
 title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ca4527cc1d5bc90ed1ec4df3eef6cf2d8b93b4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142609"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
 Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statements.Pick> .
@@ -22,7 +22,7 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 ## <a name="discussion"></a>Discussão
  O exemplo inclui um fluxo de trabalho do designer e fluxo de trabalho codificado.
 
- Fluxo de trabalho do designer a versão do designer do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
+ Fluxo de trabalho do designer A versão designer da amostra demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
 - Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
 
@@ -30,7 +30,7 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 
 - Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
 
- Fluxo de trabalho codificado a versão codificada do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
+ Fluxo de trabalho codificado A versão codificada da amostra demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
 - Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
 
@@ -38,7 +38,7 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1. Usando o Visual Studio 2010, abra o arquivo de solução escolher. sln.
+1. Usando o Visual Studio 2010, abra o arquivo de solução Pick.sln.
 
 2. Para criar a solução, pressione CTRL+SHIFT+B.
 
@@ -46,9 +46,9 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

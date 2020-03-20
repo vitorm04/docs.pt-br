@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123658"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399969"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumindo funções de DLL não gerenciadas
 A invocação de plataforma é um serviço que permite que um código gerenciado chame funções não gerenciadas implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Windows. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
@@ -41,7 +41,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
   
      [C#] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método com os modificadores **static** e **extern**.  
   
-     [C++] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método wrapper ou a função com **extern "C"** .  
+     [C++] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método wrapper ou a função com **extern "C"**.  
   
 4. [Chame uma função de DLL](calling-a-dll-function.md).  
   
@@ -50,7 +50,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
  Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>Visão aprofundada da invocação de plataforma  
- A invocação de plataforma se baseia nos metadados para localizar funções exportadas e realizar marshaling em seus argumentos em tempo de execução. A ilustração a seguir mostra esse processo.  
+ A invocação de plataforma se baseia nos metadados para localizar funções exportadas e realizar marshaling em seus argumentos em tempo de execução. A ilustração a seguir mostra este processo.  
   
  ![Diagrama que mostra uma chamada de invocação de plataforma.](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
@@ -69,8 +69,8 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
   
  A invocação de plataforma gera exceções geradas pela função não gerenciada para o chamador gerenciado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Interoperação com código não gerenciado](index.md)
+- [Interoperação com Código Não Gerenciado](index.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
-- [Marshaling de interoperabilidade](interop-marshaling.md)
+- [Realizando marshaling de interoperabilidade](interop-marshaling.md)

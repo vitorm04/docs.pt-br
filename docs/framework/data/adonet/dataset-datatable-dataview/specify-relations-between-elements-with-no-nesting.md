@@ -2,21 +2,21 @@
 title: Especificar relações entre elementos sem nenhum aninhamento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040045"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150812"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Especificar relações entre elementos sem nenhum aninhamento
-Quando os elementos não são aninhados, nenhuma relação implícita é criada. No entanto, você pode especificar explicitamente as relações entre os elementos que não são aninhados usando a anotação **MSDATA: relationship** .  
+Quando os elementos não estão aninhados, nenhuma relação implícita é criada. No entanto, você pode especificar explicitamente as relações entre elementos que não estão aninhados usando a anotação **msdata:Relacionamento.**  
   
- O exemplo a seguir mostra um esquema XML no qual a anotação **MSDATA: relationship** é especificada entre os elementos **Order** e **OrderDetail** , que não estão aninhados. A anotação **MSDATA: relationship** é especificada como o elemento filho do elemento **Schema** .  
+ O exemplo a seguir mostra um esquema XML no qual a anotação **msdata:Relationship** é especificada entre os elementos **Ordem** e **OrderDetail,** que não estão aninhados. A anotação **msdata:Relacionamento** é especificada como o elemento filho do elemento **Esquema.**  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
@@ -44,28 +44,28 @@ Quando os elementos não são aninhados, nenhuma relação implícita é criada.
    <xs:annotation>  
      <xs:appinfo>  
        <msdata:Relationship name="OrdOrderDetailRelation"  
-                            msdata:parent="Order"   
-                            msdata:child="OrderDetail"   
-                            msdata:parentkey="OrderNumber"   
+                            msdata:parent="Order"
+                            msdata:child="OrderDetail"
+                            msdata:parentkey="OrderNumber"
                             msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
 </xs:schema>  
 ```  
   
- O processo de mapeamento de esquema XSD cria um <xref:System.Data.DataSet> com tabelas **Order** e **OrderDetail** e uma relação especificada entre essas duas tabelas, como mostrado abaixo.  
+ O processo de mapeamento de esquema xml schema (XSD) cria uma <xref:System.Data.DataSet> tabela com tabelas **Order** and **OrderDetail** e uma relação especificada entre essas duas tabelas, conforme mostrado abaixo.  
   
 ```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
-ParentColumns: OrderNumber   
+ParentColumns: OrderNumber
 ChildTable: OrderDetail  
-ChildColumns: OrderNo   
+ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Gerando relações de conjunto de dados do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
-- [Mapeamento de restrições de esquema XML (XSD) exclusivos para restrições de conjunto de dados](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Gerar relações de DataSet do esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Mapeamento de restrições de esquema XML (XSD) para restrições de DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Aplicar transformações ao texto'
+title: Como aplicar transformações ao texto
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], rotated text
@@ -15,30 +15,30 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: b749d21c1b5940d216e244393eeb3c133dc153b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 867f39e3df8493014d8601530e91310c3bbbeeb5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956479"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141608"
 ---
-# <a name="how-to-apply-transforms-to-text"></a>Como: Aplicar transformações ao texto
-As transformações podem alterar a exibição do texto no seu aplicativo. Os exemplos a seguir usam diferentes tipos de transformações de renderização para afetar a exibição do texto <xref:System.Windows.Controls.TextBlock> em um controle.  
+# <a name="how-to-apply-transforms-to-text"></a>Como aplicar transformações ao texto
+As transformações podem alterar a exibição do texto no seu aplicativo. Os exemplos a seguir usam diferentes tipos de transformações <xref:System.Windows.Controls.TextBlock> de renderização para afetar a exibição de texto em um controle.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra o texto girado sobre um ponto especificado no plano bidimensional x-y.  
   
  ![Texto girado usando um RotateTransform](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
- O exemplo de código a seguir <xref:System.Windows.Media.RotateTransform> usa um para girar o texto. Um <xref:System.Windows.Media.RotateTransform.Angle%2A> valor de 90 gira o elemento 90 graus no sentido horário.  
+ O exemplo de <xref:System.Windows.Media.RotateTransform> código a seguir usa um texto para girar. Um <xref:System.Windows.Media.RotateTransform.Angle%2A> valor de 90 gira o elemento 90 graus no sentido horário.  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
  O exemplo a seguir mostra a segunda linha de texto com escala ajustada em 150% no eixo x e a terceira linha de texto ajustada em 150% no eixo y.  
   
- ![Texto dimensionado usando um ScaleTransform](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
+ ![Texto com escala ajustada usando um ScaleTransform](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg)
   
- O exemplo de código a seguir <xref:System.Windows.Media.ScaleTransform> usa um para dimensionar o texto de seu tamanho original.  
+ O exemplo de <xref:System.Windows.Media.ScaleTransform> código a seguir usa um texto para dimensionar do seu tamanho original.  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
@@ -47,23 +47,23 @@ As transformações podem alterar a exibição do texto no seu aplicativo. Os ex
   
  O exemplo a seguir mostra texto distorcido ao longo do eixo x.  
   
- ![Texto inclinado usando SkewTransform](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
-   
- O exemplo de código a seguir <xref:System.Windows.Media.SkewTransform> usa um para distorcer texto. Uma distorção, também conhecido como uma inclinação, é uma transformação que alonga o espaço de coordenadas de maneira não uniforme. Neste exemplo, as duas cadeias de caracteres de texto são distorcidas-30° e 30° na coordenada X.  
+ ![Texto distorcido usando SkewTransform](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
+
+ O exemplo de <xref:System.Windows.Media.SkewTransform> código a seguir usa um texto para distorcer. Uma distorção, também conhecido como uma inclinação, é uma transformação que alonga o espaço de coordenadas de maneira não uniforme. Neste exemplo, as duas cadeias de caracteres de texto são distorcidas-30° e 30° na coordenada X.  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
  O exemplo a seguir mostra o texto movido, ou deslocado, nos eixos x e y.  
   
- ![Deslocamento de texto usando um TranslateTransform](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
+ ![Deslocamento de texto usando TranslateTransform](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
- O exemplo de código a seguir <xref:System.Windows.Media.TranslateTransform> usa um para deslocar texto. Neste exemplo, uma cópia ligeiramente deslocada de texto abaixo do texto primário cria um efeito de sombra.  
+ O exemplo de <xref:System.Windows.Media.TranslateTransform> código a seguir usa um texto para compensar. Neste exemplo, uma cópia ligeiramente deslocada de texto abaixo do texto primário cria um efeito de sombra.  
   
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
-> O <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> fornece um rico conjunto de recursos para fornecer efeitos de sombra. Para obter mais informações, consulte [criar texto com uma sombra](how-to-create-text-with-a-shadow.md).  
+> O <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> fornece um rico conjunto de recursos para fornecer efeitos de sombra. Para obter mais informações, consulte [Criar texto com uma sombra](how-to-create-text-with-a-shadow.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Aplicar animações ao texto](how-to-apply-animations-to-text.md)

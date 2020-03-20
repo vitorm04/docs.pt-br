@@ -2,25 +2,26 @@
 title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
-ms.openlocfilehash: 562399c1d45dc73c7c88bd165e9f95ee1bcfa19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b0e6e3ebcf5d414e9dbbcecd09ba2e8bb3ddd3a
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997484"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674811"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a>System.ServiceModel.Channels.MsmqPoisonMessageRejected
-Nezpracovatelná zpráva byla odmítnuta.  
+Mensagem venenosa rejeitada.  
   
 ## <a name="description"></a>Descrição  
- O rastreamento indica que uma mensagem suspeita foi encontrada e, subsequentemente, foi rejeitada. Isso ocorre quando o `ReceiveErrorHandling` sobre o NetMsmqBinding ou MsmqIntegrationBinding estiver definida como `Reject`. Uma mensagem rejeitada é entregue para o remetente [fila de inatividade](https://go.microsoft.com/fwlink/?LinkId=99544).  
+
+ O rastro indica que uma mensagem venenosa foi encontrada e posteriormente rejeitada. Isso ocorre `ReceiveErrorHandling` quando a propriedade no NetMsmqBinding ou MsmqIntegrationBinding é definida como `Reject`. Uma mensagem rejeitada é entregue de volta à fila de [letras mortas](../../feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)do remetente .  
   
- Ver [tratamento de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkId=99546) para obter mais detalhes sobre quando as mensagens se tornarão suspeitas e como configurar seu serviço para tratá-las adequadamente. Ver [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkId=99548) para obter mais detalhes sobre o que significa que uma mensagem rejeitada no MSMQ.  
+ Para obter mais informações sobre quando as mensagens se tornam venenosas e como configurar seu serviço para manuseá-las adequadamente, consulte [Poison-Message Handling](../../feature-details/poison-message-handling.md). Para obter mais informações sobre o que significa uma mensagem rejeitada no MSMQ, consulte [MQMarkMessageReject .](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Manipulação de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkId=99546)
-- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkId=99548)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administração e Diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Manuseio de mensagens venenosas](../../feature-details/poison-message-handling.md)
+- [MQMarkMessageRejeitado](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))

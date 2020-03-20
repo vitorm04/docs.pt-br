@@ -3,10 +3,10 @@ title: Suporte ao International Resource Identifier em System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64647344"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Suporte ao International Resource Identifier em System.Uri
@@ -43,7 +43,7 @@ A classe <xref:System.Uri?displayProperty=nameWithType> foi estendida com o supo
   
  O parâmetro de configuração para as classes de configuração <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> e <xref:System.Configuration.IdnElement?displayProperty=nameWithType> serão lidos uma vez quando a primeira classe <xref:System.Uri?displayProperty=nameWithType> for criada. Alterações nas configurações depois desse tempo serão ignoradas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>

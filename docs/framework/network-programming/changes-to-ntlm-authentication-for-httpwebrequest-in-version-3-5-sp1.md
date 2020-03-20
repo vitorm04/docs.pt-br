@@ -3,10 +3,10 @@ title: Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754883"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1
@@ -43,7 +43,7 @@ Para especificar os nomes do host que são mapeados para o endereço de loopback
 
 3. Clique com o botão direito do mouse em MSV1_0, aponte para Novo e, em seguida, clique em Valor de Cadeia de Caracteres Múltipla.
 
-4. Digite `BackConnectionHostNames` e, depois, pressione ENTER.
+4. Digite `BackConnectionHostNames` e pressione ENTER.
 
 5. Clique com o botão direito do mouse em `BackConnectionHostNames` e, em seguida, clique em Modificar.
 
@@ -53,7 +53,7 @@ Para especificar os nomes do host que são mapeados para o endereço de loopback
 
 Uma solução alternativa menos segura é desabilitar a verificação de loopback, conforme descrito em <https://support.microsoft.com/kb/896861>. Isso desabilita a proteção contra ataques de reflexão. Portanto, é melhor restringir o conjunto de nomes alternativos somente àqueles que você espera que sejam usados pelo computador.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>

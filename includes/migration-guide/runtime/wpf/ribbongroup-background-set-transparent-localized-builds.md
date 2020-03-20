@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 921baed7381fad363cc832c6b6af69068c2c8f43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802544"
 ---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>Tela de fundo RibbonGroup é definida como transparente em builds localizados
@@ -14,5 +14,4 @@ ms.locfileid: "67802544"
 |Sugestão|Atualizar para o .NET Framework 4.7|
 |Escopo|Microsoft Edge|
 |Versão|4.6.2|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

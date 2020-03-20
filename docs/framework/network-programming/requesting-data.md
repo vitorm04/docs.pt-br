@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047324"
 ---
 # <a name="requesting-data"></a>Solicitando dados
@@ -52,8 +52,8 @@ Dim sr As StreamReader
 sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação de rede no .NET Framework](index.md)
-- [Como: Solicitar uma página da Web e recuperar os resultados como um fluxo](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [Como: Recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [Programação de rede no Framework .NET](index.md)
+- [Como solicitar uma página da Web e recuperar os resultados como um fluxo](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [Como recuperar uma WebResponse específica de protocolo que corresponde a uma WebRequest](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

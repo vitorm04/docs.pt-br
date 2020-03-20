@@ -27,10 +27,10 @@ helpviewer_keywords:
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047849"
 ---
 # <a name="ipv6-addressing"></a>Endereçamento IPv6
@@ -67,7 +67,7 @@ O IPv6 define os seguintes tipos de endereço:
 
   - **Endereços de site local**. Esses endereços são usados em um único site e têm o seguinte formato: FEC0::*SubnetID*:*InterfaceID*. Os endereços de sites locais são usados para endereçamento dentro de um site sem a necessidade de um prefixo global.
 
-  - **Endereços unicast IPv6 globais**. Esses endereços podem ser usados na Internet e têm o seguinte formato: 010 (FP, 3 bits) ID TLA (13 bits) Reservado (8 bits) ID NLA (24 bits) ID SLA (16 bits) *InterfaceID* (64 bits).
+  - **Endereços unicast IPv6 globais**. Esses endereços podem ser usados pela Internet e têm o seguinte formato: 010(FP, 3 bits) ID de TLA (13 bits) Reserved (8 bits) ID de NLA (24 bits) ID de SLA (16 bits) *InterfaceID* (64 bits).
 
 - **Endereço multicast**. Um identificador para um conjunto de interfaces (normalmente pertencentes a nós diferentes). Um pacote enviado para esse endereço será enviado para todas as interfaces identificadas pelo endereço. Os tipos de endereço multicast substituem os endereços difundidos por IPv4.
 
@@ -75,7 +75,7 @@ O IPv6 define os seguintes tipos de endereço:
 
 Em geral, um nó sempre tem um endereço de link local. Ele pode ter um endereço de site local e um ou mais endereços globais.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)

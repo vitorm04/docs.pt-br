@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804612"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>Nomes de evento ETW não podem ser diferentes apenas por um sufixo "Start" ou "Stop"
 
 |   |   |
 |---|---|
-|Detalhes|No .NET Framework 4.6 e 4.6.1, o tempo de execução gera uma <xref:System.ArgumentException> quando dois nomes de evento ETW (Rastreamento de Eventos para Windows) diferem somente por um sufixo &quot;Start&quot; ou &quot;Stop&quot; (como quando um evento é denominado <code>LogUser</code> e outro é denominado <code>LogUserStart</code>). Nesse caso, o tempo de execução não pode construir a origem do evento, que não pode emitir nenhum log.|
-|Sugestão|Para evitar a exceção, certifique-se de que nenhum dos dois nomes de eventos difiram somente por um sufixo &quot;Start&quot; ou &quot;Stop&quot;. Esse requisito foi removido a partir do .NET Framework 4.6.2. O tempo de execução pode resolver a ambiguidade de nomes de evento que diferem somente pelos sufixos &quot;Start&quot; e &quot;Stop&quot;.|
+|Detalhes|No .NET Framework 4.6 e 4.6.1, o runtime gera uma <xref:System.ArgumentException> quando dois nomes de evento ETW (Rastreamento de Eventos para Windows) diferem somente por um sufixo &quot;Start&quot; ou &quot;Stop&quot; (como quando um evento é denominado <code>LogUser</code> e outro é denominado <code>LogUserStart</code>). Nesse caso, o runtime não pode construir a origem do evento, que não pode emitir nenhum log.|
+|Sugestão|Para evitar a exceção, certifique-se de que nenhum dos dois nomes de eventos difiram somente por um sufixo &quot;Start&quot; ou &quot;Stop&quot;. Esse requisito foi removido a partir do .NET Framework 4.6.2. O runtime pode resolver a ambiguidade de nomes de evento que diferem somente pelos sufixos &quot;Start&quot; e &quot;Stop&quot;.|
 |Escopo|Microsoft Edge|
 |Versão|4.6|
-|Tipo|Redirecionando|
-
+|Type|Redirecionando|

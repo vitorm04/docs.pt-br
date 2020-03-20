@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 689a297eb5368d35c2e7dd034426edbe665e7ed2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785392"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151254"
 ---
 # <a name="datatable-edits"></a>Edições de DataTable
-Quando você altera os valores de coluna em uma <xref:System.Data.DataRow>, as alterações são colocadas imediatamente no estado atual da linha. O <xref:System.Data.DataRowState> é então definido como **Modified**, e as alterações são aceitas ou rejeitadas <xref:System.Data.DataRow.AcceptChanges%2A> usando <xref:System.Data.DataRow.RejectChanges%2A> os métodos ou da **DataRow**. A **DataRow** também fornece três métodos que você pode usar para suspender o estado da linha enquanto estiver editando. Esses métodos são <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
+Quando você altera os valores de coluna em uma <xref:System.Data.DataRow>, as alterações são colocadas imediatamente no estado atual da linha. Em <xref:System.Data.DataRowState> seguida, é definido como **Modificado,** e as <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> alterações são aceitas ou rejeitadas usando os ou métodos do **DataRow**. O **DataRow** também fornece três métodos que você pode usar para suspender o estado da linha enquanto você está editando-a. Esses métodos são <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> e <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- Quando você modifica valores de coluna em uma **DataRow** diretamente, o **DataRow** gerencia os valores de coluna usando as versões de linha **atual**, **padrão**e **original** . Além dessas versões de linha, os métodos **BeginEdit**, **EndEdit**e **CancelEdit** usam uma quarta versão de linha: **Proposta**. Para obter mais informações sobre versões de linha, consulte [Estados de linha e versões de linha](row-states-and-row-versions.md).  
+ Quando você modifica os valores da coluna diretamente em um **DataRow,** o **DataRow** gerencia os valores da coluna usando as versões de linha **Atual,** **Padrão**e **Original.** Além dessas versões de linha, os métodos **BeginEdit,** **EndEdit**e **CancelEdit** usam uma versão da quarta linha: **Proposta**. Para obter mais informações sobre versões de linha, consulte [Row States e Row Versions](row-states-and-row-versions.md).  
   
- A versão de linha **proposta** existe durante uma operação de edição que começa chamando **BeginEdit** e que termina usando **EndEdit** ou **CancelEdit,** ou chamando **AcceptChanges** ou **RejectChanges**.  
+ A versão **de** linha proposta existe durante uma operação de edição que começa chamando **BeginEdit** e que termina usando **EndEdit** ou **CancelEdit,** ou chamando **AcceptChanges** ou **RejectChanges**.  
   
- Durante a operação de edição, você pode aplicar a lógica de validação a colunas individuais avaliando o **ProposedValue** no evento **ColumnChanged** da **DataTable**. O evento **ColumnChanged** contém **DataColumnChangeEventArgs** que mantêm uma referência à coluna que está sendo alterada e ao **ProposedValue**. Depois que você avaliar o valor proposto, poderá modificá-lo ou cancelar a edição. Quando a edição é finalizada, a linha sai do estado **proposto** .  
+ Durante a operação de edição, você pode aplicar a lógica de validação a colunas individuais avaliando o **Evento PropostoValor** no evento **ColunaAlterar** da Tabela de **Dados**. O evento **ColunaAlterar** mantém **DataColumnChangeEventArgs** que mantém uma referência à coluna que está mudando e ao **Valor proposto**. Depois que você avaliar o valor proposto, poderá modificá-lo ou cancelar a edição. Quando a edição é terminada, a linha sai do estado **proposto.**  
   
- Você pode confirmar as edições chamando **EndEdit**ou pode cancelá-las chamando **CancelEdit**. Observe que, embora **EndEdit** confirme suas edições, o **conjunto de DataSet** não aceita realmente as alterações até que **AcceptChanges** seja chamado. Observe também que, se você chamar **AcceptChanges** antes de terminar a edição com **EndEdit** ou **CancelEdit**, a edição será finalizada e os valores de linha **proposto** serão aceitos para as versões de linha **atuais** e **originais** . Da mesma maneira, chamar **RejectChanges** encerra a edição e descarta as versões de linha **atuais** e **propostas** . Chamar **EndEdit** ou **CancelEdit** depois de chamar **AcceptChanges** ou **RejectChanges** não tem efeito porque a edição já terminou.  
+ Você pode confirmar edições chamando **EndEdit**ou cancelá-las ligando para **CancelEdit**. Observe que, embora **o EndEdit** confirme suas edições, o **DataSet** não aceita as alterações até **que as Alterações sejam** chamadas. Observe também que se você chamar **AcceptChanges** antes de terminar a edição com **EndEdit** ou **CancelEdit,** a edição será encerrada e os valores de linha **propostos** serão aceitos para as versões de linha **Atual** e **Original.** Da mesma forma, chamar **RejectChanges** termina a edição e descarta as versões de linha **Atual** e **Proposta.** Chamar **EndEdit** ou **CancelEdit** depois de chamar **AcceptChanges** ou **RejectChanges** não tem efeito porque a edição já terminou.  
   
- O exemplo a seguir demonstra como usar **BeginEdit** com **EndEdit** e **CancelEdit**. O exemplo também verifica o **ProposedValue** no evento **ColumnChanged** e decide se a edição deve ser cancelada.  
+ O exemplo a seguir demonstra como usar **BeginEdit** com **EndEdit** e **CancelEdit**. O exemplo também verifica o **Valor proposto** no evento **ColunaAlterou** e decide se cancela a edição.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -38,7 +38,7 @@ workTable.Rows.Add(workRow)
   
 workRow.BeginEdit()  
 ' Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow(0) = ""       
+workRow(0) = ""
 workRow.EndEdit()  
   
 ' Displays "Smith, New".  
@@ -59,7 +59,7 @@ End Sub
 DataTable workTable  = new DataTable();  
 workTable.Columns.Add("LastName", typeof(String));  
   
-workTable.ColumnChanged +=   
+workTable.ColumnChanged +=
   new DataColumnChangeEventHandler(OnColumnChanged);  
   
 DataRow workRow = workTable.NewRow();  
@@ -68,11 +68,11 @@ workTable.Rows.Add(workRow);
   
 workRow.BeginEdit();  
 // Causes the ColumnChanged event to write a message and cancel the edit.  
-workRow[0] = "";       
+workRow[0] = "";
 workRow.EndEdit();  
   
 // Displays "Smith, New".  
-Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);    
+Console.WriteLine("{0}, {1}", workRow[0], workRow.RowState);
   
 protected static void OnColumnChanged(  
   Object sender, DataColumnChangeEventArgs args)  
@@ -86,11 +86,11 @@ protected static void OnColumnChanged(
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [Manipulação de dados em uma DataTable](manipulating-data-in-a-datatable.md)
+- [Manipulando dados em uma DataTable](manipulating-data-in-a-datatable.md)
 - [Manipulação de eventos de DataTable](handling-datatable-events.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 2467b289df7a0361b51ad91d4458d32742c42275
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70040822"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Como: Enviar dados usando a classe WebRequest
@@ -21,7 +21,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
 
 ## <a name="to-send-data-to-a-host-server"></a>Para enviar dados para um servidor de host
 
-1. Crie uma instância de <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> com o URI do recurso, como um script ou uma página ASP.NET, que aceite dados. Por exemplo:
+1. Crie uma instância de <xref:System.Net.WebRequest> chamando <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> com o URI do recurso, como um script ou uma página ASP.NET, que aceite dados. Por exemplo: 
 
     ```csharp
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");
@@ -32,7 +32,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     ```
 
     > [!NOTE]
-    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:* , *https:* , *ftp:* e *file:* .
+    > O .NET Framework fornece classes específicas de protocolo derivadas das classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> para URIs que começam com *http:*, *https:*, *ftp:* e *file:*.
 
     Caso precise definir ou ler propriedades específica de protocolo, converta o objeto <xref:System.Net.WebRequest> ou <xref:System.Net.WebResponse> em um tipo de objeto específico de protocolo. Para obter mais informações, confira [Programando protocolos conectáveis](programming-pluggable-protocols.md).
 
@@ -56,7 +56,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     request.Method = "POST"
     ```
 
-4. Defina a propriedade <xref:System.Web.HttpRequest.ContentLength> com o número de bytes incluídos com a solicitação. Por exemplo:
+4. Defina a propriedade <xref:System.Web.HttpRequest.ContentLength> com o número de bytes incluídos com a solicitação. Por exemplo: 
 
     ```csharp
     request.ContentLength = byteArray.Length;
@@ -66,7 +66,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     request.ContentLength = byteArray.Length
     ```
 
-5. Defina a propriedade <xref:System.Web.HttpRequest.ContentType> com um valor apropriado. Por exemplo:
+5. Defina a propriedade <xref:System.Web.HttpRequest.ContentType> com um valor apropriado. Por exemplo: 
 
     ```csharp
     request.ContentType = "application/x-www-form-urlencoded";
@@ -76,7 +76,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     request.ContentType = "application/x-www-form-urlencoded"
     ```
 
-6. Obtenha o fluxo que mantém dados de solicitação chamando o método <xref:System.Net.WebRequest.GetRequestStream%2A>. Por exemplo:
+6. Obtenha o fluxo que mantém dados de solicitação chamando o método <xref:System.Net.WebRequest.GetRequestStream%2A>. Por exemplo: 
 
     ```csharp
     Stream dataStream = request.GetRequestStream();
@@ -86,7 +86,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     Dim dataStream As Stream = request.GetRequestStream()
     ```
 
-7. Grave os dados no objeto <xref:System.IO.Stream> retornado pelo método `GetRequestStream`. Por exemplo:
+7. Grave os dados no objeto <xref:System.IO.Stream> retornado pelo método `GetRequestStream`. Por exemplo: 
 
     ```csharp
     dataStream.Write(byteArray, 0, byteArray.Length);
@@ -96,7 +96,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     dataStream.Write(byteArray, 0, byteArray.Length)
     ```
 
-8. Feche o fluxo de solicitação chamando o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Por exemplo:
+8. Feche o fluxo de solicitação chamando o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Por exemplo: 
 
     ```csharp
     dataStream.Close();
@@ -106,7 +106,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     dataStream.Close()
     ```
 
-9. Envie a solicitação para o servidor chamando <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Esse método retorna um objeto que contém a resposta do servidor. O tipo do objeto `WebResponse` retornado é determinado pelo esquema do URI da solicitação. Por exemplo:
+9. Envie a solicitação para o servidor chamando <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType>. Esse método retorna um objeto que contém a resposta do servidor. O tipo do objeto `WebResponse` retornado é determinado pelo esquema do URI da solicitação. Por exemplo: 
 
     ```csharp
     WebResponse response = request.GetResponse();
@@ -128,7 +128,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)
     ```
 
-11. Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> do objeto `WebResponse`. Por exemplo:
+11. Para obter o fluxo que contém os dados de resposta enviados pelo servidor, chame o método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> do objeto `WebResponse`. Por exemplo: 
 
     ```csharp
     Stream dataStream = response.GetResponseStream();
@@ -138,7 +138,7 @@ O procedimento a seguir descreve as etapas usadas para enviar dados para um serv
     Dim dataStream As Stream = response.GetResponseStream()
     ```
 
-12. Depois de ler os dados do objeto de resposta, feche-o com o método <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> ou feche o fluxo de resposta com o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Se você não fechar a resposta ou o fluxo, seu aplicativo poderá ficar sem conexões com o servidor e sem a capacidade de processar solicitações adicionais. Como o método `WebResponse.Close` chama `Stream.Close` quando ele fecha a resposta, não é necessário chamar `Close` nos objetos de resposta e de fluxo, embora fazer isso não seja prejudicial. Por exemplo:
+12. Depois de ler os dados do objeto de resposta, feche-o com o método <xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> ou feche o fluxo de resposta com o método <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType>. Se você não fechar a resposta ou o fluxo, seu aplicativo poderá ficar sem conexões com o servidor e sem a capacidade de processar solicitações adicionais. Como o método `WebResponse.Close` chama `Stream.Close` quando ele fecha a resposta, não é necessário chamar `Close` nos objetos de resposta e de fluxo, embora fazer isso não seja prejudicial. Por exemplo: 
 
     ```csharp
     response.Close();
@@ -155,9 +155,9 @@ O seguinte exemplo mostra como enviar dados para um servidor Web e ler os dados 
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Criando solicitações da Internet](creating-internet-requests.md)
+- [Criando solicitações de internet](creating-internet-requests.md)
 - [Usando fluxos na rede](using-streams-on-the-network.md)
 - [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)
 - [Solicitando dados](requesting-data.md)

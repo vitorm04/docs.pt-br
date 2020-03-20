@@ -5,24 +5,24 @@ helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-ms.openlocfilehash: 6a418fc546313b74bb965a0b223eca9c2e5acc08
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115794"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153900"
 ---
-# <a name="relativebindforresources-element"></a>\<elemento de > relativeBindForResources
+# <a name="relativebindforresources-element"></a>\<elemento> relativeBindForResources
 Otimiza o teste para assemblies satélites.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<relativeBindForResources >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<bindForResources>**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml
-<relativeBindForResources    
+<relativeBindForResources
    enabled="true|false" />  
 ```  
   
@@ -33,17 +33,17 @@ Otimiza o teste para assemblies satélites.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o Common Language Runtime otimiza a investigação para assemblies satélite.|  
+|`enabled`|Atributo obrigatório.<br /><br /> Especifica se o tempo de execução do idioma comum otimiza a sonda para conjuntos de satélites.|  
   
 ## <a name="enabled-attribute"></a>Atributo habilitado  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|`false`|O tempo de execução não otimiza a investigação para assemblies satélite. Este é o valor padrão.|  
-|`true`|O tempo de execução otimiza a investigação para assemblies satélite.|  
+|`false`|O tempo de execução não otimiza a sonda para conjuntos de satélites. Esse é o valor padrão.|  
+|`true`|O tempo de execução otimiza a sonda para conjuntos de satélites.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -53,24 +53,24 @@ Otimiza o teste para assemblies satélites.
 |`runtime`|Contém informações sobre opções de inicialização do runtime.|  
   
 ## <a name="remarks"></a>Comentários  
- Em geral, as investigações do Resource Manager para recursos, conforme documentado no tópico [empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Isso significa que quando o Gerenciador de recursos investiga uma versão localizada específica de um recurso, ele pode procurar no cache de assembly global, examinar uma pasta específica de cultura na base de código do aplicativo, consultar Windows Installer para assemblies satélites e gerar o <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento. O elemento `<relativeBindForResources>` otimiza a maneira como as investigações do Gerenciador de recursos para assemblies satélite. Ele pode melhorar o desempenho ao investigar os recursos sob as seguintes condições:  
+ Em geral, o Gerenciador de Recursos testa recursos, conforme documentado no tópico [Embalagem e Distribuição de Recursos.](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) Isso significa que, quando o Resource Manager testa uma versão localizada específica de um recurso, ele pode olhar no cache de montagem global, procurar uma pasta <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> específica de cultura na base de código do aplicativo, consultar o Windows Installer para conjuntos de satélites e aumentar o evento. O `<relativeBindForResources>` elemento otimiza a forma como o Resource Manager sonda para conjuntos de satélites. Pode melhorar o desempenho ao sondar recursos nas seguintes condições:  
   
-- Quando o assembly satélite é implantado no mesmo local que o assembly de código. Em outras palavras, se o assembly de código estiver instalado no cache de assembly global, os assemblies satélite também deverão ser instalados lá. Se o assembly de código estiver instalado na base de código do aplicativo, os assemblies satélite também deverão ser instalados em uma pasta específica de cultura na base de código.  
+- Quando o conjunto de satélites é implantado no mesmo local que o conjunto de códigos. Em outras palavras, se o conjunto de códigos for instalado no cache de montagem global, os conjuntos de satélites também devem ser instalados lá. Se o conjunto de códigos estiver instalado na base de código do aplicativo, os conjuntos de satélites também devem ser instalados em uma pasta específica de cultura na base de código.  
   
-- Quando Windows Installer não é usado ou é usado apenas raramente para a instalação sob demanda de assemblies satélite.  
+- Quando o Windows Installer não é usado ou é usado apenas raramente para instalação demanda de conjuntos de satélites.  
   
-- Quando o código do aplicativo não manipula o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
+- Quando o código do <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> aplicativo não lida com o evento.  
   
- Definir o atributo `enabled` do elemento `<relativeBindForResources>` como `true` otimiza a investigação do Resource Manager para assemblies satélite da seguinte maneira:  
+ Definir `enabled` o atributo `true` do elemento para otimizar a `<relativeBindForResources>` sonda do Resource Manager para conjuntos de satélites da seguinte forma:  
   
-- Ele usa o local do assembly de código pai para investigar o assembly satélite.  
+- Ele usa a localização do conjunto de código sondar para a montagem do satélite.  
   
-- Ele não consulta Windows Installer para assemblies satélite.  
+- Ele não consulta o Windows Installer para conjuntos de satélites.  
   
-- Ele não gera o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
+- Isso não levanta <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> o evento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Empacotando e implantando recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Esquema de configurações do tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações do runtime](index.md)
+- [Esquema de arquivo de configuração](../index.md)

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 08c16f261338148619de2e484c73046b9d9a6bfe
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: ee5070a1a4c58d6c1282ba47c921436ca22722ff
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67858386"
 ---
 ### <a name="the-net-framework-46-does-not-use-a-45xx-version-when-registering-itself-in-the-registry"></a>.NET Framework 4.6 não usa uma versão 4.5.x.x ao se registrar no registro
@@ -14,5 +14,4 @@ ms.locfileid: "67858386"
 |Sugestão|Atualize os aplicativos que estão investigando uma instalação do .NET Framework 4.5 procurando por chaves do Registro 4.5 que também aceitam 4.6.|
 |Escopo|Microsoft Edge|
 |Versão|4.6|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

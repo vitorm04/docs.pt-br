@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 25060a42b4ff66b1e25881b8c704ae0958e5f245
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: ffafb0c9e3982dd168f907d32a8f59f96e6040d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804485"
 ---
 ### <a name="building-an-entity-framework-edmx-with-visual-studio-2013-can-fail-with-error-msb4062-if-using-the-entitydeploysplit-or-entityclean-tasks"></a>A compilação de um edmx do Entity Framework com o Visual Studio 2013 pode falhar com o erro MSB4062 se estiver usando as tarefas EntityDeploySplit ou EntityClean
@@ -14,5 +14,4 @@ ms.locfileid: "67804485"
 |Sugestão|Os arquivos de destino do Entity Framework foram corrigidos para trabalhar com o novo layout do MSBuild a partir do .NET Framework 4.6. O upgrade para essa versão do Framework corrigirá esse problema. Como alternativa, [esta solução alternativa](https://stackoverflow.com/a/24249247/131944) pode ser usada para aplicar patches diretamente aos arquivos de destino.|
 |Escopo|Principal|
 |Versão|4.5.1|
-|Tipo|Redirecionando|
-
+|Type|Redirecionando|

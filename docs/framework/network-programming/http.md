@@ -14,10 +14,10 @@ helpviewer_keywords:
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
 ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048005"
 ---
 # <a name="http"></a>HTTP
@@ -31,8 +31,8 @@ O .NET Framework fornece suporte abrangente ao protocolo HTTP, que compõe a mai
   
  Aplicativos recebem erros de protocolo HTTP capturando uma <xref:System.Net.WebException> com o <xref:System.Net.WebException.Status%2A> definido como <xref:System.Net.WebExceptionStatus>. A propriedade <xref:System.Net.WebException.Response%2A> contém a **WebResponse** enviada pelo servidor e indica o erro HTTP real encontrado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)
+- [Acessando a Internet através de um proxy](accessing-the-internet-through-a-proxy.md)
 - [Usando protocolos de aplicativo](using-application-protocols.md)
-- [Como: Acessar propriedades específicas de HTTP](how-to-access-http-specific-properties.md)
+- [Como acessar propriedades específicas de HTTP](how-to-access-http-specific-properties.md)

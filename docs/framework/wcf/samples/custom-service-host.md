@@ -2,37 +2,37 @@
 title: Host de serviço personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2aed557d1d045c08aed206660aa7b4b75ffe0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789937"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145066"
 ---
 # <a name="custom-service-host"></a>Host de serviço personalizado
-Este exemplo demonstra como usar um derivativo personalizado da classe <xref:System.ServiceModel.ServiceHost> para alterar o comportamento do tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de maneira comum. O exemplo também demonstra como usar a classe <xref:System.ServiceModel.Activation.ServiceHostFactory> para usar um ServiceHost personalizado no ambiente de hospedagem Serviços de Informações da Internet (IIS) ou serviço de ativação de processos do Windows (WAS).  
+Esta amostra demonstra como usar um <xref:System.ServiceModel.ServiceHost> derivado personalizado da classe para alterar o comportamento de tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de forma comum. A amostra também demonstra <xref:System.ServiceModel.Activation.ServiceHostFactory> como usar a classe para usar um ServiceHost personalizado no ambiente de hospedagem IIS (Internet Information Services, serviço de ativação de processos da Internet) ou do Windows Process Activation Service (WAS).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>Sobre o cenário
- Para evitar a divulgação não intencional de metadados de serviço potencialmente confidenciais, a configuração padrão para Windows Communication Foundation (WCF) Services desabilita a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar uma ferramenta de importação de metadados (como SvcUtil. exe) para gerar o código do cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço esteja explicitamente habilitado na configuração.  
+ Para evitar a divulgação não intencional de metadados de serviços potencialmente sensíveis, a configuração padrão dos serviços do Windows Communication Foundation (WCF) desativa a publicação de metadados. Esse comportamento é seguro por padrão, mas também significa que você não pode usar uma ferramenta de importação de metadados (como svcutil.exe) para gerar o código do cliente necessário para chamar o serviço, a menos que o comportamento de publicação de metadados do serviço esteja explicitamente ativado na configuração.  
   
- A habilitação da publicação de metadados para um grande número de serviços envolve a adição dos mesmos elementos de configuração a cada serviço individual, o que resulta em uma grande quantidade de informações de configuração que é essencialmente a mesma. Como alternativa à configuração de cada serviço individualmente, é possível escrever o código imperativo que permite a publicação de metadados uma vez e, em seguida, reutilizar esse código em vários serviços diferentes. Isso é feito por meio da criação de uma nova classe que deriva de <xref:System.ServiceModel.ServiceHost> e substitui o método `ApplyConfiguration`() para adicionar imperativamente o comportamento de publicação de metadados.  
+ Habilitar a publicação de metadados para um grande número de serviços envolve adicionar os mesmos elementos de configuração a cada serviço individual, o que resulta em uma grande quantidade de informações de configuração que são essencialmente as mesmas. Como alternativa à configuração individual de cada serviço, é possível escrever o código imperativo que permite a publicação de metadados uma vez e, em seguida, reutilizar esse código em vários serviços diferentes. Isso é feito criando uma nova <xref:System.ServiceModel.ServiceHost> classe que `ApplyConfiguration`deriva e substitui o método () para adicionar imperativamente o comportamento de publicação de metadados.  
   
 > [!IMPORTANT]
-> Para maior clareza, este exemplo demonstra como criar um ponto de extremidade de publicação de metadados não seguro. Esses pontos de extremidade estão potencialmente disponíveis para consumidores anônimos não autenticados e devem ser levados em vida antes da implantação desses pontos de extremidade para garantir que os metadados de um serviço sejam desmarcados publicamente.  
+> Para obter clareza, esta amostra demonstra como criar um ponto final de publicação de metadados não seguro. Esses pontos finais estão potencialmente disponíveis para consumidores anônimos não autenticados e os cuidados devem ser tomados antes de implantar tais pontos finais para garantir que a divulgação pública dos metadados de um serviço seja apropriada.  
   
 ## <a name="implementing-a-custom-servicehost"></a>Implementando um ServiceHost personalizado
- A classe <xref:System.ServiceModel.ServiceHost> expõe vários métodos virtuais úteis que os herdeiros podem substituir para alterar o comportamento de um serviço em tempo de execução. Por exemplo, o método `ApplyConfiguration`() lê as informações de configuração do serviço do repositório de configuração e altera o <xref:System.ServiceModel.Description.ServiceDescription> do host de acordo. A implementação padrão lê a configuração do arquivo de configuração do aplicativo. Implementações personalizadas podem substituir `ApplyConfiguration`() para alterar ainda mais o <xref:System.ServiceModel.Description.ServiceDescription> usando código imperativo ou até mesmo substituir o repositório de configuração padrão por completo. Por exemplo, para ler a configuração de ponto de extremidade de um serviço de um banco de dados em vez do arquivo de configuração do aplicativo.  
+ A <xref:System.ServiceModel.ServiceHost> classe expõe vários métodos virtuais úteis que os herdeiros podem substituir para alterar o comportamento de tempo de execução de um serviço. Por exemplo, `ApplyConfiguration`o método () lê informações de configuração de <xref:System.ServiceModel.Description.ServiceDescription> serviço do armazenamento de configuração e altera o host de acordo. A implementação padrão lê a configuração do arquivo de configuração do aplicativo. Implementações personalizadas `ApplyConfiguration`podem substituir () <xref:System.ServiceModel.Description.ServiceDescription> alterar ainda mais o código imperativo de uso ou até mesmo substituir totalmente o armazenamento de configuração padrão. Por exemplo, para ler a configuração de ponto final de um serviço a partir de um banco de dados em vez do arquivo de configuração do aplicativo.  
   
- Neste exemplo, desejamos criar um ServiceHost personalizado que adiciona o ServiceMetadataBehavior, (que habilita a publicação de metadados), mesmo que esse comportamento não seja explicitamente adicionado ao arquivo de configuração do serviço. Para fazer isso, criamos uma nova classe que herda de <xref:System.ServiceModel.ServiceHost> e substitui `ApplyConfiguration`().  
+ Nesta amostra, queremos criar um ServiceHost personalizado que adiciona o ServiceMetadataBehavior (que permite a publicação de metadados), mesmo que esse comportamento não seja explicitamente adicionado no arquivo de configuração do serviço. Para isso, criamos uma nova classe <xref:System.ServiceModel.ServiceHost> que herda e substitui `ApplyConfiguration`().  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -40,9 +40,9 @@ class SelfDescribingServiceHost : ServiceHost
     public SelfDescribingServiceHost(Type serviceType, params Uri[] baseAddresses)  
         : base(serviceType, baseAddresses) { }  
   
-    //Overriding ApplyConfiguration() allows us to   
+    //Overriding ApplyConfiguration() allows us to
     //alter the ServiceDescription prior to opening  
-    //the service host.   
+    //the service host.
     protected override void ApplyConfiguration()  
     {  
         //First, we call base.ApplyConfiguration()  
@@ -50,14 +50,14 @@ class SelfDescribingServiceHost : ServiceHost
         //the service we're hosting. After this call,  
         //this.Description describes the service  
         //as it was configured.  
-        base.ApplyConfiguration();       
+        base.ApplyConfiguration();
   
         //(rest of implementation elided for clarity)  
     }  
 }  
 ```  
   
- Como não queremos ignorar nenhuma configuração que tenha sido fornecida no arquivo de configuração do aplicativo, a primeira coisa que nossa substituição de `ApplyConfiguration`() é chamar a implementação de base. Depois que esse método é concluído, podemos adicionar imperativamente o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> à descrição usando o código imperativo a seguir.  
+ Como não queremos ignorar qualquer configuração que tenha sido fornecida no arquivo de configuração do aplicativo, a primeira coisa que `ApplyConfiguration`nossa substituição faz é chamar a implementação base. Uma vez que este método seja <xref:System.ServiceModel.Description.ServiceMetadataBehavior> concluído, podemos adicionar a descrição da descrição usando o seguinte código imperativo.  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -68,13 +68,13 @@ if (mexBehavior == null)
 }  
 else  
 {  
-    //Metadata behavior has already been configured,   
+    //Metadata behavior has already been configured,
     //so we do not have any work to do.  
     return;  
 }  
 ```  
   
- A última coisa que a substituição de `ApplyConfiguration`() deve fazer é adicionar o ponto de extremidade de metadados padrão. Por convenção, um ponto de extremidade de metadados é criado para cada URI na coleção do BaseAddress do host de serviço.  
+ A última `ApplyConfiguration`coisa que nossa () substituição deve fazer é adicionar o ponto final de metadados padrão. Por convenção, um ponto final de metadados é criado para cada URI na coleção BaseAddresses do host de serviço.  
   
 ```csharp
 //Add a metadata endpoint at each base address  
@@ -110,40 +110,40 @@ foreach (Uri baseAddress in this.BaseAddresses)
 }  
 ```  
   
-## <a name="using-a-custom-servicehost-in-self-host"></a>Usando um ServiceHost personalizado no auto-host  
- Agora que concluímos nossa implementação de ServiceHost personalizada, podemos usá-la para adicionar o comportamento de publicação de metadados a qualquer serviço hospedando esse serviço dentro de uma instância do nosso `SelfDescribingServiceHost`. O código a seguir mostra como usá-lo no cenário de hospedagem interna.  
+## <a name="using-a-custom-servicehost-in-self-host"></a>Usando um ServiceHost personalizado no self-host  
+ Agora que concluímos nossa implementação personalizada do ServiceHost, podemos usá-lo para adicionar comportamento de publicação `SelfDescribingServiceHost`de metadados a qualquer serviço, hospedando esse serviço dentro de uma instância do nosso . O código a seguir mostra como usá-lo no cenário de auto-host.  
   
 ```csharp
-SelfDescribingServiceHost host =   
+SelfDescribingServiceHost host =
          new SelfDescribingServiceHost( typeof( Calculator ) );  
 host.Open();  
 ```  
   
- Nosso host personalizado ainda lê a configuração de ponto de extremidade do serviço do arquivo de configuração do aplicativo, assim como se tivéssemos usado a classe de <xref:System.ServiceModel.ServiceHost> padrão para hospedar o serviço. No entanto, como adicionamos a lógica para habilitar a publicação de metadados dentro de nosso host personalizado, não é mais necessário habilitar explicitamente o comportamento de publicação de metadados na configuração. Essa abordagem tem uma vantagem distinta quando você está criando um aplicativo que contém vários serviços e deseja habilitar a publicação de metadados em cada um deles sem gravar os mesmos elementos de configuração várias vezes.  
+ Nosso host personalizado ainda lê a configuração de ponto final do serviço a partir <xref:System.ServiceModel.ServiceHost> do arquivo de configuração do aplicativo, como se tivéssemos usado a classe padrão para hospedar o serviço. No entanto, como adicionamos a lógica para permitir a publicação de metadados dentro do nosso host personalizado, não devemos mais habilitar explicitamente o comportamento de publicação de metadados na configuração. Essa abordagem tem uma vantagem distinta quando você está construindo um aplicativo que contém vários serviços e você deseja permitir a publicação de metadados em cada um deles sem escrever os mesmos elementos de configuração várias vezes.  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>Usando um ServiceHost personalizado no IIS ou WAS  
- Usar um host de serviço personalizado em cenários de hospedagem interna é simples, pois é o código do aplicativo que é, por fim, responsável pela criação e abertura da instância do host de serviço. No entanto, no ambiente IIS ou WAS de hospedagem, a infraestrutura do WCF está instanciando dinamicamente o host do serviço em resposta às mensagens de entrada. Os hosts de serviço personalizados também podem ser usados nesse ambiente de hospedagem, mas exigem um código adicional na forma de um ServiceHostFactory. O código a seguir mostra uma derivação de <xref:System.ServiceModel.Activation.ServiceHostFactory> que retorna instâncias de nossa `SelfDescribingServiceHost`personalizada.  
+ O uso de um host de serviço personalizado em cenários de auto-host é simples, porque é o código do aplicativo que é responsável pela criação e abertura da instância de host do serviço. No ambiente de hospedagem IIS ou WAS, no entanto, a infra-estrutura WCF está instanciando o host do seu serviço em resposta às mensagens recebidas. Hosts de serviço personalizados também podem ser usados neste ambiente de hospedagem, mas eles requerem algum código adicional na forma de um ServiceHostFactory. O código a seguir <xref:System.ServiceModel.Activation.ServiceHostFactory> mostra uma derivada de que retorna instâncias do nosso costume `SelfDescribingServiceHost`.  
   
 ```csharp
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
 {  
-    protected override ServiceHost CreateServiceHost(Type serviceType,   
+    protected override ServiceHost CreateServiceHost(Type serviceType,
      Uri[] baseAddresses)  
     {  
         //All the custom factory does is return a new instance  
         //of our custom host class. The bulk of the custom logic should  
-        //live in the custom host (as opposed to the factory)   
+        //live in the custom host (as opposed to the factory)
         //for maximum  
         //reuse value outside of the IIS/WAS hosting environment.  
-        return new SelfDescribingServiceHost(serviceType,     
+        return new SelfDescribingServiceHost(serviceType,
                                              baseAddresses);  
     }  
 }  
 ```  
   
- Como você pode ver, a implementação de um ServiceHostFactory personalizado é muito simples. Toda a lógica personalizada reside dentro da implementação do ServiceHost; a fábrica retorna uma instância da classe derivada.  
+ Como você pode ver, implementar um ServiceHostFactory personalizado é muito simples. Toda a lógica personalizada reside dentro da implementação do ServiceHost; a fábrica retorna uma instância da classe derivada.  
   
- Para usar uma fábrica personalizada com uma implementação de serviço, devemos adicionar alguns metadados adicionais ao arquivo. svc do serviço.  
+ Para usar uma fábrica personalizada com uma implementação de serviço, devemos adicionar alguns metadados adicionais ao arquivo .svc do serviço.  
   
 ```xml
 <%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
@@ -151,29 +151,29 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- Aqui, adicionamos um atributo `Factory` adicional à diretiva `@ServiceHost` e passamos o nome do tipo CLR de nossa fábrica personalizada como o valor do atributo. Quando o IIS ou o recebe uma mensagem para esse serviço, a infraestrutura de hospedagem do WCF primeiro cria uma instância do ServiceHostFactory e, em seguida, instancia o próprio host do serviço chamando `ServiceHostFactory.CreateServiceHost()`.  
+ Aqui adicionamos um `Factory` atributo `@ServiceHost` adicional à diretiva, e passamos o nome do tipo CLR da nossa fábrica personalizada como o valor do atributo. Quando o IIS ou WAS recebe uma mensagem para este serviço, a infra-estrutura de hospedagem `ServiceHostFactory.CreateServiceHost()`WCF cria primeiro uma instância do ServiceHostFactory e, em seguida, instancia o próprio host do serviço, chamando .  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
- Embora este exemplo forneça uma implementação de cliente e de serviço totalmente funcional, o ponto do exemplo é ilustrar como alterar o comportamento de tempo de execução de um serviço por meio de um host personalizado. Execute as seguintes etapas:  
+ Embora esta amostra forneça uma implementação de serviço e cliente totalmente funcional, o objetivo da amostra é ilustrar como alterar o comportamento de tempo de execução de um serviço por meio de um host personalizado., faça as seguintes etapas:  
   
 ### <a name="observe-the-effect-of-the-custom-host"></a>Observe o efeito do host personalizado
   
-1. Abra o arquivo Web. config do serviço e observe que não há nenhuma configuração habilitando explicitamente os metadados para o serviço.  
+1. Abra o arquivo Web.config do serviço e observe que não há configuração que habilite metadados explicitamente para o serviço.  
   
-2. Abra o arquivo. svc do serviço e observe que sua diretiva de @ServiceHost contém um atributo de fábrica que especifica o nome de um ServiceHostFactory personalizado.  
+2. Abra o arquivo .svc do serviço @ServiceHost e observe que sua diretiva contém um atributo Factory que especifica o nome de um ServiceHostFactory personalizado.  
   
-### <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar e executar o exemplo
+### <a name="set-up-build-and-run-the-sample"></a>Configurar, construir e executar a amostra
   
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
+2. Para construir a solução, siga as instruções em [Building the Windows Communication Foundation Samples](building-the-samples.md).
 
-3. Depois que a solução tiver sido criada, execute Setup. bat para configurar o aplicativo ServiceModelSamples no IIS 7,0. O diretório ServiceModelSamples agora deve aparecer como um aplicativo IIS 7,0.
+3. Depois que a solução for construída, execute Setup.bat para configurar o aplicativo ServiceModelSamples no IIS 7.0. O diretório ServiceModelSamples agora deve aparecer como um aplicativo IIS 7.0.
 
-4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
+4. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](running-the-samples.md).
 
-5. Para remover o aplicativo IIS 7,0, execute *Cleanup. bat*.
+5. Para remover o aplicativo IIS 7.0, execute *Cleanup.bat*.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como hospedar um serviço WCF no IIS](../feature-details/how-to-host-a-wcf-service-in-iis.md)

@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: d717673139ba810c1593e5c60e488537426f1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754415"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185192"
 ---
 # <a name="data-member-order"></a>Ordem de membro de dados
-Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membros de dados são enviados ou são esperados para ser recebida (como a ordem na qual os dados aparecem no XML serializável). Às vezes, pode ser necessário alterar essa ordem. Este tópico explica as regras de ordenação.  
+Em alguns aplicativos, é útil saber a ordem em que os dados dos vários membros de dados são enviados ou são esperados para serem recebidos (como a ordem em que os dados aparecem no XML serializado). Às vezes pode ser necessário mudar essa ordem. Este tópico explica as regras de pedidos.  
   
 ## <a name="basic-rules"></a>Regras básicas  
- As regras básicas de ordenação de dados incluem:  
+ As regras básicas para o pedido de dados incluem:  
   
-- Se um tipo de contrato de dados fizer parte de uma hierarquia de herança, membros de dados de seus tipos base são sempre primeiros na ordem.  
+- Se um tipo de contrato de dados faz parte de uma hierarquia de herança, os membros de dados de seus tipos de base são sempre os primeiros na ordem.  
   
-- Em seguida, em ordem são membros de dados do tipo atual que não têm o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto em ordem alfabética de atributos.  
+- Em seguida, em ordem estão os membros de <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> dados <xref:System.Runtime.Serialization.DataMemberAttribute> do tipo atual que não têm a propriedade do conjunto de atributos, em ordem alfabética.  
   
-- Em seguida, estão os membros de dados que têm o <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> propriedade do <xref:System.Runtime.Serialization.DataMemberAttribute> conjunto de atributos. Esses são ordenados pelo valor da `Order` propriedade primeiro e, em seguida, em ordem alfabética se não houver mais de um membro de um determinado `Order` valor. Valores da ordem podem ser ignoradas.  
+- Em seguida estão os <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> membros de <xref:System.Runtime.Serialization.DataMemberAttribute> dados que tenham a propriedade do conjunto de atributos. Estes são ordenados pelo `Order` valor da propriedade primeiro e, em seguida, `Order` alfabeticamente se há mais de um membro de um determinado valor. Os valores da ordem podem ser ignorados.  
   
- Ordem alfabética é estabelecida chamando o <xref:System.String.CompareOrdinal%2A> método.  
+ A ordem alfabética é <xref:System.String.CompareOrdinal%2A> estabelecida chamando o método.  
   
 ## <a name="examples"></a>Exemplos  
  Considere o código a seguir.  
@@ -34,18 +34,18 @@ Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membro
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
  [!code-vb[C_DataContractNames#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#4)]  
   
- O XML gerado é semelhante ao seguinte.  
+ O XML produzido é semelhante ao seguinte.  
   
 ```xml  
 <DerivedType>  
     <!-- Zebra is a base data member, and appears first. -->  
-    <zebra/>   
+    <zebra/>
   
     <!-- Cat has no Order, appears alphabetically first. -->  
     <cat/>  
   
    <!-- Dog has no Order, appears alphabetically last. -->  
-    <dog/>   
+    <dog/>
   
     <!-- Bird is the member with the smallest Order value -->  
     <bird/>  
@@ -58,11 +58,11 @@ Em alguns aplicativos, é útil saber a ordem na qual os dados de vários membro
   
     <!-- Antelope is the member with the highest Order value. Note that   
     Order=2 is skipped -->  
-     <antelope/>   
+     <antelope/>
 </DerivedType>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Equivalência de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)

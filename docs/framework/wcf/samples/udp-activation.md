@@ -2,35 +2,35 @@
 title: Ativação de UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 0f5d07e65abc0b29989834aff496f7c27ea557b5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c0b351adb0b45f42404e94c74bdcff7785c2d0ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715816"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143714"
 ---
 # <a name="udp-activation"></a>Ativação de UDP
-Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) . Ele estende a amostra [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) para dar suporte à ativação do processo usando o WAS (serviço de ativação de processos do Windows).  
+Esta amostra é baseada na amostra [Transport: UDP.](../../../../docs/framework/wcf/samples/transport-udp.md) Ele estende a amostra [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) para suportar a ativação do processo usando o Serviço de Ativação de Processos do Windows (WAS).  
   
- O exemplo consiste em três partes principais:  
+ A amostra consiste em três peças principais:  
   
-- Um UDP Protocol Activator, um processo autônomo que recebe mensagens UDP em nome dos aplicativos que devem ser ativados.  
+- Um Ativador de Protocolo UDP, um processo autônomo que recebe mensagens UDP em nome de aplicativos que devem ser ativados.  
   
 - Um cliente que usa o transporte personalizado UDP para enviar mensagens.  
   
-- Um serviço (hospedado em um processo de trabalho ativado pelo WAS) que recebe mensagens sobre o transporte personalizado UDP.  
+- Um serviço (hospedado em um processo de trabalhador ativado pela WAS) que recebe mensagens sobre o transporte personalizado UDP.  
   
 ## <a name="udp-protocol-activator"></a>Ativador de protocolo UDP  
- O UDP Protocol Activator é uma ponte entre o cliente WCF e o serviço WCF. Ele fornece comunicação de dados por meio do protocolo UDP na camada de transporte. Ele tem duas funções principais:  
+ O Ativador de Protocolo UDP é uma ponte entre o cliente WCF e o serviço WCF. Fornece comunicação de dados através do protocolo UDP na camada de transporte. Tem duas funções principais:  
   
-- ERA o adaptador de escuta (LA), que colabora com o WAS para ativar processos em resposta a mensagens recebidas.  
+- WAS Listener Adapter (LA), que colabora com a WAS para ativar processos em resposta às mensagens recebidas.  
   
-- Ouvinte de protocolo UDP, que aceita mensagens UDP em nome dos aplicativos que devem ser ativados.  
+- UDP Protocol Listener, que aceita mensagens UDP em nome de aplicativos que devem ser ativados.  
   
- O ativador deve estar sendo executado como um programa autônomo no computador do servidor. Normalmente, os adaptadores de escuta eram (como o NetTcpActivator e o NetPipeActivator) são implementados em serviços do Windows de longa execução. No entanto, para simplificar e clareza, este exemplo implementa o ativador de protocolo como um aplicativo autônomo.  
+ O ativador deve estar sendo executado como um programa autônomo na máquina do servidor. Normalmente, os adaptadores de ouvinte WAS (como o NetTcpActivator e o NetPipeActivator) são implementados em serviços windows de longa duração. No entanto, para simplicidade e clareza, esta amostra implementa o ativador de protocolo como um aplicativo autônomo.  
   
-### <a name="was-listener-adapter"></a>FOI o adaptador de escuta  
- O adaptador de escuta WAS para UDP é implementado na classe `UdpListenerAdapter`. É o módulo que interage com o WAS para executar a ativação do aplicativo para o protocolo UDP. Isso é feito chamando as seguintes APIs Webhost:  
+### <a name="was-listener-adapter"></a>WAS Adaptador de ouvinte  
+ O adaptador de ouvinte WAS para UDP é implementado na `UdpListenerAdapter` classe. É o módulo que interage com o WAS para realizar a ativação do aplicativo para o protocolo UDP. Isso é conseguido chamando as seguintes APIs do Webhost:  
   
 - `WebhostRegisterProtocol`  
   
@@ -40,29 +40,29 @@ Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/w
   
 - `WebhostCloseAllListenerChannelInstances`  
   
- Depois de chamar inicialmente `WebhostRegisterProtocol`, o adaptador de escuta recebe o `ApplicationCreated` de retorno de chamada do WAS para todos os aplicativos registrados em applicationHost. config (localizado em%windir%\system32\inetsrv.). Neste exemplo, tratamos apenas dos aplicativos com o protocolo UDP (com a ID de protocolo como "net. UDP") habilitado. Outras implementações podem lidar com isso de forma diferente se essas implementações responderem às alterações de configuração dinâmicas para o aplicativo (por exemplo, uma transição de aplicativo de desabilitado para habilitado).  
+ Após a `WebhostRegisterProtocol`chamada inicialmente, o adaptador de ouvinte recebe o retorno `ApplicationCreated` de chamada do WAS para todos os aplicativos registrados no aplicativoHost.config (localizado em %windir%\system32\inetsrv). Nesta amostra, apenas lidamos com os aplicativos com o protocolo UDP (com o id de protocolo como "net.udp") ativado. Outras implementações podem lidar com isso de forma diferente se essas implementações responderem a alterações dinâmicas de configuração no aplicativo (por exemplo, uma transição de aplicativo de desativado para habilitado).  
   
- Quando o `ConfigManagerInitializationCompleted` de retorno de chamada é recebido, ele indica que o foi concluído todas as notificações para a inicialização do protocolo. Neste momento, o adaptador do ouvinte está pronto para processar solicitações de ativação.  
+ Quando o `ConfigManagerInitializationCompleted` retorno de chamada é recebido, indica que o WAS tenha terminado todas as notificações para a inicialização do protocolo. Neste momento, o adaptador de ouvinte está pronto para processar solicitações de ativação.  
   
- Quando uma nova solicitação chega na primeira vez para um aplicativo, o adaptador de escuta chama `WebhostOpenListenerChannelInstance` no WAS, o que inicia o processo de trabalho se ele ainda não foi iniciado. Em seguida, os manipuladores de protocolo são carregados e a comunicação entre o adaptador de escuta e o aplicativo virtual pode ser iniciada.  
+ Quando uma nova solicitação chega na primeira vez para um `WebhostOpenListenerChannelInstance` aplicativo, o adaptador de ouvinte liga para o WAS, que inicia o processo do trabalhador se ele ainda não for iniciado. Em seguida, os manipuladores de protocolo são carregados e a comunicação entre o adaptador ouvinte e o aplicativo virtual pode começar.  
   
- O adaptador de escuta é registrado no%SystemRoot%\System32\inetsrv\ApplicationHost.config na seção <`listenerAdapters`> da seguinte maneira:  
+ O adaptador de ouvinte está registrado na seção %SystemRoot%\System32\inetsrv\ApplicationHost.config na seção <`listenerAdapters`>:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
 ```  
   
-### <a name="protocol-listener"></a>Ouvinte de protocolo  
- O ouvinte de protocolo UDP é um módulo dentro do ativador de protocolo que escuta em um ponto de extremidade UDP em nome do aplicativo virtual. Ele é implementado na classe `UdpSocketListener`. O ponto de extremidade é representado como `IPEndpoint` para o qual o número da porta é extraído da associação do protocolo para o site.  
+### <a name="protocol-listener"></a>Ouvinte de Protocolo  
+ O ouvinte de protocolo UDP é um módulo dentro do ativador de protocolo que ouve em um ponto final UDP em nome do aplicativo virtual. É implementado na `UdpSocketListener`classe. O ponto final `IPEndpoint` é representado como para o qual o número da porta é extraído da vinculação do protocolo para o site.  
   
-### <a name="control-service"></a>Serviço de controle  
- Neste exemplo, usamos o WCF para se comunicar entre o ativador e o WAS processo de trabalho. O serviço que reside no ativador é chamado de serviço de controle.  
+### <a name="control-service"></a>Serviço de Controle  
+ Nesta amostra, utilizamos o WCF para comunicar entre o ativador e o processo do trabalhador WAS. O serviço que reside no ativador é chamado de Serviço de Controle.  
   
 ## <a name="protocol-handlers"></a>Manipuladores de protocolo  
- Depois que o adaptador do ouvinte chamar `WebhostOpenListenerChannelInstance`, o Gerenciador de processos do WAS iniciará o processo de trabalho se ele não for iniciado. O Gerenciador de aplicativos dentro do processo de trabalho então carrega o PPH (manipulador de protocolo de processo) do UDP com a solicitação para essa `ListenerChannelId`. O PPH em ativa chamadas `IAdphManager`.`StartAppDomainProtocolListenerChannel` para iniciar o manipulador de protocolo de AppDomain de UDP (ADPH).  
+ Após as chamadas `WebhostOpenListenerChannelInstance`do adaptador de ouvinte, o gerente de processo WAS inicia o processo do trabalhador se ele não for iniciado. O gerenciador de aplicativos dentro do processo do trabalhador então carrega o PPH (Process Protocol Handler, manipulador de protocolo de processo udp) com a solicitação para isso `ListenerChannelId`. O PPH em `IAdphManager`turnos chamadas .`StartAppDomainProtocolListenerChannel` para iniciar o UDP AppDomain Protocol Handler (ADPH).  
   
-## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
- As informações são registradas no Web. config da seguinte maneira:  
+## <a name="hostedudptransportconfiguration"></a>Configuração hostedUDPTransporte  
+ As informações estão registradas no Web.config da seguinte forma:  
   
 ```xml  
 <serviceHostingEnvironment>  
@@ -70,58 +70,58 @@ Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/w
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="special-setup-for-this-sample"></a>Configuração especial para este exemplo  
- Este exemplo só pode ser criado e executado no Windows Vista, no Windows Server 2008 ou no Windows 7. Para executar o exemplo, você deve primeiro obter todos os componentes configurados corretamente. Use as etapas a seguir para instalar o exemplo.  
+## <a name="special-setup-for-this-sample"></a>Configuração especial para esta amostra  
+ Esta amostra só pode ser construída e executada no Windows Vista, Windows Server 2008 ou Windows 7. Para executar a amostra, primeiro você deve obter todos os componentes configurados corretamente. Use as seguintes etapas para instalar a amostra.  
   
 #### <a name="to-set-up-this-sample"></a>Para configurar este exemplo  
   
-1. Instale o ASP.NET 4,0 usando o comando a seguir.  
+1. Instale ASP.NET 4.0 usando o seguinte comando.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Compile o projeto no Windows Vista. Após a compilação, ele também executa as seguintes operações na fase pós-compilação:  
+2. Construa o projeto no Windows Vista. Após a compilação, ele também executa as seguintes operações na fase pós-compilação:  
   
-    - Instala a associação UDP ao site "Default Web site".  
+    - Instala a vinculação udp ao site "Site padrão".  
   
     - Cria o aplicativo virtual "ServiceModelSamples" para apontar para o caminho físico: "%SystemDrive%\inetpub\wwwroot\servicemodelsamples".  
   
-    - Ele também habilita o protocolo "net. UDP" para este aplicativo virtual.  
+    - Ele também permite o protocolo "net.udp" para este aplicativo virtual.  
   
-3. Inicie o aplicativo de interface do usuário "WasNetActivator. exe". Clique na guia **instalação** , marque as seguintes caixas de seleção e clique em **instalar** para instalá-las:  
+3. Inicie o aplicativo de interface de usuário "WasNetActivator.exe". Clique na guia **Configuração,** verifique as seguintes caixas de seleção e clique **em Instalar** para instalá-las:  
   
-    - Adaptador de escuta UDP  
+    - Adaptador de ouvinte UDP  
   
     - Manipuladores de protocolo UDP  
   
-4. Clique na guia **ativação** do aplicativo de interface do usuário "WasNetActivator. exe". Clique no botão **Iniciar** para iniciar o adaptador do ouvinte. Agora você está pronto para executar o programa.  
+4. Clique na guia **Ativação** do aplicativo de interface do usuário "WasNetActivator.exe". Clique no botão **Iniciar** para iniciar o adaptador de ouvinte. Agora você está pronto para executar o programa.  
   
     > [!NOTE]
-    > Ao concluir este exemplo, você deve executar o Cleanup. bat para remover a associação net. UDP do "site padrão".  
+    > Quando você terminar com esta amostra, você deve executar Cleanup.bat para remover a vinculação net.udp do "Site da Web padrão".  
   
-## <a name="sample-usage"></a>Uso de exemplo  
+## <a name="sample-usage"></a>Exemplo de uso  
  Após a compilação, há quatro binários diferentes gerados:  
   
-- Client. exe: o código do cliente. O app. config é compilado no arquivo de configuração do cliente Client. exe. config.  
+- Cliente.exe: O código do cliente. A configuração App.config é compilada no arquivo de configuração cliente Client.exe.config.  
   
-- UDPActivation. dll: a biblioteca que contém todas as principais implementações de UDP.  
+- UDPActivation.dll: a biblioteca que contém todas as principais implementações de UDP.  
   
-- Service. dll: o código do serviço. Isso é copiado para o diretório \bin do aplicativo virtual ServiceModelSamples. O arquivo de serviço é Service. svc e o arquivo de configuração é Web. config. Após a compilação, eles são copiados para o seguinte local:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: O código de serviço. Isso é copiado para o diretório \bin do aplicativo virtual ServiceModelSamples. O arquivo de serviço é Service.svc e o arquivo de configuração é Web.config. Após a compilação, eles são copiados para o seguinte local: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
-- WasNetActivator: o programa UDP Activator.  
+- WasNetActivator: O programa ativador UDP.  
   
-- Verifique se todas as partes necessárias estão instaladas corretamente. As etapas a seguir mostram como executar o exemplo:  
+- Certifique-se de que todas as peças necessárias estejam instaladas corretamente. As etapas a seguir mostram como executar a amostra:  
   
-1. Verifique se os seguintes serviços do Windows foram iniciados:  
+1. Certifique-se de que os seguintes serviços do Windows foram iniciados:  
   
-    - WAS (serviço de ativação de processos do Windows).  
+    - Serviço de ativação de processos do Windows (WAS).  
   
-    - Serviços de Informações da Internet (IIS): W3SVC.  
+    - Serviços de Informação na Internet (IIS): W3SVC.  
   
-2. Em seguida, inicie o ativador, WasNetActivator. exe. Na guia **ativação** , o único protocolo, **UDP**, é selecionado na lista suspensa. Clique no botão **Iniciar** para iniciar o ativador.  
+2. Em seguida, inicie o ativador, WasNetActivator.exe. Na guia **Ativação,** o único protocolo, **UDP,** é selecionado na lista de desímparadas. Clique no botão **Iniciar** para iniciar o ativador.  
   
-3. Depois que o ativador for iniciado, você poderá executar o código do cliente executando o Client. exe em uma janela de comando. A seguir está a saída de exemplo:  
+3. Uma vez iniciado o ativador, você pode executar o código do cliente executando Client.exe a partir de uma janela de comando. A seguir está a saída da amostra:  
   
     ```console  
     Testing Udp Activation.  
@@ -155,9 +155,9 @@ Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/w
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
+>
+> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

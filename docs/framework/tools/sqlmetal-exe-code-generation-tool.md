@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044087"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
@@ -41,23 +41,23 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>Opções  
  Para exibir a lista de opções mais atual, digite `sqlmetal /?` em um prompt de comando no local instalado.  
   
- **Opções de Conexão**  
+ **Opções de conexão**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/server:** *\<name>*|Especifica o nome do servidor do banco de dados.|  
-|**/database:** *\<name>*|Especifica o catálogo do banco de dados no servidor.|  
-|**/user:** *\<name>*|Especifica a ID do usuário de logon. Valor padrão: usar a autenticação do Windows.|  
-|**/password:** *\<password>*|Especifica a senha de logon. Valor padrão: usar a autenticação do Windows.|  
-|**/conn:** *\<connection string>*|Especifica a cadeia de conexão do banco de dados. Não pode ser usada com as opções **/server**, **/database**, **/user** ou **/password**.<br /><br /> Não inclua o nome do arquivo na cadeia de conexão. Em vez disso, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Por exemplo, a seguinte linha especifica “c:\northwnd.mdf” como o arquivo de entrada: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** .|  
-|**/timeout:** *\<seconds>*|Especifica o valor de tempo limite em que SqlMetal acessa o banco de dados. Valor padrão: 0 (ou seja, sem tempo limite).|  
+|**/servidor:** * \<nome>*|Especifica o nome do servidor do banco de dados.|  
+|**/banco de dados:** * \<nome>*|Especifica o catálogo do banco de dados no servidor.|  
+|**/usuário:** * \<nome>*|Especifica o id do usuário de logon. Valor padrão: Use a autenticação do Windows.|  
+|**/senha:** * \<senha>*|Especifica a senha de logon. Valor padrão: Usar autenticação do Windows.|  
+|**/conn:** * \<>de seqüência de conexão*|Especifica a cadeia de conexão do banco de dados. Não pode ser usada com as opções **/server**, **/database**, **/user** ou **/password**.<br /><br /> Não inclua o nome do arquivo na cadeia de conexão. Em vez disso, adicione o nome do arquivo à linha de comando como o arquivo de entrada. Por exemplo, a seguinte linha especifica “c:\northwnd.mdf” como o arquivo de entrada: **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**.|  
+|**/timeout:** * \<segundos>*|Especifica o valor de tempo limite em que SqlMetal acessa o banco de dados. Valor padrão: 0 (ou seja, sem tempo limite).|  
   
  **Opções de extração**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/views**|Extrai exibições do banco de dados.|  
-|**/functions**|Extrai funções do banco de dados.|  
+|**/visualizações**|Extrai exibições do banco de dados.|  
+|**/funções**|Extrai funções do banco de dados.|  
 |**/sprocs**|Extrai procedimentos armazenados.|  
   
  **Opções de saída**  
@@ -72,18 +72,18 @@ sqlmetal [options] [<input file>]
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**/language:** *\<language>*|Especifica a linguagem do código-fonte.<br /><br /> Valid *\<language>* : vb, csharp.<br /><br /> Valor padrão: derivado da extensão de nome de arquivo de código.|  
-|**/namespace:** *\<name>*|Especifica o namespace do código gerado. Valor padrão: sem namespace.|  
-|**/context:** *\<type>*|Especifica o nome da classe de contexto dos dados. Valor padrão: derivado do nome do banco de dados.|  
-|**/entitybase:** *\<type>*|Especifica a classe base das classes de entidade no código gerado. Valor padrão: as entidades não têm classe base.|  
-|**/pluralize**|Pluraliza ou singulariza automaticamente nomes de classe e de membro.<br /><br /> Essa opção só está disponível na versão em inglês  dos EUA.|  
-|**/serialization:** *\<option>*|Gera classes serializáveis.<br /><br /> *\<opção>* válida: nenhum, unidirecional. Valor padrão: nenhuma.<br /><br /> Para obter mais informações, consulte [Serialização](../data/adonet/sql/linq/serialization.md).|  
+|**/idioma:** * \<linguagem>*|Especifica a linguagem do código-fonte.<br /><br /> * \<Linguagem válida>: *vb, csharp.<br /><br /> Valor padrão: Derivado da extensão no nome de arquivo do código.|  
+|**/namespace:** * \<nome>*|Especifica o namespace do código gerado. Valor padrão: sem namespace.|  
+|**/contexto:** * \<tipo>*|Especifica o nome da classe de contexto dos dados. Valor padrão: Derivado do nome do banco de dados.|  
+|**/base da entidade:** * \<tipo>*|Especifica a classe base das classes de entidade no código gerado. Valor padrão: Entidades não têm classe base.|  
+|**/pluralize**|Pluraliza ou singulariza automaticamente nomes de classe e de membro.<br /><br /> Essa opção só está disponível na versão em inglês dos EUA.|  
+|**/serialização:** * \<opção>*|Gera classes serializáveis.<br /><br /> * \<Opção válida>*: Nenhum, Unidirecional. Valor padrão: Nenhum.<br /><br /> Para obter mais informações, consulte [Serialização](../data/adonet/sql/linq/serialization.md).|  
   
- **Arquivo de Entrada**  
+ **Arquivo de entrada**  
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**\<input file>**|Especifica um arquivo .mdf do SQL Server Express, um arquivo .sdf do SQL Server Compact 3.5 ou um arquivo intermediário .dbml.|  
+|**\<>de arquivos de entrada**|Especifica um arquivo .mdf do SQL Server Express, um arquivo .sdf do SQL Server Compact 3.5 ou um arquivo intermediário .dbml.|  
   
 ## <a name="remarks"></a>Comentários  
  A funcionalidade SqlMetal envolve, na realidade, duas etapas:  
@@ -132,8 +132,8 @@ sqlmetal [options] [<input file>]
 > [!NOTE]
 > Ao usar a opção **/pluralize** com o banco de dados de exemplo Northwind, observe o comportamento a seguir. Quando SqlMetal cria nomes de tipo de linha para tabelas, os nomes de tabela são singulares. Quando ele cria propriedades <xref:System.Data.Linq.DataContext> para tabelas, os nomes de tabela serão plurais. Coincidentemente, as tabelas no banco de dados de exemplo Northwind já são plurais. Por isso, você não vê essa parte funcionando. Embora seja uma prática comum nomear tabelas de banco de dados singulares, também é uma prática comum no .NET nomear as coleções plurais.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como: gerar o modelo de objeto em Visual Basic ou em C#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Como gerar o modelo de objeto em Visual Basic ou C#](../data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Geração de código em LINQ to SQL](../data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Mapeamento Externo](../data/adonet/sql/linq/external-mapping.md)
+- [Mapeamento externo](../data/adonet/sql/linq/external-mapping.md)

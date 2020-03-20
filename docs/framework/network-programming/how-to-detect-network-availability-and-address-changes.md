@@ -1,17 +1,17 @@
 ---
-title: 'Como: Detectar a disponibilidade de rede e alterações de endereço'
+title: Como detectar a disponibilidade de rede e alterações de endereço
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70894966"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a>Como: Detectar a disponibilidade de rede e alterações de endereço
+# <a name="how-to-detect-network-availability-and-address-changes"></a>Como detectar a disponibilidade de rede e alterações de endereço
 Este exemplo mostra como detectar alterações no endereço de rede de uma interface.  
   
 ## <a name="example"></a>Exemplo  

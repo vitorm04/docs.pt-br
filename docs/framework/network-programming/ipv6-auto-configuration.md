@@ -3,10 +3,10 @@ title: Configuração automática de endereço IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047815"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuração automática de endereço IPv6
@@ -22,9 +22,9 @@ Uma meta importante para IPv6 é dar suporte a Plug and Play de nó. Ou seja, de
  Independentemente de como o endereço é determinado, o nó deve verificar se seu endereço potencial é exclusivo para o link local. Isso é feito enviando uma mensagem de solicitação de vizinho para o endereço potencial. Se o nó receber alguma resposta, ele saberá que o endereço já está em uso e deverá determinar outro endereço.  
   
 ## <a name="ipv6-mobility"></a>Mobilidade IPv6  
- A proliferação de dispositivos móveis introduziu um novo requisito: Um dispositivo precisa conseguir alterar locais na Internet IPv6 arbitrariamente e ainda manter as conexões existentes. Para fornecer essa funcionalidade, um endereço residencial é atribuído a um nó móvel, endereço no qual ele sempre pode ser alcançado. Quando o nó móvel está no endereço residencial, ele se conecta ao link residencial e usa seu endereço residencial. Quando o nó móvel está longe do endereço residencial, um agente, que geralmente é um roteador, retransmite mensagens entre o nó móvel e os nós com os quais ele está se comunicando.  
+ A proliferação de dispositivos móveis introduziu um novo requisito: um dispositivo deve ser capaz de alterar os locais na Internet IPv6 arbitrariamente e ainda manter as conexões existentes. Para fornecer essa funcionalidade, um endereço residencial é atribuído a um nó móvel, endereço no qual ele sempre pode ser alcançado. Quando o nó móvel está no endereço residencial, ele se conecta ao link residencial e usa seu endereço residencial. Quando o nó móvel está longe do endereço residencial, um agente, que geralmente é um roteador, retransmite mensagens entre o nó móvel e os nós com os quais ele está se comunicando.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)

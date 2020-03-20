@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: ef2abc7574aea1b4f77ff93545ad84678c66ce48
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71046899"
 ---
 # <a name="using-secure-sockets-layer"></a>Usando o protocolo SSL
@@ -62,8 +62,8 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 - Referências ao namespace **System.Net**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Segurança na programação de rede](security-in-network-programming.md)
-- [Programação de rede no .NET Framework](index.md)
+- [Programação de rede no Framework .NET](index.md)
 - [Seleção e validação de certificado](certificate-selection-and-validation.md)

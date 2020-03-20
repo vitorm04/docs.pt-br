@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 97ceef3377a67fc621a097843abade9c61c29ca1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251162"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78848763"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Consultas compiladas (LINQ to Entities)
-Quando um aplicativo executa muitas vezes consultas estruturalmente similares no Entity Framework, geralmente é possível melhorar o desempenho compilando a consulta uma única vez e executando-a várias vezes com parâmetros diferentes. Por exemplo, um aplicativo pode precisar recuperar todos os clientes de uma cidade específica; a cidade é especificada em tempo de execução pelo usuário em um formulário. LINQ to Entities dá suporte ao uso de consultas compiladas para essa finalidade.  
+Quando um aplicativo executa muitas vezes consultas estruturalmente similares no Entity Framework, geralmente é possível melhorar o desempenho compilando a consulta uma única vez e executando-a várias vezes com parâmetros diferentes. Por exemplo, um aplicativo pode precisar recuperar todos os clientes de uma cidade específica; a cidade é especificada em runtime pelo usuário em um formulário. LINQ to Entities dá suporte ao uso de consultas compiladas para essa finalidade.  
   
  A partir do .NET Framework 4.5, as consultas LINQ são automaticamente armazenadas em cache. No entanto, você ainda pode usar consultas LINQ para reduzir esse custo em execuções posteriores e consultas compiladas podem ser mais eficientes que consultas LINQ que são automaticamente armazenadas em cache. Observe que as consultas LINQ to Entities que aplicam o operador `Enumerable.Contains` a coleções na memória não são armazenadas em cache automaticamente. Além disso, não é permitido parametrizar coleções na memória em consultas LINQ compiladas.  
   
- A classe <xref:System.Data.Objects.CompiledQuery> fornece a compilação e o cache de consultas para reutilização. Conceitualmente, essa classe contém um método <xref:System.Data.Objects.CompiledQuery> de `Compile` com várias sobrecargas. Chame o método `Compile` para criar um novo delegado para representar a consulta compilada. Os métodos `Compile`, com <xref:System.Data.Objects.ObjectContext> e valores de parâmetro, retornam um delegado que gera um resultado (como uma instância <xref:System.Linq.IQueryable%601>). A consulta é compilada somente uma vez durante a primeira execução. As opções de mesclagem definidas para a consulta no momento da compilação não podem ser alteradas posteriormente. Uma vez compilada a consulta, você só pode fornecer parâmetros de tipo primitivo, mas não pode substituir partes da consulta que alterariam o SQL gerado. Para obter mais informações, consulte [Opções de mesclagem Entity Framework e consultas compiladas](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ A classe <xref:System.Data.Objects.CompiledQuery> fornece a compilação e o cache de consultas para reutilização. Conceitualmente, essa classe contém um método <xref:System.Data.Objects.CompiledQuery> de `Compile` com várias sobrecargas. Chame o método `Compile` para criar um novo delegado para representar a consulta compilada. Os métodos `Compile`, com <xref:System.Data.Objects.ObjectContext> e valores de parâmetro, retornam um delegado que gera um resultado (como uma instância <xref:System.Linq.IQueryable%601>). A consulta é compilada somente uma vez durante a primeira execução. As opções de mesclagem definidas para a consulta no momento da compilação não podem ser alteradas posteriormente. Uma vez compilada a consulta, você só pode fornecer parâmetros de tipo primitivo, mas não pode substituir partes da consulta que alterariam o SQL gerado. Para obter mais informações, consulte [Opções de mesclagem e consultas compiladas da EF](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
- A LINQ to Entities expressão de consulta que <xref:System.Data.Objects.CompiledQuery>o `Compile` método do compila é representada por um dos delegados <xref:System.Func%605>genéricos `Func` , como. No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
+ A expressão de consulta LINQ <xref:System.Data.Objects.CompiledQuery>to `Compile` Entities de que o método `Func` compila é representado <xref:System.Func%605>por um dos delegados genéricos, tais como . No máximo, a expressão de consulta pode encapsular um parâmetro `ObjectContext`, um parâmetro de retorno e 16 parâmetros de consulta. Se mais de 16 parâmetros de consulta forem necessários, você poderá criar uma estrutura cujas propriedades representem parâmetros de consulta. Será possível usar, então, as propriedades da estrutura na expressão de consulta depois de definir as propriedades.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir compila e invoca uma consulta que aceita um parâmetro de entrada <xref:System.Decimal> e retorna uma sequência de pedidos em que o total devido é maior ou igual a US$ 200:  
@@ -40,7 +40,7 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir compila e, em seguida, invoca uma consulta que aceita <xref:System.String> um parâmetro de entrada e, `Contact` em seguida, retorna um cujo endereço de email começa com a cadeia de caracteres especificada:  
+ O exemplo a seguir compila e, em seguida, <xref:System.String> invoca uma consulta `Contact` que aceita um parâmetro de entrada e, em seguida, retorna um cujo endereço de e-mail começa com a seqüência especificada:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
@@ -68,8 +68,8 @@ Quando um aplicativo executa muitas vezes consultas estruturalmente similares no
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Entity Framework do ADO.NET](../index.md)
-- [LINQ to Entities](linq-to-entities.md)
-- [Opções de mesclagem Entity Framework e consultas compiladas](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Quadro de Entidades ADO.NET](../index.md)
+- [LINQ para Entidades](linq-to-entities.md)
+- [Opções de mesclagem e consultas compiladas da EF](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

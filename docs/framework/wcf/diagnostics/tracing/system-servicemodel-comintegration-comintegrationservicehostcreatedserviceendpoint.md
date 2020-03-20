@@ -2,25 +2,25 @@
 title: System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
 ms.date: 03/30/2017
 ms.assetid: d75d39da-7502-4a6a-91b9-eaa05b8e24d5
-ms.openlocfilehash: d56bbf145c85902d8e5f1fd21f760633121da6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f89dd1373d67714046f8cb958582c3a5dea04456
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939211"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674784"
 ---
 # <a name="systemservicemodelchannelsmsmqmoveordeleteattemptfailed"></a>System.ServiceModel.Channels.MsmqMoveOrDeleteAttemptFailed
-Não é possível mover ou excluir a mensagem.  
+Não é possível mover ou excluir mensagem.  
   
 ## <a name="description"></a>Descrição  
  O rastreamento indica que ocorreu uma falha ao tentar mover, excluir ou rejeitar uma mensagem MSMQ.  
   
- Mensagens MSMQ são utilizadas pelo Windows Communication Foundation (WCF) (quando usado com o NetMsmqBinding ou o MsmqIntegrationBinding). Este rastreamento está relacionado ao valor escolhido o `ReceiveErrorHandling` propriedade no NetMsmqBinding ou MsmqIntegrationBinding.  
+ As mensagens MSMQ são empregadas pela Windows Communication Foundation (WCF) (quando usadas com o NetMsmqBinding ou o MsmqIntegrationBinding). Este traço está relacionado com `ReceiveErrorHandling` o valor escolhido da propriedade no NetMsmqBinding ou MsmqIntegrationBinding.  
   
- Esse rastreamento não é uma indicação de uma falha geral no sistema. No entanto, ele indica que o escolhido suspeitas falhou para uma mensagem de disposição de mensagem. Ver [tratamento de mensagens suspeitas](https://go.microsoft.com/fwlink/?LinkID=99546) para obter mais detalhes sobre quando as mensagens se tornarão suspeitas e como configurar seu serviço para tratá-las adequadamente.  
+ Este traço não indica uma falha geral do sistema. No entanto, indica que a disposição da mensagem venenosa escolhida falhou para uma mensagem. Para obter mais informações sobre quando as mensagens se tornam venenosas e como configurar seu serviço para manuseá-las adequadamente, consulte [Poison-Message Handling](../../feature-details/poison-message-handling.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Rastreamento](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Usando o rastreamento para solucionar problemas do seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Administração e diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Utilizando o rastreamento para solucionar problemas em seu aplicativo](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [Administração e Diagnósticos](../../../../../docs/framework/wcf/diagnostics/index.md)

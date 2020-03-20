@@ -1,5 +1,5 @@
 ---
-title: Adicionar e remover nós com controle TreeView
+title: Adicionar e remover ádereis com controle treeview
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 02b3a7286798c6f2a6426e09c8fc6c18b74a6bf0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f1e74e6d2f827167c32a6955b3010b59cb2f85b8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731964"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142206"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Como adicionar e remover nós com o controle TreeView dos Windows Forms
-O controle de <xref:System.Windows.Forms.TreeView> de Windows Forms armazena os nós de nível superior em sua coleção de <xref:System.Windows.Forms.TreeView.Nodes%2A>. Cada <xref:System.Windows.Forms.TreeNode> também tem sua própria coleção de <xref:System.Windows.Forms.TreeNode.Nodes%2A> para armazenar seus nós filho. Ambas as propriedades de coleção são do tipo <xref:System.Windows.Forms.TreeNodeCollection>, que fornece membros de coleção padrão que permitem que você adicione, remova e reorganize os nós em um único nível da hierarquia de nós.  
+O controle <xref:System.Windows.Forms.TreeView> do Windows Forms armazena os <xref:System.Windows.Forms.TreeView.Nodes%2A> nós de alto nível em sua coleção. Cada <xref:System.Windows.Forms.TreeNode> um também <xref:System.Windows.Forms.TreeNode.Nodes%2A> tem sua própria coleção para armazenar seus nódulos infantis. Ambas as propriedades <xref:System.Windows.Forms.TreeNodeCollection>de coleta são do tipo , que fornece membros de coleta padrão que permitem adicionar, remover e reorganizar os nós em um único nível da hierarquia do nó.  
   
-### <a name="to-add-nodes-programmatically"></a>Para adicionar nós programaticamente  
+### <a name="to-add-nodes-programmatically"></a>Para adicionar nódulos programáticamente  
   
-1. Use o método <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> da propriedade <xref:System.Windows.Forms.TreeView.Nodes%2A> da exibição de árvore.  
+1. Use <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> o método da propriedade <xref:System.Windows.Forms.TreeView.Nodes%2A> da vista da árvore.  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -43,9 +43,9 @@ O controle de <xref:System.Windows.Forms.TreeView> de Windows Forms armazena os 
     treeView1->SelectedNode->Nodes->Add(newNode);  
     ```  
   
-### <a name="to-remove-nodes-programmatically"></a>Para remover nós programaticamente  
+### <a name="to-remove-nodes-programmatically"></a>Para remover os nódulos programáticamente  
   
-1. Use o método <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> da propriedade <xref:System.Windows.Forms.TreeView.Nodes%2A> da exibição de árvore para remover um único nó ou o método <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> para limpar todos os nós.  
+1. Use <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> o método da propriedade <xref:System.Windows.Forms.TreeView.Nodes%2A> da vista da árvore para <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> remover um único nó ou o método para limpar todos os nós.  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -55,7 +55,7 @@ O controle de <xref:System.Windows.Forms.TreeView> de Windows Forms armazena os 
     ```  
   
     ```csharp  
-    // Removes currently selected node, or root if nothing   
+    // Removes currently selected node, or root if nothing
     // is selected.  
     treeView1.Nodes.Remove(treeView1.SelectedNode);  
     // Clears all nodes.  
@@ -70,7 +70,7 @@ O controle de <xref:System.Windows.Forms.TreeView> de Windows Forms armazena os 
     treeView1->Nodes->Clear();  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Controle TreeView](treeview-control-windows-forms.md)
 - [Visão geral do controle TreeView](treeview-control-overview-windows-forms.md)

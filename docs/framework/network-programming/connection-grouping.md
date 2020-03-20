@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048640"
 ---
 # <a name="connection-grouping"></a>Agrupamento de conexão
@@ -20,7 +20,7 @@ O agrupamento de conexão associa solicitações específicas em um único aplic
   
  Para atribuir uma solicitação a um grupo de conexão específico, é necessário atribuir um nome à propriedade <xref:System.Net.WebRequest.ConnectionGroupName%2A> da <xref:System.Net.WebRequest> antes de fazer a solicitação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Gerenciando conexões](managing-connections.md)
-- [Como: Atribuir informações de usuário a conexões de grupo](how-to-assign-user-information-to-group-connections.md)
+- [Gerenciamento de conexões](managing-connections.md)
+- [Como atribuir informações de usuário a conexões de grupo](how-to-assign-user-information-to-group-connections.md)

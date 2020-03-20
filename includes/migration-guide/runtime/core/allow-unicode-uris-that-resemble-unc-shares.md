@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: fbc39b6e1cc19f6c2846caaabb9a8a721494b4e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67856985"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>Permitir Unicode em URIs semelhantes a compartilhamentos UNC
@@ -14,6 +14,5 @@ ms.locfileid: "67856985"
 |Sugestão|Os aplicativos que funcionam com URIs que contêm Unicode de forma consistente podem ter aceitado o uso desse comportamento para não permitir referências a compartilhamentos UNC. Esses aplicativos devem usar <xref:System.Uri.IsUnc>.|
 |Escopo|Microsoft Edge|
 |Versão|4.7.2|
-|Tipo|Tempo de execução|
+|Type|Runtime|
 |APIs afetadas|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

@@ -1,39 +1,39 @@
 ---
-title: 'Como: configurar o acompanhamento com WorkflowServiceHost'
+title: Como configurar rastreamento com WorkflowServiceHost
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 5781878270272f5ef894c68dc23b9433029e1d41
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185066"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como: configurar o acompanhamento com WorkflowServiceHost
-Este tópico explica como configurar o acompanhamento de um [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] fluxo de trabalho <xref:System.ServiceModel.Activities.WorkflowServiceHost>hospedado no. Ele é configurado por meio de um arquivo Web. config especificando um comportamento de serviço.  
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Como configurar rastreamento com WorkflowServiceHost
+Este tópico explica como configurar [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] o rastreamento de <xref:System.ServiceModel.Activities.WorkflowServiceHost>um fluxo de trabalho hospedado em . Ele é configurado através de um arquivo Web.config especificando um comportamento de serviço.  
   
-### <a name="configure-tracking-in-configuration"></a>Configurar o controle na configuração  
+### <a name="configure-tracking-in-configuration"></a>Configurar rastreamento na configuração  
   
-1. Adicione o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o elemento`behavior`< > em um arquivo de configuração, conforme mostrado no exemplo a seguir.  
+1. Adicione <xref:System.Activities.Tracking.EtwTrackingParticipant> o uso `behavior` do elemento <> em um arquivo de configuração, conforme mostrado no exemplo a seguir.  
   
     ```xml  
     <behaviors>  
        <serviceBehaviors>  
          <behavior>  
            <etwTracking profileName="Sample Tracking Profile" />  
-         </behavior>              
+         </behavior>
        </serviceBehaviors>  
     <behaviors>  
     ```  
   
     > [!NOTE]
-    > O exemplo de configuração anterior está usando uma configuração simplificada. Para obter mais informações, consulte [configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md).  
+    > A amostra de configuração anterior está usando configuração simplificada. Para obter mais informações, consulte [Configuração simplificada](../../../../docs/framework/wcf/simplified-configuration.md).  
   
-     O exemplo de configuração anterior adiciona <xref:System.Activities.Tracking.EtwTrackingParticipant> um e especifica um nome de perfil de controle. Os perfis de rastreamento são criados em`trackingProfile`um elemento < > dentro`tracking`de um elemento > <. O perfil de controle contém consultas de acompanhamento que permitem que um participante de controle assine eventos de fluxo de trabalho emitidos quando o estado de uma instância de fluxo de trabalho é alterado no tempo de execução. O exemplo a seguir mostra como criar um perfil de controle.  
+     A amostra de <xref:System.Activities.Tracking.EtwTrackingParticipant> configuração anterior adiciona a e especifica um nome de perfil de rastreamento. Os perfis de rastreamento são `trackingProfile` criados em `tracking` um elemento> <dentro de um elemento> <. O perfil de rastreamento contém consultas de rastreamento que permitem que um participante de rastreamento se inscreva em eventos de fluxo de trabalho que são emitidos quando o estado de uma instância de fluxo de trabalho é alterado em tempo de execução. O exemplo a seguir mostra como criar um perfil de rastreamento.  
   
     ```xml  
     <system.serviceModel>  
-        <tracking>   
+        <tracking>
          <trackingProfile name="Sample Tracking Profile">  
             <workflow activityDefinitionId="*">  
                <workflowInstanceQueries>  
@@ -45,30 +45,30 @@ Este tópico explica como configurar o acompanhamento de um [!INCLUDE[netfx_curr
                 </workflowInstanceQuery>  
              </workflowInstanceQueries>  
            </workflow>  
-         </trackingProfile>   
+         </trackingProfile>
        </tracking>  
     </system.serviceModel>  
     ```  
   
-     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Para obter mais informações sobre o rastreamento de perfis, consulte [Perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Para obter mais informações sobre o rastreamento em geral, consulte rastreamento [e acompanhamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Para obter mais informações sobre rastreamento em geral, consulte [Workflow Tracking and Ttracking](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
-### <a name="configure-tracking-in-code"></a>Configurar o acompanhamento no código  
+### <a name="configure-tracking-in-code"></a>Configurar rastreamento em código  
   
-1. Adicione o <xref:System.Activities.Tracking.EtwTrackingParticipant> usando o <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> comportamento no código, conforme mostrado no exemplo a seguir.  
+1. Adicione <xref:System.Activities.Tracking.EtwTrackingParticipant> o <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> uso do comportamento em código, como mostrado no exemplo a seguir.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     O exemplo de código anterior adiciona <xref:System.Activities.Tracking.EtwTrackingParticipant> um e especifica um nome de perfil de controle. Os perfis de rastreamento são criados em`trackingProfile`um elemento < > dentro`tracking`de um elemento < >, conforme mostrado na seção anterior.  
+     A amostra de <xref:System.Activities.Tracking.EtwTrackingParticipant> código anterior adiciona a e especifica um nome de perfil de rastreamento. Os perfis de rastreamento são `trackingProfile` criados em `tracking` um elemento <> dentro de um elemento <> como mostrado na seção anterior.  
   
-     Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     Para obter mais informações sobre o rastreamento de perfis, consulte [Perfis de rastreamento](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Para obter mais informações sobre o rastreamento em geral, consulte rastreamento [e acompanhamento de fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Para obter um exemplo de como configurar o acompanhamento programaticamente, consulte Configurando [o acompanhamento de um fluxo](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
+     Para obter mais informações sobre rastreamento em geral, consulte [Workflow Tracking and Ttracking](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Para um exemplo de configuração de rastreamento programática, consulte [Configuração de rastreamento para um fluxo de trabalho](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Configuração simplificada para serviços WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Serviços de fluxo de trabalho](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Girar um objeto usando um caminho geométrico (animação de matriz)'
+title: Como girar um objeto usando um caminho geométrico (animação de matriz)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63dc873a2b840ea3f870a8c60c5691ab271c1c9f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923390"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187407"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Como: Girar um objeto usando um caminho geométrico (animação de matriz)
-Este exemplo mostra como usar um <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> e uma <xref:System.Windows.Media.MatrixTransform> para girar um objeto ao longo de um caminho geométrico definido por um <xref:System.Windows.Media.PathGeometry> objeto.  
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Como girar um objeto usando um caminho geométrico (animação de matriz)
+Este exemplo mostra como <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> usar <xref:System.Windows.Media.MatrixTransform> a e a para girar (pivô) <xref:System.Windows.Media.PathGeometry> um objeto ao longo de um caminho geométrico definido por um objeto.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> objeto para animar a <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriedade de um <xref:System.Windows.Media.MatrixTransform>. O <xref:System.Windows.Media.MatrixTransform> é aplicado a um botão e faz com que ele se mova ao longo de um caminho curvo. Porque o <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> estiver definida como `true`, o retângulo gira junto da tangente do caminho.  
+ O exemplo a <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> seguir usa <xref:System.Windows.Media.MatrixTransform.Matrix%2A> o objeto <xref:System.Windows.Media.MatrixTransform>para animar a propriedade de um . O <xref:System.Windows.Media.MatrixTransform> é aplicado a um botão e faz com que ele se mova ao longo de um caminho curvo. Como <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> a propriedade `true`está definida para , o retângulo gira ao longo da tangente do caminho.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathdoesrotatewithtangentexample.xaml#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- Para o exemplo completo, consulte [exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028).  
+ Para obter a amostra completa, consulte [Path Animation Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations).  
   
- A versão de código do exemplo anterior usada um <xref:System.Windows.Media.Animation.Storyboard> animar o <xref:System.Windows.Media.EllipseGeometry>, mesmo que apenas uma animação foi aplicada. Uma maneira fácil de aplicar uma única animação a uma propriedade no código é usar o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
+ A versão de código da <xref:System.Windows.Media.Animation.Storyboard> amostra anterior <xref:System.Windows.Media.EllipseGeometry>usou um para animar o , embora apenas uma animação foi aplicada. Uma maneira mais fácil de aplicar uma única animação <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> a uma propriedade em código é usar o método. Por exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral da animação](animation-overview.md)
 - [Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)
-- [Exemplo de animação de caminho](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Exemplo de animação de caminho](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/PathAnimations)

@@ -3,10 +3,10 @@ title: Habilitando e desabilitando o IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 66c802dd5feb865faf7469cb7da04fbffcb4a2d6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048571"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitando e desabilitando o IPv6
@@ -24,7 +24,7 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
   
  Lembre-se de que, para habilitar o suporte ao IPv6 em todas as classes no namespace System.Net, é necessário modificar o arquivo de configuração do computador ou o arquivo de configuração do aplicativo. O arquivo de configuração de um aplicativo tem precedência sobre o arquivo de configuração do computador.  
   
- Para obter um exemplo de como modificar o arquivo de configuração do computador, *machine.config*, para habilitar o suporte ao IPv6, confira [Como: Modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Além disso, verifique se o suporte ao IPv6 está habilitado no sistema operacional.  
+ Para obter um exemplo de como modificar o arquivo de configuração do computador, *machine.config*, para habilitar o suporte ao IPv6, consulte [Como modificar o arquivo de configuração do computador para habilitar o suporte ao IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md). Além disso, verifique se o suporte ao IPv6 está habilitado no sistema operacional.  
   
  O .NET Framework tem uma opção de configuração definida em um arquivo de configuração da seguinte maneira  
   
@@ -44,9 +44,9 @@ Para usar o protocolo IPv6, verifique se você está executando uma versão do s
   
  Para o .NET Framework versão 2.0 e posterior, se o Windows der suporte ao IPv6, os membros da classe <xref:System.Net.Dns?displayProperty=nameWithType>, (por exemplo, o método <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType>), retornarão endereços IPv6 com uma limitação. Os membros obsoletos do DNS <xref:System.Net.Dns?displayProperty=nameWithType> (por exemplo, o método <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType>) lerão e reconhecerão o valor no arquivo de configuração para a configuração ipv6 enabled.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Protocolo da Internet Versão 6](internet-protocol-version-6.md)
 - [Soquetes](sockets.md)
 - [Esquema de configurações de rede](../configure-apps/file-schema/network/index.md)
-- [\<Elemento ipv6> (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)
+- [\<ipv6 elemento> (configurações de rede)](../configure-apps/file-schema/network/ipv6-element-network-settings.md)

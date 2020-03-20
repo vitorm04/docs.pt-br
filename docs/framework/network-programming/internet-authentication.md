@@ -16,10 +16,10 @@ helpviewer_keywords:
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047916"
 ---
 # <a name="internet-authentication"></a>Autenticação da Internet
@@ -39,8 +39,8 @@ As classes <xref:System.Net> dão suporte a uma variedade de mecanismos de auten
   
  Alguns esquemas de autenticação podem autenticar um usuário sem primeiro fazer uma solicitação para um recurso. Um aplicativo pode economizar tempo pré-autenticando o usuário com o recurso, eliminando assim pelo menos uma viagem de ida e volta ao servidor. Ou então, pode executar a autenticação durante a inicialização de programa a fim de ser mais responsivo para o usuário mais tarde. Esquemas de autenticação que podem usar pré-autenticação definem a propriedade <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> como **true**.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Autenticação Básica e Digest](basic-and-digest-authentication.md)
-- [Autenticação Kerberos e NTLM](ntlm-and-kerberos-authentication.md)
+- [Autenticação Básica e Digesta](basic-and-digest-authentication.md)
+- [Autenticação NTLM e Kerberos](ntlm-and-kerberos-authentication.md)
 - [Segurança na programação de rede](security-in-network-programming.md)

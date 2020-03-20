@@ -9,25 +9,25 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117590"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154199"
 ---
-# <a name="dependentassembly-element"></a>Elemento \<dependentAssembly >
-Encapsula local do assembly e política de associação para cada assembly. Use um elemento `dependentAssembly` para cada assembly.  
+# <a name="dependentassembly-element"></a>\<dependenteElemento> montagem
+Encapsula local do assembly e política de associação para cada assembly. Use `dependentAssembly` um elemento para cada montagem.  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<montagem>vinculante**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<dependente>de montagem**  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<dependentAssembly>   
+<dependentAssembly>
 </dependentAssembly>  
 ```  
   
@@ -35,16 +35,16 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Contém informações de identificação sobre o assembly. Esse elemento deve ser incluído em cada elemento `dependentAssembly`.|  
-|`codeBase`|Especifica onde o tempo de execução pode encontrar um assembly compartilhado se ele não estiver instalado no computador.|  
+|`assemblyIdentity`|Contém informações de identificação sobre a montagem. Este elemento deve ser `dependentAssembly` incluído em cada elemento.|  
+|`codeBase`|Especifica onde o tempo de execução pode encontrar um conjunto compartilhado se ele não estiver instalado no computador.|  
 |`bindingRedirect`|Redireciona uma versão do assembly para outra.|  
-|`publisherPolicy`|Especifica se o tempo de execução aplica a política de Publicador para este assembly.|  
+|`publisherPolicy`|Especifica se o tempo de execução aplica a política do editor para esta montagem.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -55,7 +55,7 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 |`runtime`|Contém informações sobre associação do assembly e coleta de lixo.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como encapsular informações de assembly para dois assemblies.  
+ O exemplo a seguir mostra como encapsular as informações de montagem para duas assembléias.  
   
 ```xml  
 <configuration>  
@@ -78,8 +78,8 @@ Encapsula local do assembly e política de associação para cada assembly. Use 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do tempo de execução](index.md)
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de configurações do runtime](index.md)
+- [Esquema de arquivo de configuração](../index.md)
 - [Redirecionando versões de assembly](../../redirect-assembly-versions.md)

@@ -3,10 +3,10 @@ title: Resolução e publicação de nome de par
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623196"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Resolução e publicação de nome de par
@@ -47,6 +47,6 @@ O par solicitante continua esse processo com iterações sucessivas, eventualmen
   
  Dentro do namespace <xref:System.Net.PeerToPeer>, há uma relação muitos para muitos entre os registros de <xref:System.Net.PeerToPeer.PeerName> que contêm pontos de extremidade e nuvens PNRP ou malhas nas quais eles se comunicam. Quando há entradas duplicadas ou obsoletas ou vários nós com o mesmo nome de par, nós PNRP podem obter informações atuais usando a classe <xref:System.Net.PeerToPeer.PeerNameResolver>. Os métodos <xref:System.Net.PeerToPeer.PeerNameResolver> usam um único nome de par para simplificar a perspectiva para registros de nome de um par para muitos pares e do mesmo par para muitas nuvens. Isso é semelhante a uma consulta executada usando uma junção de tabela relacional. Após a conclusão bem-sucedida, o objeto resolvedor retorna um <xref:System.Net.PeerToPeer.PeerNameRecordCollection> para o nome de par especificado.  Por exemplo, um nome de par ocorreria em todos os registros de nome de par na coleção, ordenados pela nuvem. Estas são as instâncias do nome do par cujos dados de suporte podem ser solicitados por um aplicativo baseado em PNRP.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.PeerToPeer>

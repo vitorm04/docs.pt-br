@@ -1,20 +1,20 @@
 ---
-title: 'Como: implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço'
+title: Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963870"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185377"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Como: implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
-Este tópico é o terceiro de três tópicos que discute como implementar um proxy de descoberta. No tópico anterior, [como: Implementar um serviço detectável que registra com o proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)de descoberta, você implementou um serviço WCF que se registra com o proxy de descoberta. Neste tópico, você cria um cliente WCF que usa o proxy de descoberta para localizar o serviço WCF.  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Como implementar um aplicativo cliente que utiliza o proxy de descoberta para encontrar um serviço
+Este tópico é o terceiro dos três tópicos que discute como implementar um proxy de descoberta. No tópico anterior, [Como implementar um serviço descobrivel que se registra com o Proxy de Descoberta,](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)você implementou um serviço WCF que se registra com o proxy de descoberta. Neste tópico, você cria um cliente WCF que usa o proxy de detecção para encontrar o serviço WCF.  
   
 ### <a name="implement-the-client"></a>Implementar o cliente  
   
-1. Adicione um novo projeto de aplicativo de console `DiscoveryProxyExample` à solução `Client`chamada.  
+1. Adicione um novo projeto `DiscoveryProxyExample` de `Client`aplicativo de console à solução chamada .  
   
 2. Adicione referências aos assemblies a seguir:  
   
@@ -25,9 +25,9 @@ Este tópico é o terceiro de três tópicos que discute como implementar um pro
 3. Adicione o GeneratedClient.cs encontrado na parte inferior deste tópico ao projeto.  
   
     > [!NOTE]
-    > Normalmente, esse arquivo é gerado usando uma ferramenta como SvcUtil. exe. Ele é fornecido neste tópico para simplificar a tarefa.  
+    > Este arquivo geralmente é gerado usando uma ferramenta como Svcutil.exe. É fornecido neste tópico para simplificar a tarefa.  
   
-4. Abra o arquivo Program.cs e adicione o método a seguir. Esse método usa um endereço de ponto de extremidade e o usa para inicializar o cliente de serviço (proxy).  
+4. Abra o arquivo Program.cs e adicione o seguinte método. Este método pega um endereço de ponto final e o usa para inicializar o cliente de serviço (proxy).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Este tópico é o terceiro de três tópicos que discute como implementar um pro
     }  
     ```  
   
-5. Adicione o seguinte código ao método de `Main` .  
+5. Adicione o seguinte código ao `Main` método.  
   
     ```csharp  
     public static void Main()  
@@ -79,7 +79,7 @@ Este tópico é o terceiro de três tópicos que discute como implementar um pro
 
         try  
         {  
-            // Search for services that implement ICalculatorService              
+            // Search for services that implement ICalculatorService
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
 
             Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -101,10 +101,10 @@ Este tópico é o terceiro de três tópicos que discute como implementar um pro
     }  
     ```  
   
- Você concluiu a implementação do aplicativo cliente. Continue em [como: Teste o proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)de descoberta.  
+ Você completou a implementação do aplicativo do cliente. Continue em [Como: Testar o Proxy de Detecção](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Exemplo  
- Esta é a listagem de código completa para este tópico.  
+ Esta é a lista completa de códigos para este tópico.  
   
 ```csharp  
 // GeneratedClient.cs  
@@ -226,7 +226,7 @@ namespace Microsoft.Samples.Discovery
   
             try  
             {  
-                // Find ICalculatorService endpoints              
+                // Find ICalculatorService endpoints
                 FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculatorService)));  
   
                 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count);  
@@ -281,8 +281,8 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral de descoberta do WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Como: Implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Como: Implementar um serviço detectável que se registra no proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Como implementar um proxy de descoberta](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Como implementar um serviço de descoberta que registra usando o proxy de descoberta](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
