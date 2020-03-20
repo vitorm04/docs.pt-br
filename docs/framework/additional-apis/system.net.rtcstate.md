@@ -1,5 +1,5 @@
 ---
-title: Classe RtcState (System.Net)
+title: RtcState Class (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -11,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 1a88adeefe0095bf514d36cadc9b44efd8ab61ee
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155772"
 ---
-# <a name="rtcstate-class"></a><span data-ttu-id="3c92d-102">Classe RtcState</span><span class="sxs-lookup"><span data-stu-id="3c92d-102">RtcState Class</span></span>
+# <a name="rtcstate-class"></a><span data-ttu-id="e11b1-102">RtcState Class</span><span class="sxs-lookup"><span data-stu-id="e11b1-102">RtcState Class</span></span>
 
-<span data-ttu-id="3c92d-103">A classe `RtcState` representa dados de estado para uma solicitação de comunicação em tempo real (RTC).</span><span class="sxs-lookup"><span data-stu-id="3c92d-103">The `RtcState` class represents state data for a real-time communication (RTC) request.</span></span>
+<span data-ttu-id="e11b1-103">A `RtcState` classe representa dados estatais para uma solicitação de comunicação em tempo real (RTC).</span><span class="sxs-lookup"><span data-stu-id="e11b1-103">The `RtcState` class represents state data for a real-time communication (RTC) request.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3c92d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3c92d-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e11b1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e11b1-104">Syntax</span></span>
   
 ```csharp  
 internal class RtcState
 ```
 
 > [!WARNING]
-> <span data-ttu-id="3c92d-105">A classe `RtcState` é interna e não deve ser usada diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="3c92d-105">The `RtcState` class is internal and is not meant to be used directly in your code.</span></span>
-> 
-> <span data-ttu-id="3c92d-106">A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="3c92d-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="e11b1-105">A `RtcState` classe é interna e não deve ser usada diretamente em seu código.</span><span class="sxs-lookup"><span data-stu-id="e11b1-105">The `RtcState` class is internal and is not meant to be used directly in your code.</span></span>
+>
+> <span data-ttu-id="e11b1-106">A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="e11b1-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3c92d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3c92d-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e11b1-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e11b1-107">Requirements</span></span>
 
-<span data-ttu-id="3c92d-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="3c92d-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="e11b1-108">**Espaço de nome:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="e11b1-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="3c92d-109">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="3c92d-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="e11b1-109">**Montagem:** Sistema (em System.dll)</span><span class="sxs-lookup"><span data-stu-id="e11b1-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="3c92d-110">**.NET Framework versões:** Disponível desde 4,5.</span><span class="sxs-lookup"><span data-stu-id="3c92d-110">**.NET Framework versions:** Available since 4.5.</span></span>
+<span data-ttu-id="e11b1-110">**Versões do Framework .NET:** Disponível desde 4.5.</span><span class="sxs-lookup"><span data-stu-id="e11b1-110">**.NET Framework versions:** Available since 4.5.</span></span>
