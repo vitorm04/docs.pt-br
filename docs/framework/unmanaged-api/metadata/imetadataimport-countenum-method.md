@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c78ce8192d6456dd1b1be990d87b9209b028e09
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440362"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177355"
 ---
 # <a name="imetadataimportcountenum-method"></a>Método IMetaDataImport::CountEnum
 Obtém o número de elementos na enumeração que foi recuperado pelo enumerador especificado.  
@@ -29,31 +29,31 @@ Obtém o número de elementos na enumeração que foi recuperado pelo enumerador
   
 ```cpp  
 HRESULT CountEnum (  
-   [in]  HCORENUM    hEnum,   
+   [in]  HCORENUM    hEnum,
    [out] ULONG       *pulCount  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `hEnum`  
- no O identificador do enumerador.  
+ [em] A alça do enumerador.  
   
  `pulCount`  
- fora O número de elementos enumerados.  
+ [fora] O número de elementos enumerados.  
   
 ## <a name="remarks"></a>Comentários  
- O identificador especificado pelo `hEnum` é obtido de uma chamada de *nome* de `Enum`anterior (por exemplo, [IMetaDataImport:: EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
+ O cabo `hEnum` especificado é obtido `Enum`a partir de uma chamada *nome* anterior (por exemplo, [IMetaDataImport::EnumTypeDefs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

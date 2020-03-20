@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: abc392116aec8ffd8aa94f46ef97887c48516ca0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122474"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79181626"
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -18,7 +18,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Fundamentos do aplicativo](../standard/application-essentials.md)  
  Fornece informações sobre tarefas básicas de desenvolvimento de aplicativo como programação com domínios e assemblies de aplicativo, uso de atributos, tipos base de formatação e análise, uso de coleções, manipulação de eventos e exceções, uso de fluxos de arquivos e dados e uso de genéricos.  
   
- [Dados e modelagem](./data/index.md)  
+ [Dados e Modelagem](./data/index.md)  
  Fornece informações sobre como acessar dados usando ADO.NET, Language Integrated Query (LINQ), WCF Data Services e XML.  
   
  [Aplicativos cliente](develop-client-apps.md)  
@@ -30,25 +30,23 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Aplicativos orientados a serviços com WCF](./wcf/index.md)  
  Descreve como usar o Windows Communication Foundation (WCF) para compilar aplicativos orientados a serviços, seguros e confiáveis.  
   
- [Criando fluxos de trabalho com o Windows Workflow Foundation](windows-workflow-foundation/index.md)     
- Fornece informações sobre o modelo de programação, os exemplos e as ferramentas para usar o Windows Workflow Foundation (WF).  
+ [Construindo fluxos de trabalho com a Windows Workflow Foundation](windows-workflow-foundation/index.md) Fornece informações sobre o modelo de programação, amostras e ferramentas para usar o Windows Workflow Foundation (WF).  
 
- [Aplicativos do Serviço Windows](./windows-services/index.md)  
+ [Aplicativos de serviço do Windows](./windows-services/index.md)  
  Explica como é possível usar o Visual Studio e o .NET Framework para criar um aplicativo que é instalado como um serviço e, iniciar, parar e de outro modo controlar seu comportamento.  
   
  [Processamento paralelo, simultaneidade e programação assíncrona no .NET](../standard/parallel-processing-and-concurrency.md)  
  Fornece informações sobre padrões de design de threading gerenciado, programação paralela e programação assíncrona.  
   
- [Programação de rede no .NET Framework](./network-programming/index.md)  
+ [Programação de rede no Framework .NET](./network-programming/index.md)  
  Descreve a implementação gerenciada, extensível e em camadas de serviços da Internet que podem ser integrados a aplicativos de maneira fácil e rápida.  
   
- [Configurando aplicativos .NET Framework](configure-apps/index.md)    
- Explica como usar arquivos de configuração para alterar configurações sem ter que recompilar os aplicativos .NET Framework.  
+ [Configuração de aplicativos de framework .NET](configure-apps/index.md) Explica como você pode usar arquivos de configuração para alterar configurações sem ter que recompilar seus aplicativos .NET Framework.  
   
  [Compilação de aplicativos com o .NET Native](./net-native/index.md)  
  Explica como usar a tecnologia de pré-compilação do .NET Native para compilar e implantar aplicativos da Windows Store. O .NET Native compila aplicativos que são escritos em código gerenciado (C#) e que destinam o .NET Framework para código nativo.  
   
- [Security](../standard/security/index.md)  
+ [Segurança](../standard/security/index.md)  
  Fornece informações sobre as classes e serviços no .NET Framework que facilitam o desenvolvimento de aplicativos seguros.  
   
  [Depuração, rastreamento e criação de perfil](./debug-trace-profile/index.md)  
@@ -62,7 +60,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
   
  [Desempenho](./performance/index.md)  
  Fornece informações sobre armazenamento em cache, inicialização ociosa, confiabilidade e eventos ETW.  
- 
+
 ## <a name="reference"></a>Referência  
  [Biblioteca de classes .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces do .NET Framework.  

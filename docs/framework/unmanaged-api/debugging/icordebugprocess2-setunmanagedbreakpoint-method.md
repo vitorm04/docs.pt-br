@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137175"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178642"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>Método ICorDebugProcess2::SetUnmanagedBreakpoint
-Define um ponto de interrupção não gerenciado no deslocamento da imagem nativa especificada.  
+Define um ponto de ruptura não gerenciado no deslocamento de imagem nativo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,27 +31,27 @@ Define um ponto de interrupção não gerenciado no deslocamento da imagem nativ
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `address`  
- no Um objeto `CORDB_ADDRESS` que especifica o deslocamento da imagem nativa.  
+ [em] Um `CORDB_ADDRESS` objeto que especifica o deslocamento de imagem nativa.  
   
  `bufsize`  
- no O tamanho, em bytes, da matriz de `buffer`.  
+ [em] O tamanho, em bytes, da `buffer` matriz.  
   
  `buffer`  
- fora Uma matriz que contém o opcode que é substituído pelo ponto de interrupção.  
+ [fora] Uma matriz que contém o opcode que é substituído pelo ponto de ruptura.  
   
  `bufLen`  
- fora Um ponteiro para o número de bytes retornados na matriz de `buffer`.  
+ [fora] Um ponteiro para o número de bytes retornado na `buffer` matriz.  
   
 ## <a name="remarks"></a>Comentários  
- Se o deslocamento da imagem nativa estiver dentro do Common Language Runtime (CLR), o ponto de interrupção será ignorado. Isso permite que o CLR Evite distribuir um ponto de interrupção fora de banda, quando o ponto de interrupção é definido pelo depurador.  
+ Se o deslocamento de imagem nativo estiver dentro do tempo de execução do idioma comum (CLR), o ponto de ruptura será ignorado. Isso permite que o CLR evite despachar um ponto de ruptura fora de banda, quando o ponto de ruptura é definido pelo depurador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -60,4 +60,4 @@ HRESULT SetUnmanagedBreakpoint (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

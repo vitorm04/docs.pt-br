@@ -2,21 +2,21 @@
 title: <Event> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128498"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181032"
 ---
-# <a name="event-element-net-native"></a>Elemento de > de evento \<(.NET Native)
+# <a name="event-element-net-native"></a>\<Elemento> de eventos (nativo de.NET)
 Aplica a política de reflexão de runtime a um evento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<Event Name="event_name"   
-       Browse="policy_type"   
+<Event Name="event_name"
+       Browse="policy_type"
        Dynamic="policy_type" />  
 ```  
   
@@ -35,29 +35,29 @@ Aplica a política de reflexão de runtime a um evento.
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*method_name*|O nome do evento. O tipo do evento é definido pelo elemento pai [\<Type>](type-element-net-native.md) ou [\<TypeInstantiation>](typeinstantiation-element-net-native.md).|  
+|*method_name*|O nome do evento. O tipo do evento é definido pelo elemento [ \<>tipo](type-element-net-native.md) pai ou [ \<tipo>instantiação.](typeinstantiation-element-net-native.md)|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política para o evento. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política para o evento. Os valores possíveis são `Auto`, `Excluded`, `Included` e `Required`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
+|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<>de Digitação](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
   
 ## <a name="remarks"></a>Comentários  
  Se uma política do evento não for definida explicitamente, ele herdará a política de runtime do seu elemento pai.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: Atribuir informações de usuário a conexões de grupo'
+title: Como atribuir informações de usuário a conexões de grupo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048422"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180838"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>Como: Atribuir informações de usuário a conexões de grupo
+# <a name="how-to-assign-user-information-to-group-connections"></a>Como atribuir informações de usuário a conexões de grupo
 
  O exemplo a seguir demonstra como atribuir informações de usuário a conexões de grupo, supondo que o aplicativo defina as variáveis *UserName*, *SecurelyStoredPassword* e *Domain* antes que essa seção do código seja chamada e que *UserName* seja exclusivo.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71048422"
 3. Defina as credenciais e o GroupName da Conexão para a solicitação da Web e chame **GetResponse** para recuperar um objeto **WebResponse**.  
   
     ```csharp  
-    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
     myWebRequest.ConnectionGroupName = secureGroupName;  
   
     WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -79,7 +79,7 @@ String secureGroupName = Encoding.Default.GetString(updHash);
 // Create a request for a specific URL.  
 WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
   
-myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
 myWebRequest.ConnectionGroupName = secureGroupName;  
   
 WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -107,7 +107,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Gerenciando conexões](managing-connections.md)
+- [Gerenciamento de conexões](managing-connections.md)
 - [Agrupamento de conexão](connection-grouping.md)

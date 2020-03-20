@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 464514a241cc35fc821049ba0c29bec108d88253
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774201"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180406"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
 O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
@@ -47,12 +47,12 @@ targetPE /complist:filename [-outdir:path]
 |**/outdir:** *path*|Especifica o diretório no qual o arquivo .licenses de saída deve ser colocado.|  
 |**/target:** *targetPE*|Especifica o executável para o qual o arquivo .licenses está sendo gerado.|  
 |**/v**|Especifica o modo detalhado; exibe informações de andamento da compilação.|  
-|**@** *file*|Especifica o arquivo de resposta (.rsp).|  
+|**@***arquivo*|Especifica o arquivo de resposta (.rsp).|  
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="example"></a>Exemplo  
   
-1. Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe` *,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
+1. Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe`*,* você poderá criar `HostAppLic.txt` que contém o seguinte.  
   
     ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
@@ -81,8 +81,8 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
 ```text  
 /target:hostapp.exe  
-/complist:hostapplic.txt   
-/i:WFCPrj.dll   
+/complist:hostapplic.txt
+/i:WFCPrj.dll
 /outdir:"C:\My Folder"  
 ```  
   
@@ -92,7 +92,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 lc @response.rsp  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Al.exe (Assembly Linker)](al-exe-assembly-linker.md)

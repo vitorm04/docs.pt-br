@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: e5940f229e86b46bb8c5d5b2f9920a8261359f65
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436413"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176104"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>Método ICeeGen::AddSectionReloc
-Adiciona uma instrução. realocação à base de código.  
+Adiciona uma instrução .reloc à base de código.  
   
- Este método é obsoleto e não deve ser usado.  
+ Este método é obsoleto e não deve ser utilizado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,33 +33,33 @@ Adiciona uma instrução. realocação à base de código.
 HRESULT AddSectionReloc (  
    [in] HCEESECTION            section,  
    [in] ULONG                  offset,  
-   [in] HCEESECTION            relativeTo,   
+   [in] HCEESECTION            relativeTo,
    [in] CeeSectionRelocType    relocType  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `section`  
- no A seção de código na memória à qual adicionar uma instrução. realocação.  
+ [em] A seção de código de memória para adicionar uma instrução .reloc.  
   
  `offset`  
- no O deslocamento da seção.  
+ [em] O deslocamento da seção.  
   
  `relativeTo`  
- no A seção à qual `offset` se refere.  
+ [em] A seção `offset` a que se refere.  
   
  `relocType`  
- no Um dos valores de [CeeSectionRelocType](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) , indicando o tipo de instrução. realocação a ser adicionado.  
+ [em] Um dos valores [de CeeSectionRelocType,](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md) indicando o tipo de instrução .reloc a ser adicionado.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

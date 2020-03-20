@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 542c7c65-dd56-4651-b76f-5db2465e4a15
 topic_type:
 - apiref
-ms.openlocfilehash: 55411f187e2ef73997633d94b37a7d5d2cfd74c9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 50d16b8036144d6ede349149fa4ae37344064d8b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868558"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177014"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a>Método ICorProfilerInfo3::GetFunctionEnter3Info
-Fornece o quadro de pilha e as informações de argumento da função que está sendo relatada para o criador de perfil pela função [FunctionEnter3WithInfo](functionenter3withinfo-function.md) . Esse método pode ser chamado somente durante o retorno de chamada `FunctionEnter3WithInfo`.  
+Fornece o quadro de pilha e as informações de argumento da função que está sendo relatada ao profiler pela função [FunctionEnter3WithInfo.](functionenter3withinfo-function.md) Este método só pode `FunctionEnter3WithInfo` ser chamado durante o retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetFunctionEnter3Info(  
-            [in]  FunctionID functionId,   
+            [in]  FunctionID functionId,
             [in]  COR_PRF_ELT_INFO eltInfo,  
             [out] COR_PRF_FRAME_INFO *pFrameInfo,  
             [in, out] ULONG *pcbArgumentInfo,  
@@ -37,39 +37,39 @@ HRESULT GetFunctionEnter3Info(
                   COR_PRF_FUNCTION_ARGUMENT_INFO *pArgumentInfo);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `functionId`  
- no O `FunctionID` da função que está sendo inserida.  
+ [em] A `FunctionID` função que está sendo inserida.  
   
  `eltInfo`  
- no Um identificador opaco que representa informações sobre um determinado registro de ativação. O criador de perfil deve fornecer o mesmo `eltInfo` que foi fornecido pela função [FunctionEnter3WithInfo](functionenter3withinfo-function.md) .  
+ [em] Uma alça opaca que representa informações sobre um determinado quadro de pilha. O profiler deve `eltInfo` fornecer o mesmo que foi dado pela função [FunctionEnter3WithInfo.](functionenter3withinfo-function.md)  
   
  `pFrameInfo`  
- fora Um identificador opaco que representa informações genéricas sobre um determinado registro de ativação. Esse identificador é válido somente durante o retorno de chamada `FunctionEnter3WithInfo` no qual o criador de perfil chamou o método `GetFunctionEnter3Info`.  
+ [fora] Uma alça opaca que representa informações genéricas sobre um determinado quadro de pilha. Esta alça é válida `FunctionEnter3WithInfo` somente durante o retorno `GetFunctionEnter3Info` de chamada no qual o profiler chamou o método.  
   
  `pcbArgumentInfo`  
- [entrada, saída] Um ponteiro para o tamanho total, em bytes, da estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) (mais quaisquer estruturas de [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) adicionais para os intervalos de argumentos apontados por `pArgumentInfo`). Se o tamanho especificado não for suficiente, ERROR_INSUFFICIENT_BUFFER será retornado e o tamanho esperado será armazenado em `pcbArgumentInfo`. Para chamar `GetFunctionEnter3Info` apenas para recuperar o valor esperado para `*pcbArgumentInfo`, defina `*pcbArgumentInfo`= 0 e `pArgumentInfo`= NULL.  
+ [dentro, fora] Um ponteiro para o tamanho total, em bytes, da estrutura [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) (mais quaisquer estruturas [adicionais de COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md) para as faixas de argumento apontadas por `pArgumentInfo`). Se o tamanho especificado não for suficiente, ERROR_INSUFFICIENT_BUFFER é `pcbArgumentInfo`devolvido e o tamanho esperado é armazenado em . Para `GetFunctionEnter3Info` ligar apenas para recuperar `*pcbArgumentInfo`o `*pcbArgumentInfo`valor `pArgumentInfo`esperado para , definir =0 e =NULL.  
   
  `pArgumentInfo`  
- fora Um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que descreve os locais dos argumentos da função na memória, na ordem da esquerda para a direita.  
+ [fora] Um ponteiro para uma estrutura [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md) que descreve os locais dos argumentos da função na memória, na ordem da esquerda para a direita.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil deve alocar espaço suficiente para a estrutura de `COR_PRF_FUNCTION_ARGUMENT_INFO` da função que está sendo inspecionada e deve indicar o tamanho no parâmetro `pcbArgumentInfo`.  
+ O profiler deve alocar `COR_PRF_FUNCTION_ARGUMENT_INFO` espaço suficiente para a estrutura da função que `pcbArgumentInfo` está sendo inspecionada, e deve indicar o tamanho no parâmetro.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf. idl, CorProf. h  
+ **Cabeçalho:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [Functionenter3withinfo](functionenter3withinfo-function.md)
+- [Functionleave3withinfo](functionleave3withinfo-function.md)
+- [Functiontailcall3withinfo](functiontailcall3withinfo-function.md)
 - [Interface ICorProfilerInfo3](icorprofilerinfo3-interface.md)
-- [Interfaces de criação de perfil](profiling-interfaces.md)
+- [Criação de perfil de interfaces](profiling-interfaces.md)
 - [Criação de perfil](index.md)

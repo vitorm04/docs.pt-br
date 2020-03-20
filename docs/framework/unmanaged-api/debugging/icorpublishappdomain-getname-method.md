@@ -15,51 +15,51 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790713"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178412"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>Método ICorPublishAppDomain::GetName
-Obtém o nome do domínio do aplicativo que é representado por este [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
+Obtém o nome do domínio do aplicativo representado por este [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetName (  
-    [in]  ULONG32   cchName,   
+    [in]  ULONG32   cchName,
     [out] ULONG32   *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR       *szName  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cchName`  
- no O tamanho da matriz de `szName`.  
+ [em] O tamanho `szName` da matriz.  
   
  `pcchName`  
- fora Um ponteiro para o número de caracteres largos, incluindo o caractere nulo, retornado na matriz de `szName`.  
+ [fora] Um ponteiro para o número de caracteres amplos, `szName` incluindo o caractere nulo, retornou na matriz.  
   
  `szName`  
- fora Uma matriz na qual armazenar o nome.  
+ [fora] Uma matriz na qual armazenar o nome.  
   
 ## <a name="remarks"></a>Comentários  
- Se `szName` não for NULL, o método `GetName` copiará até `cchName` caracteres (incluindo o terminador nulo) em `szName`. Se um não nulo for retornado em `pcchName`, o número real de caracteres no nome (incluindo o terminador nulo) será armazenado na matriz de `szName`.  
+ Se `szName` não for nulo, `GetName` o `cchName` método copia até caracteres (incluindo o exterminador nulo) em `szName`. Se um não-nulo `pcchName`for devolvido, o número real de caracteres no nome `szName` (incluindo o exterminador nulo) será armazenado na matriz.  
   
- O método `GetName` retorna um S_OK HRESULT, independentemente de quantos caracteres foram copiados.  
+ O `GetName` método retorna um S_OK HRESULT, independentemente de quantos caracteres foram copiados.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorPub. idl, CorPub. h  
+ **Cabeçalho:** CorPub.idl, CorPub.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorPublishAppDomain](icorpublishappdomain-interface.md)

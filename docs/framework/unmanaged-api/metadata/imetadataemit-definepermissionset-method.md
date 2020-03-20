@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-ms.openlocfilehash: 4e11a52c977de7796043868e80c147d8cfd1f506
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0fd3fdb6dde9fd6b88ea6c64ed907c8a3e9e46d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431579"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175792"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>Método IMetaDataEmit::DefinePermissionSet
-Cria uma definição para um conjunto de permissões com a assinatura de metadados especificada e Obtém um token para essa definição de conjunto de permissões.  
+Cria uma definição para um conjunto de permissões com a assinatura de metadados especificada e obtém um token para essa definição de conjunto de permissões.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT DefinePermissionSet (  
-    [in]  mdToken        tk,   
-    [in]  DWORD          dwAction,   
-    [in]  void const     *pvPermission,   
-    [in]  ULONG          cbPermission,   
-    [out] mdPermission   *ppm   
+    [in]  mdToken        tk,
+    [in]  DWORD          dwAction,
+    [in]  void const     *pvPermission,
+    [in]  ULONG          cbPermission,
+    [out] mdPermission   *ppm
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tk`  
- no O objeto a ser decorado.  
+ [em] O objeto a ser decorado.  
   
  `dwAction`  
- no Um valor de [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) que especifica o tipo de segurança declarativa a ser usado.  
+ [em] Um valor [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) que especifica o tipo de segurança declarativa a ser usada.  
   
  `pvPermission`  
- no O BLOB de permissão.  
+ [em] A permissão BLOB.  
   
  `cbPermission`  
- no O tamanho, em bytes, de `pvPermission`.  
+ [em] O tamanho, em bytes, de `pvPermission`.  
   
  `ppm`  
- fora O token de permissão retornado.  
+ [fora] O sinal de permissão devolvido.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

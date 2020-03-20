@@ -15,50 +15,50 @@ helpviewer_keywords:
 ms.assetid: 3c24e552-fc69-4971-b65a-a3e4b5f7f1e8
 topic_type:
 - apiref
-ms.openlocfilehash: 7547d7557169b1279125141afb5b05e22341942a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a5d9342b8bfe650106ccf9daf2a91dfbcd575446
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432745"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175532"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Método IMetaDataEmit2::DefineMethodSpec
-Cria uma instância genérica de um método e Obtém um token para a definição.  
+Cria uma instância genérica de um método e obtém um token para a definição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT DefineMethodSpec (  
-    [in]  mdToken           tkParent,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
+    [in]  mdToken           tkParent,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
     [out] mdMethodSpec      *pmi  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tkParent`  
- no Um token para o método do qual criar a instância genérica. O token deve ser do tipo `mdMethodDef` ou `mdMemberRef`.  
+ [em] Um token para o método de criar a instância genérica. O token deve `mdMethodDef` ser `mdMemberRef`do tipo ou .  
   
  `pvSigBlob`  
- no Um ponteiro para a assinatura COM+ binária do método.  
+ [em] Um ponteiro para a assinatura binária COM+ do método.  
   
  `cbSibBlob`  
- no O tamanho, em bytes, de `pvSigBlob`.  
+ [em] O tamanho, em bytes, de `pvSigBlob`.  
   
  `pmi`  
- fora Um token para a definição de assinatura de metadados do método.  
+ [fora] Um token para a definição de assinatura de metadados do método.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

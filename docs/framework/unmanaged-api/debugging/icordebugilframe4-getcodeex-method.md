@@ -12,12 +12,12 @@ api_type:
 ms.assetid: aeda0e42-29ee-4ca8-9f21-ac4641677a62
 topic_type:
 - apiref
-ms.openlocfilehash: e77344a99189ec8e234129262d45698c794dc249
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ef2e4bc0caddd6b13c8dbe8edb59e0673519421b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788510"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178788"
 ---
 # <a name="icordebugilframe4getcodeex-method"></a>ICorDebugILFrame4::Método GetCodeEx
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
@@ -28,32 +28,32 @@ ms.locfileid: "76788510"
   
 ```cpp
 HRESULT GetCodeEx(  
-   [in] ILCodeKind flags,   
+   [in] ILCodeKind flags,
    [out] ICorDebugCode **ppCode  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `flags`  
- no Um membro de enumeração [ILCodeKind](ilcodekind-enumeration.md) que especifica se a Il (linguagem intermediária) definida pela solicitação ReJIT do criador de perfil está incluída no quadro.  
+ [em] Um membro de enumeração [ILCodeKind](ilcodekind-enumeration.md) que especifica se o idioma intermediário (IL) definido pela solicitação ReJIT do profiler está incluído no quadro.  
   
  `ppCode`  
- fora Um ponteiro para o endereço de um objeto "ICorDebugCode" que representa o código que esse quadro de pilha está executando.  
+ [fora] Um ponteiro para o endereço de um objeto "ICorDebugCode" que representa o código que este quadro de pilha está executando.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é semelhante ao método [ICorDebugFrame:: GetCode](icordebugframe-getcode-method.md) , exceto pelo fato de que ele acessa opcionalmente o código definido pela solicitação ReJIT do criador de perfil. Chamar esse método com um valor `flags` de `ILCODE_ORIGINAL_IL` é equivalente a chamar [GetCode](icordebugframe-getcode-method.md); Se o método for instrumentado, seu IL não estará acessível. `ILCODE_REJIT_IL` permite que o depurador acesse a IL definida pela solicitação ReJIT do criador de perfil. Se o IL não for instrumentado, `ppCode` será **nulo**e o método retornará `S_OK`.  
+ Este método é semelhante ao método [ICorDebugFrame::GetCode,](icordebugframe-getcode-method.md) exceto que ele acessa opcionalmente o código definido pela solicitação ReJIT do profiler. Chamar este método `flags` com `ILCODE_ORIGINAL_IL` um valor de é equivalente a chamar [GetCode;](icordebugframe-getcode-method.md) se o método for instrumentado, seu IL não será acessível. `ILCODE_REJIT_IL` permite que o depurador acesse a IL definida pela solicitação ReJIT do criador de perfil. Se o IL não `ppCode` for instrumentado, `S_OK`será **nulo**e o método retornar.  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugILFrame4](icordebugilframe4-interface.md)
 - [Depurando interfaces](debugging-interfaces.md)
-- [ReJIT: um guia de instruções](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Um Guia de Como Fazer](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

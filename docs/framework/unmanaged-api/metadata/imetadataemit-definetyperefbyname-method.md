@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: c30a4ce3-2d3e-411a-98df-e62ac4a5dd50
 topic_type:
 - apiref
-ms.openlocfilehash: 3dfdd473b01bfe83def52f957c52e0f4d11375ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 23a6931b31ea2d7e4e8d1cb3dc8adf3a51216315
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434387"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175740"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Método IMetaDataEmit::DefineTypeRefByName
-Obtém um token de metadados para um tipo que é definido no escopo especificado, que está fora do escopo atual.  
+Obtém um token de metadados para um tipo definido no escopo especificado, que está fora do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefineTypeRefByName (   
-    [in]  mdToken     tkResolutionScope,   
-    [in]  LPCWSTR     szName,   
-    [out] mdTypeRef   *ptr   
+HRESULT DefineTypeRefByName (
+    [in]  mdToken     tkResolutionScope,
+    [in]  LPCWSTR     szName,
+    [out] mdTypeRef   *ptr
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tkResolutionScope`  
- no O token que especifica o escopo de resolução. Os seguintes tipos de token são válidos:  
+ [em] O token especificando o escopo de resolução. Os seguintes tipos de tokens são válidos:  
   
-- `mdModuleRef`, se o tipo for definido no mesmo assembly no qual o chamador está definido.  
+- `mdModuleRef`, se o tipo for definido no mesmo conjunto em que o chamador é definido.  
   
-- `mdAssemblyRef`, se o tipo for definido em um assembly diferente daquele em que o chamador é definido.  
+- `mdAssemblyRef`, se o tipo for definido em um conjunto diferente daquele em que o chamador é definido.  
   
 - `mdTypeRef`, se o tipo for um tipo aninhado.  
   
-- `mdModule`, se o tipo for definido no mesmo módulo no qual o chamador é definido.  
+- `mdModule`, se o tipo for definido no mesmo módulo em que o chamador é definido.  
   
-- NULL, se o tipo for definido globalmente.  
+- Nulo, se o tipo for definido globalmente.  
   
  `szName`  
- no O nome do tipo de destino em Unicode.  
+ [em] O nome do tipo de destino em Unicode.  
   
  `ptr`  
- fora Um ponteiro para o `mdTypeRef` token que é atribuído ao tipo.  
+ [fora] Um ponteiro `mdTypeRef` para o token atribuído ao tipo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

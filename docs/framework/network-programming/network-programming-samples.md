@@ -2,15 +2,15 @@
 title: Amostras de programação de rede
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047604"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180708"
 ---
 # <a name="network-programming-samples"></a>Amostras de programação de rede
-Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados. 
+Esta seção contém descrições e links para amostras de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security> e <xref:System.Net.Sockets>, e em outros relacionados.
   
 > [!NOTE]
 > Todas as amostras estão disponíveis no [Download das amostras do SDK do .NET Framework versão 2.0](https://www.microsoft.com/download/confirmation.aspx?id=22181), que foi lançado para o .NET Framework 2.0 e podem estar desatualizadas.
@@ -24,9 +24,8 @@ Esta seção contém descrições e links para amostras de programação de rede
   
  [Amostra de tecnologia HttpListener](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  Mostra como processar solicitações HTTP de dentro de um aplicativo.  
- 
- [Amostra de aplicativo host ASPX HttpListener](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- Demonstra como usar os recursos da classe <xref:System.Net.HttpListener?displayProperty=nameWithType> para criar um servidor HTTP que roteia as chamadas para um aplicativo ASP.NET hospedado.
+
+ Amostra do [aplicativo do host HttpListener ASPX](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) Demonstra como usar os <xref:System.Net.HttpListener?displayProperty=nameWithType> recursos da classe para criar um servidor HTTP que roteia chamadas para um aplicativo de ASP.NET hospedado.
   
  [Amostra de tecnologia de mensageiro](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Mostra como enviar mensagens de email de um aplicativo cliente.  
@@ -57,7 +56,7 @@ Esta seção contém descrições e links para amostras de programação de rede
   
  <xref:System.Net.NetworkInformation>  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação de rede no .NET Framework](index.md)
-- [Tópicos de instruções de programação de rede](network-programming-how-to-topics.md)
+- [Programação de rede no Framework .NET](index.md)
+- [Tópicos explicativos de programação de rede](network-programming-how-to-topics.md)

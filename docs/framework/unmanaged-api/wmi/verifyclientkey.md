@@ -1,5 +1,5 @@
 ---
-title: Função VerifyClientKey (referência de API não gerenciada)
+title: Verificar funçãoClientKey (referência de API não gerenciada)
 description: A função VerifyClientKey garante que a chave do cliente tenha a segurança correta.
 ms.date: 11/06/2017
 api_name:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - VerifyClientKey function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 0a0680651eb192e2798ede00048599c5130e63f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ebb794240494deb0c831b50e95461ec52017a215
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107358"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176702"
 ---
-# <a name="verifyclientkey-function"></a>Função VerifyClientKey
+# <a name="verifyclientkey-function"></a>Verificar funçãoClientKey
 Garante que a chave do cliente tenha a segurança correta.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -29,22 +29,22 @@ Garante que a chave do cliente tenha a segurança correta.
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-LONG VerifyClientKey(); 
+LONG VerifyClientKey();
 ```  
 
 ## <a name="return-value"></a>Valor retornado
 
-Se a função for realizada com sucesso, o valor de retorno será `ERROR_SUCCESS` (0).
+Se a função for bem `ERROR_SUCCESS` sucedida, o valor de retorno será (0).
 
-Se a função falhar, o valor de retorno será um código de erro diferente de zero definido em *Winerror. h*.
+Se a função falhar, o valor de retorno será um código de erro não-zero definido em *WinError.h*.
 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** WMINet_Utils. def  
+ **Cabeçalho:** WMINet_Utils.def  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [WMI e contadores de desempenho (referência de API não gerenciada)](index.md)
+- [WMI e Contadores de Desempenho (Referência de API Não Gerenciada)](index.md)

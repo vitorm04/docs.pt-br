@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ee5b0937f24fac745f72cf6ef6e4bef9ec97ba8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784270"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150775"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar um DataSet com um XmlDataDocument
-Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando uma sincronização fortemente <xref:System.Data.DataSet> tipada com <xref:System.Xml.XmlDataDocument>um. Os exemplos a seguir criam um **conjunto** de um DataSet com um esquema minimizado que corresponde apenas a uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **conjunto** de código seja usado para expor um subconjunto do documento XML.  
+Esta seção demonstra uma etapa no processamento de uma ordem <xref:System.Data.DataSet> de compra, usando uma sincronização fortemente digitada com um <xref:System.Xml.XmlDataDocument>. Os exemplos a seguir criam um **Conjunto de Dados** com um esquema minimizado que corresponde a apenas uma parte do documento XML de origem. Os exemplos usam um **XmlDataDocument** para preservar a fidelidade do documento XML de origem, permitindo que o **DataSet** seja usado para expor um subconjunto do documento XML.  
   
- O documento XML a seguir contém todas as informações referentes a uma ordem de compra: informações do cliente, itens ordenados, informações de envio e assim por diante.  
+ O documento XML a seguir contém todas as informações relativas a uma ordem de compra: informações do cliente, itens encomendados, informações de envio e assim por diante.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -109,15 +109,15 @@ Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando
 </PurchaseOrder>  
 ```  
   
- Uma etapa no processamento das informações de ordem de compra contidas no documento XML anterior é a ordem a ser preenchida do inventário atual da empresa. O funcionário responsável por preencher o pedido do depósito da empresa não precisa ver todo o conteúdo da ordem de compra; Eles só precisam ver as informações do produto para o pedido. Para expor somente as informações do produto do documento XML, crie um **conjunto** de dados com rigidez de tipos com um esquema, escrito como esquema XSD (XML Schema Definition Language), que é mapeado para os produtos e quantidades ordenados. Para obter mais informações sobre objetos de **conjunto** de dados com rigidez de tipos, consulte [datasets tipados](typed-datasets.md).  
+ Uma etapa no processamento das informações da ordem de compra contidas no documento XML anterior é que o pedido seja preenchido no inventário atual da empresa. O funcionário responsável pelo preenchimento do pedido no armazém da empresa não precisa ver todo o conteúdo da ordem de compra; eles só precisam ver as informações do produto para o pedido. Para expor apenas as informações do produto do documento XML, crie um Conjunto de **Dados** fortemente digitado com um esquema, escrito como esquema XML Schema definition language (XSD), que mapeia os produtos e quantidades pedidos. Para obter mais informações sobre objetos **DataSet** fortemente digitados, consulte [Conjuntos de dados digitados](typed-datasets.md).  
   
- O código a seguir mostra o esquema do qual o **DataSet** com rigidez de tipos é gerado para este exemplo.  
+ O código a seguir mostra o esquema a partir do qual o **Conjunto de Dados** fortemente digitado é gerado para esta amostra.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
-<xs:schema id="OrderDetail" xmlns=""   
-                            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
-                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"   
+<xs:schema id="OrderDetail" xmlns=""
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"
                             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="OrderDetail" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -157,11 +157,11 @@ Esta seção demonstra uma etapa no processamento de uma ordem de compra, usando
 </xs:schema>  
 ```  
   
- Observe que apenas as informações dos elementos **OrderDetails** e **Products** do documento XML original são incluídas no esquema para o **conjunto**de dados. Sincronizar o **conjunto** de um com um **XmlDataDocument** garante que os elementos não incluídos no **conjunto** de um persistirão com o documento XML.  
+ Observe que apenas as informações dos **elementos OrderDetails** e **Products** do documento XML original estão incluídas no esquema para o **Conjunto de Dados**. Sincronizar o **Conjunto de Dados** com um **XmlDataDocument** garante que os elementos não incluídos no **Conjunto de Dados** persistam com o documento XML.  
   
- Com o **conjunto** de tipos fortemente tipado gerado a partir do esquema XML (com um namespace de **Northwind. FillOrder**), uma parte do documento XML original pode ser exposta pela sincronização do **conjunto** de um com o **XmlDataDocument** carregado do documento XML de origem. Observe que o **conjunto** de dados gerado a partir do esquema contém estrutura, mas nenhum dado. Os dados são preenchidos quando você carrega o XML no **XmlDataDocument**. Se você tentar carregar um **XmlDataDocument** que foi sincronizado com um **DataSet** que já contém dados, uma exceção será lançada.  
+ Com o **Conjunto** de Dados fortemente digitado gerado a partir do Esquema XML (com um namespace de **Northwind.FillOrder),** uma parte do documento XML original pode ser exposta sincronizando o **Conjunto de Dados** com o **XmlDataDocument** carregado a partir do documento XML de origem. Observe que o Conjunto de **Dados** gerado a partir do esquema contém estrutura, mas nenhum dado. Os dados são preenchidos quando você carrega o XML no **XmlDataDocument**. Se você tentar carregar um **XmlDataDocument** sincronizado com um **DataSet** que já contém dados, uma exceção será lançada.  
   
- Depois que o **DataSet** (e **XmlDataDocument**) tiver sido atualizado, o **XmlDataDocument** poderá então gravar o documento XML modificado com os elementos ignorados pelo **conjunto** de um ainda intacto, como mostrado abaixo. No cenário de ordem de compra, depois que os itens do pedido forem preenchidos, o documento XML modificado poderá ser passado para a próxima etapa no processo do pedido, talvez no departamento de remessa da empresa.  
+ Depois que o **DataSet** (e o **XmlDataDocument**) tiver sido atualizado, o **XmlDataDocument** pode então escrever o documento XML modificado com os elementos ignorados pelo **DataSet** ainda intactos, como mostrado abaixo. No cenário de pedido de compra, após o preenchimento dos itens do pedido, o documento XML modificado pode então ser repassado para a próxima etapa do processo de pedido, talvez para o departamento de expedição da empresa.  
   
 ```vb  
 Imports System  
@@ -174,7 +174,7 @@ Public class Sample
   
     Dim orderDS As OrderDetail = New OrderDetail  
   
-    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)   
+    Dim xmlDocument As XmlDataDocument = New XmlDataDocument(orderDS)
   
     xmlDocument.Load("Order.xml")  
   
@@ -208,9 +208,9 @@ public class Sample
 {  
   public static void Main()  
   {  
-    OrderDetail orderDS = new OrderDetail();   
+    OrderDetail orderDS = new OrderDetail();
   
-    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);   
+    XmlDataDocument xmlDocument = new XmlDataDocument(orderDS);
   
     xmlDocument.Load("Order.xml");  
   
@@ -231,7 +231,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Sincronização de DataSet e XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

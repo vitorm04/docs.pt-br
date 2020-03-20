@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130333"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180594"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Como executar a inicialização lenta de objetos
 A classe <xref:System.Lazy%601?displayProperty=nameWithType> simplifica o trabalho de inicialização lenta e instanciação de objetos. Inicializando objetos de maneira lenta, você poderá evitar a necessidade de criá-los se eles nunca forem necessários ou você poderá adiar sua inicialização até que eles sejam acessados pela primeira vez. Para obter mais informações, veja [Inicialização lenta](lazy-initialization.md).  
@@ -48,7 +48,7 @@ End Sub
 ```  
   
 ```csharp  
-  static bool someCondition = false;    
+  static bool someCondition = false;
   //Initializing a value with a big computation, computed in parallel  
   Lazy<int> _data = new Lazy<int>(delegate  
   {  
@@ -74,7 +74,7 @@ End Sub
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
 - [Inicialização lenta](lazy-initialization.md)

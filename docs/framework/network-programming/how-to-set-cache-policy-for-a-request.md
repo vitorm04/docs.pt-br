@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir uma política de cache para uma solicitação'
+title: Como definir uma política de cache para uma solicitação
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048108"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180760"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Como: Definir uma política de cache para uma solicitação
+# <a name="how-to-set-cache-policy-for-a-request"></a>Como definir uma política de cache para uma solicitação
 O exemplo a seguir demonstra como definir uma política de cache para uma solicitação. A entrada de exemplo é um URI, como `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Exemplo  
@@ -29,12 +29,12 @@ using System.IO;
 namespace Examples.System.Net.Cache  
 {  
     public class CacheExample  
-    {     
+    {
         public static void UseCacheForOneDay(Uri resource)  
         {  
             // Create a policy that allows items in the cache  
             // to be used if they have been cached one day or less.  
-            HttpRequestCachePolicy requestPolicy =   
+            HttpRequestCachePolicy requestPolicy =
                 new HttpRequestCachePolicy (HttpCacheAgeControl.MaxAge,  
                 TimeSpan.FromDays(1));  
   
@@ -105,10 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Gerenciamento de cache para aplicativos de rede](cache-management-for-network-applications.md)
-- [Política de cache](cache-policy.md)
+- [Política de Cache](cache-policy.md)
 - [Políticas de cache baseadas na localização](location-based-cache-policies.md)
 - [Políticas de cache baseadas em tempo](time-based-cache-policies.md)
-- [\<requestCaching> Element (Network Settings)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]
+- [\<solicitarO elemento> (Configurações de rede)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

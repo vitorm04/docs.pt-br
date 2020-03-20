@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-ms.openlocfilehash: 376b9ff09ad38ca43d57fcf064458e0331da8aad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f43d4d1547cbe92f325950e1697dada83b42c4f3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442005"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177137"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>Método IMetaDataTables::GetColumn
-Obtém um ponteiro para o valor contido na célula da coluna e linha especificadas na tabela especificada.  
+Obtém um ponteiro para o valor contido na célula da coluna especificada e linha na tabela dada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetColumn (   
+HRESULT GetColumn (
     [in]  ULONG   ixTbl,  
     [in]  ULONG   ixCol,  
     [in]  ULONG   rid,  
@@ -36,51 +36,51 @@ HRESULT GetColumn (
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
  `ixTbl`  
- no O índice da tabela.  
+ [em] O índice da tabela.  
   
  `ixCol`  
- no O índice da coluna na tabela.  
+ [em] O índice da coluna na tabela.  
   
  `rid`  
- no O índice da linha na tabela.  
+ [em] O índice da linha na tabela.  
   
  `pVal`  
- fora Um ponteiro para o valor na célula.  
- 
+ [fora] Um ponteiro para o valor na célula.  
+
 ## <a name="remarks"></a>Comentários
 
-A interpretação do valor retornado por meio de `pVal` depende do tipo da coluna. O tipo de coluna pode ser determinado chamando [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+A interpretação do valor devolvido `pVal` depende do tipo da coluna. O tipo de coluna pode ser determinado ligando para [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
 
-- O método **GetColumn** converte automaticamente colunas do tipo **RID** ou **CodedToken** em valores de `mdToken` de 32 bits completos.
-- Ele também converte automaticamente valores de 8 ou 16 bits em valores completos de 32 bits. 
-- Para colunas do tipo *heap* , o *PVal* retornado será um índice no heap correspondente.
+- O método **GetColumn** converte automaticamente colunas do tipo **Rid** ou **CodedToken** em valores completos de 32 bits. `mdToken`
+- Ele também converte automaticamente valores de 8 bits ou 16 bits em valores completos de 32 bits.
+- Para colunas do tipo *heap,* o *pVal* retornado será um índice no heap correspondente.
 
 | Tipo de coluna              | pVal contém | Comentário                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *PVal* conterá um token completo. A função converte automaticamente o RID em um token completo. |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Após o retorno, o *PVal* conterá um token completo. A função descompacta automaticamente o CodedToken em um token completo. |
-| `iSHORT` (96)            | Int16         | Faça automaticamente a extensão estendida para 32 bits.  |
-| `iUSHORT` (97)           | UInt16        | Faça automaticamente a extensão estendida para 32 bits.  |
-| `iLONG` (98)             | Int32         |                                        | 
-| `iULONG` (99)            | UInt32        |                                        |
-| `iBYTE` (100)            | Byte          | Faça automaticamente a extensão estendida para 32 bits.  |
-| `iSTRING` (101)          | Índice de heap de cadeia de caracteres | *PVal* é um índice no heap de cadeia de caracteres. Use [IMetadataTables:: GetString](imetadatatables-getstring-method.md) para obter o valor real da cadeia de caracteres da coluna. |
-| `iGUID` (102)            | Índice de heap de GUID | *PVal* é um índice no heap de GUID. Use [IMetadataTables:: GetGUID](imetadatatables-getguid-method.md) para obter o valor de GUID de coluna real. |
-| `iBLOB` (103)            | Índice de heap de BLOB | *PVal* é um índice no heap de BLOB. Use [IMetadataTables:: getBlob](imetadatatables-getblob-method.md) para obter o valor de blob de coluna real. |
+| `0`..`iRidMax`<br>(0..63)  | Mdtoken     | *pVal* conterá um Token completo. A função converte automaticamente o Rid em um token completo. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Mdtoken | Após o retorno, *pVal* conterá um Token completo. A função descompacta automaticamente o CodedToken em um token completo. |
+| `iSHORT`(96)            | Int16         | Sinal automaticamente estendido para 32 bits.  |
+| `iUSHORT`(97)           | UInt16        | Sinal automaticamente estendido para 32 bits.  |
+| `iLONG`(98)             | Int32         |                                        |
+| `iULONG`(99)            | UInt32        |                                        |
+| `iBYTE`(100)            | Byte          | Sinal automaticamente estendido para 32 bits.  |
+| `iSTRING`(101)          | Índice de pilha de cordas | *pVal* é um índice no heap String. Use [IMetadataTables::GetString](imetadatatables-getstring-method.md) para obter o valor real da seqüência de caracteres da coluna. |
+| `iGUID`(102)            | Índice de pilha guia | *pVal* é um índice para o heap Guid. Use [IMetadataTables::GetGuid](imetadatatables-getguid-method.md) para obter o valor de Guia da coluna real. |
+| `iBLOB`(103)            | Índice de pilha de blob | *pVal* é um índice para a pilha Blob. Use [IMetadataTables::GetBlob](imetadatatables-getblob-method.md) para obter o valor real da coluna Blob. |
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões de .NET Framework** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

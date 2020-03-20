@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088686"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179032"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Método ICorDebugArrayValue::GetBaseIndicies
 Obtém o índice base de cada dimensão na matriz.  
@@ -30,17 +30,17 @@ Obtém o índice base de cada dimensão na matriz.
 ```cpp  
 HRESULT GetBaseIndicies (  
     [in] ULONG32          cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32           indicies[]  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cdim`  
- no O número de dimensões deste objeto de `ICorDebugArrayValue`. Esse valor também é o tamanho da matriz de `indicies` porque seu tamanho é igual ao número de dimensões do objeto `ICorDebugArrayValue`.  
+ [em] O número de dimensões deste `ICorDebugArrayValue` objeto. Este valor também é `indicies` o tamanho da matriz porque seu tamanho `ICorDebugArrayValue` é igual ao número de dimensões do objeto.  
   
  `indicies`  
- fora Uma matriz de inteiros, cada um dos quais é o índice base (ou seja, o índice inicial) de uma dimensão desse `ICorDebugArrayValue` objeto.  
+ [fora] Uma matriz de inteiros, cada um dos quais é o índice base (ou `ICorDebugArrayValue` seja, o índice inicial) de uma dimensão deste objeto.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -49,4 +49,4 @@ HRESULT GetBaseIndicies (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450135"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177938"
 ---
 # <a name="corpropertyattr-enumeration"></a>Enumeração CorPropertyAttr
 Contém valores que descrevem os metadados de uma propriedade.  
@@ -29,7 +29,7 @@ Contém valores que descrevem os metadados de uma propriedade.
 ```cpp  
 typedef enum CorPropertyAttr {  
   
-    prSpecialName           =   0x0200,   
+    prSpecialName           =   0x0200,
     prReservedMask          =   0xf400,  
     prRTSpecialName         =   0x0400,  
     prHasDefault            =   0x1000,  
@@ -40,21 +40,21 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`prSpecialName`|Especifica que a propriedade é especial e que seu nome descreve como.|  
-|`prReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  
-|`prRTSpecialName`|Especifica que os Common Language Runtime APIs internas de metadados devem verificar a codificação do nome da propriedade.|  
+|`prSpecialName`|Especifica que a propriedade é especial, e que seu nome descreve como.|  
+|`prReservedMask`|Reservado para uso interno pelo tempo de execução do idioma comum.|  
+|`prRTSpecialName`|Especifica que as APIs internas de metadados de tempo de execução de idioma comum devem verificar a codificação do nome da propriedade.|  
 |`prHasDefault`|Especifica que a propriedade tem um valor padrão.|  
 |`prUnused`|Não utilizado.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr. h  
+ **Cabeçalho:** CorHdr.h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

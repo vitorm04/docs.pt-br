@@ -15,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123859"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178953"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Método ICorDebugChain::GetStackRange
-Obtém o intervalo de endereços do segmento da pilha para esta cadeia.  
+Obtém o intervalo de endereços do segmento stack para esta cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetStackRange (  
-    [out] CORDB_ADDRESS      *pStart,   
+    [out] CORDB_ADDRESS      *pStart,
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `pStart`  
- fora Um ponteiro para um valor `CORDB_ADDRESS` que é o endereço inicial do segmento de pilha.  
+ [fora] Um ponteiro `CORDB_ADDRESS` para um valor que é o endereço inicial do segmento stack.  
   
  `pEnd`  
- fora Um ponteiro para um valor `CORDB_ADDRESS` que é o endereço final do segmento da pilha.  
+ [fora] Um ponteiro `CORDB_ADDRESS` para um valor que é o endereço final do segmento stack.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo numérico é significativo apenas para comparação de locais de quadros de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
+ O intervalo numérico é significativo apenas para comparação de locais de quadro sumário. Você não pode fazer nenhuma suposição sobre o que é realmente armazenado na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
@@ -51,4 +51,4 @@ HRESULT GetStackRange (
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

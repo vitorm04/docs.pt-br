@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450325"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177521"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Método IMetaDataEmit::SetEventProps
-Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior para [IMetaDataEmit::D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior ao [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT SetEventProps (  
-    [in]  mdEvent     ev,   
-    [in]  DWORD       dwEventFlags,   
-    [in]  mdToken     tkEventType,   
-    [in]  mdMethodDef mdAddOn,   
-    [in]  mdMethodDef mdRemoveOn,   
-    [in]  mdMethodDef mdFire,   
-    [in]  mdMethodDef rmdOtherMethods[]   
+    [in]  mdEvent     ev,
+    [in]  DWORD       dwEventFlags,
+    [in]  mdToken     tkEventType,
+    [in]  mdMethodDef mdAddOn,
+    [in]  mdMethodDef mdRemoveOn,
+    [in]  mdMethodDef mdFire,
+    [in]  mdMethodDef rmdOtherMethods[]
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `ev`  
- no O token do evento.  
+ [em] O token do evento.  
   
  `dwEventFlags`  
- no Sinalizadores de eventos. Este é um bitmask de valores de `CorEventAttr`.  
+ [em] Bandeiras de eventos. Isto é uma `CorEventAttr` pequena máscara de valores.  
   
  `tkEventType`  
- no O token para a classe de evento. Este é um `mdTypeDef` ou um token de `mdTypeRef`.  
+ [em] O símbolo para a aula de eventos. Isso é `mdTypeDef` um `mdTypeRef` ou um símbolo.  
   
  `mdAddOn`  
- no O método usado para assinar o evento ou nulo.  
+ [em] O método usado para subscrever o evento, ou nulo.  
   
  `mdRemoveOn`  
- no O método usado para cancelar a assinatura do evento, ou NULL.  
+ [em] O método usado para cancelar a inscrição do evento, ou nulo.  
   
  `mdFire`  
- no O método usado (por uma classe derivada) para gerar o evento.  
+ [em] O método utilizado (por uma classe derivada) para elevar o evento.  
   
  `rmdOtherMethods[]`  
- no Uma matriz de tokens para outros métodos associados ao evento. O último elemento da matriz deve ser `mdMethodDefNil`.  
+ [em] Uma matriz de tokens para outros métodos associados ao evento. O último elemento da `mdMethodDefNil`matriz deve ser .  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

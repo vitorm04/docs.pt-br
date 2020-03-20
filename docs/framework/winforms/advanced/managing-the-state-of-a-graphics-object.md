@@ -8,17 +8,17 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: ce645133af35271fe1de969621907c53183d9a54
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: d1e7e6eac775ca779fb68605adcc9bc2b9915e49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505598"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182450"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Gerenciando o estado de um objeto gráfico
-O <xref:System.Drawing.Graphics> classe é o cerne da GDI+. Para desenhar qualquer coisa, você deve obter um <xref:System.Drawing.Graphics> do objeto, defina suas propriedades e chamar seus métodos <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>e assim por diante).  
+A <xref:System.Drawing.Graphics> classe está no coração do GDI+. Para desenhar qualquer coisa, você obtém <xref:System.Drawing.Graphics> um objeto, <xref:System.Drawing.Graphics.DrawLine%2A> <xref:System.Drawing.Graphics.DrawImage%2A>define <xref:System.Drawing.Graphics.DrawString%2A>suas propriedades e chama seus métodos, e afins).  
   
- A exemplo a seguir chama o <xref:System.Drawing.Graphics.DrawRectangle%2A> método de um <xref:System.Drawing.Graphics> objeto. O primeiro argumento passado para o <xref:System.Drawing.Graphics.DrawRectangle%2A> método é um <xref:System.Drawing.Pen> objeto.  
+ O exemplo a <xref:System.Drawing.Graphics.DrawRectangle%2A> seguir <xref:System.Drawing.Graphics> chama o método de um objeto. O primeiro argumento <xref:System.Drawing.Graphics.DrawRectangle%2A> passado para <xref:System.Drawing.Pen> o método é um objeto.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -33,7 +33,7 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ```  
   
 ## <a name="graphics-state"></a>Estado gráfico  
- Um <xref:System.Drawing.Graphics> objeto mais do que fornecer métodos de desenho, como <xref:System.Drawing.Graphics.DrawLine%2A> e <xref:System.Drawing.Graphics.DrawRectangle%2A>. Um <xref:System.Drawing.Graphics> objeto também mantém o estado dos gráficos, que pode ser dividido nas seguintes categorias:  
+ Um <xref:System.Drawing.Graphics> objeto faz mais do que <xref:System.Drawing.Graphics.DrawLine%2A> fornecer <xref:System.Drawing.Graphics.DrawRectangle%2A>métodos de desenho, como e . Um <xref:System.Drawing.Graphics> objeto também mantém o estado gráfico, que pode ser dividido nas seguintes categorias:  
   
 - Configurações de qualidade  
   
@@ -42,9 +42,9 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 - Área de recorte  
   
 ### <a name="quality-settings"></a>Configurações de Qualidade  
- Um <xref:System.Drawing.Graphics> objeto tem várias propriedades que influenciam a qualidade dos itens que são desenhadas. Por exemplo, você pode definir o <xref:System.Drawing.Graphics.TextRenderingHint%2A> propriedade para especificar o tipo de suavização (se houver) aplicado ao texto. Outras propriedades que influenciam a qualidade são <xref:System.Drawing.Graphics.SmoothingMode%2A>, <xref:System.Drawing.Graphics.CompositingMode%2A>, <xref:System.Drawing.Graphics.CompositingQuality%2A>, e <xref:System.Drawing.Graphics.InterpolationMode%2A>.  
+ Um <xref:System.Drawing.Graphics> objeto tem várias propriedades que influenciam a qualidade dos itens que são desenhados. Por exemplo, você <xref:System.Drawing.Graphics.TextRenderingHint%2A> pode definir a propriedade para especificar o tipo de antialiasing (se houver) aplicado ao texto. Outras propriedades que <xref:System.Drawing.Graphics.SmoothingMode%2A> <xref:System.Drawing.Graphics.CompositingMode%2A>influenciam <xref:System.Drawing.Graphics.InterpolationMode%2A>a qualidade são, e <xref:System.Drawing.Graphics.CompositingQuality%2A>.  
   
- O exemplo a seguir desenha duas elipses, uma com o modo de suavização definido como <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> e outra com o modo de suavização definido como <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>:  
+ O exemplo a seguir desenha duas elipses, <xref:System.Drawing.Drawing2D.SmoothingMode.AntiAlias> uma com o modo <xref:System.Drawing.Drawing2D.SmoothingMode.HighSpeed>de suavização definido e outra com o modo de suavização definido para:  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -67,9 +67,9 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Transformações  
- Um <xref:System.Drawing.Graphics> objeto mantém duas transformações (global e página) que são aplicadas a todos os itens desenhados por esse <xref:System.Drawing.Graphics> objeto. Qualquer transformação afim pode ser armazenada na transformação global. Transformações afins incluem colocação em escala, rotação, reflexão, distorção e translação. A transformação de página pode ser usada para colocação em escala e para alterar unidades (por exemplo, pixels em polegadas). Para obter mais informações, consulte [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md).  
+ Um <xref:System.Drawing.Graphics> objeto mantém duas transformações (mundo e página) que são <xref:System.Drawing.Graphics> aplicadas a todos os itens desenhados por esse objeto. Qualquer transformação afim pode ser armazenada na transformação global. Transformações afins incluem colocação em escala, rotação, reflexão, distorção e translação. A transformação de página pode ser usada para colocação em escala e para alterar unidades (por exemplo, pixels em polegadas). Para obter mais informações, consulte [Sistemas de Coordenadas e Transformações](coordinate-systems-and-transformations.md).  
   
- O exemplo a seguir define as transformações global e de página de um <xref:System.Drawing.Graphics> objeto. A transformação global é definida com uma rotação de 30 graus. A transformação de página é definida para que as coordenadas passadas para o segundo <xref:System.Drawing.Graphics.DrawEllipse%2A> serão tratadas como milímetros em vez de pixels. O código faz duas chamadas idênticas para o <xref:System.Drawing.Graphics.DrawEllipse%2A> método. A transformação global é aplicada ao primeiro <xref:System.Drawing.Graphics.DrawEllipse%2A> de chamada e as duas transformações (global e página) são aplicadas à segunda <xref:System.Drawing.Graphics.DrawEllipse%2A> chamar.  
+ O exemplo a seguir define o <xref:System.Drawing.Graphics> mundo e as transformações de página de um objeto. A transformação global é definida com uma rotação de 30 graus. A transformação da página é definida para <xref:System.Drawing.Graphics.DrawEllipse%2A> que as coordenadas passadas para a segunda sejam tratadas como milímetros em vez de pixels. O código faz duas <xref:System.Drawing.Graphics.DrawEllipse%2A> chamadas idênticas ao método. A transformação mundial é <xref:System.Drawing.Graphics.DrawEllipse%2A> aplicada à primeira chamada, e ambas as transformações <xref:System.Drawing.Graphics.DrawEllipse%2A> (mundo e página) são aplicadas à segunda chamada.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -84,7 +84,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50)
   
 ```csharp  
 Graphics graphics = e.Graphics;  
-Pen pen = new Pen(Color.Red);   
+Pen pen = new Pen(Color.Red);
   
 graphics.ResetTransform();  
 graphics.RotateTransform(30);                    // world transformation  
@@ -95,12 +95,12 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  A ilustração a seguir mostra as duas elipses. Observe que a rotação de 30 graus é sobre a origem do sistema de coordenadas (canto superior esquerdo da área de cliente), e não sobre os centros das elipses. Observe também que a largura da caneta de 1 significa 1 pixel para a primeira elipse e 1 milímetro para a segunda elipse.  
   
- ![Ilustração que mostra duas elipses: largura de rotação e caneta.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
+ ![Ilustração que mostra duas elipses: rotação e largura da caneta.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Área de recorte  
- Um <xref:System.Drawing.Graphics> objeto mantém uma região de recorte que se aplica a todos os itens desenhados por esse <xref:System.Drawing.Graphics> objeto. Você pode definir a região de recorte chamando o <xref:System.Drawing.Graphics.SetClip%2A> método.  
+ Um <xref:System.Drawing.Graphics> objeto mantém uma região de recorte que <xref:System.Drawing.Graphics> se aplica a todos os itens desenhados por esse objeto. Você pode definir a região <xref:System.Drawing.Graphics.SetClip%2A> de recorte chamando o método.  
   
- O exemplo a seguir cria uma região em forma de mais (+), formando a união de dois retângulos. Essa área é designada como a região de recorte de um <xref:System.Drawing.Graphics> objeto. Em seguida, o código desenha duas linhas restritas ao interior da área de recorte.  
+ O exemplo a seguir cria uma região em forma de mais (+), formando a união de dois retângulos. Essa região é designada como a <xref:System.Drawing.Graphics> região de recorte de um objeto. Em seguida, o código desenha duas linhas restritas ao interior da área de recorte.  
   
 ```vb  
 Dim graphics As Graphics = e.Graphics  
@@ -128,10 +128,10 @@ graphics.DrawLine(pen, 40, 20, 190, 150)
 Graphics graphics = e.Graphics;  
   
 // Opaque red, width 5  
-Pen pen = new Pen(Color.Red, 5);    
+Pen pen = new Pen(Color.Red, 5);
   
 // Opaque aqua  
-SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));    
+SolidBrush brush = new SolidBrush(Color.FromArgb(255, 180, 255, 255));
   
 // Create a plus-shaped region by forming the union of two rectangles.  
 Region region = new Region(new Rectangle(50, 0, 50, 150));  
@@ -146,11 +146,11 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- A ilustração a seguir mostra as linhas recortadas:  
+ A ilustração a seguir mostra as linhas cortadas:  
   
- ![Diagrama que mostra a região de recorte limitada.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
+ ![Diagrama que mostra a região do clipe limitado.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Elementos Gráficos e Desenho nos Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Elementos gráficos e desenho no Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Usando Contêineres de Elementos Gráficos Aninhados](using-nested-graphics-containers.md)

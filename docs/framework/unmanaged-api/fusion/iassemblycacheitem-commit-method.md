@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134512"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176559"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>Método IAssemblyCacheItem::Commit
-Confirma a referência de assembly armazenada em cache para a memória.  
+Compromete a referência de montagem armazenada em cache à memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT Commit (  
-    [in] DWORD dwFlags,   
+    [in] DWORD dwFlags,
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `dwFlags`  
- no Sinalizadores definidos em Fusion. idl.  
+ [em] Bandeiras definidas em Fusion.idl.  
   
  `pulDisposition`  
- [saída, opcional] Um valor que indica o resultado da operação.  
+ [fora, opcional] Um valor que indica o resultado da operação.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** Fusion. h  
+ **Cabeçalho:** Fusion.h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IAssemblyCacheItem](iassemblycacheitem-interface.md)

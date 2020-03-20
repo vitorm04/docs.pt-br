@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 0f9bde1d-e306-438d-941b-d0925b322304
 topic_type:
 - apiref
-ms.openlocfilehash: 470b6511366cef1680eaf97f9ab376736add55c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 53b3d94e8b1e273fcbc041d25a5bf586a12735c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437888"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177260"
 ---
 # <a name="imetadataimportfindmethod-method"></a>Método IMetaDataImport::FindMethod
-Obtém um ponteiro para o token MethodDef do método que está incluído pelo <xref:System.Type> especificado e que tem o nome especificado e a assinatura de metadados.  
+Obtém um ponteiro para o token MethodDef para o <xref:System.Type> método que é incluído pelo especificado e que tem o nome especificado e a assinatura de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT FindMethod (  
    [in]  mdTypeDef          td,  
-   [in]  LPCWSTR            szName,   
-   [in]  PCCOR_SIGNATURE    pvSigBlob,   
-   [in]  ULONG              cbSigBlob,   
+   [in]  LPCWSTR            szName,
+   [in]  PCCOR_SIGNATURE    pvSigBlob,
+   [in]  ULONG              cbSigBlob,
    [out] mdMethodDef        *pmb  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `td`  
- no O token de `mdTypeDef` para o tipo (uma classe ou interface) que inclui o membro a ser pesquisado. Se esse valor for `mdTokenNil`, a pesquisa será feita para uma função global.  
+ [em] O `mdTypeDef` token para o tipo (uma classe ou interface) que inclui o membro para procurar. Se esse `mdTokenNil`valor for, então a pesquisa é feita para uma função global.  
   
  `szName`  
- no O nome do método a ser pesquisado.  
+ [em] O nome do método para procurar.  
   
  `pvSigBlob`  
- no Um ponteiro para a assinatura de metadados binários do método.  
+ [em] Um ponteiro para a assinatura binária de metadados do método.  
   
  `cbSigBlob`  
- no O tamanho em bytes de `pvSigBlob`.  
+ [em] O tamanho em bytes de `pvSigBlob`.  
   
  `pmb`  
- fora Um ponteiro para o token MethodDef correspondente.  
+ [fora] Um ponteiro para o token MethodDef correspondente.  
   
 ## <a name="remarks"></a>Comentários  
- Você especifica o método usando sua classe ou interface (`td`) de circunscrição, seu nome (`szName`) e, opcionalmente, sua assinatura (`pvSigBlob`). Pode haver vários métodos com o mesmo nome em uma classe ou interface. Nesse caso, passe a assinatura do método para localizar a correspondência exclusiva.  
+ Você especifica o método usando sua`td`classe de`szName`fechamento ou interface (`pvSigBlob`), seu nome ( ), e opcionalmente sua assinatura ( ). Pode haver vários métodos com o mesmo nome em uma classe ou interface. Nesse caso, passe a assinatura do método para encontrar a correspondência única.  
   
- A assinatura passada para `FindMethod` deve ter sido gerada no escopo atual, porque as assinaturas estão associadas a um escopo específico. Uma assinatura pode inserir um token que identifica a classe de circunscrição ou o tipo de valor. O token é um índice na tabela de TypeDef local. Você não pode criar uma assinatura de tempo de execução fora do contexto do escopo atual e usar essa assinatura como entrada para entrada no `FindMethod`.  
+ A assinatura `FindMethod` passada deve ter sido gerada no escopo atual, porque as assinaturas estão vinculadas a um escopo específico. Uma assinatura pode incorporar um token que identifica a classe de fechamento ou o tipo de valor. O token é um índice na tabela typeDef local. Não é possível construir uma assinatura de tempo de execução fora do `FindMethod`contexto do escopo atual e usar essa assinatura como entrada para entrada em .  
   
- `FindMethod` localiza apenas os métodos que foram definidos diretamente na classe ou na interface; Ele não encontra os métodos herdados.  
+ `FindMethod`encontra apenas métodos que foram definidos diretamente na classe ou interface; não encontra métodos herdados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.MethodInfo>
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

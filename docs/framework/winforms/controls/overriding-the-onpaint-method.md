@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 863726a6264f01de9f00296b4a64b9fd1bb96765
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506188"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182041"
 ---
 # <a name="overriding-the-onpaint-method"></a>Substituindo o método OnPaint
-As etapas básicas para a substituição de qualquer evento definido no .NET Framework são idênticas e são resumidas na lista a seguir.  
+As etapas básicas para sobrepor qualquer evento definido no Quadro .NET são idênticas e são resumidas na lista a seguir.  
   
 #### <a name="to-override-an-inherited-event"></a>Substituir um evento herdado  
   
@@ -24,9 +24,9 @@ As etapas básicas para a substituição de qualquer evento definido no .NET Fra
   
 2. Chame o método `On`*EventName* da classe base do método `On`*EventName* substituído, de modo que delegados registrados recebam o evento.  
   
- O <xref:System.Windows.Forms.Control.Paint> evento é discutido em detalhes aqui porque todos os controles Windows Forms devem substituir o <xref:System.Windows.Forms.Control.Paint> eventos que herda de <xref:System.Windows.Forms.Control>. A base <xref:System.Windows.Forms.Control> classe não sabe como um controle derivado deve ser desenhado e não fornece qualquer lógica de pintura no <xref:System.Windows.Forms.Control.OnPaint%2A> método. O <xref:System.Windows.Forms.Control.OnPaint%2A> método de <xref:System.Windows.Forms.Control> simplesmente despacha o <xref:System.Windows.Forms.Control.Paint> evento para receptores de evento registrados.  
+ O <xref:System.Windows.Forms.Control.Paint> evento é discutido em detalhes aqui porque <xref:System.Windows.Forms.Control.Paint> cada controle do <xref:System.Windows.Forms.Control>Windows Forms deve substituir o evento do que herda . A <xref:System.Windows.Forms.Control> classe base não sabe como um controle derivado precisa ser desenhado <xref:System.Windows.Forms.Control.OnPaint%2A> e não fornece nenhuma lógica de pintura no método. O <xref:System.Windows.Forms.Control.OnPaint%2A> método <xref:System.Windows.Forms.Control> de simplesmente <xref:System.Windows.Forms.Control.Paint> despacha o evento para receptores de eventos registrados.  
   
- Se você trabalhou com o exemplo em [como: Desenvolver um controle simples dos Windows Forms](how-to-develop-a-simple-windows-forms-control.md), você viu um exemplo de substituição a <xref:System.Windows.Forms.Control.OnPaint%2A> método. O fragmento de código a seguir é retirado desse exemplo.  
+ Se você trabalhou através da amostra em [Como: Desenvolver um Controle simples de formulários do Windows,](how-to-develop-a-simple-windows-forms-control.md)você viu um exemplo de substituição do <xref:System.Windows.Forms.Control.OnPaint%2A> método. O fragmento de código a seguir é retirado desse exemplo.  
   
 ```vb  
 Public Class FirstControl  
@@ -41,7 +41,7 @@ Public Class FirstControl
       ' Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, New SolidBrush(ForeColor), RectangleF.op_Implicit(ClientRectangle))  
    End Sub  
-End Class   
+End Class
 ```  
   
 ```csharp  
@@ -52,11 +52,11 @@ public class FirstControl : Control {
       base.OnPaint(e);  
       // Call methods of the System.Drawing.Graphics object.  
       e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), ClientRectangle);  
-   }   
-}   
+   }
+}
 ```  
   
- O <xref:System.Windows.Forms.PaintEventArgs> classe contém dados para o <xref:System.Windows.Forms.Control.Paint> eventos. Ele tem duas propriedades, conforme mostrado no código a seguir.  
+ A <xref:System.Windows.Forms.PaintEventArgs> classe contém <xref:System.Windows.Forms.Control.Paint> dados para o evento. Ele tem duas propriedades, conforme mostrado no código a seguir.  
   
 ```vb  
 Public Class PaintEventArgs  
@@ -68,7 +68,7 @@ Public Class PaintEventArgs
   
    Public ReadOnly Property Graphics() As System.Drawing.Graphics  
       ...  
-   End Property   
+   End Property
    ...  
 End Class  
 ```  
@@ -82,11 +82,11 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> é o retângulo a ser pintado e o <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propriedade se refere a um <xref:System.Drawing.Graphics> objeto. As classes de <xref:System.Drawing?displayProperty=nameWithType> namespace são gerenciados classes que fornecem acesso à funcionalidade da GDI+, a nova biblioteca de gráficos do Windows. O <xref:System.Drawing.Graphics> objeto tem métodos para desenhar pontos, cadeias de caracteres, linhas, arcos, elipses e muitas outras formas.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>é o retângulo a ser <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> pintado, e <xref:System.Drawing.Graphics> a propriedade refere-se a um objeto. As classes <xref:System.Drawing?displayProperty=nameWithType> no namespace são classes gerenciadas que fornecem acesso à funcionalidade do GDI+, a nova biblioteca gráfica do Windows. O <xref:System.Drawing.Graphics> objeto tem métodos para desenhar pontos, cordas, linhas, arcos, elipses e muitas outras formas.  
   
- Um controle chama seu <xref:System.Windows.Forms.Control.OnPaint%2A> método sempre que precisar alterar sua exibição visual. Esse método por sua vez dispara o <xref:System.Windows.Forms.Control.Paint> eventos.  
+ Um controle invoca <xref:System.Windows.Forms.Control.OnPaint%2A> seu método sempre que precisa alterar seu visor visual. Este método, por <xref:System.Windows.Forms.Control.Paint> sua vez, levanta o evento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Eventos](../../../standard/events/index.md)
 - [Renderizando um controle dos Windows Forms](rendering-a-windows-forms-control.md)

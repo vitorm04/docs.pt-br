@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: a55e460f565c33731c5b0b29ab42b8263d3690e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125164"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181304"
 ---
 # <a name="specifying-an-entry-point"></a>Especificando um ponto de entrada
 
 Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto gerenciado, o nome original ou o ponto de entrada ordinal de uma função de destino identifica essa função no limite de interoperação. Além disso, é possível mapear o ponto de entrada para um nome diferente, renomeando a função efetivamente.  
   
- Veja a seguir uma lista de possíveis motivos para renomear uma função de DLL:  
+ A seguir está uma lista de possíveis razões para renomear uma função DLL:  
   
 - Para evitar o uso de nomes de função de API que diferenciam maiúsculas de minúsculas  
   
@@ -30,7 +30,7 @@ Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto
  Este tópico demonstra como renomear uma função de DLL em um código gerenciado.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Renomeando uma função no Visual Basic  
- 
+
 O Visual Basic usa a palavra-chave **Function** na instrução **Declare** para definir o campo <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType>. O exemplo a seguir mostra uma declaração básica.  
   
 ```vb
@@ -90,9 +90,9 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
-- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
+- [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)

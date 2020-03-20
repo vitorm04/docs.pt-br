@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 48298cb8d89958c701d7150aeb497e82d565bde1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433864"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180234"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapeamento de Padrão de Controles para Clientes de Automação de IU
 > [!NOTE]
@@ -20,62 +20,62 @@ ms.locfileid: "74433864"
   
  A tabela a seguir organiza os padrões de controle nas seguintes categorias:  
   
-- Com suporte. O controle deve dar suporte a esse padrão de controle.  
+-  Com suporte. O controle deve suportar este padrão de controle.  
   
-- Suporte condicional. O controle pode dar suporte a esse padrão de controle dependendo do estado do controle.  
+- Suporte condicional. O controle pode suportar este padrão de controle dependendo do estado do controle.  
   
-- {1&gt;Sem suporte.&lt;1} O controle não oferece suporte a este padrão de controle; os controles personalizados podem dar suporte a esse padrão de controle.  
+- Sem suporte. O controle não suporta esse padrão de controle; controles personalizados podem suportar esse padrão de controle.  
   
 > [!NOTE]
-> Alguns controles têm suporte condicional para vários padrões de controle, dependendo da funcionalidade do controle. Por exemplo, o controle de item de menu tem suporte condicional para o <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>ou <xref:System.Windows.Automation.SelectionItemPattern> padrão de controle, dependendo de sua função no controle de menu.  
+> Alguns controles têm suporte condicional para vários padrões de controle, dependendo da funcionalidade do controle. Por exemplo, o controle do item <xref:System.Windows.Automation.InvokePattern>do <xref:System.Windows.Automation.ExpandCollapsePattern> <xref:System.Windows.Automation.TogglePattern>menu <xref:System.Windows.Automation.SelectionItemPattern> tem suporte condicional para o padrão de controle, dependendo de sua função no controle do menu.  
   
-<a name="control_mapping_clients"></a>   
+<a name="control_mapping_clients"></a>
 ## <a name="ui-automation-control-patterns-for-clients"></a>Padrões de Controle para Clientes de Automação de IU  
   
-|Tipo de controle|Com suporte|Suporte condicional|Sem suporte|  
+|Tipo de controle|Com suporte|Suporte Condicional|Sem suporte|  
 |------------------|---------------|-------------------------|-------------------|  
-|Botão|Nenhum|Invocar, ativar/desativar, expandir recolher|Nenhum|  
-|Calendário|Grade, tabela|Seleção, rolar|Valor|  
+|Botão|Nenhum|Invocar, Alternar, Expandir o Colapso|Nenhum|  
+|Calendário|Grade, Tabela|Seleção, Pergaminho|Valor|  
 |Caixa de seleção|Ativar/Desativar|Nenhum|Nenhum|  
-|Caixa de Combinação|Expandir recolher|Seleção, valor|Rolar|  
-|Grade de Dados|Grade|Rolar, selecionar, tabela|Nenhum|  
-|Item de Dados|Item de Seleção|Expandir recolhimento, item de grade, item de rolagem, tabela, alternância, valor|Nenhum|  
-|Documento|Texto|Rolar, valor|Nenhum|  
-|Editar|Nenhum|Texto, valor do intervalo, valor|Nenhum|  
-|Grupo|Nenhum|Expandir recolher|Nenhum|  
+|Caixa de Combinação|Expandir o colapso|Seleção, Valor|Rolar|  
+|Grade de dados|Grade|Pergaminho, Seleção, Tabela|Nenhum|  
+|Item de Dados|Item de Seleção|Expandir o colapso, o item da grade, o item do pergaminho, a tabela, o alterne, o valor|Nenhum|  
+|Document|Texto|Pergaminho, Valor|Nenhum|  
+|Editar|Nenhum|Texto, Valor de Intervalo, Valor|Nenhum|  
+|Agrupar|Nenhum|Expandir o colapso|Nenhum|  
 |Cabeçalho|Nenhum|Transformar|Nenhum|  
-|Item de Cabeçalho|Nenhum|Transformar, invocar|Nenhum|  
-|Hiperlink|Invocar|Valor|Nenhum|  
-|Imagem|Nenhum|Item de grade, item de tabela|Invocar, item de seleção|  
-|Lista|Nenhum|Grade, exibição múltipla, rolagem, seleção|Table|  
-|Item de lista|Item de Seleção|Expandir recolhimento, item de grade, invocar, rolar item, alternar, valor|Nenhum|  
+|Item de Cabeçalho|Nenhum|Transforme, Invoque|Nenhum|  
+|Hyperlink|Invoke|Valor|Nenhum|  
+|Imagem|Nenhum|Item da grade, item de tabela|Invocar, Item de Seleção|  
+|Lista|Nenhum|Grade, visão múltipla, pergaminho, seleção|Tabela|  
+|Item de lista|Item de Seleção|Expandir o colapso, o item da grade, invocar, rolar item, alternar, valorizar|Nenhum|  
 |Menu|Nenhum|Nenhum|Nenhum|  
-|Barra de menu|Nenhum|Expandir recolher, encaixar, transformar|Nenhum|  
-|Item de menu|Nenhum|Expandir recolher, invocar, selecionar item, alternar|Nenhum|  
-|Painel|Nenhum|Ancorá. Rolar, transformar|Janela|  
-|Barra de Andamento|Nenhum|Valor do intervalo, valor|Nenhum|  
+|Barra de menu|Nenhum|Expandir o colapso, doca, transformar|Nenhum|  
+|Item de menu|Nenhum|Expandir o colapso, invocar, o item de seleção, alternar|Nenhum|  
+|Painel|Nenhum|Doca. Rolar, Transformar|Janela|  
+|Barra de Andamento|Nenhum|Valor de intervalo, valor|Nenhum|  
 |Botão de Opção|Item de Seleção|Nenhum|Ativar/Desativar|  
 |Barra de Rolagem|Nenhum|Valor de Intervalo|Rolar|  
 |Separador|Nenhum|Nenhum|Nenhum|  
-|Controle Deslizante|Nenhum|Valor de intervalo, seleção, valor|Nenhum|  
+|Controle deslizante|Nenhum|Valor de intervalo, seleção, valor|Nenhum|  
 |Controle giratório|Nenhum|Valor de intervalo, seleção, valor|Nenhum|  
-|Botão de Divisão|Invocar, expandir recolher|Nenhum|Nenhum|  
+|Botão de Divisão|Invocar, Expandir o Colapso|Nenhum|Nenhum|  
 |Barra de Status|Nenhum|Grade|Nenhum|  
-|Guia|Seleção|Rolar|Nenhum|  
-|Item da Guia|Item de Seleção|Nenhum|Invocar|  
-|Table|Grade, item de grade, tabela, item de tabela|Nenhum|Nenhum|  
-|Texto|Nenhum|Item de grade, item de tabela, texto|Valor|  
-|Thumb|Transformar|Nenhum|Nenhum|  
-|Barra de título|Nenhum|Nenhum|Nenhum|  
-|Barra de ferramentas|Nenhum|Encaixar, expandir, recolher, transformar|Nenhum|  
-|Dica de ferramenta|Nenhum|Texto, janela|Nenhum|  
-|Árvore|Nenhum|Rolar, seleção|Nenhum|  
-|Item de Árvore|Expandir recolher|Invocar, rolar item, item de seleção, alternar|Nenhum|  
-|Janela|Transformação, janela|Encaixar|Nenhum|  
+|Tab|Seleção|Rolar|Nenhum|  
+|Item da Guia|Item de Seleção|Nenhum|Invoke|  
+|Tabela|Grade, Item da Grade, Tabela, Item de Tabela|Nenhum|Nenhum|  
+|Texto|Nenhum|Item da grade, item da tabela, texto|Valor|  
+|Posição|Transformar|Nenhum|Nenhum|  
+|Barra de Título|Nenhum|Nenhum|Nenhum|  
+|Barra de ferramentas|Nenhum|Doca, expanda o colapso, transforme|Nenhum|  
+|Dica da ferramenta|Nenhum|Texto, janela|Nenhum|  
+|Árvore|Nenhum|Pergaminho, Seleção|Nenhum|  
+|Item de Árvore|Expandir o colapso|Invocar, Rolar Item, Item de Seleção, Alternar|Nenhum|  
+|Janela|Transformar, Janela|Encaixar|Nenhum|  
   
 > [!NOTE]
-> Se um tipo de controle não tiver padrões de controle com suporte listados, mas tiver um ou mais padrões de controle com suporte condicionalmente, um desses padrões de controle condicional terá suporte em todos os momentos.  
+> Se um tipo de controle não tiver padrões de controle suportados listados, mas tiver um ou mais padrões de controle condicionalmente suportados, então um desses padrões de controle condicional será suportado em todos os momentos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Visão geral de Automação da Interface do Usuário](ui-automation-overview.md)
+- [Visão geral de automação da interface do usuário](ui-automation-overview.md)

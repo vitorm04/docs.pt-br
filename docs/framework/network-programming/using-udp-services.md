@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086098"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180611"
 ---
 # <a name="using-udp-services"></a>Usando os serviços UDP
 A classe <xref:System.Net.Sockets.UdpClient> se comunica com os serviços de rede usando o UDP. As propriedades e os métodos da classe <xref:System.Net.Sockets.UdpClient> abstraem os detalhes da criação de um <xref:System.Net.Sockets.Socket> para solicitar e receber dados usando o UDP.
@@ -48,7 +48,7 @@ Imports System.Text
 
 Public Class UDPListener
    Private Const listenPort As Integer = 11000
-   
+
    Private Shared Sub StartListener()
       Dim listener As New UdpClient(listenPort)
       Dim groupEP As New IPEndPoint(IPAddress.Any, listenPort)
@@ -65,7 +65,7 @@ Public Class UDPListener
          listener.Close()
       End Try
    End Sub 'StartListener
-   
+
    Public Shared Sub Main()
       StartListener()
    End Sub 'Main
@@ -81,19 +81,19 @@ using System.Text;
 public class UDPListener
 {
     private const int listenPort = 11000;
-    
+
     private static void StartListener()
     {
         UdpClient listener = new UdpClient(listenPort);
         IPEndPoint groupEP = new IPEndPoint(IPAddress.Any, listenPort);
-        
+
         try
         {
             while (true)
             {
                 Console.WriteLine("Waiting for broadcast");
                 byte[] bytes = listener.Receive(ref groupEP);
-                
+
                 Console.WriteLine($"Received broadcast from {groupEP} :");
                 Console.WriteLine($" {Encoding.ASCII.GetString(bytes, 0, bytes.Length)}");
             }
@@ -107,7 +107,7 @@ public class UDPListener
             listener.Close();
         }
     }
-    
+
     public static void Main()
     {
         StartListener();
@@ -145,20 +145,20 @@ class Program
     static void Main(string[] args)
     {
         Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-        
+
         IPAddress broadcast = IPAddress.Parse("192.168.1.255");
-        
+
         byte[] sendbuf = Encoding.ASCII.GetBytes(args[0]);
         IPEndPoint ep = new IPEndPoint(broadcast, 11000);
-        
+
         s.SendTo(sendbuf, ep);
-        
+
         Console.WriteLine("Message sent to the broadcast address");
     }
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.Sockets.UdpClient>
 - <xref:System.Net.IPAddress>

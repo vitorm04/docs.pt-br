@@ -10,23 +10,23 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: cb0ba120eeb57788c0525d45b714ad8edd2c39ed
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216971"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181112"
 ---
 # <a name="security-and-serialization"></a>Segurança e serialização
-Como a serialização pode permitir que outro código veja ou modifique dados de instância de objeto que, de outra forma, seriam inacessíveis, uma permissão especial é necessária para o código que executa a serialização: <xref:System.Security.Permissions.SecurityPermission> com o sinalizador de <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> especificado. De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.  
+Como a serialização pode permitir que outro código veja ou modifique dados de ocorrência de objeto <xref:System.Security.Permissions.SecurityPermission> que <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> de outra forma seriam inacessíveis, é necessária uma permissão especial para a serialização de execução de código: com o sinalizador especificado. De acordo com a política padrão, essa permissão não é dada ao código da intranet ou baixado da Internet; somente o código no computador local recebe essa permissão.  
   
- Normalmente, todos os campos de uma instância de objeto são serializados, o que significa que os dados são representados nos dados serializados da instância. É possível que o código possa interpretar o formato para determinar quais são os valores de dados, independentemente da acessibilidade do membro. Da mesma forma, a desserialização extrai dados da representação serializada e define o estado do objeto diretamente, independentemente das regras de acessibilidade.  
+ Normalmente, todos os campos de uma instância de objeto são serializados, o que significa que os dados são representados nos dados serializados para a instância. É possível para o código que pode interpretar o formato para determinar quais são os valores dos dados, independente da acessibilidade do membro. Da mesma forma, a desserialização extrai dados da representação serializada e define o estado do objeto diretamente, novamente independentemente das regras de acessibilidade.  
   
- Qualquer objeto que possa conter dados sensíveis à segurança deve se tornar não serializável, se possível. Se ele precisar ser serializável, tente criar campos específicos que contenham dados confidenciais não serializáveis. Se isso não puder ser feito, lembre-se de que esses dados serão expostos a qualquer código que tenha permissão para serializar e certifique-se de que nenhum código mal-intencionado possa obter essa permissão.  
+ Qualquer objeto que possa conter dados sensíveis à segurança deve ser tornado não serializável, se possível. Se for serializável, tente tornar os campos específicos que não são serializáveis. Se isso não puder ser feito, esteja ciente de que esses dados serão expostos a qualquer código que tenha permissão para serializar e certifique-se de que nenhum código malicioso possa obter essa permissão.  
   
- A interface <xref:System.Runtime.Serialization.ISerializable> destina-se ao uso somente pela infraestrutura de serialização. No entanto, se desprotegido, ele poderá liberar informações confidenciais. Se você fornecer serialização personalizada implementando **ISerializable**, certifique-se de tomar as seguintes precauções:  
+ A <xref:System.Runtime.Serialization.ISerializable> interface destina-se a ser usada apenas pela infra-estrutura de serialização. No entanto, se desprotegido, ele pode potencialmente liberar informações confidenciais. Se você fornecer serialização personalizada implementando **iSerializable**, certifique-se de tomar as seguintes precauções:  
   
-- O método <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> deve ser explicitamente protegido, exigindo a permissão **SecurityPermission** com **SerializationFormatter** especificada ou garantindo que nenhuma informação confidencial seja lançada com a saída do método. Por exemplo:  
+- O <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> método deve ser explicitamente protegido exigindo a **Permissão de Segurança** com a permissão **SerializationFormatter** especificada ou certificando-se de que nenhuma informação sensível seja liberada com a saída do método. Por exemplo:   
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -35,15 +35,15 @@ Como a serialização pode permitir que outro código veja ou modifique dados de
     ```  
   
     ```csharp  
-    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter   
+    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter
     =true)]  
-    public override void GetObjectData(SerializationInfo info,   
+    public override void GetObjectData(SerializationInfo info,
     StreamingContext context)  
     {  
     }  
     ```  
   
-- O Construtor especial usado para serialização também deve executar uma validação de entrada completa e deve ser protegido ou privado para ajudar a proteger contra uso indevido de código mal-intencionado. Ele deve impor as mesmas verificações de segurança e as permissões necessárias para obter uma instância de tal classe por outros meios, como criar explicitamente a classe ou criá-la indiretamente por meio de algum tipo de fábrica.  
+- O construtor especial usado para serialização também deve realizar uma validação completa de entrada e deve ser protegido ou privado para ajudar a proteger contra o uso indevido por código malicioso. Ele deve impor as mesmas verificações de segurança e permissões necessárias para obter uma instância de tal classe por qualquer outro meio, como criar explicitamente a classe ou criá-la indiretamente através de algum tipo de fábrica.  
   
 ## <a name="see-also"></a>Confira também
 

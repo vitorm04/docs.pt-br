@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047302"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180689"
 ---
 # <a name="security-in-network-programming"></a>Segurança na programação de rede
 
@@ -27,7 +27,7 @@ As classes de namespace <xref:System.Net> do .NET Framework dão suporte interno
 
 [Práticas recomendadas do protocolo TLS com o .NET Framework](tls.md)  
 Descreve as melhores práticas de TLS com o .NET Framework.
- 
+
 [Usando o protocolo SSL](using-secure-sockets-layer.md)  
 Descreve como usar conexões de protocolo SSL.  
   
@@ -39,5 +39,5 @@ Descreve como definir a segurança de acesso de código para aplicativos que usa
   
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Programação de rede no .NET Framework](index.md)  
+[Programação de rede no Framework .NET](index.md)  
 Apresenta as classes nos namespaces <xref:System.Net> e <xref:System.Net.Sockets>.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-ms.openlocfilehash: 3f965ab215ff861c6df61de82dcbbea6b389c8da
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3dd82588cf2dbf92fdda66fd7674c17ddc8b7306
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426773"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177183"
 ---
 # <a name="imetadataimportresetenum-method"></a>Método IMetaDataImport::ResetEnum
 Redefine o enumerador especificado para a posição especificada.  
@@ -29,28 +29,28 @@ Redefine o enumerador especificado para a posição especificada.
   
 ```cpp  
 HRESULT ResetEnum (  
-   [in] HCORENUM    hEnum,   
+   [in] HCORENUM    hEnum,
    [in] ULONG       ulPos  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `hEnum`  
- no O enumerador a ser redefinido.  
+ [em] O enumerador para reiniciar.  
   
  `ulPos`  
- no A nova posição na qual colocar o enumerador.  
+ [em] A nova posição para colocar o enumerador.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

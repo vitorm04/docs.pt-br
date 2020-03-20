@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: 8b259636a8bd28abd3bba12c4a05dda3c13557e1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f8e92ec4f813e8810273a1514298d0739a3d2406
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784900"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179056"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>Método ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs
-Obtém um enumerador para tipos de Windows Runtime em cache em um domínio de aplicativo com base em seus identificadores de interface.  
+Obtém um enumerador para tipos de tempo de execução do Windows em cache em um domínio de aplicativo com base em seus identificadores de interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT GetCachedWinRTTypesForIIDs (   
+HRESULT GetCachedWinRTTypesForIIDs (
     [in]  ULONG32            cReqTypes,  
     [in]  GUID                *iidsToResolve,  
     [out] ICorDebugTypeEnum   **ppTypesEnum  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cReqTypes`  
- no O número de tipos necessários.  
+ [em] O número de tipos necessários.  
   
  `iidsToResolve`  
- no Um ponteiro para uma matriz que contém os identificadores de interface correspondentes às representações gerenciadas dos tipos de Windows Runtime a serem recuperados.  
+ [em] Um ponteiro para uma matriz que contém os identificadores de interface correspondentes às representações gerenciadas dos tipos de tempo de execução do Windows a serem recuperados.  
   
  `ppTypesEnum`  
- fora Um ponteiro para o endereço de um objeto de interface "ICorDebugTypeEnum" que permite a enumeração das representações gerenciadas em cache dos tipos de Windows Runtime recuperados, com base nos identificadores de interface no `iidsToResolve`.  
+ [fora] Um ponteiro para o endereço de um objeto de interface "ICorDebugTypeEnum" que permite a enumeração das representações gerenciadas `iidsToResolve`em cache dos tipos de tempo de execução do Windows recuperados, com base nos identificadores de interface em .  
   
 ## <a name="remarks"></a>Comentários  
- Se o método não conseguir recuperar informações para um identificador de interface específico, a entrada correspondente na coleção "ICorDebugTypeEnum" terá um tipo de `ELEMENT_TYPE_END` para erros devido a problemas de recuperação de dados ou `ELEMENT_TYPE_VOID` para identificadores de interface desconhecidos.  
+ Se o método não recuperar informações para um identificador de interface específico, a entrada correspondente na `ELEMENT_TYPE_END` coleção "ICorDebugTypeEnum" `ELEMENT_TYPE_VOID` terá um tipo de erros devido a problemas de recuperação de dados ou para identificadores de interface desconhecidos.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** Windows Runtime  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** Tempo de execução do Windows  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugAppDomain3](icordebugappdomain3-interface.md)

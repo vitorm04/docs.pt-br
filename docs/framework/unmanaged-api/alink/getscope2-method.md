@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49435665-6f5a-4acd-9034-8c9244a04a63
 topic_type:
 - apiref
-ms.openlocfilehash: a5b080443be94d5a298cc67591914d87470e6f48
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 40df78cdf99c2e0f53be9664f3f5c6386b6c6f93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447192"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179404"
 ---
 # <a name="getscope2-method"></a>Método GetScope2
 Obtém um escopo de importação.  
@@ -32,29 +32,29 @@ HRESULT GetScope2(
     mdToken FileToken,  
     DWORD dwScope,  
     IMetaDataImport2** ppImportScope  
-) PURE;   
+) PURE;
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `AssemblyID`  
- ID do assembly de destino.  
+ ID da montagem do alvo.  
   
  `FileToken`  
- ID do arquivo do qual importar.  
+ ID de arquivo a partir do qual importar.  
   
  `dwScope`  
- Escopo de base zero para importar.  
+ Escopo baseado em zero para importar.  
   
  `ppImportScope`  
- Recebe o ponteiro para a interface de [interface IMetaDataImport2](../metadata/imetadataimport2-interface.md) para o escopo indicado.  
+ Recebe ponteiro para interface [IMetaDataImport2](../metadata/imetadataimport2-interface.md) para obter escopo indicado.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna S_OK se o método tiver sucesso.  
+ Retorna S_OK se o método for bem sucedido.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
- Requer ALink. h.  
+## <a name="requirements"></a>Requisitos  
+ Requer alink.h.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IALink2](ialink2-interface.md)
 - [Interface IALink](ialink-interface.md)

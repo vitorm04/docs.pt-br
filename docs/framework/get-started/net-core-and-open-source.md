@@ -2,22 +2,22 @@
 title: .NET Core e software livre
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75752554"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181608"
 ---
-# <a name="net-core-and-open-source"></a>.NET Core e código-fonte aberto
+# <a name="net-core-and-open-source"></a>.NET Core e código aberto
 
-Este artigo fornece uma breve visão geral do que é o .NET Core e mostra como você pode encontrar mais informações. Para encontrar a lista completa de documentação do .NET Core, visite o [Guia do .NET Core](../../core/index.md).
-  
-<a name="BKMK_WhatisNETCore"></a>   
+Este artigo fornece uma breve visão geral do que é o .NET Core e mostra como você pode encontrar mais informações. Para encontrar a lista completa de documentação para .NET Core, visite o [guia .NET Core](../../core/index.md).
+
 ## <a name="what-is-net-core"></a>O que é o .NET Core?  
- .NET Core é uma implementação de software livre, modular, de plataforma cruzada e para fins gerais do .NET Standard. Ele contém muitas das mesmas APIs do .NET Framework (mas o .NET Core é um conjunto menor) e inclui componentes de runtime, estrutura, compilador e ferramentas que oferecem suporte a vários sistemas operacionais e destinos de chip. A implementação do .NET Core foi conduzida principalmente por cargas de trabalho ASP.NET Core, mas também pela necessidade e desejo de ter uma implementação mais moderna. Ele pode ser usado em cenários de dispositivo, nuvem e IoT/incorporado.  
+
+.NET Core é uma implementação de software livre, modular, de plataforma cruzada e para fins gerais do .NET Standard. Ele contém muitas das mesmas APIs do .NET Framework (mas o .NET Core é um conjunto menor) e inclui componentes de runtime, estrutura, compilador e ferramentas que oferecem suporte a vários sistemas operacionais e destinos de chip. A implementação do .NET Core foi conduzida principalmente por cargas de trabalho ASP.NET Core, mas também pela necessidade e desejo de ter uma implementação mais moderna. Ele pode ser usado em cenários de dispositivo, nuvem e IoT/incorporado.  
   
- Para começar a usar o .NET Core, visite o tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
+Para começar com o .NET Core, visite o tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro).  
   
 As principais características do .NET Core são:
   
@@ -31,11 +31,11 @@ As principais características do .NET Core são:
   
 ## <a name="the-net-core-platform"></a>A plataforma .NET Core
   
-A plataforma .NET Core é composta por vários componentes, incluindo os compiladores gerenciados, o tempo de execução, as bibliotecas de classes base e vários modelos de aplicativos, como ASP.NET Core. Você pode saber mais sobre os diferentes componentes e estar envolvido visitando o seguinte repositórios do [GitHub](https://github.com/) :  
+A plataforma .NET Core é composta por vários componentes, incluindo os compiladores gerenciados, o tempo de execução, as bibliotecas de classe base e vários modelos de aplicativos, como ASP.NET Core. Você pode aprender mais sobre os diferentes componentes e ficar engajado visitando os seguintes repositórios do [GitHub:](https://github.com/)  
   
-- [Página inicial do .NET Core](https://github.com/dotnet/core)  
+- [.NET Core home](https://github.com/dotnet/core)  
   
-- [Tempo de execução-plataforma e tempo de execução do .NET Core](https://github.com/dotnet/runtime)  
+- [Tempo de execução - plataforma .NET Core e tempo de execução](https://github.com/dotnet/runtime)  
   
 - [CLI - Ferramentas da interface de linha de comando do .NET Core](https://github.com/dotnet/cli)  
   
@@ -43,8 +43,8 @@ A plataforma .NET Core é composta por vários componentes, incluindo os compila
   
 - [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Tutorial .NET – Olá, Mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [Guia do .NET Core](../../core/index.md)
+- [Tutorial .NET - Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
+- [.NET Core guide](../../core/index.md)
 - [ASP.NET Core docs](/aspnet/core/)

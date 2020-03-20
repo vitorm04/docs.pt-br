@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 70d9ee06d64cc80306a1988aa6e28859cadb9ecf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5ebbbf01bc27974850c7e0bb3591b8f050fd0579
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778413"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179267"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>Enumeração CorDebugInterfaceVersion
 Especifica uma interface, uma versão do .NET Framework ou uma versão do .NET Framework na qual uma interface foi introduzida.  
@@ -79,9 +79,9 @@ typedef enum CorDebugInterfaceVersion {
     ver_ICorDebugErrorInfoEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAppDomainEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAssemblyEnum         = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueErrorInfo   
+    ver_ICorDebugEditAndContinueErrorInfo
                                       = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueSnapshot   
+    ver_ICorDebugEditAndContinueSnapshot
                                       = CorDebugVersion_1_0,  
   
     CorDebugVersion_1_1               = CorDebugVersion_1_0 + 1,  
@@ -133,12 +133,12 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="members"></a>Membros  
  A tabela a seguir fornece links de cada valor de enumeração para a interface correspondente. Além disso, a tabela indica a primeira versão do .NET Framework na qual a interface teve suporte.  
   
-|{1&gt;Membro&lt;1}|Especifica|Versão do .NET Framework|  
+|Membro|Especifica|Versão do .NET Framework|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|A versão do .NET Framework é inválida.|-|  
 |`CorDebugVersion_1_0`|A versão do .NET Framework, incluindo todos os seus service packs, é 1.0.|1.0|  
-|`CorDebugVersion_1_1`|A versão do .NET Framework, incluindo todos os service packs, é 1.1.|1.1|  
-|`CorDebugVersion_2_0`|A versão do .NET Framework, incluindo todos os service packs, é 2.0.|2.0|  
+|`CorDebugVersion_1_1`|A versão do .NET Framework, incluindo todos os service packs, é 1.1.|1,1|  
+|`CorDebugVersion_2_0`|A versão do .NET Framework, incluindo todos os service packs, é 2.0.|2,0|  
 |`CorDebugVersion_4_0`|A versão do .NET Framework, incluindo todos os service packs, é 4.|4|  
 |`CorDebugVersion_4_5`|A versão do .NET Framework, incluindo todos os service packs, é 4.5.|4.5|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
@@ -147,7 +147,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugController`|[ICorDebugController](icordebugcontroller-interface.md)|1.0|  
 |`ver_ICorDebugAppDomain`|[ICorDebugAppDomain](icordebugappdomain-interface.md)|1.0|  
 |`ver_ICorDebugAssembly`|[ICorDebugAssembly](icordebugassembly-interface.md)|1.0|  
-|`ver_ICorDebugProcess`|[ICorDebugProcess](icordebugprocess-interface.md)|1.0|  
+|`ver_ICorDebugProcess`|[Icordebugprocess](icordebugprocess-interface.md)|1.0|  
 |`ver_ICorDebugBreakpoint`|[ICorDebugBreakpoint](icordebugbreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugFunctionBreakpoint`|[ICorDebugFunctionBreakpoint](icordebugfunctionbreakpoint-interface.md)|1.0|  
 |`ver_ICorDebugModuleBreakpoint`|[ICorDebugModuleBreakpoint](icordebugmodulebreakpoint-interface.md)|1.0|  
@@ -190,20 +190,20 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAssemblyEnum`|[ICorDebugAssemblyEnum](icordebugassemblyenum-interface.md)|1.0|  
 |`ver_ICorDebugEditAndContinueErrorInfo`|[ICorDebugEditAndContinueErrorInfo](icordebugeditandcontinueerrorinfo-interface.md)|1.0|  
 |`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
-|`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2.0|  
-|`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2.0|  
-|`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2.0|  
-|`ver_ICorDebugStepper2`|[ICorDebugStepper2](icordebugstepper2-interface1.md)|2.0|  
-|`ver_ICorDebugRegisterSet2`|[ICorDebugRegisterSet2](icordebugregisterset2-interface.md)|2.0|  
-|`ver_ICorDebugThread2`|[ICorDebugThread2](icordebugthread2-interface.md)|2.0|  
-|`ver_ICorDebugILFrame2`|[ICorDebugILFrame2](icordebugilframe2-interface.md)|2.0|  
-|`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2.0|  
-|`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2.0|  
-|`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2.0|  
-|`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
-|`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
-|`ver_ICorDebugEval2`|O "ICorDebugEval2".|2.0|  
-|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
+|`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2,0|  
+|`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2,0|  
+|`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2,0|  
+|`ver_ICorDebugStepper2`|[ICorDebugStepper2](icordebugstepper2-interface1.md)|2,0|  
+|`ver_ICorDebugRegisterSet2`|[ICorDebugRegisterSet2](icordebugregisterset2-interface.md)|2,0|  
+|`ver_ICorDebugThread2`|[ICorDebugThread2](icordebugthread2-interface.md)|2,0|  
+|`ver_ICorDebugILFrame2`|[ICorDebugILFrame2](icordebugilframe2-interface.md)|2,0|  
+|`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2,0|  
+|`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2,0|  
+|`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2,0|  
+|`ver_ICorDebugClass2`|"ICorDebugClass2"|2,0|  
+|`ver_ICorDebugValue2`|"ICorDebugValue2"|2,0|  
+|`ver_ICorDebugEval2`|O "ICorDebugeval2".|2,0|  
+|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2,0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](icordebugstackwalk-interface.md)|4|  
@@ -220,7 +220,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|A versão do .NET Framework, incluindo todos os service packs, é a mais recente.|-|  
   
 ## <a name="remarks"></a>Comentários  
- Um depurador pode usar a enumeração `CorDebugInterfaceVersion` na função [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) para especificar a versão mais recente do .NET Framework ao qual o depurador dá suporte.  
+ Um depurador pode `CorDebugInterfaceVersion` usar a enumeração na função [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) para especificar a versão mais alta do .NET Framework que o depurador suporta.  
   
 ## <a name="interface-names"></a>Nomes de Interface  
  O número que é exibido no final dos nomes de interface na API do depurador (por exemplo, o "3" em `ICorDebugThread3`) especifica a versão da interface, não a versão do .NET Framework. Todos os nomes de interface na API do depurador incluem números da versão, exceto as interfaces que foram introduzidas na versão 1 do .NET Framework. Qualquer correspondência entre números da versão de interface e números da versão do .NET Framework são coincidentes.  
@@ -233,17 +233,17 @@ typedef enum CorDebugInterfaceVersion {
   
 - As versões 3.0 e 3.5 do .NET Framework usam as interfaces existentes do .NET Framework 2.0 e não introduzem nenhuma nova interface.  
   
-- O .NET Framework 4 introduz uma mistura de versões de interface. Por exemplo, `ICorDebugThread3` e `ICorDebugThread4` são exibidas como a terceira e quarta versões da interface `ICorDebugThread`. O .NET Framework 4 também apresenta a primeira versão da interface `ICorDebugStackWalk` e a segunda versão da interface `ICorDebugNativeFrame` (`ICorDebugNativeFrame2`).  
+- O .NET Framework 4 introduz uma mistura de versões de interface. Por exemplo, `ICorDebugThread3` e `ICorDebugThread4` são exibidas como a terceira e quarta versões da interface `ICorDebugThread`. O .NET Framework 4 também introduz `ICorDebugStackWalk` a primeira versão da `ICorDebugNativeFrame` interface`ICorDebugNativeFrame2`e a segunda versão da interface ( ).  
   
-## <a name="requirements"></a>Requisitos do  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Declarando enumerações](debugging-enumerations.md)

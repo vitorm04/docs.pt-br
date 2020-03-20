@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181756"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA releaseHandleFailed
 O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado é notificar os desenvolvedores quando o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de uma classe derivada de <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> retorna `false`.  
@@ -51,13 +51,13 @@ O MDA (Assistente de Depuração Gerenciado) de `releaseHandleFailed` é ativado
  Esse MDA não tem efeito sobre o CLR.  
   
 ## <a name="output"></a>Saída  
- Uma mensagem indicando que um <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> falhou em liberar o identificador. Por exemplo:  
+ Uma mensagem indicando que um <xref:System.Runtime.InteropServices.SafeHandle> ou <xref:System.Runtime.InteropServices.CriticalHandle> falhou em liberar o identificador. Por exemplo:   
   
 ```output
-"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
-failed to properly release the handle with value 0x0000BEEF. This   
-usually indicates that the handle was released incorrectly via   
-another means (such as extracting the handle using DangerousGetHandle   
+"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
+failed to properly release the handle with value 0x0000BEEF. This
+usually indicates that the handle was released incorrectly via
+another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
@@ -77,12 +77,12 @@ and closing it directly or building another SafeHandle around it."
 ```csharp
 bool ReleaseHandle()  
 {  
-    // Calling the Win32 CloseHandle function to release the   
-    // native handle wrapped by this SafeHandle. This method returns   
-    // false on failure, but should only fail if the input is invalid   
-    // (which should not happen here). The method specifically must not   
-    // fail simply because of lack of resources or other transient   
-    // failures beyond the user’s control. That would make it unacceptable   
+    // Calling the Win32 CloseHandle function to release the
+    // native handle wrapped by this SafeHandle. This method returns
+    // false on failure, but should only fail if the input is invalid
+    // (which should not happen here). The method specifically must not
+    // fail simply because of lack of resources or other transient
+    // failures beyond the user’s control. That would make it unacceptable
     // to call CloseHandle as part of the implementation of this method.  
     return CloseHandle(handle);  
 }  
@@ -91,5 +91,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

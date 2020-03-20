@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130183"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180518"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Como criar um arquivo de documentação XML usando CodeDOM
 O CodeDOM pode ser usado para criar o código que gera a documentação XML. O processo envolve a criação do grafo CodeDOM que contém os comentários de documentação XML, a geração do código e a compilação do código gerado com a opção do compilador que cria a saída de documentação XML.  
@@ -51,22 +51,22 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
  O exemplo de código cria a seguinte documentação XML no arquivo HelloWorldDoc.xml.  
   
 ```xml  
-<?xml version="1.0" ?>   
+<?xml version="1.0" ?>
 <doc>  
   <assembly>  
-    <name>HelloWorld</name>   
+    <name>HelloWorld</name>
   </assembly>  
   <members>  
     <member name="T:Samples.Class1">  
       <summary>  
-        Create a Hello World application.   
-        <seealso cref="M:Samples.Class1.Main" />   
+        Create a Hello World application.
+        <seealso cref="M:Samples.Class1.Main" />
       </summary>  
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
-        Main method for HelloWorld application.   
-        <para>Add a new paragraph to the description.</para>   
+        Main method for HelloWorld application.
+        <para>Add a new paragraph to the description.</para>
       </summary>  
     </member>  
   </members>  
@@ -77,8 +77,8 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
   
 - Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Documentando o Código com XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Comentários da documentação XML](../../csharp/programming-guide/xmldoc/index.md)
+- [Documentando o código com XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Comentários sobre documentação xml](../../csharp/programming-guide/xmldoc/index.md)
 - [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)

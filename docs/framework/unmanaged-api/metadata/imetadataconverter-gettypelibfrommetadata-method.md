@@ -15,45 +15,45 @@ helpviewer_keywords:
 ms.assetid: 90eab7b3-1fae-4af4-8bce-f7bc0e188a99
 topic_type:
 - apiref
-ms.openlocfilehash: 9da4e34fa948db2fc73cbde813bac9b3430605ca
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ef573eb9a572c27e685289b2740a55e898be2093
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436256"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177626"
 ---
 # <a name="imetadataconvertergettypelibfrommetadata-method"></a>Método IMetaDataConverter::GetTypeLibFromMetaData
-Obtém um ponteiro para uma instância de `ITypeLib` que representa a biblioteca de tipos que tem os nomes de módulo e biblioteca especificados.  
+Obtém um `ITypeLib` ponteiro para uma instância que representa a biblioteca de tipos que tem os nomes de biblioteca e módulo especificados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetTypeLibFromMetaData (  
-    [in]  BSTR     strModule,   
-    [in]  BSTR     strTlbName,   
+    [in]  BSTR     strModule,
+    [in]  BSTR     strTlbName,
     [out] ITypeLib **ppITL  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `strModule`  
- no O nome do módulo da biblioteca de tipos.  
+ [em] O nome do módulo da biblioteca do tipo.  
   
  `strTlbName`  
- no O nome da biblioteca de tipos.  
+ [em] O nome da biblioteca do tipo.  
   
  `ppITL`  
- fora Um ponteiro para um local que recebe o endereço da instância de `ITypeLib` que representa a biblioteca de tipos.  
+ [fora] Um ponteiro para um local que `ITypeLib` recebe o endereço da instância que representa a biblioteca do tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [os requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Biblioteca:** Usado como recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataConverter](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

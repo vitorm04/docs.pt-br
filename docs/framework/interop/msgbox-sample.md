@@ -9,12 +9,12 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124105"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181352"
 ---
 # <a name="msgbox-sample"></a>Exemplo de MsgBox
 Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como parâmetros In e quando usar os campos <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> e <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
@@ -24,7 +24,7 @@ Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como 
 - **MessageBox** exportada de User32.dll.  
   
     ```cpp
-    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
+    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,
        UINT uType);  
     ```  
   
@@ -42,9 +42,9 @@ Esta amostra demonstra como passar tipos de cadeia de caracteres por valor como 
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Marshaling em cadeias de caracteres](marshaling-strings.md)
+- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
 - [Marshaling padrão para cadeias de caracteres](default-marshaling-for-strings.md)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)

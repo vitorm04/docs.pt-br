@@ -9,12 +9,12 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: b46d5c6ffbf12efbae113a95bbfccd5742ec9ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217296"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181796"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>MDA nonComVisibleBaseClass
 O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativado quando uma chamada `QueryInterface` é feita por código não gerenciado ou nativo no CCW (COM Callable Wrapper) de uma classe gerenciada visível em COM derivada de uma classe base que não é visível em COM.  A chamada `QueryInterface` faz com que o MDA seja ativado apenas em casos nos quais a chamada solicita a interface de classe ou o `IDispatch` padrão da classe gerenciada visível em COM.  O MDA não é ativado quando o `QueryInterface` é para uma interface explícita que tem o atributo <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> aplicado e é implementado explicitamente pela classe visível em COM.  
@@ -35,11 +35,11 @@ O MDA (Assistente de Depuração Gerenciado) de `nonComVisibleBaseClass` é ativ
  A seguir está um exemplo de mensagem para uma chamada `QueryInterface` em uma classe visível em COM `Derived` que deriva de uma classe não visível em COM `Base`.  
   
 ```output
-A QueryInterface call was made requesting the class interface of COM   
-visible managed class 'Derived'. However since this class derives from   
-non COM visible class 'Base', the QueryInterface call will fail. This   
-is done to prevent the non COM visible base class from being   
-constrained by the COM versioning rules.   
+A QueryInterface call was made requesting the class interface of COM
+visible managed class 'Derived'. However since this class derives from
+non COM visible class 'Base', the QueryInterface call will fail. This
+is done to prevent the non COM visible base class from being
+constrained by the COM versioning rules.
 ```  
   
 ## <a name="configuration"></a>Configuração  
@@ -55,5 +55,5 @@ constrained by the COM versioning rules.
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosticando erros com Assistentes de Depuração Gerenciados](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling de interoperabilidade](../interop/interop-marshaling.md)
+- [Diagnosticando erros com assistentes para depuração gerenciada](diagnosing-errors-with-managed-debugging-assistants.md)
+- [Realizando marshaling de interoperabilidade](../interop/interop-marshaling.md)

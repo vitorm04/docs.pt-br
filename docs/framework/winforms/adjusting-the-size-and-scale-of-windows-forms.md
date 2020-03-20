@@ -1,30 +1,29 @@
 ---
-title: Ajustar o tamanho e a escala
+title: Ajuste o tamanho e a escala
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: db82e290de93fb24ccd4f3a504fe8fdfba3b2e1b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cc77c271e52149c3cc0f42f969030478b72cf8d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739782"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182644"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Ajustando o tamanho e a escala de Windows Forms
-Este tópico fornece links para informações sobre o redimensionamento de Windows Forms.  
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Ajustando o tamanho e a escala dos Formulários do Windows
+Este tópico fornece links para informações sobre o redimensionamento de Formulários do Windows.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Como redimensionar o Windows Forms](how-to-resize-windows-forms.md)  
- Fornece instruções para especificar o tamanho de Windows Forms.  
+ Fornece instruções para especificar o tamanho dos Formulários do Windows.  
   
- [Dimensionamento automático no Windows Forms](automatic-scaling-in-windows-forms.md)  
- Discute como o dimensionamento automático permite que um formulário e seus controles sejam exibidos adequadamente entre os computadores.  
+ [Dimensionamento automático em formulários do Windows](automatic-scaling-in-windows-forms.md)  
+ Discute como o dimensionamento automático permite que um formulário e seus controles sejam exibidos adequadamente entre as máquinas.  
   
- [Suporte a alto dpi no Windows Forms](high-dpi-support-in-windows-forms.md)    
- Discute Windows Forms ' suporte para alto DPI e dimensionamento dinâmico. 
+ [Suporte a DPI alto em formulários windows](high-dpi-support-in-windows-forms.md) Discute o suporte do Windows Forms para Alto DPI e dimensionamento dinâmico.
   
 ## <a name="reference"></a>Referência  
  <xref:System.Drawing.Size>  
@@ -37,5 +36,5 @@ Este tópico fornece links para informações sobre o redimensionamento de Windo
  Descreve essa classe e tem links para todos os seus membros.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Alterando a aparência de Windows Forms](changing-the-appearance-of-windows-forms.md)  
- Fornece links para tópicos que descrevem outras maneiras de alterar a aparência de Windows Forms.
+ [Alterando a aparência dos Formulários do Windows](changing-the-appearance-of-windows-forms.md)  
+ Fornece links para tópicos descrevendo outras maneiras de alterar a aparência dos Formulários do Windows.

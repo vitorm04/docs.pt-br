@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123663"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181472"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
 A ativação sem registro de componentes baseados no .NET Framework é apenas um pouco mais complicada do que para componentes COM. A instalação exige dois manifestos:  
@@ -42,10 +42,10 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,7 +103,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 4. Identifique cada classe no assembly. Use o elemento `<clrClass>` para identificar cada classe exclusivamente no assembly gerenciado. O elemento, que é um subelemento do elemento `<assembly>`, tem os atributos descritos na tabela a seguir.  
   
-    |Atributo|Descrição|Necessária|  
+    |Atributo|Descrição|Obrigatório|  
     |---------------|-----------------|--------------|  
     |`clsid`|O identificador que especifica a classe a ser ativada.|Sim|  
     |`description`|Uma cadeia de caracteres que informa o usuário sobre o componente. Uma cadeia de caracteres vazia é o padrão.|Não|  
@@ -122,7 +122,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -156,7 +156,7 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
      Nessa instrução, `myManagedComp.manifest` é o nome do manifesto do componente que está sendo inserido. Neste exemplo, o nome do arquivo de script é `myresource.rc`.  
   
-2. Compile o script usando o Compilador de Recurso do Microsoft Windows (Rc.exe). No prompt de comando, digite o seguinte comando:  
+2. Compile o script usando o Compilador de Recurso do Microsoft Windows (Rc.exe). No prompt de comando, digite o comando a seguir:  
   
      `rc myresource.rc`  
   
@@ -166,9 +166,9 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
     `/win32res:myresource.res`  
   
-     Novamente, `myresource.res` é o nome do arquivo de recurso que contém recursos incorporados.  
+     Novamente, `myresource.res` é o nome do arquivo de recursos que contém recursos incorporados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interoperabilidade COM sem registro](registration-free-com-interop.md)
 - [Requisitos para interoperabilidade COM sem registro](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3f6928832d822422177ebd7def142422953468a0
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: e680a7a0dc3209d1988f6c84be0864572a74b3a4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274288"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179372"
 ---
 # <a name="clrdata_il_address_map-structure"></a>Estrutura CLRDATA_IL_ADDRESS_MAP
 
-Define um IL para o mapeamento de endereços.
+Define um IL para endereçar mapeamento.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -44,23 +44,22 @@ typedef struct
 
 | Membro         | Descrição                                            |
 | -------------- | ------------------------------------------------------ |
-| `ilOffset`     | Deslocamento de IL para o intervalo de endereços contidos              |
+| `ilOffset`     | Deslocamento il para a faixa de endereço contida              |
 | `startAddress` | O endereço inicial do intervalo.                        |
 | `endAddress`   | O endereço final do intervalo.                          |
-| `type`         | O tipo de dados. Este valor não está sendo usado no momento |
+| `type`         | O tipo de dados. Este valor não é usado no momento |
 
 ## <a name="remarks"></a>Comentários
 
-Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima, `CLRDATA_ADDRESS` em que é um inteiro sem sinal de 64 bits.
+Esta estrutura vive dentro do tempo de execução e não é exposta através de nenhum cabeçalho ou arquivos de biblioteca. Para usá-lo, defina a estrutura `CLRDATA_ADDRESS` como especificado acima, onde está um inteiro não assinado de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../get-started/system-requirements.md).  
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
 **Cabeçalho:** Nenhum  
-**Biblioteca** Nenhum   
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Biblioteca:** Nenhuma **versão framework .NET:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumeração CLRDataSourceType](clrdatasourcetype-enumeration.md)
 - [Depuração](index.md)

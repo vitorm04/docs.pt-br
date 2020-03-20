@@ -15,86 +15,86 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177226"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>Método IMetaDataImport::GetMemberProps
-Obtém informações armazenadas nos metadados para uma definição de membro especificada, incluindo o nome, a assinatura binária e o endereço virtual relativo, do membro de <xref:System.Type> referenciado pelo token de metadados especificado. Este é um método auxiliar simples: se *MB* for um MethodDef, **GetMethodProps** será chamado; Se *MB* for um FieldDef, então **GetFieldProps** será chamado. Consulte esses outros métodos para obter detalhes. 
+Obtém informações armazenadas nos metadados para uma definição de membro especificada, incluindo <xref:System.Type> o nome, assinatura binária e endereço virtual relativo, do membro referenciado pelo token de metadados especificado. Este é um método simples de ajuda: se *mb* é um MethodDef, então **GetMethodProps** é chamado; se *mb* é um FieldDef, então **GetFieldProps** é chamado. Veja esses outros métodos para obter detalhes.
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetMemberProps (  
-   [in]  mdToken           mb,   
+   [in]  mdToken           mb,
    [out] mdTypeDef         *pClass,  
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
    [out] DWORD             *pdwAttr,  
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] ULONG             *pulCodeRVA,   
-   [out] DWORD             *pdwImplFlags,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] ULONG             *pulCodeRVA,
+   [out] DWORD             *pdwImplFlags,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `mb`  
- no O token que faz referência ao membro para obter os metadados associados.  
+ [em] O token que faz referência ao membro para obter os metadados associados.  
   
  `pClass`  
- fora Um ponteiro para o token de metadados que representa a classe do membro.  
+ [fora] Um ponteiro para o token de metadados que representa a classe do membro.  
   
  `szMember`  
- fora O nome do membro.  
+ [fora] O nome do membro.  
   
  `cchMember`  
- no O tamanho em caracteres largos do buffer de `szMember`.  
+ [em] O tamanho em caracteres largos do `szMember` buffer.  
   
  `pchMember`  
- fora O tamanho em caracteres largos do nome retornado.  
+ [fora] O tamanho em caracteres largos do nome retornado.  
   
  `pdwAttr`  
- fora Quaisquer valores de sinalizador aplicados ao membro.  
+ [fora] Quaisquer valores de bandeira aplicados ao membro.  
   
  `ppvSigBlob`  
- fora Um ponteiro para a assinatura de metadados binários do membro.  
+ [fora] Um ponteiro para a assinatura binária de metadados do membro.  
   
  `pcbSigBlob`  
- fora O tamanho em bytes de `ppvSigBlob`.  
+ [fora] O tamanho em bytes de `ppvSigBlob`.  
   
  `pulCodeRVA`  
- fora Um ponteiro para o endereço virtual relativo do membro.  
+ [fora] Um ponteiro para o endereço virtual relativo do membro.  
   
  `pdwImplFlags`  
- fora Quaisquer sinalizadores de implementação de método associados ao membro.  
+ [fora] Qualquer método de implementação sinaliza associados ao membro.  
   
  `pdwCPlusTypeFlag`  
- fora Um sinalizador que marca um <xref:System.ValueType>. É um dos valores de `ELEMENT_TYPE_*`.
+ [fora] Uma bandeira que <xref:System.ValueType>marca um. É um dos `ELEMENT_TYPE_*` valores.
   
  `ppValue`  
- fora Um valor de cadeia de caracteres constante retornado por este membro.  
+ [fora] Um valor de seqüência constante devolvido por este membro.  
   
  `pcchValue`  
- fora O tamanho em caracteres de `ppValue`ou zero se `ppValue` não mantiver uma cadeia de caracteres.  
+ [fora] O tamanho em `ppValue`caracteres `ppValue` de , ou zero se não segurar uma seqüência.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

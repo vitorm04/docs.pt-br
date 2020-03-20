@@ -1,5 +1,5 @@
 ---
-title: Consulte hotfixes e atualizações de segurança .NET Framework instaladas
+title: Consulte atualizações de segurança e hotfixes do .NET Framework instalados
 description: Saiba como determinar quais atualizações de segurança e hotfixes do .NET Framework estão instaladas em um computador.
 ms.date: 11/27/2017
 dev_langs:
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5c7bf48d5786530a9bcb69fb7cf605ac2c80a4eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716261"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181275"
 ---
-# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Como determinar quais .NET Framework atualizações de segurança e hotfixes estão instalados
+# <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>Como determinar quais atualizações de segurança e hotfixes do .NET Framework estão instalados
 
 Este artigo mostra como descobrir quais atualizações de segurança e hotfixes do .NET Framework estão instaladas em um computador.
 
 > [!NOTE]
 > Todas as técnicas mostradas neste artigo exigem uma conta com privilégios administrativos.
 
-## <a name="use-registry-editor"></a>Usar o editor do registro
+## <a name="use-registry-editor"></a>Use o Editor de Registro
 
 As atualizações de segurança e os hotfixes instalados para cada versão do .NET Framework instalado em um computador estão listadas no Registro do Windows. Você pode usar o programa Editor do Registro (*regedit.exe*) para exibir essas informações.
 
-1. Abra o programa **regedit.exe**. No Windows 8 e versões posteriores, clique com o botão direito do mouse em **Iniciar** ![captura de tela do logotipo da chave do Windows.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Windowskeyboardlogo")em seguida, selecione **executar**. Na caixa **Abrir**, digite **regedit.exe** e selecione **OK**.
+1. Abra o programa **regedit.exe**. Nas versões Windows 8 e posteriores, clique com o botão direito do mouse **Start** ![Screenshot do logotipo da chave do Windows.](./media/how-to-determine-which-net-framework-updates-are-installed/windows-keyboard-logo.png "Logotipo do Windowskeyboard")e selecione **Executar**. Na caixa **Abrir**, digite **regedit.exe** e selecione **OK**.
 
 2. No Editor do Registro, abrir a seguinte subchave:
 
-     **HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\Updates**
+     **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Updates**
 
      As atualizações instaladas estão listadas nas subchaves que identificam a versão do .NET Framework a que se aplicam. Cada atualização é identificada por um número da Base de Dados de Conhecimento (KB).
 
@@ -65,7 +65,7 @@ Microsoft .NET Framework 4 Extended
   KB2600217
 ```
 
-## <a name="use-powershell-to-query-the-registry"></a>Usar o PowerShell para consultar o registro
+## <a name="use-powershell-to-query-the-registry"></a>Use o PowerShell para consultar o registro
 
 O exemplo a seguir mostra como determinar as atualizações de segurança e os hotfixes do .NET Framework que estão instalados em um computador usando o PowerShell:
 
@@ -74,7 +74,7 @@ $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | W
  "*.NET Framework*"}
 
 ForEach($Version in $DotNetVersions){
-    
+
    $Updates = Get-ChildItem $Version.PSPath
     $Version.PSChildName
     ForEach ($Update in $Updates){
@@ -104,8 +104,8 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Como determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md)
+- [Como: Determinar quais versões do .NET Framework estão instaladas](how-to-determine-which-versions-are-installed.md)
 - [Instalar o .NET Framework para desenvolvedores](../install/guide-for-developers.md)
 - [Versões e dependências](versions-and-dependencies.md)

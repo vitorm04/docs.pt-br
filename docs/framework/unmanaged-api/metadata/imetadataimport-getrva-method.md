@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177210"
 ---
 # <a name="imetadataimportgetrva-method"></a>Método IMetaDataImport::GetRVA
-Obtém o endereço virtual relativo (RVA) e os sinalizadores de implementação do método ou do campo representado pelo token especificado.  
+Obtém o endereço virtual relativo (RVA) e os sinalizadores de implementação do método ou campo representados pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetRVA (  
-   [in]  mdToken     tk,   
-   [out] ULONG       *pulCodeRVA,   
+   [in]  mdToken     tk,
+   [out] ULONG       *pulCodeRVA,
    [out]  DWORD      *pdwImplFlags  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tk`  
- no Um token de metadados MethodDef ou FieldDef que representa o objeto de código para o qual retornar o RVA. Se o token for um FieldDef, o campo deverá ser uma variável global.  
+ [em] Um token de metadados MethodDef ou FieldDef que representa o objeto de código para retornar o RVA. Se o token é um FieldDef, o campo deve ser uma variável global.  
   
  `pulCodeRVA`  
- fora Um ponteiro para o endereço virtual relativo do objeto de código representado pelo token.  
+ [fora] Um ponteiro para o endereço virtual relativo do objeto de código representado pelo token.  
   
  `pdwImplFlags`  
- fora Um ponteiro para os sinalizadores de implementação do método. Esse valor é um bitmask da enumeração [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) . O valor de `pdwImplFlags` será válido somente se `tk` for um token MethodDef.  
+ [fora] Um ponteiro para as bandeiras de implementação para o método. Este valor é uma máscara de bitda da enumeração [CorMethodImpl.](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) O valor `pdwImplFlags` do é `tk` válido apenas se for um token MethodDef.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

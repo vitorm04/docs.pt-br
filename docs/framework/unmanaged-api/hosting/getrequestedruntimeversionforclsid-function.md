@@ -14,67 +14,67 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6132e94544b30486b70ecfec49c1ddd5e3c0f50b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127047"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178110"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>Função GetRequestedRuntimeVersionForCLSID
-Obtém as informações de versão do Common Language Runtime (CLR) apropriadas para a classe com a `CLSID`especificada.  
+Obtém as informações apropriadas da versão de tempo de `CLSID`execução do idioma comum (CLR) para a classe com a especificada .  
   
- Essa função foi preterida no .NET Framework 4.  
+ Esta função foi depreciada no Quadro .NET 4.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
-    [in]  REFCLSID   rclsid,   
-    [out]  LPWSTR     pVersion,   
-    [in]  DWORD      cchBuffer,   
-    [out] DWORD*     dwLength,   
+    [in]  REFCLSID   rclsid,
+    [out]  LPWSTR     pVersion,
+    [in]  DWORD      cchBuffer,
+    [out] DWORD*     dwLength,
     [in]  CLSID_RESOLUTION_FLAGS dwResolutionFlags  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `rclsid`  
- no  O `CLSID` do componente.  
+ [em]  O `CLSID` do componente.  
   
  `pVersion`  
- fora  Um buffer que contém a cadeia de caracteres de número de versão após a conclusão bem-sucedida.  
+ [fora]  Um buffer que contém a seqüência de números da versão após a conclusão bem sucedida.  
   
  `cchBuffer`  
- no  O tamanho, em caracteres largos, do buffer de `pVersion`.  
+ [em]  O tamanho, em caracteres `pVersion` largos, do buffer.  
   
  `dwLength`  
- fora O comprimento, em bytes, do buffer retornado.  
+ [fora] O comprimento, em bytes, do tampão devolvido.  
   
  `dwResolutionFlags`  
- no  Um dos valores de CLSID_RESOLUTION_FLAGS. Há suporte para os seguintes valores:  
+ [em]  Um dos valores CLSID_RESOLUTION_FLAGS. Os valores a seguir têm suporte:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) especifica que o comportamento de interoperabilidade padrão deve ser usado.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) Especifica que o comportamento de interop padrão deve ser usado.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) especifica que o registro deve ser pesquisado e que a política de Shim deve ser aplicada.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) Especifica que o registro deve ser pesquisado e a política de shim deve ser aplicada.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|A função retornou com êxito.|  
+|S_OK|A função retornou com sucesso.|  
 |E_INVALIDARG|Um dos parâmetros tem um tipo ou formato inválido.|  
-|ERROR_INSUFFICIENT_BUFFER|O buffer de `pVersion` não é grande o suficiente para manter a cadeia de caracteres de versão inteira.|  
-|REGDB_E_CLASSNOTREG|Não há nenhuma classe registrada com o `CLSID`especificado.|  
-|E_POINTER|`dwLength` é nulo ou `cchBuffer` é grande o suficiente para manter a cadeia de caracteres da versão, mas `pVersion` é nulo.|  
+|Error_insufficient_buffer|O `pVersion` buffer não é grande o suficiente para segurar toda a seqüência de versão.|  
+|REGDB_E_CLASSNOTREG|Não há classe registrada com `CLSID`o especificado .|  
+|E_POINTER|`dwLength`é nulo, ou `cchBuffer` é grande o `pVersion` suficiente para segurar a seqüência de versão, mas é nulo.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** MSCorEE. h  
+ **Cabeçalho:** MSCorEE.h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Funções de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [Funções de hospedagem CLR reprovadas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

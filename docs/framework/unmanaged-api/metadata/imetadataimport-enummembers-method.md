@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: 3fb8e178-342b-4c89-9bcf-f7f834e6cb77
 topic_type:
 - apiref
-ms.openlocfilehash: acb772a64c8f13405f2836bb5f4f308986dce414
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 20c7a90f27defa18a5ef311d1f3a549b81fc5c40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447661"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175480"
 ---
 # <a name="imetadataimportenummembers-method"></a>Método IMetaDataImport::EnumMembers
-Enumera os tokens MemberDef que representam os membros do tipo especificado.  
+Enumera os tokens MemberDef representando membros do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT EnumMembers (   
-   [in, out]  HCORENUM    *phEnum,   
-   [in]  mdTypeDef   cl,   
-   [out] mdToken     rMembers[],   
-   [in]  ULONG       cMax,   
+HRESULT EnumMembers (
+   [in, out]  HCORENUM    *phEnum,
+   [in]  mdTypeDef   cl,
+   [out] mdToken     rMembers[],
+   [in]  ULONG       cMax,
    [out] ULONG       *pcTokens  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `phEnum`  
- [entrada, saída] Um ponteiro para o enumerador.  
+ [dentro, fora] Um ponteiro para o enumerador.  
   
  `cl`  
- no Um token de TypeDef que representa o tipo cujos membros devem ser enumerados.  
+ [em] Um token TypeDef representando o tipo cujos membros devem ser enumerados.  
   
  `rMembers`  
- fora A matriz usada para manter os tokens MemberDef.  
+ [fora] A matriz usada para conter os tokens MemberDef.  
   
  `cMax`  
- no O tamanho máximo da matriz de `rMembers`.  
+ [em] O tamanho máximo `rMembers` da matriz.  
   
  `pcTokens`  
- fora O número real de tokens MemberDef retornados em `rMembers`.  
+ [fora] O número real de tokens MemberDef retornou em `rMembers`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` retornado com êxito.|  
+|`S_OK`|`EnumMembers`retornou com sucesso.|  
 |`S_FALSE`|Não há tokens MemberDef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Ao enumerar coleções de membros para uma classe, `EnumMembers` retorna somente Membros (campos e métodos, mas **não** Propriedades ou eventos) definidos diretamente na classe. Ele não retorna nenhum membro herdado pela classe, mesmo que a classe forneça uma implementação para esses membros herdados. Para enumerar membros herdados, o chamador deve percorrer a cadeia de herança explicitamente. Observe que as regras para a cadeia de herança podem variar dependendo do idioma ou do compilador que emitiu os metadados originais.
- 
- As propriedades e os eventos não são enumerados por `EnumMembers`. Para enumerar, use [EnumProperties](imetadataimport-enumproperties-method.md) ou [EnumEvents](imetadataimport-enumevents-method.md).
+ Ao enumerar coleções de membros `EnumMembers` para uma classe, retorna apenas membros (campos e métodos, mas **não** propriedades ou eventos) definidos diretamente na classe. Não devolve nenhum membro que a classe herde, mesmo que a classe forneça uma implementação para os membros herdados. Para enumerar os membros herdados, o interlocutor deve andar explicitamente na cadeia de herança. Observe que as regras para a cadeia de herança podem variar dependendo do idioma ou compilador que emitia os metadados originais.
+
+ Propriedades e eventos não são `EnumMembers`enumerados por . Para enumerar esses, use [EnumProperties](imetadataimport-enumproperties-method.md) ou [EnumEvents](imetadataimport-enumevents-method.md).
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

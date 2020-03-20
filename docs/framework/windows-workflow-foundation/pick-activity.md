@@ -2,17 +2,17 @@
 title: Escolher atividade
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 51caf020042212b570ae915ead00a4225df2c588
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283174"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182900"
 ---
 # <a name="pick-activity"></a>Escolher atividade
-A atividade de <xref:System.Activities.Statements.Pick> simplifica a modelagem de um conjunto de disparadores de evento seguidos por seus manipuladores correspondentes.  Uma atividade de <xref:System.Activities.Statements.Pick> contém uma coleção de atividades de <xref:System.Activities.Statements.PickBranch> , onde cada <xref:System.Activities.Statements.PickBranch> é um emparelhamento entre uma atividade de <xref:System.Activities.Statements.PickBranch.Trigger%2A> e uma atividade de <xref:System.Activities.Statements.PickBranch.Action%2A> .  Em tempo de execução, disparadores para todos as ramificações são executados paralelamente.  Quando um disparador for concluída, então a ação correspondente é executada, e todos outros disparadores são canceladas.  O comportamento da atividade de <xref:System.Activities.Statements.Pick> de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]é semelhante à atividade de <xref:System.Workflow.Activities.ListenActivity> do .NET Framework 3,5.  
+A atividade de <xref:System.Activities.Statements.Pick> simplifica a modelagem de um conjunto de disparadores de evento seguidos por seus manipuladores correspondentes.  Uma atividade de <xref:System.Activities.Statements.Pick> contém uma coleção de atividades de <xref:System.Activities.Statements.PickBranch> , onde cada <xref:System.Activities.Statements.PickBranch> é um emparelhamento entre uma atividade de <xref:System.Activities.Statements.PickBranch.Trigger%2A> e uma atividade de <xref:System.Activities.Statements.PickBranch.Action%2A> .  Em tempo de execução, disparadores para todos as ramificações são executados paralelamente.  Quando um disparador for concluída, então a ação correspondente é executada, e todos outros disparadores são canceladas.  O comportamento [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> da atividade é semelhante à atividade <xref:System.Workflow.Activities.ListenActivity> do Quadro .NET 3.5.  
   
- A captura de tela a seguir do exemplo [usando o SDK de atividade de seleção](./samples/using-the-pick-activity.md) mostra uma atividade de seleção com duas ramificações.  Um Branch tem um gatilho chamado **read input**, uma atividade personalizada que lê a entrada da linha de comando. O segundo ramificação tem um disparador de atividade de <xref:System.Activities.Statements.Delay> . Se a atividade **ler entrada** receber dados antes da conclusão da atividade de <xref:System.Activities.Statements.Delay>, <xref:System.Activities.Statements.Delay> atraso será cancelado e uma saudação será gravada no console.  Caso contrário, se a atividade **ler entrada** não receber dados no tempo alocado, ela será cancelada e uma mensagem de tempo limite será gravada no console.  Este é um padrão comum usado para adicionar um tempo limite a qualquer ação.  
+ A captura de tela a seguir da [amostra Using the Pick Activity](./samples/using-the-pick-activity.md) SDK mostra uma atividade Pick com dois ramos.  Um ramo tem um gatilho chamado **Read input**, uma atividade personalizada que lê entrada da linha de comando. O segundo ramificação tem um disparador de atividade de <xref:System.Activities.Statements.Delay> . Se a atividade **de entrada Ler** receber dados antes do término da <xref:System.Activities.Statements.Delay> atividade, <xref:System.Activities.Statements.Delay> o atraso será cancelado e uma saudação será escrita no console.  Caso contrário, se a atividade **de entrada Ler** não receber dados no tempo atribuído, ele será cancelado e uma mensagem de tempo total será escrita no console.  Este é um padrão comum usado para adicionar um tempo limite a qualquer ação.  
   
  ![Escolher atividade](./media/pick-activity/pick-activity-two-branches.jpg)  
   
@@ -20,7 +20,7 @@ A atividade de <xref:System.Activities.Statements.Pick> simplifica a modelagem d
  Ao usar a picareta, a ramificação que executa é a ramificação cujo disparador for concluído primeiro.  Conceitualmente, todos os disparadores executam paralelamente, e um disparador pode ter executado a maioria de sua lógica antes de ser cancelado pela conclusão de um outro disparador.  Com isso em mente, uma orientação então quando usar a atividade de picareta é manipular o disparador como representação de um único evento, e a colocar como pouca lógica como possível nele.  Idealmente, o disparador deve conter apenas lógica suficiente para receber um evento, e qualquer processamento do evento deve entrar em ação de ramificação.  Este método minimiza a quantidade de sobreposição entre a execução de disparadores.  Por exemplo, considere <xref:System.Activities.Statements.Pick> com dois disparadores, onde cada disparador contém uma atividade de <xref:System.ServiceModel.Activities.Receive> seguido pela lógica adicional.  Se a lógica adicional apresenta um ponto ocioso, então existem a possibilidade de ambas as atividades de <xref:System.ServiceModel.Activities.Receive> que concluírem com êxito.  Um disparador concluirá totalmente, quando outro concluirá parcialmente.  Em alguns cenários, aceitar uma mensagem, e então concluir parcialmente o processamento delas são inaceitáveis.  Portanto, ao usar atividades internos de mensagem de WF como <xref:System.ServiceModel.Activities.Receive> e <xref:System.ServiceModel.Activities.SendReply>, quando <xref:System.ServiceModel.Activities.Receive> são comumente usadas no disparador, <xref:System.ServiceModel.Activities.SendReply> e a outra lógica deve ser colocado em ação sempre que possível.  
   
 ## <a name="using-the-pick-activity-in-the-designer"></a>Usando a atividade de picareta no designer  
- Para usar escolher no designer, localize **selecionar** e **PickBranch** na caixa de ferramentas.  Arrastar e soltar **escolha** na tela.  Por padrão, uma nova atividade de **seleção** no designer conterá duas ramificações.  Para Adicionar ramificações adicionais, arraste a atividade **PickBranch** e solte-a ao lado de branches existentes. As atividades podem ser removidas na atividade de **seleção** na área de **gatilho** ou na área de **ação** de qualquer **PickBranch**.  
+ Para usar Pick in the designer, encontre **Pick** e **PickBranch** na caixa de ferramentas.  Arraste e solte **pick** na tela.  Por padrão, uma nova **Atividade de Escolha** no designer conterá dois ramos.  Para adicionar ramificações adicionais, arraste a atividade **PickBranch** e solte-a ao lado de ramos existentes. As atividades podem ser lançadas sobre a Atividade **de Escolha** na área **Trigger** ou na área **Action** de qualquer **PickBranch**.  
   
 ## <a name="using-the-pick-activity-in-code"></a>Usando a atividade de picareta no código  
  A atividade de <xref:System.Activities.Statements.Pick> é usada preenchendo sua coleção de <xref:System.Activities.Statements.Pick.Branches%2A> com atividades de <xref:System.Activities.Statements.PickBranch> . As atividades cada um de <xref:System.Activities.Statements.PickBranch> possuem uma propriedade de <xref:System.Activities.Statements.PickBranch.Trigger%2A> de tipo <xref:System.Activities.Activity>. Quando a atividade especificada concluir a execução, <xref:System.Activities.Statements.PickBranch.Action%2A> executa.  
@@ -31,11 +31,11 @@ A atividade de <xref:System.Activities.Statements.Pick> simplifica a modelagem d
 Sequence body = new Sequence()  
 {  
     Variables = { name },  
-    Activities =   
+    Activities =
    {  
        new System.Activities.Statements.Pick  
         {  
-           Branches =   
+           Branches =
            {  
                new PickBranch  
                {  
@@ -44,10 +44,10 @@ Sequence body = new Sequence()
                       Result = name,  
                       BookmarkName = "name"  
                    },  
-                   Action = new WriteLine   
-                   {   
-                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +   
-                           name.Get(ctx))   
+                   Action = new WriteLine
+                   {
+                       Text = ExpressionServices.Convert<string>(ctx => "Hello " +
+                           name.Get(ctx))
                    }  
                },  
                new PickBranch  

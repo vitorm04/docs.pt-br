@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130123"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180498"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Como conectar um delegado usando a reflexão
 Quando você usa a reflexão para carregar e executar assemblies, não pode usar recursos de linguagem como o operador `+=` do C# ou a [instrução AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) do Visual Basic para conectar eventos. Os procedimentos a seguir mostram como conectar um método existente a um evento obtendo todos os tipos necessários por meio de reflexão e como criar um método dinâmico usando a emissão de reflexão e conectá-lo a um evento.  
@@ -67,7 +67,7 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a name="procedureSection1"></a>   
+<a name="procedureSection1"></a>
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Para gerar um manipulador de eventos em tempo de execução usando um método dinâmico  
   
 1. Os métodos do manipulador de eventos podem ser gerados em tempo de execução, usando métodos dinâmicos leves e a emissão de reflexão. Para criar um manipulador de eventos, são necessários o tipo de retorno e os tipos de parâmetro do delegado. Eles podem ser obtidos examinando o método `Invoke` do delegado. O código a seguir usa os métodos `GetDelegateReturnType` e `GetDelegateParameterTypes` para obter essas informações. O código para esses métodos pode ser encontrado na seção Exemplo neste tópico.  
@@ -103,7 +103,7 @@ Quando você usa a reflexão para carregar e executar assemblies, não pode usar
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>

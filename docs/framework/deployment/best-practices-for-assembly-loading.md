@@ -12,29 +12,29 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716584"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181698"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
   
-- [Entenda as vantagens e as desvantagens dos contextos de carregamento](#load_contexts)  
+- [Entenda as vantagens e desvantagens dos contextos de carga](#load_contexts)  
   
 - [Evite associações em nomes de assembly parciais](#avoid_partial_names)  
   
 - [Evite o carregamento de um assembly em vários contextos](#avoid_loading_into_multiple_contexts)  
   
-- [Evite o carregamento de várias versões de um assembly no mesmo contexto](#avoid_loading_multiple_versions)  
+- [Evite carregar várias versões de um conjunto no mesmo contexto](#avoid_loading_multiple_versions)  
   
 - [Considere a possibilidade de alternar para o contexto de carregamento padrão](#switch_to_default)  
   
  A primeira recomendação, [entenda as vantagens e desvantagens de contextos de carga](#load_contexts), fornece informações de plano de fundo para as outras recomendações, porque todas elas dependem de um conhecimento de contextos de carregamento.  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Entenda as vantagens e as desvantagens dos contextos de carregamento  
  Em um domínio do aplicativo, os assemblies podem ser carregados em um dos três contextos ou podem ser carregados sem contexto:  
   
@@ -95,7 +95,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
 - Nas versões do .NET Framework 1.0 e 1.1, a política não é aplicada.  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Evite associações em nomes de assembly parciais  
  A associação de nome parcial ocorre quando você especifica apenas parte do nome de exibição do assembly (<xref:System.Reflection.Assembly.FullName%2A>) ao carregar um assembly. Por exemplo, você pode chamar o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> com somente o nome simples do assembly, omitindo a versão, a cultura e o token de chave pública. Ou você pode chamar o método <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>, que primeiro chama o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e, se ele falhar em localizar o assembly, pesquisa o cache de assembly global e carrega a versão mais recente disponível do assembly.  
   
@@ -115,7 +115,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Se você quiser usar o método <xref:System.Reflection.Assembly.LoadWithPartialName%2A> porque ele facilita o carregamento de assembly, considere que seu aplicativo falhar com uma mensagem de erro que identifica o assembly ausente provavelmente fornecerá uma experiência de usuário melhor do que usar automaticamente uma versão desconhecida do assembly, o que pode causar um comportamento imprevisível e falhas de segurança.  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>Evite o carregamento de um assembly em vários contextos  
  Carregar um assembly em vários contextos pode causar problemas de identidade de tipo. Se o mesmo tipo for carregado a partir do mesmo assembly em dois contextos diferentes, é como se dois tipos diferentes com o mesmo nome tivessem sido carregados. Uma <xref:System.InvalidCastException> é lançada se você tenta converter um tipo para outro, com a mensagem confusa de que o tipo `MyType` não pode ser convertido para o tipo `MyType`.  
   
@@ -131,7 +131,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  A seção [Considere a possibilidade de alternar para o contexto de carregamento padrão](#switch_to_default) discute alternativas ao uso de cargas de caminho de arquivo como <xref:System.Reflection.Assembly.LoadFile%2A> e <xref:System.Reflection.Assembly.LoadFrom%2A>.  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>Evite o carregamento de várias versões de um assembly no mesmo contexto  
  Carregar várias versões de um assembly em um contexto de carregamento pode causar problemas de identidade de tipo. Se o mesmo tipo for carregado a partir de duas versões do mesmo assembly, é como se dois tipos diferentes com o mesmo nome tivessem sido carregados. Uma <xref:System.InvalidCastException> é lançada se você tenta converter um tipo para outro, com a mensagem confusa de que o tipo `MyType` não pode ser convertido para o tipo `MyType`.  
   
@@ -145,7 +145,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Examine cuidadosamente o código para garantir que apenas uma versão de um assembly esteja carregada. Você pode usar o método <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> para determinar quais assemblies são carregados em um determinado momento.  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>Considere a possibilidade de alternar para o contexto de carregamento padrão  
  Examine os padrões de implantação e carregamento de assembly do aplicativo. Você pode eliminar os assemblies carregados de matrizes de bytes? Você pode mover assemblies para o caminho de investigação? Se os assemblies estão localizados no cache de assembly global ou caminho de investigação do domínio do aplicativo (isto é, seu <xref:System.AppDomainSetup.ApplicationBase%2A> e <xref:System.AppDomainSetup.PrivateBinPath%2A>), você pode carregar o assembly por sua identidade.  
   
@@ -162,7 +162,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Observe que você pode usar o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> para carregar esses assemblies. Como agora eles estão no caminho de investigação, eles serão carregados no contexto de carregamento padrão em vez de no contexto de origem do carregamento. No entanto, recomendamos que você alterne para o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e forneça nomes de exibição completos do assembly para garantir que as versões corretas sejam sempre usadas.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

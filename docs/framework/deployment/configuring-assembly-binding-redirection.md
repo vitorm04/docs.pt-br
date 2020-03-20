@@ -5,17 +5,17 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5b24d99aa23358272eecd042c40001413965d7f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716563"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181690"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
 Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do runtime usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  
   
- O atributo **appliesTo** foi introduzido no.NET Framework versão 1.1; ele é ignorado pelo .NET Framework versão 1.0. Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.  
+ O atributo **appliesTo** foi introduzido no.NET Framework versão 1.1; ele é ignorado pelo .NET Framework versão 1.0. Isso significa que todos os ** \<elementos de>de montagem Vinculante** são **aplicados** ao usar a versão 1.0 do .NET Framework, mesmo que um atributo applieTo seja especificado.  
   
 > [!NOTE]
 > Use o atributo **appliesTo** para limitar o redirecionamento de associação de assembly para uma versão específica do runtime.  
@@ -25,28 +25,28 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
 ```xml  
 <runtime>  
         <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-            <dependentAssembly>   
+            <dependentAssembly>
                * assembly information goes here *  
             </dependentAssembly>  
        </assemblyBinding>  
 </runtime>  
 ```  
   
- Os elementos **\<assemblyBinding>** fazem distinção conforme a ordem. Insira as informações de redirecionamento de associação de assembly primeiramente para os assemblies do .NET Framework versão 1.0, seguido pelas informações de redirecionamento de associação de assembly para os assemblies do .NET Framework versão 1.1. Por fim, insira as informações de redirecionamento de associação de assembly para qualquer redirecionamento de assembly do .NET Framework que não use o atributo **appliesTo** e, portanto, se aplica a todas as versões do .NET Framework. No caso de um conflito de redirecionamento, a primeira instrução de redirecionamento correspondente no arquivo de configuração é usada.  
+ Os ** \<elementos de>de montagem** são sensíveis à ordem. Insira as informações de redirecionamento de associação de assembly primeiramente para os assemblies do .NET Framework versão 1.0, seguido pelas informações de redirecionamento de associação de assembly para os assemblies do .NET Framework versão 1.1. Por fim, insira as informações de redirecionamento de associação de assembly para qualquer redirecionamento de assembly do .NET Framework que não use o atributo **appliesTo** e, portanto, se aplica a todas as versões do .NET Framework. No caso de um conflito de redirecionamento, a primeira instrução de redirecionamento correspondente no arquivo de configuração é usada.  
   
  Por exemplo, para redirecionar uma referência a um assembly do .NET Framework versão 1.0 e outra referência a um assembly do .NET Framework versão 1.1, use o padrão mostrado no pseudocódigo a seguir.  
   
 ```xml  
-<assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
-  <!-- .NET Framework version 1.0 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.0.3705">
+  <!-- .NET Framework version 1.0 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="..." appliesTo="v1.1.4322">   
-  <!-- .NET Framework version 1.1 redirects here. -->   
-</assemblyBinding>   
+<assemblyBinding xmlns="..." appliesTo="v1.1.4322">
+  <!-- .NET Framework version 1.1 redirects here. -->
+</assemblyBinding>
   
-<assemblyBinding xmlns="...">   
-  <!-- Redirects meant for all versions of the .NET Framework. -->   
+<assemblyBinding xmlns="...">
+  <!-- Redirects meant for all versions of the .NET Framework. -->
 </assemblyBinding>  
 ```  
   
@@ -55,6 +55,6 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
   
  É possível identificar se um arquivo de configuração está sendo usado determinando se os redirecionamentos de associação de assembly estão ocorrendo. Use o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ver quais assemblies são carregados. Para ver todas as associações de assembly, você deve definir uma entrada para **ForceLog** no registro.  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

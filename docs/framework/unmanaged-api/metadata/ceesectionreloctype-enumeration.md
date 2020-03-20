@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: efce0c13944b383c42cbff6a6af4795293ee2989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444161"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176208"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>Enumeração CeeSectionRelocType
-Fornece valores para influenciar o tipo de instrução de `reloc` emitido em uma chamada para [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Fornece valores para `reloc` influenciar o tipo de instrução emitida em uma chamada para [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,7 +30,7 @@ Fornece valores para influenciar o tipo de instrução de `reloc` emitido em uma
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
-    srRelocHighAdj,       
+    srRelocHighAdj,
     srRelocMapToken,  
     srRelocRelative,  
     srRelocFilePos,  
@@ -50,34 +50,34 @@ typedef enum  {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Gera apenas um `reloc`relativo à seção, enviando nada para uma seção. realocação.|  
-|`srRelocHighLow`|Gera um `reloc` para um local de tamanho de ponteiro. Isso é transformado em BASED_HIGHLOW ou BASED_DIR64 dependendo da plataforma.|  
-|`srRelocHighAdj`|Gera um `reloc` para os 16 bits superiores de um número de 32 bits, em que os 16 bits inferiores são incluídos na próxima palavra na tabela. realocação.|  
-|`srRelocMapToken`|Gera uma realocação de mapa de token, enviando nada para uma seção. realocação.|  
-|`srRelocRelative`|Indica que o valor é uma correção de endereço relativa.|  
-|`srRelocFilePos`|Gera apenas um `reloc`relativo à seção, enviando nada para uma seção. realocação. Esse `reloc` é relativo à posição do arquivo da seção, não ao endereço virtual da seção.|  
-|`srRelocCodeRelative`|Especifica uma correção de endereço relativa ao código.|  
-|`srRelocIA64Imm64`|Gera um `reloc` para um endereço de 64 bits em uma instrução IA64 `movl`.|  
-|`srRelocDir64`|Gera um `reloc` para um endereço de 64 bits.|  
-|`srRelocIA64PcRel25`|Gere um `reloc` para um endereço de 25 bits relativo a um PC em uma instrução IA64 `br.call`.|  
-|`srRelocIA64PcRel64`|Gera um `reloc` para um endereço relativo a um PC de 64 bits em uma instrução IA64 `brl.call`.|  
-|`srRelocAbsoluteTagged`|Gera um `reloc`relativo a uma seção de 30 bits, usado para valores de ponteiros marcados.|  
-|`srRelocSentinel`|Um valor de sentinela para ajudar a garantir que todas as adições a essa enumeração sejam refletidas na matriz de nome de `reloc` interno.|  
-|`srNoBaseReloc`|Especifica não emitir um `reloc`base.|  
-|`srRelocPtr`|Um valor que indica que o conteúdo de ajuste prévio da memória é um ponteiro em vez de um deslocamento de seção.|  
+|`srRelocAbsolute`|Gera apenas um `reloc`parente de seção, enviando nada para uma seção .reloc.|  
+|`srRelocHighLow`|Gera `reloc` um para um local do tamanho de um ponteiro. Isso é transformado em BASED_HIGHLOW ou BASED_DIR64 dependendo da plataforma.|  
+|`srRelocHighAdj`|Gera `reloc` um para os 16 bits superiores de um número de 32 bits, onde os 16 bits inferiores são incluídos na próxima palavra na tabela .reloc.|  
+|`srRelocMapToken`|Gera uma realocação de mapa de token, enviando nada para uma seção .reloc.|  
+|`srRelocRelative`|Indica que o valor é uma correção de endereço relativo.|  
+|`srRelocFilePos`|Gera apenas um `reloc`parente de seção, enviando nada para uma seção .reloc. Isso `reloc` é relativo à posição do arquivo da seção, não ao endereço virtual da seção.|  
+|`srRelocCodeRelative`|Especifica uma correção de endereço relativo ao código.|  
+|`srRelocIA64Imm64`|Gera `reloc` um endereço para 64 bits `movl` em uma instrução ia64.|  
+|`srRelocDir64`|Gera `reloc` um para um endereço de 64 bits.|  
+|`srRelocIA64PcRel25`|Gerar `reloc` um para um endereço relativo a PC de `br.call` 25 bits em uma instrução ia64.|  
+|`srRelocIA64PcRel64`|Gera `reloc` um para um endereço relativo ao PC de `brl.call` 64 bits em uma instrução ia64.|  
+|`srRelocAbsoluteTagged`|Gera um parente de seção de 30 bits, `reloc`usado para valores de ponteiro marcados.|  
+|`srRelocSentinel`|Um valor sentinela para ajudar a garantir que quaisquer `reloc` adições a este enum sejam refletidas na matriz de nomes internos.|  
+|`srNoBaseReloc`|Especifica para não emitir uma base `reloc`.|  
+|`srRelocPtr`|Um valor indicando que o conteúdo pré-fixação da memória é um ponteiro em vez de um deslocamento de seção.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: c36c68b0375e7d03aac36de7d02b2c9579ea9316
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784594"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151098"
 ---
 # <a name="handling-dataview-events"></a>Manipulação de eventos de DataView
-Você pode usar o <xref:System.Data.DataView.ListChanged> evento <xref:System.Data.DataView> do para determinar se um modo de exibição foi atualizado. As atualizações que geram o evento incluem adicionar, excluir ou modificar uma linha na tabela subjacente; adicionando ou excluindo uma coluna para o esquema da tabela subjacente; e uma alteração em uma relação pai ou filho. O evento **ListChanged** também notifica se a lista de linhas que você está exibindo mudou significativamente devido ao aplicativo de uma nova ordem de classificação ou de um filtro.  
+Você pode <xref:System.Data.DataView.ListChanged> usar o <xref:System.Data.DataView> evento do para determinar se uma exibição foi atualizada. As atualizações que levantam o evento incluem a adição, exclusão ou modificação de uma linha na tabela subjacente; adicionando ou excluindo uma coluna ao esquema da tabela subjacente; e uma mudança na relação entre pais e filhos. O evento **ListChanged** também notifica se a lista de linhas que você está visualizando foi alterada significativamente devido à aplicação de uma nova ordem de classificação ou um filtro.  
   
- O evento **ListChanged** implementa o <xref:System.ComponentModel> delegado ListChangedEventHandler do namespace e usa como entrada um <xref:System.ComponentModel.ListChangedEventArgs> objeto. Você pode determinar que tipo de alteração ocorreu usando o <xref:System.ComponentModel.ListChangedType> valor de enumeração na propriedade **ListChangedType** do objeto **ListChangedEventArgs** . Para alterações que envolvem adicionar, excluir ou mover linhas, o novo índice da linha adicionada ou movida e o índice anterior da linha excluída podem ser acessados usando a propriedade **NewIndex** do objeto **ListChangedEventArgs** . No caso de uma linha movida, o índice anterior da linha movida pode ser acessado usando a propriedade **OldIndex** do objeto **ListChangedEventArgs** .  
+ O evento **ListChanged** implementa o delegado <xref:System.ComponentModel> **ListChangedEventHandler** do <xref:System.ComponentModel.ListChangedEventArgs> namespace e toma como entrada um objeto. Você pode determinar que tipo de <xref:System.ComponentModel.ListChangedType> alteração ocorreu usando o valor de enumeração na propriedade **ListChangedType** do objeto **ListChangedEventArgs.** Para alterações que envolvam adicionar, excluir ou mover linhas, o novo índice da linha adicionada ou movida e o índice anterior da linha excluída podem ser acessados usando a propriedade **NewIndex** do objeto **ListChangedEventArgs.** No caso de uma linha movida, o índice anterior da linha movida pode ser acessado usando a propriedade **OldIndex** do objeto **ListChangedEventArgs.**  
   
- O **DataViewManager** também expõe um evento **ListChanged** para notificá-lo se uma tabela tiver sido adicionada ou removida, ou se uma alteração tiver sido feita na coleção **Relations** do **DataSet**subjacente.  
+ O **DataViewManager** também expõe um evento ListChanged para notificá-lo se uma tabela foi adicionada ou removida, ou se uma alteração foi feita na coleção **ListChanged** **Relações** do Conjunto de **Dados**subjacente .  
   
- O exemplo de código a seguir mostra como adicionar um manipulador de eventos **ListChanged** .  
+ O exemplo de código a seguir mostra como adicionar um manipulador de eventos **ListChanged.**  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -38,10 +38,10 @@ End Sub
 ```  
   
 ```csharp  
-custView.ListChanged  += new   
+custView.ListChanged  += new
   System.ComponentModel.ListChangedEventHandler(OnListChanged);  
   
-protected static void OnListChanged(object sender,   
+protected static void OnListChanged(object sender,
   System.ComponentModel.ListChangedEventArgs args)  
 {  
   Console.WriteLine("ListChanged:");  
@@ -51,9 +51,9 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
 - [DataViews](dataviews.md)
-- [ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)
+- [Visão geral do ADO.NET](../ado-net-overview.md)

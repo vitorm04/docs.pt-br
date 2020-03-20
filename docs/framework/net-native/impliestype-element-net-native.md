@@ -2,14 +2,14 @@
 title: <ImpliesType> (.NET Nativo)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 2f0ce1a1587e190627212cba07db298c12f4b30e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181009"
 ---
-# <a name="impliestype-element-net-native"></a>\<implica > elemento (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImplicaTipo elemento> (nativo.NET)
 Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do método.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -19,7 +19,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
              Activate="policy_type"  
              Browse="policy_type"  
              Dynamic="policy_type"  
-             Serialize="policy_type"   
+             Serialize="policy_type"
              DataContractSerializer="policy_setting"  
              DataContractJsonSerializer="policy_setting"  
              XmlSerializer="policy_setting"  
@@ -51,24 +51,24 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*type_name*|O nome do tipo. Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|  
+|*Type_name*|O nome do tipo. Se o tipo representado por este elemento `<ImpliesType>` estiver localizado no mesmo namespace contendo seu elemento `<Type>`, o *type_name* poderá incluir o nome do tipo sem o respectivo namespace. Caso contrário, o *type_name* deverá incluir o nome do tipo totalmente qualificado.|  
   
 ## <a name="all-other-attributes"></a>Todos os outros atributos  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
-|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md).|  
+|*policy_setting*|A configuração a ser aplicada a este tipo de política. Os valores possíveis são `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` e `Required All`. Para obter mais informações, consulte [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
-|[\<Method>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
+|[\<Tipo>](type-element-net-native.md)|Aplica a política de reflexão a um tipo e todos os seus membros.|  
+|[\<>de Digitação](typeinstantiation-element-net-native.md)|Aplica a política de reflexão a um tipo genérico construído e todos os seus membros.|  
+|[\<método>](method-element-net-native.md)|Aplica a política de reflexão a um método.|  
   
 ## <a name="remarks"></a>Comentários  
  O elemento `<ImpliesType>` destina-se principalmente para uso por bibliotecas. Ele aborda o cenário a seguir:  
@@ -89,7 +89,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
   
  Essa diretiva não tem efeito, a menos que uma instanciação de `Explicit` tenha uma configuração de política `Dynamic` definida. Por exemplo, se for o caso de `Explicit<Int32>`, `Implicit<Int32>` é instanciado com seu membros públicos enraizados e seus metadados são disponibilizados por programação dinâmica.  
   
- Veja a seguir um exemplo real que se aplica a pelo menos um serializador. As diretivas capturam o requisito de que a reflexão sobre algo digitado como `IList<`*algo*`>` também envolve reflexão sobre o tipo `List<`*algo*`>` correspondente sem exigir nenhuma anotação por aplicativo.  
+ Veja a seguir um exemplo real que se aplica a pelo menos um serializador. As diretivas capturam a exigência de `IList<`que refletir sobre algo digitado como *algo* `>` também envolve refletir sobre o tipo `List<` *de algo* `>` correspondente sem exigir qualquer anotação por aplicativo.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
- O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` que uma determinada biblioteca acessará dinamicamente, juntamente com os tipos associados <xref:System.Collections.Generic.List%601> e <xref:System.Array>. Isso pode ser expressado como:  
+ O elemento `<ImpliesType>` também pode aparecer em um elemento `<Method>`, pois em alguns casos instanciar um método genérico implica refletir em uma instanciação de um tipo. Por exemplo, imagine um método genérico `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` que uma determinada biblioteca acessará dinamicamente juntamente com os tipos <xref:System.Collections.Generic.List%601> e <xref:System.Array> associados. Isso pode ser expressado como:  
   
 ```xml  
 <Type Name="MyType">  
@@ -108,8 +108,8 @@ Aplica a política a um tipo, se ela foi aplicada ao tipo recipiente ou do méto
 </Type>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
-- [Configurações da política da diretiva de tempo de execução](runtime-directive-policy-settings.md)
+- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
+- [Configurações da política da diretiva de runtime](runtime-directive-policy-settings.md)

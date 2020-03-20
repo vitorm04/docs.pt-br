@@ -2,21 +2,21 @@
 title: Pontos de extremidade padrão
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747765"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184398"
 ---
 # <a name="standard-endpoints"></a>Pontos de extremidade padrão
-Pontos de extremidade são definidos pela especificação de um endereço, uma ligação e um contrato. Outros parâmetros que podem ser definidos em um ponto de extremidade incluem a configuração de comportamento, cabeçalhos e ouça URIs.  Para determinados tipos de pontos de extremidade que não altere esses valores. Por exemplo, sempre usam pontos de extremidade de troca de metadados a <xref:System.ServiceModel.Description.IMetadataExchange> contrato. Outros pontos de extremidade, como <xref:System.ServiceModel.Description.WebHttpEndpoint> sempre exigem um comportamento de ponto de extremidade especificado. A usabilidade de um ponto de extremidade pode ser melhorada por ter pontos de extremidade com valores padrão para propriedades de ponto de extremidade comumente usadas. Pontos de extremidade padrão permitem que um desenvolvedor definir um ponto de extremidade que tem valores padrão ou onde as propriedades de um ou mais um ponto de extremidade não é alterado.  Esses pontos de extremidade permitem que você use um ponto de extremidade sem precisar especificar informações de natureza estática. Pontos de extremidade padrão podem ser usados para pontos de extremidade de infraestrutura e aplicativo.  
+Os pontos finais são definidos especificando um endereço, uma vinculação e um contrato. Outros parâmetros que podem ser definidos em um ponto final incluem configuração de comportamento, cabeçalhos e URIs de ouvir.  Para certos tipos de pontos finais, esses valores não mudam. Por exemplo, os pontos finais <xref:System.ServiceModel.Description.IMetadataExchange> de troca de metadados sempre usam o contrato. Outros pontos finais, <xref:System.ServiceModel.Description.WebHttpEndpoint> como sempre, exigem um comportamento de ponto final especificado. A usabilidade de um ponto final pode ser melhorada tendo pontos finais com valores padrão para propriedades de ponto final comumente usadas. Os pontos finais padrão permitem que um desenvolvedor defina um ponto final que tenha valores padrão ou onde as propriedades de um ou mais pontos finais não mudem.  Esses pontos finais permitem que você use esse ponto final sem ter que especificar informações de natureza estática. Os pontos finais padrão podem ser usados para pontos finais de infra-estrutura e aplicativos.  
   
-## <a name="infrastructure-endpoints"></a>Pontos de extremidade de infraestrutura  
- Um serviço pode expor pontos de extremidade com algumas das propriedades implementadas não explicitamente pelo autor do serviço. Por exemplo, o ponto de extremidade de troca de metadados expõe o <xref:System.ServiceModel.Description.IMetadataExchange> de contrato, mas como um serviço de autor, você não implemente essa interface, ele é implementado pelo WCF. Esses pontos de extremidade de infraestrutura têm valores padrão para uma ou mais propriedades de ponto de extremidade, algumas das quais podem ser inalteráveis. O <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> propriedade do ponto de extremidade de troca de metadados deve ser <xref:System.ServiceModel.Description.IMetadataExchange>, enquanto outras propriedades, como a associação podem ser fornecidas pelo desenvolvedor. Pontos de extremidade de infraestrutura são identificados, definindo o <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> propriedade para `true`.  
+## <a name="infrastructure-endpoints"></a>Pontos finais da infra-estrutura  
+ Um serviço pode expor pontos finais com algumas das propriedades não explicitamente implementadas pelo autor do serviço. Por exemplo, o ponto final da <xref:System.ServiceModel.Description.IMetadataExchange> troca de metadados expõe o contrato, mas como um autor de serviço que você não implementa essa interface, ela é implementada pelo WCF. Esses pontos finais de infra-estrutura têm valores padrão para uma ou mais propriedades de ponto final, algumas das quais podem ser inalteráveis. A <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> propriedade do ponto final de <xref:System.ServiceModel.Description.IMetadataExchange>troca de metadados deve ser , enquanto outras propriedades como a vinculação podem ser fornecidas pelo desenvolvedor. Os pontos finais da <xref:System.ServiceModel.Description.ServiceEndpoint.IsSystemEndpoint%2A> infra-estrutura são identificados definindo a propriedade como `true`.  
   
-## <a name="application-endpoints"></a>Pontos de extremidade do aplicativo  
- Os desenvolvedores de aplicativos podem definir seus próprios pontos de extremidade padrão que especificam os valores padrão para o endereço, associação ou contrato. Definir um ponto de extremidade padrão derivando uma classe de <xref:System.ServiceModel.Description.ServiceEndpoint> e definindo as propriedades de ponto de extremidade apropriado. Você pode fornecer valores padrão para as propriedades que podem ser alteradas. Algumas outras propriedades terão valores estáticos que não é possível alterar. O exemplo a seguir mostra como implementar um ponto de extremidade padrão.  
+## <a name="application-endpoints"></a>Pontos finais do aplicativo  
+ Os desenvolvedores de aplicativos podem definir seus próprios pontos finais padrão que especificam valores padrão para o endereço, vinculação ou contrato. Você define um ponto final padrão, <xref:System.ServiceModel.Description.ServiceEndpoint> derivando uma classe e definindo as propriedades de ponto final apropriadas. Você pode fornecer valores padrão para propriedades que podem ser alteradas. Algumas outras propriedades terão valores estáticos que não podem ser alterados. O exemplo a seguir mostra como implementar um ponto final padrão.  
   
 ```csharp
 public class CustomEndpoint : ServiceEndpoint
@@ -24,11 +24,11 @@ public class CustomEndpoint : ServiceEndpoint
     public CustomEndpoint()
         : this(string.Empty)
     { }  
-    
+
     public CustomEndpoint(string address)
         : this(address, ContractDescription.GetContract(typeof(ICalculator)))
     { }  
-    
+
     // Create the custom endpoint with a fixed binding
     public CustomEndpoint(string address, ContractDescription contract)
         : base(contract)
@@ -36,13 +36,13 @@ public class CustomEndpoint : ServiceEndpoint
         this.Binding = new BasicHttpBinding();
         this.IsSystemEndpoint = false;
     }
-    
+
     // Definition of the additional property of this endpoint
     public bool Property { get; set; }
 }
 ```
   
- Para usar um ponto de extremidade de personalizado definido pelo usuário em um arquivo de configuração, você deve derivar uma classe de <xref:System.ServiceModel.Configuration.StandardEndpointElement>, derive uma classe de <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>e registrar o novo ponto de extremidade padrão na seção de extensões em Machine. config ou App. config.  O <xref:System.ServiceModel.Configuration.StandardEndpointElement> fornece suporte de configuração para o ponto de extremidade padrão, conforme mostrado no exemplo a seguir.  
+ Para usar um ponto final personalizado definido pelo usuário em <xref:System.ServiceModel.Configuration.StandardEndpointElement>um arquivo <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>de configuração, você deve derivar uma classe de , derivar uma classe e registrar o novo ponto final padrão na seção de extensões em app.config ou machine.config.  O <xref:System.ServiceModel.Configuration.StandardEndpointElement> fornece suporte de configuração para o ponto final padrão, como mostrado no exemplo a seguir.  
   
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- O <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> fornece o tipo de suporte para a coleção que aparece sob o <`standardEndpoints`> seção na configuração do ponto de extremidade padrão.  O exemplo a seguir mostra como implementar essa classe.  
+ O <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> fornece o tipo de backup para `standardEndpoints` a coleção que aparece a seção <> na configuração para o ponto final padrão.  O exemplo a seguir mostra como implementar essa classe.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -112,7 +112,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 }
 ```
 
-O exemplo a seguir mostra como registrar um ponto de extremidade padrão na seção de extensões.
+O exemplo a seguir mostra como registrar um ponto final padrão na seção extensões.
 
 ```xml  
 <extensions>  
@@ -123,14 +123,14 @@ O exemplo a seguir mostra como registrar um ponto de extremidade padrão na seç
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
 ```  
   
-## <a name="configuring-a-standard-endpoint"></a>Configurando um ponto de extremidade padrão  
- Pontos de extremidade padrão podem ser adicionados no código ou na configuração.  Para adicionar um ponto de extremidade padrão no código simplesmente instanciará o tipo de ponto de extremidade padrão apropriado e adicioná-lo para o host de serviço, conforme mostrado no exemplo a seguir:  
+## <a name="configuring-a-standard-endpoint"></a>Configurando um ponto final padrão  
+ Os pontos finais padrão podem ser adicionados em código ou na configuração.  Para adicionar um ponto final padrão no código, basta instanciar o tipo de ponto final padrão apropriado e adicioná-lo ao host de serviço, conforme mostrado no exemplo a seguir:  
   
 ```csharp  
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- Para adicionar um ponto de extremidade padrão na configuração, adicione um <`endpoint`> elemento para o <`service`> elemento e qualquer necessárias definições de configuração no <`standardEndpoints`> elemento. O exemplo a seguir mostra como adicionar um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, um dos pontos de extremidade padrão que é fornecido com [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+ Para adicionar um ponto final padrão `endpoint` na configuração, `service` adicione um elemento> <`standardEndpoints` ao elemento <> e quaisquer configurações necessárias no elemento de> <. O exemplo a seguir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>mostra como adicionar a , [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]um dos pontos finais padrão com os quais é enviado .  
   
 ```xml  
 <services>  
@@ -138,26 +138,26 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
     <endpoint isSystemEndpoint="true" kind="udpDiscoveryEndpoint" />  
   </service>  
 </services>  
-<standardEndpoints>    
+<standardEndpoints>
   <udpDiscoveryEndpoint>  
      <standardEndpoint multicastAddress="soap.udp://239.255.255.250:3702" />
   </udpDiscoveryEndpoint>
 </standardEndpoints>
 ```  
   
- O tipo de ponto de extremidade padrão é especificado usando o atributo de tipo no <`endpoint`> elemento. O ponto de extremidade está configurado dentro de <`standardEndpoints`> elemento. No exemplo acima, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ponto de extremidade é adicionado e configurado. O <`udpDiscoveryEndpoint`> elemento contém um <`standardEndpoint`> que define o <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A> propriedade o <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+ O tipo de ponto final padrão é especificado `endpoint` usando o atributo tipo no elemento <>. O ponto final é configurado dentro do elemento> <. `standardEndpoints` No exemplo acima, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> um ponto final é adicionado e configurado. O `udpDiscoveryEndpoint` elemento> <`standardEndpoint` contém uma <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint><que define a propriedade do .  
   
-## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Pontos de extremidade padrão que acompanham o .NET Framework  
- A tabela a seguir lista os pontos de extremidade padrão que acompanham o [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+## <a name="standard-endpoints-shipped-with-the-net-framework"></a>Pontos finais padrão enviados com o Framework .NET  
+ A tabela a seguir lista os [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]pontos finais padrão enviados com .  
   
  `Mex Endpoint`  
- Um ponto de extremidade padrão que é usado para expor metadados de serviço.  
+ Um ponto final padrão que é usado para expor metadados de serviço.  
   
  <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
  Um ponto de extremidade padrão usado pelos serviços para enviar mensagens de comunicado.  
   
  <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
- Um ponto de extremidade padrão que é usado pelos serviços para enviar mensagens de descoberta.  
+ Um ponto final padrão que é usado pelos serviços para enviar mensagens de descoberta.  
   
  <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
  Um ponto de extremidade padrão pré-configurado para operações de descoberta por meio de uma associação multicast UDP.  
@@ -166,22 +166,22 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
  Um ponto de extremidade padrão usado pelos serviços para enviar mensagens de comunicado por meio de uma associação UDP.  
   
  <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
- Um ponto de extremidade padrão que usa WS-Discovery para localizar o endereço de ponto de extremidade dinamicamente em tempo de execução.  
+ Um ponto final padrão que usa o WS-Discovery para encontrar o endereço de ponto final dinamicamente em tempo de execução.  
   
  <xref:System.ServiceModel.Description.ServiceMetadataEndpoint>  
- Um ponto de extremidade padrão para troca de metadados.  
+ Um ponto final padrão para troca de metadados.  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint>  
- Um ponto de extremidade padrão com um <xref:System.ServiceModel.WebHttpBinding> associação que automaticamente adiciona o <xref:System.ServiceModel.Description.WebHttpBehavior> comportamento  
+ Um ponto final <xref:System.ServiceModel.WebHttpBinding> padrão com uma <xref:System.ServiceModel.Description.WebHttpBehavior> vinculação que adiciona automaticamente o comportamento  
   
  <xref:System.ServiceModel.Description.WebScriptEndpoint>  
- Um ponto de extremidade padrão com um <xref:System.ServiceModel.WebHttpBinding> associação que automaticamente adiciona o <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> comportamento.  
+ Um ponto final <xref:System.ServiceModel.WebHttpBinding> padrão com uma <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> ligação que adiciona automaticamente o comportamento.  
   
  <xref:System.ServiceModel.Description.WebServiceEndpoint>  
- Um ponto de extremidade padrão com um <xref:System.ServiceModel.WebHttpBinding> associação.  
+ Um ponto final <xref:System.ServiceModel.WebHttpBinding> padrão com uma ligação.  
   
  <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>  
  Um ponto de extremidade padrão que permite chamar operações de controle em instâncias de fluxo de trabalho.  
   
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>  
- Um ponto de extremidade padrão que dá suporte a retomada de indicador e de criação de fluxo de trabalho.
+ Um ponto final padrão que suporta a criação do fluxo de trabalho e a retomada de marcadores.

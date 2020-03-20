@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104338"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180265"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de Biblioteca de Tipos)
 O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os tipos definidos em um assembly do Common Language Runtime.  
@@ -28,11 +28,11 @@ O Exportador da Biblioteca de Tipos gera uma biblioteca de tipos que descreve os
 tlbexp assemblyName [options]  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
   
 |Argumento|Descrição|  
 |--------------|-----------------|  
-|*assemblyName*|O assembly para o qual uma biblioteca de tipos deve ser exportada.|  
+|*Assemblyname*|O assembly para o qual uma biblioteca de tipos deve ser exportada.|  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -43,7 +43,7 @@ tlbexp assemblyName [options]
 |**/oldnames**|Força Tlbexp.exe a exportar nomes de tipo decorados caso haja um conflito no nome do tipo. Esse era o comportamento padrão em versões anteriores ao .NET Framework versão 2.0.|  
 |**/out:** *file*|Especifica o nome do arquivo da biblioteca de tipos a ser gerado. Se você omitir essa opção, Tlbexp.exe gerará uma biblioteca de tipos com o mesmo nome do assembly (o nome do assembly real, que talvez não seja necessariamente igual ao arquivo que contém o assembly) e uma extensão .tlb.|  
 |**/silence:** `warningnumber`|Suprime a exibição do aviso especificado. Essa opção não pode ser usada com **/silent**.|  
-|**/silent**|Suprime a exibição de mensagens de sucesso. Essa opção não pode ser usada com **/silence**.|  
+|**/silencioso**|Suprime a exibição de mensagens de sucesso. Essa opção não pode ser usada com **/silence**.|  
 |**/tlbreference:** *typelibraryname*|Força Tlbexp.exe a resolver explicitamente referências da biblioteca de tipos sem consultar o Registro. Por exemplo, se o assembly B fizer referência ao assembly A, será possível usar essa opção para fornecer uma referência à biblioteca de tipos explícita, em vez de depender da biblioteca de tipos especificada no Registro. Tlbexp.exe realiza uma verificação de versão para garantir que a versão da biblioteca de tipos corresponda à versão do assembly; do contrário, ele gerará um erro.<br /><br /> Observe que a opção **tlbreference** ainda consulta o Registro nos casos em que o atributo <xref:System.Runtime.InteropServices.ComImportAttribute> é aplicado a uma interface implementada por outro tipo.|  
 |**/tlbrefpath:** *path*|Caminho totalmente qualificado para uma biblioteca de tipos referenciada.|  
 |**/win32**|Durante a compilação em um computador 64 bits, esta opção especifica que Tlbexp.exe gera uma biblioteca de tipos 32 bits.|  
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  a seguinte biblioteca de tipos é gerada:  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -127,7 +127,7 @@ CSC Sample.cs /reference:myLib.dll /out:Sample.dll
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Ferramentas](index.md)

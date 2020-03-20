@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f7cd45a90a750c357706f720453ff23697875b58
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45268929b6e9ad6ac6423aa0fa2b7b5022bc9179
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446241"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176611"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>Método ISymUnmanagedScope2::GetConstants
-Obtém as constantes locais definidas neste escopo.  
+As constantes locais são definidas dentro deste escopo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,26 +32,26 @@ HRESULT GetConstants(
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  
      [out, size_is(cConstants),  
-         length_is(*pcConstants)] ISymUnmanagedConstant*   
+         length_is(*pcConstants)] ISymUnmanagedConstant*
              constants[]);  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `cConstants`  
- no O comprimento do buffer ao qual o parâmetro `pcConstants` aponta.  
+ [em] O comprimento do buffer `pcConstants` que o parâmetro aponta.  
   
  `pcConstants`  
- fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter as constantes.  
+ [fora] Um ponteiro `ULONG32` para um que recebe o tamanho, em caracteres, do buffer necessário para conter as constantes.  
   
  `constants`  
- fora O buffer que armazena as constantes.  
+ [fora] O tampão que armazena as constantes.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
+ S_OK se o método for bem sucedido; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym. idl, CorSym. h  
+ **Cabeçalho:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface ISymUnmanagedScope2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope2-interface.md)

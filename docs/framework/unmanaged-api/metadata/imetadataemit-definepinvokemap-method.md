@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431479"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177747"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>Método IMetaDataEmit::DefinePinvokeMap
 Define os recursos da assinatura PInvoke do método referenciado pelo token especificado.  
@@ -28,37 +28,37 @@ Define os recursos da assinatura PInvoke do método referenciado pelo token espe
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
-HRESULT DefinePinvokeMap (   
-    [in]  mdToken            tk,   
-    [in]  DWORD              dwMappingFlags,   
-    [in]  LPCWSTR            szImportName,   
-    [in]  mdModuleRef        mrImportDLL   
+HRESULT DefinePinvokeMap (
+    [in]  mdToken            tk,
+    [in]  DWORD              dwMappingFlags,
+    [in]  LPCWSTR            szImportName,
+    [in]  mdModuleRef        mrImportDLL
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `tk`  
- no O token para o método de destino.  
+ [em] O símbolo do método de destino.  
   
  `dwMappingFlags`  
- no Sinalizadores usados pelo PInvoke para fazer o mapeamento.  
+ [em] Sinalizadores usados pelo PInvoke para fazer o mapeamento.  
   
  `szImportName`  
- no O nome do método de exportação de destino em uma DLL não gerenciada.  
+ [em] O nome do método de exportação de destino em um DLL não gerenciado.  
   
  `mrImportDLL`  
- no O token para a DLL nativa de destino.  
+ [em] O token para o DLL nativo alvo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MSCorEE. dll  
+ **Biblioteca:** Usado como recurso em MSCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

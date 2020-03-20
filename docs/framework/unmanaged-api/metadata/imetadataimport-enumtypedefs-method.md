@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d6e86a7f5a93b900e79907f8ee0762869d7f737
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449998"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177293"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Método IMetaDataImport::EnumTypeDefs
-Enumera os tokens de TypeDef que representam todos os tipos no escopo atual.  
+Enumera tokens TypeDef representando todos os tipos dentro do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
 ```cpp  
 HRESULT EnumTypeDefs (  
-   [out] HCORENUM   *phEnum,   
+   [out] HCORENUM   *phEnum,
    [in]  mdTypeDef  rTypeDefs[],  
-   [in]  ULONG      cMax,   
+   [in]  ULONG      cMax,
    [out] ULONG      *pcTypeDefs  
 );  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
  `phEnum`  
- fora Um ponteiro para o novo enumerador. Isso deve ser nulo para a primeira chamada deste método.  
+ [fora] Um ponteiro para o novo enumerador. Isto deve ser NULO para a primeira chamada deste método.  
   
  `rTypeDefs`  
- no A matriz usada para armazenar os tokens de TypeDef.  
+ [em] A matriz usada para armazenar os tokens TypeDef.  
   
  `cMax`  
- no O tamanho máximo da matriz de `rTypeDefs`.  
+ [em] O tamanho máximo `rTypeDefs` da matriz.  
   
  `pcTypeDefs`  
- fora O número de tokens de TypeDef retornados em `rTypeDefs`.  
+ [fora] O número de tokens TypeDef retornado em `rTypeDefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
+|`S_OK`|`EnumTypeDefs`retornou com sucesso.|  
 |`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- O token TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado por meio de um mecanismo de extensibilidade.  
+ O token TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado através de um mecanismo de extensibilidade.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Cabeçalho:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE.dll  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
