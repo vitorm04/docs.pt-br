@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: 2b94bda7-09ee-435d-91b9-c4e31af1896c
 topic_type:
 - apiref
-ms.openlocfilehash: c4b01b2c346d3173b2a5ecc144474d7fb1e6dce5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e23133176cbd703a58c92f9bf1ead530b0bbb8a8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138969"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178507"
 ---
-# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="7c31f-102">Método ICorDebugStringValue::GetString</span><span class="sxs-lookup"><span data-stu-id="7c31f-102">ICorDebugStringValue::GetString Method</span></span>
-<span data-ttu-id="7c31f-103">Obtém a cadeia de caracteres referenciada por este ICorDebugStringValue.</span><span class="sxs-lookup"><span data-stu-id="7c31f-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetstring-method"></a><span data-ttu-id="48819-102">Método ICorDebugStringValue::GetString</span><span class="sxs-lookup"><span data-stu-id="48819-102">ICorDebugStringValue::GetString Method</span></span>
+<span data-ttu-id="48819-103">Obtém a seqüência de stringreferenciada por este ICorDebugStringValue.</span><span class="sxs-lookup"><span data-stu-id="48819-103">Gets the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c31f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7c31f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48819-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="48819-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetString (  
     [in] ULONG32    cchString,  
     [out] ULONG32   *pcchString,  
-    [out, size_is(cchString), length_is(*pcchString)]   
+    [out, size_is(cchString), length_is(*pcchString)]
         WCHAR       szString[]  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7c31f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7c31f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="48819-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="48819-105">Parameters</span></span>  
  `cchString`  
- <span data-ttu-id="7c31f-106">no O tamanho da matriz de `szString`.</span><span class="sxs-lookup"><span data-stu-id="7c31f-106">[in] The size of the `szString` array.</span></span>  
+ <span data-ttu-id="48819-106">[em] O tamanho `szString` da matriz.</span><span class="sxs-lookup"><span data-stu-id="48819-106">[in] The size of the `szString` array.</span></span>  
   
  `pcchString`  
- <span data-ttu-id="7c31f-107">fora Um ponteiro para o número de caracteres retornados na matriz de `szString`.</span><span class="sxs-lookup"><span data-stu-id="7c31f-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
+ <span data-ttu-id="48819-107">[fora] Um ponteiro para o número de `szString` caracteres retornado na matriz.</span><span class="sxs-lookup"><span data-stu-id="48819-107">[out] A pointer to the number of characters returned in the `szString` array.</span></span>  
   
  `szString`  
- <span data-ttu-id="7c31f-108">fora Uma matriz que armazena a cadeia de caracteres recuperada.</span><span class="sxs-lookup"><span data-stu-id="7c31f-108">[out] An array that stores the retrieved string.</span></span>  
+ <span data-ttu-id="48819-108">[fora] Uma matriz que armazena a seqüência recuperada.</span><span class="sxs-lookup"><span data-stu-id="48819-108">[out] An array that stores the retrieved string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c31f-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7c31f-109">Requirements</span></span>  
- <span data-ttu-id="7c31f-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7c31f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="48819-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="48819-109">Requirements</span></span>  
+ <span data-ttu-id="48819-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="48819-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7c31f-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7c31f-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="48819-111">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="48819-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7c31f-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7c31f-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="48819-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="48819-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7c31f-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7c31f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="48819-113">**.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="48819-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

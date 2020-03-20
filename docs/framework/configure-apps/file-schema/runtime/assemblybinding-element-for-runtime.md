@@ -8,56 +8,56 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118140"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154316"
 ---
-# <a name="assemblybinding-element-for-runtime"></a><span data-ttu-id="015b2-102">\<o elemento > assembly para tempo de execução de \<</span><span class="sxs-lookup"><span data-stu-id="015b2-102">\<assemblyBinding> Element for \<runtime></span></span>
-<span data-ttu-id="015b2-103">Contém informações sobre o redirecionamento de versão e os locais dos assemblies.</span><span class="sxs-lookup"><span data-stu-id="015b2-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  
+# <a name="assemblybinding-element-for-runtime"></a><span data-ttu-id="96811-102">\<montagemElemento de \<> de vinculação para> de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="96811-102">\<assemblyBinding> Element for \<runtime></span></span>
+<span data-ttu-id="96811-103">Contém informações sobre o redirecionamento de versão e os locais dos assemblies.</span><span class="sxs-lookup"><span data-stu-id="96811-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  
   
-<span data-ttu-id="015b2-104">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="015b2-104">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="015b2-105">&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) </span><span class="sxs-lookup"><span data-stu-id="015b2-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
-<span data-ttu-id="015b2-106">&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblybinding >**</span><span class="sxs-lookup"><span data-stu-id="015b2-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**</span></span>  
+<span data-ttu-id="96811-104">[**\<>de configuração**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="96811-104">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="96811-105">&nbsp;&nbsp;[**\<>de tempo de execução**](runtime-element.md)</span><span class="sxs-lookup"><span data-stu-id="96811-105">&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)</span></span>\
+<span data-ttu-id="96811-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<montagem>vinculante**</span><span class="sxs-lookup"><span data-stu-id="96811-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<assemblyBinding>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="015b2-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="015b2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="96811-107">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="96811-107">Syntax</span></span>  
   
 ```xml  
-      <assemblyBinding    
+      <assemblyBinding
    xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
 </assemblyBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="015b2-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="015b2-108">Attributes and Elements</span></span>  
- <span data-ttu-id="015b2-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="015b2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="96811-108">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="96811-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="96811-109">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="96811-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="015b2-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="015b2-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="96811-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="96811-110">Attributes</span></span>  
   
-|<span data-ttu-id="015b2-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="015b2-111">Attribute</span></span>|<span data-ttu-id="015b2-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="015b2-112">Description</span></span>|  
+|<span data-ttu-id="96811-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="96811-111">Attribute</span></span>|<span data-ttu-id="96811-112">Descrição</span><span class="sxs-lookup"><span data-stu-id="96811-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="015b2-113">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="015b2-113">**xmlns**</span></span>|<span data-ttu-id="015b2-114">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="015b2-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="015b2-115">Especifica o namespace XML necessário para a associação de assembly.</span><span class="sxs-lookup"><span data-stu-id="015b2-115">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="015b2-116">Use a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" como o valor.</span><span class="sxs-lookup"><span data-stu-id="015b2-116">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span>|  
-|<span data-ttu-id="015b2-117">**appliesTo**</span><span class="sxs-lookup"><span data-stu-id="015b2-117">**appliesTo**</span></span>|<span data-ttu-id="015b2-118">Especifica a versão de tempo de execução à qual o redirecionamento de assembly .NET Framework se aplica.</span><span class="sxs-lookup"><span data-stu-id="015b2-118">Specifies the runtime version the .NET Framework assembly redirection applies to.</span></span> <span data-ttu-id="015b2-119">Esse atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica.</span><span class="sxs-lookup"><span data-stu-id="015b2-119">This optional attribute uses a .NET Framework version number to indicate what version it applies to.</span></span> <span data-ttu-id="015b2-120">Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="015b2-120">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="015b2-121">O atributo **AppliesTo** foi introduzido na versão .NET Framework 1,1; Ele é ignorado pelo .NET Framework versão 1,0.</span><span class="sxs-lookup"><span data-stu-id="015b2-121">The **appliesTo** attribute was introduced in .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="015b2-122">Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.</span><span class="sxs-lookup"><span data-stu-id="015b2-122">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>|  
+|<span data-ttu-id="96811-113">**xmlns**</span><span class="sxs-lookup"><span data-stu-id="96811-113">**xmlns**</span></span>|<span data-ttu-id="96811-114">Atributo obrigatório.</span><span class="sxs-lookup"><span data-stu-id="96811-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="96811-115">Especifica o espaço de nome XML necessário para a vinculação do conjunto.</span><span class="sxs-lookup"><span data-stu-id="96811-115">Specifies the XML namespace required for assembly binding.</span></span> <span data-ttu-id="96811-116">Use a string "urna:schemas-microsoft-com:asm.v1" como valor.</span><span class="sxs-lookup"><span data-stu-id="96811-116">Use the string "urn:schemas-microsoft-com:asm.v1" as the value.</span></span>|  
+|<span data-ttu-id="96811-117">**Appliesto**</span><span class="sxs-lookup"><span data-stu-id="96811-117">**appliesTo**</span></span>|<span data-ttu-id="96811-118">Especifica a versão em tempo de execução a que o redirecionamento do conjunto .NET Framework se aplica.</span><span class="sxs-lookup"><span data-stu-id="96811-118">Specifies the runtime version the .NET Framework assembly redirection applies to.</span></span> <span data-ttu-id="96811-119">Este atributo opcional usa um número de versão .NET Framework para indicar a qual versão ele se aplica.</span><span class="sxs-lookup"><span data-stu-id="96811-119">This optional attribute uses a .NET Framework version number to indicate what version it applies to.</span></span> <span data-ttu-id="96811-120">Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="96811-120">If no **appliesTo** attribute is specified, the **\<assemblyBinding>** element applies to all versions of the .NET Framework.</span></span> <span data-ttu-id="96811-121">O atributo **appliesTo** foi introduzido na versão 1.1 do .NET Framework; ele é ignorado pela versão .NET Framework 1.0.</span><span class="sxs-lookup"><span data-stu-id="96811-121">The **appliesTo** attribute was introduced in .NET Framework version 1.1; it is ignored by the .NET Framework version 1.0.</span></span> <span data-ttu-id="96811-122">Isso significa que todos os \*\* \<elementos de>de montagem Vinculante\*\* são **aplicados** ao usar a versão 1.0 do .NET Framework, mesmo que um atributo applieTo seja especificado.</span><span class="sxs-lookup"><span data-stu-id="96811-122">This means that all **\<assemblyBinding>** elements are applied when using the .NET Framework version 1.0, even if an **appliesTo** attribute is specified.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="015b2-123">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="015b2-123">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="96811-123">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="96811-123">Child Elements</span></span>  
   
-|<span data-ttu-id="015b2-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="015b2-124">Element</span></span>|<span data-ttu-id="015b2-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="015b2-125">Description</span></span>|  
+|<span data-ttu-id="96811-124">Elemento</span><span class="sxs-lookup"><span data-stu-id="96811-124">Element</span></span>|<span data-ttu-id="96811-125">Descrição</span><span class="sxs-lookup"><span data-stu-id="96811-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="015b2-126">\<dependentAssembly></span><span class="sxs-lookup"><span data-stu-id="015b2-126">\<dependentAssembly></span></span>](dependentassembly-element.md)|<span data-ttu-id="015b2-127">Encapsula a política de associação e o local do assembly para um assembly.</span><span class="sxs-lookup"><span data-stu-id="015b2-127">Encapsulates binding policy and assembly location for an assembly.</span></span> <span data-ttu-id="015b2-128">Use uma marcação **\<dependentAssembly >** para cada assembly.</span><span class="sxs-lookup"><span data-stu-id="015b2-128">Use one **\<dependentAssembly>** tag for each assembly.</span></span>|  
-|[<span data-ttu-id="015b2-129">\<probing></span><span class="sxs-lookup"><span data-stu-id="015b2-129">\<probing></span></span>](probing-element.md)|<span data-ttu-id="015b2-130">Especifica subdiretórios que o Common Language Runtime pesquisa ao carregar assemblies.</span><span class="sxs-lookup"><span data-stu-id="015b2-130">Specifies subdirectories the common language runtime searches when loading assemblies.</span></span>|  
-|[<span data-ttu-id="015b2-131">\<publisherPolicy></span><span class="sxs-lookup"><span data-stu-id="015b2-131">\<publisherPolicy></span></span>](publisherpolicy-element.md)|<span data-ttu-id="015b2-132">Especifica se o runtime aplica a política do editor.</span><span class="sxs-lookup"><span data-stu-id="015b2-132">Specifies whether the runtime applies publisher policy.</span></span>|  
-|[<span data-ttu-id="015b2-133">\<qualifyAssembly></span><span class="sxs-lookup"><span data-stu-id="015b2-133">\<qualifyAssembly></span></span>](qualifyassembly-element.md)|<span data-ttu-id="015b2-134">Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.</span><span class="sxs-lookup"><span data-stu-id="015b2-134">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>|  
+|[<span data-ttu-id="96811-126">\<dependente>de montagem</span><span class="sxs-lookup"><span data-stu-id="96811-126">\<dependentAssembly></span></span>](dependentassembly-element.md)|<span data-ttu-id="96811-127">Encapsula a política de vinculação e o local de montagem para uma montagem.</span><span class="sxs-lookup"><span data-stu-id="96811-127">Encapsulates binding policy and assembly location for an assembly.</span></span> <span data-ttu-id="96811-128">Use \*\* \<\*\* uma marca de>de montagem dependente para cada montagem.</span><span class="sxs-lookup"><span data-stu-id="96811-128">Use one **\<dependentAssembly>** tag for each assembly.</span></span>|  
+|[<span data-ttu-id="96811-129">\<sondando></span><span class="sxs-lookup"><span data-stu-id="96811-129">\<probing></span></span>](probing-element.md)|<span data-ttu-id="96811-130">Especifica subdiretórios as pesquisas de tempo de execução do idioma comum ao carregar conjuntos.</span><span class="sxs-lookup"><span data-stu-id="96811-130">Specifies subdirectories the common language runtime searches when loading assemblies.</span></span>|  
+|[<span data-ttu-id="96811-131">\<>de políticas de></span><span class="sxs-lookup"><span data-stu-id="96811-131">\<publisherPolicy></span></span>](publisherpolicy-element.md)|<span data-ttu-id="96811-132">Especifica se o runtime aplica a política do editor.</span><span class="sxs-lookup"><span data-stu-id="96811-132">Specifies whether the runtime applies publisher policy.</span></span>|  
+|[<span data-ttu-id="96811-133">\<qualificar>de montagem</span><span class="sxs-lookup"><span data-stu-id="96811-133">\<qualifyAssembly></span></span>](qualifyassembly-element.md)|<span data-ttu-id="96811-134">Especifica o nome completo do assembly que deve ser carregado dinamicamente quando um nome parcial é usado.</span><span class="sxs-lookup"><span data-stu-id="96811-134">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="015b2-135">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="015b2-135">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="96811-135">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="96811-135">Parent Elements</span></span>  
   
-|<span data-ttu-id="015b2-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="015b2-136">Element</span></span>|<span data-ttu-id="015b2-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="015b2-137">Description</span></span>|  
+|<span data-ttu-id="96811-136">Elemento</span><span class="sxs-lookup"><span data-stu-id="96811-136">Element</span></span>|<span data-ttu-id="96811-137">Descrição</span><span class="sxs-lookup"><span data-stu-id="96811-137">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="015b2-138">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="015b2-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="015b2-139">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="015b2-139">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="96811-138">O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="96811-138">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="96811-139">Contém informações sobre associação do assembly e coleta de lixo.</span><span class="sxs-lookup"><span data-stu-id="96811-139">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="015b2-140">Exemplo</span><span class="sxs-lookup"><span data-stu-id="015b2-140">Example</span></span>  
- <span data-ttu-id="015b2-141">O exemplo a seguir mostra como redirecionar uma versão do assembly para outra e fornecer uma codebase.</span><span class="sxs-lookup"><span data-stu-id="015b2-141">The following example shows how to redirect one assembly version to another and provide a codebase.</span></span>  
+## <a name="example"></a><span data-ttu-id="96811-140">Exemplo</span><span class="sxs-lookup"><span data-stu-id="96811-140">Example</span></span>  
+ <span data-ttu-id="96811-141">O exemplo a seguir mostra como redirecionar uma versão de montagem para outra e fornecer uma base de código.</span><span class="sxs-lookup"><span data-stu-id="96811-141">The following example shows how to redirect one assembly version to another and provide a codebase.</span></span>  
   
 ```xml  
 <configuration>  
@@ -77,12 +77,12 @@ ms.locfileid: "73118140"
 </configuration>  
 ```  
   
- <span data-ttu-id="015b2-142">O exemplo a seguir mostra como usar o atributo **AppliesTo** para redirecionar a associação de um assembly .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="015b2-142">The following example shows how to use the **appliesTo** attribute to redirect binding of a .NET Framework assembly.</span></span>  
+ <span data-ttu-id="96811-142">O exemplo a seguir mostra como usar o atributo **appliesTo** para redirecionar a vinculação de um conjunto .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="96811-142">The following example shows how to use the **appliesTo** attribute to redirect binding of a .NET Framework assembly.</span></span>  
   
 ```xml  
 <runtime>  
    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-      <dependentAssembly>   
+      <dependentAssembly>
          <assemblyIdentity name="mscorcfg" publicKeyToken="b03f5f7f11d50a3a" culture=""/>  
          <bindingRedirect oldVersion="0.0.0.0-65535.65535.65535.65535" newVersion="1.0.3300.0"/>  
       </dependentAssembly>  
@@ -90,8 +90,8 @@ ms.locfileid: "73118140"
 </runtime>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="015b2-143">Consulte também</span><span class="sxs-lookup"><span data-stu-id="015b2-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="96811-143">Confira também</span><span class="sxs-lookup"><span data-stu-id="96811-143">See also</span></span>
 
-- [<span data-ttu-id="015b2-144">Esquema de configurações do tempo de execução</span><span class="sxs-lookup"><span data-stu-id="015b2-144">Runtime Settings Schema</span></span>](index.md)
-- [<span data-ttu-id="015b2-145">Esquema de arquivos de configuração</span><span class="sxs-lookup"><span data-stu-id="015b2-145">Configuration File Schema</span></span>](../index.md)
-- [<span data-ttu-id="015b2-146">Redirecionando versões de assembly</span><span class="sxs-lookup"><span data-stu-id="015b2-146">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)
+- [<span data-ttu-id="96811-144">Esquema de configurações do runtime</span><span class="sxs-lookup"><span data-stu-id="96811-144">Runtime Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="96811-145">Esquema de arquivo de configuração</span><span class="sxs-lookup"><span data-stu-id="96811-145">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="96811-146">Redirecionando versões de assembly</span><span class="sxs-lookup"><span data-stu-id="96811-146">Redirecting Assembly Versions</span></span>](../../redirect-assembly-versions.md)

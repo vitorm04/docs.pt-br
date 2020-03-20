@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794144"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148602"
 ---
-# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="40cff-102">Inserindo uma imagem de um arquivo</span><span class="sxs-lookup"><span data-stu-id="40cff-102">Inserting an Image from a File</span></span>
-<span data-ttu-id="40cff-103">Você pode gravar um objeto binário grande (BLOB) em um banco de dados como dados binários ou de caracteres, dependendo do tipo de campo na fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="40cff-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="40cff-104">BLOB é um termo genérico que faz referência aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.</span><span class="sxs-lookup"><span data-stu-id="40cff-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
+# <a name="inserting-an-image-from-a-file"></a><span data-ttu-id="25e24-102">Inserindo uma imagem de um arquivo</span><span class="sxs-lookup"><span data-stu-id="25e24-102">Inserting an Image from a File</span></span>
+<span data-ttu-id="25e24-103">Você pode gravar um BLOB (objeto binário grande) em um banco de dados como dados binários ou de caractere, dependendo do tipo de campo na fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="25e24-103">You can write a binary large object (BLOB) to a database as either binary or character data, depending on the type of field at your data source.</span></span> <span data-ttu-id="25e24-104">BLOB é um termo genérico que se refere aos tipos de dados `text`, `ntext` e `image`, que normalmente contêm documentos e imagens.</span><span class="sxs-lookup"><span data-stu-id="25e24-104">BLOB is a generic term that refers to the `text`, `ntext`, and `image` data types, which typically contain documents and pictures.</span></span>  
   
- <span data-ttu-id="40cff-105">Para gravar um valor de BLOB em seu banco de dados, emita a instrução INSERT ou UPDATE apropriada e passe o valor do BLOB como um parâmetro de entrada (consulte [configurando parâmetros e tipos de dados de parâmetro](../configuring-parameters-and-parameter-data-types.md)).</span><span class="sxs-lookup"><span data-stu-id="40cff-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="40cff-106">Se seu BLOB estiver armazenado como texto, como um campo `text` do SQL Server, você poderá passar o BLOB como um parâmetro de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="40cff-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="40cff-107">Se o BLOB estiver armazenado no formato binário, como um campo `image` do SQL Server, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.</span><span class="sxs-lookup"><span data-stu-id="40cff-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
+ <span data-ttu-id="25e24-105">Para escrever um valor BLOB no seu banco de dados, emita a instrução INSERT ou UPDATE apropriada e passe o valor BLOB como parâmetro de entrada (consulte [Configuração de parâmetros e tipos de dados de parâmetros).](../configuring-parameters-and-parameter-data-types.md)</span><span class="sxs-lookup"><span data-stu-id="25e24-105">To write a BLOB value to your database, issue the appropriate INSERT or UPDATE statement and pass the BLOB value as an input parameter (see [Configuring Parameters and Parameter Data Types](../configuring-parameters-and-parameter-data-types.md)).</span></span> <span data-ttu-id="25e24-106">Se o BLOB for armazenado como texto, como um campo `text` do SQL Server, você poderá passá-lo como um parâmetro de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="25e24-106">If your BLOB is stored as text, such as a SQL Server `text` field, you can pass the BLOB as a string parameter.</span></span> <span data-ttu-id="25e24-107">Se o BLOB for armazenado em formato binário, como um campo `image` do SQL Server, você poderá passar uma matriz do tipo `byte` como um parâmetro binário.</span><span class="sxs-lookup"><span data-stu-id="25e24-107">If the BLOB is stored in binary format, such as a SQL Server `image` field, you can pass an array of type `byte` as a binary parameter.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="40cff-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="40cff-108">Example</span></span>  
- <span data-ttu-id="40cff-109">O exemplo de código a seguir adiciona informações do funcionário à tabela Employees no banco de dados Northwind.</span><span class="sxs-lookup"><span data-stu-id="40cff-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="40cff-110">Uma foto do funcionário é lida de um arquivo e adicionada ao campo Photo na tabela, que é um campo de imagem.</span><span class="sxs-lookup"><span data-stu-id="40cff-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
+## <a name="example"></a><span data-ttu-id="25e24-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="25e24-108">Example</span></span>  
+ <span data-ttu-id="25e24-109">O exemplo de código a seguir adiciona informações de funcionário à tabela Funcionários no banco de dados da Northwind.</span><span class="sxs-lookup"><span data-stu-id="25e24-109">The following code example adds employee information to the Employees table in the Northwind database.</span></span> <span data-ttu-id="25e24-110">Uma foto do funcionário é lida de um arquivo e adicionada ao campo Foto na tabela, que é um campo de imagem.</span><span class="sxs-lookup"><span data-stu-id="25e24-110">A photo of the employee is read from a file and added to the Photo field in the table, which is an image field.</span></span>  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -39,7 +39,7 @@ Public Shared Sub AddEmployee( _
     "INSERT INTO Employees (LastName, FirstName, Title, " & _  
     "HireDate, ReportsTo, Photo) " & _  
     "Values(@LastName, @FirstName, @Title, " & _  
-    "@HireDate, @ReportsTo, @Photo)", connection)   
+    "@HireDate, @ReportsTo, @Photo)", connection)
   
   command.Parameters.Add("@LastName",  _  
     SqlDbType.NVarChar, 20).Value = lastName  
@@ -77,12 +77,12 @@ End Function
   
 ```csharp  
 public static void AddEmployee(  
-  string lastName,   
-  string firstName,   
-  string title,   
-  DateTime hireDate,   
-  int reportsTo,   
-  string photoFilePath,   
+  string lastName,
+  string firstName,
+  string title,
+  DateTime hireDate,
+  int reportsTo,
+  string photoFilePath,
   string connectionString)  
 {  
   byte[] photo = GetPhoto(photoFilePath);  
@@ -94,17 +94,17 @@ public static void AddEmployee(
     "INSERT INTO Employees (LastName, FirstName, " +  
     "Title, HireDate, ReportsTo, Photo) " +  
     "Values(@LastName, @FirstName, @Title, " +  
-    "@HireDate, @ReportsTo, @Photo)", connection);   
+    "@HireDate, @ReportsTo, @Photo)", connection);
   
-  command.Parameters.Add("@LastName",    
+  command.Parameters.Add("@LastName",
      SqlDbType.NVarChar, 20).Value = lastName;  
-  command.Parameters.Add("@FirstName",   
+  command.Parameters.Add("@FirstName",
       SqlDbType.NVarChar, 10).Value = firstName;  
-  command.Parameters.Add("@Title",       
+  command.Parameters.Add("@Title",
       SqlDbType.NVarChar, 30).Value = title;  
-  command.Parameters.Add("@HireDate",   
+  command.Parameters.Add("@HireDate",
        SqlDbType.DateTime).Value = hireDate;  
-  command.Parameters.Add("@ReportsTo",   
+  command.Parameters.Add("@ReportsTo",
       SqlDbType.Int).Value = reportsTo;  
   
   command.Parameters.Add("@Photo",  
@@ -130,10 +130,10 @@ public static byte[] GetPhoto(string filePath)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="40cff-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40cff-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25e24-111">Confira também</span><span class="sxs-lookup"><span data-stu-id="25e24-111">See also</span></span>
 
-- [<span data-ttu-id="40cff-112">Usando os comandos para modificar dados</span><span class="sxs-lookup"><span data-stu-id="40cff-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
-- [<span data-ttu-id="40cff-113">Recuperando dados binários</span><span class="sxs-lookup"><span data-stu-id="40cff-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
-- <span data-ttu-id="40cff-114">[SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md) (Dados binários e de valor grande do SQL Server)</span><span class="sxs-lookup"><span data-stu-id="40cff-114">[SQL Server Binary and Large-Value Data](sql-server-binary-and-large-value-data.md)</span></span>
-- [<span data-ttu-id="40cff-115">Mapeamentos de tipo de dados do SQL Server</span><span class="sxs-lookup"><span data-stu-id="40cff-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
-- <span data-ttu-id="40cff-116">[ADO.NET Overview](../ado-net-overview.md) (Visão geral do ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="40cff-116">[ADO.NET Overview](../ado-net-overview.md)</span></span>
+- [<span data-ttu-id="25e24-112">Usando os comandos para modificar dados</span><span class="sxs-lookup"><span data-stu-id="25e24-112">Using Commands to Modify Data</span></span>](../using-commands-to-modify-data.md)
+- [<span data-ttu-id="25e24-113">Recuperando dados binários</span><span class="sxs-lookup"><span data-stu-id="25e24-113">Retrieving Binary Data</span></span>](../retrieving-binary-data.md)
+- [<span data-ttu-id="25e24-114">Dados binários e de grande valor do servidor SQL</span><span class="sxs-lookup"><span data-stu-id="25e24-114">SQL Server Binary and Large-Value Data</span></span>](sql-server-binary-and-large-value-data.md)
+- [<span data-ttu-id="25e24-115">Mapeamentos de tipo de dados do SQL Server</span><span class="sxs-lookup"><span data-stu-id="25e24-115">SQL Server Data Type Mappings</span></span>](../sql-server-data-type-mappings.md)
+- [<span data-ttu-id="25e24-116">Visão geral do ADO.NET</span><span class="sxs-lookup"><span data-stu-id="25e24-116">ADO.NET Overview</span></span>](../ado-net-overview.md)

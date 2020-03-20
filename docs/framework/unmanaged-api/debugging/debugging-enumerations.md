@@ -6,144 +6,144 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789170"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179135"
 ---
-# <a name="debugging-enumerations"></a><span data-ttu-id="a3e99-102">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="a3e99-102">Debugging Enumerations</span></span>
-<span data-ttu-id="a3e99-103">Esta seção descreve as enumerações não gerenciadas que a API de depuração utiliza.</span><span class="sxs-lookup"><span data-stu-id="a3e99-103">This section describes the unmanaged enumerations that the debugging API uses.</span></span>  
+# <a name="debugging-enumerations"></a><span data-ttu-id="20da5-102">Declarando enumerações</span><span class="sxs-lookup"><span data-stu-id="20da5-102">Debugging Enumerations</span></span>
+<span data-ttu-id="20da5-103">Esta seção descreve as enumerações não gerenciadas que a API de depuração utiliza.</span><span class="sxs-lookup"><span data-stu-id="20da5-103">This section describes the unmanaged enumerations that the debugging API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a3e99-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="a3e99-104">In This Section</span></span>  
- [<span data-ttu-id="a3e99-105">Enumeração CLR_DEBUGGING_PROCESS_FLAGS</span><span class="sxs-lookup"><span data-stu-id="a3e99-105">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>](clr-debugging-process-flags-enumeration.md)  
- <span data-ttu-id="a3e99-106">Fornece valores que são usados pelo método [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-106">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="20da5-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="20da5-104">In This Section</span></span>  
+ [<span data-ttu-id="20da5-105">Enumeração CLR_DEBUGGING_PROCESS_FLAGS</span><span class="sxs-lookup"><span data-stu-id="20da5-105">CLR_DEBUGGING_PROCESS_FLAGS Enumeration</span></span>](clr-debugging-process-flags-enumeration.md)  
+ <span data-ttu-id="20da5-106">Fornece valores usados pelo método [ICLRDebugging::OpenVirtualProcess.](iclrdebugging-openvirtualprocess-method.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-106">Provides values that are used by the [ICLRDebugging::OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md) method.</span></span>  
   
- [<span data-ttu-id="a3e99-107">Enumeração CLRDataEnumMemoryFlags</span><span class="sxs-lookup"><span data-stu-id="a3e99-107">CLRDataEnumMemoryFlags Enumeration</span></span>](clrdataenummemoryflags-enumeration.md)  
- <span data-ttu-id="a3e99-108">Indica quais regiões de memória uma chamada para o método [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) deve incluir.</span><span class="sxs-lookup"><span data-stu-id="a3e99-108">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+ [<span data-ttu-id="20da5-107">Enumeração CLRDataEnumMemoryFlags</span><span class="sxs-lookup"><span data-stu-id="20da5-107">CLRDataEnumMemoryFlags Enumeration</span></span>](clrdataenummemoryflags-enumeration.md)  
+ <span data-ttu-id="20da5-108">Indica quais regiões de memória uma chamada para o [iCLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) deve incluir.</span><span class="sxs-lookup"><span data-stu-id="20da5-108">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
- [<span data-ttu-id="a3e99-109">Enumeração COR_PUB_ENUMPROCESS</span><span class="sxs-lookup"><span data-stu-id="a3e99-109">COR_PUB_ENUMPROCESS Enumeration</span></span>](cor-pub-enumprocess-enumeration.md)  
- <span data-ttu-id="a3e99-110">Identifica o tipo de processo que será enumerado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-110">Identifies the type of process to be enumerated.</span></span>  
+ [<span data-ttu-id="20da5-109">Enumeração COR_PUB_ENUMPROCESS</span><span class="sxs-lookup"><span data-stu-id="20da5-109">COR_PUB_ENUMPROCESS Enumeration</span></span>](cor-pub-enumprocess-enumeration.md)  
+ <span data-ttu-id="20da5-110">Identifica o tipo de processo que será enumerado.</span><span class="sxs-lookup"><span data-stu-id="20da5-110">Identifies the type of process to be enumerated.</span></span>  
   
- [<span data-ttu-id="a3e99-111">Enumeração CorDebugBlockingReason</span><span class="sxs-lookup"><span data-stu-id="a3e99-111">CorDebugBlockingReason Enumeration</span></span>](cordebugblockingreason-enumeration.md)  
- <span data-ttu-id="a3e99-112">Especifica os motivos pelos quais um thread pode ficar bloqueado em um determinado objeto.</span><span class="sxs-lookup"><span data-stu-id="a3e99-112">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
+ [<span data-ttu-id="20da5-111">Enumeração CorDebugBlockingReason</span><span class="sxs-lookup"><span data-stu-id="20da5-111">CorDebugBlockingReason Enumeration</span></span>](cordebugblockingreason-enumeration.md)  
+ <span data-ttu-id="20da5-112">Especifica os motivos pelos quais um thread pode ficar bloqueado em um determinado objeto.</span><span class="sxs-lookup"><span data-stu-id="20da5-112">Specifies the reasons why a thread may become blocked on a given object.</span></span>  
   
- <span data-ttu-id="a3e99-113">CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="a3e99-113">CorDebugChainReason</span></span>  
- <span data-ttu-id="a3e99-114">Indica o motivo ou os motivos para o início de uma cadeia de chamadas.</span><span class="sxs-lookup"><span data-stu-id="a3e99-114">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
+ <span data-ttu-id="20da5-113">Cordebugchainreason</span><span class="sxs-lookup"><span data-stu-id="20da5-113">CorDebugChainReason</span></span>  
+ <span data-ttu-id="20da5-114">Indica o motivo ou os motivos para o início de uma cadeia de chamadas.</span><span class="sxs-lookup"><span data-stu-id="20da5-114">Indicates the reason or reasons for the initiation of a call chain.</span></span>  
   
- [<span data-ttu-id="a3e99-115">Enumeração CorDebugCodeInvokeKind</span><span class="sxs-lookup"><span data-stu-id="a3e99-115">CorDebugCodeInvokeKind Enumeration</span></span>](cordebugcodeinvokekind-enumeration.md)  
- <span data-ttu-id="a3e99-116">Descreve como uma função exportada invoca código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-116">Describes how an exported function invokes managed code.</span></span>  
+ [<span data-ttu-id="20da5-115">Enumeração CorDebugCodeInvokeKind</span><span class="sxs-lookup"><span data-stu-id="20da5-115">CorDebugCodeInvokeKind Enumeration</span></span>](cordebugcodeinvokekind-enumeration.md)  
+ <span data-ttu-id="20da5-116">Descreve como uma função exportada invoca código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="20da5-116">Describes how an exported function invokes managed code.</span></span>  
   
- [<span data-ttu-id="a3e99-117">Enumeração CorDebugCodeInvokePurpose</span><span class="sxs-lookup"><span data-stu-id="a3e99-117">CorDebugCodeInvokePurpose Enumeration</span></span>](cordebugcodeinvokepurpose-enumeration.md)  
- <span data-ttu-id="a3e99-118">Descreve por que uma função exportada chama código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-118">Describes why an exported function calls managed code.</span></span>  
+ [<span data-ttu-id="20da5-117">Enumeração CorDebugCodeInvokePurpose</span><span class="sxs-lookup"><span data-stu-id="20da5-117">CorDebugCodeInvokePurpose Enumeration</span></span>](cordebugcodeinvokepurpose-enumeration.md)  
+ <span data-ttu-id="20da5-118">Descreve por que uma função exportada chama código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="20da5-118">Describes why an exported function calls managed code.</span></span>  
   
- <span data-ttu-id="a3e99-119">CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="a3e99-119">CorDebugCreateProcessFlags</span></span>  
- <span data-ttu-id="a3e99-120">Fornece opções de depuração adicionais que podem ser usadas em uma chamada para o método [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-120">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](icordebug-createprocess-method.md) method.</span></span>  
+ <span data-ttu-id="20da5-119">CorDebugCreateProcessFlags</span><span class="sxs-lookup"><span data-stu-id="20da5-119">CorDebugCreateProcessFlags</span></span>  
+ <span data-ttu-id="20da5-120">Fornece opções adicionais de depuração que podem ser usadas em uma chamada para o método [ICorDebug::CreateProcess.](icordebug-createprocess-method.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-120">Provides additional debugging options that can be used in a call to the [ICorDebug::CreateProcess](icordebug-createprocess-method.md) method.</span></span>  
   
- [<span data-ttu-id="a3e99-121">Enumeração CorDebugDebugEventKind</span><span class="sxs-lookup"><span data-stu-id="a3e99-121">CorDebugDebugEventKind Enumeration</span></span>](cordebugdebugeventkind-enumeration.md)  
- <span data-ttu-id="a3e99-122">Indica o tipo de evento cujas informações são decodificadas pelo método [DecodeEvent](icordebugprocess6-decodeevent-method.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-122">Indicates the type of event whose information is decoded by the [DecodeEvent](icordebugprocess6-decodeevent-method.md) method.</span></span>  
+ [<span data-ttu-id="20da5-121">Enumeração CorDebugDebugEventKind</span><span class="sxs-lookup"><span data-stu-id="20da5-121">CorDebugDebugEventKind Enumeration</span></span>](cordebugdebugeventkind-enumeration.md)  
+ <span data-ttu-id="20da5-122">Indica o tipo de evento cujas informações são decodificadas pelo método [DecodeEvent.](icordebugprocess6-decodeevent-method.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-122">Indicates the type of event whose information is decoded by the [DecodeEvent](icordebugprocess6-decodeevent-method.md) method.</span></span>  
   
- [<span data-ttu-id="a3e99-123">Enumeração CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="a3e99-123">CorDebugDecodeEventFlagsWindows Enumeration</span></span>](cordebugdecodeeventflagswindows-enumeration.md)  
- <span data-ttu-id="a3e99-124">Fornece informações adicionais sobre eventos de depuração na plataforma Windows.</span><span class="sxs-lookup"><span data-stu-id="a3e99-124">Provides additional information about debug events on the Windows platform.</span></span>  
+ [<span data-ttu-id="20da5-123">Enumeração CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="20da5-123">CorDebugDecodeEventFlagsWindows Enumeration</span></span>](cordebugdecodeeventflagswindows-enumeration.md)  
+ <span data-ttu-id="20da5-124">Fornece informações adicionais sobre eventos de depuração na plataforma Windows.</span><span class="sxs-lookup"><span data-stu-id="20da5-124">Provides additional information about debug events on the Windows platform.</span></span>  
   
- <span data-ttu-id="a3e99-125">CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="a3e99-125">CorDebugExceptionCallbackType</span></span>  
- <span data-ttu-id="a3e99-126">Indica o tipo de retorno de chamada que é feito de um evento [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-126">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+ <span data-ttu-id="20da5-125">CorDebugExceptionCallbackType</span><span class="sxs-lookup"><span data-stu-id="20da5-125">CorDebugExceptionCallbackType</span></span>  
+ <span data-ttu-id="20da5-126">Indica o tipo de retorno de chamada que é feito a partir de um evento [ICorDebugManagedCallback2::Exception.](icordebugmanagedcallback2-exception-method.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-126">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
- [<span data-ttu-id="a3e99-127">Enumeração CorDebugExceptionFlags</span><span class="sxs-lookup"><span data-stu-id="a3e99-127">CorDebugExceptionFlags Enumeration</span></span>](cordebugexceptionflags-enumeration.md)  
- <span data-ttu-id="a3e99-128">Fornece informações adicionais sobre uma exceção.</span><span class="sxs-lookup"><span data-stu-id="a3e99-128">Provides additional information about an exception.</span></span>  
+ [<span data-ttu-id="20da5-127">Enumeração CorDebugExceptionFlags</span><span class="sxs-lookup"><span data-stu-id="20da5-127">CorDebugExceptionFlags Enumeration</span></span>](cordebugexceptionflags-enumeration.md)  
+ <span data-ttu-id="20da5-128">Fornece informações adicionais sobre uma exceção.</span><span class="sxs-lookup"><span data-stu-id="20da5-128">Provides additional information about an exception.</span></span>  
   
- <span data-ttu-id="a3e99-129">CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="a3e99-129">CorDebugExceptionUnwindCallbackType</span></span>  
- <span data-ttu-id="a3e99-130">Indica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="a3e99-130">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
+ <span data-ttu-id="20da5-129">CorDebugExceptionUnwindCallbackType</span><span class="sxs-lookup"><span data-stu-id="20da5-129">CorDebugExceptionUnwindCallbackType</span></span>  
+ <span data-ttu-id="20da5-130">Indica o evento que está sendo sinalizado pelo retorno de chamada durante a fase de desenrolamento.</span><span class="sxs-lookup"><span data-stu-id="20da5-130">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
   
- [<span data-ttu-id="a3e99-131">Enumeração CorDebugGCType</span><span class="sxs-lookup"><span data-stu-id="a3e99-131">CorDebugGCType Enumeration</span></span>](cordebuggctype-enumeration.md)  
- <span data-ttu-id="a3e99-132">Indica se o coletor de lixo está sendo executado em uma estação de trabalho ou em um servidor.</span><span class="sxs-lookup"><span data-stu-id="a3e99-132">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+ [<span data-ttu-id="20da5-131">Enumeração CorDebugGCType</span><span class="sxs-lookup"><span data-stu-id="20da5-131">CorDebugGCType Enumeration</span></span>](cordebuggctype-enumeration.md)  
+ <span data-ttu-id="20da5-132">Indica se o coletor de lixo está sendo executado em uma estação de trabalho ou em um servidor.</span><span class="sxs-lookup"><span data-stu-id="20da5-132">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
- [<span data-ttu-id="a3e99-133">Enumeração CorDebugGenerationTypes</span><span class="sxs-lookup"><span data-stu-id="a3e99-133">CorDebugGenerationTypes Enumeration</span></span>](cordebuggenerationtypes-enumeration.md)  
- <span data-ttu-id="a3e99-134">Especifica a geração de uma região de memória no heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-134">Specifies the generation of a region of memory on the managed heap.</span></span>  
+ [<span data-ttu-id="20da5-133">Enumeração CorDebugGenerationTypes</span><span class="sxs-lookup"><span data-stu-id="20da5-133">CorDebugGenerationTypes Enumeration</span></span>](cordebuggenerationtypes-enumeration.md)  
+ <span data-ttu-id="20da5-134">Especifica a geração de uma região de memória no heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="20da5-134">Specifies the generation of a region of memory on the managed heap.</span></span>  
   
- <span data-ttu-id="a3e99-135">CorDebugHandleType</span><span class="sxs-lookup"><span data-stu-id="a3e99-135">CorDebugHandleType</span></span>  
- <span data-ttu-id="a3e99-136">Indica o tipo de manipulação.</span><span class="sxs-lookup"><span data-stu-id="a3e99-136">Indicates the handle type.</span></span>  
+ <span data-ttu-id="20da5-135">Cordebughandletype</span><span class="sxs-lookup"><span data-stu-id="20da5-135">CorDebugHandleType</span></span>  
+ <span data-ttu-id="20da5-136">Indica o tipo de manipulação.</span><span class="sxs-lookup"><span data-stu-id="20da5-136">Indicates the handle type.</span></span>  
   
- [<span data-ttu-id="a3e99-137">Enumeração CorDebugIlToNativeMappingTypes</span><span class="sxs-lookup"><span data-stu-id="a3e99-137">CorDebugIlToNativeMappingTypes Enumeration</span></span>](cordebugiltonativemappingtypes-enumeration.md)  
- <span data-ttu-id="a3e99-138">Indica se uma faixa específica de instruções nativas corresponde a uma região de código especial.</span><span class="sxs-lookup"><span data-stu-id="a3e99-138">Indicates whether a particular range of native instructions corresponds to a special code region.</span></span>  
+ [<span data-ttu-id="20da5-137">Enumeração CorDebugIlToNativeMappingTypes</span><span class="sxs-lookup"><span data-stu-id="20da5-137">CorDebugIlToNativeMappingTypes Enumeration</span></span>](cordebugiltonativemappingtypes-enumeration.md)  
+ <span data-ttu-id="20da5-138">Indica se uma faixa específica de instruções nativas corresponde a uma região de código especial.</span><span class="sxs-lookup"><span data-stu-id="20da5-138">Indicates whether a particular range of native instructions corresponds to a special code region.</span></span>  
   
- <span data-ttu-id="a3e99-139">CorDebugIntercept</span><span class="sxs-lookup"><span data-stu-id="a3e99-139">CorDebugIntercept</span></span>  
- <span data-ttu-id="a3e99-140">Indica os tipos de código que podem ser entrados.</span><span class="sxs-lookup"><span data-stu-id="a3e99-140">Indicates the types of code that can be stepped into.</span></span>  
+ <span data-ttu-id="20da5-139">Cordebugintercept</span><span class="sxs-lookup"><span data-stu-id="20da5-139">CorDebugIntercept</span></span>  
+ <span data-ttu-id="20da5-140">Indica os tipos de código que podem ser entrados.</span><span class="sxs-lookup"><span data-stu-id="20da5-140">Indicates the types of code that can be stepped into.</span></span>  
   
- [<span data-ttu-id="a3e99-141">Enumeração CorDebugInterfaceVersion</span><span class="sxs-lookup"><span data-stu-id="a3e99-141">CorDebugInterfaceVersion Enumeration</span></span>](cordebuginterfaceversion-enumeration.md)  
- <span data-ttu-id="a3e99-142">Especifica uma versão do .NET Framework ou a versão do .NET Framework na qual uma interface foi introduzida.</span><span class="sxs-lookup"><span data-stu-id="a3e99-142">Specifies either a version of the .NET Framework, or the version of the .NET Framework in which an interface was introduced.</span></span>  
+ [<span data-ttu-id="20da5-141">Enumeração CorDebugInterfaceVersion</span><span class="sxs-lookup"><span data-stu-id="20da5-141">CorDebugInterfaceVersion Enumeration</span></span>](cordebuginterfaceversion-enumeration.md)  
+ <span data-ttu-id="20da5-142">Especifica uma versão do .NET Framework ou a versão do .NET Framework na qual uma interface foi introduzida.</span><span class="sxs-lookup"><span data-stu-id="20da5-142">Specifies either a version of the .NET Framework, or the version of the .NET Framework in which an interface was introduced.</span></span>  
   
- <span data-ttu-id="a3e99-143">CorDebugInternalFrameType</span><span class="sxs-lookup"><span data-stu-id="a3e99-143">CorDebugInternalFrameType</span></span>  
- <span data-ttu-id="a3e99-144">Identifica o tipo de quadro de pilha.</span><span class="sxs-lookup"><span data-stu-id="a3e99-144">Identifies the type of stack frame.</span></span>  
+ <span data-ttu-id="20da5-143">CorDebugInternalFrameType</span><span class="sxs-lookup"><span data-stu-id="20da5-143">CorDebugInternalFrameType</span></span>  
+ <span data-ttu-id="20da5-144">Identifica o tipo de quadro de pilha.</span><span class="sxs-lookup"><span data-stu-id="20da5-144">Identifies the type of stack frame.</span></span>  
   
- [<span data-ttu-id="a3e99-145">Enumeração CorDebugJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="a3e99-145">CorDebugJITCompilerFlags Enumeration</span></span>](cordebugjitcompilerflags-enumeration.md)  
- <span data-ttu-id="a3e99-146">Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-146">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
+ [<span data-ttu-id="20da5-145">Enumeração CorDebugJITCompilerFlags</span><span class="sxs-lookup"><span data-stu-id="20da5-145">CorDebugJITCompilerFlags Enumeration</span></span>](cordebugjitcompilerflags-enumeration.md)  
+ <span data-ttu-id="20da5-146">Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.</span><span class="sxs-lookup"><span data-stu-id="20da5-146">Contains values that influence the behavior of the managed just-in-time (JIT) compiler.</span></span>  
   
- [<span data-ttu-id="a3e99-147">Enumeração CorDebugJITCompilerFlagsDeprecated</span><span class="sxs-lookup"><span data-stu-id="a3e99-147">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- <span data-ttu-id="a3e99-148">{1&gt;{2&gt;Obsoleta. &lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="a3e99-148">Obsolete.</span></span> <span data-ttu-id="a3e99-149">Em vez disso, use o membro `CORDEBUG_JIT_DEFAULT` da enumeração [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-149">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
+ [<span data-ttu-id="20da5-147">Enumeração CorDebugJITCompilerFlagsDeprecated</span><span class="sxs-lookup"><span data-stu-id="20da5-147">CorDebugJITCompilerFlagsDeprecated Enumeration</span></span>](cordebugjitcompilerflagsdeprecated-enumeration.md)  
+ <span data-ttu-id="20da5-148">Obsoleto.</span><span class="sxs-lookup"><span data-stu-id="20da5-148">Obsolete.</span></span> <span data-ttu-id="20da5-149">Use `CORDEBUG_JIT_DEFAULT` o membro da enumeração [CorDebugJITCompilerFlags.](cordebugjitcompilerflags-enumeration.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-149">Use the `CORDEBUG_JIT_DEFAULT` member of the [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeration instead.</span></span>  
   
- <span data-ttu-id="a3e99-150">CorDebugMappingResult</span><span class="sxs-lookup"><span data-stu-id="a3e99-150">CorDebugMappingResult</span></span>  
- <span data-ttu-id="a3e99-151">Fornece os detalhes sobre como o valor do ponteiro de instrução (IP) foi obtido.</span><span class="sxs-lookup"><span data-stu-id="a3e99-151">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
+ <span data-ttu-id="20da5-150">CorDebugMappingresult</span><span class="sxs-lookup"><span data-stu-id="20da5-150">CorDebugMappingResult</span></span>  
+ <span data-ttu-id="20da5-151">Fornece os detalhes sobre como o valor do ponteiro de instrução (IP) foi obtido.</span><span class="sxs-lookup"><span data-stu-id="20da5-151">Provides the details of how the value of the instruction pointer (IP) was obtained.</span></span>  
   
- [<span data-ttu-id="a3e99-152">Enumeração CorDebugMDAFlags</span><span class="sxs-lookup"><span data-stu-id="a3e99-152">CorDebugMDAFlags Enumeration</span></span>](cordebugmdaflags-enumeration.md)  
- <span data-ttu-id="a3e99-153">Especifica o status do thread no qual o assistente de depuração gerenciada (MDA) é disparado.</span><span class="sxs-lookup"><span data-stu-id="a3e99-153">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
+ [<span data-ttu-id="20da5-152">Enumeração CorDebugMDAFlags</span><span class="sxs-lookup"><span data-stu-id="20da5-152">CorDebugMDAFlags Enumeration</span></span>](cordebugmdaflags-enumeration.md)  
+ <span data-ttu-id="20da5-153">Especifica o status do thread no qual o assistente de depuração gerenciada (MDA) é disparado.</span><span class="sxs-lookup"><span data-stu-id="20da5-153">Specifies the status of the thread on which the managed debugging assistant (MDA) is fired.</span></span>  
   
- [<span data-ttu-id="a3e99-154">Enumeração CorDebugNGenPolicy</span><span class="sxs-lookup"><span data-stu-id="a3e99-154">CorDebugNGenPolicy Enumeration</span></span>](cordebugngenpolicy-enumeration.md)  
- <span data-ttu-id="a3e99-155">Fornece um valor que determina se um depurador carrega imagens nativas (NGen) do cache de imagens nativas.</span><span class="sxs-lookup"><span data-stu-id="a3e99-155">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
+ [<span data-ttu-id="20da5-154">Enumeração CorDebugNGenPolicy</span><span class="sxs-lookup"><span data-stu-id="20da5-154">CorDebugNGenPolicy Enumeration</span></span>](cordebugngenpolicy-enumeration.md)  
+ <span data-ttu-id="20da5-155">Fornece um valor que determina se um depurador carrega imagens nativas (NGen) do cache de imagens nativas.</span><span class="sxs-lookup"><span data-stu-id="20da5-155">Provides a value that determines whether a debugger loads native (NGen) images from the native image cache.</span></span>  
   
- [<span data-ttu-id="a3e99-156">Enumeração CorDebugPlatform</span><span class="sxs-lookup"><span data-stu-id="a3e99-156">CorDebugPlatform Enumeration</span></span>](cordebugplatform-enumeration.md)  
- <span data-ttu-id="a3e99-157">Fornece valores de plataforma de destino que são usados pelo método [ICorDebugDataTarget:: GetPlatform](icordebugdatatarget-getplatform-method.md) .</span><span class="sxs-lookup"><span data-stu-id="a3e99-157">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) method.</span></span>  
+ [<span data-ttu-id="20da5-156">Enumeração CorDebugPlatform</span><span class="sxs-lookup"><span data-stu-id="20da5-156">CorDebugPlatform Enumeration</span></span>](cordebugplatform-enumeration.md)  
+ <span data-ttu-id="20da5-157">Fornece valores de plataforma de destino usados pelo método [ICorDebugDataTarget::GetPlatform.](icordebugdatatarget-getplatform-method.md)</span><span class="sxs-lookup"><span data-stu-id="20da5-157">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) method.</span></span>  
   
- [<span data-ttu-id="a3e99-158">Enumeração CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="a3e99-158">CorDebugRecordFormat Enumeration</span></span>](cordebugrecordformat-enumeration.md)  
- <span data-ttu-id="a3e99-159">Descreve o formato dos dados em uma matriz de bytes que contém informações sobre um evento de depuração de exceção nativo.</span><span class="sxs-lookup"><span data-stu-id="a3e99-159">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
+ [<span data-ttu-id="20da5-158">Enumeração CorDebugRecordFormat</span><span class="sxs-lookup"><span data-stu-id="20da5-158">CorDebugRecordFormat Enumeration</span></span>](cordebugrecordformat-enumeration.md)  
+ <span data-ttu-id="20da5-159">Descreve o formato dos dados em uma matriz de bytes que contém informações sobre um evento de depuração de exceção nativo.</span><span class="sxs-lookup"><span data-stu-id="20da5-159">Describes the format of the data in a byte array that contains information about a native exception debug event.</span></span>  
   
- <span data-ttu-id="a3e99-160">CorDebugRegister</span><span class="sxs-lookup"><span data-stu-id="a3e99-160">CorDebugRegister</span></span>  
- <span data-ttu-id="a3e99-161">Especifica os registros associados a uma determinada arquitetura de processador.</span><span class="sxs-lookup"><span data-stu-id="a3e99-161">Specifies the registers associated with a given processor architecture.</span></span>  
+ <span data-ttu-id="20da5-160">Cordebugregister</span><span class="sxs-lookup"><span data-stu-id="20da5-160">CorDebugRegister</span></span>  
+ <span data-ttu-id="20da5-161">Especifica os registros associados a uma determinada arquitetura de processador.</span><span class="sxs-lookup"><span data-stu-id="20da5-161">Specifies the registers associated with a given processor architecture.</span></span>  
   
- [<span data-ttu-id="a3e99-162">Enumeração CorDebugSetContextFlag</span><span class="sxs-lookup"><span data-stu-id="a3e99-162">CorDebugSetContextFlag Enumeration</span></span>](cordebugsetcontextflag-enumeration.md)  
- <span data-ttu-id="a3e99-163">Indica se o contexto é do quadro ativo (ou folha) na pilha ou se foi computado pelo desenrolamento de outro quadro.</span><span class="sxs-lookup"><span data-stu-id="a3e99-163">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
+ [<span data-ttu-id="20da5-162">Enumeração CorDebugSetContextFlag</span><span class="sxs-lookup"><span data-stu-id="20da5-162">CorDebugSetContextFlag Enumeration</span></span>](cordebugsetcontextflag-enumeration.md)  
+ <span data-ttu-id="20da5-163">Indica se o contexto é do quadro ativo (ou folha) na pilha ou se foi computado pelo desenrolamento de outro quadro.</span><span class="sxs-lookup"><span data-stu-id="20da5-163">Indicates whether the context is from the active (or leaf) frame on the stack or has been computed by unwinding from another frame.</span></span>  
   
- [<span data-ttu-id="a3e99-164">Enumeração CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="a3e99-164">CorDebugStateChange Enumeration</span></span>](cordebugstatechange-enumeration.md)  
- <span data-ttu-id="a3e99-165">Descreve a quantidade de dados armazenados em cache que devem ser descartados com base em alterações no processo.</span><span class="sxs-lookup"><span data-stu-id="a3e99-165">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
+ [<span data-ttu-id="20da5-164">Enumeração CorDebugStateChange</span><span class="sxs-lookup"><span data-stu-id="20da5-164">CorDebugStateChange Enumeration</span></span>](cordebugstatechange-enumeration.md)  
+ <span data-ttu-id="20da5-165">Descreve a quantidade de dados armazenados em cache que devem ser descartados com base em alterações no processo.</span><span class="sxs-lookup"><span data-stu-id="20da5-165">Describes the amount of cached data that must be discarded based on changes to the process.</span></span>  
   
- <span data-ttu-id="a3e99-166">CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="a3e99-166">CorDebugStepReason</span></span>  
- <span data-ttu-id="a3e99-167">Indica o resultado de uma etapa individual.</span><span class="sxs-lookup"><span data-stu-id="a3e99-167">Indicates the outcome of an individual step.</span></span>  
+ <span data-ttu-id="20da5-166">CorDebugStepReason</span><span class="sxs-lookup"><span data-stu-id="20da5-166">CorDebugStepReason</span></span>  
+ <span data-ttu-id="20da5-167">Indica o resultado de uma etapa individual.</span><span class="sxs-lookup"><span data-stu-id="20da5-167">Indicates the outcome of an individual step.</span></span>  
   
- <span data-ttu-id="a3e99-168">CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="a3e99-168">CorDebugThreadState</span></span>  
- <span data-ttu-id="a3e99-169">Especifica o estado de um thread para depuração.</span><span class="sxs-lookup"><span data-stu-id="a3e99-169">Specifies the state of a thread for debugging.</span></span>  
+ <span data-ttu-id="20da5-168">CorDebugThreadState</span><span class="sxs-lookup"><span data-stu-id="20da5-168">CorDebugThreadState</span></span>  
+ <span data-ttu-id="20da5-169">Especifica o estado de um thread para depuração.</span><span class="sxs-lookup"><span data-stu-id="20da5-169">Specifies the state of a thread for debugging.</span></span>  
   
- <span data-ttu-id="a3e99-170">\>CorDebugUnmappedStop</span><span class="sxs-lookup"><span data-stu-id="a3e99-170">\>CorDebugUnmappedStop</span></span>  
- <span data-ttu-id="a3e99-171">Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.</span><span class="sxs-lookup"><span data-stu-id="a3e99-171">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
+ <span data-ttu-id="20da5-170">\>Cordebugunmappedstop</span><span class="sxs-lookup"><span data-stu-id="20da5-170">\>CorDebugUnmappedStop</span></span>  
+ <span data-ttu-id="20da5-171">Especifica o tipo de código não mapeado que pode disparar uma interrupção na execução do código pelo passador.</span><span class="sxs-lookup"><span data-stu-id="20da5-171">Specifies the type of unmapped code that can trigger a halt in code execution by the stepper.</span></span>  
   
- <span data-ttu-id="a3e99-172">CorDebugUserState</span><span class="sxs-lookup"><span data-stu-id="a3e99-172">CorDebugUserState</span></span>  
- <span data-ttu-id="a3e99-173">Indica o estado do usuário de um thread.</span><span class="sxs-lookup"><span data-stu-id="a3e99-173">Indicates the user state of a thread.</span></span>  
+ <span data-ttu-id="20da5-172">Cordebuguserstate</span><span class="sxs-lookup"><span data-stu-id="20da5-172">CorDebugUserState</span></span>  
+ <span data-ttu-id="20da5-173">Indica o estado do usuário de um thread.</span><span class="sxs-lookup"><span data-stu-id="20da5-173">Indicates the user state of a thread.</span></span>  
   
- [<span data-ttu-id="a3e99-174">Enumeração CorGCReferenceType</span><span class="sxs-lookup"><span data-stu-id="a3e99-174">CorGCReferenceType Enumeration</span></span>](corgcreferencetype-enumeration.md)  
- <span data-ttu-id="a3e99-175">Identifica a fonte de um objeto para ser coletado do lixo.</span><span class="sxs-lookup"><span data-stu-id="a3e99-175">Identifies the source of an object to be garbage-collected.</span></span>  
+ [<span data-ttu-id="20da5-174">Enumeração CorGCReferenceType</span><span class="sxs-lookup"><span data-stu-id="20da5-174">CorGCReferenceType Enumeration</span></span>](corgcreferencetype-enumeration.md)  
+ <span data-ttu-id="20da5-175">Identifica a fonte de um objeto para ser coletado do lixo.</span><span class="sxs-lookup"><span data-stu-id="20da5-175">Identifies the source of an object to be garbage-collected.</span></span>  
   
- [<span data-ttu-id="a3e99-176">Enumeração ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="a3e99-176">ILCodeKind Enumeration</span></span>](ilcodekind-enumeration.md)  
- <span data-ttu-id="a3e99-177">Fornece valores que especificam se o depurador é capaz de acessar variáveis locais ou o código incluído na instrumentação ReJIT do criador de perfis.</span><span class="sxs-lookup"><span data-stu-id="a3e99-177">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
+ [<span data-ttu-id="20da5-176">Enumeração ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="20da5-176">ILCodeKind Enumeration</span></span>](ilcodekind-enumeration.md)  
+ <span data-ttu-id="20da5-177">Fornece valores que especificam se o depurador é capaz de acessar variáveis locais ou o código incluído na instrumentação ReJIT do criador de perfis.</span><span class="sxs-lookup"><span data-stu-id="20da5-177">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
   
- [<span data-ttu-id="a3e99-178">Enumeração LoggingLevelEnum</span><span class="sxs-lookup"><span data-stu-id="a3e99-178">LoggingLevelEnum Enumeration</span></span>](logginglevelenum-enumeration.md)  
- <span data-ttu-id="a3e99-179">Indica o nível de severidade de uma mensagem descritiva que é escrita no log de eventos quando um thread gerenciado registrar um evento.</span><span class="sxs-lookup"><span data-stu-id="a3e99-179">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
+ [<span data-ttu-id="20da5-178">Enumeração LoggingLevelEnum</span><span class="sxs-lookup"><span data-stu-id="20da5-178">LoggingLevelEnum Enumeration</span></span>](logginglevelenum-enumeration.md)  
+ <span data-ttu-id="20da5-179">Indica o nível de severidade de uma mensagem descritiva que é escrita no log de eventos quando um thread gerenciado registrar um evento.</span><span class="sxs-lookup"><span data-stu-id="20da5-179">Indicates the severity level of a descriptive message that is written to the event log when a managed thread logs an event.</span></span>  
   
- [<span data-ttu-id="a3e99-180">Enumeração LogSwitchCallReason</span><span class="sxs-lookup"><span data-stu-id="a3e99-180">LogSwitchCallReason Enumeration</span></span>](logswitchcallreason-enumeration.md)  
- <span data-ttu-id="a3e99-181">Indica a operação que foi realizada em uma alternação entre depuração/rastreamento.</span><span class="sxs-lookup"><span data-stu-id="a3e99-181">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
+ [<span data-ttu-id="20da5-180">Enumeração LogSwitchCallReason</span><span class="sxs-lookup"><span data-stu-id="20da5-180">LogSwitchCallReason Enumeration</span></span>](logswitchcallreason-enumeration.md)  
+ <span data-ttu-id="20da5-181">Indica a operação que foi realizada em uma alternação entre depuração/rastreamento.</span><span class="sxs-lookup"><span data-stu-id="20da5-181">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
   
- [<span data-ttu-id="a3e99-182">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="a3e99-182">VariableLocationType Enumeration</span></span>](variablelocationtype-enumeration.md)  
- <span data-ttu-id="a3e99-183">Indica o tipo de local nativo de uma variável.</span><span class="sxs-lookup"><span data-stu-id="a3e99-183">Indicates the native location type of a variable.</span></span>  
+ [<span data-ttu-id="20da5-182">Enumeração VariableLocationType</span><span class="sxs-lookup"><span data-stu-id="20da5-182">VariableLocationType Enumeration</span></span>](variablelocationtype-enumeration.md)  
+ <span data-ttu-id="20da5-183">Indica o tipo de localização nativa de uma variável.</span><span class="sxs-lookup"><span data-stu-id="20da5-183">Indicates the native location type of a variable.</span></span>  
   
- [<span data-ttu-id="a3e99-184">Enumeração WriteableMetadataUpdateMode</span><span class="sxs-lookup"><span data-stu-id="a3e99-184">WriteableMetadataUpdateMode Enumeration</span></span>](writeablemetadataupdatemode-enumeration.md)  
- <span data-ttu-id="a3e99-185">Fornece valores que especificam se as atualizações na memória para metadados estão visíveis para um depurador.</span><span class="sxs-lookup"><span data-stu-id="a3e99-185">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span> 
+ [<span data-ttu-id="20da5-184">Enumeração WriteableMetadataUpdateMode</span><span class="sxs-lookup"><span data-stu-id="20da5-184">WriteableMetadataUpdateMode Enumeration</span></span>](writeablemetadataupdatemode-enumeration.md)  
+ <span data-ttu-id="20da5-185">Fornece valores que especificam se as atualizações na memória para metadados estão visíveis para um depurador.</span><span class="sxs-lookup"><span data-stu-id="20da5-185">Provides values that specify whether in-memory updates to metadata are visible to a debugger.</span></span>
 
- <span data-ttu-id="a3e99-186">[Enumeração ClrDataSourceType](clrdatasourcetype-enumeration.md) Fornece valores que são usados pela estrutura de CLRDATA_IL_ADDRESS_MAP.</span><span class="sxs-lookup"><span data-stu-id="a3e99-186">[ClrDataSourceType Enumeration](clrdatasourcetype-enumeration.md) Provides values that are used by the CLRDATA_IL_ADDRESS_MAP structure.</span></span>
+ <span data-ttu-id="20da5-186">[Enumeração clrDataSourceType](clrdatasourcetype-enumeration.md) Fornece valores que são utilizados pela estrutura CLRDATA_IL_ADDRESS_MAP.</span><span class="sxs-lookup"><span data-stu-id="20da5-186">[ClrDataSourceType Enumeration](clrdatasourcetype-enumeration.md) Provides values that are used by the CLRDATA_IL_ADDRESS_MAP structure.</span></span>
 
-## <a name="related-sections"></a><span data-ttu-id="a3e99-187">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="a3e99-187">Related Sections</span></span>  
- [<span data-ttu-id="a3e99-188">Depurando coclasses</span><span class="sxs-lookup"><span data-stu-id="a3e99-188">Debugging Coclasses</span></span>](debugging-coclasses.md)  
+## <a name="related-sections"></a><span data-ttu-id="20da5-187">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="20da5-187">Related Sections</span></span>  
+ [<span data-ttu-id="20da5-188">Depurando coclasses</span><span class="sxs-lookup"><span data-stu-id="20da5-188">Debugging Coclasses</span></span>](debugging-coclasses.md)  
   
- [<span data-ttu-id="a3e99-189">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="a3e99-189">Debugging Interfaces</span></span>](debugging-interfaces.md)  
+ [<span data-ttu-id="20da5-189">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="20da5-189">Debugging Interfaces</span></span>](debugging-interfaces.md)  
   
- [<span data-ttu-id="a3e99-190">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="a3e99-190">Debugging Global Static Functions</span></span>](debugging-global-static-functions.md)  
+ [<span data-ttu-id="20da5-190">Depurando funções estáticas globais</span><span class="sxs-lookup"><span data-stu-id="20da5-190">Debugging Global Static Functions</span></span>](debugging-global-static-functions.md)  
   
- [<span data-ttu-id="a3e99-191">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="a3e99-191">Debugging Structures</span></span>](debugging-structures.md)
+ [<span data-ttu-id="20da5-191">Estruturas de depuração</span><span class="sxs-lookup"><span data-stu-id="20da5-191">Debugging Structures</span></span>](debugging-structures.md)
