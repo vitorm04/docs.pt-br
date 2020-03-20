@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Trabalhando com o controle MaskedTextBox'
+title: 'Instruções passo a passo: trabalhando com o controle MaskedTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,48 +11,48 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: 7f25e21008c77ebf5e55e7affbb4cf07db377c5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db32b3ec88a07747ea3e286af9f04edce3f1ba3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623257"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182069"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Passo a passo: Trabalhando com o controle MaskedTextBox
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a>Instruções passo a passo: trabalhando com o controle MaskedTextBox
 As tarefas ilustradas neste passo a passo incluem:  
   
-- Inicializando o <xref:System.Windows.Forms.MaskedTextBox> controle  
+- Inicializando <xref:System.Windows.Forms.MaskedTextBox> o controle  
   
-- Usando o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> manipulador de eventos para alertar o usuário quando um caractere não estiver de acordo com a máscara  
+- Usando <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> o manipulador de eventos para alertar o usuário quando um caractere não está de acordo com a máscara  
   
-- Atribuição de um tipo para o <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propriedade e usando o <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> manipulador de eventos para alertar o usuário quando o valor que ele está tentando confirmar não é válido para o tipo  
+- Atribuir um tipo <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> à propriedade <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> e usar o manipulador de eventos para alertar o usuário quando o valor que ele está tentando comprometer não é válido para o tipo  
   
 ## <a name="creating-the-project-and-adding-a-control"></a>Criar o projeto e adicionar um controle  
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>Adicionar um controle MaskedTextBox ao seu formulário  
   
-1. Abra o formulário no qual você deseja colocar o <xref:System.Windows.Forms.MaskedTextBox> controle.  
+1. Abra o formulário no qual <xref:System.Windows.Forms.MaskedTextBox> deseja colocar o controle.  
   
-2. Arraste uma <xref:System.Windows.Forms.MaskedTextBox> controlar do **caixa de ferramentas** ao seu formulário.  
+2. Arraste <xref:System.Windows.Forms.MaskedTextBox> um controle da **caixa de ferramentas** para o seu formulário.  
   
 3. Clique com o botão direito do mouse no controle e escolha **Propriedades**. Na janela **Propriedades**, selecione a propriedade **Máscara** e clique no botão de reticências **...** ao lado do nome da propriedade.  
   
 4. Na caixa de diálogo **Máscara de Entrada**, selecione a máscara **Data abreviada** e clique em **OK**.  
   
-5. No **propriedades** conjunto de janela a <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> propriedade `true`. Essa propriedade faz com que um aviso sonoro curto soe sempre que o usuário tentar inserir um caractere que viola a definição da máscara.  
+5. Na janela **Propriedades,** defina a <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> propriedade como `true`. Essa propriedade faz com que um aviso sonoro curto soe sempre que o usuário tentar inserir um caractere que viola a definição da máscara.  
   
- Para obter um resumo dos caracteres que a propriedade máscara dá suporte, consulte a seção de comentários do <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade.  
+ Para obter um resumo dos caracteres que a propriedade Máscara suporta, consulte a seção Observações da <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propriedade.  
   
 ## <a name="alert-the-user-to-input-errors"></a>Alertar o usuário de erros de entrada  
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>Adicionar uma dica de balão para entrada de máscara rejeitada  
   
-1. Volte para o **caixa de ferramentas** e adicione um <xref:System.Windows.Forms.ToolTip> ao seu formulário.  
+1. Retorne à **caixa de** <xref:System.Windows.Forms.ToolTip> ferramentas e adicione um ao seu formulário.  
   
-2. Crie um manipulador de eventos para o <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> evento que aciona o <xref:System.Windows.Forms.ToolTip> quando ocorre um erro de entrada. A dica de balão permanece visível por cinco segundos ou até que o usuário clique nele.  
+2. Crie um manipulador <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> de eventos <xref:System.Windows.Forms.ToolTip> para o evento que levanta o momento em que ocorre um erro de entrada. A dica de balão permanece visível por cinco segundos ou até que o usuário clique nele.  
   
     ```csharp  
-    public void Form1_Load(Object sender, EventArgs e)   
+    public void Form1_Load(Object sender, EventArgs e)
     {  
         ... // Other initialization code  
         maskedTextBox1.Mask = "00/00/0000";  
@@ -82,7 +82,7 @@ As tarefas ilustradas neste passo a passo incluem:
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>Adicionar uma dica de balão para tipos de dados inválidos  
   
-1. No seu formulário <xref:System.Windows.Forms.Form.Load> manipulador de eventos, atribua um <xref:System.Type> objeto que representa o <xref:System.DateTime> de tipo para o <xref:System.Windows.Forms.MaskedTextBox> do controle <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> propriedade:  
+1. No manipulador de <xref:System.Windows.Forms.Form.Load> eventos do formulário, <xref:System.Type> atribua um objeto representando o <xref:System.DateTime> tipo à propriedade do <xref:System.Windows.Forms.MaskedTextBox> <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> controle:  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -124,7 +124,7 @@ As tarefas ilustradas neste passo a passo incluem:
     End Sub  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Controle MaskedTextBox](maskedtextbox-control-windows-forms.md)
