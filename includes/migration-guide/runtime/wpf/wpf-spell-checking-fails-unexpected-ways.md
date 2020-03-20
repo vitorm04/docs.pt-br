@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802953"
 ---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>A Verificação Ortográfica do WPF falha de formas inesperadas
@@ -14,5 +14,4 @@ ms.locfileid: "67802953"
 |Sugestão|Problema nº 1 – esse problema foi corrigido no .NET Framework 4.6.2 Problema nº 2 – a Verificação Ortográfica do WPF deixou de ter suporte quando aplicativos são iniciados usando "Executar como usuário diferente". A partir do .NET Framework 4.6.2, aplicativos iniciados dessa maneira não falharão inesperadamente, em vez disso, a Verificação Ortográfica será desabilitada silenciosamente. Problema nº 3 – esse problema foi corrigido no .NET Framework 4.6.2.|
 |Escopo|Microsoft Edge|
 |Versão|4.6.1|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

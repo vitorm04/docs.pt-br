@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104959"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Ferramenta de Registro de Assembly)
@@ -28,21 +28,21 @@ No prompt de comando, digite o seguinte:
 regasm assemblyFile [options]
 ```
 
-## <a name="parameters"></a>Parâmetros
+## <a name="parameters"></a>parâmetros
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*assemblyFile*|O assembly a ser registrado usando-se COM.|
+|*Assemblyfile*|O assembly a ser registrado usando-se COM.|
 
 |Opção|Descrição|
 |------------|-----------------|
 |**/codebase**|Cria uma entrada Codebase no Registro. A entrada Codebase especifica o caminho de arquivo de um assembly não instalado no cache de assembly global. Você não deverá especificar essa opção se você instalar subsequentemente o assembly que está registrando no cache de assembly global. O argumento *assemblyFile* especificado com a opção **/codebase** deve ser um [assembly de nome forte](../../standard/assembly/strong-named.md).|
-|**/registered**|Especifica que essa ferramenta só fará referência a bibliotecas de tipos já registradas.|
-|**/asmpath:directory**|Especifica um diretório que contém referências de assembly. Deve ser usado com a opção **/regfile**.|
+|**/registrado**|Especifica que essa ferramenta só fará referência a bibliotecas de tipos já registradas.|
+|**/asmpath:diretório**|Especifica um diretório que contém referências de assembly. Deve ser usado com a opção **/regfile**.|
 |**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|
-|**/regfile** [ **:** *regFile*]|Gera o arquivo .reg especificado para o assembly, que contém as entradas do Registro necessárias. A especificação dessa opção não altera o Registro. Não é possível usar essa opção com as opções **/u** ou **/tlb**.|
-|**/silent** ou **/s**|Suprime a exibição de mensagens de sucesso.|
-|**/tlb** [ **:** *typeLibFile*]|Gera uma biblioteca de tipos com base no assembly especificado que contém definições dos tipos acessíveis definidos dentro do assembly.|
+|**/regfile** **[:** *regFile*]|Gera o arquivo .reg especificado para o assembly, que contém as entradas do Registro necessárias. A especificação dessa opção não altera o Registro. Não é possível usar essa opção com as opções **/u** ou **/tlb**.|
+|**/silencioso** ou **/s**|Suprime a exibição de mensagens de sucesso.|
+|**/tlb** **[:** *typeLibFile*]|Gera uma biblioteca de tipos com base no assembly especificado que contém definições dos tipos acessíveis definidos dentro do assembly.|
 |**/unregister** ou **/u**|Cancela o registro das classes criáveis encontradas em *assemblyFile*. A omissão dessa opção faz Regasm.exe registrar as classes criáveis no assembly.|
 |**/verbose**|Especifica o modo detalhado, exibe uma lista de todos os assemblies referenciados para os quais uma biblioteca de tipos precisa ser gerada, quando especificado com a opção **/tlb**.|
 |**/?** ou **/help**|Exibe sintaxe de comando e opções para a ferramenta.|
@@ -82,10 +82,10 @@ O comando a seguir registra todas as classes públicas contidas em `myTest.dll`,
 regasm myTest.dll /tlb:myTest.tlb
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Tlbexp.exe (Exportador de Biblioteca de Tipos)](tlbexp-exe-type-library-exporter.md)
 - [Tlbimp.exe (Importador de Biblioteca de Tipos)](tlbimp-exe-type-library-importer.md)
-- [Registrando assemblies usando COM](../interop/registering-assemblies-with-com.md)
+- [Registrando assemblies com o COM](../interop/registering-assemblies-with-com.md)
 - [Prompts de Comando](developer-command-prompt-for-vs.md)

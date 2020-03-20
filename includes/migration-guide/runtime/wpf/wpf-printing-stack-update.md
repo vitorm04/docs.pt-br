@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802526"
 ---
 ### <a name="wpf-printing-stack-update"></a>Atualização da pilha de impressão do WPF
@@ -14,5 +14,4 @@ ms.locfileid: "67802526"
 |Sugestão|Para usar a pilha antiga na Atualização do Windows 10 para Criadores, defina o valor REG_DWORD <code>UseXpsOMPrinting</code> da chave do Registro <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> como <code>1</code>.|
 |Escopo|Microsoft Edge|
 |Versão|4.7|
-|Tipo|Tempo de execução|
-
+|Type|Runtime|

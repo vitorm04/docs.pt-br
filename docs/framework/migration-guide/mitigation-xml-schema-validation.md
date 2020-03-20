@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457745"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigação: validação de esquema XML
@@ -18,7 +18,7 @@ No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da
 ## <a name="impact"></a>Impacto  
  O impacto dessa alteração deve ser mínimo: com base na especificação do esquema, um erro de validação do esquema será esperado se `xsd:unique` for violado usando uma chave composta com uma chave vazia.  
   
-## <a name="mitigation"></a>Redução  
+## <a name="mitigation"></a>Atenuação  
  Se um erro de validação do esquema for detectado se uma chave composta tiver uma chave vazia, é um recurso configurável:  
   
 - Começando com os aplicativos que se destinam ao .NET Framework 4.6, a detecção do erro de validação do esquema é habilitada por padrão; no entanto, é possível recusá-la para que o erro de validação do esquema não seja detectado.  
@@ -35,6 +35,6 @@ No .NET Framework 4.6, a validação de esquema XSD detectará uma violação da
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

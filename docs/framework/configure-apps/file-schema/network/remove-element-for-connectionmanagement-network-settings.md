@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 287e36dce65be7a002499d2cd22481018a1f4742
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 39ce85c3c15a2d4bdfce801a35e9ca088bd5091b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089161"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154732"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remover > elemento para connectionManagement (configurações de rede)
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<remover> Elemento para conexãoGerenciamento (Configurações de rede)
 Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**remover >**
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de gerenciamento de conexão**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remover>**
 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<remove   
-  address="server name or IP address"   
+<remove
+  address="server name or IP address"
 />  
 ```  
   
@@ -38,29 +38,29 @@ Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descrição**|  
+|**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
 |`address`|Um endereço IP ou nome DNS.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões a um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento `remove` remove a entrada da lista de gerenciamento de conexões para o servidor especificado.  
+ O `remove` elemento remove a entrada da lista de gerenciamento de conexão para o servidor especificado.  
   
- O valor do atributo `address` deve ser um nome de host ou endereço IP válido.  
+ O valor `address` do atributo deve ser um endereço IP válido ou nome de host.  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de configuração  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir remove todas as entradas da lista de gerenciamento de conexões para o servidor `www.adventure-works.com` e, em seguida, configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
+ O exemplo a seguir remove todas as `www.adventure-works.com` entradas da lista de gerenciamento de conexão para o servidor e, em seguida, configura um aplicativo para usar quatro conexões para o servidor `www.contoso.com` e duas conexões para todos os outros servidores.  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,7 @@ Remove um endereço IP ou nome DNS da lista de gerenciamento de conexão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

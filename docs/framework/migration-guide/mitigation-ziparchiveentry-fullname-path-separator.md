@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457728"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: separador de caminho ZipArchiveEntry.FullName
@@ -25,8 +25,8 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
   
  O impacto dessa alteração em arquivos .ZIP que são descompactados no sistema operacional Windows por APIs no namespace <xref:System.IO> do .NET Framework deve ser mínimo, uma vez que as APIs podem lidar perfeitamente com uma barra ("/") ou uma barra invertida ("\\") como o caractere separador de caminho.  
   
-## <a name="mitigation"></a>Redução  
- Se esse comportamento for indesejável, você poderá recusar adicionando uma definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
+## <a name="mitigation"></a>Atenuação  
+ Se esse comportamento for indesejável, você pode desativar adicionando uma configuração à seção de>em [ \<tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
   
 ```xml  
 <runtime>  
@@ -34,7 +34,7 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
 </runtime>  
 ```  
   
- Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6.1 e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
+ Além disso, aplicativos que têm como alvo versões anteriores do .NET Framework, mas estão sendo executados no .NET Framework 4.6.1 e versões posteriores podem optar por esse comportamento adicionando uma configuração à seção [ \<de>de tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
   
 ```xml  
 <runtime>  
@@ -42,7 +42,7 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
 </runtime>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [Compatibilidade de aplicativos](application-compatibility.md)

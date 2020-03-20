@@ -4,10 +4,10 @@ description: Saiba como instalar o .NET Framework no Windows 10 ou no Windows Se
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965965"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalar o .NET Framework no Windows 10 e no Windows Server 2016 e posterior
@@ -43,7 +43,7 @@ Instale o [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-fram
 
 O .NET Framework 4.8 não é compatível com:
 
-- Com o Windows 10 1507
+- Windows 10 1507
 - Com o Windows 10 1511
 
 Se estiver usando o Windows 10 1507 ou 1511 e quiser instalar o .NET Framework 4.8, primeiro, você precisará atualizar para uma versão posterior do Windows 10.
@@ -54,13 +54,13 @@ O [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/
 
 O .NET Framework 4.6.2 é compatível com aplicativos compilados para as versões 4.0 até 4.6.2 do .NET Framework.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3,5
 
 Siga as instruções para instalar o [.NET Framework 3.5 no Windows 10](dotnet-35-windows-10.md).
 
 O .NET Framework 3.5 é compatível com aplicativos compilados para as versões 1.0 até 3.5 do .NET Framework.
 
-## <a name="additional-information"></a>{1&gt;{2&gt;Informações adicionais&lt;2}&lt;1}
+## <a name="additional-information"></a>Informações adicionais
 
 As versões 4.x do .NET Framework são atualizações in-loco de versões anteriores. Isso significa o seguinte:
 
@@ -76,7 +76,7 @@ Para obter uma lista de todas as versões do .NET Framework disponíveis para do
 
 Se não for possível instalar a versão correta do .NET Framework, [entre em contato com a Microsoft para obter ajuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Downloads do .NET](https://dotnet.microsoft.com/download)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)

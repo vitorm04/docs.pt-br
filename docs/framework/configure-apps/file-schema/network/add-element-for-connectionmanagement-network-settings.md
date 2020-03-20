@@ -10,27 +10,27 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088525"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155005"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<adicionar o elemento > para connectionManagement (configurações de rede)
-Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<adicionar> Elemento para gerenciamento de conexão (Configurações de rede)
+Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexões.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**adicionar >**
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>de gerenciamento de conexão**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<adicionar>**
 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-<add   
-  address="address expression"   
-  maxconnection="integer"   
+<add
+  address="address expression"
+  maxconnection="integer"
 />  
 ```  
   
@@ -39,30 +39,30 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descrição**|  
+|**Atributo**|**Descrição**|  
 |-------------------|---------------------|  
-|`address`|Uma cadeia de caracteres que descreve um endereço IP ou nome DNS.|  
-|`maxconnection`|O número máximo de conexões permitidas a um servidor. Se não for fornecido, o padrão será 2.|  
+|`address`|Uma seqüência descrevendo um endereço IP ou nome DNS.|  
+|`maxconnection`|O número máximo de conexões permitidas a um servidor. Se não for fornecido, o padrão é 2.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões com um host de rede.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica o número máximo de conexões a um host de rede.|  
   
 ## <a name="remarks"></a>Comentários  
- O valor do atributo `address` deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
+ O valor `address` do atributo deve ser um asterisco para indicar todas `<schema>://<idn_hostname>[:<port>]`as conexões, ou uma seqüência do formulário .  
   
- Se o URI passado para qualquer API HTTP contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
+ Se o URI for passado para qualquer APIs HTTP que contenha Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> o que pode retornar uma seqüência de código punicode (comportamento dependente da configuração atual do IDN).  
   
-## <a name="configuration-files"></a>Arquivos de Configuração  
- Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
+## <a name="configuration-files"></a>Arquivos de configuração  
+ Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração da máquina (Machine.config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir configura um aplicativo para usar quatro conexões com o servidor `www.contoso.com` e duas conexões com todos os outros servidores.  
+ O exemplo a seguir configura um aplicativo para `www.contoso.com` usar quatro conexões para o servidor e duas conexões para todos os outros servidores.  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

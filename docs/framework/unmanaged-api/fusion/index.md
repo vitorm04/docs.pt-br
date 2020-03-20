@@ -7,10 +7,10 @@ helpviewer_keywords:
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
 ms.openlocfilehash: 2bf7bbb59cf983ed536a579ee3a418603f78b49a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131647"
 ---
 # <a name="fusion-unmanaged-api-reference"></a>Fusion (referência de API não gerenciada)
@@ -23,7 +23,7 @@ A API de fusão permite a um host de runtime acessar as propriedades dos recurso
  [Funções estáticas globais de fusão](fusion-global-static-functions.md)  
  Descreve as funções estáticas globais não gerenciadas que a API de fusão usa.  
   
- [Enumerações de fusão](fusion-enumerations.md)  
+ [Enumerações Fusion](fusion-enumerations.md)  
  Descreve as enumerações não gerenciadas que a API de fusão usa.  
   
  [Estruturas de fusão](fusion-structures.md)  

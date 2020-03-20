@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457960"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Interoperação com código não gerenciado
@@ -28,13 +28,13 @@ O código que é executado sob o controle de runtime é chamado de código geren
 [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)  
 Descreve como usar componentes COM de aplicativos do .NET Framework.
 
-[Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)  
+[Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)  
 Descreve como usar componentes do .NET Framework de aplicativos COM.
 
 [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)  
 Descreve como chamar funções de DLL não gerenciadas usando a invocação de plataforma.
 
-[Marshaling de interoperabilidade](interop-marshaling.md)  
+[Realizando marshaling de interoperabilidade](interop-marshaling.md)  
 Descreve o marshaling para invocação de plataforma e interoperabilidade COM.
 
 [Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)  
@@ -57,5 +57,5 @@ Descreve como criar um manifesto do aplicativo e como criar e inserir um manifes
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Wrappers COM](../../standard/native-interop/com-wrappers.md)  
+[Invólucros COM](../../standard/native-interop/com-wrappers.md)  
 Descreve os wrappers fornecidos pela interoperabilidade COM.

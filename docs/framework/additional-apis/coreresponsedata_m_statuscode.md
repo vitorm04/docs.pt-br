@@ -1,5 +1,5 @@
 ---
-title: Campo CoreResponseData. m_StatusCode
+title: Campo CoreResponseData.m_StatusCode
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740994"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156067"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData. m\_campo StatusCode
+# <a name="coreresponsedatam_statuscode-field"></a>Campo CoreResponseData.m\_StatusCode
 
-`CoreResponseData.m_StatusCode` é um <xref:System.Net.HttpStatusCode> que contém o status da resposta.
+`CoreResponseData.m_StatusCode`é <xref:System.Net.HttpStatusCode> um estado da resposta.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> Essa API não deve ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede. Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
-> 
-> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
+> Esta API não deve ser usada diretamente em seu código. Em vez disso, <xref:System.Diagnostics.DiagnosticSource> você deve usar um código de rede para conectar. Consulte [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+>
+> A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.
 
-## <a name="requirements"></a>Requisitos do
+## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espaço de nome:**<xref:System.Net>
 
-**Assembly:** Sistema (em System. dll)
+**Montagem:** Sistema (em System.dll)
 
-**.NET Framework versões:** Disponível desde 2,0.
+**Versões do Framework .NET:** Disponível desde 2.0.

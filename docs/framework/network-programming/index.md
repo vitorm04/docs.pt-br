@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204688"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programação de rede no .NET Framework
@@ -34,7 +34,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Protocolo da Internet Versão 6](internet-protocol-version-6.md)  
  Descreve as vantagens do Protocolo de Internet versão 6 (IPv6) sob a versão atual do pacote do Protocolo de Internet (IPv4), descreve o endereçamento do IPv6, o roteamento e a configuração automática e também como habilitar e desabilitar o IPv6.  
   
- [Configurando aplicativos da Internet](configuring-internet-applications.md)  
+ [Configuring Internet Applications](configuring-internet-applications.md) (Configurando aplicativos da Internet)  
  Explica como usar os arquivos de configuração do .NET Framework para configurar aplicativos da Internet.  
   
  [Rastreamento de rede no .NET Framework](network-tracing.md)  
@@ -49,13 +49,13 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Melhores práticas para classes System.Net](best-practices-for-system-net-classes.md)  
  Fornece dicas e truques para obter o máximo dos aplicativos da Internet.  
   
- [Acessando a Internet por meio de um proxy](accessing-the-internet-through-a-proxy.md)  
+ [Acessando a Internet através de um proxy](accessing-the-internet-through-a-proxy.md)  
  Descreve como configurar proxies.  
   
  [NetworkInformation](networkinformation.md)  
  Descreve como coletar informações sobre eventos, alterações, estatísticas e propriedades de rede e também explica como determinar se um host remoto é acessível usando a classe <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
   
- [Alterações no namespace System.Uri na versão 2.0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
+ [Alterações no namespace system.uri na versão 2.0](changes-to-the-system-uri-namespace-in-version-2-0.md)  
  Descreve várias alterações feitas na classe <xref:System.Uri?displayProperty=nameWithType> na versão 2.0 para comportamento fixo incorreto; aprimora a usabilidade e a segurança.  
   
  [Suporte ao International Resource Identifier em System.Uri](international-resource-identifier-support-in-system-uri.md)  
@@ -73,21 +73,21 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  [Alterações na autenticação NTLM para HttpWebRequest na versão 3.5 SP1](changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
  Descreve as alterações de segurança feitas na versão 3.5 SP1 que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> e por classes relacionadas no namespace do System.Net.  
   
- [Autenticação Integrada do Windows com proteção estendida](integrated-windows-authentication-with-extended-protection.md)  
+ [Autenticação Integrada do Windows com Proteção Estendida](integrated-windows-authentication-with-extended-protection.md)  
  Descreve aprimoramentos para a proteção estendida que afetam a maneira como a autenticação integrada do Windows é controlada por <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> e por classes relacionadas no <xref:System.Net?displayProperty=nameWithType> e por namespaces relacionados.  
   
  [Passagem de NAT usando IPv6 e Teredo](nat-traversal-using-ipv6-and-teredo.md)  
  Descreve os aprimoramentos adicionados ao <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> e namespaces <xref:System.Net.Sockets?displayProperty=nameWithType> para oferecer suporte à NAT transversal usando o IPv6 e o Teredo.  
   
  [Isolamento de rede para Aplicativos da Windows Store](network-isolation-for-windows-store-apps.md)  
- Descreve o impacto do isolamento de rede quando as classes nos namespaces <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> são usadas em aplicativos da loja do Windows 8. x.  
+ Descreve o impacto do isolamento da <xref:System.Net> <xref:System.Net.Http>rede <xref:System.Net.Http.Headers> quando as classes no , e os namespaces são usados em aplicativos do Windows 8.x Store.  
   
  [Amostras de programação de rede](network-programming-samples.md)  
  Vincula-se a amostras para download de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets>.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Net?displayProperty=nameWithType>  
- {1&gt;Fornece uma interface de programação simples para muitos dos protocolos usados nas redes de hoje.&lt;1} As classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> nesse namespace são a base para protocolos conectáveis.  
+ Fornece uma interface de programação simples para muitos dos protocolos usados nas redes de hoje. As classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> nesse namespace são a base para protocolos conectáveis.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
  Define tipos e enumerações usados para definir políticas de cache para os recursos obtidos usando as classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
@@ -134,9 +134,9 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  <xref:System.Security.Authentication.ExtendedProtection.Configuration?displayProperty=nameWithType>  
  Fornece suporte à configuração da autenticação usando proteção estendida para aplicativos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Práticas recomendadas do protocolo TLS com o .NET Framework](tls.md)
-- [Tópicos de instruções de programação de rede](network-programming-how-to-topics.md)
+- [Tópicos explicativos de programação de rede](network-programming-how-to-topics.md)
 - [Amostras de programação de rede](network-programming-samples.md)
 - [Amostra de HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

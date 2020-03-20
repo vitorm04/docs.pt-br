@@ -3,10 +3,10 @@ title: WMI e Contadores de Desempenho (Referência de API Não Gerenciada)
 description: Resume a API não gerenciada do .NET Framework para informações do contador de desempenho e de WMI.
 ms.date: 11/06/2017
 ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127415"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Instrumentação de Gerenciamento do Windows) e Contadores de Desempenho (Referência de API Não Gerenciada)
@@ -71,6 +71,6 @@ A API inclui as seguintes funções:
 | [Função VerifyClient](verifyclientkey.md) | Garante que a chave do cliente tenha a segurança correta. |
 | [Função WritePropertyValue](writepropertyvalue.md) | Grava um número especificado de bytes em uma propriedade identificada por um identificador de propriedade. |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Referência de API não gerenciada](../index.md)

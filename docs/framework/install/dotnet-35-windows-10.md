@@ -1,27 +1,27 @@
 ---
-title: Instalar o .NET Framework 3,5 no Windows 10, 8,1, 8
+title: Instale o .NET Framework 3.5 no Windows 10, 8.1, 8
 description: Saiba como instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8.
 ms.date: 07/16/2018
 ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965939"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8
 
 Talvez você precise do .NET Framework 3.5 para executar um aplicativo no Windows 10, no Windows 8.1 e no Windows 8. Você também pode usar essas instruções para versões anteriores do Windows.
 
-## <a name="download-the-offline-installer"></a>Baixar o instalador offline
+## <a name="download-the-offline-installer"></a>Baixe o instalador offline
 
-O instalador offline do .NET Framework 3,5 SP1 está disponível na [página de download do .NET Framework 3,5 SP1](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) e está disponível para versões do Windows anteriores ao Windows 10.
+O instalador off-line .NET Framework 3.5 SP1 está disponível na [página de download do .NET Framework 3.5 SP1](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) e está disponível para versões do Windows antes do Windows 10.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>Instalação do .NET Framework 3.5 sob demanda
 
 Se você tentar executar um aplicativo que exige o .NET Framework 3.5, você verá a seguinte caixa de diálogo de configuração. Escolha **Instalar este recurso** para habilitar o .NET Framework 3.5. Essa opção exige uma conexão com a Internet.
 
-![Captura de tela da caixa de diálogo de instalação do .NET Framework.](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
+![Captura de tela da caixa de diálogo de instalação .NET Framework.](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>Por que estou recebendo este pop-up?
 
@@ -31,13 +31,13 @@ O .NET Framework é criado pela Microsoft e fornece um ambiente para a execuçã
 
 Você pode habilitar o .NET Framework 3.5 por meio do Painel de Controle do Windows. Essa opção exige uma conexão com a Internet.
 
-1. Pressione a tecla Windows ![captura de tela do logotipo da tecla Windows.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) no teclado, digite "recursos do Windows" e pressione Enter. A caixa de diálogo **Ativar ou desativar recursos do Windows** é exibida.
+1. Pressione a ![tecla Windows Captura de tela do logotipo da chave do Windows.](./media/dotnet-35-windows-10/windows-keyboard-logo.png) no teclado, digite "Recursos do Windows" e pressione Enter. A caixa de diálogo **Ativar ou desativar recursos do Windows** é exibida.
 
-2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)** , selecione **OK** e reinicialize o computador, se isso for solicitado.
+2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)**, selecione **OK** e reinicialize o computador, se isso for solicitado.
 
-   ![Captura de tela mostrando a instalação do .NET com o painel de controle.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
+   ![Captura de tela mostrando a instalação de .NET com o painel de controle.](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   Não é necessário selecionar os itens filho para a **Ativação HTTP do WCF (Windows Communication Foundation)** e para a **Ativação Não HTTP do WCF (Windows Communication Foundation)** , a menos que você seja um desenvolvedor ou administrador de servidor que exija essa funcionalidade.
+   Não é necessário selecionar os itens filho para a **Ativação HTTP do WCF (Windows Communication Foundation)** e para a **Ativação Não HTTP do WCF (Windows Communication Foundation)**, a menos que você seja um desenvolvedor ou administrador de servidor que exija essa funcionalidade.
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>Solucionar problemas de instalação do .NET Framework 3.5
 

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457831"
 ---
 # <a name="mitigation-tls-protocols"></a>Mitigação: protocolos TLS
@@ -22,7 +22,7 @@ A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?
   
 - Qualquer aplicativo do lado do servidor que não possa ser atualizado para dar suporte ao Tls1.0, Tls1.1 ou Tls 1.2.  
   
-## <a name="mitigation"></a>Redução  
+## <a name="mitigation"></a>Atenuação  
  A mitigação recomendada é fazer upgrade do aplicativo do lado do servidor para Tls1.0, Tls1.1 ou Tls 1.2. Se não for viável ou se os aplicativos cliente estiverem desfeitos, a classe <xref:System.AppContext> poderá ser usada para recusar esse recurso de duas maneiras:  
   
 - De modo programático, usando um snippet de código como o seguinte:  
@@ -32,7 +32,7 @@ A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?
   
      Como o objeto <xref:System.Net.ServicePointManager> foi inicializado apenas uma vez, definir essas configurações de compatibilidade deverá ser a primeira coisa que o aplicativo fará.  
   
-- Adicionando a seguinte linha à seção [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
+- Adicionando a seguinte linha à seção de>de tempo de [ \<execução](../configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo app.config:  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -40,6 +40,6 @@ A partir do .NET Framework 4.6, as classes <xref:System.Net.ServicePointManager?
   
  No entanto, observe que não é recomendável recusar o comportamento padrão, pois isso torna o aplicativo menos seguro.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Compatibilidade de aplicativos](application-compatibility.md)

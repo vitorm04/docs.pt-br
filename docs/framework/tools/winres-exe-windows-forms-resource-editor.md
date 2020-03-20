@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715704"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
@@ -31,9 +31,9 @@ winres resourceFile
 winres /?
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
-|Argument|Descrição|
+|Argumento|Descrição|
 |--------------|-----------------|
 |`resourceFile`|O arquivo de recurso a ser localizado. Esse arquivo deve ser um arquivo .resx ou .resources de formulário do Windows Forms gerado pelo designer do Visual Studio. Winres.exe não pode abrir arquivos .resx ou .resources genéricos.|
 
@@ -88,13 +88,13 @@ O Winres.exe tem os seguintes recursos e funcionalidades:
 
 Você deve usar a versão de Winres.exe liberada com o .NET Framework que você está usando. A tabela a seguir lista as versões compatíveis:
 
-|{1&gt;Visual Studio&lt;1}|.NET Framework|Winres.exe|
+|Visual Studio|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
 |Visual Studio .NET 2002|1.0|1.0|
-|Visual Studio .NET 2003|1.1|1.1|
-|Visual Studio 2005|2.0|2.0|
+|Visual Studio .NET 2003|1,1|1,1|
+|Visual Studio 2005|2,0|2,0|
 |Visual Studio 2008|3.0 e 3.5|3.0 e 3.5|
-|Visual Studio 2010|4.0|4.0|
+|Visual Studio 2010|4,0|4,0|
 |Visual Studio 2017|4.6|4.6|
 
 > [!NOTE]
@@ -108,7 +108,7 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
 2. Para abrir os recursos padrão que serão localizados por um formulário, clique no comando **Abrir** do menu **Arquivo** e navegue até o arquivo para abri-lo.
 
-     - ou -
+     -ou-
 
      Especifique o arquivo a ser aberto na linha de comando ao iniciar Winres.exe.
 
@@ -135,7 +135,7 @@ Você deve usar a versão de Winres.exe liberada com o .NET Framework que você 
 
    A ferramenta salva o arquivo usando a convenção de nomenclatura esperada pelo tempo de execução para arquivos de recurso localizados. Por exemplo, se você localizar `TestApp.resources` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resources`. Se você localizar `TestApp.resx` para o alemão na Alemanha, a ferramenta salvará o arquivo como `TestApp.de-DE.resx`. Para obter mais informações sobre as convenções de nomenclatura de recurso, consulte [Empacotando e implantando recursos](../resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obter uma lista dos nomes de cultura predefinidos usados pelo tempo de execução, consulte a classe <xref:System.Globalization.CultureInfo>.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

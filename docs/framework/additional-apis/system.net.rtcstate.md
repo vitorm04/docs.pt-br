@@ -1,5 +1,5 @@
 ---
-title: Classe RtcState (System.Net)
+title: RtcState Class (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: 1a88adeefe0095bf514d36cadc9b44efd8ab61ee
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 861bf2fc0dfef8f836e98e45ba22c7e2e24e19f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155772"
 ---
-# <a name="rtcstate-class"></a>Classe RtcState
+# <a name="rtcstate-class"></a>RtcState Class
 
-A classe `RtcState` representa dados de estado para uma solicitação de comunicação em tempo real (RTC).
+A `RtcState` classe representa dados estatais para uma solicitação de comunicação em tempo real (RTC).
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -29,14 +29,14 @@ internal class RtcState
 ```
 
 > [!WARNING]
-> A classe `RtcState` é interna e não deve ser usada diretamente no seu código.
-> 
-> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
+> A `RtcState` classe é interna e não deve ser usada diretamente em seu código.
+>
+> A Microsoft não suporta o uso desta classe em um aplicativo de produção nenhuma circunstância.
 
 ## <a name="requirements"></a>Requisitos
 
-**Namespace:** <xref:System.Net>
+**Espaço de nome:**<xref:System.Net>
 
-**Assembly:** Sistema (em System. dll)
+**Montagem:** Sistema (em System.dll)
 
-**.NET Framework versões:** Disponível desde 4,5.
+**Versões do Framework .NET:** Disponível desde 4.5.

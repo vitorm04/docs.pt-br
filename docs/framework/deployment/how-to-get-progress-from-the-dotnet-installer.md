@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716498"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
@@ -20,7 +20,7 @@ O .NET Framework 4.5 é um runtime redistribuível. Se você desenvolver aplicat
 
 - **Invocação**. Para chamar a instalação do .NET Framework 4.5 e receber informações sobre o progresso da seção da MMIO, seu programa de instalação deve fazer o seguinte:
 
-    1. Chame o programa redistribuível do .NET Framework 4,5:
+    1. Ligue para o programa redistributable do .NET Framework 4.5:
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
@@ -32,9 +32,9 @@ O .NET Framework 4.5 é um runtime redistribuível. Se você desenvolver aplicat
 
         Substitua esses nomes por nomes que são exclusivos para seu programa de instalação.
 
-    2. Leia a seção MMIO. No .NET Framework 4,5, as operações de download e instalação são simultâneas: uma parte do .NET Framework pode estar sendo instalada enquanto outra parte está sendo baixada. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.
+    2. Leia a seção MMIO. No .NET Framework 4.5, as operações de download e instalação são simultâneas: uma parte do Framework .NET pode estar se instalando enquanto outra parte está baixando. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.
 
-- **Códigos de saída**. Os códigos de saída a seguir do comando para chamar o programa redistribuível .NET Framework 4.5 indicam se a instalação teve êxito ou falhou:
+- **Códigos de saída.** Os códigos de saída a seguir do comando para chamar o programa redistribuível .NET Framework 4.5 indicam se a instalação teve êxito ou falhou:
 
   - 0 – Instalação concluída com êxito.
 
@@ -307,7 +307,7 @@ As seções a seguir descrevem os arquivos significativos neste exemplo: MMIOCha
 
 Um servidor típico cria um nome de arquivo MMIO aleatório, cria o arquivo (conforme mostrado no exemplo de código anterior, na `Server::CreateSection`) e inicia o redistribuível usando o método `CreateProcess` e passando o nome do pipe com a opção `-pipe someFileSectionName`. O servidor deve implementar os métodos `OnProgress`, `Send` e `Finished` com código específico da interface do usuário do aplicativo.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)
 - [Implantação](index.md)

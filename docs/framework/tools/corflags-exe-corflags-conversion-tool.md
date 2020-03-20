@@ -7,10 +7,10 @@ helpviewer_keywords:
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129858"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Ferramenta de Conversão de CorFlags)
@@ -26,7 +26,7 @@ A ferramenta Conversão CorFlags permite configurar a seção CorFlags do cabeç
 CorFlags.exe assembly [options]  
 ```  
   
-## <a name="parameters"></a>Parâmetros  
+## <a name="parameters"></a>parâmetros  
   
 |Parâmetro obrigatório|Descrição|  
 |------------------------|-----------------|  
@@ -50,7 +50,7 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>Comentários  
  Se nenhuma opção estiver especificada, a ferramenta Conversão CorFlags exibirá os sinalizadores para o assembly especificado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Aplicativos de 64 bits](../64-bit-apps.md)

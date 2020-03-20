@@ -8,25 +8,25 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: 4b3495d17e07ca611a384bf958ee06e928eb2506
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088009"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155213"
 ---
-# <a name="cryptonamemapping-element"></a>\<elemento de > cryptoNameMapping
+# <a name="cryptonamemapping-element"></a>\<elemento de> de mapeamento de> de criptonome
 Contém mapeamentos de classes para nomes amigáveis.  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoNameMapping >**
+[**\<>de configuração**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<mscorlib>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<criptografiaConfigurações>**](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>de mapeamento de nomes de cripto**
 
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
-      <cryptoNameMapping>   
+      <cryptoNameMapping>
 </cryptoNameMapping>  
 ```  
   
@@ -34,13 +34,13 @@ Contém mapeamentos de classes para nomes amigáveis.
  As seções a seguir descrevem atributos, elementos filho e elementos pai.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ Nenhum.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`cryptoClasses`|Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no elemento  **\<nameEntry>** .|  
+|`cryptoClasses`|Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no ** \<nomeEntry>** elemento.|  
 |`nameEntry`|Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
@@ -50,10 +50,10 @@ Contém mapeamentos de classes para nomes amigáveis.
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
 |`cryptoNameMapping`|Contém mapeamentos de classes para nomes amigáveis.|  
-|`mscorlib`|Contém o elemento \<cryptographySettings >.|  
+|`mscorlib`|Contém o elemento \<cryptographySettings>.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento **\<cryptoNameMapping >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
+ O exemplo a seguir ** \<** mostra como usar o elemento cryptoNameMapping>para referenciar uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> string "RSA" para o método e usar o <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para retornar um `MyCryptoRSAClass` objeto.  
   
 ```xml  
 <configuration>  
@@ -74,9 +74,9 @@ Contém mapeamentos de classes para nomes amigáveis.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Esquema de arquivos de configuração](../index.md)
+- [Esquema de arquivo de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
 - [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715794"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (Ferramenta de Versão do CLR)
@@ -30,7 +30,7 @@ clrver [option]
 |Opção|Descrição|  
 |------------|-----------------|  
 |`-all`|Exibe todos os processos no computador que estão usando o CLR.|  
-|*pid*|Exibe as versões do CLR usado pelo processo com a PID (ID de processo especificado).|  
+|*Pid*|Exibe as versões do CLR usado pelo processo com a PID (ID de processo especificado).|  
 |`-?`|Exibe sintaxe de comando e opções para a ferramenta.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
 - [Prompts de Comando](developer-command-prompt-for-vs.md)

@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: Saiba como instalar o .NET Framework no Windows 8
 ms.date: 04/18/2019
 ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965991"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Instalar o .NET Framework no Windows 8 e Windows Server 2012
@@ -27,13 +27,13 @@ O .NET Framework 4.8 é compatível com o Windows Server 2012. Não há suporte 
 
 O [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) pode ser usado para executar aplicativos criados para o .NET Framework 4.0 ou posterior.
 
-## <a name="net-framework-46"></a>.NET Framework 4.6
+## <a name="net-framework-46"></a>.NET framework 4.6
 
 O [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) é a última versão do .NET Framework com suporte no Windows 8.
 
 O .NET Framework 4.6 dá suporte a aplicativos criados para o .NET Framework 4.0 a 4.6.
 
-## <a name="net-framework-35"></a>.NET Framework 3.5
+## <a name="net-framework-35"></a>.NET Framework 3,5
 
 Siga as instruções para instalar o [.NET Framework 3.5 no Windows 8 e 10](dotnet-35-windows-10.md).
 
@@ -43,8 +43,8 @@ O .NET Framework 3.5 dá suporte a aplicativos criados para o .NET Framework 1.0
 
 Você pode [entrar em contato com a Microsoft para obter ajuda](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help) se não for possível instalar a versão correta do .NET Framework.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Baixar o .NET Framework](https://dotnet.microsoft.com/download)
+- [Baixe o Quadro .NET](https://dotnet.microsoft.com/download)
 - [Solução de problemas de instalações e desinstalações bloqueadas do .NET Framework](troubleshoot-blocked-installations-and-uninstallations.md)
 - [Instalar o .NET Framework para desenvolvedores](guide-for-developers.md)

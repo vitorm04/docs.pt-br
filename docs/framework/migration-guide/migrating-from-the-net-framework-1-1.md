@@ -6,21 +6,21 @@ helpviewer_keywords:
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 ms.openlocfilehash: 11fe9ba36d32a4c9fe363b48f76a8bb2b24f073b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974965"
 ---
-# <a name="migrate-from-the-net-framework-11"></a>Migrar do .NET Framework 1,1
+# <a name="migrate-from-the-net-framework-11"></a>Migrar do Quadro .NET 1.1
 
-O Windows 7 e versões posteriores do sistema operacional Windows não dão suporte ao .NET Framework 1,1. Como resultado, os aplicativos que se destinam ao .NET Framework 1,1 não serão executados sem modificações no Windows 7 ou versões posteriores do sistema operacional. Este tópico discute as etapas necessárias para executar um aplicativo que tem como alvo o .NET Framework 1,1 no Windows 7 e versões posteriores do sistema operacional Windows. Para obter mais informações sobre o .NET Framework 1,1 e o Windows 8, consulte [executar .NET Framework aplicativos 1,1 no Windows 8 e versões posteriores](../install/run-net-framework-1-1-apps.md).
+As versões Windows 7 e posteriores do sistema operacional Windows não suportam o .NET Framework 1.1. Como resultado, os aplicativos que visam o .NET Framework 1.1 não serão executados sem modificação nas versões do sistema operacional Windows 7 ou posteriores. Este tópico discute as etapas necessárias para executar um aplicativo que tem como alvo o .NET Framework 1.1 no Windows 7 e versões posteriores do sistema operacional Windows. Para obter mais informações sobre o .NET Framework 1.1 e o Windows 8, consulte [Executar os aplicativos .NET Framework 1.1 no Windows 8 e versões posteriores](../install/run-net-framework-1-1-apps.md).
 
 ## <a name="retarget-or-recompile"></a>Redirecionar ou recompilar
 
-Há duas maneiras de obter um aplicativo que foi compilado usando o .NET Framework 1,1 para ser executado no Windows 7 ou em um sistema operacional Windows posterior:
+Existem duas maneiras de obter um aplicativo que foi compilado usando o .NET Framework 1.1 para ser executado no Windows 7 ou em um sistema operacional Windows posterior:
 
-- Redirecione o aplicativo para que ele seja executado sob .NET Framework 4 e versões posteriores. O redirecionamento exige que você adicione um elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração do aplicativo que permite que ele seja executado no .NET Framework 4 e versões posteriores. Esse arquivo de configuração utiliza a seguinte forma:
+- Redirecione o aplicativo para executar em versões .NET Framework 4 e posteriores. O retargeting requer [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) que você adicione um elemento de>de execução suportado ao arquivo de configuração do aplicativo que permite que ele seja executado em versões .NET Framework 4 e posteriores. Esse arquivo de configuração utiliza a seguinte forma:
 
     ```xml
     <configuration>
@@ -40,9 +40,9 @@ Independentemente de preferir recompilar ou redirecionar seu aplicativo, você d
 
 Se redirecionar seu aplicativo ou recompilá-lo, você deverá examinar as alterações significativas e os tipos e membros obsoletos de cada versão do .NET Framework liberada após o .NET Framework 1.1.
 
-## <a name="breaking-changes"></a>Alterações da falha
+## <a name="breaking-changes"></a>Alterações de quebra
 
-Quando ocorre uma alteração significativa, dependendo da alteração específica, a solução desse problema pode estar disponível tanto para aplicativos redestinados como para recompilados. Em alguns casos, você pode adicionar um elemento filho para o elemento [\<runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md) do seu arquivo de configuração do aplicativo para restaurar o comportamento anterior. Por exemplo, o arquivo de configuração a seguir restaura a classificação da cadeia de caracteres e o comportamento de comparação usados no .NET Framework 1.1 e pode ser usado com um aplicativo redirecionado ou recompilado.
+Quando ocorre uma alteração significativa, dependendo da alteração específica, a solução desse problema pode estar disponível tanto para aplicativos redestinados como para recompilados. Em alguns casos, você pode [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) adicionar um elemento filho ao elemento de>em tempo de execução do arquivo de configuração do aplicativo para restaurar o comportamento anterior. Por exemplo, o arquivo de configuração a seguir restaura a classificação da cadeia de caracteres e o comportamento de comparação usados no .NET Framework 1.1 e pode ser usado com um aplicativo redirecionado ou recompilado.
 
 ```xml
 <configuration>
