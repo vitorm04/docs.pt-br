@@ -10,20 +10,20 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 5818b13661fb4415c6f531b741b8a963a80bd2b8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348146"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266918"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Estruturas de controle aninhadas (Visual Basic)
-Você pode posicionar instruções de controle dentro de outras instruções de controle, por exemplo um bloco de `If...Then...Else` em um loop de `For...Next`. Uma instrução de controle colocada dentro de outra instrução de controle é considerada *aninhada*.  
+Você pode colocar instruções de controle `If...Then...Else` dentro de `For...Next` outras instruções de controle, por exemplo, um bloco dentro de um loop. Diz-se que uma declaração de controle colocada dentro de outra declaração de controle está *aninhada*.  
   
 ## <a name="nesting-levels"></a>Níveis de aninhamento  
- As estruturas de controle no Visual Basic podem ser aninhadas para quantos níveis você desejar. É uma prática comum tornar as estruturas aninhadas mais legíveis recuando o corpo de cada uma. O editor de ambiente de desenvolvimento integrado (IDE) faz isso automaticamente.  
+ Estruturas de controle no Visual Basic podem ser aninhadas para quantos níveis você quiser. É prática comum tornar as estruturas aninhadas mais legíveis, recuando o corpo de cada um. O editor do Ambiente de Desenvolvimento Integrado (IDE) faz isso automaticamente.  
   
- No exemplo a seguir, o procedimento `sumRows` adiciona os elementos positivos de cada linha da matriz.  
+ No exemplo a seguir, o procedimento `sumRows` soma os elementos positivos de cada linha da matriz.  
   
 ```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
@@ -39,15 +39,15 @@ Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)
 End Sub  
 ```  
   
- No exemplo anterior, a primeira instrução `Next` fecha o loop de `For` interno e a última instrução `Next` fecha o loop de `For` externo.  
+ No exemplo anterior, `Next` a primeira declaração fecha o loop interno `For` e a última `Next` declaração fecha o loop externo. `For`  
   
- Da mesma forma, em instruções aninhadas de `If`, as instruções de `End If` se aplicam automaticamente à instrução de `If` anterior mais próxima. Loops de `Do` aninhados funcionam de maneira semelhante, com a instrução de `Loop` mais interna correspondente à instrução de `Do` mais interna.  
+ Da mesma forma, `If` nas `End If` declarações aninhadas, as `If` instruções se aplicam automaticamente à declaração anterior mais próxima. Loops `Do` aninhados funcionam de forma `Loop` semelhante, com `Do` a declaração mais interna combinando com a afirmação mais interna.  
   
 > [!NOTE]
-> Para muitas estruturas de controle, quando você clica em uma palavra-chave, todas as palavras-chave na estrutura são realçadas. Por exemplo, quando você clica em `If` em uma construção de `If...Then...Else`, todas as instâncias de `If`, `Then`, `ElseIf`, `Else`e `End If` na construção são realçadas. Para mover para a próxima palavra-chave realçada ou anterior, pressione CTRL + SHIFT + seta para baixo ou CTRL + SHIFT + seta para cima.  
+> Para muitas estruturas de controle, quando você clica em uma palavra-chave, todas as palavras-chave na estrutura são destacadas. Por exemplo, quando `If` você `If...Then...Else` clica em `If` `Then`uma `ElseIf` `Else`construção, todas as instâncias de , , , e `End If` na construção são destacadas. Para passar para a próxima ou anterior palavra-chave destacada, pressione CTRL+SHIFT+DOWN ARROW ou CTRL+SHIFT+UP ARROW.  
   
-## <a name="nesting-different-kinds-of-control-structures"></a>Aninhando diferentes tipos de estruturas de controle  
- Você pode aninhar um tipo de estrutura de controle dentro de outro tipo. O exemplo a seguir usa um bloco de `With` dentro de um loop de `For Each` e blocos de `If` aninhados dentro do bloco de `With`.  
+## <a name="nesting-different-kinds-of-control-structures"></a>Aninhamento de diferentes tipos de estruturas de controle  
+ Você pode aninhar um tipo de estrutura de controle dentro de outro tipo. O exemplo a `With` seguir `For Each` usa um `If` bloco dentro `With` de um loop e blocos aninhados dentro do bloco.  
   
 ```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
@@ -64,14 +64,14 @@ For Each ctl As System.Windows.Forms.Control In Me.Controls
 Next ctl  
 ```  
   
-## <a name="overlapping-control-structures"></a>Sobrepondo estruturas de controle  
- Não é possível sobrepor estruturas de controle. Isso significa que qualquer estrutura aninhada deve estar completamente contida na próxima estrutura mais interna. Por exemplo, a organização a seguir é inválida porque o loop de `For` termina antes de o bloco de `With` interno ser encerrado.  
+## <a name="overlapping-control-structures"></a>Estruturas de controle sobrepostas  
+ Você não pode sobrepor estruturas de controle. Isso significa que qualquer estrutura aninhada deve estar completamente contida dentro da próxima estrutura mais interna. Por exemplo, o acordo a `For` seguir é inválido `With` porque o loop termina antes que o bloco interno termine.  
   
- ![Diagrama que mostra um exemplo de aninhamento inválido.](./media/nested-control-structures/example-invalid-nesting.gif) 
+ ![Diagrama que mostra um exemplo de aninhamento inválido.](./media/nested-control-structures/example-invalid-nesting.gif)
   
- O compilador Visual Basic detecta essas estruturas de controle sobrepostas e sinaliza um erro em tempo de compilação.  
+ O compilador Visual Basic detecta tais estruturas de controle sobrepostas e sinaliza um erro de tempo de compilação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Fluxo de Controle](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Estruturas de Decisão](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

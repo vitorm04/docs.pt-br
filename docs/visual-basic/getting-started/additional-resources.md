@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73196987"
 ---
 # <a name="additional-resources"></a>Recursos adicionais
@@ -51,7 +51,7 @@ Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas pa
 |URL|Descrição|
 |----------|----------------|
 |[Suporte da Microsoft](https://support.microsoft.com)|Fornece acesso a artigos da Base de Dados de Conhecimento (KB), downloads e atualizações, webcasts de suporte e outros serviços.|
-|[Perguntas do Visual Studio](https://developercommunity.visualstudio.com)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o .NET e o Visual Studio. Você também pode relatar um bug ao selecionar **Ajuda** > **Enviar Comentários** > **Relatar um Problema** no Visual Studio.|
+|[Perguntas sobre o Visual Studio](https://developercommunity.visualstudio.com)|Permite arquivar bugs ou fornecer sugestões à Microsoft sobre o .NET e o Visual Studio. Você também pode relatar um bug selecionando **Ajuda** > **Enviar Feedback** > **Reporte um Problema** no Visual Studio.|
 
 ## <a name="third-party-resources"></a>Recursos de terceiros
 
@@ -61,7 +61,7 @@ Os sites a seguir fornecem orientações e podem ajudar a encontrar respostas pa
 |[vbCity](http://vbcity.com/)|Um site da comunidade para que pessoas aprendam e façam perguntas sobre Visual Basic e .NET.|
 |[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|O Stack Overflow é um site de perguntas e respostas para desenvolvedores.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Introdução ao Visual Basic](../../visual-basic/getting-started/index.md)
 - [Fale conosco](/visualstudio/ide/feedback-options)

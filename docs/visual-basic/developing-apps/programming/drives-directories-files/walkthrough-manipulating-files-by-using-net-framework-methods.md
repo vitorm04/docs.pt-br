@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
 ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333779"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework (Visual Basic)
@@ -38,13 +38,13 @@ Inicie o Visual Studio e comece o projeto criando um formulário que o usuário 
 
 2. No painel **Novo Projeto**, clique em **Aplicativos do Windows**.
 
-3. Na caixa **Nome**, digite `MyDiary` e clique em **OK**.
+3. No **tipo** `MyDiary` de caixa Nome e clique em **OK**.
 
-     O Visual Studio adiciona o projeto ao **Gerenciador de Soluções** e o **Designer de Formulários do Windows** é aberto.
+     O Visual Studio adiciona o projeto ao **Solution Explorer**, e o Windows **Forms Designer** é aberto.
 
 4. Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
-|**Object**|**Propriedades**|**Value**|
+|**Objeto**|**Propriedades**|**Valor**|
 |---|---|---|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Submit`<br /><br /> **Enviar entrada**|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Clear`<br /><br /> **Limpar entrada**|
@@ -83,7 +83,7 @@ Para adicionar a capacidade de gravar em um arquivo por meio do aplicativo, use 
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Por fim, anexe o código para limpar a <xref:System.Windows.Forms.TextBox>. Adicione o seguinte código ao evento `Clear` do botão <xref:System.Windows.Forms.Control.Click>.
+4. Por fim, anexe o código para limpar a <xref:System.Windows.Forms.TextBox>. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Clear`.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -93,10 +93,10 @@ Nesta seção, você adiciona um recurso que exibe a última entrada em `Display
 
 Para esta seção do passo a passo, adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
-|Controle|{1&gt;Propriedades&lt;1}|Valores|
+|Control|Propriedades|Valores|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Size**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Vídeo**|
+|<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Tamanho**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Exibição**|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`GetEntries`<br /><br /> **Obter entradas**|
 |<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|
 
@@ -122,7 +122,7 @@ Por fim, você pode incluir uma funcionalidade adicional que permite que os usu�
 
 Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
-|Controle|{1&gt;Propriedades&lt;1}|Valores|
+|Control|Propriedades|Valores|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
@@ -130,7 +130,7 @@ Adicione os controles na tabela a seguir ao formulário e defina os valores corr
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas
 
-1. Adicione o seguinte código ao evento `Display` do botão <xref:System.Windows.Forms.Control.Click> , depois de `DisplayEntry.Text = ReadString`.
+1. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Display` , depois de `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
@@ -150,10 +150,10 @@ Adicione os controles na tabela a seguir ao formulário e defina os valores corr
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Edite a entrada na `Entry`<xref:System.Windows.Forms.TextBox> e clique em **Enviar Edição**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.
+Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Editar a entrada `Entry` <xref:System.Windows.Forms.TextBox> no e clicar em **Enviar editar**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [Explicações Passo a Passo](../../../../visual-basic/walkthroughs.md)
+- [Instruções passo a passo](../../../../visual-basic/walkthroughs.md)

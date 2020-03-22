@@ -1,5 +1,5 @@
 ---
-title: 'Como: ler de arquivos de texto com vários formatos'
+title: 'Como: Ler a partir de arquivos de texto com vários formatos'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334579"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Como: ler de arquivos FEXT com vários formatos no Visual Basic
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>Como: Ler a partir de arquivos fext com vários formatos no Visual Basic
 
 O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira fácil e eficiente de analisar arquivos de texto estruturados, como logs. É possível processar um arquivo com vários formatos usando o método `PeekChars` para determinar o formato de cada linha conforme você analisa por meio do arquivo.
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Para analisar um arquivo de texto com vários formatos
 
-1. Adicione um arquivo de texto chamado *Testfile. txt* ao seu projeto. Adicione o seguinte conteúdo ao arquivo de texto:
+1. Adicione um arquivo de texto chamado *testfile.txt* ao seu projeto. Adicione o seguinte conteúdo ao arquivo de texto:
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira
 
 ## <a name="example"></a>Exemplo
 
-Veja a seguir o exemplo completo que lê a partir do arquivo `testfile.txt`:
+A seguir está o exemplo completo `testfile.txt`que lê do arquivo:
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
@@ -67,7 +67,7 @@ As seguintes condições podem causar uma exceção:
 - O caminho é muito longo (<xref:System.IO.PathTooLongException>).
 - O usuário não tem permissões suficientes para acessar o arquivo (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

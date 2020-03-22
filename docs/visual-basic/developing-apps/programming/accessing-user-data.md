@@ -1,5 +1,5 @@
 ---
-title: Acessando dados do usuário
+title: Como acessar dados do usuário
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
 ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349210"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Acessando dados do usuário (Visual Basic)
@@ -26,12 +26,12 @@ Esta seção contém tópicos que lidam com o objeto `My.User` e com as tarefas 
   
 ## <a name="tasks"></a>Tarefas  
   
-|{1&gt;Para&lt;1}|Consulte|  
+|Para|Consulte|  
 |--------|---------|  
 |Obter nome de logon do usuário|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |Obter nome de domínio do usuário, se o aplicativo usa a autenticação do Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  
 |Determinar a função do usuário|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
 ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76794560"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Como chamar um serviço Web de forma assíncrona (Visual Basic)
@@ -23,7 +23,7 @@ A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em
 > [!NOTE]
 > Esse código não funciona em aplicativos Web, pois o ASP.NET não oferece suporte ao objeto `My.WebServices`.
 
-## <a name="call-a-web-service-asynchronously"></a>Chamar um serviço Web de forma assíncrona
+## <a name="call-a-web-service-asynchronously"></a>Chame um serviço web assíncronamente
 
 1. Consulte o serviço Web DemoTemperatureService em `http://www.xmethods.net`. O endereço é
 
@@ -66,7 +66,7 @@ A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em
 
     Para chamar o método Web `getTemp` de forma assíncrona, chame o método `CallGetTempAsync`. Quando o método Web for concluído, seu valor retornado será transmitido ao manipulador de eventos `getTempCompletedHandler`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
-- [Acessando serviços Web do aplicativo](accessing-application-web-services.md)
+- [Como acessar serviços Web de aplicativo](accessing-application-web-services.md)
 - [Objeto My.WebServices](../../language-reference/objects/my-webservices-object.md)

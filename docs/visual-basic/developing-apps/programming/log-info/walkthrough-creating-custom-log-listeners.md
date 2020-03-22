@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 7b611e93119dc66a9404cf271ea201676d7b5318
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353621"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Instruções passo a passo: criando ouvintes de log personalizados (Visual Basic)
@@ -39,13 +39,13 @@ O procedimento seguinte fornece algumas etapas simples para criar um assembly de
 
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Para nomear fortemente o assembly de ouvinte de log
 
-1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, escolha **Propriedades**.
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto,** escolha **Propriedades**.
 
-2. Clique na guia **Assinatura**.
+2. Clique na guia **Assinatura** .
 
 3. Marque a caixa **Assinar o assembly**.
 
-4. Selecione **Novo\<** da lista suspensa **Escolha um arquivo de chave de nome forte**.
+4. Selecione ** \<Nova>** na lista de desímpara de arquivo de **chave de nome forte.**
 
      A caixa de diálogo **Criar Chave de Nome Forte** é aberta.
 
@@ -79,7 +79,7 @@ Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log
 
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.
 
-     - ou -
+     -ou-
 
      Se houver um arquivo app.config:
 
@@ -107,7 +107,7 @@ Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log
 
      Altere o valor de `SimpleLogStrongName` para ser o nome forte do ouvinte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

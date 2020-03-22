@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802050"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187138"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -21,54 +21,54 @@ Este tópico lista os nomes dos principais recursos para cada versão do Visual 
 
 ## <a name="current-version"></a>Versão atual
 
-Visual Basic 16,0/Visual Studio 2019 versão 16,0 \
-Para obter novos recursos, consulte [Visual Basic 16,0](#visual-basic-160).
+Visual Basic 16.0 / Visual Studio 2019 versão 16.0\
+Para obter novos recursos, consulte [Visual Basic 16.0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Versões anteriores
 
-Visual Basic 15,8/Visual Studio 2017 versão 15,8 \
-Para obter novos recursos, consulte [Visual Basic 15,8](#visual-basic-158).
+Visual Basic 15.8 / Visual Studio 2017 versão 15.8\
+Para obter novos recursos, consulte [Visual Basic 15.8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 versão 15,5 \
-Para obter novos recursos, consulte [Visual Basic 15,5](#visual-basic-155).
+Visual Basic 15.5 / Visual Studio 2017 versão 15.5\
+Para obter novos recursos, consulte [Visual Basic 15.5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 versão 15,3 \
-Para obter novos recursos, consulte [Visual Basic 15,3](#visual-basic-153).
+Visual Basic 15.3 / Visual Studio 2017 versão 15.3\
+Para obter novos recursos, consulte [Visual Basic 15.3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 \
+Visual Basic 2017 / Visual Studio 2017\
 Para obter novos recursos, consulte [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 \
+Visual Basic / Visual Studio 2015\
 Para obter novos recursos, consulte [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013 \
-Visualizações de tecnologia da Plataforma do Compilador .NET (“Roslyn”)
+Visual Basic / Visual Studio 2013\
+Visualizações tecnológicas da Plataforma de Compilação .NET ("Roslyn")
 
-Visual Basic/Visual Studio 2012 \
+Visual Basic / Visual Studio 2012\
 palavras-chave `Async` e `await`, iteradores, atributos de informações do chamador
 
-Visual Basic, Visual Studio 2010 \
+Visual Basic, Visual Studio 2010\
 Propriedades autoimplementadas, inicializadores de coleção, continuação de linha implícita, covariância/contravariância genérica, acesso ao namespace global
 
-Visual Basic/Visual Studio 2008 \
+Visual Basic / Visual Studio 2008\
 LINQ (consulta integrada à linguagem), literais XML, inferência de tipos de variável local, inicializadores de objeto, tipos anônimos, métodos de extensão, inferência de tipos `var` local, expressões lambda, operador `if`, métodos parciais, tipos de valor anulável
 
-Visual Basic/Visual Studio 2005 \
+Visual Basic / Visual Studio 2005\
 O tipo `My` e tipos auxiliares (acesso ao aplicativo, computador, sistema de arquivos, rede)
 
-Visual Basic/Visual Studio .NET 2003 \
+Visual Basic / Visual Studio .NET 2003\
 Operadores bit shift, declaração de variável de loop
 
-Visual Basic/Visual Studio .NET 2002 \
+Visual Basic / Visual Studio .NET 2002\
 A primeira versão do Visual Basic .NET
 
-## <a name="visual-basic-160"></a>Visual Basic 16,0
+## <a name="visual-basic-160"></a>Visual Básico 16.0
 
-Visual Basic 16,0 concentra-se em fornecer mais recursos do Visual Basic Runtime (Microsoft. VisualBasic. dll) para o .NET Core e é a primeira versão do Visual Basic concentrada no .NET Core. Muitas partes do Visual Basic Runtime dependem de WinForms e elas serão adicionadas em uma versão posterior do Visual Basic.
+O Visual Basic 16.0 se concentra em fornecer mais recursos do Visual Basic Runtime (microsoft.visualbasic.dll) para .NET Core e é a primeira versão do Visual Basic focada no .NET Core. Muitas partes do Visual Basic Runtime dependem do WinForms e estas serão adicionadas em uma versão posterior do Visual Basic.
 
-**Comentários permitidos em mais lugares dentro de instruções**
+**Comentários permitidos em mais lugares dentro de declarações**
 
-No Visual Basic 15,8 e versões anteriores, os comentários são permitidos somente em linhas em branco, no final de uma instrução ou em locais específicos dentro de uma instrução em que uma continuação de linha implícita é permitida. A partir do Visual Basic 16,0, os comentários também são permitidos após as continuaçãos de linha explícitas e dentro de uma instrução em uma linha que começa com um espaço seguido por um sublinhado.
+No Visual Basic 15.8 e versões anteriores, os comentários só são permitidos em linhas em branco, no final de uma declaração ou em lugares específicos dentro de uma declaração onde uma continuação de linha implícita é permitida. A partir do Visual Basic 16.0, os comentários também são permitidos após continuações explícitas de linha e dentro de uma declaração em uma linha que começa com um espaço seguido de um sublinhado.
 
 ```vb
 Public Sub Main()
@@ -124,7 +124,7 @@ Por exemplo, a seguinte chamada de método tem dois argumentos posicionais entre
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[Modificador de acesso de membro`Private Protected`](../language-reference/modifiers/private-protected.md)
+[`Private Protected`modificador de acesso membro](../language-reference/modifiers/private-protected.md)
 
 Essa nova combinação de palavra-chave definirá um membro que é acessível por todos os membros em sua classe recipiente, bem como por tipos derivados da classe recipiente, mas somente se eles também forem encontrados no assembly de contenção. Como estruturas não podem ser herdadas, `Private Protected` só pode ser aplicado aos membros de uma classe.
 
@@ -146,7 +146,7 @@ Para usar o caractere de sublinhado como um separador à esquerda, você deve ad
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[**Inferência de tupla nomeada**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Chamada inferência tuple**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Quando você atribui o valor de elementos de tupla com base em variáveis, o Visual Basic infere o nome dos elementos de tupla dos nomes de variável correspondentes; não é necessário nomear explicitamente um elemento de tupla. O exemplo a seguir usa a inferência para criar uma tupla com três elementos nomeados, `state`, `stateName` e `capital`.
 
@@ -154,7 +154,7 @@ Quando você atribui o valor de elementos de tupla com base em variáveis, o Vis
 
 **Opções adicionais do compilador**
 
-O compilador de linha de comando do Visual Basic agora é compatível com as opções do compilador [ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar a saída de assemblies de referência. A **-refout** define o diretório de saída do assembly de referência e a **-refonly** especifica que somente um assembly de referência deve ser produzido pela compilação.
+O compilador de linha de comando do Visual Basic agora é compatível com as opções do compilador [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) e [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) para controlar a saída de assemblies de referência. A **-refout** define o diretório de saída do assembly de referência e a **-refonly** especifica que somente um assembly de referência deve ser produzido pela compilação.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -174,7 +174,7 @@ O chamador pode então chamar o método e manipular a tupla retornada com o cód
 
 [!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-**Literais binários e os separadores de dígito**
+**Literais binários e separadores de dígitos**
 
 Você pode definir um literal binário usando o prefixo `&B` ou `&b`. Além disso, você pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade. O exemplo a seguir usa as duas funcionalidades para atribuir um valor `Byte` e exibi-lo como um número decimal, hexadecimal e binário.
 
@@ -182,11 +182,11 @@ Você pode definir um literal binário usando o prefixo `&B` ou `&b`. Além diss
 
 Para obter mais informações, consulte a seção "Atribuições de literal" dos tipos de dados [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) e [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Suporte para valores retornados por referência em C#** ](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Suporte para valores retornados por referência em C#**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Começando com o C# 7.0, o C# é compatível com valores retornados de referência. Isto é, quando o método de chamada recebe um valor retornado por referência, ele pode alterar o valor da referência. O Visual Basic não permite a criação de métodos com valores retornados de referência, mas isso não permite o consumo e a modificação de valores de retorno de referência.
 
-Por exemplo, a classe `Sentence` a seguir escrita em C# inclui um método `FindNext` que localiza a próxima palavra em uma sentença que começa com uma subcadeia de caracteres especificada. A cadeia de caracteres é retornada como um valor retornado de referência e uma variável `Boolean` passada pela referência para o método indica se a pesquisa foi bem-sucedida. Isso significa que o chamador não pode apenas ler o valor retornado, ele também pode modificá-lo e essa modificação é refletida na classe `Sentence`.
+Por exemplo, a classe `Sentence` a seguir escrita em C# inclui um método `FindNext` que localiza a próxima palavra em uma sentença que começa com uma subcadeia de caracteres especificada. A cadeia de caracteres é retornada como um valor retornado de referência e uma variável `Boolean` passada pela referência para o método indica se a pesquisa foi bem-sucedida. Isso significa que, além de ler o valor retornado, o chamador também `Sentence` pode modificá-lo, e essa modificação é refletida na classe.
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
@@ -202,21 +202,21 @@ Uma solução melhor é usar um método auxiliar para o qual o valor retornado d
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-Para obter mais informações, consulte [Reference return values](../programming-guide/language-features/procedures/ref-return-values.md) (Valores retornados de referência).
+Para obter mais informações, consulte [Valores de retorno de referência](../programming-guide/language-features/procedures/ref-return-values.md).
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[NameOf](../language-reference/operators/nameof.md)
+[Nomeof](../language-reference/operators/nameof.md)
 
 Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou de um membro para uso em uma mensagem de erro sem realizar hard-coding de uma cadeia de caracteres.  Isso permite que seu código permaneça correto ao refatorar.  Esse recurso também é útil para conectar links MVC do tipo modelo-exibição-controlador e acionar eventos de alteração de propriedade.
 
-[Interpolação de cadeia de caracteres](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+[Interpolação de cadeias de caracteres](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-formatting.md).
+Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada parece com uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação a argumentos, do que a [formatação composta](../../standard/base-types/composite-formatting.md).
 
 [Acesso de membro nulo condicional e indexação](../language-reference/operators/null-conditional-operators.md)
 
-Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).  Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.  Se a referência de objeto ou o operando esquerdo for nulo, as operações retornarão valores nulos.
+Você pode testar a nulidade de uma maneira sintática muito simples antes de executar uma operação de acesso de membro (`?.`) ou índice (`?[]`).  Esses operadores ajudam a escrever menos código para lidar com verificações de nulidade, especialmente para entrar em estruturas de dados.  Se a referência de objeto ou o operando esquerdo for nulo, as operações serão nulas.
 
 [Literais de cadeia multilinha](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
 
@@ -289,7 +289,7 @@ End Interface
 
 Agora, o compilador usará regras de resolução de sobrecarga normais para escolher o `GetDetails` mais apropriado a ser chamado e você pode declarar relações de interface no Visual Basic, como aquelas mostradas no exemplo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
-- [O que há de novo no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)

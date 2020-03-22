@@ -1,5 +1,5 @@
 ---
-title: Criando, excluindo e movendo arquivos e diretórios
+title: Criar, excluir e mover arquivos e diretórios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -23,10 +23,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
 ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348919"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Criando, excluindo e movendo arquivos e diretórios no Visual Basic
@@ -47,7 +47,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  [Como criar um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Demonstra como criar um arquivo.  
   
- [Como excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Como: Excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Demonstra como excluir um arquivo.  
   
  [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
@@ -62,7 +62,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  [Como copiar um diretório para outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  Demonstra como copiar um diretório para outro local.  
   
- [Como criar um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
+ [Coco criar um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-directory.md)  
  Demonstra como criar um diretório.  
   
  [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
@@ -118,10 +118,10 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
  Descreve o objeto `SpecialDirectories`.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
 
- [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Lista as tarefas associadas à leitura de arquivos.  
   
- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Escrevendo para arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Lista as tarefas que envolvem a gravação em arquivos.

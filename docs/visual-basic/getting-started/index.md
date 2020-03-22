@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75559879"
 ---
 # <a name="get-started-with-visual-basic"></a>Introdução ao Visual Basic
@@ -18,17 +18,17 @@ Esta seção da documentação ajuda você a começar o desenvolvimento de aplic
 
 ## <a name="get-started-with-visual-basic-and-net-core"></a>Introdução ao Visual Basic e o .NET Core
 
-[Criar um aplicativo Olá, Mundo com o .NET Core no Visual Studio](../../core/tutorials/with-visual-studio.md)
+[Construa um aplicativo Hello World com .NET Core no Visual Studio](../../core/tutorials/with-visual-studio.md)
 
-[Criar uma biblioteca de classes com .NET Standard no Visual Studio](../../core/tutorials/library-with-visual-studio.md)
+[Construa uma biblioteca de classes com .NET Standard no Visual Studio](../../core/tutorials/library-with-visual-studio.md)
 
-## <a name="additional-information"></a>{1&gt;{2&gt;Informações adicionais&lt;2}&lt;1}
+## <a name="additional-information"></a>Informações adicionais
 
-- [O que há de novo para Visual Basic](whats-new.md) Lista os novos recursos em cada uma das versões do Visual Basic .NET.
+- [O que há de novo para Visual Basic](whats-new.md) Lista novos recursos em cada uma das versões do Visual Basic .NET.
 
-- [Recursos adicionais para programadores de Visual Basic](additional-resources.md) Fornece uma lista de sites da Web e grupos de notícias que podem ajudá-lo a encontrar respostas para problemas comuns.
+- [Recursos adicionais para programadores básicos visuais](additional-resources.md) Fornece uma lista de sites e grupos de notícias que podem ajudá-lo a encontrar respostas para problemas comuns.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Obter o Visual Basic](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) Fornece links de download para versões do Visual Studio que incluem o suporte ao Visual Basic, incluindo versões gratuitas.
 
@@ -38,7 +38,7 @@ Esta seção da documentação ajuda você a começar o desenvolvimento de aplic
 
 - [Instruções](../walkthroughs.md) Fornece uma lista de páginas de Ajuda que demonstram aspectos da linguagem do Visual Basic.
 
-- [Opções de comentários para o Visual Studio](/visualstudio/ide/feedback-options) Aborda como receber suporte e fornecer comentários.
+- [Opções de feedback para Visual Studio](/visualstudio/ide/feedback-options) Abrange como receber suporte e dar feedback.
 
 - [Visual Studio](/visualstudio/) Fornece links para a documentação do Visual Studio.
 

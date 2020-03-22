@@ -1,14 +1,14 @@
 ---
-title: Obtendo informações sobre o computador
+title: Obter informações sobre o computador
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 ms.openlocfilehash: fd5b49cd053d70e752352e2b050f9202564ee7d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348118"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>Obtendo informações sobre o computador (Visual Basic)
@@ -19,7 +19,7 @@ O objeto `My.Computer.Info` fornece propriedades para obter informações sobre 
 
 Esta tabela lista tarefas normalmente executadas por meio do objeto `My.Computer.Info` e aponta para tópicos que demonstram como executar cada uma.
 
-|{1&gt;Para&lt;1}|Consulte|
+|Para|Consulte|
 |---|---|
 |Determinar quanto espaço de endereço virtual está disponível para o computador no qual o aplicativo está instalado|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
 |Determinar o tipo de plataforma do computador no qual o aplicativo está sendo executado|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
@@ -27,6 +27,6 @@ Esta tabela lista tarefas normalmente executadas por meio do objeto `My.Computer
 |Determinar quais pacotes de serviço foram instalados no computador no qual o aplicativo está sendo executado|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
 |Determinar o `UICulture` instalado no computador no qual o aplicativo está sendo executado.|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
