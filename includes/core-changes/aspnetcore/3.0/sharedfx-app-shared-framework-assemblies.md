@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937273"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549607"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>Estrutura compartilhada: Assembléias removidas do Microsoft.AspNetCore.App
 
@@ -36,7 +36,7 @@ Uma referência `Microsoft.AspNetCore.App` a não `<PackageReference>` mais requ
 
 Para obter mais informações, consulte [dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612).
 
-Entity Framework Core é enviado como pacotes NuGet. Essa alteração alinha o modelo de envio com todas as outras bibliotecas de acesso a dados no .NET. Ele fornece ao Entity Framework Core o caminho mais simples para continuar inovando enquanto suporta as várias plataformas .NET. A mudança do Entity Framework Core para fora da estrutura compartilhada não tem impacto em seu status como uma biblioteca desenvolvida pela Microsoft, suportada e útil. A [política de suporte do .NET Core](https://www.microsoft.com/net/platform/support-policy) continua a cobri-la.
+Entity Framework Core é enviado como pacotes NuGet. Essa alteração alinha o modelo de envio com todas as outras bibliotecas de acesso a dados no .NET. Ele fornece ao Entity Framework Core o caminho mais simples para continuar inovando enquanto suporta as várias plataformas .NET. A mudança do Entity Framework Core para fora da estrutura compartilhada não tem impacto em seu status como uma biblioteca desenvolvida pela Microsoft, suportada e útil. A [política de suporte do .NET Core](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) continua a cobri-la.
 
 Json.NET e Entity Framework Core continuam a trabalhar com ASP.NET Core. Eles não serão, no entanto, incluídos no quadro compartilhado.
 

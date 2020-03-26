@@ -4,12 +4,12 @@ description: Neste tutorial, você aprenderá como contêiner um aplicativo .NET
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157824"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546569"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Containerize um aplicativo .NET Core
 
@@ -26,8 +26,8 @@ Você aprenderá a:
 
 Você aprenderá as tarefas de build e implantação de contêiner do Docker para um aplicativo .NET Core. A *plataforma Docker* usa o *Mecanismo do Docker* para criar e empacotar aplicativos como *imagens do Docker* com agilidade. Essas imagens são gravadas no formato *Dockerfile* para serem implantadas e executadas em um contêiner em camadas.
 
-> [!TIP]
-> Se você está trabalhando com um aplicativo ASP.NET Core existente, consulte o [Learn how to containerize a ASP.NET Tutorial de aplicativo Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+> [!WARNING]
+> **Este tutorial não é para ASP.NET aplicativos Core.** Se você estiver usando ASP.NET Core, leia o [Learn how to containerize a ASP.NET tutorial do aplicativo Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 

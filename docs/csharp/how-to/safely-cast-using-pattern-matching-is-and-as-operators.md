@@ -6,32 +6,32 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 762f8135063f7256ce7a167c65013703d9249039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73973088"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249351"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Como lançar com segurança usando a correspondência de padrões e o é e como operadores
 
 Como os objetos são polimórficos, é possível que uma variável de tipo de classe base tenha um [tipo](../programming-guide/types/index.md) derivado. Para acessar os métodos de instância do tipo derivado, é necessário [converter](../programming-guide/types/casting-and-type-conversions.md) o valor de volta no tipo derivado. No entanto, uma conversão cria o risco de lançar um <xref:System.InvalidCastException>. O C# fornece instruções de [correspondência de padrões](../pattern-matching.md) que executarão uma conversão condicionalmente somente quando ela tiver êxito. O C# também oferece os operadores [is](../language-reference/operators/type-testing-and-cast.md#is-operator) e [as](../language-reference/operators/type-testing-and-cast.md#as-operator) para testar se um valor é de um determinado tipo.
 
-O código a seguir demonstra a instrução `is` da correspondência de padrões. Ele contém métodos que testam um argumento de método para determinar se ele é um argumento de um possível conjunto de tipos derivados:
+O exemplo a seguir mostra `is` como usar a declaração de correspondência de padrões:
 
 [!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-O exemplo anterior demonstra alguns recursos da sintaxe de correspondência de padrões. As instruções `if (a is Mammal m)` e `if (o is Mammal m)` combinam o teste com uma atribuição de inicialização. A atribuição ocorre apenas quando o teste é bem-sucedido. A variável `m` está somente no escopo na instrução `if` inserida em ela foi atribuída. Não é possível acessar `m` posteriormente no mesmo método. Experimente isso na janela interativa.
+O exemplo anterior demonstra alguns recursos da sintaxe de correspondência de padrões. A `if (a is Mammal m)` declaração combina o teste com uma atribuição de inicialização. A atribuição ocorre apenas quando o teste é bem-sucedido. A variável `m` está somente no escopo na instrução `if` inserida em ela foi atribuída. Não é possível acessar `m` posteriormente no mesmo método. O exemplo anterior também mostra [ `as` ](../language-reference/operators/type-testing-and-cast.md#as-operator) como usar o operador para converter um objeto em um tipo especificado.
 
-Você também pode usar a mesma sintaxe para testar se um [tipo de valor anulado](../language-reference/builtin-types/nullable-value-types.md) tiver um valor, conforme mostrado no seguinte código de amostra:
+Você também pode usar a mesma sintaxe para testar se um [tipo de valor anulado](../language-reference/builtin-types/nullable-value-types.md) tiver um valor, como mostrado no exemplo a seguir:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
 O exemplo anterior demonstra outros recursos da correspondência de padrões a serem usados com conversões. É possível testar se uma variável tem padrão nulo verificando especificamente o valor `null`. Quando o valor de runtime da variável é `null`, uma instrução `is` que verifica um tipo retorna sempre `false`. A instrução `is` da correspondência de padrões não permite um tipo de valor anulável, como `int?` ou `Nullable<int>`, mas é possível testar qualquer outro tipo de valor. Os `is` padrões do exemplo anterior não se limitam aos tipos de valor anulados. Você também pode usar esses padrões para testar se uma variável `null`de um tipo de referência tem um valor ou é .
 
-O exemplo anterior também mostra como você usa a expressão `is` de correspondência de padrões em uma instrução `switch` em que a variável pode ser um dos muitos tipos diferentes.
+A amostra anterior também mostra como você `switch` usa o padrão de tipo em uma declaração onde a variável pode ser um dos muitos tipos diferentes.
 
-Se desejar testar se uma variável é um determinado tipo, mas não a atribuir à nova variável, será possível usar os operadores `is` e `as` para tipos de referência e tipos que permitem valor nulo. O seguinte código mostra como usar as instruções `is` e `as` que faziam parte da linguagem C# antes que a correspondência de padrões fosse introduzida para testar se uma variável é de um determinado tipo:
+Se você quiser testar se uma variável é um determinado tipo, mas não `is` atribuí-la a uma nova variável, você pode usar os operadores e `as` operadores para tipos de referência e tipos de valor anulados. O seguinte código mostra como usar as instruções `is` e `as` que faziam parte da linguagem C# antes que a correspondência de padrões fosse introduzida para testar se uma variável é de um determinado tipo:
 
 [!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 

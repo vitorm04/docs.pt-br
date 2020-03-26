@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143311"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249689"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -427,7 +427,7 @@ Também é possível configurar cookies SameSite no nível do aplicativo modific
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ O fluxo básico do Always Encrypted com base em enclave é:
 A partir do .NET Framework 4.7.2, um assistente de diagnóstico pode localizar o  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> criado de um determinado URI de origem.(Este recurso é usado por assistentes de diagnóstico, não por aplicativos de produção.) Um assistente de diagnóstico, como o recurso "Editar e continuar" do Visual Studio, permite que seu usuário edite um Dicionário de Recursos com a intenção de que as alterações sejam aplicadas ao aplicativo em execução. Uma etapa para conseguir isso é localizar todos os ResourceDictionaries que o aplicativo em execução criou com base no dicionário que está sendo editado. Por exemplo, um aplicativo pode declarar um ResourceDictionary cujo conteúdo é copiado de um determinado URI de origem:
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 Um assistente de diagnóstico que emite a marcação original no *MyRD.xaml* pode usar o novo recurso para localizar o dicionário.O recurso é implementado por um novo método estático, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. O assistente de diagnóstico chama o novo método usando um URI absoluto que identifica a marcação original, conforme ilustrado pelo código a seguir:

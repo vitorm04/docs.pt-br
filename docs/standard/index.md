@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730779"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228811"
 ---
 # <a name="net-guide"></a>Guia do .NET
 
-O guia .NET fornece informações sobre .NET. Dependendo da sua familiaridade com o .NET, você pode querer explorar diferentes seções deste guia e outros guias, como [.NET Core](../core/index.md) ou [.NET Framework](../framework/index.md).
+O guia .NET fornece informações sobre .NET. Dependendo da sua familiaridade com o .NET, você pode querer explorar diferentes seções deste guia e outros guias, como [.NET Core](../core/index.md) ou [.NET Framework](../framework/index.yml).
 
 ## <a name="new-to-net"></a>Novo no .NET?
 
@@ -38,25 +38,25 @@ Se você é novo no .NET Standard, confira [.NET Standard](net-standard.md).
 
 Para portar um pacote de aplicativo, serviço, componente ou NuGet para .NET Standard ou .NET Core, consulte ['Porta para .NET Core' do .NET Framework](../core/porting/index.md). As ferramentas para .NET Standard e .NET Core são compartilhadas, de modo que o conteúdo é relevante para portar para ambas as estruturas.
 
-## <a name="net-concepts"></a>Conceitos .NET
+## <a name="net-concepts"></a>Conceitos do .NET
 
 Para obter mais informações sobre os principais conceitos do .NET, consulte:
 
-* [.NET componentes arquitetônicos](components.md)
+* [Componentes de arquitetura do .NET](components.md)
 * [.NET Standard](net-standard.md)
 * [Interoperabilidade nativa](native-interop/index.md)
 * [Coleta de lixo](garbage-collection/index.md)
 * [Tipos básicos em .NET](base-types/index.md)
 * [Coleções](collections/index.md)
-* [Datas, horários e fusos horários](datetime/index.md)
+* [Datas, horas e fusos horários](datetime/index.md)
 * [Programação assíncrona](async.md)
 
 Para obter informações sobre os três principais idiomas .NET, consulte:
 
-* [Guia C#](../csharp/index.yml)
-* [Guia F#](../fsharp/index.yml)
-* [Guia Visual Básico](../visual-basic/index.yml)
+* [Guia do C#](../csharp/index.yml)
+* [Guia do F#](../fsharp/index.yml)
+* [Guia do Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>Referência de API
+## <a name="api-reference"></a>Reference API
 
 Para obter informações detalhadas sobre todas as APIs disponíveis no .NET, consulte [referência de API .NET](../../api/index.md).

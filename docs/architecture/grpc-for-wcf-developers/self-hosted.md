@@ -2,12 +2,12 @@
 title: Aplicativos gRPC auto-hospedados - gRPC para desenvolvedores WCF
 description: Implantação de ASP.NET principais aplicativos gRPC como serviços auto-hospedados.
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147796"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110900"
 ---
 # <a name="self-hosted-grpc-applications"></a>Aplicativos gRPC auto-hospedados
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-O `Type=notify` imóvel `systemd` informa que o aplicativo irá notificá-lo sobre inicialização e desligamento. A `WantedBy=multi-user.target` configuração fará com que o serviço seja inicializado quando o sistema Linux atingir o "runlevel 2", o que significa que um shell multiusuário não gráfico está ativo.
+O `Type=notify` imóvel `systemd` informa que o aplicativo irá notificá-lo sobre inicialização e desligamento. A `WantedBy=multi-user.target` configuração fará com que o serviço seja inicializado quando o sistema Linux atingir o "runlevel 2", o que significa que um shell não gráfico e multiusuário está ativo.
 
 Antes `systemd` de reconhecer o serviço, ele precisa recarregar sua configuração. Você `systemd` controla `systemctl` usando o comando. Após a recarga, use o `status` subcomando para confirmar se o aplicativo foi registrado com sucesso.
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > Se você tiver um ambiente de GUI disponível no seu host, alguns espectadores de log gráfico estão disponíveis para Linux, como *QJournalctl* e *gnomo-logs*.
 
-Para saber mais sobre `systemd` como consultar o diário `journalctl`a partir da linha de comando usando , consulte [as páginas do homem](https://manpages.debian.org/buster/systemd/journalctl.1).
+Para saber mais sobre `systemd` como consultar o diário `journalctl`a partir da linha de comando usando , consulte [as páginas de homem](https://manpages.debian.org/buster/systemd/journalctl.1).
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>Certificados HTTPS para aplicativos auto-hospedados
 

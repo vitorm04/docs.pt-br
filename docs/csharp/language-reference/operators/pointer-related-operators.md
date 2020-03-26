@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7c95fe07220a78b388a5c6850e4123feb029d951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399542"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507094"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
@@ -42,7 +42,7 @@ Para obter informações sobre tipos de ponteiros, veja [Tipos de ponteiro](../.
 > [!NOTE]
 > Qualquer operação com ponteiros exige um contexto [unsafe](../keywords/unsafe.md). O código que contém blocos inseguros deve ser compilado com a [`-unsafe`](../compiler-options/unsafe-compiler-option.md) opção compilador.
 
-## <a name="address-of-operator-"></a>Endereço do operador&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>Endereço do operador&amp;
 
 O operador unário `&` retorna o endereço de seu operando:
 
@@ -70,7 +70,7 @@ O operador binário `*` computa o [produto](arithmetic-operators.md#multiplicati
 
 ## <a name="pointer-member-access-operator--"></a>Operador de acesso a membro do ponteiro ->
 
-O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-operator-). Ou seja, `x` se é `T*` um `y` ponteiro de tipo `T`e é um membro acessível do tipo, uma expressão da forma
+O operador `->` combina [indireção do ponteiro](#pointer-indirection-operator-) e [acesso de membro](member-access-operators.md#member-access-expression-). Ou seja, `x` se é `T*` um `y` ponteiro de tipo `T`e é um membro acessível do tipo, uma expressão da forma
 
 ```csharp
 x->y
@@ -96,7 +96,7 @@ O exemplo a seguir demonstra como acessar elementos da matriz com um ponteiro e 
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-O exemplo [ `stackalloc` ](stackalloc.md) usa o operador para alocar um bloco de memória na pilha.
+No exemplo anterior, [ `stackalloc` ](stackalloc.md) uma expressão aloca um bloco de memória na pilha.
 
 > [!NOTE]
 > O operador de acesso de elemento de ponteiro não verifica se há erros fora dos limites.
@@ -192,5 +192,5 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Palavra-chave unsafe](../keywords/unsafe.md)
 - [palavra-chave fixa](../keywords/fixed-statement.md)
-- [Operador stackalloc](stackalloc.md)
+- [stackalloc](stackalloc.md)
 - [tamanhodo operador](sizeof.md)

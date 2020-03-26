@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713517"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507185"
 ---
 # <a name="fixed-statement-c-reference"></a>Instrução fixed (Referência de C#)
 
@@ -62,7 +62,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, use o [ `stackalloc` operador](../operators/stackalloc.md).
+É possível alocar memória na pilha, local que não está sujeito à coleta de lixo e, portanto, não precisa ser fixado. Para fazer isso, [ `stackalloc` ](../operators/stackalloc.md)use uma expressão .
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto ou solução .NET Core para um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146549"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110965"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -168,5 +168,5 @@ A saída do comando `dotnet publish` está pronta para implantação em um siste
 - [Publique os aplicativos .NET Core com o .NET Core CLI](../deploying/deploy-with-cli.md)
 - [Estruturas de destino](../../standard/frameworks.md)
 - [Catálogo de identificadores de execução (RID)](../rid-catalog.md)
-- [Trabalhando com nota nota notardo pelo macOS Catalina](../install/macos-notarization-issues.md) Para obter mais informações, consulte os seguintes recursos:
+- [Trabalhando com nota nota notardo pelo macOS Catalina](../install/macos-notarization-issues.md)
 - [Estrutura do diretório de um aplicativo publicado](/aspnet/core/hosting/directory-structure)

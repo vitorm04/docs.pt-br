@@ -9,15 +9,15 @@ helpviewer_keywords:
 - drawing [WPF], optimizing performance
 - imaging [WPF], optimizing performance
 - shapes [WPF], optimizing performance
-- 2-D graphics [WPF]
+- 2D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 03b2b64736407bf54c9bf957fe93d2d3d6e343f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb3686367873276587572addda436471cd1abf27
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186773"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291797"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Otimizando desempenho: elementos gráficos e geração de imagens 2D
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece uma ampla variedade de gráficos 2D e funcionalidade de imagem que pode ser otimizada para suas necessidades de aplicativo. Este tópico fornece informações sobre otimização de desempenho nessas áreas.  
@@ -42,9 +42,9 @@ ms.locfileid: "79186773"
   
 - <xref:System.Windows.Media.DrawingGroup>Desenha outros desenhos. Use um grupo de desenhos para combinar outros desenhos em um único desenho de composição.  
   
- O <xref:System.Windows.Media.GeometryDrawing> objeto é usado para renderizar conteúdo de geometria. A <xref:System.Windows.Media.Geometry> classe e as classes concretas <xref:System.Windows.Media.CombinedGeometry>que <xref:System.Windows.Media.EllipseGeometry>derivam dela, tais como , e <xref:System.Windows.Media.PathGeometry>, fornecem um meio para renderizar gráficos 2D, bem como fornecer suporte para testes de hit e recorte. Objetos geométricos podem ser usados para definir a região de um controle, por exemplo, ou para definir a região de corte para aplicar a uma imagem. Objetos geométricos podem ser regiões simples, como retângulos e círculos ou regiões de composição criadas de dois ou mais objetos geométricos. Regiões geométricas mais complexas podem <xref:System.Windows.Media.PathSegment>ser criadas combinando objetos derivados, tais como <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>e <xref:System.Windows.Media.QuadraticBezierSegment>.  
+ O <xref:System.Windows.Media.GeometryDrawing> objeto é usado para renderizar conteúdo de geometria. A <xref:System.Windows.Media.Geometry> classe e as classes concretas <xref:System.Windows.Media.CombinedGeometry>que <xref:System.Windows.Media.EllipseGeometry>derivam dela, tais como , e <xref:System.Windows.Media.PathGeometry>, fornecem um meio para renderizar gráficos 2D e fornecer suporte para testes de hit e recorte. Objetos geométricos podem ser usados para definir a região de um controle, por exemplo, ou para definir a região de corte para aplicar a uma imagem. Objetos geométricos podem ser regiões simples, como retângulos e círculos ou regiões de composição criadas de dois ou mais objetos geométricos. Regiões geométricas mais complexas podem <xref:System.Windows.Media.PathSegment>ser criadas combinando objetos derivados, tais como <xref:System.Windows.Media.ArcSegment>, <xref:System.Windows.Media.BezierSegment>e <xref:System.Windows.Media.QuadraticBezierSegment>.  
   
- Na superfície, <xref:System.Windows.Media.Geometry> a classe <xref:System.Windows.Shapes.Shape> e a classe são bastante semelhantes. Ambos são usados na renderização de gráficos 2D e ambos <xref:System.Windows.Media.EllipseGeometry> têm <xref:System.Windows.Shapes.Ellipse>classes de concreto semelhantes que derivam deles, por exemplo, e . No entanto, existem diferenças importantes entre esses dois conjuntos de classes. Por um <xref:System.Windows.Media.Geometry> exemplo, a classe carece de <xref:System.Windows.Shapes.Shape> algumas funcionalidades da classe, como a capacidade de desenhar a si mesma. Para desenhar um objeto geométrico, outra classe, como DrawingContext, Drawing ou Path (vale a pena observar que um Path é um Shape) deve ser usada para executar a operação de desenho. Propriedades de processamento, como preenchimento, traço e a espessura do traço estão na classe que desenha o objeto geométrico, enquanto um objeto de forma contém essas propriedades. Uma maneira de pensar nessa diferença é que um objeto geométrico define uma região, um círculo por exemplo, enquanto um objeto de forma define uma região, define como a região é preenchida e destacada e participa do sistema de layout.  
+ Na superfície, <xref:System.Windows.Media.Geometry> a classe <xref:System.Windows.Shapes.Shape> e a classe são semelhantes. Ambos são usados na renderização de gráficos 2D e ambos <xref:System.Windows.Media.EllipseGeometry> têm <xref:System.Windows.Shapes.Ellipse>classes de concreto semelhantes que derivam deles, por exemplo, e . No entanto, existem diferenças importantes entre esses dois conjuntos de classes. Por um <xref:System.Windows.Media.Geometry> exemplo, a classe carece de <xref:System.Windows.Shapes.Shape> algumas funcionalidades da classe, como a capacidade de desenhar a si mesma. Para desenhar um objeto geométrico, outra classe, como DrawingContext, Drawing ou Path (vale a pena observar que um Path é um Shape) deve ser usada para executar a operação de desenho. As propriedades de renderização, como preenchimento, traçado e espessura do traçado, estão na classe que desenha o objeto de geometria, enquanto um objeto de forma contém essas propriedades. Uma maneira de pensar essa diferença é que um objeto de geometria define uma região, por exemplo, um círculo, enquanto um objeto de forma define uma região, define como essa região é preenchida e delineada, e participa do sistema de layout.  
   
  Uma <xref:System.Windows.Shapes.Shape> vez que <xref:System.Windows.FrameworkElement> os objetos derivam da classe, usá-los pode adicionar significativamente mais consumo de memória em sua aplicação. Se você realmente <xref:System.Windows.FrameworkElement> não precisa dos recursos para o seu <xref:System.Windows.Media.Drawing> conteúdo gráfico, considere usar os objetos mais leves.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "79186773"
   
 <a name="Images"></a>
 ## <a name="images"></a>Imagens  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a imagem fornece uma melhoria significativa sobre os recursos de imagem em versões anteriores do Windows. Recursos de imagens, como exibir um bitmap ou usar uma imagem em um controle comum foram primeiramente tratados pela interface de programação Microsoft Windows GDI (Graphics Device Interface) ou Microsoft Windows GDI+ (API). Essa API fornece a funcionalidade de linha de base de imagens, mas não têm recursos como o suporte para a extensibilidade de codec e suporte às imagens de alta fidelidade. WPF Imaging API foi remodelado para superar os defeitos do GDI e GDI+ e fornecer um novo conjunto de APIs para exibir e usar imagens em seus aplicativos.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a imagem fornece uma melhoria significativa sobre os recursos de imagem em versões anteriores do Windows. Os recursos de imagem, como exibir um bitmap ou usar uma imagem em um controle comum, foram manipulados principalmente pela Interface de Dispositivo gráfico (GDI) da Microsoft Ou pela Interface de Programação de Aplicativos Microsoft Windows GDI+ (API). Essas APIs forneceram funcionalidade de imagem de linha de base, mas não tinham recursos como suporte para extensibilidade de codec e suporte a imagens de alta fidelidade. As APIs de imagem WPF foram reprojetadas para superar as deficiências do GDI e do GDI+ e fornecer um novo conjunto de APIs para exibir e usar imagens dentro de seus aplicativos.  
   
  Ao usar imagens, considere as seguintes recomendações para obter um melhor desempenho:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "79186773"
 - Para obter mais informações, consulte [Visão geral de imagens](../graphics-multimedia/imaging-overview.md).  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- Ao animar a dimensão de qualquer bitmap, o algoritmo de reamostragem da imagem de alta qualidade padrão às vezes pode consumir recursos de sistema suficientes para causar degradação da taxa de quadros, efetivamente causando o travamento de animações. Ao definir <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> a <xref:System.Windows.Media.RenderOptions> propriedade <xref:System.Windows.Media.BitmapScalingMode.LowQuality> do objeto para você, você pode criar uma animação mais suave ao dimensionar um bitmap. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>o modo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diz ao mecanismo de renderização para mudar de um algoritmo otimizado para qualidade para um algoritmo otimizado por velocidade ao processar imagens.  
+ Ao animar a escala de qualquer bitmap, o algoritmo padrão de reamostragem de imagem de alta qualidade pode às vezes consumir recursos suficientes do sistema para causar a degradação da taxa de quadros, efetivamente fazendo com que as animações gaguetremem. Ao definir <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A> a <xref:System.Windows.Media.RenderOptions> propriedade <xref:System.Windows.Media.BitmapScalingMode.LowQuality>do objeto para , você pode criar uma animação mais suave ao dimensionar um bitmap. <xref:System.Windows.Media.BitmapScalingMode.LowQuality>o modo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diz ao mecanismo de renderização para mudar de um algoritmo otimizado para qualidade para um algoritmo otimizado por velocidade ao processar imagens.  
   
  O exemplo a seguir <xref:System.Windows.Media.BitmapScalingMode> mostra como definir o objeto para uma imagem.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "79186773"
  [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
- Por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão, não armazena o <xref:System.Windows.Media.TileBrush> conteúdo renderizado <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush>de objetos, tais como e . Em cenários estáticos onde <xref:System.Windows.Media.TileBrush> nem o conteúdo nem o uso da cena está mudando, isso faz sentido, já que conserva a memória do vídeo. Não faz tanto sentido quando <xref:System.Windows.Media.TileBrush> um com conteúdo estático é usado de forma <xref:System.Windows.Media.DrawingBrush> não <xref:System.Windows.Media.VisualBrush> estática — por exemplo, quando uma estática ou é mapeada para a superfície de um objeto 3D rotativo. O comportamento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão é rerenderizar todo <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> conteúdo do ou para cada quadro, mesmo que o conteúdo seja imutável.  
+ Por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão, não armazena o <xref:System.Windows.Media.TileBrush> conteúdo renderizado <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.VisualBrush>de objetos, tais como e . Em cenários estáticos onde <xref:System.Windows.Media.TileBrush> o conteúdo ou o uso do na cena não estão mudando, isso faz sentido, uma vez que conserva a memória do vídeo. Não faz tanto sentido quando <xref:System.Windows.Media.TileBrush> um com conteúdo estático é usado de forma <xref:System.Windows.Media.DrawingBrush> não <xref:System.Windows.Media.VisualBrush> estática — por exemplo, quando uma estática ou é mapeada para a superfície de um objeto 3D rotativo. O comportamento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão é rerenderizar todo <xref:System.Windows.Media.DrawingBrush> o <xref:System.Windows.Media.VisualBrush> conteúdo do ou para cada quadro, mesmo que o conteúdo seja imutável.  
   
- Ao definir <xref:System.Windows.Media.RenderOptions.CachingHint%2A> a <xref:System.Windows.Media.RenderOptions> propriedade <xref:System.Windows.Media.CachingHint.Cache> do objeto para você, você pode aumentar o desempenho usando versões em cache dos objetos de escova de ladrilhos.  
+ Ao definir <xref:System.Windows.Media.RenderOptions.CachingHint%2A> a <xref:System.Windows.Media.RenderOptions> propriedade <xref:System.Windows.Media.CachingHint.Cache>do objeto para , você pode aumentar o desempenho usando versões em cache dos objetos de escova de ladrilhos.  
   
  Os <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> valores e propriedades são valores de tamanho relativo que determinam quando o <xref:System.Windows.Media.TileBrush> objeto deve ser regenerado devido a alterações na escala. Por exemplo, ao <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A> definir a propriedade como 2.0, o cache para o <xref:System.Windows.Media.TileBrush> único precisa ser regenerado quando seu tamanho excede o dobro do tamanho do cache atual.  
   
@@ -107,6 +107,6 @@ ms.locfileid: "79186773"
 - [Comportamento do objeto](optimizing-performance-object-behavior.md)
 - [Recursos de aplicação](optimizing-performance-application-resources.md)
 - [Texto](optimizing-performance-text.md)
-- [Associação de dados](optimizing-performance-data-binding.md)
+- [Vinculação de dados](optimizing-performance-data-binding.md)
 - [Outras recomendações de desempenho](optimizing-performance-other-recommendations.md)
 - [Dicas e truques de animação](../graphics-multimedia/animation-tips-and-tricks.md)

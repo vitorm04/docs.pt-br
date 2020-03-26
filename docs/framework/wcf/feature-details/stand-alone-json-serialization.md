@@ -2,12 +2,12 @@
 title: Serialização JSON autônoma usando DataContractJsonSerializer
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184418"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249442"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>Serialização JSON autônoma usando DataContractJsonSerializer
 
@@ -42,7 +42,7 @@ A tabela a seguir mostra a correspondência entre os tipos .NET e os tipos JSON/
 |Coleções, dicionários e matrizes|Array|Consulte a seção Coleções, Dicionários e Matrizes deste tópico.|
 |Tipos complexos <xref:System.Runtime.Serialization.DataContractAttribute> (com o ou <xref:System.SerializableAttribute> aplicado)|Tipo complexo|Os membros de dados tornam-se membros do tipo complexo JavaScript.|
 |Tipos complexos <xref:System.Runtime.Serialization.ISerializable> implementando a interface)|Tipo complexo|O mesmo que outros <xref:System.Runtime.Serialization.ISerializable> tipos complexos, mas alguns tipos não são suportados – veja a parte de Suporte ISerializable da seção Informações Avançadas deste tópico.|
-|`Null`valor para qualquer tipo|Nulo|Os tipos anulados também são suportados e mapeiam para JSON da mesma forma que os tipos não anulados.|
+|`Null`valor para qualquer tipo|Nulo|Os tipos de valor anulados também são suportados e mapeiam para JSON da mesma forma que os tipos de valor não anulados.|
 
 ### <a name="enumerations-and-json"></a>Enumerações e JSON
 

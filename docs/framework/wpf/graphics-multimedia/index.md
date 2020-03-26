@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186727"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112031"
 ---
 # <a name="graphics-and-multimedia"></a>Gráficos e multimídia
 
@@ -57,9 +57,9 @@ Várias alterações foram feitas com relação aos gráficos e animações.
 
 O WPF inclui suporte para gráficos 2D de alta qualidade. A funcionalidade inclui pincéis, geometrias, imagens, formas e transformações. Para obter mais informações, consulte [Gráficos](graphics.md). A renderização de elementos <xref:System.Windows.Media.Visual> gráficos é baseada na classe. A estrutura de objetos visuais na tela é descrita pela árvore visual. Para obter mais informações, consulte [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md).
 
-### <a name="2-d-shapes"></a>Formas 2D
+### <a name="2d-shapes"></a>Formas 2D
 
-O WPF fornece uma biblioteca de formas 2D comumente usadas, desenhadas por vetores, como retângulos e elipses, que a ilustração a seguir mostra.
+O WPF fornece uma biblioteca de formas 2D comumente usadas e com vetores, como retângulos e elipses, que a ilustração a seguir mostra.
 
 ![Diagrama mostrando elipses e retângulos.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -99,15 +99,15 @@ A ilustração a seguir mostra a saída para a marcação [!INCLUDE[TLA2#tla_xam
 
 Para obter mais informações, consulte [Visão geral de formas e desenho básico no WPF](shapes-and-basic-drawing-in-wpf-overview.md). Para ver um exemplo introdutório, consulte [Amostra de elementos de forma](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements).
 
-### <a name="2-d-geometries"></a>Geometrias 2D
+### <a name="2d-geometries"></a>Geometrias 2D
 
-Quando as formas 2 D que o WPF fornece não são suficientes, você pode usar o suporte do WPF para geometrias e caminhos para criar o seu próprio. A ilustração a seguir mostra como você pode usar geometrias para criar formas, como um pincel de desenho, e para cortar outros elementos wpf.
+Quando as formas 2D que o WPF fornece não são suficientes, você pode usar o suporte do WPF para geometrias e caminhos para criar o seu próprio. A ilustração a seguir mostra como você pode usar geometrias para criar formas, como um pincel de desenho, e para cortar outros elementos wpf.
 
 ![Captura de tela mostrando como você pode usar geometrias para criar formas.](./media/index/use-geometries-create-shapes.png)
 
 Para obter mais informações, consulte [Geometry Overview](geometry-overview.md). Para ver um exemplo introdutório, consulte [Amostra de geometrias](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry).
 
-### <a name="2-d-effects"></a>Efeitos 2D
+### <a name="2d-effects"></a>Efeitos 2D
 
 O WPF fornece uma biblioteca de classes 2D que você pode usar para criar uma variedade de efeitos. A capacidade de renderização 2D do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] WPF fornece a capacidade de pintar elementos que têm gradientes, bitmaps, desenhos e vídeos; e manipulá-los usando rotação, escala e distorção. A ilustração a seguir dá um exemplo dos muitos efeitos que você pode obter usando pincéis WPF.
 
@@ -117,13 +117,13 @@ Para obter mais informações, consulte [Visão geral do WPF Brushes](wpf-brushe
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>Renderização 3D
+## <a name="3d-rendering"></a>Renderização 3D
 
-O WPF fornece um conjunto de recursos de renderização 3D que se integram com suporte [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]a gráficos 2D no WPF para que você crie layout mais emocionante e visualização de dados. Em uma extremidade do espectro, o WPF permite que você produza imagens 2D nas superfícies de formas 3D, o que a ilustração a seguir demonstra.
+O WPF fornece um conjunto de recursos de renderização 3D que se integram com [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]suporte gráfico 2D no WPF para que você crie layout mais emocionante e visualização de dados. Em uma extremidade do espectro, o WPF permite que você produza imagens 2D nas superfícies de formas 3D, o que a ilustração a seguir demonstra.
 
 ![Captura de tela de uma amostra mostrando formas 3D com diferentes texturas.](./media/index/visual-three-dimensional-shape.png)
 
-Para obter mais informações, consulte [visão geral de gráficos 3D](3-d-graphics-overview.md). Para ver um exemplo introdutório, consulte [Amostra de sólidos em 3D](https://go.microsoft.com/fwlink/?LinkID=159964).
+Para obter mais informações, consulte [visão geral de gráficos 3D](3-d-graphics-overview.md). Para obter uma amostra introdutória, consulte [3D Solids Sample](https://go.microsoft.com/fwlink/?LinkID=159964).
 
 <a name="animation"></a>
 
@@ -171,5 +171,5 @@ Para obter mais informações, consulte [Visão geral de multimídia](multimedia
 - [Visão geral da pintura com cores sólidas e gradientes](painting-with-solid-colors-and-gradients-overview.md)
 - [Pintando com imagens, desenhos e visuais](painting-with-images-drawings-and-visuals.md)
 - [Tópicos explicativos de animação e tempo](animation-and-timing-how-to-topics.md)
-- [Visão geral de elementos gráficos 3D](3-d-graphics-overview.md)
+- [Visão geral de gráficos 3D](3-d-graphics-overview.md)
 - [Visão geral de multimídia](multimedia-overview.md)

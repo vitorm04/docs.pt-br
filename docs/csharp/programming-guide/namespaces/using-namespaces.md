@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700192"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507042"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
 
@@ -42,7 +42,7 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
   
 ## <a name="using-namespaces-to-control-scope"></a>Usar namespaces para controlar o escopo
 
- A palavra-chave `namespace` é usada para declarar um escopo. A capacidade de criar escopos dentro de seu projeto ajuda a organizar o código e permite que você crie tipos globalmente exclusivos. No exemplo a seguir, uma classe denominada `SampleClass` é definida em dois namespaces, um aninhado no outro. O [operador `.` de acesso de membro](../../language-reference/operators/member-access-operators.md#member-access-operator-) é usado para diferenciar qual método é chamado.  
+ A palavra-chave `namespace` é usada para declarar um escopo. A capacidade de criar escopos dentro de seu projeto ajuda a organizar o código e permite que você crie tipos globalmente exclusivos. No exemplo a seguir, uma classe denominada `SampleClass` é definida em dois namespaces, um aninhado no outro. O [ `.` token](../../language-reference/operators/member-access-operators.md#member-access-expression-) é usado para diferenciar qual método é chamado.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -94,6 +94,6 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
 
 - [C# Guia de Programação](../index.md)
 - [Namespaces](./index.md)
-- [. Operador](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Expressão de acesso ao membro](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [:: operador](../../language-reference/operators/namespace-alias-qualifier.md)
 - [Alias extern](../../language-reference/keywords/extern-alias.md)

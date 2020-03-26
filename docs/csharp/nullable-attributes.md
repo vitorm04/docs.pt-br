@@ -3,12 +3,12 @@ title: Atualizar APIs para tipos de referência anulados com atributos que defin
 description: Aprenda a usar os atributos descritivos AllowNull, DisallowNull, MaybeNull, NotNull e muito mais para descrever completamente o estado nulo de suas APIs.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: a4b1f851bcbe27dd4884d45eb6d1209ab54271d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79170358"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249240"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualize bibliotecas para usar tipos de referência anulados e comunicar regras anuladas aos chamadores
 
@@ -30,7 +30,7 @@ Atualizar sua biblioteca para referências anuladas `?` requer mais do que polvi
 
 Este trabalho leva tempo. Vamos começar com estratégias para tornar sua biblioteca ou aplicativo anulado, ao mesmo tempo em que equilibra mos outros requisitos e entregas. Você verá como equilibrar o desenvolvimento contínuo permitindo tipos de referência anulados. Você aprenderá desafios para definições de tipos genéricos. Você aprenderá a aplicar atributos para descrever pré e pós-condições em APIs individuais.
 
-## <a name="choose-a-nullable-strategy"></a>Escolha uma estratégia anulada
+## <a name="choose-a-strategy-for-nullable-reference-types"></a>Escolha uma estratégia para tipos de referência anulados
 
 A primeira escolha é se os tipos de referência anulados devem estar ligados ou desligados por padrão. Você tem duas estratégias:
 
@@ -41,7 +41,7 @@ A primeira estratégia funciona melhor quando você está adicionando outros rec
 
 Seguindo esta primeira estratégia, você faz o seguinte:
 
-1. Habilite tipos anulados para `<Nullable>enable</Nullable>` todo o projeto adicionando o elemento aos seus arquivos *csproj.*
+1. Habilite tipos de referência anulados `<Nullable>enable</Nullable>` para todo o projeto adicionando o elemento aos seus arquivos *csproj.*
 1. Adicione `#nullable disable` o pragma a cada arquivo de origem do seu projeto.
 1. Ao trabalhar em cada arquivo, remova o pragma e aborde quaisquer avisos.
 
@@ -129,7 +129,7 @@ O exemplo anterior demonstra o que `AllowNull` procurar ao adicionar o atributo 
 
 Na maioria das vezes você precisará `in`deste `out`atributo para propriedades, ou , e `ref` argumentos. O `AllowNull` atributo é a melhor escolha quando uma variável é `null` tipicamente não nula, mas você precisa permitir como uma pré-condição.
 
-Contraste isso com `DisallowNull`cenários para usar : Você usa este atributo para `null`especificar que uma variável de entrada de um tipo anulado não deve ser . Considere um `null` imóvel onde está o valor padrão, mas os clientes só podem defini-lo como um valor não nulo. Considere o código a seguir:
+Contraste isso com `DisallowNull`cenários para usar : Você usa este atributo para especificar que uma variável de entrada de um tipo de referência anulada não deve ser `null`. Considere um `null` imóvel onde está o valor padrão, mas os clientes só podem defini-lo como um valor não nulo. Considere o código a seguir:
 
 ```csharp
 public string ReviewComment
@@ -189,7 +189,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 
 O código precedente informa aos chamadores que o contrato implica um tipo não anulado, mas o valor de devolução *pode* realmente ser nulo.  Use `MaybeNull` o atributo quando sua API deve ser um tipo não anulado, tipicamente `null` um parâmetro de tipo genérico, mas pode haver casos em que a Sua API seria devolvida.
 
-Você também pode especificar que `out` `ref` um valor de retorno ou um ou argumento não é nulo, mesmo que o tipo seja um tipo anulado. Considere um método que garanta que uma matriz seja grande o suficiente para conter uma série de elementos. Se o argumento de entrada não tiver capacidade, a rotina alocaria uma nova matriz e copiaria todos os elementos existentes nele. Se o argumento `null`de entrada for, a rotina alocaria um novo armazenamento. Se há capacidade suficiente, a rotina não faz nada:
+Você também pode especificar que `out` `ref` um valor de retorno ou um argumento ou argumento não é nulo, mesmo que o tipo seja um tipo de referência anulado. Considere um método que garanta que uma matriz seja grande o suficiente para conter uma série de elementos. Se o argumento de entrada não tiver capacidade, a rotina alocaria uma nova matriz e copiaria todos os elementos existentes nele. Se o argumento `null`de entrada for, a rotina alocaria um novo armazenamento. Se há capacidade suficiente, a rotina não faz nada:
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -219,7 +219,7 @@ Você especifica postcondições incondicionais usando os seguintes atributos:
 
 ## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Especificar pós-condições `NotNullWhen`condicionais: , `MaybeNullWhen`e`NotNullIfNotNull`
 
-Você provavelmente está `string` familiarizado <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>com o método. Este método `true` retorna quando o argumento é nulo ou uma seqüência vazia. É uma forma de verificação nula: os chamadores não precisam verificar `false`nulo o argumento se o método retornar . Para tornar um método como este anulado, você definiria o argumento `NotNullWhen` para um tipo anulado e adicionaria o atributo:
+Você provavelmente está `string` familiarizado <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>com o método. Este método `true` retorna quando o argumento é nulo ou uma seqüência vazia. É uma forma de verificação nula: os chamadores não precisam verificar `false`nulo o argumento se o método retornar . Para tornar um método como este anulado, você definiria o argumento para `NotNullWhen` um tipo de referência anulado e adicionaria o atributo:
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);

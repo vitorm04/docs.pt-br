@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400179"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249715"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -566,7 +566,7 @@ Do .NET Framework 4.7.1 em diante, vários controles do WinForms oferecem uma me
 
 ```xml
 <!-- Windows 10 -->
-<supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
+<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
 ```
 
 Alguns exemplos de alterações de alto contraste incluem:
@@ -709,4 +709,4 @@ As alterações de acessibilidade no Designer de Fluxo de Trabalho incluem as se
 
 ## <a name="see-also"></a>Confira também
 
-- [O que há de novo no Quadro .NET](index.md)
+- [Novidades no .NET Framework](index.md)

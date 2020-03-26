@@ -3,12 +3,12 @@ title: Criar tipos de mixin usando métodos de interface padrão
 description: Usando membros de interface padrão, você pode estender interfaces com implementações padrão opcionais para implementores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134368"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: Misture a funcionalidade ao criar classes usando interfaces com métodos de interface padrão
 
@@ -117,7 +117,7 @@ Este cenário mostra uma interface base sem implementações. Adicionar um méto
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-A implementação padrão assume a potência CA:
+A implementação padrão não pressupõe energia:
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d4e30984a232b17d1f40e300655c519ec1a6e191
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: e11152dc626b1e3619b9ecbc04d8a237ca9f13d3
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159904"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248037"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Controlando a serialização XML usando atributos
 
 Os atributos podem ser usados para controlar a serialização XML de um objeto ou criar um fluxo XML alternativo do mesmo conjunto de classes. Para obter mais detalhes sobre como criar um fluxo XML alternativo, consulte [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Se o XML gerado precisar estar de acordo com a seção 5 do documento World Wide Web Consortium (W3C) intitulado [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), use os atributos listados em [atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).
+> Se o XML gerado estiver em conformidade com a seção 5 do documento W3C (World Wide Web Consortium, [protocolo de acesso ao objeto simples) 1.1,](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)use os atributos listados em [Atributos que controlam a serialização de SABÃO ENcodificada.](attributes-that-control-encoded-soap-serialization.md)
 
 Por padrão, um nome de elemento XML é determinado pela classe ou nome do membro. Em uma classe simples chamada `Book`, um campo chamado `ISBN` produzirá uma marcação de elemento XML \<ISBN>, conforme mostrado no exemplo a seguir.
 
@@ -241,7 +241,7 @@ Uma instância serializada pode parecer com o seguinte.
 </Group>
 ```
 
-Outra maneira para diferenciar os dois fluxos XML é usar a Ferramenta de Definição de Esquema XML para gerar os arquivos de documento de esquema XSD de código compilado. (Para obter mais detalhes sobre como usar a ferramenta, consulte [a ferramenta de definição de esquema XML e a SERIALIZAÇÃO XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Quando nenhum atributo é aplicado ao campo, o esquema descreve o elemento da seguinte maneira.
+Outra maneira para diferenciar os dois fluxos XML é usar a Ferramenta de Definição de Esquema XML para gerar os arquivos de documento de esquema XSD de código compilado. (Para obter mais detalhes sobre o uso da ferramenta, consulte [a ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Quando nenhum atributo é aplicado ao campo, o esquema descreve o elemento da seguinte maneira.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -300,7 +300,7 @@ public class Group {
 Se essa classe for criada, e a ferramenta de Definição de Esquema XML for usada para gerar seu esquema, você descobriria o seguinte XML descrevendo o `Group`.
 
 ```xml
-<xs:element name="NewGroupName" type="NewTypeName">
+<xs:element name="NewGroupName" type="NewTypeName" />
 ```
 
 Por outro lado, se você quisesse serializar uma instância da classe, somente `NewGroupName` seria encontrado no documento XML.

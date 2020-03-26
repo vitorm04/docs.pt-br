@@ -1,43 +1,43 @@
 ---
-title: Ordenação
+title: Collation
 ms.date: 12/13/2019
-description: Saiba como criar uma sequência de Agrupamento Personalizada.
-ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+description: Aprenda a criar uma seqüência de colagem personalizada.
+ms.openlocfilehash: b93c82a4ace154b8293b05effa8f9e9294fa7708
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777385"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506535"
 ---
-# <a name="collation"></a>Ordenação
+# <a name="collation"></a>Collation
 
-As sequências de agrupamento são usadas pelo SQLite ao comparar valores de texto para determinar a ordem e a igualdade. Você pode especificar qual Agrupamento usar ao criar colunas ou por operação em consultas SQL. O SQLite inclui três sequências de agrupamento por padrão.
+As seqüências de coletâneas são usadas pelo SQLite ao comparar valores de TEXTO para determinar a ordem e a igualdade. Você pode especificar qual colagem usar ao criar colunas ou por operação em consultas SQL. O SQLite inclui três seqüências de colisão por padrão.
 
-| Ordenação | Descrição                               |
+| Collation | Descrição                               |
 | --------- | ----------------------------------------- |
-| RTRIM     | Ignora o espaço em branco à direita               |
-| NOCASESEMMAIÚSCMINÚSC    | Não diferencia maiúsculas de minúsculas para caracteres ASCII de A-Z |
-| BINARY    | Diferenciar maiúsculas de minúsculas. Compara bytes diretamente   |
+| RTRIM     | Ignora o espaço branco em arrasto               |
+| NOCASE    | Caso insensível para caracteres ASCII A-Z |
+| BINARY    | Sensível a casos. Compara bytes diretamente   |
 
-## <a name="custom-collation"></a>Agrupamento personalizado
+## <a name="custom-collation"></a>Colagem personalizada
 
-Você também pode definir suas próprias sequências de agrupamento ou substituir as internas usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. O exemplo a seguir mostra a substituição do agrupamento nocase para dar suporte a caracteres Unicode. O [código de exemplo completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponível no github.
+Você também pode definir suas próprias seqüências de colisão ou substituir as incorporadas usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. O exemplo a seguir mostra sobrepondo a colagem NOCASE para suportar caracteres Unicode. O [código de amostra completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponível no GitHub.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 
 ## <a name="like-operator"></a>Operador Like
 
-O operador LIKE no SQLite não honra agrupamentos. A implementação padrão tem a mesma semântica que o agrupamento nocase. É apenas não diferencia maiúsculas de minúsculas para os caracteres ASCII de a a Z.
+O operador LIKE no SQLite não honra colagens. A implementação padrão tem a mesma semântica que a colagem NOCASE. É apenas caso insensível para os caracteres ASCII de A a Z.
 
-Você pode facilmente tornar o operador LIKE com diferenciação de maiúsculas e minúsculas usando a seguinte instrução pragma:
+Você pode facilmente tornar o operador LIKE sensível ao caso usando a seguinte declaração pragma:
 
 ```sql
-PRAGMA case_sensitive_like = 0
+PRAGMA case_sensitive_like = 1
 ```
 
-Consulte [funções definidas pelo usuário](user-defined-functions.md) para obter detalhes sobre como substituir a implementação do operador Like.
+Consulte [as funções definidas pelo usuário](user-defined-functions.md) para obter detalhes sobre a substituição da implementação do operador LIKE.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 * [Funções definidas pelo usuário](user-defined-functions.md)
 * [Sintaxe SQL](https://www.sqlite.org/lang.html)

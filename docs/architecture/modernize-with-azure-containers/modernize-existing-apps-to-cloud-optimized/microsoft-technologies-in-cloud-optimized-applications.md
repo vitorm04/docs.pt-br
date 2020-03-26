@@ -2,12 +2,12 @@
 title: Tecnologias da Microsoft em aplicativos otimizados para nuvem
 description: Modernizar os aplicativos .NET existentes com contêineres Azure Cloud e Windows | Tecnologias da Microsoft em aplicativos otimizados para nuvem
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578219"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546504"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologias da Microsoft em aplicativos otimizados para nuvem
 
@@ -19,7 +19,7 @@ A lista a seguir descreve as ferramentas, tecnologias e soluções que são reco
 
 - **Nuvem gerenciada**: Quando você escolhe uma opção de nuvem gerenciada, você pode evitar a despesa e a complexidade de gerenciar e suportar a infra-estrutura subjacente, VMs, patches de sO e configuração de rede. Se você optar por migrar usando iaaS, você é responsável por todas essas tarefas e pelos custos associados. Em uma opção de nuvem gerenciada, você gerencia apenas os aplicativos e serviços que desenvolve. O provedor de serviços em nuvem normalmente gerencia todo o resto. Exemplos de serviços gerenciados em nuvem no Azure incluem Banco de [Dados Azure SQL,](https://azure.microsoft.com/services/sql-database) [Azure Redis Cache,](https://azure.microsoft.com/services/cache/) [Azure Cosmos DB,](https://azure.microsoft.com/services/cosmos-db/) [Azure Storage,](https://azure.microsoft.com/services/storage/) [Azure Database for MySQL,](https://azure.microsoft.com/services/mysql/) [Azure Database for PostgreSQL,](https://azure.microsoft.com/services/postgresql/) [Azure Active Directory,](https://azure.microsoft.com/services/active-directory/)e serviços de computação gerenciados como [conjuntos de escala VM,](https://azure.microsoft.com/services/virtual-machine-scale-sets/) [Azure App Service](https://azure.microsoft.com/services/app-service/)e [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 
-- **Desenvolvimento de aplicativos**: Você pode escolher entre muitos idiomas ao criar aplicativos executados em contêineres. Este guia se concentra no [.NET,](https://www.microsoft.com/net)mas, você pode desenvolver aplicativos baseados em contêineres usando outras linguagens, como Node.js, Python, Spring/Java ou Go.
+- **Desenvolvimento de aplicativos**: Você pode escolher entre muitos idiomas ao criar aplicativos executados em contêineres. Este guia se concentra no [.NET,](https://dotnet.microsoft.com)mas, você pode desenvolver aplicativos baseados em contêineres usando outras linguagens, como Node.js, Python, Spring/Java ou Go.
 
 - **Monitoramento, telemetria, registro e auditoria**: A capacidade de monitorar e auditar aplicativos e contêineres que estão sendo executados na nuvem é fundamental para qualquer aplicativo otimizado para nuvem. [O Azure Application Insights](https://azure.microsoft.com/services/application-insights/) e o [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) são as principais ferramentas da Microsoft que fornecem monitoramento e auditoria para aplicativos otimizados para nuvem.
 

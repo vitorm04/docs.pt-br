@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 6799b229de8e8eb49dd3b8bbaffe0d08a32b7208
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4738373b10fbcb1d2406406d30f10b795aeb914
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142284"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228849"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Definindo um evento em controles dos Windows Forms
 Para obter detalhes sobre a definição de eventos personalizados, consulte [Eventos](../../../standard/events/index.md). Se você definir um evento que não tenha dados associados, use o tipo de base para dados de eventos, <xref:System.EventArgs> e use <xref:System.EventHandler> como o delegado do evento. Tudo o que resta fazer é definir `On`um membro do evento e um método protegido *EventName* que levanta o evento.  
@@ -71,7 +71,7 @@ public class FlashTrackBar : Control {
    // changed. Derived controls can override this method.
    protected virtual void OnValueChanged(EventArgs e)
    {  
-       ValueChanged?.Invoke(this, e);  
+       onValueChanged?.Invoke(this, e);  
    }  
 }  
 ```  

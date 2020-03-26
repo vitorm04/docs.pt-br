@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186421"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112278"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -59,7 +59,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  O **valor máximo de multiamostra** permite ajustar a quantidade máxima de antialiasing de conteúdo 3D. Use este nível para desativar a antialiasing 3D no Windows Vista.  
   
- O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a suavização de mutisample de conteúdo 3D deverá ser desabilitada e um valor de 16 tentará usar até 16x a suavização de multisample, se houver suporte da placa de vídeo. Cuidado que a definição desse valor-chave de registro em computadores que usam drivers XPDM fará com que os aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuam o desempenho da renderização 3D e tenham o potencial de introduzir erros de renderização e estabilidade Problemas.  
+ O **valor de multisample máximo** é um valor DWORD que varia de 0 a 16. Um valor de 0 especifica que a antialiação multiamostra de conteúdo 3D deve ser desativada, e um valor de 16 tentará usar até 16x de antialiasing multiamostral, se suportado pela placa de vídeo. Cuidado que a definição desse valor-chave de registro em computadores que usam drivers XPDM fará com que os aplicativos usem uma grande quantidade de memória de vídeo adicional, diminuam o desempenho da renderização 3D e tenham o potencial de introduzir erros de renderização e estabilidade Problemas.  
   
  Quando essa chave do Registro não está definida, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] volta para o padrão 0 para drivers XPDM e 4 para drivers WDDM.  
   

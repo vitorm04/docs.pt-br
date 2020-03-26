@@ -3,14 +3,14 @@ title: CLI do .NET Core
 titleSuffix: ''
 description: Uma visão geral do .NET Core CLI e suas características.
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399115"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110835"
 ---
-# <a name="net-core-cli-overview"></a>Visão geral do .NET Core CLI
+# <a name="net-core-cli-overview"></a>Visão geral da CLI do .NET Core
 
 **Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
 
@@ -95,11 +95,11 @@ O comando executa uma ação. Por exemplo, `dotnet build` compila código. `dotn
 
 ### <a name="arguments"></a>Argumentos
 
-Os argumentos que você passa na linha de comando são aqueles do comando invocado. Por exemplo, quando você executa `dotnet publish my_app.csproj`, o argumento `my_app.csproj` indica o projeto a ser publicado e é passado para o comando `publish`.
+Os argumentos que você passa na linha de comando são aqueles do comando invocado. Por exemplo, quando `dotnet publish my_app.csproj`você `my_app.csproj` executa, o argumento indica `publish` que o projeto será publicado e é passado para o comando.
 
 ### <a name="options"></a>Opções
 
-As opções que você passa na linha de comando são aquelas do comando invocado. Por exemplo, quando você executa `dotnet publish --output /build_output`, a opção `--output` e seu valor são passados para o comando `publish`.
+As opções que você passa na linha de comando são aquelas do comando invocado. Por exemplo, quando `dotnet publish --output /build_output`você `--output` executa, a opção `publish` e seu valor são passados para o comando.
 
 ## <a name="see-also"></a>Confira também
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84c418627462f83630fe5072a0b0e2089f6588f6
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712670"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507120"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (referência do C#)
 
@@ -56,7 +56,7 @@ Use o qualificador `::` de alias namespace para acessar um membro de um namespac
   > [!NOTE]
   > A palavra-chave `global` é o alias do namespace global apenas quando é o identificador à esquerda do qualificador `::`.
 
-Você também pode usar o [operador de acesso `.` de membro](member-access-operators.md#member-access-operator-) para acessar um membro de um namespace com alias. No entanto, o `.` operador também é usado para acessar um membro do tipo. O qualificador `::` garante que o identificador à esquerda dele sempre faça referência a um alias de namespace, mesmo que exista um tipo ou namespace com o mesmo nome.
+Você também pode usar o [ `.` token para](member-access-operators.md#member-access-expression-) acessar um membro de um namespace com alias. No entanto, o `.` token também é usado para acessar um membro do tipo. O qualificador `::` garante que o identificador à esquerda dele sempre faça referência a um alias de namespace, mesmo que exista um tipo ou namespace com o mesmo nome.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

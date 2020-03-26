@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 9b2cd67a1c4f30e6fe246124be5b8f7081c539a6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 4c6996e2279693cf96c826741869d72007cf81cf
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392854"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249546"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML
 A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XML que descreve uma classe ou gerar a classe definida por um esquema XML. Os seguintes procedimentos mostram como executar essas operações.  
@@ -27,11 +27,11 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
     xsd mySchema.xsd  
     ```  
   
-     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o namespace do esquema XML deve ser "http://www.w3.org/2001/XMLSchema", conforme mostrado no exemplo a seguir.  
+     A ferramenta somente pode processar esquemas que fazem referência à especificação de XML World Wide Web Consortium de 16 de março de 2001. Em outras palavras, o espaço de nomehttp://www.w3.org/2001/XMLSchemaXML Schema deve ser " " como mostrado no exemplo a seguir.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
-    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="" xmlns:xs="http://www.w3.org/2001/XMLSchema" />  
     ```  
   
 3. Modifique as classes com métodos, propriedades ou campos, conforme o necessário. Para obter mais informações sobre como modificar uma classe com atributos, consulte [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md) e [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
@@ -52,7 +52,7 @@ A ferramenta de Definição de Esquema XML (Xsd.exe) permite gerar um esquema XM
   
      O esquema (ou esquemas) serão escritos, começando com o nome "schema0.xsd".  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - [A ferramenta de definição de esquema XML e a serialização XML](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)

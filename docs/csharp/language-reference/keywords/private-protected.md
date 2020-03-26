@@ -2,12 +2,12 @@
 title: private protected – Referência de C#
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134361"
 ---
 # <a name="private-protected-c-reference"></a>private protected (referência do C#)
 
@@ -21,8 +21,6 @@ A combinação de palavras-chave `private protected` é um modificador de acesso
 Um membro particular protegido de uma classe base é acessível de tipos derivados em seu assembly recipiente apenas se o tipo estático da variável é o tipo da classe derivada. Por exemplo, considere o seguinte segmento de código:  
 
 ```csharp
-// Assembly1.cs  
-// Compile with: /target:library  
 public class BaseClass
 {
     private protected int myValue = 0;

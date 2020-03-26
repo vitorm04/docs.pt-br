@@ -10,18 +10,18 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 544d0a26f24e5ad4ed7e2e3cfa25f8e15d1be446
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452825"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112109"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Como aplicar várias transformações a um objeto
-Este exemplo mostra como usar um <xref:System.Windows.Media.TransformGroup> para agrupar dois ou mais objetos <xref:System.Windows.Media.Transform> em um único <xref:System.Windows.Media.Transform>composto.  
+Este exemplo mostra como <xref:System.Windows.Media.TransformGroup> usar um <xref:System.Windows.Media.Transform> para agrupar <xref:System.Windows.Media.Transform>dois ou mais objetos em um único composto .  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa uma <xref:System.Windows.Media.TransformGroup> para aplicar um <xref:System.Windows.Media.ScaleTransform> e um <xref:System.Windows.Media.RotateTransform> a um <xref:System.Windows.Controls.Button>.  
+ O exemplo a <xref:System.Windows.Media.TransformGroup> seguir <xref:System.Windows.Media.ScaleTransform> usa <xref:System.Windows.Media.RotateTransform> a <xref:System.Windows.Controls.Button>aplicar a e a a a .  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   
@@ -33,4 +33,4 @@ Este exemplo mostra como usar um <xref:System.Windows.Media.TransformGroup> para
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [Visão geral de transformações](transforms-overview.md)
-- [Exemplo de transformações 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D transforma amostra](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

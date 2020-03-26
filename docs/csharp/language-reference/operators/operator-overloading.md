@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: cdb35b212d5bfc4cc685fbfd6c294066983709df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec67d8ec5c0b102ea0b2434119c99f93a0bbe8dd
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847294"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507107"
 ---
 # <a name="operator-overloading-c-reference"></a>Sobrecarga de operador (referência de C#)
 
@@ -43,7 +43,7 @@ A tabela a seguir fornece informações sobre capacidade de sobrecarga de operad
 |[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|O acesso de elemento não é considerado um operador que pode ser sobrecarregado, mas você pode definir um [indexador](../../programming-guide/indexers/index.md).|
 |[(T)x](type-testing-and-cast.md#cast-operator-)|O operador cast não pode ser sobrecarregado, mas você pode definir novos operadores de conversão. Para saber mais, confira [Operadores de conversão definidos pelo usuário](user-defined-conversion-operators.md).|
 |[+=](arithmetic-operators.md#compound-assignment)e [-=](arithmetic-operators.md#compound-assignment) [ \* ](arithmetic-operators.md#compound-assignment) [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment) [&=](boolean-logical-operators.md#compound-assignment), [&#124;](boolean-logical-operators.md#compound-assignment)= [^=](boolean-logical-operators.md#compound-assignment) [ \< \< ](bitwise-and-shift-operators.md#compound-assignment).[>>=](bitwise-and-shift-operators.md#compound-assignment)|Operadores de atribuição compostos não podem ser sobrecarregados explicitamente. No entanto, quando um operador binário estiver sobrecarregado, o operador de atribuição composto correspondente, se houver, também estará implicitamente sobrecarregado. Por exemplo, `+=` é avaliado usando `+`, que pode ser sobrecarregado.|
-|[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-operator-), [c ? t : f](conditional-operator.md), x [?? y](null-coalescing-operator.md), x [?? = y](null-coalescing-operator.md), [x.. y,](member-access-operators.md#range-operator-) [x->y,](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md) [f(x)](member-access-operators.md#invocation-operator-), [as,](type-testing-and-cast.md#as-operator) [aguardar,](await.md) [verificado,](../keywords/checked.md) [desmarcado,](../keywords/unchecked.md) [padrão,](default.md) [delegado,](delegate-operator.md) [é,](type-testing-and-cast.md#is-operator) [nome,](nameof.md) [novo,](new-operator.md) [tamanho,](sizeof.md) [stackalloc,](stackalloc.md) [typeof](type-testing-and-cast.md#typeof-operator)|Esses operadores não podem ser sobrecarregados.|
+|[^x](member-access-operators.md#index-from-end-operator-), [x = y](assignment-operator.md), [x.y](member-access-operators.md#member-access-expression-), [c ? t : f](conditional-operator.md), x [?? y](null-coalescing-operator.md), x [?? = y](null-coalescing-operator.md), [x.. y,](member-access-operators.md#range-operator-) [x->y,](pointer-related-operators.md#pointer-member-access-operator--) [=>](lambda-operator.md) [f(x)](member-access-operators.md#invocation-expression-), [as,](type-testing-and-cast.md#as-operator) [aguardar,](await.md) [verificado,](../keywords/checked.md) [desmarcado,](../keywords/unchecked.md) [padrão,](default.md) [delegado,](delegate-operator.md) [é,](type-testing-and-cast.md#is-operator) [nome,](nameof.md) [novo,](new-operator.md) [tamanho,](sizeof.md) [stackalloc,](stackalloc.md) [typeof](type-testing-and-cast.md#typeof-operator)|Esses operadores não podem ser sobrecarregados.|
 
 > [!NOTE]
 > Os operadores de comparação precisam ser sobrecarregados em pares. Ou seja, se o operador de um par está sobrecarregado, o outro operador precisa estar sobrecarregado também. Esses pares são os seguintes:

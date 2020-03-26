@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159371"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248011"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Como compactar e extrair arquivos
 
@@ -27,15 +27,21 @@ O namespace <xref:System.IO.Compression> contém os seguintes tipos para compact
 - <xref:System.IO.Compression.DeflateStream>
 - <xref:System.IO.Compression.GZipStream>
 
-Os exemplos a seguir mostram algumas das operações que você pode executar com arquivos compactados.
+Os exemplos a seguir mostram algumas das operações que você pode executar com arquivos compactados. Esses exemplos exigem que os seguintes pacotes NuGet sejam adicionados ao seu projeto:
+
+- [System.IO.Compression](https://www.nuget.org/packages/System.IO.Compression)
+- [System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+
+Se você estiver usando o .NET Framework, adicione referências a essas duas bibliotecas ao seu projeto:
+
+- `System.IO.Compression`
+- `System.IO.Compression.FileSystem`
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>Exemplo 1: Criar e extrair um arquivo .zip
 
 O exemplo a seguir mostra como criar e extrair um arquivo *.zip* compactado usando a classe <xref:System.IO.Compression.ZipFile>. O exemplo compacta o conteúdo de uma pasta em um novo arquivo *.zip* e extrai o zip para uma nova pasta.
 
 Para executar a amostra, crie uma pasta *Iniciar* na pasta do programa e popule-a com arquivos a serem zipados.
-
-Se você receber o erro de build "O nome 'ZipFile' não existe no contexto atual", adicione uma referência ao assembly `System.IO.Compression.FileSystem` ao projeto.
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
@@ -45,10 +51,6 @@ Se você receber o erro de build "O nome 'ZipFile' não existe no contexto atual
 O próximo exemplo itera pelo conteúdo de um arquivo *.zip* existente e extrai os arquivos que têm uma extensão *.txt*. Ele usa a classe <xref:System.IO.Compression.ZipArchive> para acessar o zip e a classe <xref:System.IO.Compression.ZipArchiveEntry> para inspecionar as entradas individuais. O método de extensão <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para o objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponível na classe <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
 Para executar a amostra, coloque um arquivo *.zip* chamado *result.zip* na pasta do programa. Quando solicitado, forneça um nome de pasta na qual extrair.
-
-Se você receber o erro de build "O nome 'ZipFile' não existe no contexto atual", adicione uma referência ao assembly `System.IO.Compression.FileSystem` ao projeto.
-
-Se você receber o erro "O tipo 'ZipArchive' é definido em um assembly que não é referenciado", adicione uma referência ao `System.IO.Compression` assembly ao projeto.
 
 > [!IMPORTANT]
 > Ao descompactar os arquivos, você precisa procurar caminhos de arquivos maliciosos que possam escapar do diretório no qual deseja descompactar. Isso é conhecido como um ataque de passagem de caminho. O exemplo a seguir demonstra como verificar caminhos de arquivos maliciosos e fornece uma maneira segura de descompactação.

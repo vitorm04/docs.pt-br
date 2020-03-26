@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73423631"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249572"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -191,7 +191,7 @@ Sobrecarga | [Sobrecargas](#overloads) | Somente propriedades e métodos podem s
 Sobrecarga | [Sobrecargas](#overloads) |As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno. | 38
 Sobrecarga | -- | Se dois ou mais métodos em conformidade com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo. | 48
 Propriedades | [Propriedades](#properties) | Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados. | 24
-Propriedades | [Propriedades](#properties) | Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância. | 26
+Propriedades | [Propriedades](#properties) | Os acessórios de uma propriedade devem ser todos estáticos, todos são virtuais, ou todos serão exemplo. | 26
 Propriedades | [Propriedades](#properties) | O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter. Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter. Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (ou seja, não deverão ser passados por referência). | 27
 Propriedades | [Propriedades](#properties) | As propriedades deverão seguir um padrão de nomenclatura específico. O atributo `SpecialName` mencionado na regra 24 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador. Uma propriedade deverá ter um método getter, um método setter ou ambos. | 28
 Conversão de tipos | [Conversão de tipo](#type-conversion) | Se op_Implicit ou op_Explicit for fornecido, um meio alternativo de coerção deverá ser fornecido. | 39

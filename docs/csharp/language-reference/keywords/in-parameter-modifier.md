@@ -1,15 +1,15 @@
 ---
 title: Modificador de parâmetro in – Referência de C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173608"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249364"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modificador de parâmetro in (referência do C#)
 
@@ -115,7 +115,9 @@ A única chamada de método em que o argumento é passado por referência é a c
 Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes tipos de métodos:  
   
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
-- Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.  
+- Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.
+- O primeiro argumento de um `in` método de extensão não pode ter o modificador a menos que esse argumento seja uma estrutura.
+- O primeiro argumento de um método de extensão onde esse argumento é um tipo genérico (mesmo quando esse tipo é constrangido a ser uma estrutura.)
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

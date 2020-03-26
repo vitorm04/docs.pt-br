@@ -2,12 +2,12 @@
 title: Repositório de pacotes de runtime
 description: Saiba como usar o repositório de pacotes de runtime para direcionar a manifestos usados pelo .NET Core.
 ms.date: 08/12/2017
-ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77448952"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134269"
 ---
 # <a name="runtime-package-store"></a>Repositório de pacotes de runtime
 
@@ -41,7 +41,7 @@ A primeira etapa é criar um *manifesto de repositório de pacotes* que lista os
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="<NUGET_PACKAGE>" Version="<VERSION>" />
+    <PackageReference Include="NUGET_PACKAGE" Version="VERSION" />
     <!-- Include additional packages here -->
   </ItemGroup>
 </Project>

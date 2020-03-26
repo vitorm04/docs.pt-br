@@ -4,12 +4,12 @@ description: Aprimoramentos recentes na linguagem C# permitem escrever código s
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239970"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506977"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -72,7 +72,7 @@ Siga esta recomendação sempre que sua intenção de design for criar um tipo d
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Declare membros somente leitura quando uma estrutura não pode ser imutável
 
-Em C# 8.0 e posteriormente, quando um tipo de estrutura é mutável, `readonly`você deve declarar membros que não causam mutação para ser . Por exemplo, o seguinte é uma variação mutável da estrutura de ponto 3D:
+Em C# 8.0 e posteriormente, quando um tipo de estrutura é mutável, `readonly`você deve declarar membros que não causam mutação para ser . Considere uma aplicação diferente que precise de uma estrutura de ponto 3D, mas que deve suportar mutabilidade. A versão a seguir da estrutura `readonly` de ponto 3D adiciona o modificador apenas aos membros que não modificam a estrutura. Siga este exemplo quando seu design deve suportar modificações na estrutura por alguns membros, mas você ainda quer os benefícios de aplicar a leitura apenas em alguns membros:
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ Esse comportamento facilita a adoção de parâmetros `in` ao longo do tempo nas
 
 A designação do parâmetro `in` também pode ser usada com tipos de referência ou valores numéricos. No entanto, os benefícios em ambos os casos serão mínimos, se houver.
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>Nunca use structs mutáveis como no argumento `in`
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>Evite estruturas mutáveis como `in` argumento
 
 As técnicas descritas acima explicam como evitar cópias retornando referências e passando valores por referência. Essas técnicas funcionam melhor quando os tipos de argumento são declarados como tipos `readonly struct`. Caso contrário, o compilador deve criar **cópias de defesa** em muitas situações, para impor a qualidade de somente leitura de quaisquer argumentos. Considere o exemplo a seguir que calcula a distância de um ponto 3D da origem:
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-A estrutura `Point3D`*não* é um struct somente leitura. Há seis chamadas de acesso de propriedade diferentes no corpo deste método. No primeiro exame, você pode ter achado que esses acessos estavam seguros. No fim das contas, um acessador `get` não deve modificar o estado do objeto. Mas não há nenhuma regra de linguagem que impõe isso. É apenas uma convenção comum. Qualquer tipo pode implementar um acessador `get` que modificou o estado interno. Sem alguma garantia de linguagem, o compilador deve criar uma cópia temporária do argumento antes de chamar qualquer membro. O armazenamento temporário é criado na pilha, os valores do argumento são copiados para o armazenamento temporário e o valor é copiado para a pilha para cada acesso de membro como o argumento `this`. Em muitas situações, essas cópias prejudicam tanto o desempenho que a passagem por valor é mais rápida do que a passagem por referência somente leitura quando o tipo de argumento não é um `readonly struct`.
+A estrutura `Point3D`*não* é um struct somente leitura. Há seis chamadas de acesso de propriedade diferentes no corpo deste método. No primeiro exame, você pode ter achado que esses acessos estavam seguros. No fim das contas, um acessador `get` não deve modificar o estado do objeto. Mas não há nenhuma regra de linguagem que impõe isso. É apenas uma convenção comum. Qualquer tipo pode implementar um acessador `get` que modificou o estado interno. Sem alguma garantia de idioma, o compilador deve criar uma cópia `readonly` temporária do argumento antes de chamar qualquer membro não marcado com o modificador. O armazenamento temporário é criado na pilha, os valores do argumento são copiados para o armazenamento temporário e o valor é copiado para a pilha para cada acesso de membro como o argumento `this`. Em muitas situações, essas cópias prejudicam o desempenho suficiente para que o pass-by-value `readonly struct` seja mais rápido do que `readonly`a referência de leitura de passagem por leitura quando o tipo de argumento não é um e o método chama membros que não são marcados . Se você marcar todos os métodos que não `readonly`modificam o estado de estrutura como , o compilador pode determinar com segurança que o estado de estrutura não é modificado, e uma cópia defensiva não é necessária.
 
 Em vez disso, se o cálculo da distância `ReadonlyPoint3D`usar a estrutura imutável, objetos temporários não são necessários:
 

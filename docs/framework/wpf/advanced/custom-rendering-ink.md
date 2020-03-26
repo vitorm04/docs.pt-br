@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ceb831057a9a92aa7319d2004f04d7cf5ac820e
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186359"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111823"
 ---
 # <a name="custom-rendering-ink"></a>Tinta de renderização personalizada
 A <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> propriedade de um traçado permite especificar a aparência de um traçado, como seu tamanho, cor e <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> forma, mas pode haver momentos em que você deseja personalizar a aparência além do que permite. Convém personalizar a aparência da tinta renderizando na aparência de um pincel de ar, pintura a óleo e muitos outros efeitos. O Windows Presentation Foundation (WPF) permite que você personalize <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> <xref:System.Windows.Ink.Stroke> a renderização de tinta implementando um objeto personalizado.  

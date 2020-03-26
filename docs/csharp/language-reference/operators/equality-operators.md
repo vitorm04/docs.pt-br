@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399563"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110913"
 ---
 # <a name="equality-operators-c-reference"></a>Operadores de igualdade (Referência de C#)
 
@@ -83,7 +83,7 @@ O exemplo a seguir demonstra o uso do operador `!=`:
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
-Os tipos definidos pelo usuário podem [sobrecarregar](operator-overloading.md) os operadores `==` e `!=`. Se um tipo sobrecarregar um dos dois operadores, ele também precisará sobrecarregar o outro.
+Os tipos definidos pelo usuário podem [sobrecarregar](operator-overloading.md) os operadores `==` e `!=`. Se um tipo sobrecarregar um dos dois operadores, ele também deve sobrecarregar o outro.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847723"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507237"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -43,7 +43,7 @@ Quando você projeta um tipo de estrutura, você tem os mesmos recursos que com 
 
 Em C#, você deve inicializar uma variável declarada antes que ela possa ser usada. Como uma variável do `null` tipo de estrutura não pode ser (a menos que seja uma variável de um tipo de [valor anulado),](nullable-value-types.md)você deve instanciar uma instância do tipo correspondente. Há várias maneiras de fazer isso.
 
-Normalmente, você instancia um tipo de estrutura [`new`](../operators/new-operator.md) ligando para um construtor apropriado com o operador. Cada tipo de estrutura tem pelo menos um construtor. É um construtor implícito sem parâmetros, que produz o [valor padrão](default-values.md) do tipo. Você também pode usar o operador [padrão](../operators/default.md) ou literal para produzir o valor padrão de um tipo.
+Normalmente, você instancia um tipo de estrutura [`new`](../operators/new-operator.md) ligando para um construtor apropriado com o operador. Cada tipo de estrutura tem pelo menos um construtor. É um construtor implícito sem parâmetros, que produz o [valor padrão](default-values.md) do tipo. Você também pode usar uma [expressão de valor padrão](../operators/default.md) para produzir o valor padrão de um tipo.
 
 Se todos os campos de exemplo de um tipo de `new` estrutura estiverem acessíveis, você também poderá instancia-lo sem o operador. Nesse caso, você deve inicializar todos os campos de instância antes do primeiro uso da instância. O seguinte exemplo mostra como fazer isso:
 
@@ -68,4 +68,4 @@ Para obter mais informações, consulte a seção [Structs](~/_csharplang/spec/s
 - [Referência do C#](../index.md)
 - [Diretrizes de design - Escolha entre classe e estrutura](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
 - [Diretrizes de design - Projeto de estrutura](../../../standard/design-guidelines/struct.md)
-- [Aulas e estruturas](../../programming-guide/classes-and-structs/index.md)
+- [Classes e structs](../../programming-guide/classes-and-structs/index.md)

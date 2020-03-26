@@ -1,34 +1,34 @@
 ---
-title: operador nameof – referência do C#
+title: nomede expressão - C# referência
 ms.date: 07/12/2019
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 helpviewer_keywords:
-- nameof operator [C#]
+- nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: ffbc801acf61bf72db1c88912dc2142a478fa280
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a68161be7bb03122d2a63ccef4365c5853862b2
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846266"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507133"
 ---
-# <a name="nameof-operator-c-reference"></a>operador nameof (referência do C#)
+# <a name="nameof-expression-c-reference"></a>nomeda expressão (referência C#)
 
-O operador `nameof` obtém o nome de uma variável, tipo ou membro como uma cadeia de caracteres constante:
+Uma `nameof` expressão produz o nome de uma variável, tipo ou membro como a constante de seqüência de cordas:
 
-[!code-csharp-interactive[nameof operator](snippets/NameOfOperator.cs#Examples)]
+[!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
 
 Como mostra o exemplo anterior, no caso de um tipo e um namespace, o nome produzido geralmente não é [totalmente qualificado](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
-O `nameof` operador é avaliado no momento da compilação e não tem efeito no tempo de execução.
+Uma `nameof` expressão é avaliada no tempo de compilação e não tem efeito no tempo de execução.
 
-Você pode usar o operador `nameof` para tornar o código de verificação de argumentos mais passível de manutenção:
+Você pode `nameof` usar uma expressão para tornar o código de verificação de argumentos mais sustentável:
 
 [!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
-O operador `nameof` está disponível no C# 6 e versões posteriores.
+Uma `nameof` expressão está disponível em C # 6 e posterior.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

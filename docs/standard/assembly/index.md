@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228673"
 ---
 # <a name="assemblies-in-net"></a>Assemblies no .NET
 
@@ -116,3 +116,4 @@ Em C#, você pode usar duas versões do mesmo conjunto em um único aplicativo. 
 - [Como: Conjuntos de carga e descarga](load-unload.md)
 - [Como: Usar e depurar a capacidade de descarga do conjunto no .NET Core](unloadability.md)
 - [Como: Determinar se um arquivo é um conjunto](identify.md)
+- [Como: Inspecionar o conteúdo do conjunto usando metadadosLoadContext](inspect-contents-using-metadataloadcontext.md)

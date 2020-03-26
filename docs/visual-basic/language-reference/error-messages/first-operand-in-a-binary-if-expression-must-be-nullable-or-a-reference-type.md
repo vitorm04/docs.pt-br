@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625561"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249520"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>O primeiro operando em uma expressão 'If' binária deve ser um tipo que permite valor nulo ou um de referência
-Um `If` expressão pode levar dois ou três argumentos. Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo anulável. Se o primeiro argumento for avaliado como algo diferente de `Nothing`, seu valor será retornado. Se o primeiro argumento é avaliado como `Nothing`, o segundo argumento é avaliado e retornado.  
+Uma `If` expressão pode ter dois ou três argumentos. Quando você envia apenas dois argumentos, o primeiro argumento deve ser um tipo de referência ou um tipo de valor anulado. Se o primeiro argumento avaliar `Nothing`qualquer outra coisa que não, seu valor é devolvido. Se o primeiro argumento `Nothing`avaliar, o segundo argumento é avaliado e devolvido.  
   
- Por exemplo, o código a seguir contém duas `If` expressões, uma com três argumentos e outra com dois argumentos. As expressões de calculam e retornam o mesmo valor.  
+ Por exemplo, o código `If` a seguir contém duas expressões, uma com três argumentos e outra com dois argumentos. As expressões calculam e retornam o mesmo valor.  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- As expressões a seguir causam esse erro:  
+ As seguintes expressões causam este erro:  
   
 ```vb  
 Dim choice1 = 4  
@@ -42,19 +42,19 @@ Dim booleanVar = True
 'Console.WriteLine(If(booleanVar, "Test returns True."))  
 ```  
   
- **ID do erro:** BC33107  
+ **ID de erro:** BC33107  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Se você não pode alterar o código para que o primeiro argumento é um tipo anulável ou tipo de referência, considere a conversão para um argumento de três `If` expressão, ou como um `If...Then...Else` instrução.  
+- Se você não puder alterar o código para que o primeiro argumento seja um tipo `If` de valor ou `If...Then...Else` tipo de referência anulado, considere converter-se para uma expressão de três argumentos ou para uma declaração.  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  
 Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Operador If](../../../visual-basic/language-reference/operators/if-operator.md)
 - [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipos de valor anulados](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 3c21ae3d00aa9f1b48a89650430b89ceccb2a1b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186020"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291583"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -45,7 +45,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 ### <a name="rendering-tier-0"></a>Camada de renderização 0  
  Um valor de nível de renderização 0 significa que não há nenhum gráficos aceleração de hardware disponível para o aplicativo no dispositivo. Nesse nível, você deve assumir que todos os gráficos serão renderizados por software sem aceleração de hardware. A funcionalidade deste nível corresponde a uma versão DirectX inferior a 9.0.  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>Camada de Renderização 1 e Camada de Renderização 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>Camada de Renderização 1 e Camada de Renderização 2
   
 > [!NOTE]
 > A partir do .NET Framework 4, o nível de renderização 1 foi redefinido para incluir apenas o hardware gráfico que suporta DirectX 9.0 ou superior. O hardware gráfico que suporta DirectX 7 ou 8 agora é definido como renderização de nível 0.  
@@ -57,7 +57,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |Recurso|Camada 1|Camada 2|  
 |-------------|------------|------------|  
 |Versão DirectX|Deve ser maior ou igual a 9.0.|Deve ser maior ou igual a 9.0.|  
-|Vídeo Ram|Deve ser maior ou igual a 60MB.|Deve ser maior ou igual a 120MB.|  
+|Vídeo Ram|Deve ser maior ou igual a 60 MB.|Deve ser maior ou igual a 120 MB.|  
 |Sombreador de pixel|O nível da versão deve ser maior ou igual a 2.0.|O nível da versão deve ser maior ou igual a 2.0.|  
 |Sombreador de vértica|Não é necessário.|O nível da versão deve ser maior ou igual a 2.0.|  
 |Unidades multitexturas|Não é necessário.|Número de unidades deve ser maior ou igual a 4.|  
@@ -72,7 +72,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
 |Mapeamento de MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tenta utilizar mapeamento MIP quando renderiza conteúdo 3D. O mapeamento MIP melhora a qualidade da renderização da textura <xref:System.Windows.Controls.Viewport3D>quando uma textura ocupa um campo de visão menor em um .|  
 |Gradientes radiais|Enquanto estiver apoiado, <xref:System.Windows.Media.RadialGradientBrush> evite o uso de objetos grandes.|  
 |Cálculos de iluminação 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] realiza iluminação por vértice, o que significa que uma intensidade de luz precisa ser calculada a cada vértice para cada material aplicado a uma malha.|  
-|Renderização de texto|Renderização de texto sub-pixel utiliza sombreadores de pixel disponíveis no hardware gráfico.|  
+|Renderização de texto|A renderização da fonte subpixel usa sombreadores de pixeldisponíveis no hardware gráfico.|  
   
  Os seguintes recursos e capacidades são acelerados por hardware apenas para a camada de renderização 2:  
   
@@ -124,7 +124,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  Quando você executa a Ferramenta de Diagnóstico DirectX, a janela principal contém um conjunto de guias que permitem exibir e diagnosticar informações relacionadas ao DirectX. Por exemplo, a guia **Sistema** fornece informações do sistema sobre o seu computador e especifica a versão do DirectX que está instalada no seu computador.  
   
- ![Captura de tela: Ferramenta de diagnóstico do DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Captura de tela: DirectX Ferramenta de diagnóstico](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Janela principal da Ferramenta de diagnóstico do DirectX  
   
 ## <a name="see-also"></a>Confira também

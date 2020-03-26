@@ -3,24 +3,24 @@ title: Visão geral de transformações
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transformations [WPF], about transformations
-- classes [WPF], 2-D transform
-- transform classes [WPF], 2-D
-- 2-D transform classes
+- classes [WPF], 2D transform
+- transform classes [WPF], 2D
+- 2D transform classes
 - FrameworkElement objects [WPF], rotating
 - FrameworkElement objects [WPF], skewing
 - FrameworkElement objects [WPF], translating
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 49fb0109e1d7db065f7e241955f30cb038699020
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5f29404a301eb023ff24b2890531dede6440ec4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187463"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111953"
 ---
 # <a name="transforms-overview"></a>Visão geral de transformações
-Este tópico descreve como usar as <xref:System.Windows.Media.Transform> classes 2D para girar, dimensionar, mover (traduzir) e distorcer <xref:System.Windows.FrameworkElement> objetos.  
+Este tópico descreve como usar <xref:System.Windows.Media.Transform> as classes 2D para girar, dimensionar, mover (traduzir) e distorcer <xref:System.Windows.FrameworkElement> objetos.  
 
 <a name="whatIsATransformSection"></a>
 ## <a name="what-is-a-transform"></a>O que é uma transformação?  
@@ -31,7 +31,7 @@ Este tópico descreve como usar as <xref:System.Windows.Media.Transform> classes
   
  A tabela a seguir mostra a estrutura de uma matriz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
-### <a name="a-2-d-transformation-matrix"></a>A matriz de transformação 2D  
+### <a name="a-2d-transformation-matrix"></a>Uma matriz de transformação 2D  
   
 ||||  
 |-|-|-|  
@@ -142,7 +142,7 @@ LayoutTransform utilizado para rotacionar o botão
   
  [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- Para obter o exemplo completo, consulte [Amostras de Transformação 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms). Para mais informações sobre animações, consulte [Visão Geral de Animação](animation-overview.md).  
+ Para obter a amostra completa, consulte [2D Transforms Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms). Para mais informações sobre animações, consulte [Visão Geral de Animação](animation-overview.md).  
   
 <a name="freezable_features"></a>
 ## <a name="freezable-features"></a>Recursos congeláveis  
@@ -153,4 +153,4 @@ LayoutTransform utilizado para rotacionar o botão
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [Tópicos de como fazer](transformations-how-to-topics.md)
-- [Exemplo de transformações 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D transforma amostra](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

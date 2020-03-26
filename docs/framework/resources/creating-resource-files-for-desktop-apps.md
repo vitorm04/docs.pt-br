@@ -10,22 +10,22 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129973"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111771"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Criar arquivos de recurso para aplicativos .NET
 
 Você pode incluir recursos, como cadeias de caracteres, imagens ou dados de objetos em arquivos de recursos para torná-los facilmente disponíveis no seu aplicativo. O .NET Framework tem cinco maneiras de criar arquivos de recursos:
 
-- Crie um arquivo de texto que contenha recursos de cadeia de caracteres. Você pode usar o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para converter o arquivo de texto em um arquivo de recursos binário (. resources). Em seguida, você pode inserir o arquivo de recurso binário em um aplicativo executável ou em uma biblioteca de aplicativos usando um compilador de linguagem; ou pode inseri-lo em um assembly satélite usando o [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md). Para obter mais informações, consulte a secção [Recursos em Arquivos de Texto](creating-resource-files-for-desktop-apps.md#TextFiles).
+- Crie um arquivo de texto que contenha recursos de cadeia de caracteres. Você pode usar o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para converter o arquivo de texto em um arquivo de recursos binário (. resources). Em seguida, você pode incorporar o arquivo de recurso binário em um aplicativo executável ou em uma biblioteca de aplicativos usando um compilador de idiomas, ou você pode incorporá-lo em um conjunto de satélite usando [o Linker de montagem (Al.exe)](../tools/al-exe-assembly-linker.md). Para obter mais informações, consulte a secção [Recursos em Arquivos de Texto](creating-resource-files-for-desktop-apps.md#TextFiles).
 
 - Criar um arquivo de recurso XML (.resx) que contenha a cadeia de caracteres, imagens ou dados de objeto. Você pode usar o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para converter o arquivo. resx em um arquivo de recursos binário (.resources). Em seguida, pode inserir o arquivo de recurso binário em um aplicativo executável ou em uma biblioteca de aplicativos usando um compilador de linguagem, ou você pode inseri-la em um assembly satélite usando o [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md). Para obter mais informações, confira a secção [Recursos em Arquivos .resx](creating-resource-files-for-desktop-apps.md#ResxFiles).
 
-- Crie um arquivo de recurso XML (.resx) com programação usando os tipos no namespace <xref:System.Resources>. Pode criar um arquivo .resx, enumerar os seus recursos e recuperar os recursos específicos pelo seu nome. Para obter mais informações, confira o tópico [Trabalhando com arquivos .resx de forma programática](working-with-resx-files-programmatically.md).
+- Crie um arquivo de recurso XML (.resx) com programação usando os tipos no namespace <xref:System.Resources>. Pode criar um arquivo .resx, enumerar os seus recursos e recuperar os recursos específicos pelo seu nome. Para obter mais informações, confira [Trabalhando com arquivos .resx de forma programática](working-with-resx-files-programmatically.md).
 
 - Criar um arquivo de recurso binário (.resources) de forma programática. Em seguida, pode inserir o arquivo em um aplicativo executável ou em uma biblioteca de aplicativos usando um compilador de linguagem, ou você pode inseri-la em um assembly satélite usando o [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md). Para obter mais informações, confira a secção [Recursos em Arquivos .resources](creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
@@ -58,7 +58,7 @@ name2=value2
 
  O formato do arquivo de recursos de .txt e dos arquivos .restext é idêntico. A extensão de arquivo .restext serve apenas para tornar os arquivos de texto imediatamente identificáveis como arquivos de recurso baseados em texto.
 
- Os recursos de cadeia de caracteres são exibidos como pares *nome/valor*, em que *nome* é uma cadeia que identifica o recurso e *valor* é a cadeia de recurso que é retornada quando passa o *nome* para um método de recuperação de recursos, como <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. O *nome* e o *valor* devem ser separados por um sinal de igual (=). Por exemplo:
+ Os recursos de cadeia de caracteres são exibidos como pares *nome/valor*, em que *nome* é uma cadeia que identifica o recurso e *valor* é a cadeia de recurso que é retornada quando passa o *nome* para um método de recuperação de recursos, como <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. O *nome* e o *valor* devem ser separados por um sinal de igual (=). Por exemplo: 
 
 ```text
 FileMenuName=File
@@ -70,13 +70,13 @@ HelpMenuName=Help
 > [!CAUTION]
 > Não use arquivos de recurso para armazenar senhas, informações confidenciais ou dados privados.
 
- Cadeias de caracteres vazias (ou seja, um recurso cujo valor é <xref:System.String.Empty?displayProperty=nameWithType>) são permitidas em arquivos de texto. Por exemplo:
+ Cadeias de caracteres vazias (ou seja, um recurso cujo valor é <xref:System.String.Empty?displayProperty=nameWithType>) são permitidas em arquivos de texto. Por exemplo: 
 
 ```text
 EmptyString=
 ```
 
- A partir do .NET Framework 4.5 e em todas as versões do .NET Core, os arquivos de texto oferecem suporte à compilação condicional com as construções `#ifdef`*símbolo*... `#endif` e `#if !`*símbolo*... `#endif`. Então pode usar o alternador `/define` com o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para definir os símbolos. Cada recurso requer a sua própria construção `#ifdef` *símbolo*... `#endif` ou `#if !`*símbolo*... `#endif`. Se você usar uma instrução `#ifdef` e estiver definido o *símbolo*, o recurso associado é incluído no arquivo .resources; caso contrário, ele não será incluído. Se você usar uma instrução `#if !` e não estiver definido o *símbolo*, o recurso associado é incluído no arquivo .resources; caso contrário, ele não será incluído.
+ Começando com .NET Framework 4.5 e em todas as versões `#ifdef`do .NET Core, arquivos de texto suportam compilação condicional com o *símbolo*... `#endif` e `#if !` *símbolo*... `#endif` construções. Então pode usar o alternador `/define` com o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para definir os símbolos. Cada recurso requer `#ifdef`seu próprio *símbolo...* `#endif` ou `#if !` *símbolo*... `#endif` construir. Se você usar uma instrução `#ifdef` e estiver definido o *símbolo*, o recurso associado é incluído no arquivo .resources; caso contrário, ele não será incluído. Se você usar uma instrução `#if !` e não estiver definido o *símbolo*, o recurso associado é incluído no arquivo .resources; caso contrário, ele não será incluído.
 
  Os comentários são opcionais em arquivos de texto e são precedidos por um ponto e vírgula (;) ou por um sinal de cerquilha (#) no início de uma linha. As linhas que contêm comentários podem ser colocadas em qualquer lugar no arquivo. Os comentários não são incluídos em um arquivo .resources compilado que é criado usando o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md).
 
@@ -92,13 +92,13 @@ CancelButton=Cancel
 
  Se o arquivo de texto contiver ocorrências duplicadas de *nome*, o [Gerador de Arquivo de Recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) exibe um aviso e ignora o segundo nome.
 
- o *valor* não pode conter novos caracteres de linha, mas você pode usar caracteres de escape em estilo de linguagem C, como `\n` para representar uma nova linha e `\t` para representar uma guia. Você também pode incluir um caractere de barra invertida se ele tiver escape (por exemplo, "\\\\"). Além disso, é permitida uma cadeia de caracteres vazia.
+ *o valor* não pode conter novos caracteres de linha, `\n` mas você pode `\t` usar caracteres de fuga estilo linguagem C, como representar uma nova linha e representar uma guia. Você também pode incluir um caractere de barra invertida se ele for escapado (por exemplo, "\\\\"). Além disso, é permitida uma cadeia de caracteres vazia.
 
- Deve salvar os recursos em formato de arquivo de texto usando a codificação UTF-8 ou UTF-16 em qualquer ordem de bytes com término baixo ou alto. No entanto, o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), que converte um arquivo .txt em um arquivo .resources, por padrão trata-os como sendo UTF-8. Se quiser que o Resgen.exe reconheça um arquivo codificado com UTF-16, deve incluir uma marca de ordem de byte Unicode (U + FEFF) no início do arquivo.
+ Economize recursos no formato de arquivo de texto usando codificação UTF-8 ou codificação UTF-16 em ordem de byte sinuosa ou de grande endian. No entanto, o [Gerador de Arquivos de Recurso (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), que converte um arquivo .txt em um arquivo .resources, por padrão trata-os como sendo UTF-8. Se quiser que o Resgen.exe reconheça um arquivo codificado com UTF-16, deve incluir uma marca de ordem de byte Unicode (U + FEFF) no início do arquivo.
 
  Para incorporar um arquivo de recurso no formato de texto em um assembly do .NET, deve converter o arquivo em um arquivo de recursos binário (.resources) usando o [Gerador de Arquivo de Recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md). Em seguida, pode inserir o arquivo .resources em um assembly do .NET usando um compilador de linguagem, ou pode inseri-lo em um assembly satélite, usando o [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
 
- O exemplo seguinte usa um arquivo de recursos no formato de texto chamado GreetingResources.txt para um aplicativo de console simples "Hello World". O arquivo de texto define duas cadeias de caracteres, `prompt` e `greeting`, que pedem ao usuário que insira o seu nome e exibe uma saudação.
+ O exemplo seguinte usa um arquivo de recursos no formato de texto chamado GreetingResources.txt para um aplicativo de console simples "Hello World". O arquivo de texto define `prompt` `greeting`duas strings e, que solicitam ao usuário que insira seu nome e exiba uma saudação.
 
 ```text
 # GreetingResources.txt
@@ -186,7 +186,7 @@ Você pode usar a classe <xref:System.Resources.ResourceWriter?displayProperty=n
 > [!NOTE]
 > Não use arquivos de recurso para armazenar senhas, informações confidenciais ou dados privados.
 
- O exemplo a seguir cria um arquivo .resources chamado CarResources.resources que armazena seis cadeias de caracteres, um ícone e dois objetos definidos pelo aplicativo (dois objetos `Automobile`). Observe que a classe `Automobile`, que é definida e instanciada no exemplo, é marcada com o atributo <xref:System.SerializableAttribute>, que permite a persistência por meio do formatador de serialização binária.
+ O exemplo a seguir cria um arquivo .resources chamado CarResources.resources que armazena seis cadeias de caracteres, um ícone e dois objetos definidos pelo aplicativo (dois objetos `Automobile`). A `Automobile` classe, que é definida e instanciada no <xref:System.SerializableAttribute> exemplo, é marcada com o atributo, que permite que ele seja persistido pela questão da serialização binária.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -202,8 +202,8 @@ Se você estiver adicionando recursos localizados, conceda a eles o mesmo nome d
 
 No momento da compilação, o Visual Studio converte primeiro os arquivos .resx em um projeto para os arquivos de recurso binários (.resources) e armazena-os num subdiretório do diretório *obj* do projeto. O Visual Studio incorpora quaisquer arquivos de recurso que não contenham recursos localizados no assembly principal que é gerado pelo projeto. Se os arquivos de recurso contém os recursos localizados, o Visual Studio insere-os em assemblies satélites separados para cada cultura localizada. Em seguida, ele armazena cada assembly satélite em um diretório cujo nome corresponde à cultura localizada. Por exemplo, os recursos localizados do Inglês (Estados Unidos) são armazenados em um assembly satélite no subdiretório en-US.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Resources>
-- [Recursos em aplicativos de área de trabalho](index.md)
+- [Recursos em Aplicativos de Desktop](index.md)
 - [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)

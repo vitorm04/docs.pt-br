@@ -3,12 +3,12 @@ title: Introdução ao C# e ao Visual Studio Code
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398877"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111056"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
@@ -79,7 +79,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
     ![Definindo um ponto de interrupção](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Para iniciar a depuração, pressione <kbd>F5</kbd> ou selecione a seta verde. O depurador interrompe a execução do programa quando ele atinge o ponto de interrupção definido na etapa anterior.
-    - Durante a depuração, você pode exibir as variáveis locais no painel superior esquerdo ou usar o console de depuração.
+    - Durante a depuração, você pode visualizar suas variáveis locais no painel superior esquerdo ou usar o console de depuração.
 
 7. Selecione a seta azul na parte superior para continuar a depuração ou escolha o quadrado vermelho na parte superior para interromper o processamento.
 

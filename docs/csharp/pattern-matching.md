@@ -4,12 +4,12 @@ description: Saiba mais sobre expressões de correspondência de padrões em C#
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170378"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249227"
 ---
 # <a name="pattern-matching"></a>Correspondência padrão
 
@@ -106,7 +106,7 @@ Por fim, você pode adicionar um case `null` para garantir que o argumento não 
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-O comportamento especial para o padrão `null` é interessante porque a constante `null` no padrão não tem um tipo, mas pode ser convertida em qualquer tipo de referência ou tipo que permite valor nulo. Em vez de converter um `null` em qualquer tipo, a linguagem define que um `null` valor não será correspondente ao padrão de qualquer tipo, independentemente do tipo de tempo de compilação da variável. Esse comportamento torna o novo padrão de tipo baseado em `switch` consistente com a instrução `is`: instruções `is` sempre retornam `false` quando o valor sendo verificado é `null`. Isso também é mais simples: depois de verificar o tipo, não é necessário fazer uma verificação adicional de nulos. Você pode ver isso pelo fato de que não há nenhuma verificação de nulos em nenhum dos blocos de casos dos exemplos acima: elas não são necessárias, já que a correspondência do padrão de tipo assegura um valor não nulo.
+O comportamento especial `null` para o padrão `null` é interessante porque a constante no padrão não tem um tipo, mas pode ser convertida para qualquer tipo de referência ou tipo de valor anulado. Em vez de converter um `null` em qualquer tipo, a linguagem define que um `null` valor não será correspondente ao padrão de qualquer tipo, independentemente do tipo de tempo de compilação da variável. Esse comportamento torna o novo padrão de tipo baseado em `switch` consistente com a instrução `is`: instruções `is` sempre retornam `false` quando o valor sendo verificado é `null`. Isso também é mais simples: depois de verificar o tipo, não é necessário fazer uma verificação adicional de nulos. Você pode ver isso pelo fato de que não há nenhuma verificação de nulos em nenhum dos blocos de casos dos exemplos acima: elas não são necessárias, já que a correspondência do padrão de tipo assegura um valor não nulo.
 
 ## <a name="var-declarations-in-case-expressions"></a>`var` declarações em expressões `case`
 

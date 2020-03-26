@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações
 titleSuffix: ''
 description: Lista as mudanças de quebra no núcleo ASP.NET.
-ms.date: 01/10/2020
+ms.date: 03/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093169"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291711"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações
 
@@ -18,7 +18,6 @@ ASP.NET Core fornece os recursos de desenvolvimento de aplicativos web usados pe
 
 As seguintes alterações de quebra estão documentadas nesta página:
 
-- [HTTP: O Navegador SameSite altera a autenticação de impacto](#http-browser-samesite-changes-impact-authentication)
 - [Antiforgery obsoleto, CORS, Diagnósticos, MVC e APIs de roteamento removidos](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Autenticação: depreciação do Google+:](#authentication-google-deprecated-and-replaced)
 - [Autenticação: httpcontext.authentication propriedade removido](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ As seguintes alterações de quebra estão documentadas nesta página:
 - [Autorização: Adicionar Sobrecarga de autorização movida para diferentes conjuntos](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Autorização: IAllowAnonymous removido do AuthorizationFilterContext.Filters](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Autorização: Implementações do IAuthorizationPolicyProvider exigem um novo método](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure: pacotes de integração azure prefixados pela Microsoft removidos](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Cache: CompactOnMemoryPressure propriedade removido](#caching-compactonmemorypressure-property-removed)
 - [Cache: Microsoft.Extensions.Caching.SqlServer usa novo pacote SqlClient](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Cache: ResponseCaching tipos "pubternal" alterados para internos](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ As seguintes alterações de quebra estão documentadas nesta página:
 - [Hospedagem: Redirecionamento HTTPS ativado para aplicativos fora de processo do IIS](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [Hospedagem: IHostingAmbiente e iAppLifetime tipos substituídos](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [Hospedagem: ObjectPoolProvider removido das dependências do WebHostBuilder](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP: O Navegador SameSite altera a autenticação de impacto](#http-browser-samesite-changes-impact-authentication)
 - [HTTP: Extensibilidade padrãohttpcontext removido](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP: Os campos de cabeçalhonames alterados para leitura estática somente](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP: Mudanças na infra-estrutura do corpo de resposta](#http-response-body-infrastructure-changes)
@@ -66,9 +67,20 @@ As seguintes alterações de quebra estão documentadas nesta página:
 - [SignalR: Os construtores do HubConnectionContext mudaram](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: Alteração do nome do pacote do cliente JavaScript](#signalr-javascript-client-package-name-changed)
 - [Sinalizador: APIs obsoletas](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [SignalR: UseSignalR e UseConnections métodos removidos](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPAs: SpaServices e NodeServices marcados como obsoletos](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [SPAs: SpaServices e NodeServices console logger recuo de forma padrão](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [Estrutura de destino: .NET Framework não suportado](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>núcleo ASP.NET 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>núcleo de ASP.NET 3.1
 

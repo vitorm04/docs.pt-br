@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713907"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249377"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à língua C# e ao Quadro .NET
 
@@ -22,7 +22,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 ## <a name="c-language"></a>Linguagem C#
 
-A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de cinta encaracolada de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe C# simplifica muitas das complexidades do C++ e fornece recursos poderosos, como tipos de valor anulados, enumerações, delegados, expressões lambda e acesso direto à memória. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões LINQ (Language-Integrated Query, consulta integrada ao idioma) tornam a consulta fortemente digitada uma construção de idioma de primeira classe.  
+A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de cinta encaracolada de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe C# simplifica muitas das complexidades do C++ e fornece recursos poderosos, como tipos anulados, enumerações, delegados, expressões lambda e acesso direto à memória. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões LINQ (Language-Integrated Query, consulta integrada ao idioma) tornam a consulta fortemente digitada uma construção de idioma de primeira classe.  
   
  Por ser uma linguagem orientada a objeto, o C# oferece suporte aos conceitos de encapsulamento, herança e polimorfismo. Todas as variáveis e métodos, incluindo o método `Main`, o ponto de entrada do aplicativo, são encapsulados em definições de classe. Uma classe pode herdar diretamente de uma classe pai, mas pode implementar qualquer quantidade de interfaces. Métodos que substituem métodos virtuais em uma classe pai exigem a palavra-chave `override` como uma forma de evitar uma redefinição acidental. Em C#, um struct é como uma classe simplificada; é um tipo alocado na pilha que pode implementar interfaces, mas não oferece suporte a herança.  
   

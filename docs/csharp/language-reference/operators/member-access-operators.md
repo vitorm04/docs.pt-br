@@ -1,5 +1,5 @@
 ---
-title: Operadores de acesso a membro - Referência de C#
+title: Operadores e expressões de acesso a membros - referência C#
 description: Aprenda sobre operadores de C# que você pode usar para acessar membros de tipo.
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399507"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546634"
 ---
-# <a name="member-access-operators-c-reference"></a>Operadores de acesso a membro (Referência de C#)
+# <a name="member-access-operators-and-expressions-c-reference"></a>Operadores e expressões de acesso a membros (referência C#)
 
-Você pode usar os seguintes operadores quando acessar um membro do tipo:
+Você pode usar os seguintes operadores e expressões quando acessar um membro do tipo:
 
-- (acesso ao membro): para acessar um membro de um namespace ou um tipo [ `.` ](#member-access-operator-)
+- (acesso ao membro): para acessar um membro de um namespace ou um tipo [ `.` ](#member-access-expression-)
 - [(acesso a elemento de matriz ou indexador) : para acessar um elemento de matriz ou um indexador de tipo `[]` ](#indexer-operator-)
 - [e `?[]` (operadores condicionais nulos) : realizar uma operação de acesso a membros ou elementos somente se um operand não for `?.` ](#null-conditional-operators--and-)nulo
-- (invocação) : chamar um método acessado ou invocar um delegado [ `()` ](#invocation-operator-)
+- (invocação) : chamar um método acessado ou invocar um delegado [ `()` ](#invocation-expression-)
 - [(índice a partir do fim): para indicar que a posição do elemento é do final de uma seqüência `^` ](#index-from-end-operator-)
 - (intervalo) : para especificar uma gama de índices que você pode usar para obter uma gama de elementos de seqüência [ `..` ](#range-operator-)
 
-## <a name="member-access-operator-"></a>Operador de acesso a membro.
+## <a name="member-access-expression-"></a>Expressão de acesso ao membro .
 
 Use o token `.` para acessar um membro de um namespace ou um tipo, como demonstram os exemplos a seguir:
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operadores condicionais nulos ?. e ?[]
 
-Disponível em C# 6 e posterior, um operador condicionado a `?[]`membros aplica um acesso a [membros](#member-access-operator-), `?.`ou acesso a [elementos](#indexer-operator-), operação ao seu operativo e somente se esse operand avaliar a não-nulo; caso contrário, `null`ele retorna . Isto é
+Disponível em C# 6 e posterior, um operador condicionado a `?[]`membros aplica um acesso a [membros](#member-access-expression-), `?.`ou acesso a [elementos](#indexer-operator-), operação ao seu operativo e somente se esse operand avaliar a não-nulo; caso contrário, `null`ele retorna . Isto é
 
 - Se `a` avaliar `null`, o `a?.x` resultado `a?[x]` `null`de ou é .
 - Se `a` avalia-se para não nulo, o resultado `a?.x` ou `a.x` `a[x]` `a?[x]` é o mesmo que o resultado ou, respectivamente.
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>Operador de invocação ()
+## <a name="invocation-expression-"></a>Expressão de invocação ()
 
 Use parênteses, `()`, para chamar um [método](../../programming-guide/classes-and-structs/methods.md) ou invocar um [delegado](../../programming-guide/delegates/index.md).
 

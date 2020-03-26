@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: e3326f654e05ef7d487a76f076f8ad0da3637096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187240"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291629"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Instruções passo a passo: hospedando um controle composto do WPF nos Windows Forms
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial no código do Windows Forms, pode ser mais eficaz estender o aplicativo Windows Forms existente com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em vez de reescrevê-lo do zero. Um cenário comum é quando você deseja incorporar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] um ou mais controles implementados dentro do aplicativo Windows Forms. Para obter mais informações sobre a personalização dos controles WPF, consulte [Personalização de controle](../controls/control-customization.md).  
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Implementação do aplicativo host do Windows Forms  
- O aplicativo host Do <xref:System.Windows.Forms.Integration.ElementHost> Windows Forms [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa um objeto para hospedar o controle composto. O aplicativo lida `OnButtonClick` com o evento para receber os dados do controle composto. O aplicativo também tem um conjunto de botões de opção que podem ser usados para modificar a aparência do controle. A ilustração a seguir mostra o aplicativo.  
+ O aplicativo host Do <xref:System.Windows.Forms.Integration.ElementHost> Windows Forms [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa um objeto para hospedar o controle composto. O aplicativo lida `OnButtonClick` com o evento para receber os dados do controle composto. O aplicativo também tem um conjunto de botões de opção que você pode usar para modificar a aparência do controle. A ilustração a seguir mostra o aplicativo.  
 
 A imagem a seguir mostra um controle composto WPF hospedado em um aplicativo Do Windows Forms"  
 
- ![Scteenshot que mostra um controle Avalon de hospedagem do Formulário do Windows.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Captura de tela que mostra um controle Avalon de hospedagem do Formulário do Windows.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Criando o Projeto  
  Para iniciar o projeto:  
@@ -329,4 +329,4 @@ A imagem a seguir mostra um controle composto WPF hospedado em um aplicativo Do 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Criar XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Instruções passo a passo: hospedando um controle composto dos Windows Forms no WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Passo a passo: hospedando um controle composto do WPF 3D no Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Passo a passo: Hospedando um controle composto 3D WPF em formulários windows](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

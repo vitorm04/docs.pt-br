@@ -2,12 +2,12 @@
 title: Visão geral de modelo de programação HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184181"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291741"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Visão geral de modelo de programação HTTP Web do WCF
 O modelo de programação WEB HTTP da Windows Communication Foundation (WCF) fornece os elementos básicos necessários para construir serviços WEB HTTP com WCF. Os serviços WCF WEB HTTP foram projetados para serem acessados pela mais ampla gama de clientes possíveis, incluindo navegadores da Web e têm os seguintes requisitos exclusivos:  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Isso significa que o modelo de programação WCF WEB HTTP pode lidar <xref:System.IO.Stream>com qualquer tipo de dados, mas, você pode estar programando contra .  
   
- O .NET Framework 3.5 fornece suporte para dados JSON (AJAX), bem como feeds de sindicância (incluindo ATOM e RSS). Para obter mais informações sobre esses recursos, consulte [WCF Web HTTP Formatando](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)visão[geral do sindicância WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) e [suporte à integração AJAX e JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ O .NET Framework 3.5 fornece suporte para dados JSON (AJAX), bem como feeds de sindicância (incluindo ATOM e RSS). Para obter mais informações sobre esses recursos, consulte [WCF Web HTTP Formatting,](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md) [WCF Syndication Overview](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)e [AJAX Integration and JSON Support](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP Modelo de Programação e Segurança  
 

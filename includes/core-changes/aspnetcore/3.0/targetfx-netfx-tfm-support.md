@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937276"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549612"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Quadro de destino: o suporte ao framework .NET caiu
 
@@ -14,7 +14,7 @@ Começando com ASP.NET Core 3.0, o .NET Framework é uma estrutura de destino n�
 
 .NET Framework 4.8 é a última versão principal do .NET Framework. Os novos aplicativos ASP.NET Core devem ser construídos no .NET Core. Começando com a versão .NET Core 3.0, você pode pensar em ASP.NET Core 3.0 como sendo parte do .NET Core.
 
-Os clientes que usam ASP.NET Core com o .NET Framework podem continuar de forma totalmente suportada usando a [versão 2.1 LTS](https://www.microsoft.com/net/download/dotnet-core/2.1). O suporte e a manutenção do 2.1 continua até pelo menos 21 de agosto de 2021. Esta data é de três anos após a declaração da liberação do LTS pela [.NET Support Policy](https://www.microsoft.com/net/platform/support-policy). O suporte para ASP.NET pacotes Core 2.1 **no .NET Framework** se estenderá indefinidamente, semelhante à [política de manutenção para outros frameworks de ASP.NET baseados em pacotes.](https://dotnet.microsoft.com/platform/support/policy/aspnet)
+Os clientes que usam ASP.NET Core com o .NET Framework podem continuar de forma totalmente suportada usando a [versão 2.1 LTS](https://dotnet.microsoft.com/download/dotnet-core/2.1). O suporte e a manutenção do 2.1 continua até pelo menos 21 de agosto de 2021. Esta data é de três anos após a declaração da liberação do LTS pela [.NET Support Policy](https://dotnet.microsoft.com/platform/support-policy). O suporte para ASP.NET pacotes Core 2.1 **no .NET Framework** se estenderá indefinidamente, semelhante à [política de manutenção para outros frameworks de ASP.NET baseados em pacotes.](https://dotnet.microsoft.com/platform/support/policy/aspnet)
 
 Para obter mais informações sobre a portação do .NET Framework para .NET Core, consulte [Porting to .NET Core](~/docs/core/porting/index.md).
 

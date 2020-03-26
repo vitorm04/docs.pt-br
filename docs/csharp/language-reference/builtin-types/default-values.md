@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625859"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507250"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>Valores padrão dos tipos C# (referência C#)
 
@@ -27,7 +27,7 @@ A seguinte tabela mostra os valores padrão de tipos C#:
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
 |Qualquer [tipo de valor que permite valor nulo](nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. Esse valor padrão também é conhecido como o valor *nulo* de um tipo de valor anulado.|
 
-Use o [operador padrão](../operators/default.md) para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
+Use [ `default` ](../operators/default.md#default-operator) o operador para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
 
 ```csharp
 int a = default(int);

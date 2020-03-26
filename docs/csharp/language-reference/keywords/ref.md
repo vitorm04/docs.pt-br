@@ -1,18 +1,18 @@
 ---
 title: Palavra-chave ref – Referência de C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399360"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249325"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -25,7 +25,7 @@ A palavra-chave `ref` indica um valor que é passado por referência. Ela é usa
 
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
-Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passa uma expressão variável local ou uma expressão de acesso do elemento de matriz e o método chamado substituir o objeto ao qual o parâmetro ref se refere, então a variável local do chamador ou o elemento da matriz fará agora referência ao novo objeto quando o método retornar.
+Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passar uma expressão de variável local ou uma expressão de acesso a elemento de matriz, e o método chamado substituir o objeto ao qual o parâmetro de ref se refere, então a variável local do chamador ou o elemento de matriz agora se refere ao novo objeto quando o retornos do método.
 
 > [!NOTE]
 > Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
@@ -59,7 +59,13 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
  Não é possível usar as palavras-chave `ref`, `in` e `out` para os seguintes tipos de métodos:  
   
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
-- Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.  
+- Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.
+
+Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
+
+- O `out` keywoard não pode ser usado no primeiro argumento de um método de extensão.
+- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
+- A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
 

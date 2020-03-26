@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627704"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507029"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -72,7 +72,7 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 |`++` e `--`|Incrementa e decrementa ponteiros.|
 |`+` e `-`|Executa aritmética de ponteiros.|
 |`==`, `!=`, `<`, `>`, `<=` e `>=`|Compara ponteiros.|
-|[`stackalloc`Operador](../../language-reference/operators/stackalloc.md)|Aloca memória na pilha.|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|Aloca memória na pilha.|
 |[`fixed`Declaração](../../language-reference/keywords/fixed-statement.md)|Corrige temporariamente uma variável para que seu endereço possa ser encontrado.|
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
@@ -84,7 +84,7 @@ Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe
 ## <a name="see-also"></a>Confira também
 
 - [C# Guia de Programação](../index.md)
-- [Código não seguro e ponteiros](index.md)
+- [Código e ponteiros inseguros](index.md)
 - [Conversões de ponteiros](pointer-conversions.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)
 - [Tipos de valor](../../language-reference/builtin-types/value-types.md)

@@ -2,12 +2,12 @@
 title: Tipos de dados escalares protobuf - gRPC para desenvolvedores WCF
 description: Conheça os tipos de dados básicos e conhecidos que o Protobuf e o gRPC suportam no .NET Core.
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148121"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249429"
 ---
 # <a name="protobuf-scalar-data-types"></a>Tipos de dados escalares de Protobuf
 
@@ -125,7 +125,7 @@ A tabela a seguir mostra a lista completa de tipos de invólucros com seu tipo C
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Os tipos `Timestamp` conhecidos `Duration` são representados em .NET como classes, portanto não há necessidade de uma versão anulada. Mas é importante verificar se há nulidade em propriedades desses `DateTimeOffset` `TimeSpan`tipos quando você está se convertendo para ou .
+Os tipos `Timestamp` conhecidos `Duration` são representados em .NET como classes. Em C # 8 e além, você pode usar tipos de referência anulados. Mas é importante verificar se há nulidade em propriedades desses `DateTimeOffset` `TimeSpan`tipos quando você está se convertendo para ou .
 
 ## <a name="decimals"></a>Decimais
 

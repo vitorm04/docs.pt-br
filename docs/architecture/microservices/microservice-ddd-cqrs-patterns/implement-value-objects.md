@@ -2,12 +2,12 @@
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502507"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249416"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -31,7 +31,7 @@ Existem duas características principais para objetos de valor:
 
 - Eles são imutáveis.
 
-A primeira característica já foi discutida. A imutabilidade é um requisito importante. Os valores de um objeto de valor devem ser imutáveis depois que o objeto for criado. Portanto, quando o objeto é construído, você deve fornecer os valores necessários, mas não deve permitir que mudem durante o tempo de vida do objeto.
+A primeira característica já foi discutida. A imutabilidade é um requisito importante. Os valores de um objeto de valor devem ser imutáveis depois que o objeto for criado. Portanto, quando o objeto é construído, você deve fornecer os valores necessários, mas você não deve permitir que eles mudem durante a vida útil do objeto.
 
 Objetos de valor permitem que você execute certos truques para desempenho graças à sua natureza imutável. Isso é especialmente verdadeiro em sistemas em que pode haver milhares de instâncias de objeto de valor, muitas das quais com os mesmos valores. Sua natureza imutável permite que sejam reutilizados; eles podem ser objetos intercambiáveis, desde que seus valores sejam os mesmos e não tenham identidade. Esse tipo de otimização às vezes pode ser a diferença entre o software executado lentamente e o software com bom desempenho. Obviamente, todos esses casos dependem do ambiente do aplicativo e do contexto de implantação.
 
@@ -168,9 +168,9 @@ Mesmo com algumas lacunas entre o padrão de objeto de valor canônico no DDD e 
 
 O recurso de tipo de entidade própria foi adicionado ao EF Core desde a versão 2.0.
 
-Um tipo de entidade própria permite mapear tipos que não têm a própria identidade definida explicitamente no modelo de domínio e são usados como propriedades, como um objeto de valor, em uma de suas entidades. Um tipo de entidade própria compartilha o mesmo tipo CLR com outro tipo de entidade (ou seja, ele é apenas uma classe regular). A entidade que contém a navegação de definição é a entidade proprietária. Ao consultar o proprietário, os tipos próprios serão incluídos por padrão.
+Um tipo de entidade própria permite mapear tipos que não têm a própria identidade definida explicitamente no modelo de domínio e são usados como propriedades, como um objeto de valor, em uma de suas entidades. Um tipo de entidade própria compartilha o mesmo tipo de CLR com outro tipo de entidade (ou seja, é apenas uma classe regular). A entidade que contém a navegação de definição é a entidade proprietária. Ao consultar o proprietário, os tipos próprios serão incluídos por padrão.
 
-Apenas observando o modelo de domínio, um tipo de propriedade parece não ter identidade alguma. No entanto, nos bastidores, tipos próprios têm identidade, mas a propriedade de navegação do proprietário faz parte dessa identidade.
+Apenas olhando para o modelo de domínio, um tipo de propriedade parece que ele não tem qualquer identidade. No entanto, nos bastidores, tipos próprios têm identidade, mas a propriedade de navegação do proprietário faz parte dessa identidade.
 
 A identidade de instâncias de tipos próprios não é completamente própria. Consiste em três componentes:
 
@@ -295,7 +295,7 @@ public class Address
 
 - Você não pode `ModelBuilder.Entity<T>()` chamar os tipos de propriedade (atualmente por design).
 
-- Não há suporte para tipos de propriedade opcionais (ou seja, anulados) que sejam mapeados com o proprietário na mesma tabela (isto é, usando divisão de mesa). Isso ocorre porque o mapeamento é feito para cada propriedade; não temos um sentinela separado para o valor complexo nulo como um inteiro.
+- Não há suporte para tipos de propriedade opcionais (ou seja, anulados) que sejam mapeados com o proprietário na mesma tabela (isto é, usando divisão de mesa). Isso porque o mapeamento é feito para cada propriedade, não temos uma sentinela separada para o valor complexo nulo como um todo.
 
 - Não há suporte de mapeamento de herança para tipos de propriedade, mas você deve conseguir mapear dois tipos de folha das mesmas hierarquias de herança como diferentes tipos próprios. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
 

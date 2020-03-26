@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187656"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112018"
 ---
 # <a name="how-to-skew-an-element"></a>Como distorcer um elemento
 Este exemplo mostra como <xref:System.Windows.Media.SkewTransform> usar um para distorcer um elemento. Uma distorção, também conhecida como cisalhamento, é uma transformação que alonga o espaço de coordenadas de uma maneira não uniforme. Um uso típico <xref:System.Windows.Media.SkewTransform> de a é para simular profundidade 3D em objetos 2D.  
@@ -40,7 +40,7 @@ Este exemplo mostra como <xref:System.Windows.Media.SkewTransform> usar um para 
  ![Exemplos SkewTransform](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 Três exemplos ilustrativos de SkewTransform  
   
- Para obter o exemplo completo, consulte [Amostras de Transformação 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Para obter a amostra completa, consulte [2D Transforms Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Confira também
 

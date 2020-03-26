@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147485"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111043"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -64,7 +64,7 @@ Um problema comum para os desenvolvedores que não têm experiência com a cria�
 
 Os projetos de teste podem ser organizados da maneira mais adequada à sua situação. É uma boa ideia separar os testes por tipo (teste de unidade, teste de integração) e pelo que eles estão testando (por projeto, por namespace). Indicar se essa separação consiste em pastas dentro de um único projeto de teste ou de vários projetos de teste é uma decisão de design. Um projeto é o mais simples, mas para projetos grandes com muitos testes ou para executar diferentes conjuntos de testes com mais facilidade, talvez você deseje ter vários projetos de teste diferentes. Muitas equipes organizam projetos de teste com base no projeto que estão testando, o que, para aplicativos com mais de alguns projetos, pode resultar em um grande número de projetos de teste, especialmente se você ainda divide-os de acordo com o tipo de testes existente em cada projeto. Uma abordagem de meio-termo é ter um projeto por tipo de teste, por aplicativo, com pastas dentro dos projetos de teste para indicar o projeto (e a classe) que está sendo testado.
 
-Uma abordagem comum é organizar os projetos de aplicativo em uma pasta 'src' e os projetos de teste do aplicativo em uma pasta 'tests' paralela. Crie pastas de solução correspondentes no Visual Studio se achar esta organização útil.
+Uma abordagem comum é organizar os projetos de aplicação em uma pasta 'src' e os projetos de teste do aplicativo em uma pasta de 'testes' paralelos. Crie pastas de solução correspondentes no Visual Studio se achar esta organização útil.
 
 ![Organização de teste em sua solução](./media/image9-2.png)
 
@@ -145,7 +145,7 @@ public IActionResult GetImage(int id)
 
 `_logger`e `_imageService` ambos são injetados como dependências. Agora você pode testar que o mesmo ID que `_imageService`é passado para o método de ação é passado para , e que os bytes resultantes são devolvidos como parte do FileResult. Você também pode testar que o registro de `NotFound` erros está acontecendo como esperado, e que um resultado é devolvido se a imagem estiver faltando, assumindo que este é um comportamento de aplicativo importante (ou seja, não apenas código temporário que o desenvolvedor adicionou para diagnosticar um problema). A lógica real do arquivo foi movida para um serviço de implementação separado e foi aumentada para retornar uma exceção específica do aplicativo para o caso de um arquivo ausente. Você pode testar essa implementação de forma independente, usando um teste de integração.
 
-Na maioria dos casos, será melhor usar manipuladores de exceção globais em seus controladores, portanto, a quantidade de lógica contida neles será mínima e provavelmente não valerá a pena usar testes de unidade. Você deve executar a maior parte dos testes de ações do controlador usando testes funcionais e a classe `TestServer` descrita abaixo.
+Na maioria dos casos, você vai querer usar manipuladores de exceção globais em seus controladores, de modo que a quantidade de lógica neles deve ser mínima e provavelmente não vale a pena testar a unidade. Faça a maioria dos testes das ações `TestServer` do controlador usando testes funcionais e a classe descrita abaixo.
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Realizando testes de integração em aplicativos ASP.NET Core
 
@@ -153,7 +153,7 @@ A maioria dos testes de integração em seus aplicativos ASP.NET Core deve testa
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Realizando teste funcional em aplicativos ASP.NET Core
 
-Para os aplicativos ASP.NET Core, a classe `TestServer` facilita bastante a escrita de testes funcionais. Você configura `TestServer` um `WebHostBuilder` uso `HostBuilder`de um (ou ) diretamente (como `WebApplicationFactory` você normalmente faz para a sua aplicação), ou com o tipo (disponível desde a versão 2.1). Você deve tentar corresponder o host de teste ao host de produção o máximo possível, para que seus testes tenham um comportamento semelhante ao que o aplicativo terá em produção. A classe `WebApplicationFactory` é útil para a configuração de ContentRoot do TestServer, que é usada pelo ASP.NET Core para localizar recursos estáticos, como Exibições.
+Para os aplicativos ASP.NET Core, a classe `TestServer` facilita bastante a escrita de testes funcionais. Você configura `TestServer` um `WebHostBuilder` uso `HostBuilder`de um (ou ) diretamente (como `WebApplicationFactory` você normalmente faz para a sua aplicação), ou com o tipo (disponível desde a versão 2.1). Tente combinar seu host de teste com seu host de produção o mais próximo possível, para que seus testes exerçam comportamento semelhante ao que o aplicativo fará na produção. A classe `WebApplicationFactory` é útil para a configuração de ContentRoot do TestServer, que é usada pelo ASP.NET Core para localizar recursos estáticos, como Exibições.
 
 Você pode criar testes funcionais simples criando uma classe de teste que implementa IClassFixture\<WebApplicationFactory\<TEntry>>, em que TEntry é a classe de inicialização do aplicativo Web. Com isso em vigor, o acessório de teste pode criar um cliente usando o método CreateClient do alocador:
 
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC/Razor Pages, incluindo todos os middlewares, filtros, associadores e outros que possam estar em vigor. Ele verifica se uma determinada rota ("/") retorna o código de status de êxito esperado e a saída HTML. Ele faz isso sem configurar um servidor Web real e, portanto, evita grande parte da fragilidade decorrente do uso de um servidor Web real (por exemplo, problemas com as configurações de firewall). Em geral, os testes funcionais executados no TestServer são mais lentos do que os testes de integração e de unidade, mas são muito mais rápidos do que os testes que seriam executados na rede em um servidor Web de teste. Use os testes funcionais para garantir a que pilha de front-end do aplicativo funcione conforme o esperado. Esses testes são úteis principalmente quando você encontra duplicação em seus controladores ou páginas e soluciona a duplicação adicionando filtros. O ideal é que essa refatoração não altere o comportamento do aplicativo. Um conjunto de testes funcionais pode verificar isso.
+Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC/Razor Pages, incluindo todos os middlewares, filtros, associadores e outros que possam estar em vigor. Ele verifica se uma determinada rota ("/") retorna o código de status de êxito esperado e a saída HTML. Ele faz isso sem configurar um servidor Web real e, portanto, evita grande parte da fragilidade decorrente do uso de um servidor Web real (por exemplo, problemas com as configurações de firewall). Em geral, os testes funcionais executados no TestServer são mais lentos do que os testes de integração e de unidade, mas são muito mais rápidos do que os testes que seriam executados na rede em um servidor Web de teste. Use testes funcionais para garantir que a pilha front-end do aplicativo esteja funcionando como esperado. Esses testes são úteis principalmente quando você encontra duplicação em seus controladores ou páginas e soluciona a duplicação adicionando filtros. O ideal é que essa refatoração não altere o comportamento do aplicativo. Um conjunto de testes funcionais pode verificar isso.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Referências – Testar aplicativos ASP.NET Core MVC
 >

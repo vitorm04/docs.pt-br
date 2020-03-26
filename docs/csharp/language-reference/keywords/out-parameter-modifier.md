@@ -1,15 +1,15 @@
 ---
 title: Modificador de parâmetro out – Referência de C#
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f963188d77685bb81f7dc9fb3794e343114fe3c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173556"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249338"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador de parâmetro out (Referência de C#)
 A palavra-chave `out` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:   
@@ -46,6 +46,12 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
 - Métodos assíncronos, que você define usando o modificador [async](./async.md).  
   
 - Métodos de iterador, que incluem uma instrução [yield return](./yield.md) ou `yield break`.  
+
+Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
+
+- O `out` keywoard não pode ser usado no primeiro argumento de um método de extensão.
+- A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
+- A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
 
 ## <a name="declaring-out-parameters"></a>Declarando parâmetros `out`
 

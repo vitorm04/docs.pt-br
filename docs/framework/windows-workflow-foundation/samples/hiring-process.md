@@ -2,12 +2,12 @@
 title: Processo de aluguer
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c7e99d41d009ee9ab9ccf322f082d3e253ca03ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182834"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291694"
 ---
 # <a name="hiring-process"></a>Processo de aluguer
 Este exemplo demonstra como implementar um processo enterprise usando as atividades de mensagem e os dois fluxos de trabalho hospedados como serviços de fluxo de trabalho. Esses fluxos de trabalho são parte da infraestrutura de TI de uma empresa fictícia chamada Contoso, Inc.  
@@ -62,7 +62,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 1. Um funcionário (solicitador) começa a solicitação de aluguer do processo.  
   
-2. O gerenciador do solicitador deve aprovar a solicitação:  
+2. O gerente do solicitante deve aprovar a solicitação:  
   
     1. O gerenciador pode descartar a solicitação.  
   
@@ -72,7 +72,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
     3. O gerenciador pode aprovar.  
   
-3. Depois que o gerenciador do solicitador aprova, o proprietário do departamento deve aprovar a solicitação:  
+3. Após a aprovação do gerente do solicitante, o proprietário do departamento deve aprovar a solicitação:  
   
     1. O proprietário do departamento pode descartar.  
   
@@ -97,7 +97,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 |Project|Descrição|  
 |-------------|-----------------|  
-|ContosoHR|Contém contratos de dados, objetos comerciais e classes de armazenamento.|  
+|ContosoHR|Contém contratos de dados, objetos de negócios e classes de repositório.|  
 |HiringRequestService|Contém a definição do fluxo de trabalho aluguer do processo de solicitação.<br /><br /> Este projeto é implementado como um aplicativo de console que são host o fluxo de trabalho (arquivo de xaml) como um serviço.|  
 |ResumeRequestService|Um serviço de fluxo de trabalho que coleta resumos dos candidatos até que um tempo limite expire ou alguém decidir que o processo tem que ser interrompido.<br /><br /> Este projeto é implementado como um serviço declarativa de fluxo de trabalho (xamlx).|  
 |OrgService|Um serviço que expõem informações de organização (funcionários, posições, PositionTypes, e departamentos). Você pode pensar esse serviço como o módulo de organização de um plano (ERP) de recurso de empresa.<br /><br /> Este projeto é implementado como um aplicativo de console que expõe um serviço da Windows Communication Foundation (WCF).|  
@@ -113,7 +113,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |Fluxograma|O processo empresarial é representado como um fluxograma. Esta descrição do fluxograma representa o processo da mesma maneira na qual um negócio o desenharia em um whiteboard.|HiringRequestService|  
 |Serviços de fluxo de trabalho|O fluxograma com a definição de processo é hospedado em um serviço (nesse exemplo, o serviço está hospedado em um aplicativo de console).|HiringRequestService|  
 |Atividades de mensagem|O fluxograma usa atividades de mensagem de duas maneiras:<br /><br /> - Obter informações do usuário (para receber as decisões e informações relacionadas em cada etapa de aprovação).<br />- Interagir com outros serviços existentes (InboxService e OrgDataService, usados por meio de referências de serviço).|HiringRequestService|  
-|O conteúdo com base correlação|As mensagens aprovação de correlacionam na propriedade ID de solicitação de aluguer:<br /><br /> - Quando um processo é iniciado, a alça de correlação é inicializada com o ID da solicitação.<br />- As mensagens de aprovação recebidas se correlacionam em seu ID (o primeiro parâmetro de cada mensagem de aprovação é o ID da solicitação).|HiringRequestService/ResumeRequestService|  
+|Correlação baseada em conteúdo|As mensagens aprovação de correlacionam na propriedade ID de solicitação de aluguer:<br /><br /> - Quando um processo é iniciado, a alça de correlação é inicializada com o ID da solicitação.<br />- As mensagens de aprovação recebidas se correlacionam em seu ID (o primeiro parâmetro de cada mensagem de aprovação é o ID da solicitação).|HiringRequestService/ResumeRequestService|  
 |Atividades personalizados (declarativas e código com base)|Há várias atividades personalizados nesse exemplo:<br /><br /> -   `SaveActionTracking`: Esta atividade emite um costume <xref:System.Activities.Tracking.TrackingRecord> (usando <xref:System.Activities.NativeActivityContext.Track%2A>). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.NativeActivity>.<br />-   `GetEmployeesByPositionTypes`: Esta atividade recebe uma lista de IDs do tipo de posição e retorna uma lista de pessoas que têm essa posição em Contoso. Esta atividade foi criado declarativamente (usando o designer de atividade).<br />-   `SaveHiringRequestInfo`: Esta atividade salva as `HiringRequest` informações `HiringRequestRepository.Save`de a (usando ). Esta atividade foi criada usando código obrigatório que estende <xref:System.Activities.CodeActivity>.|HiringRequestService|  
 |Sistema forneceu persistência do SQL Server|A instância de <xref:System.ServiceModel.Activities.WorkflowServiceHost> que hospeda a definição de processo do fluxograma é configurado para usar o sistema forneceu persistência do SQL Server.|HiringRequestService/ResumeRequestService|  
 |Rastreamento personalizada|O exemplo inclui um participante personalizado de rastreamento que salva o histórico de `HiringRequestProcess` (esse registro que ação foi feita, por quem, e quando). O código-fonte está na pasta de rastreamento de HiringRequestService.|HiringRequestService|  
@@ -122,7 +122,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
 |Atividades paralelas|-   <xref:System.Activities.Statements.ParallelForEach%601>é usado para se registrar na Caixa de Entrada do CEO e gestores de RH em paralelo (Aguardando duas etapas de Aprovação dos Gestores de RH).<br />-   <xref:System.Activities.Statements.Parallel>é usado para fazer algumas tarefas de limpeza nas etapas Concluídas e Rejeitadas|HiringRequestService|  
 |Cancelar modelo|O fluxograma usa <xref:System.Activities.Statements.CancellationScope> para criar o comportamento de cancelamento (neste caso faz qualquer limpeza.)|HiringRequestService|  
 |Participante de persistência do cliente|`HiringRequestPersistenceParticipant` salva dados de uma variável de fluxo de trabalho a uma tabela armazenada na base de dados de Contoso hora.|HiringRequestService|  
-|Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando serviços de fluxo de trabalho. A definição de fluxo de trabalho e informações de serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
+|Serviços de fluxo de trabalho|`ResumeRequestService` é implementado usando serviços de fluxo de trabalho. A definição do fluxo de trabalho e as informações do serviço estão contidas em ResumeRequestService.xamlx. O serviço está configurado para usar a persistência e o rastreamento.|ResumeRequestService|  
 |Timers duráveis|`ResumeRequestService` usa timers duráveis para definir a duração de um anúncio de emprego (uma vez para o tempo limite expirar, o anúncio de emprego é fechado).|ResumeRequestService|  
 |Transactions|<xref:System.Activities.Statements.TransactionScope> é usado para garantir a consistência de dados dentro da execução de várias atividades (quando um novo resumo é recebido).|ResumeRequestService|  
 |Transactions|O participante personalizado de persistência (`HiringRequestPersistenceParticipant`) e uso personalizado de participante de rastreamento (`HistoryFileTrackingParticipant`) a mesma transação.|HiringRequestService|  
@@ -159,7 +159,7 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 1. Após criar a solução, pressione CTRL+F5 para executar sem depuração. Verifique se todos os serviços comecem.  
   
-2. Clique com o botão direito do mouse **InternalClient** na solução e, em seguida, **selecione Exibir no Navegador**. A página padrão para `InternalClient` é exibida. Certifique-se de que os serviços estão sendo executado, clique o link.  
+2. Clique com o botão direito do mouse **no InternalClient** na solução e, em seguida, **selecione Exibir no Navegador**. A página padrão para `InternalClient` é exibida. Certifique-se de que os serviços estão sendo executado, clique o link.  
   
 3. O módulo **HiringRequest** é exibido. Você pode seguir o cenário detalhado aqui.  
   
@@ -181,17 +181,17 @@ Este exemplo demonstra como implementar um processo enterprise usando as ativida
   
 2. Após ser criado, a solicitação aparece na caixa de entrada de Michael (clique em **Atualizar** se você não ver o pedido) aguardando a aprovação de Peter Brehm, que é o empresário de Michael.  
   
-3. Peter deseja atuar na solicitação de Michael. Pense as demandas da posição 5 anos de experiência C# em vez de 3, o que envia comentários volta para revisão.  
+3. Peter quer agir a pedido de Michael. Pense as demandas da posição 5 anos de experiência C# em vez de 3, o que envia comentários volta para revisão.  
   
 4. Michael vê uma mensagem em sua caixa de entrada de seu gerente e quer agir. Michael vê a história do pedido de posição e concorda com Peter. Michael altera a descrição para exigir 5 anos de experiência de C# e aceitar a alteração.  
   
-5. Atua de Peter na solicitação modificada de Michael e aceitar-la. A solicitação agora deve ser aprovada pelo diretor de engenharia, Tsvi Reiter.  
+5. Peter age sobre o pedido modificado de Michael e aceita. A solicitação agora deve ser aprovada pelo diretor de engenharia, Tsvi Reiter.  
   
 6. Tsvi Reiter deseja expedir a solicitação, o que colocados em um comentário para dizer que a solicitação é urgente e aceitar-la.  
   
 7. A solicitação agora tem que ser aprovada por dois gerentes de hora ou por CEO. O CEO, Brian Richard Goldstein, consulta a solicitação urgente por Tsvi. Atua na solicitação aceitando a assim, ignorando a aprovação por dois gerentes de hora.  
   
-8. A solicitação é removido da caixa de entrada de Michael e o processo de contratar um SDET agora tem iniciado.  
+8. O pedido é removido da caixa de entrada de Michael e o processo de contratação de um SDET já começou.  
   
 ### <a name="start-resume-request"></a>Solicitação de resumo de Início  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399465"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507081"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operadores cast e teste de tipo (Referência de C#)
 
@@ -113,7 +113,7 @@ Para saber mais sobre conversões explícitas sem suporte, confira a seção [Co
 
 ### <a name="other-usages-of-"></a>Outros usos de ()
 
-Você também usa parênteses para [ chamar um método ou chamar um delegado ](member-access-operators.md#invocation-operator-).
+Você também usa parênteses para [ chamar um método ou chamar um delegado ](member-access-operators.md#invocation-expression-).
 
 Outro uso dos parênteses é ajustar a ordem na qual as operações em uma expressão são avaliadas. Para saber mais, confira [Operadores C#](index.md).
 
@@ -155,4 +155,4 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
 - [Como lançar com segurança usando a correspondência de padrões e o é e como operadores](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [Genéricos no .NET](../../../standard/generics/index.md)
+- [Generics in .NET (Genéricos no .NET)](../../../standard/generics/index.md)

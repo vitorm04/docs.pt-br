@@ -3,19 +3,21 @@ title: Instale o .NET Core no Fedora 30 - gerenciador de pacotes - .NET Core
 description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tempo de execução no Fedora 30.
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: bce30c9fd3fad8b3a63ef938d7446c2516a756cc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 41ea47a8f473d69df6ca9823623646968e895de7
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920790"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134263"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30 Package Manager - Instalar .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Core no Fedora 30. Se você estiver instalando o tempo de execução, sugerimos que você instale o [tempo de execução do ASP.NET Core,](#install-the-aspnet-core-runtime)pois inclui os tempos de execução do .NET Core e do ASP.NET Core.
+Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Core no Fedora 30.
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
 
@@ -31,7 +33,7 @@ Abra um terminal e execute os seguintes comandos.
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/30/prod.repo
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/30/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core

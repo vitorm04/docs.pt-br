@@ -4,12 +4,12 @@ description: Este tutorial avançado fornece uma introdução aos tipos de refer
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240061"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249123"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expressar sua intenção de design mais claramente com tipos de referência que permitem valor nulo e tipos que não permitem valor nulo
 
@@ -72,7 +72,7 @@ O aplicativo que você vai construir faz as seguintes etapas:
 1. Contatos respondentes até que o tamanho da pesquisa concluída atinja o número da meta.
 1. Escreve estatísticas importantes sobre as respostas da pesquisa.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Criar a pesquisa com tipos que permitem valor nulo e tipos que não permitem valor nulo
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>Construa a pesquisa com tipos de referência anulados e não anulados
 
 O primeiro código gravado criará a pesquisa. Você escreverá classes para modelar uma pergunta da pesquisa e uma execução da pesquisa. A pesquisa tem três tipos de perguntas, diferenciadas pelo formato da resposta: respostas do tipo Sim/Não, respostas com números e respostas com texto. Criar `public SurveyQuestion` uma classe:
 

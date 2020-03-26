@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157072"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249175"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
-Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) não abstrata ou uma [estrutura](../../language-reference/builtin-types/struct.md) deve implementar. Uma interface `static` pode definir métodos, que devem ter uma implementação. Uma interface pode fornecer uma implementação padrão para qualquer ou todos os membros de instância declarados. Uma interface não pode declarar dados de instância, como campos, propriedades implementadas automaticamente ou eventos semelhantes a propriedades.
+Uma interface contém definições para um grupo de funcionalidades relacionadas que uma [classe](../../language-reference/keywords/class.md) não abstrata ou uma [estrutura](../../language-reference/builtin-types/struct.md) deve implementar. Uma interface `static` pode definir métodos, que devem ter uma implementação. Começando com C# 8.0, uma interface pode definir uma implementação padrão para membros. Uma interface não pode declarar dados de instância, como campos, propriedades implementadas automaticamente ou eventos semelhantes a propriedades.
 
 Usando interfaces, você pode, por exemplo, incluir o comportamento de várias fontes em uma classe. Essa funcionalidade é importante em C# porque a linguagem não dá suporte a várias heranças de classes. Além disso, use uma interface se você deseja simular a herança para structs, pois eles não podem herdar de outro struct ou classe.
 
@@ -54,12 +54,12 @@ Uma interface tem as propriedades a seguir:
 - Uma interface não pode ser instanciada diretamente. Seus membros são implementados por qualquer classe ou struct que implemente a interface.
 - Uma classe ou struct pode implementar várias interfaces. Uma classe pode herdar uma classe base e também implementar uma ou mais interfaces.
 
-## <a name="BKMK_RelatedSections"></a>Seções relacionadas
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>Seções relacionadas
 
 - [Propriedades de interface](../classes-and-structs/interface-properties.md)  
 - [Indexadores em interfaces](../indexers/indexers-in-interfaces.md)  
 - [Como implementar eventos de interface](../events/how-to-implement-interface-events.md)
-- [Classes e structs](../classes-and-structs/index.md)  
+- [Aulas e Estruturas](../classes-and-structs/index.md)  
 - [Herança](../classes-and-structs/inheritance.md)  
 - [Métodos](../classes-and-structs/methods.md)  
 - [Polimorfismo](../classes-and-structs/polymorphism.md)  

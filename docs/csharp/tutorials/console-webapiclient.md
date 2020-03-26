@@ -3,12 +3,12 @@ title: Cria um cliente REST usando .NET Core
 description: Este tutorial ensina vários recursos no .NET Core e da linguagem C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156851"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249162"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -163,7 +163,7 @@ Esse recurso facilita a criação de tipos que funcionam apenas com um subconjun
 
 Agora que você criou o tipo, vamos desserializá-lo.
 
-Em seguida, você usará o serializador para converter JSON em objetos de C#. Substitua a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> chamada `ProcessRepositories` para o seu método pelas três linhas a seguir:
+Em seguida, você usará o serializador para converter JSON em objetos de C#. Substitua a <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> chamada `ProcessRepositories` para o seu método pelas seguintes linhas:
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ Como etapa final, vamos adicionar as informações para a última operação de 
 2016-02-08T21:27:00Z
 ```
 
-Esse formato não segue o formato <xref:System.DateTime> padrão do .NET. Por isso, você precisará escrever um método de conversão personalizado. Provavelmente você também não quer expor a cadeia de caracteres bruta aos usuários da classe `Repository`. Os atributos podem ajudar a controlar isto também. `public` Primeiro, defina uma propriedade que manterá a representação de string da data e hora em sua `Repository` classe e uma `LastPush` `readonly` propriedade que retorna uma seqüência formatada que representa a data retornada:
+Esse formato está no Tempo Universal Coordenado (UTC) <xref:System.DateTime> para <xref:System.DateTime.Kind%2A> que <xref:System.DateTimeKind.Utc>você obtenha um valor cuja propriedade é . Se você preferir uma data representada no seu fuso horário, você precisará escrever um método de conversão personalizado. Primeiro, defina `public` uma propriedade que manterá a representação `Repository` UTC `LastPush` `readonly` da data e hora em sua classe e uma propriedade que retorna a data convertida em horário local:
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-Vamos repassar as novas construções que acabamos de definir. A `LastPush` propriedade é definida usando um *membro encorpado de expressão* para o `get` acessório. Não há nenhum acessador `set`. Omitir o `set` acessório é como você define uma propriedade *somente leitura* em C#. (Sim, você pode criar propriedades *somente para gravação* em C#, mas seu valor é limitado.) O <xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> método analisa uma string <xref:System.DateTime> e cria um objeto usando um formato de `DateTime` data `CultureInfo` fornecido e adiciona metadados adicionais ao uso de um objeto. Se a operação de análise falhar, o acessador da propriedade gerará uma exceção.
-
-Para <xref:System.Globalization.CultureInfo.InvariantCulture>usar, você precisará <xref:System.Globalization> adicionar o `using` namespace `repo.cs`às diretivas em :
-
-```csharp
-using System.Globalization;
-```
+Vamos repassar as novas construções que acabamos de definir. A `LastPush` propriedade é definida usando um *membro encorpado de expressão* para o `get` acessório. Não há nenhum acessador `set`. Omitir o `set` acessório é como você define uma propriedade *somente leitura* em C#. (Sim, você pode criar propriedades *somente gravação* em C#, mas o valor delas é limitado.)
 
 Por fim, adicione mais uma instrução de saída no console, e você estará pronto para compilar e executar esse aplicativo novamente:
 

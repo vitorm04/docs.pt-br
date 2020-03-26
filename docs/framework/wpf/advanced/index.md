@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710205"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248180"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Avançado (Windows Presentation Foundation)
-Esta seção descreve algumas das áreas avançadas no WPF.  
-  
+
+Esta seção descreve algumas das áreas avançadas no WPF.
+
 ## <a name="in-this-section"></a>Nesta seção
 
-[Arquitetura do WPF](wpf-architecture.md)  
-[XAML no WPF](xaml-in-wpf.md)  
-[Classes de elementos base](base-elements.md)  
-[Árvore de elementos e serialização](element-tree-and-serialization.md)  
-[Sistema de propriedades do WPF](properties-wpf.md)  
-[Eventos no WPF](events-wpf.md)  
-[Entrada](input-wpf.md)  
-[Arrastar e soltar](drag-and-drop.md)  
-[Recursos](resources-wpf.md)  
-[Documentos](documents.md)  
-[Globalização e localização](globalization-and-localization.md)  
-[Layout](layout.md)  
-[Migração e interoperabilidade](migration-and-interoperability.md)  
-[Desempenho](performance.md)  
-[Modelo de threading](threading-model.md)  
-[Referência de API do WPF não gerenciada](wpf-unmanaged-api-reference.md)  
+[Arquitetura WPF](wpf-architecture.md)\
+[XAML em WPF](xaml-in-wpf.md)\
+[Classes de elementobase](base-elements.md)\
+[Árvore de Elementos e Serialização](element-tree-and-serialization.md)\
+[Sistema de propriedade WPF](properties-wpf.md)\
+[Eventos em WPF](events-wpf.md)\
+[Entrada](input-wpf.md)\
+[Arrastar e soltar](drag-and-drop.md)\
+[Recursos](resources-wpf.md)\
+[Documentos](documents.md)\
+[Globalização e Localização](globalization-and-localization.md)\
+[Layout](layout.md)\
+[Tipos migraram do WPF para o System.Xaml](types-migrated-from-wpf-to-system.md)\
+[Migração e Interoperabilidade](migration-and-interoperability.md)\
+[Desempenho](performance.md)\
+[Modelo de rosca](threading-model.md)\
+[Referência de API WPF não gerenciada](wpf-unmanaged-api-reference.md)\

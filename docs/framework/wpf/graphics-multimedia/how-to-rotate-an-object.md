@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 02d8144c28b7a4e54fb86fea5abb694cf7af34af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e17d3b7b9986b477df198480129edaf4c139c6bc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185961"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112057"
 ---
 # <a name="how-to-rotate-an-object"></a>Como girar um objeto
 Este exemplo mostra como girar um objeto. O exemplo primeiro <xref:System.Windows.Media.RotateTransform> cria a <xref:System.Windows.Media.RotateTransform.Angle%2A> e, em seguida, especifica seu em graus.  
@@ -42,7 +42,7 @@ Dois objetos que giram 45 graus de diferentes centros de rotação
   
  Os <xref:System.Windows.Shapes.Polyline> exemplos anteriores são <xref:System.Windows.UIElement>um . Quando você <xref:System.Windows.Media.Transform> aplica <xref:System.Windows.UIElement.RenderTransform%2A> um à <xref:System.Windows.UIElement>propriedade de <xref:System.Windows.UIElement.RenderTransformOrigin%2A> um , você pode <xref:System.Windows.Media.Transform> usar a propriedade para especificar uma origem para cada que você aplica ao elemento. Como <xref:System.Windows.UIElement.RenderTransformOrigin%2A> a propriedade usa coordenadas relativas, você pode aplicar uma transformação ao centro do elemento mesmo que você não saiba o seu tamanho. Para obter mais informações e por exemplo, consulte [Especificar a Origem de uma Transformação usando valores relativos](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md).  
   
- Para obter o exemplo completo, consulte [Amostras de Transformação 2D](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
+ Para obter a amostra completa, consulte [2D Transforms Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).  
   
 ## <a name="see-also"></a>Confira também
 

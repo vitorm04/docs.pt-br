@@ -2,17 +2,17 @@
 title: Como recuperar o valor de um elemento (LINQ para XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168681"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249201"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Como recuperar o valor de um elemento (LINQ para XML) (C#)
 Este tópico mostra como obter o valor de elementos. Há duas maneiras principais de fazer isso. Uma maneira é converter <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute> para o tipo desejado. O operador de conversão explícita converte o conteúdo do elemento ou do atributo no tipo especificado e o atribui à sua variável. Outra opção é usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> ou a propriedade <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
- Entretanto, com C#, a conversão geralmente é a melhor abordagem. Se você converter o elemento ou o atributo em um tipo anulável, o código será mais simples de criar ao recuperar o valor de um elemento (ou de um atributo) que pode ou não existir. O último exemplo deste tópico demonstra isso. No entanto, você não pode definir o conteúdo de um elemento por meio de conversão, como faria usando a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
+ Entretanto, com C#, a conversão geralmente é a melhor abordagem. Se você lançar o elemento ou atributo a um tipo de valor anulado, o código é mais simples de escrever ao recuperar o valor de um elemento (ou atributo) que pode ou não existir. O último exemplo deste tópico demonstra isso. No entanto, você não pode definir o conteúdo de um elemento por meio de conversão, como faria usando a propriedade <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemplo  
  Para recuperar o valor de um elemento, basta converter o objeto <xref:System.Xml.Linq.XElement> no tipo desejado. Você sempre pode converter um elemento em uma cadeia de caracteres, como a seguir:  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>Exemplo  
- Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe. Nesse caso, quando você atribuir o elemento convertido a um tipo que permite valor nulo (`string` ou um elemento dos tipos que permitem valor nulo no .NET Framework), se o elemento não existir, a variável atribuída será definida como `null`. O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
+ Às vezes, você tenta recuperar o valor de um elemento mesmo quando não tem certeza de que ele existe. Neste caso, quando você atribui o elemento lançado a um tipo de referência anulado ou tipo de valor anulado, `null`se o elemento não existir, a variável atribuída será definida apenas para . O código a seguir mostra que quando o elemento pode ou não existir, é mais fácil de usar a conversão do que usar a propriedade <xref:System.Xml.Linq.XElement.Value%2A>.  
   
 ```csharp  
 XElement root = new XElement("Root",  

@@ -3,12 +3,12 @@ title: Bem-vindo ao .NET
 description: Introdução à família de tecnologias do .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124215"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228791"
 ---
 # <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
@@ -34,7 +34,7 @@ Além disso, siga os eventos .NET mais recentes:
 Para obter informações sobre os recursos mais recentes adicionados às implementações do .NET e os idiomas com suporte, consulte os seguintes artigos:
 
 - [Novidades do .NET Core](core/whats-new/index.md)
-- [O que há de novo no Quadro .NET](framework/whats-new/index.md)
+- [Novidades no .NET Framework](framework/whats-new/index.md)
 - [Novidades no C#](csharp/whats-new/index.md)
 - [Novidades do Visual Basic](visual-basic/getting-started/whats-new.md)
 
@@ -42,13 +42,13 @@ Para obter informações sobre os recursos mais recentes adicionados às impleme
 
 Esta documentação abrange a extensão do .NET entre plataformas e linguagens. Você pode começar com o .NET e suas linguagens em qualquer uma das seções a seguir:
 
-- [Guia do .NET](standard/index.md)
-- [Guia do .NET Core](core/index.md)
-- [Guia do .NET Framework](framework/index.md)
+- [.NET Guia](standard/index.md)
+- [.NET Core Guide](core/index.md)
+- [Guia do .NET Framework](framework/index.yml)
 - [Guia C#](csharp/index.yml)
-- [Guia de F#](fsharp/index.yml)
-- [Guia do Visual Basic](visual-basic/index.yml)
-- [Guia do ML.NET](machine-learning/index.yml)
+- [Guia F#](fsharp/index.yml)
+- [Guia Básico Visual](visual-basic/index.yml)
+- [Guia de ML.NET](machine-learning/index.yml)
 - [.NET para Apache Spark](spark/index.yml)
 - [Arquitetura do Aplicativo .NET](architecture/index.yml)
 

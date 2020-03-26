@@ -1,25 +1,30 @@
 ---
-title: Operador padrão – Referência do C#
-description: Use o operador padrão para produzir o valor padrão de um tipo
-ms.date: 08/01/2019
+title: expressões de valor padrão - referência C#
+description: Use as expressões de valor padrão para obter o valor padrão de um tipo
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399479"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507172"
 ---
-# <a name="default-operator-c-reference"></a>operador padrão (referência do C#)
+# <a name="default-value-expressions-c-reference"></a>expressões de valor padrão (referência C#)
 
-O operador `default` produz o [valor padrão](../builtin-types/default-values.md) de um tipo. O argumento para o operador `default` deve ser o nome ou um parâmetro de tipo.
-
-O exemplo a seguir mostra o uso do operador `default`:
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+Uma expressão de valor padrão produz o [valor padrão](../builtin-types/default-values.md) de um tipo. Existem dois tipos de expressões de valor padrão: a chamada padrão do [operador](#default-operator) e uma [literal padrão](#default-literal).
 
 Você também `default` usa a palavra-chave como o rótulo de caso padrão dentro de uma [ `switch` declaração](../keywords/switch.md).
+
+## <a name="default-operator"></a>operador default
+
+O argumento do operador `default` deve ser o nome de um tipo ou um parâmetro de tipo, como mostra o exemplo a seguir:
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>literal padrão
 
@@ -45,4 +50,4 @@ Para obter mais informações sobre o literal `default`, confira a [nota da prop
 - [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
 - [Valores padrão dos tipos C#](../builtin-types/default-values.md)
-- [Genéricos no .NET](../../../standard/generics/index.md)
+- [Generics in .NET (Genéricos no .NET)](../../../standard/generics/index.md)
