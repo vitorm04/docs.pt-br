@@ -8,31 +8,31 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925979"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111901"
 ---
-# <a name="transformations"></a><span data-ttu-id="e5a67-102">Transformações</span><span class="sxs-lookup"><span data-stu-id="e5a67-102">Transformations</span></span>
-<span data-ttu-id="e5a67-103">Transformações são usadas para girar, dimensionar, converter ou distorcer <xref:System.Windows.FrameworkElement> objetos.</span><span class="sxs-lookup"><span data-stu-id="e5a67-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="8292d-102">Transformações</span><span class="sxs-lookup"><span data-stu-id="8292d-102">Transformations</span></span>
+<span data-ttu-id="8292d-103">As transformações são usadas para girar, <xref:System.Windows.FrameworkElement> dimensionar, traduzir ou distorcer objetos.</span><span class="sxs-lookup"><span data-stu-id="8292d-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5a67-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="e5a67-104">In This Section</span></span>  
- [<span data-ttu-id="e5a67-105">Visão geral de transformações</span><span class="sxs-lookup"><span data-stu-id="e5a67-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="e5a67-106">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="e5a67-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8292d-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8292d-104">In This Section</span></span>  
+ [<span data-ttu-id="8292d-105">Visão geral de transformações</span><span class="sxs-lookup"><span data-stu-id="8292d-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="8292d-106">Tópicos de como fazer</span><span class="sxs-lookup"><span data-stu-id="8292d-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5a67-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e5a67-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8292d-107">Confira também</span><span class="sxs-lookup"><span data-stu-id="8292d-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="e5a67-108">Elementos gráficos e multimídia</span><span class="sxs-lookup"><span data-stu-id="e5a67-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="e5a67-109">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="e5a67-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="e5a67-110">Layout</span><span class="sxs-lookup"><span data-stu-id="e5a67-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="8292d-108">Gráficos e Multimídia</span><span class="sxs-lookup"><span data-stu-id="8292d-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="8292d-109">Visão geral de renderização de gráficos do WPF</span><span class="sxs-lookup"><span data-stu-id="8292d-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="8292d-110">Layout</span><span class="sxs-lookup"><span data-stu-id="8292d-110">Layout</span></span>](../advanced/layout.md)
