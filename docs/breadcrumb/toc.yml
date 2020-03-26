@@ -391,7 +391,7 @@
                 - name: Aprimorar aplicativos do Windows Forms
                   tocHref: /dotnet/framework/winforms/advanced/
                   topicHref: /dotnet/framework/winforms/advanced/index
-                - name: Controles do Windows Forms
+                - name: Controles de formulários do Windows
                   tocHref: /dotnet/framework/winforms/controls/
                   topicHref: /dotnet/framework/winforms/controls/index
             - name: Windows Presentation Foundation
@@ -497,9 +497,6 @@
                 - name: Namespaces
                   tocHref: /dotnet/csharp/programming-guide/namespaces/
                   topicHref: /dotnet/csharp/programming-guide/namespaces/index
-                - name: Tipos que permitem valor nulo
-                  tocHref: /dotnet/csharp/programming-guide/nullable-types/
-                  topicHref: /dotnet/csharp/programming-guide/nullable-types/index
                 - name: Conceitos de programação
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
@@ -695,3 +692,10 @@
         - name: Guia do .NET para Apache Spark
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
+        - name: Azure
+          tocHref: /dotnet/azure/
+          topicHref: /dotnet/azure/index
+          items:
+            - name: SDK do Azure para .NET
+              tocHref: /dotnet/azure/sdk/
+              topicHref: /dotnet/azure/sdk/index
