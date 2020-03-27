@@ -2,12 +2,12 @@
 title: Tutoriais do C#
 description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346793"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345100"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 
@@ -29,7 +29,7 @@ No tutorial [Números em C#](intro-to-csharp/numbers-in-csharp.yml), você apren
 
 Esse tutorial pressupõe a conclusão da lição [Olá, Mundo](intro-to-csharp/hello-world.yml).
 
-## <a name="branches-and-loops"></a>[Ramificações e loops](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loops"></a>[Loops e branches](intro-to-csharp/branches-and-loops.yml)
 
 O tutorial [Branches e loops](intro-to-csharp/branches-and-loops.yml) ensina os conceitos básicos da seleção de diferentes caminhos de execução de código com base nos valores armazenados em variáveis. Você aprenderá os conceitos básicos do fluxo de controle, que são os fundamentos de como os programas tomam decisões e escolhem ações diferentes. Este tutorial também está disponível [para execução local no seu computador](intro-to-csharp/branches-and-loops-local.md).
 
@@ -56,7 +56,7 @@ Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão dis
 
 ## <a name="general-tutorials"></a>Tutoriais gerais
 
-Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Core](../../core/index.md):
+Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Core](../../core/index.yml):
 
 * [Aplicativo de console](console-teleprompter.md): demonstra a E/S de console, a estrutura de um aplicativo de console e os conceitos básicos do modelo de programação assíncrono baseado em tarefa.
 * [Cliente REST](console-webapiclient.md): demonstra as comunicações da Web, serialização JSON e recursos orientados a objeto na linguagem C#.

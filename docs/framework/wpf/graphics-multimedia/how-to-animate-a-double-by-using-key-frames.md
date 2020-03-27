@@ -1,5 +1,5 @@
 ---
-title: 'Como: Animar um duplo usando quadros principais'
+title: Como animar um duplo usando quadros-chave
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9eab794cc8411230226cddc97beaa13c1bdd9405
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010196"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344925"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Como: Animar um duplo usando quadros principais
-Este exemplo mostra como animar o valor de uma propriedade que aceita um <xref:System.Double> usando quadros-chave.  
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Como animar um duplo usando quadros-chave
+Este exemplo mostra como animar o valor de <xref:System.Double> uma propriedade que leva a usando quadros-chave.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir move um retângulo por uma tela. O exemplo usa o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> classe para animar a <xref:System.Windows.Media.TranslateTransform.X%2A> propriedade de uma <xref:System.Windows.Media.TranslateTransform> aplicado a um <xref:System.Windows.Shapes.Rectangle>. Essa animação, que se repete indefinidamente, usa três quadros chave da seguinte maneira:  
+ O exemplo a seguir move um retângulo por uma tela. O exemplo <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> usa a classe <xref:System.Windows.Media.TranslateTransform.X%2A> para <xref:System.Windows.Media.TranslateTransform> animar a <xref:System.Windows.Shapes.Rectangle>propriedade de um aplicado a um . Essa animação, que se repete indefinidamente, usa três quadros chave da seguinte maneira:  
   
-1. Durante os primeiros três segundos, usa uma instância da <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> classe para mover o retângulo ao longo de um caminho a uma taxa constante de sua posição inicial até a posição 500. Quadros-chave lineares como <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> criam uma transição linear suave entre valores.  
+1. Durante os primeiros três segundos, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> usa uma instância da classe para mover o retângulo ao longo de um caminho a uma taxa constante de sua posição inicial para a posição de 500. Quadros de <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> chaves lineares como criar uma transição linear suave entre os valores.  
   
-2. No final do quarto segundo, usa uma instância da <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> classe para mover repentinamente o retângulo para a próxima posição. Quadros chave discretos como <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> criam saltos repentinos entre valores. Neste exemplo, o retângulo está na posição inicial e, de repente, aparece na posição 500.  
+2. No final do quarto segundo, usa <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> uma instância da classe para de repente mover o retângulo para a próxima posição. Quadros-chave discretos <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> como criar saltos repentinos entre os valores. Neste exemplo, o retângulo está na posição inicial e, de repente, aparece na posição 500.  
   
-3. Os dois segundos finais, usa uma instância da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> classe para mover o retângulo de volta para sua posição inicial. Como quadros-chave spline <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> criam uma transição variável entre valores de acordo com o valor da <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> propriedade. Neste exemplo, o retângulo começa a se mover lentamente e acelera exponencialmente em direção ao final do segmento de tempo.  
+3. Nos dois segundos finais, usa <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> uma instância da classe para mover o retângulo de volta para sua posição inicial. Quadros-chave spline como <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> criar uma transição variável <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> entre valores de acordo com o valor da propriedade. Neste exemplo, o retângulo começa a se mover lentamente e acelera exponencialmente em direção ao final do segmento de tempo.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/AltDoubleAnimationUsingKeyFramesExample.xaml#altdoubleanimationusingkeyframeswholepage)]  
   
- Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Para ver o exemplo completo, consulte [Exemplo de animação de quadro-chave](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation).  
   
- Para consistência com outros exemplos de animação, as versões de código deste exemplo usam um <xref:System.Windows.Media.Animation.Storyboard> objeto ao qual aplicar o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Como alternativa, ao aplicar uma única animação no código, é mais simples usar o <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método em vez de usar um <xref:System.Windows.Media.Animation.Storyboard>. Para obter um exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
+ Para obter consistência com outros exemplos de animação, <xref:System.Windows.Media.Animation.Storyboard> as versões de código deste exemplo usam um objeto para aplicar o <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Alternativamente, ao aplicar uma única animação em código, <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> é mais <xref:System.Windows.Media.Animation.Storyboard>simples usar o método em vez de usar um . Por exemplo, consulte [Animar uma propriedade sem usar um storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>

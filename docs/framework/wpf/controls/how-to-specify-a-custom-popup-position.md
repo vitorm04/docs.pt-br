@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar uma posição de pop-up personalizada'
+title: Como especificar uma posição de pop-up personalizada
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea8d73c51dd018608b95104f00bf341ff434225c
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911203"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344960"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Como: Especificar uma posição de pop-up personalizada
-Este exemplo mostra como especificar uma posição personalizada para um <xref:System.Windows.Controls.Primitives.Popup> controlar quando o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> estiver definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
+# <a name="how-to-specify-a-custom-popup-position"></a>Como especificar uma posição de pop-up personalizada
+Este exemplo mostra como especificar <xref:System.Windows.Controls.Primitives.Popup> uma posição <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> personalizada para <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>um controle quando a propriedade é definida como .  
   
 ## <a name="example"></a>Exemplo  
- Quando o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> estiver definida como <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>, o <xref:System.Windows.Controls.Primitives.Popup> chama uma instância definida do <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegar. Esse delegado retorna um conjunto de pontos possíveis que são relativas ao canto superior esquerdo da área de destino e o canto superior esquerdo do <xref:System.Windows.Controls.Primitives.Popup>. O <xref:System.Windows.Controls.Primitives.Popup> posicionamento ocorre no ponto em que oferece melhor visibilidade.  
+ Quando <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> a propriedade <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>é <xref:System.Windows.Controls.Primitives.Popup> definida para , <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> a chamada é uma instância definida do delegado. Este delegado retorna um conjunto de possíveis pontos que são relativos ao canto <xref:System.Windows.Controls.Primitives.Popup>superior esquerdo da área alvo e ao canto superior esquerdo do . A <xref:System.Windows.Controls.Primitives.Popup> colocação ocorre no ponto que proporciona a melhor visibilidade.  
   
- O exemplo a seguir mostra como definir a posição de um <xref:System.Windows.Controls.Primitives.Popup> definindo o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> propriedade <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Ele também mostra como criar e atribuir uma <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> delegado para posicionar o <xref:System.Windows.Controls.Primitives.Popup>.  O delegado de retorno de chamada retorna dois <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> objetos.  Se o <xref:System.Windows.Controls.Primitives.Popup> está oculto pela borda de tela na primeira posição, o <xref:System.Windows.Controls.Primitives.Popup> é colocado na segunda posição.  
+ O exemplo a seguir mostra como <xref:System.Windows.Controls.Primitives.Popup> definir <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> a <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>posição de a definindo a propriedade como . Ele também mostra como criar <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> e atribuir um <xref:System.Windows.Controls.Primitives.Popup>delegado a fim de posicionar o .  O delegado de <xref:System.Windows.Controls.Primitives.CustomPopupPlacement> retorno retorna dois objetos.  Se <xref:System.Windows.Controls.Primitives.Popup> o estiver escondido por uma borda <xref:System.Windows.Controls.Primitives.Popup> de tela na primeira posição, o é colocado na segunda posição.  
   
  [!code-xaml[PopupCustomPlacement#CustomPlacement](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml#customplacement)]  
   
@@ -30,10 +30,10 @@ Este exemplo mostra como especificar uma posição personalizada para um <xref:S
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- Para ver o exemplo completo, confira [Exemplo de posicionamento do pop-up](https://go.microsoft.com/fwlink/?LinkID=160032).  
+ Para ver o exemplo completo, confira [Exemplo de posicionamento do pop-up](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Controls.Primitives.Popup>
 - [Visão geral do pop-up](popup-overview.md)
-- [Tópicos de instruções](popup-how-to-topics.md)
+- [Tópicos explicativos ](popup-how-to-topics.md)

@@ -4,12 +4,12 @@ description: Descreve os componentes de arquitetura do .NET, como o .NET Standar
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291778"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344158"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -38,7 +38,7 @@ Há quatro implementações principais de .NET que a Microsoft desenvolve e mant
 
 O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, macOS e Linux. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), o [Windows Forms](../framework/winforms/windows-forms-overview.md) e o [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) são executados no .NET Core.
 
-Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
+Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.yml) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -107,8 +107,8 @@ Os documentos iso/iec oficiais estão disponíveis na página [Normas Disponíve
 
 - [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core Guide](../core/index.md)
-- [Guia do .NET Framework](../framework/index.yml)
+- [.NET Core Guide](../core/index.yml)
+- [.NET Framework Guide](../framework/index.yml)
 - [Guia C#](../csharp/index.yml)
 - [Guia F#](../fsharp/index.yml)
 - [Guia Básico Visual](../visual-basic/index.yml)

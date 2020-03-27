@@ -2,15 +2,15 @@
 title: Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184879"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344972"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Como adicionar programaticamente a capacidade de descoberta para um cliente e serviço do WCF
-Este tópico explica como tornar um serviço da Windows Communication Foundation (WCF) descoberto. É baseado na amostra [self-host.](https://go.microsoft.com/fwlink/?LinkId=145523)  
+Este tópico explica como tornar um serviço da Windows Communication Foundation (WCF) descoberto. É baseado na amostra [self-host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar a amostra de serviço self-host existente para o Discovery  
   
@@ -124,7 +124,7 @@ Este tópico explica como tornar um serviço da Windows Communication Foundation
   
      Este método usa o endereço `FindCalculatorServiceAddress` de ponto final retornado para chamar o serviço de calculadora.  
   
-11. Dentro `InvokeCalculatorService` do método, crie `CalculatorServiceClient` uma instância da classe. Esta classe é definida pela amostra [Self-Host.](https://go.microsoft.com/fwlink/?LinkId=145523) Foi gerado usando Svcutil.exe.  
+11. Dentro `InvokeCalculatorService` do método, crie `CalculatorServiceClient` uma instância da classe. Esta classe é definida pela amostra [Self-Host.](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) Foi gerado usando Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ Este tópico explica como tornar um serviço da Windows Communication Foundation
     ```  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma lista do código para esta amostra. Como este código é baseado na amostra [self-host,](https://go.microsoft.com/fwlink/?LinkId=145523) apenas os arquivos que são alterados são listados. Para obter mais informações sobre a amostra auto-host, consulte [Instruções de configuração](https://go.microsoft.com/fwlink/?LinkId=145522).  
+ A seguir está uma lista do código para esta amostra. Como este código é baseado na amostra [self-host,](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) apenas os arquivos que são alterados são listados. Para obter mais informações sobre a amostra auto-host, consulte [Instruções de configuração](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
   
 ```csharp  
 // Service.cs  

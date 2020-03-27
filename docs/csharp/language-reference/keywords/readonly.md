@@ -1,18 +1,18 @@
 ---
 title: Palavra-chave readonly – Referência de C#
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399353"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345146"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -28,7 +28,7 @@ A `readonly` palavra-chave é um modificador que pode ser usado em quatro contex
   > [!WARNING]
   > Um tipo externamente visível que contém um campo somente leitura externamente visível que seja um tipo de referência mutável pode ser uma vulnerabilidade de segurança e pode acionar o aviso [CA2104](/visualstudio/code-quality/ca2104) : "Não declare somente tipos de referência mutáveis".
 
-- Em uma `readonly` `struct` [ `readonly struct` definição,](#readonly-struct-example)indica que o é imutável.
+- Em `readonly struct` uma definição `readonly` de tipo, indica que o tipo de estrutura é imutável. Para obter mais [ `readonly` ](../builtin-types/struct.md#readonly-struct) informações, consulte a seção de estrutura do artigo [Tipos de Estrutura.](../builtin-types/struct.md)
 - Em uma `readonly` `struct` [ `readonly` definição de membro,](#readonly-member-examples)indica que um membro de um não muta o estado interno da estrutura.
 - Em um [ `ref readonly` retorno do método,](#ref-readonly-return-example)o modificador indica que o `readonly` método retorna uma referência e as gravações não são permitidas a essa referência.
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 você receberá a mensagem de erro do compilador:
 
 **Um campo somente leitura não pode ser atribuído (exceto em um construtor ou em um inicializador de variáveis)**
-
-## <a name="readonly-struct-example"></a>Exemplo de struct readonly
-
-O modificador `readonly` em uma definição `struct` declara que o struct é **imutável**. Cada campo da instância de `struct` precisa ser marcado como `readonly`, conforme é mostrado no exemplo a seguir:
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-O exemplo anterior usa as [propriedades automáticas de readonly](../../properties.md#read-only) para declarar seu armazenamento. Isso instrui o compilador a criar campos de suporte `readonly` para essas propriedades. Você também pode declarar campos `readonly` diretamente:
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-Adicionar um campo não marcado como `readonly` gera o erro do compilador `CS8340`: "Os campos da instância de structs readonly devem ser readonly."
 
 ## <a name="readonly-member-examples"></a>Leia apenas exemplos de membros
 
@@ -144,6 +122,7 @@ Você pode `readonly` adicionar o modificador nesses locais, mas não terá nenh
 O `readonly` modificador `ref return` em um indica que a referência retornada não pode ser modificada. O exemplo a seguir retorna uma referência para a origem. Ele usa `readonly` o modificador para indicar que os chamadores não podem modificar a origem:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
@@ -159,7 +138,7 @@ Você também pode ver as propostas de especificação do idioma:
 
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [C# Palavras-chave](index.md)
 - [Modificadores](index.md)
 - [const](const.md)
 - [Campos](../../programming-guide/classes-and-structs/fields.md)

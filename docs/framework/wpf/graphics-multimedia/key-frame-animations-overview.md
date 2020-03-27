@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eb590b07eae3b76b3a206b9731997a6bc2c90d7
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186677"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344902"
 ---
 # <a name="key-frame-animations-overview"></a>Visão geral das animações de quadro-chave
 Este tópico apresenta as animações de quadro-chave. As animações de quadro-chave permitem realizar animações usando mais de dois valores de destino e controlam o método de interpolação de uma animação.  
@@ -289,7 +289,7 @@ Um spline-chave com pontos de controle (0,25, 0,5) e (0,75, 1,0)
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Amostra de animação de spline-chave](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
-- [Amostra de animação de KeyFrame](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Amostra de animação de KeyFrame](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)
 - [Visão geral da animação](animation-overview.md)
 - [Visão geral de storyboards](storyboards-overview.md)
 - [Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)

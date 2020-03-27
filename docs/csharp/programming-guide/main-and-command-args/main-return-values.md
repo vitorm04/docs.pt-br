@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77504006"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345121"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -25,7 +25,7 @@ Se o valor retornado de `Main` não for usado, o retorno de `void` permite um c�
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.md). Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/cli-create-console-app.md).
+Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.yml). Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/cli-create-console-app.md).
 
 Modifique o método `Main` em *program.cs* da seguinte maneira:
 
@@ -99,5 +99,5 @@ Quando o ponto de entrada do aplicativo retorna um `Task` ou `Task<int>`, o comp
 
 - [C# Guia de Programação](../index.md)
 - [C# Referência](../index.md)
-- [Main() e argumentos de linha de comando](index.md)
+- [Principais() e Argumentos de linha de comando](index.md)
 - [Como exibir argumentos de linha de comando](./how-to-display-command-line-arguments.md)

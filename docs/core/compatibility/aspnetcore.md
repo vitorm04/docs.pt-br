@@ -2,15 +2,15 @@
 title: ASP.NET Core alterações
 titleSuffix: ''
 description: Lista as mudanças de quebra no núcleo ASP.NET.
-ms.date: 03/25/2020
+ms.date: 03/26/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 05272032f2b93c8ae89377a20e6fdafc2ff0eb7b
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291711"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345333"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações
 
@@ -66,15 +66,20 @@ As seguintes alterações de quebra estão documentadas nesta página:
 - [SignalR: Métodos de hubConexão removidos](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [SignalR: Os construtores do HubConnectionContext mudaram](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR: Alteração do nome do pacote do cliente JavaScript](#signalr-javascript-client-package-name-changed)
+- [SignalR: MessagePack Hub Protocol mudou para o pacote MessagePack 2.x](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
 - [Sinalizador: APIs obsoletas](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [SignalR: UseSignalR e UseConnections métodos removidos](#signalr-usesignalr-and-useconnections-methods-removed)
-- [SPAs: SpaServices e NodeServices marcados como obsoletos](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [SPAs: SpaServices e NodeServices console logger recuo de forma padrão](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [SPAs: SpaServices e NodeServices marcados como obsoletos](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Estrutura de destino: .NET Framework não suportado](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>núcleo ASP.NET 5.0
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
 
 ***
 

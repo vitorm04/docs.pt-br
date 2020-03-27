@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248902"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345043"
 ---
 # <a name="get-started-with-net-framework"></a>Comece com o .NET Framework
 
 .NET Framework é um ambiente de execução em tempo de execução que gerencia aplicativos que visam o .NET Framework. Ele consiste no Common Language Runtime, que fornece gerenciamento de memória e outros serviços do sistema, além de em uma biblioteca de classes extensa, o que permite que programadores usem o código robusto e confiável para todas as áreas principais do desenvolvimento de aplicativos.
 
 > [!NOTE]
-> .NET Framework está disponível apenas em sistemas Windows. Você pode usar [o .NET Core](../../core/index.md) para desenvolver e executar aplicativos no Windows, MacOS e Linux.
+> .NET Framework está disponível apenas em sistemas Windows. Você pode usar [o .NET Core](../../core/index.yml) para desenvolver e executar aplicativos no Windows, MacOS e Linux.
 
 ## <a name="what-is-net-framework"></a>O que é .NET Framework?
 
@@ -80,12 +80,12 @@ Para obter mais informações sobre o desenvolvimento de aplicativos que visam o
 | [.NET Framework e lançamentos fora da banda](the-net-framework-and-out-of-band-releases.md) | Descreve as versões fora de faixa do .NET Framework e como usá-las em seu aplicativo. |
 | [Requisitos do sistema](system-requirements.md) | Lista os requisitos de hardware e software para executar o .NET Framework. |
 | [.NET Core e software livre](net-core-and-open-source.md) | Descreve o .NET Core em relação ao .NET Framework e como acessar os projetos .NET Core de código aberto. |
-| [Documentação do .NET Core](../../core/index.md) | Fornece a documentação conceitual e de referência de API para .NET Core. |
+| [Documentação do .NET Core](../../core/index.yml) | Fornece a documentação conceitual e de referência de API para .NET Core. |
 | [.NET Standard](../../standard/net-standard.md) | Discute o .NET Standard, uma especificação versionada que as implementações individuais .NET suportam para garantir que um conjunto consistente de APIs esteja disponível em várias plataformas.
 
 ## <a name="see-also"></a>Confira também
 
-- [.NET Framework](../index.yml)
+- [Guia do .NET Framework](../index.yml)
 - [Novidades](../whats-new/index.md)
 - [Navegador da API .NET](../../../api/index.md)
 - [Guia de desenvolvimento](../development-guide.md)

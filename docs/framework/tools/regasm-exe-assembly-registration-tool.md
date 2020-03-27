@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104959"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345001"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Ferramenta de Registro de Assembly)
 
@@ -28,7 +28,7 @@ No prompt de comando, digite o seguinte:
 regasm assemblyFile [options]
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
@@ -54,7 +54,7 @@ regasm assemblyFile [options]
 
 É possível usar a opção **/regfile** para gerar um arquivo .reg que contém as entradas do Registro em vez de fazer as alterações diretamente no Registro. É possível atualizar o Registro em um computador importando-se o arquivo .reg com a ferramenta Editor do Registro (Regedit.exe). O arquivo .reg não contém atualizações do Registro que possam ser feitas por funções do Registro definidas pelo usuário.  Observe que a opção **/regfile** emite apenas entradas do Registro para classes gerenciadas.  Essa opção não emite entradas para `TypeLibID`s ou `InterfaceID`S.
 
-Quando você especifica a opção **/tlb**, Regasm.exe gera e registra uma biblioteca de tipos que descreve os tipos encontrados no assembly. Regasm.exe coloca as bibliotecas de tipos geradas no diretório de trabalho atual ou no diretório especificado para o arquivo de saída. A geração de uma biblioteca de tipos para um assembly que faça referência a outros assemblies pode fazer várias bibliotecas de tipos serem geradas de uma só vez. É possível usar a biblioteca de tipos para fornecer informações de tipo para ferramentas de desenvolvimento como o Visual Studio. Você não deverá usar a opção **/tlb** se o assembly que você está sendo registrando tiver sido produzido pelo Importador da Biblioteca de Tipos ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). Não é possível exportar uma biblioteca de tipos com base em um assembly que foi importado de uma biblioteca de tipos. O uso da opção **/tlb** tem o mesmo efeito do uso do Exportador da Biblioteca de Tipos ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) e de Regasm.exe, com a exceção de Tlbexp.exe não registra a biblioteca de tipos produzida.  Se usar a opção **/tlb** para registrar uma biblioteca de tipos, poderá usar a opção **/tlb** com a opção **/unregister** para cancelar o registro da biblioteca de tipos. O uso das duas opções juntas cancelará o registro das entradas da biblioteca de tipos e da interface, que podem limpar o Registro consideravelmente.
+Quando você especifica a opção **/tlb**, Regasm.exe gera e registra uma biblioteca de tipos que descreve os tipos encontrados no assembly. Regasm.exe coloca as bibliotecas de tipos geradas no diretório de trabalho atual ou no diretório especificado para o arquivo de saída. A geração de uma biblioteca de tipos para um assembly que faça referência a outros assemblies pode fazer várias bibliotecas de tipos serem geradas de uma só vez. É possível usar a biblioteca de tipos para fornecer informações de tipo para ferramentas de desenvolvimento como o Visual Studio. Você não deverá usar a opção **/tlb** se o assembly que você está sendo registrando tiver sido produzido pelo Importador da Biblioteca de Tipos ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)). Não é possível exportar uma biblioteca de tipos com base em um assembly que foi importado de uma biblioteca de tipos. O uso da opção **/tlb** tem o mesmo efeito do uso do Exportador da Biblioteca de Tipos ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) e de Regasm.exe, com a exceção de Tlbexp.exe não registra a biblioteca de tipos produzida.  Se você usar a opção **/tlb** para registrar uma biblioteca de tipos, você pode usar a opção **/tlb** com a opção **/unregister** para cancelar o registro da biblioteca do tipo. O uso das duas opções juntas cancelará o registro das entradas da biblioteca de tipos e da interface, que podem limpar o Registro consideravelmente.
 
 Quando você registra um assembly a ser usado pelo COM, Regasm.exe adiciona entradas ao Registro no computador local. Mais especificamente, ele cria chaves do Registro que dependem da versão que permitem a execução de várias versões do mesmo assembly lado a lado em um computador. Na primeira vez em que um assembly é registrado, uma chave de nível superior é criada para o assembly e uma subchave exclusiva é criada para a versão específica. Sempre que você registra uma nova versão do assembly, Regasm.exe cria uma subchave para a nova versão.
 
@@ -85,7 +85,7 @@ regasm myTest.dll /tlb:myTest.tlb
 ## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
-- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](tlbexp-exe-type-library-exporter.md)
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Tipo De Biblioteca Exportadora)](tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (Importador de Biblioteca sinuosa)](tlbimp-exe-type-library-importer.md)
 - [Registrando assemblies com o COM](../interop/registering-assemblies-with-com.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Comandos](developer-command-prompt-for-vs.md)

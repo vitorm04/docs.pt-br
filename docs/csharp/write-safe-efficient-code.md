@@ -4,12 +4,12 @@ description: Aprimoramentos recentes na linguagem C# permitem escrever código s
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506977"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345090"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -17,11 +17,11 @@ Novos recursos em C# permitem escrever código seguro verificável com melhor de
 
 Grande parte do código de exemplo neste artigo usa recursos adicionados no C# 7.2. Para usar esses recursos, é necessário configurar seu projeto para usar o C# 7.2 ou posterior. Para obter mais informações sobre a definição da versão do idioma, consulte [configurar a versão do idioma](language-reference/configure-language-version.md).
 
-Este artigo se concentra em técnicas para o gerenciamento eficiente de recursos. Uma vantagem de usar tipos de valor é que eles geralmente evitam alocações de heap. A desvantagem é que eles são copiados por valor. Essa compensação dificulta a otimização de algoritmos que operam em grandes quantidades de dados. Os novos recursos de linguagem no C# 7.2 oferecem mecanismos que habilitam o código eficiente seguro que usa referências para tipos de valor. Use esses recursos criteriosamente para minimizar tanto as alocações quanto as operações de cópia. Este artigo explora esses novos recursos.
+Este artigo se concentra em técnicas para o gerenciamento eficiente de recursos. Uma vantagem de usar tipos de valor é que eles geralmente evitam alocações de heap. A desvantagem é que eles são copiados por valor. Essa troca torna mais difícil otimizar algoritmos que operam em grandes quantidades de dados. Os novos recursos de linguagem no C# 7.2 oferecem mecanismos que habilitam o código eficiente seguro que usa referências para tipos de valor. Use esses recursos criteriosamente para minimizar tanto as alocações quanto as operações de cópia. Este artigo explora esses novos recursos.
 
 Este artigo se concentra nas seguintes técnicas de gerenciamento de recursos:
 
-- Declare [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) a para expressar que um tipo é **imutável** e permite [`in`](language-reference/keywords/in-parameter-modifier.md) que o compilador salve cópias ao usar parâmetros.
+- Declare [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) a para expressar que um tipo é **imutável**. Isso permite que o compilador salve [`in`](language-reference/keywords/in-parameter-modifier.md) cópias defensivas ao usar parâmetros.
 - Se um tipo não puder ser imutável, declare `struct` os membros `readonly` para indicar que o membro não modifica o estado.
 - Use [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) um retorno quando o `struct` valor <xref:System.IntPtr.Size?displayProperty=nameWithType> de retorno for maior do que e a vida útil do armazenamento for maior do que o método que devolve o valor.
 - Quando o tamanho de um `readonly struct` é maior que <xref:System.IntPtr.Size?displayProperty=nameWithType>, você deve passá-lo como um parâmetro `in` por motivos de desempenho.

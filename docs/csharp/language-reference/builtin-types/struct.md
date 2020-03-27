@@ -1,6 +1,6 @@
 ---
 title: Tipos de estrutura - Referência C#
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507237"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345142"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -24,6 +24,24 @@ Um *tipo de estrutura* (ou tipo de *estrutura)* é um tipo de [valor](value-type
 Os tipos de estrutura têm *semântica de valor.* Ou seja, uma variável de um tipo de estrutura contém uma instância do tipo. Por padrão, os valores variáveis são copiados na atribuição, passando um argumento para um método e retornando um resultado do método. No caso de uma variável do tipo estrutura, uma instância do tipo é copiada. Para obter mais informações, consulte [Tipos de valor](value-types.md).
 
 Normalmente, você usa tipos de estrutura para projetar pequenos tipos centrados em dados que fornecem pouco ou nenhum comportamento. Por exemplo, .NET usa tipos de estrutura para representar um número [(inteiro](integral-numeric-types.md) e [real),](floating-point-numeric-types.md)um [valor booleano,](bool.md)um [caractere Unicode,](char.md)uma [instância de tempo](xref:System.DateTime). Se você está focado no comportamento de um tipo, considere definir uma [classe.](../keywords/class.md) Os tipos de classe têm *semântica de referência.* Ou seja, uma variável de um tipo de classe contém uma referência a uma instância do tipo, não à instância em si.
+
+Como os tipos de estrutura têm semântica de valor, recomendamos que você defina tipos de estrutura *imutáveis.*
+
+## <a name="readonly-struct"></a>`readonly`Struct
+
+Começando com C# 7.2, `readonly` você usa o modificador para declarar que um tipo de estrutura é imutável:
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+Todos os membros `readonly` de dados de uma estrutura devem ser lidos apenas da seguinte forma:
+
+- Qualquer declaração de campo deve ter o [ `readonly` modificador](../keywords/readonly.md)
+- Qualquer propriedade, incluindo as implementadas automaticamente, deve ser somente leitura
+
+Isso garante que nenhum `readonly` membro de uma estrutura modifica o estado da estrutura.
+
+> [!NOTE]
+> Em `readonly` uma estrutura, um membro de dados de um tipo de referência mutável ainda pode mutar seu próprio estado. Por exemplo, você <xref:System.Collections.Generic.List%601> não pode substituir uma instância, mas você pode adicionar novos elementos a ela.
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>Limitações com o design de um tipo de estrutura
 
@@ -63,9 +81,11 @@ Para qualquer tipo de estrutura, existem conversões <xref:System.ValueType?disp
 
 Para obter mais informações, consulte a seção [Structs](~/_csharplang/spec/structs.md) da [especificação do idioma C#.](~/_csharplang/spec/introduction.md)
 
+Para obter `readonly` mais informações sobre estruturas, consulte a [nota](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)de proposta do recurso .
+
 ## <a name="see-also"></a>Confira também
 
 - [Referência do C#](../index.md)
 - [Diretrizes de design - Escolha entre classe e estrutura](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
 - [Diretrizes de design - Projeto de estrutura](../../../standard/design-guidelines/struct.md)
-- [Classes e structs](../../programming-guide/classes-and-structs/index.md)
+- [Aulas e estruturas](../../programming-guide/classes-and-structs/index.md)

@@ -1,14 +1,14 @@
 ---
 title: O que é o Construtor de Modelo e como ele funciona?
 description: Como usar o Construtor de Modelo do ML.NET para treinar automaticamente um modelo de machine learning
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399220"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344785"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -23,7 +23,7 @@ Não é necessário ter experiência de aprendizado de máquina para usar o Cons
 > [!NOTE]
 > O Construtor de Modelo está atualmente na Versão Prévia.
 
-## <a name="scenarios"></a>Cenários
+## <a name="scenario"></a>Cenário
 
 Você pode trazer vários cenários diferentes para o Construtor de Modelo para gerar um modelo de machine learning para seu aplicativo.
 
@@ -38,47 +38,41 @@ Um cenário é uma descrição do tipo de previsão que você deseja fazer usand
 
 No Model Builder, você precisa selecionar um cenário. O tipo de cenário depende do tipo de previsão que você está tentando fazer.
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Prever uma categoria (quando há apenas duas categorias)
+#### <a name="text-classification"></a>Classificação de texto
 
-A classificação binária é usada para classificar dados em duas categorias (sim/não; aprovados/reprovados, verdadeiros/falsos; positivos/negativos).
+A classificação é usada para categorizar dados em categorias.
 
 ![Diagrama mostrando exemplos de classificação binária incluindo detecção de fraude, mitigação de risco e triagem de aplicativo](media/binary-classification-examples.png)
 
-A análise de sentimento pode ser usada para prever o sentimento positivo ou negativo de comentários do cliente. É um exemplo da tarefa de aprendizado de máquina de classificação binária.
-
-Se seu cenário exigir a classificação em duas categorias, você poderá usar esse modelo com seu próprio conjunto de dados.
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Prever uma categoria (quando há três ou mais categorias)
-
-A classificação multiclasse pode ser usada para categorizar os dados em três ou mais classes.
-
 ![Os exemplos de classificação multiclasse que incluem a classificação de documentos e de produtos, roteamento de tíquete de suporte e priorização de problemas do cliente](media/multiclass-classification-examples.png)
 
-A classificação de problema pode ser usada para categorizar os problemas de comentários (por exemplo, sobre o GitHub) do cliente usando o título do problema e a descrição. É um exemplo da tarefa de aprendizagem de máquina de classificação multiclasse.
-
-Você poderá usar o modelo de classificação do problema para seu cenário se quiser categorizar os dados em três ou mais categorias.
-
-#### <a name="predict-a-number"></a>Prever um número
+#### <a name="value-prediction"></a>Previsão de valor
 
 A regressão é usada para prever números.
 
 ![Diagrama mostrando exemplos de regressão, como a previsão de preços, a previsão de vendas e a manutenção preditiva](media/regression-examples.png)
 
-A previsão de preço pode ser usada para prever preços de casas usando local, tamanho e outras características da casa. É um exemplo da tarefa de aprendizado de máquina de regressão.
-
-Você poderá usar o modelo de previsão de preço para o seu cenário se quiser prever um valor numérico com seu próprio conjunto de dados.
-
-#### <a name="classify-images-into-categories"></a>Classificar imagens em categorias
-
-Este cenário é um caso especial de classificação multiclasse, onde os dados de entrada a serem categorizados é um conjunto de imagens.
+#### <a name="image-classification"></a>Classificação de imagens
 
 A classificação de imagens pode ser usada para identificar imagens de diferentes categorias. Por exemplo, diferentes tipos de terreno ou animais ou defeitos de fabricação.
 
-Você pode usar o modelo de classificação de imagem para o seu cenário se você tiver um conjunto de imagens e quiser classificar as imagens em diferentes categorias.
+Você pode usar o cenário de classificação de imagens se tiver um conjunto de imagens e quiser classificar as imagens em diferentes categorias.
 
-#### <a name="custom-scenario"></a>Cenário personalizado
+#### <a name="recommendation"></a>Recomendação
 
-O cenário personalizado permite que você escolha manualmente o seu cenário.
+O cenário de recomendação prevê uma lista de itens sugeridos para um determinado usuário, com base no quão semelhantes seus gostos e desgostos são com os de outros usuários.
+
+Você pode usar o cenário de recomendação quando você tem um conjunto de usuários e um conjunto de "produtos", como itens para comprar, filmes, livros ou programas de TV, juntamente com um conjunto de "classificações" dos usuários desses produtos.
+
+## <a name="environment"></a>Ambiente
+
+Você pode treinar seu modelo de aprendizado de máquina localmente em sua máquina ou na nuvem no Azure.
+
+Quando você treina localmente, você trabalha dentro das restrições dos recursos do seu computador (CPU, memória e disco). Quando você treina na nuvem, você pode escalar seus recursos para atender às demandas do seu cenário, especialmente para grandes conjuntos de dados.
+
+O treinamento local é apoiado para todos os cenários.
+
+O treinamento do Azure é suportado para classificação de imagem.
 
 ## <a name="data"></a>Dados
 
@@ -113,14 +107,15 @@ O rótulo é o preço histórico de casas para essa linha de valores de metro qu
 
 Se você ainda não tiver seus próprios dados, experimente um desses conjuntos de dados:
 
-|Cenário|Tarefa ML|Dados|Rótulo|Recursos|
+|Cenário|Exemplo|Dados|Rótulo|Recursos|
 |-|-|-|-|-|
-|Previsão de preço|regressão|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
-|Detecção de anomalias|classificação binária|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Month|
-|Análise de sentimento|classificação binária|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
-|Detecção de fraude|classificação binária|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
-|Classificação de texto|classificação multiclasse|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
-|Classificação de imagens|classificação multiclasse|[Imagens de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|O tipo de flor: margarida, dente-de-leão, rosas, girassóis, tulipas|Os dados da imagem em si|
+|classificação|Prever anomalias de vendas|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Month|
+||Prever o sentimento dos comentários do site|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
+||Prever transações fraudulentas de cartão de crédito|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
+||Prever o tipo de problema em um repositório do GitHub|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
+|Previsão de valor|Prever preço da tarifa de táxi|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
+|Classificação de imagens|Prever a categoria de um problema|[imagens de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|O tipo de flor: margarida, dente-de-leão, rosas, girassóis, tulipas|Os dados da imagem em si|
+|Recomendação|Prever filmes que alguém vai gostar|[classificações de filmes](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|Usuários, Filmes|Classificações|
 
 ## <a name="train"></a>Treinar
 
@@ -165,13 +160,13 @@ O Construtor de Modelo divide os dados de treinamento em um conjunto de treiname
 
 Um cenário mapeia uma tarefa de aprendizado de máquina. Cada tarefa ml tem seu próprio conjunto de métricas de avaliação.
 
-#### <a name="regression-for-example-price-prediction"></a>Regressão (por exemplo, Previsão de Preços)
+#### <a name="value-prediction"></a>Previsão de valor
 
-A métrica padrão para problemas de regressão é RSquared, o valor do RSquared varia entre 0 e 1. 1 é o melhor valor possível ou, em outras palavras, quanto mais perto o valor de RSquared para 1, melhor o seu modelo está realizando.
+A métrica padrão para problemas de previsão de valor é RSquared, o valor do RSquared varia entre 0 e 1. 1 é o melhor valor possível ou, em outras palavras, quanto mais perto o valor de RSquared para 1, melhor o seu modelo está realizando.
 
-Outras métricas relatadas, como perda absoluta, perda quadrada e perda de RMS são métricas adicionais, que podem ser usadas para entender como seu modelo está se saindo e compará-lo com outros modelos de regressão.
+Outras métricas relatadas, como perda absoluta, perda quadrada e perda de RMS são métricas adicionais, que podem ser usadas para entender como seu modelo está se saindo e compará-lo com outros modelos de previsão de valor.
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>Classificação Binária (por exemplo, Análise de Sentimento)
+#### <a name="classification-2-categories"></a>Classificação (2 categorias)
 
 A métrica padrão para problemas de classificação é a precisão. A precisão define a proporção de previsões corretas que seu modelo está fazendo ao longo do conjunto de dados do teste. Quanto mais perto de 100% ou 1.0 melhor.
 
@@ -179,7 +174,7 @@ Outras métricas relatadas, como AUC (Área a curva), que mede a taxa positiva v
 
 Métricas adicionais como a pontuação da F1 podem ser usadas para controlar o equilíbrio entre Precisão e Recall.
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Classificação multiclasse (por exemplo, Classificação de problemas, classificação de imagem)
+#### <a name="classification-3-categories"></a>Classificação (3+ categorias)
 
 A métrica padrão para classificação multiclasse é Micro Accuracy. Quanto mais perto da Micro Precisão 100% ou 1.0, melhor será.
 
@@ -196,7 +191,7 @@ Para obter mais informações, consulte [métricas de avaliação de modelo](res
 
 Se a sua pontuação de desempenho do modelo não for tão boa quanto deseja, você poderá:
 
-- Treinar por um período maior de tempo. Com mais tempo, usar o mecanismo de aprendizado de máquina automatizado para experimentar mais algoritmos e configurações.
+- Treinar por um período maior de tempo. Com mais tempo, o motor automatizado de aprendizado de máquina experimenta com mais algoritmos e configurações.
 
 - Adicionar mais dados. Às vezes, a quantidade de dados não é suficiente para treinar um modelo de machine learning de alta qualidade.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185606"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345276"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como configurar uma associação de intercâmbio de WS-Metadata
 Este tópico explicará como configurar uma vinculação personalizada de troca WS-Metadata. O Windows Communication Foundation (WCF) inclui quatro vinculações de metadados definidas pelo sistema, mas você pode publicar metadados usando qualquer vinculação desejada. Este tópico mostrará como publicar metadados usando o `wsHttpBinding`. Essa vinculação lhe dá a opção de expor metadados de forma segura. O código deste artigo é baseado no [Getting Started](../samples/getting-started-sample.md).  
@@ -32,8 +32,8 @@ Este tópico explicará como configurar uma vinculação personalizada de troca 
 2. Adicione `behaviorConfiguration` um atributo à tag de serviço que faz referência a esse novo comportamento:  
   
     ```xml  
-    <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+    behaviorConfiguration="CalculatorServiceBehavior" />
     ```  
   
 3. Adicione um ponto final de metadados especificando mex como endereço, `wsHttpBinding` como a vinculação e <xref:System.ServiceModel.Description.IMetadataExchange> como contrato:  

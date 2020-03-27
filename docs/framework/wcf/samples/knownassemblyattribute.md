@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183555"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345246"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Esta amostra demonstra como os processos de serialização e <xref:System.Runtime.Serialization.DataContractResolver> desserialização podem ser personalizados usando a classe. Esta amostra mostra como adicionar dinamicamente tipos conhecidos durante a serialização e desserialização.  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. Se o aplicativo não for executado corretamente, siga estas etapas para garantir que o ambiente tenha sido configurado corretamente:  
   
-6. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Fundação de Comunicação do Windows](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Fundação de Comunicação do Windows](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples).  
   
-7. Para construir a solução, siga as instruções em [Building the Windows Communication Foundation Sample](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Para construir a solução, siga as instruções em [Building the Windows Communication Foundation Sample](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples).  
   
-8. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
