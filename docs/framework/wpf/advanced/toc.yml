@@ -49,7 +49,7 @@
               href: propertypath-xaml-syntax.md
             - name: 'Atributo PresentationOptions:Freeze'
               href: presentationoptions-freeze-attribute.md
-        - name: 'Recursos de linguagem da compatibilidade de marcação (mc:)'
+        - name: 'Compatibilidade de marcação (mc:) Funcionalidades de linguagem'
           href: markup-compatibility-mc-language-features.md
           items:
             - name: 'Atributo mc:Ignorable'
@@ -65,7 +65,7 @@
           href: freezable-objects-overview.md
         - name: 'Visão geral de alinhamento, margens e preenchimento'
           href: alignment-margins-and-padding-overview.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: base-elements-how-to-topics.md
           items:
             - name: Deixar um UIElement transparente ou semitransparente
@@ -74,7 +74,7 @@
               href: how-to-animate-the-size-of-a-frameworkelement.md
             - name: Determinar se um congelável está congelado
               href: how-to-determine-whether-a-freezable-is-frozen.md
-            - name: Identificar um evento carregado
+            - name: Manipular um evento carregado
               href: how-to-handle-a-loaded-event.md
             - name: Definir margens de elementos e controles
               href: how-to-set-margins-of-elements-and-controls.md
@@ -86,7 +86,7 @@
               href: how-to-flip-a-uielement-horizontally-or-vertically.md
             - name: Usar um objeto ThicknessConverter
               href: how-to-use-a-thicknessconverter-object.md
-            - name: Tratar o evento ContextMenuOpening
+            - name: Manipular o evento ContextMenuOpening
               href: how-to-handle-the-contextmenuopening-event.md
     - name: Árvore de elementos e serialização
       href: element-tree-and-serialization.md
@@ -97,7 +97,7 @@
           href: serialization-limitations-of-xamlwriter-save.md
         - name: Inicialização de elementos de objeto que não estejam em uma árvore de objetos
           href: initialization-for-object-elements-not-in-an-object-tree.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: element-tree-and-serialization-how-to-topics.md
           items:
             - name: Localizar um elemento pelo nome
@@ -133,7 +133,7 @@
           href: collection-type-dependency-properties.md
         - name: Carregamento de XAML e propriedades da dependência
           href: xaml-loading-and-dependency-properties.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: properties-how-to-topics.md
           items:
             - name: Implementar uma propriedade de dependência
@@ -163,12 +163,12 @@
           href: visual-basic-and-wpf-event-handling.md
         - name: Padrões de evento fraco
           href: weak-event-patterns.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: events-how-to-topics.md
           items:
             - name: Adicionar um manipulador de eventos usando código
               href: how-to-add-an-event-handler-using-code.md
-            - name: Identificar um evento roteado
+            - name: Manipular um evento roteado
               href: how-to-handle-a-routed-event.md
             - name: Criar um evento roteado personalizado
               href: how-to-create-a-custom-routed-event.md
@@ -187,9 +187,9 @@
           href: focus-overview.md
         - name: Estilos para foco em controles e FocusVisualStyle
           href: styling-for-focus-in-controls-and-focusvisualstyle.md
-        - name: 'Instruções passo a passo: criando o primeiro aplicativo sensível ao toque'
+        - name: 'Passo a passo: criar o primeiro aplicativo sensível ao toque'
           href: walkthrough-creating-your-first-touch-application.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: input-and-commands-how-to-topics.md
           items:
             - name: Habilitar um comando
@@ -210,9 +210,9 @@
               href: how-to-create-a-routedcommand.md
             - name: Implementar ICommandSource
               href: how-to-implement-icommandsource.md
-            - name: Enganchar um comando em um controle sem suporte de comando
+            - name: Enganchar um comando em um controle sem suporte a comandos
               href: how-to-hook-up-a-command-to-a-control-with-no-command-support.md
-            - name: Enganchar um comando em um controle com suporte de comando
+            - name: Interligar um comando a um controle com suporte de comando
               href: how-to-hook-up-a-command-to-a-control-with-command-support.md
         - name: Tinta digital
           href: digital-ink.md
@@ -228,7 +228,7 @@
                   href: handwriting-recognition.md
                 - name: Armazenando tinta
                   href: storing-ink.md
-                - name: 'O modelo de objeto Ink: Windows Forms e COM versus WPF'
+                - name: 'Modelo de objeto de tinta: Windows Forms e COM versus WPF'
                   href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
                 - name: Tratamento de tinta avançado
                   href: advanced-ink-handling.md
@@ -241,7 +241,7 @@
                       href: creating-an-ink-input-control.md
                     - name: O modelo de threading da tinta
                       href: the-ink-threading-model.md
-            - name: Tópicos explicativos
+            - name: 'Tópicos explicativos '
               href: digital-ink-how-to-topics.md
               items:
                 - name: Selecionar tinta em um controle personalizado
@@ -269,9 +269,9 @@
           href: drag-and-drop-overview.md
         - name: Dados e objetos de dados
           href: data-and-data-objects.md
-        - name: 'Instruções passo a passo: habilitando arrastar e soltar em um controle de usuário'
+        - name: 'Passo a passo: habilitar arrastar e soltar em um controle de usuário'
           href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: drag-and-drop-how-to-topics.md
           items:
             - name: Abrir um arquivo solto em um controle RichTextBox
@@ -296,7 +296,7 @@
               href: resources-and-code.md
             - name: Dicionários de recursos mesclados
               href: merged-resource-dictionaries.md
-            - name: Tópicos explicativos
+            - name: 'Tópicos explicativos '
               href: resources-how-to-topics.md
               items:
                 - name: Definir e referenciar um recurso
@@ -334,12 +334,12 @@
               href: textelement-content-model-overview.md
             - name: Visão geral da tabela
               href: table-overview.md
-            - name: Tópicos explicativos
+            - name: 'Tópicos explicativos '
               href: flow-content-elements-how-to-topics.md
               items:
                 - name: Ajustar o espaçamento entre parágrafos
                   href: how-to-adjust-spacing-between-paragraphs.md
-                - name: Compilar uma tabela de forma programática
+                - name: Criar uma tabela de forma programática
                   href: how-to-build-a-table-programmatically.md
                 - name: Alterar o FlowDirection de conteúdo de forma programática
                   href: how-to-change-the-flowdirection-of-content-programmatically.md
@@ -389,7 +389,7 @@
                   href: packaging-fonts-with-applications.md
                 - name: Pacote de fontes OpenType de amostra
                   href: sample-opentype-font-pack.md
-                - name: Tópicos explicativos
+                - name: 'Tópicos explicativos '
                   href: fonts-how-to-topics.md
                   items:
                     - name: Enumerar fontes de sistema
@@ -401,9 +401,9 @@
               items:
                 - name: Introdução ao objeto GlyphRun e ao elemento de glifos
                   href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-                - name: Como desenhar texto usando glifos
+                - name: 'Como: Desenhar texto usando glifos'
                   href: draw-text-using-glyphs.md
-            - name: Tópicos explicativos
+            - name: 'Tópicos explicativos '
               href: typography-how-to-topics.md
               items:
                 - name: Criar uma decoração de texto
@@ -416,9 +416,9 @@
                   href: how-to-apply-animations-to-text.md
                 - name: Criar texto com uma sombra
                   href: how-to-create-text-with-a-shadow.md
-                - name: Criar texto de estrutura de tópicos
+                - name: Criar texto contornado
                   href: how-to-create-outlined-text.md
-                - name: Desenhar texto para o plano de fundo de um controle
+                - name: Desenhar texto para o segundo plano de um controle
                   href: how-to-draw-text-to-a-control-background.md
                 - name: Desenhar texto em um visual
                   href: how-to-draw-text-to-a-visual.md
@@ -429,7 +429,7 @@
           items:
             - name: Visão geral da impressão
               href: printing-overview.md
-            - name: Tópicos explicativos
+            - name: 'Tópicos explicativos '
               href: printing-how-to-topics.md
               items:
                 - name: Invocar uma caixa de diálogo Imprimir
@@ -444,7 +444,7 @@
                   href: how-to-enumerate-a-subset-of-print-queues.md
                 - name: Obter propriedades do objeto do sistema de impressão sem reflexão
                   href: how-to-get-print-system-object-properties-without-reflection.md
-                - name: Imprimir arquivos XPS de forma programática
+                - name: Imprimir arquivos XPS com programação
                   href: how-to-programmatically-print-xps-files.md
                 - name: Pesquisar remotamente o status das impressoras
                   href: how-to-remotely-survey-the-status-of-printers.md
@@ -463,7 +463,7 @@
           href: localization-attributes-and-comments.md
         - name: Visão geral dos recursos bidirecionais no WPF
           href: bidirectional-features-in-wpf-overview.md
-        - name: Tópicos explicativos
+        - name: 'Tópicos explicativos '
           href: globalization-and-localization-how-to-topics.md
           items:
             - name: Localizar um aplicativo
@@ -481,6 +481,8 @@
     - name: Migração e interoperabilidade
       href: migration-and-interoperability.md
       items:
+        - name: Migrar do WPF 3.X para o WPF 4.5
+          href: types-migrated-from-wpf-to-system.md
         - name: Interoperação do WPF e dos Windows Forms
           href: wpf-and-windows-forms-interoperation.md
           items:
@@ -494,29 +496,29 @@
               href: windows-forms-and-wpf-property-mapping.md
             - name: Solucionando problemas de aplicativos híbridos
               href: troubleshooting-hybrid-applications.md
-            - name: 'Instruções passo a passo: hospedando um controle dos Windows Forms no WPF'
+            - name: 'Passo a passo: hospedar um controle do Windows Forms no WPF'
               href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
-            - name: 'Instruções passo a passo: hospedando um controle dos Windows Forms no WPF usando XAML'
+            - name: 'Passo a passo: hospedar um controle do Windows Forms no WPF usando XAML'
               href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
-            - name: 'Instruções passo a passo: hospedando um controle composto dos Windows Forms no WPF'
+            - name: 'Passo a passo: hospedar um controle composto do Windows Forms no WPF'
               href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
-            - name: 'Instruções passo a passo: hospedando um controle ActiveX no WPF'
+            - name: 'Passo a passo: hospedar um controle ActiveX no WPF'
               href: walkthrough-hosting-an-activex-control-in-wpf.md
-            - name: Como habilitar estilos visuais em um aplicativo híbrido
+            - name: 'Como: habilitar estilos visuais em um aplicativo híbrido'
               href: how-to-enable-visual-styles-in-a-hybrid-application.md
-            - name: 'Instruções passo a passo: organizando controles dos Windows Forms no WPF'
+            - name: 'Passo a passo: organizar controles do Windows Forms no WPF'
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
-            - name: 'Instruções passo a passo: associando a dados em aplicativos híbridos'
+            - name: 'Passo a passo: associar a dados em aplicativos híbridos'
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: 'Instruções passo a passo: hospedando um controle composto do WPF 3D nos Windows Forms'
+            - name: 'Passo a passo: Hospedar um controle composto 3D do WPF nos Windows Forms'
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
-            - name: 'Instruções passo a passo: hospedando um controle composto do WPF nos Windows Forms'
+            - name: 'Passo a passo: hospedar um controle composto do WPF nos Windows Forms'
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
-            - name: 'Instruções passo a passo: mapeando propriedades usando o controle ElementHost'
+            - name: 'Passo a passo: mapear propriedades usando o controle ElementHost'
               href: walkthrough-mapping-properties-using-the-elementhost-control.md
-            - name: 'Instruções passo a passo: mapeando propriedades usando o elemento WindowsFormsHost'
+            - name: 'Passo a passo: mapear propriedades usando o elemento WindowsFormsHost'
               href: walkthrough-mapping-properties-using-the-windowsformshost-element.md
-            - name: 'Instruções passo a passo: localizando um aplicativo híbrido'
+            - name: 'Passo a passo: localizar um aplicativo híbrido'
               href: walkthrough-localizing-a-hybrid-application.md
         - name: Interoperação Win32 e WPF
           href: wpf-and-win32-interoperation.md
@@ -527,20 +529,20 @@
               href: sharing-message-loops-between-win32-and-wpf.md
             - name: Hospedando conteúdo Win32 no WPF
               href: hosting-win32-content-in-wpf.md
-            - name: 'Instruções passo a passo: hospedando um controle Win32 no WPF'
+            - name: 'Passo a passo: hospedar um controle Win32 no WPF'
               href: walkthrough-hosting-a-win32-control-in-wpf.md
-            - name: 'Instruções passo a passo: hospedando conteúdo do WPF em Win32'
+            - name: 'Passo a passo: hospedar conteúdo do WPF no Win32'
               href: walkthrough-hosting-wpf-content-in-win32.md
-            - name: 'Instruções passo a passo: hospedando um relógio do WPF em Win32'
+            - name: 'Passo a passo: hospedar um relógio do WPF no Win32'
               href: walkthrough-hosting-a-wpf-clock-in-win32.md
         - name: Interoperação Direct3D9 e WPF
           href: wpf-and-direct3d9-interoperation.md
           items:
             - name: Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF
               href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
-            - name: 'Instruções passo a passo: criando conteúdo Direct3D9 para hospedar no WPF'
+            - name: 'Passo a passo: criar conteúdo Direct3D9 para hospedar no WPF'
               href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
-            - name: 'Instruções passo a passo: hospedando conteúdo de Direct3D9 no WPF'
+            - name: 'Passo a passo: hospedar o conteúdo de Direct3D9 no WPF'
               href: walkthrough-hosting-direct3d9-content-in-wpf.md
     - name: Desempenho
       href: performance.md
@@ -552,7 +554,7 @@
           items:
             - name: Planejando-se para desempenho do aplicativo
               href: planning-for-application-performance.md
-            - name: Usufruindo hardware
+            - name: Aproveitar o hardware
               href: optimizing-performance-taking-advantage-of-hardware.md
             - name: Layout e design
               href: optimizing-performance-layout-and-design.md
@@ -572,7 +574,7 @@
               href: optimizing-performance-other-recommendations.md
             - name: Tempo de inicialização do aplicativo
               href: application-startup-time.md
-        - name: 'Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF'
+        - name: 'Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF'
           href: walkthrough-caching-application-data-in-a-wpf-application.md
     - name: Modelo de threading
       href: threading-model.md

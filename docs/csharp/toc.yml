@@ -1569,7 +1569,7 @@
               href: language-reference/keywords/by.md
             - name: in
               href: language-reference/keywords/in.md
-    - name: 'Operadores C#'
+    - name: 'Operadores e expressões C#'
       items:
         - name: Visão geral
           href: language-reference/operators/index.md
@@ -1589,7 +1589,7 @@
         - name: Operadores de comparação
           href: language-reference/operators/comparison-operators.md
           displayName: '>, <, >=, <=, greater, less'
-        - name: Operadores de acesso a membro
+        - name: Operadores de acesso do membro e expressões
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
         - name: Operadores cast e teste de tipo
@@ -1625,24 +1625,29 @@
         - name: 'Operador ::'
           href: language-reference/operators/namespace-alias-qualifier.md
           displayName: 'namespace alias qualifier, global namespace'
-        - name: operador await
+        - name: Operador await
           href: language-reference/operators/await.md
           displayName: async
-        - name: operador default
+        - name: Expressões de valor padrão
           href: language-reference/operators/default.md
-          displayName: 'default value, default literal, type default'
+          displayName: 'default value, default operator, default literal, type default'
         - name: operador delegate
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
-        - name: operador nameof
+        - name: expressão nameof
           href: language-reference/operators/nameof.md
+          displayName: nameof operator
         - name: Operador new
           href: language-reference/operators/new-operator.md
           displayName: constructor
         - name: Operador sizeof
           href: language-reference/operators/sizeof.md
-        - name: operador stackalloc
+        - name: expressão stackalloc
           href: language-reference/operators/stackalloc.md
+          displayName: 'stack allocation, span, stackalloc operator'
+        - name: expressão switch
+          href: language-reference/operators/switch-expression.md
+          displayName: 'switch, pattern matching, patterns'
         - name: operadores true e false
           href: language-reference/operators/true-false-operators.md
         - name: Sobrecarga de operador

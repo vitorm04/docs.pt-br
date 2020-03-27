@@ -1,6 +1,6 @@
 - name: Guia do .NET para Apache Spark
   href: index.yml
-- name: Visão Geral
+- name: Visão geral
   expanded: true
   items:
     - name: O que é Apache Spark?
@@ -35,6 +35,8 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: Compilar aplicativo no Windows
       href: how-to-guides/windows-instructions.md
+    - name: Instalar notebooks interativos no Azure HDInsight
+      href: how-to-guides/hdinsight-notebook-installation.md
 - name: Referência
   items:
     - name: Referência API
