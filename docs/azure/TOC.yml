@@ -1,0 +1,16 @@
+- name: Azure para desenvolvedores .NET
+  href: index.yml
+  items:
+    - name: Introdução ao Azure e ao .NET
+      href: intro.md
+    - name: Migrar para o Azure
+      expanded: true
+      items:
+        - name: Escolher uma opção de hospedagem do Azure
+          href: ./migration/choose.md
+        - name: Migrar um aplicativo Web .NET ou serviço para o Serviço de Aplicativo do Azure
+          href: ./migration/app-service.md
+        - name: Migrar um aplicativo ASP.NET para a VM do Azure
+          href: ./migration/vm.md
+        - name: Migrar um banco de dados do SQL Server para o Azure
+          href: ./migration/sql.md
