@@ -2,56 +2,62 @@
 title: .NET Core introdução e visão geral
 description: .NET Core é uma implementação modular e de alto desempenho do .NET para criar aplicativos Windows, Linux e macOS. Saiba mais sobre o .NET Core para começar.
 author: richlander
-ms.date: 03/25/2020
+ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: edd3864d3c3c5c0e9fd8c26ee806ffc9e100423d
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a20cdda5cbd366d04e7ee9e8df3d1b15d10c1f4a
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80351697"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391156"
 ---
-# <a name="introduction-to-net-core"></a><span data-ttu-id="e3389-104">Introdução ao .NET Core</span><span class="sxs-lookup"><span data-stu-id="e3389-104">Introduction to .NET Core</span></span>
+# <a name="introduction-to-net-core"></a><span data-ttu-id="c99eb-104">Introdução ao .NET Core</span><span class="sxs-lookup"><span data-stu-id="c99eb-104">Introduction to .NET Core</span></span>
 
-<span data-ttu-id="e3389-105">O [.NET Core](about.md) é uma plataforma de desenvolvimento [de código aberto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) de uso geral mantida pela Microsoft e pela comunidade .NET no [GitHub](https://github.com/dotnet/core).</span><span class="sxs-lookup"><span data-stu-id="e3389-105">[.NET Core](about.md) is an [open-source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), general-purpose development platform maintained by Microsoft and the .NET community on [GitHub](https://github.com/dotnet/core).</span></span> <span data-ttu-id="e3389-106">É uma plataforma cruzada (compatível com Windows, macOS e Linux) que pode ser usada no desenvolvimento de dispositivos, na nuvem e em aplicativos de IoT.</span><span class="sxs-lookup"><span data-stu-id="e3389-106">It's cross-platform (supporting Windows, macOS, and Linux) and can be used to build device, cloud, and IoT applications.</span></span>
+<span data-ttu-id="c99eb-105">[.NET Core](about.md) é uma plataforma de desenvolvimento [de código aberto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)e de uso geral.</span><span class="sxs-lookup"><span data-stu-id="c99eb-105">[.NET Core](about.md) is an [open-source](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), general-purpose development platform.</span></span> <span data-ttu-id="c99eb-106">Você pode criar aplicativos .NET Core para Windows, macOS e Linux para processadores x64, x86, ARM32 e ARM64 usando várias linguagens de programação.</span><span class="sxs-lookup"><span data-stu-id="c99eb-106">You can create .NET Core apps for Windows, macOS, and Linux for x64, x86, ARM32, and ARM64 processors using multiple programming languages.</span></span> <span data-ttu-id="c99eb-107">Estruturas e APIs são fornecidas para [nuvem,](/aspnet/core/) [IoT,](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) [ui cliente](/dotnet/desktop-wpf/overview/index)e [machine learning](/dotnet/machine-learning/).</span><span class="sxs-lookup"><span data-stu-id="c99eb-107">Frameworks and APIs are provided for [cloud](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [client UI](/dotnet/desktop-wpf/overview/index), and [machine learning](/dotnet/machine-learning/).</span></span>
 
-## <a name="download-net-core"></a><span data-ttu-id="e3389-107">Baixe o .NET Core</span><span class="sxs-lookup"><span data-stu-id="e3389-107">Download .NET Core</span></span>
+<span data-ttu-id="c99eb-108">[Baixe o .NET Core SDK](https://dotnet.microsoft.com/download) para experimentar o .NET Core na sua máquina.</span><span class="sxs-lookup"><span data-stu-id="c99eb-108">[Download the .NET Core SDK](https://dotnet.microsoft.com/download) to try .NET Core on your machine.</span></span> <span data-ttu-id="c99eb-109">A versão mais recente é [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).</span><span class="sxs-lookup"><span data-stu-id="c99eb-109">The latest version is [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).</span></span>
 
-<span data-ttu-id="e3389-108">Baixe o [.NET Core SDK](https://dotnet.microsoft.com/download) para experimentar o .NET Core em sua máquina Windows, macOS ou Linux.</span><span class="sxs-lookup"><span data-stu-id="e3389-108">Download the [.NET Core SDK](https://dotnet.microsoft.com/download) to try .NET Core on your Windows, macOS, or Linux machine.</span></span> <span data-ttu-id="e3389-109">Se preferir usar contêineres Docker, visite o [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).</span><span class="sxs-lookup"><span data-stu-id="e3389-109">If you prefer to use Docker containers, visit the [.NET Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).</span></span>
+## <a name="download-net-core"></a><span data-ttu-id="c99eb-110">Baixe o .NET Core</span><span class="sxs-lookup"><span data-stu-id="c99eb-110">Download .NET Core</span></span>
 
-## <a name="net-core-31"></a><span data-ttu-id="e3389-110">.NET Núcleo 3.1</span><span class="sxs-lookup"><span data-stu-id="e3389-110">.NET Core 3.1</span></span>
+<span data-ttu-id="c99eb-111">Você pode obter o .NET Core das seguintes maneiras:</span><span class="sxs-lookup"><span data-stu-id="c99eb-111">You can get .NET Core in the following ways:</span></span>
 
-<span data-ttu-id="e3389-111">A versão mais recente é .NET Core 3.1.</span><span class="sxs-lookup"><span data-stu-id="e3389-111">The latest version is .NET Core 3.1.</span></span> <span data-ttu-id="e3389-112">3.1 inclui pequenas melhorias sobre o .NET Core 3.0, no entanto, .NET Core 3.1 é uma [versão suportada a longo prazo](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="e3389-112">3.1 includes minor improvements over .NET Core 3.0, however, .NET Core 3.1 is a [long-term supported release](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).</span></span> <span data-ttu-id="e3389-113">Para obter mais informações sobre a versão .NET Core 3.1, consulte [as novidades do .NET Core 3.1](./whats-new/dotnet-core-3-1.md).</span><span class="sxs-lookup"><span data-stu-id="e3389-113">For more information about the .NET Core 3.1 release, see [What's new in .NET Core 3.1](./whats-new/dotnet-core-3-1.md).</span></span>
+* [<span data-ttu-id="c99eb-112">Instaladores para Windows e macOS</span><span class="sxs-lookup"><span data-stu-id="c99eb-112">Installers for Windows and macOS</span></span>](https://dotnet.microsoft.com/download)
+* [<span data-ttu-id="c99eb-113">Pacotes do Linux</span><span class="sxs-lookup"><span data-stu-id="c99eb-113">Linux packages</span></span>](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [<span data-ttu-id="c99eb-114">Contêineres do Docker</span><span class="sxs-lookup"><span data-stu-id="c99eb-114">Docker containers</span></span>](https://hub.docker.com/_/microsoft-dotnet-core/)
+* [<span data-ttu-id="c99eb-115">Zips e bolas de piche</span><span class="sxs-lookup"><span data-stu-id="c99eb-115">Zips and tar balls</span></span>](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+* [<span data-ttu-id="c99eb-116">Instalar scripts</span><span class="sxs-lookup"><span data-stu-id="c99eb-116">Install scripts</span></span>](https://dotnet.microsoft.com/download/dotnet-core/scripts)
+* [<span data-ttu-id="c99eb-117">Notas de versão</span><span class="sxs-lookup"><span data-stu-id="c99eb-117">Release notes</span></span>](https://github.com/dotnet/core/tree/master/release-notes)
 
-<span data-ttu-id="e3389-114">Se você está procurando por outra versão do .NET Core, todas as versões estão disponíveis em [downloads .NET Core](https://dotnet.microsoft.com/download/dotnet-core).</span><span class="sxs-lookup"><span data-stu-id="e3389-114">If you're looking for another version of .NET Core, all the versions are available at [.NET Core downloads](https://dotnet.microsoft.com/download/dotnet-core).</span></span>
+## <a name="create-your-first-application"></a><span data-ttu-id="c99eb-118">Criar seu primeiro aplicativo</span><span class="sxs-lookup"><span data-stu-id="c99eb-118">Create your first application</span></span>
 
-## <a name="create-your-first-application"></a><span data-ttu-id="e3389-115">Criar seu primeiro aplicativo</span><span class="sxs-lookup"><span data-stu-id="e3389-115">Create your first application</span></span>
-
-<span data-ttu-id="e3389-116">Após instalar o SDK do .NET Core, abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="e3389-116">After installing the .NET Core SDK, open a command prompt.</span></span> <span data-ttu-id="e3389-117">Digite `dotnet` os seguintes comandos para criar e executar um aplicativo C#:</span><span class="sxs-lookup"><span data-stu-id="e3389-117">Enter the following `dotnet` commands to create and run a C# application:</span></span>
+<span data-ttu-id="c99eb-119">Após instalar o SDK do .NET Core, abra um prompt de comando.</span><span class="sxs-lookup"><span data-stu-id="c99eb-119">After installing the .NET Core SDK, open a command prompt.</span></span> <span data-ttu-id="c99eb-120">Use os seguintes comandos para criar e executar um aplicativo:</span><span class="sxs-lookup"><span data-stu-id="c99eb-120">Use the following commands to create and run an application:</span></span>
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-<span data-ttu-id="e3389-118">Você deve ver o seguinte resultado:</span><span class="sxs-lookup"><span data-stu-id="e3389-118">You should see the following output:</span></span>
+<span data-ttu-id="c99eb-121">Você deve ver o seguinte resultado:</span><span class="sxs-lookup"><span data-stu-id="c99eb-121">You should see the following output:</span></span>
 
 ```output
 Hello World!
 ```
 
-## <a name="support"></a><span data-ttu-id="e3389-119">Suporte</span><span class="sxs-lookup"><span data-stu-id="e3389-119">Support</span></span>
+## <a name="contribute"></a><span data-ttu-id="c99eb-122">Contribuir</span><span class="sxs-lookup"><span data-stu-id="c99eb-122">Contribute</span></span>
 
-<span data-ttu-id="e3389-120">O .NET Core é [suportado pela Microsoft](https://dotnet.microsoft.com/platform/support/policy) no Windows, macOS e Linux.</span><span class="sxs-lookup"><span data-stu-id="e3389-120">.NET Core is [supported by Microsoft](https://dotnet.microsoft.com/platform/support/policy) on Windows, macOS, and Linux.</span></span> <span data-ttu-id="e3389-121">Ele é atualizado para segurança e qualidade várias vezes ao ano, normalmente mensalmente.</span><span class="sxs-lookup"><span data-stu-id="e3389-121">It's updated for security and quality several times a year, typically monthly.</span></span>
+<span data-ttu-id="c99eb-123">.NET Core é uma plataforma aberta.</span><span class="sxs-lookup"><span data-stu-id="c99eb-123">.NET Core is an open platform.</span></span> <span data-ttu-id="c99eb-124">Todos podem participar.</span><span class="sxs-lookup"><span data-stu-id="c99eb-124">Everyone is welcome to participate.</span></span>
 
-<span data-ttu-id="e3389-122">As distribuições de binários do .NET Core são criadas e testadas em servidores mantidos pela Microsoft no Azure e têm suporte como qualquer produto da Microsoft.</span><span class="sxs-lookup"><span data-stu-id="e3389-122">.NET Core binary distributions are built and tested on Microsoft-maintained servers in Azure and supported just like any Microsoft product.</span></span>
+* <span data-ttu-id="c99eb-125">Filie problemas e perguntas sobre produtos na [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/spaces/61/index.html).</span><span class="sxs-lookup"><span data-stu-id="c99eb-125">File product issues and questions at [Developer Community](https://developercommunity.visualstudio.com/spaces/61/index.html).</span></span>
+* <span data-ttu-id="c99eb-126">As contribuições dos produtos devem ser feitas em um dos repositórios do projeto, tais como [dotnet/runtime,](https://github.com/dotnet/runtime) [dotnet/sdk,](https://github.com/dotnet/sdk) [dotnet/rosyln](https://github.com/dotnet/roslyn)ou [aspnetcore](https://github.com/dotnet/aspnetcore).</span><span class="sxs-lookup"><span data-stu-id="c99eb-126">Product contributions should be made on one of the project repositories, such as [dotnet/runtime](https://github.com/dotnet/runtime), [dotnet/sdk](https://github.com/dotnet/sdk), [dotnet/rosyln](https://github.com/dotnet/roslyn), or [aspnetcore](https://github.com/dotnet/aspnetcore).</span></span> <span data-ttu-id="c99eb-127">Para obter mais informações, consulte [os repos .NET Core](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md).</span><span class="sxs-lookup"><span data-stu-id="c99eb-127">For more information, see [.NET Core repos](https://github.com/dotnet/core/blob/master/Documentation/core-repos.md).</span></span>
 
-<span data-ttu-id="e3389-123">A [Red Hat oferece suporte ao .NET Core](http://redhatloves.net/) no Red Hat Enterprise Linux (RHEL).</span><span class="sxs-lookup"><span data-stu-id="e3389-123">[Red Hat supports .NET Core](http://redhatloves.net/) on Red Hat Enterprise Linux (RHEL).</span></span> <span data-ttu-id="e3389-124">A Red Hat compila o .NET Core da origem e o disponibiliza nas [Coleções de Software do Red Hat](https://developers.redhat.com/products/softwarecollections/overview/).</span><span class="sxs-lookup"><span data-stu-id="e3389-124">Red Hat builds .NET Core from source and makes it available in the [Red Hat Software Collections](https://developers.redhat.com/products/softwarecollections/overview/).</span></span> <span data-ttu-id="e3389-125">Red Hat e Microsoft colaboram para garantir que o .NET Core funcione bem no RHEL.</span><span class="sxs-lookup"><span data-stu-id="e3389-125">Red Hat and Microsoft collaborate to ensure that .NET Core works well on RHEL.</span></span>
+## <a name="support"></a><span data-ttu-id="c99eb-128">Suporte</span><span class="sxs-lookup"><span data-stu-id="c99eb-128">Support</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="e3389-126">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="e3389-126">Next steps</span></span>
+<span data-ttu-id="c99eb-129">.NET Core é suportado pela Microsoft no Windows, macOS e Linux e pela Red Hat no Red Hat Enterprise Linux.</span><span class="sxs-lookup"><span data-stu-id="c99eb-129">.NET Core is supported by Microsoft on Windows, macOS, and Linux and by Red Hat on Red Hat Enterprise Linux.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="c99eb-130">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="c99eb-130">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e3389-127">Tutoriais do .NET Core</span><span class="sxs-lookup"><span data-stu-id="e3389-127">.NET Core tutorials</span></span>](tutorials/index.md)
+> [<span data-ttu-id="c99eb-131">Tutoriais do .NET Core</span><span class="sxs-lookup"><span data-stu-id="c99eb-131">.NET Core tutorials</span></span>](tutorials/index.md)
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e3389-128">Experimente o .NET Core no seu navegador</span><span class="sxs-lookup"><span data-stu-id="e3389-128">Try .NET Core in your browser</span></span>](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)
+> [<span data-ttu-id="c99eb-132">Experimente o .NET Core no seu navegador</span><span class="sxs-lookup"><span data-stu-id="c99eb-132">Try .NET Core in your browser</span></span>](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml)
