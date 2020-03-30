@@ -1,6 +1,8 @@
-- name: Guia do .NET Core
-  href: index.md
-- name: Sobre o .NET Core
+- name: Documentação do .NET Core
+  href: index.yml
+- name: Introdução ao .NET Core
+  href: introduction.md
+- name: Visão geral do .NET Core
   href: about.md
 - name: Instalar o
   items:
