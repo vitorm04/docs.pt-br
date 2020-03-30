@@ -4,12 +4,12 @@ description: Aprenda a usar a herança em bibliotecas e aplicativos em C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156747"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391143"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
 
@@ -28,7 +28,7 @@ Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../
 1. Copie e cole o código do exemplo em seu editor de código.
 1. Insira o comando [dotnet restore](../../core/tools/dotnet-restore.md) na linha de comando para carregar ou restaurar as dependências do projeto.
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. Insira o comando [dotnet run](../../core/tools/dotnet-run.md) para compilar e executar o exemplo.
 
@@ -141,7 +141,7 @@ A tabela a seguir lista as categorias de tipos que você pode criar em C#, e os 
 
 | Categoria do tipo | Herda implicitamente de                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| class         | <xref:System.Object>                                                          |
+| classe         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | enum          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | delegado      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |

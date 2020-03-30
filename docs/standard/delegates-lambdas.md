@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345547"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391228"
 ---
 # <a name="delegates-and-lambdas"></a>Delegados e lambdas
 
@@ -46,9 +46,9 @@ public class Program
 
 Para simplificar o processo de desenvolvimento, o .NET inclui um conjunto de tipos de delegados que os programadores podem reutilizar, sem precisar criar novos tipos. Eles são `Func<>`, `Action<>` e `Predicate<>`, e podem ser usados em vários locais das APIs .NET sem a necessidade de definir novos tipos de delegado. Obviamente, há algumas diferenças entre os três, que você verá em suas assinaturas e que geralmente têm a ver com a maneira como eles deveriam ser usados:
 
-* `Action<>` é usado quando é necessário executar uma ação usando os argumentos do delegado.
-* `Func<>` é normalmente é usado quando você tem uma transformação à mão, ou seja, quando é necessário transformar os argumentos do delegado em um resultado diferente. As projeções são um excelente exemplo disso.
-* `Predicate<>` é usado quando você precisa determinar se o argumento satisfaz a condição do delegado. Ele também pode ser escrito como um `Func<T, bool>`.
+* `Action<>` é usado quando é necessário executar uma ação usando os argumentos do delegado. O método que encapsula não retorna um valor.
+* `Func<>` é normalmente é usado quando você tem uma transformação à mão, ou seja, quando é necessário transformar os argumentos do delegado em um resultado diferente. As projeções são um excelente exemplo disso. O método que encapsula retorna um valor especificado.
+* `Predicate<>` é usado quando você precisa determinar se o argumento satisfaz a condição do delegado. Também pode ser escrito `Func<T, bool>`como um , o que significa que o método retorna um valor booleano.
 
 Agora, podemos pegar nosso exemplo acima e reescrevê-lo usando o delegado `Func<>` em vez de um tipo personalizado. O programa continuará sendo executado exatamente da mesma forma.
 
@@ -110,7 +110,7 @@ Como você pode ver, o corpo do delegado é apenas um conjunto de expressões, c
 
 No entanto, mesmo com essa abordagem, ainda há muito código que podemos descartar. É aí que as **expressões lambda** entram em cena.
 
-As expressões lambda ou apenas "lambdas" para abreviar, foram introduzidas pela primeira vez no C# 3.0 como um dos principais elementos de construção da LINQ (Consulta integrada à linguagem). Elas são apenas uma sintaxe mais conveniente para usar delegados. Elas declaram uma assinatura e um corpo de método, mas não têm uma identidade formal própria, a menos que sejam atribuídas a um delegado. Ao contrário dos representantes, elas podem ser atribuídas diretamente como o lado esquerdo do registro de eventos ou em várias cláusulas e métodos LINQ.
+As expressões lambda ou apenas "lambdas" para abreviar, foram introduzidas pela primeira vez no C# 3.0 como um dos principais elementos de construção da LINQ (Consulta integrada à linguagem). Elas são apenas uma sintaxe mais conveniente para usar delegados. Eles declaram uma assinatura e um corpo de método, mas não têm uma identidade formal própria, a menos que sejam designados para um delegado. Ao contrário dos representantes, elas podem ser atribuídas diretamente como o lado esquerdo do registro de eventos ou em várias cláusulas e métodos LINQ.
 
 Como uma expressão lambda é apenas outra maneira de especificar um delegado, nós podemos reescrever o exemplo acima para usar uma expressão lambda em vez de um delegado anônimo.
 
@@ -159,6 +159,6 @@ O operador `+=` nesse contexto é usado para assinar um [evento](../../docs/csha
 
 ## <a name="further-reading-and-resources"></a>Recursos e leituras adicionais
 
-* [Delega](../../docs/csharp/programming-guide/delegates/index.md)
+* [Delegados](../../docs/csharp/programming-guide/delegates/index.md)
 * [Funções Anônimas](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
 * [Expressões lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
