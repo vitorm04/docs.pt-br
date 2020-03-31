@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187629"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438224"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analise o sentimento dos comentários do site em um aplicativo web usando ML.NET Model Builder
 
@@ -302,6 +302,6 @@ Neste tutorial, você aprendeu a:
 
 Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
 
-- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
+- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenario)
 - [Classificação Binária](../resources/glossary.md#binary-classification)
 - [Métricas do modelo de classificação binária](../resources/metrics.md#evaluation-metrics-for-binary-classification)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a36989f9453208e436ef8a4db2d4440aa0a1382
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185832"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438186"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: Classifique a gravidade das violações à saúde do restaurante com o Model Builder
 
@@ -150,6 +150,6 @@ Parabéns! Você construiu com sucesso um modelo de aprendizado de máquina para
 
 Para saber mais sobre os tópicos mencionados neste tutorial, visite os seguintes recursos:
 
-- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenarios)
+- [Cenários do Construtor de Modelo](../automate-training-with-model-builder.md#scenario)
 - [Classificação multiclasse](../resources/glossary.md#multiclass-classification)
 - [Métricas do modelo de classificação multiclasse](../resources/metrics.md#evaluation-metrics-for-multi-class-classification)

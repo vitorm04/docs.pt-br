@@ -1,16 +1,16 @@
 ---
 title: .NET Standard
-description: Saiba mais sobre o .NET Standard, suas versões e as implementações de .NET que dão suporte a ele.
+description: Conheça o .NET Standard, suas versões e as implementações .NET que o suportam.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452585"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438212"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -100,9 +100,9 @@ O controle de versão do .NET Standard é importante para uso. Com uma versão d
 - Use bibliotecas que dependem da mesma versão do .NET Standard ou inferior.
 - Se você encontrar uma biblioteca que depende de uma versão mais recente do .NET Standard, deverá adotar essa mesma versão ou decidir não usar essa biblioteca.
 
-## <a name="targeting-net-standard"></a>Direcionamento do .NET Standard
+## <a name="target-net-standard"></a>Alvo .NET Padrão
 
-Você pode [criar .NET Standard Libraries](../core/tutorials/libraries.md) usando uma combinação de `netstandard` estrutura e metapacote NETStandard.Library. Você pode ver exemplos de [direcionamento do .NET Standard com as ferramentas do .NET Core](../core/packages.md).
+Você pode [criar .NET Standard Libraries](../core/tutorials/libraries.md) usando uma combinação de `netstandard` estrutura e metapacote NETStandard.Library. Você pode ver exemplos de [segmentação .NET Standard com ferramentas .NET Core](../core/packages.md).
 
 ## <a name="net-framework-compatibility-mode"></a>Modo de compatibilidade do .NET framework
 
@@ -118,7 +118,7 @@ Se você precisar apenas consumir as bibliotecas do .NET Standard 2.0 em seus pr
 
 ## <a name="comparison-to-portable-class-libraries"></a>Comparação com bibliotecas de classes portáteis
 
-O .NET Standard é o substituto das [PCLs (Bibliotecas de classe portáteis)](./cross-platform/cross-platform-development-with-the-portable-class-library.md). O .NET Standard aprimora a experiência de criar bibliotecas portáteis, selecionando um BCL padrão e estabelecendo maior uniformidade entre as implementações do .NET como resultado. Uma biblioteca direcionada ao .NET Standard é uma PCL ou uma “PCL baseada no .NET Standard”. PCLs existentes são "PCLs baseadas em perfil".
+O .NET Standard é o substituto das [PCLs (Bibliotecas de classe portáteis)](./cross-platform/cross-platform-development-with-the-portable-class-library.md). O .NET Standard melhora a experiência de criar bibliotecas portáteis, fazendo a curadoria de um BCL padrão e estabelecendo maior uniformidade entre as implementações .NET como resultado. Uma biblioteca direcionada ao .NET Standard é uma PCL ou uma “PCL baseada no .NET Standard”. PCLs existentes são "PCLs baseadas em perfil".
 
 Os perfis do .NET Standard e da PCL foram criados para finalidades semelhantes, mas também diferem de maneiras básicas.
 
@@ -130,7 +130,7 @@ Diferenças:
 
 - O .NET Standard é um conjunto estruturado de APIs, enquanto os perfis de PCL são definidos por interseções de plataformas existentes.
 - O .NET Standard tem versões lineares, ao passo que os perfis de PCL não.
-- Os perfis de PCL representam plataformas da Microsoft, enquanto o .NET Standard é independente de plataforma.
+- Os perfis pcl representam as plataformas da Microsoft, enquanto o .NET Standard é agnóstico de plataforma.
 
 ### <a name="pcl-compatibility"></a>Compatibilidade com PCL
 
@@ -143,7 +143,7 @@ Compatibilidade de PCL baseada em perfil é fornecida pelo pacote NuGet. [Micros
 
 PCLs baseadas em perfil e empacotadas como `netstandard` são mais fáceis de serem consumidas do que PCLs baseadas em perfil tipicamente empacotadas. `netstandard` o empacotamento é compatível com os usuários existentes.
 
-Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standard:
+Você pode ver o conjunto de perfis PCL compatíveis com o .NET Standard:
 
 | Perfil do PCL | .NET Standard | Plataformas PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------

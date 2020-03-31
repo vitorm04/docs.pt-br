@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124254"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438174"
 ---
 # <a name="get-started"></a>Introdução
 
@@ -18,21 +18,23 @@ Há várias formas para começar a trabalhar com o .NET. Como o .NET é uma plat
 
 ## <a name="get-started-using-net-languages"></a>Introdução ao uso de linguagens .NET
 
-* Os [artigos c# e](../csharp/getting-started/index.md) os [tutoriais C#](../csharp/tutorials/index.md) fornecem maneiras de começar de uma maneira c#cêntrica.
+Para começar tutoriais em C#, Visual Basic e F#, veja:
 
-* Os tutoriais [f# de início](../fsharp/get-started/index.md) cobrem as três principais maneiras que você pode usar F#: com Visual Studio, Visual Studio Code ou ferramentas de linha de comando.
-
-* Os artigos do Visual Basic que [iniciam](../visual-basic/getting-started/index.md) fornecem guias para o uso do Visual Basic no Visual Studio.
+* [Introdução em C#](../csharp/getting-started/index.md)
+* [Tutoriais sobre C#](../csharp/tutorials/index.md)
+* [F# iniciando tutoriais](../fsharp/get-started/index.md)
+* [Comece no Visual Basic](../visual-basic/getting-started/index.md)
 
 ## <a name="get-started-using-net-core"></a>Introdução ao uso do .NET Core
 
-* [Comece com o .NET Core](../core/get-started.md) fornece uma visão geral de artigos que mostram como começar com o .NET Core em diferentes sistemas operacionais e usando diferentes ferramentas.
+Para obter uma orientação específica do Núcleo .NET, consulte:
 
-* Os [tutoriais do .NET Core](../core/tutorials/index.md) detalham maneiras de começar com o .NET Core usando seu sistema operacional e ferramentas de escolha.
+* [Introdução ao .NET Core](../core/get-started.md)
+* [Tutoriais do .NET Core](../core/tutorials/index.md)
 
 ## <a name="get-started-using-net-standard"></a>Comece a usar o .NET Standard
 
-* Para obter um tutorial introdutório, consulte [Build a .NET Standard library in Visual Studio](../core/tutorials/library-with-visual-studio.md).
+Para obter um tutorial introdutório, consulte [Build a .NET Standard library in Visual Studio](../core/tutorials/library-with-visual-studio.md).
 
 ## <a name="get-started-using-net-core-on-docker"></a>Introdução ao uso do .NET Core no Docker
 
