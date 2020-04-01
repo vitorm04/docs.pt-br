@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d85625b99603c0bd81346cf2076b8efe0e1bba42
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159423"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523880"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
@@ -32,7 +32,7 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
   
 - A identidade de domínio representa a evidência do aplicativo, que, no caso de um aplicativo Web, pode ser a URL completa. Para código hospedado pelo shell, a identidade de domínio pode ser baseada no caminho de diretório de aplicativo. Por exemplo, se o executável é executado do caminho C:\Office\MyApp.exe, a identidade de domínio é C:\Office\MyApp.exe.  
   
-- A identidade do assembly é a evidência do assembly. Pode vir de uma assinatura digital de criptografia, que pode ser o [nome forte](../assembly/strong-named.md) do assembly, o editor de software do assembly ou sua identidade de URL. Se um assembly tiver um nome forte e uma identidade do editor de software, a identidade do editor de software será usada. Se o assembly vier da Internet e não estiver assinado, a identidade de URL será usada. Para saber mais sobre assemblies e nomes fortes, confira [Programação com assemblies](../assembly/program.md).  
+- A identidade do assembly é a evidência do assembly. Pode vir de uma assinatura digital de criptografia, que pode ser o [nome forte](../assembly/strong-named.md) do assembly, o editor de software do assembly ou sua identidade de URL. Se um assembly tiver um nome forte e uma identidade do editor de software, a identidade do editor de software será usada. Se o assembly vier da Internet e não estiver assinado, a identidade de URL será usada. Para saber mais sobre assemblies e nomes fortes, confira [Programação com assemblies](/dotnet/standard/assembly/index).  
   
 - Os armazenamentos móveis migram com um usuário que tem um perfil de usuário móvel. Os arquivos são gravados em um diretório de rede e são baixados em qualquer computador em que o usuário faz logon. Para saber mais sobre perfis de usuário móvel, confira <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   

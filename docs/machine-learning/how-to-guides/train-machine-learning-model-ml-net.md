@@ -1,16 +1,16 @@
 ---
 title: Treinar e avaliar um modelo
 description: Saiba como criar modelos de machine learning, coletar métricas e medir o desempenho com o ML.NET. Um modelo de machine learning identifica padrões nos dados de treinamento para fazer previsões usando novos dados.
-ms.date: 08/29/2019
+ms.date: 03/31/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51499f2c0ece615a99740bd9b27f99d4b5ed1d01
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976768"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523851"
 ---
 # <a name="train-and-evaluate-a-model"></a>Treinar e avaliar um modelo
 
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Use [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) o método para dividir os dados em conjuntos de trem e teste. O resultado será [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) um objeto [`IDataView`](xref:Microsoft.ML.IDataView) que contém dois membros, um para o conjunto de trens e outro para o conjunto de testes. O percentual de divisão de dados é determinado pelo parâmetro `testFraction`. O snippet a seguir está mantendo 20% dos dados originais para o conjunto de teste.
+Use [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) o método para dividir os dados em conjuntos de trem e teste. O resultado será [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) um objeto [`IDataView`](xref:Microsoft.ML.IDataView) que contém dois membros, um para o conjunto de trens e outro para o conjunto de testes. O percentual de divisão de dados é determinado pelo parâmetro `testFraction`. O snippet a seguir está mantendo 20% dos dados originais para o conjunto de teste.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -100,9 +100,9 @@ Algoritmos do ML.NET têm restrições nos tipos de coluna de entrada. Além dis
 
 Os algoritmos de aprendizado de máquina no ML.NET esperam um vetor flutuante de tamanho conhecido como entrada. Aplique [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) o atributo ao seu modelo de dados quando todos os dados já estão em formato numérico e se destinam a ser processados em conjunto (ou seja, pixels de imagem).
 
-Se os dados não forem todos numéricos e você quiser aplicar diferentes [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) transformações de dados em cada uma das colunas individualmente, use o método depois que todas as colunas tiverem sido processadas para combinar todas as colunas individuais em um único vetor de recurso que é output para uma nova coluna.
+Se os dados não forem todos numéricos e você quiser aplicar diferentes [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) transformações de dados em cada uma das colunas individualmente, use o método depois que todas as colunas tiverem sido processadas para combinar todas as colunas individuais em um único vetor de recurso que é output para uma nova coluna.
 
-O snippet a seguir combina as colunas `Size` e `HistoricalPrices` em um vetor de recurso único que é a saída para uma nova coluna chamada `Features`. Como há uma diferença de [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) escalas, `Features` é aplicado à coluna para normalizar os dados.
+O snippet a seguir combina as colunas `Size` e `HistoricalPrices` em um vetor de recurso único que é a saída para uma nova coluna chamada `Features`. Como há uma diferença de [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A) escalas, `Features` é aplicado à coluna para normalizar os dados.
 
 ```csharp
 // Define Data Prep Estimator
@@ -123,7 +123,7 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 Algoritmos do ML.NET usam nomes de coluna padrão quando nenhum é especificado. Todos os treinadores têm um parâmetro chamado `featureColumnName` para as entradas do algoritmo e, quando aplicável, também têm um parâmetro para o valor esperado chamado `labelColumnName`. Por padrão, esses valores são `Features` e `Label`, respectivamente.
 
-Ao usar [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) o método durante o pré-processamento `Features`para criar uma nova coluna chamada, não há necessidade de especificar o `IDataView`nome da coluna de recurso nos parâmetros do algoritmo, uma vez que ele já existe no pré-processado . A coluna `CurrentPrice`de rótulo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) é , mas como o atributo `CurrentPrice` é `Label` usado no modelo de `labelColumnName` dados, ML.NET renomeia a coluna para a qual remove a necessidade de fornecer o parâmetro para o estimador de algoritmo de aprendizagem de máquina.
+Ao usar [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) o método durante o pré-processamento `Features`para criar uma nova coluna chamada, não há necessidade de especificar o `IDataView`nome da coluna de recurso nos parâmetros do algoritmo, uma vez que ele já existe no pré-processado . A coluna `CurrentPrice`de rótulo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) é , mas como o atributo `CurrentPrice` é `Label` usado no modelo de `labelColumnName` dados, ML.NET renomeia a coluna para a qual remove a necessidade de fornecer o parâmetro para o estimador de algoritmo de aprendizagem de máquina.
 
 Se você não quiser usar os nomes de coluna padrão, passe os nomes das colunas de rótulo e de recurso como parâmetros ao definir o estimador do algoritmo de aprendizado de máquina como demonstrado pelo snippet subsequente:
 
@@ -131,9 +131,29 @@ Se você não quiser usar os nomes de coluna padrão, passe os nomes das colunas
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
+## <a name="caching-data"></a>Cache de dados
+
+Por padrão, quando os dados são processados, ele é carregado preguiçosamente ou transmitido, o que significa que os treinadores podem carregar os dados do disco e iterar sobre eles várias vezes durante o treinamento. Portanto, o cache é recomendado para conjuntos de dados que se encaixam na memória para reduzir o número de vezes que os dados são carregados a partir do disco. O cache é feito [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) como [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A)parte de um uso .
+
+Recomenda-se usar [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) antes de qualquer treinador no oleoduto.
+
+Usando o [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)seguinte [`AppendCacheCheckpoint`](xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A) , [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) adicionando antes que o treinador cachê os resultados dos estimadores anteriores para uso posterior pelo treinador.
+
+```csharp
+// 1. Concatenate Size and Historical into a single feature vector output to a new column called Features
+// 2. Normalize Features vector
+// 3. Cache prepared data
+// 4. Use Sdca trainer to train the model
+IEstimator<ITransformer> dataPrepEstimator =
+    mlContext.Transforms.Concatenate("Features", "Size", "HistoricalPrices")
+        .Append(mlContext.Transforms.NormalizeMinMax("Features"))
+        .AppendCacheCheckpoint(mlContext);
+        .Append(mlContext.Regression.Trainers.Sdca());
+```
+
 ## <a name="train-the-machine-learning-model"></a>Treinar o modelo de machine learning
 
-Uma vez que os dados são [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) pré-processados, use [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) o método para treinar o modelo de aprendizagem de máquina com o algoritmo de regressão.
+Uma vez que os dados são [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase%602.Fit%2A) pré-processados, use [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) o método para treinar o modelo de aprendizagem de máquina com o algoritmo de regressão.
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -145,7 +165,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Extrair parâmetros do modelo
 
-Após a formação do modelo, [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) extraia os aprendidos para inspeção ou retreinamento. O [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) fornecer o viés e os coeficientes aprendidos ou pesos do modelo treinado.
+Após a formação do modelo, [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) extraia o aprendido para inspeção ou retreinamento. O [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) fornecer o viés e os coeficientes aprendidos ou pesos do modelo treinado.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
@@ -156,7 +176,7 @@ var trainedModelParameters = trainedModel.Model as LinearRegressionModelParamete
 
 ## <a name="evaluate-model-quality"></a>Avaliar a qualidade do modelo
 
-Para ajudar a escolher o modelo com melhor desempenho, é essencial avaliar seu desempenho nos dados de teste. Use [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) o método, para medir várias métricas para o modelo treinado.
+Para ajudar a escolher o modelo com melhor desempenho, é essencial avaliar seu desempenho nos dados de teste. Use [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) o método, para medir várias métricas para o modelo treinado.
 
 > [!NOTE]
 > O método `Evaluate` produz métricas diferentes dependendo de qual tarefa de aprendizado de máquina foi executada. Para obter mais detalhes, visite a [ `Microsoft.ML.Data` Documentação](xref:Microsoft.ML.Data) da API e procure por classes que contenham `Metrics` em seu nome.

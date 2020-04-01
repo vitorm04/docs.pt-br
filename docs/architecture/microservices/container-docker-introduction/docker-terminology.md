@@ -2,12 +2,12 @@
 title: Terminologia do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Terminologia do Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502831"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523340"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -17,7 +17,9 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Dockerfile**: um arquivo de texto que contém instruções sobre como criar uma imagem do Docker. É como um script em lotes, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para instalar os programas necessários, copie os arquivos e assim por diante, até que você obtenha o ambiente de trabalho que precisa.
 
-**Build**: a ação de criar de uma imagem de contêiner com base nas informações e no contexto fornecido pelo Dockerfile, além de arquivos adicionais na pasta em que a imagem é criada. Você pode criar imagens com o comando **docker build** do Docker.
+**Build**: a ação de criar de uma imagem de contêiner com base nas informações e no contexto fornecido pelo Dockerfile, além de arquivos adicionais na pasta em que a imagem é criada. Você pode construir imagens com o comando Docker:
+
+> `docker build`
 
 **Contêiner**: uma instância de uma imagem do Docker. Um contêiner representa a execução de um único aplicativo, processo ou serviço. Consiste no conteúdo de uma imagem do Docker, um ambiente de execução e um conjunto padrão de instruções. Ao dimensionar um serviço, você cria várias instâncias de um contêiner da mesma imagem. Ou um trabalho em lotes pode criar vários contêineres da mesma imagem, passando parâmetros diferentes para cada instância.
 
@@ -25,7 +27,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Marcação**: uma marca ou um rótulo pode ser aplicado a imagens para que imagens ou versões diferentes da mesma imagem (dependendo do número de versão ou do ambiente de destino) possam ser identificadas.
 
-**Build de vários estágios**: é um recurso disponível no Docker 17.05 e posteriores que ajuda a reduzir o tamanho das imagens finais. Em algumas frases, com o build de vários estágios você pode usar, por exemplo, uma imagem base grande contendo o SDK para compilar e publicar o aplicativo e, em seguida, usar a pasta de publicação com uma pequena imagem base somente de runtime para produzir uma imagem final muito menor
+**Build de vários estágios**: é um recurso disponível no Docker 17.05 e posteriores que ajuda a reduzir o tamanho das imagens finais. Em algumas frases, com a compilação em vários estágios, você pode usar, por exemplo, uma imagem base grande, contendo o SDK, para compilar e publicar o aplicativo e, em seguida, usar a pasta de publicação com uma pequena imagem base somente em tempo de execução, para produzir uma imagem final muito menor.
 
 **Repositório**: uma coleção de imagens do Docker relacionadas, rotulada com uma marcação que indica a versão da imagem. Alguns repositórios contêm várias variantes de uma imagem específica, como uma imagem contendo SDKs (mais pesadas), uma imagem contendo apenas tempos de execução (mais leve), etc. Essas variantes podem ser marcadas com tags. Um único repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows.
 

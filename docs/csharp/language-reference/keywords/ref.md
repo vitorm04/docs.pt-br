@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249325"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523783"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -25,7 +25,7 @@ A palavra-chave `ref` indica um valor que é passado por referência. Ela é usa
 
 ## <a name="passing-an-argument-by-reference"></a>Passando um argumento por referência
 
-Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passar uma expressão de variável local ou uma expressão de acesso a elemento de matriz, e o método chamado substituir o objeto ao qual o parâmetro de ref se refere, então a variável local do chamador ou o elemento de matriz agora se refere ao novo objeto quando o retornos do método.
+Quando usado na lista de parâmetros do método, a palavra-chave `ref` indica que um argumento é passado por referência, não por valor. A palavra-chave `ref` torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. Por exemplo, se o chamador passar uma expressão de variável local ou uma expressão de acesso a elemento de matriz, e o método chamado substituir o objeto ao qual o parâmetro de ref se refere, então a variável local do chamador ou o elemento de matriz agora se refere ao novo objeto quando o método retorna.
 
 > [!NOTE]
 > Não confunda o conceito de passar por referência com o conceito de tipos de referência. Os dois conceitos não são iguais. Um parâmetro de método pode ser modificado por `ref`, independentemente de ele ser um tipo de valor ou um tipo de referência. Não há nenhuma conversão boxing de um tipo de valor quando ele é passado por referência.  
@@ -63,7 +63,7 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
 
 Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
 
-- O `out` keywoard não pode ser usado no primeiro argumento de um método de extensão.
+- A `out` palavra-chave não pode ser usada no primeiro argumento de um método de extensão.
 - A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
 - A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
 
@@ -160,11 +160,11 @@ Você pode combinar modificadores para declarar um struct como `readonly ref`. U
   
 ## <a name="see-also"></a>Confira também
 
-- [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
+- [Escreva um código eficiente seguro](../../write-safe-efficient-code.md)
 - [Ref returns e ref locals](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Expressão condicional ref](../operators/conditional-operator.md#conditional-ref-expression)
-- [Passando parâmetros](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Parâmetros de passagem](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parâmetros de método](method-parameters.md)
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [C# Palavras-chave](index.md)

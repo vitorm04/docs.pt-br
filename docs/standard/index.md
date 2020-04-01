@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344082"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523892"
 ---
 # <a name="net-guide"></a>Guia do .NET
 
@@ -46,7 +46,6 @@ Para obter mais informações sobre os principais conceitos do .NET, consulte:
 * [.NET Standard](net-standard.md)
 * [Interoperabilidade nativa](native-interop/index.md)
 * [Coleta de lixo](garbage-collection/index.md)
-* [Tipos básicos em .NET](base-types/index.md)
 * [Coleções](collections/index.md)
 * [Datas, horas e fusos horários](datetime/index.md)
 * [Programação assíncrona](async.md)
@@ -57,6 +56,6 @@ Para obter informações sobre os três principais idiomas .NET, consulte:
 * [Guia do F#](../fsharp/index.yml)
 * [Guia do Visual Basic](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>Reference API
+## <a name="api-reference"></a>Referência de API
 
 Para obter informações detalhadas sobre todas as APIs disponíveis no .NET, consulte [referência de API .NET](../../api/index.md).

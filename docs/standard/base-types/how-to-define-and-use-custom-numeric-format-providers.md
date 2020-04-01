@@ -1,5 +1,5 @@
 ---
-title: Como definir e usar provedores de formatos numéricos personalizados
+title: 'Como: definir e usar provedores de formatos numéricos personalizados'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140068"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523932"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Como definir e usar provedores de formatos numéricos personalizados
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Como: definir e usar provedores de formatos numéricos personalizados
 O .NET Framework oferece controle abrangente sobre a representação de cadeias de caracteres de valores numéricos. Ele dá suporte aos seguintes recursos para personalizar o formato de valores numéricos:  
   
 - Cadeias de caracteres de formato numérico padrão, que fornecem um conjunto predefinido de formatos para converter números para suas representações de cadeia de caracteres. Você pode usá-las com qualquer método de formatação numérica, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tem um parâmetro `format`. Para obter detalhes, confira [Cadeias de caracteres de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -84,8 +84,4 @@ O .NET Framework oferece controle abrangente sobre a representação de cadeias 
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- No caso deste exemplo, o método que implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> se destina a servir como um método de retorno de chamada para o método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Portanto, ele examina o parâmetro `formatProvider` para determinar se ele contém uma referência ao objeto `TelephoneFormatter` atual. No entanto, o método também pode ser chamado diretamente do código. Nesse caso, você pode usar o parâmetro `formatProvider` para fornecer um objeto <xref:System.Globalization.CultureInfo> ou <xref:System.Globalization.NumberFormatInfo> que fornece informações de formatação específicas da cultura.  
-  
-## <a name="see-also"></a>Confira também
-
-- [Executando operações de formatação](../../../docs/standard/base-types/performing-formatting-operations.md)
+ No caso deste exemplo, o método que implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> se destina a servir como um método de retorno de chamada para o método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Portanto, ele examina o parâmetro `formatProvider` para determinar se ele contém uma referência ao objeto `TelephoneFormatter` atual. No entanto, o método também pode ser chamado diretamente do código. Nesse caso, você pode usar o parâmetro `formatProvider` para fornecer um objeto <xref:System.Globalization.CultureInfo> ou <xref:System.Globalization.NumberFormatInfo> que fornece informações de formatação específicas da cultura.

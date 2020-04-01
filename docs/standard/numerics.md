@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091599"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523282"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -95,5 +95,4 @@ Os tipos habilitados para SIMD são implementados de modo que possam ser usados 
 
 ## <a name="see-also"></a>Confira também
 
-- [Fundamentos do aplicativo](application-essentials.md)
-- [Strings de formato numérico padrão](base-types/standard-numeric-format-strings.md)
+- [Cadeias de caracteres de formato numérico padrão](base-types/standard-numeric-format-strings.md)

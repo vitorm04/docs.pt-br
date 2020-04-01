@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185747"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523310"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir vestígios e definir níveis de rastreamento, definir rastreamento de atividade e propagação para suportar correlação de rastreamento de ponta a ponta e definir os ouvintes de rastreamento para acessar vestígios.  
@@ -38,7 +38,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  

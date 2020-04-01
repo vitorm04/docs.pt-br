@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711474"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523968"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 
@@ -350,7 +350,3 @@ No entanto, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProp
 08.09.1890 06:47
 18.02.1905 15:12
 ```
-
-## <a name="see-also"></a>Confira também
-
-- [Manipulando cadeias de caracteres](manipulating-strings.md)

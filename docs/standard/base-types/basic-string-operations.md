@@ -8,41 +8,23 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132919"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523982"
 ---
-# <a name="basic-string-operations-in-net"></a>Operações básicas de cadeias de caracteres no .NET
-Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base na entrada do usuário. Por exemplo, não é incomum para sites responderem a um usuário recém-conectado com uma saudação especializada que inclui o nome do usuário. Vários métodos nas classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> permitem que você construa dinamicamente cadeias de caracteres personalizadas para exibir na interface do usuário. Esses métodos também ajudam a realizar várias operações de cadeias de caracteres básicas como criar novas cadeias de caracteres em matrizes de bytes, comparar os valores das cadeias de caracteres e modificar cadeias de caracteres existentes.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Criando novas cadeias de caracteres](../../../docs/standard/base-types/creating-new.md)  
- Descreve maneiras básicas de converter objetos em cadeias de caracteres e de combinar cadeias de caracteres.  
-  
- [Cortar e remover caracteres](../../../docs/standard/base-types/trimming.md)  
- Descreve como cortar ou remover caracteres em uma cadeia de caracteres.  
-  
- [Preencher cadeias de caracteres](../../../docs/standard/base-types/padding.md)  
- Descreve como inserir caracteres ou espaços vazios em uma cadeia de caracteres.  
-  
- [Comparação de cadeias de caracteres](../../../docs/standard/base-types/comparing.md)  
- Descreve como comparar o conteúdo de duas ou mais cadeias de caracteres.  
-  
- [Caso de alteração](../../../docs/standard/base-types/changing-case.md)  
- Descreve como alterar a definição de maiúsculas e minúsculas dentro de uma cadeia de caracteres.  
-  
- [Uso da classe StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
- Descreve como criar e modificar objetos de cadeia de caracteres dinâmica usando a classe <xref:System.Text.StringBuilder>.  
-  
- [Como executar manipulações de cadeias de caracteres básicas](../../../docs/standard/base-types/basic-manipulations.md)  
- Demonstra o uso das operações de cadeias de caracteres básicas.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [Conversão de tipo no .NET](../../../docs/standard/base-types/type-conversion.md)  
- Descreve como converter de um tipo para outro.  
-  
- [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)  
- Descreve como formatar cadeias de caracteres usando especificadores de formato.
+# <a name="basic-string-operations-in-net"></a>Operações básicas de string em .NET
+
+Muitas vezes, os aplicativos respondem aos usuários criando mensagens com base na entrada do usuário. Por exemplo, não é incomum que sites respondam a um usuário recém-conectado com uma saudação especializada que inclua o nome do usuário.
+
+Vários métodos nas classes <xref:System.String?displayProperty=nameWithType> e <xref:System.Text.StringBuilder?displayProperty=nameWithType> permitem que você construa dinamicamente cadeias de caracteres personalizadas para exibir na interface do usuário. Esses métodos também ajudam a realizar várias operações de cadeias de caracteres básicas como criar novas cadeias de caracteres em matrizes de bytes, comparar os valores das cadeias de caracteres e modificar cadeias de caracteres existentes.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Conversão de tipo em .NET](../../../docs/standard/base-types/type-conversion.md)\
+Descreve como converter de um tipo para outro.  
+
+[Tipos de formatação](../../../docs/standard/base-types/formatting-types.md)\
+Descreve como formatar cadeias de caracteres usando especificadores de formato.

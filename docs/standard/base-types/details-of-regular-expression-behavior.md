@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124345"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523845"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalhes do comportamento de expressões regulares
 
@@ -87,7 +87,7 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 
      Para obter mais informações sobre as asserções de lookahead negativo, consulte [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-- Avaliação condicional: `(?(` *expressão*`)`*sim*`|`*não* `)` e `(?(` *nome*`)`sim*não*`|`*no*`)`, onde *a expressão* é uma subexpressão para combinar, *nome* é o nome de um grupo de captura, *sim* é a string para combinar se *a expressão* é compatível ou *nome* é um grupo capturado válido, não vazio, e *não* é a subexpressão para combinar se *expressão *não é correspondido ou *o nome* não é um grupo capturado válido e não vazio. Esse recurso permite que o mecanismo pesquise usando mais de um padrão alternativo, dependendo do resultado de uma correspondência de subexpressão anterior ou do resultado de uma asserção de largura zero. Isso possibilita uma forma mais potente de referência inversa que permite, por exemplo, corresponder a uma subexpressão com base no fato de uma subexpressão anterior ser correspondente. A expressão regular no exemplo a seguir corresponde a parágrafos que são destinados a uso público e interno. Os parágrafos destinados apenas a uso interno começam com uma marca `<PRIVATE>`. O padrão de expressão regular `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa avaliação condicional para atribuir o conteúdo de parágrafos destinados a uso público e interno a grupos de captura separados. Esses parágrafos podem ser tratados de maneiras diferentes.
+- Avaliação condicional: `(?(` *expressão*`)`*sim*`|`*não* `)` e `(?(` *nome*`)`sim*yes*`|`*não*`)`, onde *a expressão* é uma subexpressão para combinar, *nome* é o nome de um grupo de captura, *sim* é a string para combinar se a *expressão* for combinada ou *o nome* for um grupo capturado válido, não vazio, e *não* é a subexpressão para combinar se a *expressão* não for correspondida ou *o nome* não for um grupo capturado válido e não vazio. Esse recurso permite que o mecanismo pesquise usando mais de um padrão alternativo, dependendo do resultado de uma correspondência de subexpressão anterior ou do resultado de uma asserção de largura zero. Isso possibilita uma forma mais potente de referência inversa que permite, por exemplo, corresponder a uma subexpressão com base no fato de uma subexpressão anterior ser correspondente. A expressão regular no exemplo a seguir corresponde a parágrafos que são destinados a uso público e interno. Os parágrafos destinados apenas a uso interno começam com uma marca `<PRIVATE>`. O padrão de expressão regular `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa avaliação condicional para atribuir o conteúdo de parágrafos destinados a uso público e interno a grupos de captura separados. Esses parágrafos podem ser tratados de maneiras diferentes.
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -148,11 +148,10 @@ O mecanismo de expressões regulares do .NET Framework é um correspondente de e
 |-----------|-----------------|
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Fornece informações sobre como o retrocesso de expressões regulares se ramifica para encontrar correspondências alternativas.|
 |[Compilação e reutilização](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Fornece informações sobre a compilação e a reutilização de expressões regulares para aumentar o desempenho.|
-|[Segurança de thread](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Fornece informações sobre a segurança de thread de expressões regulares e explica quando você deve sincronizar o acesso a objetos de expressão regular.|
+|[Segurança de threads](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Fornece informações sobre a segurança de thread de expressões regulares e explica quando você deve sincronizar o acesso a objetos de expressão regular.|
 |[Expressões regulares do .NET Framework](../../../docs/standard/base-types/regular-expressions.md)|Fornece uma visão geral sobre o aspecto de linguagem de programação das expressões regulares.|
 |[O modelo de objeto de expressão regular](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Oferece informações e exemplos de código que mostram como usar as classes de expressão regular.|
-|[Exemplos de expressão regular](../../../docs/standard/base-types/regular-expression-examples.md)|Contém exemplos de código que mostram o uso de expressões regulares em aplicativos comuns.|
-|[Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Oferece informações a respeito do conjunto de caracteres, operadores e constructos que você pode usar para definir expressões regulares.|
+|[Linguagem de expressões regulares – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Oferece informações a respeito do conjunto de caracteres, operadores e constructos que você pode usar para definir expressões regulares.|
 
 ## <a name="reference"></a>Referência
 
