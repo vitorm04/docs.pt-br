@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134227"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588568"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Como cancelar uma consulta PLINQ
 Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O primeiro exemplo mostra como cancelar uma consulta composta principalmente de travessia de dados. O segundo exemplo mostra como cancelar uma consulta que contém uma função de usuário que gasta muitos recursos de computação.
@@ -53,5 +53,5 @@ Quando um enumerador é descartado, por exemplo, quando o código foge de um loo
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Cancelamento em threads gerenciados](../../../docs/standard/threading/cancellation-in-managed-threads.md)

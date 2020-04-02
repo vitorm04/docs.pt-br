@@ -14,22 +14,22 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 9bf0b168633bbf9f56694e79cf81f8051f9b8ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186381"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587801"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
-O WPF (Windows Presentation Foundation) fornece um conjunto de serviços que podem ser usados para estender a funcionalidade de uma [propriedade](../../../standard/base-types/common-type-system.md#Properties) de um tipo. Em conjunto, esses serviços são normalmente conhecidos como o sistema de propriedades do WPF. Uma propriedade que tem o suporte do sistema de propriedades do WPF é conhecida como uma propriedade de dependência. Esta visão geral descreve o sistema de propriedades do WPF e as funcionalidades de uma propriedade de dependência. Isso inclui como usar as propriedades de dependência existentes no XAML e no código. Esta visão geral também apresenta aspectos especializados de propriedades de dependência, como metadados de propriedades de dependência e como criar sua própria propriedade de dependência em uma classe personalizada.
+O WPF (Windows Presentation Foundation) fornece um conjunto de serviços que podem ser usados para estender a funcionalidade de uma [propriedade](../../../standard/base-types/common-type-system.md#properties) de um tipo. Em conjunto, esses serviços são normalmente conhecidos como o sistema de propriedades do WPF. Uma propriedade que tem o suporte do sistema de propriedades do WPF é conhecida como uma propriedade de dependência. Esta visão geral descreve o sistema de propriedades do WPF e as funcionalidades de uma propriedade de dependência. Isso inclui como usar as propriedades de dependência existentes no XAML e no código. Esta visão geral também apresenta aspectos especializados de propriedades de dependência, como metadados de propriedades de dependência e como criar sua própria propriedade de dependência em uma classe personalizada.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 Este tópico pressupõe que você tenha algum conhecimento básico sobre o sistema de tipos .NET e sobre programação orientada a objeto. Para seguir os exemplos deste tópico, você também deve ter noções básicas de XAML e saber como escrever aplicativos do WPF. Para obter mais informações, confira [Passo a passo: Meu primeiro aplicativo de área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Propriedades de dependência e propriedades CLR
- No WPF, as propriedades normalmente são expostas como [propriedades](../../../standard/base-types/common-type-system.md#Properties) padrão do .NET. Em um nível básico, você poderá interagir com essas propriedades diretamente e nunca saber que elas são implementadas como uma propriedade de dependência. No entanto, você deve se familiarizar com algumas ou todas as funcionalidades do sistema de propriedades do WPF para poder aproveitá-las.
+ No WPF, as propriedades normalmente são expostas como [propriedades](../../../standard/base-types/common-type-system.md#properties) padrão do .NET. Em um nível básico, você poderá interagir com essas propriedades diretamente e nunca saber que elas são implementadas como uma propriedade de dependência. No entanto, você deve se familiarizar com algumas ou todas as funcionalidades do sistema de propriedades do WPF para poder aproveitá-las.
 
 A finalidade das propriedades de dependência é fornecer uma maneira para calcular o valor de uma propriedade com base no valor de outras entradas. Essas outras entradas podem incluir propriedades do sistema, como temas e preferências do usuário, mecanismos de determinação de propriedade Just-In-Time, como vinculação de dados e animações/storyboards, uso múltiplo de modelos, como recursos e estilos ou valores conhecidos por meio de relacionamentos pai-filho com outros elementos da árvore de elementos. Além disso, uma propriedade de dependência pode ser implementada para fornecer validação independente, valores padrão, retornos de chamada que monitoram alterações em outras propriedades e um sistema que pode impor valores da propriedade com base nas informações possivelmente em runtime. As classes derivadas também podem alterar algumas características específicas de uma propriedade existente, substituindo metadados de propriedades de dependência, em vez de substituir a implementação real das propriedades existentes ou criar novas propriedades.
 
@@ -95,7 +95,7 @@ Uma propriedade de dependência fornece uma funcionalidade que estende a funcion
 
 - [Substituições de metadados](#metadata-overrides)
 
-- [Herança do valor da propriedade](#property-value-inheritance)
+- [Herança de valor patrimonial](#property-value-inheritance)
 
 - [Integração do WPF Designer](#wpf-designer-integration)
 
@@ -200,5 +200,5 @@ Normalmente, você não desejará que os estilos sempre sejam aplicados e oculte
 
 - [Propriedades de dependência personalizada](custom-dependency-properties.md)
 - [Propriedades de dependência somente leitura](read-only-dependency-properties.md)
-- [Visão geral xaml (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Arquitetura do WPF](wpf-architecture.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160385"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588651"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
@@ -30,7 +30,7 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
   
 - **A capacidade de enumerar a coleção**  
   
-     Coleções do .NET Framework implementam <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir a iteração da coleção por meio dela. Um enumerador pode ser considerado um ponteiro móvel para qualquer elemento da coleção. A instrução [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) e a [Instrução For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usam o enumerador exposto pelo método <xref:System.Collections.IEnumerable.GetEnumerator%2A> e ocultam a complexidade de manipulação do enumerador. Além disso, qualquer coleção que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> é considerada um *tipo passível de consulta* e pode ser consultada com LINQ. Consultas LINQ fornecem um padrão comum para o acesso de dados. Elas são geralmente mais concisas e legíveis que loops `foreach` padrão e fornecem filtragem, classificação e agrupamento de recursos. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, consulte [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Introdução a consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) e [Operações básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+     Coleções do .NET Framework implementam <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir a iteração da coleção por meio dela. Um enumerador pode ser considerado um ponteiro móvel para qualquer elemento da coleção. A instrução [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) e a [Instrução For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usam o enumerador exposto pelo método <xref:System.Collections.IEnumerable.GetEnumerator%2A> e ocultam a complexidade de manipulação do enumerador. Além disso, qualquer coleção que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> é considerada um *tipo passível de consulta* e pode ser consultada com LINQ. Consultas LINQ fornecem um padrão comum para o acesso de dados. Elas são geralmente mais concisas e legíveis que loops `foreach` padrão e fornecem filtragem, classificação e agrupamento de recursos. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, consulte [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md), [Introdução a consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) e [Operações básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
 - **A capacidade de copiar o conteúdo da coleção para uma matriz**  
   
@@ -80,7 +80,7 @@ Dados semelhantes podem normalmente ser tratados com mais eficiência quando arm
 |[Comparações e classificações dentro de coleções](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|Discute o uso de comparações de igualdade e comparações de classificação em coleções.|  
 |[Tipos de Coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as características e o desempenho de coleções classificadas|  
 |[Tipos de Coleção de Tabela de Hash e Dicionário](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.|  
-|[Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|  
+|[Coleções seguras para segmentos](../../../docs/standard/collections/thread-safe/index.md)|Descreve os tipos de coleção, tais como <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> e <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> que dão suporte a acesso simultâneo seguro e eficiente de vários threads.|  
 |System.Collections.Immutable|Apresenta as coleções imutáveis e fornece links para os tipos de coleção.|  
   
 <a name="BKMK_Reference"></a>

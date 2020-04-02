@@ -4,12 +4,12 @@ description: Saber a diferença entre delegados e eventos e quando usar cada um 
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146172"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588255"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinção entre Delegados e Eventos
 
@@ -37,6 +37,11 @@ Controles de UX ainda funcionam corretamente, mesmo quando não houver nenhum as
 Outra consideração é o protótipo do método que você gostaria de ter para seu método de delegado. Como você viu, todos os delegados usados para os eventos têm um tipo retornado nulo. Você também viu que há expressões para criar manipuladores de eventos que passam informações para as origens dos eventos modificando propriedades do objeto de argumento de evento. Embora essas expressões funcionem, elas não são tão naturais quanto retornar um valor de um método.
 
 Observe que essas duas heurísticas geralmente podem estar presentes: se o método de delegado retornar um valor, provavelmente ele terá impacto sobre o algoritmo de alguma forma.
+
+## <a name="events-have-private-invocation"></a>Eventos têm invocação privada
+
+Classes diferentes daquela em que um evento é contido só podem adicionar e remover ouvintes de eventos; apenas a classe que contém o evento pode invocar o evento. Eventos são tipicamente membros de classe pública.
+Em comparação, os delegados são frequentemente passados como parâmetros e armazenados como membros de classe privada, se eles são armazenados em tudo.
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Ouvintes de evento frequentemente têm vida útil mais longa
 

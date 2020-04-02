@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 621d64183c1cacc14c2d432e4eef43f4d3ba5474
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711344"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588320"
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
 
@@ -79,11 +79,11 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects e PLINQ  
  O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. As consultas LINQ fornecem um padrão comum para acessar dados, são geralmente mais concisas e legíveis que os loops padrão `foreach` e fornecem capacidades de filtragem, ordenação e agrupamento. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md) e [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md).  
   
- PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)
+- [Coleções seguras para segmentos](../../../docs/standard/collections/thread-safe/index.md)

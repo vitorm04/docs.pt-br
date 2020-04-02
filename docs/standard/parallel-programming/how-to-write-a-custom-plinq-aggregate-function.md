@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to create aggregate function
 ms.assetid: 5a70dd49-ab2a-4798-b551-196ee7042b1a
-ms.openlocfilehash: 7bb4cc1b69f0b6b97c1cf6255ded5341304f3ee3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8168c89a6edecd5f7e33a710c9a89c92a6f82005
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106763"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588236"
 ---
 # <a name="how-to-write-a-custom-plinq-aggregate-function"></a>Como escrever uma função agregada PLINQ personalizada
 Este exemplo mostra como usar o método <xref:System.Linq.ParallelEnumerable.Aggregate%2A> para aplicar uma função de agregação personalizada a uma sequência de origem.  
@@ -34,4 +34,4 @@ Este exemplo mostra como usar o método <xref:System.Linq.ParallelEnumerable.Agg
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Linq.ParallelEnumerable>
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139863"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588282"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Explicação passo a passo: Criando um pipeline de fluxo de dados
 Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para receber mensagens dos blocos de origem, você também pode conectar blocos de mensagens para formar um *pipeline de fluxo de dados*. Um pipeline de fluxo de dados é uma série de componentes, ou *blocos de fluxo de dados*, e cada uma série executa uma tarefa específica que contribui para um objetivo maior. Todos os blocos de fluxo de dados em um pipeline de fluxo de dados realizam trabalhos ao receber uma mensagem de outro bloco de fluxo de dados. Como analogia, podemos usar uma linha de montagem de automóveis. À medida que os veículos passam por ela, uma estação monta a carroceria, a seguinte instala o motor e assim por diante. Como a linha de montagem permite que vários veículos sejam montados ao mesmo tempo, seu desempenho é superior se comparado com a montagem de um veículo completo por vez.
@@ -104,7 +104,7 @@ Embora possa usar os métodos <xref:System.Threading.Tasks.Dataflow.DataflowBloc
 ## <a name="next-steps"></a>Próximas etapas  
  Este exemplo envia uma URL para ser processada pelo fluxo de dados do pipeline. Se você enviar mais de um valor de entrada pelo pipeline, introduza um formulário de paralelismo no aplicativo, semelhante à forma como as peças seriam movimentadas em uma fábrica de automóveis. Após o primeiro membro do pipeline enviar o resultado para o segundo membro, o primeiro membro poderá processar outro item em paralelo enquanto o segundo membro processa o primeiro resultado.  
   
- O paralelismo obtido usando pipelines de fluxo de dados é conhecido como *paralelismo de alta granularidade* porque, geralmente, é formado por menos tarefas, porém maiores. Você também pode usar um *paralelismo mais refinado* com tarefas menores e de curta execução em um pipeline de fluxo de dados. Neste exemplo, o membro `findReversedWords` do pipeline usa o [PLINQ](parallel-linq-plinq.md) para processar em paralelo vários itens da lista de trabalho. O uso do paralelismo refinado em um pipeline de alta granularidade pode melhorar o desempenho geral.  
+ O paralelismo obtido usando pipelines de fluxo de dados é conhecido como *paralelismo de alta granularidade* porque, geralmente, é formado por menos tarefas, porém maiores. Você também pode usar um *paralelismo mais refinado* com tarefas menores e de curta execução em um pipeline de fluxo de dados. Neste exemplo, o membro `findReversedWords` do pipeline usa o [PLINQ](introduction-to-plinq.md) para processar em paralelo vários itens da lista de trabalho. O uso do paralelismo refinado em um pipeline de alta granularidade pode melhorar o desempenho geral.  
   
  Você também pode conectar um bloco de fluxo de dados de origem a vários blocos de destino para criar uma *rede de fluxo de dados*. A versão sobrecarregada do método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> usa um objeto <xref:System.Predicate%601> que define se o bloco de destino aceita cada mensagem com base em seu valor. A maioria dos tipos de blocos de fluxo de dados que agem como fontes fornecem mensagens para todos os blocos de destino conectados, na ordem em que estavam conectados, até que um dos blocos aceite essa mensagem. Com esse mecanismo de filtragem, é possível criar sistemas de blocos de fluxo de dados conectados que direcionam determinados dados por um caminho e outros dados por meio de outro caminho. Para ver um exemplo que usa a filtragem para criar uma rede de fluxo de dados, confira [Explicação passo a passo: usar o fluxo de dados em um aplicativo do Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   

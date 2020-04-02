@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc590d712a49ea27fcc61181e0b8c9b3349e74e5
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711396"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588332"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de coleção de uso comum
 Tipos de coleção são as variações comuns de coleções de dados, como tabelas de hash, filas, pilhas, pacotes, dicionários e listas.  
@@ -28,7 +28,7 @@ Tipos de coleção são as variações comuns de coleções de dados, como tabel
   
  As coleções podem variar, dependendo de como os elementos são armazenados, como são classificados, como as pesquisas são executadas e como são feitas comparações. A classe <xref:System.Collections.Queue> e a classe genérica <xref:System.Collections.Generic.Queue%601> fornecem listas primeiro a entrar, primeiro a sair, enquanto a classe <xref:System.Collections.Stack> e a classe genérica <xref:System.Collections.Generic.Stack%601> fornecem listas último a entrar, primeiro a sair. A classe <xref:System.Collections.SortedList> e a classe genérica <xref:System.Collections.Generic.SortedList%602> fornecem versões classificadas da classe <xref:System.Collections.Hashtable> e da classe genérica <xref:System.Collections.Generic.Dictionary%602>. Os elementos de uma <xref:System.Collections.Hashtable> ou uma <xref:System.Collections.Generic.Dictionary%602> são acessíveis somente pela chave do elemento, mas os elementos de uma <xref:System.Collections.SortedList> ou uma <xref:System.Collections.ObjectModel.KeyedCollection%602> são acessíveis pela chave ou pelo índice do elemento. Os índices em todas as coleções são baseados em zero, exceto <xref:System.Array>, que permite matrizes que não sejam baseadas em zero.  
   
- O recurso LINQ para objetos permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Consultas LINQ fornecem um padrão comum para acessar dados; são geralmente mais concisas e legíveis que os loops `foreach` padrão; e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ O recurso LINQ para objetos permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Consultas LINQ fornecem um padrão comum para acessar dados; são geralmente mais concisas e legíveis que os loops `foreach` padrão; e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="related-topics"></a>Tópicos Relacionados  
   

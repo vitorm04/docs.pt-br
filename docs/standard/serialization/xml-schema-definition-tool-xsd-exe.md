@@ -2,18 +2,20 @@
 title: Ferramenta de Definição de Esquema XML (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9de4a195f34b0daedcfb3687dbb36495b985092d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775257"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588345"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Ferramenta de Definição de Esquema XML (Xsd.exe)
 
 A Ferramenta de Definição de Esquema XML (Xsd.exe) gera um esquema XML ou classes de common language runtime de arquivos XDR, XML e XSD files, ou de classes em um assembly de tempo de execução.
 
 ## <a name="syntax"></a>Sintaxe
+
+Execute a ferramenta a partir da linha de comando.
 
 ```console
 xsd file.xdr [-outputdir:directory][/parameters:file.xml]
@@ -24,50 +26,53 @@ xsd file.xsd {/classes | /dataset} [/element:element]
                           [/parameters:file.xml]
 xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/parameters:file.xml]
 ```
+  
+> [!TIP]
+> Para que as ferramentas .NET Framework `Path`funcionem corretamente, você deve definir as variáveis de `Include`ambiente e `Lib` de ambiente corretamente. Defina essas variáveis de ambiente executando SDKVars.bat, que está localizado no diretório \<SDK>\v2.0\Bin. SDKVars.bat deve ser executado em todo shell de comando.
 
 ## <a name="argument"></a>Argumento
 
 |Argumento|Descrição|
 |--------------|-----------------|
-|*file.extension*|Especifica o arquivo de entrada para ser convertido. Você deve especificar a extensão como um dos seguintes:. XDR,. xml,. xsd,. dll ou. exe.<br /><br /> Se você especificar um arquivo de esquema XDR (extensão .xdr), o Xsd.exe converterá o esquema XDR em um esquema XSD. O arquivo de saída tem o mesmo nome que o esquema XDR, mas com a extensão .xsd.<br /><br /> Se você especificar um arquivo XML (extensão .xml), o Xsd.exe deduzirá um esquema dos dados no arquivo e produzirá um esquema XSD. O arquivo de saída tem o mesmo nome que o arquivo XML, mas com a extensão .xsd.<br /><br /> Se você especificar um arquivo de esquema XML (extensão .xsd), o Xsd.exe gerará o código de origem para objetos em runtime que correspondem ao esquema XML.<br /><br /> Se você especificar um arquivo de assembly de runtime (extensão .exe ou .dll), o Xsd.exe gerará esquemas para um ou mais tipos nesse assembly. Você pode usar a opção `/type` para especificar os tipos para os quais gerar esquemas. Os esquemas de saída são nomeados schema0.xsd, schema1.xsd e assim por diante. O Xsd.exe produzirá vários esquemas somente se os determinados tipos especificarem um namespace usando o atributo personalizado `XMLRoot`.|
+|*file.extension*|Especifica o arquivo de entrada para ser convertido. Você deve especificar a extensão como uma das seguintes: .xdr, .xml, .xsd, .dll ou .exe.<br /><br /> Se você especificar um arquivo de esquema XDR (extensão .xdr), o Xsd.exe converterá o esquema XDR em um esquema XSD. O arquivo de saída tem o mesmo nome que o esquema XDR, mas com a extensão .xsd.<br /><br /> Se você especificar um arquivo XML (extensão .xml), o Xsd.exe deduzirá um esquema dos dados no arquivo e produzirá um esquema XSD. O arquivo de saída tem o mesmo nome que o arquivo XML, mas com a extensão .xsd.<br /><br /> Se você especificar um arquivo de esquema XML (extensão .xsd), o Xsd.exe gerará o código de origem para objetos em runtime que correspondem ao esquema XML.<br /><br /> Se você especificar um arquivo de assembly de runtime (extensão .exe ou .dll), o Xsd.exe gerará esquemas para um ou mais tipos nesse assembly. Você pode usar a opção `/type` para especificar os tipos para os quais gerar esquemas. Os esquemas de saída são nomeados schema0.xsd, schema1.xsd e assim por diante. O Xsd.exe produzirá vários esquemas somente se os determinados tipos especificarem um namespace usando o atributo personalizado `XMLRoot`.|
 
 ## <a name="general-options"></a>Opções gerais
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/h \[elp \]**|Exibe sintaxe de comando e opções para a ferramenta.|
-|**/o \[utputdir \]:** _Directory_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
+|**/h\[elp\]**|Exibe sintaxe de comando e opções para a ferramenta.|
+|**/o\[utputdir:\]**_diretório_|Especifica o diretório para arquivos de saída. Esse argumento pode aparecer somente uma vez. O padrão é o diretório atual.|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
-|**/p \[arameters \]:** _File. xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [comentários](#remarks) .|
+|**/p\[arameters:\]**_file.xml_|As opções de leitura para vários modos de operação do arquivo .xml especificado. A forma curta é `/p:`. Para obter mais informações, consulte a seção [Observações.](#remarks)|
 
 ## <a name="xsd-file-options"></a>Opções de arquivo XSD
  Você deve especificar somente uma das seguintes opções para arquivos .xsd.
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/c \[lasses \]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
-|**/d \[ataset \]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
+|**/c\[lasses\]**|Gera classes que correspondem ao esquema especificado. Para ler dados XML em um objeto, use o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|
+|**/d\[ataset\]**|Gera uma classe derivada de <xref:System.Data.DataSet> que corresponde ao esquema especificado. Para ler dados XML na classe derivada, use o método <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|
 
  Você também pode especificar qualquer uma das seguintes opções para arquivos .xsd.
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/e \[lement \]:** _elemento_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
+|**/e\[\]lement:**_elemento_|Especifica o elemento no esquema para o qual gerar código. Por padrão, todos os elementos são tipados. Você pode especificar esse argumento mais de uma vez.|
 |**/enableDataBinding**|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos gerados para habilitar a associação de dados. A forma curta é `/edb`.|
-|**/enableLinqDataSet**|(Forma abreviada: `/eld`.) Especifica que o DataSet gerado pode ser consultado em relação ao uso de LINQ to DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre como usar o LINQ, consulte [LINQ (consulta integrada à C# linguagem)](../../csharp/programming-guide/concepts/linq/index.md) ou [LINQ (consulta integrada à linguagem)-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
-|**/f \[ields \]**|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|
-|**/l \[anguage \]:** _idioma_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
-|**/n \[amespace \]:** _namespace_|Especifica o namespace de runtime para os tipos gerados. O namespace padrão é `Schemas`.|
+|**/enableLinqDataSet**|(Formulário curto: `/eld`.) Especifica que o Conjunto de Dados gerado pode ser consultado contra o uso de LINQ para DataSet. Essa opção é usada quando a opção /dataset também está especificada. Para obter mais informações, consulte [Visão geral do LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) e [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md). Para obter informações gerais sobre o uso do LINQ, consulte [A Consulta Integrada à Linguagem (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md) ou Consulta Integrada à Linguagem [(LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).|
+|**/f\[ields\]**|Gera campos em vez de propriedades. Por padrão, as propriedades são geradas.|
+|**/l\[anguage:\]**_linguagem_|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, que é o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe implementando <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|
+|**/n\[amespace:\]**_namespace_|Especifica o namespace de runtime para os tipos gerados. O namespace padrão é `Schemas`.|
 |**/nologo**|Suprime o banner.|
 |**/order**|Gera identificadores de pedido explícito em todos os membros de partícula.|
-|**/o \[ut \]:** _DirectoryName_|Especifica o diretório de saída no qual colocar os arquivos. O padrão é o diretório atual.|
-|**/u \[ri \]:** _URI_|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|
+|**/o\[\]ut:**_diretórioNome_|Especifica o diretório de saída no qual colocar os arquivos. O padrão é o diretório atual.|
+|**/u\[\]ri:**_uri_|Especifica o URI para os elementos no esquema para o qual gerar código. Esse URI, se houver, aplica-se a todos os elementos especificados com a opção `/element`.|
 
 ## <a name="dll-and-exe-file-options"></a>Opções de arquivo DLL e EXE
 
 |Opção|Descrição|
 |------------|-----------------|
-|**/t \[ype \]:** _TypeName_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
+|**/t\[ype:\]**_nome de digite_|Especifica o nome do tipo para o qual criar um esquema. Você pode especificar vários argumentos de tipo. Se *typename* não especificar um namespace, o Xsd.exe corresponderá todos os tipos no assembly com o tipo especificado. Se *typename* especificar um namespace, somente esse tipo terá uma correspondência. Se *typename* terminar com um caractere de asterisco (\*), a ferramenta corresponderá todos os tipos que começam com a cadeia de caracteres antes do \*. Se você omitir a opção `/type`, o Xsd.exe gera esquemas para todos os tipos no assembly.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -79,9 +84,9 @@ A tabela a seguir mostra as operações que o Xsd.exe realiza.
 |XML to XSD|Gera um esquema XML de um arquivo XML.|
 |XSD to DataSet|Gera classes <xref:System.Data.DataSet> de common language runtime de um arquivo de esquema XSD. As classes geradas fornecem um modelo de objeto ideal para os dados XML regulares.|
 |XSD para classes|Gera classes de runtime de um arquivo de esquema XSD. As classes geradas podem ser usadas em conjunto com <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> para ler e escrever código XML que segue o esquema.|
-|Classes para XSD| Gera um esquema XML de um tipo ou tipos em um arquivo de assembly de runtime. O esquema gerado define o formato XML usado pelo <xref:System.Xml.Serialization.XmlSerializer>.|
+|Classes para XSD| Gera um esquema XML de um tipo ou tipos em um arquivo de assembly de runtime. O esquema gerado define o formato XML <xref:System.Xml.Serialization.XmlSerializer>usado pelo .|
 
- O Xsd.exe somente permite que você manipule esquemas de XML que seguem a linguagem XSD (linguagem de definição de esquema XML) proposta pelo World Wide Web Consortium (W3C). Para obter mais informações sobre a proposta de definição de esquema XML ou o padrão XML, consulte <https://w3.org>.
+ O Xsd.exe somente permite que você manipule esquemas de XML que seguem a linguagem XSD (linguagem de definição de esquema XML) proposta pelo World Wide Web Consortium (W3C). Para obter mais informações sobre a proposta de definição de <https://w3.org>esquema XML ou o padrão XML, consulte .
 
 ## <a name="setting-options-with-an-xml-file"></a>Configurando opções com um arquivo XML
 
@@ -96,7 +101,7 @@ Ao usar a opção `/parameters`, você pode especificar um único arquivo XML qu
 </xsd>
 ```
 
-Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas.xml, use a opção `/parameters` digitando o seguinte no prompt de comando e pressionando ENTER:
+Se o XML anterior estiver contido em um arquivo chamado GenerateSchemas.xml, use o `/parameters` switch digitando o seguinte em um prompt de comando e pressionando **Enter**:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -113,7 +118,7 @@ Por outro lado, se você estiver gerando um esquema para um único tipo localiza
 </xsd>
 ```
 
-Mas para usar o código precedente, você também deverá fornecer o nome do assembly no prompt de comando. Digite o seguinte em um prompt de comando (supondo que o arquivo XML se chame GenerateSchemaFromType.xml):
+Mas para usar o código precedente, você também deverá fornecer o nome do assembly no prompt de comando. Digite o seguinte em um prompt de comando (presumindo que o arquivo XML é chamado De GerarSchemaFromType.xml):
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
@@ -150,11 +155,11 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
+|Linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
 |namespace|Especifica o namespace para o código gerado. O namespace deve estar em conformidade com os padrões CLR (por exemplo, sem caracteres de espaço ou barra invertida).|
 |opções|Um dos seguintes valores: `none`, `properties` (gera propriedades em vez de campos públicos), `order` ou `enableDataBinding` (consulte as opções `/order` e `/enableDataBinding` na seção anterior Opções de arquivo XSD).|
 
- Você também pode controlar como o código do `DataSet` é gerado usando o elemento `<generateDataSet>`. O XML a seguir especifica que o código gerado usa estruturas de `DataSet` (como a classe <xref:System.Data.DataTable>) para criar Visual Basic código para um elemento especificado. As estruturas de DataSet geradas darão suporte a consultas LINQ.
+ Você também pode controlar como o código do `DataSet` é gerado usando o elemento `<generateDataSet>`. O XML a seguir especifica `DataSet` que o código <xref:System.Data.DataTable> gerado usa estruturas (como a classe) para criar código Visual Basic para um elemento especificado. As estruturas de DataSet geradas darão suporte a consultas LINQ.
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -174,7 +179,7 @@ As opções que você pode definir para o elemento `<generateDataSet>` incluem o
 |Atributo|Descrição|
 |---------------|-----------------|
 |enableLinqDataSet|Especifica que o DataSet gerado pode ser consultado usando LINQ to DataSet. O valor padrão é false.|
-|linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
+|Linguagem|Especifica a linguagem de programação a ser usada. Escolha `CS` (C#, o padrão), `VB` (Visual Basic), `JS` (JScript), ou `VJS` (Visual J#). Você também pode especificar um nome totalmente qualificado para uma classe que implementa <xref:System.CodeDom.Compiler.CodeDomProvider>|
 |namespace|Especifica o namespace para o código gerado. O namespace deve estar em conformidade com os padrões CLR (por exemplo, sem caracteres de espaço ou barra invertida).|
 
  Há atributos que você pode definir no elemento `<xsd>` de nível superior. Essas opções podem ser usadas com qualquer um dos elementos filho (`<generateSchemas>`, `<generateClasses>` ou `<generateDataSet>`). O código XML a seguir gera código para um elemento denominado "IDItems" no diretório de saída denominado "MyOutputDirectory".
@@ -191,9 +196,9 @@ A tabela a seguir mostra os atributos que também podem ser usados com o element
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|saída|O nome de um diretório onde o esquema ou arquivo de código gerado será colocado.|
+|output|O nome de um diretório onde o esquema ou arquivo de código gerado será colocado.|
 |nologo|Suprime o banner. Definir como `true` ou `false`.|
-|help|Exibe sintaxe de comando e opções para a ferramenta. Definir como `true` ou `false`.|
+|ajuda|Exibe sintaxe de comando e opções para a ferramenta. Definir como `true` ou `false`.|
 
 ## <a name="examples"></a>Exemplos
  O comando a seguir gera um esquema XML de `myFile.xdr` e salva-o no diretório atual.
@@ -220,13 +225,13 @@ O comando a seguir gera esquemas XML para todos os tipos no assembly `myAssembly
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
 - [Ferramentas](../../../docs/framework/tools/index.md)
-- [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [Visão geral de LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
+- [Comandos](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [LINQ para visão geral do DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Consultando DataSets tipados](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ (consulta integrada à linguagem) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ (consulta integrada à linguagem) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada ao Idioma) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ (Consulta Integrada ao Idioma) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)
