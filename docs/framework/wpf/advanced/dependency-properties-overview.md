@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587801"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636025"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -128,7 +128,7 @@ As propriedades de dependência, ou a classe <xref:System.Windows.DependencyObje
 ### <a name="styles"></a>Estilos
 Estilos e modelos são dois dos principais cenários que motivam o uso de propriedades de dependência. Os estilos são particularmente úteis para a configuração de propriedades que definem a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do aplicativo. Normalmente, os estilos são definidos como recursos no XAML. Os estilos interagem com o sistema de propriedades porque geralmente contêm “setters” para propriedades específicas, bem como “gatilhos” que alteram um valor da propriedade com base no valor em tempo real de outra propriedade.
 
-O exemplo a seguir cria um estilo muito simples (que é definido em um dicionário <xref:System.Windows.FrameworkElement.Resources%2A>, não mostrado) e, em seguida, aplica esse estilo diretamente à propriedade <xref:System.Windows.FrameworkElement.Style%2A> de um <xref:System.Windows.Controls.Button>. O setter no estilo define a propriedade <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> com estilo como verde.
+O exemplo a seguir cria um estilo <xref:System.Windows.FrameworkElement.Resources%2A> simples (que seria definido dentro de <xref:System.Windows.FrameworkElement.Style%2A> um dicionário, não mostrado), em seguida, aplica esse estilo diretamente à propriedade para um <xref:System.Windows.Controls.Button>. O setter no estilo define a propriedade <xref:System.Windows.Controls.Control.Background%2A> de um <xref:System.Windows.Controls.Button> com estilo como verde.
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ O exemplo a seguir anima a <xref:System.Windows.Controls.Control.Background%2A> 
 Para obter mais informações sobre como animar propriedades, consulte [Visão geral da animação](../graphics-multimedia/animation-overview.md) e [Visão geral dos storyboards](../graphics-multimedia/storyboards-overview.md).
 
 ### <a name="metadata-overrides"></a>Substituições de metadados
-É possível alterar alguns comportamentos de uma propriedade de dependência substituindo os metadados dessa propriedade ao derivar da classe que originalmente registra a propriedade de dependência. A substituição dos metadados depende do identificador <xref:System.Windows.DependencyProperty>. Sobrescrever metadados não exige a reimplementação da propriedade. A alteração de metadados é tratada nativamente pelo sistema de propriedades; cada classe potencialmente contém metadados individuais para todas as propriedades que são herdadas de classes base por tipo.
+É possível alterar alguns comportamentos de uma propriedade de dependência substituindo os metadados dessa propriedade ao derivar da classe que originalmente registra a propriedade de dependência. A substituição dos metadados depende do identificador <xref:System.Windows.DependencyProperty>. Sobrepor metadados não requer reimplementação da propriedade. A alteração de metadados é tratada nativamente pelo sistema de propriedades; cada classe potencialmente contém metadados individuais para todas as propriedades que são herdadas de classes base por tipo.
 
 O exemplo a seguir substitui os metadados de uma propriedade de dependência <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>. A substituição dos metadados dessa propriedade de dependência específica faz parte de um padrão de implementação que cria controles que podem usar estilos padrão de temas.
 
@@ -183,18 +183,18 @@ Em princípio, no primeiro botão, a propriedade é definida duas vezes, mas ape
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>Por que a precedência da propriedade de dependência existe?
-Normalmente, você não desejará que os estilos sempre sejam aplicados e ocultem até mesmo um valor definido localmente de um elemento individual (caso contrário, será muito difícil usar estilos ou elementos em geral). Portanto, os valores obtidos de estilos operam com uma precedência mais baixa que o valor definido localmente. Para obter uma lista mais completa das propriedades de dependência e da possível origem de um valor efetivo de propriedade de dependência, consulte [Precedência do valor da propriedade de dependência](dependency-property-value-precedence.md).
+Normalmente, você não gostaria que os estilos se aplicassem sempre e obscurecessem até mesmo um valor localmente definido de um elemento individual (caso contrário, seria difícil usar estilos ou elementos em geral). Portanto, os valores obtidos de estilos operam com uma precedência mais baixa que o valor definido localmente. Para obter uma lista mais completa das propriedades de dependência e da possível origem de um valor efetivo de propriedade de dependência, consulte [Precedência do valor da propriedade de dependência](dependency-property-value-precedence.md).
 
 > [!NOTE]
 > Há uma série de propriedades definidas em elementos do WPF que não são propriedades de dependência. De modo geral, as propriedades foram implementadas como propriedades de dependência somente quando houve a necessidade de dar suporte a, pelo menos, um dos cenários habilitados pelo sistema de propriedades: vinculação de dados, estilos, animação, suporte ao valor padrão, herança, propriedades anexadas ou invalidação.
 
 ## <a name="learning-more-about-dependency-properties"></a>Mais informações sobre propriedades de dependência  
 
-- Uma propriedade anexada é um tipo de propriedade que dá suporte a uma sintaxe especializada em XAML. Uma propriedade anexada muitas vezes não tem uma correspondência 1:1 com uma propriedade de tempo de execução (CLR) comum, e não é necessariamente uma propriedade de dependência. A finalidade típica de uma propriedade anexada é permitir que os elementos filho relatem valores de propriedade para um elemento pai, mesmo que o elemento pai e o elemento filho não tenham essa propriedade como parte das listagens de membros de classe. Um cenário principal é permitir que os elementos filhos informem o pai como devem ser apresentados no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; por exemplo, confira <xref:System.Windows.Controls.DockPanel.Dock%2A> ou <xref:System.Windows.Controls.Canvas.Left%2A>. Para obter detalhes, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
+- Uma propriedade anexada é um tipo de propriedade que dá suporte a uma sintaxe especializada em XAML. Uma propriedade anexada muitas vezes não tem uma correspondência 1:1 com uma propriedade de tempo de execução (CLR) comum, e não é necessariamente uma propriedade de dependência. O propósito típico de uma propriedade anexada é permitir que elementos de filho reportem valores de propriedade a um elemento pai, mesmo que o elemento pai e o elemento filho não possuam essa propriedade como parte das listagens dos membros da classe. Um cenário principal é permitir que os elementos filhos informem o pai como devem ser apresentados no [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]; por exemplo, confira <xref:System.Windows.Controls.DockPanel.Dock%2A> ou <xref:System.Windows.Controls.Canvas.Left%2A>. Para obter detalhes, consulte [Visão geral das propriedades anexadas](attached-properties-overview.md).
 
 - Os desenvolvedores de componentes ou de aplicativos podem desejar criar sua própria propriedade de dependência, a fim de habilitar funcionalidades como vinculação de dados ou suporte a estilos ou para o suporte à invalidação e coerção de valor. Para obter detalhes, consulte [Propriedades de dependência personalizadas](custom-dependency-properties.md).
 
-- De modo geral, as propriedades de dependência devem ser consideradas propriedades públicas, acessíveis ou, pelo menos, detectáveis por qualquer chamador que tem acesso a uma instância. Para obter mais informações, consulte [Segurança das propriedades de dependência](dependency-property-security.md).
+- Considere as propriedades de dependência como propriedades públicas, acessíveis ou pelo menos descobertas por qualquer chamador que tenha acesso a uma instância. Para obter mais informações, consulte [Segurança das propriedades de dependência](dependency-property-security.md).
 
 ## <a name="see-also"></a>Confira também
 

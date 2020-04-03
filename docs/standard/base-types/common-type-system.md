@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ec078ea89befedd26ce205c724193935dd08b82a
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523967"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635905"
 ---
 # <a name="common-type-system"></a>Sistema de tipo comum
 
@@ -78,7 +78,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 ### <a name="structures"></a>Estruturas
 
- Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é muito útil para representar valores cujos requisitos de memória são pequenos e passar valores como parâmetros por valor para os métodos que tenham parâmetros fortemente tipados. No .NET Framework, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) são definidos como estruturas.  
+ Uma estrutura é um tipo de valor que é derivado implicitamente do <xref:System.ValueType?displayProperty=nameWithType> que, por sua vez, é derivado de <xref:System.Object?displayProperty=nameWithType>. Uma estrutura é útil para representar valores cujos requisitos de memória são pequenos, e para passar valores como parâmetros por valor para métodos que têm parâmetros fortemente digitados. No .NET Framework, todos os tipos de dados primitivos (<xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.DateTime>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32> e <xref:System.UInt64>) são definidos como estruturas.  
   
  Assim como as classes, as estruturas definem os dados (os campos da estrutura) e as operações que podem ser executadas nesses dados (os métodos da estrutura). Isso significa que você pode chamar métodos em estruturas, incluindo os métodos virtuais definidos nas classes <xref:System.Object?displayProperty=nameWithType> e <xref:System.ValueType?displayProperty=nameWithType> e todos os métodos definidos no próprio tipo de valor. Em outras palavras, as estruturas podem ter campos, propriedades e eventos, bem como métodos estáticos e não estáticos. É possível criar instâncias de estruturas, passá-las como parâmetros, armazená-las como variáveis locais ou armazená-las em um campo de outro tipo de valor ou tipo de referência. As estruturas também podem implementar interfaces.  
   

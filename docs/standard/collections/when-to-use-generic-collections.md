@@ -6,15 +6,16 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bbf8ec7f61981332b6984488b369fee62959b92a
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588525"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635896"
 ---
 # <a name="when-to-use-generic-collections"></a>Quando usar coleções genéricas
-Geralmente é recomendável usar coleções genéricas, porque você obtém a vantagem imediata da segurança de tipos sem precisar derivar de um tipo de coleção base e implementar membros específicos do tipo. Tipos de coleção genérica também geralmente executam melhor do que os tipos de coleção não genérica correspondentes (e melhor do que tipos que são derivados de tipos de coleção base não genérica) quando os elementos da coleção forem tipos de valor, pois com genéricos não é necessário colocar os elementos em caixa.  
+
+O uso de coleções genéricas dá-lhe o benefício automático da segurança do tipo sem ter que derivar de um tipo de coleta base e implementar membros específicos do tipo. Os tipos de coleta genéricas também geralmente têm um desempenho melhor do que os tipos de coleta não genéricos correspondentes (e melhores do que os tipos que são derivados de tipos de coleta de base não genéricos) quando os elementos de coleta são tipos de valor, porque com genéricos, não há necessidade de encaixotar os elementos.  
   
  Para programas direcionados ao .NET Framework 4 ou posterior, você deve usar as classes de coleção genérica no namespace <xref:System.Collections.Concurrent> quando vários threads puderem adicionar ou remover itens da coleção simultaneamente.  
   
@@ -24,7 +25,7 @@ Geralmente é recomendável usar coleções genéricas, porque você obtém a va
   
 - <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602> são as classes genéricas que correspondem à <xref:System.Collections.Hashtable>.  
   
-- <xref:System.Collections.ObjectModel.Collection%601> é a classe genérica que corresponde à <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601> pode ser usada como uma classe base, mas ao contrário de <xref:System.Collections.CollectionBase>, ela não é abstrata. Isso facilita muito o seu uso.  
+- <xref:System.Collections.ObjectModel.Collection%601> é a classe genérica que corresponde à <xref:System.Collections.CollectionBase>. <xref:System.Collections.ObjectModel.Collection%601>pode ser usado como uma <xref:System.Collections.CollectionBase>classe base, mas ao contrário, não é abstrato, o que torna muito mais fácil de usar.  
   
 - <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> é a classe genérica que corresponde à <xref:System.Collections.ReadOnlyCollectionBase>. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> não é abstrata e tem um construtor que facilita expor uma <xref:System.Collections.Generic.List%601> existente como uma coleção somente leitura.  
   
@@ -44,7 +45,7 @@ Geralmente é recomendável usar coleções genéricas, porque você obtém a va
 - <xref:System.Collections.Concurrent.ConcurrentBag%601> fornece rápida inserção e remoção de elementos não classificados.  
   
 ## <a name="linq-to-objects"></a>Objetos LINQ to  
- O recurso LINQ para objetos permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Consultas LINQ fornecem um padrão comum para acessar dados; são geralmente mais concisas e legíveis que os loops `foreach` padrão; e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
+ O recurso LINQ para objetos permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. As consultas LINQ fornecem um padrão comum para acessar dados; são tipicamente mais concisos `foreach` e legíveis do que os loops padrão; e fornecer recursos de filtragem, encomenda e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, confira [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) e [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md).  
   
 ## <a name="additional-functionality"></a>Funcionalidade adicional  
  Alguns dos tipos genéricos possuem funcionalidades que não se encontram em tipos de coleção genérica. Por exemplo, a classe <xref:System.Collections.Generic.List%601>, que corresponde à classe <xref:System.Collections.ArrayList> não genérica, possui vários métodos que aceitam delegados genéricos, tais como o delegado <xref:System.Predicate%601> que permite que você especifique métodos para pesquisa na lista, o delegado <xref:System.Action%601> que representa métodos que atuam em cada elemento da lista e o delegado <xref:System.Converter%602> que permite definir conversões entre tipos.  

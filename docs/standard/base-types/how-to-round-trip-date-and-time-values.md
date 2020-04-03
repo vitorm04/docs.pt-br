@@ -12,16 +12,16 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 4fc38b6b852f8a7b8f268fd9e8624bdf350744c8
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523814"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635132"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Como: Valores de data e hora de viagem de ida e volta
 
-Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambiguidade um único ponto no tempo. Este tópico mostra como salvar e restaurar um valor <xref:System.DateTime> e um valor <xref:System.DateTimeOffset> para que o valor restaurado identifique o mesmo horário que o valor salvo.
+Em muitos aplicativos, um valor de data e hora destina-se a identificar sem ambiguidade um único ponto no tempo. Este artigo mostra como salvar <xref:System.DateTime> e <xref:System.DateTimeOffset> restaurar um valor, um valor e um valor de data e hora com informações de fuso horário para que o valor restaurado identifique o mesmo tempo que o valor salvo.
 
 ## <a name="round-trip-a-datetime-value"></a>Ida e volta um valor datetime
 
@@ -38,7 +38,7 @@ O exemplo a seguir mostra como fazer a viagem de ida e volta de um valor <xref:S
 [!code-csharp[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#1)]
 [!code-vb[Formatting.HowTo.RoundTrip#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#1)]
 
-Fazendo a viagem de ida e volta de um valor <xref:System.DateTime>, essa técnica consegue preservar o horário para todos os horários locais e universais. Por exemplo, se <xref:System.DateTime> um valor local é salvo em um sistema no fuso horário padrão do Pacífico dos EUA e é restaurado em um sistema no fuso horário padrão padrão dos EUA, a data e hora restauradas serão duas horas mais tarde do que o horário original, o que reflete a diferença de tempo entre os dois fusos horários. No entanto, essa técnica não é necessariamente exata para horários não especificados. Todos os valores <xref:System.DateTime> cuja propriedade <xref:System.DateTime.Kind%2A> é <xref:System.DateTimeKind.Unspecified> são tratados como se fossem horários locais. Se não for o caso, <xref:System.DateTime> não conseguirá identificar o momento correto. A solução alternativa para essa limitação é acoplar rigorosamente um valor de data e hora com seu fuso horário para salvar e restaurar a operação.
+Fazendo a viagem de ida e volta de um valor <xref:System.DateTime>, essa técnica consegue preservar o horário para todos os horários locais e universais. Por exemplo, se <xref:System.DateTime> um valor local é salvo em um sistema no fuso horário padrão do Pacífico dos EUA e é restaurado em um sistema no fuso horário padrão padrão dos EUA, a data e hora restauradas serão duas horas mais tarde do que o horário original, o que reflete a diferença de tempo entre os dois fusos horários. No entanto, essa técnica não é necessariamente exata para horários não especificados. Todos os valores <xref:System.DateTime> cuja propriedade <xref:System.DateTime.Kind%2A> é <xref:System.DateTimeKind.Unspecified> são tratados como se fossem horários locais. Se não for uma hora <xref:System.DateTime> local, não identificará com sucesso o ponto correto no tempo. A solução alternativa para essa limitação é acoplar rigorosamente um valor de data e hora com seu fuso horário para salvar e restaurar a operação.
 
 ## <a name="round-trip-a-datetimeoffset-value"></a>Ida e volta um valor DateTimeOffset
 
@@ -72,7 +72,7 @@ Essa técnica sempre identifica sem ambiguidade um valor <xref:System.DateTimeOf
 
 5. Transmita (em C#) ou converta (em Visual Basic) o objeto desserializado em um objeto do tipo apropriado.
 
-O exemplo a seguir ilustra como fazer a viagem de ida e volta de um objeto que armazena informações de data e hora e fuso horário.
+O exemplo a seguir ilustra como fazer uma viagem de ida e volta a um objeto que armazena tanto o fuso horário quanto as informações de data e hora.
 
 [!code-csharp[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#4)]
 [!code-vb[Formatting.HowTo.RoundTrip#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#4)]

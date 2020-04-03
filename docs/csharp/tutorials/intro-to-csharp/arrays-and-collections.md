@@ -3,12 +3,12 @@ title: Trabalhar com coleções – Introdução ao tutorial do C#
 description: Aprenda C# explorando a Coleção de lista neste tutorial.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156683"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635659"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Saiba como gerenciar coleções de dados usando o tipo de lista genérico
 
@@ -230,4 +230,4 @@ Com cada iteração do loop, você está pegando os últimos dois inteiros na li
 
 Parabéns, você concluiu o tutorial de lista. Continue com o tutorial [Introdução às classes](introduction-to-classes.md) em seu próprio ambiente de desenvolvimento.
 
-Saiba mais sobre como trabalhar com o tipo `List` no tópico [Guia de .NET](../../../standard/index.md) em [coleções](../../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.
+Você pode aprender mais `List` sobre como trabalhar com o tipo no artigo do [guia .NET](../../../standard/index.yml) sobre [coleções](../../../standard/collections/index.md). Você também aprenderá muitos outros tipos de coleção.

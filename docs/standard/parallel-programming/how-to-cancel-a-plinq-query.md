@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588568"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635875"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Como cancelar uma consulta PLINQ
 Os exemplos a seguir mostram duas maneiras de cancelar uma consulta PLINQ. O primeiro exemplo mostra como cancelar uma consulta composta principalmente de travessia de dados. O segundo exemplo mostra como cancelar uma consulta que contém uma função de usuário que gasta muitos recursos de computação.
@@ -33,9 +33,9 @@ A estrutura do PLINQ não implementa um único <xref:System.OperationCanceledExc
 
 A orientação geral sobre o cancelamento é a seguinte:
 
-1. Se você executar o cancelamento do delegado-usuário, deverá informar ao PLINQ sobre o <xref:System.Threading.CancellationToken> externo e lançar uma <xref:System.OperationCanceledException>(externalCT).
+1. Se você realizar o cancelamento do usuário-delegado, <xref:System.Threading.CancellationToken> você deve <xref:System.OperationCanceledException>informar plinq sobre o externo e jogar um (externalCT).
 
-2. Se o cancelamento ocorrer e nenhum outra exceção for gerada, você deverá tratar uma <xref:System.OperationCanceledException> em vez de uma <xref:System.AggregateException>.
+2. Se ocorrer cancelamento e nenhuma outra exceção <xref:System.OperationCanceledException> for <xref:System.AggregateException>lançada, então manuseie um em vez de um .
 
 ## <a name="example"></a>Exemplo
 
@@ -44,11 +44,11 @@ O exemplo a seguir mostra como tratar o cancelamento quando você tem uma funç�
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-Quando você processa o cancelamento no código do usuário, não precisa usar <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> na definição da consulta. No entanto, recomendamos que você faça isso, pois <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> não tem nenhum efeito sobre o desempenho da consulta e permite que o cancelamento seja tratado por operadores de consulta e pelo código do usuário.
+Quando você processa o cancelamento no código do usuário, não precisa usar <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> na definição da consulta. No entanto, recomendamos <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>que <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> você use, porque não tem efeito no desempenho da consulta e permite que o cancelamento seja tratado pelas operadoras de consulta e pelo seu código de usuário.
 
 Para garantir a capacidade de resposta do sistema, recomendamos que você verifique o cancelamento uma vez a cada milissegundo; no entanto, qualquer período de até 10 milissegundos é considerado aceitável. Essa frequência não deve ter um impacto negativo no desempenho do seu código.
 
-Quando um enumerador é descartado, por exemplo, quando o código foge de um loop foreach (For Each no Visual Basic) que está iterando sobre os resultados da consulta, a consulta é cancelada, mas nenhuma exceção é lançada.
+Quando um enumerador é eliminado, por exemplo, quando o código sai de um loop foreach (For Each in Visual Basic) que está iterando sobre os resultados da consulta, então a consulta é cancelada, mas nenhuma exceção é lançada.
 
 ## <a name="see-also"></a>Confira também
 

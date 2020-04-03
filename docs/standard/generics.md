@@ -4,12 +4,12 @@ description: Saiba como os genéricos atuam como modelos de código que permitem
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 0188e620a45462e7cc31391406ade9d57b1b0220
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: f51d69088b0d5c798f3aa3a6c1f5b62b3ea81d39
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588477"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635277"
 ---
 # <a name="generic-types-overview"></a>Visão geral de tipos genéricos
 
@@ -17,9 +17,9 @@ Desenvolvedores usam genéricos o tempo todo no .NET, seja implícita ou explici
 
 Introduzidos pela primeira vez no .NET Framework 2.0, os genéricos são essencialmente um "modelo de código" que permite aos desenvolvedores definir estruturas de dados [fortemente tipadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) sem se comprometer com um tipo de dados real. Por <xref:System.Collections.Generic.List%601> exemplo, é uma [coleção genérica](xref:System.Collections.Generic) que pode ser declarada `List<int>` `List<string>`e `List<Person>`usada com qualquer tipo, como , ou .
 
-Para entender por que os genéricos são úteis, vamos dar uma olhada em uma classe específica antes e depois adicionar os genéricos: <xref:System.Collections.ArrayList>. No .NET Framework 1.0, os elementos `ArrayList` eram do tipo <xref:System.Object>. Isso significava que qualquer elemento adicionado silenciosamente era convertido em um `Object`. O mesmo aconteceria ao ler os elementos da lista. Esse processo é conhecido como [conversão boxing e unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) e afeta o desempenho. Mais do que isso, no entanto, não é possível determinar o tipo de dados na lista no tempo de compilação. Isso resulta em um código frágil. Genéricos resolvem esse problema definindo o tipo de dados que cada instância de lista conterá. Resumindo, você só pode adicionar inteiros a `List<int>` e só pode adicionar Pessoas a `List<Person>`.
+Para entender por que os genéricos são úteis, vamos dar uma olhada em uma classe específica antes e depois adicionar os genéricos: <xref:System.Collections.ArrayList>. No .NET Framework 1.0, os elementos `ArrayList` eram do tipo <xref:System.Object>. Qualquer elemento adicionado à coleção foi silenciosamente `Object`convertido em um . O mesmo aconteceria ao ler elementos da lista. Esse processo é conhecido como [conversão boxing e unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) e afeta o desempenho. Além do desempenho, no entanto, não há como determinar o tipo de dados na lista no momento da compilação, o que torna algum código frágil. Genéricos resolvem esse problema definindo o tipo de dados que cada instância de lista conterá. Resumindo, você só pode adicionar inteiros a `List<int>` e só pode adicionar Pessoas a `List<Person>`.
 
-Os genéricos também estão disponíveis em tempo de execução. Isso significa que o runtime sabe que tipo de estrutura de dados você está usando e pode armazená-la na memória com mais eficiência.
+Os genéricos também estão disponíveis em tempo de execução. O tempo de execução sabe que tipo de estrutura de dados você está usando e pode armazená-la na memória de forma mais eficiente.
 
 O exemplo a seguir é um pequeno programa que ilustra a eficiência de conhecer o tipo de estrutura de dados em tempo de execução:
 

@@ -1,19 +1,19 @@
 ---
 title: instrução lock – referência em C#
 description: Use a instrução lock do C# para sincronizar o acesso de thread com um recurso compartilhado
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713396"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635390"
 ---
 # <a name="lock-statement-c-reference"></a>instrução lock (referência em C#)
 
@@ -48,13 +48,15 @@ Como o código usa um bloco [try...finally](try-finally.md), o bloqueio será li
 
 Não é possível usar o [operador await](../operators/await.md) no corpo de uma instrução `lock`.
 
-## <a name="remarks"></a>Comentários
+## <a name="guidelines"></a>Diretrizes
 
 Ao sincronizar o acesso de thread com um recurso compartilhado, bloqueie uma instância de objeto dedicada (por exemplo, `private readonly object balanceLock = new object();`) ou outra instância que provavelmente não será usada como um objeto de bloqueio por partes não relacionadas do código. Evite usar a mesma instância de objeto de bloqueio para diferentes recursos compartilhados, uma vez que ela poderia resultar em deadlock ou contenção de bloqueio. Especificamente, evite usar os seguintes itens como objetos de bloqueio:
 
 - `this`, uma vez que pode ser usado pelos chamadores como um bloqueio.
 - Instâncias <xref:System.Type>, pois podem ser obtidas pelo operador ou reflexão [typeof](../operators/type-testing-and-cast.md#typeof-operator).
 - Instâncias de cadeia de caracteres, incluindo literais de cadeia de caracteres, pois podem ser [internalizadas](/dotnet/api/system.string.intern#remarks).
+
+Segure uma trava pelo menor tempo possível para reduzir a contenção do bloqueio.
 
 ## <a name="example"></a>Exemplo
 
@@ -68,9 +70,9 @@ Para saber mais, confira a seção [A instrução lock](~/_csharplang/spec/state
 
 ## <a name="see-also"></a>Confira também
 
+- [Referência do C#](../index.md)
+- [Palavras-chave de C#](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [Referência do C#](../index.md)
-- [C# palavras-chave](index.md)
 - [Visão geral dos primitivos de sincronização](../../../standard/threading/overview-of-synchronization-primitives.md)

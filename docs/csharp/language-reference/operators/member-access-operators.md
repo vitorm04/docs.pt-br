@@ -1,7 +1,7 @@
 ---
 title: Operadores e expressões de acesso a membros - referência C#
 description: Aprenda sobre operadores de C# que você pode usar para acessar membros de tipo.
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546634"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635312"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores e expressões de acesso a membros (referência C#)
 
@@ -130,6 +130,12 @@ O exemplo a seguir demonstra o uso dos operadores `?.` e `?[]`:
 
 O exemplo anterior também usa o [operador `??` de coalizão nula](null-coalescing-operator.md) para especificar uma expressão alternativa `null`para avaliar caso o resultado de uma operação condicionada seja .
 
+Se `a.x` `a[x]` ou é de um tipo `T` `a?.x` de `a?[x]` valor não anulado, ou é do [tipo](../builtin-types/nullable-value-types.md) `T?`de valor nulo correspondente . Se você precisar de `T`uma expressão do tipo, `??` aplique o operador de coalizão nula a uma expressão condicionada nula, como mostra o exemplo a seguir:
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+No exemplo anterior, se você não `??` usar `numbers?.Length < 2` o `false` operador, avalia quando `numbers` é `null`.
+
 O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Invocação de delegado thread-safe
@@ -214,4 +220,4 @@ Para obter mais informações sobre índices e faixas, consulte a [nota de propo
 - [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
 - [?? (operador de união nula)](null-coalescing-operator.md)
-- [:: operador](namespace-alias-qualifier.md)
+- [Operador ::](namespace-alias-qualifier.md)

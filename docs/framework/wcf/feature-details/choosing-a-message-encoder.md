@@ -2,15 +2,16 @@
 title: Escolhendo um codificador de mensagem
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: a306896af7a73d43956638981908c12d86126a9f
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d93d7039d034262cd47edd437d5d7d8d63890f02
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345250"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635769"
 ---
-# <a name="choosing-a-message-encoder"></a>Escolhendo um codificador de mensagem
-Este tópico discute critérios para a escolha entre os codificadores de mensagens que estão incluídos no Windows Communication Foundation (WCF): mecanismo de otimização binária, de texto e de transmissão de mensagens (MTOM).  
+# <a name="choose-a-message-encoder"></a>Escolha um codificador de mensagens
+
+Este artigo discute critérios para a escolha entre os codificadores de mensagens que estão incluídos no Windows Communication Foundation (WCF): mecanismo de otimização binária, de texto e de transmissão de mensagens (MTOM).  
   
  No WCF, você especifica como transferir dados através de uma rede entre pontos finais por meio de uma *vinculação,* que é composta por uma seqüência de *elementos de ligação*. Um codificador de mensagens é representado por um elemento de codificação de mensagem na pilha de vinculação. Uma vinculação inclui elementos de vinculação de protocolo opcionais, como um elemento de vinculação de segurança ou um elemento de vinculação de mensagens confiável, um elemento de vinculação de codificação de mensagens necessário e um elemento de vinculação de transporte necessário.  
   
@@ -33,7 +34,7 @@ Este tópico discute critérios para a escolha entre os codificadores de mensage
 |Fator|Descrição|Codificadores que suportam esse fator|  
 |------------|-----------------|---------------------------------------|  
 |Conjuntos de caracteres suportados|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>e <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> suportam apenas as codificações UTF8 e UTF16 Unicode (*grande-endiana* e *pouco endiana).* Se forem necessárias outras codificações, como UTF7 ou ASCII, um codificador personalizado deve ser usado. Para obter um codificador personalizado de exemplo, consulte [Encoder de mensagens personalizadas](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Texto|  
-|Inspeção|Inspeção é a capacidade de examinar mensagens durante a transmissão. As codificações de texto, com ou sem o uso de SOAP, permitem que as mensagens sejam inspecionadas e analisadas por muitas aplicações sem o uso de ferramentas especializadas. Observe que o uso da segurança de transferência, tanto no nível de mensagem quanto de transporte, afeta sua capacidade de inspecionar mensagens. A confidencialidade protege uma mensagem de ser examinada e a integridade protege uma mensagem de ser modificada.|Texto|  
+|Inspeção|Inspeção é a capacidade de examinar mensagens durante a transmissão. As codificações de texto, com ou sem o uso de SOAP, permitem que as mensagens sejam inspecionadas e analisadas por muitas aplicações sem o uso de ferramentas especializadas. O uso da segurança de transferência, tanto no nível de mensagem quanto de transporte, afeta sua capacidade de inspecionar mensagens. A confidencialidade protege uma mensagem de ser examinada e a integridade protege uma mensagem de ser modificada.|Texto|  
 |Confiabilidade|Confiabilidade é a resiliência de um codificador para erros de transmissão. A confiabilidade também pode ser fornecida na camada de mensagem, transporte ou aplicativo. Todos os codificadores Padrão WCF assumem que outra camada está fornecendo confiabilidade. O codificador tem pouca capacidade de se recuperar de um erro de transmissão.|Nenhum|  
 |Simplicidade|A simplicidade representa a facilidade com que você pode criar codificadores e decodificadores para uma especificação de codificação. As codificações de texto são particularmente vantajosas para a simplicidade, e a codificação de texto POX tem a vantagem adicional de não exigir suporte para o processamento de SOAP.|Texto (POX)|  
 |Tamanho|A codificação determina a quantidade de sobrecarga imposta ao conteúdo. O tamanho das mensagens codificadas está diretamente relacionado com o throughput máximo das operações de serviço. As codificações binárias são geralmente mais compactas do que as codificações de texto. Quando o tamanho da mensagem estiver em um prêmio, considere também comprimir o conteúdo da mensagem durante a codificação. No entanto, a compressão adiciona custos de processamento tanto para o remetente de mensagens quanto para o receptor.|Binário|  

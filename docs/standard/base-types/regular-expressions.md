@@ -20,12 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: 99a70fa1b56a45087ee380d063c66326976f5b41
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 819310891192833f0c71d0104fceec11b1b25375
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523791"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635717"
 ---
 # <a name="net-regular-expressions"></a>Expressões regulares do .NET
 
@@ -99,7 +99,7 @@ A classe <xref:System.String> inclui uma série de métodos de pesquisa de cadei
   
  O método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> é chamado com opções de expressão regular definidas como <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. Portanto, a operação de correspondência não faz distinção entre maiúsculas e minúsculas e o exemplo identifica a subcadeia de caracteres “This this” como uma duplicação.  
   
- Observe que a cadeia de caracteres de entrada inclui a subcadeia de caracteres “this? This”. No entanto, devido à pontuação no meio, ela não é identificada como uma duplicação.  
+ A seqüência de entrada inclui a substring "isso? This”. No entanto, devido à pontuação no meio, ela não é identificada como uma duplicação.  
   
 ### <a name="example-3-dynamically-build-a-culture-sensitive-regular-expression"></a>Exemplo 3: Construa dinamicamente uma expressão regular sensível à cultura  
 

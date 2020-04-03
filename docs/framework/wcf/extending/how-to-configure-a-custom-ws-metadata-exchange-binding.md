@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345276"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635793"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Como configurar uma associação de intercâmbio de WS-Metadata
-Este tópico explicará como configurar uma vinculação personalizada de troca WS-Metadata. O Windows Communication Foundation (WCF) inclui quatro vinculações de metadados definidas pelo sistema, mas você pode publicar metadados usando qualquer vinculação desejada. Este tópico mostrará como publicar metadados usando o `wsHttpBinding`. Essa vinculação lhe dá a opção de expor metadados de forma segura. O código deste artigo é baseado no [Getting Started](../samples/getting-started-sample.md).  
+
+Este artigo explica como configurar uma vinculação personalizada de troca WS-Metadata. O Windows Communication Foundation (WCF) inclui quatro vinculações de metadados definidas pelo sistema, mas você pode publicar metadados usando qualquer vinculação desejada. Este artigo mostra como publicar metadados usando o `wsHttpBinding`. Essa vinculação lhe dá a opção de expor metadados de forma segura. O código deste artigo é baseado no [Getting Started](../samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Usando um arquivo de configuração  
   
@@ -44,7 +45,7 @@ Este tópico explicará como configurar uma vinculação personalizada de troca 
               contract="IMetadataExchange" />  
     ```  
   
-4. Para verificar se o ponto final da troca de metadados está funcionando corretamente, adicione uma tag de ponto final no arquivo de configuração do cliente:  
+4. Para verificar se o ponto final da troca de metadados está funcionando corretamente, adicione uma tag endpoint no arquivo de configuração do cliente:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

@@ -3,12 +3,12 @@ title: Bem-vindo ao .NET
 description: Introdução à família de tecnologias do .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345302"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635957"
 ---
 # <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
@@ -42,7 +42,7 @@ Para obter informações sobre os recursos mais recentes adicionados às impleme
 
 Esta documentação abrange a extensão do .NET entre plataformas e linguagens. Você pode começar com o .NET e suas linguagens em qualquer uma das seções a seguir:
 
-- [.NET Guia](standard/index.md)
+- [.NET Guia](standard/index.yml)
 - [.NET Core Guide](core/index.yml)
 - [.NET Framework Guide](framework/index.yml)
 - [Guia C#](csharp/index.yml)

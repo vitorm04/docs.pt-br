@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: c5079237ff4c97dd9ef164061dc5e7499c1d6e38
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523310"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635993"
 ---
 # <a name="configuring-tracing"></a>Configurando o rastreamento
 Este tópico descreve como você pode habilitar o rastreamento, configurar fontes de rastreamento para emitir vestígios e definir níveis de rastreamento, definir rastreamento de atividade e propagação para suportar correlação de rastreamento de ponta a ponta e definir os ouvintes de rastreamento para acessar vestígios.  
@@ -136,7 +136,7 @@ Este tópico descreve como você pode habilitar o rastreamento, configurar fonte
  Para obter mais informações sobre a criação de fontes de rastreamento definidas pelo usuário, consulte [Extending Tracing](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurando rastreadores para consumir vestígios  
- Em tempo de execução, o WCF alimenta dados de rastreamento para os ouvintes que processam os dados. O WCF fornece vários <xref:System.Diagnostics>ouvintes predefinidos para , que diferem no formato que eles usam para a saída. Você também pode adicionar tipos de ouvintes personalizados.  
+ Em tempo de execução, o WCF alimenta dados de rastreamento para os ouvintes, que processam os dados. O WCF fornece vários <xref:System.Diagnostics>ouvintes predefinidos para , que diferem no formato que eles usam para a saída. Você também pode adicionar tipos de ouvintes personalizados.  
   
  Você pode usar `add` para especificar o nome e o tipo do ouvinte de rastreamento que deseja usar. Em nossa configuração de exemplo, nomeamos o Ouvinte `traceListener` e`System.Diagnostics.XmlWriterTraceListener`adicionamos o rastreador padrão .NET Framework ( ) como o tipo que queremos usar. Você pode adicionar qualquer número de ouvintes de rastreamento para cada fonte. Se o ouvinte de rastreamento emite o rastreamento para um arquivo, você deve especificar o local e o nome do arquivo de saída no arquivo de configuração. Isso é feito `initializeData` definindo o nome do arquivo para esse ouvinte. Se você não especificar um nome de arquivo, um nome de arquivo aleatório será gerado com base no tipo de ouvinte usado. Se <xref:System.Diagnostics.XmlWriterTraceListener> for usado, um nome de arquivo sem extensão será gerado. Se você implementar um ouvinte personalizado, você também poderá usar esse atributo para receber dados de inicialização que não sejam um nome de arquivo. Por exemplo, você pode especificar um identificador de banco de dados para este atributo.  
   

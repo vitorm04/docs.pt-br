@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523282"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635151"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -60,11 +60,11 @@ O .NET inclui três primitivos tipos de ponto flutuante, que estão listados na 
   
 Os tipos <xref:System.Single> e <xref:System.Double> dão suporte a valores especiais que representam não é um número e infinito. Por exemplo, o tipo <xref:System.Double> fornece os seguintes valores: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Você usa os métodos <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> e <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> para testar esses valores especiais.
 
-Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. O .NET Core 2.0 e posteriores incluem a classe <xref:System.MathF?displayProperty=nameWithType> que fornece métodos que aceitam argumentos do tipo <xref:System.Single>.
+Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> posteriormente inclui a classe, que <xref:System.Single> fornece métodos que aceitam argumentos do tipo.
 
 Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter?displayProperty=nameWithType>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.
   
-Os tipos <xref:System.Double> e <xref:System.Single> destinam-se a ser usados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicativos em que um alto grau de precisão e erro de arredondamento pequeno não são necessários. Você deve usar o tipo <xref:System.Decimal?displayProperty=nameWithType> para casos em que uma maior precisão é necessária e erros de arredondamento devem ser minimizados.
+Os <xref:System.Double> <xref:System.Single> e tipos destinam-se a ser utilizados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicações em que um alto grau de precisão e pequeno erro de arredondamento não é necessário. Use <xref:System.Decimal?displayProperty=nameWithType> o tipo para casos em que maior precisão seja necessária e erros de arredondamento devem ser minimizados.
 
 > [!NOTE]
 > O tipo <xref:System.Decimal> não elimina a necessidade de arredondamento. Em vez disso, ele minimiza erros devido a arredondamento.
