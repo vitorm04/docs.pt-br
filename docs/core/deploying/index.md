@@ -1,13 +1,13 @@
 ---
 title: Publicação de aplicativos
 description: Saiba mais sobre as formas de publicar um aplicativo .NET Core. O .NET Core pode publicar aplicativos específicos da plataforma ou multiplataforma. Você pode publicar um aplicativo como independente ou como dependente de tempo de execução. Cada modo afeta a forma como um usuário executa seu aplicativo.
-ms.date: 01/31/2020
-ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/01/2020
+ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399059"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665532"
 ---
 # <a name="net-core-application-publishing-overview"></a>Visão geral da publicação de aplicativos .NET Core
 
@@ -15,7 +15,7 @@ Os aplicativos criados com o .NET Core podem ser publicados em dois modos difere
 
 Publicar seu aplicativo como *autônomo* produz um aplicativo que inclui o tempo de execução e bibliotecas do .NET Core, e seu aplicativo e suas dependências. Os usuários do aplicativo podem executá-lo em uma máquina que não tenha o tempo de execução do .NET Core instalado.
 
-Publicar seu aplicativo como *dependente de tempo de execução* produz um aplicativo que inclui apenas seu aplicativo em si e suas dependências. Os usuários do aplicativo têm que instalar separadamente o tempo de execução do .NET Core.
+Publicar seu aplicativo como *dependente de tempo de execução* (anteriormente conhecido como dependente de *framework)* produz um aplicativo que inclui apenas seu próprio aplicativo e suas dependências. Os usuários do aplicativo têm que instalar separadamente o tempo de execução do .NET Core.
 
 Ambos os modos de publicação produzem um executável específico da plataforma por padrão. Aplicativos dependentes de tempo de execução podem ser criados sem um executável, e esses aplicativos são multiplataformas.
 
