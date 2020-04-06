@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: Roll forward de runtime de implantação autossuficiente
       href: deploying/runtime-patch-selection.md
+    - name: Cortar implantações e executáveis autossuficientes
+      href: deploying/trim-self-contained.md
     - name: Repositório de pacotes de runtime
       href: deploying/runtime-store.md
 - name: Docker
