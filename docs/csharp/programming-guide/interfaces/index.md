@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249175"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805906"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -26,7 +26,7 @@ O nome de uma interface deve ser um [nome identificador](../inside-a-program/ide
 
 Qualquer classe ou struct que implemente a interface <xref:System.IEquatable%601> deve conter uma definição para um método <xref:System.IEquatable%601.Equals%2A> que corresponda à assinatura que a interface especifica. Como resultado, você pode contar com uma classe que implementa `IEquatable<T>` para conter um método `Equals` com o qual uma instância da classe pode determinar se é igual a outra instância da mesma classe.
 
-A definição de `IEquatable<T>` não fornece uma implementação para `Equals`. Uma classe ou estrutura pode implementar várias interfaces, mas uma classe só pode herdar de uma única classe.
+A definição `IEquatable<T>` de não fornece `Equals`uma implementação para . Uma classe ou estrutura pode implementar várias interfaces, mas uma classe só pode herdar de uma única classe.
 
 Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
@@ -59,11 +59,11 @@ Uma interface tem as propriedades a seguir:
 - [Propriedades de interface](../classes-and-structs/interface-properties.md)  
 - [Indexadores em interfaces](../indexers/indexers-in-interfaces.md)  
 - [Como implementar eventos de interface](../events/how-to-implement-interface-events.md)
-- [Aulas e Estruturas](../classes-and-structs/index.md)  
+- [Classes e structs](../classes-and-structs/index.md)  
 - [Herança](../classes-and-structs/inheritance.md)  
 - [Métodos](../classes-and-structs/methods.md)  
 - [Polimorfismo](../classes-and-structs/polymorphism.md)  
-- [Classes e membros de classes abstratas e lacradas](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+- [Classes e membros de classes abstract e sealed](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Propriedades](../classes-and-structs/properties.md)  
 - [Eventos](../events/index.md)  
 - [Indexadores](../indexers/index.md)  

@@ -3,12 +3,12 @@ title: Infraestrutura de comunicação de malha de serviço
 description: Saiba como as tecnologias de malha de serviço simplificam a comunicação de microserviços nativa em nuvem
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523516"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805757"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infraestrutura de comunicação de malha de serviço
 
@@ -74,4 +74,4 @@ Em seguida, passamos para dados distribuídos em sistemas nativos da nuvem e os 
 
 >[!div class="step-by-step"]
 >[Próximo](grpc.md)
->[anterior](Database-per-microservice.md)
+>[anterior](database-per-microservice.md)

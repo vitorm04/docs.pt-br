@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523783"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805849"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -87,7 +87,7 @@ Um valor retornado por referência é definido usando a palavra-chave `ref`:
 public ref decimal GetCurrentPrice()
 ```
 
-- Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo: 
+- Entre o token `return` e a variável retornada em uma instrução `return` no método. Por exemplo:
 
 ```csharp
 return ref DecimalArray[0];
@@ -117,7 +117,7 @@ Você pode acessar um valor por referência da mesma maneira. Em alguns casos, a
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-Observe que, nos dois exemplos, a palavra-chave `ref` deve ser usada em ambos os locais ou o compilador gera o erro CS8172, "Não é possível inicializar uma variável por referência com um valor".
+Em ambos os `ref` exemplos, a palavra-chave deve ser usada em ambos os lugares, ou o compilador gera erro CS8172, "Não é possível inicializar uma variável por referência com um valor."
 
 A partir do C# 7.3, a variável de iteração da instrução `foreach` pode ser ref local ou a variável local ref readonly. Para saber mais, confira o artigo [Instrução foreach](foreach-in.md).
 
@@ -145,8 +145,8 @@ A meta de manter um tipo `ref struct` como uma variável alocada na pilha aprese
 
 - Você não pode encaixotar um `ref struct`. Você não pode atribuir um tipo `ref struct` a uma variável do tipo `object`, `dynamic` ou de qualquer tipo de interface.
 - Tipos `ref struct` não podem implementar interfaces.
-- Você não pode declarar um `ref struct` como um membro de campo de uma classe ou de um struct normal. Isso inclui a declaração de uma propriedade autoimplementada, que cria um campo de suporte gerado pelo compilador.
-- Você não pode declarar variáveis locais que são do tipo `ref struct` em métodos assíncronos. Você pode declará-las em métodos síncronos que retornam tipos semelhantes a <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
+- Você não pode declarar um `ref struct` como um membro de campo de uma classe ou de um struct normal. Isso inclui declarar uma propriedade implementada automaticamente, que cria um campo de backup gerado pelo compilador.
+- Você não pode declarar variáveis locais que são do tipo `ref struct` em métodos assíncronos. Você pode declará-los em métodos síncronos que retornam <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>ou `Task`-tipos semelhantes.
 - Você não pode declarar as variáveis locais `ref struct` em iteradores.
 - Você não pode capturar as variáveis `ref struct` em expressões lambda ou em funções locais.
 

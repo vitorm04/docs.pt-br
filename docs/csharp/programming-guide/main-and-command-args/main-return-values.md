@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345121"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805933"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores retornados de Main() (Guia de Programação em C#)
 
@@ -21,11 +21,11 @@ Ele também pode retornar um `int`:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples. No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável. O valor retornado de `Main` é tratado como o código de saída para o processo. Se `void` for retornado de `Main`, o código de saída será implicitamente `0`. O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.
+Se o valor retornado de `Main` não for usado, o retorno de `void` permite um código um pouco mais simples. No entanto, o retorno de um inteiro habilita o programa a comunicar informações de status para outros programas ou scripts, que invocam o arquivo executável. O valor retornado de `Main` é tratado como o código de saída para o processo. Se `void` for devolvido, o código de `Main` `0`saída será implicitamente . O exemplo a seguir mostra como o valor retornado de `Main` pode ser acessado.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo usa ferramentas de linha de comando do [.NET Core](../../../core/index.yml). Se você não estiver familiarizado com as ferramentas de linha de comando do .NET Core, poderá aprender sobre elas neste [Tópico de introdução](../../../core/tutorials/cli-create-console-app.md).
+Este exemplo usa ferramentas de linha de comando [.NET Core.](../../../core/index.yml) Se você não estiver familiarizado com as ferramentas de linha de comando .NET Core, você pode aprender sobre elas neste [artigo inicial](../../../core/tutorials/cli-create-console-app.md).
 
 Modifique o método `Main` em *program.cs* da seguinte maneira:
 
@@ -37,7 +37,7 @@ Você pode construir o aplicativo usando o comando [DOtnet CLI.](../../../core/t
 
 Em seguida, crie um script do Powershell para executar o aplicativo e exibir o resultado. Cole o código a seguir em um arquivo de texto e salve-o como `test.ps1` na pasta que contém o projeto. Execute o script do PowerShell digitando `test.ps1` no prompt do PowerShell.
 
-Como o código retorna zero, o arquivo em lotes relatará êxito. No entanto, se você alterar o MainReturnValTest.cs para retornar um valor diferente de zero e recompilar o programa, a execução subsequente do script do PowerShell reportará falha.
+Como o código retorna zero, o arquivo em lotes relatará êxito. No entanto, se você alterar MainReturnValTest.cs para retornar um valor não-zero e, em seguida, recompilar o programa, a execução subseqüente do script powershell reportará falha.
 
 ```dotnetcli
 dotnet run

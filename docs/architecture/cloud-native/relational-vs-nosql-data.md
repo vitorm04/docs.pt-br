@@ -1,16 +1,16 @@
 ---
-title: Dados relacionais vs. NoSQL
+title: Relacional versus Dados NoSQL
 description: Saiba mais sobre dados relacionais e NoSQL em aplicativos nativos da nuvem
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141413"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805799"
 ---
-# <a name="relational-vs-nosql-data"></a>Dados relacionais vs. NoSQL
+# <a name="relational-vs-nosql-data"></a>Relacional versus Dados NoSQL
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -284,5 +284,5 @@ Uma das tarefas mais demoradas é migrar dados de uma plataforma de dados para o
 O serviço fornece recomendações para guiá-lo através das alterações necessárias para executar uma migração, tanto pequena quanto grande.
 
 >[!div class="step-by-step"]
->[Próximo](Database-per-microservice.md)
+>[Próximo](database-per-microservice.md)
 >[anterior](azure-caching.md)

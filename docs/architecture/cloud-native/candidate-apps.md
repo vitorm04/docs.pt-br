@@ -1,95 +1,95 @@
 ---
-title: Aplicativos candidatos para nuvem nativa
-description: Saiba quais tipos de aplicativos se beneficiam de uma abordagem nativa de nuvem
+title: Aplicativos candidatos para nativos da nuvem
+description: Saiba quais tipos de aplicativos se beneficiam de uma abordagem nativa da nuvem
 author: robvet
-ms.date: 08/20/2019
-ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 03/31/2020
+ms.openlocfilehash: 8e58f5bd3aa0a4503ea73ab454e42e863eb0bb5d
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337433"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805619"
 ---
-# <a name="candidate-apps-for-cloud-native"></a>Aplicativos candidatos para nuvem nativa
+# <a name="candidate-apps-for-cloud-native"></a>Aplicativos candidatos para nativos da nuvem
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Examine os aplicativos em seu portfólio. Quantas delas se qualificam para uma arquitetura nativa de nuvem? Todos eles? Talvez alguns?
+Olhe para os aplicativos em seu portfólio. Quantos deles se qualificam para uma arquitetura nativa da nuvem? Todos eles? Talvez alguns?
 
-Aplicando uma análise de custo/benefício, há uma boa chance de que a maioria não dê suporte à marca de preço pesada necessária para ser nativa na nuvem. O custo de ser nativo na nuvem excedeu muito o valor comercial do aplicativo.
+Aplicando uma análise de custo/benefício, há uma boa chance de que a maioria não suportaria a etiqueta de preço pesada necessária para ser nativa da nuvem. O custo de ser nativo da nuvem excederia em muito o valor de negócios da aplicação.
 
-Que tipo de aplicativo pode ser um candidato para a nuvem nativa?
+Que tipo de candidatura pode ser um candidato para nativo da nuvem?
 
-- Um sistema empresarial grande e estratégico que precisa desenvolver constantemente recursos/recursos de negócios
+- Um sistema corporativo grande e estratégico que precisa evoluir constantemente os recursos/recursos dos negócios
 
-- Um aplicativo que requer uma velocidade de liberação alta – com alta confiança
+- Um aplicativo que requer uma alta velocidade de liberação - com alta confiança
 
-- Um sistema com o qual os recursos individuais devem ser liberados *sem* uma reimplantação completa de todo o sistema
+- Um sistema com onde os recursos individuais devem ser *liberados sem* uma reimplantação completa de todo o sistema
 
-- Um aplicativo desenvolvido por equipes com experiência em diferentes pilhas de tecnologia
+- Um aplicativo desenvolvido por equipes com expertise em diferentes pilhas de tecnologia
 
-- Um aplicativo com componentes que devem ser dimensionados de forma independente
+- Um aplicativo com componentes que devem ser dimensionados independentemente
 
-Em seguida, há sistemas herdados. Embora todos gostaríamos de criar novos aplicativos, muitas vezes somos responsáveis por modernizar cargas de trabalho herdadas que são críticas para os negócios. Ao longo do tempo, um aplicativo herdado poderia ser decomposto em microserviços, em contêineres e, por fim, "replataforma" em uma arquitetura nativa de nuvem.
+Então há sistemas legados. Embora todos gostaríamos de construir novos aplicativos, muitas vezes somos responsáveis por modernizar cargas de trabalho legados que são fundamentais para os negócios. Com o tempo, um aplicativo legado pode ser decomposto em microsserviços, contêiner e, finalmente, "replataformado" em uma arquitetura nativa da nuvem.
 
-### <a name="modernizing-legacy-apps"></a>Modernizando aplicativos herdados
+### <a name="modernizing-legacy-apps"></a>Modernização de aplicativos legados
 
-O Microsoft e-book gratuito [modernizar aplicativos .net existentes com a nuvem do Azure e contêineres do Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) fornece orientação para migrar cargas de trabalho locais para a nuvem. A Figura 1-10 mostra que não há uma estratégia única de um único tamanho para modernizar aplicativos herdados.
+O e-book gratuito da Microsoft [Modernize os aplicativos .NET existentes com nuvem Azure e Contêineres Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook) fornece orientação para migrar cargas de trabalho no local para a nuvem. A Figura 1-10 mostra que não há uma única estratégia de tamanho único para modernizar aplicativos legados.
 
-![Estratégias para migrar cargas de trabalho herdadas](./media/strategies-for-migrating-legacy-workloads.png)
+![Estratégias para migrar cargas de trabalho legados](./media/strategies-for-migrating-legacy-workloads.png)
 
-**Figura 1-10**. Estratégias para migrar cargas de trabalho herdadas
+**Figura 1-10**. Estratégias para migrar cargas de trabalho legados
 
-Aplicativos monolíticos que não são críticos amplamente se beneficiam de uma migração rápida de comparação de precisão e mudança ([pronta para a infraestrutura de nuvem](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). Aqui, a carga de trabalho local é rehospedada para uma VM baseada em nuvem, sem alterações. Essa abordagem usa o [modelo IaaS (infraestrutura como serviço)](https://azure.microsoft.com/overview/what-is-iaas/). O Azure inclui várias ferramentas como ([migrações para Azure](https://aka.ms/azuremigrate), [Azure site Recovery](https://azure.microsoft.com/services/site-recovery/)e serviço de migração de [banco de dados do Azure](https://azure.microsoft.com/campaigns/database-migration/)) para facilitar a movimentação. Embora essa estratégia possa gerar alguma economia de custos, esses aplicativos normalmente não eram arquitetados para desbloquear e aproveitar os benefícios da computação em nuvem.
+Os aplicativos monolíticos que não são críticos beneficiam em grande parte de uma migração rápida de levantamento e mudança[(Cloud Infrastructure-Ready).](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md) Aqui, a carga de trabalho no local é rehospedada em uma VM baseada em nuvem, sem alterações. Esta abordagem utiliza o [modelo IaaS (Infrastructure as a Service).](https://azure.microsoft.com/overview/what-is-iaas/) O Azure inclui várias ferramentas, como [o Azure Migrate,](https://azure.microsoft.com/services/azure-migrate/) [o Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)e [o Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) para facilitar esse movimento. Embora essa estratégia possa gerar alguma redução de custos, tais aplicativos normalmente não foram arquitetados para desbloquear e aproveitar os benefícios da computação em nuvem.
 
-Os aplicativos monolíticos que são essenciais para os negócios muitas vezes se beneficiam de uma migração avançada de comparação de precisão e deslocamento (*otimizada para nuvem*). Essa abordagem inclui otimizações de implantação que habilitam os principais serviços de nuvem, sem alterar a arquitetura principal do aplicativo. Por exemplo, você pode colocar o aplicativo em [contêiner](https://docs.microsoft.com/virtualization/windowscontainers/about/) e implantá-lo em um orquestrador de contêiner, como os [Serviços Kubernetess do Azure](https://azure.microsoft.com/services/kubernetes-service/), discutidos posteriormente neste livro. Uma vez na nuvem, o aplicativo poderia consumir outros serviços de nuvem, como bancos de dados, filas de mensagens, monitoramento e Caching distribuído.
+Aplicativos monolíticos que são críticos para os negócios muitas vezes se beneficiam de uma migração aprimorada de elevação e mudança *(Otimização da Nuvem).* Essa abordagem inclui otimizações de implantação que permitem os principais serviços de nuvem - sem alterar a arquitetura principal do aplicativo. Por exemplo, você pode [contêiner](https://docs.microsoft.com/virtualization/windowscontainers/about/) o aplicativo e implantá-lo em um orquestrador de [contêineres, como o Azure Kubernetes Services,](https://azure.microsoft.com/services/kubernetes-service/)discutido mais tarde neste livro. Uma vez na nuvem, o aplicativo poderia consumir outros serviços em nuvem, como bancos de dados, filas de mensagens, monitoramento e cache distribuído.
 
-Por fim, os aplicativos monolíticos que executam funções empresariais estratégicas podem se beneficiar melhor de uma abordagem *nativa de nuvem* , o assunto deste livro. Essa abordagem fornece agilidade e velocidade. Mas, ele vem a um custo de replataforma, rearquitetura e reescrita de código.
+Finalmente, aplicativos monolíticos que executam funções corporativas estratégicas podem se beneficiar melhor de uma abordagem *Cloud-Native,* o tema deste livro. Essa abordagem proporciona agilidade e velocidade. Mas, ele vem a um custo de replataforma, rearquiteto e reescrever código.
 
-Se você e sua equipe acreditarem que uma abordagem nativa de nuvem é apropriada, ela convém você a racionalizar a decisão com sua organização. O que é exatamente o problema de negócios que uma abordagem nativa de nuvem resolverá? Como ele se alinharia com as necessidades dos negócios?
+Se você e sua equipe acreditam que uma abordagem nativa da nuvem é apropriada, cabe a você racionalizar a decisão com sua organização. Qual é exatamente o problema de negócios que uma abordagem nativa da nuvem resolverá? Como isso se alinharia às necessidades dos negócios?
 
-- Versões rápidas de recursos com maior confiança?
+- Lançamentos rápidos de recursos com maior confiança?
 
-- Escalabilidade refinada-uso mais eficiente de recursos?
+- Escalabilidade de grãos finos - uso mais eficiente de recursos?
 
-- Maior resiliência do sistema?
+- Melhor resiliência do sistema?
 
 - Melhor desempenho do sistema?
 
-- Mais visibilidade de operações?
+- Mais visibilidade nas operações?
 
-- As plataformas de desenvolvimento de Blend e armazenamentos de dados chegam à melhor ferramenta para o trabalho?
+- Misturar plataformas de desenvolvimento e data stores para chegar à melhor ferramenta para o trabalho?
 
-- Investimento de aplicativos à prova de futuro?
+- Investimento em aplicações à prova de futuro?
 
-A estratégia de migração certa depende das prioridades organizacionais e dos sistemas que você está direcionando. Para muitos, pode ser mais econômico para otimizar a nuvem um aplicativo monolítico ou adicionar serviços de alta granularidade a um aplicativo de N camadas. Nesses casos, você ainda pode fazer uso completo de recursos de PaaS de nuvem como os oferecidos pelo serviço Azure App.
+A estratégia de migração correta depende das prioridades organizacionais e dos sistemas que você está mirando. Para muitos, pode ser mais econômico otimizar uma aplicação monolítica na nuvem ou adicionar serviços de grãos grossos a um aplicativo N-Tier. Nesses casos, você ainda pode fazer uso total dos recursos do PaaS na nuvem, como os oferecidos pelo Azure App Service.
 
 ## <a name="summary"></a>Resumo
 
-Neste capítulo, introduzimos a computação nativa de nuvem. Fornecemos uma definição junto com os principais recursos que orientam um aplicativo nativo de nuvem. Examinamos os tipos de aplicativos que podem justificar esse investimento e esforço.
+Neste capítulo, introduzimos a computação nativa em nuvem. Fornecemos uma definição juntamente com os principais recursos que impulsionam um aplicativo nativo da nuvem. Analisamos os tipos de aplicações que podem justificar esse investimento e esforço.
 
-Com a introdução por trás, agora nos aprofundamos em uma visão muito mais detalhada na nuvem nativa.
+Com a introdução por trás, agora mergulhamos em um olhar muito mais detalhado sobre os nativos das nuvens.
 
 ### <a name="references"></a>Referências
 
-- [Computação nativa da nuvem Foundation](https://www.cncf.io/)
+- [Fundação de Computação Nativa da Nuvem](https://www.cncf.io/)
 
-- [Microserviços .NET: arquitetura para aplicativos .NET em contêineres](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET Microservices: Arquitetura para aplicativos .NET contêiner](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [Modernize os aplicativos .NET existentes com a nuvem DoZure e os contêineres windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
-- [Padrões de nuvem nativa por Cornelia Davis](https://www.manning.com/books/cloud-native-patterns)
+- [Padrões nativos da nuvem por Cornelia Davis](https://www.manning.com/books/cloud-native-patterns)
 
-- [Além do aplicativo de doze fatores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
+- [Além da aplicação de doze fatores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
-- [O que é infraestrutura como código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
+- [O que é Infra-estrutura como Código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
 
-- [Micro Deploy de engenharia de Uber: implantação diária com confiança](https://eng.uber.com/micro-deploy/)
+- [Micro Implantação da Uber Engineering: Implantação diária com confiança](https://eng.uber.com/micro-deploy/)
 
-- [Como o Netflix implanta o código](https://www.infoq.com/news/2013/06/netflix/)
+- [Como a Netflix implanta código](https://www.infoq.com/news/2013/06/netflix/)
 
-- [Controle de sobrecarga para dimensionar microserviços WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
+- [Controle de sobrecarga para dimensionamento de microserviços wechat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
 
 >[!div class="step-by-step"]
->[Anterior](definition.md)
->[Próximo](introduce-eshoponcontainers-reference-app.md)
+>[Próximo](definition.md)
+>[anterior](introduce-eshoponcontainers-reference-app.md)

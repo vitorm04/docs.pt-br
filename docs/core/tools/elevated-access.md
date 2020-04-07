@@ -3,12 +3,12 @@ title: Acesso elevado para os comandos dotnet
 description: Conheça as melhores práticas para os comandos dotnet que exigem acesso elevado.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156758"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805797"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acesso elevado para os comandos dotnet
 
@@ -18,6 +18,7 @@ Os seguintes comandos podem ser executados com privilégios elevados:
 
 - comandos `dotnet tool`, como [instalação de ferramenta dotnet](dotnet-tool-install.md).
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 Não recomendamos executar outros comandos com privilégios elevados. Particularmente, não recomendamos privilégios elevados com comandos que usam o MSBuild, como [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md) e [dotnet run](dotnet-run.md). O principal problema é o gerenciamento de permissões quando um usuário faz a transição entre a raiz e uma conta restrita várias vezes após a emissão de comandos dotnet. Você pode achar, como um usuário restrito, que não tem acesso ao arquivo criado por um usuário raiz. Existem maneiras de resolver esta situação, mas não é necessário entrar nesse assunto agora.
 

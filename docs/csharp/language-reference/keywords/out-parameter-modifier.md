@@ -4,15 +4,16 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249338"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805862"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador de parâmetro out (Referência de C#)
-A palavra-chave `out` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:   
+
+A palavra-chave `out` faz com que os argumentos sejam passados por referência. Ela torna o parâmetro formal um alias para o argumento, que deve ser uma variável. Em outras palavras, qualquer operação no parâmetro é feita no argumento. É como a palavra-chave [ref](ref.md), exceto pelo fato de que `ref` requer que a variável seja inicializada antes de ser passada. Também é como a palavra-chave [in](in-parameter-modifier.md), exceto que `in` não permite que o método chamado modifique o valor do argumento. Para usar um parâmetro `out`, a definição do método e o método de chamada devem usar explicitamente a palavra-chave `out`. Por exemplo:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
@@ -49,13 +50,13 @@ Não é possível usar as palavras-chave `in`, `ref` e `out` para os seguintes t
 
 Além disso, [os métodos de extensão](../../programming-guide/classes-and-structs/extension-methods.md) têm as seguintes restrições:
 
-- O `out` keywoard não pode ser usado no primeiro argumento de um método de extensão.
+- A `out` palavra-chave não pode ser usada no primeiro argumento de um método de extensão.
 - A `ref` palavra-chave não pode ser usada no primeiro argumento de um método de extensão quando o argumento não é uma estrutura, ou um tipo genérico não constrangido a ser uma estrutura.
 - A `in` palavra-chave não pode ser usada a menos que o primeiro argumento seja uma estrutura. A `in` palavra-chave não pode ser usada em qualquer tipo genérico, mesmo quando constrangida a ser uma estrutura.
 
 ## <a name="declaring-out-parameters"></a>Declarando parâmetros `out`
 
-Declarar um método com argumentos `out` é uma solução clássica para retornar vários valores. Começando com o C# 7.0, considere [tuplas](../../tuples.md) para cenários semelhantes. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. Observe que o terceiro argumento é atribuído a null. Isso permite que os métodos retornem valores opcionalmente.  
+Declarar um método com argumentos `out` é uma solução clássica para retornar vários valores. Começando com o C# 7.0, considere [tuplas](../../tuples.md) para cenários semelhantes. O exemplo a seguir usa `out` para retornar três variáveis com uma única chamada de método. O terceiro argumento é atribuído a nulo. Isso permite que os métodos retornem valores opcionalmente.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
@@ -80,5 +81,5 @@ No exemplo anterior, a variável `number` é fortemente tipada como um `int`. Vo
 
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](./index.md)
+- [C# Palavras-chave](./index.md)
 - [Parâmetros de método](./method-parameters.md)

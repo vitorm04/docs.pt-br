@@ -2,12 +2,12 @@
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249416"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805743"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -133,7 +133,7 @@ Você pode ver como essa implementação de objeto de valor do Endereço não te
 
 Não ter campo de ID em uma classe a ser usada pela Entity Framework (EF) não era possível até o EF Core 2.0, o que ajuda muito a implementar objetos de melhor valor sem ID. Essa é justamente a explicação da próxima seção.
 
-Pode-se argumentar que objetos de valor, sendo imutáveis, devem ser lidos apenas (ou seja, ter propriedades somente get),e isso é verdade. No entanto, os objetos de valor geralmente são serializados e desserializados para passar pelas filas de mensagens e, sendo somente leitura, impedem o desserializador de atribuir valores. Portanto, simplesmente os deixamos como um conjunto particular que é somente leitura o suficiente para ser prático.
+Pode-se argumentar que objetos de valor, sendo imutáveis, devem ser lidos apenas (ou seja, ter propriedades somente get),e isso é verdade. No entanto, objetos de valor geralmente são serializados e desserializados para passar por filas de mensagens, `private set`e ser lido apenas impede o desériedor de atribuir valores, então nós apenas deixá-los como , o que é apenas leitura suficiente para ser prático.
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>Como persistir objetos de valor no banco de dados com o EF Core 2.0 e posterior
 
@@ -186,7 +186,7 @@ Por convenção, uma chave primária de sombra será criada para o tipo próprio
 
 É importante observar que tipos próprios nunca são descobertos pela convenção no núcleo do EF, assim, você precisa declará-los explicitamente.
 
-Em eShopOnContainers, em OrderingContext.cs, no método OnModelCreating(), há várias configurações de infraestrutura que estão sendo aplicadas. Um deles está relacionado à entidade Ordem.
+No eShopOnContainers, no arquivo OrderingContext.cs, dentro do `OnModelCreating()` método, várias configurações de infra-estrutura são aplicadas. Um deles está relacionado à entidade Ordem.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -226,7 +226,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 No código anterior, o método `orderConfiguration.OwnsOne(o => o.Address)` especifica que a propriedade `Address` é uma entidade própria do tipo `Order`.
 
-Por padrão, as colunas de nome e banco de dados de convenções do EF Core para as propriedades do tipo de entidade própria como `EntityProperty_OwnedEntityProperty`. Portanto, as propriedades internas de `Address` aparecerão na tabela `Orders` com os nomes `Address_Street`, `Address_City` (e assim por diante para `State`, `Country` e `ZipCode`).
+Por padrão, as colunas de nome e banco de dados de convenções do EF Core para as propriedades do tipo de entidade própria como `EntityProperty_OwnedEntityProperty`. Portanto, as propriedades `Address` internas de `Orders` aparecerão na `Address_Street` `Address_City` tabela com os `State`nomes `Country`( `ZipCode`e assim por diante para , e ).
 
 Você pode acrescentar o método fluente `Property().HasColumnName()` para renomear as colunas. No caso em que `Address` é uma propriedade pública, os mapeamentos seriam semelhantes ao seguinte:
 
@@ -281,7 +281,7 @@ public class Address
 
 - Você pode mapear o mesmo tipo CLR como diferentes tipos próprios na mesma entidade de proprietário por meio de propriedades de navegação separadas.
 
-- A divisão de tabela está configurada por convenção, mas você pode recusá-la mapeando o tipo próprio para uma tabela diferente usando ToTable.
+- A divisão de tabelas é configurada por convenção, mas você pode optar por mapear o tipo de propriedade para uma tabela diferente usando O Tabela.
 
 - O carregamento ansioso é realizado automaticamente em tipos próprios, `.Include()` ou seja, não há necessidade de chamar a consulta.
 
@@ -297,7 +297,7 @@ public class Address
 
 - Não há suporte para tipos de propriedade opcionais (ou seja, anulados) que sejam mapeados com o proprietário na mesma tabela (isto é, usando divisão de mesa). Isso porque o mapeamento é feito para cada propriedade, não temos uma sentinela separada para o valor complexo nulo como um todo.
 
-- Não há suporte de mapeamento de herança para tipos de propriedade, mas você deve conseguir mapear dois tipos de folha das mesmas hierarquias de herança como diferentes tipos próprios. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
+- Sem suporte de mapeamento de herança para tipos de propriedade, mas você deve ser capaz de mapear dois tipos de folha das mesmas hierarquias de herança que diferentes tipos de propriedade. O EF Core não argumentará sobre o fato de que fazem parte da mesma hierarquia.
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>Principais diferenças com tipos complexos do EF6
 

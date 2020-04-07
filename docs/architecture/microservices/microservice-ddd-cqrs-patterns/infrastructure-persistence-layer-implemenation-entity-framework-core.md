@@ -2,18 +2,18 @@
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 description: .NET Microservices Architecture for Containerized .NET Applications | Explorar os detalhes de implementação para a camada de persistência da infra-estrutura, usando o Entity Framework Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523318"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805485"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
 Ao usar bancos de dados relacionais, como o SQL Server, o Oracle ou o PostgreSQL, uma abordagem recomendada é implementar a camada de persistência com base no EF (Entity Framework). O EF é compatível com LINQ e fornece objetos fortemente tipados para o modelo, bem como uma persistência simplificada no banco de dados.
 
-O Entity Framework tem uma longa história de participação no .NET Framework. Ao usar o .NET Core, você também deve usar o Entity Framework Core, que é executado no Windows ou no Linux da mesma maneira que o .NET Core. O EF Core é uma reformulação completa do Entity Framework, implementado com muito menos espaço e importantes melhorias no desempenho.
+O Entity Framework tem uma longa história de participação no .NET Framework. Ao usar o .NET Core, você também deve usar o Entity Framework Core, que é executado no Windows ou no Linux da mesma maneira que o .NET Core. O EF Core é uma reescrita completa do Entity Framework que é implementado com uma pegada muito menor e melhorias importantes no desempenho.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introdução ao Entity Framework Core
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-Observe que a propriedade `OrderItems` somente pode ser acessada como somente leitura usando `IReadOnlyCollection<OrderItem>`. Esse tipo é somente leitura, portanto, ele está protegido contra as atualizações externas regulares.
+A `OrderItems` propriedade só pode ser acessada apenas como leitura. `IReadOnlyCollection<OrderItem>` Esse tipo é somente leitura, portanto, ele está protegido contra as atualizações externas regulares.
 
 O EF Core fornece uma maneira de mapear o modelo de domínio para o banco de dados físico sem "contaminar" o modelo de domínio. Trata-se de puro código POCO do .NET, pois a ação de mapeamento é implementada na camada de persistência. Nessa ação de mapeamento, você precisa configurar o mapeamento dos campos para o banco de dados. No exemplo a seguir do método `OnModelCreating` de `OrderingContext` e da classe `OrderEntityTypeConfiguration`, a chamada para `SetPropertyAccessMode` informa ao EF Core para acessar a propriedade `OrderItems` por meio de seu campo.
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -110,7 +110,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-Ao usar campos em vez de propriedades, a entidade `OrderItem` será persistida como se tivesse uma propriedade `List<OrderItem>`. No entanto, ela expõe um único acessador, o método `AddOrderItem`, para adicionar novos itens ao pedido. Como resultado, o comportamento e os dados ficarão vinculados e serão consistentes em todos os códigos de aplicativo que usarem o modelo de domínio.
+Quando você usa campos em `OrderItem` vez de propriedades, a `List<OrderItem>` entidade é persistida como se tivesse uma propriedade. No entanto, ela expõe um único acessador, o método `AddOrderItem`, para adicionar novos itens ao pedido. Como resultado, o comportamento e os dados ficarão vinculados e serão consistentes em todos os códigos de aplicativo que usarem o modelo de domínio.
 
 ## <a name="implement-custom-repositories-with-entity-framework-core"></a>Implementar repositórios personalizados com o Entity Framework Core
 
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-Observe que a interface IBuyerRepository vem da camada de modelo de domínio como um contrato. No entanto, a implementação do repositório é feita na camada de persistência e de infraestrutura.
+A `IBuyerRepository` interface vem da camada de modelo de domínio como um contrato. No entanto, a implementação do repositório é feita na camada de persistência e de infraestrutura.
 
 O DbContext do EF é fornecido pelo construtor por meio de injeção de dependência. Ele é compartilhado entre vários repositórios no mesmo escopo de solicitação HTTP, graças ao seu tempo de vida padrão (`ServiceLifetime.Scoped`) no contêiner de IoC (inversão de controle) (que também pode ser definido explicitamente com `services.AddDbContext<>`).
 
@@ -168,11 +168,11 @@ No entanto, os métodos de consulta reais para obter os dados a serem enviados �
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>Usando um repositório personalizado em vez de usar o DbContext EF diretamente
 
-A classe DbContext do Entity Framework baseia-se nos padrões de unidade de trabalho e de repositório e pode ser usada diretamente no código, como em um controlador MVC do ASP.NET Core. Essa é a maneira de criar o código mais simples possível, como o microsserviço de catálogo de CRUD (criar, ler, atualizar e excluir) no eShopOnContainers. Nos casos em que você deseja o código mais simples possível, é possível usar diretamente a classe DbContext, como muitos desenvolvedores fazem.
+A classe Entity Framework DbContext é baseada nos padrões de Unidade de Trabalho e Repositório e pode ser usada diretamente do seu código, como a partir de um controlador MVC ASP.NET. Os padrões de Unidade de Trabalho e Repositório resultam no código mais simples, como no microserviço de catálogo CRUD em eShopOnContainers. Nos casos em que você deseja o código mais simples possível, é possível usar diretamente a classe DbContext, como muitos desenvolvedores fazem.
 
-No entanto, a implementação de repositórios personalizados oferece vários benefícios ao implementar microsserviços ou aplicativos mais complexos. Os padrões de unidade de trabalho e de repositório são indicados para encapsular a camada de persistência da infraestrutura para que ela fique desacoplada das camadas de aplicativo e de modelo de domínio. A implementação desses padrões pode facilitar o uso de repositórios fictícios para simulação de acesso ao banco de dados.
+No entanto, a implementação de repositórios personalizados oferece vários benefícios ao implementar microsserviços ou aplicativos mais complexos. Os padrões de Unidade de Trabalho e Repositório destinam-se a encapsular a camada de persistência da infra-estrutura para que ela seja dissociada das camadas de aplicativo e modelo de domínio. A implementação desses padrões pode facilitar o uso de repositórios fictícios para simulação de acesso ao banco de dados.
 
-Na Figura 7-18, veja as diferenças entre não usar repositórios (usando diretamente o DbContext do EF) e usar repositórios, o que facilita a simulação desses repositórios.
+Na Figura 7-18, você pode ver as diferenças entre não usar repositórios (usando diretamente o EF DbContext) versus usar repositórios, o que torna mais fácil zombar desses repositórios.
 
 ![Diagrama mostrando os componentes e o fluxo de dados nos dois repositórios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
@@ -219,7 +219,7 @@ O modo de criação de instância do DbContext não deve ser configurado como Se
 
 ## <a name="the-repository-instance-lifetime-in-your-ioc-container"></a>O tempo de vida da instância de repositório no contêiner de IoC
 
-Da mesma forma, o tempo de vida do repositório normalmente deve ser definido como no escopo (InstancePerLifetimeScope no Autofac). Ele também pode ser transitório (InstancePerDependency no Autofac), mas o serviço será mais eficiente em relação à memória ao usar o tempo de vida no escopo.
+Da mesma forma, a vida útil do repositório deve ser geralmente definida como escopo (InstancePerLifetimeScope em Autofac). Ele também pode ser transitório (InstancePerDependency no Autofac), mas o serviço será mais eficiente em relação à memória ao usar o tempo de vida no escopo.
 
 ```csharp
 // Registering a Repository in Autofac IoC container
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-Observe que usar o tempo de vida singleton para o repositório poderá causar problemas graves de simultaneidade quando o DbContext estiver definido como tempo de vida no escopo (InstancePerLifetimeScope) (os tempos de vida padrão de um DBContext).
+O uso da vida útil de singleton para o repositório pode causar sérios problemas de concorrência quando seu DbContext estiver definido como escopo (InstancePerLifetimeScope) vida útil (as vidas padrão de um DBContext).
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
@@ -243,7 +243,7 @@ Observe que usar o tempo de vida singleton para o repositório poderá causar pr
 
 ## <a name="table-mapping"></a>Mapeamento de tabela
 
-O mapeamento de tabela identifica os dados de tabela a serem consultados e salvos no banco de dados. Você já viu como as entidades de domínio (por exemplo, um domínio de produto ou de pedido) podem ser usadas para gerar um esquema de banco de dados relacionado. O EF foi projetado rigidamente de acordo com o conceito de *convenções*. As convenções abrangem perguntas como "Qual será o nome de uma tabela?" ou "Qual propriedade é a chave primária?" As convenções normalmente se baseiam nos nomes convencionais. Por exemplo, é comum que a chave primária seja uma propriedade que termine com Id.
+O mapeamento de tabela identifica os dados de tabela a serem consultados e salvos no banco de dados. Você já viu como as entidades de domínio (por exemplo, um domínio de produto ou de pedido) podem ser usadas para gerar um esquema de banco de dados relacionado. O EF foi projetado rigidamente de acordo com o conceito de *convenções*. Convenções abordam questões como "Qual será o nome de uma mesa?" ou "Qual propriedade é a chave principal?" As convenções são tipicamente baseadas em nomes convencionais. Por exemplo, é típico que a chave primária `Id`seja uma propriedade que termine com .
 
 Por convenção, cada entidade será configurada para ser mapeada para uma tabela com o mesmo nome que a propriedade `DbSet<TEntity>` que expõe a entidade no contexto derivado. Se nenhum valor de `DbSet<TEntity>` for fornecido para a entidade especificada, o nome da classe será usado.
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-A seguinte especificação carrega uma única entidade de cesta de compras de acordo com a ID da cesta de compras ou com a ID do comprador ao qual a cesta de compras pertence. Isso fará o [carregamento adiantado](https://docs.microsoft.com/ef/core/querying/related-data) da coleção de itens do carrinho de compras.
+A seguinte especificação carrega uma única entidade de cesta dada a identidade da cesta ou o ID do comprador a quem a cesta pertence. Ele vai [carregar ansiosamente](/ef/core/querying/related-data) `Items` a coleção da cesta.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION

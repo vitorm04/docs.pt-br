@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523647"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805596"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -115,11 +115,11 @@ Com foco em um único contêiner, o microserviço de contêiner catalog-api tem 
 
 Esse serviço em contêiner tem a seguinte configuração básica:
 
-- É baseado na imagem personalizada **de eshop/catalog-api.** Por questões de simplicidade, não há nenhuma definição de chave build: no arquivo. Isso significa que a imagem precisa ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
+- É baseado na imagem personalizada **de eshop/catalog-api.** Para simplificar, não há compilação: configuração de tecla no arquivo. Isso significa que a imagem precisa ser previamente compilada (com docker build) ou ser baixada (com o comando docker pull) de qualquer registro do Docker.
 
 - Ele define uma variável de ambiente denominada ConnectionString, com a cadeia de conexão a ser usada pelo Entity Framework para acessar a instância do SQL Server que contém o modelo de dados de catálogo. Nesse caso, o mesmo contêiner do SQL Server está mantendo vários bancos de dados. Dessa forma, você precisará de menos memória no computador de desenvolvimento do Docker. No entanto, você também poderia implantar um contêiner do SQL Server para cada banco de dados de microsserviço.
 
-- O nome do SQL Server é **sqldata**, que é o mesmo nome usado para o contêiner que está executando a instância do SQL Server para Linux. Isso é conveniente: a possibilidade de usar essa resolução de nome (interna ao host do Docker) resolverá o endereço de rede, então você não precisará saber o IP interno dos contêineres que está acessando de outros contêineres.
+- O nome do SQL Server é **sqldata**, que é o mesmo nome usado para o contêiner que está executando a instância do SQL Server para Linux. Isso é conveniente; ser capaz de usar essa resolução de nome (interna para o host Docker) resolverá o endereço da rede para que você não precise saber o IP interno para os contêineres que você está acessando de outros contêineres.
 
 Como a cadeia de conexão é definida por uma variável de ambiente, você pode definir essa variável por meio de um mecanismo diferente e em outro momento. Por exemplo, você pode definir uma cadeia de conexão diferente durante a implantação em produção nos hosts finais ou fazer isso através dos pipelines de CI/CD no Azure DevOps Services ou no sistema de DevOps de sua preferência.
 
@@ -149,7 +149,7 @@ Os docker-compose.yml são arquivos de configuração interpretados pelo mecanis
 
 #### <a name="testing-environments"></a>Ambientes de teste
 
-Uma parte importante de qualquer processo de CD (implantação contínua) ou CI (integração contínua) são os testes de unidade e testes de integração. Esses testes automatizados exigem um ambiente isolado para que não sejam afetados por usuários ou qualquer outra alteração nos dados do aplicativo.
+Uma parte importante de qualquer processo de CD (implantação contínua) ou CI (integração contínua) são os testes de unidade e testes de integração. Esses testes automatizados requerem um ambiente isolado para que não sejam afetados pelos usuários ou qualquer outra alteração nos dados do aplicativo.
 
 Com o Docker Compose, você pode criar e destruir esse ambiente isolado muito facilmente em alguns comandos do seu prompt de comando ou scripts, como os seguintes comandos:
 
@@ -177,7 +177,7 @@ Você pode usar um único arquivo docker-compose.yml, como nos exemplos simplifi
 
 Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 6-11, quando você estiver usando o Visual Studio e habilitar o suporte ao Docker, o Visual Studio também criará um arquivo docker-compose.vs.debug.g.yml adicional para depurar o aplicativo. Dê uma olhada nesse arquivo na pasta obj\\Docker\\ da pasta da solução principal.
 
-![Captura de tela dos arquivos em um projeto de composição de docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Arquivos em um projeto de composição de docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Figura 6-11**. arquivos de composição de docker no Visual Studio 2019
 
@@ -269,7 +269,7 @@ Se você se concentrar na definição do serviço webmvc, por exemplo, verá com
 
 - O nome do serviço: webmvc.
 
-- A imagem personalizada do contêiner: eshop/webmvc.
+- Imagem personalizada do contêiner: eshop/webmvc.
 
 - O comando para compilar a imagem personalizada do Docker, que indica qual Dockerfile usar.
 
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 Um Dockerfile como esse funcionará. No entanto, você pode otimizar substancialmente suas imagens, especialmente as imagens de produção.
 
-No modelo de contêiner e microsserviços, você está constantemente iniciando contêineres. O modo comum de uso de contêineres não reinicia um contêiner em suspensão porque o contêiner é descartável. Orquestradores (como o Kubernetes e o Azure Service Fabric) simplesmente criam instâncias de imagens. Isso significa que você precisará otimizar por meio da pré-compilação do aplicativo quando ele for criado, fazendo com que o processo de instanciação seja mais rápido. Quando o contêiner é iniciado, ele deve estar pronto para executar. Você não deve restaurar nem compilar em tempo de execução usando os comandos `dotnet restore` e `dotnet build` na CLI do dotnet, como visto em várias postagens no blog sobre o .NET Core e o Docker.
+No modelo de contêiner e microsserviços, você está constantemente iniciando contêineres. O modo comum de uso de contêineres não reinicia um contêiner em suspensão porque o contêiner é descartável. Orquestradores (como o Kubernetes e o Azure Service Fabric) simplesmente criam instâncias de imagens. Isso significa que você precisará otimizar por meio da pré-compilação do aplicativo quando ele for criado, fazendo com que o processo de instanciação seja mais rápido. Quando o contêiner é iniciado, ele deve estar pronto para executar. Não restaure e compile em `dotnet restore` tempo `dotnet build` de execução usando os comandos e CLI, como você pode ver em postagens de blog sobre .NET Core e Docker.
 
 A equipe do .NET está realizando um trabalho importante para tornar o .NET Core e o ASP.NET Core uma estrutura otimizada para contêineres. O .NET Core não é apenas uma estrutura leve com um volume de memória pequeno; a equipe se concentrou em imagens do Docker otimizadas para três cenários principais e as publicou no Registro no Hub do Docker em *dotnet/core*, começando na versão 2.1:
 
-1. **Desenvolvimento**: Onde a prioridade é a capacidade de iterar rapidamente e depurar mudanças, e onde o tamanho é secundário.
+1. **Desenvolvimento**: A prioridade é a capacidade de iterar rapidamente e depurar mudanças, e onde o tamanho é secundário.
 
-2. **Build**: a prioridade é compilar o aplicativo e inclui os binários e outras dependências para otimizar os binários.
+2. **Build**: A prioridade é compilar o aplicativo, e a imagem inclui binários e outras dependências para otimizar binários.
 
-3. **Produção**: Onde o foco é a implantação rápida e a partida dos contêineres, de modo que essas imagens são limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
+3. **Produção**: O foco é a implantação rápida e o início dos contêineres, de modo que essas imagens estão limitadas aos binários e ao conteúdo necessário para executar o aplicativo.
 
-Para conseguir isso, a equipe do .NET fornece quatro variantes básicas em [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (no Hub do Docker):
+A equipe .NET fornece quatro variantes básicas em [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (no Docker Hub):
 
 1. **sdk**: para cenários de desenvolvimento e build
 1. **aspnet**: para cenários de produção do ASP.NET
 1. **runtime**: para cenários de produção do .NET
-1. **runtime-deps**: para cenários de produção de [aplicativos autossuficientes](../../../core/deploying/index.md#publish-self-contained).
+1. **runtime-deps**: para cenários de produção de [aplicações independentes](../../../core/deploying/index.md#publish-self-contained)
 
 Para uma inicialização mais rápida, as imagens de runtime também definem automaticamente aspnetcore\_urls para a porta 80 e usam o Ngen para criar um cache de imagens nativas de assemblies.
 

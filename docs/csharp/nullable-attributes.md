@@ -3,16 +3,16 @@ title: Atualizar APIs para tipos de referência anulados com atributos que defin
 description: Aprenda a usar os atributos descritivos AllowNull, DisallowNull, MaybeNull, NotNull e muito mais para descrever completamente o estado nulo de suas APIs.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5d7a864ba1b66ad6b4ae7b0391d170a29147c537
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249240"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805839"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualize bibliotecas para usar tipos de referência anulados e comunicar regras anuladas aos chamadores
 
-A adição de tipos de [referência anulados](nullable-references.md) significa que você pode declarar se um `null` valor é permitido ou esperado para cada variável. Além disso, você pode aplicar uma `AllowNull` `DisallowNull`série `MaybeNull` `NotNull`de `NotNullWhen` `MaybeNullWhen`atributos: , , , , , , , , e `NotNullWhenNotNull` descrever completamente os estados nulos de argumento e valores de devolução. Isso proporciona uma grande experiência enquanto você escreve código. Você recebe avisos se uma variável não-nula pode ser definida como `null`. Você recebe avisos se uma variável anulada não for verificada nula antes de desreferencia-la. Atualizar suas bibliotecas pode levar tempo, mas os pagamentos valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um `null` valor é permitido ou proibido, melhores avisos os usuários de sua API receberão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tem a seguinte API para recuperar uma seqüência de recursos:
+A adição de tipos de [referência anulados](nullable-references.md) significa que você pode declarar se um `null` valor é permitido ou esperado para cada variável. Além disso, você pode aplicar uma `AllowNull` `DisallowNull`série `MaybeNull` `NotNull`de `NotNullWhen` `MaybeNullWhen`atributos: , , , , , , , , e `NotNullIfNotNull` descrever completamente os estados nulos de argumento e valores de devolução. Isso proporciona uma grande experiência enquanto você escreve código. Você recebe avisos se uma variável não-nula pode ser definida como `null`. Você recebe avisos se uma variável anulada não for verificada nula antes de desreferencia-la. Atualizar suas bibliotecas pode levar tempo, mas os pagamentos valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um `null` valor é permitido ou proibido, melhores avisos os usuários de sua API receberão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tem a seguinte API para recuperar uma seqüência de recursos:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

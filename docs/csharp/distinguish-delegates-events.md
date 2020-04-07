@@ -1,21 +1,21 @@
 ---
-title: Distinção entre Delegados e Eventos
+title: Delegados versus eventos
 description: Saber a diferença entre delegados e eventos e quando usar cada um desses recursos do .NET Core.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588255"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805760"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Distinção entre Delegados e Eventos
 
 [Anterior](modern-events.md)
 
-Desenvolvedores que são novos na plataforma .NET Core geralmente têm dificuldades para decidir entre um design baseado em `delegates` e um design baseado em `events`. Este é um conceito difícil, porque os recursos das duas linguagens são muito semelhantes. De fato, os eventos são criados usando o suporte de linguagem para delegados.
+Desenvolvedores que são novos na plataforma .NET Core geralmente têm dificuldades para decidir entre um design baseado em `delegates` e um design baseado em `events`. A escolha de delegados ou eventos é muitas vezes difícil, porque as duas características linguísticas são semelhantes. De fato, os eventos são criados usando o suporte de linguagem para delegados.
 
 Ambas oferecem um cenário de associação tardia: elas permitem cenários em que um componente se comunica chamando um método que é conhecido somente em runtime. Ambas dão suporte a métodos de assinante único e vários assinantes. Você pode ver esse suporte ser chamado de singlecast e multicast. Ambas dão suporte a uma sintaxe semelhante para adicionar e remover manipuladores. Por fim, acionar um evento e chamar um delegado usam exatamente a mesma sintaxe de chamada de método. As duas até mesmo dão suporte à mesma sintaxe de método `Invoke()` para uso com o operador `?.`.
 
@@ -45,7 +45,7 @@ Em comparação, os delegados são frequentemente passados como parâmetros e ar
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>Ouvintes de evento frequentemente têm vida útil mais longa
 
-Essa é uma justificativa ligeiramente mais fraca. No entanto, você pode descobrir que designs baseados em eventos são mais naturais quando a origem do evento for gerar eventos durante um longo período de tempo. Você pode ver exemplos disso para controles de UX em vários sistemas. Quando você assina um evento, a origem do evento pode gerar eventos durante o tempo de vida do programa.
+Esse evento que os ouvintes têm vidas mais longas é uma justificativa um pouco mais fraca. No entanto, você pode descobrir que designs baseados em eventos são mais naturais quando a origem do evento for gerar eventos durante um longo período de tempo. Você pode ver exemplos de design baseado em eventos para controles UX em muitos sistemas. Quando você assina um evento, a origem do evento pode gerar eventos durante o tempo de vida do programa.
 (Você pode cancelar a assinatura de eventos quando não precisar mais deles.)
 
 Compare isso com vários designs baseados em delegados, em que um delegado é usado como um argumento para um método e o delegado não é usado depois que o método é retornado.

@@ -3,12 +3,12 @@ title: Introdução ao C# e ao Visual Studio Code
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111056"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805818"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
@@ -34,7 +34,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 2. Inicialize um projeto em C#:
 
-    - Abra o Terminal Integrado do Visual Studio Code selecionando **Exibir** > **Terminal Integrado** no menu principal.
+    - Abra o Terminal do Visual Studio Code selecionando **'Exibir** > **terminal'** no menu principal.
     - Na janela do terminal, digite `dotnet new console`.
     - Este comando cria um arquivo *Program.cs* em sua pasta com um simples programa "Hello World" já escrito, juntamente com um arquivo de projeto C# chamado *HelloWorld.csproj*.
 

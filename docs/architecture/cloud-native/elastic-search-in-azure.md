@@ -2,13 +2,13 @@
 title: Busca elástica em aplicativos nativos da nuvem
 description: Aprenda a adicionar recursos de Pesquisa Elástica a aplicativos nativos da nuvem.
 author: robvet
-ms.date: 01/22/2020
-ms.openlocfilehash: 1bce255b6315006b11e0b6ac77040300f67ed984
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/02/2020
+ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141283"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805567"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Busca elástica em um aplicativo nativo da nuvem
 
@@ -43,8 +43,6 @@ Este capítulo apresentou um olhar detalhado sobre os dados em sistemas nativos 
 - [Padrão CQRS (Segregação de Responsabilidade de Consulta e Comando)](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 - [Padrão de Sourcing de Eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-
-- [Bancos de dados RDBMSs vs. NoSQL: Visão geral](https://maxivak.com/rdbms-vs-nosql-databases/)
 
 - [Por que a partição RDBMS não é tolerante no teorema do CAP e por que está disponível?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
