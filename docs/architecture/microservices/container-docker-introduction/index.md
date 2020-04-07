@@ -3,10 +3,10 @@ title: Introdução aos contêineres e ao Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Introdução aos contêineres e ao Docker
 ms.date: 08/31/2018
 ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
+ms.lasthandoff: 11/07/2019
 ms.locfileid: "73740052"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introdução aos contêineres e ao Docker
@@ -28,5 +28,5 @@ Outro benefício do uso de contêineres é a escalabilidade. Você pode aumentar
 Resumindo, os contêineres oferecem os benefícios de portabilidade, agilidade, escalabilidade, controle e isolamento em todo o fluxo de trabalho do ciclo de vida do aplicativo. O benefício mais importante é o isolamento de ambiente fornecido entre Desenvolvimento e Operações.
 
 >[!div class="step-by-step"]
->[Próximo](../index.md)
->[anterior](docker-defined.md)
+>[Anterior](../index.md)
+>[Próximo](docker-defined.md)
