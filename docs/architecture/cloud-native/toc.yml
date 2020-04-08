@@ -44,10 +44,8 @@
         - name: Infraestrutura de comunicação de malha de serviço
           href: service-mesh-communication-infrastructure.md
     - name: Dados distribuídos
-      href: null
+      href: database-per-microservice.md
       items:
-        - name: Banco de dados por microsserviço
-          href: database-per-microservice.md
         - name: Relacional versus Dados NoSQL
           href: relational-vs-nosql-data.md
         - name: Cache em um aplicativo nativo de nuvem
