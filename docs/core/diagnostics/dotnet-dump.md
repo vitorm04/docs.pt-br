@@ -2,12 +2,12 @@
 title: dotnet-dump - .NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-dump.
 ms.date: 10/14/2019
-ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c78ddb6447021f61f2452c075733b7d33e051ca0
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737663"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888196"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilitário de coleta`dotnet-dump`e análise de despejo ( )
 
@@ -38,7 +38,7 @@ A `dotnet-dump` ferramenta global é uma maneira de coletar e analisar dumps `ll
 
 - **`--version`**
 
-  Exibe a versão do utilitário dotnet-counters.
+  Exibe a versão do utilitário dotnet-dump.
 
 - **`-h|--help`**
 

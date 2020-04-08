@@ -2,12 +2,12 @@
 title: Assinando eventos
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda os detalhes de publicação e assinatura de eventos de integração.
 ms.date: 01/30/2020
-ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805502"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888209"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -93,7 +93,7 @@ Em microsserviços mais avançados, como ao usar abordagens de CQRS, ele pode se
 
 Ao publicar eventos de integração por meio de um sistema de mensagens distribuído como o barramento de eventos, surge o problema da atualização do banco de dados original e da publicação de um evento de forma atômica (ou seja, ambas as operações são concluídas ou nenhuma delas). Por exemplo, no exemplo simplificado mostrado anteriormente, o código confirma os dados no banco de dados quando o preço do produto é alterado e, em seguida, publica uma mensagem ProductPriceChangedIntegrationEvent. Inicialmente, pode parecer essencial que essas duas operações sejam executada atomicamente. No entanto, se você estivesse usando uma transação distribuída que envolvesse o banco de dados e o agente de mensagens, assim como faria em sistemas mais antigos, como o [MSMQ (Enfileiramento de Mensagens da Microsoft)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx), isso não seria recomendado pelos motivos descritos pelo [Teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
-Basicamente, você usa microsserviços para criar sistemas escalonáveis e altamente disponíveis. Simplificando um pouco, o teorema CAP enuncia que não é possível criar um banco de dados (ou um microsserviço proprietário desse modelo) que seja continuamente disponível, altamente consistente *e* tolerante a qualquer partição. Você deve escolher duas dessas três propriedades.
+Basicamente, você usa microsserviços para criar sistemas escalonáveis e altamente disponíveis. Simplificando um pouco, o teorema do CAP diz que você não pode construir um banco de dados (distribuído) (ou um microserviço que possua seu modelo) que esteja continuamente disponível, fortemente consistente *e* tolerante a qualquer partição. Você deve escolher duas dessas três propriedades.
 
 Em arquiteturas baseadas em microsserviços, você deve escolher disponibilidade e tolerância, e você deve desenfatizar uma forte consistência. Portanto, na maioria dos aplicativos modernos baseados em microsserviços, geralmente não é interessante usar transações distribuídas no sistema de mensagens, como ao implementar [transações distribuídas](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) com base no DTC (Coordenador de Transações Distribuídas) do Windows com o [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
@@ -151,7 +151,7 @@ Em relação à segunda abordagem: você usa a tabela EventLog como uma fila e s
 
 **Figura 6-23**. Atomicidade ao publicar eventos no barramento de eventos com um microsserviço de trabalho
 
-Para simplificar, o exemplo eShopOnContainers usa a primeira abordagem (sem processos adicionais nem microsserviços verificadores) e o barramento de eventos. No entanto, o eShopOnContainers não trata todos os casos de falha possíveis. Em um aplicativo real implantado na nuvem, você deve aceitar o fato de que os problemas surgirão eventualmente, e você deverá implementar essa lógica de verificação e reenvio. O uso da tabela como uma fila pode ser mais eficiente do que a primeira abordagem se você tem essa tabela como uma única fonte de eventos ao publicá-los (com o trabalho) por meio do barramento de eventos.
+Para simplificar, o exemplo eShopOnContainers usa a primeira abordagem (sem processos adicionais nem microsserviços verificadores) e o barramento de eventos. No entanto, a amostra eShopOnContainers não está lidando com todos os casos de falha possíveis. Em um aplicativo real implantado na nuvem, você deve aceitar o fato de que os problemas surgirão eventualmente, e você deverá implementar essa lógica de verificação e reenvio. O uso da tabela como uma fila pode ser mais eficiente do que a primeira abordagem se você tem essa tabela como uma única fonte de eventos ao publicá-los (com o trabalho) por meio do barramento de eventos.
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>Implementando atomicidade ao publicar eventos de integração por meio do barramento de eventos
 
@@ -293,7 +293,7 @@ Um exemplo de uma operação idempotente é uma instrução SQL que insere dados
 
 É possível projetar mensagens idempotentes. Por exemplo, crie um evento que indica "definir o preço do produto como US$ 25" em vez de "adicionar US$ 5 ao preço do produto". A primeira mensagem pode ser processada com segurança qualquer número de vezes e o resultado será o mesmo. Isso não é válido para a segunda mensagem. Mas, mesmo no primeiro caso, talvez não seja interessante processar o primeiro evento, porque o sistema também pode ter enviado um evento de alteração de preço mais recente, e o novo preço seria substituído.
 
-Outro exemplo poderia ser o de um evento de pedido concluído propagado para vários assinantes. É importante que as informações de pedidos sejam atualizadas em outros sistemas apenas uma vez, mesmo que haja eventos de mensagens duplicadas para o mesmo evento concluído por ordem.
+Outro exemplo pode ser um evento concluído por ordem que é propagado para vários assinantes. O aplicativo tem que garantir que as informações do pedido sejam atualizadas em outros sistemas apenas uma vez, mesmo que haja eventos de mensagens duplicadas para o mesmo evento concluído por ordem.
 
 É conveniente ter algum tipo de identidade por evento, para que você possa criar uma lógica que imponha que cada evento seja processado apenas uma vez em cada destinatário.
 
@@ -310,7 +310,7 @@ Você pode garantir que os eventos de mensagem sejam enviados e processados apen
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>Eliminando a duplicação de eventos de mensagem no nível do EventHandler
 
-Uma maneira de garantir que um evento seja processado apenas uma vez por qualquer receptor é implementando certa lógica ao processar os eventos de mensagem em manipuladores de eventos. Por exemplo, essa é a abordagem usada no aplicativo eShopOnContainers, como você pode ver no [código-fonte da classe UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando ele recebe um evento de integração UserCheckoutAcceptedIntegrationEvent. (Nesse caso, encapsulamos o CreateOrderCommand com um IdentifiedCommand, usando o eventMsg.RequestId como um identificador, antes de enviá-lo para o manipulador de comando).
+Uma maneira de garantir que um evento seja processado apenas uma vez por qualquer receptor é implementando certa lógica ao processar os eventos de mensagem em manipuladores de eventos. Por exemplo, essa é a abordagem usada no aplicativo eShopOnContainers, como você pode ver no [código-fonte da classe UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) quando recebe um evento de `UserCheckoutAcceptedIntegrationEvent` integração. (Neste caso, `CreateOrderCommand` o é `IdentifiedCommand`embrulhado com `eventMsg.RequestId` um , usando o como um identificador, antes de enviá-lo para o manipulador de comando).
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>Eliminando a duplicação de mensagens ao usar RabbitMQ
 

@@ -4,19 +4,19 @@ description: Saiba mais sobre os tipos de valor nulo C# e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399584"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888066"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor anulados (referência C#)
 
 Um *tipo* `T?` de valor anulado representa todos os valores do seu [tipo](value-types.md) `T` de valor subjacente e um valor [nulo](../keywords/null.md) adicional. Por exemplo, você pode atribuir qualquer um `bool?` dos `true`três `false`valores a uma variável: , ou `null`. Um tipo `T` de valor subjacente não pode ser um tipo de valor anulado em si.
 
 > [!NOTE]
-> C# 8.0 introduz o recurso de tipos de referência anulados. Para obter mais informações, consulte [tipos de referência nulamente](../../nullable-references.md). Os tipos de valor anulados estão disponíveis a partir de C# 2.
+> C# 8.0 introduz o recurso de tipos de referência anulados. Para obter mais informações, consulte [tipos de referência nulamente](nullable-reference-types.md). Os tipos de valor anulados estão disponíveis a partir de C# 2.
 
 Qualquer tipo de valor anulado é <xref:System.Nullable%601?displayProperty=nameWithType> uma instância da estrutura genérica. Você pode consultar um tipo de valor `T` anulado com um tipo subjacente `Nullable<T>` `T?`em qualquer uma das seguintes formas intercambiáveis: ou .
 
@@ -24,7 +24,7 @@ Você normalmente usa um tipo de valor anulado quando precisa representar o valo
 
 ## <a name="declaration-and-assignment"></a>Declaração e atribuição
 
-Como um tipo de valor é implicitamente conversível para o tipo de valor nulo correspondente, você pode atribuir um valor a uma variável de um tipo de valor anulado como você faria para o seu tipo de valor subjacente. Você também pode atribuir o valor `null`. Por exemplo: 
+Como um tipo de valor é implicitamente conversível para o tipo de valor nulo correspondente, você pode atribuir um valor a uma variável de um tipo de valor anulado como você faria para o seu tipo de valor subjacente. Você também pode atribuir o valor `null`. Por exemplo:
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ Um tipo `T` de valor não anulado é implicitamente `T?`conversível para o tipo
 
 ## <a name="lifted-operators"></a>Operadores suspensos
 
-Os [operadores indefinidos](../operators/index.md) e binários predefinidos ou quaisquer operadores sobrecarregados que são suportados por um tipo de `T` valor também são suportados pelo tipo `T?`de valor nulo correspondente . Esses operadores, também conhecidos como `null` *operadores suspensos,* produzem `null`se um ou ambos os orperands são; caso contrário, o operador utiliza os valores contidos de seus operands para calcular o resultado. Por exemplo: 
+Os [operadores indefinidos](../operators/index.md) e binários predefinidos ou quaisquer operadores sobrecarregados que são suportados por um tipo de `T` valor também são suportados pelo tipo `T?`de valor nulo correspondente . Esses operadores, também conhecidos como `null` *operadores suspensos,* produzem `null`se um ou ambos os orperands são; caso contrário, o operador utiliza os valores contidos de seus operands para calcular o resultado. Por exemplo:
 
 [!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
@@ -120,7 +120,7 @@ Você pode usar o código apresentado no exemplo a seguir para determinar se uma
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anulados](../../nullable-references.md).
+> Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anulados](nullable-reference-types.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -139,4 +139,4 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Tipos de referência anuláveis](../../nullable-references.md)
+- [Tipos de referência anuláveis](nullable-reference-types.md)

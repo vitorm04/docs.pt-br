@@ -2,12 +2,12 @@
 title: .NET Core e software livre
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: bed5bb6aad5f3e651f7c4c0651a2365f17eb8a0b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 4d9d42304c58c631020d8b12bec5c038bc0c07ab
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635290"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888235"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core e software livre
 
@@ -23,9 +23,9 @@ As principais características do .NET Core são:
   
 - **Plataforma cruzada:** o .NET Core fornece uma funcionalidade essencial para implementação de recursos de aplicativo necessários, e reutilização desse código independentemente de seu destino de plataforma. Atualmente, suporta três sistemas operacionais principais (OS): Windows, Linux e macOS. Você pode escrever aplicativos e bibliotecas que são executados sem modificações em sistemas operacionais com suporte. Para ver a lista de sistemas operacionais com suporte, visite [Roteiro do .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
   
-- **Software livre:** o .NET Core é um dos muitos projetos sob a administração do [.NET Foundation](https://www.dotnetfoundation.org/) e está disponível no [GitHub](https://github.com/).  Ter o .NET Core como um projeto de código-fonte aberto promove um processo de desenvolvimento mais transparente e uma comunidade ativa e dedicada.  
+- **Software livre:** o .NET Core é um dos muitos projetos sob a administração do [.NET Foundation](https://www.dotnetfoundation.org/) e está disponível no [GitHub](https://github.com/). Como um projeto de código aberto, o .NET Core promove um processo de desenvolvimento mais transparente e uma comunidade ativa e engajada.  
   
-- **Implantação flexível:** há duas maneiras de implantar seu aplicativo: implantação dependente da estrutura ou implantação independente. Com a implantação dependente da estrutura, apenas as dependências de seu aplicativo e de terceiros serão instaladas, e seu aplicativo dependerá da presença de uma versão de todo o sistema do .NET Core. Com a implantação independente, a versão do .NET Core usada para compilar seu aplicativo também será implantada junto com as dependências de seu aplicativo e de terceiros, e poderá ser executada lado a lado com outras versões. Para saber mais, confira [Implantação de aplicativos .NET Core](../../core/deploying/index.md).
+- **Implantação flexível:** há duas maneiras de implantar seu aplicativo: implantação dependente da estrutura ou implantação independente. Com a implantação dependente da estrutura, apenas as dependências de seu aplicativo e de terceiros serão instaladas, e seu aplicativo dependerá da presença de uma versão de todo o sistema do .NET Core. Com a implantação independente, a versão .NET Core usada para construir seu aplicativo também é implantada juntamente com suas dependências de aplicativos e terceiros e pode ser executada lado a lado com outras versões. Para saber mais, confira [Implantação de aplicativos .NET Core](../../core/deploying/index.md).
 
 - **Modular:** o .NET Core é modular, pois é liberado por meio do NuGet em pacotes de assembly menores. Em vez de um grande conjunto que contém a maior parte da funcionalidade principal, o .NET Core é disponibilizado como pacotes menores e centrados em recursos. Essa modularidade permite um modelo de desenvolvimento mais ágil para nós e permite que você otimize seu aplicativo para incluir apenas os pacotes NuGet que você precisa. Os benefícios de uma área de superfície menor do aplicativo incluem segurança mais rigorosa, manutenção reduzida, desempenho aprimorado e redução dos custos em um modelo de pagamento “pague pelo que usar”.  
   
