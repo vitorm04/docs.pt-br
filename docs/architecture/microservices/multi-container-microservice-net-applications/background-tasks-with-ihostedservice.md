@@ -2,12 +2,12 @@
 title: Implementar tarefas em segundo plano em microsserviços com IHostedService e a classe BackgroundService
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Compreenda as novas opções para usar IHostedService e BackgroundService para implementar tarefas em segundo plano em microsserviços do .NET Core.
 ms.date: 01/30/2020
-ms.openlocfilehash: fab67c816e90c69a4d593422b4974cb9b8819807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502299"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988330"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tarefas em segundo plano em microsserviços com IHostedService e a classe BackgroundService
 
@@ -33,7 +33,7 @@ Cada abordagem tem vantagens e desvantagens, dependendo de suas necessidades de 
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Registro de serviços hospedados em seu WebHost ou Host
 
-Vamos analisar detalhadamente a interface `IHostedService`, já que seu uso é muito semelhante em um `WebHost` ou em um `Host`.
+Vamos aprofundar ainda mais `IHostedService` a interface, já que `WebHost` seu uso `Host`é bastante semelhante em um ou em um .
 
 SignalR é um exemplo de um artefato usando serviços hospedados, mas você também pode usá-lo para itens muito mais simples, como:
 
@@ -64,7 +64,7 @@ Nesse código, o serviço hospedado `GracePeriodManagerService` é o código rea
 
 A execução da tarefa em segundo plano `IHostedService` é coordenada com o tempo de vida do aplicativo (ou seja, host ou microsserviço). Você registra tarefas quando o aplicativo é iniciado e você tem a oportunidade de fazer alguma ação normal ou limpeza quando o aplicativo está sendo desligado.
 
-Sem usar `IHostedService`, você sempre pode iniciar um thread em segundo plano para executar qualquer tarefa. A diferença está precisamente no tempo de desligamento do aplicativo quando esse thread seria simplesmente seria interrompido sem a oportunidade de executar as ações de limpeza normais.
+Sem usar `IHostedService`, você sempre pode iniciar um thread em segundo plano para executar qualquer tarefa. A diferença está precisamente no momento de desligamento do aplicativo, quando esse segmento seria simplesmente morto sem ter a oportunidade de executar ações graciosas de limpeza.
 
 ## <a name="the-ihostedservice-interface"></a>A interface IHostedService
 
@@ -178,7 +178,7 @@ public class GracePeriodManagerService : BackgroundService
                                      IEventBus eventBus,
                                      ILogger<GracePeriodManagerService> logger)
     {
-        //Constructor’s parameters validations...
+        // Constructor's parameters validations...
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -249,6 +249,6 @@ A `IHostedService` interface fornece uma maneira conveniente de iniciar tarefas 
 - **Exemplo generichost usando ASP.NET Núcleo 2.1** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
->[!div class="step-by-step"]
->[Próximo](test-aspnet-core-services-web-apps.md)
->[anterior](implement-api-gateways-with-ocelot.md)
+> [!div class="step-by-step"]
+> [Próximo](test-aspnet-core-services-web-apps.md)
+> [anterior](implement-api-gateways-with-ocelot.md)

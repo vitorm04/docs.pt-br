@@ -2,12 +2,12 @@
 title: Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entender eventos de integração para implementar comunicação baseada em evento entre microsserviços.
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712397"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988317"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
@@ -29,7 +29,7 @@ Para implementar apenas uma prova de conceito de barramento de evento para seu a
 
 Se você precisar de abstrações de alto nível e os recursos mais avançados, como [Sagas](https://docs.particular.net/nservicebus/sagas/), para processos de execução longa que facilitam o desenvolvimento distribuído barramentos, valerá a pena avaliar outros barramentos de serviço comerciais e de software livre como NServiceBus, MassTransit e Brighter. Nesse caso, as abstrações e a API a serem usadas em geral serão seriam diretamente aquelas fornecidas por esses barramentos de serviço de alto nível, em vez das suas próprias abstrações (como [abstrações de barramento de evento simples fornecidas no eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Nesse caso, você pode pesquisar os [eShopOnContainers bifurcados usando o NServiceBus](https://go.particular.net/eShopOnContainers) (amostra derivada adicional implementada pelo Software Particular).
 
-Obviamente, você sempre pode criar seus próprios recursos de barramento de serviço sobre tecnologias de nível inferior, como RabbitMQ e o Docker, mas o trabalho necessário para "reinventar a roda" pode ser muito alto para um aplicativo empresarial personalizado.
+Claro, você sempre pode construir seus próprios recursos de barramento de serviço em cima de tecnologias de nível inferior como RabbitMQ e Docker, mas o trabalho necessário para "reinventar a roda" pode ser muito caro para um aplicativo corporativo personalizado.
 
 Para reiterar: as abstrações do barramento de evento de exemplo e a implementação apresentada no exemplo do eShopOnContainers devem ser usados apenas como uma prova de conceito. Quando decidir que deseja ter comunicação assíncrona e controlada por evento, conforme explicado na seção atual, você deve escolher o produto de barramento de serviço que melhor atenda às suas necessidades de produção.
 
@@ -76,7 +76,7 @@ No [padrão Observador](https://en.wikipedia.org/wiki/Observer_pattern), seu obj
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Padrão Pub/Sub (Publicar/Assinar)
 
-O objetivo do [padrão Publicar/Assinar](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão de observador, a difusão é executada diretamente do observável para os observadores, de modo que eles "conhecem" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
+O objetivo do [padrão Publicar/Assinar](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) é o mesmo que o padrão Observador: você deseja notificar outros serviços quando determinados eventos ocorrem. Mas há uma diferença importante entre os padrões de Observador e Pub/Sub. No padrão do observador, a transmissão é realizada diretamente do observável para os observadores, para que eles "se conheçam" uns aos outros. Porém, ao usar um padrão Pub/Sub, há um terceiro componente, chamado de agente, agente de mensagem ou barramento de evento, que é conhecido tanto pelo publicador quanto pelo assinante. Portanto, ao usar o padrão Pub/Sub, o publicador e os assinantes são precisamente desacoplados graças ao agente de mensagem ou barramento de evento mencionado.
 
 ### <a name="the-middleman-or-event-bus"></a>O barramento de evento ou intermediário
 
@@ -100,7 +100,7 @@ Na Figura 6-20, você pode ver uma abstração de um barramento de evento com v�
 
 ### <a name="defining-an-event-bus-interface"></a>Definir uma interface de barramento de evento
 
-Vamos começar com algum código de implementação para a interface de barramento de evento e possíveis implementações para fins de exploração. A interface deve ser genérica e simples, como na interface a seguir.
+Vamos começar com algum código de implementação para a interface de barramento de eventos e possíveis implementações para fins de exploração. A interface deve ser genérica e simples, como na interface a seguir.
 
 ```csharp
 public interface IEventBus

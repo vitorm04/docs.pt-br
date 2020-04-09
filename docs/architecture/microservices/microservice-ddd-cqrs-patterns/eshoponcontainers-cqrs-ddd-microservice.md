@@ -2,12 +2,12 @@
 title: Aplicando abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda como a CQRS é implementada no microsserviço de pedidos no eShopOnContainers.
 ms.date: 03/03/2020
-ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eda0ee374b41a81811e92e2829b10dc8515e0ccd
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847148"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988486"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Aplicar abordagens CQRS e CQS em um microsserviço DDD em eShopOnContainers
 
@@ -15,7 +15,7 @@ O design do microsserviço de ordenação no aplicativo de referência eShopOnCo
 
 A essência desses padrões e o ponto importante aqui é que as consultas são idempotentes: não importa quantas vezes você consulte um sistema, o estado desse sistema não será alterado. Em outras palavras, as consultas não têm efeito colateral.
 
-Portanto, você pode usar um modelo de dados de "leituras" diferente do que o modelo de domínio “gravações” de lógica transacional, mesmo que os microsserviços de pedidos estejam usando o mesmo banco de dados. Portanto, essa é uma abordagem de CQRS simplificada.
+Portanto, você poderia usar um modelo de dados "leituras" diferente do modelo de domínio de "gravações" da lógica transacional, mesmo que os microsserviços de pedidos estejam usando o mesmo banco de dados. Portanto, essa é uma abordagem de CQRS simplificada.
 
 Por outro lado, comandos, que disparam transações e atualizações de dados, alteram o estado no sistema. Com os comandos, é necessário ter cuidado ao lidar com a complexidade e com regras de negócio em constante mudança. É o local em que você deseja aplicar as técnicas DDD para ter um sistema modelado melhor.
 
@@ -25,7 +25,7 @@ Um desses padrões é o padrão de agregação, que examinaremos mais nas seçõ
 
 Como mostrado na Figura 7-2 na seção anterior, este guia sugere o uso de padrões DDD apenas na área transacional/atualizações do seu microserviço (isto é, como acionado por comandos). As consultas podem seguir uma abordagem mais simples e devem estar separadas de comandos, seguindo uma abordagem CQRS.
 
-Para implementar o "lado das consultas", é possível escolher entre muitas abordagens, do seu ORM completo como EF Core, projeções do AutoMapper, procedimentos armazenados, exibições, exibições materializadas ou um micro ORM.
+Para implementar o "lado das consultas", você pode escolher entre muitas abordagens, desde o seu ORM completo como EF Core, projeções do AutoMapper, procedimentos armazenados, visualizações, visualizações materializadas ou um micro ORM.
 
 Neste guia e nos eShopOnContainers (principalmente o microsserviço de ordenação), escolhemos implementar consultas diretas usando um micro ORM como o [Dapper](https://github.com/StackExchange/dapper-dot-net). Isso permite a você implementar qualquer consulta com base em instruções SQL para obter o melhor desempenho, graças à estrutura leve com muito pouca sobrecarga.
 

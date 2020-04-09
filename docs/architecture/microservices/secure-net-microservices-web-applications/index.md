@@ -3,12 +3,12 @@ title: Protegendo microsserviços e aplicativos Web .NET
 description: Segurança nos Microsserviços do .NET e aplicativos Web – Conheça as opções de autenticação em aplicativos Web ASP.NET Core.
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56ebd95c8a24c7c8d30d3c6acef6650cb63383c6
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628326"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988109"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
@@ -16,7 +16,7 @@ Há muitos aspectos sobre segurança em microsserviços e aplicativos Web que o 
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>Implementar a autenticação em microsserviços .NET e aplicativos Web
 
-Geralmente é necessário que os recursos e as APIs publicados por um serviço sejam limitados a determinados usuários ou clientes confiáveis. A primeira etapa para tomar esses tipos de decisões de confiança no nível da API é a autenticação. Autenticação é o processo de confirmar a identidade do usuário de forma confiável.
+Geralmente é necessário que os recursos e as APIs publicados por um serviço sejam limitados a determinados usuários ou clientes confiáveis. A primeira etapa para tomar esses tipos de decisões de confiança no nível da API é a autenticação. Autenticação é o processo de verificar de forma confiável a identidade de um usuário.
 
 Em cenários de microsserviço, a autenticação é normalmente feita de forma centralizada. Se você estiver usando um Gateway de API, o gateway será um bom lugar para fazer a autenticação, conforme é mostrado na Figura 9-1. Se você usar esta abordagem, verifique se os microsserviços individuais não podem ser acessados diretamente (sem o Gateway de API), a não ser que haja uma segurança adicional em vigor para autenticar mensagens que entram ou não pelo gateway.
 
@@ -34,7 +34,7 @@ Quando os microsserviços são acessados diretamente, a confiança, que inclui a
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Autenticar usando o ASP.NET Core Identity
 
-O mecanismo primário no ASP.NET Core para identificar os usuários de um aplicativo é sistema de associação [ASP.NET Core Identity](/aspnet/core/security/authentication/identity). A Identidade do ASP.NET Core armazena informações de usuário (incluindo informações de logon, funções e declarações) em um repositório de dados configurado pelo desenvolvedor. Normalmente, o armazenamento de dados do ASP.NET Core Identity é um repositório do Entity Framework fornecido no pacote `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. No entanto, os repositórios personalizados ou outros pacotes de terceiros podem ser usados para armazenar informações de identidade no Armazenamento de Tabelas do Azure, no CosmosDB ou em outros locais.
+O principal mecanismo no ASP.NET Core para identificar os usuários de um aplicativo é o sistema de associação [ASP.NET Identidade Central.](/aspnet/core/security/authentication/identity) A Identidade do ASP.NET Core armazena informações de usuário (incluindo informações de logon, funções e declarações) em um repositório de dados configurado pelo desenvolvedor. Normalmente, o armazenamento de dados do ASP.NET Core Identity é um repositório do Entity Framework fornecido no pacote `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. No entanto, os repositórios personalizados ou outros pacotes de terceiros podem ser usados para armazenar informações de identidade no Armazenamento de Tabelas do Azure, no CosmosDB ou em outros locais.
 
 > [!TIP]
 > ASP.NET Core 2.1 e posteriormente fornece [ASP.NET Identidade Central](/aspnet/core/security/authentication/identity) como uma Biblioteca de Classe de [Navalha,](/aspnet/core/razor-pages/ui-class)para que você não veja muito do código necessário em seu projeto, como foi o caso das versões anteriores. Para obter detalhes sobre como personalizar o código de identidade para atender às suas necessidades, consulte [Scaffold Identity em projetos ASP.NET Core](/aspnet/core/security/authentication/scaffold-identity).
@@ -83,9 +83,9 @@ Usar o ASP.NET Core Identity permite vários cenários:
 
 - Criar informações de novo usuário usando o tipo UserManager (userManager.CreateAsync).
 
-- Autenticar usuários usando o tipo SignInManager. Você pode usar `signInManager.SignInAsync` para entrar diretamente ou `signInManager.PasswordSignInAsync` para confirmar se a senha do usuário está correta e, em seguida, assiná-las.
+- Autenticar usuários usando o tipo SignInManager. Você pode `signInManager.SignInAsync` usar para fazer `signInManager.PasswordSignInAsync` login diretamente, ou para confirmar que a senha do usuário está correta e, em seguida, inscrevê-la.
 
-- Identificar um usuário com base nas informações armazenadas em um cookie (que são lidas pelo middleware do ASP.NET Core Identity) para que as próximas solicitações de um navegador incluam a identidade e as declarações do usuário conectado.
+- Identifique um usuário com base nas informações armazenadas em um cookie (que é lido por ASP.NET middleware De identidade central) para que as solicitações subseqüentes de um navegador incluam a identidade e as reivindicações de um usuário conectado.
 
 O ASP.NET Core Identity também dá suporte à [autenticação de dois fatores](/aspnet/core/security/authentication/2fa).
 
@@ -215,7 +215,7 @@ Se preferir emitir tokens de segurança para usuários do ASP.NET Core Identity 
 
 [IdentityServer4](https://github.com/IdentityServer/IdentityServer4) e [OpenIddict](https://github.com/openiddict/openiddict-core) são provedores do OpenID Connect que se integram facilmente ao ASP.NET Core Identity para permitir que você emita tokens de segurança de um serviço do ASP.NET Core. A [IdentityServer4 documentation](https://identityserver4.readthedocs.io/en/latest/) (Documentação do IdentityServer4) tem instruções detalhadas para usar a biblioteca. No entanto, as etapas básicas para usar o IdentityServer4 para emitir tokens são as seguintes.
 
-1. Chame app.UseIdentityServer no método Startup.Configure para adicionar o IdentityServer4 ao pipeline de processamento de solicitação HTTP do aplicativo. Isso permite que a biblioteca atenda solicitações dos pontos de extremidade do OpenID Connect e do OAuth2 como /connect/token.
+1. Você chama o aplicativo. UseIdentityServer no método Startup.Configure para adicionar IdentityServer4 ao pipeline de processamento de solicitações HTTP do aplicativo. Isso permite que a biblioteca atenda solicitações dos pontos de extremidade do OpenID Connect e do OAuth2 como /connect/token.
 
 2. Você pode configurar o IdentityServer4 no Startup.ConfigureServices fazendo uma chamada para services.AddIdentityServer.
 

@@ -2,13 +2,13 @@
 title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
-ms.date: 09/20/2017
-ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/08/2020
+ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399682"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989188"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -41,9 +41,9 @@ Os principais recursos do C# 1.0 incluíam:
 - [Interfaces](../programming-guide/interfaces/index.md)
 - [Eventos](../events-overview.md)
 - [Propriedades](../properties.md)
-- [Delega](../delegates-overview.md)
+- [Delegados](../delegates-overview.md)
 - [Expressões](../programming-guide/statements-expressions-operators/expressions.md)
-- [Declarações](../programming-guide/statements-expressions-operators/statements.md)
+- [Instruções](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
 
 ## <a name="c-version-12"></a>C# versão 1.2
@@ -57,7 +57,7 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciais](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anônimos](../language-reference/operators/delegate-operator.md)
-- [tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
+- [Tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
 - [Iterators](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -80,13 +80,13 @@ E ainda assim, o C# continuava na tentativa de alcançar o mesmo nível do Java.
 
 O C# versão 3.0 chegou no final de 2007, juntamente com o Visual Studio 2008, porém o pacote completo de recursos de linguagem veio, na verdade, com o C# versão 3.5. Esta versão foi o marco de uma alteração significativa no crescimento do C#. Ela estabeleceu o C# como uma linguagem de programação realmente formidável. Vamos dar uma olhada em alguns recursos importantes nesta versão:
 
-- [Propriedades autoimplementadas](../programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [Propriedades auto-implementadas](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Expressões de consulta](../linq/query-expression-basics.md)
 - [Expressões lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Árvores de expressão](../expression-trees.md)
 - [Métodos de extensão](../programming-guide/classes-and-structs/extension-methods.md)
-- [Variáveis locais de tipo implícito](../language-reference/keywords/var.md)
+- [Variáveis locais digitadas implicitamente](../language-reference/keywords/var.md)
 - [Métodos parciais](../language-reference/keywords/partial-method.md)
 - [Iniciadores de objetos e coleções](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
@@ -154,7 +154,7 @@ Fizeram ainda outra coisa com esta versão, embora não seja um recurso de lingu
 
 ## <a name="c-version-70"></a>C# versão 7.0
 
-A versão principal mais recente é c# versão 7.0, lançada com visual studio 2017. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
+C# versão 7.0 foi lançado com visual studio 2017. Esta versão tem algumas coisas interessantes e evolutivas na mesma direção que o C# 6.0, mas sem o compilador como um serviço. Aqui estão alguns dos novos recursos:
 
 - [Variáveis out](./csharp-7.md#out-variables)
 - [Tuplas e desconstrução](./csharp-7.md#tuples)
@@ -165,12 +165,93 @@ A versão principal mais recente é c# versão 7.0, lançada com visual studio 2
 
 Outros recursos incluíam:
 
-- [Descarta](./csharp-7.md#discards)
+- [Descartes](./csharp-7.md#discards)
 - [Literais binários e os separadores de dígito](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Expressões throw](./csharp-7.md#throw-expressions)
 
 Todas essas funcionalidades oferecem novos recursos interessantes para desenvolvedores e a oportunidade de escrever um código mais limpo do que nunca. Um ponto alto é a condensação da declaração de variáveis a serem usadas com a palavra-chave `out` e a permissão de vários valores retornados por meio de tupla.
 
 Mas o C# está sendo colocado para um uso cada vez mais amplo. Agora o .NET Core tem qualquer sistema operacional como destino e tem a visão firme na nuvem e na portabilidade.  Essas novas funcionalidades certamente ocupam a mente e o tempo dos designers da linguagem, além de levarem a novos recursos.
+
+## <a name="c-version-71"></a>C# versão 7.1
+
+C# começou a liberar *lançamentos de pontos* com C# 7.1. Esta versão adicionou o elemento de [configuração de seleção de versão do idioma,](../language-reference/configure-language-version.md) três novos recursos de linguagem e novo comportamento do compilador.
+
+Os novos recursos de linguagem nesta versão são:
+
+- [`async``Main` método](./csharp-7-1.md#async-main)
+  - O ponto de entrada para um aplicativo pode ter o modificador `async`.
+- [`default`expressões literais](./csharp-7-1.md#default-literal-expressions)
+  - Use expressões literais padrão em expressões de valor padrão quando o tipo de destino pode ser inferido.
+- [Nomes de elementos de tupla inferidos](./csharp-7-1.md#inferred-tuple-element-names)
+  - Em muitos casos, os nomes dos elementos de tupla podem ser inferidos com base na inicialização da tupla.
+- [Restrições em parâmetros de tipo genérico](./csharp-7-1.md#pattern-matching-on-generic-type-parameters)
+  - Você pode usar expressões de correspondência de padrão em variáveis cujo tipo é um parâmetro de tipo genérico.
+
+Por fim, o compilador traz duas opções `-refout` e `-refonly`, que controlam a [geração de assembly de referência](./csharp-7-1.md#reference-assembly-generation).
+
+## <a name="c-version-72"></a>C# versão 7.2
+
+C# 7.2 adicionou vários pequenos recursos de idioma:
+
+- [Técnicas para escrever código eficiente seguro](./csharp-7-2.md#safe-efficient-code-enhancements)
+  - Uma combinação de aprimoramentos de sintaxe que permitem trabalhar com tipos de valor usando a semântica de referência.
+- [Argumentos nomeados que não estejam à direita](./csharp-7-2.md#non-trailing-named-arguments)
+  - Os argumentos nomeados podem ser seguidos por argumentos posicionais.
+- [Sublinhados à esquerda em literais numéricos](./csharp-7-2.md#leading-underscores-in-numeric-literals)
+  - Agora os literais numéricos podem ter sublinhados à esquerda, antes dos dígitos impressos.
+- [`private protected`modificador de acesso](./csharp-7-2.md#private-protected-access-modifier)
+  - O modificador de acesso `private protected` permite o acesso a classes derivadas no mesmo assembly.
+- [Expressões `ref` condicionais](./csharp-7-2.md#conditional-ref-expressions)
+  - O resultado de uma expressão condicional (`?:`) agora já pode ser uma referência.
+
+## <a name="c-version-73"></a>C# versão 7.3
+
+Há dois temas principais para a versão C# 7.3. Um tema fornece recursos que permitem que o código seguro tenha o mesmo desempenho que o código não seguro. O segundo tema fornece melhorias incrementais aos recursos existentes. Além disso, novas opções do compilador foram adicionadas nesta versão.
+
+Os novos recursos a seguir são compatíveis com o tema de melhor desempenho para código seguro:
+
+- [Você pode acessar campos fixos sem fixação.](csharp-7-3.md#indexing-fixed-fields-does-not-require-pinning)
+- [Você pode reatribuir `ref` variáveis locais.](csharp-7-3.md#ref-local-variables-may-be-reassigned)
+- [Você pode usar inicializantes em `stackalloc` matrizes.](csharp-7-3.md#stackalloc-arrays-support-initializers)
+- [Você pode `fixed` usar instruções com qualquer tipo que suporte um padrão.](csharp-7-3.md#more-types-support-the-fixed-statement)
+- [Você pode usar restrições genéricas adicionais.](csharp-7-3.md#enhanced-generic-constraints)
+
+Os seguintes recursos e aprimoramentos foram feitos nos recursos existentes:
+
+- [Você pode `==` `!=` testar e com tipos de tuplos.](csharp-7-3.md#tuples-support--and-)
+- [Você pode usar variáveis de expressão em mais locais.](csharp-7-3.md#extend-expression-variables-in-initializers)
+- [Você pode anexar atributos ao campo de suporte de propriedades autoimplementadas.](csharp-7-3.md#attach-attributes-to-the-backing-fields-for-auto-implemented-properties)
+- [A resolução do método `in` quando os argumentos diferem foi melhorada.](csharp-7-3.md#in-method-overload-resolution-tiebreaker)
+- [A resolução de sobrecarga agora tem menos casos ambíguos.](csharp-7-3.md#improved-overload-candidates)
+
+As novas opções do compilador são:
+
+- [`-publicsign`para permitir a assinatura de conjuntos do OsS (Open Source Software) .](csharp-7-3.md#public-or-open-source-signing)
+- [`-pathmap`para fornecer um mapeamento para diretórios de origem.](csharp-7-3.md#pathmap)
+
+## <a name="c-version-80"></a>C# versão 8.0
+
+C# 8.0 é a primeira versão c# principal que especificamente tem como alvo o .NET Core. Alguns recursos dependem de novos recursos CLR, outros em tipos de biblioteca adicionados apenas no .NET Core. C# 8.0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
+
+- [Membros somente leitura](./csharp-8.md#readonly-members)
+- [Métodos de interface padrão](./csharp-8.md#default-interface-methods)
+- [Aprimoramentos de correspondência de padrões](./csharp-8.md#more-patterns-in-more-places):
+  - [Expressões Switch](./csharp-8.md#switch-expressions)
+  - [Padrões da propriedade](./csharp-8.md#property-patterns)
+  - [Padrões de tupla](./csharp-8.md#tuple-patterns)
+  - [Padrões posicionais](./csharp-8.md#positional-patterns)
+- [Declarações using](./csharp-8.md#using-declarations)
+- [Funções locais estáticas](./csharp-8.md#static-local-functions)
+- [Estruturas ref descartáveis](./csharp-8.md#disposable-ref-structs)
+- [Tipos de referência anuláveis](../language-reference/builtin-types/nullable-reference-types.md)
+- [Fluxos assíncronos](./csharp-8.md#asynchronous-streams)
+- [Índices e intervalos](./csharp-8.md#indices-and-ranges)
+- [Atribuição de coalizão nula](./csharp-8.md#null-coalescing-assignment)
+- [Tipos construídos não gerenciados](./csharp-8.md#unmanaged-constructed-types)
+- [Stackalloc em expressões aninhadas](./csharp-8.md#stackalloc-in-nested-expressions)
+- [Aprimoramento de cordas verbatim interpoladas](./csharp-8.md#enhancement-of-interpolated-verbatim-strings)
+
+Os membros da interface padrão exigem melhorias no CLR. Essas características foram adicionadas no CLR para .NET Core 3.0. Faixas e índices e fluxos assíncronos exigem novos tipos nas bibliotecas .NET Core 3.0. Os tipos de referência anulados, embora implementados no compilador, são muito mais úteis quando as bibliotecas são anotadas para fornecer informações semânticas sobre o estado nulo dos argumentos e valores de devolução. Essas anotações estão sendo adicionadas nas bibliotecas .NET Core.
 
 _Artigo_ [_originalmente publicado no blog NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, cortesia de Erik Dietrich e Patrick Smacchia._

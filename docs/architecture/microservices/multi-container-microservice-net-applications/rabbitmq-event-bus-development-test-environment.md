@@ -2,18 +2,18 @@
 title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o RabbitMQ para implementar mensagens de barramento de eventos para eventos de integração para os ambientes de desenvolvimento ou de teste.
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711193"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988291"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 
 Devemos começar dizendo que, se você criar seu barramento de eventos personalizado com base no RabbitMQ em execução em um contêiner, como o aplicativo eShopOnContainers faz, ele deverá ser usado apenas para seus ambientes de desenvolvimento e teste. Você não deve usá-lo para o seu ambiente de produção, a menos que o esteja criando como parte de um barramento de serviço pronto para produção. Um barramento de eventos personalizado simples talvez não tenha muitos recursos críticos prontos para produção que um barramento de serviço comercial tem.
 
-Uma da implementação personalizada do barramento de eventos no eShopOnContainers é basicamente uma biblioteca que usa a API do RabbitMQ (há outra implementação baseada no Barramento de Serviço do Azure).
+Uma das implementações personalizadas de ônibus de eventos no eShopOnContainers é basicamente uma biblioteca usando a API RabbitMQ. (Há outra implementação baseada no Azure Service Bus.)
 
 A implementação do barramento de eventos com RabbitMQ permite que os microsserviços assinem, publiquem e recebam eventos, conforme mostrado na Figura 6-21.
 
@@ -122,6 +122,6 @@ Uma solução pronta para produção com suporte para RabbitMQ.
 - **Transporte coletivo** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[Próximo](integration-event-based-microservice-communications.md)
->[anterior](subscribe-events.md)
+> [!div class="step-by-step"]
+> [Próximo](integration-event-based-microservice-communications.md)
+> [anterior](subscribe-events.md)

@@ -1,13 +1,13 @@
 ---
 title: O que há de novo em C# 8.0 - C# Guide
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399675"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989201"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -25,6 +25,7 @@ C# 8.0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 - [Estruturas ref descartáveis](#disposable-ref-structs)
 - [Tipos de referência anuláveis](#nullable-reference-types)
 - [Fluxos assíncronos](#asynchronous-streams)
+- [Descartável assíncrono](#asynchronous-disposable)
 - [Índices e intervalos](#indices-and-ranges)
 - [Atribuição de coalizão nula](#null-coalescing-assignment)
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
@@ -392,6 +393,10 @@ await foreach (var number in GenerateSequence())
 ```
 
 Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [criar e consumir fluxos assíncronos](../tutorials/generate-consume-asynchronous-stream.md). Por padrão, os elementos de fluxo são processados no contexto capturado. Se você quiser desativar a captura do <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> contexto, use o método de extensão. Para obter mais informações sobre contextos de sincronização e captura do contexto atual, consulte o artigo sobre [o consumo do padrão assíncrono baseado em tarefas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+
+## <a name="asynchronous-disposable"></a>Descartável assíncrono
+
+Começando com C# 8.0, o idioma suporta tipos descartáveis assíncronos que implementam a <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface. O operand `using` de uma <xref:System.IDisposable> expressão <xref:System.IAsyncDisposable>pode implementar qualquer um ou . No caso `IAsyncDisposable`de , o compilador `await` <xref:System.Threading.Tasks.Task> gera código <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>para o retornado de . Para obter mais informações, consulte a [ `using` declaração](../language-reference/keywords/using-statement.md).
 
 ## <a name="indices-and-ranges"></a>Índices e intervalos
 

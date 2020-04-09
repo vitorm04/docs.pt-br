@@ -2,14 +2,14 @@
 title: Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 description: Arquitetura de microsserviços do .NET para aplicativos do .NET em contêineres | Microsserviços são serviços implantáveis de maneira modular e independente. Os contêineres do Docker (para Linux e Windows) simplificam a implantação e o teste ao agrupar um serviço e suas dependências em uma única unidade, que será executada em um ambiente isolado.
 ms.date: 01/30/2020
-ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cdd5556f92e1acde540b647e7b68628a3ecf67f
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543528"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988785"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços .NET: arquitetura para aplicativos .NET em contêineres
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET: Arquitetura de aplicativos .NET em contêineres
 
 ![Capa do livro](./media/cover-small.png)
 
@@ -74,7 +74,7 @@ A segunda parte do guia de começa com a seção [Processo de desenvolvimento de
 
 O aplicativo eShopOnContainers é um aplicativo de referência de software livre para .NET Core e microsserviços criado para ser implantado usando contêineres do Docker. O aplicativo é composto de vários subsistemas, incluindo vários front-ends de interface do usuário de loja virtual (um aplicativo Web MVC, um SPA Web e um aplicativo móvel nativo). Ele também inclui os microsserviços e os contêineres de back-end de todas as operações do servidor necessárias.
 
-A finalidade do aplicativo é demonstrar padrões de arquitetura. **A TI NÃO É UM MODELO PRONTO PARA PRODUÇÃO** para iniciar aplicativos de mundo real. Na verdade, o aplicativo está em um estado beta permanente, porque também é usado para testar novas tecnologias potencialmente interessantes, à medida que aparecem.
+A finalidade do aplicativo é demonstrar padrões de arquitetura. **A TI NÃO É UM MODELO PRONTO PARA PRODUÇÃO** para iniciar aplicativos de mundo real. Na verdade, a aplicação está em um estado beta permanente, pois também é usada para testar novas tecnologias potencialmente interessantes à medida que aparecem.
 
 ## <a name="send-us-your-feedback"></a>Envie-nos seus comentários!
 
@@ -162,11 +162,11 @@ Copyright © 2020 pela Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
-Este manual é fornecido "no estado em que se encontra" e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste guia, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
+Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste guia, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
-A Microsoft e as marcas comerciais listadas em <https://www.microsoft.com> na página da Web “Marcas comerciais” são marcas comerciais do grupo de empresas da Microsoft.
+A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
 
 Mac e macOS são marcas comerciais da Apple Inc.
 

@@ -2,12 +2,12 @@
 title: Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux nos clusters do AKS/Kubernetes
 description: Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Ciclo de vida de aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft)
 ms.date: 02/25/2019
-ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70848748"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989019"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Criar aplicativos ASP.NET Core 2.2 implantados como contêineres do Linux em um orquestrador do AKS/Kubernetes
 
@@ -51,7 +51,7 @@ Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, por
 
 **Figura 4-38**. Como adicionar suporte ao Docker ao projeto existente
 
-Para concluir a adição de suporte ao Docker, você pode escolher Windows ou Linux. Nesse caso, selecione **Linux**, porque o AKS não é compatível com contêineres do Windows (como o de 2018).
+Para concluir a adição de suporte ao Docker, você pode escolher Windows ou Linux. Neste caso, selecione **O Linux**, porque o AKS não suporta contêineres windows (a partir do final de 2018).
 
 ![Caixa de diálogo de opção para selecionar o sistema operacional de destino para o Dockerfile.](media/select-linux-docker-support.png)
 
@@ -59,7 +59,7 @@ Para concluir a adição de suporte ao Docker, você pode escolher Windows ou Li
 
 Com estas etapas simples, você tem seu aplicativo ASP.NET Core 2.2 em execução em um contêiner do Linux.
 
-Como é possível ver, a integração entre o Visual Studio 2017 e o Docker é totalmente orientada à produtividade do desenvolvedor.
+Como você pode ver, a integração entre o Visual Studio 2017 e o Docker é totalmente orientada para a produtividade do desenvolvedor.
 
 Agora você pode executar seu aplicativo com a tecla **F5** ou usando o botão **Executar**.
 
@@ -75,7 +75,7 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Registrar a solução no Registro de Contêiner do Azure
 
-Carregue a imagem em um registro do Docker, como o [ACR (Registro de Contêiner do Azure)](https://azure.microsoft.com/services/container-registry/), ou Docker Hub, para que as imagens possam ser implantadas no cluster do AKS desse registro. Neste caso, estamos carregando a imagem para um Registro de Contêiner do Azure.
+Carregue a imagem em um registro do Docker, como o [ACR (Registro de Contêiner do Azure)](https://azure.microsoft.com/services/container-registry/), ou Docker Hub, para que as imagens possam ser implantadas no cluster do AKS desse registro. Neste caso, estamos enviando a imagem para o Registro de Contêineres do Azure.
 
 ### <a name="create-the-image-in-release-mode"></a>Criar a imagem no modo de versão
 

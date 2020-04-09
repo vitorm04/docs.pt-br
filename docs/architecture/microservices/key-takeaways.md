@@ -2,12 +2,12 @@
 title: Principais aspectos a serem lembrados
 description: Saiba quais são os principais aspectos a serem lembrados do guia/livro eletrônico “Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres” para ter uma visão geral de alto nível dos problemas envolvidos ao usar uma arquitetura de microsserviços, como as vantagens e desvantagens, os padrões de DDD para design e desenvolvimento, bem como a resiliência, a segurança e o uso de orquestradores.
 ms.date: 10/19/2018
-ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e793a76fa59d6c131422480071d85ab3f18102c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674453"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988772"
 ---
 # <a name="key-takeaways"></a>Principais observações
 
@@ -29,7 +29,7 @@ A seguir, encontram-se as conclusões mais importantes deste guia, que servem co
 
 **CLI versus IDE.** Com as ferramentas da Microsoft, é possível desenvolver aplicativos .NET em contêineres usando sua abordagem preferencial. Você pode desenvolver com uma CLI e um ambiente baseado em editor usando a CLI do Docker e o Visual Studio Code. Outra opção é usar uma abordagem centrada em IDE com o Visual Studio e seus recursos exclusivos para Docker, como a depuração de aplicativos de vários contêineres.
 
-**Aplicativos de nuvem resilientes.** Em sistemas baseados em nuvem e sistemas distribuídos em geral, há sempre o risco de falha parcial. Como clientes e serviços são processos separados (contêineres), um serviço pode não ser capaz de responder de forma oportuna a uma solicitação do cliente. Por exemplo, um serviço pode estar inativo por causa de uma falha parcial ou de manutenção, estar sobrecarregado e respondendo a solicitações de maneira extremamente lenta ou simplesmente não estar acessível durante um curto período devido a problemas de rede. Portanto, um aplicativo baseado em nuvem deve adotar essas falhas e ter uma estratégia para responder a elas. Essas estratégias podem incluir políticas de repetição (reenviar mensagens ou repetir solicitações) e padrões de implementação disjuntor para evitar uma carga exponencial de solicitações repetidas. Basicamente, os aplicativos baseados em nuvem precisam ter mecanismos resilientes, seja com base na infraestrutura de nuvem ou personalizados, como os de alto nível fornecidos pelos orquestradores ou barramentos de serviço.
+**Aplicativos de nuvem resilientes.** Em sistemas baseados em nuvem e sistemas distribuídos em geral, há sempre o risco de falha parcial. Como clientes e serviços são processos separados (contêineres), um serviço pode não ser capaz de responder em tempo hárum à solicitação de um cliente. Por exemplo, um serviço pode estar inativo por causa de uma falha parcial ou de manutenção, estar sobrecarregado e respondendo a solicitações de maneira extremamente lenta ou simplesmente não estar acessível durante um curto período devido a problemas de rede. Portanto, um aplicativo baseado em nuvem deve adotar essas falhas e ter uma estratégia para responder a elas. Essas estratégias podem incluir políticas de repetição (reenviar mensagens ou repetir solicitações) e padrões de implementação disjuntor para evitar uma carga exponencial de solicitações repetidas. Basicamente, os aplicativos baseados em nuvem precisam ter mecanismos resilientes, seja com base na infraestrutura de nuvem ou personalizados, como os de alto nível fornecidos pelos orquestradores ou barramentos de serviço.
 
 **Segurança.** O mundo moderno de contêineres e microsserviços pode expor novas vulnerabilidades. Há várias maneiras de implementar a segurança básica de aplicativo, com base em autenticação e autorização. No entanto, a segurança do contêiner precisa considerar os principais componentes adicionais que resultam em aplicativos inerentemente mais seguros. Um elemento crítico da criação de aplicativos mais seguros é implantar uma maneira segura de comunicar-se com outros aplicativos e sistemas, algo que geralmente requer credenciais, tokens, senhas e assim por diante, conhecidos como segredos do aplicativo. Toda solução de segurança precisa seguir as práticas recomendadas de segurança, como criptografia de segredos quando em trânsito e em repouso, e impedir que os segredos vazem ao serem consumidos pelo aplicativo final. Esses segredos precisam ser armazenados e mantidos em segurança, como quando o Azure Key Vault é usado.
 

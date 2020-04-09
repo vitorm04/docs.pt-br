@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503952"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987901"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -22,17 +22,17 @@ O ASP.NET Core é uma estrutura multiplataforma de software livre para a criaç�
 
 O ASP.NET Core MVC oferece diversos recursos úteis para a criação de APIs e aplicativos baseados na Web. O termo MVC significa "Model-View-Controller", um padrão de interface do usuário que divide a responsabilidade de responder às solicitações do usuário em várias partes. Além de seguir esse padrão, você também pode implementar recursos em seus aplicativos ASP.NET Core, como as Razor Pages. As páginas de barbear são incorporadas ASP.NET MVC core, e usam os mesmos recursos para roteamento, vinculação do modelo, etc. No entanto, em vez de ter pastas e arquivos separados para controladores, visualizações, etc. e usar roteamento baseado em atributos, as Páginas de Navalha são colocadas em uma única pasta ("/Páginas"), rota com base em sua localização relativa nesta pasta e lidam com solicitações com manipuladores em vez de ações de controlador.
 
-Ao criar um aplicativo ASP.NET Core, você deve ter um plano em mente para o tipo de aplicativo que deseja. No Visual Studio, você poderá escolher entre vários modelos. Os três modelos de projeto mais comuns são a API Web, o aplicativo Web e aplicativo Web (Model-View-Controller). Embora você só possa tomar essa decisão ao criar um projeto, essa não é uma decisão irrevogável. O projeto de API Web usa controladores Model-View-Controller padrão. Ele apenas não tem Exibições por padrão. Da mesma forma, o modelo de Aplicativo Web padrão usa Razor Pages e, portanto, também não tem uma pasta de Exibições. Você poderá adicionar uma pasta de Exibições a esses projetos mais tarde para permitir o comportamento com base na exibição. Os projetos de API Web e Model-View-Controller não incluem uma pasta Pages por padrão, mas você poderá adicioná-la mais tarde para permitir o comportamento com base em Razor Pages. Considere esses três modelos como suportes a três tipos diferentes de interação do usuário padrão: dados (API Web), baseado em página e baseado em exibição. No entanto, você poderá combiná-los e usar um deles ou todos eles em um único projeto, se desejar.
+Ao criar um aplicativo ASP.NET Core, você deve ter um plano em mente para o tipo de aplicativo que deseja. No Visual Studio, você poderá escolher entre vários modelos. Os três modelos de projeto mais comuns são a API Web, o aplicativo Web e aplicativo Web (Model-View-Controller). Embora você só possa tomar essa decisão quando você cria um projeto pela primeira vez, não é uma decisão irrevogável. O projeto de API Web usa controladores Model-View-Controller padrão. Ele apenas não tem Exibições por padrão. Da mesma forma, o modelo de Aplicativo Web padrão usa Razor Pages e, portanto, também não tem uma pasta de Exibições. Você poderá adicionar uma pasta de Exibições a esses projetos mais tarde para permitir o comportamento com base na exibição. Os projetos de API Web e Model-View-Controller não incluem uma pasta Pages por padrão, mas você poderá adicioná-la mais tarde para permitir o comportamento com base em Razor Pages. Considere esses três modelos como suportes a três tipos diferentes de interação do usuário padrão: dados (API Web), baseado em página e baseado em exibição. No entanto, você poderá combiná-los e usar um deles ou todos eles em um único projeto, se desejar.
 
 ### <a name="why-razor-pages"></a>Por que usar Razor Pages?
 
 As Razor Pages são a abordagem padrão para novos aplicativos Web no Visual Studio. Elas oferecem uma maneira mais simples de criar recursos de aplicativo baseados em página, como formulários que não são de SPA. Com controladores e exibições, era comum que os aplicativos tivessem controladores muito grandes que funcionavam com muitas dependências e modelos de exibição diferentes e retornavam várias exibições. Isso resultou em mais complexidade e muitas vezes resultou em controladores que não seguiram o Princípio de Responsabilidade Única ou Princípios Abertos/Fechados efetivamente. As Razor Pages resolvem esse problema encapsulando a lógica do lado do servidor para uma determinada "página" lógica em um aplicativo Web com sua marcação Razor. Uma Razor Page sem nenhuma lógica do lado do servidor pode consistir simplesmente em um arquivo Razor (por exemplo, "Index.cshtml"). No entanto, a maioria das Razor Pages menos triviais têm uma classe de modelo de página associada, que, por convenção, tem o mesmo nome que o arquivo do Razor, com uma extensão ".cs" (por exemplo, "Index.cshtml.cs").
 
-O modelo de página de uma Razor Page combina as responsabilidades de um controlador MVC e de um viewmodel. Em vez de manipular as solicitações com métodos de ação do controlador, são executados manipuladores de modelo de página, como "OnGet()", renderizando suas próprias páginas associadas por padrão. As Razor Pages simplificam o processo de criação de páginas individuais em um aplicativo ASP.NET Core, fornecendo ainda todos os recursos de arquiteturas ASP.NET Core MVC. Elas são uma boa opção padrão para a nova funcionalidade baseada em página.
+O modelo de página de uma página de Razor Page combina as responsabilidades de um controlador MVC e um modelo de visualização. Em vez de manipular as solicitações com métodos de ação do controlador, são executados manipuladores de modelo de página, como "OnGet()", renderizando suas próprias páginas associadas por padrão. As Razor Pages simplificam o processo de criação de páginas individuais em um aplicativo ASP.NET Core, fornecendo ainda todos os recursos de arquiteturas ASP.NET Core MVC. Elas são uma boa opção padrão para a nova funcionalidade baseada em página.
 
 ### <a name="when-to-use-mvc"></a>Quando usar o MVC
 
-Se você estiver criando APIs Web, o padrão MVC fará mais sentido do que tentar usar Razor Pages. Se o seu projeto só expor os pontos finais da API web, você deve começar a partir do modelo de projeto da API da Web. Caso contrário, é fácil adicionar controladores e pontos finais de API associados a qualquer aplicativo ASP.NET Core. Use a abordagem MVC baseada em visualização se você estiver migrando um aplicativo existente de ASP.NET MVC 5 ou anterior para ASP.NET MVC core e você deseja fazê-lo com o menor esforço. Depois de fazer a migração inicial, você poderá avaliar se faz sentido adotar as Razor Pages para os novos recursos ou até mesmo como uma migração em grande escala.
+Se você está construindo APIs web, o padrão MVC faz mais sentido do que tentar usar páginas de barbear. Se o seu projeto só expor os pontos finais da API web, você deve começar a partir do modelo de projeto da API da Web. Caso contrário, é fácil adicionar controladores e pontos finais de API associados a qualquer aplicativo ASP.NET Core. Use a abordagem MVC baseada em visualização se você estiver migrando um aplicativo existente de ASP.NET MVC 5 ou anterior para ASP.NET MVC core e você deseja fazê-lo com o menor esforço. Uma vez que você fez a migração inicial, você pode avaliar se faz sentido adotar Páginas de Barbear para novos recursos ou mesmo como uma migração por atacado.
 
 Se você optar por construir seu aplicativo web usando páginas de barbear ou visualizações de MVC, seu aplicativo terá desempenho semelhante e incluirá suporte para injeção de dependência, filtros, vinculação de modelos, validação e assim por diante.
 
@@ -51,7 +51,7 @@ app.UseEndpoints(endpoints =>
 
 Nesse exemplo, uma rota chamada "default" foi adicionada à tabela de roteamento. Ele define um modelo de rota com espaços reservados para _controlador,_ _ação_e _id._ Os espaços reservados para controlador e ação têm padrão especificado ("Home" e "Index", respectivamente), e o espaço reservado de id é opcional (em virtude de um "?" aplicado a ele). A convenção definida aqui indica que a primeira parte de uma solicitação deve corresponder ao nome do controlador, a segunda parte à ação, e, em seguida, se for necessário, uma terceira parte representará um parâmetro de ID. As rotas convencionais costumam ser definidas em um lugar para o aplicativo, como no método Configure na classe Startup.
 
-As rotas de atributo são aplicadas aos controladores e às ações diretamente, em vez de serem especificadas globalmente. Isso oferece a vantagem de torná-las muito mais detectáveis quando você estiver procurando um método específico, mas significa que as informações de roteamento não são mantidas em um único lugar no aplicativo. Com as rotas de atributo, você pode especificar com facilidade várias rotas para determinada ação, além de combinar rotas entre controladores e ações. Por exemplo: 
+As rotas de atributo são aplicadas aos controladores e às ações diretamente, em vez de serem especificadas globalmente. Isso oferece a vantagem de torná-las muito mais detectáveis quando você estiver procurando um método específico, mas significa que as informações de roteamento não são mantidas em um único lugar no aplicativo. Com as rotas de atributo, você pode especificar com facilidade várias rotas para determinada ação, além de combinar rotas entre controladores e ações. Por exemplo:
 
 ```csharp
 [Route("Home")]
@@ -76,7 +76,7 @@ public class ProductsController : Controller
 }
 ```
 
-As Razor Pages não usam o roteamento de atributo. Você pode especificar informações de modelo de rota adicionais para uma Razor Page como parte de sua diretiva `@page`:
+Razor Pages não usa roteamento de atributos. Você pode especificar informações de modelo de rota adicionais para uma Razor Page como parte de sua diretiva `@page`:
 
 ```csharp
 @page "{id:int}"
@@ -431,7 +431,7 @@ Tenha um cuidado especial ao "distribuir sua própria" implementação de cripto
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Autenticação e autorização para aplicativos de API no Serviço de Aplicativo do Azure**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **Servidor de Identidade**  
+> - **Servidor de identidade**  
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>Comunicação com o cliente

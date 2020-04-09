@@ -2,12 +2,12 @@
 title: Projetando a camada de aplicativos de microsserviço e a API Web
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Uma breve menção dos princípios SOLID para a criação da camada de aplicativo.
 ms.date: 10/08/2018
-ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491aa7bd90910c7f6c1d0ab56edfe0ae057ca006
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68676513"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988447"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Projetar a camada de aplicativos de microsserviço e a API Web
 
@@ -25,7 +25,7 @@ Os princípios SOLID são técnicas críticas para serem usadas em qualquer apli
 
 - Princípio da Inversão de dependência
 
-SOLID trata-se da maneira como você cria as camadas internas do microsserviço ou do aplicativo e do desacoplamento das dependências entre eles. Ele não está relacionado ao domínio, mas ao design técnico do aplicativo. O princípio final, o princípio de Inversão de dependência, permite a você desacoplar a camada de infraestrutura do restante das camadas, que permite uma melhor implementação desacoplada das camadas DDD.
+SOLID trata-se da maneira como você cria as camadas internas do microsserviço ou do aplicativo e do desacoplamento das dependências entre eles. Não está relacionado ao domínio, mas ao projeto técnico do aplicativo. O princípio final, o princípio de Inversão de dependência, permite a você desacoplar a camada de infraestrutura do restante das camadas, que permite uma melhor implementação desacoplada das camadas DDD.
 
 DI (Injeção de Dependência) é uma maneira de implementar o princípio de Inversão de Dependência. É uma técnica para obter um acoplamento flexível entre objetos e suas dependências. Em vez de criar uma instância de colaboradores diretamente ou usar referências estáticas (ou seja, usar novos...), os objetos de que uma classe precisa para executar suas ações são fornecidos (ou "injetados") na classe. Geralmente, as classes declararão suas dependências por meio de seu construtor, possibilitando que elas sigam o princípio de Dependências Explícitas. Geralmente, a Injeção de Dependência baseia-se em contêineres IoC (Inversão de Controle) específicos. O ASP.NET Core fornece um contêiner IoC interno simples, mas também é possível usar seu contêiner IoC favorito, como Autofac ou Ninject.
 

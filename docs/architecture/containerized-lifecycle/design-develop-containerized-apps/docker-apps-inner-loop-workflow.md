@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Conheça o fluxo de trabalho de "loop interno" para desenvolvimento de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936806"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989006"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -100,7 +100,7 @@ Na Figura 4-24, você pode ver como um arquivo docker-compose é adicionado usan
 
 **Figura 4-24**. Arquivos do Docker adicionados usando o **Adicionar arquivos do Docker ao Workspace**
 
-Quando adiciona um DockerFile, você especificar qual imagem de base do Docker usará (como usar `FROM mcr.microsoft.com/dotnet/core/aspnet`). Normalmente, você criará sua imagem personalizada usando uma imagem de base que obteve de qualquer repositório oficial no [Registro do Docker Hub](https://hub.docker.com/) (como uma [imagem para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) o a imagem [para Node.js](https://hub.docker.com/_/node/)).
+Quando você adiciona um DockerFile, você especifica qual imagem base `FROM mcr.microsoft.com/dotnet/core/aspnet`do Docker você estará usando (como usar ). Normalmente, você criará sua imagem personalizada usando uma imagem de base que obteve de qualquer repositório oficial no [Registro do Docker Hub](https://hub.docker.com/) (como uma [imagem para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) o a imagem [para Node.js](https://hub.docker.com/_/node/)).
 
 ***Usar uma imagem do Docker oficial existente***
 

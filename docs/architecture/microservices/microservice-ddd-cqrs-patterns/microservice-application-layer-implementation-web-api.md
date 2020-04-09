@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Entenda os padrões de injeção de dependência e os padrões do Mediador e seus detalhes de implementação na camada de aplicação da API da Web.
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502443"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988460"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -175,7 +175,7 @@ O tipo de escopo da instância determina como uma instância é compartilhada en
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>Implementar os padrões de Comando e Manipulador de Comandos
 
-No exemplo de DI por meio de construtor, mostrado na seção anterior, o contêiner de IoC injetou repositórios por meio de um construtor em uma classe. Mas em que local eles foram exatamente injetados? Em uma API Web simples (por exemplo, o microsserviço de catálogo em eShopOnContainers), eles são injetados no nível de controladores do MVC, em um construtor de controlador, como parte do pipeline de solicitação do ASP.NET Core. Entretanto, no código inicial desta seção (a classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) do serviço Ordering.API em eShopOnContainers), a injeção de dependências é feita por meio do construtor de um manipulador comandos específico. Vamos explicar o que é um manipulador de comandos e por que você o usaria.
+No exemplo de DI por meio de construtor, mostrado na seção anterior, o contêiner de IoC injetou repositórios por meio de um construtor em uma classe. Mas em que local eles foram exatamente injetados? Em uma Simples API web (por exemplo, o microserviço de catálogo em eShopOnContainers), você os injeta no nível dos controladores MVC, em um construtor controlador, como parte do pipeline de solicitação de ASP.NET Core. Entretanto, no código inicial desta seção (a classe [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) do serviço Ordering.API em eShopOnContainers), a injeção de dependências é feita por meio do construtor de um manipulador comandos específico. Vamos explicar o que é um manipulador de comandos e por que você o usaria.
 
 O padrão Command é intrinsecamente relacionado ao padrão CQRS, apresentado anteriormente neste guia. O CQRS tem dois lados. A primeira área é a de consultas, usando consultas simplificadas com o micro ORM [Dapper](https://github.com/StackExchange/dapper-dot-net), explicado anteriormente. A segunda área é a de comandos, os quais são o ponto de partida para transações e o canal de entrada do serviço.
 
@@ -183,7 +183,7 @@ Conforme mostrado na Figura 7-24, o padrão é baseado em aceitar comandos do la
 
 ![Diagrama mostrando o fluxo de dados de alto nível de cliente para banco de dados.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-**Figura 7-24**. Exibição de alto nível dos comandos ou do "lado transacional" em um padrão CQRS
+**Figura 7-24**. Exibição de alto nível dos comandos ou "lado transacional" em um padrão CQRS
 
 A Figura 7-24 mostra que o aplicativo de IA `CommandHandler`envia um comando através da API que chega a um , que depende do modelo de Domínio e da Infra-Estrutura, para atualizar o banco de dados.
 
@@ -199,7 +199,7 @@ Uma característica importante de um comando é que ele deve ser processado apen
 
 Além disso, é importante que um comando seja processado apenas uma vez, caso ele não seja idempotente. Um comando será idempotente se ele puder ser executado várias vezes sem alterar o resultado, devido à natureza do comando ou por causa da forma como o sistema manipula o comando.
 
-Uma boa prática é tornar os comandos e atualizações idempotentes, quando isso for adequado às regras de negócios e invariáveis do seu domínio. Assim, para usar o mesmo exemplo, se por algum motivo (lógica de repetição, hackers, etc.) o mesmo comando CreateOrder chegar até seu sistema diversas vezes, você deverá ser capaz de identificá-lo e ter a certeza de não criar vários pedidos. Para fazer isso, você precisa anexar algum tipo de identidade nas operações e identificar se o comando ou a atualização já foi processada.
+É uma boa prática fazer seus comandos e atualizações idempotentes quando faz sentido sob as regras de negócios e invariantes do seu domínio. Assim, para usar o mesmo exemplo, se por algum motivo (lógica de repetição, hackers, etc.) o mesmo comando CreateOrder chegar até seu sistema diversas vezes, você deverá ser capaz de identificá-lo e ter a certeza de não criar vários pedidos. Para fazer isso, você precisa anexar algum tipo de identidade nas operações e identificar se o comando ou a atualização já foi processada.
 
 Você envia um comando a um único destinatário; você não publica um comando. A publicação serve para eventos que declaram um fato, ou seja, que algo aconteceu e pode ser interessante para destinatários de eventos. No caso de eventos, o publicador não tem preocupações sobre quais destinatários recebem o evento ou o que eles fazem com isso. No entanto, os eventos de domínio ou de integração são outra história, já apresentada nas seções anteriores.
 
@@ -283,7 +283,7 @@ public class CreateOrderCommand
 }
 ```
 
-Basicamente, a classe de comando contém todos os dados necessários para realizar uma transação comercial, usando os objetos do modelo de domínio. Assim, os comandos são simplesmente estruturas de dados que contêm dados somente leitura e nenhum comportamento. O nome do comando indica sua finalidade. Em várias linguagens, como C#, os comandos são representados como classes, mas eles não são verdadeiramente classes, no real sentido de serem orientados a objetos.
+Basicamente, a classe de comando contém todos os dados necessários para realizar uma transação comercial, usando os objetos do modelo de domínio. Assim, os comandos são simplesmente estruturas de dados que contêm dados somente leitura e nenhum comportamento. O nome do comando indica seu propósito. Em várias linguagens, como C#, os comandos são representados como classes, mas eles não são verdadeiramente classes, no real sentido de serem orientados a objetos.
 
 Como uma característica adicional, os comandos são imutáveis, porque o uso esperado é que eles sejam processados diretamente pelo modelo de domínio. Eles não precisam ser alterados durante o tempo de vida projetado. Em uma classe de C#, a imutabilidade pode ser obtida por não haver nenhum setter nem outros métodos que alterem o estado interno.
 
@@ -291,7 +291,7 @@ Tenha em mente que se você pretende ou espera que os comandos passem por um pro
 
 Por exemplo, a classe de comando para a criação de um pedido é, provavelmente, semelhante em relação aos dados para o pedido que você deseja criar, mas é provável que você não precise dos mesmos atributos. Por exemplo, `CreateOrderCommand` não tem um ID de pedido, porque a ordem ainda não foi criada.
 
-Muitas classes de comando podem ser simples, exigindo apenas alguns campos de algum estado que tenha que ser alterado. Esse seria o caso se você estivesse apenas alterando o status de um pedido de "em processo" para "pago" ou "enviado", usando um comando semelhante ao seguinte:
+Muitas classes de comando podem ser simples, exigindo apenas alguns campos de algum estado que tenha que ser alterado. Esse seria o caso se você estivesse apenas mudando o status de uma ordem de "em processo" para "pago" ou "enviado" usando um comando semelhante ao seguinte:
 
 ```csharp
 [DataContract]
@@ -388,11 +388,11 @@ public class CreateOrderCommandHandler
 
 Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 
-- Usar os dados do comando para operar com os métodos e o comportamento da raiz de agregação.
+- Use os dados do comando para operar com os métodos e o comportamento da raiz agregada.
 
 - Internamente, dentro dos objetos de domínio, acionar eventos de domínio enquanto a transação é executada, mas isso é transparente do ponto de vista de um manipulador comandos.
 
-- Se o resultado da operação de agregação for bem-sucedido e depois que a transação for concluída, acione eventos de integração. (Eles também podem ser acionados por classes de infraestrutura como repositórios).
+- Se o resultado da operação do agregado for bem-sucedido e após o término da transação, levante os eventos de integração. (Eles também podem ser acionados por classes de infraestrutura como repositórios).
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
@@ -433,13 +433,13 @@ O diagrama acima mostra um zoom-in da imagem 7-24: o controlador ASP.NET Core en
 
 O motivo pelo qual o uso do padrão Mediador faz sentido é porque, em aplicativos empresariais, as solicitações de processamento podem ficar complicadas. Você almeja adicionar um número indefinido de interesses transversais como registro em log, validações, auditoria e segurança. Nesses casos, você pode confiar em um pipeline mediador (veja [Padrão mediador](https://en.wikipedia.org/wiki/Mediator_pattern)) para oferecer um meio para esses comportamentos adicionais ou interesses transversais.
 
-Um mediador é um objeto que encapsula o "como" desse processo: ele coordena a execução com base no estado, a maneira como um manipulador de comandos é invocado ou o conteúdo que você fornece para o manipulador. Com um componente mediador, você pode aplicar interesses transversais de uma forma centralizada e transparente, por meio da aplicação de decoradores (ou [comportamentos de pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) como [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Para obter mais informações, consulte o [Padrão decorador](https://en.wikipedia.org/wiki/Decorator_pattern).
+Um mediador é um objeto que encapsula o "como" desse processo: coordena a execução com base no estado, na forma como um manipulador de comando é invocado ou na carga que você fornece ao manipulador. Com um componente mediador, você pode aplicar interesses transversais de uma forma centralizada e transparente, por meio da aplicação de decoradores (ou [comportamentos de pipeline](https://github.com/jbogard/MediatR/wiki/Behaviors) como [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0)). Para obter mais informações, consulte o [Padrão decorador](https://en.wikipedia.org/wiki/Decorator_pattern).
 
 Os decoradores e comportamentos são semelhantes à [AOP (Programação orientada a aspectos)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), aplicada somente a um pipeline de processo específico gerenciado pelo componente mediador. Os aspectos na AOP, que implementam interesses transversais, são aplicados com base em *construtores de aspecto* injetados em tempo de compilação ou com base na interceptação da chamada de objeto. Às vezes, essas duas abordagens de AOP típicas parecem funcionar "como mágica", porque não é fácil entender como a AOP faz seu trabalho. Ao lidar com problemas sérios ou bugs, pode ser difícil depurar a AOP. Por outro lado, esses decoradores/comportamentos são explícitos e aplicados apenas no contexto do mediador, assim, a depuração fica muito mais fácil e previsível.
 
 Por exemplo, no microsserviço de pedidos eShopOnContainers, implementamos dois comportamentos de exemplo, uma classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e uma classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). A implementação dos comportamentos é explicada na próxima seção, mostrando como o eShopOnContainers usa [comportamentos](https://github.com/jbogard/MediatR/wiki/Behaviors) [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) .
 
-### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usar filas de mensagens (fora do processo) no pipeline do comando
+### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Use filas de mensagens (fora de proc) no pipeline do comando
 
 Outra opção é usar mensagens assíncronas com base em agentes ou filas de mensagens, conforme mostrado na Figura 7-26. Essa opção também pode ser combinada com o componente mediador imediatamente antes do manipulador de comandos.
 
@@ -447,23 +447,23 @@ Outra opção é usar mensagens assíncronas com base em agentes ou filas de men
 
 **Figura 7-26**. Usando filas de mensagens (comunicação fora do processo e entre processos) com comandos CQRS
 
-O pipeline do comando também pode ser tratado por uma fila de mensagens de alta disponibilidade para entregar os comandos ao manipulador adequado. O uso de filas de mensagens para aceitar os comandos pode complicar ainda mais o pipeline do comando, porque você provavelmente precisará dividir o pipeline em dois processos conectados por meio da fila de mensagens externas. Ainda assim, isso deve ser usado se você precisa ter melhor escalabilidade e desempenho com base no sistema de mensagens assíncrono. Considere que, no caso da Figura 7-26, o controlador apenas posta a mensagem de comando na fila e retorna. Em seguida, o manipulador de comandos processa as mensagens em seu próprio ritmo. Esse é um grande benefício das filas: a fila de mensagens pode agir como um buffer nos casos em que a hiperescalabilidade é necessária, como para estoques ou qualquer outro cenário com um alto volume de dados de entrada.
+O pipeline do comando também pode ser tratado por uma fila de mensagens de alta disponibilidade para entregar os comandos ao manipulador adequado. Usar filas de mensagens para aceitar os comandos pode complicar ainda mais o pipeline do seu comando, porque você provavelmente precisará dividir o pipeline em dois processos conectados através da fila de mensagens externas. Ainda assim, isso deve ser usado se você precisa ter melhor escalabilidade e desempenho com base no sistema de mensagens assíncrono. Considere que, no caso da Figura 7-26, o controlador apenas posta a mensagem de comando na fila e retorna. Em seguida, o manipulador de comandos processa as mensagens em seu próprio ritmo. Esse é um grande benefício das filas: a fila de mensagens pode agir como um buffer nos casos em que a hiperescalabilidade é necessária, como para estoques ou qualquer outro cenário com um alto volume de dados de entrada.
 
-No entanto, devido à natureza assíncrona das filas de mensagens, você precisa descobrir como se comunicar com o aplicativo cliente em relação ao êxito ou falha do processo do comando. Como regra, você nunca deve usar comandos do tipo "disparar e esquecer". Todos os aplicativos de negócios precisam saber se um comando foi processado com êxito ou, pelo menos, validado e aceito.
+No entanto, devido à natureza assíncrona das filas de mensagens, você precisa descobrir como se comunicar com o aplicativo cliente sobre o sucesso ou falha do processo do comando. Como regra geral, você nunca deve usar comandos "fogo e esquecer". Todos os aplicativos de negócios precisam saber se um comando foi processado com êxito ou, pelo menos, validado e aceito.
 
-Portanto, a capacidade de responder ao cliente após a validação de uma mensagem de comando que foi enviada para uma fila assíncrona adiciona complexidade ao seu sistema, em comparação com um processo de comando em processo, que retorna o resultado da operação depois de executar a transação. Ao usar filas, talvez seja necessário retornar o resultado do processo do comando por meio de outras mensagens de resultado da operação, o que exigirá comunicação personalizada e componentes adicionais em seu sistema.
+Assim, poder responder ao cliente após validar uma mensagem de comando que foi submetida a uma fila assíncrona adiciona complexidade ao seu sistema, em comparação com um processo de comando em processo que retorna o resultado da operação após a execução da transação. Ao usar filas, talvez seja necessário retornar o resultado do processo do comando por meio de outras mensagens de resultado da operação, o que exigirá comunicação personalizada e componentes adicionais em seu sistema.
 
 Além disso, os comandos assíncronos são unidirecionais, o que, em muitos casos, pode não ser necessário, conforme explicado na seguinte discussão interessante entre Burtsev Alexey e Greg Young em uma [conversa online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
 > \[Burtsev Alexey\] Eu encontro muito código nos locais em que as pessoas usam a manipulação de comando assíncrono ou sistemas de mensagens de comando unidirecional sem nenhuma razão para isso (eles não estão fazendo nenhuma operação longa, nem executando código assíncrono externo, nem mesmo ultrapassando o limite do aplicativo para usar o barramento de mensagem). Por que eles introduzem essa complexidade desnecessária? E, na verdade, eu não vi nenhum exemplo de código CQRS com manipuladores de comando de bloqueio até o momento, embora isso funcionaria muito bem na maioria dos casos.
 >
-> \[Greg\] \[Young... \] um comando assíncrono não existe; na verdade, é outro evento. Se eu precisar aceitar o que você me envia e acionar um evento se não concordar, já não será mais você me dizendo para fazer algo, \[ou seja, não se tratará de um comando\]. É você me informando que algo foi feito. Parece que essa é apenas uma pequena diferença inicialmente, mas isso tem várias implicações.
+> \[Greg\] \[Young... \] um comando assíncrono não existe; na verdade, é outro evento. Se eu devo aceitar o que você me envia e levantar um evento se \[eu discordar, não é\]mais você me dizendo para fazer algo que é, não é um comando. É você me informando que algo foi feito. Parece que essa é apenas uma pequena diferença inicialmente, mas isso tem várias implicações.
 
 Os comandos assíncronos aumentam significativamente a complexidade de um sistema, porque não há nenhuma maneira simples de indicar falhas. Portanto, os comandos assíncronos não são recomendados a não ser quando há requisitos de dimensionamento ou em casos especiais, ao comunicar os microsserviços internos por meio do sistema de mensagens. Nesses casos, você deve projetar um sistema de relatórios e de recuperação separado para falhas.
 
 Na versão inicial do eShopOnContainers, decidimos usar processamento de comando síncrono, iniciado com solicitações HTTP e orientado pelo padrão Mediador. Isso permite retornar o êxito ou a falha do processo com facilidade, como na implementação de [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs).
 
-Em todo caso, essa deve ser uma decisão baseada nos requisitos de negócio do aplicativo ou do microsserviço.
+De qualquer forma, esta deve ser uma decisão baseada nos requisitos de negócios do seu aplicativo ou microserviço.
 
 ## <a name="implement-the-command-process-pipeline-with-a-mediator-pattern-mediatr"></a>Implementar o pipeline de processo de comando com um padrão mediador (MediatR)
 
@@ -477,7 +477,7 @@ Outra boa razão para usar o padrão Mediador foi explicada por Jimmy Bogard dur
 
 > Acho que vale a pena mencionar testes aqui – eles oferecem uma janela consistente e adequada sobre o comportamento do seu sistema. Solicitação de entrada, resposta. Achamos esse aspecto muito valioso na construção de testes consistentemente comportados.
 
-Primeiro, vamos dar uma olhada em um controlador de WebAPI de exemplo no local em que você usaria o objeto mediador. Se você não estivesse usando o objeto mediador, você precisaria injetar todas as dependências para esse controlador, coisas como um objeto de logger e outros. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
+Primeiro, vamos olhar para um controlador WebAPI de exemplo onde você realmente usaria o objeto mediador. Se você não estivesse usando o objeto mediador, você precisaria injetar todas as dependências para esse controlador, coisas como um objeto de logger e outros. Portanto, o construtor ficaria muito complicado. Por outro lado, se você usasse o objeto mediador, o construtor do controlador poderia ser muito mais simples, com apenas algumas dependências em vez de muitas dependências, se você tivesse um por operação transversal, como no exemplo a seguir:
 
 ```csharp
 public class MyMicroserviceController : Controller
@@ -526,7 +526,7 @@ var requestCreateOrder = new IdentifiedCommand<CreateOrderCommand,bool>(createOr
 result = await _mediator.Send(requestCreateOrder);
 ```
 
-No entanto, neste caso também é um pouco mais avançado porque estamos implementando comandos idempotentes. O processo CreateOrderCommand deve ser idempotente, portanto, se a mesma mensagem vier duplicada pela rede, independentemente do motivo, como repetições, a mesma ordem de negócios será processada apenas uma vez.
+No entanto, este caso também é um pouco mais avançado porque também estamos implementando comandos idempotentes. O processo CreateOrderCommand deve ser idempotente, portanto, se a mesma mensagem vier duplicada pela rede, independentemente do motivo, como repetições, a mesma ordem de negócios será processada apenas uma vez.
 
 Isso é implementado pelo encapsulamento do comando empresarial (CreateOrderCommand, neste caso), inserindo-o em um IdentifiedCommand genérico que é controlado por uma ID de cada mensagem que chega por meio da rede e que deve ser idempotente.
 
@@ -546,7 +546,7 @@ public class IdentifiedCommand<T, R> : IRequest<R>
 }
 ```
 
-Então, o CommandHandler do IdentifiedCommand chamado [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) vai basicamente verificar se a ID que está chegando como parte da mensagem já existe em uma tabela. Se ela já existir, aquele comando não será processado novamente, comportando-se como um comando idempotente. Esse código de infraestrutura é executado pela chamada de método `_requestManager.ExistAsync` abaixo.
+Então, o CommandHandler do IdentifiedCommand chamado [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) vai basicamente verificar se a ID que está chegando como parte da mensagem já existe em uma tabela. Se ele já existir, esse comando não será processado novamente, então ele se comporta como um comando idempotente. Esse código de infraestrutura é executado pela chamada de método `_requestManager.ExistAsync` abaixo.
 
 ```csharp
 // IdentifiedCommandHandler.cs
@@ -590,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Como o IdentifiedCommand age como o envelope de um comando de negócios, quando o comando de negócios tiver que ser processado, por não ter uma ID repetida, ele obterá esse comando de negócios interno e o enviará novamente para o Mediador, como na última parte do código mostrado acima ao executar `_mediator.Send(message.Command)`, do [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Uma vez que o Comando Identificado age como um envelope de comando de negócios, quando o comando de negócios precisa ser processado porque não é um ID repetido, `_mediator.Send(message.Command)`então ele pega esse comando de negócios interno e o envia novamente ao Mediador, como na última parte do código mostrado acima ao executar , a partir do [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 Ao fazer isso, ele vinculará e executará o manipulador do comando empresarial, o [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs), nesse caso, que está executando transações no banco de dados de Pedidos, conforme mostrado no código a seguir.
 
@@ -643,7 +643,7 @@ public class CreateOrderCommandHandler
 
 Para que o MediatR tome ciência de suas classes de manipulador de comando, é necessário registrar as classes de mediador e as classes de manipulador de comandos em seu contêiner de IoC. Por padrão, o MediatR usa o Autofac como contêiner de IoC, mas você também pode usar o contêiner de IoC interno do ASP.NET Core ou qualquer outro contêiner compatível com o MediatR.
 
-O código a seguir mostra como registrar comandos e tipos do Mediador ao usar módulos de Autofac.
+O código a seguir mostra como registrar os tipos e comandos do Mediador ao usar módulos Autofac.
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -664,7 +664,7 @@ public class MediatorModule : Autofac.Module
 }
 ```
 
-É aqui que a "mágica acontece" com o MediatR.
+É aqui que "a magia acontece" com a MediatR.
 
 Como cada manipulador de comando implementa a interface `IAsyncRequestHandler<T>` genérica, durante o registro de assemblies, o código registra todos os tipos marcados como `IAsyncRequestHandler` com `RegisteredAssemblyTypes`, relacionando, ao mesmo tempo, os `CommandHandlers` com seus respectivos `Commands`, graças a relação declarada na classe `CommandHandler`, como no exemplo a seguir:
 
@@ -758,7 +758,7 @@ public class ValidatorBehavior<TRequest, TResponse>
 }
 ```
 
-O comportamento aqui é gerar uma exceção se a validação falhar, mas também é possível retornar um objeto de resultado. Esse objeto contém o resultado do comando se ele é bem-sucedido ou, caso contrário, as mensagens de validação. Isso provavelmente tornaria mais fácil exibir os resultados da validação para o usuário.
+O comportamento aqui está levantando uma exceção se a validação falhar, mas você também pode retornar um objeto de resultado, contendo o resultado do comando se ele for bem sucedido ou as mensagens de validação caso não tenha. Isso provavelmente tornaria mais fácil exibir os resultados da validação para o usuário.
 
 Assim, com base na biblioteca [FluentValidation](https://github.com/JeremySkinner/FluentValidation), criamos a validação para os dados passados com CreateOrderCommand, como no código a seguir:
 

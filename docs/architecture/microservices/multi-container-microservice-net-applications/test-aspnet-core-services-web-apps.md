@@ -2,12 +2,12 @@
 title: Testar serviços e aplicativos Web do ASP.NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explorar uma arquitetura para testar serviços e aplicativos Web do ASP.NET Core em contêineres.
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501978"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988226"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -19,7 +19,7 @@ Os controladores são uma parte central de qualquer serviço de API do ASP.NET C
 
 - Testes de integração. Garantem que as interações do componente funcionam como esperado em artefatos externos, como bancos de dados. Instruções assert podem testar a API do componente, a interface do usuário ou os efeitos colaterais de ações, como E/S de banco de dados, registros em log etc.
 
-- Testes funcionais para cada microsserviço. Garantem que o aplicativo funciona conforme o esperado da perspectiva do usuário.
+- Testes funcionais para cada microsserviço. Isso garante que o aplicativo funcione conforme esperado do ponto de vista do usuário.
 
 - Testes de serviço. Garantem que os casos de uso do serviço de ponta a ponta sejam testados, incluindo testes de vários serviços ao mesmo tempo. Para esse tipo de teste, é necessário preparar o ambiente primeiro. Nesse caso, significa iniciar os serviços (por exemplo, usando o docker-compose up).
 

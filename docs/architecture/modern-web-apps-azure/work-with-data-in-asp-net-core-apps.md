@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 5a38ca94b6df676858e7cb058272e450aaf1572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78241033"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987836"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -130,7 +130,7 @@ var brandsWithItems = await _context.CatalogBrands
 Você pode incluir vários relacionamentos e também pode incluir subrelacionamentos usando ThenInclude. O EF Core executará uma única consulta para recuperar o conjunto resultante de entidades. Como alternativa, você pode incluir propriedades de navegação de propriedades de navegação passando uma cadeia de caracteres separada por '.' para o método de extensão `.Include()`, da seguinte forma:
 
 ```csharp
-    .Include(“Items.Products”)
+    .Include("Items.Products")
 ```
 
 Além de encapsular a lógica de filtragem, uma especificação pode especificar a forma dos dados a serem retornados, incluindo quais propriedades devem ser populadas. O exemplo eShopOnWeb inclui várias especificações que demonstram o encapsulamento das informações de carregamento adiantado dentro da especificação. Veja aqui como a especificação é usada como parte de uma consulta:
@@ -506,7 +506,7 @@ new CancellationChangeToken(cts.Token));
 _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
-O cache pode melhorar consideravelmente o desempenho das páginas da Web que solicitam repetidamente os mesmos valores do banco de dados. Meça o desempenho da página e o acesso a dados antes de aplicar o cache e somente aplique o cache quando houver necessidade de melhoria. O cache consome recursos de memória do servidor Web e aumenta a complexidade do aplicativo, portanto, é importante que você não se apresse em otimizar usando essa técnica.
+O cache pode melhorar consideravelmente o desempenho das páginas da Web que solicitam repetidamente os mesmos valores do banco de dados. Meça o desempenho da página e o acesso a dados antes de aplicar o cache e somente aplique o cache quando houver necessidade de melhoria. O cache consome recursos de memória do servidor web e aumenta a complexidade do aplicativo, por isso é importante que você não otimize prematuramente usando essa técnica.
 
 >[!div class="step-by-step"]
 >[Próximo](develop-asp-net-core-mvc-apps.md)

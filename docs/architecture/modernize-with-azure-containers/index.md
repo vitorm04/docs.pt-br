@@ -2,12 +2,12 @@
 title: Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 description: Aprenda a migrar aplicativos usando o método lift-and-shift e modernizar os existentes para a nuvem e contêineres do Azure com este livro eletrônico.
 ms.date: 04/28/2018
-ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95a5870254481a4c6c9eed82b5be5e1eb10be346
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628347"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987940"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 
@@ -81,7 +81,7 @@ A definição e a breve explicação de cada nível de maturidade do aplicativo 
 **Nível 1: Aplicativos prontos para infra-estrutura na nuvem:** Nesta abordagem de migração, você simplesmente migra ou reatualmente seus aplicativos on-premises atuais para uma plataforma de infra-estrutura como serviço[(IaaS).](https://azure.microsoft.com/overview/what-is-iaas/) Os aplicativos têm quase a mesma composição de antes, mas agora você os implanta em VMs na nuvem.
 Esse tipo simples de migração é normalmente conhecido no setor como "lift-and-shift".
 
-**Nível 2:** Aplicativos otimizados para nuvem: neste nível e ainda sem reprojetar ou alterar códigos significativos, você pode obter benefícios adicionais com a execução do seu aplicativo na nuvem com tecnologias modernas como contêineres e serviços adicionais gerenciados na nuvem. Melhore a agilidade dos seus aplicativos para distribuição mais rápida refinando seus processos de DevOps (operações de desenvolvimento) corporativas. Faça isso usando tecnologias como Contêineres do Windows, que é baseada no Mecanismo do Docker. Os contêineres removem o atrito causado pelas dependências de aplicativo ao implantar em vários estágios. Nesse modelo de maturidade, você pode implantar contêineres ou IaaS ou PaaS ao usar serviços gerenciados por nuvem adicionais relacionados a bancos de dados, cache como serviço, monitoramento e pipelines de CI/CD (integração contínua/implantação contínua).
+**Nível 2:** Aplicativos otimizados para nuvem: neste nível e ainda sem reprojetar ou alterar códigos significativos, você pode obter benefícios adicionais com a execução do seu aplicativo na nuvem com tecnologias modernas como contêineres e serviços adicionais gerenciados na nuvem. Melhore a agilidade dos seus aplicativos para distribuição mais rápida refinando seus processos de DevOps (operações de desenvolvimento) corporativas. Faça isso usando tecnologias como Contêineres do Windows, que é baseada no Mecanismo do Docker. Contêineres removem a fricção que é causada pelas dependências de aplicativo ao implantar em vários estágios. Nesse modelo de maturidade, você pode implantar contêineres ou IaaS ou PaaS ao usar serviços gerenciados por nuvem adicionais relacionados a bancos de dados, cache como serviço, monitoramento e pipelines de CI/CD (integração contínua/implantação contínua).
 
 O terceiro nível de maturidade é a meta final na nuvem, mas é opcional para muitos aplicativos e não é o foco principal deste guia:
 
@@ -98,7 +98,7 @@ A Tabela 1-1 descreve as principais vantagens e motivos para escolher cada abord
 | **Vantagens**|
 | <li>Sem recriação da arquitetura, sem novo código <li> Mínimo de esforço para migração rápida <li> Mínimo denominador comum com suporte no Azure <li> Garantias básicas de disponibilidade <li> Depois de mudar para a nuvem, é mais fácil modernizar ainda mais | <li> Sem recriação da arquitetura <li> Alterações mínimas de código/configuração <li> Melhoria na implantação e agilidade de DevOps para liberação devido a contêineres <li> Aumento da densidade e redução dos custos de implantação <li> Portabilidade de aplicativos e dependências <li> Flexibilidade das metas de host: Abordagens paaS ou IaaS | <li> Arquiteto da nuvem, você obtém os melhores benefícios da nuvem, mas é necessário um novo código <li> Abordagens de microsserviços nativos de nuvem <li> Aplicativos críticos modernos, hiperescalonáveis e resilientes de nuvem <li> Serviços totalmente gerenciados <li> Otimizado para escala <li> Otimizado para agilidade autônoma por subsistema <li> Baseado em implantação e DevOps |
 | **Desafios** |
-| <li> Menor valor de nuvem, diferente da mudança no custo de operação ou o fechamento de datacenters <li> Pouco é gerenciado: Sem patches de sistema operacional ou middleware; pode usar soluções de infra-estrutura, como Terraform, Spinnaker ou Puppet | <li> O desenvolvimento de contêineres é uma etapa adicional na curva de aprendizado para desenvolvedores e Operações de TI <li> Os pipelines de CI/CD e DevOps geralmente são essenciais para essa abordagem. Se não estiver presente no momento na cultura da organização, poderá ser um desafio adicional| <li> Requer a recriação da arquitetura para aplicativos nativos de nuvem e arquiteturas de microsserviço e geralmente requer refatoração ou regravação de código significativa durante a modernização (maiores tempo e orçamento)|
+| <li> Menor valor de nuvem, diferente da mudança no custo de operação ou o fechamento de datacenters <li> Pouco é gerenciado: Sem patches de sistema operacional ou middleware; pode usar soluções de infra-estrutura, como Terraform, Spinnaker ou Puppet | <li> O desenvolvimento de contêineres é uma etapa adicional na curva de aprendizado para desenvolvedores e Operações de TI <li> Os gasodutos DevOps e CI/CD geralmente são "imperdíveis" para esta abordagem. Se não estiver presente no momento na cultura da organização, poderá ser um desafio adicional| <li> Requer a recriação da arquitetura para aplicativos nativos de nuvem e arquiteturas de microsserviço e geralmente requer refatoração ou regravação de código significativa durante a modernização (maiores tempo e orçamento)|
 > **Tabela 1-1.** Benefícios e desafios de caminhos de modernização para serviços e aplicativos .NET existentes
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Principais tecnologias e arquiteturas por nível de maturidade

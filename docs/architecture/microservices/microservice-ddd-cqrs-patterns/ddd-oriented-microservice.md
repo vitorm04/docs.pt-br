@@ -2,12 +2,12 @@
 title: Projetando um microsserviço orientado a DDD
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda o design do microsserviço de pedidos orientado a DDD e suas camadas de aplicativo.
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401693"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988733"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
@@ -71,7 +71,7 @@ Passando para a camada de aplicativo, novamente podemos citar o livro de Eric Ev
 
 **Camada de aplicativo:** define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
 
-Uma camada de aplicativo do microsserviço no .NET é codificada como um projeto de API da Web do ASP.NET Core. O projeto implementa interação do microsserviço, o acesso remoto à rede e as APIs da Web externas usadas nos aplicativos de interface do usuário ou cliente. Ele incluirá consultas se estiver usando uma abordagem CQRS, comandos aceitos pelo microsserviço e até mesmo a comunicação controlada por evento entre microsserviços (eventos de integração). A API Web do ASP.NET Core que representa a camada de aplicativo não deve conter as regras de negócio nem o conhecimento do domínio (especialmente regras de domínio para transações ou atualizações); isso deve ser de propriedade da biblioteca de classes de modelo de domínio. A camada do aplicativo deve apenas coordenar tarefas e não deve reter nem definir qualquer estado de domínio (modelo de domínio). Ela delega a execução de regras de negócio para as classes de modelo de domínio em si (raízes agregadas e entidades de domínio), que, por fim, atualizarão os dados dentro dessas entidades de domínio.
+A camada de aplicação de um microserviço no .NET é comumente codificada como um projeto de API da Web ASP.NET. O projeto implementa a interação do microserviço, o acesso à rede remota e as APIs externas da Web usadas a partir dos aplicativos de interface do cliente ou ui. Ele incluirá consultas se estiver usando uma abordagem CQRS, comandos aceitos pelo microsserviço e até mesmo a comunicação controlada por evento entre microsserviços (eventos de integração). A API Web do ASP.NET Core que representa a camada de aplicativo não deve conter as regras de negócio nem o conhecimento do domínio (especialmente regras de domínio para transações ou atualizações); isso deve ser de propriedade da biblioteca de classes de modelo de domínio. A camada do aplicativo deve apenas coordenar tarefas e não deve reter nem definir qualquer estado de domínio (modelo de domínio). Ela delega a execução de regras de negócio para as classes de modelo de domínio em si (raízes agregadas e entidades de domínio), que, por fim, atualizarão os dados dentro dessas entidades de domínio.
 
 Basicamente, a “lógica de aplicativo” é onde você implementa todos os casos de uso que dependem de um determinado front-end. Por exemplo, a implementação relacionada a um serviço de API da Web.
 
@@ -81,7 +81,7 @@ A meta é que a lógica do domínio na camada de modelo de domínio, suas invari
 
 A camada de infraestrutura é como os dados inicialmente mantidos em entidades de domínio (em memória) são mantidos em bancos de dados ou outro repositório persistente. Um exemplo é usar o código do Entity Framework Core para implementar as classes padrão do repositório que usam um DBContext para manter os dados em um banco de dados relacional.
 
-Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve ser "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
+De acordo com os princípios anteriormente mencionados [de ignorância](https://deviq.com/persistence-ignorance/) e ignorância [de infra-estrutura,](https://ayende.com/blog/3137/infrastructure-ignorance) a camada de infra-estrutura não deve "contaminar" a camada do modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
 
 Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 7-7.
 

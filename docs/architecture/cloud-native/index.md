@@ -3,12 +3,12 @@ title: Arquitetando aplicações nativas da nuvem .NET para azure
 description: Um guia para a construção de aplicativos nativos da nuvem aproveitando contêineres, microsserviços e recursos sem servidor do Azure.
 author: ardalis
 ms.date: 03/07/2019
-ms.openlocfilehash: 7f14a690d0153edc43f0ce7f4e91c9e9cd2c6858
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71696785"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989058"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicações nativas da nuvem .NET para azure
 
@@ -26,15 +26,15 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019, Microsoft Corporation
+Copyright &copy; 2019 pela Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
-Este manual é fornecido "no estado em que se encontra" e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste livro, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
+Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste livro, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
-A Microsoft e as marcas comerciais listadas em https://www.microsoft.com na página da Web “Marcas comerciais” são marcas comerciais do grupo de empresas da Microsoft.
+A Microsoft e as marcas listadas em https://www.microsoft.com na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft.
 
 Mac e macOS são marcas comerciais da Apple Inc.
 
@@ -46,7 +46,7 @@ Autores:
 
 > **Steve "ardalis" Smith** – Arquiteto de software e instrutor – [Ardalis.com](https://ardalis.com)
 >
-> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [RobVettor.com](https://robvettor.com)
+> **Rob Vettor** - Microsoft - Principal Cloud System Architect/IP Architect - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 
 Participantes e Revisores:
 

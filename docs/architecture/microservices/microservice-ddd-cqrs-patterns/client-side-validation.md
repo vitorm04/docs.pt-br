@@ -2,12 +2,12 @@
 title: Validação do lado do cliente (validação nas camadas de apresentação)
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Explore os principais conceitos da validação do lado do cliente.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44c1e9fa280b19fcee87d4d1cdfcaa2ab9462f27
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674353"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988695"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validação do lado do cliente (validação nas camadas de apresentação)
 
@@ -15,7 +15,7 @@ Mesmo quando a fonte de verdade for o modelo de domínio e, em último caso, voc
 
 A validação do lado do cliente é uma ótima conveniência para usuários. Ela economiza tempo que de outra forma seria gasto aguardando uma viagem de ida e volta que talvez retorne erros de validação. Em termos de negócios, até mesmo algumas frações de segundos multiplicadas por centenas de vezes por dia chega a ser muito tempo, despesa e frustração. A validação imediata e simples permite que os usuários trabalhem com mais eficiência e façam contribuições e produzam entradas e saídas de melhor qualidade.
 
-Como o modelo de exibição e o modelo de domínio são diferentes, a validação do modelo de exibição e do modelo de domínio podem ser semelhantes, mas têm um propósito diferente. Se estiver preocupado com DRY (o princípio Don't Repeat Yourself), considere que, nesse caso, a reutilização de código poderá significar também acoplamento e, em aplicativos empresariais, será mais importante não acoplar o lado do servidor com o do cliente do que seguir o princípio DRY.
+Como o modelo de exibição e o modelo de domínio são diferentes, a validação do modelo de exibição e do modelo de domínio podem ser semelhantes, mas têm um propósito diferente. Se você está preocupado com DRY (o princípio Não Repita a si mesmo), considere que neste caso a reutilização do código também pode significar acoplamento, e em aplicativos corporativos é mais importante não acoplar o lado do servidor ao lado do cliente do que seguir o princípio DRY.
 
 Mesmo ao usar a validação do lado do cliente, você sempre deve validar seus comandos ou DTOs de entrada no código do servidor, porque as APIs do servidor são um possível vetor de ataque. Geralmente, fazer as duas é a melhor opção, porque se você tiver um aplicativo cliente, de uma perspectiva do UX, será melhor ser proativo e não permitir que o usuário insira informações inválidas.
 
@@ -51,7 +51,7 @@ A implementação de validação do lado do cliente depende de qual tipo de apli
 
 Em resumo, estes são os conceitos mais importantes no que diz respeito à validação:
 
-- Entidades e agregações devem impor sua própria consistência e serem "sempre válidas". Raízes agregadas são responsáveis pela consistência de várias entidades dentro da mesma agregação.
+- Entidades e agregados devem impor sua própria consistência e ser "sempre válidos". Raízes agregadas são responsáveis pela consistência de várias entidades dentro da mesma agregação.
 
 - Se você acha que uma entidade precisa entrar em um estado inválido, considere usar um modelo de objeto diferente – por exemplo, usar um DTO temporário até criar a entidade de domínio definitiva.
 

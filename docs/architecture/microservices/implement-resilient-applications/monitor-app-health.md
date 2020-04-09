@@ -2,20 +2,20 @@
 title: Monitoramento da integridade
 description: Explore uma maneira de implementar o monitoramento de integridade.
 ms.date: 03/02/2020
-ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88354ae0ae59dbfbe40dbe1b25320f8f93d042ce
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401707"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988850"
 ---
 # <a name="health-monitoring"></a>Monitoramento da integridade
 
 O monitoramento de integridade pode permitir informações quase em tempo real sobre o estado de seus contêineres e microsserviços. O monitoramento de integridade é fundamental para vários aspectos da operação de microsserviços e é especialmente importante quando orquestradores executam upgrades parciais de aplicativo em fases, conforme explicado posteriormente.
 
-Aplicativos baseados em microsserviços geralmente usam pulsações ou verificações de integridade para habilitar seus monitores de desempenho, agendadores e orquestradores a controlar a variedade de serviços. Se os serviços não puderem enviar algum tipo de sinal "Estou ativo", seja sob demanda ou conforme um agendamento, seu aplicativo poderá enfrentar riscos quando você implantar atualizações ou poderá simplesmente detectar falhas tarde demais e não conseguir interromper falhas em cascata que possam levar a grandes interrupções.
+Aplicativos baseados em microsserviços geralmente usam pulsações ou verificações de integridade para habilitar seus monitores de desempenho, agendadores e orquestradores a controlar a variedade de serviços. Se os serviços não puderem enviar algum tipo de sinal de "estou vivo", seja sob demanda ou em um cronograma, seu aplicativo pode enfrentar riscos quando você implantar atualizações, ou pode apenas detectar falhas tarde demais e não ser capaz de parar falhas em cascata que podem acabar em grandes paralisações.
 
-No modelo comum, serviços enviam relatórios sobre o status, e essas informações são agregadas para fornecer uma exibição geral do estado de integridade do seu aplicativo. Se você estiver usando um orquestrador, poderá fornecer informações de integridade para o cluster do orquestrador para que o cluster possa atuar adequadamente. Se você investir em relatórios de integridade de alta qualidade personalizados para seu aplicativo, poderá detectar e corrigir problemas do aplicativo em execução com muito mais facilidade.
+No modelo comum, serviços enviam relatórios sobre o status, e essas informações são agregadas para fornecer uma exibição geral do estado de integridade do seu aplicativo. Se você estiver usando um orquestrador, você pode fornecer informações de saúde para o cluster do seu orquestrador, para que o cluster possa agir de acordo. Se você investir em relatórios de integridade de alta qualidade personalizados para seu aplicativo, poderá detectar e corrigir problemas do aplicativo em execução com muito mais facilidade.
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>Implementar verificações de integridade nos serviços do ASP.NET Core
 
@@ -50,9 +50,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-No código anterior, o método `services.AddHealthChecks()` configura uma verificação básica de HTTP que retorna um código de status **200** com “Íntegro”.  Além disso, o método de extensão `AddCheck()` configura uma `SqlConnectionHealthCheck` personalizada que verifica a integridade do Banco de Dados SQL relacionado.
+No código anterior, `services.AddHealthChecks()` o método configura uma verificação HTTP básica que retorna um código de status **200** com "Saudável".  Além disso, o `AddCheck()` método `SqlConnectionHealthCheck` de extensão configura um costume que verifica a saúde do Banco de Dados SQL relacionado.
 
-O método `AddCheck()` adiciona uma nova verificação de integridade com um nome especificado e a implementação do tipo `IHealthCheck`. Adicione várias Verificações de Integridade usando o método AddCheck, de modo que um microsserviço não forneça um status “íntegro” até que todas as suas verificações estejam íntegras.
+O método `AddCheck()` adiciona uma nova verificação de integridade com um nome especificado e a implementação do tipo `IHealthCheck`. Você pode adicionar várias verificações de saúde usando o método AddCheck, para que um microserviço não forneça um status "saudável" até que todas as suas verificações estejam saudáveis.
 
 `SqlConnectionHealthCheck` é uma classe personalizada que implementa `IHealthCheck`, que usa uma cadeia de conexão como um parâmetro de construtor e executa uma consulta simples para verificar se a conexão com o Banco de Dados SQL foi bem-sucedida. Ela retornara `HealthCheckResult.Healthy()` se a consulta for executada com êxito e um `FailureStatus` com a exceção real em caso de falha.
 
@@ -220,7 +220,7 @@ Uma boa notícia é que [AspNetCore.Diagnostics.HealthChecks](https://github.com
 
 **Figura 8-9**. Relatório de verificação de integridade de exemplo em eShopOnContainers
 
-Em resumo, esse serviço de watchdog consulta o ponto de extremidade "/hc" de cada microsserviço. Isso executará todas as verificações de integridade definidas dentro dele e retornará um estado de integridade geral dependendo todas essas verificações. A HealthChecksUI é fácil de ser consumida com algumas entradas de configuração e duas linhas de código que precisam ser adicionadas no Startup.cs do serviço de watchdog.
+Em resumo, este serviço de cão de guarda consulta o ponto final "/hc" de cada microserviço. Isso executará todas as verificações de integridade definidas dentro dele e retornará um estado de integridade geral dependendo todas essas verificações. A HealthChecksUI é fácil de ser consumida com algumas entradas de configuração e duas linhas de código que precisam ser adicionadas no Startup.cs do serviço de watchdog.
 
 Arquivo de configuração de exemplo para interface do usuário da verificação de integridade:
 
@@ -257,7 +257,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
     //…
-    app.UseHealthChecksUI(config=> config.UIPath = “/hc-ui”);
+    app.UseHealthChecksUI(config=> config.UIPath = "/hc-ui");
     //…
 }
 ```

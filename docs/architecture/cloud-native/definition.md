@@ -3,18 +3,18 @@ title: Como definir o que é nativo de nuvem
 description: Conheça os pilares fundamentais que fornecem a base para sistemas nativos em nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 756a2565bd77fcef19a5f15579987836ff0e75a4
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401567"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989084"
 ---
 # <a name="defining-cloud-native"></a>Definindo nuvem nativa
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Pare o que está fazendo e mande uma mensagem para 10 de seus colegas. Peça-lhes para definir o termo "Nativo da Nuvem". Boa chance de você ter oito respostas diferentes. Curiosamente, daqui a seis meses, à medida que as tecnologias e práticas nativas da nuvem evoluem, a definição deles também.
+Pare o que está fazendo e mande sms para dez de seus colegas. Peça-lhes para definir o termo "Cloud Native". Boa chance de você ter oito respostas diferentes.
 
 Nativo da nuvem é tudo sobre mudar a maneira como pensamos sobre a construção de sistemas de negócios críticos.
 
@@ -52,7 +52,7 @@ Vamos dar um tempo para entender melhor o significado de cada pilar.
 
 Os sistemas nativos em nuvem aproveitam ao máximo o modelo de serviço em nuvem.
 
-Projetados para prosperar em um ambiente de nuvem dinâmico e virtualizado, esses sistemas fazem uso extensivo da infra-estrutura de computação [platform as a Service (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) e serviços gerenciados. Eles tratam a infra-estrutura subjacente como *descartável* - provisionada em minutos e redimensionada, dimensionada, movida ou destruída demanda - via automação.
+Projetados para prosperar em um ambiente de nuvem dinâmico e virtualizado, esses sistemas fazem uso extensivo da infra-estrutura de computação [platform as a Service (PaaS)](https://azure.microsoft.com/overview/what-is-paas/) e serviços gerenciados. Eles tratam a infra-estrutura subjacente como *descartável* - provisionada em minutos e redimensionada, dimensionada, movida ou destruída sob demanda - via automação.
 
 Considere o conceito de DevOps amplamente aceito de [Pets vs. Cattle](https://medium.com/@Joachim8675309/devops-concepts-pets-vs-cattle-2380b5aab313). Em um data center tradicional, os servidores são tratados como *Pets*: uma máquina física, com um nome significativo e cuidado. Você dimensiona adicionando mais recursos à mesma máquina (dimensionamento). Se o servidor ficar doente, você cuida dele de volta à saúde. Caso o servidor fique indisponível, todos nota.
 
@@ -290,7 +290,7 @@ Com o IaC, você automatiza o provisionamento de plataformas e a implantação d
 
 Ferramentas como [o Azure Resource Manager,](https://azure.microsoft.com/documentation/articles/resource-group-overview/)Terraform e a CLI do [Azure](https://docs.microsoft.com/cli/azure/)permitem que você script a infra-estrutura de nuvem que você precisa. Nomes de recursos, locais, capacidades e segredos são parametrizados e dinâmicos. O script é versão e verificado no controle de origem como um artefato do seu projeto. Você invoca o script para prover uma infra-estrutura consistente e repetitiva em ambientes do sistema, como QA, encenação e produção.
 
-o capô, IaC é idempotente, o que significa que você pode executar o mesmo script uma e outra vez sem efeitos colaterais. Se a equipe precisa fazer uma mudança, eles editam e reexecutam o script. Apenas os recursos atualizados são afetados.
+Sob o capô, IaC é idempotente, o que significa que você pode executar o mesmo script uma e outra vez sem efeitos colaterais. Se a equipe precisa fazer uma mudança, eles editam e reexecutam o script. Apenas os recursos atualizados são afetados.
 
 No artigo, [What is Infrastructure as Code](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code), autor Sam Guckenheimer descreve como: "As equipes que implementam AC podem fornecer ambientes estáveis rapidamente e em escala. As equipes evitam a configuração manual dos ambientes e impõem consistência representando o estado desejado de seus ambientes via código. As implantações de infra-estrutura com IaC são repetíveis e evitam problemas de tempo de execução causados por deriva de configuração ou dependências ausentes. As equipes de DevOps podem trabalhar em conjunto com um conjunto unificado de práticas e ferramentas para fornecer aplicativos e sua infra-estrutura de suporte de forma rápida, confiável e em escala."
 
@@ -318,7 +318,7 @@ A fase de liberação pega o artefato binário, aplica informações externas de
 
 Finalmente, o recurso lançado é executado no ambiente de execução de destino. Os lançamentos são imutáveis, o que significa que qualquer alteração deve criar uma nova versão.
 
-Aplicando essas práticas, as organizações evoluíram radicalmente a forma como enviam software. Muitos passaram de lançamentos trimestrais para atualizações demanda. O objetivo é pegar problemas no início do ciclo de desenvolvimento quando eles são menos caros para corrigir. Quanto maior a duração entre integrações, mais caros se resolvem os problemas.  Com consistência no processo de integração, as equipes podem cometer mudanças de código com mais freqüência, levando a uma melhor colaboração e qualidade de software.
+Aplicando essas práticas, as organizações evoluíram radicalmente a forma como enviam software. Muitos passaram de lançamentos trimestrais para atualizações sob demanda. O objetivo é pegar problemas no início do ciclo de desenvolvimento quando eles são menos caros para corrigir. Quanto maior a duração entre integrações, mais caros se resolvem os problemas.  Com consistência no processo de integração, as equipes podem cometer mudanças de código com mais freqüência, levando a uma melhor colaboração e qualidade de software.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

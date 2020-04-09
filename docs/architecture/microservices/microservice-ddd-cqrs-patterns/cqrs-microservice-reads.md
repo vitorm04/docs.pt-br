@@ -2,12 +2,12 @@
 title: Implementando leituras/consultas em um microsserviço CQRS
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Entenda a implementação do lado de consultas do CQRS no microsserviço de ordenação no eShopOnContainers usando o Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972081"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988746"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 
@@ -93,13 +93,13 @@ O ponto importante é que, ao usar um tipo dinâmico, a coleção de dados retor
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel como classes DTO predefinidas
 
-**Prós:** ter classes ViewModel estáticas predefinidas, como “contratos” com base em classes DTO explícitas, é definitivamente melhor para APIs públicas, mas também para microsserviços de longo prazo, mesmo que sejam usados apenas pelo mesmo aplicativo.
+Prós : Ter classes de viewmodel estáticas predefinidas, como "contratos" baseados em classes DTO **explícitas,** é definitivamente melhor para APIs públicas, mas também para microsserviços de longo prazo, mesmo que sejam usados apenas pelo mesmo aplicativo.
 
 Se você quiser especificar os tipos de resposta para o Swagger, precisará usar as classes DTO explícitas como o tipo de retorno. Portanto, classes DTO predefinidas permitem que você ofereça informações mais sofisticadas do Swagger. Isso melhora a documentação da API e a compatibilidade ao consumir uma API.
 
 **Contras:** conforme mencionado anteriormente, ao atualizar o código, serão necessárias mais algumas etapas para atualizar as classes DTO.
 
-*Dica com base em nossa experiência:* nas consultas implementadas no microsserviço de Ordenação em eShopOnContainers, começamos a desenvolver usando ViewModels dinâmico, pois ele era muito simples e mais ágil nos primeiros estágios de desenvolvimento. No entanto, quando o desenvolvimento foi estabilizado, escolhemos refatorar as APIs e usar DTOs estáticos ou predefinidos para ViewModels, pois fica mais claro para os consumidores do microsserviço conhecer os tipos de DTO explícitos, usados como "contratos".
+*Dica com base em nossa experiência:* nas consultas implementadas no microsserviço de Ordenação em eShopOnContainers, começamos a desenvolver usando ViewModels dinâmico, pois ele era muito simples e mais ágil nos primeiros estágios de desenvolvimento. Mas, uma vez estabilizado o desenvolvimento, optamos por refatorar as APIs e usar DTOs estáticos ou pré-definidos para os ViewModels, pois é mais claro para os consumidores do microserviço conhecer tipos explícitos de DTO, usados como "contratos".
 
 No exemplo a seguir, você pode ver como a consulta está retornando dados usando uma classe DTO ViewModel explícita: a classe OrderSummary.
 

@@ -2,12 +2,12 @@
 title: Estratégias para tratar falhas parciais
 description: Conheça várias estratégias para tratar falhas parciais normalmente.
 ms.date: 10/16/2018
-ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674503"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988798"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Estratégias para tratar falhas parciais
 
@@ -19,7 +19,7 @@ As estratégias para lidar com falhas parciais incluem o seguinte.
 
 **Solução alternativa para tempos limite de rede**. Em geral, os clientes devem ser criados para não serem bloqueados indefinidamente e para sempre usar tempos limite ao aguardar uma resposta. Usar tempos limite garante que os recursos nunca fiquem bloqueados indefinidamente.
 
-**Usar o padrão de disjuntor**. Nessa abordagem, o processo do cliente rastreia o número de solicitações com falha. Se a taxa de erro exceder um limite configurado, um "disjuntor" viajará para que outras tentativas falhem imediatamente. (Se um grande número de solicitações estiver falhando, isso sugere que o serviço não está disponível e que o envio de solicitações é inútil.) Após um período de tempo, o cliente deve tentar novamente e, se as novas solicitações forem bem sucedidas, feche o disjuntor.
+**Usar o padrão de disjuntor**. Nessa abordagem, o processo do cliente rastreia o número de solicitações com falha. Se a taxa de erro exceder um limite configurado, um "disjuntor" será executado para que novas tentativas falhem imediatamente. (Se um grande número de solicitações estiver falhando, isso sugere que o serviço não está disponível e que o envio de solicitações é inútil.) Após um período de tempo, o cliente deve tentar novamente e, se as novas solicitações forem bem sucedidas, feche o disjuntor.
 
 **Fornecer fallbacks**. Nessa abordagem, o processo de cliente executa a lógica de fallback quando uma solicitação falha, como retornar dados armazenados em cache ou um valor padrão. Essa é uma abordagem adequada para consultas e é mais complexa para atualizações ou comandos.
 

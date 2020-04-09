@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181476"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989214"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamento de marshaling padrão
 O marshaling de interoperabilidade opera em regras que determinam como os dados associados aos parâmetros de método se comportam, conforme eles passam entre a memória gerenciada e não gerenciada. Essas regras internas controlam atividades de marshaling como transformações de tipo de dados, se um receptor pode alterar os dados passados para ele e retornar essas alterações ao chamador e em quais circunstâncias o marshaler fornece otimizações de desempenho.  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Um tipo formatado é um tipo complexo que contém informações que controlam explicitamente o layout de seus membros na memória. As informações de layout de membro são fornecidas usando o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. O layout pode ser um dos seguintes valores de enumeração <xref:System.Runtime.InteropServices.LayoutKind>:  
   
-- **LayoutKind.Automatic**  
+- **LayoutKind.Auto**  
   
      Indica que o Common Language Runtime está livre para reordenar os membros do tipo para eficiência. No entanto, quando um tipo de valor é passado para um código não gerenciado, o layout dos membros é previsível. Uma tentativa de realizar marshaling de uma estrutura como essa causa uma exceção automaticamente.  
   

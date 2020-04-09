@@ -2,12 +2,12 @@
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 description: Aprenda as etapas do "loop externo" do fluxo de trabalho de DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936777"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988967"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -184,7 +184,7 @@ Do ponto de vista da CD e especificamente do Azure DevOps Services, você pode e
 
 **Figura 5-9**. Implantando aplicativos distribuídos no Serviço de Contêiner
 
-Inicialmente, ao implantar em determinados clusters ou orquestradores, tradicionalmente você usaria scripts de implantação e mecanismos específicos a cada orquestrador (ou seja, o Kubernetes e o Service Fabric têm mecanismos de implantação diferentes) em vez da ferramenta `docker-compose`, mais simples e mais fácil de usar, no arquivo de definição `docker-compose.yml`. No entanto, graças à tarefa Implantação do Docker do Azure DevOps Services, mostrada na Figura 5-10, agora você também pode implantar em orquestradores com suporte apenas usando o arquivo `docker-compose.yml` familiar, porque a ferramenta realiza essa "tradução" para você (de seu arquivo `docker-compose.yml` para o formato necessário para o orquestrador).
+Inicialmente, ao implantar em determinados clusters ou orquestradores, tradicionalmente você usaria scripts de implantação e mecanismos específicos a cada orquestrador (ou seja, o Kubernetes e o Service Fabric têm mecanismos de implantação diferentes) em vez da ferramenta `docker-compose`, mais simples e mais fácil de usar, no arquivo de definição `docker-compose.yml`. No entanto, graças à tarefa Azure DevOps Services Docker Deploy, mostrada na Figura 5-10, agora `docker-compose.yml` você também pode implantar nos orquestradores `docker-compose.yml` suportados usando apenas o seu arquivo familiar porque a ferramenta executa essa "tradução" para você (do seu arquivo ao formato necessário pelo orquestrador).
 
 ![Captura de tela mostrando a tarefa Implantar para Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

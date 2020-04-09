@@ -2,12 +2,12 @@
 title: Visão geral de tutoriais passo a passo e introduções técnicas
 description: Modernizar aplicativos .NET existentes com contêineres Azure Cloud e Windows | Passo a passo e visão técnica começam
 ms.date: 04/28/2018
-ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69660892"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987863"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Visão geral de tutoriais passo a passo e introduções técnicas
 
@@ -204,11 +204,11 @@ Pode haver variações sobre a implantação dos aplicativos eShopModernizando e
 
 ### <a name="benefits"></a>Benefícios
 
-As Instâncias de Contêiner do Azure facilitam criar e gerenciar contêineres do Docker no Azure, sem a necessidade de provisionar máquinas virtuais ou adotar um serviço de nível superior. Com a ACI, você pode implantar diretamente um contêiner do Windows no Azure e expô-lo à internet com um nome de domínio totalmente qualificado (FQDN) em questão de segundos (desde que você tenha a imagem do Contêiner do Windows pronta em um registro docker como Docker Hub ou Azure Container Registro).
+As Instâncias de Contêiner do Azure facilitam criar e gerenciar contêineres do Docker no Azure, sem a necessidade de provisionar máquinas virtuais ou adotar um serviço de nível superior. Com a ACI, você pode implantar diretamente um contêiner do Windows no Azure e expô-lo à internet com um nome de domínio totalmente qualificado (FQDN) em questão de segundos (desde que você tenha a imagem do Contêiner do Windows pronta em um registro docker como Docker Hub ou Azure Container Registry).
 
 ### <a name="considerations"></a>Considerações
 
-Implantar contêineres windows com o Framework /ASP.NET ou o SQL Server completos no Azure Container Instances (ACI) não é tão rápido quanto implantar em um Host Docker normal (como um Windows Server 2016 com contêineres windows) porque a imagem do Docker tem que ser baixada (retirada do registro docker) todas as vezes e os tamanhos da imagem do contêiner SQL (15,1 GB) e da imagem do contêiner ASP.NET (13,9 GB) são significativamente significativamente no entanto, é muito mais barato do que manter seu próprio host docker (permanentemente on-line Windows Servidor 2016 com Windows Containers VM no Azure) sem mencionar um orquestrador inteiro como Kubernetes in Azure (AKS) que é, por outro lado, uma ótima escolha para implantações de produção.
+Implantar contêineres do Windows com o Framework /ASP.NET completo ou o SQL Server em Azure Container Instances (ACI) não é tão rápido quanto implantar em um Host Docker normal (como um Windows Server 2016 com contêineres do Windows) porque a imagem do Docker tem que ser baixada (retirada do registro do Docker) todas as vezes e os tamanhos da imagem do contêiner SQL (15,1 GB) e a imagem de contêiner ASP.NET (13,9 GB) são significativamente grandes, porém é muito mais barato do que manter seu próprio host docker (permanentemente on-line Windows Server 2016 com Windows Containers VM no Azure) sem mencionar um orquestrador inteiro como Kubernetes no Azure (AKS), ou seja, por outro lado, uma ótima escolha para implantações de produção.
 
 Como conclusão principal, o uso do Azure Container Instances é uma opção muito atraente para cenários de Dev/Teste e para pipelines de CI/CD.
 
@@ -254,7 +254,7 @@ O objetivo deste passo a passo é aprender a implantar um aplicativo baseado em 
 
 ### <a name="benefits"></a>Benefícios
 
-Há muitos benefícios para implantar em um cluster em Kubernetes. O maior benefício é que você obtenha um ambiente pronto para a produção no qual você pode dimensionar o aplicativo com base no número de instâncias de contêiner que deseja usar (escalabilidade interna nos ádeis existentes) e com base no número de nódulos ou VMs no cluster ( escalabilidade global do cluster).
+Há muitos benefícios para implantar em um cluster em Kubernetes. O maior benefício é que você obtenha um ambiente pronto para a produção no qual você pode dimensionar o aplicativo com base no número de instâncias de contêiner que deseja usar (escalabilidade interna nos ádeis existentes) e com base no número de nódulos ou VMs no cluster (escalabilidade global do cluster).
 
 O Azure Container Service otimiza as populares ferramentas e tecnologias de código aberto especificamente para o Azure. Você recebe uma solução aberta que oferece portabilidade, tanto para seus contêineres quanto para a configuração do seu aplicativo. Você seleciona o tamanho, o número de hosts e o orchestrator tools-Container Service lida com todo o resto.
 

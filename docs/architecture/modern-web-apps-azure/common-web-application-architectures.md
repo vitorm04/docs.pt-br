@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9a8e9450d81ac2e63a8c8ea54592ed81e646e05
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450162"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988122"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -219,7 +219,7 @@ Um aplicativo monolítico não pode ser facilmente decomposto em microsserviços
 
 Talvez o aplicativo ainda não precise dimensionar recursos de modo independente. Muitos aplicativos, quando precisam ser dimensionados para mais de uma única instância, podem passar pelo processo relativamente simples de clonagem da instância inteira. O trabalho adicional para separar o aplicativo em serviços distintos fornece poucas vantagens, enquanto o dimensionamento de instâncias completas do aplicativo é simples e econômico.
 
-No início do desenvolvimento de um aplicativo, você pode não ter uma ideia clara de onde estão os limites funcionais naturais. Mesmo depois de desenvolve rum produto mínimo viável, a separação natural pode ainda não ter surgido. Algumas dessas condições podem ser temporárias. Você pode começar criando um aplicativo monolítico e posteriormente separar alguns recursos para serem desenvolvidos e implantados como microsserviços. Outras condições podem ser essenciais para o espaço do problema do aplicativo, o que significa que o aplicativo pode nunca ser dividido em vários microsserviços.
+No início do desenvolvimento de um aplicativo, você pode não ter uma ideia clara de onde estão os limites funcionais naturais. Mesmo depois de desenvolve rum produto mínimo viável, a separação natural pode ainda não ter surgido. Algumas dessas condições podem ser temporárias. Você pode começar criando um aplicativo monolítico e posteriormente separar alguns recursos para serem desenvolvidos e implantados como microsserviços. Outras condições podem ser essenciais para o espaço problemático do aplicativo, o que significa que o aplicativo pode nunca ser dividido em vários microsserviços.
 
 A separação de um aplicativo em vários processos distintos também apresenta sobrecarga. É mais complexo separar recursos em processos diferentes. Os protocolos de comunicação tornam-se mais complexos. Em vez de chamadas de método, você deve usar a comunicação assíncrona entre serviços. Ao passar para uma arquitetura de microsserviços, você precisa adicionar muitos dos blocos de construção implementados na versão de microsserviços do aplicativo eShopOnContainers: manipulação de barramento de eventos, resiliência e novas tentativas de mensagem, consistência eventual e muito mais.
 

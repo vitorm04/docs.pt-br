@@ -2,12 +2,12 @@
 title: Resiliência e a alta disponibilidade em microsserviços
 description: Microsserviços precisam ser projetados para resistir a falhas de dependências e de rede transitória e precisam ser resilientes para alcançar alta disponibilidade.
 ms.date: 09/20/2018
-ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f8b124cd59b2c3d621267cb437872af42c9ea8
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094221"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988915"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resiliência e a alta disponibilidade em microsserviços
 
@@ -31,8 +31,8 @@ Na seção [Implementação de verificações de integridade nos serviços ASP.N
 
 Você também tem a opção de usar uma excelente biblioteca de código-fonte aberto chamada Pulse vencer, disponível no [GitHub](https://github.com/Xabaril/BeatPulse) e como um [pacote do NuGet](https://www.nuget.org/packages/BeatPulse/). Essa biblioteca também faz verificações de integridade, mas com uma diferença, pois ela lida com dois tipos de verificação:
 
-- **Vivacidade**: verifica se o microsserviço está ativo, ou seja, se ele é capaz de aceitar solicitações e responder.
-- **Preparação**: verifica se as dependências do microsserviço (banco de dados, serviços de fila, etc.) estão prontas, de modo que o microsserviço pode fazer o que se espera.
+- **Viva :** Verifique se o microserviço está vivo, ou seja, se ele é capaz de aceitar pedidos e responder.
+- **Prontidão**: Verifique se as dependências do microserviço (Banco de Dados, serviços de fila, etc.) estão prontas, para que o microserviço possa fazer o que é suposto fazer.
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Usando fluxos de eventos de logs e diagnóstico
 

@@ -3,12 +3,12 @@ title: Configurações de configuração de compilação
 description: Saiba mais sobre as configurações de tempo de execução que configuram como o compilador JIT funciona para aplicativos .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092883"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989110"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opções de configuração em tempo de execução para compilação
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092883"
   - O segundo nível gera código otimizado em segundo plano ("otimizando o JIT").
 - No .NET Core 3.0 e posterior, a compilação hierárquica é habilitada por padrão.
 - No .NET Core 2.1 e 2.2, a compilação hierárquica é desativada por padrão.
-- Para obter mais informações, consulte o [guia de compilação hierárquico](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md).
+- Para obter mais informações, consulte o [guia de compilação hierárquico](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md).
 
 | | Nome da configuração | Valores |
 | - | - | - |

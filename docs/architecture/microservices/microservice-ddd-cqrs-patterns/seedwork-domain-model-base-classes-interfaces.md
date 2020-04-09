@@ -2,12 +2,12 @@
 title: Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o conceito de seedwork como ponto de partida para iniciar a implementação para um modelo de domínio orientado para DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 545be2723ba468a5fd65f81978799328234ca113
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116575"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988304"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
@@ -19,7 +19,7 @@ A figura 7-12 mostra as classes que formam o seedwork do modelo de domínio no m
 O conteúdo detalhado da pasta SeedWork, contendo classes e interfaces básicas: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs.
 :::image-end:::
 
-**Figura 7-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
+**Figura 7-12**. Um conjunto de exemplo de classes e interfaces base do modelo de domínio "seedwork"
 
 Esse é o tipo de reutilização de copiar e colar que muitos desenvolvedores compartilham entre projetos, não uma estrutura formal. É possível ter seedworks em qualquer camada ou biblioteca. No entanto, se o conjunto de classes e interfaces ficar grande o suficiente, você pode querer criar uma única biblioteca de classes.
 
@@ -113,7 +113,7 @@ Os contratos de repositório são simplesmente interfaces .NET que expressam os 
 
 Os repositórios em si, com código do EF Core ou quaisquer outras dependências de infraestrutura e código (LINQ, SQL, etc.), não devem ser implementados no modelo de domínio; os repositórios só deverão implementar as interfaces que você definir no modelo de domínio.
 
-Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler "Use a Interface separada para definir uma interface em um pacote, mas a implemente em outro. Dessa forma, um cliente que precisa da dependência com a interface pode não estar completamente ciente da implementação."
+Um padrão relacionado a essa prática (inserir as interfaces de repositório na camada do modelo de domínio) é o padrão Interface separada. Como [explicado](https://www.martinfowler.com/eaaCatalog/separatedInterface.html) por Martin Fowler, "Use interface separada para definir uma interface em um pacote, mas implementá-la em outro. Dessa forma, um cliente que precisa da dependência da interface pode desconhecer completamente a implementação."
 
 Seguir o padrão Interface separada permite que a camada de aplicativo (nesse caso, o projeto da API Web para o microsserviço) tenha uma dependência nos requisitos definidos no modelo de domínio, mas não uma dependência direta com a camada de infraestrutura/persistência. Além disso, é possível usar a Injeção de dependência para isolar a implementação, o que é implementado na camada de infraestrutura/persistência que usam repositórios.
 

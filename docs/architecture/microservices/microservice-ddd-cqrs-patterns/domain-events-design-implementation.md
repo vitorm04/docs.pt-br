@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: 3bba18d4a77b47abee55c16bae8a64ed27ac9aba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e03abba66945a6434f6a81eaa9f50d53998f346c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74884222"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988710"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -61,7 +61,7 @@ A manipulação de eventos de domínio é um interesse do aplicativo. A camada d
 
 Os eventos de domínio também podem ser usados para disparar um grande número de ações de aplicativo e, o mais importante, devem estar abertos para aumentar esse número no futuro de maneira separada. Por exemplo, quando o pedido é iniciado, você publica um evento de domínio para propagar essas informações para outras agregações ou, até mesmo, para gerar ações de aplicativo, como notificações.
 
-O ponto-chave é o número indefinido de ações a serem executadas quando ocorre um evento de domínio. As ações e regras do domínio e do aplicativo vão, eventualmente, aumentar. A complexidade ou o número de ações de efeito colateral que ocorre aumentará, mas se o código estiver acoplado com “associação” (ou seja, criando objetos específicos com `new`), então, sempre que for necessário adicionar uma nova ação você também terá que alterar o código testado e funcionando.
+O ponto-chave é o número indefinido de ações a serem executadas quando ocorre um evento de domínio. As ações e regras do domínio e do aplicativo vão, eventualmente, aumentar. A complexidade ou o número de ações de efeito colateral quando algo acontece crescerá, mas se `new`seu código estivesse associado a "cola" (ou seja, criando objetos específicos com), então toda vez que você precisasse adicionar uma nova ação, você também precisaria mudar o código de trabalho e testado.
 
 Essa alteração pode resultar em novos bugs e essa abordagem também vai contra o [Princípio Aberto/Fechado](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID). E não se trata apenas disso, pois a classe original que estava orquestrando as operações cresceria sem parar, o que vai contra o [SRP (princípio de responsabilidade única)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -69,9 +69,9 @@ Por outro lado, se você usa eventos de domínio, você pode criar uma implement
 
 1. Enviar um comando (por exemplo, CreateOrder).
 2. Receber o comando em um manipulador de comandos.
-   - Executar a transação de uma única agregação.
+   - Execute a transação de um único agregado.
    - (Opcional) Acionar eventos de domínio para efeitos colaterais (por exemplo, OrderStartedDomainEvent).
-3. Manipular eventos de domínio (dentro do processo atual) que executarão um número indefinido de efeitos colaterais em várias agregações ou ações de aplicativo. Por exemplo: 
+3. Manipular eventos de domínio (dentro do processo atual) que executarão um número indefinido de efeitos colaterais em várias agregações ou ações de aplicativo. Por exemplo:
    - Verificar ou criar o comprador e a forma de pagamento.
    - Criar e enviar um evento de integração relacionado ao barramento de eventos a fim de propagar estados entre microsserviços ou disparar ações externas, como o envio de um email para o comprador.
    - Manipular outros efeitos colaterais.
@@ -82,7 +82,7 @@ Conforme mostrado na Figura 7-15, começando pelo mesmo evento de domínio, voc�
 
 **Figura 7-15**. Manipulando várias ações por domínio
 
-Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele. Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
+Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele. Os manipuladores de eventos geralmente estão na camada do aplicativo, porque você usará objetos de infra-estrutura como repositórios ou uma API de aplicativo para o comportamento do microserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
 
 Ter um número aberto de manipuladores por evento de domínio permite adicionar quantas regras de domínio forem necessárias, sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
 
@@ -124,7 +124,7 @@ Nos termos da linguagem ubíqua do domínio, como um evento é algo que ocorreu 
 
 Conforme observado anteriormente, uma característica importante de eventos é que, como um evento é algo que ocorreu no passado, ele não deve ser alterado. Portanto, ele deve ser uma classe imutável. Observe no código anterior que as propriedades são somente leitura. Não é possível atualizar o objeto, você pode definir os valores apenas quando ele é criado.
 
-É importante destacar aqui que se os eventos de domínio fossem manipulados de forma assíncrona, usando uma fila que exigia a serialização e a desserialização dos objetos de evento, as propriedades precisariam ser um "conjunto particular" em vez de somente leitura, de forma que desserializador poderia atribuir os valores após a remoção da fila. Isso não é um problema no microsserviço de pedidos, pois o evento de domínio pub/sub é implementado de forma síncrona usando o MediatR.
+É importante destacar aqui que se os eventos de domínio fossem tratados de forma assíncrona, usando uma fila que exigia serialização e desserialização dos objetos de evento, as propriedades teriam que ser "conjunto privado" em vez de leitura, para que o desumseriador pudesse atribuir os valores ao desfazer. Isso não é um problema no microsserviço de pedidos, pois o evento de domínio pub/sub é implementado de forma síncrona usando o MediatR.
 
 ### <a name="raise-domain-events"></a>Acionar eventos de domínio
 
@@ -248,7 +248,7 @@ Outra maneira de mapear eventos para vários manipuladores de eventos é o uso d
 
 **Figura 7-16**. Dispatcher de evento de domínio usando IoC
 
-Você pode criar todos os detalhes técnicos e artefatos para implementar essa abordagem por si só. No entanto, você também pode usar as bibliotecas disponíveis, como a [MediatR](https://github.com/jbogard/MediatR), que usa seu contêiner de IoC nos bastidores. Portanto, você pode usar diretamente as interfaces predefinidas e métodos de expedição/publicação do objeto mediador.
+Você pode criar todos os detalhes técnicos e artefatos para implementar essa abordagem por si só. No entanto, você também pode usar as bibliotecas disponíveis, como a [MediatR](https://github.com/jbogard/MediatR), que usa seu contêiner de IoC nos bastidores. Portanto, você pode usar diretamente as interfaces predefinidas e os métodos de publicação/expedição do objeto mediador.
 
 No código, primeiro você precisa registrar os tipos de manipulador de eventos no contêiner de IoC, conforme mostrado no seguinte exemplo no [microsserviço de pedidos eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 

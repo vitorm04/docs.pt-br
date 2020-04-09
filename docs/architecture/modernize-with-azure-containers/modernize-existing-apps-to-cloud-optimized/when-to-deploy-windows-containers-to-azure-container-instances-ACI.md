@@ -2,12 +2,12 @@
 title: Quando implantar os contêineres do Windows em ACI (ACI)
 description: Modernizar os aplicativos .NET existentes com contêineres Azure Cloud e Windows | Quando implantar os contêineres do Windows em ACI (ACI)
 ms.date: 04/29/2018
-ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c889db6f0475f24a196144c7fb62faec4c173ed
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69577929"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989149"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Quando implantar os contêineres do Windows em ACI (ACI)
 
@@ -28,7 +28,7 @@ No entanto, mesmo quando a ACI é considerada infra-estrutura porque apenas forn
 Os principais benefícios da Azure Container Instances (ACI) são:
 
 - Executar contêineres sem gerenciar servidores
-- Aumente a agilidade com contêineres demanda
+- Aumente a agilidade com contêineres sob demanda
 - Implante contêineres na nuvem com simplicidade e velocidade sem precedentes — com um único comando.
 - Aplicações seguras com isolamento de hipervisor
 

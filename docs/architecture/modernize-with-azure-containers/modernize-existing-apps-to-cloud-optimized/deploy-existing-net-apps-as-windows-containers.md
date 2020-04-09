@@ -2,12 +2,12 @@
 title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar os aplicativos .NET existentes com contêineres Azure Cloud e Windows | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089555"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987966"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows
 
@@ -152,7 +152,7 @@ Desses três, a ACI proporciona um grande benefício, que é o fato de que você
 
 Os produtos em contêineres de suporte a Azure que estão ao mesmo tempo posicionados mais no nível PaaS (Platform as a Service) são:
 
-- **Serviço de aplicativo do Azure**
+- **Serviço de Aplicativo do Azure**
 - **Serviço Azure Kubernetes (AKS e ACS)**
 - **Lote do Azure**
 

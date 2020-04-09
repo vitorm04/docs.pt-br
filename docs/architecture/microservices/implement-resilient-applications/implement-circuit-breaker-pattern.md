@@ -2,12 +2,12 @@
 title: Implementando o padrão de Disjuntor
 description: Saiba como implementar o padrão de disjuntor como um sistema complementar para repetições de HTTP.
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847239"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988879"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementar o padrão de disjuntor
 
@@ -65,9 +65,9 @@ Do ponto de vista de uso, ao usar httpclient, não há necessidade de adicionar 
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testar repetições de HTTP e disjuntores no eShopOnContainers
 
-Sempre que você inicia a solução eShopOnContainers em um host do Docker, ela precisa iniciar vários contêineres. Alguns dos contêineres são mais lentos em iniciar e inicializar, como o contêiner do SQL Server. Isso é verdadeiro principalmente na primeira vez que você implanta o aplicativo eShopOnContainers no Docker, porque é necessário configurar as imagens e o banco de dados. O fato de que alguns contêineres iniciam mais lentamente do que outros pode fazer o restante dos serviços lançarem exceções HTTP, mesmo que você defina dependências entre contêineres no nível do Docker Compose, como explicado nas seções anteriores. Essas dependências do Docker Compose entre os contêineres são apenas no nível do processo. O processo de ponto de entrada do contêiner pode ser iniciado, mas o SQL Server talvez não esteja pronto para consultas. O resultado pode ser uma cascata de erros e o aplicativo pode obter uma exceção ao tentar consumir aquele contêiner específico.
+Sempre que você inicia a solução eShopOnContainers em um host do Docker, ela precisa iniciar vários contêineres. Alguns dos contêineres são mais lentos em iniciar e inicializar, como o contêiner do SQL Server. Isso é verdadeiro principalmente na primeira vez que você implanta o aplicativo eShopOnContainers no Docker, porque é necessário configurar as imagens e o banco de dados. O fato de que alguns contêineres iniciam mais lentamente do que outros pode fazer o restante dos serviços lançarem exceções HTTP, mesmo que você defina dependências entre contêineres no nível do Docker Compose, como explicado nas seções anteriores. Essas dependências do Docker Compose entre os contêineres são apenas no nível do processo. O processo de ponto de entrada do contêiner pode ser iniciado, mas o SQL Server pode não estar pronto para consultas. O resultado pode ser uma cascata de erros e o aplicativo pode obter uma exceção ao tentar consumir aquele contêiner específico.
 
-Você também pode ver esse tipo de erro na inicialização quando o aplicativo está sendo implantado para a nuvem. Nesse caso, os orquestradores poderão estar movendo contêineres de um nó ou VM para outro (ou seja, começando novas instâncias) ao equilibrar o número de contêineres entre nós do cluster.
+Você também pode ver esse tipo de erro na inicialização quando o aplicativo está sendo implantado para a nuvem. Nesse caso, os orquestradores podem estar movendo contêineres de um nó ou VM para outro (ou seja, iniciando novas instâncias) ao equilibrar o número de contêineres nos nós do cluster.
 
 A maneira como 'eShopOnContainers' resolve esses problemas ao iniciar todos os contêineres é usando o padrão de repetições ilustrado anteriormente.
 
@@ -96,7 +96,7 @@ Em seguida, você pode verificar o status usando o URI `http://localhost:5103/fa
 
 ![Captura de tela de verificação do status da simulação de middleware falhando.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**Figura 8-5**. Verificando o estado do middleware ASP.NET com "Falha" – neste caso, desabilitado.
+**Figura 8-5**. Verificando o estado do "Falhando" ASP.NET middleware – Neste caso, desativado.
 
 Neste ponto, o de microsserviço Cesta responde com o código de status 500 sempre que você o chama ou invoca.
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-Segue um resumo. A política de repetição tenta várias vezes fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de repetições atinge o número máximo definido para a política de Disjuntor (nesse caso, 5), o aplicativo gera uma BrokenCircuitException. O resultado é uma mensagem amigável, como mostra a Figura 8-6.
+Aqui está um resumo. A política de repetição tenta várias vezes fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de repetições atinge o número máximo definido para a política de Disjuntor (nesse caso, 5), o aplicativo gera uma BrokenCircuitException. O resultado é uma mensagem amigável, como mostra a Figura 8-6.
 
 ![Captura de tela do aplicativo web MVC com erro inoperante do serviço de cesta.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

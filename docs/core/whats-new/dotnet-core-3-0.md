@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523588"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989162"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -140,7 +140,7 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
-A TC ([compilação em camadas](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use mais adaptativamente o compilador Just-in-Time (JIT) para obter um melhor desempenho.
+A TC ([compilação em camadas](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use mais adaptativamente o compilador Just-in-Time (JIT) para obter um melhor desempenho.
 
 O principal benefício da compilação hierárquica é fornecer duas maneiras de métodos de jitting: em um nível de menor qualidade, mas mais rápido ou em um nível mais lento, mas de maior qualidade. A qualidade refere-se ao quão bem o método é otimizado. O TC ajuda a melhorar o desempenho de um aplicativo à medida que passa por várias etapas de execução, desde a inicialização até o estado estável. Quando a compilação hierárquica é desativada, cada método é compilado de uma única maneira que é tendenciosa para o desempenho de estado estável sobre o desempenho da inicialização.
 
@@ -506,11 +506,11 @@ Foram adicionadas APIs que permitem acesso a determinadas instruções da CPU or
 
 Quando apropriado, as bibliotecas .NET começaram usando estas instruções para melhorar o desempenho.
 
-Para obter mais informações, consulte [Intrínsecos dependentes da plataforma .NET](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md).
+Para obter mais informações, consulte [Intrínseca dependente da plataforma .NET](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md).
 
 ### <a name="improved-net-core-version-apis"></a>APIs de versão aprimoradas do .NET Core
 
-Começando com o .NET Core 3.0, as APIs de versão fornecidas com o .NET Core agora retornam as informações que você espera. Por exemplo: 
+Começando com o .NET Core 3.0, as APIs de versão fornecidas com o .NET Core agora retornam as informações que você espera. Por exemplo:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
