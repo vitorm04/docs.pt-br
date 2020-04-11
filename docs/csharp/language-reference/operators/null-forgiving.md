@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 36bfa46cebd2b35c4985dfc23dbe84f8f5dc9201
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846279"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121438"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! Operador (inodção nula) (referência C#)
 
@@ -19,7 +19,7 @@ Disponível em C# 8.0 e posterior, o operador postfix não-ary `!` é o operador
 
 O operador de perdoar nulos não tem efeito no tempo de execução. Afeta apenas a análise estática do fluxo do compilador alterando o estado nulo da expressão. No tempo de `x!` execução, a expressão avalia `x`o resultado da expressão subjacente .
 
-Para obter mais informações sobre o recurso de tipos de referência anulados, consulte [tipos de referência anulados](../../nullable-references.md).
+Para obter mais informações sobre o recurso de tipos de referência anulados, consulte [tipos de referência anulados](../builtin-types/nullable-reference-types.md).
 
 ## <a name="examples"></a>Exemplos
 

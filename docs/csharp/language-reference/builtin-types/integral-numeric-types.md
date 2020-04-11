@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093195"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121463"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos integrais (Referência C#)
 
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Conversões
 
-Você pode converter qualquer tipo numérico integral para qualquer outro tipo numérico integral. Se o tipo de destino pode armazenar todos os valores do tipo de origem, a conversão está implícita. Caso contrário, você precisa usar o [operador `()` de elenco](../operators/type-testing-and-cast.md#cast-operator-) para invocar uma conversão explícita. Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
+Você pode converter qualquer tipo numérico integral para qualquer outro tipo numérico integral. Se o tipo de destino pode armazenar todos os valores do tipo de origem, a conversão está implícita. Caso contrário, você precisa usar uma [expressão de elenco](../operators/type-testing-and-cast.md#cast-expression) para realizar uma conversão explícita. Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

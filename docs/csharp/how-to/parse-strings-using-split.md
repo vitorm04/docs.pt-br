@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: b46429f3b55658e1f2a7d21eed714c1d02236c57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73973228"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121503"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Como analisar strings usando String.Split (Guia C#)
 
@@ -48,7 +48,7 @@ O <xref:System.String.Split%2A?displayProperty=nameWithType> pode receber uma ma
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Confira também
 

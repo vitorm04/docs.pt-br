@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123936"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121597"
 ---
 # <a name="how-to-create-com-wrappers"></a>Como criar wrappers COM
 
@@ -39,7 +39,7 @@ No Visual Studio 2005, você pode adicionar o wrapper COM como uma referência a
 Agora você pode escrever o código para acessar o objeto COM. Comece declarando o objeto, por exemplo, com uma instrução `Imports` para o Visual Basic ou uma instrução `Using` para o C#.
 
 > [!NOTE]
-> Caso deseje programar componentes do Microsoft Office, primeiro instale os [PIAs (Assemblies de Interoperabilidade Primários) do Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) no Centro de Download da Microsoft. Na etapa 4, selecione a última versão da biblioteca de objetos disponível para o produto do Office desejado, como a **Biblioteca de Objetos do Microsoft Word 11.0**.  
+> Se você quiser programar os componentes do Microsoft Office, instale primeiro o [Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508).
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para criar um RCW (Runtime Callable Wrapper) usando ferramentas do .NET Framework  
   
@@ -55,7 +55,7 @@ Agora você pode escrever o código para acessar o objeto COM. Comece declarando
   
      Verifique se você tem um número de versão de quatro partes completo para o assembly no arquivo AssemblyInfo. Esse número é necessário para manter o controle de versão no Registro do Windows. Para obter mais informações sobre os números de versão, consulte [Controle de versão do assembly](../../standard/assembly/versioning.md).  
   
-2. No menu **Projeto**, clique em **Propriedades**.  
+2. No menu **Projeto** , clique em **Propriedades**.  
   
 3. Clique na guia **Compilar**.  
   
@@ -71,7 +71,7 @@ Essa ferramenta lê os metadados do assembly e adiciona as entradas necessárias
   
 Execute o Regasm.exe em um assembly localizado em qualquer diretório e, em seguida, execute o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para movê-lo para o cache de assembly global. A movimentação do assembly não invalida as entradas do Registro de local, porque o cache de assembly global sempre será examinado se o assembly não for encontrado em outro lugar.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md)
 - [COM Callable Wrapper](../../standard/native-interop/com-callable-wrapper.md)

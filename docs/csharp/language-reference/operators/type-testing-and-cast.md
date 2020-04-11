@@ -1,5 +1,5 @@
 ---
-title: Operadores cast e teste de tipo – Referência de C#
+title: Operadores de teste de tipo e expressão de elenco - referência C#
 description: Saiba mais sobre os operadores do C# que você pode usar para verificar o tipo de um resultado de expressão e convertê-lo para outro tipo, se necessário.
 ms.date: 06/21/2019
 author: pkulikov
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507081"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121413"
 ---
-# <a name="type-testing-and-cast-operators-c-reference"></a>Operadores cast e teste de tipo (Referência de C#)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Operadores de teste de tipo e expressão de elenco (referência C#)
 
-Você pode usar os seguintes operadores para executar a verificação de tipo ou conversão de tipo:
+Você pode usar os seguintes operadores e expressões para realizar verificação de tipo ou conversão de tipo:
 
 - [operador is](#is-operator): para verificar se o tipo de runtime de uma expressão é compatível com um determinado tipo
 - [operador as](#as-operator): para converter explicitamente uma expressão em um determinado tipo, se o tipo de runtime for compatível com esse tipo
-- [operador cast ()](#cast-operator-): para executar uma conversão explícita
+- [expressão de elenco](#cast-expression): para realizar uma conversão explícita
 - [operador typeof](#typeof-operator): para obter a instância <xref:System.Type?displayProperty=nameWithType> para um tipo
 
 ## <a name="is-operator"></a>Operador is
@@ -76,7 +76,7 @@ Para saber mais sobre o padrão de tipos e outros padrões com suporte, confira 
 
 ## <a name="as-operator"></a>Operador as
 
-O operador `as` converte explicitamente o resultado de uma expressão para uma determinada referência ou tipo de valor anulável. Se a conversão não for possível, o operador `as` retorna `null`. Ao contrário do [operador cast ()](#cast-operator-), o operador `as` nunca lança uma exceção.
+O operador `as` converte explicitamente o resultado de uma expressão para uma determinada referência ou tipo de valor anulável. Se a conversão não for possível, o operador `as` retorna `null`. Ao contrário de `as` uma expressão de [elenco,](#cast-expression)o operador nunca lança uma exceção.
 
 A expressão da forma
 
@@ -92,7 +92,7 @@ E is T ? (T)(E) : (T)null
 
 exceto que `E` é avaliado apenas uma vez.
 
-O operador `as` considera apenas as conversões de referência, anulável, boxing e unboxing. Não é possível usar o operador `as` para executar uma conversão definida pelo usuário. Para fazer isso, use o operador [cast ()](#cast-operator-).
+O operador `as` considera apenas as conversões de referência, anulável, boxing e unboxing. Não é possível usar o operador `as` para executar uma conversão definida pelo usuário. Para fazer isso, use uma [expressão de elenco](#cast-expression).
 
 O exemplo a seguir demonstra o uso do operador `as`:
 
@@ -101,7 +101,7 @@ O exemplo a seguir demonstra o uso do operador `as`:
 > [!NOTE]
 > Como mostrado no exemplo anterior, você precisa comparar o resultado da expressão `as` com `null` para verificar se uma conversão foi bem-sucedida. Começando com C# 7.0, você pode usar o [operador is](#type-testing-with-pattern-matching) tanto para testar se a conversão é bem sucedida e, se for bem-sucedida, atribuir seu resultado a uma nova variável.
 
-## <a name="cast-operator-"></a>Operador cast ()
+## <a name="cast-expression"></a>Expressão de conversão
 
 Uma expressão de conversão do formulário `(T)E` realiza uma conversão explícita do resultado da expressão `E` para o tipo `T`. Se não existir nenhuma conversão explícita do tipo `E` para o tipo `T`, ocorrerá um erro em tempo de compilação. No tempo de execução, uma conversão explícita pode não ter êxito e uma expressão de conversão pode lançar uma exceção.
 

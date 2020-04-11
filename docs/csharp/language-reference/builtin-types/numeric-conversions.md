@@ -8,16 +8,16 @@ helpviewer_keywords:
 - numeric conversions [C#], explicit
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
-ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7d53e508e4d585c746a3cc61824cdace7707deb
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399598"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121459"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>Conversões numéricas incorporadas (referência C#)
 
-C# fornece um conjunto de tipos numéricos [integrais](integral-numeric-types.md) e [de ponto flutuante.](floating-point-numeric-types.md) Existe uma conversão entre dois tipos numéricos, implícitos ou explícitos. Você deve usar o [operador `()` de elenco](../operators/type-testing-and-cast.md#cast-operator-) para invocar uma conversão explícita.
+C# fornece um conjunto de tipos numéricos [integrais](integral-numeric-types.md) e [de ponto flutuante.](floating-point-numeric-types.md) Existe uma conversão entre dois tipos numéricos, implícitos ou explícitos. Você deve usar uma [expressão de elenco](../operators/type-testing-and-cast.md#cast-expression) para realizar uma conversão explícita.
 
 ## <a name="implicit-numeric-conversions"></a>Conversões numéricas implícitas
 
@@ -26,14 +26,14 @@ A tabela a seguir mostra as conversões implícitas predefinidas entre os tipos 
 |De|Para|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`, `int`, `long`, `float`, `double` ou `decimal`|
-|[Byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|
+|[byte](integral-numeric-types.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|
 |[Curto](integral-numeric-types.md)|`int`, `long`, `float`, `double` ou `decimal`|
 |[ushort](integral-numeric-types.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` ou `decimal`|
-|[Int](integral-numeric-types.md)|`long`, `float`, `double` ou `decimal`|
+|[INT](integral-numeric-types.md)|`long`, `float`, `double` ou `decimal`|
 |[uint](integral-numeric-types.md)|`long`, `ulong`, `float`, `double` ou `decimal`|
 |[Longas](integral-numeric-types.md)|`float`, `double` ou `decimal`|
 |[Ulong](integral-numeric-types.md)|`float`, `double` ou `decimal`|
-|[Flutuar](floating-point-numeric-types.md)|`double`|
+|[FLOAT](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
 > As conversões `int`implícitas `long`de `ulong` `float` , `uint` `long` , ou de e para ou para ou `ulong` para `double` pode causar uma perda de precisão, mas nunca uma perda de uma ordem de magnitude. As outras conversões numéricas implícitas nunca perdem qualquer informação.
@@ -62,16 +62,16 @@ A tabela a seguir mostra as conversões explícitas predefinidas entre os tipos 
 |De|Para|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`, `ushort`, `uint` ou `ulong`|
-|[Byte](integral-numeric-types.md)|`sbyte`|
+|[byte](integral-numeric-types.md)|`sbyte`|
 |[Curto](integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint` ou `ulong`|
 |[ushort](integral-numeric-types.md)|`sbyte`, `byte` ou `short`|
-|[Int](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` ou `ulong`|
+|[INT](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint` ou `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort` ou `int`|
 |[Longas](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` ou `ulong`|
 |[Ulong](integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint` ou `long`|
-|[Flutuar](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong` ou `decimal`|
-|[Duplo](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , ou`decimal`|
-|[Decimal](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , ou`double`|
+|[FLOAT](floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong` ou `decimal`|
+|[double](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , ou`decimal`|
+|[decimal](floating-point-numeric-types.md)|`sbyte`, `byte` `short`, `ushort` `int`, `uint` `long`, `ulong` `float`, , , , ou`double`|
 
 > [!NOTE]
 > Uma conversão numérica explícita pode resultar em perda de dados <xref:System.OverflowException>ou lançar uma exceção, tipicamente uma .

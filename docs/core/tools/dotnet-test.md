@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507302"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121035"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  Especifica um agente para resultados do teste.
+  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não `-l "console;v=d"` aceita `-l "console;verbosity=detailed"`abreviaturas: em vez de usar .
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+  Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`. Para obter mais informações, consulte <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
 - `RunSettings`Argumentos
 
@@ -149,6 +149,12 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- Execute os testes no projeto no diretório atual e registre com verbosidade detalhada para o console:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>Filtrar detalhes da opção
@@ -192,3 +198,4 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 
 - [Frameworks e Metas](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
+- [Passando argumentos de runsettings através da linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

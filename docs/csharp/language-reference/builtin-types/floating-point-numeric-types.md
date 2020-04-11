@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a277215d438b5f6b0bbbef72e5e0121b6ce41990
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77215248"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121477"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
@@ -107,7 +107,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Conversões
 
-Há apenas uma conversão implícita entre os tipos `float` numéricos de ponto flutuante: de . `double` No entanto, você pode converter qualquer tipo de ponto flutuante para qualquer outro tipo de ponto flutuante com o [gesso explícito](../operators/type-testing-and-cast.md#cast-operator-). Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
+Há apenas uma conversão implícita entre os tipos `float` numéricos de ponto flutuante: de . `double` No entanto, você pode converter qualquer tipo de ponto flutuante para qualquer outro tipo de ponto flutuante com o [gesso explícito](../operators/type-testing-and-cast.md#cast-expression). Para obter mais informações, consulte [conversões numéricas incorporadas](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

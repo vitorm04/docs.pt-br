@@ -3,12 +3,12 @@ title: Como modificar o conteúdo das cordas - Guia C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543255"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121134"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo das strings em C\#
 
@@ -70,9 +70,9 @@ Como as strings são imutáveis, os exemplos anteriores criam strings temporári
 
 Você pode modificar uma seqüência em um bloco fixo com código inseguro, mas é **fortemente** desencorajado a modificar o conteúdo da seqüência depois que uma string é criada. Fazer isso vai quebrar as coisas de maneiras imprevisíveis. Por exemplo, se alguém internar uma string que tenha o mesmo conteúdo que o seu, ele receberá sua cópia e não esperará que você esteja modificando sua seqüência.
 
-Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
+Você pode experimentar essas amostras olhando para o código em nosso [repositório GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Ou então, você pode baixar os exemplos [como um arquivo zip](../../../samples/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Confira também
 
 - [Expressões regulares do .NET Framework](../../standard/base-types/regular-expressions.md)
-- [Linguagem de Expressão Regular - Referência Rápida](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de expressões regulares – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -2,12 +2,12 @@
 title: Usando Windows Management Instrumentation para diagnóstico
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185682"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121541"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Usando Windows Management Instrumentation para diagnóstico
 A Windows Communication Foundation (WCF) expõe os dados de inspeção de um serviço em tempo de execução através de um provedor WCF Windows Management Instrumentation (WMI).  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>Acessando instâncias remotas de objeto WMI  
  Se você precisar acessar instâncias WCF WMI em uma máquina remota, você deve habilitar a privacidade do pacote nas ferramentas que você usa para acesso. A seção a seguir descreve como alcançá-los usando o WMI CIM Studio, O Tester de Instrumentação de Gerenciamento do Windows, bem como o .NET SDK 2.0.  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- Se você tiver instalado [ferramentas administrativas WMI,](https://go.microsoft.com/fwlink/?LinkId=95185)você pode usar o WMI CIM Studio para acessar instâncias WMI. As ferramentas estão na seguinte pasta  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+Se você instalou ferramentas administrativas WMI, você pode usar o WMI CIM Studio para acessar instâncias WMI. As ferramentas estão na seguinte pasta:
   
- **%windir%\Arquivos do programa\WMI Ferramentas\\**  
+*%windir%\Arquivos do programa\WMI Ferramentas\\*
   
 1. No **Conecte-se ao namespace:** janela, digite **root\ServiceModel** e clique em **OK.**  
   

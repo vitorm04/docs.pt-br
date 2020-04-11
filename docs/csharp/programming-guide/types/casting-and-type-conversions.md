@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711890"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121383"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Coerções e conversões de tipo (Guia de Programação em C#)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Conversões implícitas**: nenhuma sintaxe especial é necessária porque a conversão é de tipo seguro e nenhum dado será perdido. Exemplos incluem conversões de tipos integrais menores para maiores e conversões de classes derivadas para classes base.  
   
-- **Conversões explícitas (moldes)**: Conversões explícitas requerem o [ `()`operador de elenco ](../../language-reference/operators/type-testing-and-cast.md#cast-operator-). A conversão é necessária quando as informações podem ser perdidas na conversão ou quando a conversão pode não funcionar por outros motivos. Exemplos típicos incluem a conversão numérica para um tipo que tem menos precisão ou um intervalo menor e a conversão de uma instância de classe base para uma classe derivada.  
+- **Conversões explícitas (moldes)**: Conversões explícitas requerem uma [expressão de elenco](../../language-reference/operators/type-testing-and-cast.md#cast-expression). A conversão é necessária quando as informações podem ser perdidas na conversão ou quando a conversão pode não funcionar por outros motivos. Exemplos típicos incluem a conversão numérica para um tipo que tem menos precisão ou um intervalo menor e a conversão de uma instância de classe base para uma classe derivada.  
   
 - **Conversões definidas pelo usuário**: as conversões definidas pelo usuário são realizadas por métodos especiais que podem ser definidos para habilitar conversões explícitas e implícitas entre tipos personalizados que não têm uma relação de classe base/classe derivada. Para saber mais, confira [Operadores de conversão definidos pelo usuário](../../language-reference/operators/user-defined-conversion-operators.md).  
   
@@ -92,7 +92,7 @@ Para saber mais, confira a seção [Conversões](~/_csharplang/spec/conversions.
 
 - [C# Guia de Programação](../index.md)
 - [Tipos](./index.md)
-- [Operador cast ()](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [Expressão de conversão](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [Operadores de conversões definidas pelo usuário](../../language-reference/operators/user-defined-conversion-operators.md)
 - [Conversão de tipos generalizados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Como converter uma cadeia de caracteres em um número](./how-to-convert-a-string-to-a-number.md)
