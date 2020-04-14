@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546731"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242732"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>Como usar classes de codificação de caracteres em .NET
 
@@ -37,7 +37,7 @@ Todas as classes de codificação de caracteres no .NET são herdadas da classe 
 
 - Chame o construtor de classe da codificação. A instância de objetos para as codificações ASCII, UTF-7, UTF-8, UTF-16 e UTF-32 podem ser criadas dessa forma. Por padrão, cada objeto usa fallback de substituição para manipular as cadeias de caracteres que ele não consegue codificar e bytes que ele não consegue decodificar, mas, em vez disso, você pode especificar que uma exceção seja gerada. Para obter mais informações, consulte [O recuo de substituição](../../../docs/standard/base-types/character-encoding.md#Replacement) e o [recuo de exceção](../../../docs/standard/base-types/character-encoding.md#Exception).
 
-- Chame o construtor <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> e passe por ele um inteiro que represente a codificação. Os objetos de codificação padrão usam o fallback de substituição e a página de código e o DBCS (conjunto de caracteres de dois bytes) que codificam objetos usam o fallback que melhor se ajusta para manipular cadeias de caracteres que eles não conseguem codificar e bytes que eles não conseguem decodificar. Para obter mais informações, consulte [O retorno mais adequado](../../../docs/standard/base-types/character-encoding.md#BestFit).
+- Chame o construtor <xref:System.Text.Encoding.%23ctor%28System.Int32%29> e passe por ele um inteiro que represente a codificação. Os objetos de codificação padrão usam o fallback de substituição e a página de código e o DBCS (conjunto de caracteres de dois bytes) que codificam objetos usam o fallback que melhor se ajusta para manipular cadeias de caracteres que eles não conseguem codificar e bytes que eles não conseguem decodificar. Para obter mais informações, consulte [O retorno mais adequado](../../../docs/standard/base-types/character-encoding.md#BestFit).
 
 - Chame o método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que retorna qualquer padrão, página de código ou codificação DBCS disponível no .NET. As sobrecargas permitem especificar um objeto de fallback para o codificador e o decodificador.
 

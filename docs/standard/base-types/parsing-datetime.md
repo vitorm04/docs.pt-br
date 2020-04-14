@@ -1,5 +1,5 @@
 ---
-title: 'Como: converter cadeias de caracteres em DateTime'
+title: Converter strings para DateTime
 description: Aprenda técnicas para analisar cadeias de caracteres que representam datas e horas a fim de criar um DateTime com base na cadeia de caracteres de data e hora.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156537"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242641"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>Analisando Cadeias de Caracteres de Data e Hora no .NET
+# <a name="parse-date-and-time-strings-in-net"></a>Analisar as seqüências de data e hora em .NET
 
 A análise de cadeias de caracteres para convertê-las em objetos <xref:System.DateTime> exige que você especifique as informações de como as datas e horas são representadas como texto. Diferentes culturas usam ordens diferentes para dia, mês e ano. Algumas representações usam o relógio de 24 horas, outras especificam "AM" e "PM". Alguns aplicativos precisam apenas da data. Outros precisam apenas da hora. Há também outros que precisam especificar tanto a data quanto a hora. Os métodos que convertem cadeias de caracteres em objetos <xref:System.DateTime> permitem que você forneça informações detalhadas sobre os formatos esperados e os elementos de uma data e hora que seu aplicativo precisa. Há três subtarefas para converter corretamente o texto em um <xref:System.DateTime>:
 
@@ -56,7 +56,7 @@ O exemplo a seguir ilustra o uso do método <xref:System.DateTime.Parse%2A?displ
 > Todos os exemplos de C# neste artigo são executados no navegador. Pressione o botão **Executar** para ver a saída. Você também pode editá-los para experimentar como quiser.
 
 > [!NOTE]
-> Esses exemplos estão disponíveis no redis do GitHub para [c#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) e [visual basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Ou, você pode baixar o projeto como um arquivo zip para [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) ou [Visual Basic](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Esses exemplos estão disponíveis no redis do GitHub para [c#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions) e [visual basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions). Ou, você pode baixar o projeto como um arquivo zip para [C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip) ou [Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -86,8 +86,8 @@ Cada sobrecarga dos métodos <xref:System.DateTime.Parse%2A> e <xref:System.Date
 
 ## <a name="see-also"></a>Confira também
 
-- [Análise de cadeias de caracteres](parsing-strings.md)
+- [Analisando cadeias de caracteres](parsing-strings.md)
 - [Formatar tipos](formatting-types.md)
-- [Conversão de tipo no .NET](type-conversion.md)
+- [Conversão de tipo em .NET](type-conversion.md)
 - [Formatos de data e hora padrão](standard-date-and-time-format-strings.md)
 - [Cadeias de caracteres de formato de data e hora personalizado](custom-date-and-time-format-strings.md)

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121555"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278906"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>Anular a identidade de um serviço de autenticação
 
 Normalmente, você não precisa definir a identidade em um serviço porque a seleção de um tipo de credencial do cliente dita o tipo de identidade exposta nos metadados do serviço. Por exemplo, o código de configuração a seguir `clientCredentialType` usa o [ \<elemento wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) e define o atributo para o Windows.  
 
- O fragmento de WSDL (Web Services Description Language, linguagem de descrição dos serviços da Web) a seguir mostra a identidade do ponto final previamente definido. Neste exemplo, o serviço está sendo executado como um serviçousername@contoso.comauto-hospedado em uma determinada conta de usuário ( ) e, portanto, a identidade do nome principal do usuário (UPN) contém o nome da conta. O UPN também é conhecido como o nome de logon do usuário em um domínio do Windows.  
+ O fragmento de WSDL (Web Services Description Language, linguagem de descrição dos serviços da Web) a seguir mostra a identidade do ponto final previamente definido. Neste exemplo, o serviço está sendo executado como um serviçousername@contoso.comauto-hospedado em uma determinada conta de usuário ( ) e, portanto, a identidade do nome principal do usuário (UPN) contém o nome da conta. O UPN também é conhecido como o nome de login do usuário em um domínio do Windows.  
 
  Para obter um aplicativo de exemplo que demonstre a configuração de identidade, consulte [Amostra de identidade de serviço](../samples/service-identity-sample.md). Para obter mais informações sobre a identidade do serviço, consulte [Identidade de Serviço e Autenticação](../feature-details/service-identity-and-authentication.md).  
   
@@ -41,18 +41,18 @@ Normalmente, você não precisa definir a identidade em um serviço porque a sel
   
 - Se você estiver usando a segurança do nível de mensagem, a autenticação pode falhar, dependendo do modo de autenticação:  
   
-- Se você `spnego` estiver usando `AllowNtlm` o modo `false`e o atributo estiver definido como , falha de autenticação.  
+- Se você `spnego` estiver usando `AllowNtlm` o modo `false`e o atributo estiver definido como, a autenticação falhará.  
   
 - Se você `spnego` estiver usando `AllowNtlm` o modo `true`e o atributo estiver definido como, a autenticação falhará se o UPN estiver vazio, mas será bem sucedido se o SPN estiver vazio.  
   
 - Se você estiver usando o Kerberos direct (também conhecido como "one-shot"), a autenticação falhará.  
   
-### <a name="using-the-identity-element-in-configuration"></a>Usando \<o elemento de> de identidade na configuração  
- Se você alterar o tipo de credencial do`,` cliente na vinculação mostrada anteriormente ao Certificado, o WSDL gerado contém um certificado X.509 serializado base64 para o valor de identidade como mostrado no código a seguir. Este é o padrão para todos os tipos de credenciais do cliente que não seja o Windows.  
+### <a name="use-the-identity-element-in-configuration"></a>Use \<o elemento de> de identidade na configuração  
+ Se você alterar o tipo de credencial do `Certificate`cliente na vinculação mostrada anteriormente, então o WSDL gerado contém um certificado X.509 serializado Base64 para o valor de identidade mostrado no código a seguir. Este é o padrão para todos os tipos de credenciais do cliente que não seja o Windows.  
 
  Você pode alterar o valor da identidade de serviço padrão ou `identity` alterar o tipo da identidade usando o elemento> <na configuração ou definindo a identidade em código. O código de configuração a seguir define uma `contoso.com`identidade de dns (domain name system) com o valor .  
 
-### <a name="setting-identity-programmatically"></a>Definindo a identidade programática  
+### <a name="set-identity-programmatically"></a>Definir identidade programática  
  Seu serviço não precisa especificar explicitamente uma identidade, porque o WCF a determina automaticamente. No entanto, o WCF permite que você especifique uma identidade em um ponto final, se necessário. O código a seguir adiciona um novo ponto final de serviço com uma identidade DNS específica.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]

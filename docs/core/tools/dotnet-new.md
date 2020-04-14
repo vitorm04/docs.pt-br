@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
-ms.date: 02/13/2020
-ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/10/2020
+ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399122"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242875"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
 | Modelos                                    | Nome curto                      | Linguagem     | Marcas                                  | Introduzido |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| Aplicativo de console                          | [Console](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
+| Aplicativo do Console                          | [Console](#console)             | [C#], F#, VB | Comum/Console                        | 1.0        |
 | Biblioteca de classes                                | [classlib](#classlib)           | [C#], F#, VB | Comum/Library                        | 1.0        |
 | Aplicativo WPF                              | [Wpf](#wpf)                     | [C#]         | Comum/WPF                            | 3.0        |
 | Biblioteca de classe WPF                            | [wpflib](#wpf)                  | [C#]         | Comum/WPF                            | 3.0        |
@@ -67,7 +67,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 | Importações de Exibição do MVC                              | [verimportações](#namespace)       | [C#]         | Web/ASP.NET                           | 2,0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2,0        |
 | Aplicativo Blazor Server                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| ASP.NET Core Vazio                           | [web](#web)                     | [C#], F#     | Web/Vazio                             | 1.0        |
+| ASP.NET Core Vazio                           | [Web](#web)                     | [C#], F#     | Web/Vazio                             | 1.0        |
 | Aplicativo Web ASP.NET Core (Modelo-Exibição-Controlador) | [Mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicativo Web ASP.NET Core                         | [webapp, navalha](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
 | ASP.NET Core com Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2,0        |
@@ -198,7 +198,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -216,7 +216,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="winforms"></a>winforms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a>winforms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -230,7 +230,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="web-others"></a>trabalhador, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a>trabalhador, grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -246,7 +246,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="test"></a>mstest, xunit
+### <a name="mstest-xunit"></a><a name="test"></a>mstest, xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -306,7 +306,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="namespace"></a>verimportações, proto
+### <a name="viewimports-proto"></a><a name="namespace"></a>verimportações, proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -413,7 +413,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 ***
 
-### <a name="web-options"></a>mvc, webapp
+### <a name="mvc-webapp"></a><a name="web-options"></a>mvc, webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -497,9 +497,13 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
   Inclui o BrowserLink no projeto. Opção não disponível em .NET Core 2.2 e 3.1 SDK.
 
+- **`-rrc|--razor-runtime-compilation`**
+
+  Determina se o projeto está configurado para usar a [compilação Razor runtime](/aspnet/core/mvc/views/view-compilation#runtime-compilation) em compilações Debug. Opção disponível desde .NET Core 3.1 SDK.
+
 ***
 
-### <a name="spa"></a>angular, reagir
+### <a name="angular-react"></a><a name="spa"></a>angular, reagir
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 

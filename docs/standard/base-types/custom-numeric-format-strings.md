@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5961cce4601a89b34708b7090207edfed63b5b08
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348302"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242979"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -265,7 +265,7 @@ Independentemente da cadeia de caracteres de formato, se o valor de um tipo de p
 
 As configurações no item **Opções Regionais e de Idioma** do Painel de Controle influenciam a cadeia de caracteres de resultado produzida por uma operação de formatação. Essas configurações são usadas para inicializar o objeto <xref:System.Globalization.NumberFormatInfo> associado à cultura de thread atual, a qual fornece valores usados para controlar a formatação. Computadores que usam configurações diferentes geram cadeias de caracteres de resultado diferentes.
 
-Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> for usado para criar uma instância de um novo objeto <xref:System.Globalization.CultureInfo> que representa a mesma cultura que a cultura atual do sistema, quaisquer personalizações estabelecidas pelo item **Opções Regionais e de Idioma** no Painel de Controle serão aplicadas ao novo objeto <xref:System.Globalization.CultureInfo>. Você pode usar o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para criar um objeto <xref:System.Globalization.CultureInfo> que não reflita as personalizações de um sistema.
+Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> for usado para criar uma instância de um novo objeto <xref:System.Globalization.CultureInfo> que representa a mesma cultura que a cultura atual do sistema, quaisquer personalizações estabelecidas pelo item **Opções Regionais e de Idioma** no Painel de Controle serão aplicadas ao novo objeto <xref:System.Globalization.CultureInfo>. Você pode usar o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> para criar um objeto <xref:System.Globalization.CultureInfo> que não reflita as personalizações de um sistema.
 
 ### <a name="rounding-and-fixed-point-format-strings"></a>Arredondamento e cadeias de caracteres de formato de ponto fixo
 
@@ -290,6 +290,6 @@ O exemplo a seguir demonstra duas cadeias de caracteres de formato numérico per
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Formatar tipos](../../../docs/standard/base-types/formatting-types.md)
 - [Strings de formato numérico padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Como preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Como: Preencher um número com zeros à esquerda](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

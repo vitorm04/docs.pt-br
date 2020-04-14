@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120736"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242667"
 ---
 # <a name="handling-io-errors-in-net"></a>Tratamento de erros de E/S no .NET
 
@@ -39,7 +39,7 @@ Como o sistema de arquivos é um recurso de sistema operacional, os métodos de 
 
 Por exemplo, no sistema operacional Windows, uma chamada de método que retorna um código de erro `ERROR_FILE_NOT_FOUND` (ou 0x02) é mapeada para um <xref:System.IO.FileNotFoundException> e um código de erro `ERROR_PATH_NOT_FOUND` (ou 0x03) é mapeado para um <xref:System.IO.DirectoryNotFoundException>.
 
-No entanto, as condições precisas sob as quais o sistema operacional retorna códigos de erro específicos geralmente não são documentadas ou são mal documentadas. Em decorrência disso, podem ocorrer exceções inesperadas. Por exemplo, como você está trabalhando com um diretório em vez de um arquivo, você esperaria que fornecer um caminho de diretório inválido para o construtor <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> gerasse uma <xref:System.IO.DirectoryNotFoundException>. No entanto, isso também pode gerar uma <xref:System.IO.FileNotFoundException>.
+No entanto, as condições precisas sob as quais o sistema operacional retorna códigos de erro específicos geralmente não são documentadas ou são mal documentadas. Em decorrência disso, podem ocorrer exceções inesperadas. Por exemplo, como você está trabalhando com um diretório em vez de um arquivo, você esperaria que fornecer um caminho de diretório inválido para o construtor <xref:System.IO.DirectoryInfo.%23ctor%2A> gerasse uma <xref:System.IO.DirectoryNotFoundException>. No entanto, isso também pode gerar uma <xref:System.IO.FileNotFoundException>.
 
 ## <a name="exception-handling-in-io-operations"></a>Tratamento de exceções em operações de E/S
 

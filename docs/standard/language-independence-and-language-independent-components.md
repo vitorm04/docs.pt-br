@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400529"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243057"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independência da linguagem e componentes independentes da linguagem
 
@@ -37,7 +37,7 @@ Neste artigo:
 
   - [Tipos e assinaturas de membro de tipo](#Types)
 
-  - [Convenções de nomeação](#naming)
+  - [Convenções de nomenclatura](#naming)
 
   - [Conversão de tipo](#conversion)
 
@@ -135,9 +135,9 @@ As regras de conformidade com CLS estão listadas na tabela a seguir. O texto da
 |Membros|[Membros de tipo em geral](#members)|Campos e métodos estáticos globais não são compatíveis com CLS.|36|
 |Membros|--|O valor de um estático literal é especificado por meio do uso de metadados de inicialização do campo. Um literal compatível com CLS deve ter um valor especificado em metadados de inicialização de campo que sejam exatamente do mesmo tipo que o literal (ou do tipo subjacente, se esse literal for um `enum`).|13|
 |Membros|[Membros de tipo em geral](#members)|A restrição vararg não faz parte da CLS e a única convenção de chamada com suporte pela CLS é a convenção de chamada gerenciada padrão.|15|
-|Convenções de nomenclatura|[Convenções de nomeação](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres que podem iniciar e ser incluídos em identificadores, disponíveis online em <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|
-|Sobrecarga|[Convenções de nomeação](#naming)|Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um único tipo use o mesmo nome para um método e um campo, a CLS não permite.|5|
-|Sobrecarga|[Convenções de nomeação](#naming)|Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS.|6|
+|Convenções de nomenclatura|[Convenções de nomenclatura](#naming)|Os assemblies deverão seguir o Anexo 7 do Relatório Técnico 15 do Padrão Unicode 3.0 que controla o conjunto de caracteres que podem iniciar e ser incluídos em identificadores, disponíveis online em <https://www.unicode.org/unicode/reports/tr15/tr15-18.html>. Os identificadores deverão estar no formato canônico definido pelo Formulário C de Normalização de Unicode. Para fins de CLS, dois identificadores serão iguais se os mapeamentos em minúsculas (conforme especificado pelos mapeamentos em minúsculas um para um, insensíveis a localidade Unicode) forem os mesmos. Ou seja, para dois identificadores serem considerados diferentes na CLS, eles deverão ser diferentes além de apenas maiúsculas e minúsculas. No entanto, para substituir uma definição herdada, a CLI exige que a codificação precisa da declaração original seja usada.|4|
+|Sobrecarga|[Convenções de nomenclatura](#naming)|Todos os nomes introduzidos em um escopo compatível com CLS deverão ser independentes e distintos do tipo, exceto quando os nomes forem idênticos e resolvidos por meio da sobrecarga. Ou seja, embora o CTS permita que um único tipo use o mesmo nome para um método e um campo, a CLS não permite.|5|
+|Sobrecarga|[Convenções de nomenclatura](#naming)|Campos e tipos aninhados deverão ser diferenciados apenas por comparação de identificador, mesmo que o CTS permita que assinaturas diferentes sejam distinguidas. Métodos, propriedades e eventos com o mesmo nome (por comparação de identificador) deverão ser diferentes além apenas do tipo de retorno, exceto conforme especificado na Regra 39 da CLS.|6|
 |Sobrecarga|[Sobrecargas](#overloads)|Somente propriedades e métodos podem ser sobrecarregados.|37|
 |Sobrecarga|[Sobrecargas](#overloads)|As propriedades e os métodos só podem ser sobrecarregados com base no número e nos tipos de seus parâmetros, exceto os operadores de conversão chamados `op_Implicit` e `op_Explicit`, que também podem ser sobrecarregados com base no tipo de retorno.|38|
 |Sobrecarga|--|Se dois ou mais métodos em conformidade com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo.|48|
@@ -527,7 +527,7 @@ O exemplo a seguir define uma classe `DescriptionAttribute` que é derivada de <
 
 ## <a name="the-clscompliantattribute-attribute"></a>O atributo CLSCompliantAttribute
 
-O atributo <xref:System.CLSCompliantAttribute> é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification. O construtor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> inclui um único parâmetro necessário, `isCompliant`, que indica se o elemento de programa é compatível com CLS.
+O atributo <xref:System.CLSCompliantAttribute> é usado para indicar se um elemento do programa está em conformidade com a Common Language Specification. O construtor <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29> inclui um único parâmetro necessário, `isCompliant`, que indica se o elemento de programa é compatível com CLS.
 
 No tempo de compilação, o compilador detecta os elementos não compatíveis que provavelmente são compatíveis com CLS e emite um aviso. O compilador não emite avisos para tipos ou membros explicitamente declarados como não compatíveis.
 

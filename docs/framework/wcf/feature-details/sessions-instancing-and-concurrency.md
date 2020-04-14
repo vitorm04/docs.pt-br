@@ -2,12 +2,12 @@
 title: Sessões,instanciação e simultaneidade
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184439"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243109"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sessões,instanciação e simultaneidade
 Uma *sessão* é uma correlação de todas as mensagens enviadas entre dois pontos finais. *Instancing* refere-se ao controle da vida útil de <xref:System.ServiceModel.InstanceContext> objetos de serviço definidos pelo usuário e seus objetos relacionados. *Conmoeda* é o termo dado ao controle do número <xref:System.ServiceModel.InstanceContext> de threads executados em um ao mesmo tempo.  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>Serviços bem conhecidos de Singleton  
  Uma variação em objetos de serviço de instância única às vezes é útil: você pode criar um objeto de serviço sozinho e criar o host de serviço usando esse objeto. Para isso, você também deve <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> definir <xref:System.ServiceModel.InstanceContextMode.Single> a propriedade para ou uma exceção é lançada quando o host de serviço é aberto.  
   
- Use <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> o construtor para criar tal serviço. Ele fornece uma alternativa para <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> implementar um personalizado quando você deseja fornecer uma instância específica de objeto para uso por um serviço singleton. Você pode usar essa sobrecarga quando seu tipo de implementação de serviço é difícil de construir (por exemplo, se ele não implementar um construtor público sem parâmetros).  
+ Use <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> o construtor para criar tal serviço. Ele fornece uma alternativa para <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> implementar um personalizado quando você deseja fornecer uma instância específica de objeto para uso por um serviço singleton. Você pode usar essa sobrecarga quando seu tipo de implementação de serviço é difícil de construir (por exemplo, se ele não implementar um construtor público sem parâmetros).  
   
  Observe que quando um objeto é fornecido a este construtor, alguns recursos relacionados ao Comportamento de Instancing da Windows Communication Foundation (WCF) funcionam de forma diferente. Por exemplo, <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> a chamada não tem efeito quando uma instância de objeto singleton é fornecida. Da mesma forma, qualquer outro mecanismo de liberação de instâncias é ignorado. O <xref:System.ServiceModel.ServiceHost> sempre se comporta <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> como se <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> a propriedade estivesse definida para todas as operações.  
   
@@ -114,4 +114,4 @@ public class CalculatorService : ICalculatorConcurrency
 - [Como controlar instanciação de serviço](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Simultaneidade](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Instanciação](../../../../docs/framework/wcf/samples/instancing.md)
-- [Sessão](../../../../docs/framework/wcf/samples/session.md)
+- [Session](../../../../docs/framework/wcf/samples/session.md)

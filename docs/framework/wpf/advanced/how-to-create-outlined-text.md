@@ -11,15 +11,16 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: d0ce46b9895589fd4635b567136204368a6431ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86bfa396a2aa44eb511c014687501d60e170a396
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278919"
 ---
-# <a name="how-to-create-outlined-text"></a>Como criar texto de estrutura de tópicos
-Na maioria dos casos, ao adicionar ornamentos a cadeias de caracteres de texto em seu aplicativo [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], você está usando texto em termos de uma coleção de caracteres separados ou glifos. Por exemplo, você pode criar um pincel de <xref:System.Windows.Controls.Control.Foreground%2A> gradiente <xref:System.Windows.Controls.TextBox> linear e aplicá-lo à propriedade de um objeto. Ao exibir ou editar a caixa de texto, o pincel de gradiente linear é aplicado automaticamente ao conjunto de caracteres atual na cadeia de texto.  
+# <a name="how-to-create-outlined-text"></a>Como: Criar texto delineado
+
+Na maioria dos casos, quando você está adicionando [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ornamentação a strings de texto em sua aplicação, você está usando texto em termos de uma coleção de caracteres discretos, ou glifos. Por exemplo, você pode criar um pincel de <xref:System.Windows.Controls.Control.Foreground%2A> gradiente <xref:System.Windows.Controls.TextBox> linear e aplicá-lo à propriedade de um objeto. Ao exibir ou editar a caixa de texto, o pincel de gradiente linear é aplicado automaticamente ao conjunto de caracteres atual na cadeia de texto.  
   
  ![Texto exibido com um pincel de gradiente linear](./media/how-to-create-outlined-text/text-linear-gradient.jpg)
   
@@ -35,7 +36,7 @@ Na maioria dos casos, ao adicionar ornamentos a cadeias de caracteres de texto e
   
  ![Texto com pincel de imagem aplicado ao traço](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
- Também é possível modificar o retângulo da caixa delimitadora ou realce, do texto convertido. O exemplo a seguir ilustra uma maneira de criar efeitos visuais modificando o traço e realce do texto convertido.  
+ Também é possível modificar o retângulo da caixa delimitadora ou realce, do texto convertido. O exemplo a seguir ilustra uma maneira de criar efeitos visuais modificando o traçado e o destaque do texto convertido.  
   
  ![Texto com pincel de imagem aplicado ao traçado e destaque](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
 
@@ -45,14 +46,14 @@ Na maioria dos casos, ao adicionar ornamentos a cadeias de caracteres de texto e
  [!code-csharp[OutlineTextControlViewer#CreateText](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#createtext)]
  [!code-vb[OutlineTextControlViewer#CreateText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#createtext)]  
   
- Para exibir os <xref:System.Windows.Media.Geometry> objetos recuperados, você precisa <xref:System.Windows.Media.DrawingContext> acessar o objeto que está exibindo o texto convertido. Nesses exemplos de código, isso é feito criando um objeto de controle personalizado derivado de uma classe que dá suporte a renderização definida pelo usuário.  
+ Para exibir os <xref:System.Windows.Media.Geometry> objetos recuperados, você precisa <xref:System.Windows.Media.DrawingContext> acessar o objeto que está exibindo o texto convertido. Nesses exemplos de código, esse acesso é obtido criando um objeto de controle personalizado derivado de uma classe que suporta renderização definida pelo usuário.  
   
  Para <xref:System.Windows.Media.Geometry> exibir objetos no controle personalizado, <xref:System.Windows.UIElement.OnRender%2A> forneça uma substituição para o método. Seu método substituído deve <xref:System.Windows.Media.DrawingContext.DrawGeometry%2A> usar o <xref:System.Windows.Media.Geometry> método para desenhar os objetos.  
   
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  Para obter a origem do exemplo do objeto de controle personalizado do usuário, consulte [OutlineTextControl.cs para C#](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb para Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
+  Para obter a origem do exemplo do objeto de controle personalizado do usuário, consulte [OutlineTextControl.cs para C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) e [OutlineTextControl.vb para Visual Basic](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb).
   
 ## <a name="see-also"></a>Confira também
 

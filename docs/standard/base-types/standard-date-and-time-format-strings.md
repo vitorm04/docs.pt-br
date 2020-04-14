@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248128"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242745"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora padrão
 
@@ -440,7 +440,7 @@ O exemplo a seguir utiliza o especificador de formato "y" para exibir um valor d
 
 As configurações no item **Opções Regionais e de Idioma** do Painel de Controle influenciam a cadeia de caracteres de resultado produzida por uma operação de formatação. Essas configurações são usadas para inicializar o objeto <xref:System.Globalization.DateTimeFormatInfo> associado à cultura de thread atual, a qual fornece os valores usados para determinar a formatação. Computadores que usam configurações diferentes geram cadeias de caracteres de resultado diferentes.
 
-Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> for usado para criar uma instância de um novo objeto <xref:System.Globalization.CultureInfo> que representa a mesma cultura que a cultura atual do sistema, quaisquer personalizações estabelecidas pelo item **Opções Regionais e de Idioma** no Painel de Controle serão aplicadas ao novo objeto <xref:System.Globalization.CultureInfo>. Você pode usar o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> para criar um objeto <xref:System.Globalization.CultureInfo> que não reflita as personalizações de um sistema.
+Além disso, se o constructo <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> for usado para criar uma instância de um novo objeto <xref:System.Globalization.CultureInfo> que representa a mesma cultura que a cultura atual do sistema, quaisquer personalizações estabelecidas pelo item **Opções Regionais e de Idioma** no Painel de Controle serão aplicadas ao novo objeto <xref:System.Globalization.CultureInfo>. Você pode usar o construtor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> para criar um objeto <xref:System.Globalization.CultureInfo> que não reflita as personalizações de um sistema.
 
 ### <a name="datetimeformatinfo-properties"></a>Propriedades DateTimeFormatInfo
 

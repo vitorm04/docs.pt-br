@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567957"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81274941"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>O tamanho mínimo para a geração de chaves RSAOpenSsl aumentou
 
@@ -12,7 +12,7 @@ O tamanho mínimo para gerar novas chaves RSA no Linux aumentou de 384 bits para
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Começando com o .NET Core 3.0, o `LegalKeySizes` tamanho mínimo de <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>chave <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>legal <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> relatado pela propriedade em instâncias RSA de , e no Linux aumentou de 384 para 512.
+Começando com o .NET Core 3.0, o `LegalKeySizes` tamanho mínimo de <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>chave <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>legal <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> relatado pela propriedade em instâncias RSA de , e no Linux aumentou de 384 para 512.
 
 Como resultado, em .NET Core 2.2 e versões anteriores, uma chamada de método como `RSA.Create(384)` sucesso. Nas versões .NET Core 3.0 `RSA.Create(384)` e posteriores, a chamada do método lança uma exceção indicando que o tamanho é muito pequeno.
 
@@ -37,8 +37,8 @@ Criptografia
 
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes?displayProperty=nameWithType>
 - <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
 ### Affected APIs

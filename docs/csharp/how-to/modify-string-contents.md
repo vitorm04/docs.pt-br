@@ -3,12 +3,12 @@ title: Como modificar o conteúdo das cordas - Guia C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121134"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242849"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Como modificar o conteúdo das strings em C\#
 
@@ -58,7 +58,7 @@ O método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithTy
 
 Você pode produzir uma matriz de caracteres de uma cadeia de caracteres, modificar o conteúdo da matriz e, em seguida, criar uma nova cadeia de caracteres com base no conteúdo modificado da matriz.
 
-O exemplo a seguir mostra como substituir um conjunto de caracteres em uma cadeia de caracteres. Primeiro, ele usa o método <xref:System.String.ToCharArray?displayProperty=nameWithName> para criar uma matriz de caracteres. Ele usa o método <xref:System.String.IndexOf%2A> para localizar o índice inicial da palavra "fox". Os próximos três caracteres são substituídos por uma palavra diferente. Por fim, uma nova cadeia de caracteres é construída com a matriz de caracteres atualizada.
+O exemplo a seguir mostra como substituir um conjunto de caracteres em uma cadeia de caracteres. Primeiro, ele usa o método <xref:System.String.ToCharArray?displayProperty=nameWithType> para criar uma matriz de caracteres. Ele usa o método <xref:System.String.IndexOf%2A> para localizar o índice inicial da palavra "fox". Os próximos três caracteres são substituídos por uma palavra diferente. Por fim, uma nova cadeia de caracteres é construída com a matriz de caracteres atualizada.
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

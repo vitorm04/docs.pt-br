@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146652"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242862"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
@@ -40,7 +40,7 @@ A primeira etapa é criar a biblioteca.
 
 2. Abra o `Class1.cs`.
 3. Adicione `using System.Runtime.InteropServices;` ao topo do arquivo.
-4. Crie uma interface chamada `IServer`. Por exemplo: 
+4. Crie uma interface chamada `IServer`. Por exemplo:
 
    ```csharp
    using System;
@@ -92,5 +92,7 @@ Há um [exemplo de servidor COM](https://github.com/dotnet/samples/tree/master/c
 ## <a name="additional-notes"></a>Observações adicionais
 
 Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é escrever manualmente um arquivo IDL ou um cabeçalho C/C++ para as declarações nativas das interfaces COM.
+
+[As implantações independentes](../deploying/index.md#publish-self-contained) de componentes COM não são suportadas. Apenas [implantações dependentes de tempo](../deploying/index.md#publish-runtime-dependent) de execução de componentes COM são suportadas.
 
 Além disso, carregar o .NET Framework e o .NET Core no mesmo processo tem limitações diagnósticas. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar tanto o .NET Framework quanto o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assembléias gerenciadas. Isso significa que não é possível compartilhar tipos reais .NET nos dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.

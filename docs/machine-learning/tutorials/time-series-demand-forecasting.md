@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 962c40ea0536d6b6057d936cfc4b95a49ddadbf8
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76921251"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243278"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Previsão da demanda de serviço de aluguel de bicicletas com análise de séries tempois e ML.NET
 
@@ -60,7 +60,7 @@ O algoritmo usado neste tutorial é [o Single Spectrum Analysis(SSA).](http://ss
 1. Baixe o arquivo de banco de dados [ *DailyDemand.mdf* ](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) e salve-o no diretório *Data.*
 
 > [!NOTE]
-> Os dados usados neste tutorial vêm do conjunto de dados de compartilhamento de [bicicletas UCI](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi, e Gama, João, 'Rotulagem de eventos combinando detectores de conjunto e conhecimento de fundo', Progresso em Inteligência Artificial (2013): pp. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> Os dados usados neste tutorial vêm do conjunto de dados de compartilhamento de [bicicletas UCI](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset). Fanaee-T, Hadi, e Gama, João, 'Rotulagem de eventos combinando detectores de conjunto e conhecimento de fundo', Progresso em Inteligência Artificial (2013): pp. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
 O conjunto de dados original contém várias colunas correspondentes à sazonalidade e ao clima. Para a brevidade e porque o algoritmo usado neste tutorial requer apenas os valores de uma única coluna numérica, o conjunto de dados original foi condensado para incluir apenas as seguintes colunas:
 
@@ -287,4 +287,4 @@ Você pode encontrar o código fonte para este tutorial no repositório [dotnet/
 ## <a name="next-steps"></a>Próximas etapas
 
 - [Tarefas de aprendizado de máquina no ML.NET](../resources/tasks.md)
-- [Aprimorar a precisão do modelo](../resources/improve-machine-learning-model-ml-net.md)
+- [Melhorar a precisão do modelo](../resources/improve-machine-learning-model-ml-net.md)

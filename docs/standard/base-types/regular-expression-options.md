@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972110"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242771"
 ---
 # <a name="regular-expression-options"></a>Opções de expressões regulares
 
@@ -40,7 +40,7 @@ Por padrão, a comparação de uma cadeia de caracteres de entrada com quaisquer
 
 É possível especificar opções para expressões regulares de uma destas três maneiras:
 
-- No parâmetro `options` de um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método de correspondência padrão (`Shared` no Visual Basic) estático, como <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. O parâmetro `options` é uma combinação OR bit a bit de valores enumerados <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
+- No parâmetro `options` de um construtor de classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> ou método de correspondência padrão (`Shared` no Visual Basic) estático, como <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29> ou <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. O parâmetro `options` é uma combinação OR bit a bit de valores enumerados <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
   Quando as opções são fornecidas a uma instância <xref:System.Text.RegularExpressions.Regex> mediante uso do parâmetro `options` de um construtor de classe, elas são atribuídas à propriedade <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. No entanto, a propriedade <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> não reflete opções embutidas no próprio padrão de expressão regular.
 
@@ -264,7 +264,7 @@ No entanto, nos casos a seguir, os caracteres de espaço em branco em uma expres
 
 - O espaço branco não é permitido dentro de `{`um `{`quantificador entrelaçado, como *n*`}`, *n*`,}`, e `{` *n*`,`*m*`}`. Por exemplo, o padrão de expressão regular `\d{1, 3}` falha ao corresponder quaisquer sequências de dígitos de um a três dígitos porque contém um caractere de espaço em branco.
 
-- Não é permitido espaço em branco dentro da sequência de caracteres que introduz um elemento de linguagem. Por exemplo: 
+- Não é permitido espaço em branco dentro da sequência de caracteres que introduz um elemento de linguagem. Por exemplo:
 
   - A `(?:` *subexpressão* `)` do elemento de linguagem representa `(?:` um grupo não capturador, e a parte do elemento não pode ter espaços incorporados. A `(? :` *subexpressão* `)` de <xref:System.ArgumentException> padrão lança um tempo de execução porque o mecanismo `( ?:`de expressão regular não pode analisar o padrão, e a *subexpressão* `)` padrão não corresponde à *subexpressão*.
 
@@ -377,4 +377,4 @@ O exemplo a seguir é idêntico ao anterior, exceto que o método estático <xre
 
 ## <a name="see-also"></a>Confira também
 
-- [Linguagem de Expressão Regular - Referência Rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Linguagem de expressões regulares – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

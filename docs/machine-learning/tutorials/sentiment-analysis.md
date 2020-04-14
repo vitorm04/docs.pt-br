@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um aplicativo de console do .NET Co
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 47b9a9fe37cbcacab3797ed7fb1398b0c524d746
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6e13cfca93c54648b1a0423c5983013d3e2a1a0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241124"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243291"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Analise o sentimento dos comentários do site com classificação binária em ML.NET
 
@@ -32,7 +32,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 - [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho ".NET Core cross-platform development" instalada
 
-- [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
+- [Conjunto de dados de Sentenças de sentimentos rotuladas da UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (arquivo zip)
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
@@ -49,7 +49,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 > [!NOTE]
 > Os conjuntos de dados deste tutorial são de "From Group to Individual Labels using Deep Features”, Kotzias et. al,. KDD 2015, e hospedado no Repositório de Machine Learning da UCI - Dua, D. e Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
-1. Baixe o [arquivo zip do conjunto de dados de Sentenças de sentimentos rotuladas da UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e descompacte-o.
+1. Baixe o [arquivo zip do conjunto de dados de Sentenças de sentimentos rotuladas da UCI](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) e descompacte-o.
 
 2. Copie o arquivo `yelp_labelled.txt` para o diretório *Dados* que você criou.
 
@@ -131,7 +131,7 @@ Você prepara o aplicativo e, em seguida, carrega os dados:
 
     [!code-csharp[LoadData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#LoadData "loading dataset")]
 
-    O [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e lê o arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`.
+    O método [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e é lido no arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`.
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Dividir o conjunto de dados para o modelo de treinamento e de teste
 
@@ -141,7 +141,7 @@ Ao preparar um modelo, você usa parte do conjunto de dados para treiná-lo e pa
 
     [!code-csharp[SplitData](~/samples/snippets/machine-learning/SentimentAnalysis/csharp/Program.cs#SplitData "Split the Data")]
 
-    O código anterior usa o método [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) para dividir o conjunto de dados carregado em conjuntos de dados de treino e de teste e retorna-os na classe [TrainTestData](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData). Especifique o percentual de dados do conjunto de teste com o parâmetro `testFraction`. O padrão é 10% e, nesse caso, você usa 20% para avaliar mais dados.
+    O código anterior usa o método [TrainTestSplit()](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit%2A) para dividir o conjunto de dados <xref:Microsoft.ML.DataOperationsCatalog.TrainTestData> carregado em conjuntos de dados de trem e teste e devolvê-los na classe. Especifique o percentual de dados do conjunto de teste com o parâmetro `testFraction`. O padrão é 10% e, nesse caso, você usa 20% para avaliar mais dados.
 
 2. Retorne o `splitDataView` no final do método `LoadData()`:
 

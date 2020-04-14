@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635151"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242758"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -62,7 +62,7 @@ Os tipos <xref:System.Single> e <xref:System.Double> dão suporte a valores espe
 
 Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> posteriormente inclui a classe, que <xref:System.Single> fornece métodos que aceitam argumentos do tipo.
 
-Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter?displayProperty=nameWithType>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.
+Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter?displayProperty=nameWithType>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.
   
 Os <xref:System.Double> <xref:System.Single> e tipos destinam-se a ser utilizados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicações em que um alto grau de precisão e pequeno erro de arredondamento não é necessário. Use <xref:System.Decimal?displayProperty=nameWithType> o tipo para casos em que maior precisão seja necessária e erros de arredondamento devem ser minimizados.
 
@@ -95,4 +95,4 @@ Os tipos habilitados para SIMD são implementados de modo que possam ser usados 
 
 ## <a name="see-also"></a>Confira também
 
-- [Cadeias de caracteres de formato numérico padrão](base-types/standard-numeric-format-strings.md)
+- [Strings de formato numérico padrão](base-types/standard-numeric-format-strings.md)

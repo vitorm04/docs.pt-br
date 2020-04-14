@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto ou solução .NET Core para um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 26dda33d04f3f7a23805627708b55233ef4e87ef
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588277"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242836"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -23,7 +23,8 @@ ms.locfileid: "80588277"
 dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
+    [-o|--output] [-p:PublishReadyToRun] [-p:PublishSingleFile]
+    [-p:PublishTrimmed] [-r|--runtime] [--self-contained]
     [--no-self-contained] [-v|--verbosity] [--version-suffix]
 
 dotnet publish [-h|--help]
@@ -114,6 +115,12 @@ Para saber mais, consulte os recursos a seguir:
   
   Se não especificado, ele é padrão para *[project_file_folder]./bin/[configuração]/[framework]/publish/* para binários executáveis e multiplataformas dependentes de tempo de execução. Ele é padrão para *[project_file_folder]/bin/[configuração]/[framework]/[runtime]/publish/* para um executável independente.
 
+  Em um projeto web, se a pasta de `dotnet publish` saída estiver na pasta do projeto, comandos sucessivos resultarão em pastas de saída aninhadas. Por exemplo, se a pasta do projeto for *myproject*, e a `dotnet publish` pasta de saída publicar for *myproject/publish*, e você for executado duas vezes, a segunda execução coloca arquivos de conteúdo como *arquivos .config* e *.json* no *myproject/publish/publish*. Para evitar o ninho de pastas de publicação, especifique uma pasta de publicação que não esteja diretamente sob a pasta do projeto ou exclua a pasta de publicação do projeto. Para excluir uma pasta de publicação chamada *publishoutput*, adicione o seguinte elemento a um `PropertyGroup` elemento no arquivo *.csproj:*
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK e posterior
   
     Se um caminho relativo for especificado ao publicar um projeto, o diretório de saída gerado será relativo ao diretório de trabalho atual, não à localização do arquivo do projeto.
@@ -125,6 +132,26 @@ Para saber mais, consulte os recursos a seguir:
     Se um caminho relativo for especificado ao publicar um projeto, o diretório de saída gerado será relativo à localização do arquivo do projeto, não ao diretório de trabalho atual.
 
     Se um caminho relativo for especificado ao publicar uma solução, a saída de cada projeto será colocada em uma pasta separada em relação ao local do arquivo do projeto. Se um caminho absoluto for especificado ao publicar uma solução, todas as saídas de publicação para todos os projetos serão colocadas na pasta especificada.
+
+- **`-p:PublishReadyToRun`**
+
+  Compila conjuntos de aplicativos como formato ReadyToRun (R2R). R2R é uma forma de compilação antecipada (AOT). Para obter mais informações, consulte [imagens ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponível desde o SDK do .NET Core 3.0.
+
+  Recomendamos que você especifique esta opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
+
+- **`-p:PublishSingleFile`**
+
+  Empacota o aplicativo em um executável de arquivo único específico da plataforma. O executável é auto-extraindo e contém todas as dependências (incluindo nativas) que são necessárias para executar o aplicativo. Quando o aplicativo é executado pela primeira vez, o aplicativo é extraído para um diretório com base no nome do aplicativo e no identificador do build. A inicialização é mais rápida quando o aplicativo é executado novamente. O aplicativo não precisa se extrair uma segunda vez, a menos que uma nova versão seja usada. Disponível desde o SDK do .NET Core 3.0.
+
+  Para obter mais informações sobre a publicação de arquivo único, consulte o [documento de design de empacotador de arquivo único](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md).
+
+  Recomendamos que você especifique esta opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
+
+- **`-p:PublishTrimmed`**
+
+  Apara bibliotecas não utilizadas para reduzir o tamanho de implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [Trim implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3.0.
+
+  Recomendamos que você especifique esta opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
 - **`--self-contained [true|false]`**
 
@@ -196,10 +223,11 @@ Para saber mais, consulte os recursos a seguir:
 
 - [Visão geral da publicação de aplicativos .NET Core](../deploying/index.md)
 - [Publique os aplicativos .NET Core com o .NET Core CLI](../deploying/deploy-with-cli.md)
-- [Estruturas de destino](../../standard/frameworks.md)
+- [Frameworks de destino](../../standard/frameworks.md)
 - [Catálogo de identificadores de execução (RID)](../rid-catalog.md)
 - [Trabalhando com nota nota notardo pelo macOS Catalina](../install/macos-notarization-issues.md)
 - [Estrutura do diretório de um aplicativo publicado](/aspnet/core/hosting/directory-structure)
 - [Referência de linha de comando MSBuild](/visualstudio/msbuild/msbuild-command-line-reference)
 - [Visual Studio publica perfis (.pubxml) para implantação de aplicativos ASP.NET Core](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tarefas](https://aka.ms/dotnet-illink)

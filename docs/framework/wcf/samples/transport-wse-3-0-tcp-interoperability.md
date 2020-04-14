@@ -2,12 +2,12 @@
 title: 'Transporte: interoperabilidade de TCP de WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278893"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transporte: interoperabilidade de TCP de WSE 3.0
 A amostra wse 3.0 TCP Interoperability Transport demonstra como implementar uma sessão duplex TCP como um transporte personalizado da Windows Communication Foundation (WCF). Ele também demonstra como você pode usar a extensibilidade da camada de canal para interagir sobre o fio com sistemas implantados existentes. As etapas a seguir mostram como construir este transporte WCF personalizado:  
@@ -39,7 +39,7 @@ A amostra wse 3.0 TCP Interoperability Transport demonstra como implementar uma 
   
  <xref:System.ServiceModel.Channels.Message> Uma vez codificado em bytes, ele deve ser transmitido no fio. Isso requer um sistema para definir limites de mensagens. O WSE 3.0 usa uma versão do [DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime) como seu protocolo de enquadramento. `WriteData`encapsula a lógica de enquadramento para envolver um byte[] em um conjunto de discos DIME.  
   
- A lógica para receber mensagens é muito semelhante. A principal complexidade é lidar com o fato de que uma leitura de soquete pode retornar menos bytes do que foi solicitado. Para receber uma `WseTcpDuplexSessionChannel` mensagem, leia bytes fora do fio, decodifica <xref:System.ServiceModel.Channels.MessageEncoder> o enquadramento DIME e, em seguida, usa o para transformar o byte[] em um <xref:System.ServiceModel.Channels.Message>.  
+ A lógica para receber mensagens é semelhante. A principal complexidade é lidar com o fato de que uma leitura de soquete pode retornar menos bytes do que foi solicitado. Para receber uma `WseTcpDuplexSessionChannel` mensagem, leia bytes fora do fio, decodifica <xref:System.ServiceModel.Channels.MessageEncoder> o enquadramento DIME e, em seguida, usa o para transformar o byte[] em um <xref:System.ServiceModel.Channels.Message>.  
   
  A `WseTcpDuplexSessionChannel` base pressupõe que recebe um soquete conectado. A classe base lida com o desligamento do soquete. Existem três lugares que interagem com o fechamento do soquete:  
   
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, construir e executar a amostra  
   
 1. Para executar esta amostra, você deve ter [O MSE (Web Services Enhancements) 3.0 para Microsoft .NET](https://www.microsoft.com/download/details.aspx?id=14089) e a amostra WSE `TcpSyncStockService` instalada.
   
@@ -179,9 +179,9 @@ Symbols:
   
 1. Depois de `TcpSyncStockService` instalar a amostra, faça o seguinte:  
   
-    1. Abra `TcpSyncStockService` o no Visual Studio (Observe que a amostra TcpSyncStockService está instalada com o WSE 3.0. Não faz parte do código desta amostra).  
+    1. Abra `TcpSyncStockService` o no Visual Studio. (A amostra TcpSyncStockService está instalada com o WSE 3.0. Não faz parte do código desta amostra.)  
   
-    2. Defina o projeto StockService como o projeto de inicialinicial.  
+    2. Defina o projeto StockService como o projeto inicial.  
   
     3. Abra StockService.cs no projeto StockService e comente o `StockService` atributo [Política] na classe. Isso desativa a segurança da amostra. Embora o WCF possa interoperar com pontos finais seguros do WSE 3.0, a segurança é desativada para manter essa amostra focada no transporte TCP personalizado.  
   

@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278945"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analise o sentimento dos comentários do site em um aplicativo web usando ML.NET Model Builder
 
@@ -103,9 +103,9 @@ O tempo necessário para treinar o modelo é proporcional à quantidade de dados
 
 ## <a name="evaluate-the-model"></a>Avalie o modelo
 
-O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta Model Builder, a seção de saída, conterá o algoritmo usado pelo modelo de melhor desempenho na entrada **do Melhor Modelo,** juntamente com métricas em **Melhor Precisão de Modelo**. Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
+O resultado da etapa de treinamento será um modelo que tem o melhor desempenho. Na etapa de avaliação da ferramenta Model Builder, a seção de saída conterá o algoritmo usado pelo modelo de melhor desempenho na entrada **do Melhor Modelo,** juntamente com as métricas em **Melhor Precisão de Modelo**. Além disso, uma tabela de resumo contendo os cinco principais modelos e suas métricas é mostrada.
 
-Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Caso contrário, selecione o link **de código** para passar para a etapa final na ferramenta Construtor de modelos.
+Se você não está satisfeito com suas métricas de precisão, algumas maneiras fáceis de tentar melhorar a precisão do modelo são aumentar o tempo para treinar o modelo ou usar mais dados. Caso contrário, selecione o link **de código** para passar para a etapa final na ferramenta Construtor de modelos.
 
 ## <a name="add-the-code-to-make-predictions"></a>Adicionar o código para fazer previsões
 
@@ -124,7 +124,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
 
 ### <a name="configure-the-predictionengine-pool"></a>Configure o pool ForecastEngine
 
-Para fazer uma única previsão, [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)você tem que criar um . [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)não é seguro para rosca. Além disso, você tem que criar uma instância dele em todos os lugares necessários dentro de sua aplicação. À medida que sua aplicação cresce, esse processo pode se tornar incontrolável. Para melhorar o desempenho e a segurança dos fios, use uma combinação de injeção de dependência e o `PredictionEnginePool` serviço, que cria um de [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) objetos para uso em toda a sua aplicação.
+Para fazer uma única previsão, <xref:Microsoft.ML.PredictionEngine%602>você tem que criar um . <xref:Microsoft.ML.PredictionEngine%602> não é thread-safe. Além disso, você tem que criar uma instância dele em todos os lugares necessários dentro de sua aplicação. À medida que sua aplicação cresce, esse processo pode se tornar incontrolável. Para melhorar o desempenho e a segurança dos fios, use uma combinação de injeção de dependência e o `PredictionEnginePool` serviço, que cria um de <xref:Microsoft.Extensions.ObjectPool.ObjectPool%601> <xref:Microsoft.ML.PredictionEngine%602> objetos para uso em toda a sua aplicação.
 
 1. Instale o pacote *Microsoft.Extensions.ML* NuGet:
 
@@ -277,7 +277,7 @@ Os resultados devolvidos `OnGetAnalyzeSentiment` pelo serão exibidos `Index` di
 
 ## <a name="run-the-application"></a>Executar o aplicativo
 
-Agora que seu aplicativo está configurado, execute o aplicativo que deve ser lançado no seu navegador.
+Agora que seu aplicativo está configurado, execute o aplicativo, que deve ser lançado no seu navegador.
 
 Quando o aplicativo for lançado, digite *Model Builder é legal!* na área de texto. O sentimento previsto exibido não deve ser *tóxico.*
 
