@@ -1,18 +1,18 @@
 ---
 title: Palavra-chave readonly – Referência de C#
-ms.date: 03/26/2020
+ms.date: 04/14/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 03b0aa63eda3e7a9d8745baaa33479fd5e85b01b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345146"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389052"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -29,7 +29,7 @@ A `readonly` palavra-chave é um modificador que pode ser usado em quatro contex
   > Um tipo externamente visível que contém um campo somente leitura externamente visível que seja um tipo de referência mutável pode ser uma vulnerabilidade de segurança e pode acionar o aviso [CA2104](/visualstudio/code-quality/ca2104) : "Não declare somente tipos de referência mutáveis".
 
 - Em `readonly struct` uma definição `readonly` de tipo, indica que o tipo de estrutura é imutável. Para obter mais [ `readonly` ](../builtin-types/struct.md#readonly-struct) informações, consulte a seção de estrutura do artigo [Tipos de Estrutura.](../builtin-types/struct.md)
-- Em uma `readonly` `struct` [ `readonly` definição de membro,](#readonly-member-examples)indica que um membro de um não muta o estado interno da estrutura.
+- Em uma declaração de membro `readonly` de instância dentro de um tipo de estrutura, indica que um membro de instância não modifica o estado da estrutura. Para obter mais [ `readonly` ](../builtin-types/struct.md#readonly-instance-members) informações, consulte a seção de membros de instância do artigo [Tipos de Estrutura.](../builtin-types/struct.md)
 - Em um [ `ref readonly` retorno do método,](#ref-readonly-return-example)o modificador indica que o `readonly` método retorna uma referência e as gravações não são permitidas a essa referência.
 
 Os `readonly struct` `ref readonly` contextos foram adicionados em C# 7.2. `readonly`membros de estrutura foram adicionados em C # 8.0
@@ -72,56 +72,11 @@ você receberá a mensagem de erro do compilador:
 
 **Um campo somente leitura não pode ser atribuído (exceto em um construtor ou em um inicializador de variáveis)**
 
-## <a name="readonly-member-examples"></a>Leia apenas exemplos de membros
-
-Outras vezes, você pode criar uma estrutura que suporta mutação. Nesses casos, vários dos membros da instância provavelmente não modificarão o estado interno da estrutura. Você pode declarar esses `readonly` membros de instância com o modificador. O compilador reforça sua intenção. Se esse membro modificar o estado diretamente ou acessar um membro `readonly` que também não é declarado com o modificador, o resultado será um erro de tempo de compilação. O `readonly` modificador é `struct` válido `class` em `interface` declarações de membros, não de membros.
-
-Você ganha duas vantagens `readonly` aplicando o `struct` modificador aos métodos aplicáveis. Mais importante, o compilador reforça sua intenção. Código que modifica estado não é `readonly` válido em um método. O compilador também pode fazer `readonly` uso do modificador para permitir otimizações de desempenho. Quando `struct` grandes tipos `in` são passados por referência, o compilador deve gerar uma cópia defensiva se o estado da estrutura pode ser modificado. Se `readonly` apenas membros forem acessados, o compilador não poderá criar a cópia defensiva.
-
-O `readonly` modificador é válido na `struct`maioria dos membros de a, <xref:System.Object?displayProperty=nameWithType>incluindo métodos que sobrepõem métodos declarados em . Existem algumas restrições:
-
-- Você não pode `readonly` declarar métodos ou propriedades estáticas.
-- Você não pode `readonly` declarar construtores.
-
-Você pode `readonly` adicionar o modificador a uma declaração de propriedade ou indexador:
-
-```csharp
-readonly public int Counter
-{
-  get { return 0; }
-  set {} // not useful, but legal
-}
-```
-
-Você também pode `readonly` adicionar o `get` `set` modificador a um indivíduo ou acessórios de uma propriedade ou indexador:
-
-```csharp
-public int Counter
-{
-  readonly get { return _counter; }
-  set { _counter = value; }
-}
-int _counter;
-```
-
-Você não pode `readonly` adicionar o modificador a uma propriedade e a um ou mais dos acessórios dessa mesma propriedade. Essa mesma restrição se aplica aos indexadores.
-
-O compilador aplica implicitamente o `readonly` modificador a propriedades implementadas automaticamente onde o código implementado pelo compilador não modifica o estado. Equivale às seguintes declarações:
-
-```csharp
-public readonly int Index { get; }
-// Or:
-public int Number { readonly get; }
-public string Message { readonly get; set; }
-```
-
-Você pode `readonly` adicionar o modificador nesses locais, mas não terá nenhum efeito significativo. Você não pode `readonly` adicionar o modificador a um definidor de propriedade implementado automaticamente ou a uma propriedade de leitura/gravação implementada automaticamente.
-
 ## <a name="ref-readonly-return-example"></a>Exemplo de retorno de readonly de ref
 
 O `readonly` modificador `ref return` em um indica que a referência retornada não pode ser modificada. O exemplo a seguir retorna uma referência para a origem. Ele usa `readonly` o modificador para indicar que os chamadores não podem modificar a origem:
 
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+[!code-csharp[readonly return example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 
 O tipo retornado não precisa ser um `readonly struct`. Qualquer tipo que possa ser retornado por `ref` pode ser retornado por `ref readonly`.
 
@@ -141,4 +96,4 @@ Você também pode ver as propostas de especificação do idioma:
 - [C# Palavras-chave](index.md)
 - [Modificadores](index.md)
 - [const](const.md)
-- [Campos](../../programming-guide/classes-and-structs/fields.md)
+- [Fields](../../programming-guide/classes-and-structs/fields.md)

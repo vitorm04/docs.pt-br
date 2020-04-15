@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121164"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389737"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolver e implantar serviços de dados WCF
 
@@ -42,7 +42,7 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
 
 1. **Servidor de IIS local**
 
-     Quando você cria um serviço de dados que é um aplicativo de ASP.NET ou ASP.NET site que funciona no Internet Information Services (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, você deve ter certeza de que tanto o IIS quanto o Windows Communication Foundation (WCF) estão instalados e configurados corretamente e concedem acesso a contas IIS no sistema de arquivos e bancos de dados. Para obter mais informações, consulte [Como desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Quando você cria um serviço de dados que é um aplicativo de ASP.NET ou ASP.NET site que funciona no Internet Information Services (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, certifique-se de que tanto o IIS quanto o Windows Communication Foundation (WCF) estejam instalados e configurados corretamente e concedam acesso a contas IIS no sistema de arquivos e bancos de dados. Para obter mais informações, consulte [Como desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Você deve executar o Visual Studio com os direitos de administrador para permitir que o ambiente de desenvolvimento configure o servidor IIS local.
@@ -61,7 +61,7 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
 
     - Este servidor não inclui os recursos adicionais do IIS, como autenticação.
 
-    - Esse servidor não pode lidar com fluxos HTTP em pedaços, que são enviados para ser padrão pelo cliente WCF Data Services ao acessar grandes dados binários do serviço de dados. Para obter mais informações, consulte [Provedor de Streaming](streaming-provider-wcf-data-services.md).
+    - Esse servidor não pode lidar com fluxos HTTP em pedaços, que são enviados por padrão pelo cliente WCF Data Services ao acessar grandes dados binários do serviço de dados. Para obter mais informações, consulte [Provedor de Streaming](streaming-provider-wcf-data-services.md).
 
     - Este servidor tem problemas com`.`o processamento do caractere period ( ) em uma URL, mesmo que este caractere seja suportado pelo WCF Data Services em valores-chave.
 
@@ -74,11 +74,11 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
 
 ### <a name="development-tips"></a>Dicas de desenvolvimento
 
-Você deve considerar o seguinte ao desenvolver um serviço de dados:
+Considere o seguinte quando você desenvolve um serviço de dados:
 
-- Determinar os requisitos de segurança de seu serviço de dados, se planejar autenticar usuários ou restringir o acesso para usuários específicos. Para obter mais informações, consulte [Protegendo os Serviços de Dados WCF](securing-wcf-data-services.md).
+- Se você planeja autenticar usuários ou restringir o acesso a usuários específicos, determine os requisitos de segurança do seu serviço de dados. Para obter mais informações, consulte [Protegendo os Serviços de Dados WCF](securing-wcf-data-services.md).
 
-- Um programa de inspeção de HTTP pode ser muito útil ao depurar um serviço de dados permitindo que você inspecione o conteúdo de mensagens de solicitação e resposta. Qualquer analisador de pacote de rede que possa exibir pacotes brutos pode ser usado para inspecionar solicitações HTTP para e respostas do serviço de dados.
+- Um programa de inspeção HTTP pode ser útil ao depurar um serviço de dados, permitindo que você inspecione o conteúdo das mensagens de solicitação e resposta. Qualquer analisador de pacote de rede que possa exibir pacotes brutos pode ser usado para inspecionar solicitações HTTP para e respostas do serviço de dados.
 
 - Ao depurar um serviço de dados, você pode querer obter mais informações sobre um erro do serviço de dados do que durante a operação regular. Você pode obter informações de erro adicionais do serviço de dados definindo a propriedade <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> no <xref:System.Data.Services.DataServiceConfiguration> para `true` e definindo a propriedade <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> do atributo <xref:System.ServiceModel.Description.ServiceDebugBehavior> na classe de serviço de dados como `true`. Para obter mais informações, consulte o post [Depuração de Serviços de Dados WCF](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Você também pode habilitar o rastreamento no WCF para visualizar as exceções levantadas na camada de mensagens HTTP. Para obter mais informações, consulte [Configuração de rastreamento](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
@@ -119,7 +119,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 ### <a name="deployment-considerations"></a>Considerações de implantação
 
-Você deve considerar o seguinte ao implantar um serviço de dados:
+Considere o seguinte ao implantar um serviço de dados:
 
 - Quando você implanta um serviço de dados que usa o provedor Entity Framework para acessar um banco de dados SQL Server, você também pode ter que propagar estruturas de dados, dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts (.sql files) automaticamente para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, consulte [Como implantar um banco de dados com um projeto de aplicativo web.](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)) Para um site ASP.NET, você pode fazer isso usando o **Assistente de Publicação de Banco de Dados** no Visual Studio. Para obter mais informações, consulte [Publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 

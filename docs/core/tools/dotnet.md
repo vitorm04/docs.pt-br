@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para o .NET Core CLI) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134073"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389606"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -57,7 +57,7 @@ O `dotnet` comando tem duas funções:
 
 - Ele executa aplicativos .NET Core.
 
-  Você especifica o caminho `.dll` para um arquivo de aplicativo para executar o aplicativo. Por exemplo, `dotnet myapp.dll` `myapp` executa o aplicativo. Consulte a [implantação do aplicativo .NET Core](../deploying/index.md) para saber sobre opções de implantação.
+  Você especifica o caminho `.dll` para um arquivo de aplicativo para executar o aplicativo.  Para executar o aplicativo significa encontrar e executar o ponto de `Main` entrada, que no caso de aplicativos de console é o método. Por exemplo, `dotnet myapp.dll` `myapp` executa o aplicativo. Consulte a [implantação do aplicativo .NET Core](../deploying/index.md) para saber sobre opções de implantação.
 
 ## <a name="options"></a>Opções
 
@@ -77,7 +77,7 @@ As seguintes `dotnet` opções são para si só. Por exemplo, `dotnet --info`. E
 
 - **`--list-runtimes`**
 
-  Imprime uma lista dos tempos de execução do .NET Core instalados.
+  Imprime uma lista dos tempos de execução do .NET Core instalados. Uma versão x86 do SDK lista apenas tempos de execução x86, e uma versão x64 do SDK lista apenas tempos de execução x64.
 
 - **`--list-sdks`**
 
@@ -171,7 +171,7 @@ O comportamento de encaminhamento também pode ser configurado em uma propriedad
 | [dotnet run](dotnet-run.md)                   | Executa o aplicativo na origem.                                   |
 | [dotnet sln](dotnet-sln.md)                   | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
 | [dotnet store](dotnet-store.md)               | Armazena os assemblies no repositório de pacotes de runtime.                     |
-| [teste dotnet](dotnet-test.md)                 | Executa testes usando um executor de teste.                                     |
+| [dotnet test](dotnet-test.md)                 | Executa testes usando um executor de teste.                                     |
 
 ### <a name="project-references"></a>Referências de projeto
 
@@ -195,12 +195,12 @@ Comando | Função
 [dotnet nuget delete](dotnet-nuget-delete.md) | Exclui ou retira da lista um pacote do servidor.
 [dotnet nuget push](dotnet-nuget-push.md) | Envia um pacote ao servidor e os publica.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Limpa ou lista os recursos locais do NuGet, como cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.
-[dotnet nuget adicionar fonte](dotnet-nuget-add-source.md) | Adiciona uma fonte NuGet.
-[dotnet nuget desativar fonte](dotnet-nuget-disable-source.md) | Desativa uma fonte NuGet.
-[dotnet nuget habilitar fonte](dotnet-nuget-enable-source.md) | Habilita uma fonte NuGet.
-[dotnet nuget fonte de lista](dotnet-nuget-list-source.md) | Lista todas as fontes NuGet configuradas.
-[dotnet nuget remover fonte](dotnet-nuget-remove-source.md) | Remove uma fonte NuGet.
-[dotnet nuget fonte de atualização](dotnet-nuget-update-source.md) | Atualiza uma fonte NuGet.
+[dotnet nuget add source](dotnet-nuget-add-source.md) | Adiciona uma fonte NuGet.
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | Desativa uma fonte NuGet.
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | Habilita uma fonte NuGet.
+[dotnet nuget list source](dotnet-nuget-list-source.md) | Lista todas as fontes NuGet configuradas.
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | Remove uma fonte NuGet.
+[dotnet nuget update source](dotnet-nuget-update-source.md) | Atualiza uma fonte NuGet.
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>Comandos de ferramentas globais, de caminho de ferramentas e locais
 

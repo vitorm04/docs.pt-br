@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: e74027ba70ddf6905a12f9691caeb0a406428ad6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b336e1aa097f83280de6faeef51793345520530
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157018"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389652"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,9 +21,10 @@ ms.locfileid: "78157018"
 
 ```dotnetcli
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
-    [--force] [--ignore-failed-sources] [--no-cache]
-    [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [-v|--verbosity] [--interactive]
+    [-f|--force] [--force-evaluate] [--ignore-failed-sources]
+    [--interactive] [--lock-file-path] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages] [-r|--runtime]
+    [-s|--source] [--use-lockfile] [-v|--verbosity]
 
 dotnet restore [-h|--help]
 ```
@@ -92,6 +93,10 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
   Forçará todas as dependências a serem resolvidas mesmo se última restauração tiver sido bem-sucedida. A especificação desse sinalizador é o mesmo que a exclusão do arquivo *project.assets.json*.
 
+- **`--force-evaluate`**
+
+  As forças restauram para reavaliar todas as dependências, mesmo que um arquivo de bloqueio já exista.
+
 - **`-h|--help`**
 
   Imprime uma ajuda breve para o comando.
@@ -99,6 +104,18 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 - **`--ignore-failed-sources`**
 
   Avise somente sobre fontes com falha se houver pacotes que atendem ao requisito de versão.
+
+- **`--interactive`**
+
+  Permite que o comando pare e aguarde a entrada ou uma ação do usuário (por exemplo, para concluir a autenticação). A partir do .NET Core 2.1.400.
+
+- **`--lock-file-path <LOCK_FILE_PATH>`**
+
+  Local de saída onde o arquivo de bloqueio do projeto é gravado. Por padrão, isso é *PROJECT_ROOT\packages.lock.json*.
+
+- **`--locked-mode`**
+
+  Não permita atualizar o arquivo de bloqueio do projeto.
 
 - **`--no-cache`**
 
@@ -120,13 +137,13 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
   Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Essa configuração substitui todas as fontes especificadas nos arquivos *nuget.config*. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
-- **`--verbosity <LEVEL>`**
+- **`--use-lockfile`**
+
+  Permite que o arquivo de bloqueio do projeto seja gerado e usado com restauração.
+
+- **`-v|--verbosity <LEVEL>`**
 
   Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `minimal`.
-
-- **`--interactive`**
-
-  Permite que o comando pare e aguarde a entrada ou uma ação do usuário (por exemplo, para concluir a autenticação). A partir do .NET Core 2.1.400.
 
 ## <a name="examples"></a>Exemplos
 

@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401637"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389193"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -286,7 +286,7 @@ O arquivo resultante é:
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -433,7 +433,7 @@ Você pode implantar um aplicativo de vários contêineres com um único arquivo
 
 ## <a name="step-5-build-and-run-your-docker-application"></a>Etapa 5. Compilar e executar seu aplicativo do Docker
 
-Se seu aplicativo tem apenas um contêiner, você pode executá-lo implantando-o no host do Docker (VM ou servidor físico). No entanto, se o aplicativo contiver vários serviços, você pode`docker-compose up)`implantá-lo como um aplicativo composto, usando um único comando CLI ( ou com o Visual Studio, que usará esse comando as capas. Vamos examinar as diferentes opções.
+Se seu aplicativo tem apenas um contêiner, você pode executá-lo implantando-o no host do Docker (VM ou servidor físico). No entanto, se o aplicativo contiver vários serviços, você pode`docker-compose up)`implantá-lo como um aplicativo composto, usando um único comando CLI ( ou com o Visual Studio, que usará esse comando sob as capas. Vamos examinar as diferentes opções.
 
 ### <a name="option-a-running-a-single-container-application"></a>Opção A: Executando um aplicativo de contêiner único
 
@@ -479,7 +479,7 @@ Depois que o comando docker-compose up é executado, o aplicativo e os contêine
 
 #### <a name="using-visual-studio"></a>Como usar o Visual Studio
 
-Executar um aplicativo de vários contêineres usando o Visual Studio 2019 não pode ficar mais simples. Basta pressionar **Ctrl+F5** para executar ou **F5** para depuração, como de costume, configurando o projeto **docker-compose** como o projeto de inicialização.  O Visual Studio lida com toda a configuração necessária, para que você possa criar pontos de interrupção como de costume e depurar o que finalmente se tornou processos independentes em execução em "servidores remotos", com o depurador já conectado. assim mesmo.
+Executar um aplicativo de vários contêineres usando o Visual Studio 2019 não pode ficar mais simples. Basta pressionar **Ctrl+F5** para executar ou **F5** para depuração, como de costume, configurando o projeto **docker-compose** como o projeto de inicialização.  O Visual Studio lida com toda a configuração necessária, para que você possa criar pontos de interrupção como de costume e depurar o que finalmente se tornam processos independentes em execução em "servidores remotos", com o depurador já conectado, assim mesmo.
 
 Conforme mencionado anteriormente, sempre que você adiciona suporte à solução do Docker a um projeto de uma solução, esse projeto é configurado no arquivo global (nível da solução) docker-compose.yml, o que permite que você execute ou depure toda a solução de uma só vez. O Visual Studio iniciará um contêiner para cada projeto que tenha suporte habilitado à solução do Docker e executará todas as etapas internas para você (dotnet publish, docker build, etc.).
 

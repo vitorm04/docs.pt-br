@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989188"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389105"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -120,7 +120,7 @@ Associação dinâmica tem potencial de erros, mas também grande eficiência na
 C# versão 5.0, lançado com visual studio 2012, era uma versão focada do idioma. Quase todo o esforço para essa versão foi dedicado a outro conceito inovador de linguagem: os modelos `async` e `await` para programação assíncrona.  Aqui está a lista dos recursos principais:
 
 - [Membros assíncronos](../async.md)
-- [Atributos de informações do chamador](../programming-guide/concepts/caller-information.md)
+- [Atributos de informações do chamador](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>Consulte Também
 

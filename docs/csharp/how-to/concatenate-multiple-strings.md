@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121046"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389529"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Como concatenar várias strings (Guia C#)
 
@@ -37,13 +37,13 @@ Em algumas expressões, é mais fácil concatenar cadeias de caracteres usando a
 
 Outro método para concatenar cadeias de caracteres é o <xref:System.String.Format%2A?displayProperty=nameWithType>. Esse método funciona bem quando você está criando uma cadeia de caracteres com base em um pequeno número de cadeias de caracteres de componente.
 
-Em outros casos, você pode combinar cadeias de caracteres em um loop em que você não sabe quantas cadeias de caracteres de origem você está combinando, sendo que o número real de cadeias de caracteres de origem pode ser grande demais. A classe <xref:System.Text.StringBuilder> foi projetada para esses cenários. O código a seguir usa o método <xref:System.Text.StringBuilder.Append%2A> da classe <xref:System.Text.StringBuilder> para concatenar cadeias de caracteres.  
+Em outros casos, você pode estar combinando strings em um loop onde você não sabe quantas strings de origem você está combinando, e o número real de strings de origem pode ser grande. A classe <xref:System.Text.StringBuilder> foi projetada para esses cenários. O código a seguir usa o método <xref:System.Text.StringBuilder.Append%2A> da classe <xref:System.Text.StringBuilder> para concatenar cadeias de caracteres.  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 Você pode ler mais sobre as [razões `StringBuilder` para escolher a concatenação de cordas ou a classe](xref:System.Text.StringBuilder#StringAndSB).
 
-Outra opção para unir cadeias de caracteres de uma coleção é usar o método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use o método <xref:System.String.Join%2A?displayProperty=nameWithType> se desejar separar as cadeias de caracteres de origem por um delimitador. O código a seguir combina uma matriz de palavras usando os dois métodos:
+Outra opção para unir cadeias de caracteres de uma coleção é usar o método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use <xref:System.String.Join%2A?displayProperty=nameWithType> o método se as seqüências de origem devem ser separadas por um delimitador. O código a seguir combina uma matriz de palavras usando os dois métodos:
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 

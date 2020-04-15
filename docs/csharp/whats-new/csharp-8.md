@@ -2,12 +2,12 @@
 title: O que há de novo em C# 8.0 - C# Guide
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989201"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389097"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
@@ -76,7 +76,7 @@ O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A `D
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Observe que `readonly` o modificador é necessário em uma propriedade somente leitura. O compilador não assume `get` que os acessórios não modificam o estado; você deve `readonly` declarar explicitamente. As propriedades autoimplementadas são uma exceção; o compilador tratará todos os getters auto-implementados como apenas leitura, `readonly` então aqui `X` não `Y` há necessidade de adicionar o modificador às propriedades e.
+Observe que `readonly` o modificador é necessário em uma propriedade somente leitura. O compilador não assume `get` que os acessórios não modificam o estado; você deve `readonly` declarar explicitamente. As propriedades autoimplementadas são uma exceção; o compilador tratará todos os getters auto-implementados `readonly`como , então `readonly` aqui não `X` `Y` há necessidade de adicionar o modificador às propriedades e.
 
 O compilador impõe a `readonly` regra de que os membros não modificam o estado. O seguinte método não será compilado `readonly` a menos que você remova o modificador:
 
@@ -88,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção. Você pode aprender mais sobre membros lidos [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)apenas no artigo de referência de idiomas sobre .
+Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção.
+
+Para obter mais [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) informações, consulte a seção de membros de instância do artigo [Tipos de Estrutura.](../language-reference/builtin-types/struct.md)
 
 ## <a name="default-interface-methods"></a>Métodos de interface padrão
 

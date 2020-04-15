@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399745"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389549"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -95,7 +95,7 @@ O exemplo a seguir mostra como aplicar atributos a métodos, parâmetros de mét
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> Independentemente dos destinos nos quais `ValidatedContract` é definido como válido, o destino `return` deve ser especificado, mesmo se `ValidatedContract` forem definidos para serem aplicados somente a valores de retorno. Em outras palavras, o compilador não usará as informações de `AttributeUsage` para resolver os destinos de atributos ambíguos. Para obter mais informações, consulte [AttributeUsage (C#)](attributeusage.md).
+> Independentemente dos destinos nos quais `ValidatedContract` é definido como válido, o destino `return` deve ser especificado, mesmo se `ValidatedContract` forem definidos para serem aplicados somente a valores de retorno. Em outras palavras, o compilador não usará as informações de `AttributeUsage` para resolver os destinos de atributos ambíguos. Para obter mais informações, consulte [AttributeUsage (C#)](../../../language-reference/attributes/general.md).
 
 ## <a name="common-uses-for-attributes"></a>Usos comuns para atributos
 
@@ -121,7 +121,7 @@ Para obter mais informações, consulte:
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)  
 - [Como criar uma união C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comuns (C#)](common-attributes.md)  
-- [Informações do chamador (C#)](../caller-information.md)  
+- [Informações do chamador (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>Confira também
 

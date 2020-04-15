@@ -1,15 +1,15 @@
 ---
 title: Escrever um código C# seguro e eficiente
 description: Aprimoramentos recentes na linguagem C# permitem escrever código seguro verificável que o desempenho associou anteriormente ao código não seguro.
-ms.date: 10/23/2018
+ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345090"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389675"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -22,7 +22,7 @@ Este artigo se concentra em técnicas para o gerenciamento eficiente de recursos
 Este artigo se concentra nas seguintes técnicas de gerenciamento de recursos:
 
 - Declare [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) a para expressar que um tipo é **imutável**. Isso permite que o compilador salve [`in`](language-reference/keywords/in-parameter-modifier.md) cópias defensivas ao usar parâmetros.
-- Se um tipo não puder ser imutável, declare `struct` os membros `readonly` para indicar que o membro não modifica o estado.
+- Se um tipo não puder ser imutável, declare `struct` os membros [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) para indicar que o membro não modifica o estado.
 - Use [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) um retorno quando o `struct` valor <xref:System.IntPtr.Size?displayProperty=nameWithType> de retorno for maior do que e a vida útil do armazenamento for maior do que o método que devolve o valor.
 - Quando o tamanho de um `readonly struct` é maior que <xref:System.IntPtr.Size?displayProperty=nameWithType>, você deve passá-lo como um parâmetro `in` por motivos de desempenho.
 - Nunca passe `struct` um `in` como parâmetro a menos que `readonly` seja declarado com `readonly` o modificador ou o método chama apenas os membros da estrutura. Violar essa orientação pode afetar negativamente o desempenho e pode levar a um comportamento obscuro.
@@ -113,7 +113,7 @@ public struct Point3D
 
 A amostra anterior mostra muitos dos locais `readonly` onde você pode aplicar o modificador: métodos, propriedades e acessórios de propriedade. Se você usar propriedades implementadas automaticamente, `readonly` o compilador `get` adicionará o modificador ao acessório para propriedades de leitura e gravação. O compilador adiciona `readonly` o modificador às declarações de propriedade `get` implementadas automaticamente para propriedades com apenas um acessório.
 
-Adicionar `readonly` o modificador a membros que não sofrem mutação de estado fornece dois benefícios relacionados. Primeiro, o compilador reforça sua intenção. Esse membro não pode alterar o estado da estrutura, nem pode acessar um `readonly`membro que também não está marcado. Em segundo lugar, o compilador não `in` criará cópias defensivas de parâmetros ao acessar um `readonly` membro. O compilador pode fazer essa otimização com `struct` segurança porque garante `readonly` que o não é modificado por um membro.
+Adicionar `readonly` o modificador a membros que não sofrem mutação de estado fornece dois benefícios relacionados. Primeiro, o compilador reforça sua intenção. Esse membro não pode alterar o estado da estrutura. Em segundo lugar, o compilador não `in` criará cópias defensivas de parâmetros ao acessar um `readonly` membro. O compilador pode fazer essa otimização com `struct` segurança porque garante `readonly` que o não é modificado por um membro.
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>Use instruções `ref readonly return` para grandes estruturas, quando possível
 

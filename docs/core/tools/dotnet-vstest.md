@@ -2,12 +2,12 @@
 title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
 ms.date: 02/27/2020
-ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4941a6d08d45953039eb406a30f0ff984128ba1c
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156927"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389625"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,11 @@ ms.locfileid: "78156927"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
-    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
-    [--TestCaseFilter] [--logger] [-lt|--ListTests]
-    [--ParentProcessId] [--Port] [--Diag] [--Blame]
-    [--InIsolation] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
+    [--Framework] [--InIsolation] [-lt|--ListTests] [--logger]
+    [--Parallel] [--ParentProcessId] [--Platform] [--Port]
+    [--ResultsDirectory] [--Settings] [--TestAdapterPath]
+    [--TestCaseFilter] [--Tests] [[--] <args>...]] [-?|--Help]
 ```
 
 ## <a name="description"></a>Descrição
@@ -39,37 +39,25 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 ## <a name="options"></a>Opções
 
-- **`--Settings <Settings File>`**
+- **`--Blame`**
 
-  Configurações para usar ao executar testes.
+  Executa os testes no modo blame. Essa opção é útil para isolar os testes problemáticos que causam uma falha do host de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
 
-- **`--Tests <Test Names>`**
+- **`--Diag <Path to log file>`**
 
-  Execute testes com nomes que correspondam aos valores fornecidos. Separe vários valores com vírgulas.
-
-- **`--TestAdapterPath`**
-
-  Use adaptadores de teste personalizados para um determinado caminho (se houver) na execução de teste.
-
-- **`--Platform <Platform type>`**
-
-  Arquitetura da plataforma de destino usada para a execução de teste. Os valores válidos são `x86`, `x64` e `ARM`.
+  Permite logs detalhados na plataforma de teste. Os logs são gravados no arquivo fornecido.
 
 - **`--Framework <Framework Version>`**
 
   Versão do .NET Framework de destino usada na execução de teste. Alguns exemplos de valores válidos são `.NETFramework,Version=v4.6` ou `.NETCoreApp,Version=v1.0`. Outros valores com suporte são `Framework40`, `Framework45`, `FrameworkCore10` e `FrameworkUap10`.
 
-- **`--Parallel`**
+- **`--InIsolation`**
 
-  Executar testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número `MaxCpuCount` explícito de `RunConfiguration` núcleos definindo a propriedade o nó no arquivo *de configurações* de execução.
+  Executa os testes em um processo isolado. Isso torna o processo *vstest.console.exe* menos suscetível a ser interrompido por engano nos testes. Entretanto, os testes podem ser executados de forma mais lenta.
 
-- **`--TestCaseFilter <Expression>`**
+- **`-lt|--ListTests <File Name>`**
 
-  Execute testes que correspondam à expressão fornecida. `<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Parênteses `()` são usados para agrupar subexpressões.
-
-- **`-?|--Help`**
-
-  Imprime uma ajuda breve para o comando.
+  Lista todos os testes descobertos do contêiner de teste fornecido.
 
 - **`--logger <Logger Uri/FriendlyName>`**
 
@@ -93,29 +81,45 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
     /logger:trx [;LogFileName=<Defaults to unique file name>]
     ```
 
-- **`-lt|--ListTests <File Name>`**
+- **`--Parallel`**
 
-  Lista todos os testes descobertos do contêiner de teste fornecido.
+  Executar testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número `MaxCpuCount` explícito de `RunConfiguration` núcleos definindo a propriedade sob o nó no arquivo *de configurações* de execução.
 
 - **`--ParentProcessId <ParentProcessId>`**
 
   ID do processo pai responsável por iniciar o processo atual.
 
+- **`--Platform <Platform type>`**
+
+  Arquitetura da plataforma de destino usada para a execução de teste. Os valores válidos são `x86`, `x64` e `ARM`.
+
 - **`--Port <Port>`**
 
   Especifica a porta para a conexão de soquete e recebimento das mensagens do evento.
 
-- **`--Diag <Path to log file>`**
+- **`--ResultsDirectory:<PathToResulsDirectory>`**
 
-  Permite logs detalhados na plataforma de teste. Os logs são gravados no arquivo fornecido.
+  O diretório de resultados de teste será criado no caminho especificado, se não existir.
 
-- **`--Blame`**
+- **`--Settings <Settings File>`**
 
-  Executa os testes no modo blame. Essa opção é útil para isolar os testes problemáticos que causam uma falha do host de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
+  Configurações para usar ao executar testes.
 
-- **`--InIsolation`**
+- **`--TestAdapterPath`**
 
-  Executa os testes em um processo isolado. Isso torna o processo *vstest.console.exe* menos suscetível a ser interrompido por engano nos testes. Entretanto, os testes podem ser executados de forma mais lenta.
+  Use adaptadores de teste personalizados para um determinado caminho (se houver) na execução de teste.
+
+- **`--TestCaseFilter <Expression>`**
+
+  Execute testes que correspondam à expressão fornecida. `<Expression>` está no formato `<property>Operator<value>[|&<Expression>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Parênteses são usados `()` para agrupar subexpressões. Para obter mais informações, consulte [o filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+
+- **`--Tests <Test Names>`**
+
+  Execute testes com nomes que correspondam aos valores fornecidos. Separe vários valores com vírgulas.
+
+- **`-?|--Help`**
+
+  Imprime uma ajuda breve para o comando.
 
 - **`@<file>`**
 
@@ -156,3 +160,7 @@ Execute testes `TestMethod1` e `TestMethod2`:
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
+
+## <a name="see-also"></a>Confira também
+
+- [Opções da linha de comando de VSTest.Console.exe](/visualstudio/test/vstest-console-options)

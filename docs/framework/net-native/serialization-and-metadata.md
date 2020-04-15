@@ -2,12 +2,12 @@
 title: Serialização e metadados
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241913"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389230"
 ---
 # <a name="serialization-and-metadata"></a>Serialização e metadados
 
@@ -15,7 +15,7 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
   
 - Serializadores de terceiros baseados em reflexão. Eles necessitam de modificações no arquivo de diretivas de runtime e são discutidos na próxima seção.  
   
-- Serializadores não baseados em reflexão localizados na Biblioteca de Classes do .NET Framework. Eles podem necessitar de modificações no arquivo de diretivas de runtime e são discutidos na seção [Serializadores da Microsoft](#Microsoft).  
+- Serializadores não baseados em reflexão encontrados na biblioteca de classes .NET Framework. Eles podem necessitar de modificações no arquivo de diretivas de runtime e são discutidos na seção [Serializadores da Microsoft](#Microsoft).  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>Serializadores de terceiros
@@ -59,13 +59,13 @@ Se seu aplicativo serializa ou desserializa objetos, talvez seja necessário adi
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- Você deve adicionar entradas como mostrado a seguir para cada tipo para o arquivo de diretivas de runtime:  
+Adicionar entradas como o seguinte para cada tipo ao arquivo de diretivas de tempo de execução:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- Para obter informações sobre a sintaxe usada no exemplo, consulte [ \<Tipo> Elemento](type-element-net-native.md).  
+Para obter informações sobre a sintaxe usada no exemplo, consulte [ \<Tipo> Elemento](type-element-net-native.md).  
   
 ## <a name="see-also"></a>Confira também
 

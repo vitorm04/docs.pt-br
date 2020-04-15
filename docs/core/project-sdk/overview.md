@@ -3,16 +3,16 @@ title: Visão geral do Projeto .NET Core SDK
 description: Saiba mais sobre os SDKs do projeto .NET Core.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 32e14993326c6f17d6470249fe5a545180348631
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399171"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389662"
 ---
 # <a name="net-core-project-sdks"></a>SDKs do projeto .NET Core
 
-Os projetos .NET Core estão associados a um kit de desenvolvimento de software (SDK). Cada projeto SDK é um conjunto de metas do MSBuild e [tarefas](/visualstudio/msbuild/msbuild-targets) [associadas](/visualstudio/msbuild/msbuild-tasks) que são responsáveis pela compilação, embalagem e publicação de códigos.
+Os projetos .NET Core estão associados a um kit de desenvolvimento de software (SDK). Cada *projeto SDK* é um conjunto de metas do MSBuild e [tarefas associadas](/visualstudio/msbuild/msbuild-targets) que são responsáveis pela compilação, embalagem e publicação de códigos. [tasks](/visualstudio/msbuild/msbuild-tasks) Um projeto que faz referência a um projeto SDK é às vezes referido como um *projeto no estilo SDK.*
 
 ## <a name="available-sdks"></a>SDKs disponíveis
 
@@ -76,7 +76,7 @@ Referenciar um SDK em uma dessas maneiras simplifica muito os arquivos de projet
 
 Você pode ver o projeto totalmente expandido à medida que o MSBuild o `dotnet msbuild -preprocess` vê depois que o SDK e seus alvos são incluídos usando o comando. O interruptor de [`dotnet msbuild`](../tools/dotnet-msbuild.md) [pré-processo](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) do comando mostra quais arquivos são importados, suas fontes e suas contribuições para a construção sem realmente construir o projeto.
 
-Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura, especificando-o como uma propriedade MSBuild. Por exemplo: 
+Se o projeto tiver várias estruturas de destino, concentre os resultados do comando em apenas uma estrutura, especificando-o como uma propriedade MSBuild. Por exemplo:
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
@@ -135,7 +135,7 @@ Os projetos .NET Core podem empacotar metas e propriedades personalizadas do MSB
 
 - Estender o processo de construção.
 - Acesso a artefatos do processo de construção, como arquivos gerados.
-- Inspecione a configuração a qual a compilação é invocada.
+- Inspecione a configuração sob a qual a compilação é invocada.
 
 Você adiciona metas ou propriedades de compilação `<package_id>.targets` `<package_id>.props` personalizadas colocando `Contoso.Utility.UsefulStuff.targets`arquivos no formulário ou (por exemplo) na pasta de *compilação* do projeto.
 
