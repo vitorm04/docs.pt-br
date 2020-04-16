@@ -119,7 +119,7 @@
       href: programming-guide/types/index.md
     - name: Tipos de referência anuláveis
       href: nullable-references.md
-    - name: Descrever APIs anuláveis usando atributos e restrições
+    - name: Atualizar assinaturas de API para referências que permitem valor nulo
       href: nullable-attributes.md
     - name: Namespaces
       href: programming-guide/namespaces/index.md
@@ -355,16 +355,10 @@
               href: programming-guide/concepts/attributes/index.md
             - name: Criando atributos personalizados
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: Acessando atributos usando reflexão
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: Como criar uma união do C/C++ usando atributos
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: Atributos comuns
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: Informações do chamador
-          href: programming-guide/concepts/caller-information.md
         - name: Coleções
           href: programming-guide/concepts/collections.md
         - name: Covariância e contravariância
@@ -1664,6 +1658,19 @@
           href: language-reference/tokens/interpolated.md
         - name: '@ – identificador textual'
           href: language-reference/tokens/verbatim.md
+    - name: Atributos lidos pelo compilador
+      items:
+        - name: Atributos globais
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+        - name: Geral
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: Informações do chamador
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: Análise estática que permite valor nulo
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
     - name: 'Diretivas de pré-processador do C#'
       items:
         - name: Visão geral
