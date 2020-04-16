@@ -2,12 +2,12 @@
 title: Como usar filtros
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: f99c2af623dacac3ebe46422815a7f42e2a4df2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34ea961b0ef5db51efcae0b86f2c06171d6d756c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184823"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464108"
 ---
 # <a name="how-to-use-filters"></a>Como usar filtros
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que usa vários filtros. Neste exemplo, as mensagens são encaminhadas para duas implementações de um serviço de calculadora, regularCalc e roundingCalc. Ambas as implementações suportam as mesmas operações; no entanto, um serviço arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de indicar se deve usar a versão de arredondamento do serviço; se nenhuma preferência de serviço for expressa, então a mensagem é equilibrada entre os dois serviços. As operações expostas por ambos os serviços são:  
@@ -24,7 +24,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
   
 ### <a name="determine-unique-data"></a>Determinar dados únicos  
   
-1. Como ambas as implementações de serviço lidam com as mesmas operações, e são essencialmente idênticas além dos dados que retornam, os dados base contidos nas mensagens enviadas de aplicativos clientes não são únicos o suficiente para permitir que você determine como direcionar o Solicitação. Mas se o aplicativo cliente adicionar um valor de cabeçalho único à mensagem, então você pode usar esse valor para determinar como a mensagem deve ser roteada.  
+1. Como ambas as implementações de serviço lidam com as mesmas operações e são essencialmente idênticas aos dados que retornam, os dados base contidos nas mensagens enviadas dos aplicativos do cliente não são únicos o suficiente para permitir que você determine como direcionar a solicitação. Mas se o aplicativo cliente adicionar um valor de cabeçalho único à mensagem, então você pode usar esse valor para determinar como a mensagem deve ser roteada.  
   
      Para este exemplo, se o aplicativo cliente precisar que a mensagem seja processada pela calculadora de arredondamento, ele adiciona um cabeçalho personalizado usando o seguinte código:  
   
@@ -35,7 +35,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
   
      Agora você pode usar o filtro XPath para inspecionar mensagens para este cabeçalho e encaminhar mensagens contendo o cabeçalho para o serviço roundCalc.  
   
-2. Além disso, o Serviço de Roteamento expõe dois pontos finais de serviço virtuais que podem ser usados com os filtros EndpointName, EndpointAddress ou PrefixEndpointAddress para direcionar exclusivamente mensagens recebidas para uma implementação de calculadora específica com base no ponto final para o qual a solicitação do cliente envia a solicitação.  
+2. Além disso, o Serviço de Roteamento expõe dois pontos finais de serviço virtuais que podem ser usados com os filtros EndpointName, EndpointAddress ou PrefixEndpointAddress para direcionar exclusivamente mensagens recebidas para uma implementação de calculadora específica com base no ponto final ao qual o aplicativo cliente envia a solicitação.  
   
 ### <a name="define-endpoints"></a>Definir pontos finais  
   
@@ -180,7 +180,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
                 <add filterName="XPathFilter" endpointName="roundingCalcEndpoint" priority="2"/>  
               </entries>  
             </table>  
-          <filterTables>  
+          </filterTables>  
     </routing>  
     ```  
   

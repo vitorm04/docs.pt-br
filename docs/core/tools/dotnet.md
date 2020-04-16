@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para o .NET Core CLI) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389606"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463269"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -22,26 +22,27 @@ ms.locfileid: "81389606"
 Para obter informações sobre os comandos disponíveis e o ambiente:
 
 ```dotnetcli
-dotnet [-h|--help] [--version] [--info]
-    [--list-runtimes] [--list-sdks]
+dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
+
+dotnet -h|--help
 ```
 
 Para executar um comando (requer instalação do SDK):
 
 ```dotnetcli
-dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
     [command-options] [arguments]
 ```
 
 Para executar um aplicativo:
 
 ```dotnetcli
-dotnet [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet [--additionalprobingpath <PATH>] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 
-dotnet exec [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 

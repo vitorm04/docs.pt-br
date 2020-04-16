@@ -2,12 +2,12 @@
 title: Como controlar a versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1178a0bedfe8665d7b3ec463e99183809538c28
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184850"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464121"
 ---
 # <a name="how-to-service-versioning"></a>Como controlar a versão de serviço
 Este tópico descreve as etapas básicas necessárias para criar uma configuração de roteamento que encaminha mensagens para diferentes versões do mesmo serviço. Neste exemplo, as mensagens são encaminhadas para duas `roundingCalc` versões diferentes de um serviço de calculadora, (v1) e `regularCalc` (v2). Ambas as implementações suportam as mesmas operações; no entanto, `roundingCalc`o serviço mais antigo, , arredonda todos os cálculos para o valor inteiro mais próximo antes de retornar. Um aplicativo cliente deve ser capaz de `regularCalc` indicar se deve usar o serviço mais novo.  
@@ -25,7 +25,7 @@ Este tópico descreve as etapas básicas necessárias para criar uma configuraç
   
 - Dividir  
   
- Como ambas as implementações de serviço lidam com as mesmas operações, e são essencialmente idênticas além dos dados que retornam, os dados base contidos nas mensagens enviadas de aplicativos clientes não são únicos o suficiente para permitir que você determine como direcionar o Solicitação. Por exemplo, os filtros action não podem ser usados porque as ações padrão para ambos os serviços são as mesmas.  
+ Como ambas as implementações de serviço lidam com as mesmas operações e são essencialmente idênticas aos dados que retornam, os dados base contidos nas mensagens enviadas dos aplicativos do cliente não são únicos o suficiente para permitir que você determine como direcionar a solicitação. Por exemplo, os filtros action não podem ser usados porque as ações padrão para ambos os serviços são as mesmas.  
   
  Isso pode ser resolvido de várias maneiras, como expor um ponto final específico no roteador para cada versão do serviço ou adicionar um elemento de cabeçalho personalizado à mensagem para indicar a versão do serviço.  Cada uma dessas abordagens permite que você encaminhe exclusivamente mensagens recebidas para uma versão específica do serviço, mas utilizar conteúdo de mensagem exclusivo é o método preferido de diferenciar entre solicitações de diferentes versões de serviço.  
   
@@ -90,7 +90,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
            messages that do not contain the custom header-->  
        <filter name="XPathFilterNoHeader" filterType="XPath"  
                filterData="count(sm:header()/custom:CalcVer)=0"/>  
-    </filters  
+    </filters>
     ```  
   
     > [!NOTE]

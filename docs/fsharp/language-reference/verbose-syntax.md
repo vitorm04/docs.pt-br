@@ -1,27 +1,27 @@
 ---
 title: Sintaxe detalhada
-description: Aprenda a diferença entre a sintaxe detalhada e leve na F# linguagem de programação.
+description: Aprenda a diferença entre verbose e sintaxe leve na linguagem de programação F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421175"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463915"
 ---
 # <a name="verbose-syntax"></a>Sintaxe detalhada
 
-Há duas formas de sintaxe disponíveis para muitas construções na F# linguagem: *sintaxe detalhada* e *sintaxe leve*. A sintaxe detalhada não é normalmente usada, mas tem a vantagem de ser menos sensível ao recuo. A sintaxe leve é mais curta e usa recuo para sinalizar o início e o fim de construções, em vez de palavras-chave adicionais como `begin`, `end`, `in`e assim por diante. A sintaxe padrão é a sintaxe leve. Este tópico descreve a sintaxe para F# construções quando a sintaxe leve não está habilitada. A sintaxe detalhada é sempre habilitada, portanto, mesmo que você habilite a sintaxe leve, você ainda pode usar a sintaxe detalhada para algumas construções. Você pode desabilitar a sintaxe leve usando a diretiva `#light "off"`.
+Existem duas formas de sintaxe disponíveis para muitas construções na língua F#: *sintaxe verbosa* e *sintaxe leve.* A sintaxe verbosa não é tão comumente utilizada, mas tem a vantagem de ser menos sensível ao recuo. A sintaxe leve é mais curta e usa recuo para sinalizar o início `begin` `end`e `in`o fim das construções, em vez de palavras-chave adicionais como , , e assim por diante. A sintaxe padrão é a sintaxe leve. Este tópico descreve a sintaxe para construções F# quando a sintaxe leve não está habilitada. A sintaxe verbose está sempre ativada, portanto, mesmo que você habilite a sintaxe leve, você ainda pode usar a sintaxe verbose para algumas construções. Você pode desativar a sintaxe leve usando a `#light "off"` diretiva.
 
-## <a name="table-of-constructs"></a>Tabela de construções
+## <a name="table-of-constructs"></a>Tabela de Construções
 
-A tabela a seguir mostra a sintaxe leve e detalhada F# para construções de linguagem em contextos em que há uma diferença entre as duas formas. Nesta tabela, os colchetes angulares (&lt;&gt;) incluem elementos de sintaxe fornecidos pelo usuário. Consulte a documentação de cada construção de linguagem para obter informações mais detalhadas sobre a sintaxe usada dentro dessas construções.
+A tabela a seguir mostra a sintaxe leve e verbosa para a linguagem F# construída em contextos onde há uma diferença entre as duas formas. Nesta tabela, os suportes angulares ()&lt;&gt;circundam elementos de sintaxe fornecidos pelo usuário. Consulte a documentação de cada construção de idioma para obter informações mais detalhadas sobre a sintaxe utilizada nesses construtos.
 
 <table>
 <tr>
-<th>Construção de linguagem</th>
+<th>Construção linguística</th>
 <th>Sintaxe leve</th>
-<th>Sintaxe detalhada</th>
+<th>Sintaxe verbose</th>
 </tr>
 <tr>
 <td>
@@ -30,8 +30,8 @@ expressões compostas
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ expressões compostas
 </tr>
 <tr><td>
 
-associações de `let` aninhadas
+amarras `let` aninhados
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>Gravável
+<tr><td>registro
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>Estrutura</td><td>
+<tr><td>estrutura</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td>expressão de objeto</td><td>
+<tr><td>expressão do objeto</td><td>
 
 ```fsharp
 { new <type-name>
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Referência da Linguagem F#](index.md)
+- [Referência de idioma F#](index.md)
 - [Diretivas de Compilador](compiler-directives.md)
 - [Diretrizes de Formatação de Código](../style-guide/formatting.md)

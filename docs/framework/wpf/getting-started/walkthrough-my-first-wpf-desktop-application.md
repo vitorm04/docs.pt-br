@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186592"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463920"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Crie seu primeiro aplicativo WPF no Visual Studio 2019
 
@@ -293,11 +293,11 @@ Nesta seção, você atualizará a ui da página inicial com uma imagem e um tí
 
 1. Em *`ExpenseItHome.xaml`*, adicionar outra <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> coluna <xref:System.Windows.Controls.ColumnDefinition.Width%2A> ao com um fixo de 230 pixels:
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. Adicione outra linha <xref:System.Windows.Controls.Grid.RowDefinitions%2A>ao , para um total de quatro linhas:
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. Mova os controles para a segunda <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> coluna definindo a propriedade para 1 em cada um dos três controles (Border, ListBox e Button).
 
@@ -456,7 +456,7 @@ Nesta seção, você atualizará a ui para cada item nas listas vinculadas a dad
 
     [!code-xaml[ExpenseIt#30](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. Substitua <xref:System.Windows.Controls.DataGridTextColumn> os <xref:System.Windows.Controls.DataGridTemplateColumn> elementos por o <xref:System.Windows.Controls.DataGrid> elemento e aplique os modelos a eles.
+4. Substitua <xref:System.Windows.Controls.DataGridTextColumn> os <xref:System.Windows.Controls.DataGridTemplateColumn> elementos por sob o <xref:System.Windows.Controls.DataGrid> elemento e aplique os modelos a eles.
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
@@ -481,15 +481,15 @@ A ilustração a `ExpenseIt` seguir mostra ambas as páginas do aplicativo com c
 Neste passo a passo você aprendeu uma série de técnicas para criar uma UI usando o Windows Presentation Foundation (WPF). Agora você deve ter uma compreensão básica dos blocos de construção de um aplicativo .NET vinculado a dados. Para obter mais informações sobre os modelos de arquitetura e programação do WPF, consulte os seguintes tópicos:
 
 - [Arquitetura WPF](../advanced/wpf-architecture.md)
-- [Visão geral do XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Visão geral xaml (WPF)](../advanced/xaml-overview-wpf.md)
 - [Visão geral das propriedades de dependência](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
 Para obter mais informações sobre como criar aplicativos, consulte os seguintes tópicos:
 
-- [Desenvolvimento de aplicativos](../app-development/index.md)
+- [Desenvolvimento de aplicativo](../app-development/index.md)
 - [Controles](../controls/index.md)
-- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
+- [Visão geral de associação de dados](../../../desktop-wpf/data/data-binding-overview.md)
 - [Gráficos e multimídia](../graphics-multimedia/index.md)
 - [Documentos no WPF](../advanced/documents-in-wpf.md)
 

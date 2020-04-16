@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185011"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464143"
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Como criar um token de contexto de segurança para uma sessão segura
 Ao usar um token de contexto de segurança de estado (SCT) em uma sessão segura, a sessão pode suportar que o serviço seja reciclado. Por exemplo, quando um SCT apátrida é usado em uma sessão segura e o IIS (Internet Information Services, serviços de informações da Internet) é redefinido, então os dados de sessão associados ao serviço são perdidos. Esses dados da sessão incluem um cache de token SCT. Assim, da próxima vez que um cliente envia ao serviço um SCT apátrida, um erro é devolvido, porque a chave associada ao SCT não pode ser recuperada. Se, no entanto, um SCT imponente for usado, então a chave associada ao SCT está contida no SCT. Como a chave está contida no SCT e, portanto, contida na mensagem, a sessão segura não é afetada pelo serviço ser reciclado. Por padrão, o Windows Communication Foundation (WCF) usa SCTs apátridas em uma sessão segura. Este tópico detalha como usar SCTs estaduais em uma sessão segura.  
@@ -32,6 +32,7 @@ Ao usar um token de contexto de segurança de estado (SCT) em uma sessão segura
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. Adicione [ \<](../../configure-apps/file-schema/wcf/bindings.md) um elemento de>criança de vinculação ao [ \<>de vinculação personalizado ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -40,6 +41,7 @@ Ao usar um token de contexto de segurança de estado (SCT) em uma sessão segura
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. Especifique o modo de autenticação para mensagens enviadas para e a partir deste serviço adicionando um [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento de segurança>filho ao [ \<>de vinculação personalizado ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -48,7 +50,8 @@ Ao usar um token de contexto de segurança de estado (SCT) em uma sessão segura
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. Especifique como o cliente é autenticado enquanto a sessão segura é [ \< ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)estabelecida adicionando um [ \<elemento de>filho seguroConversationBootstrap](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) à>de segurança .  
@@ -103,7 +106,7 @@ Ao usar um token de contexto de segurança de estado (SCT) em uma sessão segura
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

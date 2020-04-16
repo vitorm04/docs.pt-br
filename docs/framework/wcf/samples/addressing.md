@@ -2,12 +2,12 @@
 title: Endereçando
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 4403ac2bf8e0e5193006f6ec19b24a9bcb00bf35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 55bb30ba3df80e41986b1337f8732dd8ad3231ff
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183972"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463761"
 ---
 # <a name="addressing"></a>Endereçando
 A amostra Endereçamento demonstra vários aspectos e características de endereços de ponto final. A amostra é baseada no ["Getting Started".](../../../../docs/framework/wcf/samples/getting-started-sample.md) Nesta amostra o serviço é auto-hospedado. Tanto o serviço quanto o cliente são aplicativos de console. O serviço define vários pontos finais usando uma combinação de endereços de ponto final relativo e absoluto.  
@@ -76,7 +76,6 @@ A amostra Endereçamento demonstra vários aspectos e características de endere
           "net.tcp://localhost:9000/servicemodelsamples/service"  
           binding="netTcpBinding"  
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-</service>  
 ```  
   
  O cliente acessa apenas um dos quatro pontos finais do serviço, mas todos os quatro são definidos em seu arquivo de configuração. O cliente seleciona um ponto `CalculatorProxy` final quando cria o objeto. Ao alterar o `CalculatorEndpoint1` nome `CalculatorEndpoint4`de configuração a partir de todo, você pode exercitar cada um dos pontos finais.  

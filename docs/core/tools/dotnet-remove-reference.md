@@ -2,12 +2,12 @@
 title: Comando dotnet remove reference
 description: O comando dotnet remove reference fornece uma opção conveniente para remover referências projeto a projeto.
 ms.date: 02/14/2020
-ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503624"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463439"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
@@ -20,7 +20,9 @@ ms.locfileid: "77503624"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+
+dotnet remove reference -h|--help
 ```
 
 ## <a name="description"></a>Descrição

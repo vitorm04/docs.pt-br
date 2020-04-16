@@ -2,12 +2,12 @@
 title: Comportamentos de segurança no WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184534"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464055"
 ---
 # <a name="security-behaviors-in-wcf"></a>Comportamentos de segurança no WCF
 No Windows Communication Foundation (WCF), os comportamentos modificam o comportamento de tempo de execução no nível de serviço ou no nível de ponto final. (Para obter mais informações sobre comportamentos em geral, consulte [Especificar comportamento de tempo de execução de serviço](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Os comportamentos de segurança* permitem o controle sobre credenciais, autenticação, autorização e registros de auditoria. Você pode usar comportamentos tanto pela programação quanto pela configuração. Este tópico se concentra na configuração dos seguintes comportamentos relacionados às funções de segurança:  
@@ -92,7 +92,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 ## <a name="client-credentials"></a>Credenciais do cliente  
  As credenciais do cliente são usadas para autenticar o cliente em serviços nos casos em que a autenticação mútua é necessária. Você pode usar a seção para especificar certificados de serviço para cenários onde o cliente deve proteger mensagens para um serviço com o certificado do serviço.  
   
- Você também pode configurar um cliente como parte de um cenário de federação para usar tokens emitidos a partir de um serviço de token seguro ou de um emissor local de tokens. Para obter mais informações sobre cenários federados, consulte [Federação e Tokens Emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Todas as credenciais do cliente são encontradas o [ \<ponto finalComportamentos>, ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)conforme mostrado no código a seguir.  
+ Você também pode configurar um cliente como parte de um cenário de federação para usar tokens emitidos a partir de um serviço de token seguro ou de um emissor local de tokens. Para obter mais informações sobre cenários federados, consulte [Federação e Tokens Emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). Todas as credenciais do cliente são encontradas sob o [ \<ponto finalComportamentos>, ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)conforme mostrado no código a seguir.  
   
 ```xml  
 <behaviors>  
@@ -112,6 +112,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<elemento> de certificado de cliente  
@@ -135,6 +136,9 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<elemento de> de certificado de serviço  
@@ -151,7 +155,7 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
 ## <a name="serviceauthorization"></a>Autorização de serviço  
  O [ \<elemento serviceAuthorization>](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) contém elementos que afetam a autorização, os provedores de função personalizados e a personificação.  
   
- A <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe é aplicada a um método de serviço. O atributo especifica os grupos de usuários a serem usados ao autorizar o uso de um método protegido. O valor padrão é "UseWindowsGroups" e especifica que grupos do Windows, como "Administradores" ou "Usuários", são pesquisados por uma identidade que tenta acessar um recurso. Você também pode especificar UseAspNetRoles para usar um provedor `system.web` de funções personalizado configurado o elemento <>, conforme mostrado no código a seguir.  
+ A <xref:System.Security.Permissions.PrincipalPermissionAttribute> classe é aplicada a um método de serviço. O atributo especifica os grupos de usuários a serem usados ao autorizar o uso de um método protegido. O valor padrão é "UseWindowsGroups" e especifica que grupos do Windows, como "Administradores" ou "Usuários", são pesquisados por uma identidade que tenta acessar um recurso. Você também pode especificar "UseAspNetRoles" para usar um provedor `system.web` de funções personalizado configurado sob o elemento <>, conforme mostrado no código a seguir.  
   
 ```xml  
 <system.web>  
@@ -191,15 +195,15 @@ No Windows Communication Foundation (WCF), os comportamentos modificam o comport
  Use o [ \<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) para especificar o registro gravado e quais tipos de eventos a registrar. Para obter mais informações, consulte [Auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 02/27/2020
-ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121035"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463370"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,18 @@ ms.locfileid: "81121035"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION>]
-    [-a|--test-adapter-path] [--blame] [-c|--configuration]
-    [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [--interactive] [-l|--logger] [--no-build] [--nologo]
-    [--no-restore] [-o|--output] [-r|--results-directory]
-    [--runtime] [-s|--settings] [-t|--list-tests]
-    [-v|--verbosity] [[--] <RunSettings arguments>]
+    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-c|--configuration <CONFIGURATION>]
+    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
+    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--filter <EXPRESSION>] [--interactive]
+    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
+    [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
-dotnet test [-h|--help]
+dotnet test -h|--help
 ```
 
 ## <a name="description"></a>Descrição
@@ -83,7 +87,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Permite que o comando pare e aguarde entrada ou ação do usuário. Por exemplo, para concluir a autenticação. Disponível desde o SDK do .NET Core 3.0.
 
-- **`l|--logger <LoggerUri/FriendlyName>`**
+- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não `-l "console;v=d"` aceita `-l "console;verbosity=detailed"`abreviaturas: em vez de usar .
 

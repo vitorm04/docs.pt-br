@@ -2,12 +2,12 @@
 title: Configurando a descoberta em um arquivo de configuração
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: b2e604f6168e4adff36bfb0c22861124743b358d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185323"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464213"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Configurando a descoberta em um arquivo de configuração
 Existem quatro grandes grupos de configurações usadas na descoberta. Este tópico descreverá brevemente cada um e mostrará exemplos de como configurá-los. Na sequência de cada seção haverá um link para uma documentação mais detalhada sobre cada área.  
@@ -26,6 +26,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
           </serviceDiscovery>  
         </behavior>  
       </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Depois de especificar o comportamento, `service` faça referência a um elemento> <, conforme mostrado na amostra a seguir.  
@@ -41,7 +42,8 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
          <!-- Discovery Endpoints -->  
          <endpoint kind="udpDiscoveryEndpoint" />  
         </service>  
-    </service>  
+    </services>  
+</system.serviceModel>  
 ```  
   
  Para que um serviço seja descoberto, você também deve adicionar um ponto <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> final de descoberta, o exemplo acima adiciona um ponto final padrão.  
@@ -62,6 +64,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
    <service name="AnnouncementListener">  
       <endpoint kind="udpAnnouncementEndpoint" />  
    </service>  
+</services>
 ```  
   
  O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento é usado para ativar ou desativar a descoberta de um ponto final específico.  O exemplo a seguir configura um serviço com dois pontos finais de aplicativo, um com a detecção ativada e outro com a detecção desativada. Para cada ponto <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> final é adicionado um comportamento.  
@@ -87,7 +90,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
         <endpoint kind="udpDiscoveryEndpoint" />  
       </service>  
    </services>  
-    <behaviors>  
+   <behaviors>  
       <serviceBehaviors>  
         <behavior name="helloWorldServiceBehavior">  
           <serviceDiscovery />  
@@ -102,6 +105,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
         </behavior>  
      </endpointBehaviors>  
    </behaviors>  
+</system.serviceModel>  
 ```  
   
  O <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> comportamento também pode ser usado para adicionar metadados personalizados aos metadados de ponto final retornados pelo serviço. O exemplo a seguir mostra como fazer isso.  
@@ -163,7 +167,9 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
           </discoveryClient>  
           <textMessageEncoding messageVersion="Soap11"/>  
           <httpTransport />  
-        </binding>  
+      </binding>
+   </customBinding>
+</bindings>  
 ```  
   
  Esta configuração de vinculação personalizada deve ser referenciada por um ponto final do cliente:  
@@ -174,7 +180,7 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
                 binding="customBinding"  
                 bindingConfiguration="discoBindingConfiguration"  
                 contract="IHelloWorldService" />  
-    </client>  
+</client>  
 ```  
   
  Para obter mais informações sobre os critérios de encontrar, consulte [Discovery Find e FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md). Para obter mais informações sobre elementos de descoberta e vinculação, consulte o [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
@@ -223,7 +229,8 @@ Existem quatro grandes grupos de configurações usadas na descoberta. Este tóp
             maxReceivedMessageSize="8192"  
             maxBufferPoolSize="262144"/>  
         </standardEndpoint>  
-      </udpDiscoveryEndpoint>  
+      </udpDiscoveryEndpoint>
+</standardEndpoints>
 ```  
   
  Depois de adicionar a configuração padrão do ponto `endpoint` final, consulte a configuração no elemento <> para cada ponto final, conforme mostrado na amostra a seguir.  

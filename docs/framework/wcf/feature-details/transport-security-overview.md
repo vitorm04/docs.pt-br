@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: f30b2c587d7f9b21c1f19fa1c3943621fc2607cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184339"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464011"
 ---
 # <a name="transport-security-overview"></a>Visão geral de segurança de transporte
 Os mecanismos de segurança de transporte na Windows Communication Foundation (WCF) dependem da vinculação e do transporte que estão sendo utilizados. Por exemplo, ao <xref:System.ServiceModel.WSHttpBinding> usar a classe, o transporte é HTTP, e o mecanismo principal para garantir o transporte é o Secure Sockets Layer (SSL) através do HTTP, comumente chamado HTTPS. Este tópico discute os principais mecanismos de segurança de transporte utilizados nas vinculações fornecidas pelo sistema WCF.  
   
 > [!NOTE]
-> Quando o segurança SSL é usado com o .NET Framework 3.5 e, posteriormente, um cliente WCF usa tanto os certificados intermediários em sua loja de certificados quanto os certificados intermediários recebidos durante a negociação SSL para realizar a validação da cadeia de certificados no serviço do serviço Certificado. O .NET Framework 3.0 usa apenas os certificados intermediários instalados na loja de certificados local.  
+> Quando a segurança SSL é usada com o .NET Framework 3.5 e, posteriormente, um cliente WCF usa tanto os certificados intermediários em sua loja de certificados quanto os certificados intermediários recebidos durante a negociação SSL para realizar a validação da cadeia de certificados no certificado do serviço. O .NET Framework 3.0 usa apenas os certificados intermediários instalados na loja de certificados local.  
   
 > [!WARNING]
 > Quando a segurança do <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> transporte é usada, a propriedade pode ser substituída. Para evitar que isso <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>aconteça, defina o para . <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>é um comportamento de serviço que pode ser definido na descrição do serviço.  
@@ -101,7 +101,7 @@ Os mecanismos de segurança de transporte na Windows Communication Foundation (W
    <clientCredentials>  
      <clientCertificate findValue= "101010101010101010101010101010000000000"
       storeLocation="LocalMachine" storeName="My"
-      X509FindType="FindByThumbPrint"/>  
+      X509FindType="FindByThumbPrint">  
      </clientCertificate>  
    </clientCredentials>  
  </behavior>  

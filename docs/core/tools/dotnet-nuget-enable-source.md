@@ -2,14 +2,14 @@
 title: dotnet nuget ativar comando fonte
 description: O comando dotnet nuget enable source enable a source in your NuGet configuration files..com
 ms.date: 03/20/2020
-ms.openlocfilehash: 1f18e7db6a6c8631bb432676dd97dabfad5b0ab8
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 38fb5917361bd7952fef9c31ed897fb81f005155
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148557"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463556"
 ---
-# <a name="dotnet-nuget-enable-source"></a>dotnet nuget habilitar fonte
+# <a name="dotnet-nuget-enable-source"></a>dotnet nuget enable source
 
 **Este artigo se aplica a:** ✔️ .NET Core 3.1.200 SDK e versões posteriores
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148557"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet nuget enable source <NAME> [--configfile]
-dotnet nuget enable source [-h|--help]
+dotnet nuget enable source <NAME> [--configfile <FILE>]
+
+dotnet nuget enable source -h|--help
 ```
 
 ## <a name="description"></a>Descrição
@@ -36,7 +37,7 @@ O `dotnet nuget enable source` comando habilita uma fonte existente em seus arqu
 
 ## <a name="options"></a>Opções
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   O arquivo de configuração NuGet. Se especificado, apenas as configurações deste arquivo serão usadas. Se não for especificado, a hierarquia dos arquivos de configuração do diretório atual será usada. Para obter mais informações, consulte [Configurações comuns de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

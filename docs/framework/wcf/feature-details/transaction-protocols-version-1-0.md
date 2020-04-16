@@ -2,12 +2,12 @@
 title: Protocolos de transação versão 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: a19329b56bb569a04195b38877a42d635996ff1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a775ca395e01e7ecbc676ba3ec97d19ae10b4f49
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184384"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464027"
 ---
 # <a name="transaction-protocols-version-10"></a>Protocolos de transação versão 1.0
 A versão 1 da Windows Communication Foundation (WCF) implementa a versão 1.0 dos protocolos WS-Atomic Transaction e WS-Coordination. Para obter mais informações sobre a versão 1.1, consulte [Protocolos de transação](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
@@ -152,8 +152,8 @@ A versão 1 da Windows Communication Foundation (WCF) implementa a versão 1.0 d
     <a:To>https://...</a:To>  
     <wsse:Security>  
       <u:Timestamp>  
-        <wsu:Created>2005-12-15T23:36:09.921Z</u:Created>  
-        <wsu:Expires>2005-12-15T23:41:09.921Z</u:Expires>  
+        <wsu:Created>2005-12-15T23:36:09.921Z</wsu:Created>  
+        <wsu:Expires>2005-12-15T23:41:09.921Z</wsu:Expires>  
       </u:Timestamp>  
     </wsse:Security>  
   </s:Header>  
@@ -405,10 +405,10 @@ A versão 1 da Windows Communication Foundation (WCF) implementa a versão 1.0 d
         <!-- signature over Addressing headers, Timestamp, and Body -->  
       </Signature>  
     </wsse:Security>  
-    <wsse11:EncryptedHeader >  
+    <wsse11:EncryptedHeader>  
      <!-- encrypted wscoor:CoordinationContext header containing CCi -->  
     </wsse11:EncryptedHeader>  
-    <wsse11:EncryptedHeader
+    <wsse11:EncryptedHeader>
       <!-- encrypted wst:IssuedTokens header containing SCTi -->  
       <!-- wst:IssuedTokens header is taken verbatim from message #2 above, omitted for brevity -->  
     </wsse11:EncryptedHeader>  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: b9faa4b7422419af9283ab52325e878db3d6f19f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86e0c77b899ad590b9958fea3a050ad0e660bb43
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184511"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463789"
 ---
 # <a name="security-protocols"></a>Protocolos de segurança
 Os Protocolos de Segurança de Serviços Web fornecem mecanismos de segurança de serviços da Web que cobrem todos os requisitos de segurança de mensagens corporativas existentes. Esta seção descreve os detalhes da Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) (implementados no ) para os seguintes protocolos de segurança de serviços web.  
@@ -139,7 +139,7 @@ Os Protocolos de Segurança de Serviços Web fornecem mecanismos de segurança d
  A presença de carimbo <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de <xref:System.ServiceModel.Channels.SecurityBindingElement> data e hora é controlada usando a propriedade da classe. O WCF sempre serializa wsse:TimeStamp com wsse:Created e wsse:Expires fields. O wsse:TimeStamp é sempre assinado quando a assinatura é usada.  
   
 ### <a name="22-protection-order"></a>2.2 Ordem de Proteção  
- O WCF suporta a ordem de proteção de mensagens "Assinar antes de criptografar" e "Criptografar antes de assinar" (Política de segurança 1.2). "Assinar antes de criptografar" é recomendado por razões que incluem: mensagens protegidas com Encrypt Before Sign estão abertas a ataques de substituição de assinatura, a menos que o mecanismo WS-Security 1.1 SignatureConfirmation seja usado, e uma assinatura sobre conteúdo criptografado faz auditoria mais difícil.  
+ O WCF suporta a ordem de proteção de mensagens "Assinar antes de criptografar" e "Criptografar antes de assinar" (Política de segurança 1.2). "Assinar antes de criptografar" é recomendado por razões que incluem: mensagens protegidas com Encrypt Before Sign estão abertas a ataques de substituição de assinatura, a menos que o mecanismo WS-Security 1.1 SignatureConfirmation seja usado e uma assinatura sobre conteúdo criptografado dificulte a auditoria.  
   
 ### <a name="23-signature-protection"></a>2.3 Proteção de assinatura  
  Quando o Encrypt Before Sign é usado, recomenda-se proteger a assinatura para evitar ataques de força bruta para adivinhar o conteúdo criptografado ou a chave de assinatura (especialmente quando um token personalizado é usado com material chave fraco).  
@@ -235,7 +235,76 @@ Os Protocolos de Segurança de Serviços Web fornecem mecanismos de segurança d
  Política  
   
 ```xml  
-<wsp:Policy wsu:Id="IssuedTokenOverTransport_policy"><wsp:ExactlyOne><wsp:All><sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:TransportToken><wsp:Policy><sp:HttpsToken/></wsp:Policy></sp:TransportToken><sp:AlgorithmSuite><wsp:Policy><sp:Basic256/></wsp:Policy></sp:AlgorithmSuite><sp:Layout><wsp:Policy><sp:Strict/></wsp:Policy></sp:Layout><sp:IncludeTimestamp/></wsp:Policy></sp:TransportBinding><sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient"><Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address><Metadata xmlns="http://www.w3.org/2005/08/addressing"><Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><wsx:MetadataSection xmlns=""><wsx:MetadataReference><Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address><Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity"><Dns> ...  </Dns></Identity></wsx:MetadataReference></wsx:MetadataSection></Metadata></Metadata></Issuer><sp:RequestSecurityTokenTemplate><trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType></sp:RequestSecurityTokenTemplate><wsp:Policy><sp:RequireInternalReference/></wsp:Policy></sp:IssuedToken><sp:SignedParts><sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/></sp:SignedParts></wsp:Policy></sp:EndorsingSupportingTokens><sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/><sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/></wsp:Policy></sp:Wss11><sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"><wsp:Policy><sp:MustSupportIssuedTokens/><sp:RequireClientEntropy/><sp:RequireServerEntropy/></wsp:Policy></sp:Trust13><wsaw:UsingAddressing/></wsp:All></wsp:ExactlyOne></wsp:Policy  
+<wsp:Policy wsu:Id="IssuedTokenOverTransport_policy">
+ <wsp:ExactlyOne>
+  <wsp:All>
+   <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:TransportToken>
+      <wsp:Policy>
+       <sp:HttpsToken />
+      </wsp:Policy>
+     </sp:TransportToken>
+     <sp:AlgorithmSuite>
+      <wsp:Policy>
+       <sp:Basic256 />
+      </wsp:Policy>
+     </sp:AlgorithmSuite>
+     <sp:Layout>
+      <wsp:Policy>
+       <sp:Strict/>
+      </wsp:Policy>
+     </sp:Layout>
+     <sp:IncludeTimestamp/>
+    </wsp:Policy>
+   </sp:TransportBinding>
+   <sp:EndorsingSupportingTokens xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:IssuedToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+      <Issuer xmlns="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+       <Address xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</Address>
+       <Metadata xmlns="http://www.w3.org/2005/08/addressing">
+        <Metadata xmlns="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <wsx:MetadataSection xmlns="">
+          <wsx:MetadataReference>
+           <Address xmlns="http://www.w3.org/2005/08/addressing"> ... </Address>
+           <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+            <Dns> ...  </Dns>
+           </Identity>
+          </wsx:MetadataReference>
+         </wsx:MetadataSection>
+        </Metadata>
+       </Metadata>
+      </Issuer>
+      <sp:RequestSecurityTokenTemplate>
+       <trust:KeyType xmlns:trust="http://docs.oasis-open.org/ws-sx/ws-trust/200512">http://docs.oasis-open.org/ws-sx/ws-trust/200512/SymmetricKey</trust:KeyType>
+      </sp:RequestSecurityTokenTemplate>
+      <wsp:Policy>
+       <sp:RequireInternalReference/>
+      </wsp:Policy>
+     </sp:IssuedToken>
+     <sp:SignedParts>
+      <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing"/>
+     </sp:SignedParts>
+    </wsp:Policy>
+   </sp:EndorsingSupportingTokens>
+   <sp:Wss11 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:MustSupportRefKeyIdentifier/><sp:MustSupportRefIssuerSerial/>
+     <sp:MustSupportRefThumbprint/><sp:MustSupportRefEncryptedKey/>
+    </wsp:Policy>
+   </sp:Wss11>
+   <sp:Trust13 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+    <wsp:Policy>
+     <sp:MustSupportIssuedTokens/>
+     <sp:RequireClientEntropy/>
+     <sp:RequireServerEntropy/>
+    </wsp:Policy>
+   </sp:Trust13>
+   <wsaw:UsingAddressing/>
+  </wsp:All>
+ </wsp:ExactlyOne>
+</wsp:Policy>
 ```  
   
  Layout do cabeçalho de segurança  
@@ -416,7 +485,7 @@ Proteção de tokens: falso
   
  Assinar assinatura: True  
   
- Os modos de autenticação acima só diferem pelos tokens de suporte que eles usam. AnonymousForCertificate não tem nenhum token de suporte, MutualCertificate WSS 1.1 tem o certificado X509 do cliente como um endossando tokens de suporte, UserNameForCertificate tem um Token UserName como um token de suporte assinado e O TokenCertificate emitido tem o token emitido como um token de suporte de suporte.  
+ Os modos de autenticação acima só diferem pelos tokens de suporte que eles usam. AnonymousForCertificate não tem nenhum token de suporte, MutualCertificate WSS 1.1 tem o certificado X509 do cliente como um endossando tokens de suporte, UserNameForCertificate tem um Token UserName como um token de suporte assinado e O EmissãoTokenForCertificate tem o token emitido como um token de suporte de suporte.  
   
 #### <a name="324-anonymousforcertificate"></a>3.2.4 Certificado anônimo  
  Com este modo de autenticação, o cliente é anônimo e o serviço é autenticado usando um certificado X.509. A vinculação utilizada é uma instância de vinculação simétrica descrita em 3.4.2.  

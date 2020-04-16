@@ -2,12 +2,12 @@
 title: Protocolos de segurança versão 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184521"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463800"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de segurança versão 1.0
 Os Protocolos de Segurança de Serviços Web fornecem mecanismos de segurança de serviços da Web que cobrem todos os requisitos de segurança de mensagens corporativas existentes. Esta seção descreve os detalhes da versão 1.0 da <xref:System.ServiceModel.Channels.SecurityBindingElement>Windows Communication Foundation (WCF) (implementados no ) para os seguintes protocolos de segurança de serviços da Web.  
@@ -137,7 +137,7 @@ Os Protocolos de Segurança de Serviços Web fornecem mecanismos de segurança d
  A presença de carimbo <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de <xref:System.ServiceModel.Channels.SecurityBindingElement> data e hora é controlada usando a propriedade da classe. O WCF sempre serializa wsse:TimeStamp com wsse:Created e wsse:Expires fields. O wsse:TimeStamp é sempre assinado quando a assinatura é usada.  
   
 ### <a name="22-protection-order"></a>2.2 Ordem de Proteção  
- O WCF suporta a ordem de proteção de mensagens "Assinar antes de criptografar" e "Criptografar antes de assinar" (Política de segurança 1.1). "Assinar antes de criptografar" é recomendado por razões que incluem: mensagens protegidas com Encrypt Before Sign estão abertas a ataques de substituição de assinatura, a menos que o mecanismo WS-Security 1.1 SignatureConfirmation seja usado, e uma assinatura sobre conteúdo criptografado faz auditoria mais difícil.  
+ O WCF suporta a ordem de proteção de mensagens "Assinar antes de criptografar" e "Criptografar antes de assinar" (Política de segurança 1.1). "Assinar antes de criptografar" é recomendado por razões que incluem: mensagens protegidas com Encrypt Before Sign estão abertas a ataques de substituição de assinatura, a menos que o mecanismo WS-Security 1.1 SignatureConfirmation seja usado e uma assinatura sobre conteúdo criptografado dificulte a auditoria.  
   
 ### <a name="23-signature-protection"></a>2.3 Proteção de assinatura  
  Quando o Encrypt Before Sign é usado, recomenda-se proteger a assinatura para evitar ataques de força bruta para adivinhar o conteúdo criptografado ou a chave de assinatura (especialmente quando um token personalizado é usado com material chave fraco).  
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -947,7 +947,7 @@ Proteção de tokens: falso
   
  Assinar assinatura: True  
   
- Os modos de autenticação acima só diferem pelos tokens de suporte que eles usam. AnonymousForCertificate não tem nenhum token de suporte, MutualCertificate WSS 1.1 tem o certificado X509 do cliente como um endossando tokens de suporte, UserNameForCertificate tem um Token UserName como um token de suporte assinado e O TokenCertificate emitido tem o token emitido como um token de suporte de suporte.  
+ Os modos de autenticação acima só diferem pelos tokens de suporte que eles usam. AnonymousForCertificate não tem nenhum token de suporte, MutualCertificate WSS 1.1 tem o certificado X509 do cliente como um endossando tokens de suporte, UserNameForCertificate tem um Token UserName como um token de suporte assinado e O EmissãoTokenForCertificate tem o token emitido como um token de suporte de suporte.  
   
  Política  
   
@@ -1856,7 +1856,7 @@ Proteção de tokens: falso
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

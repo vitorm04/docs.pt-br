@@ -2,12 +2,12 @@
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 ms.date: 04/10/2020
-ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242875"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463606"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,10 +20,14 @@ ms.locfileid: "81242875"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
 ## <a name="description"></a>Descrição
@@ -121,7 +125,7 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
   O nome para a saída criada. Se nenhum nome for especificado, o nome do diretório atual será usado.
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   Especifica uma origem do NuGet a ser usada durante a instalação. Disponível desde .NET Core 2.1 SDK.
 
@@ -129,9 +133,9 @@ O comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) pa
 
   Local para colocar a saída gerada. O padrão é o diretório atual.
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "projeto", "item" ou "outro".
+  Filtra modelos com base em tipos disponíveis. Os valores `project` `item`predefinidos são, ou `other`.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 

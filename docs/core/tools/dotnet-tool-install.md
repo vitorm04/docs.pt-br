@@ -2,12 +2,12 @@
 title: Comando dotnet tool install
 description: O comando dotnet tool install instala a ferramenta .NET Core especificada na máquina.
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e142773d1f981a8dc3b552d5a23d2864cdd82c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146457"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463358"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -20,19 +20,22 @@ ms.locfileid: "79146457"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet tool install <PACKAGE_NAME> <-g|--global>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> -g|--global
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <PACKAGE_NAME> <--tool-path>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> --tool-path <PATH>
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
 dotnet tool install <PACKAGE_NAME>
-    [--add-source] [--configfile] [--framework]
-    [-v|--verbosity] [--version]
+    [--add-source <SOURCE>] [--configfile <FILE>]
+    [--framework <FRAMEWORK>] [-v|--verbosity <LEVEL>]
+    [--version <VERSION_NUMBER>]
 
-dotnet tool install <-h|--help>
+dotnet tool install -h|--help
 ```
 
 ## <a name="description"></a>Descrição
@@ -52,7 +55,7 @@ As ferramentas globais são instaladas nos seguintes `-g` `--global` diretórios
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-As ferramentas locais são adicionadas a um arquivo *tool-manifest.json* em um diretório *.config* o diretório atual. Se um arquivo manifesto ainda não existir, crie-o executando o seguinte comando:
+As ferramentas locais são adicionadas a um arquivo *tool-manifest.json* em um diretório *.config* sob o diretório atual. Se um arquivo manifesto ainda não existir, crie-o executando o seguinte comando:
 
 ```dotnetcli
 dotnet new tool-manifest

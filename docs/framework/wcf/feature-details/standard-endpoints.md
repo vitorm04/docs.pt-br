@@ -2,12 +2,12 @@
 title: Pontos de extremidade padrão
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184398"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463783"
 ---
 # <a name="standard-endpoints"></a>Pontos de extremidade padrão
 Os pontos finais são definidos especificando um endereço, uma vinculação e um contrato. Outros parâmetros que podem ser definidos em um ponto final incluem configuração de comportamento, cabeçalhos e URIs de ouvir.  Para certos tipos de pontos finais, esses valores não mudam. Por exemplo, os pontos finais <xref:System.ServiceModel.Description.IMetadataExchange> de troca de metadados sempre usam o contrato. Outros pontos finais, <xref:System.ServiceModel.Description.WebHttpEndpoint> como sempre, exigem um comportamento de ponto final especificado. A usabilidade de um ponto final pode ser melhorada tendo pontos finais com valores padrão para propriedades de ponto final comumente usadas. Os pontos finais padrão permitem que um desenvolvedor defina um ponto final que tenha valores padrão ou onde as propriedades de um ou mais pontos finais não mudem.  Esses pontos finais permitem que você use esse ponto final sem ter que especificar informações de natureza estática. Os pontos finais padrão podem ser usados para pontos finais de infra-estrutura e aplicativos.  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- O <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> fornece o tipo de backup para `standardEndpoints` a coleção que aparece a seção <> na configuração para o ponto final padrão.  O exemplo a seguir mostra como implementar essa classe.  
+ O <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> fornece o tipo de backup para `standardEndpoints` a coleção que aparece sob a seção <> na configuração para o ponto final padrão.  O exemplo a seguir mostra como implementar essa classe.  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -121,6 +121,8 @@ O exemplo a seguir mostra como registrar um ponto final padrão na seção exten
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
+      </standardEndpointExtensions>
+</extensions>  
 ```  
   
 ## <a name="configuring-a-standard-endpoint"></a>Configurando um ponto final padrão  

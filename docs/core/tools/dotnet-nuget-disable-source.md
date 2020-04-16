@@ -2,14 +2,14 @@
 title: dotnet nuget desativar comando fonte
 description: O comando dotnet nuget desabilita uma fonte existente em seus arquivos de configuração NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 5aa16c842bcddeead180fdeec3d9dcdda33f7ed9
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 54acb40b1944eaff347107e8f3439578ec8e0f3c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148550"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463575"
 ---
-# <a name="dotnet-nuget-disable-source"></a>dotnet nuget desativar fonte
+# <a name="dotnet-nuget-disable-source"></a>dotnet nuget disable source
 
 **Este artigo se aplica a:** ✔️ .NET Core 3.1.200 SDK e versões posteriores
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148550"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet nuget disable source <NAME> [--configfile]
-dotnet nuget disable source [-h|--help]
+dotnet nuget disable source <NAME> [--configfile <FILE>]
+
+dotnet nuget disable source -h|--help
 ```
 
 ## <a name="description"></a>Descrição
@@ -36,7 +37,7 @@ O `dotnet nuget disable source` comando desativa uma fonte existente em seus arq
 
 ## <a name="options"></a>Opções
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   O arquivo de configuração NuGet. Se especificado, apenas as configurações deste arquivo serão usadas. Se não for especificado, a hierarquia dos arquivos de configuração do diretório atual será usada. Para obter mais informações, consulte [Configurações comuns de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
 

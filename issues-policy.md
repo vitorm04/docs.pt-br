@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 33178637c4fcfb21e8190c3d2593f09326ea5995
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73554844"
 ---
 # <a name="github-issues-process-and-policy"></a>Política e processo de problemas do GitHub
@@ -35,12 +35,12 @@ Se essas perguntas não puderem ser respondidas no exame inicial, faremos pergun
 
 Há tipos de problemas que são fechados durante a fase de diagnóstico e triagem:
 
-- **Kudos**: agradecemos e fechamos o problema.
-- **Problema de produto**: os problemas relacionados ao produto, e não à sua documentação, são fechados. Também podemos executar ações adicionais, como descrito abaixo.
-- **Violações de CoC**: esses problemas serão fechados e relatados se a [violação de CoC](https://dotnetfoundation.org/code-of-conduct) merecer denúncia e bloqueio.
-- **Duplicatas**: as duplicatas são fechadas com um comentário indicando o problema existente.
-- **Doc-ok**: o cliente está errado, e o documento está correto.
-- **Fórum**: os problemas que são solicitações de suporte ou do fórum são direcionados ao Stack Overflow ou outros sites de suporte e fechados.
+- **kudos**: Nós expressamos agradecimentos, e fechamos a questão.
+- **emissão do produto**: Questões relacionadas ao produto e não à sua documentação estão fechadas. Também podemos executar ações adicionais, como descrito abaixo.
+- **Violações de CoC**: Essas questões são encerradas e relatadas se a [violação do CoC](https://dotnetfoundation.org/code-of-conduct) merece relatórios e bloqueios.
+- **duplicatas**: As duplicatas são fechadas com um comentário referente ao problema existente.
+- **doc-ok**: O cliente está incorreto, e o doutor está correto.
+- **fórum**: Os problemas que são solicitações de suporte ou fórum são direcionados para Stack Overflow ou outros sites de suporte e fechados.
 
 ### <a name="actions-on-product-issues"></a>Ações quanto a problemas de produto
 
@@ -62,20 +62,20 @@ Para outros problemas, a equipe:
 
 Os níveis de prioridade são baseados nas diretrizes a seguir, mas são subjetivos. Os marcos também são subjetivos e se baseiam em outras prioridades, como agendas atuais de lançamentos de produtos e lançamentos futuros.
 
-- **P0**: uma omissão ou um erro de documento impede que os clientes tenham sucesso em um cenário comum.
+- **P0**: Uma omissão ou erro de docs impede que os clientes tenham sucesso em um cenário comum.
   - Os problemas **P0** são abordados nas próximas três semanas, tendo precedência sobre o trabalho agendado anteriormente.
-- **P1**: uma omissão ou um erro de documento torna um cenário comum muito mais difícil ou bloqueia outros cenários conhecidos.
+- **P1**: Uma omissão ou erro de docs torna um cenário comum muito mais difícil ou bloqueia outros cenários bem conhecidos.
   - Os problemas **P1** são agendados em tempo hábil. Geralmente, os problemas P1 estão planejados para um marco futuro.
-- **P2**: problemas que causam pequenos inconvenientes ou que afetam um artigo com pouca exibição de página.
+- **P2**: Problemas que causam pequenos inconvenientes ou afetam um artigo de exibição de página baixa.
   - Os problemas **P2** geralmente são corrigidos quando um artigo é atualizado por motivos de maior prioridade.
-- **P3**: problemas que são solicitações para cenários de caso de borda.
+- **P3**: Questões que são solicitações de cenários de casos de borda.
   - Os problemas **P3** são colocados na lista de pendências e são considerados para atualização quando os artigos são atualizados por motivos de maior prioridade.
 
 Os membros da equipe gastam uma quantidade limitada de tempo no diagnóstico e na triagem para que possam progredir nas tarefas agendadas. Cada membro da equipe passa no máximo 30 minutos por dia em diagnóstico e triagem.
 
 O rótulo **up-for-grabs** (a distribuir) é aplicado quando um problema é um bom candidato para um membro da comunidade (possivelmente o autor) enviar uma correção. O membro da equipe que aplica o rótulo **up-for-grabs** (a distribuir) ajudará ou encontrará alguém para ajudar os membros da comunidade a trabalhar no processo de criação de PR. Problemas "up-for-grabs" costumam ser adicionados aos [Projetos de contribuição da comunidade](https://github.com/dotnet/docs/projects/35)
 
-> OBSERVAÇÃO: recentemente, adotamos a convenção de precedência. A pessoa que adicionou o rótulo pode encaminhar você a outro membro da equipe, que o ajudará.
+> NOTA: Nós apenas recentemente adotamos a convenção anterior. A pessoa que adicionou o rótulo pode encaminhar você a outro membro da equipe, que o ajudará.
 
 ## <a name="resolution-phase"></a>Fase de resolução
 
@@ -83,9 +83,9 @@ Os problemas gerados pelo cliente são ponderados como parte do planejamento da 
 
 A resolução do problema segue o nível de prioridade definido durante o diagnóstico. Os problemas recebidos dos clientes são priorizados com outro trabalho agendado de prioridade semelhante
 
-- **P0**: assim que possível, durante as próximas três semanas.
-- **P1**: agendado com outros trabalhos P1 planejados. Geralmente, isso significa nos próximos três meses.
-- **P2**: agendado com outros trabalhos P2 planejados. Os problemas P2 são agendados regularmente com base na área e na visibilidade. Frequentemente, os problemas de P2 serão abordados quando um artigo for atualizado.
-- **P3**: nenhuma garantia quanto à data de correção. Quando um artigo é atualizado, examinamos a lista de pendências para outros problemas no mesmo artigo.
+- **P0:** Assim que for razoável, durante as próximas três semanas.
+- **P1**: Agendado com outros trabalhos P1 planejados. Geralmente, isso significa nos próximos três meses.
+- **P2**: Agendado com outros trabalhos P2 planejados. Os problemas P2 são agendados regularmente com base na área e na visibilidade. Frequentemente, os problemas de P2 serão abordados quando um artigo for atualizado.
+- **P3**: Não há garantia na data de fixação. Quando um artigo é atualizado, examinamos a lista de pendências para outros problemas no mesmo artigo.
 
 Os problemas podem ser novamente priorizados com base nos novos comentários e dados sobre a visibilidade do artigo.

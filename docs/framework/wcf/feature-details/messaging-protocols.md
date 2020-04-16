@@ -2,12 +2,12 @@
 title: Protocolos de mensagens
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: d35cd496db32e1a2886f7ca06e7a3d0964f9c9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 814347c77b54c4450aabf0a4f3966df223360663
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184592"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463826"
 ---
 # <a name="messaging-protocols"></a>Protocolos de mensagens
 
@@ -25,7 +25,7 @@ Este tópico abrange detalhes de implementação <xref:System.ServiceModel.Chann
 
 Especificação/Documento:
 
-- [Xml](https://www.w3.org/TR/REC-xml)
+- [XML](https://www.w3.org/TR/REC-xml)
 - [SABÃO 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SABÃO 1.2 Núcleo](https://www.w3.org/TR/soap12-part1/)
 - [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
@@ -283,7 +283,7 @@ A afirmação completa da política pode ser assim:
 </wsam:Addressing>
 ```
 
-O uso da seguinte afirmação que tem O Assunto da Política de Ponto Final [WS-PA] em pontos finais que usam as vinculações WSDL 1.1 SOAP 1.x HTTP requer duas conexões HTTP inversas separadas para serem usadas para mensagens que fluem do solicitante para responder e responder ao solicitante, Respectivamente.
+O uso da seguinte afirmação que tem O Assunto da Política de Ponto Final [WS-PA] em pontos finais que usam as vinculações WSDL 1.1 SOAP 1.x HTTP requer duas conexões HTTP inversas separadas para serem usadas para mensagens que fluem do solicitante para responder e responder ao solicitante, respectivamente.
 
 ```xml
 <cdp:CompositeDuplex/>
@@ -566,7 +566,7 @@ Um ponto final wcf configurado para usar o MTOM sempre enviará mensagens codifi
 O WCF usa a seguinte afirmação de diretiva para indicar o uso do MTOM por ponto final:
 
 ```xml
-<wsoma:OptimizedMimeSerialization ... />
+<wsoma:OptimizedMimeSerialization />
 ```
 
 - R4211: A afirmação da diretiva anterior tem um Assunto de Política de Ponto Final e especifica que todas as mensagens enviadas e recebidas do ponto final devem ser otimizadas usando o MTOM.

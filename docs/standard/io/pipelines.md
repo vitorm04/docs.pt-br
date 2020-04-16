@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627546"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81462516"
 ---
 # <a name="systemiopipelines-in-net"></a>Pipelines system.IO.em .NET
 
@@ -172,7 +172,7 @@ Ao fazer I/O, é importante ter controle fino sobre onde a I/O é realizada. Est
 * O primeiro argumento determina quanta memória foi consumida.
 * O segundo argumento determina quanto do buffer foi observado.
 
-Marcar dados como consumidos significa que o tubo pode retornar a memória para o pool de buffer subjacente. Marcar dados como observado controla o `PipeReader.ReadAsync` que a próxima chamada faz. Marcar tudo como observado significa que `PipeReader.ReadAsync` a próxima chamada não retornará até que haja mais dados escritos no tubo. Qualquer outro valor fará a `PipeReader.ReadAsync` próxima chamada para retornar imediatamente com os dados observados *e* não observados, mas dados que já foram consumidos.
+Marcar dados como consumidos significa que o tubo pode retornar a memória para o pool de buffer subjacente. Marcar dados como observado controla o `PipeReader.ReadAsync` que a próxima chamada faz. Marcar tudo como observado significa que `PipeReader.ReadAsync` a próxima chamada não retornará até que haja mais dados escritos no tubo. Qualquer outro valor fará a `PipeReader.ReadAsync` próxima chamada para retornar imediatamente com os dados observados *e* não observados, mas não dados que já foram consumidos.
 
 ### <a name="read-streaming-data-scenarios"></a>Leia cenários de dados de streaming
 

@@ -2,12 +2,12 @@
 title: Como criar um ponto de extremidade de serviço em configuração
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5935f798004de3ec049b9c9f0300675e1660f462
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185005"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464124"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>Como criar um ponto de extremidade de serviço em configuração
 Os endpoints fornecem aos clientes acesso à funcionalidade que um serviço da Windows Communication Foundation (WCF) oferece. Você pode definir um ou mais pontos finais para um serviço usando uma combinação de endereços de ponto final relativo e absoluto, ou se você não definir nenhum ponto final de serviço, o tempo de execução fornece alguns por padrão para você. Este tópico mostra como adicionar pontos finais usando um arquivo de configuração que contém endereços relativos e absolutos.  
@@ -25,10 +25,8 @@ Os endpoints fornecem aos clientes acesso à funcionalidade que um serviço da W
   
   <system.serviceModel>  
     <services>  
-    <!-- This section is optional with the default configuration introduced  
-         in .NET Framework 4. -->  
-      <service  
-          name="Microsoft.ServiceModel.Samples.CalculatorService">  
+    <!-- This section is optional with the default configuration introduced in .NET Framework 4. -->  
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService">  
         <host>  
           <baseAddresses>  
             <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
