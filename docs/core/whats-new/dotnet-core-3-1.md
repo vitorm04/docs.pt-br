@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b52615a3fb288a6ca0622deb83f4db3c8e3587fb
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156550"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607900"
 ---
 # <a name="whats-new-in-net-core-31"></a>Novidades do .NET Core 3.1
 
 Este artigo descreve o que há de novo no .NET Core 3.1. Esta versão contém pequenas melhorias no .NET Core 3.0, com foco em pequenas, mas importantes correções. A característica mais importante sobre o .NET Core 3.1 é que é uma versão [LTS (de suporte de longo prazo).](#long-term-support)
 
-Se você estiver usando o Visual Studio 2019, você deve atualizar para o [Visual Studio 2019 versão 16.4](https://visualstudio.microsoft.com/downloads/) para trabalhar com projetos .NET Core 3.1. Para obter mais informações sobre as novidades do Visual Studio, veja [as novidades do Visual Studio 2019 versão 16.4](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164).
+Se você estiver usando o Visual Studio 2019, você deve atualizar para o [Visual Studio 2019 versão 16.4 ou posterior](https://visualstudio.microsoft.com/downloads/) para trabalhar com projetos .NET Core 3.1. Para obter informações sobre as novidades do Visual Studio versão 16.4, consulte [O que há de novo no Visual Studio 2019 versão 16.4](/visualstudio/releases/2019/release-notes-v16.4#whats-new-in-visual-studio-2019-version-164).
 
 Visual Studio para Mac também suporta e inclui .NET Core 3.1 no Visual Studio para Mac 8.4.
 

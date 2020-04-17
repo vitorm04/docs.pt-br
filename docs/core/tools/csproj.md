@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134060"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607700"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -145,7 +145,7 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 
 #### <a name="version"></a>Versão
 
-O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma versão mínima, inclusive, compatível. Por exemplo, `Version="1.2.3"` especificar é equivalente `[1.2.3, )` à notação NuGet e significa que o pacote resolvido terá a versão 1.2.3 se disponível ou maior de outra forma.
+O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [faixa de versão NuGet.](/nuget/concepts/package-versioning#version-ranges) O comportamento padrão é uma versão mínima, inclusive, compatível. Por exemplo, `Version="1.2.3"` especificar é equivalente `[1.2.3, )` à notação NuGet e significa que o pacote resolvido terá a versão 1.2.3 se disponível ou maior de outra forma.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>Incluir Ativos, Excluir Ativos e Ativos Privados
 

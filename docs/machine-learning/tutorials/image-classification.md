@@ -4,12 +4,12 @@ description: Aprenda a transferir o conhecimento de um modelo TensorFlow existen
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241020"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607565"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: Gere um modelo de classificação de imagem ML.NET a partir de um modelo TensorFlow pré-treinado
 
@@ -37,7 +37,7 @@ Para este tutorial, você usa parte de um modelo TensorFlow - treinado para clas
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 versão 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho ".NET Core cross-platform development" instalada.
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou posterior ou Visual Studio 2017 versão 15.6 ou posterior com a carga de trabalho ".NET Core cross-platform development" instalada.
 * [O arquivo .ZIP do diretório de recursos do tutorial](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [O modelo de machine learning do InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -80,7 +80,7 @@ Este tutorial usa o modelo TensorFlow [Inception](https://storage.googleapis.com
 
 Como `Inception model` o já foi pré-treinado em milhares de imagens diferentes, internamente contém os [recursos de imagem necessários](https://en.wikipedia.org/wiki/Feature_(computer_vision)) para identificação de imagens. Podemos fazer uso desses recursos de imagem interna no modelo para treinar um novo modelo com muito menos classes.
 
-Conforme mostrado no diagrama a seguir, você adiciona uma referência aos pacotes ML.NET NuGet em seus aplicativos .NET Core ou .NET Framework. as capas, ML.NET inclui `TensorFlow` e faz referência à biblioteca nativa que `TensorFlow` permite escrever um código que carrega um arquivo de modelo treinado existente.
+Conforme mostrado no diagrama a seguir, você adiciona uma referência aos pacotes ML.NET NuGet em seus aplicativos .NET Core ou .NET Framework. Sob as capas, ML.NET inclui `TensorFlow` e faz referência à biblioteca nativa que `TensorFlow` permite escrever um código que carrega um arquivo de modelo treinado existente.
 
 ![Diagrama de arco da transformação do TensorFlow do ML.NET](./media/image-classification/tensorflow-mlnet.png)
 

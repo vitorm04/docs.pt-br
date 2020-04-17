@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389737"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607952"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolver e implantar serviços de dados WCF
 
@@ -42,7 +42,7 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
 
 1. **Servidor de IIS local**
 
-     Quando você cria um serviço de dados que é um aplicativo de ASP.NET ou ASP.NET site que funciona no Internet Information Services (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar seu serviço de dados no IIS, certifique-se de que tanto o IIS quanto o Windows Communication Foundation (WCF) estejam instalados e configurados corretamente e concedam acesso a contas IIS no sistema de arquivos e bancos de dados. Para obter mais informações, consulte [Como desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
+     Quando você cria um serviço de dados que é um aplicativo de ASP.NET ou ASP.NET site que funciona no Internet Information Services (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos exigidos pelo serviço de dados. Para executar seu serviço de dados no IIS, certifique-se de que tanto o IIS quanto o Windows Communication Foundation (WCF) estejam instalados e configurados corretamente e concedam acesso a contas IIS no sistema de arquivos e bancos de dados. Para obter mais informações, consulte [Como desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Você deve executar o Visual Studio com os direitos de administrador para permitir que o ambiente de desenvolvimento configure o servidor IIS local.
@@ -51,7 +51,7 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
 
      O Visual Studio inclui um servidor Web integrado, o Visual Studio Development Server, que é o servidor Web padrão para projetos ASP.NET. Este servidor Web foi projetado para executar projetos ASP.NET no computador local durante o desenvolvimento. O [quickstart do WCF Data Services](quickstart-wcf-data-services.md) mostra como criar um serviço de dados que é executado no Visual Studio Development Server.
 
-     Você deve estar ciente das seguintes limitações ao usar o Visual Studio Development Server para desenvolver o serviço de dados:
+     Esteja ciente das seguintes limitações ao usar o Visual Studio Development Server para desenvolver o serviço de dados:
 
     - Este servidor só pode ser acessado no computador local.
 
@@ -68,9 +68,9 @@ Quando você desenvolve um WCF Data Service como um aplicativo ASP.NET ou ASP.NE
     > [!TIP]
     > Mesmo que você possa usar o Visual Studio Development Server para testar seus serviços de dados durante o desenvolvimento, você deve testá-los novamente depois de implantá-los em um servidor Web que está executando o IIS.
 
-3. **Ambiente de desenvolvimento do Microsoft Azure**
+3. **Ambiente de Desenvolvimento Azure**
 
-     O Windows Azure Tools for Visual Studio inclui um conjunto integrado de ferramentas para o desenvolvimento de serviços do Windows Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Microsoft Azure e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados que seja executado na plataforma Windows Azure. Para obter informações sobre a instalação das ferramentas, consulte as [ferramentas do Azure para o Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Para obter mais informações sobre o desenvolvimento de um serviço de dados que seja executado no Windows Azure, consulte o post [Implantando um Serviço de OData no Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     O Windows Azure Tools for Visual Studio inclui um conjunto integrado de ferramentas para o desenvolvimento de serviços Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Azure, e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados que seja executado na plataforma Azure. Para obter informações sobre a instalação das ferramentas, consulte as [ferramentas do Azure para o Visual Studio 2015](../../../azure/sdk/vs2015-install.md). Para obter mais informações sobre o desenvolvimento de um serviço de dados que seja executado no Azure, consulte o post [Implantando um Serviço de OData no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Dicas de desenvolvimento
 
@@ -92,7 +92,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 - **Servidor Web hospedado no IIS**
 
-    Quando um serviço de dados é desenvolvido como um projeto ASP.NET, ele pode ser implantado em um servidor Web IIS usando os processos de implantação de ASP.NET padrão.  O Visual Studio fornece as seguintes tecnologias de implantação para ASP.NET, dependendo do tipo de projeto ASP.NET que hospeda o serviço de dados que você está implantando.
+    Quando um serviço de dados é desenvolvido como um projeto ASP.NET, ele pode ser implantado em um servidor Web IIS usando os processos de implantação de ASP.NET padrão. O Visual Studio fornece as seguintes tecnologias de implantação para ASP.NET, dependendo do tipo de projeto ASP.NET que hospeda o serviço de dados que você está implantando.
 
   - **Tecnologias de implantação para aplicativos Web ASP.NET**
 
@@ -113,9 +113,9 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
     > [!TIP]
     > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, consulte [Como desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Azure**
 
-     Você pode implantar um serviço de dados no Windows Azure usando o Windows Azure Tools para Visual Studio. Você pode baixar as ferramentas do Windows Azure para Visual Studio no [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre a implantação de um serviço de dados no Windows Azure, consulte o post [Implantando um Serviço de OData no Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Você pode implantar um serviço de dados no Azure usando [o Azure Tools for Visual Studio](../../../azure/sdk/vs2015-install.md). Para obter mais informações sobre como implantar um serviço de dados no Azure, consulte [Implantando um Serviço de Dados no Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Considerações de implantação
 

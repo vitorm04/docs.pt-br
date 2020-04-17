@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450031"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607887"
 ---
 # <a name="development-process-for-azure"></a>Processo de desenvolvimento para o Azure
 
@@ -58,13 +58,13 @@ Crie um Serviço de Aplicativo do Azure no qual você implantará o aplicativo. 
 
 O processo de build de CI executará um build automatizado sempre que o novo código for confirmado no repositório de controle do código-fonte do projeto. Isso fornece a você um feedback imediato de que o código é compilado (e, de preferência, é aprovado em testes automatizados) e potencialmente pode ser implantado. Esse build de CI produzirá um artefato de pacote de implantação da Web e o publicará para consumo pelo processo de CD.
 
-[Definir o processo de build de CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
+[Definir o processo de build de CI](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Lembre-se de habilitar a integração contínua para que o sistema coloque na fila um build sempre que alguém de sua equipe confirmar um novo código. Teste o build e verifique se ele está produzindo um pacote de implantação da Web como um de seus artefatos.
 
 Quando um build for bem-sucedido, o processo de CD implantará os resultados do build de CI no aplicativo Web do Azure. Para configurar isso, crie e configure uma *Versão*, que será implantada no Serviço de Aplicativo do Azure.
 
-[Definir o processo de lançamento de CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
+[Implantar um aplicativo web do Azure](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
 
 Depois que o pipeline de CI/CD for configurado, basta fazer atualizações no aplicativo Web e confirmá-las no controle do código-fonte para implantá-las.
 

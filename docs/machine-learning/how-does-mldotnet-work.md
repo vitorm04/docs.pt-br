@@ -4,12 +4,12 @@ description: O ML.NET oferece a capacidade de adicionar aprendizado de máquina 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185865"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607765"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>O que é ML.NET e como ele funciona?
 
@@ -230,7 +230,7 @@ Você pode transformar dados de entrada em previsões em massa ou uma entrada po
     var price = predEngine.Predict(size);
 ```
 
-O método `CreatePredictionEngine()` usa uma classe de entrada e uma classe de saída. Os nomes de campo e/ou atributos de código determinam os nomes das colunas de dados usadas durante a previsão e o treinamento do modelo. Você pode ler sobre [como fazer uma previsão única](./how-to-guides/single-predict-model-ml-net.md) na seção de instruções.
+O método `CreatePredictionEngine()` usa uma classe de entrada e uma classe de saída. Os nomes de campo e/ou atributos de código determinam os nomes das colunas de dados usadas durante a previsão e o treinamento do modelo. Para obter mais informações, consulte [Fazer previsões com um modelo treinado](how-to-guides/machine-learning-model-predictions-ml-net.md).
 
 ### <a name="data-models-and-schema"></a>Esquema e modelos de dados
 

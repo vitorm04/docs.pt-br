@@ -2,12 +2,12 @@
 title: Guias de instruções do ML.NET
 description: Saiba como realizar tarefas específicas para ajudar na criação de soluções de IA personalizadas e na integração do Machine Learning em seus aplicativos .NET.
 ms.date: 03/01/2019
-ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715662"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607526"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guias de instruções de aprendizado de máquina do .NET
 
@@ -19,7 +19,7 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 ### <a name="prepare-the-data"></a>Preparar os dados
 
-* [Pré-processar dados de treinamento com normalizadores a ser usados no processamento de dados.](normalizers-preprocess-data-ml-net.md)
+* [Pré-processar dados de treinamento com normalizadores a ser usados no processamento de dados.](prepare-data-ml-net.md)
 
 ## <a name="train-the-model"></a>Treinar o modelo
 

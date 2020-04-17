@@ -3,12 +3,12 @@ title: Configurações de configuração de coletor de lixo
 description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória para aplicativos .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733523"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607804"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opções de configuração em tempo de execução para coleta de lixo
 
@@ -117,8 +117,8 @@ Para obter mais informações sobre algumas dessas configurações, consulte o m
 
 - Limita o número de montes criados pelo coletor de lixo.
 - Aplica-se apenas à coleta de lixo do servidor.
-- Se a afinidade do processador GC estiver ativada, que é `n` o padrão, a configuração `n` de contagem de pilhas adiaos pilhas/threads GC para os primeiros processadores. (Use as configurações de intervalos de afeitização ou aderiss para especificar exatamente quais processadores aparticipar.)
-- Se a afinidade do processador GC estiver desativada, essa configuração limita o número de pilhas gc.
+- Se a [afinidade do processador GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) estiver ativada, que é `n` o padrão, a configuração `n` de contagem de pilhas adiaos pilhas/threads GC para os primeiros processadores. (Use as configurações de [intervalos de afeitização](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) ou [aderiss para](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges) especificar exatamente quais processadores aparticipar.)
+- Se [a afinidade do processador GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) estiver desativada, essa configuração limita o número de pilhas gc.
 - Para obter mais informações, consulte as observações do [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks).
 
 | | Nome da configuração | Valores | Versão introduzida |
@@ -145,7 +145,7 @@ Exemplo:
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - Especifica os processadores exatos que os segmentos coletores de lixo devem usar.
-- Se a afinidade do `System.GC.NoAffinitize` `true`processador estiver desativada por configuração para , esta configuração será ignorada.
+- Se [a afinidade do processador GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) estiver desativada, essa configuração será ignorada.
 - Aplica-se apenas à coleta de lixo do servidor.
 - O valor é uma máscara de bit que define os processadores disponíveis para o processo. Por exemplo, um valor decimal de 1023 (ou um valor hexadecimal de 0x3FF ou 3FF se você estiver usando a variável ambiente) é 0011 1111 1111 em notação binária. Isso especifica que os primeiros 10 processadores devem ser usados. Para especificar os próximos 10 processadores, ou seja, processadores 10-19, especifique um valor decimal de 1047552 (ou um valor hexadecimal de 0xFFC00 ou FFC00), que equivale a um valor binário de 1111 1111 1100 0000 0000.
 
@@ -170,9 +170,9 @@ Exemplo:
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - Especifica a lista de processadores a serem usados para segmentos coletores de lixo.
-- Esta configuração `System.GC.HeapAffinitizeMask`é semelhante a , exceto que permite especificar mais de 64 processadores.
+- Esta configuração é semelhante ao [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask), exceto que permite especificar mais de 64 processadores.
 - Para sistemas operacionais Windows, prefixe o número do processador ou o intervalo com o grupo de [CPU](/windows/win32/procthread/processor-groups)correspondente, por exemplo, "0:1-10,0:12,1:50-52,1:70".
-- Se a afinidade do `System.GC.NoAffinitize` `true`processador estiver desativada por configuração para , esta configuração será ignorada.
+- Se [a afinidade do processador GC](#systemgcnoaffinitizecomplus_gcnoaffinitize) estiver desativada, essa configuração será ignorada.
 - Aplica-se apenas à coleta de lixo do servidor.
 - Para obter mais informações, consulte [Tornando a configuração da CPU melhor para GC em máquinas com > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) no blog de Maoni Stephens.
 
@@ -239,6 +239,11 @@ Exemplo:
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - Especifica o tamanho máximo de confirmação, em bytes, para a contabilidade GC heap e GC.
+- Esta configuração só se aplica a computadores de 64 bits.
+- O valor padrão, que só se aplica em certos casos, é o menor de 20 MB ou 75% do limite de memória no recipiente. O valor padrão se aplica se:
+
+  - O processo está sendo executado dentro de um recipiente que tem um limite de memória especificado.
+  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) não está definido.
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
@@ -262,7 +267,14 @@ Exemplo:
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- Especifica o uso do heap GC como uma porcentagem da memória total.
+- Especifica o uso permitido do heap GC como uma porcentagem da memória física total.
+- Se [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) também estiver definido, essa configuração será ignorada.
+- Esta configuração só se aplica a computadores de 64 bits.
+- Se o processo estiver sendo executado dentro de um recipiente que tenha um limite de memória especificado, a porcentagem será calculada como uma porcentagem desse limite de memória.
+- O valor padrão, que só se aplica em certos casos, é o menor de 20 MB ou 75% do limite de memória no recipiente. O valor padrão se aplica se:
+
+  - O processo está sendo executado dentro de um recipiente que tem um limite de memória especificado.
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) não está definido.
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |

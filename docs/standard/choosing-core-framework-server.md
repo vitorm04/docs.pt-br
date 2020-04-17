@@ -3,14 +3,14 @@ title: Escolher entre .NET Core e .NET Framework para aplicativos de servidor
 description: Um guia sobre qual implementação de .NET você deve considerar ao compilar um aplicativo de servidor no .NET.
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344146"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607487"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>Escolher entre .NET Core e .NET Framework para aplicativos de servidor
 
 Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo diretrizes sobre quando usar cada um.
 
@@ -103,8 +103,8 @@ Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Co
 ## <a name="see-also"></a>Confira também
 
 - [Escolher entre o ASP.NET e o ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-- [ASP.NET Core direcionado para o .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
-- [Estruturas de destino](frameworks.md)
+- [ASP.NET Core direcionado para o .NET Framework](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
+- [Frameworks de destino](frameworks.md)
 - [.NET Core Guide](../core/index.yml)
 - [Portabilidade do .NET Framework para o .NET Core](../core/porting/index.md)
 - [Introdução ao .NET e ao Docker](../core/docker/introduction.md)
