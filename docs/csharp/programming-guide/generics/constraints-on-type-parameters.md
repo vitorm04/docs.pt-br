@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463877"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738259"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -19,7 +19,7 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 
 |Constraint|Descrição|
 |----------------|-----------------|
-|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulado. Para obter informações sobre tipos de valor anulados, consulte [tipos de valor anulados](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm `struct` um construtor `new()` sem parâmetros acessível, `new()` a restrição implica a restrição e não pode ser combinada com a restrição. Você também não pode `struct` combinar `unmanaged` a restrição com a restrição.|
+|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulado. Para obter informações sobre tipos de valor anulados, consulte [tipos de valor anulados](../../language-reference/builtin-types/nullable-value-types.md). Como todos os tipos de valor têm `struct` um construtor `new()` sem parâmetros acessível, `new()` a restrição implica a restrição e não pode ser combinada com a restrição. Você não pode `struct` combinar a `unmanaged` restrição com a restrição.|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz. Em um contexto nulo em C# `T` 8.0 ou posterior, deve ser um tipo de referência não anulado. |
 |`where T : class?`|O argumento de tipo deve ser um tipo de referência, nulo ou não. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : notnull`|O argumento de tipo deve ser um tipo não anulado. O argumento pode ser um tipo de referência não anulado em C# 8.0 ou posterior, ou um tipo de valor não anulado. |

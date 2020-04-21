@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b95fa5fe5cecd4825e8c17a33f7795c6c9480c6
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980113"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738371"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - interpolação de cordas (referência C#)
 
@@ -74,7 +74,7 @@ Há três conversões implícitas de uma cadeia de caracteres interpolada:
       - Um método <xref:System.FormattableString.Invariant%2A> que produz uma cadeia de caracteres de resultado para a <xref:System.Globalization.CultureInfo.InvariantCulture>.
       - Um método <xref:System.FormattableString.ToString(System.IFormatProvider)> que produza uma cadeia de caracteres de resultado para uma cultura específica.
 
-    Use também o método <xref:System.FormattableString.ToString(System.IFormatProvider)> para fornecer uma implementação definida pelo usuário da interface <xref:System.IFormatProvider> que dá suporte à formatação personalizada. Para obter mais informações, consulte a formatação personalizada com a seção [ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dos tipos de formatação no artigo [.NET.](../../../standard/base-types/formatting-types.md)
+    Você também pode <xref:System.FormattableString.ToString(System.IFormatProvider)> usar o método para fornecer <xref:System.IFormatProvider> uma implementação definida pelo usuário da interface que suporta formatação personalizada. Para obter mais informações, consulte a formatação personalizada com a seção [ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) dos tipos de formatação no artigo [.NET.](../../../standard/base-types/formatting-types.md)
 
 1. Conversão de uma cadeia de caracteres interpolada em uma instância <xref:System.IFormattable>, que também permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura com base em uma única instância <xref:System.IFormattable>.
 
@@ -84,7 +84,7 @@ O exemplo a seguir usa a conversão implícita em <xref:System.FormattableString
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres no C# Interativo](../../tutorials/exploration/interpolated-strings.yml). Você também pode verificar outro tutorial de [interpolação de cadeia de caracteres C#](../../tutorials/string-interpolation.md) que demonstra como usar cadeias de caracteres interpoladas para produzir cadeias de caracteres formatadas.
+Se não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres no C# Interativo](../../tutorials/exploration/interpolated-strings.yml). Você também pode verificar outra [interpolação de strings no](../../tutorials/string-interpolation.md) tutorial C# que demonstra como usar strings interpoladas para produzir strings formatadas.
 
 ## <a name="compilation-of-interpolated-strings"></a>Compilação de cadeias de caracteres interpoladas
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: 07248ec0b8ac4f2356d9c9915b6a904dfad30cb2
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 2fe4458aa43144a9c29ed67fd7bee99a37fe1434
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388975"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739688"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>Como acionar notificações de alteração usando um BindingSource e a interface INotifyPropertyChanged
-O <xref:System.Windows.Forms.BindingSource> componente detectará automaticamente alterações em uma fonte de dados <xref:System.ComponentModel.INotifyPropertyChanged> quando o <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> tipo contido na fonte de dados implementar a interface e levantar eventos quando um valor de propriedade é alterado. Isso é útil porque os <xref:System.Windows.Forms.BindingSource> controles vinculados ao testamento serão atualizados automaticamente à medida que os valores de origem de dados mudam.  
+O <xref:System.Windows.Forms.BindingSource> componente detecta automaticamente alterações em uma fonte de dados <xref:System.ComponentModel.INotifyPropertyChanged> quando <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> o tipo contido na fonte de dados implementa e levanta eventos quando um valor de propriedade é alterado. Essa detecção de alteração é <xref:System.Windows.Forms.BindingSource> útil porque os controles vinculados à atualização automática à medida que os valores de origem de dados mudam.  
   
 > [!NOTE]
 > Se a sua <xref:System.ComponentModel.INotifyPropertyChanged> fonte de dados for implementada e você estiver realizando operações assíncronas, você não deve fazer alterações na fonte de dados em um segmento de fundo. Em vez disso, você deve ler os dados em um thread em segundo plano e mesclar os dados em uma lista no thread da interface do usuário.  
@@ -37,7 +37,7 @@ O <xref:System.Windows.Forms.BindingSource> componente detectará automaticament
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- Referências aos assemblies System, System.Data, System.Drawing e System.Windows.Forms.  
+- Referências aos conjuntos System,Data, System.Drawing e System.Windows.Forms.  
   
 ## <a name="see-also"></a>Confira também
 

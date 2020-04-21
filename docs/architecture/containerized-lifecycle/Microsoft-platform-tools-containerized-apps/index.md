@@ -2,12 +2,12 @@
 title: Introdução à plataforma e ferramentas da Microsoft para aplicativos em contêineres
 description: Conheça as ofertas da Microsoft para dar suporte ao ciclo de vida de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738099"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738455"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introdução à plataforma e às ferramentas da Microsoft para aplicativos em contêineres
 
@@ -39,13 +39,13 @@ A plataforma Microsoft e ferramentas para aplicativos em contêineres do Docker,
 
 - **DevOps para aplicativos do Docker** Os desenvolvedores que criam aplicativos do Docker podem usar o [Azure DevOps Services](https://azure.microsoft.com/services/devops/) ou qualquer outro produto de terceiros, como o Jenkins, para criar um ALM (gerenciamento de ciclo de vida de aplicativos) automatizado e abrangente.
 
-  Com o Azure DevOps Services, os desenvolvedores podem criar DevOps voltado para contêineres para um processo iterativo rápido que abrange o controle de código-fonte de qualquer lugar (Azure DevOps Services-Git, GitHub, qualquer repositório Git remoto ou Subversion), CI (Integração Contínua), testes de unidade interna, testes entre contêineres/de integração do serviço, CD (Entrega Contínua) e RM (gerenciamento de versão). Os desenvolvedores também podem automatizar suas versões de aplicativo do Docker dentro do AKS (Serviço de Kubernetes do Azure), desde o desenvolvimento até os ambientes de preparo e produção.
+  Com o Azure DevOps Services, os desenvolvedores podem criar DevOps voltado para contêineres para um processo iterativo rápido que abrange o controle de código-fonte de qualquer lugar (Azure DevOps Services-Git, GitHub, qualquer repositório Git remoto ou Subversion), CI (Integração Contínua), testes de unidade interna, testes entre contêineres/de integração do serviço, CD (Entrega Contínua) e RM (gerenciamento de versão). Os desenvolvedores também podem automatizar suas versões de aplicativos Docker no Azure Kubernetes Service (AKS), desde o desenvolvimento até ambientes de preparação e produção.
 
 - **Gerenciamento e Monitoramento** O time de TI pode gerenciar e monitorar aplicativos e serviços de produção de várias maneiras, integrando ambas as perspectivas em uma experiência consolidada.
 
   - **Portal Azure** Se você estiver usando orquestradores de código aberto, o Azure Kubernetes Service (AKS), o Service Fabric e outros orquestradores ajudam você a configurar e manter seus ambientes Docker. Se você estiver usando o Azure Service Fabric, a ferramenta Service Fabric Explorer possibilita visualizar e configurar o cluster.
 
-  - **Ferramentas docker** Você pode gerenciar seus aplicativos de contêiner usando ferramentas familiares. Não é necessário alterar suas práticas de gerenciamento existentes do Docker para mover cargas de trabalho do contêiner para a nuvem. Use as ferramentas de gerenciamento de aplicativo com as quais você já está familiarizado e conecte-se por meio de pontos de extremidade de API padrão ao orquestrador de sua escolha. Você também pode usar outras ferramentas de terceiros para gerenciar seus aplicativos do Docker, como Docker Datacenter ou até mesmo as ferramentas do Docker CLI.
+  - **Ferramentas docker** Você pode gerenciar seus aplicativos de contêiner usando ferramentas familiares. Não é necessário alterar suas práticas de gerenciamento existentes do Docker para mover cargas de trabalho do contêiner para a nuvem. Use as ferramentas de gerenciamento de aplicativo com as quais você já está familiarizado e conecte-se por meio de pontos de extremidade de API padrão ao orquestrador de sua escolha. Você também pode usar outras ferramentas de terceiros para gerenciar seus aplicativos Docker, como o Docker Datacenter ou até mesmo as ferramentas CLI Docker.
 
     Mesmo que você esteja familiarizado com os comandos do Linux, você pode gerenciar seus aplicativos de contêiner usando o Microsoft Windows e o PowerShell com uma linha de comando de subsistema do Linux e os produtos (Docker, Kubernetes...) clientes executando nessa funcionalidade de Subsistema do Linux. Você verá mais sobre como usar essas ferramentas no Subsistema do Linux usando seu SO favorito do Microsoft Windows mais adiante neste livro.
 

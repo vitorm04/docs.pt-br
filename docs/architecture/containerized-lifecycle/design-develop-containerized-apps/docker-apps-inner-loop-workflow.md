@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Conheça o fluxo de trabalho de "loop interno" para desenvolvimento de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989006"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738414"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -156,7 +156,7 @@ Para cada serviço personalizado que compõe seu aplicativo, você precisará cr
 >
 > Sendo assim, cada desenvolvedor precisa primeiro realizar todo o processo de loop interno para testar localmente e continuar desenvolvendo até que queiram efetuar push de um recurso ou alteração completa para o sistema de controle do código-fonte.
 
-Para criar uma imagem no ambiente local usando o DockerFile, você pode usar o comando docker build, conforme demonstrado na Figura 4-25 (você também pode executar `docker-compose up --build` para aplicativos compostos por vários contêineres/serviços).
+Para criar uma imagem em seu ambiente local e usando o DockerFile, você pode usar o comando `docker-compose up --build` docker build, conforme demonstrado na Figura 4-25 (você também pode executar aplicativos compostos por vários contêineres/serviços).
 
 ![Captura de tela mostrando a saída do console do comando de compilação docker.](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
@@ -263,7 +263,7 @@ Isso pode ser testado usando o CURL no terminal. Em uma instalação do Docker n
 
 O Visual Studio Code dá suporte à depuração do Docker quando você está usando Node.js e outras plataformas, como contêineres do .NET Core.
 
-Você também pode depurar contêineres do .NET Core ou .NET Framework no Docker ao usar o Visual Studio para Windows ou Mac, conforme descrito na próxima seção.
+Você também pode depurar recipientes .NET Core ou .NET Framework no Docker ao usar o Visual Studio para Windows ou Mac, conforme descrito na próxima seção.
 
 > [!TIP]
 > Para saber mais sobre a depuração de contêineres Node.js Docker, consulte <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.

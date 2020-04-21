@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: 6218aa1a7b813601e9b718abf862e20a7cbcd313
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e09ed853598dcbb13cc8dc3fe963276e4b5e974d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124295"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739640"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementando o padrão assíncrono baseado em tarefa
 Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três formas: usando os compiladores C# e Visual Basic no Visual Studio, manualmente ou por meio de uma combinação dos métodos de compilador e manual. As seções a seguir discutem cada método em detalhes. Você pode usar o padrão TAP para implementar operações assíncronas associadas ao cálculo e associadas à E/S. A seção [Cargas de trabalho](#workloads) descreve cada tipo de operação.
@@ -24,10 +24,10 @@ Você pode implementar o Padrão Assíncrono baseado em Tarefas (TAP) de três f
 ## <a name="generating-tap-methods"></a>Gerando métodos do TAP
 
 ### <a name="using-the-compilers"></a>Usando os compiladores
-Do .NET Framework 4.5 em diante, qualquer método que seja atribuído com a palavra-chave `async` (`Async` no Visual Basic) é considerado um método assíncrono e os compiladores de C# e do Visual Basic realizam as transformações necessárias para implementar o método de forma assíncrona usando o TAP. Um método assíncrono deve retornar um objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou um objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Para o último, o corpo da função deve retornar um `TResult`, e o compilador garante que esse resultado seja disponibilizado por meio do objeto de tarefa resultante. Da mesma forma, quaisquer exceções que passem para o corpo do método sem tratamento são empacotadas na tarefa de saída e fazem com que a tarefa resultante termine no estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. A exceção é quando uma <xref:System.OperationCanceledException> (ou um tipo derivado) passa sem tratamento e, nesse caso, a tarefa resultante termina no estado <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType>.
+Do .NET Framework 4.5 em diante, qualquer método que seja atribuído com a palavra-chave `async` (`Async` no Visual Basic) é considerado um método assíncrono e os compiladores de C# e do Visual Basic realizam as transformações necessárias para implementar o método de forma assíncrona usando o TAP. Um método assíncrono deve retornar um objeto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou um objeto <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Para o último, o corpo da função deve retornar um `TResult`, e o compilador garante que esse resultado seja disponibilizado por meio do objeto de tarefa resultante. Da mesma forma, quaisquer exceções que passem para o corpo do método sem tratamento são empacotadas na tarefa de saída e fazem com que a tarefa resultante termine no estado <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType>. A exceção a esta <xref:System.OperationCanceledException> regra é quando um (ou tipo derivado) não é <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> tratado, nesse caso a tarefa resultante termina no estado.
 
 ### <a name="generating-tap-methods-manually"></a>Gerando métodos do TAP manualmente
-Você pode implementar o padrão TAP manualmente para obter maior controle sobre a implementação. O compilador depende da área de superfície pública exposta no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType> e dos tipos de suporte no namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Para implementar o TAP você mesmo, crie um objeto <xref:System.Threading.Tasks.TaskCompletionSource%601>, execute a operação assíncrona e quando ela estiver concluída, chame o método <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou a versão `Try` de um desses métodos. Quando você implementa um método do TAP manualmente, deverá concluir a tarefa resultante quando a operação assíncrona representada for concluída. Por exemplo: 
+Você pode implementar o padrão TAP manualmente para obter maior controle sobre a implementação. O compilador depende da área de superfície pública exposta no namespace <xref:System.Threading.Tasks?displayProperty=nameWithType> e dos tipos de suporte no namespace <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>. Para implementar o TAP você mesmo, crie um objeto <xref:System.Threading.Tasks.TaskCompletionSource%601>, execute a operação assíncrona e quando ela estiver concluída, chame o método <xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult%2A>, <xref:System.Threading.Tasks.TaskCompletionSource%601.SetException%2A> ou <xref:System.Threading.Tasks.TaskCompletionSource%601.SetCanceled%2A>, ou a versão `Try` de um desses métodos. Quando você implementa um método do TAP manualmente, deverá concluir a tarefa resultante quando a operação assíncrona representada for concluída. Por exemplo:
 
 [!code-csharp[Conceptual.TAP_Patterns#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap_patterns/cs/patterns1.cs#1)]
 [!code-vb[Conceptual.TAP_Patterns#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap_patterns/vb/patterns1.vb#1)]

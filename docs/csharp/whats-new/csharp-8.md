@@ -2,12 +2,12 @@
 title: O que há de novo em C# 8.0 - C# Guide
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: fcba0526fbcbe46a02cef167822c219f9db2eb63
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389097"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738160"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 

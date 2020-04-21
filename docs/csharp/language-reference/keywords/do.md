@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 38224ce70c19ff67ad80b99d3da52155849f1341
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d4323366e567dab4b27b07803d0c06e731611ce
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713596"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738901"
 ---
 # <a name="do-c-reference"></a>do (Referência de C#)
 
@@ -22,7 +22,7 @@ A qualquer momento dentro do bloco de instruções `do`, interrompa o loop usand
 
 Você pode seguir diretamente para a avaliação da expressão `while` usando a instrução [continue](continue.md). Se a expressão for avaliada como `true`, a execução continuará na primeira instrução do loop. Caso contrário, a execução continuará na primeira instrução após o loop.
 
-Você também pode sair de um loop `do-while` com a instrução [goto](goto.md), [return](return.md) ou [throw](throw.md).
+Você também pode `do-while` sair de um loop pelas declarações [goto](goto.md), [return](return.md)ou [throw.](throw.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -38,5 +38,5 @@ Para saber mais, confira a seção [A instrução do](~/_csharplang/spec/stateme
 
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [C# Palavras-chave](index.md)
 - [enquanto declaração](while.md)

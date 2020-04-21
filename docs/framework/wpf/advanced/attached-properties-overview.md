@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389009"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739292"
 ---
 # <a name="attached-properties-overview"></a>Visão geral das propriedades anexadas
 
@@ -20,11 +20,11 @@ Uma propriedade anexada é um conceito definido por XAML. Uma propriedade anexad
 
 ## <a name="prerequisites"></a>Pré-requisitos<a name="prerequisites"></a>
 
-Este tópico pressupõe que você entende as propriedades de dependência da perspectiva de um consumidor de propriedades de dependência existentes nas classes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e que leu a [Visão geral das propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos neste tópico, você também deve entender XAML e saber como escrever aplicativos WPF.
+Este artigo assume que você entende as propriedades de dependência da perspectiva [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de um consumidor de propriedades de dependência existentes nas classes e leu a visão geral das [propriedades de dependência](dependency-properties-overview.md). Para seguir os exemplos deste artigo, você também deve entender XAML e saber escrever aplicativos WPF.
 
 ## <a name="why-use-attached-properties"></a>Por que usar propriedades anexadas<a name="attached_properties_usage"></a>
 
-Uma das finalidades de uma propriedade anexada é permitir que diferentes elementos filho especifiquem valores exclusivos para uma propriedade que, na verdade, é definida em um elemento pai. Um aplicativo específico desse cenário é quando elementos filho informam ao elemento pai como devem ser apresentados no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Um exemplo <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> é a propriedade. A <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade é criada como uma propriedade anexada porque foi projetada para <xref:System.Windows.Controls.DockPanel>ser definida <xref:System.Windows.Controls.DockPanel> em elementos que estão contidos dentro de um , e não em si mesmo. A <xref:System.Windows.Controls.DockPanel> classe define <xref:System.Windows.DependencyProperty> o <xref:System.Windows.Controls.DockPanel.DockProperty>campo estático <xref:System.Windows.Controls.DockPanel.GetDock%2A> nomeado <xref:System.Windows.Controls.DockPanel.SetDock%2A> e, em seguida, fornece os métodos e métodos como acessórios públicos para a propriedade anexada.
+Um propósito de uma propriedade anexada é permitir que diferentes elementos da criança especifiquem valores únicos para uma propriedade definida em um elemento pai. Um aplicativo específico desse cenário é quando elementos filho informam ao elemento pai como devem ser apresentados no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Um exemplo <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> é a propriedade. A <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> propriedade é criada como uma propriedade anexada porque foi projetada para <xref:System.Windows.Controls.DockPanel> ser <xref:System.Windows.Controls.DockPanel> definida em elementos que estão contidos dentro de um e não em si mesmo. A <xref:System.Windows.Controls.DockPanel> classe define <xref:System.Windows.DependencyProperty> o <xref:System.Windows.Controls.DockPanel.DockProperty>campo estático <xref:System.Windows.Controls.DockPanel.GetDock%2A> nomeado <xref:System.Windows.Controls.DockPanel.SetDock%2A> e, em seguida, fornece os métodos e métodos como acessórios públicos para a propriedade anexada.
 
 ## <a name="attached-properties-in-xaml"></a>Propriedades anexadas em XAML<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ A seguir, um exemplo de <xref:System.Windows.Controls.DockPanel.Dock%2A?displayP
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Observe que o uso é um pouco semelhante a uma propriedade estática; você sempre faz <xref:System.Windows.Controls.DockPanel> referência ao tipo que possui e registra a propriedade anexada, em vez de se referir a qualquer instância especificada pelo nome.
+O uso é um pouco semelhante a uma propriedade estática; você sempre faz <xref:System.Windows.Controls.DockPanel> referência ao tipo que possui e registra a propriedade anexada, em vez de se referir a qualquer instância especificada pelo nome.
 
-Além disso, como uma propriedade anexada em XAML é um atributo definido na marcação, somente a operação de conjuntos tem alguma relevância. Não é possível obter uma propriedade diretamente em XAML, apesar de existirem alguns mecanismos indiretos para comparar valores, como gatilhos em estilos (para mais detalhes, consulte [Estilo e modelagem](../controls/styling-and-templating.md)).
+Além disso, como uma propriedade anexada em XAML é um atributo definido na marcação, somente a operação de conjuntos tem alguma relevância. Não é possível obter uma propriedade diretamente em XAML, apesar de existirem alguns mecanismos indiretos para comparar valores, como gatilhos em estilos (para mais detalhes, consulte [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementação de propriedades anexadas no WPF
 
-Em [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], a maioria das propriedades anexadas existentes em tipos wpf que estão relacionados à apresentação de IU são implementadas como propriedades de dependência. As propriedades anexadas são um conceito XAML, enquanto as propriedades de dependência são um conceito WPF. Como as propriedades anexadas ao WPF são propriedades de dependência, elas suportam conceitos de propriedade de dependência, como metadados de propriedade e valores padrão desses metadados de propriedade.
+Em, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]a maioria das propriedades anexadas relacionadas à UI em tipos WPF são implementadas como propriedades de dependência. As propriedades anexadas são um conceito XAML, enquanto as propriedades de dependência são um conceito WPF. Como as propriedades anexadas ao WPF são propriedades de dependência, elas suportam conceitos de propriedade de dependência, como metadados de propriedade e valores padrão desses metadados de propriedade.
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Como as propriedades anexadas são usadas pelo tipo de propriedade<a name="howused"></a>
 
@@ -91,7 +91,7 @@ Como mencionado anteriormente, será necessário registrar como propriedade anex
 
 Se sua classe estiver definindo a propriedade anexada estritamente para uso <xref:System.Windows.DependencyObject>em outros tipos, então a classe não precisa derivar de . Mas você precisa derivar se <xref:System.Windows.DependencyObject> você seguir o modelo geral do WPF de ter sua propriedade anexada também ser uma propriedade de dependência.
 
-Defina sua propriedade anexada como uma `public static readonly` propriedade de <xref:System.Windows.DependencyProperty>dependência declarando um campo de tipo . Você define este campo usando o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> valor de retorno do método. O nome do campo deve corresponder ao nome `Property`da propriedade anexado, anexado à string, para seguir o padrão WPF estabelecido de nomear os campos de identificação versus as propriedades que eles representam. O provedor de propriedade anexada também deve fornecer métodos estáticos **Get_PropertyName_** e **Set_PropertyName_** como acessórios para a propriedade anexada; não fazer isso resultará na incapacidade do sistema de propriedade de usar sua propriedade anexada.
+Defina sua propriedade anexada como uma `public static readonly` propriedade de <xref:System.Windows.DependencyProperty>dependência declarando um campo de tipo . Você define este campo usando o <xref:System.Windows.DependencyProperty.RegisterAttached%2A> valor de retorno do método. O nome do campo deve corresponder ao nome `Property`da propriedade anexado, anexado à string, para seguir o padrão WPF estabelecido de nomear os campos de identificação versus as propriedades que eles representam. O provedor de propriedade anexada também deve fornecer métodos estáticos **Get_PropertyName_** e **Set_PropertyName_** como acessórios para a propriedade anexada; não fazer isso resulta em que o sistema de propriedade não pode usar sua propriedade anexada.
 
 > [!NOTE]
 > Se você omitir o acessório get da propriedade anexada, a vinculação de dados na propriedade não funcionará em ferramentas de design, como Visual Studio e Blend for Visual Studio.

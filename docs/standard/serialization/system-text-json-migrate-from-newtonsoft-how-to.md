@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 957bafcdf69d5792702962db6598458a0c8ec974
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291571"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739245"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Como migrar de Newtonsoft.Json para System.Text.Json
 
@@ -73,15 +73,15 @@ A tabela `Newtonsoft.Json` a `System.Text.Json` seguir lista características e 
 | Método `JsonConvert.PopulateObject`                   | ⚠️[Não suportado, solução](#populate-existing-objects) |
 | `ObjectCreationHandling`configuração global               | ⚠️[Não suportado, solução](#reuse-rather-than-replace-properties) |
 | Adicionar às coleções sem setters                    | ⚠️[Não suportado, solução](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`configuração global           | ❌[Não suportado](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`configuração global                | ❌[Não suportado](#preserve-object-references-and-handle-loops) |
-| Suporte `System.Runtime.Serialization` para atributos | ❌[Não suportado](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`configuração global                | ❌[Não suportado](#missingmemberhandling) |
-| Permitir nomes de propriedades sem aspas                   | ❌[Não suportado](#json-strings-property-names-and-string-values) |
-| Permitir aspas únicas em torno de valores de seqüência              | ❌[Não suportado](#json-strings-property-names-and-string-values) |
-| Permitir valores JSON não-string para propriedades de string    | ❌[Não suportado](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`configuração global           | ❌ [Sem suporte](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`configuração global                | ❌ [Sem suporte](#preserve-object-references-and-handle-loops) |
+| Suporte `System.Runtime.Serialization` para atributos | ❌ [Sem suporte](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`configuração global                | ❌ [Sem suporte](#missingmemberhandling) |
+| Permitir nomes de propriedades sem aspas                   | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
+| Permitir aspas únicas em torno de valores de seqüência              | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
+| Permitir valores JSON não-string para propriedades de string    | ❌ [Sem suporte](#non-string-values-for-string-properties) |
 
-Esta não é uma lista `Newtonsoft.Json` exaustiva de recursos. A lista inclui muitos dos cenários que foram solicitados em problemas do [GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) ou postagens [stackoverflow.](https://stackoverflow.com/questions/tagged/system.text.json) Se você implementar uma solução para um dos cenários listados aqui que não possui código de amostra no momento e, se quiser compartilhar sua solução, selecione **Esta página** na [seção Feedback](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback) desta página. Isso cria um problema do GitHub e lista-o na parte inferior desta página.
+Esta não é uma lista `Newtonsoft.Json` exaustiva de recursos. A lista inclui muitos dos cenários que foram solicitados em problemas do [GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) ou postagens [stackoverflow.](https://stackoverflow.com/questions/tagged/system.text.json) Se você implementar uma solução para um dos cenários listados aqui que não possui código de amostra no momento e, se quiser compartilhar sua solução, selecione **Esta página** na seção **Feedback** na parte inferior desta página. Isso cria um problema no repo gitHub desta documentação e lista-o na seção **Feedback** nesta página também.
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Diferenças no comportamento padrão do JsonSerializer em comparação com Newtonsoft.Json
 
@@ -472,7 +472,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 O código anterior `JsonElement` espera `fileName` um que contenha uma propriedade. Ele abre o arquivo JSON e cria um `JsonDocument`. O método pressupõe que o chamador quer trabalhar com `Clone` todo `RootElement`o documento, por isso retorna o do .
 
-Se você `JsonElement` receber um e estiver retornando um subelemento, `Clone` não é necessário devolver um subelemento. O interlocutor é responsável `JsonDocument` por manter vivo `JsonElement` o que o falecido pertence. Por exemplo: 
+Se você `JsonElement` receber um e estiver retornando um subelemento, `Clone` não é necessário devolver um subelemento. O interlocutor é responsável `JsonDocument` por manter vivo `JsonElement` o que o falecido pertence. Por exemplo:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -510,7 +510,7 @@ As seções a seguir explicam `Utf8JsonReader`os padrões de programação recom
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader é um ref struct
 
-Como `Utf8JsonReader` o tipo é uma *estrutura de ref,* ele tem [certas limitações.](../../csharp/language-reference/keywords/ref.md#ref-struct-types) Por exemplo, ele não pode ser armazenado como um campo em uma classe ou estrutura além de uma estrutura de ref. Para obter alto desempenho, este `ref struct` tipo deve ser um, pois ele precisa fazer cache da entrada [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601), que por si só é uma estrutura de ref. Além disso, este tipo é mutável, uma vez que mantém o estado. Portanto, **passá-lo por árbitro** e não por valor. Passá-lo por valor resultaria em uma cópia de estrutura e as alterações de estado não seriam visíveis para o chamador. Isso difere `Newtonsoft.Json` de `Newtonsoft.Json` `JsonTextReader` uma classe. Para obter mais informações sobre como usar os structs de ref, consulte [Escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
+Como `Utf8JsonReader` o tipo é uma *estrutura de ref,* ele tem [certas limitações.](../../csharp/language-reference/builtin-types/struct.md#ref-struct) Por exemplo, ele não pode ser armazenado como um campo em uma classe ou estrutura além de uma estrutura de ref. Para obter alto desempenho, este `ref struct` tipo deve ser um, pois ele precisa fazer cache da entrada [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601), que por si só é uma estrutura de ref. Além disso, este tipo é mutável, uma vez que mantém o estado. Portanto, **passá-lo por árbitro** e não por valor. Passá-lo por valor resultaria em uma cópia de estrutura e as alterações de estado não seriam visíveis para o chamador. Isso difere `Newtonsoft.Json` de `Newtonsoft.Json` `JsonTextReader` uma classe. Para obter mais informações sobre como usar os structs de ref, consulte [Escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
 
 ### <a name="read-utf-8-text"></a>Leia o texto utf-8
 

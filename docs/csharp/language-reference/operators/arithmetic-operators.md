@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399255"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738741"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referência do C#)
 
@@ -153,7 +153,7 @@ O operador de adição `+` calcula a soma dos operandos:
 
 [!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
 
-Você também pode usar o operador `+` para a combinação de delegado e concatenação de cadeia de caracteres. Para obter mais informações, consulte o artigo [ `+` e `+=` operadores.](addition-operator.md)
+Você também pode `+` usar o operador para concatenação de cordas e combinação de delegados. Para obter mais informações, consulte o artigo [ `+` e `+=` operadores.](addition-operator.md)
 
 ## <a name="subtraction-operator--"></a>Operador de subtração -
 
@@ -161,7 +161,7 @@ O operador de subtração `-` subtrai o operando à direita do operando à esque
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-Você também pode usar o operador `-` para a remoção de delegado. Para obter mais informações, consulte o artigo [ `-` e `-=` operadores.](subtraction-operator.md)
+Você também pode `-` usar o operador para remoção de delegado. Para obter mais informações, consulte o artigo [ `-` e `-=` operadores.](subtraction-operator.md)
 
 ## <a name="compound-assignment"></a>Atribuição composta
 

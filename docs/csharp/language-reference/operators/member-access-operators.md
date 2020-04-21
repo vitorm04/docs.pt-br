@@ -1,7 +1,7 @@
 ---
 title: Operadores e expressões de acesso a membros - referência C#
 description: Aprenda sobre operadores de C# que você pode usar para acessar membros de tipo.
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120990"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738717"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores e expressões de acesso a membros (referência C#)
 
@@ -155,6 +155,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+Essa é uma maneira segura de rosca `handler` para garantir que apenas um não-nulo seja invocado. Como as instâncias de delegado são imutáveis, nenhum `handler` segmento pode alterar o valor referenciado pela variável local. Em particular, se o código executado por outro `PropertyChanged` segmento `PropertyChanged` `null` cancelar `handler` a assinatura do evento `handler` e se tornar antes de ser invocado, o valor referenciado por permanece inalterado. O `?.` operador avalia seu oper esquerdo e não mais do que uma `null` vez, garantindo que não pode ser alterado para depois de ser verificado como não nulo.
 
 ## <a name="invocation-expression-"></a>Expressão de invocação ()
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61b60674d3b5de4649a52d2a165265ae0a27e0be
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715259"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738860"
 ---
 # <a name="if-else-c-reference"></a>if-else (Referência de C#)
 
@@ -71,7 +71,7 @@ No exemplo a seguir, você insere um caractere do teclado e o programa usa uma i
 
 ## <a name="example"></a>Exemplo
 
-Você também pode aninhar uma instrução `if` dentro de um bloco else, como mostra o código parcial a seguir. O exemplo aninha instruções `if` em dois blocos else e um bloco then. Os comentários especificam quais condições são verdadeiras ou falsas em cada bloco.
+Você também pode `if` aninhar uma declaração dentro de um outro bloco, como mostra o seguinte código parcial. O exemplo aninha instruções `if` em dois blocos else e um bloco then. Os comentários especificam quais condições são verdadeiras ou falsas em cada bloco.
 
 [!code-csharp[csrefKeywordsSelection#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#5)]
 
@@ -138,7 +138,7 @@ if (!(m >= n || m >= p))
 
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
+- [C# Palavras-chave](index.md)
 - [?: Operador](../operators/conditional-operator.md)
 - [Instrução if-else (C++)](/cpp/cpp/if-else-statement-cpp)
-- [Interruptor](switch.md)
+- [switch](switch.md)

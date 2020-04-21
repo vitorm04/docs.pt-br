@@ -2,12 +2,12 @@
 title: Aplicativos de SOA
 description: Tenha em mente que os contêineres também podem ser uma opção de implantação útil para aplicativos de SOA.
 ms.date: 02/15/2019
-ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8619cb50a7d90b911db9ff2c8ef37c3c5fde210
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68672353"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738380"
 ---
 # <a name="service-oriented-applications"></a>Aplicativos orientados a serviços
 
@@ -17,7 +17,7 @@ Atualmente, é possível implantar esses serviços como contêineres do Docker, 
 
 Os contêineres do Docker são úteis (mas não necessários) para arquiteturas tradicionais orientadas a serviço e para as arquiteturas de microsserviços mais avançadas.
 
-Ao considerar tudo, as soluções de clustering de contêiner são úteis para uma arquitetura de SOA tradicional e para uma arquitetura de microsserviços mais avançada na qual cada microsserviço tem seu próprio modelo de dados. E, graças aos vários bancos de dados, você também pode expandir a camada de dados em vez de trabalhar com bancos de dados monolíticos compartilhados pelos serviços de SOA. No entanto, a discussão sobre divisão dos dados é puramente sobre arquitetura e design.
+Ao considerar tudo, as soluções de clustering de contêiner são úteis para uma arquitetura de SOA tradicional e para uma arquitetura de microsserviços mais avançada na qual cada microsserviço tem seu próprio modelo de dados. E graças a vários bancos de dados, você também pode dimensionar o nível de dados em vez de trabalhar com bancos de dados monolíticos compartilhados pelos serviços SOA. No entanto, a discussão sobre divisão dos dados é puramente sobre arquitetura e design.
 
 >[!div class="step-by-step"]
 >[Próximo](state-and-data-in-docker-applications.md)

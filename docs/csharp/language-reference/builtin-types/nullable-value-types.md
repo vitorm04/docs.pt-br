@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos de valor nulo C# e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888066"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738992"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valor anulados (referência C#)
 
@@ -24,7 +24,7 @@ Você normalmente usa um tipo de valor anulado quando precisa representar o valo
 
 ## <a name="declaration-and-assignment"></a>Declaração e atribuição
 
-Como um tipo de valor é implicitamente conversível para o tipo de valor nulo correspondente, você pode atribuir um valor a uma variável de um tipo de valor anulado como você faria para o seu tipo de valor subjacente. Você também pode atribuir o valor `null`. Por exemplo:
+Como um tipo de valor é implicitamente conversível para o tipo de valor nulo correspondente, você pode atribuir um valor a uma variável de um tipo de valor anulado como você faria para o seu tipo de valor subjacente. Você também pode `null` atribuir o valor. Por exemplo:
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 

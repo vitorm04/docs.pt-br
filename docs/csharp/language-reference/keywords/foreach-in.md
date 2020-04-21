@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: dbe4f4e95c2b99f1be47885e39d51db81ba3a97d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173699"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738811"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência em C#)
 
@@ -27,7 +27,7 @@ Começando com C# 7.3, se a `Current` propriedade do enumerador`ref T` `T` retor
 
 A partir de C# `await` 8.0, o `foreach` operador pode ser aplicado <xref:System.Collections.Generic.IAsyncEnumerable%601> à declaração quando o tipo de coleta implementa a interface. Cada iteração do loop pode ser suspensa enquanto o próximo elemento é recuperado assíncronamente. Por padrão, os elementos de fluxo são processados no contexto capturado. Se você quiser desativar a captura do <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> contexto, use o método de extensão. Para obter mais informações sobre contextos de sincronização e captura do contexto atual, consulte o artigo sobre [o consumo do padrão assíncrono baseado em tarefas](../../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
-Em qualquer ponto dentro do bloco de instrução `foreach`, você pode sair do loop usando a instrução [break](break.md) ou seguir para a próxima iteração no loop usando a instrução [continue](continue.md). Você também pode sair de um loop `foreach` com a instrução [goto](goto.md), [return](return.md) ou [throw](throw.md).
+Em qualquer ponto dentro do bloco de instrução `foreach`, você pode sair do loop usando a instrução [break](break.md) ou seguir para a próxima iteração no loop usando a instrução [continue](continue.md). Você também pode `foreach` sair de um loop pelas declarações [goto](goto.md), [return](return.md)ou [throw.](throw.md)
 
 Se a instrução `foreach` for aplicada a `null`, uma <xref:System.NullReferenceException> será gerada. Se a coleta `foreach` de origem da declaração `foreach` estiver vazia, o corpo do laço não é executado e pulado.
 
@@ -59,6 +59,6 @@ Para obter mais informações, confira a seção [A instrução foreach](~/_csha
 
 - [C# Referência](../index.md)
 - [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](index.md)
-- [Usar foreach com matrizes](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [C# Palavras-chave](index.md)
+- [Usando foreach com matrizes](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [para declaração](for.md)

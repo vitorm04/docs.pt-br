@@ -2,18 +2,18 @@
 title: Interpolação de cadeia de caracteres – tutorial de C#
 description: Este tutorial mostra como usar o recurso de interpolação de cadeias de caracteres em C# para incluir resultados de expressão formatada em uma cadeia de caracteres maior.
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346788"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738277"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usar interpolação de cadeia de caracteres para construir cadeia de caracteres formatadas
 
 Este tutorial ensina como usar a [interpolação de cadeias de caracteres](../../language-reference/tokens/interpolated.md) em C# para inserir valores em uma única cadeia de caracteres de resultado. Escreva o código em C# e veja os resultados da compilação e da execução. O tutorial contém uma série de lições que mostram como inserir valores em uma cadeia de caracteres e formatar esses valores de diferentes maneiras.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Você também pode concluir a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Você também pode completar a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
 
 ## <a name="create-an-interpolated-string"></a>Criar uma cadeia de caracteres interpolada
 

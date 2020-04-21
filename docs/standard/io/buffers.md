@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160112"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739616"
 ---
 # <a name="work-with-buffers-in-net"></a>Trabalhe com Buffers em .NET
 
@@ -191,5 +191,5 @@ O exemplo a seguir analisa um comprimento inteiro de 4 bytes `ReadOnlySequence<b
 ### <a name="sequencereadert-common-problems"></a>Sequenclero\> T\<problemas comuns
 
 - Por `SequenceReader<T>` ser uma estrutura mutável, deve ser sempre passada por [referência.](../../csharp/language-reference/keywords/ref.md)
-- `SequenceReader<T>`é uma [estrutura ref para](../../csharp/language-reference/keywords/ref.md#ref-struct-types) que ele só possa ser usado em métodos síncronos e não pode ser armazenado em campos. Para obter mais informações, consulte [Escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
+- `SequenceReader<T>`é uma [estrutura ref para](../../csharp/language-reference/builtin-types/struct.md#ref-struct) que ele só possa ser usado em métodos síncronos e não pode ser armazenado em campos. Para obter mais informações, consulte [Escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
 - `SequenceReader<T>`é otimizado para uso como um leitor somente para frente. `Rewind`destina-se a pequenos backups que não podem `Read` `Peek`ser `IsNext` endereçados utilizando outras , e APIs.

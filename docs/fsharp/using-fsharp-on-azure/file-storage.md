@@ -3,12 +3,12 @@ title: Introdução ao armazenamento de Arquivos do Azure usando F#
 description: Armazene dados de arquivos na nuvem com o armazenamento de Arquivos do Azure e monte seu compartilhamento de arquivos na nuvem de uma VM (máquina virtual) do Azure ou de um aplicativo local que executa o Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607461"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739597"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Comece com o armazenamento de arquivos Do Azure usando F\#
 
@@ -41,7 +41,7 @@ Para o tutorial, você digitará sua seqüência de conexão no seu script, assi
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-No entanto, isso não é **recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante para a senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger a chave de sua conta de armazenamento. Evite distribuí-la a outros usuários, embuti-la no código ou salvá-lo em um arquivo de texto sem formatação que esteja acessível a outras pessoas. Você pode regenerar sua chave usando o Portal Azure se acreditar que ela pode ter sido comprometida.
+No entanto, isso não é **recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante para a senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger a chave de sua conta de armazenamento. Evite distribuí-la a outros usuários, embuti-la no código ou salvá-lo em um arquivo de texto sem formatação que esteja acessível a outras pessoas. Você pode regenerar sua chave usando o portal Azure se você acredita que pode ter sido comprometida.
 
 Para aplicativos reais, a melhor maneira de manter sua seqüência de conexão de armazenamento está em um arquivo de configuração. Para buscar a seqüência de conexões de um arquivo de configuração, você pode fazer isso:
 
@@ -73,7 +73,7 @@ Este exemplo mostra como criar um compartilhamento de arquivos se ele ainda não
 
 ## <a name="create-a-root-directory-and-a-subdirectory"></a>Crie um diretório raiz e um subdiretório
 
-Aqui, você começa o diretório raiz e obter um sub-diretório da raiz. Você cria ambos se eles já não existem.
+Aqui, você começa o diretório raiz e obter um subdiretório da raiz. Você cria ambos se eles já não existem.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
@@ -127,13 +127,13 @@ Você pode copiar um blob em um arquivo da mesma maneira. Se o objeto de origem 
 
 O Azure Storage Analytics suporta métricas para armazenamento de arquivos. Com dados de métricas, você pode rastrear solicitações e diagnosticar problemas.
 
-Você pode habilitar métricas para armazenamento de arquivos no [Portal Azure,](https://portal.azure.com)ou pode fazê-lo a partir de F# assim:
+Você pode habilitar métricas para armazenamento de arquivos a partir do [portal Azure,](https://portal.azure.com)ou pode fazê-lo a partir de F# assim:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Consulte estes links para obter mais informações sobre o armazenamento de arquivo do Azure.
+Para obter mais informações sobre o armazenamento de arquivos do Azure, consulte esses links.
 
 ### <a name="conceptual-articles-and-videos"></a>Artigos e vídeos conceituais
 

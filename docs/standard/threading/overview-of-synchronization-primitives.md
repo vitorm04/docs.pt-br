@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73106586"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739379"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Visão geral dos primitivos de sincronização
 
@@ -65,7 +65,7 @@ Para obter mais informações, veja a referência de API <xref:System.Threading.
 
 A classe <xref:System.Threading.Mutex?displayProperty=nameWithType>, como <xref:System.Threading.Monitor>, concede acesso exclusivo a um recurso compartilhado. Use uma das sobrecargas do método [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) para solicitar a propriedade de um mutex. Como <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> tem afinidade de thread e o thread que adquiriu um mutex deverá liberá-lo chamando o método <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
 
-Diferente de <xref:System.Threading.Monitor>, a classe <xref:System.Threading.Mutex> pode ser usada para sincronização entre processos. Para fazer isso, use um mutex nomeado, que fica visível em todo o sistema operacional. Para criar uma instância de mutex nomeada, use um [construtor Mutex](<xref:System.Threading.Mutex.%23ctor%2A>) que especifique um nome. Você também pode chamar o método <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> para abrir um mutex do sistema nomeado existente.
+Diferente de <xref:System.Threading.Monitor>, a classe <xref:System.Threading.Mutex> pode ser usada para sincronização entre processos. Para fazer isso, use um mutex nomeado, que fica visível em todo o sistema operacional. Para criar uma instância de mutex nomeada, use um [construtor Mutex](<xref:System.Threading.Mutex.%23ctor%2A>) que especifique um nome. Você também pode <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType> chamar o método para abrir um mutex de sistema nomeado existente.
   
 Para obter mais informações, veja o artigo [Mutexes](mutexes.md) e a referência da API <xref:System.Threading.Mutex>.
 
@@ -143,5 +143,5 @@ Para obter mais informações, veja o artigo [SpinWait](spinwait.md) e a referê
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Coleções seguras para segmentos](../collections/thread-safe/index.md)
+- [Coleções thread-safe](../collections/thread-safe/index.md)
 - [Objetos e recursos de threading](threading-objects-and-features.md)

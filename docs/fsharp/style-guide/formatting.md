@@ -2,19 +2,19 @@
 title: Diretrizes de formatação de código do F#
 description: Aprenda as diretrizes para formatar o código F# .
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278932"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739559"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
 Este artigo oferece diretrizes de como formatar seu código para que seu código F# seja:
 
-* Geralmente visto como mais legível
-* Está de acordo com as convenções aplicadas por ferramentas de formatação no Visual Studio e outros editores
+* Mais legível
+* De acordo com as convenções aplicadas por ferramentas de formatação no Visual Studio e outros editores
 * Semelhante a outro código online
 
 Essas diretrizes são baseadas em [um guia abrangente de Convenções de Formatação F#](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) por [Anh-Dung Phan](https://github.com/dungpa).
@@ -27,7 +27,7 @@ F# usa espaço branco significativo por padrão. As seguintes diretrizes destina
 
 Quando o recuo é necessário, você deve usar espaços, não guias. Pelo menos um espaço é necessário. Sua organização pode criar padrões de codificação para especificar o número de espaços a serem usados para recuo; dois, três ou quatro espaços de recuo em cada nível onde ocorre o recuo é típico.
 
-**Recomendamos 4 espaços por recuo.**
+**Recomendamos quatro espaços por recuo.**
 
 Dito isto, o recuo dos programas é uma questão subjetiva. As variações são ok, mas a primeira regra que você deve seguir é *a consistência do recuo*. Escolha um estilo geralmente aceito de recuo e use-o sistematicamente em toda a sua base de código.
 
@@ -43,7 +43,7 @@ Use sempre o espaço branco em torno de expressões aritméticas binárias:
 let subtractThenAdd x = x - 1 + 3
 ```
 
-Os `-` operadores unary devem sempre ter o valor que estão negando imediatamente seguir:
+Os `-` operadores unary devem ser sempre imediatamente seguidos pelo valor que estão negando:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>Coloque parâmetros em uma nova linha para definições de membros muito longas
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Coloque parâmetros em uma nova linha para definições de membros longos
 
 Se você tiver uma definição de membro muito longa, coloque os parâmetros em novas linhas e recue-os em um escopo.
 
@@ -195,7 +195,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-As funções vinculadas localmente nas classes também devem usar camelCase.
+Funções vinculadas localmente nas classes também devem usar camelCase.
 
 ```fsharp
 type MyClass() =
@@ -287,7 +287,7 @@ Namespaces, exceções, eventos e`.dll` projetos/nomes também devem usar Pascal
 
 Historicamente, algumas bibliotecas F# têm usado sublinhados em nomes. No entanto, isso não é mais amplamente aceito, em parte porque se choca com as convenções de nomeação .NET. Dito isto, alguns programadores F# usam sublinhações pesadamente, em parte por razões históricas, e tolerância e respeito é importante. No entanto, esteja ciente de que o estilo muitas vezes é detestado por outros que têm uma escolha sobre se usá-lo.
 
-Algumas exceções incluem inter-operar com componentes nativos, onde sublinhados são muito comuns.
+Uma exceção inclui interoperar com componentes nativos, onde sublinhados são comuns.
 
 ### <a name="use-standard-f-operators"></a>Use operadores F# padrão
 
@@ -325,7 +325,7 @@ Para todos os outros tipos, use a forma de prefixo.
 
 ## <a name="formatting-tuples"></a>Formatação de tuplas
 
-Uma instanciação tuple deve ser parêntena, e as comúdes delimitadoras dentro devem ser seguidas por um único espaço, por exemplo: `(1, 2)`. `(x, y, z)`
+Uma instanciação tupla deve ser parêntena, e as comúdes delimitadoras dentro dela devem ser seguidas por um único espaço, por exemplo: `(1, 2)`. `(x, y, z)`
 
 É comumente aceito para omitir parênteses na correspondência de padrões de tuplas:
 
@@ -354,7 +354,7 @@ Em resumo, prefira instanciais tuplas parênteses, mas ao usar tuplas para corre
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatação de declarações sindicais discriminadas
 
-Recuo `|` na definição do tipo por 4 espaços:
+Recuo `|` na definição do tipo por quatro espaços:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>Formatação de declarações de registro
 
-Recue `{` na definição de tipo por 4 espaços e inicie a lista de campo na mesma linha:
+Recue `{` na definição de tipo por quatro espaços e inicie a lista de campo na mesma linha:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-E como com a orientação de registro, você pode querer dedicar linhas separadas para o aparelho e recue um escopo para a direita com a expressão. Observe que em alguns casos especiais, como embrulhar um valor com um opcional sem parênteses, você pode precisar manter uma cinta em uma linha:
+E como com a orientação de registro, você pode querer dedicar linhas separadas para o aparelho e recue um escopo para a direita com a expressão. Em alguns casos especiais, como embrulhar um valor com um opcional sem parênteses, você pode precisar manter uma cinta em uma linha:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-A correspondência de padrões `let rec` em funções definidas ou `let` `let` deve `function` ser recuada 4 espaços após o início de , mesmo que a palavra-chave seja usada:
+A correspondência de padrões `let rec` em funções definidas ou `let` `let` deve `function` ser recuada quatro espaços após o início de , mesmo que a palavra-chave seja usada:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatação de expressões e interfaces de objeto
 
-Expressões e interfaces de objeto devem ser `member` alinhadas da mesma forma com o recuo após 4 espaços.
+Expressões e interfaces de objeto devem ser `member` alinhadas da mesma forma com o recuo após quatro espaços.
 
 ```fsharp
 let comparer =

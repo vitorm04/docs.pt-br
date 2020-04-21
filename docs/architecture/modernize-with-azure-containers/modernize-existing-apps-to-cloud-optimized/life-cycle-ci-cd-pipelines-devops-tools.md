@@ -2,12 +2,12 @@
 title: Modernizar o ciclo de vida do seu aplicativo com pipelines de CI/CD e ferramentas de DevOps na nuvem
 description: Modernizar os aplicativos .NET existentes com contêineres Azure Cloud e Windows | Modernize o ciclo de vida do seu aplicativo com pipelines de CI/CD e ferramentas DevOps na nuvem
 ms.date: 04/30/2018
-ms.openlocfilehash: ac2d9a1e9ab432cf69cb3da670fc91c681f802c2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: afb7bae7780a766329ca604d192b2d7353e32bf5
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987849"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739169"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizar o ciclo de vida do seu aplicativo com pipelines de CI/CD e ferramentas de DevOps na nuvem
 
@@ -19,7 +19,7 @@ O Azure DevOps Services suporta integração contínua e implantação de aplica
 
 - [Implantar em um aplicativo web do Azure para contêineres](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 
-- [Implantar no Serviço Azure Kubernetes](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
+- [Implantar no Serviço de Kubernetes do Azure](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-aks?tabs=dotnet-core)
 
 Mas você também pode implantar no [Docker Swarm](https://blog.jcorioland.io/archives/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services.html) ou DC/OS usando tarefas baseadas em script do Azure DevOps Services.
 

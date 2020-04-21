@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para o .NET Core CLI) e seu uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463269"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739074"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
@@ -264,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  Especifica se as mensagens de boas-vindas e telemetria do .NET Core são exibidas na primeira execução. Definir `true` para silenciar essas mensagens `true` `1` `yes` (valores , ou `false` aceitos) `false` `0`ou `no` definido para permitir (valores , ou aceitos). Se não estiver definido, o padrão é `false` e as mensagens serão exibidas na primeira execução. Observe que esta bandeira não tem efeito `DOTNET_CLI_TELEMETRY_OPTOUT` na telemetria (veja para optar por não enviar telemetria).
+  Especifica se as mensagens de boas-vindas e telemetria do .NET Core são exibidas na primeira execução. Definir `true` para silenciar essas mensagens `true` `1` `yes` (valores , ou `false` aceitos) `false` `0`ou `no` definido para permitir (valores , ou aceitos). Se não estiver definido, o padrão é `false` e as mensagens serão exibidas na primeira execução. Esta bandeira não tem efeito sobre `DOTNET_CLI_TELEMETRY_OPTOUT` a telemetria (veja para optar por não enviar telemetria).
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

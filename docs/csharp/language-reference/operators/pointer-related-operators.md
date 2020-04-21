@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507094"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738612"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados a ponteiro (referência do C#)
 
@@ -103,7 +103,7 @@ No exemplo anterior, [ `stackalloc` ](stackalloc.md) uma expressão aloca um blo
 
 Não é possível usar `[]` para acesso de elemento de ponteiro com uma expressão do tipo `void*`.
 
-Você também pode usar o operador `[]` para [acesso de indexador ou elemento de matriz](member-access-operators.md#indexer-operator-).
+Você também pode `[]` usar o operador para acesso a [elemento de matriz ou indexador](member-access-operators.md#indexer-operator-).
 
 ## <a name="pointer-arithmetic-operators"></a>Operadores aritméticos de ponteiro
 
@@ -189,8 +189,8 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 - [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
-- [Tipos de Ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Palavra-chave unsafe](../keywords/unsafe.md)
 - [palavra-chave fixa](../keywords/fixed-statement.md)
 - [stackalloc](stackalloc.md)
-- [tamanhodo operador](sizeof.md)
+- [Operador sizeof](sizeof.md)
