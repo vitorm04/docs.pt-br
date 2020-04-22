@@ -2,13 +2,13 @@
 title: Depurar um tutorial de vazamento de memória
 description: Saiba como depurar um vazamento de memória no .NET Core.
 ms.topic: tutorial
-ms.date: 12/17/2019
-ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/20/2020
+ms.openlocfilehash: d47992bab9dab64cf7f88ff679eef407dd891b5a
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76737734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021364"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Depurar um vazamento de memória no .NET Core
 
@@ -137,7 +137,7 @@ Neste tutorial, você está pronto com o [destino de depuração Sample](https:/
 
 ### <a name="analyze-the-core-dump"></a>Analisar o despejo do núcleo
 
-Agora que você tem um dump de núcleo gerado, use a ferramenta [dotnet-dump)](dotnet-dump.md) para analisar o dump:
+Agora que você tem um dump de núcleo gerado, use a ferramenta [dotnet-dump](dotnet-dump.md) para analisar o dump:
 
 ```dotnetcli
 dotnet-dump analyze core_20190430_185145
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Onde `core_20190430_185145` está o nome do despejo do núcleo que você quer analisar.
 
 > [!NOTE]
-> Se você vir um erro reclamando que *libdl.so* não pode ser encontrado, você pode ter que instalar o pacote *libc6-dev.* Para saber mais, confira [Pré-requisitos para o .NET Core no Linux](../linux-prerequisites.md).
+> Se você vir um erro reclamando que *libdl.so* não pode ser encontrado, você pode ter que instalar o pacote *libc6-dev.* Para saber mais, confira [Pré-requisitos para o .NET Core no Linux](../install/dependencies.md?pivots=os-linux).
 
 Você será apresentado com um prompt onde você pode inserir comandos SOS. Geralmente, a primeira coisa que você quer olhar é o estado geral do monte gerenciado:
 
@@ -226,7 +226,7 @@ Você pode continuar despejando objetos para ver que a maioria dos `String` obje
 
 Este procedimento geral permite identificar a fonte de grandes vazamentos de memória.
 
-## <a name="clean-up-resources"></a>Limpar recursos
+## <a name="clean-up-resources"></a>Limpar os recursos
 
 Neste tutorial, você começou um servidor web de exemplo. Este servidor deveria ter sido desligado conforme explicado na seção Reiniciar a seção [de processo com falha.](#restart-the-failed-process)
 

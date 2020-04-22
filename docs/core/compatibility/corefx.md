@@ -1,17 +1,17 @@
 ---
 title: Biblioteca de classe base quebrando mudanças
-description: Lista as alterações de quebra no .NET CoreFx, a biblioteca de classe base.
+description: Lista as alterações de quebra nas bibliotecas .NET principais.
 ms.date: 09/20/2019
-ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf90ca2bc8736101c1cb8d327a93d100148937b
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147569"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021833"
 ---
-# <a name="corefx-breaking-changes"></a>Alterações de quebra do CoreFx
+# <a name="core-net-libraries-breaking-changes"></a>Bibliotecas Core .NET quebrando alterações
 
-O CoreFx fornece os primitivos e outros tipos gerais usados pelo .NET Core.
+As bibliotecas .NET principais fornecem os primitivos e outros tipos gerais usados pelo .NET Core.
 
 As seguintes alterações de quebra estão documentadas nesta página:
 

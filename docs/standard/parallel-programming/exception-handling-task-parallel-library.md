@@ -1,6 +1,6 @@
 ---
 title: Tratamento de exceções (biblioteca de paralelismo de tarefas)
-ms.date: 03/30/2017
+ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021505"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Tratamento de exceções (biblioteca de paralelismo de tarefas)
 
@@ -89,7 +89,14 @@ Se uma tarefa for concluída no estado <xref:System.Threading.Tasks.TaskStatus.F
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-Em um aplicativo real, o delegado de continuação poderia registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para se recuperar da exceção.
+Em uma aplicação significativa, o delegado de continuação poderia registrar informações detalhadas sobre a exceção e possivelmente gerar novas tarefas para recuperar da exceção. Se uma tarefa falhar, as seguintes expressões jogam a exceção:
+
+- `await task`
+- `task.Wait()`
+- `task.Result`
+- `task.GetAwaiter().GetResult()`
+
+Use [`try-catch`](../../csharp/language-reference/keywords/try-catch.md) uma declaração para lidar e observar exceções lançadas. Alternativamente, observe a exceção <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> acessando o imóvel.
 
 ## <a name="unobservedtaskexception-event"></a>Evento UnobservedTaskException
 

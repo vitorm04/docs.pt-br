@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9547cdc2f127cf13a3610118a26736930fcd8bd
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021638"
 ---
 ### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Mudança na semântica de `(string)null` em Utf8JsonWriter
 
@@ -70,7 +70,7 @@ Ao escrever nomes e <xref:System.Text.Json.Utf8JsonWriter> valores de propriedad
 
 #### <a name="category"></a>Categoria
 
-CoreFx
+Bibliotecas Core .NET
 
 #### <a name="affected-apis"></a>APIs afetadas
 

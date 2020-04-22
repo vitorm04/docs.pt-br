@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463427"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021781"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -120,7 +120,7 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
 - **`--no-cache`**
 
-  Especifica para não armazenar os pacotes e solicitações HTTP em cache.
+  Especifica para não armazenar solicitações HTTP.
 
 - **`--no-dependencies`**
 

@@ -2,12 +2,12 @@
 title: Programação assincronia
 description: Saiba como f# fornece suporte limpo para assincronia com base em um modelo de programação em nível de linguagem derivado de conceitos de programação funcional principais.
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608030"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021528"
 ---
 # <a name="async-programming-in-f"></a>Programação de assincronismo em F\#
 
@@ -16,7 +16,7 @@ A programação assíncrona é um mecanismo essencial para aplicações modernas
 - Apresentar um processo de servidor que possa atender a um número significativo de solicitações simultâneas recebidas, minimizando os recursos do sistema ocupados enquanto o processamento de solicitação aguarda entradas de sistemas ou serviços externos a esse processo
 - Mantendo uma ui responsiva ou um segmento principal enquanto simultaneamente progride o trabalho de fundo
 
-Embora o trabalho de fundo muitas vezes envolva a utilização de vários threads, é importante considerar os conceitos de assincronia e multi-threading separadamente. Na verdade, são preocupações separadas, e uma não implica a outra. O que se segue neste artigo descreve isso com mais detalhes.
+Embora o trabalho de fundo muitas vezes envolva a utilização de vários threads, é importante considerar os conceitos de assincronia e multi-threading separadamente. Na verdade, são preocupações separadas, e uma não implica a outra. Este artigo descreve os conceitos separados com mais detalhes.
 
 ## <a name="asynchrony-defined"></a>Assincronia definida
 
@@ -26,7 +26,7 @@ O ponto anterior - que a assincronia é independente da utilização de vários 
 - Paralelismo; quando vários cálculos ou várias partes de uma única computação são executados exatamente ao mesmo tempo.
 - Assincronia; quando um ou mais cálculos podem ser executados separadamente do fluxo principal do programa.
 
-Todos os três são conceitos ortogonais, mas podem ser facilmente confundidos, especialmente quando são usados juntos. Por exemplo, você pode precisar executar vários cálculos assíncronos em paralelo. Isso não significa que o paralelismo ou a assincronia impliquem um ao outro.
+Todos os três são conceitos ortogonais, mas podem ser facilmente confundidos, especialmente quando são usados juntos. Por exemplo, você pode precisar executar vários cálculos assíncronos em paralelo. Essa relação não significa que o paralelismo ou a assincronia implicam um ao outro.
 
 Se você considerar a etimologia da palavra "assíncrona", há duas peças envolvidas:
 
@@ -35,7 +35,7 @@ Se você considerar a etimologia da palavra "assíncrona", há duas peças envol
 
 Quando você colocar esses dois termos juntos, você verá que "assíncrono" significa "não ao mesmo tempo". É isso! Não há implicação de simultismo ou paralelismo nesta definição. Isso também é verdade na prática.
 
-Em termos práticos, computações assíncronas em F# são programadas para executar independentemente do fluxo principal do programa. Isso não implica concorrência ou paralelismo, nem implica que uma computação sempre acontece em segundo plano. Na verdade, cálculos assíncronos podem até mesmo executar sincronicamente, dependendo da natureza da computação e do ambiente em que a computação está sendo executada.
+Em termos práticos, computações assíncronas em F# são programadas para executar independentemente do fluxo principal do programa. Essa execução independente não implica simultuou-se ou paralelismo, nem implica que uma computação sempre acontece em segundo plano. Na verdade, cálculos assíncronos podem até mesmo executar sincronicamente, dependendo da natureza da computação e do ambiente em que a computação está sendo executada.
 
 A principal vantagem que você deve ter é que os cálculos assíncronos são independentes do fluxo principal do programa. Embora existam poucas garantias sobre quando ou como uma computação assíncrona é executada, existem algumas abordagens para orquestre-las e agendar. O resto deste artigo explora conceitos centrais para a assincronia F# e como usar os tipos, funções e expressões incorporadas em F#.
 
@@ -167,7 +167,7 @@ Executa uma computação assíncrona, iniciando imediatamente no segmento atual 
 Assinatura:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Quando usar:
@@ -185,7 +185,7 @@ Executa um cálculo no pool de segmentos. Retorna <xref:System.Threading.Tasks.T
 Assinatura:
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 Quando usar:
@@ -203,7 +203,7 @@ Agenda uma seqüência de cálculos assíncronos a serem executados em paralelo.
 Assinatura:
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 Quando usar:
@@ -214,7 +214,7 @@ Quando usar:
 O que tomar cuidado:
 
 - Você só pode acessar a matriz de valores resultante uma vez que todos os cálculos tenham terminado.
-- Os cálculos serão executados, porém eles acabam sendo agendados. Isso significa que você não pode confiar na ordem deles de execução.
+- Os cálculos serão executados sempre que forem agendados. Este comportamento significa que você não pode confiar na ordem deles de sua execução.
 
 ### <a name="asyncsequential"></a>Async.Seqüencial
 
@@ -242,7 +242,7 @@ Retorna uma computação assíncrona que <xref:System.Threading.Tasks.Task%601> 
 Assinatura:
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 Quando usar:
@@ -251,7 +251,7 @@ Quando usar:
 
 O que tomar cuidado:
 
-- As exceções <xref:System.AggregateException> são embrulhadas seguindo a convenção da Biblioteca Paralela de Tarefas, e isso é diferente de como o f# assync geralmente aparece exceções.
+- As exceções <xref:System.AggregateException> são embrulhadas seguindo a convenção da Biblioteca Paralela de Tarefas, e esse comportamento é diferente de como o f# assync geralmente aparece exceções.
 
 ### <a name="asynccatch"></a>Async.Catch
 
@@ -287,7 +287,7 @@ Quando usar:
 
 O que tomar cuidado:
 
-- Se você deve usar isso `Async.Start` porque deseja usar `Async<unit>`ou outra função que exija, considere se descartar o resultado é ok para fazer. Descartar resultados apenas para se encaixar em uma assinatura de tipo geralmente não deve ser feito.
+- Se você `Async.Ignore` deve usar porque `Async.Start` deseja usar `Async<unit>`ou outra função que exija, considere se descartar o resultado está bem. Evite descartar resultados apenas para se encaixar em uma assinatura do tipo.
 
 ### <a name="asyncrunsynchronously"></a>Async.RunSynchronously
 
@@ -296,7 +296,7 @@ Executa uma computação assíncrona e aguarda seu resultado no segmento de cham
 Assinatura:
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 Quando usar:
@@ -310,12 +310,12 @@ O que tomar cuidado:
 
 ### <a name="asyncstart"></a>Async.Start
 
-Inicia uma computação assíncrona no `unit`pool de segmentos que retorna . Não espera pelo resultado. Os cálculos aninhados iniciados `Async.Start` são iniciados completamente independentemente da computação parental que os chamou. Sua vida não está ligada a nenhum cálculo dos pais. Se a computação dos pais for cancelada, nenhum cálculo de filhos será cancelado.
+Inicia uma computação assíncrona no `unit`pool de segmentos que retorna . Não espera pelo resultado. Os cálculos aninhados iniciados `Async.Start` são iniciados independentemente da computação parental que os chamou. Sua vida não está ligada a nenhum cálculo dos pais. Se a computação dos pais for cancelada, nenhum cálculo de filho será cancelado.
 
 Assinatura:
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 Use somente quando:
@@ -328,7 +328,7 @@ Use somente quando:
 O que tomar cuidado:
 
 - Exceções levantadas por cálculos `Async.Start` iniciados não são propagadas para o chamador. A pilha de chamadas será completamente desenrolada.
-- Qualquer trabalho eficaz (como `printfn`chamar) `Async.Start` iniciado não fará com que o efeito aconteça no segmento principal da execução de um programa.
+- Qualquer trabalho (como `printfn`chamada) `Async.Start` iniciado não fará com que o efeito aconteça no segmento principal da execução de um programa.
 
 ## <a name="interoperate-with-net"></a>Interoperar com .NET
 

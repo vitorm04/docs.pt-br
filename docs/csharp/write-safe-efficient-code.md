@@ -4,12 +4,12 @@ description: Aprimoramentos recentes na linguagem C# permitem escrever código s
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389675"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021485"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -26,7 +26,7 @@ Este artigo se concentra nas seguintes técnicas de gerenciamento de recursos:
 - Use [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) um retorno quando o `struct` valor <xref:System.IntPtr.Size?displayProperty=nameWithType> de retorno for maior do que e a vida útil do armazenamento for maior do que o método que devolve o valor.
 - Quando o tamanho de um `readonly struct` é maior que <xref:System.IntPtr.Size?displayProperty=nameWithType>, você deve passá-lo como um parâmetro `in` por motivos de desempenho.
 - Nunca passe `struct` um `in` como parâmetro a menos que `readonly` seja declarado com `readonly` o modificador ou o método chama apenas os membros da estrutura. Violar essa orientação pode afetar negativamente o desempenho e pode levar a um comportamento obscuro.
-- Use [`ref struct`](language-reference/keywords/ref.md#ref-struct-types)um , `readonly ref struct` ou <xref:System.Span%601> <xref:System.ReadOnlySpan%601> um tal como ou para trabalhar com a memória como uma seqüência de bytes.
+- Use [`ref struct`](language-reference/builtin-types/struct.md#ref-struct)um , `readonly ref struct` ou <xref:System.Span%601> <xref:System.ReadOnlySpan%601> um tal como ou para trabalhar com a memória como uma seqüência de bytes.
 
 Essas técnicas forçam você a equilibrar duas metras concorrentes em relação às **referências** e aos **valores**. As variáveis que são [tipos de referência](programming-guide/types/index.md#reference-types) mantêm uma referência ao local na memória. As variáveis que são [tipos de valor](programming-guide/types/index.md#value-types) contêm diretamente seu valor. Essas diferenças realçam as principais diferenças que são importantes para gerenciar recursos de memória. Normalmente, os **tipos de valor** são copiados quando passados para um método ou retornados de um método. Esse comportamento inclui copiar o valor do `this` ao chamar membros de um tipo de valor. O custo da cópia está relacionado ao tamanho do tipo. Os **tipos de referência** são alocados no heap gerenciado. Cada novo objeto requer uma nova alocação e, subsequentemente, deve ser recuperado. Ambas as operações levam tempo. A referência é copiada quando um tipo de referência é passado como um argumento para um método ou retornado de um método.
 

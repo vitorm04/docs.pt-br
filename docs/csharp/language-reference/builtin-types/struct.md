@@ -1,6 +1,6 @@
 ---
 title: Tipos de estrutura - Referência C#
-ms.date: 04/14/2020
+ms.date: 04/21/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 8013aab5580ac007875debc78208532a2d0ad1dc
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388987"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021268"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estrutura (referência C#)
 
@@ -41,11 +41,11 @@ Todos os membros `readonly` de dados de uma estrutura devem ser lidos apenas da 
 Isso garante que nenhum `readonly` membro de uma estrutura modifica o estado da estrutura.
 
 > [!NOTE]
-> Em `readonly` uma estrutura, um membro de dados de um tipo de referência mutável ainda pode mutar seu próprio estado. Por exemplo, você <xref:System.Collections.Generic.List%601> não pode substituir uma instância, mas você pode adicionar novos elementos a ela.
+> Em `readonly` uma estrutura, um membro de dados de um tipo de referência mutável ainda pode mutar seu próprio estado. Por exemplo, você não <xref:System.Collections.Generic.List%601> pode substituir uma instância, mas você pode adicionar novos elementos a ele.
 
 ## <a name="readonly-instance-members"></a>`readonly`membros de instância
 
-Começando com C# 8.0, você `readonly` também pode usar o modificador para declarar que um membro de instância não modifica o estado de uma estrutura. Se você não puder declarar `readonly`todo `readonly` o tipo de estrutura como , use o modificador para marcar os membros de ocorrência que não modificam o estado da estrutura. Em `readonly` uma estrutura, cada membro de `readonly`instância é implicitamente .
+Começando com C# 8.0, você `readonly` também pode usar o modificador para declarar que um membro de instância não modifica o estado de uma estrutura. Se você não puder declarar todo `readonly`o `readonly` tipo de estrutura como , use o modificador para marcar os membros de instância que não modificam o estado da estrutura. Em `readonly` uma estrutura, cada membro de `readonly`instância é implicitamente .
 
 Dentro `readonly` de um membro de instância, você não pode atribuir aos campos de instância da estrutura. No entanto, um `readonly` membro`readonly` pode chamar um não-membro. Nesse caso, o compilador cria uma cópia da instância`readonly` da estrutura e chama o não-membro nessa cópia. Como resultado, a instância original da estrutura não é modificada.
 
@@ -68,7 +68,7 @@ Normalmente, você `readonly` aplica o modificador aos seguintes tipos de membro
   > [!NOTE]
   > O compilador declara `get` um acessório de uma `readonly` [propriedade auto-implementada](../../programming-guide/classes-and-structs/auto-implemented-properties.md) `readonly` como , independentemente da presença do modificador em uma declaração de propriedade.
 
-Não é `readonly` possível aplicar o modificador a membros estáticos de um tipo de estrutura.
+Você não pode `readonly` aplicar o modificador a membros estáticos de um tipo de estrutura.
 
 O compilador pode fazer `readonly` uso do modificador para otimizações de desempenho. Para obter mais informações, consulte [Escrever código C# seguro e eficiente](../../write-safe-efficient-code.md).
 
@@ -88,7 +88,7 @@ Quando você projeta um tipo de estrutura, você tem os mesmos recursos que com 
 
 ## <a name="instantiation-of-a-structure-type"></a>Instantiva de um tipo de estrutura
 
-Em C#, você deve inicializar uma variável declarada antes que ela possa ser usada. Como uma variável do `null` tipo de estrutura não pode ser (a menos que seja uma variável de um tipo de [valor anulado),](nullable-value-types.md)você deve instanciar uma instância do tipo correspondente. Há várias maneiras de fazer isso.
+Em C#, você deve inicializar uma variável declarada antes que ela possa ser usada. Como uma variável de tipo `null` de estrutura não pode ser (a menos que seja uma variável de um tipo de [valor anulado),](nullable-value-types.md)você deve instanciar uma instância do tipo correspondente. Há várias maneiras de fazer isso.
 
 Normalmente, você instancia um tipo de estrutura [`new`](../operators/new-operator.md) ligando para um construtor apropriado com o operador. Cada tipo de estrutura tem pelo menos um construtor. É um construtor implícito sem parâmetros, que produz o [valor padrão](default-values.md) do tipo. Você também pode usar uma [expressão de valor padrão](../operators/default.md) para produzir o valor padrão de um tipo.
 
@@ -102,9 +102,32 @@ No caso dos [tipos de valor embutidos,](value-types.md#built-in-value-types)use 
 
 Quando você passa uma variável de tipo de estrutura para um método como argumento ou retorna um valor de tipo de estrutura a partir de um método, toda a instância de um tipo de estrutura é copiada. Isso pode afetar o desempenho do seu código em cenários de alto desempenho que envolvem grandes tipos de estrutura. Você pode evitar a cópia de valor passando uma variável tipo de estrutura por referência. Use [`ref`](../keywords/ref.md#passing-an-argument-by-reference)os [`out`](../keywords/out-parameter-modifier.md)modificadores do parâmetro , ou [`in`](../keywords/in-parameter-modifier.md) método para indicar que um argumento deve ser aprovado por referência. Use [o retorno do ref](../../programming-guide/classes-and-structs/ref-returns.md) para retornar um resultado do método por referência. Para obter mais informações, consulte [Escrever código C# seguro e eficiente](../../write-safe-efficient-code.md).
 
+## <a name="ref-struct"></a>`ref`Struct
+
+Começando com C# 7.2, `ref` você pode usar o modificador na declaração de um tipo de estrutura. As instâncias de um `ref` tipo de estrutura são alocadas na pilha e não podem escapar para o monte gerenciado. Para garantir isso, o compilador `ref` limita o uso de tipos de estruturada da seguinte forma:
+
+- Uma `ref` estrutura não pode ser o tipo de elemento de uma matriz.
+- Uma `ref` estrutura não pode ser um tipo declarado de um campo`ref` de uma classe ou uma não-estrutura.
+- Uma `ref` estrutura não pode implementar interfaces.
+- Uma `ref` estrutura não pode ser encaixotada <xref:System.ValueType?displayProperty=nameWithType> ou. <xref:System.Object?displayProperty=nameWithType>
+- Uma `ref` estrutura não pode ser um tipo de argumento.
+- Uma `ref` variável de estruturanão pode ser capturada por uma [expressão lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) ou uma [função local.](../../programming-guide/classes-and-structs/local-functions.md)
+- Uma `ref` variável de estruturanão pode ser [`async`](../keywords/async.md) usada em um método. No entanto, `ref` você pode usar variáveis de estrutura em métodos síncronos, por exemplo, naqueles que retornam <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>.
+- Uma `ref` variável de estruturanão pode ser usada em [iteradores](../../iterators.md).
+
+Normalmente, você `ref` define um tipo de estruturação quando precisa de `ref` um tipo que também inclua membros de dados de tipos de estrutura:
+
+[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+
+Para declarar `ref` uma estrutura [`readonly`](#readonly-struct)como `readonly` , `ref` combine os modificadores e `readonly` modificadores na `ref` declaração do tipo (o modificador deve vir antes do modificador):
+
+[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+
+Em .NET, exemplos `ref` de uma <xref:System.Span%601?displayProperty=nameWithType> estrutura <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>são e .
+
 ## <a name="conversions"></a>Conversões
 
-Para qualquer tipo de estrutura, existem conversões <xref:System.ValueType?displayProperty=nameWithType> de <xref:System.Object?displayProperty=nameWithType> boxe [e unboxing](../../programming-guide/types/boxing-and-unboxing.md) para e de e tipos. Existem também conversões de boxe e unboxing entre um tipo de estrutura e qualquer interface que implemente.
+Para qualquer tipo de estrutura (exceto <xref:System.ValueType?displayProperty=nameWithType> <xref:System.Object?displayProperty=nameWithType> [ `ref` ](#ref-struct) tipos de estrutura), existem conversões de boxe e [unboxing](../../programming-guide/types/boxing-and-unboxing.md) para e dos tipos. Existem também conversões de boxe e unboxing entre um tipo de estrutura e qualquer interface que implemente.
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 
@@ -114,6 +137,7 @@ Para obter mais informações sobre os recursos introduzidos no C# 7.2 e posteri
 
 - [Structs somente leitura](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)
 - [Membros da instância ReadOnly](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
+- [Segurança de tempo de compilação para tipos semelhantes a ref](~/_csharplang/proposals/csharp-7.2/span-safety.md)
 
 ## <a name="see-also"></a>Confira também
 

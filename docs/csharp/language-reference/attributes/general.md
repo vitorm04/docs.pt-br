@@ -2,12 +2,12 @@
 title: 'C# atributos reservados: Condicional, obsoleto, atributoUso'
 ms.date: 04/09/2020
 description: Esses atributos são interpretados pelo compilador para afetar o código gerado pelo compilador
-ms.openlocfilehash: ca3b76387de2a57380d6eb0848991d979a558662
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389866"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021767"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>Atributos reservados: ConditionalAttribute, ObsoleteAttribute, AttributeUseAttribute
 
@@ -19,25 +19,25 @@ O atributo `Conditional` torna a execução de um método dependente de um ident
 
 No exemplo a `Conditional` seguir, é aplicado a um método para ativar ou desativar a exibição de informações de diagnóstico específicas do programa:
 
-::::::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
 
 Se `TRACE_ON` o identificador não for definido, a saída de rastreamento não será exibida. Explore você mesmo na janela interativa.
 
 O `Conditional` atributo é `DEBUG` frequentemente usado com o identificador para habilitar recursos de rastreamento e registro para compilações de depuração, mas não em compilações de versão, como mostrado no exemplo a seguir:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
 
 Quando um método marcado como condicional é chamado, a presença ou ausência do símbolo de pré-processamento especificado determina se a chamada está incluída ou omitida. Se o símbolo estiver definido, a chamada será incluída, caso contrário, a chamada será omitida. Um método condicional deve ser um método em uma declaração `void` de classe ou estrutura e deve ter um tipo de retorno. O `Conditional` uso é mais limpo, mais elegante e menos `#if…#endif` propenso a erros do que os métodos de fechamento dentro de blocos.
 
 Se um método `Conditional` tiver vários atributos, uma chamada ao método será incluída se em um ou mais símbolos condicionais for definido (os símbolos estão logicamente ligados juntos usando o operador OR). No exemplo a seguir, `A` a `B` presença de um ou resulta em uma chamada de método:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
 
 ### <a name="using-conditional-with-attribute-classes"></a>Usando `Conditional` com classes de atributos
 
 O atributo `Conditional` também pode ser aplicado a uma definição de classe de atributos. No exemplo a seguir, `Documentation` o atributo personalizado só `DEBUG` adicionará informações aos metadados se for definido.
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
 
 ## <a name="obsolete-attribute"></a>Atributo `Obsolete`
 
@@ -45,7 +45,7 @@ O `Obsolete` atributo marca um elemento de código como não mais recomendado pa
 
 No exemplo a `Obsolete` seguir, o `A` atributo `B.OldMethod`é aplicado à classe e ao método . Como o segundo argumento do construtor de atributo aplicado a `B.OldMethod` está definido como `true`, esse método causará um erro do compilador, enquanto que ao usar a classe `A`, produzirá apenas um aviso. Chamar `B.NewMethod`, no entanto, não produz aviso nem erro. Por exemplo, ao usá-lo com as definições anteriores, o código a seguir gera um erro e dois avisos:
 
-::::::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
 
 A seqüência fornecida como o primeiro argumento para o construtor de atributos será exibida como parte do aviso ou erro. São gerados dois avisos para a classe `A`: um para a declaração da referência de classe e outro para o construtor de classe. O `Obsolete` atributo pode ser usado sem argumentos, mas incluindo uma explicação do que usar em vez disso é recomendado.
 
