@@ -341,7 +341,7 @@ Quando um valor importado é solicitado pelo construtor de uma parte, esse objet
 
 O atributo `Import` especifica um requisito para a parte funcionar. Se uma importação não puder ser atendida, a composição dessa parte falhará e a parte não estará disponível.
 
-Você pode especificar que uma importação é *optional* usando a propriedade `AllowDefault`. Nesse caso, a composição terá sucesso mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão para seu tipo de propriedade (`null` para propriedades de objeto, `false` para boolianos ou zero para propriedades numéricas). A classe a seguir usa uma importação opcional.
+Você pode especificar que uma importação é *optional* usando a propriedade `AllowDefault`. Nesse caso, a composição terá sucesso mesmo se a importação não corresponder a nenhuma exportação disponível, e a propriedade de importação será definida como o padrão para seu tipo de propriedade (`null` para propriedades de objeto `false` , para boolianos ou zero para propriedades numéricas). A classe a seguir usa uma importação opcional.
 
 ```vb
 Public Class MyClass1
@@ -980,7 +980,7 @@ Para contêineres de composição de longa vida, o consumo de memória pelas par
 
 `IPartImportsSatisfiedNotification` contém um método chamado `OnImportsSatisfied`. Esse método é chamado pelo contêiner de composição em qualquer parte que implementar a interface quando a composição tiver sido concluída e as importações da parte estiverem prontas para uso. As partes são criadas pelo mecanismo de composição para preencher as importações de outras partes. Antes de as importações de uma parte terem sido definidas, você não pode realizar nenhuma inicialização que dependa de ou manipule valores importados no construtor da parte, a menos que esses valores tenham sido especificados como pré-requisitos usando o atributo `ImportingConstructor`. Normalmente, esse é o método preferido, mas, em alguns casos, a injeção do construtor pode não estar disponível. Na maioria dos casos, a inicialização pode ser realizada em `OnImportsSatisfied`, e a parte deve implementar `IPartImportsSatisfiedNotification`.
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Vídeo do Channel 9: Open Up Your Applications with the Managed Extensibility Framework (Abra seus aplicativos com o Managed Extensibility Framework)](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
 - [Vídeo do Channel 9: Managed Extensibility Framework (MEF) 2.0 [MEF (Managed Extensibility Framework) 2.0]](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

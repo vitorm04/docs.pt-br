@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119753"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645444"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Executando aplicativos de intranet em confiança total
 
@@ -23,7 +23,7 @@ As seguintes regras se aplicam a assemblies que são carregados por um executáv
   
 - Os assemblies de bibliotecas devem residir na mesma pasta do assembly executável. Os assemblies que residem em uma subpasta ou são referenciados em um caminho diferente não recebem o conjunto de concessões de confiança total.  
   
-- Se o executável carregar um assembly com atraso, ele deverá usar o mesmo caminho que foi usado para iniciar o executável. Por exemplo, se o compartilhamento \\\\*computador da rede*\\*compartilhamento* for mapeado para uma letra da unidade e o executável for executado a partir desse caminho, os assemblies que forem carregados pelo executável usando o caminho de rede não receberão confiança total. Para carregar um assembly com atraso na zona <xref:System.Security.SecurityZone.MyComputer>, o executável deve usar o caminho da letra da unidade.  
+- Se o executável carregar um assembly com atraso, ele deverá usar o mesmo caminho que foi usado para iniciar o executável. Por exemplo, se o compartilhamento \\ \\de *computador*\\de rede*compartilhado for mapeado* para uma letra de unidade e o executável for executado desse caminho, os assemblies que são carregados pelo executável usando o caminho de rede não receberão confiança total. Para carregar um assembly com atraso na zona <xref:System.Security.SecurityZone.MyComputer>, o executável deve usar o caminho da letra da unidade.  
   
 ## <a name="restoring-the-former-intranet-policy"></a>Restauração da política antiga de intranet  
 
@@ -35,6 +35,6 @@ Esse novo comportamento é o padrão para assemblies da intranet. Você pode ret
   
 - Em computadores de 64 bits, crie uma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework no Registro do sistema. Use o nome de chave LegacyMyComputerZone com um valor DWORD de 1. Crie a mesma subchave sob a chave HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Programação com assemblies](../../standard/assembly/program.md)
+- [Programação com assemblies](../../standard/assembly/index.md)

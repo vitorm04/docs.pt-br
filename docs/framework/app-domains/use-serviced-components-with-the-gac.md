@@ -23,7 +23,7 @@ Componentes atendidos (componentes COM+ com código gerenciado) devem ser coloca
   
 - Para componentes atendidos em um aplicativo ASP.NET, a situação é diferente. Se você colocar o assembly que contém os componentes atendidos no diretório bin da base de aplicativo e usar o registro sob demanda, o assembly será copiado por sombra para o cache de download, pois o ASP.NET aproveita os recursos de sombra do runtime.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
+- [Trabalhando com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
+- [Gacutil. exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

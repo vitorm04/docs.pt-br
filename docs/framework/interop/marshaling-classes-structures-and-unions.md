@@ -31,18 +31,18 @@ Estruturas e classes são semelhantes no .NET Framework. Ambas podem ter campos,
 
 A tabela a seguir lista as opções de marshaling de classes, estruturas e uniões, descreve o uso delas e fornece um link para a amostra de invocação de plataforma correspondente.
 
-|{1&gt;Tipo&lt;1}|Descrição|Amostra|
+|Type|Descrição|Amostra|
 |----------|-----------------|------------|
-|Classe por valor.|Passa uma classe com membros de inteiro como um parâmetro In/Out, como no caso gerenciado.|[Exemplo de SysTime](#systime-sample)|
+|Classe por valor.|Passa uma classe com membros de inteiro como um parâmetro In/Out, como no caso gerenciado.|[Exemplo SysTime](#systime-sample)|
 |Estrutura por valor.|Passa estruturas como parâmetros In.|[Exemplo de estruturas](#structures-sample)|
 |Estrutura por referência.|Passa estruturas como parâmetros In/Out.|[Exemplo de OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
-|Estrutura com estruturas aninhadas (mescladas).|Passa uma classe que representa uma estrutura com estruturas aninhadas na função não gerenciada. A estrutura é mesclada em uma estrutura grande no protótipo gerenciado.|[Exemplo de FindFile](#findfile-sample)|
+|Estrutura com estruturas aninhadas (mescladas).|Passa uma classe que representa uma estrutura com estruturas aninhadas na função não gerenciada. A estrutura é mesclada em uma estrutura grande no protótipo gerenciado.|[Exemplo FindFile](#findfile-sample)|
 |Estrutura com um ponteiro para outra estrutura.|Passa uma estrutura que contém um ponteiro para uma segunda estrutura como um membro.|[Exemplo de estruturas](#structures-sample)|
 |Matriz de estruturas com inteiros por valor.|Passa uma matriz de estruturas que contêm somente inteiros como um parâmetro In/Out. Os membros da matriz podem ser alterados.|[Exemplo de matrizes](marshaling-different-types-of-arrays.md)|
 |Matriz de estruturas com inteiros e cadeias de caracteres por referência.|Passa uma matriz de estruturas que contêm inteiros e cadeias de caracteres como um parâmetro Out. A função chamada aloca memória para a matriz.|[Exemplo de OutArrayOfStructs](#outarrayofstructs-sample)|
 |Uniões com tipos de valor.|Passa uniões com tipos de valor (integer e double).|[Exemplo de uniões](#unions-sample)|
 |Uniões com tipos mistos.|Passa uniões com tipos mistos (integer e string).|[Exemplo de uniões](#unions-sample)|
-|Valores nulos na estrutura.|Passa uma referência nula (**Nothing** no Visual Basic) em vez de uma referência a um tipo de valor.|[Exemplo de HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|Valores nulos na estrutura.|Passa uma referência nula (**Nothing** no Visual Basic) em vez de uma referência a um tipo de valor.|[Exemplo HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Amostra de estruturas
 
@@ -301,8 +301,8 @@ Como mencionado anteriormente, o C# permite código não gerenciado e o Visual B
 [!code-csharp[Conceptual.Interop.Marshaling#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
 [!code-vb[Conceptual.Interop.Marshaling#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
-- [Marshaling em cadeias de caracteres](marshaling-strings.md)
+- [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)
+- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
 - [Marshaling de diversos tipos de matrizes](marshaling-different-types-of-arrays.md)

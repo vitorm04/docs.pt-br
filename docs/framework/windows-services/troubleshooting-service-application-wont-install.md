@@ -1,5 +1,5 @@
 ---
-title: 'Solução de problemas: O aplicativo de serviço não é instalado'
+title: 'Solucionando problemas: aplicativo de serviço não será instalado'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053530"
 ---
-# <a name="troubleshooting-service-application-wont-install"></a>Solução de problemas: O aplicativo de serviço não é instalado
+# <a name="troubleshooting-service-application-wont-install"></a>Solucionando problemas: aplicativo de serviço não será instalado
 Se o aplicativo de serviço não for instalado corretamente, verifique se a propriedade <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> da classe de serviço está definida com o mesmo valor que é mostrado no instalador do serviço. O valor precisa ser o mesmo em ambas as instâncias para que o serviço seja instalado corretamente.  
   
 > [!NOTE]
@@ -25,6 +25,6 @@ Se o aplicativo de serviço não for instalado corretamente, verifique se a prop
   
  Você também deve verificar se você tem outro serviço com o mesmo nome já está instalado. Os nomes de serviço precisam ser exclusivos para que a instalação tenha êxito.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)

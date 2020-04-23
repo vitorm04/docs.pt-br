@@ -116,7 +116,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Realizando marshaling de objeto para interface
 
-Quando um objeto é exposto para o COM como uma interface, essa interface é a interface de classe do tipo gerenciado <xref:System.Object> (a interface **_Object**). Essa interface é tipada como um **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) ou um **IUnknown** (**UnmanagedType.IUnknown**) na biblioteca de tipos resultante. Os clientes COM podem invocar dinamicamente os membros da classe gerenciada ou todos os membros implementados por suas classes derivadas por meio da interface **_Object**. O cliente também pode chamar **QueryInterface** para obter qualquer outra interface implementada explicitamente pelo tipo gerenciado.
+Quando um objeto é exposto para o COM como uma interface, essa interface é a interface de classe do tipo gerenciado <xref:System.Object> (a interface **_Object**). Essa interface é digitada como **IDispatch** um IDispatch<xref:System.Runtime.InteropServices.UnmanagedType>() ou um **IUnknown** (**UnmanagedType. IUnknown**) na biblioteca de tipos resultante. Os clientes COM podem invocar dinamicamente os membros da classe gerenciada ou todos os membros implementados por suas classes derivadas por meio da interface **_Object**. O cliente também pode chamar **QueryInterface** para obter qualquer outra interface implementada explicitamente pelo tipo gerenciado.
 
 ## <a name="marshaling-object-to-variant"></a>Realizando marshaling de objeto para variante
 
@@ -132,7 +132,7 @@ Quando um objeto tem o marshaling realizado como uma variante, o tipo de variant
 
 A tabela a seguir mostra os tipos de objeto gerenciados e seus tipos de variante COM correspondentes. Esses tipos são convertidos somente quando a assinatura do método que está sendo chamado é do tipo <xref:System.Object?displayProperty=nameWithType>.
 
-|Tipo de Objeto|Tipo de variante COM|
+|Tipo de objeto|Tipo de variante COM|
 |-----------------|----------------------|
 |Referência de objeto nulo (**Nothing** no Visual Basic).|**VT_EMPTY**|
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|
@@ -235,12 +235,12 @@ A tabela a seguir mostra os valores possíveis para a enumeração **TypeCode** 
 |**TypeCode.Decimal**|**VT_DECIMAL**|
 |**TypeCode.DateTime**|**VT_DATE**|
 |**TypeCode.String**|**VT_BSTR**|
-|Não há suporte.|**VT_INT**|
-|Não há suporte.|**VT_UINT**|
-|Não há suporte.|**VT_ARRAY**|
-|Não há suporte.|**VT_RECORD**|
-|Não há suporte.|**VT_CY**|
-|Não há suporte.|**VT_VARIANT**|
+|Sem suporte.|**VT_INT**|
+|Sem suporte.|**VT_UINT**|
+|Sem suporte.|**VT_ARRAY**|
+|Sem suporte.|**VT_RECORD**|
+|Sem suporte.|**VT_CY**|
+|Sem suporte.|**VT_VARIANT**|
 
 O valor da variante COM é determinado com uma chamada à interface **IConvertible.To** *Type*, em que **To** *Type* é a rotina de conversão que corresponde ao tipo retornado do **IConvertible.GetTypeCode**. Por exemplo, um objeto que retorna **TypeCode.Double** de **IConvertible.GetTypeCode** tem o marshaling realizado como uma variante COM do tipo **VT_R8**. É possível obter o valor da variante (armazenado no campo **dblVal** da variante COM) com a conversão para a interface **IConvertible** e uma chamada ao método <xref:System.IConvertible.ToDouble%2A>.
 
@@ -248,7 +248,7 @@ O valor da variante COM é determinado com uma chamada à interface **IConvertib
 
 Ao realizar marshaling de uma variante para um objeto, o tipo e, às vezes, o valor, da variante com marshaling determina o tipo de objeto produzido. A tabela a seguir identifica cada tipo de variante e o tipo de objeto correspondente criado pelo marshaler quando uma variante é passada do COM para o .NET Framework.
 
-|Tipo de variante COM|Tipo de Objeto|
+|Tipo de variante COM|Tipo de objeto|
 |----------------------|-----------------|
 |**VT_EMPTY**|Referência de objeto nulo (**Nothing** no Visual Basic).|
 |**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|
@@ -271,10 +271,10 @@ Ao realizar marshaling de uma variante para um objeto, o tipo e, às vezes, o va
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|
+|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Tipo de valor demarcado correspondente.|
-|**VT_VARIANT**|Não há suporte.|
+|**VT_VARIANT**|Sem suporte.|
 
 Os tipos de variante passados do COM para o código gerenciado e, em seguida, novamente para o COM podem não manter o mesmo tipo de variante durante a chamada. Considere o que acontece quando uma variante do tipo **VT_DISPATCH** é passada do COM para o .NET Framework. Durante o marshaling, a variante é convertida em um <xref:System.Object?displayProperty=nameWithType>. Se o **Object** for então passado novamente para o COM, ele terá o marshaling realizado novamente como uma variante do tipo **VT_UNKNOWN**. Não há nenhuma garantia de que a variante produzida quando um objeto tem o marshaling realizado de um código gerenciado para o COM terá o mesmo tipo de variante usado inicialmente para produzir o objeto.
 
@@ -293,7 +293,7 @@ Variantes passadas por valor e por referência
 
 **Comportamento padrão de marshaling de objetos e variantes por referência**
 
-Para propagar as alterações novamente para o chamador, os parâmetros devem ser passados por referência. Por exemplo, use a palavra-chave **ref** no C# (ou **ByRef** no código gerenciado do Visual Basic) para passar parâmetros por referência. No COM, os parâmetros de referência são passados usando um ponteiro, como uma **variante \*** .
+Para propagar as alterações novamente para o chamador, os parâmetros devem ser passados por referência. Por exemplo, use a palavra-chave **ref** no C# (ou **ByRef** no código gerenciado do Visual Basic) para passar parâmetros por referência. No COM, os parâmetros de referência são passados usando um ponteiro, como uma **variante \***.
 
 - Ao passar um objeto para o COM por referência, o marshaler cria uma nova variante e copia o conteúdo da referência de objeto para a variante antes que a chamada seja feita. A variante é passada para a função não gerenciada, na qual o usuário é livre para alterar o conteúdo da variante. Após o retorno da chamada, todas as alterações feitas na variante no lado não gerenciado são propagadas novamente para o objeto original. Se o tipo da variante for diferente do tipo da variante passada para a chamada, as alterações serão propagadas novamente para um objeto de um tipo diferente. Ou seja, o tipo do objeto passado para a chamada pode ser diferente do tipo do objeto retornado da chamada.
 
@@ -312,14 +312,14 @@ A tabela a seguir resume as regras de propagação para variantes e objetos.
 
 |De|Para|Alterações propagadas novamente|
 |----------|--------|-----------------------------|
-|**Variante**  *v*|**Objeto**  *o*|Nunca|
-|**Objeto**  *o*|**Variante**  *v*|Nunca|
-|**Variante**   ***\****  *pv*|**Objeto de Referência**  *o*|Sempre|
-|**Objeto de referência**  *o*|**Variante**   ***\****  *pv*|Sempre|
-|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Nunca|
+|**Variante**  *v*|**Objeto**  *o*|Never|
+|**Objeto**  *o*|**Variante**  *v*|Never|
+|**Variante**   ***\****  *PV*|**Objeto de Referência**  *o*|Sempre|
+|**Objeto de referência**  *o*|**Variante**   ***\****  *PV*|Sempre|
+|**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objeto**  *o*|Never|
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objeto de Referência**  *o*|Somente se o tipo não foi alterado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)

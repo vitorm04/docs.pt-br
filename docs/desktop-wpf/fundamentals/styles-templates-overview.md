@@ -14,57 +14,57 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "82071881"
 ---
-# <a name="styles-and-templates-in-wpf"></a>Estilos e modelos em WPF
+# <a name="styles-and-templates-in-wpf"></a>Estilos e modelos no WPF
 
-O estilo e o templating do Windows Presentation Foundation (WPF) referem-se a um conjunto de recursos que permitem que desenvolvedores e designers criem efeitos visualmente atraentes e uma aparência consistente para seu produto. Ao personalizar a aparência de um aplicativo, você quer um modelo de estilo forte e templating que permita a manutenção e o compartilhamento da aparência dentro e entre os aplicativos. O WPF fornece esse modelo.
+O estilo e a modelagem do Windows Presentation Foundation (WPF) referem-se a um conjunto de recursos que permitem que desenvolvedores e designers criem efeitos visualmente atraentes e uma aparência consistente para seus produtos. Ao personalizar a aparência de um aplicativo, você deseja um modelo forte de estilo e modelagem que permite a manutenção e o compartilhamento da aparência dentro e entre os aplicativos. O WPF fornece esse modelo.
 
-Outra característica do modelo de estilo WPF é a separação de apresentação e lógica. Os designers podem trabalhar na aparência de um aplicativo usando apenas XAML ao mesmo tempo em que os desenvolvedores trabalham na lógica de programação usando C# ou Visual Basic.
+Outro recurso do modelo de estilo do WPF é a separação da apresentação e da lógica. Os designers podem trabalhar na aparência de um aplicativo usando apenas XAML ao mesmo tempo que os desenvolvedores trabalham na lógica de programação usando C# ou Visual Basic.
 
-Essa visão geral se concentra nos aspectos de estilo e templating do aplicativo e não discute conceitos de vinculação de dados. Para obter informações sobre associação de dados, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).
+Esta visão geral concentra-se nos aspectos de estilo e modelagem do aplicativo e não aborda nenhum dos conceitos de ligação de dados. Para obter informações sobre associação de dados, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).
 
-É importante entender os recursos, que são o que permitem que estilos e modelos sejam reutilizados. Para obter mais informações sobre recursos, consulte [Recursos de XAML](xaml-resources-define.md).
+É importante entender os recursos, que são o que permite que os estilos e modelos sejam reutilizados. Para obter mais informações sobre recursos, consulte [Recursos de XAML](xaml-resources-define.md).
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="sample"></a>Amostra
 
-O código de exemplo fornecido nesta visão geral é baseado em um [simples aplicativo de navegação](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) por foto mostrado na ilustração a seguir.
+O código de exemplo fornecido nesta visão geral é baseado em um [aplicativo simples de navegação de fotos](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) mostrado na ilustração a seguir.
 
-![Lista estilizadaVer](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![ListView com estilo](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-Essa amostra de foto simples usa estilo e modelagem para criar uma experiência de usuário visualmente atraente. A amostra <xref:System.Windows.Controls.TextBlock> tem dois <xref:System.Windows.Controls.ListBox> elementos e um controle que está vinculado a uma lista de imagens.
+Essa amostra de foto simples usa estilo e modelagem para criar uma experiência de usuário visualmente atraente. O exemplo tem dois <xref:System.Windows.Controls.TextBlock> elementos e um <xref:System.Windows.Controls.ListBox> controle que está associado a uma lista de imagens.
 
 Para ver a amostra completa, consulte [Introdução à amostra de estilo e modelagem](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="styles"></a>Estilos
 
-Você pode pensar <xref:System.Windows.Style> em uma maneira conveniente de aplicar um conjunto de valores de propriedade a vários elementos. Você pode usar um estilo em <xref:System.Windows.FrameworkElement> qualquer <xref:System.Windows.FrameworkContentElement> elemento <xref:System.Windows.Window> que <xref:System.Windows.Controls.Button>deriva ou como um ou um .
+Você pode considerar um <xref:System.Windows.Style> como uma maneira conveniente de aplicar um conjunto de valores de propriedade a vários elementos. Você pode usar um estilo em qualquer elemento que derive de <xref:System.Windows.FrameworkElement> ou <xref:System.Windows.FrameworkContentElement> como um <xref:System.Windows.Window> ou um <xref:System.Windows.Controls.Button>.
 
-A maneira mais comum de declarar um `Resources` estilo é como um recurso na seção em um arquivo XAML. Como estilos são recursos, eles obedecem às mesmas regras de escopo que se aplicam a todos os recursos. Simplificando, onde você declara que um estilo afeta onde o estilo pode ser aplicado. Por exemplo, se você declarar o estilo no elemento raiz do arquivo XAML da definição do aplicativo, o estilo pode ser usado em qualquer lugar do seu aplicativo.
+A maneira mais comum de declarar um estilo é como um recurso na `Resources` seção em um arquivo XAML. Como os estilos são recursos, eles obedecem as mesmas regras de escopo que se aplicam a todos os recursos. Coloque simplesmente, em que você declara um estilo que afeta o local em que o estilo pode ser aplicado. Por exemplo, se você declarar o estilo no elemento raiz do arquivo XAML de definição de aplicativo, o estilo poderá ser usado em qualquer lugar em seu aplicativo.
 
-Por exemplo, o seguinte código XAML `TextBlock`declara dois estilos para `TextBlock` um , um aplicado automaticamente a todos os elementos, e outro que deve ser explicitamente referenciado.
+Por exemplo, o código XAML a seguir declara dois estilos para um `TextBlock`, um aplicado automaticamente a todos `TextBlock` os elementos e outro que deve ser explicitamente referenciado.
 
 [!code-xaml[SnippetDefaultTextBlockStyleBasedOn](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetDefaultTextBlockStyleBasedOn)]
 
-Aqui está um exemplo dos estilos declarados acima sendo usados.
+Aqui está um exemplo dos estilos declarados acima que estão sendo usados.
 
 [!code-xaml[SnippetTextBlocksExplicit](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetTextBlocksExplicit)]
 
-![Blocos de texto estilizados](./media/styles-and-templates-overview/stylingintro-textblocks.png)
+![Bloco de Textcom estilo](./media/styles-and-templates-overview/stylingintro-textblocks.png)
 
-Para obter mais informações, consulte [Criar um estilo para um controle](styles-templates-create-apply-style.md).
+Para obter mais informações, consulte [criar um estilo para um controle](styles-templates-create-apply-style.md).
 
 ## <a name="controltemplates"></a>ControlTemplates
 
-No WPF, <xref:System.Windows.Controls.ControlTemplate> o de um controle define a aparência do controle. Você pode alterar a estrutura e a <xref:System.Windows.Controls.ControlTemplate> aparência de um controle definindo um novo e atribuindo-o a um controle. Em muitos casos, os modelos lhe dão flexibilidade suficiente para que você não tenha que escrever seus próprios controles personalizados.
+No WPF, o <xref:System.Windows.Controls.ControlTemplate> de um controle define a aparência do controle. Você pode alterar a estrutura e a aparência de um controle definindo um novo <xref:System.Windows.Controls.ControlTemplate> e atribuindo-o a um controle. Em muitos casos, os modelos fornecem flexibilidade suficiente para que você não precise escrever seus próprios controles personalizados.
 
-Cada controle tem um modelo padrão atribuído à propriedade [Control.Template.](xref:System.Windows.Controls.Control.Template) O modelo conecta a apresentação visual do controle com as capacidades do controle. Como você define um modelo em XAML, você pode alterar a aparência do controle sem escrever nenhum código. Cada modelo é projetado para um <xref:System.Windows.Controls.Button>controle específico, como um .
+Cada controle tem um modelo padrão atribuído à propriedade [Control. Template](xref:System.Windows.Controls.Control.Template) . O modelo conecta a apresentação visual do controle com os recursos do controle. Como você define um modelo em XAML, você pode alterar a aparência do controle sem escrever nenhum código. Cada modelo é projetado para um controle específico, como um <xref:System.Windows.Controls.Button>.
 
-Geralmente você declara um modelo como `Resources` um recurso na seção de um arquivo XAML. Como em todos os recursos, as regras de escopo se aplicam.
+Normalmente, você declara um modelo como um recurso na `Resources` seção de um arquivo XAML. Assim como acontece com todos os recursos, as regras de escopo se aplicam.
 
-Modelos de controle são muito mais envolvidos do que um estilo. Isso porque o modelo de controle reescreve a aparência visual de todo o controle, enquanto um estilo simplesmente aplica alterações de propriedade ao controle existente. No entanto, uma vez que o modelo de um controle é aplicado definindo a propriedade [Control.Template,](xref:System.Windows.Controls.Control.Template) você pode usar um estilo para definir ou definir um modelo.
+Os modelos de controle são muito mais envolvidos do que um estilo. Isso ocorre porque o modelo de controle reescreve a aparência visual do controle inteiro, enquanto um estilo simplesmente aplica alterações de propriedade ao controle existente. No entanto, como o modelo de um controle é aplicado definindo a propriedade [Control. Template](xref:System.Windows.Controls.Control.Template) , você pode usar um estilo para definir ou definir um modelo.
 
-Os designers geralmente permitem que você crie uma cópia de um modelo existente e modifique-o. Por exemplo, no designer Do Visual `CheckBox` Studio WPF, selecione um controle e, em seguida, clique com o botão direito do mouse e selecione **Editar modelo** > **Criar uma cópia**. Este comando gera um *estilo que define um modelo*.
+Os designers geralmente permitem que você crie uma cópia de um modelo existente e modifique-o. Por exemplo, no designer do WPF do Visual Studio, selecione `CheckBox` um controle e clique com o botão direito do mouse e selecione **Editar modelo** > **criar uma cópia**. Esse comando gera um *estilo que define um modelo*.
 
 ```xaml
 <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
@@ -99,82 +99,82 @@ Os designers geralmente permitem que você crie uma cópia de um modelo existent
 
 Editar uma cópia de um modelo é uma ótima maneira de aprender como os modelos funcionam. Em vez de criar um novo modelo em branco, é mais fácil editar uma cópia e alterar alguns aspectos da apresentação visual.
 
-Por exemplo, consulte [Criar um modelo para um controle](../themes/how-to-create-apply-template.md).
+Para obter um exemplo, consulte [criar um modelo para um controle](../themes/how-to-create-apply-template.md).
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Você deve ter notado que o recurso de modelo definido na seção anterior usa a [extensão de marcação de vinculação de modelos](../../framework/wpf/advanced/templatebinding-markup-extension.md). A `TemplateBinding` é uma forma otimizada de uma vinculação para cenários `{Binding RelativeSource={RelativeSource TemplatedParent}}`de modelo, análoga a uma vinculação construída com . `TemplateBinding`é útil para vincular partes do modelo às propriedades do controle. Por exemplo, cada <xref:System.Windows.Controls.Control.BorderThickness> controle tem uma propriedade. Use `TemplateBinding` a para gerenciar qual elemento no modelo é afetado por essa configuração de controle.
+Talvez você tenha notado que o recurso de modelo definido na seção anterior usa a [extensão de marcação TemplateBinding](../../framework/wpf/advanced/templatebinding-markup-extension.md). Uma `TemplateBinding` é uma forma otimizada de uma associação para cenários de modelo, análoga a uma associação `{Binding RelativeSource={RelativeSource TemplatedParent}}`construída com. `TemplateBinding`é útil para associar partes do modelo a propriedades do controle. Por exemplo, cada controle tem uma <xref:System.Windows.Controls.Control.BorderThickness> propriedade. Use um `TemplateBinding` para gerenciar qual elemento no modelo é afetado por essa configuração de controle.
 
-### <a name="contentcontrol-and-itemscontrol"></a>Controle de conteúdo e itensControle
+### <a name="contentcontrol-and-itemscontrol"></a>ContentControl e ItemsControl
 
-Se <xref:System.Windows.Controls.ContentPresenter> um for declarado <xref:System.Windows.Controls.ControlTemplate> no <xref:System.Windows.Controls.ContentControl>de <xref:System.Windows.Controls.ContentPresenter> a, a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> vontade <xref:System.Windows.Controls.ContentControl.Content%2A> automaticamente se ligará às propriedades. Da mesma <xref:System.Windows.Controls.ItemsPresenter> forma, um <xref:System.Windows.Controls.ControlTemplate> que <xref:System.Windows.Controls.ItemsControl> está no de <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> <xref:System.Windows.Controls.ItemsControl.Items%2A> um irá automaticamente ligar-se ao e propriedades.
+Se um <xref:System.Windows.Controls.ContentPresenter> <xref:System.Windows.Controls.ControlTemplate> for declarado no de <xref:System.Windows.Controls.ContentControl>a, o <xref:System.Windows.Controls.ContentPresenter> se associará automaticamente às propriedades <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> e <xref:System.Windows.Controls.ContentControl.Content%2A> . Da mesma forma <xref:System.Windows.Controls.ItemsPresenter> , um que está <xref:System.Windows.Controls.ControlTemplate> no de <xref:System.Windows.Controls.ItemsControl> um será automaticamente associado às <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> propriedades <xref:System.Windows.Controls.ItemsControl.Items%2A> e.
 
-## <a name="datatemplates"></a>Datatemplates
+## <a name="datatemplates"></a>DataTemplates
 
-Neste aplicativo de exemplo, <xref:System.Windows.Controls.ListBox> há um controle que está vinculado a uma lista de fotos.
+Neste aplicativo de exemplo, há um <xref:System.Windows.Controls.ListBox> controle associado a uma lista de fotos.
 
 [!code-xaml[ListBox](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window3.xaml#SnippetListBox)]
 
-Este <xref:System.Windows.Controls.ListBox> atualmente se parece com o seguinte.
+Atualmente <xref:System.Windows.Controls.ListBox> , isso é semelhante ao seguinte.
 
 ![ListBox antes de aplicar o modelo](./media/styles-and-templates-overview/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")
 
-A maioria dos controles tem algum tipo de conteúdo, que, frequentemente, vem dos dados aos quais você está se associando. Neste exemplo, os dados estão na lista de fotos. No WPF, você <xref:System.Windows.DataTemplate> usa um para definir a representação visual dos dados. Basicamente, o que <xref:System.Windows.DataTemplate> você coloca em um determina como os dados se parecem no aplicativo renderizado.
+A maioria dos controles tem algum tipo de conteúdo, que, frequentemente, vem dos dados aos quais você está se associando. Neste exemplo, os dados estão na lista de fotos. No WPF, você usa um <xref:System.Windows.DataTemplate> para definir a representação visual dos dados. Basicamente, o que você coloca em <xref:System.Windows.DataTemplate> um determina a aparência dos dados no aplicativo renderizado.
 
-Em nosso aplicativo de `Photo` exemplo, `Source` cada objeto personalizado tem uma propriedade de string de tipo que especifica o caminho do arquivo da imagem. Atualmente, os objetos de fotos aparecem como caminhos de arquivo.
+Em nosso aplicativo de exemplo, cada `Photo` objeto personalizado tem `Source` uma propriedade do tipo cadeia de caracteres que especifica o caminho do arquivo da imagem. Atualmente, os objetos de fotos aparecem como caminhos de arquivo.
 
 [!code-csharp[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Photo.cs#PhotoClass)]
 [!code-vb[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/vb/Photo.vb#PhotoClass)]
 
-Para que as fotos apareçam <xref:System.Windows.DataTemplate> como imagens, você cria um recurso.
+Para que as fotos apareçam como imagens, você cria <xref:System.Windows.DataTemplate> um como um recurso.
 
 [!code-xaml[DataTemplate](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window4.xaml#SnippetDataTemplate)]
 
-Observe que <xref:System.Windows.DataTemplate.DataType%2A> a propriedade <xref:System.Windows.Style.TargetType%2A> é semelhante <xref:System.Windows.Style>à propriedade do . Se <xref:System.Windows.DataTemplate> o seu estiver na seção <xref:System.Windows.DataTemplate.DataType%2A> recursos, quando você especificar a propriedade para um tipo e omitir um `x:Key`, o <xref:System.Windows.DataTemplate> é aplicado sempre que esse tipo aparecer. Você sempre tem a opção <xref:System.Windows.DataTemplate> de `x:Key` atribuir o com `StaticResource` um e, em seguida, defini-lo como um para propriedades que tomam <xref:System.Windows.DataTemplate> tipos, como o <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> imóvel ou o <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> imóvel.
+Observe que a <xref:System.Windows.DataTemplate.DataType%2A> propriedade é semelhante à <xref:System.Windows.Style.TargetType%2A> Propriedade do. <xref:System.Windows.Style> Se o <xref:System.Windows.DataTemplate> estiver na seção de recursos, quando você especificar a <xref:System.Windows.DataTemplate.DataType%2A> propriedade para um tipo e omitir `x:Key`um, <xref:System.Windows.DataTemplate> o será aplicado sempre que esse tipo for exibido. Você sempre tem a opção de atribuir o <xref:System.Windows.DataTemplate> com um `x:Key` e, em seguida, defini `StaticResource` -lo como um <xref:System.Windows.DataTemplate> para propriedades que usam tipos <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> , como a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> propriedade ou a propriedade.
 
-Essencialmente, <xref:System.Windows.DataTemplate> o exemplo acima define que sempre `Photo` que há um <xref:System.Windows.Controls.Image> objeto, <xref:System.Windows.Controls.Border>ele deve aparecer como um dentro de um . Com <xref:System.Windows.DataTemplate>isso, nosso aplicativo agora se parece com isso.
+Essencialmente, o <xref:System.Windows.DataTemplate> no exemplo acima define que sempre que houver um `Photo` objeto, ele deve aparecer como um <xref:System.Windows.Controls.Image> dentro de um <xref:System.Windows.Controls.Border>. Com isso <xref:System.Windows.DataTemplate>, nosso aplicativo agora tem esta aparência.
 
 ![Imagem de foto](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-O modelo de modelagem de dados fornece outros recursos. Por exemplo, se você estiver exibindo dados de <xref:System.Windows.Controls.HeaderedItemsControl> coleta que <xref:System.Windows.Controls.Menu> contenham <xref:System.Windows.Controls.TreeView>outras <xref:System.Windows.HierarchicalDataTemplate>coleções usando um tipo como a ou a, há o . Outro recurso de templating de dados é o <xref:System.Windows.Controls.DataTemplateSelector>, que permite que você escolha um <xref:System.Windows.DataTemplate> para usar com base na lógica personalizada. Para obter mais informações, consulte [Visão geral de modelagem dos dados](../../framework/wpf/data/data-templating-overview.md), que oferece uma discussão mais detalhada sobre os diferentes recursos de modelagem de dados.
+O modelo de modelagem de dados fornece outros recursos. Por exemplo, se você estiver exibindo dados de coleção que contêm outras coleções <xref:System.Windows.Controls.HeaderedItemsControl> usando um tipo como <xref:System.Windows.Controls.Menu> ou <xref:System.Windows.Controls.TreeView>, há o <xref:System.Windows.HierarchicalDataTemplate>. Outro recurso de modelagem de dados <xref:System.Windows.Controls.DataTemplateSelector>é o, que permite que você <xref:System.Windows.DataTemplate> escolha um para usar com base na lógica personalizada. Para obter mais informações, consulte [Visão geral de modelagem dos dados](../../framework/wpf/data/data-templating-overview.md), que oferece uma discussão mais detalhada sobre os diferentes recursos de modelagem de dados.
 
 ## <a name="triggers"></a>Gatilhos
 
-Um gatilho define propriedades ou inicia ações, como uma animação, quando um valor da propriedade for alterado ou quando um evento for gerado. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>e <xref:System.Windows.DataTemplate> todos `Triggers` possuem uma propriedade que pode conter um conjunto de gatilhos. Existem vários tipos de gatilhos.
+Um gatilho define propriedades ou inicia ações, como uma animação, quando um valor da propriedade for alterado ou quando um evento for gerado. <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>e <xref:System.Windows.DataTemplate> All têm uma `Triggers` propriedade que pode conter um conjunto de gatilhos. Há vários tipos de gatilhos.
 
-### <a name="propertytriggers"></a>Gatilhos de propriedade
+### <a name="propertytriggers"></a>PropertyTriggers
 
-Um <xref:System.Windows.Trigger> que define valores de propriedade ou inicia ações com base no valor de um imóvel é chamado de gatilho de propriedade.
+Um <xref:System.Windows.Trigger> que define valores de propriedade ou inicia ações com base no valor de uma propriedade é chamado de gatilho de propriedade.
 
-Para demonstrar como usar gatilhos de <xref:System.Windows.Controls.ListBoxItem> propriedade, você pode tornar cada um parcialmente transparente, a menos que seja selecionado. O estilo a <xref:System.Windows.UIElement.Opacity%2A> seguir <xref:System.Windows.Controls.ListBoxItem> define `0.5`o valor de a . Quando <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> a `true`propriedade é <xref:System.Windows.UIElement.Opacity%2A> , no `1.0`entanto, o é definido para .
+Para demonstrar como usar gatilhos de propriedade, você pode fazer <xref:System.Windows.Controls.ListBoxItem> cada um parcialmente transparente, a menos que esteja selecionado. O estilo a seguir define <xref:System.Windows.UIElement.Opacity%2A> o valor de <xref:System.Windows.Controls.ListBoxItem> a `0.5`para. No entanto <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> , `true` <xref:System.Windows.UIElement.Opacity%2A> quando a propriedade é definida como `1.0`.
 
 [!code-xaml[PropertyTrigger](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window5.xaml#SnippetPropertyTrigger)]
 
-Este exemplo <xref:System.Windows.Trigger> usa um para definir um <xref:System.Windows.Trigger> valor de <xref:System.Windows.TriggerBase.EnterActions%2A> propriedade, mas observe que a classe também tem as propriedades que <xref:System.Windows.TriggerBase.ExitActions%2A> permitem que um gatilho execute ações.
+Este exemplo usa um <xref:System.Windows.Trigger> para definir um valor de propriedade, mas observe que <xref:System.Windows.Trigger> a classe também tem <xref:System.Windows.TriggerBase.EnterActions%2A> as <xref:System.Windows.TriggerBase.ExitActions%2A> Propriedades e que permitem que um gatilho execute ações.
 
-Observe que <xref:System.Windows.FrameworkElement.MaxHeight%2A> a <xref:System.Windows.Controls.ListBoxItem> propriedade do `75`está definida como . Na ilustração a seguir, o terceiro item é o item selecionado.
+Observe que a <xref:System.Windows.FrameworkElement.MaxHeight%2A> propriedade de <xref:System.Windows.Controls.ListBoxItem> é definida como `75`. Na ilustração a seguir, o terceiro item é o item selecionado.
 
-![Lista estilizadaVer](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
+![ListView com estilo](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
 ### <a name="eventtriggers-and-storyboards"></a>EventTriggers e storyboards
 
-Outro tipo de <xref:System.Windows.EventTrigger>gatilho é o , que inicia um conjunto de ações com base na ocorrência de um evento. Por exemplo, <xref:System.Windows.EventTrigger> os seguintes objetos especificam <xref:System.Windows.FrameworkElement.MaxHeight%2A> que quando o ponteiro `90` do `0.2` mouse entra no <xref:System.Windows.Controls.ListBoxItem>, a propriedade anima a um valor de mais de um segundo período. Quando o mouse se afasta do item, a propriedade retorna para o valor original durante um período de `1` segundos. Observe como não é necessário <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> especificar <xref:System.Windows.ContentElement.MouseLeave> um valor para a animação. Isso ocorre porque a animação é capaz de controlar o valor original.
+Outro tipo de gatilho é o <xref:System.Windows.EventTrigger>, que inicia um conjunto de ações com base na ocorrência de um evento. Por exemplo, os objetos <xref:System.Windows.EventTrigger> a seguir especificam que quando o ponteiro do <xref:System.Windows.Controls.ListBoxItem>mouse entra <xref:System.Windows.FrameworkElement.MaxHeight%2A> no, a propriedade é animada para `90` um valor `0.2` de um segundo período. Quando o mouse se afasta do item, a propriedade retorna para o valor original durante um período de `1` segundos. Observe como não é necessário especificar um <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> valor para a <xref:System.Windows.ContentElement.MouseLeave> animação. Isso ocorre porque a animação é capaz de controlar o valor original.
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Para obter mais informações, consulte a visão geral do [Storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Para obter mais informações, consulte a [visão geral dos storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
 Na ilustração a seguir, o mouse está apontando para o terceiro item.
 
-![Captura de tela de amostra de estilo](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![Captura de tela de exemplo de estilo](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTriggers, DataTriggers e MultiDataTriggers
 
-Além <xref:System.Windows.Trigger> disso, <xref:System.Windows.EventTrigger>existem outros tipos de gatilhos. <xref:System.Windows.MultiTrigger>permite definir valores de propriedade com base em múltiplas condições. Você <xref:System.Windows.DataTrigger> usa <xref:System.Windows.MultiDataTrigger> e quando a propriedade de sua condição está vinculada a dados.
+Além de <xref:System.Windows.Trigger> e <xref:System.Windows.EventTrigger>, há outros tipos de gatilhos. <xref:System.Windows.MultiTrigger>permite que você defina valores de propriedade com base em várias condições. Você usa <xref:System.Windows.DataTrigger> e <xref:System.Windows.MultiDataTrigger> quando a propriedade da condição é associada a dados.
 
-## <a name="visual-states"></a>Estados Visuais
+## <a name="visual-states"></a>Estados visuais
 
-Os controles estão sempre em um **estado**específico. Por exemplo, quando o mouse se move sobre a superfície de um `MouseOver`controle, o controle é considerado em um estado comum de . Um controle sem um estado específico `Normal` é considerado no estado comum. Os Estados são divididos em grupos, e os estados `CommonStates`mencionados anteriormente fazem parte do grupo estatal. A maioria dos controles `CommonStates` tem `FocusStates`dois grupos estaduais: e . De cada grupo de Estado aplicado a um controle, um controle `CommonStates.MouseOver` está `FocusStates.Unfocused`sempre em um estado de cada grupo, como e . No entanto, um controle não pode estar em dois `CommonStates.Normal` `CommonStates.Disabled`estados diferentes dentro do mesmo grupo, como e . Aqui está uma tabela de estados que a maioria dos controles reconhece e usa.
+Os controles estão sempre em um **estado**específico. Por exemplo, quando o mouse se move sobre a superfície de um controle, o controle é considerado em um Estado comum de `MouseOver`. Um controle sem um estado específico é considerado no estado comum `Normal` . Os Estados são divididos em grupos e os Estados mencionados anteriormente fazem parte do grupo `CommonStates`de Estados. A maioria dos controles tem dois grupos `CommonStates` de `FocusStates`Estado: e. De cada grupo de Estados aplicado a um controle, um controle sempre está em um estado de cada grupo, como `CommonStates.MouseOver` e `FocusStates.Unfocused`. No entanto, um controle não pode estar em dois Estados diferentes dentro do mesmo grupo `CommonStates.Normal` , `CommonStates.Disabled`como e. Aqui está uma tabela de Estados que a maioria dos controles reconhece e usa.
 
 | Nome do VisualState | Nome do VisualStateGroup | Descrição |
 | ---------------- | --------------------- | ----------- |
@@ -185,9 +185,9 @@ Os controles estão sempre em um **estado**específico. Por exemplo, quando o mo
 | Focalizado          | FocusStates           | O controle tem foco. |
 | Sem foco        | FocusStates           | O controle não tem foco. |
 
-Ao definir <xref:System.Windows.VisualStateManager?displayProperty=fullName> um no elemento raiz de um modelo de controle, você pode acionar animações quando um controle entra em um estado específico. O `VisualStateManager` declara quais combinações <xref:System.Windows.VisualState> e <xref:System.Windows.VisualStateGroup> assistir. Quando o controle entra em um estado `VisaulStateManager` assistido, a animação definida pelo é iniciada.
+Ao definir um <xref:System.Windows.VisualStateManager?displayProperty=fullName> no elemento raiz de um modelo de controle, você pode disparar animações quando um controle entra em um estado específico. O `VisualStateManager` declara quais combinações de <xref:System.Windows.VisualStateGroup> e <xref:System.Windows.VisualState> observar. Quando o controle entra em um estado observado, a animação definida pelo `VisaulStateManager` é iniciada.
 
-Por exemplo, o código XAML a seguir observa o `CommonStates.MouseOver` estado `backgroundElement`para animar a cor de preenchimento do elemento nomeado . Quando o controle `CommonStates.Normal` retorna ao estado, a `backgroundElement` cor de preenchimento do elemento nomeado é restaurada.
+Por exemplo, o código XAML a seguir observa `CommonStates.MouseOver` o estado para animar a cor de preenchimento do `backgroundElement`elemento chamado. Quando o controle retorna para o `CommonStates.Normal` estado, a cor de preenchimento do elemento chamado `backgroundElement` é restaurada.
 
 ```xaml
 <ControlTemplate x:Key="roundbutton" TargetType="Button">
@@ -212,21 +212,21 @@ Por exemplo, o código XAML a seguir observa o `CommonStates.MouseOver` estado `
         ...
 ```
 
-Para obter mais informações sobre storyboards, consulte [Storyboards Overview](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Para obter mais informações sobre storyboards, consulte [visão geral de storyboards](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
 
-## <a name="shared-resources-and-themes"></a>Recursos e temas compartilhados
+## <a name="shared-resources-and-themes"></a>Temas e recursos compartilhados
 
-Um aplicativo Típico WPF pode ter vários recursos de IU que são aplicados em todo o aplicativo. Coletivamente, esse conjunto de recursos pode ser considerado o tema do aplicativo. O WPF fornece suporte para a embalagem de recursos de UI <xref:System.Windows.ResourceDictionary> como tema usando um dicionário de recursos encapsulado como classe.
+Um aplicativo WPF típico pode ter vários recursos de interface do usuário que são aplicados em todo o aplicativo. Coletivamente, esse conjunto de recursos pode ser considerado o tema para o aplicativo. O WPF dá suporte para empacotamento de recursos de interface do usuário como um tema usando um dicionário de recursos <xref:System.Windows.ResourceDictionary> que é encapsulado como a classe.
 
-Os temas wpf são definidos usando o mecanismo de estilo e templating que o WPF expõe para personalizar o visual de qualquer elemento.
+Os temas do WPF são definidos usando o mecanismo de modelagem e estilo que o WPF expõe para personalizar os elementos visuais de qualquer elemento.
 
-Os recursos temáticos do WPF são armazenados em dicionários de recursos incorporados. Esses dicionários de recursos devem ser inseridos em um assembly assinado; podem ser inseridos no mesmo assembly, como o próprio código, ou em um assembly lado a lado. Para PresentationFramework.dll, o conjunto que contém controles WPF, os recursos temáticos estão em uma série de conjuntos lado a lado.
+Os recursos de tema do WPF são armazenados em dicionários de recursos inseridos. Esses dicionários de recursos devem ser inseridos em um assembly assinado; podem ser inseridos no mesmo assembly, como o próprio código, ou em um assembly lado a lado. Para PresentationFramework. dll, o assembly que contém controles WPF, recursos de tema estão em uma série de assemblies lado a lado.
 
-O tema torna-se o último local para procurar o estilo de um elemento. Normalmente, a pesquisa começará subindo a árvore de elementos em busca de um recurso apropriado, depois procure na coleção de recursos do aplicativo e, finalmente, consultará o sistema. Isso dá aos desenvolvedores de aplicativos a chance de redefinir o estilo para qualquer objeto no nível da árvore ou aplicativo antes de chegar ao tema.
+O tema torna-se o último local para procurar o estilo de um elemento. Normalmente, a pesquisa começará orientando a árvore de elementos procurando um recurso apropriado e, em seguida, examinará a coleção de recursos de aplicativo e, finalmente, consultará o sistema. Isso dá aos desenvolvedores de aplicativos a oportunidade de redefinir o estilo de qualquer objeto no nível da árvore ou do aplicativo antes de alcançar o tema.
 
-Você pode definir dicionários de recursos como arquivos individuais que permitem reutilizar um tema em vários aplicativos. Você também pode criar temas permutáveis definindo vários dicionários de recursos que fornecem os mesmos tipos de recursos, mas com valores diferentes. Redefinir esses estilos ou outros recursos no nível do aplicativo é a abordagem recomendada para esfolar um aplicativo.
+Você pode definir dicionários de recursos como arquivos individuais que permitem reutilizar um tema em vários aplicativos. Você também pode criar temas permutáveis definindo vários dicionários de recursos que fornecem os mesmos tipos de recursos, mas com valores diferentes. A redefinição desses estilos ou de outros recursos no nível do aplicativo é a abordagem recomendada para a capa de um aplicativo.
 
-Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre aplicativos, <xref:System.Windows.ResourceDictionary> você pode criar `shared.xaml` um arquivo XAML e definir um que inclua referência a um arquivo.
+Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre aplicativos, você pode criar um arquivo XAML e definir um <xref:System.Windows.ResourceDictionary> que inclua referência a um `shared.xaml` arquivo.
 
 ```xaml
 <ResourceDictionary.MergedDictionaries>
@@ -234,14 +234,14 @@ Para compartilhar um conjunto de recursos, incluindo estilos e modelos, entre ap
 </ResourceDictionary.MergedDictionaries>
 ```
 
-É o compartilhamento `shared.xaml`de , que <xref:System.Windows.ResourceDictionary> por si só define um que contém um conjunto de recursos de estilo e pincel, que permite que os controles em um aplicativo tenham um olhar consistente.
+É o compartilhamento de `shared.xaml`, que, por sua vez <xref:System.Windows.ResourceDictionary> , define um que contém um conjunto de recursos de estilo e pincel, que permite que os controles em um aplicativo tenham uma aparência consistente.
 
-Para obter mais informações, consulte [dicionários de recursos mesclados](../../framework/wpf/advanced/merged-resource-dictionaries.md).
+Para obter mais informações, consulte [dicionários de Recursos mesclados](../../framework/wpf/advanced/merged-resource-dictionaries.md).
 
-Se você estiver criando um tema para o seu controle personalizado, consulte os **recursos definidores na** seção de nível temático da [visão geral](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level)de autoria do Controle .
+Se você estiver criando um tema para seu controle personalizado, consulte a seção **definindo recursos no nível do tema** da [visão geral de criação de controles](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level).
 
 ## <a name="see-also"></a>Confira também
 
 - [URIs "pack://" no WPF](../../framework/wpf/app-development/pack-uris-in-wpf.md)
 - [Como localizar elementos gerados por ControlTemplate](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [Encontrar elementos gerados por datatemplate](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [Localizar elementos gerados pelo DataTemplate](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

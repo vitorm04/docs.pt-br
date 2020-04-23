@@ -57,19 +57,19 @@ Para fins de acompanhamento do tempo de vida, um tipo genérico construído, com
 
 As seguintes restrições se aplicam a assemblies de coleção:
 
-- **Referências estáticas** Os tipos em um conjunto dinâmico comum não podem ter referências estáticas a tipos definidos em um conjunto colecionável. Por exemplo, se você definir um tipo comum herdado de um tipo em um assembly de coleção, uma exceção <xref:System.NotSupportedException> será gerada. Um tipo em um assembly de coleção pode ter referências estáticas a um tipo em outro assembly de coleção, mas isso aumenta o tempo de vida do assembly referenciado para o tempo de vida do assembly de referência.
+- **Referências estáticas** Tipos em um assembly dinâmico comum não podem ter referências estáticas a tipos que são definidos em um assembly de coleção. Por exemplo, se você definir um tipo comum herdado de um tipo em um assembly de coleção, uma exceção <xref:System.NotSupportedException> será gerada. Um tipo em um assembly de coleção pode ter referências estáticas a um tipo em outro assembly de coleção, mas isso aumenta o tempo de vida do assembly referenciado para o tempo de vida do assembly de referência.
 
-- **COM interop** Nenhuma interface COM pode ser definida dentro de um conjunto colecionável, e nenhuma ocorrência de tipos dentro de um conjunto colecionável pode ser convertida em objetos COM. Um tipo em um assembly de coleção não pode servir como um CCW (COM Callable Wrapper) ou RCW (Runtime Callable Wrapper). No entanto, os tipos em assemblies de coleção podem usar objetos que implementam interfaces COM.
+- **Interoperabilidade com** Nenhuma interface COM pode ser definida em um assembly de coleção e nenhuma instância de tipos dentro de um assembly de coleção pode ser convertida em objetos COM. Um tipo em um assembly de coleção não pode servir como um CCW (COM Callable Wrapper) ou RCW (Runtime Callable Wrapper). No entanto, os tipos em assemblies de coleção podem usar objetos que implementam interfaces COM.
 
-- **Invocação da plataforma** Os métodos <xref:System.Runtime.InteropServices.DllImportAttribute> que possuem o atributo não serão compilados quando forem declarados em uma montagem colecionável. A instrução <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> não pode ser usada na implementação de um tipo em um assembly de coleção e esses tipos não podem ter marshaling para um código não gerenciado. No entanto, você pode chamar um código nativo por meio de um ponto de entrada declarado em um assembly de não coleção.
+- **Invocação de plataforma** Os métodos que têm <xref:System.Runtime.InteropServices.DllImportAttribute> o atributo não serão compilados quando forem declarados em um assembly de coleção. A instrução <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> não pode ser usada na implementação de um tipo em um assembly de coleção e esses tipos não podem ter marshaling para um código não gerenciado. No entanto, você pode chamar um código nativo por meio de um ponto de entrada declarado em um assembly de não coleção.
 
-- **Marshaling** Objetos (em particular, delegados) definidos em assembléias colecionáveis não podem ser empacotados. Essa é uma restrição de todos os tipos emitidos transitórios.
+- **Marshaling** Objetos (em particular, delegados) que são definidos em assemblies de coleção não podem ser empacotados. Essa é uma restrição de todos os tipos emitidos transitórios.
 
-- **Carregamento de montagem** O eito de reflexão é o único mecanismo suportado para o carregamento de conjuntos colecionáveis. Assemblies carregados por meio de qualquer outra forma de carregamento do assembly não podem ser descarregados.
+- **Carregamento de assembly** A emissão de reflexão é o único mecanismo com suporte para carregar assemblies de coleção. Assemblies carregados por meio de qualquer outra forma de carregamento do assembly não podem ser descarregados.
 
-- **Objetos vinculados ao contexto** As variáveis estáticas de contexto não são suportadas. Tipos em um assembly de coleção não podem estender <xref:System.ContextBoundObject>. No entanto, um código em assemblies de coleção podem usar objetos associados a contexto definidos em outro lugar.
+- **Objetos associados ao contexto** Não há suporte para variáveis de contexto estático. Tipos em um assembly de coleção não podem estender <xref:System.ContextBoundObject>. No entanto, um código em assemblies de coleção podem usar objetos associados a contexto definidos em outro lugar.
 
-- **Dados estáticos de segmento** As variáveis estáticas de rosca não são suportadas.
+- **Dados estáticos de thread** Não há suporte para variáveis de thread estático.
 
 ## <a name="see-also"></a>Confira também
 

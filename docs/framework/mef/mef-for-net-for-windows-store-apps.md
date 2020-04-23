@@ -10,11 +10,11 @@ ms.lasthandoff: 12/04/2019
 ms.locfileid: "74802183"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF para .NET para aplicativos da Windows Store
-<xref:System.Composition?displayProperty=nameWithType> e seus namespaces filho contêm tipos para desenvolver aplicativos extensível do Windows 8. x Store com Managed Extensibility Framework (MEF). Esses namespaces fazem parte do .NET para o subconjunto de aplicativos da loja do Windows 8. x para o sistema operacional Windows 8.  
+<xref:System.Composition?displayProperty=nameWithType>e seus namespaces filho contêm tipos para desenvolver aplicativos de armazenamento extensíveis do Windows 8. x com o Managed Extensibility Framework (MEF). Esses namespaces fazem parte do .NET para o subconjunto de aplicativos da loja do Windows 8. x para o sistema operacional Windows 8.  
   
  Esses namespaces não fazem parte da biblioteca de classes principal distribuída com o .NET Framework. Para instalar esses namespaces, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu **Projeto** e pesquise online o pacote Microsoft.Composition.  
   
-- <xref:System.Composition?displayProperty=nameWithType> fornece classes que constituem o MEF principal para aplicativos da loja do Windows 8. x.  
+- <xref:System.Composition?displayProperty=nameWithType>fornece classes que constituem o MEF principal para aplicativos da loja do Windows 8. x.  
   
 - O <xref:System.Composition.Convention?displayProperty=nameWithType> fornece tipos que dão suporte ao uso do MEF com um modelo de configuração baseado em convenção.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "74802183"
   
  Para obter mais informações sobre o .NET para aplicativos da loja do Windows 8. x e uma lista de namespaces e tipos que ele contém, consulte [visão geral do .net para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/br230302(v=vs.110)).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/br230302(v=vs.110))
 - [.NET para aplicativos da Windows Store – APIs com suporte](https://docs.microsoft.com/previous-versions/br230232(v=vs.110))

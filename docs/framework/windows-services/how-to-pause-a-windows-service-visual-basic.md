@@ -1,5 +1,5 @@
 ---
-title: 'Como: Pausar um Serviço Windows (Visual Basic)'
+title: Como pausar um Serviço Windows (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -17,7 +17,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053592"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Como: Pausar um Serviço Windows (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Como pausar um Serviço Windows (Visual Basic)
 Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> para pausar o serviço de administração do IIS no computador local.  
   
 ## <a name="example"></a>Exemplo  
@@ -47,9 +47,9 @@ Este exemplo usa o componente <xref:System.ServiceProcess.ServiceController> par
   
  O acesso a informações de serviço pode ser restringido usando o <xref:System.Security.Permissions.PermissionState> para definir permissões em <xref:System.Security.Permissions.SecurityPermission>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Como: Continuar um serviço Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)
+- [Como Continuar um Serviço Windows (Visual Basic)](how-to-continue-a-windows-service-visual-basic.md)

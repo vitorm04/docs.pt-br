@@ -1,5 +1,5 @@
 ---
-title: 'Como: Iniciar serviços'
+title: Como iniciar serviços
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053566"
 ---
-# <a name="how-to-start-services"></a>Como: Iniciar serviços
+# <a name="how-to-start-services"></a>Como iniciar serviços
 
 Depois que um serviço for instalado, ele precisará ser iniciado. O início chama o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> na classe de serviço. Normalmente, o método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define o trabalho útil que o serviço executará. Depois que um serviço é iniciado, ele permanece ativo até que ser colocado em pausa ou ser interrompido manualmente.
 
@@ -28,7 +28,7 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
 ### <a name="to-specify-how-a-service-should-start"></a>Para especificar como um serviço deve ser iniciado
 
-1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md).
+1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md).
 
 2. No designer, clique no instalador do serviço com o qual você está trabalhando.
 
@@ -40,7 +40,7 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
     |Quando uma ação explícita do usuário inicia o serviço|**Manual**|
 
     > [!TIP]
-    > Para impedir que o serviço seja iniciado, você pode definir a propriedade<xref:System.ServiceProcess.ServiceInstaller.StartType%2A> **Desabilitado**. Você poderá fazer isso quando pretender reiniciar um servidor várias vezes e desejar economizar tempo impedindo que sejam iniciados os serviços que normalmente seriam.
+    > Para impedir que o serviço seja iniciado, você pode definir a propriedade<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>**Desabilitado**. Você poderá fazer isso quando pretender reiniciar um servidor várias vezes e desejar economizar tempo impedindo que sejam iniciados os serviços que normalmente seriam.
 
     > [!NOTE]
     > Essas e outras propriedades poderão ser alteradas depois que o serviço estiver instalado.
@@ -49,7 +49,7 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Para iniciar um serviço manualmente usando o Gerenciador de Servidores
 
-1. No **Gerenciador de Servidores**, adicione o servidor desejado caso ele ainda não esteja listado. Para obter mais informações, confira Como acessar e inicializar o Gerenciador de Servidores/Gerenciador de Banco de Dados.
+1. No **Gerenciador de Servidores**, adicione o servidor desejado caso ele ainda não esteja listado. Para obter mais informações, consulte Como acessar e inicializar o Gerenciador de Servidores/Gerenciador de Banco de Dados.
 
 2. Expanda o nó **Serviços** e, em seguida, localize o serviço que você deseja iniciar.
 
@@ -61,7 +61,7 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
     - No Windows XP e no 2000 Professional, clique com botão direito do mouse em **Meu Computador** na área de trabalho e, em seguida, clique em **Gerenciar**. Na caixa de diálogo que aparece, expanda o nó **Serviços e Aplicativos**.
 
-      \- ou -
+      \- ou –
 
     - No Windows Server 2003 e no Windows 2000 Server, clique em **Iniciar**, aponte para **Programas**, clique em **Ferramentas Administrativas** e, em seguida, clique em **Serviços**.
 
@@ -78,8 +78,8 @@ Você define a propriedade <xref:System.ServiceProcess.ServiceInstaller.StartTyp
 
 2. Chame o método <xref:System.ServiceProcess.ServiceController.Start%2A> para iniciar o serviço.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](how-to-create-windows-services.md)
-- [Como: adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Como criar Serviços Windows](how-to-create-windows-services.md)
+- [Como adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)

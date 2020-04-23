@@ -23,7 +23,7 @@ Interoperabilidade COM dá suporte ao uso de objetos COM por código gerenciado 
  As seções a seguir são vinculadas a tópicos que descrevem os processos para personalizar os wrappers de interoperabilidade quando você pode (ou precisa) fornecer informações de tipo adicionais ao marshaler.  
   
 ## <a name="in-this-section"></a>Nesta seção  
-[Como: Criar invólucros manualmente](how-to-create-wrappers-manually.md) Descreve como criar um invólucro COM manualmente no código-fonte gerenciado.
+[Como criar wrappers manualmente](how-to-create-wrappers-manually.md) Descreve como criar um wrapper COM manualmente no código-fonte gerenciado.
 
  [Como: migrar código gerenciador do DCOM para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Descreve como migrar o código DCOM gerenciado para o WCF para obter a solução mais segura possível.  

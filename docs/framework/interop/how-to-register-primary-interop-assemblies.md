@@ -47,7 +47,7 @@ Use a [Ferramenta de Registro do Assembly (Regasm.exe)](../tools/regasm-exe-asse
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programando com assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Localizando assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

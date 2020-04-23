@@ -29,7 +29,7 @@ Quando terminar de usar um domínio do aplicativo, descarregue-o usando o métod
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Como criar um domínio do aplicativo](how-to-create-an-application-domain.md)

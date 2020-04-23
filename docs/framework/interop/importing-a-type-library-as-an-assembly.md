@@ -28,7 +28,7 @@ Definições de tipo COM geralmente residem em uma biblioteca de tipos. Por outr
 
 Há duas maneiras de disponibilizar essas informações de tipo para seu aplicativo:
 
-- Usando assemblies de interoperabilidade somente de tempo de design: começando com o .NET Framework 4, você pode instruir o compilador a inserir informações de tipo do assembly de interoperabilidade em seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Esta é a técnica recomendada.
+- Usando assemblies de interoperabilidade somente de tempo de design: começando com o .NET Framework 4, você pode instruir o compilador a inserir informações de tipo do assembly de interoperabilidade em seu executável. O compilador insere apenas as informações de tipo usadas pelo aplicativo. Não é necessário implantar o assembly de interoperabilidade com o aplicativo. Essa é a técnica recomendada.
 
 - Implantando assemblies de interoperabilidade: é possível criar uma referência padrão ao assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo. Se você usar essa técnica e não estiver usando um componente COM particular, sempre referencie o PIA (assembly de interoperabilidade primário) publicado pelo autor do componente COM que você pretende incorporar no código gerenciado. Para obter mais informações sobre como produzir e usar assemblies de interoperabilidade primários, consulte [Assemblies de interoperabilidade primários](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
@@ -70,15 +70,15 @@ Após você localizar a biblioteca de tipos que contém a implementação do seu
 
  Para obter mais informações sobre o processo de importação de interoperabilidade COM, consulte [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md)
-- [Customizing Standard Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)) (Personalizando wrappers padrão)
+- [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
+- [Personalizando wrappers padrão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilando um projeto de interoperabilidade](compiling-an-interop-project.md)
-- [Implantação de um aplicativo de interoperabilidade](deploying-an-interop-application.md)
+- [Implantando um aplicativo de interoperabilidade](deploying-an-interop-application.md)
 - [Como adicionar referências a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)
-- [Como gerar assemblies de interoperabilidade com base em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)
+- [Como gerar assemblies de interoperabilidade a partir de bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md)

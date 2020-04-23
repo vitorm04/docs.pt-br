@@ -42,9 +42,9 @@ E os links a seguir o ajudarão a compreender melhor o Banco de Dados SQL do Azu
 
 ## <a name="choosing-iaas-or-paas"></a>Escolhendo IaaS ou PaaS
 
-Ao avaliar onde migrar seu banco de dados, determine se o IaaS ou paaS é mais apropriado para você.
+Ao avaliar onde migrar seu banco de dados, determine se IaaS ou PaaS é mais apropriado para você.
 
-**Escolha o SQL Server nas VMs do Azure se:**
+**Escolha SQL Server em VMs do Azure se:**
 
 * está procurando "aumentar e mover" seu banco de dados e aplicativos com uma alteração mínima ou nenhuma.
 * prefere ter controle total sobre o servidor do banco de dados e a VM na qual ele é executado.
@@ -61,9 +61,9 @@ A tabela a seguir descreve as diferenças entre cada serviço com base em vário
 | Cenário | SQL Server nas VMs do Azure | Banco de Dados SQL do Azure |
 |----------|-------------------------|--------------------|
 | Migração | Requer alterações mínimas no banco de dados. | Poderá exigir alterações em seu banco de dados se você usar recursos indisponíveis no SQL do Azure, conforme determinado pelo [Assistente de Migração de Dados](https://www.microsoft.com/download/details.aspx?id=53595) ou se tiver outras dependências, como executáveis instalados localmente.|
-| Gerenciando a disponibilidade, recuperação e atualizações | Disponibilidade e recuperação são configuradas manualmente. As atualizações podem ser automatizadas com os [Conjuntos de Dimensionamento de VMs](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Gerenciadas automaticamente para você. |
+| Gerenciando a disponibilidade, recuperação e atualizações | A disponibilidade e a recuperação são configuradas manualmente. As atualizações podem ser automatizadas com os [Conjuntos de Dimensionamento de VMs](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade). | Gerenciadas automaticamente para você. |
 | Configuração do SO subjacente | Configuração manual. | Gerenciadas automaticamente para você. |
-| Gerenciando o tamanho do banco de dados | Suporta até 64 TB de armazenamento por instância do SQL Server. | Suporta 4 TB de armazenamento antes de precisar de uma partição horizontal. |
+| Gerenciando o tamanho do banco de dados | Dá suporte a até 64 TB de armazenamento por instância de SQL Server. | Dá suporte a 4 TB de armazenamento antes de precisar de uma partição horizontal. |
 | Gerenciando os custos | Você deve gerenciar os custos de licença do SQL Server, custos de licença do Windows Server e custos da VM (com base nos núcleos, RAM e armazenamento). | Deve gerenciar os custos do serviço (com base nas [eDTUs ou DTUs](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), armazenamento e número de bancos de dados se usar um pool elástico). Também deve gerenciar o custo de qualquer SLA. |
 
 Para saber mais sobre as diferenças entre os dois, leia Escolher uma opção do SQL Server na nuvem: [banco de dados SQL do Azure ou SQL Server nas VMs do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
@@ -74,9 +74,9 @@ Para saber mais sobre as diferenças entre os dois, leia Escolher uma opção do
 
     Sim! Todas as ferramentas do Microsoft SQL funcionam com ambos os serviços. No entanto, o SSRS não faz parte do Banco de Dados SQL do Azure e é recomendado que você execute-o em uma VM do Azure, em seguida, aponte-o para sua instância do banco de dados.
 
-* **Quero ir para o PaaS, mas não sei se meu banco de dados é compatível. Há ferramentas para ajudar?**
+* **Quero ir para a PaaS, mas não tenho certeza se o meu banco de dados é compatível. Há ferramentas para ajudar?**
 
-    Sim. O [Assistente de Migração de Dados](https://www.microsoft.com/download/details.aspx?id=53595) é uma ferramenta usada como parte da migração para o Banco de Dados SQL do Azure. O [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) é um serviço de visualização que você pode usar para IaaS ou PaaS.
+    Sim. O [Assistente de Migração de Dados](https://www.microsoft.com/download/details.aspx?id=53595) é uma ferramenta usada como parte da migração para o Banco de Dados SQL do Azure. O [serviço de migração de banco de dados do Azure](https://azure.microsoft.com/campaigns/database-migration/) é um serviço de visualização que você pode usar para IaaS ou PaaS.
 
 * **Posso estimar os custos?**
 

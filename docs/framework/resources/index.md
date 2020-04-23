@@ -11,16 +11,16 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: f7db871c6643973ab18a5bb6bbfac7ab85a11a76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346748"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645675"
 ---
 # <a name="resources-in-net-apps"></a>Recursos em aplicativos .NET
 
-Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistindo em um arquivo de recursos, os objetos devem ser serializáveis.) Armazenar seus dados em um arquivo de recursos permite que você altere os dados sem recompilar todo o seu aplicativo. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.
+Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um recurso é qualquer dado não executável que está implantado de modo lógico com um aplicativo. Um recurso pode ser exibido em um aplicativo como mensagens de erro ou como parte da interface do usuário. Os recursos podem conter dados em vários formatos, incluindo cadeias de caracteres, imagens e objetos persistentes. (Para gravar objetos persistentes em um arquivo de recurso, os objetos devem ser serializáveis.) O armazenamento de dados em um arquivo de recurso permite que você altere os dados sem recompilar o aplicativo inteiro. Também é possível armazenar dados em um único local e eliminar a necessidade de depender de dados embutidos em código que são armazenados em vários locais.
 
 O .NET Framework e o .NET Core fornecem suporte abrangente para a criação e a localização de recursos. Além disso, o .NET dá suporte a um modelo simples de empacotamento e implantação de recursos localizados.
 
@@ -48,7 +48,7 @@ No tempo de execução, um aplicativo carrega os recursos localizados apropriado
 
 - Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>.
 
-- Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local. As implementações .NET em execução [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) no Windows fazem isso chamando a função Windows.
+- Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local. As implementações do .NET em execução no Windows fazem isso [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) chamando a função do Windows.
 
 Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.
 
@@ -66,7 +66,6 @@ Você pode recuperar recursos para a cultura da interface do usuário atual ou p
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [Fundamentos do aplicativo](../../standard/application-essentials.md)
 - [Criação de arquivos de recurso](creating-resource-files-for-desktop-apps.md)
 - [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Criação de assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md)

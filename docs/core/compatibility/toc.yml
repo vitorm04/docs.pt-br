@@ -30,7 +30,7 @@
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
-    - name: CoreFx
+    - name: Bibliotecas principais do .NET
       href: corefx.md
     - name: Criptografia
       href: cryptography.md

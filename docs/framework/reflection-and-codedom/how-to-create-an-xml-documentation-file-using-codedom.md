@@ -80,5 +80,5 @@ O CodeDOM pode ser usado para criar o código que gera a documentação XML. O p
 ## <a name="see-also"></a>Confira também
 
 - [Documentando o código com XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Comentários sobre documentação xml](../../csharp/programming-guide/xmldoc/index.md)
+- [Comentários de documentação XML](../../csharp/programming-guide/xmldoc/index.md)
 - [Documentação XML](/cpp/ide/xml-documentation-visual-cpp)

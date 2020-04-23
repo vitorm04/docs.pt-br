@@ -66,7 +66,7 @@ CMyClass::MethodThatThrows
 |**COR_E_BADIMAGEFORMAT ou ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR_E_CORE**|**CoreException**|  
+|**COR_E_CORE**|**Coreexception**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND ou ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW ou ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**Systemexception**|  
+|**COR_E_SYSTEM**|**SystemException**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,12 +130,12 @@ CMyClass::MethodThatThrows
   
 |Campo de exceção|Origem das informações do COM|  
 |---------------------|------------------------------------|  
-|**Errorcode**|HRESULT retornado da chamada.|  
+|**ErrorCode**|HRESULT retornado da chamada.|  
 |**HelpLink**|Se **IErrorInfo->HelpContext** é diferente de zero, a cadeia de caracteres é formada pela concatenação de **IErrorInfo->GetHelpFile** e "#" e **IErrorInfo->GetHelpContext**. Caso contrário, a cadeia de caracteres é retornada de **IErrorInfo->GetHelpFile**.|  
-|**InnerException**|Sempre uma referência nula (**Nada** no Visual Básico).|  
+|**InnerException**|Sempre uma referência nula (**Nothing** no Visual Basic).|  
 |**Mensagem**|Cadeia de caracteres retornada de **IErrorInfo->GetDescription**.|  
 |**Fonte**|Cadeia de caracteres retornada de **IErrorInfo->GetSource**.|  
-|**Stacktrace**|O rastreamento de pilha.|  
+|**Pilha**|O rastreamento de pilha.|  
 |**TargetSite**|O nome do método que retornou o HRESULT com falha.|  
   
  Campos de exceção, tais como **Message**, **Source** e **StackTrace**, não estão disponíveis para o **StackOverflowException**.  

@@ -34,7 +34,7 @@ O encapsulamento de uma função de DLL frequentemente usada em uma classe geren
   
  Nomeie a classe e seus métodos conforme desejar. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Identificando funções em DLLs](identifying-functions-in-dlls.md)

@@ -27,7 +27,7 @@ ms.locfileid: "79180456"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
 
-Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar recursos em aplicativos do Windows 8.x Store, consulte [Criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar recursos em aplicativos da loja do Windows 8. x, consulte [criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperando recursos dos assemblies  
@@ -203,7 +203,7 @@ csc Example.cs
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Resources.ResourceManager>
-- [Recursos em aplicativos de área de trabalho](index.md)
+- [Recursos em aplicativos da área de trabalho](index.md)
 - [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

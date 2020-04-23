@@ -77,9 +77,9 @@ A ativação sem registro de componentes baseados no .NET Framework é apenas um
   
 5. Salve e nomeie o arquivo de manifesto. O nome de um manifesto do aplicativo é o nome do executável do assembly seguido pela extensão .manifest. Por exemplo, o nome do arquivo de manifesto do aplicativo para myComApp.exe é myComApp.exe.manifest.  
   
-Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo COM. Como alternativa, adicione-o como um recurso ao arquivo .exe do aplicativo. Para obter mais informações, consulte [Sobre conjuntos lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
+Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo COM. Como alternativa, adicione-o como um recurso ao arquivo .exe do aplicativo. Para obter mais informações, consulte [sobre assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
-## <a name="create-a-component-manifest"></a>Criar um manifesto de componentes  
+## <a name="create-a-component-manifest"></a>Criar um manifesto de componente  
   
 1. Usando um editor de XML, crie um manifesto do componente para descrever o assembly gerenciado.  
   
@@ -170,7 +170,7 @@ Você pode instalar um manifesto do aplicativo no mesmo diretório do aplicativo
   
     `/win32res:myresource.res`  
   
-     Novamente, `myresource.res` é o nome do arquivo de recursos que contém recursos incorporados.  
+     Novamente, `myresource.res` é o nome do arquivo de recurso que contém recursos incorporados.  
   
 ## <a name="see-also"></a>Confira também
 

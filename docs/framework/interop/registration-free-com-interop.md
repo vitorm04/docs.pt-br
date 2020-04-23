@@ -52,6 +52,6 @@ A interoperabilidade COM sem registro ativa um componente sem usar o Registro do
     > [!NOTE]
     > A execução lado a lado é um recurso do .NET que habilita várias versões do runtime e várias versões de aplicativos e componentes que usam uma versão do runtime no mesmo computador, ao mesmo tempo. Execução lado a lado e assemblies lado a lado são mecanismos diferentes para fornecer funcionalidade de lado a lado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como configurar componentes do COM baseados no .NET Framework para ativação sem registro](configure-net-framework-based-com-components-for-reg.md)

@@ -35,5 +35,5 @@ Embora a chamada a funções de DLL não gerenciadas seja quase idêntica à cha
  [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)  
  Descreve como chamar funções de DLL não gerenciadas usando a invocação de plataforma.  
   
- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)  
+ [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)  
  Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.

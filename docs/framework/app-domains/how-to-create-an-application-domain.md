@@ -27,7 +27,7 @@ Um host Common Language Runtime cria domínios de aplicativos automaticamente qu
  [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Uso de domínios do aplicativo](use.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180471"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644194"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de segurança na emissão de reflexão
 O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate Language), cada uma com seus próprios problemas de segurança:  
@@ -34,7 +34,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Assemblies Dinâmicos  
- Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Veja [alterações de segurança](../security/security-changes.md).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
+ Os assemblies dinâmicos são criados usando as sobrecargas do método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. A maioria das sobrecargas desse método foi preterida no .NET Framework 4 devido à eliminação da política de segurança de todo o computador. (Consulte [alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).) As sobrecargas restantes podem ser executadas por qualquer código, independentemente do nível de confiança. Essas sobrecargas se enquadram em dois grupos: aquelas que especificam uma lista de atributos a ser aplicada ao assembly dinâmico quando ele é criado e aquelas que não. Se você não especificar o modelo de transparência do assembly, aplicando o atributo <xref:System.Security.SecurityRulesAttribute> quando criá-lo, o modelo de transparência será herdado do assembly emissor.  
   
 > [!NOTE]
 > Os atributos aplicados ao assembly dinâmico após ele ser criado, usando o método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>, não entram em vigor até que o assembly tenha sido salvo no disco e carregado na memória novamente.  
@@ -137,7 +137,7 @@ O .NET Framework fornece três maneiras de emitir a MSIL (Microsoft Intermediate
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Informações sobre versão  
- Do .NET Framework 4 em diante, a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](../security/security-changes.md).  
+ Do .NET Framework 4 em diante, a política de segurança de todo computador é eliminada e a transparência de segurança se torna o mecanismo de imposição padrão. Consulte [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  Desde o .NET Framework 2.0 Service Pack 1, <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> não é mais necessário ao emitir métodos dinâmicos e assemblies dinâmicos. Esse sinalizador é exigido em todas as versões anteriores do .NET Framework.  
   

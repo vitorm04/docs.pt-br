@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-As seqüências de conexão de serviço são usadas em outros serviços do Azure, como [CosmosDB,](https://docs.microsoft.com/azure/cosmos-db/) [Cache Azure para Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)e [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Você pode obter essas strings usando o portal Azure, CLI ou PowerShell. Você também pode usar as bibliotecas de gerenciamento do Azure para .NET a fim de consultar recursos para criar cadeias de conexão no seu código.
+As cadeias de conexão de serviço são usadas em outros serviços do Azure, como [CosmosDB](https://docs.microsoft.com/azure/cosmos-db/), [cache do Azure para Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)e [barramento de serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Você pode obter essas cadeias de caracteres usando o portal do Azure, a CLI ou o PowerShell. Você também pode usar as bibliotecas de gerenciamento do Azure para .NET a fim de consultar recursos para criar cadeias de conexão no seu código.
 
 Esse snippet de código usa as bibliotecas de gerenciamento para criar uma cadeia de conexão da conta de armazenamento:
 

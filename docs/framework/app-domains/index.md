@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73119814"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644281"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>Programação com domínios do aplicativo e assemblies
 
@@ -28,7 +28,7 @@ Fornece links a todos os Tópicos explicativos encontrados na documentação con
 [Uso de domínios do aplicativo](use.md)  
 Fornece exemplos de como criar, configurar e usar domínios do aplicativo.  
   
-[Programação com assemblies](../../standard/assembly/program.md)  
+[Programação com assemblies](../../standard/assembly/index.md)  
 Descreve como criar, assinar e definir atributos em assemblies.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

@@ -27,7 +27,7 @@ Você deve especificar nomes de tipo para ter uma entrada válida para várias o
 
 ## <a name="grammar-for-type-names"></a>Gramática para nomes de tipo
 
- A gramática define a sintaxe de linguagens formais. A tabela a seguir lista as regras lexicais que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (&#124;) indica que as regras que têm sub-regras.
+ A gramática define a sintaxe de linguagens formais. A tabela a seguir lista as regras lexicais que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (& #124;) indica que as regras que têm sub-regras.
 
 <!-- markdownlint-disable MD010 -->
 ```antlr
@@ -126,7 +126,7 @@ Use a barra invertida (\\) como um caractere de escape para separar os seguintes
 |\\*|Tipo do ponteiro.|
 |\\[|Delimitador de dimensão da matriz.|
 |\\]|Delimitador de dimensão da matriz.|
-|\\|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|
+|\\.|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|
 |\\\|Barra invertida quando for necessária como uma cadeia de caracteres literal.|
 
 Observe que, em todos os componentes de TypeSpec, exceto AssemblyNameSpec, os espaços são relevantes. No AssemblyNameSpec, os espaços antes do separador ',' são relevantes, mas espaços depois do separador ',' são ignorados.
@@ -141,13 +141,13 @@ Se o namespace fosse `Ozzy.Out+Back`, o sinal de adição deve ser precedido por
 
 A informação mínima necessária em uma especificação de nome do assembly é o nome textual (IDENTIFIER) do assembly. Você pode seguir o IDENTIFIER de uma lista separada por vírgulas de pares propriedade/valor, conforme descrito na tabela a seguir. A nomenclatura do IDENTIFIER deve seguir as regras de nomenclatura de arquivo. O IDENTIFIER não diferencia maiúsculas de minúsculas.
 
-|Property name|Descrição|Valores permitidos|
+|Nome da propriedade|Descrição|Valores permitidos|
 |-------------------|-----------------|----------------------|
 |**Versão**|Número de versão do assembly|*Major.Minor.Build.Revision*, em que *Major*, *Minor*, *Build* e *Revision* são inteiro entre 0 e 65535, inclusive.|
 |**PublicKey**|Chave pública completa|O valor da cadeia de caracteres da chave pública completa em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|
 |**PublicKeyToken**|Token de chave pública (hash de 8 bytes da chave pública completa)|Valor da cadeia de caracteres do token de chave pública em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|
 |**Cultura**|Cultura do assembly|A cultura do assembly no formato RFC-1766 ou “neutra” para assemblies independente de linguagem (não satélite).|
-|**Personalizado**|BLOB (objeto binário grande) personalizado. No momento, isso é usado apenas em assemblies gerados pelo [Ngen (Gerador de Imagens Nativas)](../tools/ngen-exe-native-image-generator.md).|A cadeia de caracteres personalizada usada pela ferramenta do Gerador de Imagens Nativas para notificar o cache de assembly que o assembly que está sendo instalado é uma imagem nativa e, portanto, deve ser instalada no cache de imagens nativas. Também chamado de cadeia de caracteres zap.|
+|**Custom**|BLOB (objeto binário grande) personalizado. No momento, isso é usado apenas em assemblies gerados pelo [Ngen (Gerador de Imagens Nativas)](../tools/ngen-exe-native-image-generator.md).|A cadeia de caracteres personalizada usada pela ferramenta do Gerador de Imagens Nativas para notificar o cache de assembly que o assembly que está sendo instalado é uma imagem nativa e, portanto, deve ser instalada no cache de imagens nativas. Também chamado de cadeia de caracteres zap.|
 
 A exemplo a seguir mostra um **AssemblyName** para um assembly de nome simples com cultura padrão.
 
@@ -210,11 +210,11 @@ Matrizes são acessadas na reflexão ao especificar a classificação da matriz:
 
 - `Type.GetType("MyArray[*,*]")` e `Type.GetType("MyArray[,]")` obtém uma matriz bidimensional retangular com limites inferiores desconhecidos.
 
-Observe que, do ponto de vista do tempo de execução, `MyArray[] != MyArray[*]`, mas para matrizes multidimensionais, as duas notações são equivalentes. Ou seja, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` é avaliada como **true**.
+Observe que, do ponto de vista do runtime, `MyArray[] != MyArray[*]`, mas para matrizes multidimensionais, as duas notações são equivalentes. Ou seja, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` é avaliada como **true**.
 
-Para **ModuleBuilder.GetType**, `MyArray[0..5]` indica uma matriz de dimensão única com tamanho 6 e limite inferior 0. `MyArray[4…]` indica uma matriz de dimensão única de tamanho desconhecido e limite inferior 4.
+Para o o **. GetType**, `MyArray[0..5]` indica uma matriz de dimensão única com tamanho 6, menor limite 0. `MyArray[4…]` indica uma matriz de dimensão única de tamanho desconhecido e limite inferior 4.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Reflection.AssemblyName>
 - <xref:System.Reflection.Emit.ModuleBuilder>

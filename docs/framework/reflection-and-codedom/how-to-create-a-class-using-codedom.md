@@ -116,7 +116,7 @@ The object:
   
 - Este exemplo de código requer a permissão `FullTrust` definida para ser executado com êxito.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Usando o CodeDOM](using-the-codedom.md)
 - [Gerando e compilando código-fonte de um gráfico CodeDOM](generating-and-compiling-source-code-from-a-codedom-graph.md)

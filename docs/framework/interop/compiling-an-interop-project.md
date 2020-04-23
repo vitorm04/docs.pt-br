@@ -22,7 +22,7 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 
  Há duas maneiras de referenciar assemblies de interoperabilidade:
 
-- Tipos de interoperabilidade inseridos: a partir do .NET Framework 4 e do Visual Studio 2010, você pode instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade em seu executável. Esta é a técnica recomendada.
+- Tipos de interoperabilidade inseridos: a partir do .NET Framework 4 e do Visual Studio 2010, você pode instruir o compilador a inserir informações de tipo de um assembly de interoperabilidade em seu executável. Essa é a técnica recomendada.
 
 - Implantando assemblies de interoperabilidade: é possível criar uma referência padrão a um assembly de interoperabilidade. Nesse caso, o assembly de interoperabilidade deve ser implantado com o aplicativo.
 
@@ -30,14 +30,14 @@ Os projetos de interoperabilidade COM que referenciam um ou mais assemblies que 
 
  A incorporação de tipos de interoperabilidade com o Visual Studio é demonstrada em [instruções: incorporando tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Para fazer referência a um assembly de interoperabilidade com um compilador de linha de comando e inserir informações de tipo em seus executáveis, use a opção [-link (C# opções do compilador)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou o conjunto de compiladores [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) e especifique o nome do assembly de interoperabilidade.
+ Para fazer referência a um assembly de interoperabilidade com um compilador de linha de comando e inserir informações de tipo em seus executáveis, use a opção [-link (opções do compilador C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou o comando [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) do compilador e especifique o nome do assembly de interoperabilidade.
 
 > [!NOTE]
 > Os aplicativos do Visual C++ não podem inserir informações de tipo, mas podem interoperar com aplicativos ou suplementos que têm essa capacidade.
 
  Para compilar um aplicativo que inclui um assembly de interoperabilidade primário quando ele é implantado, use a opção do compilador **/reference** e especifique o nome do assembly de interoperabilidade.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../standard/language-independence-and-language-independent-components.md)

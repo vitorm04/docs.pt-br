@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  Um tipo formatado é um tipo complexo que contém informações que controlam explicitamente o layout de seus membros na memória. As informações de layout de membro são fornecidas usando o atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. O layout pode ser um dos seguintes valores de enumeração <xref:System.Runtime.InteropServices.LayoutKind>:  
   
-- **LayoutKind.Auto**  
+- **LayoutKind. auto**  
   
      Indica que o Common Language Runtime está livre para reordenar os membros do tipo para eficiência. No entanto, quando um tipo de valor é passado para um código não gerenciado, o layout dos membros é previsível. Uma tentativa de realizar marshaling de uma estrutura como essa causa uma exceção automaticamente.  
   
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |Tipo de valor do sistema|Tipo de IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**Data**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**Decimal**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**VÍRGULA**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**VOLUME**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  O código a seguir mostra a definição dos tipos não gerenciados **DATE**, **GUID**, **DECIMAL** e **OLE_COLOR** na biblioteca de tipos Stdole2.  

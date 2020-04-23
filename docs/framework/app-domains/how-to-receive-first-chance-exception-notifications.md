@@ -34,12 +34,12 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2. Gere uma exceção e capture-a. Antes de o tempo de execução localizar o manipulador de exceção, o evento <xref:System.AppDomain.FirstChanceException> é gerado e exibe uma mensagem. Essa mensagem é seguida pela mensagem exibida pelo manipulador de exceção.
+2. Gere uma exceção e capture-a. Antes de o runtime localizar o manipulador de exceção, o evento <xref:System.AppDomain.FirstChanceException> é gerado e exibe uma mensagem. Essa mensagem é seguida pela mensagem exibida pelo manipulador de exceção.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3. Gere uma exceção, mas não a capture. Antes de o tempo de execução procurar o manipulador de exceção, o evento <xref:System.AppDomain.FirstChanceException> é gerado e exibe uma mensagem. Não há um manipulador de exceções, portanto, o aplicativo será encerrado.
+3. Gere uma exceção, mas não a capture. Antes de o runtime procurar o manipulador de exceção, o evento <xref:System.AppDomain.FirstChanceException> é gerado e exibe uma mensagem. Não há um manipulador de exceções, portanto, o aplicativo será encerrado.
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -64,7 +64,7 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
 
-     Você pode manipular esse evento no domínio do aplicativo padrão da mesma maneira. Use a propriedade <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> `static` (`Shared` no Visual Basic) no `Main()` para obter uma referência para o domínio do aplicativo padrão.
+     Você pode manipular esse evento no domínio do aplicativo padrão da mesma maneira. Use a propriedade <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType>`static` (`Shared` no Visual Basic) no `Main()` para obter uma referência para o domínio do aplicativo padrão.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>Para demonstrar notificações de exceção de primeira tentativa no domínio do aplicativo
 
@@ -96,6 +96,6 @@ O evento <xref:System.AppDomain.FirstChanceException> da classe <xref:System.App
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.AppDomain.FirstChanceException>

@@ -15,15 +15,15 @@ ms.locfileid: "73119986"
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Tópicos explicativos sobre domínios do aplicativo e assemblies
 As seções a seguir contém links para todos os tópicos explicativos encontrados na documentação conceitual para programação com domínios do aplicativo e assemblies.  
   
- **Domínios do aplicativo**  
+ **Domínios de aplicativo**  
   
 - [Como criar um domínio do aplicativo](how-to-create-an-application-domain.md)  
   
 - [Como descarregar um domínio do aplicativo](how-to-unload-an-application-domain.md)  
   
-- [Como configurar um domínio do aplicativo](how-to-configure-an-application-domain.md)  
+- [Como configurar um domínio de aplicativo](how-to-configure-an-application-domain.md)  
   
-- [Como carregar assemblies em um domínio do aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
+- [Como carregar assemblies em um domínio de aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
   
 - [Como obter as informações de tipo e membro de um assembly](../reflection-and-codedom/get-type-member-information.md)  
   
@@ -35,7 +35,7 @@ As seções a seguir contém links para todos os tópicos explicativos encontrad
   
 - [Como Compilar um Assembly de Vários Arquivos](build-multifile-assembly.md)  
   
-- [Como criar um par de chaves pública/privada](../../standard/assembly/create-public-private-key-pair.md)  
+- [Como criar um par de chaves pública-privada](../../standard/assembly/create-public-private-key-pair.md)  
   
 - [Como assinar um assembly com um nome forte](../../standard/assembly/sign-strong-name.md)  
   
@@ -47,10 +47,10 @@ As seções a seguir contém links para todos os tópicos explicativos encontrad
   
 - [Como exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
   
-- [Como remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)  
+- [Como remover um assembly do cache de assemblies global](how-to-remove-an-assembly-from-the-gac.md)  
   
-- [Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)  
+- [Como exibir o conteúdo de um assembly](../../standard/assembly/view-contents.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Domínios do aplicativo e assemblies](index.md)
+- [Domínios de aplicativo e assemblies](index.md)

@@ -78,8 +78,8 @@ Quando um <xref:System.String?displayProperty=nameWithType> é passado por refer
 
 Quando um <xref:System.Text.StringBuilder?displayProperty=nameWithType> é passado por valor, o marshaler passa uma referência ao buffer interno do **StringBuilder** diretamente para o chamador. O chamador e o receptor devem concordar com o tamanho do buffer. O chamador é responsável pela criação de um **StringBuilder** de tamanho adequado. O receptor deve tomar as precauções necessárias para garantir que o buffer não tenha estouro. **StringBuilder** é uma exceção à regra em que os tipos de referência passados por valor são passados como parâmetros de Entrada por padrão. Ele é sempre passado como Entrada/Saída.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Marshaling de interoperabilidade](interop-marshaling.md)
+- [Realizando marshaling de interoperabilidade](interop-marshaling.md)

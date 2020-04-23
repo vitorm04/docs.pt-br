@@ -34,7 +34,7 @@ Cada instância de um domínio do aplicativo consiste em propriedades e informa�
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programação com domínios do aplicativo](application-domains.md#programming-with-application-domains)
 - [Uso de domínios do aplicativo](use.md)

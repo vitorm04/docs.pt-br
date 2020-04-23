@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130062"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644182"
 ---
 # <a name="security-considerations-for-reflection"></a>Considerações sobre segurança relacionadas à reflexão
 
@@ -59,7 +59,7 @@ Essas regras são as mesmas se um membro crítico para segurança for acessado d
 
 Código de aplicativo que é executado da linha de comando é executado com confiança total. Desde que não esteja marcado como transparente, ele pode usar reflexão para acessar membros críticos para segurança. Quando o mesmo código é executado com confiança parcial (por exemplo, em um domínio do aplicativo em área restrita), o nível de confiança do assembly determina se ele pode acessar o código crítico para segurança: se o assembly tiver um nome forte e estiver instalado no cache de assembly global, ele é um assembly confiável e pode chamar membros crítico de segurança. Se não for confiável, ele se tornará transparente mesmo se não for marcado como transparente e não poderá acessar membros críticos para segurança.
 
-Para obter mais informações sobre o modelo de segurança no .NET Framework 4, consulte [Alterações de Segurança](../security/security-changes.md).
+Para obter mais informações sobre o modelo de segurança no .NET Framework 4, consulte [Alterações de Segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflexão e transparência
 
@@ -102,7 +102,7 @@ Para serialização, <xref:System.Security.Permissions.SecurityPermission> com o
 
 Evite escrever membros públicos que utilizam parâmetros <xref:System.Reflection.MethodInfo>, especialmente para código confiável. Esses membros podem ser mais vulneráveis a códigos mal-intencionados. Por exemplo, considere um membro público no código altamente confiável que utiliza um parâmetro <xref:System.Reflection.MethodInfo>. Suponha que o membro público chama indiretamente o método <xref:System.Reflection.MethodBase.Invoke%2A> no parâmetro fornecido. Se o membro público não executa as verificações de permissão necessária, a chamada para o método <xref:System.Reflection.MethodBase.Invoke%2A> sempre terá êxito, pois o sistema de segurança determina se o chamador é altamente confiável. Mesmo que o código mal-intencionado não tenha permissão para invocar o método indiretamente, ele ainda poderá fazer isso indiretamente chamando o membro público.
 
-## <a name="version-information"></a>Informações de versão
+## <a name="version-information"></a>Informações sobre versão
 
 - A partir do .NET Framework 4, código transparente não pode usar reflexão para acessar membros críticos para segurança.
 
@@ -110,12 +110,12 @@ Evite escrever membros públicos que utilizam parâmetros <xref:System.Reflectio
 
 - A partir do .NET Framework 2.0, usar reflexão para obter informações sobre tipos e membros não públicos não requer permissões. Em versões anteriores, o <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> é obrigatório.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Alterações de segurança](../security/security-changes.md)
+- [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
 - [Segurança de acesso do código](../misc/code-access-security.md)
 - [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
 - [Exibindo informações de tipo](viewing-type-information.md)

@@ -31,7 +31,7 @@ Equivalência de tipo significa que um objeto COM que é passado de um assembly 
 
 - Os tipos têm a mesma identidade, conforme descrito na próxima seção.
 
-- Ambos os tipos são elegíveis para equivalência de tipo, conforme descrito na seção [Marcando tipos COM para a equivalência de tipo](#marking-com-types-for-type-equivalence).
+- Ambos os tipos são elegíveis para equivalência de tipo, conforme descrito na seção [marcando tipos com para equivalência de tipo](#marking-com-types-for-type-equivalence) .
 
 ### <a name="type-identity"></a>Tipo de identidade
 
@@ -51,7 +51,7 @@ Se um tipo não tiver o atributo <xref:System.Runtime.InteropServices.TypeIdenti
 
 - Tornar o tipo um tipo de importação COM. Uma interface é um tipo de importação COM se ela tem o atributo <xref:System.Runtime.InteropServices.ComImportAttribute>. Uma interface, uma estrutura, uma enumeração ou um representante é um tipo de importação COM se o assembly no qual ele é definido tem o atributo <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Type.IsEquivalentTo%2A>
 - [Usando tipos COM no código gerenciado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))

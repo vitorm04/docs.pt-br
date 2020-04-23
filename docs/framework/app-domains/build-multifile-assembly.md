@@ -99,7 +99,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 3. Compile todos os outros módulos, usando as opções do compilador necessárias para indicar os outros módulos que são referenciados no código. Esta etapa usa a opção do compilador **/addmodule**.
 
-   No exemplo a seguir, um módulo de código chamado *cliente* tem um ponto de entrada `Main` método que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
+   No exemplo a seguir, um módulo de código chamado *cliente* tem um método `Main` de ponto de entrada que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -207,13 +207,13 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 5. Use o [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) para criar o arquivo de saída que contém o manifesto do assembly. Esse arquivo contém informações de referência para todos os módulos ou recursos que fazem parte do assembly.
 
-    No prompt de comando, digite o seguinte comando:
+    No prompt de comando, digite o comando a seguir:
 
-    **al** \<*nome do módulo*> \<*nome do módulo*> … **/main:** \<*nome do método*>  **/out:** \<*nome de arquivo*>  **/target:** \<*tipo de arquivo do assembly*>
+    **Al** \< *module name*> Name nome\<módulo*nome>.* .. **/Main:**\<*nome*> do método **/out:**\<*nome*> do arquivo **/target:**\<*tipo de arquivo do assembly*>
 
-    Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. A opção **/target:** especifica que o assembly é um arquivo executável do aplicativo de console ( *. exe*), um arquivo executável do Windows ( *. Win*) ou um arquivo de biblioteca ( *. lib*).
+    Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. A opção **/target:** especifica que o assembly é um arquivo executável do aplicativo de console (*. exe*), um arquivo executável do Windows (*. Win*) ou um arquivo de biblioteca (*. lib*).
 
-    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o método `Main` na classe `MainClientApp`, que está localizada em *Client. dll*.
+    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o `Main` método na classe `MainClientApp`, que está localizado em *Client. dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -221,9 +221,9 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
     Você pode usar o [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) para examinar o conteúdo de um assembly ou determinar se um arquivo é um assembly ou um módulo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Criar assemblies](../../standard/assembly/create.md)
 - [Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)
-- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Assemblies de multiarquivo](multifile-assemblies.md)
+- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Assemblies de vários arquivos](multifile-assemblies.md)

@@ -17,7 +17,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130212"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Como: obter informações de tipo e membro usando reflexão
-O namespace <xref:System.Reflection> contém muitos métodos para obter informações sobre tipos e seus membros. Este artigo demonstra um desses métodos, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Para obter informações adicionais, consulte [visão geral de reflexão](reflection.md).
+O <xref:System.Reflection> namespace contém muitos métodos para obter informações sobre tipos e seus membros. Este artigo demonstra um desses métodos, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>. Para obter informações adicionais, consulte [visão geral de reflexão](reflection.md).
   
 ## <a name="example"></a>Exemplo
 
@@ -27,7 +27,7 @@ O exemplo a seguir obtém informações de tipo e membro usando reflexão:
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Programa com domínios de aplicativo](../app-domains/application-domains.md#programming-with-application-domains)
 - [Reflexão](reflection.md)

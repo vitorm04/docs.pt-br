@@ -30,7 +30,7 @@ Para exibir uma lista de assemblies no cache de assembly global, abra o [Prompt 
 gacutil -l
 ```
 
-\- ou -
+-ou-
 
 ```shell
 gacutil /l
@@ -39,7 +39,7 @@ gacutil /l
 > [!NOTE]
 > Nas versões anteriores do .NET Framework, a extensão do shell do Windows [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) permitia exibir o cache de assembly global no Explorador de Arquivos. Do .NET Framework 4 em diante, a Shfusion.dll tornou-se obsoleta.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
+- [Trabalhando com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
+- [Gacutil. exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)

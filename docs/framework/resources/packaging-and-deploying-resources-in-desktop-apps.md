@@ -48,12 +48,12 @@ Há várias vantagens para este modelo:
 - Você deve gerenciar vários conjuntos de recursos.
 - Aumenta o custo inicial de um aplicativo de teste, porque você deve testar várias configurações. Observe que a longo prazo será mais fácil e menos dispendioso para testar um aplicativo básico com vários satélites que testar e manter várias versões internacionais paralelas.
 
-## <a name="resource-naming-conventions"></a>Convenções de nomeação de recursos
+## <a name="resource-naming-conventions"></a>Convenções de nomenclatura de recursos
 
 Ao empacotar os recursos de seu aplicativo, você deve nomeá-los usando as convenções de nomenclatura esperadas pelo Common Language Runtime. O runtime identifica um recurso pelo seu nome de cultura. Cada cultura tem um nome exclusivo, que normalmente é uma combinação de um nome de cultura de duas letras minúsculas associado a um idioma e, se necessário, um nome de subcultura de duas letras maiúsculas associado a um país ou região. O nome de subcultura vem depois do nome da cultura, separado por um traço (-). Exemplos incluem ja-JP para japonês falado no Japão, en-US para inglês falado nos Estados Unidos, de-DE para alemão falado na Alemanha, ou de-AT para alemão falado na Áustria. Confira a coluna **Marca de idioma** na [lista de nomes de idioma/região com suporte do Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Os nomes de cultura seguem o padrão definido pelo [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
-> Existem algumas exceções para os nomes de `zh-Hans` cultura de duas letras, como para chinês (simplificado).
+> Há algumas exceções para os nomes de cultura de duas letras, como `zh-Hans` para chinês (simplificado).
 
 > [!NOTE]
 > Para obter informações sobre como criar arquivos de recursos, consulte [Criando arquivos de recursos](creating-resource-files-for-desktop-apps.md) e [Criando assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md).
@@ -71,7 +71,7 @@ Para melhorar o desempenho da pesquisa, aplique o atributo <xref:System.Resource
 O processo de fallback de recurso do .NET Framework envolve as seguintes etapas:
 
 > [!TIP]
-> Você pode ser capaz [ \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) de usar o elemento de configuração>bindforresources relativo para otimizar o processo de recuo de recursos e o processo pelo qual o tempo de execução testa para conjuntos de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
+> Você pode usar o elemento de [ \<configuração relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) para otimizar o processo de fallback de recursos e o processo pelo qual o tempo de execução investiga para assemblies de recursos. Para obter mais informações, consulte a seção [Otimizar o processo de fallback do recurso](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).
 
 1. O runtime primeiro verifica o [cache de assembly global](../app-domains/gac.md) para um assembly que coincide com a cultura solicitada para seu aplicativo.
 
@@ -116,7 +116,7 @@ Sob as seguintes condições, você pode otimizar o processo pelo qual o runtime
 
 - O código do aplicativo não processa o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.
 
-Você otimiza o teste para conjuntos de satélites, incluindo `enabled` o `true` [ \<elemento de>bindforresources relativo](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e definindo seu atributo no arquivo de configuração do aplicativo, como mostrado no exemplo a seguir.
+Você otimiza a investigação de assemblies satélite, incluindo o [ \<elemento relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) e definindo seu `enabled` atributo como `true` no arquivo de configuração do aplicativo, conforme mostrado no exemplo a seguir.
 
 ```xml
 <configuration>
@@ -231,7 +231,7 @@ Restrições de tempo ou orçamento podem impedir a criação de um conjunto de 
 
 ## <a name="see-also"></a>Confira também
 
-- [Recursos em Aplicativos de Desktop](index.md)
-- [Cache de montagem global](../app-domains/gac.md)
+- [Recursos em aplicativos da área de trabalho](index.md)
+- [Cache de assembly global](../app-domains/gac.md)
 - [Criação de arquivos de recurso](creating-resource-files-for-desktop-apps.md)
 - [Criação de assemblies satélite](creating-satellite-assemblies-for-desktop-apps.md)

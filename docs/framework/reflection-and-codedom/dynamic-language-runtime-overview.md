@@ -76,7 +76,7 @@ Exemplos de linguagens desenvolvidos usando o DLR incluem:
 
  ![Visão geral da arquitetura de tempo de execução de linguagem dinâmica](./media/dlr-archoverview.png "DLR_ArchOverview") Arquitetura do DLR
 
- O DLR agrega um conjunto de serviços ao CLR para melhorar o suporte a linguagens dinâmicas. Tais serviços incluem os seguintes:
+ O DLR agrega um conjunto de serviços ao CLR para melhorar o suporte a linguagens dinâmicas. esses serviços incluem o seguinte:
 
 - Árvores de expressão. O DLR usa árvores de expressão para representar a semântica da linguagem. Para tal, o DLR tem árvores de expressão LINQ estendidos para incluir o fluxo de controle, a atribuição e outros nós de modelagem de linguagem. Para obter mais informações, consulte [Árvores de expressão (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) ou [Árvores de expressão (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
@@ -89,11 +89,11 @@ O DLR usa associadores em sites de chamada para se comunicar não apenas com o .
 ## <a name="dlr-documentation"></a>Documentação do DLR
  Para obter mais informações sobre como usar a versão de software livre do DLR para adicionar comportamento dinâmico a uma linguagem ou sobre como habilitar o uso de uma linguagem dinâmica com o .NET Framework, consulte a documentação no repositório [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) no GitHub.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Common Language Runtime](../../standard/clr.md)
 - [Árvores de expressão (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
 - [Árvores de expressão (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [Passo a passo: Criando e usando objetos dinâmicos](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Walkthrough: Criando e usando objetos dinâmicos](../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

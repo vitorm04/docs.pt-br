@@ -89,14 +89,14 @@ End Module
 |Int16|Int32, Int64, Single e Double|  
 |UInt32|UInt64, Int64, Single e Double|  
 |Int32|Int64, Single e Double|  
-|UInt64|Single e Double|  
-|Int64|Single e Double|  
-|Simples|Duplo|  
+|UInt64|Single, Double|  
+|Int64|Single, Double|  
+|Single|Double|  
 |Tipo Nonreference|Tipo Reference|  
   
  A classe <xref:System.Type> tem métodos **Get** que usam parâmetros do tipo **Binder** para resolver referências a um determinado membro. <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>, <xref:System.Type.GetMethod%2A?displayProperty=nameWithType> e <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> pesquisam um determinado membro do tipo atual, fornecendo informações de assinatura para esse membro. <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> e <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType> são chamados de volta para selecionar as informações de determinada assinatura dos métodos apropriados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>

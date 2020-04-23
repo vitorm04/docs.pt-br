@@ -60,15 +60,15 @@ A imagem a seguir mostra o diretório do assembly satélite:
 
 ## <a name="compiling-satellite-assemblies"></a>Compilação de assemblies satélite
 
-Você usa o [gerador de arquivo de recurso (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) para compilar arquivos de texto ou arquivos XML ( *. resx*) que contêm recursos para arquivos *. Resources* binários. Em seguida, você usa o [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md) para compilar arquivos *. Resources* em assemblies satélite. *Al. exe* cria um assembly a partir dos arquivos *. Resources* que você especificar. Assemblies satélites podem conter somente recursos; eles não podem conter nenhum código executável.
+Você usa o [gerador de arquivo de recurso (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) para compilar arquivos de texto ou arquivos XML (*. resx*) que contêm recursos para arquivos *. Resources* binários. Em seguida, você usa o [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md) para compilar arquivos *. Resources* em assemblies satélite. *Al. exe* cria um assembly a partir dos arquivos *. Resources* que você especificar. Assemblies satélites podem conter somente recursos; eles não podem conter nenhum código executável.
 
-O comando *al. exe* a seguir cria um assembly satélite para o aplicativo `Example` das cadeias de caracteres de arquivo de recursos do alemão *. de. Resources*.
+O comando *al. exe* a seguir cria um assembly satélite para o `Example` aplicativo a partir das cadeias de caracteres do arquivo de recursos do alemão *. de. Resources*.
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll
 ```
 
-O comando *al. exe* a seguir também cria um assembly satélite para o aplicativo `Example` das *cadeias de caracteres de arquivo. de. Resources*. A opção **/Template** faz com que o assembly satélite herde todos os metadados do assembly, exceto para suas informações de cultura do assembly pai (*example. dll*).
+O comando *al. exe* a seguir também cria um assembly satélite para o `Example` aplicativo a partir das *cadeias de caracteres de arquivo. de. Resources*. A opção **/Template** faz com que o assembly satélite herde todos os metadados do assembly, exceto para suas informações de cultura do assembly pai (*example. dll*).
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
@@ -81,7 +81,7 @@ A tabela a seguir descreve as opções *al. exe* usadas nesses comandos com mais
 |`-target:lib`|Especifica que o seu assembly satélite é compilado em um arquivo de biblioteca (. dll). Como um assembly satélite não contém código executável e não é um assembly principal do aplicativo, você deve salvar assemblies satélites como DLLs.|
 |`-embed:strings.de.resources`|Especifica o nome do arquivo de recurso a ser inserido quando *al. exe* compila o assembly. Você pode incorporar vários arquivos .resources em um assembly satélite, mas se estiver seguindo o modelo hub e spoke, compile um assembly satélite para cada cultura. No entanto, você pode criar arquivos .resources separados para cadeias de caracteres e objetos.|
 |`-culture:de`|Especifica a cultura do recurso para compilar. O Common Language Runtime usa essas informações ao procurar os recursos de uma cultura específica. Se você omitir essa opção, *al. exe* ainda compilará o recurso, mas o tempo de execução não poderá encontrá-lo quando um usuário o solicitar.|
-|`-out:Example.resources.dll`|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources. *extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o runtime não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|
+|`-out:Example.resources.dll`|Especifica o nome do arquivo de saída. O nome deve seguir o padrão de nomeação *baseName*.resources.* extensão*, onde *baseName* é o nome do assembly principal, e *extension* é uma extensão de nome de arquivo válido (como .dll). Observe que o runtime não é capaz de determinar a cultura de um assembly satélite com base em seu nome de arquivo de saída; você deve usar a opção **/culture** para especificá-lo.|
 |`-template:Example.dll`|Especifica o assembly do qual todos os metadados de assembly devem ser herdados, exceto o campo de cultura. Esta opção afetará assemblies satélites somente se você especificar um assembly com um [nome forte](../../standard/assembly/strong-named.md).|
   
  Para obter uma lista completa das opções disponíveis com o *al. exe*, consulte [Assembly Linker (al. exe)](../tools/al-exe-assembly-linker.md).
@@ -99,11 +99,11 @@ Este é um exemplo simples "Olá, Mundo", que exibe uma caixa de mensagem com um
   
 3. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:  
   
-    - Para dar suporte à cultura en-US ou inglês (Estados Unidos), crie um arquivo de recurso chamado *greeting. en-US. resx* ou *greeting. en-US. txt*e armazene-o em uma única cadeia de caracteres chamada `HelloString` cujo valor é "Olá, mundo!".
+    - Para dar suporte à cultura en-US ou inglês (Estados Unidos), crie um arquivo de recurso chamado *greeting. en-US. resx* ou *greeting. en-US. txt*e armazene-o em uma `HelloString` única cadeia de caracteres chamada cujo valor é "Olá, mundo!".
   
-    - Para dar suporte à cultura fr-FR ou francês (França), crie um arquivo de recurso chamado *greeting.fr-fr. resx* ou *greeting.fr-fr. txt*e armazene-o em uma única cadeia de caracteres denominada `HelloString` cujo valor é "saudação Le Monde!".
+    - Para dar suporte à cultura fr-FR ou francês (França), crie um arquivo de recurso chamado *greeting.fr-fr. resx* ou *greeting.fr-fr. txt*e armazene-o em uma `HelloString` única cadeia de caracteres chamada cujo valor é "saudação Le Monde!".
   
-    - Para dar suporte à cultura RU-RU ou russo (Rússia), crie um arquivo de recurso chamado *greeting.ru-ru. resx* ou *greeting.ru-ru. txt*e armazene-o em uma única cadeia de caracteres chamada `HelloString` cujo valor é "Всем привет!".
+    - Para dar suporte à cultura RU-RU ou russo (Rússia), crie um arquivo de recurso chamado *greeting.ru-ru. resx* ou *greeting.ru-ru. txt*e armazene-o em uma `HelloString` única cadeia de caracteres chamada cujo valor é "Всем привет!".
   
 4. Use [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) para compilar cada arquivo de recurso XML ou texto em um arquivo binário *. Resources* . A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos *. resx* ou *. txt* , mas uma extensão *. Resources* . Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute os seguintes comandos para compilar os arquivos *. resx* em arquivos *. Resources* :  
   
@@ -124,7 +124,7 @@ Este é um exemplo simples "Olá, Mundo", que exibe uma caixa de mensagem com um
     [!code-csharp[Conceptual.Resources.Locating#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
 
-    Se o aplicativo for chamado de exemplo e você estiver compilando a partir da linha de comando, o C# comando para o compilador será:
+    Se o aplicativo for chamado de exemplo e você estiver compilando a partir da linha de comando, o comando para o compilador C# é:
 
     ```console
     csc Example.cs -res:Greeting.resources
@@ -184,7 +184,7 @@ O comando *al. exe* a seguir cria um assembly satélite de nome forte para o apl
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk
 ```
 
-A opção **-delay+** especifica que o Assembly Linker deve atrasar a assinatura do assembly. A opção **-keyfile** especifica o nome do arquivo da chave que contém a chave pública a ser usada para atrasar a assinatura do assembly.
+A opção **-delay+** especifica que o Assembly Linker deve atrasar a assinatura do assembly. A opção **-keyfile** especifica o nome do arquivo de chave que contém a chave pública a ser usada para atrasar a assinatura do assembly.
 
 ### <a name="re-signing-an-assembly"></a>Nova assinatura de um assembly com atraso
 
@@ -235,11 +235,11 @@ O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework pa
 
 5. Adicione suporte a culturas adicionais (en-US, fr-FR e ru-RU) ao aplicativo da seguinte maneira:
 
-    - Para dar suporte à cultura "en-US" ou inglês (Estados Unidos), crie um arquivo de recurso chamado *Strings. en-US. resx* ou *Strings. en-US. txt*e armazene-o em uma única cadeia de caracteres chamada `Greeting` cujo valor é "Hello!".
+    - Para dar suporte à cultura "en-US" ou inglês (Estados Unidos), crie um arquivo de recurso chamado *Strings. en-US. resx* ou *Strings. en-US. txt*e armazene-o em uma `Greeting` única cadeia de caracteres chamada cujo valor é "Hello!".
 
-    - Para dar suporte à cultura "fr-FR" ou francês (França), crie um arquivo de recurso chamado *Strings.fr-fr. resx* ou *Strings.fr-fr. txt* e armazene-o em uma única cadeia de caracteres chamada `Greeting` cujo valor seja "Bno atual!".
+    - Para dar suporte à cultura "fr-FR" ou francês (França), crie um arquivo de recurso chamado *Strings.fr-fr. resx* ou *Strings.fr-fr. txt* e armazene-o em `Greeting` uma única cadeia de caracteres chamada cujo valor seja "Bno atual!".
 
-    - Para dar suporte à cultura "ru-RU" ou russo (Rússia), crie um arquivo de recurso chamado *Strings.ru-ru. resx* ou *Strings.ru-ru. txt* e armazene-o em uma única cadeia de caracteres chamada `Greeting` cujo valor é "привет!".
+    - Para dar suporte à cultura "ru-RU" ou russo (Rússia), crie um arquivo de recurso chamado *Strings.ru-ru. resx* ou *Strings.ru-ru. txt* e armazene-o em `Greeting` uma única cadeia de caracteres chamada cujo valor é "привет!".
 
 6. Use [Resgen.exe](../tools/resgen-exe-resource-file-generator.md) para compilar cada texto ou um arquivo de recursos XML em um arquivo binário .resources. A saída é um conjunto de arquivos que têm o mesmo nome de arquivo raiz que os arquivos *. resx* ou *. txt* , mas uma extensão *. Resources* . Se você criar o exemplo com o Visual Studio, o processo de compilação será manipulado automaticamente. Se você não estiver usando o Visual Studio, execute o seguinte comando para compilar os arquivos *. resx* em arquivos *. Resources* :
 
@@ -252,7 +252,7 @@ O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework pa
 7. Compile o seguinte código-fonte para *StringLibrary. vb* ou *StringLibrary.cs* junto com os recursos para a cultura padrão em um assembly de biblioteca assinado com atraso chamado *StringLibrary. dll*:
 
     > [!IMPORTANT]
-    > Se você estiver usando a linha de comando em vez do Visual Studio para criar o exemplo, modifique a chamada ao construtor de classe <xref:System.Resources.ResourceManager> para `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.
+    > Se você estiver usando a linha de comando em vez do Visual Studio para criar o exemplo, deverá modificar a chamada para <xref:System.Resources.ResourceManager> o construtor de `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`classe para.
 
     [!code-csharp[Conceptual.Resources.Satellites#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
     [!code-vb[Conceptual.Resources.Satellites#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]
@@ -299,7 +299,7 @@ O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework pa
 
     onde *filename* é o nome do arquivo para registrar.
 
-13. Se você estiver usando o Visual Studio, crie um novo projeto de **aplicativo de console** chamado `Example`, adicione uma referência a *StringLibrary. dll* e o seguinte código-fonte a ele e compile.
+13. Se você estiver usando o Visual Studio, crie um novo projeto de aplicativo `Example`de **console** chamado, adicione uma referência a *StringLibrary. dll* e o seguinte código-fonte a ele e compile.
 
     [!code-csharp[Conceptual.Resources.Satellites#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
     [!code-vb[Conceptual.Resources.Satellites#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]
@@ -318,11 +318,11 @@ O exemplo a seguir usa um método em uma biblioteca de classes .NET Framework pa
 
 14. Execute *example. exe*.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Assinar um assembly com atraso](../../standard/assembly/delay-sign.md)
-- [Al.exe (Assembly Linker)](../tools/al-exe-assembly-linker.md)
-- [Sn.exe (Ferramenta Nome Forte)](../tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (Ferramenta Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
-- [Recursos em aplicativos de área de trabalho](index.md)
+- [Al. exe (vinculador de assembly)](../tools/al-exe-assembly-linker.md)
+- [Sn. exe (ferramenta Strong Name)](../tools/sn-exe-strong-name-tool.md)
+- [Gacutil. exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md)
+- [Recursos em aplicativos da área de trabalho](index.md)

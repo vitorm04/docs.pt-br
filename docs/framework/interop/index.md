@@ -57,5 +57,5 @@ Descreve como criar um manifesto do aplicativo e como criar e inserir um manifes
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Invólucros COM](../../standard/native-interop/com-wrappers.md)  
+[Wrappers COM](../../standard/native-interop/com-wrappers.md)  
 Descreve os wrappers fornecidos pela interoperabilidade COM.

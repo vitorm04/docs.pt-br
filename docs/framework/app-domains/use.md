@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119732"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645433"
 ---
 # <a name="using-application-domains"></a>Usando domínios do aplicativo
 
@@ -27,13 +27,13 @@ Descreve como criar um domínio do aplicativo com programação.
 [Como descarregar um domínio do aplicativo](how-to-unload-an-application-domain.md)  
 Descreve como descarregar um domínio do aplicativo com programação.  
   
-[Como configurar um domínio do aplicativo](how-to-configure-an-application-domain.md)  
+[Como configurar um domínio de aplicativo](how-to-configure-an-application-domain.md)  
 Fornece uma introdução à configuração de um domínio do aplicativo.  
   
-[Recuperação de informações de instalação de um domínio do aplicativo](retrieve-setup-information.md)  
+[Recuperando informações de instalação de um domínio de aplicativo](retrieve-setup-information.md)  
 Descreve como recuperar informações de configuração de um domínio do aplicativo.  
   
-[Como carregar assemblies em um domínio do aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
+[Como carregar assemblies em um domínio de aplicativo](how-to-load-assemblies-into-an-application-domain.md)  
 Descreve como carregar um assembly em um domínio do aplicativo.  
   
 [Como obter as informações de tipo e membro de um assembly](../reflection-and-codedom/get-type-member-information.md)  
@@ -57,13 +57,13 @@ Representa um domínio do aplicativo. Fornece métodos para criar e controlar do
 [Assemblies no .NET](../../standard/assembly/index.md)  
 Fornece uma visão geral das funções executadas por assemblies.  
   
-[Programação com assemblies](../../standard/assembly/program.md)  
+[Programação com assemblies](../../standard/assembly/index.md)  
 Descreve como criar, assinar e definir atributos em assemblies.  
   
 [Emissão de métodos e assemblies dinâmicos](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
 Descreve como criar assemblies dinâmicos.  
   
-[Domínios do aplicativo](application-domains.md)  
+[Domínios de aplicativo](application-domains.md)  
 Fornece uma visão geral conceitual de domínios de aplicativos.  
   
 [Visão geral da reflexão](../reflection-and-codedom/reflection.md)  

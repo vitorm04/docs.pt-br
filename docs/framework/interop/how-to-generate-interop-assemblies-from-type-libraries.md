@@ -39,7 +39,7 @@ tlbimp Loanlib.tlb
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)

@@ -22,7 +22,7 @@ Esta seção da documentação fornece informações sobre programação dinâmi
  [Emissão de métodos e assemblies dinâmicos](emitting-dynamic-methods-and-assemblies.md)  
  Descreve como criar métodos e assemblies em tempo de execução usando Reflection.Emit.  
   
- [Visão geral do tempo de execução do idioma dinâmico](dynamic-language-runtime-overview.md)  
+ [Visão geral do tempo de execução de linguagem dinâmica](dynamic-language-runtime-overview.md)  
  Descreve os recursos do dynamic language runtime.  
   
  [Geração e compilação de código-fonte dinâmico](dynamic-source-code-generation-and-compilation.md)  

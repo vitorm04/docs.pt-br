@@ -91,9 +91,9 @@ O namespace <xref:System.CodeDom.Compiler> fornece interfaces para geração de 
 ## <a name="languages-with-initial-support"></a>Linguagens com suporte inicial  
  O .NET Framework fornece compiladores de código e geradores de código para as seguintes linguagens: C#, Visual Basic, C++ e JScript. O suporte do CodeDOM pode ser estendido a outras linguagens implementando geradores de código e compiladores de código específicos da linguagem.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
-- [Dynamic Source Code Generation and Compilation](dynamic-source-code-generation-and-compilation.md) (Compilação e geração de código-fonte dinâmico)
+- [Geração e compilação de código-fonte dinâmico](dynamic-source-code-generation-and-compilation.md)
 - [Referência rápida do CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

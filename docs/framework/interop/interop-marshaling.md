@@ -15,7 +15,7 @@ ms.locfileid: "73124281"
 ---
 # <a name="interop-marshaling"></a>Realizando marshaling de interoperabilidade
 
-O marshaling de interoperabilidade rege como os dados são passados em argumentos de método e valores de retorno entre memória gerenciada e não gerenciada durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.
+ O marshaling de interoperabilidade controla como os dados são passados em argumentos de método e valores retornados entre memória gerenciada e não gerenciada e durante chamadas. O marshaling de interoperabilidade é uma atividade de tempo de execução executada pelo serviço de marshaling do Common Language Runtime.
 
 A maioria dos tipos de dados têm representações comuns tanto na memória gerenciada quanto na não gerenciada. O marshaler de interoperabilidade manipula esses tipos para você. Outros tipos podem ser ambíguos ou não representados em absoluto na memória gerenciada.
 
@@ -115,14 +115,14 @@ O runtime também fornece comunicação remota gerenciada, que pode ser usada pa
 
 Algumas chamadas não gerenciadas podem ser canalizadas por SOAP, assim como as chamadas entre os componentes de serviço e o COM.
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-topics"></a>Tópicos Relacionados
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Comportamento de marshaling padrão](default-marshaling-behavior.md)|Descreve as regras que o serviço de marshaling de interoperabilidade usa para realizar marshaling de dados.|
-|[Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)|Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.|
+|[Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)|Descreve como declarar parâmetros de método e passar argumentos para funções exportadas por bibliotecas não gerenciadas.|
 |[Realizando marshaling em dados com interoperabilidade COM](marshaling-data-with-com-interop.md)|Descreve como personalizar os wrappers COM para alterar o comportamento de marshaling.|
-|[Como: migrar código DCOM gerenciado para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|
+|[Como: migrar código gerenciador do DCOM para o WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Descreve como migrar do DCOM para o WCF.|
 |[Como mapear HRESULTs e exceções](how-to-map-hresults-and-exceptions.md)|Descreve como mapear exceções personalizadas para HRESULTs e fornece o mapeamento completo de cada HRESULT para a respectiva classe de exceção comparável no .NET Framework.|
 |[Interoperação usando tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Descreve quais ações têm suporte ao usar tipos genéricos para interoperabilidade COM.|
 |[Interoperação com código não gerenciado](index.md)|Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.|

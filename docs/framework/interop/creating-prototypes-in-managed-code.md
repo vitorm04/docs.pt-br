@@ -229,13 +229,13 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Consumindo funções de DLL não gerenciadas](consuming-unmanaged-dll-functions.md)
 - [Especificando um ponto de entrada](specifying-an-entry-point.md)
 - [Especificando um conjunto de caracteres](specifying-a-character-set.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
-- [Considerações sobre segurança de invocação de plataforma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
+- [Considerações sobre Segurança da Invocação de Plataforma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identificando funções em DLLs](identifying-functions-in-dlls.md)
 - [Criando uma classe para conter funções de DLL](creating-a-class-to-hold-dll-functions.md)
 - [Chamando uma função de DLL](calling-a-dll-function.md)

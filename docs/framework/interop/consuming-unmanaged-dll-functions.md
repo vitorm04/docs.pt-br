@@ -39,7 +39,7 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
   
      [Visual Basic] Use a instrução **Declare** com as palavras-chave **Function** e **Lib**. Em alguns casos raros, é possível usar o **DllImportAttribute** com as palavras-chave **Shared Function**. Esses casos são explicados mais adiante nesta seção.  
   
-     [C#] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método com os modificadores **static** e **extern**.  
+     C# Use o **DllImportAttribute** para identificar a dll e a função. Marque o método com os modificadores **static** e **extern**.  
   
      [C++] Use o **DllImportAttribute** para identificar a DLL e a função. Marque o método wrapper ou a função com **extern "C"**.  
   
@@ -71,6 +71,6 @@ A invocação de plataforma é um serviço que permite que um código gerenciado
 
 ## <a name="see-also"></a>Confira também
 
-- [Interoperação com Código Não Gerenciado](index.md)
+- [Interoperação com código não gerenciado](index.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
 - [Realizando marshaling de interoperabilidade](interop-marshaling.md)

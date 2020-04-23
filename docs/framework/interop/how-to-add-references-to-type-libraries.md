@@ -40,12 +40,12 @@ O Visual Studio gera um assembly de interoperabilidade que contém metadados qua
   
 1. Gere um assembly de interoperabilidade, conforme descrito em [Como gerar assemblies de interoperabilidade em bibliotecas de tipos](how-to-generate-interop-assemblies-from-type-libraries.md).  
   
-2. Use a opção de compilador [-link (C# Compiler Options)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) com o nome de montagem interop para incorporar informações de tipo para tipos COM em seus executáveis.  
+2. Use a opção de compilador [-link (opções do compilador C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) ou [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) com o nome do assembly de interoperabilidade para inserir informações de tipo para tipos com em seus executáveis.  
   
 ## <a name="see-also"></a>Confira também
 
 - [Importando uma biblioteca de tipos como um assembly](importing-a-type-library-as-an-assembly.md)
 - [Expondo componentes do COM ao .NET Framework](exposing-com-components.md)
 - [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
-- [-link (C# Opções de compilador)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-link (opções do compilador C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

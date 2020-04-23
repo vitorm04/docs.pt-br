@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119715"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645414"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
 
@@ -51,25 +51,25 @@ Descreve as maneiras de instalar um assembly no cache de assembly global.
 [Como exibir o conteúdo do cache de assembly global](how-to-view-the-contents-of-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para exibir o conteúdo do cache de assembly global.  
   
-[Como remover um assembly do cache de assembly global](how-to-remove-an-assembly-from-the-gac.md)  
+[Como remover um assembly do cache de assemblies global](how-to-remove-an-assembly-from-the-gac.md)  
 Explica como usar a [Gacutil.exe (Ferramenta de Cache de Assembly Global)](../tools/gacutil-exe-gac-tool.md) para remover um assembly do cache de assembly global.  
   
-[Uso de componentes atendidos com o cache de assembly global](use-serviced-components-with-the-gac.md)  
+[Usando componentes atendidos com o cache de assemblies global](use-serviced-components-with-the-gac.md)  
 Explica por que componentes de atendidos (componentes COM+ gerenciados) devem ser colocados no cache de assembly global.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
-[Criação de assemblies](../../standard/assembly/create.md)  
+[Criando assemblies](../../standard/assembly/create.md)  
 Apresenta uma visão geral da criação de assemblies.  
   
 [Cache de assembly global](gac.md)  
 Descreve o cache de assembly global.  
   
-[Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)  
+[Como exibir o conteúdo de um assembly](../../standard/assembly/view-contents.md)  
 Explica como usar o [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) para exibir informações MSIL (Microsoft Intermediate Language) em um assembly.  
   
-[Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)  
+[Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)  
 Descreve como o Common Language Runtime localiza e carrega os assemblies que compõem seu aplicativo.  
   
-[Programação com assemblies](../../standard/assembly/program.md)  
+[Programação com assemblies](../../standard/assembly/index.md)  
 Descreve assemblies, os blocos de construção de aplicativos gerenciados.

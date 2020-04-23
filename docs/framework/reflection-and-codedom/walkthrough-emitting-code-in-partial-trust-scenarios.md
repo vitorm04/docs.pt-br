@@ -28,7 +28,7 @@ A emissão de reflexão usa a mesma API definida na confiança total ou parcial,
 > [!NOTE]
 > Antes do .NET Framework 3.5, a emissão de código necessitava de <xref:System.Security.Permissions.ReflectionPermission> com o sinalizador <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Essa permissão é incluída por padrão nos conjuntos de permissões denominados `FullTrust` e `Intranet`, mas não no conjunto de permissões `Internet`. Portanto, uma biblioteca poderia ser usada da confiança parcial somente se tivesse o atributo <xref:System.Security.SecurityCriticalAttribute> e também executasse um método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Tais bibliotecas exigem uma análise atenta da segurança, pois erros de código poderiam resultar em falhas de segurança. O .NET Framework 3.5 permite que o código seja emitido em cenários de confiança parcial sem a emissão de nenhuma demanda de segurança, pois a geração de código não é uma operação inerentemente privilegiada. Ou seja, o código gerado não tem mais permissões que o assembly que o emite. Isso permite que bibliotecas que emitem código sejam transparentes de segurança e elimina a necessidade de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de modo que escrever uma biblioteca de segurança não exige uma análise minuciosa da segurança.
 
-Esta explicação passo a passo ilustra as seguintes tarefas:
+Este passo a passo ilustra as seguintes tarefas:
 
 - [Configurando uma área restrita simples para testar código parcialmente confiável](#Setting_up).
 
@@ -208,7 +208,7 @@ O exemplo adiciona <xref:System.Security.Permissions.ReflectionPermission> com <
 
 - A primeira sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas. O método dinâmico é compilado e executado com êxito, pois o assembly que emite o código é o mesmo que o assembly que contém o método particular. Portanto, os níveis de confiança são iguais. Se o aplicativo que contém a classe `Worker` tiver vários assemblies, o mesmo processo teria êxito para qualquer um desses assemblies, pois todos estão no mesmo nível de confiança.
 
-- A segunda sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas novamente. Dessa vez, o método dinâmico falha ao ser compilado, pois ele tenta acessar a propriedade `internal` `FirstChar` da classe <xref:System.String>. O assembly que contém a classe <xref:System.String> é totalmente confiável. Portanto, ele está em um nível mais alto que o assembly que emite o código.
+- A segunda sobrecarga do método `AccessPrivateMethod` é executada e as verificações de visibilidade JIT são ignoradas novamente. Desta vez, o método dinâmico falha quando é compilado, pois ele tenta acessar a `internal` `FirstChar` propriedade da <xref:System.String> classe. O assembly que contém a classe <xref:System.String> é totalmente confiável. Portanto, ele está em um nível mais alto que o assembly que emite o código.
 
 Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> habilita código parcialmente confiável para ignorar as verificações de visibilidade para outros códigos parcialmente confiáveis sem comprometer a segurança do código confiável.
 
@@ -221,7 +221,7 @@ Essa comparação mostra como <xref:System.Security.Permissions.ReflectionPermis
 
 - Se você compilar esse exemplo de código no Visual Studio, deverá alterar o nome da classe para incluir o namespace ao passá-lo para o método <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>. Por padrão, o namespace é o nome do projeto. Por exemplo, se o projeto for “PartialTrust”, o nome de classe deverá ser “PartialTrust.Worker”.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Problemas de segurança na emissão de reflexão](security-issues-in-reflection-emit.md)
 - [Como executar código parcialmente confiável em uma área restrita](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

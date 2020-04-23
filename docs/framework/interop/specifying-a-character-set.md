@@ -144,9 +144,9 @@ extern "C" int MessageBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)
 - [Exemplos de invocação de plataforma](platform-invoke-examples.md)
-- [Marshaling de dados com a invocação de plataforma](marshaling-data-with-platform-invoke.md)
+- [Marshaling de dados com invocação de plataforma](marshaling-data-with-platform-invoke.md)

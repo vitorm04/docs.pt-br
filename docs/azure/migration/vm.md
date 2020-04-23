@@ -1,5 +1,5 @@
 ---
-title: Migrar um aplicativo web ASP.NET para uma VM Azure
+title: Migrar um aplicativo Web ASP.NET para uma VM do Azure
 description: Saiba como migrar um aplicativo Web ASP.NET do local para uma Máquina Virtual do Azure.
 ms.topic: how-to
 ms.date: 11/15/2017
@@ -22,10 +22,10 @@ Saiba como criar uma máquina virtual e publicar o aplicativo nela: [Publicar em
 
 Esses tutoriais demonstram as etapas para criar (ou migrar) uma máquina virtual, publicar seu aplicativo Web para ela e outras tarefas que podem ser necessárias para dar suporte ao seu aplicativo no Azure.
 
-- Crie uma máquina virtual para seu aplicativo de ASP.NET no Azure usando uma das seguintes opções:
+- Crie uma máquina virtual para seu aplicativo ASP.NET no Azure usando uma das seguintes opções:
   - [Criar uma nova máquina virtual para Aplicativos ASP.NET](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [Migrar uma máquina virtual VMWare existente no local](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [Migrar uma máquina virtual Hiper-V existente no local](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [Migrar uma máquina virtual VMWare local existente](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
+  - [Migrar uma máquina virtual do Hyper-V local existente](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
 - [Publicar seu aplicativo usando o Visual Studio](https://go.microsoft.com/fwlink/?linkid=863240)
 - [Criar uma rede virtual segura para suas VMs](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [Criar um pipeline CI/CD para seu aplicativo](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
@@ -39,7 +39,7 @@ As máquinas virtuais oferecem o caminho mais fácil para migrar um aplicativo d
 
 ### <a name="virtual-machine-size"></a>Tamanho da Máquina Virtual
 
-Escolha o tamanho da máquina virtual e o tipo mais otimizados para sua carga de trabalho. Para obter mais informações, consulte [Tamanhos para máquinas virtuais windows no Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
+Escolha o tamanho da máquina virtual e o tipo mais otimizados para sua carga de trabalho. Para obter mais informações, consulte [tamanhos de máquinas virtuais do Windows no Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
 
 ### <a name="maintenance"></a>Manutenção 
 
@@ -70,12 +70,12 @@ Muitos aplicativos usam o Active Directory para a autenticação e o gerenciamen
 Se seu aplicativo estiver usando um banco de dados local, o aplicativo não conseguirá comunicar-se com ele por padrão. Você pode:
 
 - Configure uma rede híbrida que permita ao seu aplicativo acessar o banco de dados em execução no local.
-- Migre seu banco de dados para o Azure. Para obter mais informações, consulte [Migrem seu banco de dados do SQL Server para o Azure](sql.md).
+- Migre seu banco de dados para o Azure. Para obter mais informações, consulte [migrar seu banco de dados SQL Server para o Azure](sql.md).
 
 ### <a name="high-availability-and-scalability"></a>Alta disponibilidade e escalabilidade
 
 #### <a name="virtual-machine-scale-sets"></a>Conjuntos de Dimensionamento de Máquinas Virtuais
-Se você quiser verificar se seu aplicativo tem alta disponibilidade e pode ser dimensionado, migre sua imagem da VM para um conjunto de dimensionamento da máquina virtual para melhorar a disponibilidade e a escalabilidade do aplicativo. Os Conjuntos de Escala de VM fornecem a capacidade de usar uma VM existente que você já configurou ou configurar um pipeline de compilação para construir uma imagem com seu aplicativo.
+Se você quiser verificar se seu aplicativo tem alta disponibilidade e pode ser dimensionado, migre sua imagem da VM para um conjunto de dimensionamento da máquina virtual para melhorar a disponibilidade e a escalabilidade do aplicativo. Os conjuntos de dimensionamento de VM fornecem a capacidade de usar uma VM existente que você já configurou ou configurou um pipeline de compilação para criar uma imagem com seu aplicativo.
 
 Para começar, confira [Implantar seu aplicativo nos conjuntos de dimensionamento da máquina virtual](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 

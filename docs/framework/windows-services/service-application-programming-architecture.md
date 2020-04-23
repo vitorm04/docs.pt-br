@@ -49,7 +49,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
 > [!NOTE]
 > Esses métodos representam os estados pelos quais o serviço passa em seu tempo de vida. O serviço faz a transição de um estado para o próximo. Por exemplo, você nunca fará com que o serviço responda a um comando <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> antes que <xref:System.ServiceProcess.ServiceBase.OnStart%2A> seja chamado.  
   
- Há várias outras propriedades e métodos interessantes. Elas incluem:  
+ Há várias outras propriedades e métodos interessantes. Eles incluem:  
   
 - O método <xref:System.ServiceProcess.ServiceBase.Run%2A> na classe <xref:System.ServiceProcess.ServiceBase>. Este é o ponto de entrada principal para o serviço. Quando você cria um serviço usando o modelo de Serviço Windows, o código é inserido no método `Main` do aplicativo para executar o serviço. Esse código tem esta aparência:  
   
@@ -57,7 +57,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    > Esses exemplos usam uma matriz do tipo <xref:System.ServiceProcess.ServiceBase>, na qual cada serviço que o aplicativo contém pode ser adicionado e, em seguida, todos os serviços podem ser executados juntos. No entanto, se você estiver criando apenas um único serviço, poderá decidir não usar a matriz e simplesmente declarar um novo objeto herdado de <xref:System.ServiceProcess.ServiceBase> e, em seguida, executá-lo. Para obter um exemplo, consulte [ Escrever serviços de forma programática](how-to-write-services-programmatically.md).  
+    > Esses exemplos usam uma matriz do tipo <xref:System.ServiceProcess.ServiceBase>, na qual cada serviço que o aplicativo contém pode ser adicionado e, em seguida, todos os serviços podem ser executados juntos. No entanto, se você estiver criando apenas um único serviço, poderá decidir não usar a matriz e simplesmente declarar um novo objeto herdado de <xref:System.ServiceProcess.ServiceBase> e, em seguida, executá-lo. Para obter um exemplo, confira [Como escrever serviços de forma programática](how-to-write-services-programmatically.md).  
   
 - Uma série de propriedades na classe <xref:System.ServiceProcess.ServiceBase>. Elas determinam quais métodos podem ser chamados no serviço. Por exemplo, quando a propriedade <xref:System.ServiceProcess.ServiceBase.CanStop%2A> está definida como `true`, o método <xref:System.ServiceProcess.ServiceBase.OnStop%2A> no serviço pode ser chamado. Quando a propriedade <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> está definida como `true`, os métodos <xref:System.ServiceProcess.ServiceBase.OnPause%2A> e <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> podem ser chamados. Ao definir uma dessas propriedades para `true`, você deverá substituir e definir o processamento dos métodos associados.  
   
@@ -66,7 +66,7 @@ Os aplicativos de Serviço Windows baseiam-se em uma classe que é herdada da cl
   
  Você também pode usar um componente chamado <xref:System.ServiceProcess.ServiceController> para comunicar-se com um serviço existente e controlar seu comportamento.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
-- [Como: criar serviços do Windows](how-to-create-windows-services.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Como criar Serviços Windows](how-to-create-windows-services.md)

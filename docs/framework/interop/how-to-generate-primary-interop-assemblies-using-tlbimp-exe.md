@@ -67,6 +67,6 @@ O exemplo a seguir importa `MyLib.tlb`, que referencia `CompanyA.LibUtil.dll` e 
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Como registrar assemblies de interoperabilidade primários](how-to-register-primary-interop-assemblies.md)

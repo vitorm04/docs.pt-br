@@ -30,7 +30,7 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
   
 - O cache de assembly global (deve ser um assembly de nome forte).  
   
-- No diretório do aplicativo. Assemblies carregados no caminho do aplicativo só são acessíveis por meio desse aplicativo.  
+- No diretório de aplicativo. Assemblies carregados no caminho do aplicativo só são acessíveis por meio desse aplicativo.  
   
 - Ao longo de um caminho de arquivo especificado com a opção **/codebase** para Regasm.exe.  
   
@@ -41,9 +41,9 @@ Você pode executar uma ferramenta de linha de comando chamada [Ferramenta de re
   
  Para a subchave `InprocServer32`, uma referência a Mscoree.dll é exibida no lugar de uma biblioteca de tipos COM tradicional para indicar que o Common Language Runtime cria o objeto gerenciado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
 - [Como referenciar tipos do .NET com base no COM](how-to-reference-net-types-from-com.md)
-- [Calling a .NET Object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) (Chamando um objeto .NET)
+- [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

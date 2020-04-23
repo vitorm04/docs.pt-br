@@ -61,9 +61,9 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
 |[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Converte em um valor de 1, 2 ou 4 bytes com `true` como 1 ou -1.|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Converte em um caractere Unicode ou ANSI.|  
+|[System. Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Converte em um caractere Unicode ou ANSI.|  
 |[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Converte em uma interface de classe.|  
-|[System.Object](default-marshaling-for-objects.md)|Converte em uma variante ou uma interface.|  
+|[System. Object](default-marshaling-for-objects.md)|Converte em uma variante ou uma interface.|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|Converte em uma matriz C-style ou em um `SAFEARRAY`.|  
 |[System.String](default-marshaling-for-strings.md)|Converte em uma cadeia de caracteres que termina em uma referência nula ou em um BSTR.|  
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Converte em uma estrutura com um layout de memória fixo.|  
@@ -71,6 +71,6 @@ A maioria dos tipos de dados tem uma representação comum na memória gerenciad
   
  Há suporte para tipos de objeto e de classe apenas na interoperabilidade COM. Para tipos correspondentes no Visual Basic, C# e C++, consulte a [Visão geral da biblioteca de classes](../../standard/class-library-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)

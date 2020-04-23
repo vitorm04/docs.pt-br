@@ -1,5 +1,5 @@
 ---
-title: 'Como: Especificar o contexto de segurança para serviços'
+title: Como especificar o contexto de segurança para serviços
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -18,7 +18,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053590"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Como: Especificar o contexto de segurança para serviços
+# <a name="how-to-specify-the-security-context-for-services"></a>Como especificar o contexto de segurança para serviços
 Por padrão, os serviços são executados em um contexto de segurança diferente do que o usuário que fez logon. Os serviços são executados no contexto da conta padrão do sistema, chamada `LocalSystem`, que oferece a eles privilégios de acesso a recursos do sistema diferentes que os do usuário. Você pode alterar esse comportamento para especificar outra conta de usuário diferente com a qual o serviço deverá ser executado.  
   
  Você define o contexto de segurança manipulando a propriedade <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> para o processo no qual o serviço é executado. Essa propriedade permite que você defina o serviço para uma entre quatro tipos de conta:  
@@ -35,7 +35,7 @@ Por padrão, os serviços são executados em um contexto de segurança diferente
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Para especificar o contexto de segurança de um serviço  
   
-1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
+1. Depois de criar o serviço, adicione os instaladores necessários para ele. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
   
 2. No designer, acesse a classe `ProjectInstaller` e clique no instalador do processo de serviço para o serviço com o qual você está trabalhando.  
   
@@ -44,8 +44,8 @@ Por padrão, os serviços são executados em um contexto de segurança diferente
   
 3. Na janela **Propriedades**, defina a <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> para o valor apropriado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Introdução aos Aplicativos de Serviço Windows](introduction-to-windows-service-applications.md)
-- [Como: adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
-- [Como: criar serviços do Windows](how-to-create-windows-services.md)
+- [Introdução aos aplicativos de serviço do Windows](introduction-to-windows-service-applications.md)
+- [Como adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
+- [Como criar Serviços Windows](how-to-create-windows-services.md)

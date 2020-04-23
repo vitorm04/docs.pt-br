@@ -232,7 +232,7 @@ Em algumas circunstâncias, um buffer de caracteres de comprimento fixo deve ser
 
 A solução é passar um buffer <xref:System.Text.StringBuilder> como o argumento em vez de um <xref:System.String>. Um `StringBuilder` pode ser desreferenciado e modificado pelo receptor, desde que ele não exceda a capacidade do `StringBuilder`. Ele também pode ser inicializado com um comprimento fixo. Por exemplo, se você inicializar um buffer do `StringBuilder` em uma capacidade de `N`, o marshaler fornecerá um buffer com o tamanho de (`N`+ 1) caracteres. O + 1 leva em conta o fato de que a cadeia de caracteres não gerenciada tem um terminador nulo, ao contrário de `StringBuilder`.
 
-Por exemplo, a função de API [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) do Windows (definida em *winuser.h*) exige que o chamador passe um buffer de caracteres de comprimento fixo para o qual a função grava o texto da janela. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O exemplo a seguir mostra a declaração de função `GetWindowText`, conforme definida em *winuser.h*.
+Por exemplo, a função [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) de API do Windows (definida em *WinUser. h*) requer que o chamador passe um buffer de caracteres de comprimento fixo para o qual a função grava o texto da janela. `LpString` aponta para um buffer alocado pelo chamador com o tamanho `nMaxCount`. O chamador deve alocar o buffer e definir o argumento `nMaxCount` com o tamanho do buffer alocado. O exemplo a seguir mostra a declaração de função `GetWindowText`, conforme definida em *winuser.h*.
 
 ```cpp
 int GetWindowText(
@@ -285,10 +285,10 @@ Public Class Window
 End Class
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Comportamento de marshaling padrão](default-marshaling-behavior.md)
-- [Marshaling em cadeias de caracteres](marshaling-strings.md)
+- [Realizando marshaling de cadeias de caracteres](marshaling-strings.md)
 - [Tipos blittable e não blittable](blittable-and-non-blittable-types.md)
 - [Atributos direcionais](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Copiando e fixando](copying-and-pinning.md)

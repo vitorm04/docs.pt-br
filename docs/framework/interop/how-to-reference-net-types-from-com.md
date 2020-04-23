@@ -32,7 +32,7 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     \- ou -  
+     -ou-  
   
 - Inclua uma diretiva #import para Mscorlib.tlb. Por exemplo:  
   
@@ -41,9 +41,9 @@ Do ponto de vista do código de cliente e servidor, as diferenças entre o .NET 
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Registrando assemblies usando COM](registering-assemblies-with-com.md)
-- [Calling a .NET Object](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) (Chamando um objeto .NET)
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
+- [Registrando assemblies com o COM](registering-assemblies-with-com.md)
+- [Chamando um objeto .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [Implantando um aplicativo para acesso COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

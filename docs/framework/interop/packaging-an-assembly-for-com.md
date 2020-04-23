@@ -79,7 +79,7 @@ A **classe TypeLibConverter** implementa o <xref:System.Runtime.InteropServices.
 
 ## <a name="assembly-registration-tool"></a>Ferramenta de Registro de Assembly
 
-A [Ferramenta de Registro de Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) pode gerar e registrar uma biblioteca de tipos quando você aplica a opção **/tlb:** . Clientes COM exigem que as bibliotecas de tipos sejam instaladas no Registro do Windows. Sem essa opção, o Regasm.exe registra somente os tipos em um assembly, mas não a biblioteca de tipos. Registrar os tipos em um assembly e registrando a biblioteca de tipos são atividades distintas.
+A [Ferramenta de Registro de Assembly (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) pode gerar e registrar uma biblioteca de tipos quando você aplica a opção **/tlb:**. Clientes COM exigem que as bibliotecas de tipos sejam instaladas no Registro do Windows. Sem essa opção, o Regasm.exe registra somente os tipos em um assembly, mas não a biblioteca de tipos. Registrar os tipos em um assembly e registrando a biblioteca de tipos são atividades distintas.
 
 <a name="cpconpackagingassemblyforcomanchor4"></a>
 
@@ -87,14 +87,14 @@ A [Ferramenta de Registro de Assembly (Regasm.exe)](../tools/regasm-exe-assembly
 
 A [ferramenta de instalação de serviços .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) adiciona classes gerenciadas para Serviços do Componente do Windows 2000 e combina várias tarefas em uma única ferramenta. Além de carregar e registrar um assembly, Regsvcs.exe pode gerar, registrar e instalar a biblioteca de tipos em um aplicativo COM+ 1.0 existente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
-- [Expondo componentes do .NET Framework ao COM](exposing-dotnet-components-to-com.md)
-- [Qualificando tipos .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md)
-- [Apresentando a interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
-- [Considerações sobre segurança de assembly](../../standard/assembly/security-considerations.md)
-- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Registrando assemblies usando COM](registering-assemblies-with-com.md)
+- [Expondo componentes do .NET Framework para COM](exposing-dotnet-components-to-com.md)
+- [Qualificando tipos do .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Introdução à interface de classe](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
+- [Considerações de segurança do assembly](../../standard/assembly/security-considerations.md)
+- [TlbExp. exe (tipo de exportador da biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Registrando assemblies com o COM](registering-assemblies-with-com.md)
 - [Como inserir bibliotecas de tipo como recursos do Win32 em aplicativos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

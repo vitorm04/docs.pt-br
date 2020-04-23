@@ -114,5 +114,5 @@ typedef struct _MYPERSON
   
 ## <a name="see-also"></a>Confira também
 
-- [Plataforma invoca tipos de dados](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [Tipos de dados de invocação de plataforma](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Criando protótipos em código gerenciado](creating-prototypes-in-managed-code.md)

@@ -301,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- A seguir, a implementação deste serviço. Essa implementação mantém uma fábrica de canais única para criar objetos de sessão.  Quando `GetInstanceAddress` é chamado, ele cria um canal e cria um objeto <xref:System.ServiceModel.EndpointAddress10> que aponta para o endereço remoto associado a esse canal.   <xref:System.ServiceModel.EndpointAddress10> é um tipo de dados que pode ser retornado ao cliente por valor.
+ A seguir está a implementação deste serviço. Essa implementação mantém uma fábrica de canais única para criar objetos de sessão.  Quando `GetInstanceAddress` é chamado, ele cria um canal e cria um objeto <xref:System.ServiceModel.EndpointAddress10> que aponta para o endereço remoto associado a esse canal.   <xref:System.ServiceModel.EndpointAddress10> é um tipo de dados que pode ser retornado ao cliente por valor.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. Na seção `<services>`, declare pontos de extremidade de serviço para a o objeto de fábrica e de sessão.  Isso permite que o cliente se comunique com os pontos de extremidade de serviço, adquira o <xref:System.ServiceModel.EndpointAddress10> e crie o canal de sessão.  
   
- A seguir está um arquivo de configuração de exemplo com essas configurações:  
+ Este é um exemplo de arquivo de configuração com estas configurações:  
   
 ```xml  
 <configuration>  

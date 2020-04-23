@@ -14,30 +14,30 @@ ms.locfileid: "82071937"
 
 ## <a name="sdk-downloads"></a>Downloads do SDK
 
-As bibliotecas Azure para .NET são implementadas como [pacotes NuGet](https://www.nuget.org/packages?q=windowsazureofficial). Consulte a referência da [API](/dotnet/api/overview/azure/?view=azure-dotnet) para obter instruções de instalação organizadas pelo serviço Azure.
+As bibliotecas do Azure para .NET são implementadas como [pacotes NuGet](https://www.nuget.org/packages?q=windowsazureofficial). Consulte a [referência de API](/dotnet/api/overview/azure/?view=azure-dotnet) para obter instruções de instalação organizadas pelo serviço do Azure.
 
 ## <a name="development-tools"></a>Ferramentas de desenvolvimento
 
-O Visual Studio possui ferramentas para muitos serviços do Azure embutidos. Alguns serviços do Azure têm ferramentas ou emuladores adicionais disponíveis, como [o Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/). Consulte a documentação do seu serviço Azure para quaisquer ferramentas adicionais, se necessário.
+O Visual Studio tem ferramentas para muitos serviços do Azure internos. Alguns serviços do Azure têm ferramentas ou emuladores adicionais disponíveis, como [Gerenciador de armazenamento do Azure](https://azure.microsoft.com/features/storage-explorer/). Consulte a documentação do serviço do Azure para obter outras ferramentas, se necessário.
 
-Estas instruções instalam o ambiente de desenvolvimento inicial recomendado para o seu sistema operacional.
+Estas instruções instalam o ambiente de desenvolvimento inicial recomendado para seu sistema operacional.
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-As versões do Visual Studio 2017 e posteriormente têm suporte integrado para o desenvolvimento do Azure. As etapas abaixo descrevem a habilitação do suporte ao desenvolvimento do Azure no Visual Studio.
+As versões 2017 e posteriores do Visual Studio têm suporte interno para o desenvolvimento do Azure. As etapas a seguir descrevem a habilitação do suporte de desenvolvimento do Azure no Visual Studio.
 
 Para o Visual Studio 2015 e anterior, <a href="vs2015-install.md">siga estas instruções</a>.
 
-### <a name="step-1-download-visual-studio-2019"></a>Passo 1: Baixar visual studio 2019
+### <a name="step-1-download-visual-studio-2019"></a>Etapa 1: baixar o Visual Studio 2019
 
-Você pode pular essa etapa se já tiver o Visual Studio 2019 instalado.
+Você pode ignorar esta etapa se já tiver o Visual Studio 2019 instalado.
 
 > [!div class="nextstepaction"]
 > [Baixar o Visual Studio 2019](https://www.visualstudio.com/downloads/)
 
 ### <a name="step-2-install-the-two-azure-workloads"></a>Etapa 2: instalar as duas cargas de trabalho do Azure
 
-No instalador do Visual Studio, instale o Visual Studio (ou modifique uma instalação existente). Certifique-se de que as cargas de trabalho de desenvolvimento e *desenvolvimento de ASP.NET e desenvolvimento web* do *Azure* sejam selecionadas.
+No instalador do Visual Studio, instale o Visual Studio (ou modifique uma instalação existente). Verifique se as cargas de trabalho *desenvolvimento do Azure* e *ASP.net e desenvolvimento Web* estão selecionadas.
 
 ### <a name="step-3-develop-with-net-on-azure"></a>Etapa 3: desenvolver com o .NET no Azure
 

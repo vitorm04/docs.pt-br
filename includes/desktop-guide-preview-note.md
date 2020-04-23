@@ -8,4 +8,4 @@ ms.locfileid: "82071041"
 ---
 
 > [!IMPORTANT]
-> A documentação do Guia de Desktop está em construção.
+> A documentação do guia da área de trabalho está em construção.

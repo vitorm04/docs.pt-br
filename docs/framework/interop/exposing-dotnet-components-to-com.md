@@ -17,7 +17,7 @@ ms.locfileid: "73123484"
 
 A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado são atividades distintas para desenvolvedores. Esta seção descreve várias dicas para escrever um código gerenciado que interopera com clientes COM:
 
-- [Qualificando tipos .NET para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md).
+- [Qualificando tipos .net para interoperação](../../standard/native-interop/qualify-net-types-for-interoperation.md).
 
      Todos os tipos gerenciados, métodos, propriedades, campos e eventos que você deseja expor ao COM devem ser públicos. Os tipos devem ter um construtor sem parâmetros público, que é o único construtor que pode ser invocado por meio do COM.
 
@@ -25,7 +25,7 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
      Atributos personalizados no código gerenciado podem melhorar a interoperabilidade de um componente.
 
-- [Empacotando um assembly para o COM](packaging-an-assembly-for-com.md).
+- [Empacotando um assembly para com](packaging-an-assembly-for-com.md).
 
      Os desenvolvedores do COM podem precisar que você resuma as etapas envolvidas na referência e implantação dos assemblies.
 
@@ -37,7 +37,7 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
      Os tipos em um assembly (e as bibliotecas de tipos) devem ser registrados em tempo de design. Se um instalador não registrar o assembly, instrua os desenvolvedores do COM a usar Regasm.exe.
 
-2. [Referenciar tipos .NET por meio do COM](how-to-reference-net-types-from-com.md).
+2. [Referencie tipos .net de com](how-to-reference-net-types-from-com.md).
 
      Os desenvolvedores do COM podem referenciar tipos em um assembly usando as mesmas ferramentas e técnicas que usam hoje.
 
@@ -49,7 +49,7 @@ A escrita de um tipo .NET e o consumo desse tipo em um código não gerenciado s
 
      Um assembly de nome forte pode ser instalado no cache de assembly global e exige uma assinatura de seu fornecedor. Os assemblies que não têm nome forte devem ser instalados no diretório do aplicativo do cliente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Interoperação com código não gerenciado](index.md)
-- [Amostra de interoperabilidade COM: cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)
+- [Exemplo de interoperabilidade COM: cliente COM e servidor .NET](com-interop-sample-com-client-and-net-server.md)

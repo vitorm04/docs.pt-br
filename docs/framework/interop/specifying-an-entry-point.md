@@ -17,7 +17,7 @@ ms.locfileid: "79181304"
 
 Um ponto de entrada identifica o local de uma função em uma DLL. Em um projeto gerenciado, o nome original ou o ponto de entrada ordinal de uma função de destino identifica essa função no limite de interoperação. Além disso, é possível mapear o ponto de entrada para um nome diferente, renomeando a função efetivamente.  
   
- A seguir está uma lista de possíveis razões para renomear uma função DLL:  
+ Veja a seguir uma lista de possíveis motivos para renomear uma função de DLL:  
   
 - Para evitar o uso de nomes de função de API que diferenciam maiúsculas de minúsculas  
   

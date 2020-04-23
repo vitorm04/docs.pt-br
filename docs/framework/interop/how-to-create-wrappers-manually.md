@@ -103,5 +103,5 @@ namespace SAServer
 - [Tipos de dados COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Como editar assemblies de interoperabilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [Resumo da conversão de bibliotecas de tipos em assemblies](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Importador de Biblioteca de Tipos)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Exportador de Biblioteca de Tipos)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp. exe (tipo de importador de biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
+- [TlbExp. exe (tipo de exportador da biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)

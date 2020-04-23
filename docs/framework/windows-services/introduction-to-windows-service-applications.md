@@ -38,12 +38,12 @@ Os serviços do Microsoft Windows, anteriormente conhecidos como serviços do NT
   
  Depois de criar e compilar o aplicativo, você pode instalá-lo executando o utilitário de linha de comando InstallUtil.exe e passando o caminho para o arquivo executável do serviço. Você pode usar o **Gerenciador de Controle de Serviços** para iniciar, parar, pausar, retomar e configurar o serviço. Você também pode realizar muitas das mesmas tarefas no nó **Serviços** no **Gerenciador de Servidores** ou usando a classe <xref:System.ServiceProcess.ServiceController>.  
   
-## <a name="service-applications-vs-other-visual-studio-applications"></a>Aplicativos de serviço versus. Outros aplicativos do Visual Studio  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>Aplicativos de serviço versus outros aplicativos do Visual Studio  
  Os aplicativos de serviço funcionam de forma diferente de vários outros tipos de projeto por vários motivos:  
   
-- O arquivo executável compilado que um projeto de aplicativo de serviço cria precisa ser instalado no servidor antes que o projeto possa funcionar de forma significativa. Você não pode depurar ou executar um aplicativo de serviço pressionando F5 ou F11. Você não pode executar um serviço ou intervir no código imediatamente. Nesse caso, você precisa instalar e iniciar o serviço e, em seguida, anexar um depurador ao processo do serviço. Para obter mais informações, confira [Como: Depurar aplicativos do serviço Windows](how-to-debug-windows-service-applications.md).  
+- O arquivo executável compilado que um projeto de aplicativo de serviço cria precisa ser instalado no servidor antes que o projeto possa funcionar de forma significativa. Você não pode depurar ou executar um aplicativo de serviço pressionando F5 ou F11. Você não pode executar um serviço ou intervir no código imediatamente. Nesse caso, você precisa instalar e iniciar o serviço e, em seguida, anexar um depurador ao processo do serviço. Para obter mais informações, confira [Como depurar aplicativos de Serviço Windows](how-to-debug-windows-service-applications.md).  
   
-- Ao contrário de alguns tipos de projetos, você precisa criar componentes de instalação para aplicativos de serviço. Os componentes de instalação instalam e registram o serviço no servidor e criam uma entrada para o serviço com o **Gerenciador de Controle de Serviços** do Windows. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
+- Ao contrário de alguns tipos de projetos, você precisa criar componentes de instalação para aplicativos de serviço. Os componentes de instalação instalam e registram o serviço no servidor e criam uma entrada para o serviço com o **Gerenciador de Controle de Serviços** do Windows. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
   
 - O método `Main` para o aplicativo de serviço precisa emitir o comando Run para os serviços que o projeto contém. O método `Run` carrega os serviços no **Gerenciador de Controle de Serviços** no servidor apropriado. Se você usar o modelo de projeto de **Serviços Windows**, esse método será escrito automaticamente. Observe carregar um serviço não é a mesma coisa que iniciar o serviço. Confira "Tempo de vida do serviço" abaixo para obter mais informações.  
   
@@ -78,15 +78,15 @@ Os serviços do Microsoft Windows, anteriormente conhecidos como serviços do NT
   
 - Os serviços precisam ser criados em um projeto de aplicativo de **Serviço Windows** ou em outro projeto habilitado pelo .NET Framework que crie um arquivo .exe ao ser compilado e seja herdado da classe <xref:System.ServiceProcess.ServiceBase>.  
   
-- Os projetos que contêm serviços Windows precisam ter os componentes de instalação para o projeto e seus serviços. Isso pode ser conseguido facilmente pela janela **Propriedades**. Para obter mais informações, confira [Como: Adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
+- Os projetos que contêm serviços Windows precisam ter os componentes de instalação para o projeto e seus serviços. Isso pode ser conseguido facilmente pela janela **Propriedades**. Para obter mais informações, confira [Como adicionar instaladores no seu aplicativo de serviço](how-to-add-installers-to-your-service-application.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Aplicativos do Serviço Windows](index.md)
-- [Arquitetura de programação de aplicativo de serviço](service-application-programming-architecture.md)
-- [Como: criar serviços do Windows](how-to-create-windows-services.md)
-- [Como: Instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
-- [Como: Iniciar serviços](how-to-start-services.md)
-- [Como: Depurar aplicativos do serviço Windows](how-to-debug-windows-service-applications.md)
-- [Passo a passo: Criando um aplicativo de serviço Windows no Designer de Componentes](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [Como: adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)
+- [Aplicativos de serviço do Windows](index.md)
+- [Arquitetura de programação do aplicativo de serviço](service-application-programming-architecture.md)
+- [Como criar Serviços Windows](how-to-create-windows-services.md)
+- [Como instalar e desinstalar serviços](how-to-install-and-uninstall-services.md)
+- [Como iniciar serviços](how-to-start-services.md)
+- [Como: depurar aplicativos de serviço do Windows](how-to-debug-windows-service-applications.md)
+- [Passo a passo: criando um aplicativo de Serviço Windows no Designer de componentes](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Como adicionar instaladores ao aplicativo de serviço](how-to-add-installers-to-your-service-application.md)

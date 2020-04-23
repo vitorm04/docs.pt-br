@@ -11,7 +11,7 @@ ms.locfileid: "82072140"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introdução ao Azure e ao .NET
 
-Este documento fornece uma visão geral dos principais conceitos e serviços com os quais os desenvolvedores do .NET devem estar familiarizados para começar a desenvolver aplicativos usando os serviços do Azure.
+Este documento fornece uma visão geral dos principais conceitos e serviços que os desenvolvedores do .NET devem estar familiarizados para começar a desenvolver aplicativos usando os serviços do Azure.
 
 ## <a name="key-concepts"></a>Conceitos Principais
 
@@ -47,9 +47,9 @@ Em geral, quanto mais seu aplicativo favorecer os modelos FaaS e PaaS, mais bene
 * [Máquinas Virtuais do Azure](https://docs.microsoft.com/azure/virtual-machines/): se o Serviço de Aplicativo não atender às suas necessidades para hospedar um aplicativo existente devido a dependências específicas, as Máquinas Virtuais serão o melhor lugar para começar. Para se familiarizar com as Máquinas Virtuais e o ASP.NET ou o WCF, consulte [Implantar um aplicativo ASP.NET em uma máquina virtual do Azure](https://tutorials.visualstudio.com/aspnet-vm/intro).
 
 > [!TIP]
-> Para obter mais informações sobre a escolha de um serviço, consulte [Escolha um serviço de computação do Azure para sua aplicação](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
+> Para obter mais informações sobre como escolher um serviço, consulte [escolher um serviço de computação do Azure para seu aplicativo](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree).
 
-## <a name="choose-a-data-storage-service"></a>Escolha um serviço de armazenamento de dados
+## <a name="choose-a-data-storage-service"></a>Escolher um serviço de armazenamento de dados
 
 O Azure oferece vários serviços para armazenar os dados, dependendo de suas necessidades. Os serviços de dados mais comuns para os desenvolvedores do .NET são:
 
@@ -76,6 +76,6 @@ Depois de implantar seu aplicativo no Azure, poderá haver situações em que el
 ## <a name="next-steps"></a>Próximas etapas
 
 * [Implantar seu primeiro aplicativo Web ASP.NET Core ao Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
-* [Saiba mais sobre autenticação no Azure SDK para .NET](./sdk/authentication.md)
+* [Saiba mais sobre a autenticação no SDK do Azure para .NET](./sdk/authentication.md)
 * [Diagnosticar erros nos aplicativos de nuvem](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
 * Baixe o livro eletrônico gratuito [Guia de Início Rápido do Azure para Desenvolvedores do .NET](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)

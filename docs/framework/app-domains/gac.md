@@ -40,8 +40,8 @@ Cada computador em que o Common Language Runtime está instalado tem um cache de
   
  Assemblies implantados no Cache de Assembly Global devem ter um nome forte. Quando um assembly é adicionado ao Cache de Assembly Global, são executadas verificações de integridade em todos os arquivos que compõem o assembly. O cache executa essas verificações de integridade para garantir que um assembly não tenha sido adulterado, por exemplo, quando um arquivo é alterado, mas o manifesto não reflete a alteração.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Assemblies no .NET](../../standard/assembly/index.md)
-- [Como trabalhar com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
-- [Assemblies de nomes fortes](../../standard/assembly/strong-named.md)
+- [Trabalhando com assemblies e o cache de assembly global](working-with-assemblies-and-the-gac.md)
+- [Assemblies de nome forte](../../standard/assembly/strong-named.md)
