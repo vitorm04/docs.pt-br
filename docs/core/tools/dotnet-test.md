@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 02/27/2020
-ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739097"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102731"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -42,6 +42,10 @@ O comando `dotnet test` é usado para executar testes de unidade em um determina
 Os projetos de teste especificam o executor de teste usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+### <a name="implicit-restore"></a>Restauração implícita
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -105,11 +109,11 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual encontram-se os binários para execução.
+  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com vários frameworks `TargetFrameworks` de destino (via `--framework` propriedade), você também precisa definir quando você especifica essa opção.
 
 - **`-r|--results-directory <PATH>`**
 
-  O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado.
+  O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado. O padrão `TestResults` está no diretório que contém o arquivo do projeto.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -127,13 +131,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`. Para obter mais informações, consulte <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- `RunSettings`Argumentos
+- **`RunSettings`** Argumentos
 
   Os argumentos `RunSettings` são passados como configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
 
   Exemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Para obter mais informações, consulte [vstest.console.exe: Passando RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Para obter mais informações, consulte ['''Configurações de execução' argumentos através da linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Exemplos
 

@@ -8,22 +8,23 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457728"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102613"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: separador de caminho ZipArchiveEntry.FullName
-Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
+
+Começando com aplicativos que visam o .NET Framework 4.6.1, o separador de caminho usado na <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> propriedade mudou da barra invertida ("\\"") usada nas versões anteriores do .NET Framework para uma barra para frente ("/"). Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
   
 ## <a name="impact"></a>Impacto  
  A alteração traz a implementação do .NET em conformidade com a seção 4.4.17.1 da [Especificação de formato de arquivo .ZIP](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) e permite que arquivamentos .ZIP sejam descompactados em sistemas não Windows.  
   
- A descompactação de um arquivo zip criado por um aplicativo que se destina a uma versão anterior do .NET Framework em sistemas operacionais não Windows, como o Macintosh, falha na preservação da estrutura de diretório. Por exemplo, no Macintosh, ela cria um conjunto de arquivos cujo nome de arquivo concatena o caminho do diretório com qualquer caractere de barra invertida ("\\") e o nome do arquivo. Consequentemente, a estrutura do diretório de arquivos descompactados não é preservada.  
+ Descompactação de um arquivo zip criado por um aplicativo que tem como alvo uma versão anterior do .NET Framework em sistemas operacionais não-Windows, como o MacOS, não consegue preservar a estrutura do diretório. Por exemplo, no MacOS, ele cria um conjunto de arquivos cujo nome do arquivo\\concatena o caminho do diretório, qualquer caractere sem corte (" ") e o nome do arquivo. Consequentemente, a estrutura do diretório de arquivos descompactados não é preservada.  
   
- O impacto dessa alteração em arquivos .ZIP que são descompactados no sistema operacional Windows por APIs no namespace <xref:System.IO> do .NET Framework deve ser mínimo, uma vez que as APIs podem lidar perfeitamente com uma barra ("/") ou uma barra invertida ("\\") como o caractere separador de caminho.  
+ O impacto dessa mudança em . Os arquivos ZIP que são descompactados no sistema <xref:System.IO> operacional Windows por APIs no namespace do .NET Framework devem ser mínimos, uma vez que essas APIs podem lidar perfeitamente com uma barra ("/") ou uma barra invertida ("\\") como o caractere separador de caminho.  
   
 ## <a name="mitigation"></a>Atenuação  
  Se esse comportamento for indesejável, você pode desativar adicionando uma configuração à seção de>em [ \<tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
@@ -44,5 +45,4 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
   
 ## <a name="see-also"></a>Confira também
 
-- [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [Compatibilidade de aplicativos](application-compatibility.md)

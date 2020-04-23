@@ -2,12 +2,12 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba como a versão c# do idioma é determinada com base no seu projeto e nas razões por trás dessa escolha. Saiba como substituir o padrão manualmente.
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399535"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102652"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
@@ -20,7 +20,7 @@ C# 8.0 (e superior) é suportado apenas em .NET Core 3.x e versões mais recente
 - A implementação padrão do membro da interface requer novos recursos no .NET Core 3.0 CLR.
 - Os fluxos assíncronos requerem os novos tipos <xref:System.IAsyncDisposable?displayProperty=nameWithType> <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>e <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>.
 - Índices e faixas requerem <xref:System.Index?displayProperty=nameWithType> <xref:System.Range?displayProperty=nameWithType>os novos tipos e .
-- Os tipos de referência anulados fazem uso de vários [atributos](../nullable-attributes.md) para fornecer melhores avisos. Esses atributos foram adicionados no .NET Core 3.0. Outros quadros de alvo não foram anotados com nenhum desses atributos. Isso significa que os avisos anulados podem não refletir com precisão problemas potenciais.
+- Os tipos de referência anulados fazem uso de vários [atributos](attributes/nullable-analysis.md) para fornecer melhores avisos. Esses atributos foram adicionados no .NET Core 3.0. Outros quadros de alvo não foram anotados com nenhum desses atributos. Isso significa que os avisos anulados podem não refletir com precisão problemas potenciais.
 
 ## <a name="defaults"></a>Padrões
 
@@ -31,7 +31,7 @@ O compilador determina um padrão com base nestas regras:
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2. x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
-|.NET Standard|2,0|C# 7.3|
+|.NET Standard|2.0|C# 7.3|
 |.NET Standard|1.x|C# 7.3|
 |.NET Framework|all|C# 7.3|
 

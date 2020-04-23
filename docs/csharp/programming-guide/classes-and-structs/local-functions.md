@@ -3,12 +3,12 @@ title: Funções locais – Guia de Programação em C#
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: b6924b8981af5115a474eeb6b2e5376dd1b17ff5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 200fbd097b7c71a1cd392d62622955528a80fd66
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170229"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102938"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -26,7 +26,7 @@ Começando com o C# 7.0, o C# é compatível com *funções locais*. Funções l
 No entanto, as funções locais não podem ser declaradas dentro de um membro apto para expressão.
 
 > [!NOTE]
-> Em alguns casos, você pode usar uma expressão lambda para implementar uma funcionalidade que também tem suporte por uma função local. Para obter uma comparação, consulte [Funções locais comparadas com expressões Lambda](../../local-functions-vs-lambdas.md).
+> Em alguns casos, você pode usar uma expressão lambda para implementar uma funcionalidade que também tem suporte por uma função local. Para uma comparação, consulte [funções locais vs. expressões lambda](#local-functions-vs-lambda-expressions).
 
 Funções locais tornam a intenção do seu código clara. Qualquer pessoa que leia seu código pode ver que o método não é callable exceto pelo método de contenção. Para projetos de equipe, elas também impossibilitam que outro desenvolvedor chame o método por engano diretamente de qualquer outro lugar na classe ou no struct.
 
@@ -74,6 +74,58 @@ O exemplo a seguir usa um método assíncrono chamado `GetMultipleAsync` para pa
 Assim como foi feito com o método iterador, podemos refatorar o código deste exemplo para executar a validação antes de chamar o método assíncrono. Assim como demonstrado pela saída de exemplo a seguir, o <xref:System.ArgumentOutOfRangeException> não é empacotado em uma <xref:System.AggregateException>.
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)]
+
+## <a name="local-functions-vs-lambda-expressions"></a>Funções locais vs. expressões lambda
+
+À primeira vista, funções locais e [expressões lambda](../statements-expressions-operators/lambda-expressions.md) são muito semelhantes. Em muitos casos, a escolha entre usar expressões lambda e funções locais é uma questão de estilo e preferência pessoal. No entanto, há diferenças reais nos casos em que você pode usar uma ou outra, e é importante conhecer essas diferenças.
+
+Examinaremos as diferenças entre a função local e as implementações de expressão lambda do algoritmo fatorial. Primeiro a versão usando uma função local:
+
+[!code-csharp[LocalFunctionFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
+
+Compare essa implementação com uma versão que usa expressões lambda:
+
+[!code-csharp[26_LambdaFactorial](../../../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
+
+As funções locais têm nomes. As expressões lambda são métodos anônimos que são atribuídos a variáveis dos tipos `Func` ou `Action`. Quando você declara uma função local, os tipos de argumento e o tipo de retorno fazem parte da declaração da função. Em vez de fazer parte do corpo da expressão lambda, os tipos de argumento e o tipo de retorno são parte da declaração de tipo de variável da expressão lambda. Essas duas diferenças podem resultar em um código mais claro.
+
+As funções locais têm diferentes regras para atribuição definida em relação às expressões lambda. Uma declaração de função local pode ser referenciada em qualquer local do código em que ela esteja no escopo. Uma expressão lambda deve ser atribuída a uma variável delegada antes de ser acessada (ou chamada através do delegado referindo-se à expressão lambda). Observe que a versão que usa a expressão lambda `nthFactorial` deve declarar e inicializar a expressão lambda antes de defini-la. Não fazer isso resulta em um erro em tempo de compilação para referenciar `nthFactorial` antes de atribuí-lo. Essas diferenças significam que os algoritmos recursivos são mais fáceis de criar usando funções locais. Você pode declarar e definir uma função local que chame a si mesma. As expressões lambda devem ser declaradas e atribuídas a um valor padrão antes que possam ser reatribuídas a um corpo que referencie a mesma expressão lambda.
+
+As regras de atribuição definidas também afetam as variáveis que são capturadas pela função local ou pela expressão lambda. As regras das funções locais e das expressões lambda exigem que as variáveis capturadas sejam definitivamente atribuídas no momento em que a expressão lambda ou a função local é convertida em um delegado. A diferença é que as expressões lambda são convertidas em delegados no momento em que são declaradas. As funções locais são convertidas em delegados somente quando usadas como um delegado. Se você declarar uma função local e só referenciá-la ao chamá-la como um método, ela não será convertida em um delegado. Essa regra permite que você declare uma função local em qualquer local conveniente no respectivo escopo delimitador. É comum declarar funções locais ao final do método pai, depois das instruções de retorno.
+
+Em terceiro lugar, o compilador pode executar uma análise estática que permite que as funções locais atribuam definitivamente as variáveis capturadas no escopo delimitador. Considere este exemplo:
+
+```csharp
+int M()
+{
+    int y;
+    LocalFunction();
+    return y;
+
+    void LocalFunction() => y = 0;
+}
+```
+
+O compilador pode determinar que `LocalFunction` definitivamente atribua `y` quando chamada. Como a `LocalFunction` é chamada antes da instrução `return`, `y` é atribuído definitivamente na instrução `return`.
+
+Essa análise de exemplo permite a quarta diferença. Dependendo do uso, as funções locais podem evitar as alocações de heap que são sempre necessárias nas expressões lambda. Se uma função local nunca é convertida em um delegado, e nenhuma das variáveis capturadas pela função local é capturada por outros lambdas ou funções locais que são convertidas em delegados, o compilador pode evitar alocações de heap.
+
+Considere este exemplo assíncrono:
+
+[!code-csharp[TaskLambdaExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
+
+O fechamento desta expressão lambda contém as variáveis `address`, `index` e `name`. No caso de funções locais, o objeto que implementa o encerramento pode ser um tipo `struct`. Esse tipo de struct seria passado por referência à função local. Essa diferença na implementação poderia economizar em uma alocação.
+
+A instanciação necessária para expressões lambda ocasiona alocações adicionais de memória, tornando-se um fator de desempenho em caminhos de código com tempo crítico. As funções locais não incorrem nessa sobrecarga. No exemplo acima, a versão das funções locais tem 2 alocações a menos que a versão da expressão lambda.
+
+> [!NOTE]
+> A função local equivalente desse método também usa uma classe para o fechamento. O fechamento de uma função local ser implementado como um `class` ou como um `struct`, trata-se de um detalhe de implementação. Uma função local pode usar um `struct`, enquanto uma lambda sempre usará um `class`.
+
+[!code-csharp[TaskLocalFunctionExample](../../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
+
+Uma vantagem final não demonstrada neste exemplo é que as funções locais podem ser implementadas como iteradores, usando a sintaxe `yield return` para produzir uma sequência de valores. A instrução `yield return` não é permitida em expressões lambda.
+
+Embora as funções locais possam parecer redundantes para expressões lambda, elas realmente têm finalidades e usos diferentes. As funções locais são mais eficientes para quando você deseja escrever uma função que é chamada apenas do contexto de outro método.
 
 ## <a name="see-also"></a>Confira também
 

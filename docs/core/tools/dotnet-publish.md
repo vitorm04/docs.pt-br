@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: O comando dotnet publish publica um projeto ou solução .NET Core para um diretório.
 ms.date: 02/24/2020
-ms.openlocfilehash: ca6b6bd0151674a81e0beee7798dc6bde9c088f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463465"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102795"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -24,7 +24,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive]
     [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
     [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-p:PublishReadyToRun] [-p:PublishSingleFile] [-p:PublishTrimmed]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
     [--no-self-contained] [-v|--verbosity <LEVEL>]
     [--version-suffix <VERSION_SUFFIX>]
@@ -42,6 +42,10 @@ dotnet publish -h|--help
 - As dependências do aplicativo, que são copiadas do cache NuGet para a pasta de saída.
 
 A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, um computador, um Mac, um laptop) para execução. É a única maneira com suporte oficial de preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o runtime compartilhado do .NET Core instalado. Para obter mais informações, consulte [Publicar os aplicativos .NET Core com o .NET Core CLI](../deploying/deploy-with-cli.md).
+
+### <a name="implicit-restore"></a>Restauração implícita
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -127,7 +131,7 @@ Para saber mais, consulte os recursos a seguir:
   
     Se um caminho relativo for especificado ao publicar um projeto, o diretório de saída gerado será relativo ao diretório de trabalho atual, não à localização do arquivo do projeto.
 
-    Se um caminho relativo for especificado ao publicar uma solução, toda a saída para todos os projetos entrará na pasta especificada em relação ao diretório de trabalho atual. Para fazer a saída de publicação ir para pastas separadas para `PublishDir` cada projeto, especifique um caminho relativo usando a propriedade msbuild em vez da `--output` opção. Por exemplo, `dotnet publish -p:PublishDir=.\publish` envia a saída `publish` de publicação de cada projeto para uma pasta sob a pasta que contém o arquivo do projeto.
+    Se um caminho relativo for especificado ao publicar uma solução, toda a saída para todos os projetos será colocada na pasta especificada em relação ao diretório de trabalho atual. Para fazer a saída de publicação ir para pastas separadas para `PublishDir` cada projeto, especifique um caminho relativo usando a propriedade msbuild em vez da `--output` opção. Por exemplo, `dotnet publish -p:PublishDir=.\publish` envia a saída `publish` de publicação de cada projeto para uma pasta sob a pasta que contém o arquivo do projeto.
 
   - .NET Core 2.x SDK
   
@@ -135,13 +139,13 @@ Para saber mais, consulte os recursos a seguir:
 
     Se um caminho relativo for especificado ao publicar uma solução, a saída de cada projeto será colocada em uma pasta separada em relação ao local do arquivo do projeto. Se um caminho absoluto for especificado ao publicar uma solução, todas as saídas de publicação para todos os projetos serão colocadas na pasta especificada.
 
-- **`-p:PublishReadyToRun`**
+- **`-p:PublishReadyToRun=true`**
 
   Compila conjuntos de aplicativos como formato ReadyToRun (R2R). R2R é uma forma de compilação antecipada (AOT). Para obter mais informações, consulte [imagens ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponível desde o SDK do .NET Core 3.0.
 
   Recomendamos que você especifique esta opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
-- **`-p:PublishSingleFile`**
+- **`-p:PublishSingleFile=true`**
 
   Empacota o aplicativo em um executável de arquivo único específico da plataforma. O executável é auto-extraindo e contém todas as dependências (incluindo nativas) que são necessárias para executar o aplicativo. Quando o aplicativo é executado pela primeira vez, o aplicativo é extraído para um diretório com base no nome do aplicativo e no identificador do build. A inicialização é mais rápida quando o aplicativo é executado novamente. O aplicativo não precisa se extrair uma segunda vez, a menos que uma nova versão seja usada. Disponível desde o SDK do .NET Core 3.0.
 
@@ -149,7 +153,7 @@ Para saber mais, consulte os recursos a seguir:
 
   Recomendamos que você especifique esta opção em um perfil de publicação em vez de na linha de comando. Para mais informações, consulte [MSBuild](#msbuild).
 
-- **`-p:PublishTrimmed`**
+- **`-p:PublishTrimmed=true`**
 
   Apara bibliotecas não utilizadas para reduzir o tamanho de implantação de um aplicativo ao publicar um executável independente. Para obter mais informações, consulte [Trim implantações e executáveis independentes](../deploying/trim-self-contained.md). Disponível desde o SDK do .NET Core 3.0.
 

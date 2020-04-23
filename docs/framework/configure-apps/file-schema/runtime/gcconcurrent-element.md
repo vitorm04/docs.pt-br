@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400039"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102899"
 ---
 # <a name="gcconcurrent-element"></a>\<gcElemento> concomitante
 
@@ -82,7 +82,7 @@ O arquivo de configuração a seguir desativa a coleta de lixo em segundo plano:
 
 Se houver uma configuração **gcConcurrentSetting** no arquivo de configuração da máquina, ele definirá o valor padrão para todos os aplicativos .NET Framework. A configuração do arquivo de configuração da máquina substitui a configuração de configuração do aplicativo.
 
-Para obter mais informações sobre coleta simultânea e de antecedentes, consulte a [coleta simultânea de lixo](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection), coleta de lixo de base da [estação](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)de trabalho e seções de coleta de [lixo do servidor background](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection) no artigo Fundamentos da Coleta de [Lixo.](../../../../standard/garbage-collection/fundamentals.md)
+Para obter mais informações sobre coleta de lixo simultânea e de fundo, consulte [Coleta de lixo em segundo plano](../../../../standard/garbage-collection/background-gc.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -98,6 +98,6 @@ O exemplo a seguir permite a coleta de lixo em segundo plano:
 
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do runtime](index.md)
+- [Esquema de configurações em tempo de execução](index.md)
 - [Esquema de arquivo de configuração](../index.md)
 - [Noções básicas sobre a coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f3d06dec42ba117cd30dbf4d05fa4a6f594e57e5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738565"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101963"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! Operador (inodção nula) (referência C#)
 
@@ -43,7 +43,7 @@ Se você puder `IsValid` modificar o método, você pode usar o atributo [NotNul
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-No exemplo anterior, você não precisa usar o operador que perdoa nulos porque `p` o `null` compilador `if` tem informações suficientes para descobrir que não pode estar dentro da declaração. Para obter mais informações sobre os atributos que permitem fornecer informações adicionais sobre o estado nulo de uma variável, consulte [Atualizar APIs com atributos para definir expectativas nulas](../../nullable-attributes.md).
+No exemplo anterior, você não precisa usar o operador que perdoa nulos porque `p` o `null` compilador `if` tem informações suficientes para descobrir que não pode estar dentro da declaração. Para obter mais informações sobre os atributos que permitem fornecer informações adicionais sobre o estado nulo de uma variável, consulte [Atualizar APIs com atributos para definir expectativas nulas](../attributes/nullable-analysis.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

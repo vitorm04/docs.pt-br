@@ -2,12 +2,12 @@
 title: Arquitetura das ferramentas de linha de comando do .NET Core
 description: Saiba mais sobre as camadas de ferramentas do .NET Core e o que foi alterado nas versões recentes.
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092909"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102873"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Visão geral de alto nível das alterações nas ferramentas do .NET Core
 
@@ -30,7 +30,7 @@ Vamos começar recapitulando as camadas na Visualização 2, conforme mostrado n
 
 ![A arquitetura de alto nível das ferramentas da Visualização 2](media/cli-msbuild-architecture/p2-arch.png)
 
-A camada das ferramentas na Pré-Visualização 2 é simples. Na parte inferior, a base é o .NET Core CLI. Todas as outras ferramentas de nível superior, como visual studio ou visual studio code, dependem e dependem da CLI para construir projetos, restaurar dependências e assim por diante. Por exemplo, se o Visual Studio quisesse realizar uma `dotnet restore` operação de restauração, ele ligaria para o comando[(ver nota)](#dotnet-restore-note)na CLI.
+A camada das ferramentas na Pré-Visualização 2 é simples. Na parte inferior, a base é o .NET Core CLI. Todas as outras ferramentas de nível superior, como visual studio ou visual studio code, dependem e dependem da CLI para construir projetos, restaurar dependências e assim por diante. Por exemplo, se o Visual Studio quisesse realizar uma `dotnet restore` operação de restauração, ele ligaria para o comando na CLI.
 
 Com a mudança para o novo sistema de projeto, o diagrama anterior se altera:
 
@@ -41,7 +41,7 @@ A principal diferença é que a CLI não é mais a camada básica; agora, essa f
 > [!NOTE]
 > Um "alvo" é um termo MSBuild que indica uma operação nomeada que o MSBuild pode invocar. Normalmente, ele está acoplado com uma ou mais tarefas que executam alguma lógica que o destino deve realizar. O MSBuild oferece suporte a muitos destinos prontos como `Copy` ou `Execute`; ele também permite aos usuários gravar suas próprias tarefas usando código gerenciado e definir metas para executar essas tarefas. Para mais informações, consulte [Tarefas do MSBuild](/visualstudio/msbuild/msbuild-tasks).
 
-Todos os conjuntos de ferramentas agora consumem o componente SDK compartilhado e seus destinos, incluindo a CLI. Por exemplo, o Visual Studio 2019 `dotnet restore` não liga para o comando[(ver nota)](#dotnet-restore-note)para restaurar dependências para projetos .NET Core. Em vez disso, ele usa diretamente o alvo "Restaurar". Como esses são os destinos do MSBuild, também é possível usar o MSBuild bruto para executá-los, usando o comando [dotnet msbuild](dotnet-msbuild.md).
+Todos os conjuntos de ferramentas agora consumem o componente SDK compartilhado e seus destinos, incluindo a CLI. Por exemplo, o Visual Studio 2019 `dotnet restore` não chama o comando para restaurar dependências de projetos .NET Core. Em vez disso, ele usa diretamente o alvo "Restaurar". Como esses são os destinos do MSBuild, também é possível usar o MSBuild bruto para executá-los, usando o comando [dotnet msbuild](dotnet-msbuild.md).
 
 ### <a name="cli-commands"></a>Comandos de CLI
 
@@ -73,5 +73,6 @@ Este comando publica `pub` um aplicativo em uma pasta usando a configuração "L
 
 Notáveis exceções a esta `new` `run` regra são os comandos. Eles não foram implementados como alvos do MSBuild.
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>Restauração implícita
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

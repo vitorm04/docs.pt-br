@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635576"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102470"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -54,9 +54,12 @@ Common Language Runtime do .NET Core.
 
 Esse CLR é criado com a mesma base de código que o CLR. Originalmente, o CoreCLR era o runtime do Silverlight e foi projetado para ser executado em várias plataformas, especificamente o Windows e OS X. Agora o CoreCLR faz parte do .NET Core e representa uma versão simplificada do CLR. Ainda é um runtime [multiplataforma](#cross-platform), incluindo também suporte para várias distribuições do Linux. O CoreCLR também é uma máquina virtual com recursos JIT e de execução de código.
 
-## <a name="corefx"></a>CoreFX
+## <a name="corefx"></a>CoreFx
 
 BCL (biblioteca de classes base) do .NET Core
+
+> [!TIP]
+> *Fx* significa *framework*.
 
 Um conjunto de bibliotecas que compõem o Sistema. \* (e até certo ponto, Microsoft.\*) espaços de nome. A BCL é uma estrutura de nível inferior e de uso geral, base para a criação de estruturas de aplicativo de nível mais alto, como o ASP.NET Core. O código-fonte do .NET Core BCL está contido no [repositório de tempo de execução .NET Core](https://github.com/dotnet/runtime). No entanto, a maioria das APIs do .NET Core também estão disponíveis no .NET Framework, portanto você pode pensar no CoreFX como um fork da BCL do .NET Framework.
 
@@ -277,4 +280,4 @@ Uma implementação do .NET que é usada para criar aplicativos do Windows moder
 - [.NET Framework Guide](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [visão geral ASP.NET](/aspnet/index#pivot=aspnet)
-- [Visão geral do ASP.NET Core](/aspnet/index#pivot=core)
+- [visão geral do núcleo ASP.NET](/aspnet/index#pivot=core)

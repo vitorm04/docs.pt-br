@@ -3,12 +3,12 @@ title: Configurações de configuração de coletor de lixo
 description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória para aplicativos .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607804"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102860"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opções de configuração em tempo de execução para coleta de lixo
 
@@ -24,7 +24,7 @@ As configurações são organizadas em grupos nesta página. As configurações 
 
 ## <a name="flavors-of-garbage-collection"></a>Sabores da coleta de lixo
 
-Os dois principais sabores da coleta de lixo são a Estação de Trabalho GC e o servidor GC. Para obter mais informações sobre as diferenças entre os dois, consulte [Fundamentos da coleta de lixo](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection).
+Os dois principais sabores da coleta de lixo são a Estação de Trabalho GC e o servidor GC. Para obter mais informações sobre as diferenças entre os dois, consulte [Workstation e coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md).
 
 Os subsabores da coleta de lixo são de fundo e não são concomitantes.
 
@@ -72,7 +72,7 @@ Arquivo de projeto:
 
 - Configura se a coleta de lixo em segundo plano (simultânea) está habilitada.
 - Padrão: Ativado`true`().
-- Para obter mais informações, consulte [Coleta de lixo em segundo](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection) plano e coleta de lixo do servidor em segundo [plano](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection).
+- Para obter mais informações, consulte [A coleta de lixo de fundo](../../standard/garbage-collection/background-gc.md).
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
@@ -240,7 +240,7 @@ Exemplo:
 
 - Especifica o tamanho máximo de confirmação, em bytes, para a contabilidade GC heap e GC.
 - Esta configuração só se aplica a computadores de 64 bits.
-- O valor padrão, que só se aplica em certos casos, é o menor de 20 MB ou 75% do limite de memória no recipiente. O valor padrão se aplica se:
+- O valor padrão, que só se aplica em certos casos, é o maior de 20 MB ou 75% do limite de memória no recipiente. O valor padrão se aplica se:
 
   - O processo está sendo executado dentro de um recipiente que tem um limite de memória especificado.
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) não está definido.

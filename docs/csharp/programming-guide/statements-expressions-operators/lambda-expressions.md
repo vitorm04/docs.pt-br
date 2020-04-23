@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 44d6ed9ac6e1c3c4d08bbd69ca808d2e740f0c4e
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738324"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101989"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
 
@@ -230,7 +230,7 @@ Para obter mais informações, confira a seção [Expressões de função anôni
 - [C# Guia de Programação](../index.md)
 - [LINQ (Consulta Integrada à Linguagem)](../concepts/linq/index.md)
 - [Árvores de Expressão](../concepts/expression-trees/index.md)
-- [Funções locais em comparação com expressões lambda](../../local-functions-vs-lambdas.md)
+- [Funções locais vs. expressões lambda](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [Expressões lambda tipadas implicitamente](../../implicitly-typed-lambda-expressions.md)
 - [Exemplos de C# do Visual Studio 2008 (veja os arquivos de exemplo de consultas LINQ e programa XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Expressões lambda recursivas](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

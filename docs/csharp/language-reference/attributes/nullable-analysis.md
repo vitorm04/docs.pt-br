@@ -2,12 +2,12 @@
 title: 'C# Atributos reservados: Análise estática anulada'
 ms.date: 04/14/2020
 description: Esses atributos são interpretados pelo compilador para fornecer melhor análise estática para tipos de referência anulados e não anulados.
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389859"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102704"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Atributos reservados contribuem para a análise estática do estado nulo do compilador
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 Você provavelmente escreveu um método `null` como este para retornar quando o nome procurado não foi encontrado. O `null` registro indica que o registro não foi encontrado. Neste exemplo, você provavelmente mudaria o `Customer` `Customer?`tipo de retorno de . Declarar o valor de retorno como um tipo de referência anulado especifica claramente a intenção desta API.
 
-Por razões cobertas por [definições genéricas e nulidade](../../nullable-attributes.md#generic-definitions-and-nullability) essa técnica não funciona com métodos genéricos. Você pode ter um método genérico que segue um padrão semelhante:
+Por razões cobertas por [definições genéricas e nulidade](../../nullable-migration-strategies.md#generic-definitions-and-nullability) essa técnica não funciona com métodos genéricos. Você pode ter um método genérico que segue um padrão semelhante:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

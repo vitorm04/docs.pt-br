@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242810"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102925"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<O elemento> AppContextSwitchOverrides
 
@@ -59,7 +59,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 
  O `value` atributo `<AppContextSwitchOverrides>` do elemento consiste em uma única seqüência que consiste de um ou mais pares de nome/valor delimitados em ponto e vírgula.  Cada nome identifica um switch de compatibilidade, e seu`true` `false`valor correspondente é um Boolean ( ou ) que indica se o switch está definido. Por padrão, o `false`switch é , e bibliotecas fornecem a nova funcionalidade. Eles só fornecem a funcionalidade anterior se o switch estiver `true`definido (ou seja, seu valor é ). Isso permite que as bibliotecas forneçam um novo comportamento para uma API existente, permitindo que os chamadores que dependem do comportamento anterior optem pela nova funcionalidade.
 
- O Quadro .NET suporta os seguintes switches:
+O Quadro .NET suporta os seguintes switches:
 
 |Nome do switch|Descrição|Introduzido|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ Define uma ou mais opções usadas pela classe <xref:System.AppContext> para for
 
  Os desenvolvedores de bibliotecas também podem definir switches personalizados para permitir que os chamadores optem por desativar a funcionalidade alterada introduzida em versões posteriores de suas bibliotecas. Para obter mais informações, consulte a classe <xref:System.AppContext>.
 
-## <a name="switches-in-aspnet-applications"></a>Switches em aplicativos ASP.NET
+## <a name="switches-in-aspnet-apps"></a>Switches em aplicativos ASP.NET
 
 Você pode configurar um aplicativo ASP.NET para usar configurações de compatibilidade [ \<adicionando](../appsettings/add-element-for-appsettings.md) um elemento Add>à [ \<](../appsettings/index.md) seção Configurações>do arquivo Web.config.
 
@@ -179,6 +179,7 @@ O exemplo a `<add>` seguir usa o elemento `<appSettings>` para adicionar duas co
 
 ## <a name="see-also"></a>Confira também
 
+- [Mitigar novos comportamentos no Framework .NET 4.6 e posterior](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<elemento> em tempo de execução](runtime-element.md)
 - [\<elemento> de configuração](../configuration-element.md)

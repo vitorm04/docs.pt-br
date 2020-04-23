@@ -2,12 +2,12 @@
 title: Diretrizes de formatação de código do F#
 description: Aprenda as diretrizes para formatar o código F# .
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739559"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102483"
 ---
 # <a name="f-code-formatting-guidelines"></a>Diretrizes de formatação de código do F#
 
@@ -579,10 +579,10 @@ Ao gerar matrizes e listas programáticas, prefira `->` quando `do ... yield` um
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 Versões mais antigas do `yield` idioma F# são necessárias especificando em situações em que os dados podem ser gerados condicionalmente, ou podem haver expressões consecutivas a serem avaliadas. Prefira `yield` omitir essas palavras-chave, a menos que você deve compilar com uma versão mais antiga do idioma F#:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>Formatação de expressões e interfaces de objeto

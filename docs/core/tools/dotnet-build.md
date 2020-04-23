@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463717"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102834"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -43,9 +43,13 @@ Para projetos executáveis direcionados a versões anteriores ao .NET Core 3.0, 
 
 Para projetos executáveis direcionados ao .NET Core 3.0 e posteriores, as dependências da biblioteca são copiadas para a pasta de saída. Isso significa que, se não houver nenhuma outra lógica específica de publicação (como projetos da Web), a produção de compilação deve ser implantável.
 
-A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é [`dotnet restore`](dotnet-restore.md) criado quando é executado. Sem o arquivo de ativos em vigor, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros. Com o .NET Core 1.x SDK, `dotnet restore` você `dotnet build`precisava ser executado explicitamente antes de executar . Começando pelo SDK do .NET Core 2.0, o `dotnet restore` é executado implicitamente quando você executa `dotnet build`. Se você deseja desabilitar a restauração implícita ao executar o comando de build, é possível passar a opção `--no-restore`.
+### <a name="implicit-restore"></a>Restauração implícita
+
+A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é [`dotnet restore`](dotnet-restore.md) criado quando é executado. Sem o arquivo de ativos em vigor, as ferramentas não conseguem resolver os assemblies de referência, o que resulta em erros.
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>Executável ou saída de biblioteca
 
 O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produz um código executável:
 

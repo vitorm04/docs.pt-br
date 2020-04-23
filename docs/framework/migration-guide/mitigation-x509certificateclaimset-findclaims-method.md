@@ -2,15 +2,16 @@
 title: 'Mitigação: método X509CertificateClaimSet.FindClaims'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: f94a5f685a5aa94332bf2e15e5d5eb0def02d7ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b306960c4f11bb6f54aecaeb13297e7725e16a8
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400137"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102639"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: método X509CertificateClaimSet.FindClaims
-Começando com aplicativos direcionados ao .NET Framework 4.6.1, o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> tentará corresponder o argumento `claimType` com todas as entradas DNS em seu campo SAN.  
+
+Começando com aplicativos que visam o .NET <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> Framework 4.6.1, o método tentará combinar o `claimType` argumento com todas as entradas de DNS em seu campo SAN.  
   
 ## <a name="impact"></a>Impacto  
  Essa alteração afeta somente os aplicativos que se destinam a versões do .NET Framework, começando pelo .NET Framework 4.6.1.  
@@ -26,7 +27,7 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o método <xref
 </runtime>  
 ```  
   
- Além disso, os aplicativos que têm como alvo versões anteriores do .NET Framework, mas estão sendo executados o .NET Framework 4.6.1 e versões posteriores podem optar por esse comportamento adicionando a seguinte configuração à configuração em [ \<tempo de execução>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo de configuração do aplicativo:  
+ Além disso, os aplicativos que têm como alvo versões anteriores do .NET Framework, mas estão sendo executados sob o .NET Framework 4.6.1 e versões posteriores podem optar por esse comportamento adicionando a seguinte configuração à configuração em [ \<tempo de execução>](../configure-apps/file-schema/runtime/runtime-element.md) seção do arquivo de configuração do aplicativo:  
   
 ```xml  
 <runtime>  

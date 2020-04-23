@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1291de95b88b3de16fb94fb376fb4153dd4a5862
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399689"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102662"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -18,9 +18,9 @@ O C# 7.0 adiciona vários recursos novos à linguagem C#:
   - Declare valores `out` embutidos como argumentos para o método em que eles são usados.
 - [Tuplas](#tuples)
   - Você pode criar tipos simples e sem nome que contêm vários campos públicos. Compiladores e ferramentas IDE entendem a semântica desses tipos.
-- [Descarta](#discards)
+- [Descartes](#discards)
   - Descartes são variáveis temporárias de somente gravação usadas em atribuições quando o valor atribuído não tem importância. Eles são mais úteis ao desconstruir tuplas e tipos definidos pelo usuário, bem como ao chamar métodos com parâmetros `out`.
-- [Correspondência de padrões](#pattern-matching)
+- [Correspondência padrão](#pattern-matching)
   - Você pode criar a lógica de ramificação com base em tipos e valores arbitrários dos membros desses tipos.
 - [`ref`moradores e retorna](#ref-locals-and-returns)
   - As variáveis locais do método e os valores de retorno podem ser referências a outros armazenamentos.
@@ -211,7 +211,7 @@ A mesma técnica pode ser empregada com métodos `async` para garantir que as ex
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alguns dos designs com suporte pelas funções locais também podem ser feitos usando *expressões lambda*. Para obter mais informações, consulte [funções locais vs. expressões lambda](../local-functions-vs-lambdas.md).
+> Alguns dos projetos que são suportados por funções locais também podem ser realizados usando *expressões lambda*. Para obter mais informações, consulte [funções locais vs. expressões lambda](../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions).
 
 ## <a name="more-expression-bodied-members"></a>Mais membros aptos para expressão
 

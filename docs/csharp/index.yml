@@ -6,12 +6,12 @@ metadata:
   description: Aprenda programação C# - para desenvolvedores iniciantes, desenvolvedores novos para C#, e desenvolvedores experientes C# / .NET
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339166"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102717"
 landingContent:
 - title: 'Aprenda a programar em C #'
   linkLists:
@@ -77,8 +77,8 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: Anotar APIs para nulidade
-      url: nullable-attributes.md
+    - text: Escolha uma estratégia de migração anulada
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
     - text: Consumir e gerar fluxos de sincronização
@@ -103,7 +103,7 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Referência da linguagem
+    - text: Referência de linguagem
       url: language-reference/index.md
     - text: Palavras-chave de C#
       url: language-reference/keywords/index.md

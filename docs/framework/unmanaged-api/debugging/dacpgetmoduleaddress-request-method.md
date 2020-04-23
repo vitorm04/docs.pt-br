@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179210"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102901"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Método de solicitação
 
@@ -36,7 +36,7 @@ HRESULT Request(
 );
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 `pDataModule`\
 [em] Um ponteiro para o módulo de dados de sementes.
@@ -49,11 +49,12 @@ Esta estrutura vive dentro do tempo de execução e não é exposta através de 
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Cabeçalho:** Nenhuma **Biblioteca:** Nenhuma  
-**.NET Framework Versions:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plataformas:** Ver [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md)\
+**Cabeçalho:** Nenhum.
+**Biblioteca:** Nenhum.
+**.NET Framework Versions:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Confira também
 
 - [Depuração](index.md)
-- [DacpGetModuleInterface de endereço](dacpgetmoduleaddress-structure.md)
+- [Estrutura de endereço sinuosa](dacpgetmoduleaddress-structure.md)

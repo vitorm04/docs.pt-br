@@ -2,12 +2,12 @@
 title: Comando dotnet run
 description: O comando dotnet run oferece uma opção conveniente para executar o aplicativo do código-fonte.
 ms.date: 02/19/2020
-ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463410"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102756"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -46,6 +46,8 @@ dotnet myapp.dll
 Para saber mais sobre o driver `dotnet`, veja o tópico [CLI (Ferramentas de Linha de Comando) do .NET Core](index.md).
 
 Para executar o aplicativo, o comando `dotnet run` resolve as dependências do aplicativo que estão fora do runtime compartilhado por meio do cache NuGet. Como ele usa as dependências em cache, não recomendamos usar `dotnet run` para executar aplicativos em produção. Em vez disso, [crie uma implantação](../deploying/index.md) usando o comando [`dotnet publish`](dotnet-publish.md) e implante a saída publicada.
+
+### <a name="implicit-restore"></a>Restauração implícita
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 

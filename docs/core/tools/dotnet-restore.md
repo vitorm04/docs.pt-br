@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021781"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102782"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -34,9 +34,22 @@ dotnet restore -h|--help
 
 O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
 
-Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o .NET Core SDK é instalado. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *nuget.config* com a opção - `-s` .
+### <a name="specify-feeds"></a>Especificar feeds
+
+Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o .NET Core SDK é instalado. Para especificar feeds adicionais, faça um dos seguintes:
+
+- Crie seu próprio arquivo *nuget.config* no diretório do projeto. Para obter mais informações, consulte [configurações comuns do NuGet](/nuget/consume-packages/configuring-nuget-behavior) e [diferenças de nuget.config](#nugetconfig-differences) mais tarde neste artigo.
+- Use `dotnet nuget` comandos [`dotnet nuget add source`](dotnet-nuget-add-source.md)como .
+
+Você pode substituir os feeds *nuget.config* com a `-s` opção.
+
+Para obter informações sobre como usar feeds autenticados, consulte [Consumir pacotes de feeds autenticados](/nuget/consume-packages/consuming-packages-authenticated-feeds).
+
+### <a name="package-cache"></a>Cache do pacote
 
 Para dependências, especifique onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
+
+### <a name="project-specific-tooling"></a>Ferramentas específicas do projeto
 
 Para ferramentas específicas do projeto, o `dotnet restore` primeiro restaura o pacote no qual a ferramenta foi empacotada e prossegue com a restauração das dependências da ferramenta conforme especificado no seu arquivo de projeto.
 

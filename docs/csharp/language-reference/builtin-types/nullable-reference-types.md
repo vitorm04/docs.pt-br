@@ -2,12 +2,12 @@
 title: Tipos de referência nulamente - referência C#
 description: Saiba mais sobre os tipos de referência nula e como usá-los
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888312"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102691"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Tipos de referência anulados (referência C#)
 
@@ -61,11 +61,11 @@ O trecho a seguir mostra onde o compilador emite avisos ao usar esta classe:
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-Os exemplos anteriores demonstram a análise estática do compilador para determinar o estado nulo das variáveis de referência. O compilador aplica regras de idioma para verificações e atribuições nulas para informar sua análise.  O compilador não pode fazer suposições sobre a semântica de métodos ou propriedades. Se você chamar métodos que realizam verificações nulas, o compilador não pode saber que esses métodos afetam o estado nulo de uma variável. Há uma série de atributos que você pode adicionar às suas APIs para informar o compilador sobre a semântica de argumentos e valores de devolução. Esses atributos foram aplicados a muitas APIs comuns nas bibliotecas .NET Core. Por exemplo, <xref:System.String.IsNullOrEmpty%2A> foi atualizado, e o compilador interpreta corretamente esse método como uma verificação nula. Para obter mais informações sobre os atributos aplicáveis à análise estática do estado nulo, consulte o artigo sobre [atributos anulados](../../nullable-attributes.md).
+Os exemplos anteriores demonstram a análise estática do compilador para determinar o estado nulo das variáveis de referência. O compilador aplica regras de idioma para verificações e atribuições nulas para informar sua análise.  O compilador não pode fazer suposições sobre a semântica de métodos ou propriedades. Se você chamar métodos que realizam verificações nulas, o compilador não pode saber que esses métodos afetam o estado nulo de uma variável. Há uma série de atributos que você pode adicionar às suas APIs para informar o compilador sobre a semântica de argumentos e valores de devolução. Esses atributos foram aplicados a muitas APIs comuns nas bibliotecas .NET Core. Por exemplo, <xref:System.String.IsNullOrEmpty%2A> foi atualizado, e o compilador interpreta corretamente esse método como uma verificação nula. Para obter mais informações sobre os atributos aplicáveis à análise estática do estado nulo, consulte o artigo sobre [atributos anulados](../attributes/nullable-analysis.md).
 
 ## <a name="setting-the-nullable-context"></a>Definindo o contexto nulo
 
-Há duas maneiras de controlar o contexto nulo. No nível do projeto, `<Nullable>enable</Nullable>` você pode adicionar a configuração do projeto. Em um único arquivo de origem `#nullable enable` C#, você pode adicionar o pragma para ativar o contexto anulado. Veja o artigo sobre [a definição de uma estratégia anulada](../../nullable-attributes.md).
+Há duas maneiras de controlar o contexto nulo. No nível do projeto, `<Nullable>enable</Nullable>` você pode adicionar a configuração do projeto. Em um único arquivo de origem `#nullable enable` C#, você pode adicionar o pragma para ativar o contexto anulado. Veja o artigo sobre [a definição de uma estratégia anulada](../../nullable-migration-strategies.md).
 
 ## <a name="c-language-specification"></a>especificação da linguagem C#
 

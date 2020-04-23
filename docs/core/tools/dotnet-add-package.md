@@ -2,12 +2,12 @@
 title: Comando dotnet add package
 description: O comando 'dotnet add package' fornece uma opção conveniente para adicionar uma referência de pacote NuGet a um projeto.
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463749"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102847"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -32,8 +32,6 @@ dotnet add package -h|--help
 
 O comando `dotnet add package` fornece uma opção conveniente para adicionar uma referência de pacote a um arquivo de projeto. Depois de executar o comando, há uma verificação de compatibilidade para garantir que o pacote seja compatível com as estruturas do projeto. Se for aprovado na verificação, um elemento `<PackageReference>` será adicionado ao arquivo de projeto e [dotnet restore](dotnet-restore.md) será executada.
 
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
-
 Por exemplo, adicionar `Newtonsoft.Json` a *ToDo.csproj* produz uma saída semelhante ao exemplo a seguir:
 
 ```console
@@ -54,6 +52,10 @@ O arquivo *ToDo.csproj* agora contém um elemento [`<PackageReference>`](/nuget/
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
+
+### <a name="implicit-restore"></a>Restauração implícita
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>Argumentos
 

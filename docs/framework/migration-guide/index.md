@@ -6,22 +6,22 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974980"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102626"
 ---
-# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Guia de migração para o .NET Framework 4.8, 4.7, 4.6 e 4.5
+# <a name="migrate-to-net-framework-48-47-46-and-45"></a>Migre para o Quadro .NET 4.8, 4.7, 4.6 e 4.5
 
-Se seu aplicativo foi criado usando uma versão anterior do .NET Framework, normalmente, é possível atualizá-lo com facilidade para o .NET Framework 4.5 e suas versões de correção (4.5.1 e 4.5.2), para o .NET Framework 4.6 e suas versões de correção (4.6.1 e 4.6.2), para o .NET Framework 4.7 e suas versões de correção (4.7.1 e 4.7.2) ou para o .NET Framework 4.8. Abra o projeto no Visual Studio. Se o seu projeto tiver sido criado em uma versão anterior do Visual Studio, a caixa de diálogo **Compatibilidade do Projeto** abrirá automaticamente. Para saber mais sobre como atualizar um projeto no Visual Studio, consulte [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) e [Direcionamento e compatibilidade da plataforma Visual Studio 2019](/visualstudio/releases/2019/compatibility).
+Se você criou seu aplicativo usando uma versão anterior do .NET Framework, você geralmente pode atualizá-lo para o .NET Framework 4.5 e suas liberações de pontos (4.5.1 e 4.5.2), .NET Framework 4.6 e suas versões de pontos (4.6.1 e 4.6.2), .NET Framework 4.7 e suas versões de pontos (4.7.1 e 4.7.2) ou .NET Framework 4.8 facilmente. Abra o projeto no Visual Studio. Se o seu projeto tiver sido criado em uma versão anterior do Visual Studio, a caixa de diálogo **Compatibilidade do Projeto** abrirá automaticamente. Para saber mais sobre como atualizar um projeto no Visual Studio, consulte [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) e [Direcionamento e compatibilidade da plataforma Visual Studio 2019](/visualstudio/releases/2019/compatibility).
 
- No entanto, algumas alterações feitas no .NET Framework exigem mudanças no seu código. Convém também aproveitar a nova funcionalidade no .NET Framework 4.5 e suas versões de correção, no .NET Framework 4.6 e suas versões de correção, no .NET Framework 4.7 e suas versões de correção ou no .NET Framework 4.8. Fazer esses tipos de mudanças para seu aplicativo de uma nova versão do .NET Framework costuma ser conhecido como *migração*. Se o aplicativo não precisar ser migrado, será possível executar o .NET Framework 4.5 ou versões posteriores sem recompilá-lo.
+ No entanto, algumas alterações no .NET Framework exigem alterações no seu código. Convém também aproveitar a nova funcionalidade no .NET Framework 4.5 e suas versões de correção, no .NET Framework 4.6 e suas versões de correção, no .NET Framework 4.7 e suas versões de correção ou no .NET Framework 4.8. Fazer esses tipos de alterações no seu aplicativo para uma nova versão do .NET Framework é tipicamente referido como *migração*. Se o seu aplicativo não tiver que ser migrado, você pode executá-lo no .NET Framework 4.5 ou em uma versão posterior sem recompilá-lo.
 
 ## <a name="migration-resources"></a>Recursos de migração
 
-Examine os seguintes documentos antes de migrar seu aplicativo de versões anteriores do .NET Framework para as versões 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8:
+Revise os documentos a seguir antes de migrar seu aplicativo das versões anteriores do .NET Framework para a versão 4.5, 4.5.1, 4.5.2, 4.6.6, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8:
 
 - Confira [Versões e dependências](versions-and-dependencies.md) para compreender a versão do CLR subjacente a cada versão do .NET Framework e examinar diretrizes para segmentação de seus aplicativos com êxito.
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738832"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102067"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -77,7 +77,7 @@ Para obter mais informações sobre como passar tipos de referência por valor e
   
 ## <a name="reference-return-values"></a>Valores retornados por referência
 
-Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método e essa alteração será refletida no estado do objeto que contém o método.
+Valores retornados por referência (ou ref returns) são valores que um método retorna por referência para o chamador. Ou seja, o chamador pode modificar o valor retornado por um método, e essa alteração se reflete no estado do objeto no método de chamada.
 
 Um valor retornado por referência é definido usando a palavra-chave `ref`:
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 Para que o chamador modifique o estado do objeto, o valor retornado de referência deve ser armazenado em uma variável que é definida explicitamente como um [ref local](#ref-locals).
+
+Aqui está um exemplo de retorno mais completo do ref, mostrando tanto a assinatura do método quanto o corpo do método.
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 O método chamado também poderá declarar o valor retornado como `ref readonly` para retornar o valor por referência e, em seguida, impor que o código de chamada não possa modificar o valor retornado. O método de chamada pode evitar a cópia retornada com um valor ao armazenar o valor em um local [ref readonly](#ref-readonly-locals) variável.
 
