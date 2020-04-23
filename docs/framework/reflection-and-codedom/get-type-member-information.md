@@ -16,19 +16,19 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130212"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="f76de-102">Como: obter informações de tipo e membro usando reflexão</span><span class="sxs-lookup"><span data-stu-id="f76de-102">How to: Get type and member information by using reflection</span></span>
-<span data-ttu-id="f76de-103">O namespace <xref:System.Reflection> contém muitos métodos para obter informações sobre tipos e seus membros.</span><span class="sxs-lookup"><span data-stu-id="f76de-103">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="f76de-104">Este artigo demonstra um desses métodos, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f76de-104">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="f76de-105">Para obter informações adicionais, consulte [visão geral de reflexão](reflection.md).</span><span class="sxs-lookup"><span data-stu-id="f76de-105">For additional information, see [Reflection overview](reflection.md).</span></span>
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a><span data-ttu-id="6b44f-102">Como: obter informações de tipo e membro usando reflexão</span><span class="sxs-lookup"><span data-stu-id="6b44f-102">How to: Get type and member information by using reflection</span></span>
+<span data-ttu-id="6b44f-103">O <xref:System.Reflection> namespace contém muitos métodos para obter informações sobre tipos e seus membros.</span><span class="sxs-lookup"><span data-stu-id="6b44f-103">The <xref:System.Reflection> namespace contains many methods for obtaining information about types and their members.</span></span> <span data-ttu-id="6b44f-104">Este artigo demonstra um desses métodos, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6b44f-104">This article demonstrates one of these methods, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="6b44f-105">Para obter informações adicionais, consulte [visão geral de reflexão](reflection.md).</span><span class="sxs-lookup"><span data-stu-id="6b44f-105">For additional information, see [Reflection overview](reflection.md).</span></span>
   
-## <a name="example"></a><span data-ttu-id="f76de-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f76de-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="6b44f-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="6b44f-106">Example</span></span>
 
-<span data-ttu-id="f76de-107">O exemplo a seguir obtém informações de tipo e membro usando reflexão:</span><span class="sxs-lookup"><span data-stu-id="f76de-107">The following example obtains type and member information by using reflection:</span></span>
+<span data-ttu-id="6b44f-107">O exemplo a seguir obtém informações de tipo e membro usando reflexão:</span><span class="sxs-lookup"><span data-stu-id="6b44f-107">The following example obtains type and member information by using reflection:</span></span>
 
 [!code-cpp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cpp)]
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a><span data-ttu-id="f76de-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f76de-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b44f-108">Confira também</span><span class="sxs-lookup"><span data-stu-id="6b44f-108">See also</span></span>
 
-- [<span data-ttu-id="f76de-109">Programa com domínios de aplicativo</span><span class="sxs-lookup"><span data-stu-id="f76de-109">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="f76de-110">Reflexão</span><span class="sxs-lookup"><span data-stu-id="f76de-110">Reflection</span></span>](reflection.md)
-- [<span data-ttu-id="f76de-111">Usar domínios de aplicativo</span><span class="sxs-lookup"><span data-stu-id="f76de-111">Use application domains</span></span>](../app-domains/use.md)
+- [<span data-ttu-id="6b44f-109">Programa com domínios de aplicativo</span><span class="sxs-lookup"><span data-stu-id="6b44f-109">Program with application domains</span></span>](../app-domains/application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="6b44f-110">Reflexão</span><span class="sxs-lookup"><span data-stu-id="6b44f-110">Reflection</span></span>](reflection.md)
+- [<span data-ttu-id="6b44f-111">Usar domínios de aplicativo</span><span class="sxs-lookup"><span data-stu-id="6b44f-111">Use application domains</span></span>](../app-domains/use.md)
