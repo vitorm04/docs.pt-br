@@ -24,20 +24,20 @@ Especifica a classe ou o módulo que contém o procedimento `Sub Main`.
   
 ## <a name="arguments"></a>Argumentos  
  `location`  
- Necessário. O nome da classe ou do módulo que contém o procedimento `Sub Main` a ser chamado quando o programa é iniciado. Isso pode estar no formato **-principal: módulo** ou **-principal: namespace. Module**.  
+ Obrigatórios. O nome da classe ou do módulo que contém o `Sub Main` procedimento a ser chamado quando o programa for iniciado. Isso pode estar no formato **-principal: módulo** ou **-principal: namespace. Module**.  
   
 ## <a name="remarks"></a>Comentários  
- Use essa opção quando você criar um arquivo executável ou programa executável do Windows. Se a opção **-Main** for omitida, o compilador pesquisará um `Sub Main` compartilhado válido em todas as classes e módulos públicos.  
+ Use essa opção quando você criar um arquivo executável ou programa executável do Windows. Se a opção **-Main** for omitida, o compilador pesquisará um compartilhamento `Sub Main` válido em todos os módulos e classes públicas.  
   
- Consulte o [procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obter uma discussão sobre as várias formas do procedimento `Main`.  
+ Consulte o [procedimento principal no Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md) para obter uma discussão sobre as várias formas `Main` do procedimento.  
   
- Quando `location` é uma classe que herda de <xref:System.Windows.Forms.Form>, o compilador fornece um procedimento padrão `Main` que inicia o aplicativo se a classe não tiver um procedimento `Main`. Isso permite que você compile o código na linha de comando que foi criada no ambiente de desenvolvimento.  
+ Quando `location` é uma classe que herda de <xref:System.Windows.Forms.Form>, o compilador fornece um procedimento `Main` padrão que inicia o aplicativo se a classe não tiver `Main` nenhum procedimento. Isso permite que você compile o código na linha de comando que foi criada no ambiente de desenvolvimento.  
   
  [!code-vb[VbVbalrCompiler#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#16)]  
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Para definir o principal no ambiente de desenvolvimento integrado do Visual Studio  
   
-1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.  
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto** , clique em **Propriedades**.  
   
 2. Clique na guia **Aplicativo**.  
   
@@ -46,13 +46,13 @@ Especifica a classe ou o módulo que contém o procedimento `Sub Main`.
 4. Modifique o valor na caixa **objeto de inicialização** .  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `T2.vb` e `T3.vb`, especificando que o procedimento `Sub Main` será encontrado na classe `Test2`.  
+ O código a seguir `T2.vb` compila e `T3.vb`, especificando que o `Sub Main` procedimento será encontrado na `Test2` classe.  
   
 ```console
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

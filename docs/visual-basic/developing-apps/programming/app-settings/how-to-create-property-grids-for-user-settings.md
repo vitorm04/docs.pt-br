@@ -1,5 +1,5 @@
 ---
-title: Como criar grades de propriedades para configurações de usuário
+title: 'Como: criar grades de propriedades para configurações de usuário'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -21,7 +21,7 @@ Você pode criar uma grade de propriedades para configurações de usuário, pre
 > [!NOTE]
 > Para que esse exemplo funcione, seu aplicativo deve ter as configurações de usuário definidas. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- O objeto `My.Settings` expõe cada configuração como uma propriedade. O nome da propriedade é o mesmo que o nome da configuração e o tipo de propriedade é o mesmo que o tipo de configuração. O **escopo** da configuração determina se a propriedade é somente leitura; a propriedade para uma configuração de escopo de **aplicativo**é somente leitura, enquanto a propriedade para uma configuração de escopo **do usuário**é leitura-gravação. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ O objeto `My.Settings` expõe cada configuração como uma propriedade. O nome da propriedade é o mesmo que o nome da configuração e o tipo de propriedade é o mesmo que o tipo de configuração. O **escopo** da configuração determina se a propriedade é somente leitura; a propriedade para uma configuração de escopo de **aplicativo**é somente leitura, enquanto a propriedade para uma configuração de escopo de **usuário**é de leitura/gravação. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
 > Você não pode alterar ou salvar os valores de configurações de escopo do aplicativo em tempo de execução. As configurações de escopo do aplicativo só podem ser alteradas ao criar o aplicativo (por meio do **Designer de Projeto**) ou editando o arquivo de configuração de aplicativo. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
@@ -51,7 +51,7 @@ Você pode criar uma grade de propriedades para configurações de usuário, pre
 
  O aplicativo salva as configurações do usuário quando o aplicativo é desligado. Para salvar as configurações imediatamente, chame o método `My.Settings.Save`. Para obter mais informações, consulte [Como persistir configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

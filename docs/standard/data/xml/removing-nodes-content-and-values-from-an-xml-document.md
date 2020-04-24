@@ -15,6 +15,6 @@ Uma vez que um modelo de objeto (DOM) de documento XML está na memória, você 
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
-- [Inserção de nós em um documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)
-- [Modificando nós, conteúdo e os valores em um documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Inserindo nós em um documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)
+- [Modificando nós, conteúdo e valores em documentos XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)

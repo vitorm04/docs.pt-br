@@ -258,9 +258,9 @@ public class Order {
 </BookOrderForm>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Serialização XML e SOAP](xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
 - [Como serializar um objeto como um fluxo XML codificado para SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [Como substituir a serialização XML de SOAP codificada](how-to-override-encoded-soap-xml-serialization.md)

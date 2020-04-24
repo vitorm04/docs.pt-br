@@ -66,5 +66,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
   
 ## <a name="see-also"></a>Veja também
 
-- [Convertendo cadeias de caracteres para tipos de dados do .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
-- [Convertendo tipos do .NET Framework em cadeias de caracteres](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [Convertendo cadeias de caracteres em tipos de dados do .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+- [Convertendo tipos do .NET Framework para cadeias de caracteres](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

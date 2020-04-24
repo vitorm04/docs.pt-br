@@ -42,7 +42,7 @@ Use o método `CreateDirectory` do objeto `My.Computer.FileSystem` para criar di
   
 - O usuário não possui permissões em uma situação de confiança parcial (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>
 - [Criar, excluir e mover arquivos e diretórios](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

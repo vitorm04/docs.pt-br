@@ -48,7 +48,7 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
   
 - O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

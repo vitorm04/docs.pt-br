@@ -33,7 +33,7 @@ Existem várias maneiras de modificar os nós e o conteúdo de um documento. Voc
 |ProcessingInstruction|O conteúdo, excluindo o destino.|  
 |Texto|O conteúdo do texto.|  
 |XmlDeclaration|O conteúdo da declaração, excluindo as marcações `<?xml` e `?>`.|  
-|Whitespace|O valor do espaço em branco. Você pode definir o valor como um dos quatro caracteres de espaço em branco XML reconhecidos: espaço, tabulação, CR ou LF.|  
+|Espaço em branco|O valor do espaço em branco. Você pode definir o valor como um dos quatro caracteres de espaço em branco XML reconhecidos: espaço, tabulação, CR ou LF.|  
 |SignificantWhitespace|O valor do espaço em branco significativo. Você pode definir o valor como um dos quatro caracteres de espaço em branco XML reconhecidos: espaço, tabulação, CR ou LF.|  
   
  Qualquer tipo de nó não listado na tabela não é um tipo de nó válido no qual definir um valor. Definir um valor em qualquer outro tipo de nó gera <xref:System.InvalidOperationException>.  
@@ -46,4 +46,4 @@ Existem várias maneiras de modificar os nós e o conteúdo de um documento. Voc
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

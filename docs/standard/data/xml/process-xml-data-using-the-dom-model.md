@@ -17,23 +17,23 @@ O DOM (Document Object Model) XML trata dados XML como um conjunto padrão de ob
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
 - [Tipos de nós XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
-- [Hierarquia de DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+- [Hierarquia DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
   
-- [Mapeando a hierarquia de objetos para dados XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
+- [Mapeando a hierarquia do objeto para dados XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
   
 - [Criação de documentos XML](../../../../docs/standard/data/xml/xml-document-creation.md)  
   
-- [Ler um documento XML no DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)  
+- [Lendo um documento XML no DOM](../../../../docs/standard/data/xml/reading-an-xml-document-into-the-dom.md)  
   
-- [Inserção de nós em um documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
+- [Inserindo nós em um documento XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)  
   
-- [Removendo nós, conteúdo e os valores de um documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)  
+- [Removendo os nós, conteúdo, e valores de um documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)  
   
-- [Modificando nós, conteúdo e os valores em um documento XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)  
+- [Modificando nós, conteúdo e valores em documentos XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)  
   
 - [Validando um documento XML no DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md)  
   
@@ -49,12 +49,12 @@ O DOM (Document Object Model) XML trata dados XML como um conjunto padrão de ob
   
 - [Atualizações dinâmicas a NodeLists e a NamedNodeMaps](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
   
-- [Suporte a Namespace em DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
+- [Suporte do namespace em DOM](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
   
 - [Tratamento de eventos em um documento XML usando o XmlNodeChangedEventArgs](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
   
-- [Estendendo o DOM](../../../../docs/standard/data/xml/extending-the-dom.md)  
+- [Estendendo os DOM](../../../../docs/standard/data/xml/extending-the-dom.md)  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  Discute o processamento de XML usando a classe <xref:System.Xml.XPath.XPathNavigator>.

@@ -29,4 +29,4 @@ Se um documento XML é carregado usando o método <xref:System.Xml.XmlDocument.L
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -24,7 +24,7 @@ Permite o uso de inferência de tipo local nas declarações de variáveis.
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
@@ -34,11 +34,11 @@ Permite o uso de inferência de tipo local nas declarações de variáveis.
 > Você pode usar a opção `-noconfig` para manter os padrões internos do compilador em vez dos especificados no vbc.rsp. O padrão do compilador para essa opção é `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentários  
- Se o arquivo de código-fonte contiver uma [instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), a instrução substituirá a configuração `-optioninfer` compilador de linha de comando.  
+ Se o arquivo de código-fonte contiver uma [instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md), a `-optioninfer` instrução substituirá a configuração do compilador de linha de comando.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para Set-optioninfer no IDE do Visual Studio  
   
-1. Selecione um projeto no **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**.  
+1. Selecione um projeto no **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**.  
   
 2. Na guia **Compilar** , modifique o valor na caixa **Opção Infer** .  
   
@@ -49,7 +49,7 @@ Permite o uso de inferência de tipo local nas declarações de variáveis.
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)

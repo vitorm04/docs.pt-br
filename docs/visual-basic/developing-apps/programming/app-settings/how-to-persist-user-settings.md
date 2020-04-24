@@ -1,5 +1,5 @@
 ---
-title: Como persistir configurações de usuário
+title: 'Como: persistir configurações do usuário'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
@@ -32,7 +32,7 @@ Você pode usar o método `My.Settings.Save` para persistir as alterações nas 
   
  Para que esse exemplo funcione, seu aplicativo deve ter uma configuração do usuário `LastChanged`, do tipo `Date`. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

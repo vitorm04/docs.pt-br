@@ -18,13 +18,13 @@ As tabelas a seguir listam as tarefas associadas ao objeto `My.Computer.Network`
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [Como: Carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [Como: carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  Demonstra como carregar um arquivo e armazená-lo em um local remoto usando `My.Computer.Network`.  
   
- [Como: Baixar um Arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [Como: baixar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  Demonstra como baixar um arquivo de um local remoto usando `My.Computer.Network`.  
   
- [Como verificar o status da conexão](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ [Como: Verificar o status da conexão](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  Mostra como determinar se o computador tem uma conexão de rede de trabalho.  
   
 ## <a name="reference"></a>Referência  

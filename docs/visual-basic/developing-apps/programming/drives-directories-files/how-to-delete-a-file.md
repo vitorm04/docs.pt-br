@@ -60,7 +60,7 @@ O método `DeleteFile` do objeto `My.Computer.FileSystem` permite a exclusão de
   
 - O usuário cancelou a operação e `onUserCancel` está definido como `ThrowException` (<xref:System.OperationCanceledException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

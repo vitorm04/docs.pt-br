@@ -27,6 +27,6 @@ Descreve como usar a classe de (SOM) <xref:System.Xml.Schema.XmlSchemaInference>
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regras para inferir tipos de nó e estrutura de esquema](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

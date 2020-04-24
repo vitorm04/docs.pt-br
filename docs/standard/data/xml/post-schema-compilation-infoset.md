@@ -21,7 +21,7 @@ A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3
   
  O SOM é o modelo de objeto que representa os infosets de validação de pré-compilação e esquema de compilação de esquema posteriores; consiste nas classes no namespace de <xref:System.Xml.Schema?displayProperty=nameWithType> . Todas as propriedades de leitura e gravação das classes no namespace de <xref:System.Xml.Schema> pertencem ao infoset de validação de pré-compilação esquema, quando todas as propriedades somente leitura das classes no namespace de <xref:System.Xml.Schema> pertencerem ao infoset de compilação de pré esquema. A exceção a essa regra é as seguintes propriedades, que são propriedades de infoset de compilação de infoset e posteriores do esquema de validação de pré-compilação esquema.  
   
-|Classe|propriedade|  
+|Classe|Propriedade|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -40,4 +40,4 @@ A [Recomendação de esquema XML World Wide Web Consortium (W3C)](https://www.w3
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

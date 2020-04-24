@@ -61,11 +61,11 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
   
 - <xref:System.ComponentModel.PropertyDescriptor>. Fornece informações sobre uma propriedade.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
 
  [Solução de problemas de criação de controle e de componente](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Explica como corrigir problemas comuns.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como acessar o suporte em tempo de design nos Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
+- [Como acessar o suporte a tempo de design no Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

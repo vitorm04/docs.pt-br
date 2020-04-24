@@ -15,7 +15,7 @@ O SQLite não dá suporte a criptografia de arquivos de banco de dados por padr�
 
 ## <a name="installation"></a>Instalação
 
-### <a name="net-core-clitabnetcore-cli"></a>[CLI do .NET Core](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[CLI do .NET Core](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet remove package Microsoft.Data.Sqlite
@@ -23,7 +23,7 @@ dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Remove-Package Microsoft.Data.Sqlite
@@ -37,14 +37,14 @@ Para obter mais informações sobre como usar uma biblioteca nativa diferente pa
 
 ## <a name="specify-the-key"></a>Especifique a chave
 
-Para habilitar a criptografia, especifique a chave usando a palavra-chave da cadeia de conexão `Password`. Use <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> para adicionar ou atualizar o valor da entrada do usuário e evitar ataques de injeção de cadeia de conexão.
+Para habilitar a criptografia, especifique a chave usando `Password` a palavra-chave da cadeia de conexão. Use <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> para adicionar ou atualizar o valor da entrada do usuário e evitar ataques de injeção de cadeia de conexão.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
 ## <a name="rekeying-the-database"></a>Rechaveamento do banco de dados
 
-Se você quiser alterar a chave de criptografia de um banco de dados, emita uma instrução `PRAGMA rekey`. Para descriptografar o banco de dados, especifique `NULL`.
+Se você quiser alterar a chave de criptografia de um banco de dados, `PRAGMA rekey` emita uma instrução. Para descriptografar o banco `NULL`de dados, especifique.
 
-Infelizmente, o SQLite não dá suporte a parâmetros em instruções `PRAGMA`. Em vez disso, use a função `quote()` para impedir a injeção de SQL.
+Infelizmente, o SQLite não dá suporte `PRAGMA` a parâmetros em instruções. Em vez disso, `quote()` use a função para impedir a injeção de SQL.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_Rekey)]

@@ -43,7 +43,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

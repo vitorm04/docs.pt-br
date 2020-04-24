@@ -22,29 +22,29 @@ Insere um arquivo. ico no arquivo de saída. Esse arquivo. ico representa o arqu
 -win32icon:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
 |`filename`|O arquivo. ico a ser adicionado ao arquivo de saída. Coloque o nome de arquivo entre aspas ("") se ele contiver um espaço.|  
   
 ## <a name="remarks"></a>Comentários  
- Você pode criar um arquivo. ico com o compilador de recursos do Microsoft Windows (RC). O compilador de recursos é invocado quando você compila C++ um programa Visual; um arquivo. ico é criado a partir do arquivo. rc. As opções `-win32icon` e `-win32resource` são mutuamente exclusivas.  
+ Você pode criar um arquivo. ico com o compilador de recursos do Microsoft Windows (RC). O compilador de recursos é invocado quando você compila um programa de Visual C++; um arquivo. ico é criado a partir do arquivo. rc. As opções `-win32icon` e `-win32resource` são mutualmente exclusivas.  
   
  Consulte [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para fazer referência a um arquivo de recurso .NET Framework ou [-Resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para anexar um arquivo de recurso de .NET Framework. Consulte [-Win32Resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar um arquivo. res.  
   
 |Para definir-win32icon no IDE do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modifique o valor na caixa **ícone** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **aplicativo** .<br />3. modifique o valor na caixa **ícone** .|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `In.vb` e anexa um arquivo. ico, `Rf.ico`.  
+ O código a seguir compila `In.vb` e anexa um arquivo. ico,. `Rf.ico`  
   
 ```console
 vbc -win32icon:rf.ico in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

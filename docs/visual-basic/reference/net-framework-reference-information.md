@@ -16,7 +16,7 @@ ms.locfileid: "74352846"
 # <a name="net-framework-reference-information-visual-basic"></a>Informações de referência do .NET Framework (Visual Basic)
 Este tópico fornece links para informações sobre como trabalhar com a biblioteca de classes de .NET Framework.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Introdução](../../framework/get-started/index.md)  
  Fornece uma visão geral abrangente do .NET Framework e links para recursos adicionais.  
   

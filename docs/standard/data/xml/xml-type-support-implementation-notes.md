@@ -47,4 +47,4 @@ Este tópico descreve alguns detalhes de implementação de que você deseja est
   
 ## <a name="see-also"></a>Veja também
 
-- [Type Support in the System.Xml Classes](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md) (Suporte a tipo nas classes System.XML)
+- [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

@@ -43,7 +43,7 @@ As seguintes condições podem criar uma exceção:
 
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Como gravar texto em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

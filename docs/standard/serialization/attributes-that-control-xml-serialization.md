@@ -43,11 +43,11 @@ Você pode aplicar os atributos na tabela a seguir para classes e membros de cla
   
  Para controlar a serialização XML de SOAP codificada, consulte [Atributos que controlam a serialização SOAP codificada](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [Como: Especifique um nome de elemento alternativo para um Stream XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Como: Serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Como: Desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Como especificar um nome de elemento alternativo para um fluxo XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

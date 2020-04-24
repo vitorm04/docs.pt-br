@@ -48,7 +48,7 @@ Use o método `RenameFile` do objeto `My.Computer.FileSystem` para renomear um a
   
 - O usuário não tem a permissão necessária (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [Como mover um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)

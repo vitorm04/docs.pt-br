@@ -29,7 +29,7 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
 #### <a name="guidelines"></a>Diretrizes  
  Habilitar scripts somente quando a folha de estilos vem de uma fonte confiável. Se você não pode verificar a fonte da folha de estilos, ou se a folha de estilos não vem de uma fonte confiável, passe em `null` para o argumento configurações de fonte.  
   
-## <a name="external-resources"></a>Recursos Externos  
+## <a name="external-resources"></a>Recursos externos  
  O idioma XSLT tem recursos como `xsl:import`, `xsl:include`, ou a função de `document()` , onde o processador precisa resolver referências de um URI. A classe de <xref:System.Xml.XmlResolver> é usada para resolver recursos externos. Os recursos externos podem precisar ser resolvido nos dois seguintes casos:  
   
 - Ao criar uma folha de estilos, <xref:System.Xml.XmlResolver> é usado para `xsl:import` e resolução de `xsl:include` .  

@@ -49,8 +49,8 @@ while (rdr.Read()) {}
 
 - <xref:System.Xml.XmlDocument>
 - [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
-- [XPathNavigator em transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator em transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [Entrada de XPathDocument para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [Entrada de XmlDataDocument para XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
+- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)

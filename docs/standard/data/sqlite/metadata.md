@@ -15,30 +15,30 @@ Há duas APIs para recuperar metadados em ADO.NET. Uma recupera metadados sobre 
 
 ## <a name="query-result-metadata"></a>Metadados do resultado da consulta
 
-Você pode recuperar metadados sobre os resultados de uma consulta usando o método <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> em `SqliteDataReader`. O <xref:System.Data.DataTable> retornado contém as seguintes colunas:
+Você pode recuperar metadados sobre os resultados de uma consulta usando o <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> método em `SqliteDataReader`. O retornado <xref:System.Data.DataTable> contém as seguintes colunas:
 
-| Column             | {1&gt;Tipo&lt;1}    | Descrição                                                               |
+| Coluna             | Tipo    | Descrição                                                               |
 | ------------------ | ------- | ------------------------------------------------------------------------- |
-| `AllowDBNull`      | Booliano | True se a coluna de origem puder ser nula.                                    |
-| `BaseCatalogName`  | Cadeia de caracteres  | O nome do banco de dados da coluna de origem. Sempre nulo para expressões.    |
-| `BaseColumnName`   | Cadeia de caracteres  | O nome sem alias da coluna de origem. Sempre nulo para expressões.    |
-| `BaseSchemaName`   | Cadeia de caracteres  | Sempre nulo. O SQLite não dá suporte a esquemas.                              |
-| `BaseServerName`   | Cadeia de caracteres  | O caminho para o arquivo de banco de dados especificado na cadeia de conexão.         |
-| `BaseTableName`    | Cadeia de caracteres  | O nome da tabela da coluna de origem. Sempre nulo para expressões.       |
-| `ColumnName`       | Cadeia de caracteres  | O nome ou alias da coluna no conjunto de resultados.                        |
+| `AllowDBNull`      | Boolean | True se a coluna de origem puder ser nula.                                    |
+| `BaseCatalogName`  | String  | O nome do banco de dados da coluna de origem. Sempre nulo para expressões.    |
+| `BaseColumnName`   | String  | O nome sem alias da coluna de origem. Sempre nulo para expressões.    |
+| `BaseSchemaName`   | String  | Sempre nulo. O SQLite não dá suporte a esquemas.                              |
+| `BaseServerName`   | String  | O caminho para o arquivo de banco de dados especificado na cadeia de conexão.         |
+| `BaseTableName`    | String  | O nome da tabela da coluna de origem. Sempre nulo para expressões.       |
+| `ColumnName`       | String  | O nome ou alias da coluna no conjunto de resultados.                        |
 | `ColumnOrdinal`    | Int32   | O ordinal da coluna no conjunto de resultados.                              |
-| `ColumnSize`       | Int32   | Sempre-1. Isso pode ser alterado em versões futuras do `Microsoft.Data.Sqlite`.   |
-| `DataType`         | {1&gt;Tipo&lt;1}    | O tipo de dados padrão do .NET da coluna.                                 |
-| `DataTypeName`     | Cadeia de caracteres  | O tipo de dados do SQLite da coluna.                                       |
-| `IsAliased`        | Booliano | True se o nome da coluna tiver um alias no conjunto de resultados.                     |
-| `IsAutoIncrement`  | Booliano | True se a coluna de origem tiver sido criada com a palavra-chave AutoIncrement.     |
-| `IsExpression`     | Booliano | True se a coluna se originar de uma expressão na consulta.            |
-| `IsKey`            | Booliano | True se a coluna de origem fizer parte da chave primária.                     |
-| `IsUnique`         | Booliano | True se a coluna de origem for exclusiva.                                      |
-| `NumericPrecision` | Int16   | Sempre nulo. Isso pode ser alterado em versões futuras do `Microsoft.Data.Sqlite`. |
-| `NumericScale`     | Int16   | Sempre nulo. Isso pode ser alterado em versões futuras do `Microsoft.Data.Sqlite`. |
+| `ColumnSize`       | Int32   | Sempre-1. Isso pode ser alterado em versões futuras `Microsoft.Data.Sqlite`do.   |
+| `DataType`         | Tipo    | O tipo de dados padrão do .NET da coluna.                                 |
+| `DataTypeName`     | String  | O tipo de dados do SQLite da coluna.                                       |
+| `IsAliased`        | Boolean | True se o nome da coluna tiver um alias no conjunto de resultados.                     |
+| `IsAutoIncrement`  | Boolean | True se a coluna de origem tiver sido criada com a palavra-chave AutoIncrement.     |
+| `IsExpression`     | Boolean | True se a coluna se originar de uma expressão na consulta.            |
+| `IsKey`            | Boolean | True se a coluna de origem fizer parte da chave primária.                     |
+| `IsUnique`         | Boolean | True se a coluna de origem for exclusiva.                                      |
+| `NumericPrecision` | Int16   | Sempre nulo. Isso pode ser alterado em versões futuras `Microsoft.Data.Sqlite`do. |
+| `NumericScale`     | Int16   | Sempre nulo. Isso pode ser alterado em versões futuras `Microsoft.Data.Sqlite`do. |
 
-O exemplo a seguir mostra como usar `GetSchemaTable` para criar uma cadeia de caracteres de depuração que mostra metadados sobre um resultado:
+O exemplo a seguir mostra como usar `GetSchemaTable` o para criar uma cadeia de caracteres de depuração que mostra metadados sobre um resultado:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/ResultMetadataSample/Program.cs?name=snippet_ResultMetadata)]
 

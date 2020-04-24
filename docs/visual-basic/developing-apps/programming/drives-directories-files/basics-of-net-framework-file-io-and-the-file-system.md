@@ -61,11 +61,11 @@ A tabela a seguir lista as tarefas comumente realizadas com um fluxo:
 
 |Para|Consulte|
 |---|---|
-|Ler e gravar em um arquivo de dados|[Como ler e gravar em um arquivo de dados recém-criado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|Ler texto de um arquivo|[Como ler texto de um arquivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|Gravar texto em um arquivo|[Como gravar texto em um arquivo](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|Ler caracteres de uma cadeia de caracteres|[Como ler caracteres de uma cadeia de caracteres](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|Gravar caracteres em uma cadeia de caracteres|[Como escrever caracteres em uma cadeia de caracteres](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|Ler e gravar em um arquivo de dados|[Como: Ler e gravar em um arquivo de dados recém-criado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
+|Ler texto de um arquivo|[Como: Ler texto de um arquivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|Gravar texto em um arquivo|[Como: gravar texto em um arquivo](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|Ler caracteres de uma cadeia de caracteres|[Como: Ler caracteres de uma cadeia de caracteres](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|Gravar caracteres em uma cadeia de caracteres|[Como: Gravar caracteres em uma cadeia de caracteres](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |Criptografar dados|[Criptografando dados](../../../../standard/security/encrypting-data.md)|
 |Descriptografar dados|[Descriptografando dados](../../../../standard/security/decrypting-data.md)|
 
@@ -79,7 +79,7 @@ A tabela a seguir lista as tarefas que envolvem o acesso a arquivos e atributos 
 
 |Para|Consulte|
 |---|---|
-|Abrir e acrescentar texto a um arquivo de log|[Como abrir e acrescentar a um arquivo de log](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
+|Abrir e acrescentar texto a um arquivo de log|[Como: Abrir um arquivo de log e fazer acréscimos a ele](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Determinar os atributos de um arquivo|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>Permissões de arquivo
@@ -94,21 +94,21 @@ A tabela a seguir lista as tarefas comumente associadas ao armazenamento isolado
 
 |Para|Consulte|
 |---|---|
-|Criar um repositório isolado|[Como obter repositórios para o armazenamento isolado](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
-|Enumerar repositórios isolados|[Como enumerar repositórios para o armazenamento isolado](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
-|Excluir um repositório isolado|[Como excluir repositórios no armazenamento isolado](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
-|Criar um arquivo ou diretório no armazenamento isolado|[Como criar arquivos e diretórios no armazenamento isolado](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
-|Localizar um arquivo no armazenamento isolado|[Como localizar arquivos e diretórios existentes no armazenamento isolado](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|Ler ou gravar em um arquivo no armazenamento isolado|[Como ler e gravar em arquivos no armazenamento isolado](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
-|Excluir um arquivo ou diretório no armazenamento isolado|[Como excluir arquivos e diretórios no armazenamento isolado](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
+|Criar um repositório isolado|[Como: Obter repositórios para o armazenamento isolado](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
+|Enumerar repositórios isolados|[Como: Enumerar repositórios para o armazenamento isolado](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
+|Excluir um repositório isolado|[Como: Excluir repositórios no armazenamento isolado](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
+|Criar um arquivo ou diretório no armazenamento isolado|[Como: Criar arquivos e diretórios no armazenamento isolado](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
+|Localizar um arquivo no armazenamento isolado|[Como: Localizar arquivos e diretórios existentes no armazenamento isolado](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
+|Ler ou gravar em um arquivo no armazenamento isolado|[Como: Ler e gravar em arquivos no armazenamento isolado](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|Excluir um arquivo ou diretório no armazenamento isolado|[Como: Excluir arquivos e diretórios no armazenamento isolado](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
 ## <a name="file-events"></a>Eventos de arquivo
 
 O componente <xref:System.IO.FileSystemWatcher> permite observar alterações em arquivos e diretórios em seu sistema ou em qualquer computador em que você tem acesso à rede. Por exemplo, se um arquivo é modificado, convém enviar a um usuário um alerta sobre a alteração ocorrida. Quando ocorrem alterações, um ou mais eventos são acionados, armazenados em um buffer e enviados ao componente <xref:System.IO.FileSystemWatcher> para processamento.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Compondo fluxos](../../../../standard/io/composing-streams.md)
-- [Arquivo e I/O do fluxo](../../../../standard/io/index.md)
-- [E/S de arquivo assíncrona](../../../../standard/io/asynchronous-file-i-o.md)
+- [Compor fluxos](../../../../standard/io/composing-streams.md)
+- [Arquivo e e/s de fluxo](../../../../standard/io/index.md)
+- [E/s de arquivo assíncrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

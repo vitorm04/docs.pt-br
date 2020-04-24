@@ -1,5 +1,5 @@
 ---
-title: Como ler configurações do aplicativo
+title: 'Como: ler configurações de aplicativo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
@@ -27,7 +27,7 @@ Você pode ler uma configuração de usuário, acessando a propriedade da config
   
  Para que esse exemplo funcione, seu aplicativo deve ter uma configuração `Nickname`, do tipo `String`. Para obter mais informações, consulte [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Como alterar configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

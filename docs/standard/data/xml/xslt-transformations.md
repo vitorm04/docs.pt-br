@@ -22,7 +22,7 @@ A linguagem XSL Transformation (XSLT) permite transformar o conteúdo de um docu
  [Usando a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
  Fornece informações sobre como usar a classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
- [Migrando da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
+ [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  Aborda como migrar o código da classe <xref:System.Xml.Xsl.XslTransform>.  
   
  [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
@@ -36,5 +36,5 @@ A linguagem XSL Transformation (XSLT) permite transformar o conteúdo de um docu
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)

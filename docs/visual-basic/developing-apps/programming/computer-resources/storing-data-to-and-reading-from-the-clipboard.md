@@ -1,5 +1,5 @@
 ---
-title: Armazenamento de dados e leitura da Área de Transferência
+title: Armazenando dados na área de transferência e lendo-os
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -62,7 +62,7 @@ A Área de Transferência pode ser usada para armazenar dados, como texto e imag
   
  [!code-vb[VbVbcnMyClipboard#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#2)]  
   
- Use o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> para gravar dados na Área de Transferência. Este exemplo `DataObject` `dataChunk` escreve a área de `specialFormat`transferência no formato personalizado .  
+ Use o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> para gravar dados na Área de Transferência. Este exemplo grava o `DataObject` `dataChunk` na área de transferência no formato `specialFormat`personalizado.  
   
  [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
   
@@ -73,10 +73,10 @@ A Área de Transferência pode ser usada para armazenar dados, como texto e imag
 > [!IMPORTANT]
 > Como a Área de Transferência pode ser acessada por outros usuários, não a use para armazenar informações confidenciais, como senhas ou dados confidenciais.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
-- [Como: Ler dados de objeto de um arquivo XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [Como: Gravar dados de objeto em um arquivo XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [Como: ler dados de objeto de um arquivo XML](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Como: gravar dados de objeto em um arquivo XML](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

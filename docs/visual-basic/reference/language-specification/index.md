@@ -25,7 +25,7 @@ Problemas na especificação devem ser criados no repositório [dotnet/vblang](h
 
 ## <a name="see-also"></a>Veja também
 
-- [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)
+- [Referência de linguagem de Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
 >[Avançar](../../../../_vblang/spec/introduction.md)

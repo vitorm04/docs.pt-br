@@ -63,7 +63,7 @@ Para obter mais informações sobre os locais de saída padrão, consulte [Traba
 
     - Para obter informações sobre onde outros tipos de ouvintes de log gravam informações, consulte a documentação daquele tipo.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -72,9 +72,9 @@ Para obter mais informações sobre os locais de saída padrão, consulte [Traba
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics>
-- [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Como registrar em log as exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Como gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Instruções passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Como: registrar exceções em log](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [Como: gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Passo a passo: alterar o local no qual My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [Eventos ETW no .NET Framework](../../../../framework/performance/etw-events.md)
-- [Solucionando problemas: ouvintes de Log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Solução de problemas: ouvintes de log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

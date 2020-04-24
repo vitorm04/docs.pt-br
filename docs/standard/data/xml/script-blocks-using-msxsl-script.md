@@ -89,18 +89,18 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
   
  O atributo `name` contém o nome do assembly e o atributo `href` contém o caminho para o assembly. O nome do assembly pode ser um nome completo, como "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", ou um nome curto, como "System.Web".  
   
-#### <a name="namespaces"></a>{1&gt;Namespaces&lt;1}  
+#### <a name="namespaces"></a>Namespaces  
  Os seguintes namespaces são incluídos por padrão:  
   
-- System  
+- Sistema  
   
 - System.Collection  
   
-- {1&gt;System.Text&lt;1}  
+- System.Text  
   
-- {1&gt;System.Text.RegularExpressions&lt;1}  
+- System.Text.RegularExpressions  
   
-- {1&gt;System.Xml&lt;1}  
+- System.Xml  
   
 - System.Xml.Xsl  
   
@@ -149,4 +149,4 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
 ## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Dynamic Source Code Generation and Compilation](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md) (Compilação e geração de código-fonte dinâmico)
+- [Geração e compilação de código-fonte dinâmico](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

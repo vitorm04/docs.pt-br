@@ -14,7 +14,7 @@ ms.lasthandoff: 10/07/2019
 ms.locfileid: "72005440"
 ---
 # <a name="-noconfig"></a>-noconfig
-Especifica que o compilador não deve referenciar automaticamente os assemblies de .NET Framework usados com frequência ou importar os namespaces `System` e `Microsoft.VisualBasic`.  
+Especifica que o compilador não deve referenciar automaticamente os assemblies de .NET Framework usados com frequência `System` ou `Microsoft.VisualBasic` importar os namespaces e.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,19 +23,19 @@ Especifica que o compilador não deve referenciar automaticamente os assemblies 
 ```  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-noconfig` informa o compilador para não compilar com o arquivo Vbc. rsp, que está localizado no mesmo diretório que o arquivo Vbc. exe. O arquivo Vbc. rsp faz referência aos assemblies de .NET Framework usados com frequência e importa os namespaces `System` e `Microsoft.VisualBasic`. O compilador referencia implicitamente o assembly System. dll, a menos que a opção `-nostdlib` seja especificada. A opção `-nostdlib` informa ao compilador para não compilar com Vbc. rsp ou referenciar automaticamente o assembly System. dll.  
+ A `-noconfig` opção informa o compilador para não compilar com o arquivo Vbc. rsp, que está localizado no mesmo diretório que o arquivo Vbc. exe. O arquivo Vbc. rsp faz referência aos assemblies de .NET Framework usados com frequência `System` e `Microsoft.VisualBasic` importa os namespaces e. O compilador referencia implicitamente o assembly System. dll, a `-nostdlib` menos que a opção seja especificada. A `-nostdlib` opção informa o compilador para não compilar com Vbc. rsp ou referenciar automaticamente o assembly System. dll.  
   
 > [!NOTE]
 > Os assemblies mscorlib. dll e Microsoft. VisualBasic. dll são sempre referenciados.  
   
- Você pode modificar o arquivo Vbc. rsp para especificar opções adicionais do compilador que devem ser incluídas em cada compilação do Vbc. exe (exceto ao especificar a opção `-noconfig`). Para obter mais informações, confira [@ (Especificar de arquivo de resposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md).  
+ Você pode modificar o arquivo Vbc. rsp para especificar opções adicionais do compilador que devem ser incluídas em cada compilação do Vbc. exe (exceto ao `-noconfig` especificar a opção). Para obter mais informações, confira [@ (Especificar de arquivo de resposta)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md).  
   
- O compilador processa as opções passadas para o comando `vbc` por último. Portanto, qualquer opção na linha de comando substitui a configuração da mesma opção no arquivo Vbc. rsp.  
+ O compilador processa as opções passadas para `vbc` o comando por último. Portanto, qualquer opção na linha de comando substitui a configuração da mesma opção no arquivo Vbc. rsp.  
   
 > [!NOTE]
-> A opção `-noconfig` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-noconfig` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)

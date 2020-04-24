@@ -43,8 +43,8 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode se
   
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
-- [Escrevendo para arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

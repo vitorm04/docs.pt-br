@@ -17,7 +17,7 @@ O exemplo a seguir mostra como chamar `sqlite3_trace` para gravar instruções S
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_Trace)]
 
-E o exemplo a seguir mostra a chamada de `sqlite3_stmt_status` para ver quantas etapas de máquina virtual do SQLite uma instrução SQL compilou em:
+E o exemplo a seguir mostra `sqlite3_stmt_status` a chamada para ver quantas etapas de máquina virtual do SQLite uma instrução SQL compilou em:
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/InteropSample/Program.cs?name=snippet_StatementStatus)]
 

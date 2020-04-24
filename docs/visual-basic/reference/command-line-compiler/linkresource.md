@@ -25,7 +25,7 @@ Cria um link a um recurso gerenciado.
 -linkresource:filename[,identifier[,public|private]]  
 ```
 
-ou  
+ou o  
 
 ```console
 -linkres:filename[,identifier[,public|private]]  
@@ -33,33 +33,33 @@ ou
   
 ## <a name="arguments"></a>Argumentos  
  `filename`  
- Necessária. O arquivo de recurso a ser vinculado ao assembly. Se o nome do arquivo contiver um espaço, coloque o nome entre aspas ("").  
+ Obrigatórios. O arquivo de recurso a ser vinculado ao assembly. Se o nome do arquivo contiver um espaço, coloque o nome entre aspas ("").  
   
  `identifier`  
  Opcional. O nome lógico do recurso. O nome usado para carregar o recurso. O padrão é o nome do arquivo. Opcionalmente, você pode especificar se o arquivo é público ou privado no manifesto do assembly, por exemplo: `-linkres:filename.res,myname.res,public`. Por padrão, `filename` é público no assembly.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-linkresource` não incorpora o arquivo de recurso no arquivo de saída; Use a opção `-resource` para fazer isso.  
+ A `-linkresource` opção não incorpora o arquivo de recurso no arquivo de saída; Use a `-resource` opção para fazer isso.  
   
- A opção `-linkresource` requer uma das opções de `-target` diferentes de `-target:module`.  
+ A `-linkresource` opção requer uma das `-target` opções diferentes de. `-target:module`  
   
- Se `filename` for um arquivo de recurso .NET Framework criado, por exemplo, pelo [Resgen. exe (gerador de arquivo de recurso)](../../../framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado com membros no namespace <xref:System.Resources>. (Para obter mais informações, consulte <xref:System.Resources.ResourceManager>.) Para acessar todos os outros recursos em tempo de execução, use os métodos que começam com `GetManifestResource` na classe <xref:System.Reflection.Assembly>.  
+ Se `filename` for um arquivo de recurso .NET Framework criado, por exemplo, pelo [Resgen. exe (gerador de arquivo de recurso)](../../../framework/tools/resgen-exe-resource-file-generator.md) ou no ambiente de desenvolvimento, ele poderá ser acessado <xref:System.Resources> com membros no namespace. (Para obter mais informações, <xref:System.Resources.ResourceManager>consulte.) Para acessar todos os outros recursos em tempo de execução, use os métodos que `GetManifestResource` começam com <xref:System.Reflection.Assembly> na classe.  
   
  O nome do arquivo pode ser qualquer formato de arquivo. Por exemplo, crie uma parte DLL nativa do assembly de maneira que possa ser instalada no cache de assembly global e acessado no código gerenciado no assembly.  
   
  A forma abreviada de `-linkresource` é `-linkres`.  
   
 > [!NOTE]
-> A opção `-linkresource` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir da linha de comando.  
+> A `-linkresource` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir da linha de comando.  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `in.vb` e links para o arquivo de recurso `rf.resource`.  
+ O código a seguir compila `in.vb` e vincula ao arquivo `rf.resource`de recurso.  
   
 ```console  
 vbc -linkresource:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

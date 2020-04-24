@@ -30,7 +30,7 @@ Você pode invocar o compilador de linha de comando digitando o nome do seu arqu
 
 4. Na linha de comando, digite `vbc.exe` *sourceFileName* e pressione Enter.
 
-    Por exemplo, se você armazenou o código-fonte em um diretório chamado `SourceFiles`, abra o prompt de comando e digite `cd SourceFiles` para alterar para esse diretório. Se o diretório contiver um arquivo de origem chamado `Source.vb`, você poderá compilá-lo digitando `vbc.exe Source.vb`.
+    Por exemplo, se você armazenou o código-fonte em um `SourceFiles`diretório chamado, abra o prompt de comando e `cd SourceFiles` digite para alterar para esse diretório. Se o diretório contiver um arquivo de `Source.vb`origem chamado, você poderá compilá- `vbc.exe Source.vb`lo digitando.
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Para definir a variável de ambiente PATH para o compilador para o prompt de comando do Windows
 
@@ -54,11 +54,11 @@ Você pode invocar o compilador de linha de comando digitando o nome do seu arqu
 
 1. No menu **Iniciar** , clique na pasta **acessórios** e, em seguida, abra o **prompt de comando do Windows**.
 
-2. Na linha de comando, digite `vbc.exe`*sourceFileName* e pressione Enter.
+2. Na linha de comando, digite `vbc.exe` *sourceFileName* e pressione Enter.
 
-     Por exemplo, se você armazenou o código-fonte em um diretório chamado `SourceFiles`, abra o prompt de comando e digite `cd SourceFiles` para alterar para esse diretório. Se o diretório contiver um arquivo de origem chamado `Source.vb`, você poderá compilá-lo digitando `vbc.exe Source.vb`.
+     Por exemplo, se você armazenou o código-fonte em um `SourceFiles`diretório chamado, abra o prompt de comando e `cd SourceFiles` digite para alterar para esse diretório. Se o diretório contiver um arquivo de `Source.vb`origem chamado, você poderá compilá- `vbc.exe Source.vb`lo digitando.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Compilação Condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [Compilação condicional](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

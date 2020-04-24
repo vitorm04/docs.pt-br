@@ -1,5 +1,5 @@
 ---
-title: Como carregar um arquivo
+title: 'Como: carregar um arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -47,9 +47,9 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser us
   
 - A conexão ultrapassou o tempo limite (<xref:System.TimeoutException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [Como: Baixar um Arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Como: baixar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
 - [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

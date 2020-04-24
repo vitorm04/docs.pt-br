@@ -25,7 +25,7 @@ Exibe as opções do compilador.
 -help  
 ```
 
-ou  
+ou o  
 
 ```console
 -?  
@@ -35,7 +35,7 @@ ou
  Se você incluir essa opção em uma compilação, nenhum arquivo de saída será criado e nenhuma compilação ocorrerá.  
   
 > [!NOTE]
-> A opção `-help` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-help` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir exibe a ajuda da linha de comando.  
@@ -44,7 +44,7 @@ ou
 vbc -help  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

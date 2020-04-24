@@ -17,13 +17,13 @@ Há algumas limitações que você deve conhecer ao usar o Microsoft. Data. sqli
 
 Os nomes de parâmetro do SQLite diferenciam maiúsculas de minúsculas. Verifique se os nomes de parâmetro usados no SQL correspondem ao caso das propriedades do objeto anônimo. O problema [#18861](https://github.com/dotnet/efcore/issues/18861) melhoraria essa experiência.
 
-Dapper também espera parâmetros para usar o prefixo `@`. Outros prefixos não funcionarão.
+Dapper também espera parâmetros para usar o `@` prefixo. Outros prefixos não funcionarão.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_Parameter)]
 
 ## <a name="data-types"></a>Tipos de dados
 
-Dapper lê os valores usando o indexador SqliteDataReader. O tipo de retorno desse indexador é Object, o que significa que ele nunca retornará valores Long, Double, String ou byte []. Para obter mais informações, consulte [tipos de dados](types.md). O Dapper lida com a maioria das conversões entre esses e outros tipos primitivos. Infelizmente, ele não lida com `DateTimeOffset`, `Guid`ou `TimeSpan`. Crie manipuladores de tipo se você quiser usar esses tipos em seus resultados.
+Dapper lê os valores usando o indexador SqliteDataReader. O tipo de retorno desse indexador é Object, o que significa que ele nunca retornará valores Long, Double, String ou byte []. Para obter mais informações, consulte [tipos de dados](types.md). O Dapper lida com a maioria das conversões entre esses e outros tipos primitivos. Infelizmente, não trata `DateTimeOffset`de, `Guid`ou. `TimeSpan` Crie manipuladores de tipo se você quiser usar esses tipos em seus resultados.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DapperSample/Program.cs?name=snippet_TypeHandlers)]
 

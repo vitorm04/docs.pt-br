@@ -1,5 +1,5 @@
 ---
-title: Como excluir uma chave do Registro
+title: 'Como: Excluir uma Chave do Registro'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -48,7 +48,7 @@ Os métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> e
 
  As chamadas do Registro falharão se as permissões suficientes de tempo de execução não forem concedidas (<xref:System.Security.Permissions.RegistryPermission>) ou se o usuário não tiver o acesso correto para (conforme determinado pelas ACLs) para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey>

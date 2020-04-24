@@ -62,7 +62,7 @@ As seguintes condições podem causar uma exceção:
 
 - Um arquivo de destino existe, mas não pode ser acessado (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [Como localizar subdiretórios com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

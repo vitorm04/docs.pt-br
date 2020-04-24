@@ -41,7 +41,7 @@ Esta página discute as implicações de segurança de armazenar dados no Regist
 > [!IMPORTANT]
 > Ao ler o Registro em um aplicativo Web, a identidade do usuário atual depende da autenticação e da representação implementadas no aplicativo Web.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [Ler e gravar no Registro](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

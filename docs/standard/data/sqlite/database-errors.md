@@ -1,5 +1,5 @@
 ---
-title: Erros de banco de dados
+title: Erros do banco de dados
 ms.date: 12/13/2019
 description: Descreve como os erros e os rearos de banco de dados são tratados pela biblioteca.
 ms.openlocfilehash: 9a613b6f94a89dc40e627c14f46836be77080035
@@ -9,9 +9,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75447268"
 ---
-# <a name="database-errors"></a>Erros de banco de dados
+# <a name="database-errors"></a>Erros do banco de dados
 
-<xref:Microsoft.Data.Sqlite.SqliteException> é gerada quando um erro do SQLite é encontrado. A mensagem é fornecida pelo SQLite. As propriedades `SqliteErrorCode` e `SqliteExtendedErrorCode` contêm o [código de resultado](https://www.sqlite.org/rescode.html) do SQLite do erro.
+<xref:Microsoft.Data.Sqlite.SqliteException>é gerado quando um erro do SQLite é encontrado. A mensagem é fornecida pelo SQLite. As `SqliteErrorCode` propriedades `SqliteExtendedErrorCode` e contêm o [código de resultado](https://www.sqlite.org/rescode.html) do SQLite do erro.
 
 Erros podem ser encontrados sempre que o Microsoft. Data. sqlite interage com a biblioteca SQLite nativa. A lista a seguir mostra os cenários comuns em que podem ocorrer erros:
 
@@ -35,7 +35,7 @@ Você pode aumentar o tempo limite do comando definindo <xref:Microsoft.Data.Sql
 command.CommandTimeout = 60;
 ```
 
-O Microsoft. Data. sqlite às vezes precisa criar um objeto de comando implícito. Por exemplo, durante BeginTransaction. Para definir o tempo limite para esses comandos, use <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>.
+O Microsoft. Data. sqlite às vezes precisa criar um objeto de comando implícito. Por exemplo, durante BeginTransaction. Para definir o tempo limite para esses comandos, <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>use.
 
 ```csharp
 // Set the default timeout of all commands on this connection

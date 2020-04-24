@@ -56,7 +56,7 @@ O método `My.Computer.FileSystem.CopyFile` permite a cópia de arquivos. Os par
   
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>

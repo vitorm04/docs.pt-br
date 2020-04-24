@@ -16,7 +16,7 @@ ms.locfileid: "74352873"
 Esta seção fornece links para informações de referência sobre vários aspectos da programação de Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
+ [Referência de linguagem de Visual Basic](../../visual-basic/language-reference/index.md)  
  Fornece informações de referência para vários aspectos do idioma do Visual Basic.  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
@@ -25,10 +25,10 @@ Esta seção fornece links para informações de referência sobre vários aspec
  [Informações de Referência do .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
  Fornece links para informações sobre como trabalhar com a biblioteca de classes de .NET Framework.  
   
- [Especificação da linguagem do Visual Basic](../../visual-basic/reference/language-specification/index.md)  
+ [Especificação da linguagem Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Fornece links para a especificação de idioma completo do Visual Basic, que contém informações detalhadas sobre todos os aspectos do idioma.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Elementos gerais de interface do usuário (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Contém tópicos para caixas de diálogo e janelas usadas no Visual Studio.  
   

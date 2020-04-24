@@ -26,19 +26,19 @@ Impõe uma semântica de tipo estrito para restringir conversões implícitas de
 -optionstrict[:custom]
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `+` &#124; `-`  
-Opcional. A opção `-optionstrict+` restringe a conversão de tipo implícita. O padrão para essa opção é `-optionstrict-`. A opção `-optionstrict+` é a mesma que `-optionstrict`. Você pode usar ambas as semânticas de tipo permissivas.
+Opcional. A `-optionstrict+` opção restringe a conversão implícita de tipo. O padrão para essa opção é `-optionstrict-`. A `-optionstrict+` opção é a mesma que `-optionstrict`. Você pode usar ambas as semânticas de tipo permissivas.
 
 `custom`  
-Necessário. Avisar quando a semântica de linguagem estrita não for respeitada.
+Obrigatórios. Avisar quando a semântica de linguagem estrita não for respeitada.
 
 ## <a name="remarks"></a>Comentários
 
-Quando `-optionstrict+` está em vigor, apenas conversões de tipo de alargamento podem ser feitas implicitamente. As conversões de tipo de estreitamento implícita, como a atribuição de um objeto de tipo de `Decimal` a um objeto de tipo inteiro, são relatadas como erros.
+Quando `-optionstrict+` está em vigor, apenas as conversões de tipo de ampliação podem ser feitas implicitamente. As conversões de tipo de estreitamento implícita, como a atribuição de `Decimal` um objeto de tipo a um objeto de tipo inteiro, são relatadas como erros.
 
-Para gerar avisos para conversões de tipo de estreitamento implícita, use `-optionstrict:custom`. Use `-nowarn:numberlist` para ignorar avisos e `-warnaserror:numberlist`s específicos para tratar avisos específicos como erros.
+Para gerar avisos para conversões de tipo de estreitamento implícita, `-optionstrict:custom`use. Use `-nowarn:numberlist` para ignorar avisos específicos e `-warnaserror:numberlist` tratar avisos específicos como erros.
 
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Para Set-optionstrict no IDE do Visual Studio
 
@@ -60,7 +60,7 @@ O código a seguir compila `Test.vb` usando semântica de tipo estrito.
 vbc -optionstrict+ test.vb
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)

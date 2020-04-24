@@ -39,4 +39,4 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
 ## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Considerações de segurança de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+- [Considerações de segurança XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

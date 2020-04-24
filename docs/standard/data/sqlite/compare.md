@@ -48,18 +48,18 @@ Microsoft. Data. sqlite tem muito menos palavras-chave de [cadeia de conexão](c
 
 | Palavra-chave          | Alternativa                                         |
 | ---------------- | --------------------------------------------------- |
-| Tamanho do Cache       | Enviar `PRAGMA cache_size = <pages>`                  |
+| Tamanho do cache       | Enviar`PRAGMA cache_size = <pages>`                  |
 | Tempo limite padrão  | Use a propriedade defaultTimeout em SqliteConnection |
 | FailIfMissing    | Use `Mode=ReadWrite`.                                |
 | FullUri          | Usar a palavra-chave de fonte de dados                         |
-| Modo de diário     | Enviar `PRAGMA journal_mode = <mode>`                 |
-| Formato herdado    | Enviar `PRAGMA legacy_file_format = 1`                |
-| Contagem máxima de páginas   | Enviar `PRAGMA max_page_count = <pages>`              |
-| Tamanho da Página        | Enviar `PRAGMA page_size = <bytes>`                   |
-| Somente Leitura        | Use `Mode=ReadOnly`.                                 |
-| Synchronous      | Enviar `PRAGMA synchronous = <mode>`                  |
-| URI              | Usar a palavra-chave de fonte de dados                         |
-| UseUTF16Encoding | Enviar `PRAGMA encoding = 'UTF-16'`                   |
+| Modo de diário     | Enviar`PRAGMA journal_mode = <mode>`                 |
+| Formato herdado    | Enviar`PRAGMA legacy_file_format = 1`                |
+| Contagem máxima de páginas   | Enviar`PRAGMA max_page_count = <pages>`              |
+| Tamanho da Página        | Enviar`PRAGMA page_size = <bytes>`                   |
+| Somente leitura        | Use `Mode=ReadOnly`.                                 |
+| Síncrona      | Enviar`PRAGMA synchronous = <mode>`                  |
+| Uri              | Usar a palavra-chave de fonte de dados                         |
+| UseUTF16Encoding | Enviar`PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>Autorização
 

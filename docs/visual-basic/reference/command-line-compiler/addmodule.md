@@ -22,21 +22,21 @@ Faz com que o compilador verifique todos os tipos de informações de arquivos e
 -addmodule:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
  `fileList`  
- Necessário. Lista delimitada por vírgulas de arquivos que contêm metadados, mas não contêm manifestos de assembly. Os nomes de arquivo que contêm espaços devem estar entre aspas ("").  
+ Obrigatórios. Lista delimitada por vírgulas de arquivos que contêm metadados, mas não contêm manifestos de assembly. Os nomes de arquivo que contêm espaços devem estar entre aspas ("").  
   
 ## <a name="remarks"></a>Comentários  
- Os arquivos listados pelo parâmetro `fileList` devem ser criados com a opção `-target:module` ou com um equivalente de `-target:module` do compilador.  
+ Os arquivos listados pelo `fileList` parâmetro devem ser criados com a opção `-target:module` ou com o equivalente de outro compilador `-target:module`.  
   
- Todos os módulos adicionados com `-addmodule` devem estar no mesmo diretório que o arquivo de saída em tempo de execução. Ou seja, você pode especificar um módulo em qualquer diretório em tempo de compilação, mas o módulo deve estar no diretório do aplicativo em tempo de execução. Se não estiver, você receberá um erro de <xref:System.TypeLoadException>.  
+ Todos os módulos adicionados `-addmodule` com devem estar no mesmo diretório que o arquivo de saída em tempo de execução. Ou seja, você pode especificar um módulo em qualquer diretório em tempo de compilação, mas o módulo deve estar no diretório do aplicativo em tempo de execução. Se não for, você receberá um <xref:System.TypeLoadException> erro.  
   
- Se você especificar (implícita ou explicitamente) qualquer opção[-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) diferente de `-target:module` com `-addmodule`, os arquivos passados para `-addmodule` se tornarão parte do assembly do projeto. Um assembly é necessário para executar um arquivo de saída que tenha um ou mais arquivos adicionados com `-addmodule`.  
+ Se você especificar (implícita ou explicitamente) qualquer opção[-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) diferente de `-target:module` with `-addmodule`, os arquivos passados para `-addmodule` se tornarão parte do assembly do projeto. Um assembly é necessário para executar um arquivo de saída que tenha um ou mais arquivos adicionados `-addmodule`com o.  
   
  Use [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) para importar metadados de um arquivo que contém um assembly.  
   
 > [!NOTE]
-> A opção `-addmodule` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-addmodule` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir cria um módulo.  
@@ -49,7 +49,7 @@ Faz com que o compilador verifique todos os tipos de informações de arquivos e
   
  Quando você executa `t1`, ele gera `802`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

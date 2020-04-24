@@ -15,23 +15,23 @@ O Microsoft. Data. sqlite fornece implementações de muitas das abstrações AD
 
 ## <a name="database-schema-information"></a>Informações de esquema de banco de dados
 
-Os metadados sobre os resultados da consulta estão disponíveis usando o método <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A>.
+Os metadados sobre os resultados da consulta estão <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> disponíveis usando o método.
 
-`DbConnection.GetSchema()` não está implementado. Essa API não é bem definida, portanto, é recomendável recuperar os metadados do banco de dados diretamente usando as APIs do SQLite padrão, como a tabela de [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) e o [TABLE_INFO](https://www.sqlite.org/pragma.html#pragma_table_info) pragma.
+`DbConnection.GetSchema()`Não está implementado. Essa API não é bem definida, portanto, é recomendável recuperar os metadados do banco de dados diretamente usando as APIs do SQLite padrão, como a tabela de [sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema) e o [TABLE_INFO](https://www.sqlite.org/pragma.html#pragma_table_info) pragma.
 
 Para obter mais informações, consulte [metadados](metadata.md).
 
 ## <a name="systemtransactions"></a>System.Transactions
 
-Microsoft. Data. sqlite ainda não dá suporte a System. Transactions. Em vez disso, use transações ADO.NET. Para obter mais informações, consulte [Transações](transactions.md).
+Microsoft. Data. sqlite ainda não dá suporte a System. Transactions. Em vez disso, use transações ADO.NET. Para obter mais informações, veja [Transações](transactions.md).
 
 Forneça comentários sobre a falta de suporte para System. Transactions no problema [#13825](https://github.com/dotnet/efcore/issues/13825).
 
 ## <a name="data-adapters"></a>Adaptadores de dados
 
-`DbDataAdapter` ainda não está implementado pelo Microsoft. Data. sqlite. Isso significa que você só pode usar ADO.NET `DataSet` e `DataTable` para carregar dados e não atualizá-los.
+`DbDataAdapter`Ainda não está implementado pelo Microsoft. Data. sqlite. Isso significa que você só pode usar `DataSet` ADO.NET `DataTable` e carregar dados e não atualizá-los.
 
-Use o problema [#13838](https://github.com/dotnet/efcore/issues/13838) para fornecer comentários sobre a implementação de `DbDataAdapter`.
+Use o Issue [#13838](https://github.com/dotnet/efcore/issues/13838) para fornecer comentários sobre `DbDataAdapter`a implementação.
 
 ## <a name="output-parameters"></a>Parâmetros de saída
 
@@ -47,10 +47,10 @@ O SQLite não dá suporte a procedimentos armazenados.
 
 ## <a name="isolation-levels"></a>Níveis de isolamento
 
-Os níveis de isolamento `Chaos` e `Snapshot` não têm suporte em transações SQLite.
+Os `Chaos` níveis `Snapshot` de isolamento e não têm suporte em transações SQLite.
 
 ## <a name="see-also"></a>Veja também
 
 * [Limitações assíncronas](async.md)
 * [Tipos de dados](types.md)
-* [Transações](transactions.md)
+* [Transactions](transactions.md)

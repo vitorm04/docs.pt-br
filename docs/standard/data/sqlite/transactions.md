@@ -1,5 +1,5 @@
 ---
-title: Transações
+title: Transactions
 ms.date: 12/13/2019
 description: Saiba como usar transações.
 ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
@@ -9,13 +9,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75447135"
 ---
-# <a name="transactions"></a>Transações
+# <a name="transactions"></a>Transactions
 
 As transações permitem agrupar várias instruções SQL em uma única unidade de trabalho confirmada no banco de dados como uma unidade atômica. Se qualquer instrução na transação falhar, as alterações feitas pelas instruções anteriores poderão ser revertidas. O estado inicial do banco de dados quando a transação foi iniciada é preservado. O uso de uma transação também pode melhorar o desempenho no SQLite ao fazer inúmeras alterações no banco de dados ao mesmo tempo.
 
-## <a name="concurrency"></a>Concorrência
+## <a name="concurrency"></a>Simultaneidade
 
-No SQLite, somente uma transação tem permissão para ter alterações pendentes no banco de dados de cada vez. Por isso, as chamadas para <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> e os métodos `Execute` em <xref:Microsoft.Data.Sqlite.SqliteCommand> podem atingir o tempo limite se outra transação demorar muito para ser concluída.
+No SQLite, somente uma transação tem permissão para ter alterações pendentes no banco de dados de cada vez. Por isso, as chamadas para <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> e os `Execute` métodos em <xref:Microsoft.Data.Sqlite.SqliteCommand> podem atingir o tempo limite se outra transação levar muito tempo para ser concluída.
 
 Para obter mais informações sobre bloqueio, novas tentativas e tempos limite, consulte [erros de banco de dados](database-errors.md).
 
@@ -33,6 +33,6 @@ O SQLite também dá suporte à **leitura não confirmada** ao usar um cache com
 
 Microsoft. Data. sqlite trata o IsolationLevel passado para <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> como um nível mínimo. O nível de isolamento real será promovido para leitura não confirmada ou serializável.
 
-O código a seguir simula uma leitura suja. Observe que a cadeia de conexão deve incluir `Cache=Shared`.
+O código a seguir simula uma leitura suja. Observe que a cadeia de conexão deve `Cache=Shared`incluir.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]

@@ -24,8 +24,8 @@ A lista acima não abrange todas as possíveis situações e cenários em que o 
 > [!NOTE]
 > A maioria dos exemplos nesta seção será apresentada para todas as três plataformas com suporte para .NET Core (Windows, Linux e macOS). No entanto, para alguns exemplos ilustrativos e curtos, é exibida apenas uma amostra que usa nomes de arquivo e extensões do Windows (ou seja, "dll" para bibliotecas). Isso não significa que tais recursos não estão disponíveis em Linux ou macOS; foi feito simplesmente para maior conveniência.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Invocação de plataforma (P/Invoke)](pinvoke.md)
-- [Tipo de empacotamento](type-marshaling.md)
+- [Marshaling de tipo](type-marshaling.md)
 - [Práticas recomendadas de interoperabilidade nativa](best-practices.md)

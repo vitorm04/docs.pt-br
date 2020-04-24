@@ -18,19 +18,19 @@ O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar a
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [Como mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [Como: mostrar portas seriais disponíveis](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  Demonstra como exibir as portas seriais disponíveis.  
   
- [Como discar modems conectados a portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Como: discar modems anexados a portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
  Demonstra como discar um modem conectado à porta serial de um computador.  
   
- [Como enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Como: enviar cadeias de caracteres para portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
  Demonstra como enviar uma cadeia de caracteres para uma porta serial do computador.  
   
- [Como Receber Cadeias de Caracteres de Portas Seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ [Como: receber cadeias de caracteres de portas seriais](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  Demonstra como receber uma cadeia de caracteres de uma porta serial do computador.  
   
- [Operações de Porta no .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
+ [Operações de porta no .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
  Descreve como usar o .NET Framework ao executar operações de porta.  
   
 ## <a name="reference"></a>Referência  

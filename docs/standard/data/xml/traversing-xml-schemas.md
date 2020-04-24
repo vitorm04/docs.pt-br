@@ -22,7 +22,7 @@ Percorrer um esquema XML que usa o modelo de objeto (SOM) API de esquema fornece
 
 As seguintes propriedades da classe de <xref:System.Xml.Schema.XmlSchema> fornecem acesso à coleção de todos os itens globais adicionados ao esquema XML.
 
-|propriedade|Tipo de objeto armazenado na coleção ou na matriz|
+|Propriedade|Tipo de objeto armazenado na coleção ou na matriz|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
@@ -69,10 +69,10 @@ O exemplo de código no tópico [Criação de esquemas XML](../../../../docs/sta
 
 ## <a name="see-also"></a>Veja também
 
-- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Visão geral do modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Incluindo ou importando um esquema XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Compilação Infoset de pré esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

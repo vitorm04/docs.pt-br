@@ -24,27 +24,27 @@ Faz com que o compilador aceite apenas a sintaxe que está incluída na versão 
   
 ## <a name="arguments"></a>Argumentos  
  `version`  
- Necessária. A versão de idioma a ser usada durante a compilação. Os valores aceitos são `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` e `latest`.
+ Obrigatórios. A versão de idioma a ser usada durante a compilação. `9`Os valores aceitos `10`são `11`, `12` `14` `15` `15.3` `default` ,,,,,, e `latest` `15.5`
 
  Qualquer um dos números inteiros também pode ser especificado usando `.0` como a versão secundária, por exemplo, `11.0`.
 
  Você pode ver a lista de todos os valores possíveis especificando `-langversion:?` na linha de comando.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-langversion` especifica a sintaxe aceita pelo compilador. Por exemplo, se você especificar que a versão do idioma é 9,0, o compilador gerará erros de sintaxe válida somente na versão 10,0 e posterior.  
+ A `-langversion` opção especifica qual sintaxe o compilador aceita. Por exemplo, se você especificar que a versão do idioma é 9,0, o compilador gerará erros de sintaxe válida somente na versão 10,0 e posterior.  
   
  Você pode usar essa opção ao desenvolver aplicativos direcionados a diferentes versões do .NET Framework. Por exemplo, se você estiver direcionando .NET Framework 3,5, poderá usar essa opção para garantir que não use a sintaxe da versão de linguagem 10,0.  
   
- Você pode definir `-langversion` diretamente usando a linha de comando. Para obter mais informações, consulte [Definindo uma versão específica do .NET Framework como destino](/visualstudio/ide/visual-studio-multi-targeting-overview).  
+ Você pode definir `-langversion` diretamente apenas usando a linha de comando. Para obter mais informações, consulte [Definindo uma Versão Específica do .NET Framework como Destino](/visualstudio/ide/visual-studio-multi-targeting-overview).  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `sample.vb` para Visual Basic 9,0.  
+ O código a seguir é compilado `sample.vb` para o Visual Basic 9,0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -29,7 +29,7 @@ O objeto `My.Forms` fornece uma maneira fácil de acessar uma instância de cada
 |Exibir os títulos de todos os formulários abertos do aplicativo.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |Atualizar a tela inicial com informações de status conforme o aplicativo é iniciado.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>

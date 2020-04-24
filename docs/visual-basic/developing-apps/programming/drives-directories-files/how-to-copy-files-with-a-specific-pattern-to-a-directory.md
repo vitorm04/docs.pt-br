@@ -60,7 +60,7 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
   
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>). O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>

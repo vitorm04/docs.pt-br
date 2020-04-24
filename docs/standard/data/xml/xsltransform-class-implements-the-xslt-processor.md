@@ -80,7 +80,7 @@ Para saber mais sobre níveis e evidência de segurança e como isso afeta o scr
 
 Para saber mais sobre níveis e evidência de segurança, e como isso afeta a função `document()`, confira [Resolvendo folhas de estilos XSLT e documentos externos](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).
 
-Uma folha de estilos pode ser fornecida com um número de parâmetros. A folha de estilos também pode chamar funções em objetos de extensão. Os parâmetros e objetos de extensão são fornecidos para a folha de estilos usando a classe de <xref:System.Xml.Xsl.XsltArgumentList> . Para obter mais informações sobre o <xref:System.Xml.Xsl.XsltArgumentList>, consulte <xref:System.Xml.Xsl.XsltArgumentList>.
+Uma folha de estilos pode ser fornecida com um número de parâmetros. A folha de estilos também pode chamar funções em objetos de extensão. Os parâmetros e objetos de extensão são fornecidos para a folha de estilos usando a classe de <xref:System.Xml.Xsl.XsltArgumentList> . Para obter mais informações sobre <xref:System.Xml.Xsl.XsltArgumentList>, consulte <xref:System.Xml.Xsl.XsltArgumentList>.
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Seguro uso recomendado da classe XslTransform
 
@@ -239,8 +239,8 @@ A propriedade <xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=n
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [Transformações XSLT com a classe XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
-- [XPathNavigator em transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
-- [XPathNodeIterator em transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
-- [Entrada de XPathDocument para XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
-- [Entrada de XmlDataDocument para XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
-- [Entrada de XmlDocument para XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+- [XPathNavigator nas transformações](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)
+- [XmlDocument inseriu a XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

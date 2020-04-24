@@ -36,12 +36,12 @@ O modelo de objeto (SOM) de esquema no Microsoft.NET Framework é ricos API que 
   
  Para obter mais informações sobre cada classe no namespace de <xref:System.Xml.Schema> , consulte a documentação de referência do <xref:System.Xml.Schema> na biblioteca de classes do .NET Framework.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Incluindo ou importando um esquema XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
 - [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Infoset de compilação pós-esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+- [Compilação Infoset de pré esquema](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

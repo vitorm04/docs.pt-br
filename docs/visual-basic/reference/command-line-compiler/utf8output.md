@@ -24,13 +24,13 @@ Exibe a saída do compilador usando a codificação UTF-8.
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. O padrão para essa opção é `-utf8output-`, o que significa que a saída do compilador não usa a codificação UTF-8. Especificar `-utf8output` é o mesmo que especificar `-utf8output+`.  
+ Opcional. O padrão para essa opção é `-utf8output-`, que significa que a saída do compilador não usa a codificação UTF-8. Especificar `-utf8output` é o mesmo que especificar `-utf8output+`.  
   
 ## <a name="remarks"></a>Comentários  
  Em algumas configurações internacionais, a saída do compilador não pode ser exibida corretamente no console do. Nessas situações, use `-utf8output` e redirecione a saída do compilador para um arquivo.  
   
 > [!NOTE]
-> A opção `-utf8output` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-utf8output` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e direciona o compilador para exibir a saída usando a codificação UTF-8.  
@@ -39,7 +39,7 @@ Exibe a saída do compilador usando a codificação UTF-8.
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

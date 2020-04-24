@@ -60,9 +60,9 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|Lê caracteres de um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Compondo fluxos](../../../../standard/io/composing-streams.md)
-- [Arquivo e I/O do fluxo](../../../../standard/io/index.md)
-- [E/S de arquivo assíncrona](../../../../standard/io/asynchronous-file-i-o.md)
+- [Compor fluxos](../../../../standard/io/composing-streams.md)
+- [Arquivo e e/s de fluxo](../../../../standard/io/index.md)
+- [E/s de arquivo assíncrono](../../../../standard/io/asynchronous-file-i-o.md)
 - [Noções básicas de E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

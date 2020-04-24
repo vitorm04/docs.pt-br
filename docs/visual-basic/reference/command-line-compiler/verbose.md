@@ -27,10 +27,10 @@ Faz com que o compilador produza mensagens de erro e status detalhados.
  Opcional. Especificar `-verbose` é o mesmo que especificar `-verbose+`, o que faz com que o compilador emita mensagens detalhadas. O padrão para essa opção é `-verbose-`.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-verbose` exibe informações sobre o número total de erros emitidos pelo compilador, relata quais assemblies estão sendo carregados por um módulo e exibe quais arquivos estão sendo compilados no momento.  
+ A `-verbose` opção exibe informações sobre o número total de erros emitidos pelo compilador, relata quais assemblies estão sendo carregados por um módulo e exibe quais arquivos estão sendo compilados no momento.  
   
 > [!NOTE]
-> A opção `-verbose` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-verbose` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e direciona o compilador para exibir informações detalhadas de status.  
@@ -39,7 +39,7 @@ Faz com que o compilador produza mensagens de erro e status detalhados.
 vbc -verbose in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

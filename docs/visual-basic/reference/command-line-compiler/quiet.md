@@ -30,7 +30,7 @@ Impede que o compilador exiba código para erros e avisos relacionados à sintax
 
 Por padrão, `-quiet` não está em vigor. Quando o compilador relata um erro ou aviso relacionado à sintaxe, ele também gera a linha do código-fonte. Para aplicativos que analisam a saída do compilador, pode ser mais conveniente para o compilador gerar somente o texto do diagnóstico.
 
-No exemplo a seguir, `Module1` gera um erro que inclui o código-fonte quando compilado sem `-quiet`.
+No exemplo a seguir, `Module1` gera um erro que inclui o código-fonte quando `-quiet`compilado sem.
 
 ```vb
 Module Module1
@@ -56,7 +56,7 @@ E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> A opção `-quiet` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.
+> A `-quiet` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.
 
 ## <a name="example"></a>Exemplo
 
@@ -66,7 +66,7 @@ O código a seguir compila `T2.vb` e não exibe código para diagnósticos de co
 vbc -quiet t2.vb
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

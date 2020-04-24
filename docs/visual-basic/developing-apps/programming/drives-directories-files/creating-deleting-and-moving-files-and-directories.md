@@ -47,7 +47,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  [Como criar um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  Demonstra como criar um arquivo.  
   
- [Como: Excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [Como excluir um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  Demonstra como excluir um arquivo.  
   
  [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
@@ -123,5 +123,5 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Lista as tarefas associadas à leitura de arquivos.  
   
- [Escrevendo para arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Lista as tarefas que envolvem a gravação em arquivos.

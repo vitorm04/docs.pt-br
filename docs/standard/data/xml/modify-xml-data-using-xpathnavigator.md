@@ -28,7 +28,7 @@ A classe <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos 
   
 |<xref:System.Xml.XPath.XPathNodeType>|Dados alterados|  
 |---------------------------------------------------------------------------------------------------------------------------------------------|------------------|  
-|<xref:System.Xml.XPath.XPathNodeType.Root>|{1&gt;Sem suporte.&lt;1}|  
+|<xref:System.Xml.XPath.XPathNodeType.Root>|Sem suporte.|  
 |<xref:System.Xml.XPath.XPathNodeType.Element>|O conteúdo do elemento.|  
 |<xref:System.Xml.XPath.XPathNodeType.Attribute>|O valor do atributo.|  
 |<xref:System.Xml.XPath.XPathNodeType.Text>|O conteúdo do texto.|  
@@ -252,5 +252,5 @@ Console.WriteLine(navigator.OuterXml);
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Inserir dados XML usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
-- [Remover os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+- [Dados XML de inserção usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
+- [Remova os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

@@ -1,5 +1,5 @@
 ---
-title: Acessando as configurações do aplicativo
+title: Acessando configurações do aplicativo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
@@ -33,7 +33,7 @@ Esta seção contém tópicos que descrevem o objeto `My.Settings` e as tarefas 
 |Salvar valores atualizados de configuração de usuário|[Como persistir configurações de usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |Determinar os valores das configurações de usuário|[Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Gerenciando configurações de aplicativo (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
 - [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)

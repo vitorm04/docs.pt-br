@@ -61,5 +61,5 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
  [Armazenar dados e ler da área de transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Explica como realizar tarefas associadas ao `My.Computer.Clipboard`, como leitura e gravação de dados na área de transferência.  
   
- [Codificações de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codificações de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Fornece uma visão geral sobre codificações de arquivo.

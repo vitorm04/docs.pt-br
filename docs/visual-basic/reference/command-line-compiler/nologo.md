@@ -27,7 +27,7 @@ Suprime a exibição da faixa de direitos autorais e as mensagens informativas d
  Se você especificar `-nologo`, o compilador não exibirá uma faixa de direitos autorais. Por padrão, `-nologo` não está em vigor.  
   
 > [!NOTE]
-> A opção `-nologo` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
+> A `-nologo` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `T2.vb` e não exibe uma faixa de direitos autorais.  
@@ -36,7 +36,7 @@ Suprime a exibição da faixa de direitos autorais e as mensagens informativas d
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

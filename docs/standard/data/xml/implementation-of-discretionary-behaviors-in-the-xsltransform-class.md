@@ -21,30 +21,30 @@ Portanto, porque cada um dos comportamentos arbitrários permitidos pelo W3C, a 
 
 |Problema|Comportamento|Seção|
 |-------------|--------------|-------------|
-|Um nó de texto corresponde `xsl:strip-space` e `xsl:preserve-space`.|Recupere|3.4|
-|Um nó de origem corresponde mais de uma regra de modelo.|Recupere|5.5|
-|Um namespace Uniform Resource Identifier (URI) é declarada para ser um alias para vários namespace URIs, tudo que tem o mesmo precedência de importação.|Recupere|7.1.1|
+|Um nó de texto corresponde `xsl:strip-space` e `xsl:preserve-space`.|Recuperar|3.4|
+|Um nó de origem corresponde mais de uma regra de modelo.|Recuperar|5.5|
+|Um namespace Uniform Resource Identifier (URI) é declarada para ser um alias para vários namespace URIs, tudo que tem o mesmo precedência de importação.|Recuperar|7.1.1|
 |O nome do atributo em `xsl:attribute` e em `xsl:element` gerado de um modelo de valor de atributo não é um nome qualificado válido (QName).|Exceção lançada|7.1.2 e 7.1.3|
-|Adicionando um atributo a um elemento após os nós filho já foram adicionados ao nó do elemento.|Recupere|7.1.3|
-|Adicionando um atributo a algo diferente de um nó de elemento.|Recupere|7.1.3|
-|A instanciação do conteúdo de um elemento de `xsl:attribute` não é um nó de texto.|Recupere|7.1.3|
-|Dois conjuntos de atributo tem a mesma precedência de importação e nome expandido. Têm o mesmo atributo, e não há nenhum outro atributo definida que contém o atributo comum com o mesmo nome com importância mais alta.|Recupere|7.1.4|
-|o atributo de nome de`xsl:processing-instruction` não produz um nome de sem dois-pontos (NCName) e um destino de instrução de processamento.|Recupere|7.3|
-|Criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto.|Recupere|7.3|
-|Os resultados de criar uma instância do conteúdo de `xsl:processing-instruction` contêm a cadeia de caracteres “`?>`”.|Recupere|7.3|
-|Os resultados de instanciar o conteúdo de `xsl:comment` contêm a cadeia de caracteres "--" ou terminam com "-".|Recupere|7.4|
-|Os resultados de criar uma instância do conteúdo de `xsl:comment` criar nós diferentes de nós de texto.|Recupere|7.4|
-|O modelo dentro de um elemento de variável associação retorna um nó de atributo ou um nó de namespace.|Recupere|11.2|
+|Adicionando um atributo a um elemento após os nós filho já foram adicionados ao nó do elemento.|Recuperar|7.1.3|
+|Adicionando um atributo a algo diferente de um nó de elemento.|Recuperar|7.1.3|
+|A instanciação do conteúdo de um elemento de `xsl:attribute` não é um nó de texto.|Recuperar|7.1.3|
+|Dois conjuntos de atributo tem a mesma precedência de importação e nome expandido. Têm o mesmo atributo, e não há nenhum outro atributo definida que contém o atributo comum com o mesmo nome com importância mais alta.|Recuperar|7.1.4|
+|o atributo de nome de`xsl:processing-instruction` não produz um nome de sem dois-pontos (NCName) e um destino de instrução de processamento.|Recuperar|7.3|
+|Criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto.|Recuperar|7.3|
+|Os resultados de criar uma instância do conteúdo de `xsl:processing-instruction` contêm a cadeia de caracteres “`?>`”.|Recuperar|7.3|
+|Os resultados de instanciar o conteúdo de `xsl:comment` contêm a cadeia de caracteres "--" ou terminam com "-".|Recuperar|7.4|
+|Os resultados de criar uma instância do conteúdo de `xsl:comment` criar nós diferentes de nós de texto.|Recuperar|7.4|
+|O modelo dentro de um elemento de variável associação retorna um nó de atributo ou um nó de namespace.|Recuperar|11.2|
 |Há um erro que recupera o recurso URI passado na função do documento.|Exceção lançada|12.1|
 |A referência URI na função do documento contém um identificador de fragmento, e há um erro que processa o identificador do fragmento.|Exceção lançada|12.1|
-|Há vários atributos com o mesmo nome que não são nomeados `cdata-section-elements` em `xls:output`, e esses atributos têm a mesma precedência de importação.|Recupere|16|
-|O processador não oferece suporte ao valor de codificação de caracteres fornecido no atributo de `encoding` do elemento de `xsl:output` .|Recupere|16.1|
+|Há vários atributos com o mesmo nome que não são nomeados `cdata-section-elements` em `xls:output`, e esses atributos têm a mesma precedência de importação.|Recuperar|16|
+|O processador não oferece suporte ao valor de codificação de caracteres fornecido no atributo de `encoding` do elemento de `xsl:output` .|Recuperar|16.1|
 |`disable-output-escaping` é usado para um nó de texto, e o nó de texto é usado para criar algo diferente de um nó de texto na árvore de resultado.|o atributo de`disable-output-escaping` é ignorado|16.4|
-|Convertendo uma árvore de resultado fragmente a um número ou cadeia se o fragmento da árvore de resultado contém um nó de texto com o escape de saída ativado.|Ignorado|16.4|
-|O escape de saída é desativado para os caracteres que não podem ser representados na codificação que o processador XSLT está usando para saída.|Ignorado|16.4|
-|Adicionando um nó de namespace para um elemento após os filhos lhe foram adicionados ou após os atributos lhe foram adicionados|Recupere|Erratas e25|
-|`xsl:number` é NaN, interminável, ou menor que 0,5.|Recupere|Erratas e24|
-|O segundo argumento nó- definida como a função do documento está vazia e a referência URI é relativo|Recupere|Erratas e14|
+|Convertendo uma árvore de resultado fragmente a um número ou cadeia se o fragmento da árvore de resultado contém um nó de texto com o escape de saída ativado.|Ignored|16.4|
+|O escape de saída é desativado para os caracteres que não podem ser representados na codificação que o processador XSLT está usando para saída.|Ignored|16.4|
+|Adicionando um nó de namespace para um elemento após os filhos lhe foram adicionados ou após os atributos lhe foram adicionados|Recuperar|Erratas e25|
+|`xsl:number` é NaN, interminável, ou menor que 0,5.|Recuperar|Erratas e24|
+|O segundo argumento nó- definida como a função do documento está vazia e a referência URI é relativo|Recuperar|Erratas e14|
 
 As seções da errata podem ser encontradas em [XSL Transformations (XSLT) Version 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) [Erratas de especificação de XSLT (XSL Transformations) Versão 1.0] do W3C.
 
@@ -54,7 +54,7 @@ Há comportamentos exclusivos para a implementação da classe de <xref:System.X
 
 ## <a name="xslsort"></a>xsl:sort
 
-Ao usar uma transformação para classificar, a recomendação W3C XSLT 1,0 faça algumas observações. Elas são:
+Ao usar uma transformação para classificar, a recomendação W3C XSLT 1,0 faça algumas observações. Eles são:
 
 - Dois processadores XSLT podem ser processadores de conformação, mas ainda podem classificar diferente.
 
@@ -73,17 +73,17 @@ A tabela a seguir mostra o comportamento de classificação implementado para ca
 
 A tabela a seguir mostra os recursos que são opcionais para um processador XSLT implementa e é implementada na classe de <xref:System.Xml.Xsl.XslTransform> .
 
-|Recurso|Local de referência|{1&gt;Observações&lt;1}|
+|Recurso|Local de referência|Observações|
 |-------------|------------------------|-----------|
 |atributo de`disable-output-escaping` em `<xsl:text...>` e em marcas de `<xsl:value-of...>` .|Recomendação W3C XSLT, 1,0<br /><br /> Seção 16,4|O atributo de `disable-output-escaping` é ignorado quando os elementos de `xsl:text` ou de `xsl:value-of` são usados em `xsl:comment`, em `xsl:processing-instruction`, ou no elemento de `xsl:attribute` .<br /><br /> Os fragmentos da árvore de resultado que contêm texto e saída de texto que foram de escape não são suportados.<br /><br /> O atributo de escape é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos.|
 
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [A classe XslTransform implementa o processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
-- [XPathNavigator em transformações](xpathnavigator-in-transformations.md)
-- [XPathNodeIterator em transformações](xpathnodeiterator-in-transformations.md)
-- [Entrada de XPathDocument para XslTransform](xpathdocument-input-to-xsltransform.md)
-- [Entrada de XmlDataDocument para XslTransform](xmldatadocument-input-to-xsltransform.md)
-- [Entrada de XmlDocument para XslTransform](xmldocument-input-to-xsltransform.md)
+- [XPathNavigator nas transformações](xpathnavigator-in-transformations.md)
+- [XPathNodeIterator nas transformações](xpathnodeiterator-in-transformations.md)
+- [XPathDocument inseriu a XslTransform](xpathdocument-input-to-xsltransform.md)
+- [XmlDataDocument inseriu a XslTransform](xmldatadocument-input-to-xsltransform.md)
+- [XmlDocument inseriu a XslTransform](xmldocument-input-to-xsltransform.md)

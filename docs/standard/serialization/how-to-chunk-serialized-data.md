@@ -58,6 +58,6 @@ O exemplo de código a seguir mostra o método da Web no cliente que desativa o 
   
 - O código usa os seguintes namespaces: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization> e <xref:System.Xml.Schema>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Serialização personalizada](custom-serialization.md)

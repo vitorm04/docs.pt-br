@@ -30,21 +30,21 @@ Especifica o local de mscorlib. dll e Microsoft. VisualBasic. dll.
  O diretório que contém as versões de mscorlib. dll e Microsoft. VisualBasic. dll a serem usadas para compilação. Esse caminho não é verificado até que seja carregado. Coloque o nome do diretório entre aspas ("") se ele contiver um espaço.  
   
 ## <a name="remarks"></a>Comentários  
- Essa opção informa o compilador de Visual Basic para carregar os arquivos mscorlib. dll e Microsoft. VisualBasic. dll de um local não padrão. A opção `-sdkpath` foi projetada para ser usada com [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). O .NET Compact Framework usa versões diferentes dessas bibliotecas de suporte para evitar o uso de tipos e recursos de idioma não encontrados nos dispositivos.  
+ Essa opção informa o compilador de Visual Basic para carregar os arquivos mscorlib. dll e Microsoft. VisualBasic. dll de um local não padrão. A `-sdkpath` opção foi projetada para ser usada com [-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). O .NET Compact Framework usa versões diferentes dessas bibliotecas de suporte para evitar o uso de tipos e recursos de idioma não encontrados nos dispositivos.  
   
 > [!NOTE]
-> A opção `-sdkpath` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando. A opção `-sdkpath` é definida quando um projeto de dispositivo Visual Basic é carregado.  
+> A `-sdkpath` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando. A `-sdkpath` opção é definida quando um projeto de dispositivo Visual Basic é carregado.  
   
- Você pode especificar que o compilador deve compilar sem uma referência para a biblioteca de tempo de execução Visual Basic usando a opção de compilador `-vbruntime`. Para obter mais informações, consulte [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
+ Você pode especificar que o compilador deve compilar sem uma referência para a biblioteca de tempo de execução Visual Basic `-vbruntime` usando a opção do compilador. Para obter mais informações, consulte [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `Myfile.vb` com o .NET Compact Framework, usando as versões de mscorlib. dll e Microsoft. VisualBasic. dll encontrados no diretório de instalação padrão do .NET Compact Framework na unidade C. Normalmente, você usaria a versão mais recente do .NET Compact Framework.  
+ O código a seguir é compilado `Myfile.vb` com o .NET Compact Framework, usando as versões de mscorlib. dll e Microsoft. VisualBasic. dll encontrados no diretório de instalação padrão do .NET Compact Framework na unidade C. Normalmente, você usaria a versão mais recente do .NET Compact Framework.  
   
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

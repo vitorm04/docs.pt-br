@@ -24,22 +24,22 @@ Descreve como a classe de <xref:System.Xml.Schema.XmlSchemaInference> infere o t
   
 |Tipo simples|Descrição|  
 |-----------------|-----------------|  
-|boolean|True, false, 0, 1.|  
+|booleano|True, false, 0, 1.|  
 |byte|Inteiros no intervalo de – 128 a 127.|  
 |unsignedByte|Inteiros no intervalo de 0 a 255.|  
 |short|Inteiros no intervalo de – 32768 a 32767.|  
 |unsignedShort|Inteiros no intervalo de 0 a 65535.|  
-|int|Inteiros no intervalo de – 2147483648 a 2147483647.|  
+|INT|Inteiros no intervalo de – 2147483648 a 2147483647.|  
 |unsignedInt|Inteiros no intervalo de 0 a 4294967295.|  
 |long|Inteiros no intervalo de – 9223372036854775808 a 9223372036854775807.|  
 |unsignedLong|Inteiros no intervalo de 0 a 18446744073709551615.|  
-|integer|Um número de dígitos finito prefixados possivelmente com “-”.|  
+|inteiro|Um número de dígitos finito prefixados possivelmente com “-”.|  
 |decimal|Valores numéricos que contêm 0 a 28 dígitos de precisão.|  
-|float|Os decimais opcionalmente seguido por “E” ou “e” tiver usado por um valor inteiro que representa o expoente. Os valores decimais podem estar no intervalo de -16777216 a 16777216. Os valores do expoente podem estar no intervalo de – 149 a 104.<br /><br /> O flutuante permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para o flutuante são: 0, -0, INF, - INF, NaN.|  
+|FLOAT|Os decimais opcionalmente seguido por “E” ou “e” tiver usado por um valor inteiro que representa o expoente. Os valores decimais podem estar no intervalo de -16777216 a 16777216. Os valores do expoente podem estar no intervalo de – 149 a 104.<br /><br /> O flutuante permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para o flutuante são: 0, -0, INF, - INF, NaN.|  
 |double|O mesmo como flutuam exceto valores decimais podem estar no intervalo de -9007199254740992 a 9007199254740992, e o expoente valor podem estar no intervalo de – 1075 a 970.<br /><br /> O tipo double permite valores especiais representar a infinito e não valores numéricos. Os valores especiais para o flutuante são: 0, -0, INF, - INF, NaN.|  
 |duration|O formato de duração W3C.|  
 |dateTime|O formato dateTime W3C.|  
-|hora|O formato de hora W3C.|  
+|time|O formato de hora W3C.|  
 |date|Os valores do ano são impedidos de 0001 a 9999.|  
 |gYearMonth|O formato gregoriano mês e ano de W3C.|  
 |cadeia de caracteres|Um ou mais caracteres Unicode.|  
@@ -76,6 +76,6 @@ Os seguintes esquema- está definindo os atributos que são ignorados durante a 
   
 ## <a name="see-also"></a>Veja também
 
-- [XML Schema Object Model (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md) [SOM (Modelo de Objeto de Esquema) XML]
+- [SOM (Schema Object Model) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Inferindo esquemas de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regras para inferir tipos de nó e estrutura de esquema](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

@@ -50,7 +50,7 @@ Os objetos **Node** têm um conjunto de métodos e propriedades e característic
 
 - A maioria dos nós pode possuir vários nós filho, que são nós diretamente abaixo deles. A seguir está uma lista de tipos de nós que podem possuir nós filho.
 
-  - **Document**
+  - **Documento**
 
   - **DocumentFragment**
 
@@ -58,7 +58,7 @@ Os objetos **Node** têm um conjunto de métodos e propriedades e característic
 
   - **Elemento**
 
-  - **Attribute**
+  - **Atributo**
 
   Os nós **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction** e **DocumentType** não têm nós filho.
 
@@ -77,4 +77,4 @@ O DOM é mais útil para ler dados XML na memória para alterar sua estrutura, p
 ## <a name="see-also"></a>Veja também
 
 - [Tipos de nós XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
-- [Mapeando a hierarquia de objetos para dados XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+- [Mapeando a hierarquia do objeto para dados XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

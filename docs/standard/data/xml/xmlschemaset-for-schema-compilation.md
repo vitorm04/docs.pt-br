@@ -259,4 +259,4 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 - <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
 - [XmlSchemaSet como um cache de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [Validação de esquema XML (XSD) com XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)
+- [Validação de XSD (esquema XML) com XmlSchemaSet](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

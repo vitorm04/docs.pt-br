@@ -81,7 +81,7 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [-Target (Visual Basic)](target.md)
 - [Compilador de linha de comando do Visual Basic](index.md)

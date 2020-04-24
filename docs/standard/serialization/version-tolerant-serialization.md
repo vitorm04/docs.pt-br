@@ -121,7 +121,7 @@ End Class
 
 Os retornos de chamada de serialização são um mecanismo que fornece ganchos no processo de serialização/desserialização em quatro pontos.
 
-|Atributo|Quando o método associado é chamado|Uso típico|
+|Atributo|Quando o método associado é chamado|Usos comum|
 |---------------|------------------------------------------|-----------------|
 |<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Antes da desserialização.\*|Inicialize valores padrão para campos opcionais.|
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Depois da desserialização.|Corrija valores de campo opcionais com base nos conteúdos de outros campos.|

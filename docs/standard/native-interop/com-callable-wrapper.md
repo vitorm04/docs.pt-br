@@ -51,7 +51,7 @@ Além de expor as interfaces que são implementadas explicitamente por uma class
 |---------------|-----------------|
 |**IDispatch**|Fornece um mecanismo de associação tardia ao tipo.|
 |**IErrorInfo**|Fornece uma descrição textual do erro, sua origem, um arquivo de Ajuda, um contexto de Ajuda e o GUID da interface que definiu o erro (sempre **GUID_NULL** para classes do .NET).|
-|**Iprovideclassinfo**|Permite aos clientes COM obter acesso à interface **ITypeInfo** implementada por uma classe gerenciada. Retorna `COR_E_NOTSUPPORTED` no .NET Core para tipos não importados do COM. |
+|**IProvideClassInfo**|Permite aos clientes COM obter acesso à interface **ITypeInfo** implementada por uma classe gerenciada. Retorna `COR_E_NOTSUPPORTED` no .NET Core para tipos não importados do COM. |
 |**ISupportErrorInfo**|Permite a um cliente COM determinar se o objeto gerenciado dá suporte à interface **IErrorInfo**. Nesse caso, permite ao cliente obter um ponteiro para o último objeto de exceção. Todos os tipos gerenciados dão suporte à interface **IErrorInfo**.|
 |**ITypeInfo** (somente .NET Framework)|Fornece informações de tipo de uma classe que são exatamente iguais às informações de tipo produzidas pelo Tlbexp.exe.|
 |**IUnknown**|Fornece a implementação padrão da interface **IUnknown** com a qual o cliente COM gerencia o tempo de vida do CCW e fornece a coerção de tipo.|
@@ -192,10 +192,10 @@ Se o seu aplicativo exigir chamadas early-bound para métodos de interface de ev
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [Invólucros COM](com-wrappers.md)
+- [Wrappers COM](com-wrappers.md)
 - [Expondo componentes do .NET Framework para COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [Como expor componentes do .NET Core ao COM](../../core/native-interop/expose-components-to-com.md)
 - [Qualificando tipos do .NET para interoperação](qualify-net-types-for-interoperation.md)

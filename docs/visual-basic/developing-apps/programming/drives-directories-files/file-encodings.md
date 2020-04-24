@@ -38,7 +38,7 @@ A classe <xref:System.Text.Encoding> representa uma codificação de caracteres.
 |<xref:System.Text.UTF7Encoding>|Representa uma codificação de caracteres Unicode UTF-7.|
 |<xref:System.Text.UTF8Encoding>|Representa uma codificação de caracteres Unicode UTF-8. |
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Escrevendo para arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

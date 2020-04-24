@@ -24,7 +24,7 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
  [Desenvolvimento com My](../../visual-basic/developing-apps/development-with-my/index.md)  
  Discute um novo recurso chamado `My`, que fornece acesso a informações e a instâncias de objetos padrão que são relacionadas a um aplicativo e seu ambiente de tempo de execução.  
   
- [Acessando dados em aplicações básicas visuais](../../visual-basic/developing-apps/accessing-data.md)  
+ [Acessando dados em aplicativos Visual Basic](../../visual-basic/developing-apps/accessing-data.md)  
  Contém ajuda para acessar os dados do Visual Basic.  
   
  [Criando e usando componentes no Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
@@ -41,5 +41,5 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
  [Guia de programação do Visual Basic](../../visual-basic/programming-guide/index.md)  
  Percorre os elementos essenciais de programação com o Visual Basic.  
   
- [Referência de linguagem básica visual](../../visual-basic/language-reference/index.md)  
+ [Referência de linguagem de Visual Basic](../../visual-basic/language-reference/index.md)  
  Contém documentação de referência para a linguagem do Visual Basic.

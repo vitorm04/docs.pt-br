@@ -11,8 +11,8 @@ ms.locfileid: "75901279"
 ---
 # <a name="online-backup"></a>Backup online
 
-O SQLite pode fazer backup de arquivos de banco de dados enquanto o aplicativo está em execução. Essa funcionalidade está disponível em Microsoft. Data. SQLite como o método <xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> em `SqliteConnection`.
+O SQLite pode fazer backup de arquivos de banco de dados enquanto o aplicativo está em execução. Essa funcionalidade está disponível em Microsoft. Data. SQLite como o <xref:Microsoft.Data.Sqlite.SqliteConnection.BackupDatabase%2A> método em `SqliteConnection`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/BackupSample/Program.cs?name=snippet_Backup)]
 
-Atualmente, `BackupDatabase` fará o backup do banco de dados o mais rápido possível e bloqueará a gravação de outras conexões no banco de dados. O problema [#13834](https://github.com/dotnet/efcore/issues/13834) forneceria uma API alternativa para fazer backup do banco de dados em segundo plano e permitir que outras conexões interrompam o backup e gravem no banco de dados. Se você estiver interessado, forneça comentários sobre o problema.
+No momento `BackupDatabase` , o fará backup do banco de dados o mais rápido possível e bloqueará a gravação de outras conexões no banco de dados. O problema [#13834](https://github.com/dotnet/efcore/issues/13834) forneceria uma API alternativa para fazer backup do banco de dados em segundo plano e permitir que outras conexões interrompam o backup e gravem no banco de dados. Se você estiver interessado, forneça comentários sobre o problema.

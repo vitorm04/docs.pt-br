@@ -46,7 +46,7 @@ As seguintes condições podem causar uma exceção:
 
 - O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>
 - [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

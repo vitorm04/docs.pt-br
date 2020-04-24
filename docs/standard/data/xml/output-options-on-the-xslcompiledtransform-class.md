@@ -20,16 +20,16 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
   
 |Nome do atributo|Comportamento|  
 |--------------------|--------------|  
-|{1&gt;Método &lt;1}|Com suporte.|  
-|versão|Ignorado. A versão é sempre 1,0 para XML e 4,0 para HTML.|  
-|{1&gt;encoding&lt;1}|Ignorado para gerar a <xref:System.IO.TextWriter>. A propriedade de <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> é usada em vez.|  
-|{1&gt;omit-xml-declaration&lt;1}|Com suporte.|  
-|{1&gt;standalone&lt;1}|Com suporte.|  
-|doctype-public|Com suporte.|  
-|doctype-system|Com suporte.|  
-|cdata-section-elements|Com suporte.|  
-|{1&gt;indent&lt;1}|Com suporte.|  
-|media-type|Com suporte.|  
+|method| Com suporte.|  
+|version|Ignorado. A versão é sempre 1,0 para XML e 4,0 para HTML.|  
+|codificando|Ignorado para gerar a <xref:System.IO.TextWriter>. A propriedade de <xref:System.IO.TextWriter.Encoding%2A?displayProperty=nameWithType> é usada em vez.|  
+|omit-xml-declaration| Com suporte.|  
+|autônomos| Com suporte.|  
+|doctype-public| Com suporte.|  
+|doctype-system| Com suporte.|  
+|cdata-section-elements| Com suporte.|  
+|indent| Com suporte.|  
+|media-type| Com suporte.|  
   
 #### <a name="sending-output-to-an-xmlwriter"></a>Enviando saída para um XmlWriter  
  Se a folha de estilos usa o elemento de `xsl:output` e o tipo de saída é um objeto de <xref:System.Xml.XmlWriter> , você deve usar a propriedade de <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> quando você cria o objeto de <xref:System.Xml.XmlWriter> . A propriedade de <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A?displayProperty=nameWithType> retorna um objeto de <xref:System.Xml.XmlWriterSettings> que contém informações derivada de elemento de `xsl:output` de uma folha de estilos compilado. Este objeto de <xref:System.Xml.XmlWriterSettings> pode ser passado para o método de <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> para criar um objeto de <xref:System.Xml.XmlWriter> com as configurações corretas.  
@@ -40,10 +40,10 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
 #### <a name="xmlwriter"></a>XmlWriter  
  A classe de <xref:System.Xml.XmlWriter> gravará fluxos XML ou arquivos. Você pode especificar os recursos para oferecer suporte no objeto de <xref:System.Xml.XmlWriter> , incluindo opções de saída, usando a classe de <xref:System.Xml.XmlWriterSettings> . A classe de <xref:System.Xml.XmlWriter> é uma parte integral de estrutura de <xref:System.Xml> . Use esse tipo de saída para canalizar os resultados de saída em outro processo XML.  
   
-#### <a name="string"></a>Cadeia de caracteres  
+#### <a name="string"></a>String  
  Use esse tipo de saída para especificar a URL do arquivo de saída.  
   
-#### <a name="stream"></a>Stream  
+#### <a name="stream"></a>STREAM  
  Um fluxo é uma abstração de uma sequência de bytes, como um arquivo, um dispositivo de arquivos entrada/saída, um pipe de comunicação de inter- processo, ou um soquete TCP/IP. A classe de <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão genérica desses tipos diferentes de entrada e saída, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
   
  Use esse tipo de saída para enviar dados a <xref:System.IO.FileStream>, a <xref:System.IO.MemoryStream>, ou um fluxo de saída (`Response.OutputStream`).  
@@ -51,7 +51,7 @@ Este tópico discute opções de saída disponíveis XSLT. Você pode especifica
 #### <a name="textwriter"></a>TextWriter  
  Os caracteres sequenciais de grava de <xref:System.IO.TextWriter> . É implementado nas classes de <xref:System.IO.StringWriter> e de <xref:System.IO.StreamWriter> , que gravam caracteres para cadeias de caracteres ou para fluxos, respectivamente. Use esse tipo de saída quando você deseja para a saída para uma cadeia de caracteres.  
   
-## <a name="notes"></a>{1&gt;Observações&lt;1}  
+## <a name="notes"></a>Observações  
   
 - Para gravar marcas vazios, um espaço é escrito entre o último caractere do nome de elemento e a barra invertida, `<myElement />` por exemplo. Isso permite que um navegadores mais antigos exibir as páginas corretamente gerados HTML.  
   

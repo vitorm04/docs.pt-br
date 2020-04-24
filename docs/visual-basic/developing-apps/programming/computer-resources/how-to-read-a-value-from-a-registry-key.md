@@ -1,5 +1,5 @@
 ---
-title: Como ler um valor a partir de uma chave do Registro
+title: 'Como: ler um valor de uma chave do Registro'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -55,7 +55,7 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
 
  Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - <xref:Microsoft.Win32.RegistryHive>

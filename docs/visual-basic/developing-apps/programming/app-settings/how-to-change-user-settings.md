@@ -1,5 +1,5 @@
 ---
-title: Como alterar configurações de usuário
+title: 'Como: alterar configurações do usuário'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -33,7 +33,7 @@ Você pode alterar uma configuração do usuário atribuindo um novo valor à pr
   
  O aplicativo salva as configurações do usuário quando o aplicativo é desligado. Para salvar as configurações imediatamente, chame o método `My.Settings.Save`. Para obter mais informações, consulte [Como persistir configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [Como ler configurações do aplicativo no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)

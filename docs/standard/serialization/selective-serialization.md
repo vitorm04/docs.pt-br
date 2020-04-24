@@ -31,8 +31,8 @@ Se possível, crie um objeto que possa conter dados confidenciais de segurança 
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serialização binária](binary-serialization.md)
-- [Serialização XML e SOAP](xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)

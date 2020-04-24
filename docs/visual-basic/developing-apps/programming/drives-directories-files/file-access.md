@@ -30,7 +30,7 @@ O objeto `My.Computer.FileSystem` fornece ferramentas para trabalhar com arquivo
  [Ler arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Lista os tópicos que lidam com o uso do objeto `My.Computer.FileSystem` para ler arquivos  
   
- [Escrevendo para arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  Lista os tópicos que lidam com o uso do objeto `My.Computer.FileSystem` para gravar em arquivos  
   
  [Criar, excluir e mover arquivos e diretórios](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
@@ -39,7 +39,7 @@ O objeto `My.Computer.FileSystem` fornece ferramentas para trabalhar com arquivo
  [Analisando arquivos de texto com o objeto TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
  Discute como usar o `TextFieldReader` para analisar arquivos de texto, como logs.  
   
- [Codificações de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
+ [Codificações de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)  
  Descreve as codificações de arquivo e seu uso.  
   
  [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  

@@ -335,4 +335,4 @@ document.Save("book.xml");
 - <xref:System.Xml.XPath.XPathNavigator>
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
 - [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
-- [Remover os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+- [Remova os dados XML usando XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

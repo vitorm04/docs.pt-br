@@ -41,9 +41,9 @@ A seguinte tabela lista as versões de subsistema comuns do Windows.
 |Versão do Windows|Versão do subsistema|
 |---------------------|-----------------------|
 |Windows 2000|5.00|
-|Windows XP|5.01|
-|Windows Server 2003|5.02|
-|Windows Vista|6.00|
+|Windows XP|5,01|
+|Windows Server 2003|5,02|
+|Windows Vista|6,00|
 |Windows 7|6.01|
 |Windows Server 2008|6.01|
 |Windows 8|6.02|
@@ -54,9 +54,9 @@ O valor padrão da opção do compilador **-subsystemversion** depende das condi
 
 - O valor padrão é 6.02 se qualquer opção do compilador na lista a seguir for definida:
 
-  - [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
 
-  - [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
+  - [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
@@ -66,10 +66,10 @@ O valor padrão da opção do compilador **-subsystemversion** depende das condi
 
 ## <a name="setting-this-option"></a>Definindo esta opção
 
-Para definir a opção de compilador **-SubSystemVersion** no Visual Studio, você deve abrir o arquivo. vbproj e especificar um valor para a propriedade `SubsystemVersion` no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+Para definir a opção de compilador **-SubSystemVersion** no Visual Studio, você deve abrir o arquivo. vbproj e especificar um valor para `SubsystemVersion` a propriedade no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
-- [Propriedades MSBuild](/visualstudio/msbuild/msbuild-properties)
+- [Propriedades do MSBuild](/visualstudio/msbuild/msbuild-properties)

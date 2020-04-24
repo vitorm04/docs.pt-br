@@ -13,7 +13,7 @@ ms.locfileid: "75709966"
 # <a name="xml-document-object-model-dom-hierarchy"></a>Hierarquia DOM (Document Object Model) XML
 A ilustração a seguir mostra a hierarquia de classes para o DOM (Document Object Model) XML, com o nome do World Wide Web Consortium (W3C) entre parênteses junto com o nome da classe onde é relevante.  
   
- ![Hierarquia dom &#40;&#41; de modelo de objeto do documento XML](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
+ ![Modelo de Objeto do Documento XML &#40;hierarquia de&#41; DOM](../../../../docs/standard/data/xml/media/dom-class-hierarchy.gif "Dom_class_hierarchy")  
 Hierarquia DOM (Document Object Model) XML  
   
  As seguintes classes não herdam de **XmlNode**:  
@@ -38,4 +38,4 @@ Hierarquia DOM (Document Object Model) XML
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

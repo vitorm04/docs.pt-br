@@ -78,4 +78,4 @@ A tabela a seguir descreve o mapeamento padrão entre os tipos de dados XML e o 
 
 ## <a name="see-also"></a>Veja também
 
-- [Type Support in the System.Xml Classes](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md) (Suporte a tipo nas classes System.XML)
+- [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

@@ -114,7 +114,7 @@ O exemplo de código completo pode ser encontrado em <xref:System.Xml.XmlDocumen
 
 Você também pode criar um nó **XmlAttribute** e usar o método **InsertBefore** ou **InsertAfter** para colocá-lo na posição apropriada na coleção. Se um atributo com o mesmo nome já estiver presente na coleção de atributos, o nó **XmlAttribute** existente será removido da coleção, e o novo nó **XmlAttribute** será inserido. Isso é executado da mesma forma que o método **SetAttribute**. Esses métodos usam, como parâmetro, um nó existente como um ponto de referência para fazer **InsertBefore** e **InsertAfter**. Se você não fornecer um nó de referência indicando onde inserir o novo nó, o padrão para o método **InsertAfter** será inserir o novo nó no início da coleção. A posição padrão de **InsertBefore**, se nenhum nó de referência for fornecido, será no final da coleção.
 
-Se você criou um **XmlNamedNodeMap** de atributos, você pode adicionar um atributo por nome usando o método <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Para saber mais, confira [Coleções de nó em NamedNodeMaps e em NodeLists](node-collections-in-namednodemaps-and-nodelists.md).
+Se você criou um **XmlNamedNodeMap** de atributos, você pode adicionar um atributo por nome usando o <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> método. Para saber mais, confira [Coleções de nó em NamedNodeMaps e em NodeLists](node-collections-in-namednodemaps-and-nodelists.md).
 
 ## <a name="default-attributes"></a>Atributos padrão
 
@@ -126,4 +126,4 @@ O valor de um nó de atributo se torna os seus nós filhos. Há apenas dois tipo
 
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

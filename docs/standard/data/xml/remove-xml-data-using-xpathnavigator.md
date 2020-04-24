@@ -185,5 +185,5 @@ Console.WriteLine(navigator.OuterXml);
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Inserir dados XML usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
+- [Dados XML de inserção usando XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
 - [Modificar dados XML usando XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)

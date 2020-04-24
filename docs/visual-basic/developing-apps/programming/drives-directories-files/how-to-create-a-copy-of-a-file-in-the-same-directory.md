@@ -64,7 +64,7 @@ Use o método `My.Computer.FileSystem.CopyFile` para copiar arquivos. Os parâme
   
 - O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>

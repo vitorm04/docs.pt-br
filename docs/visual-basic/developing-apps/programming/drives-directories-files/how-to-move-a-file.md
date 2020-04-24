@@ -51,7 +51,7 @@ O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arq
   
 - O usuário não tem a permissão necessária (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)

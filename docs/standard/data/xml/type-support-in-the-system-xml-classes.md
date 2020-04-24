@@ -27,14 +27,14 @@ No .NET Framework versão 2,0, as classes XML principais foram aprimoradas para 
 > Na versão 1,0 do.NET Framework a classe de <xref:System.Xml.XmlConvert> foi necessária para converter entre o esquema XML e os tipos de CLR.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Mapeando tipos de dados XML para tipos CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
+ [Tipos de dados XML de mapeamento para tipos de CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
  Descreve os mapeamentos padrão de tipos de dados XML para tipos de CLR.  
   
- [Notas de implementação de suporte de tipo XML](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
+ [Notas de implementação de suporte do tipo XML](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
  Descreve alguns dos detalhes de implementação de suporte de tipo.  
   
  [Conversão de tipos de dados XML](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
  Descreve como usar a classe de <xref:System.Xml.XmlConvert> para converter entre o esquema XML e os tipos de CLR.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
- [Acessando dados XML fortemente tipados usando o XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)
+## <a name="related-sections"></a>Seções relacionadas  
+ [Acessando dados fortemente tipados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-strongly-typed-xml-data-using-xpathnavigator.md)

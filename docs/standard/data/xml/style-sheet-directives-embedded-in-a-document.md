@@ -37,4 +37,4 @@ De acordo com a recomendação [Associating Style Sheets with XML documents Vers
 
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

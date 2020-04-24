@@ -31,14 +31,14 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> é o processador XSLT do Mic
   
 |||  
 |-|-|  
-|[Erros recuperáveis de XSLT](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)|Lista os comportamentos discricionários permitidos pela recomendação da World Wide Web Consortium (W3C) XSLT 1.0 e descreve como esses comportamentos são tratados pela classe <xref:System.Xml.Xsl.XslCompiledTransform>.|  
-|[Como transformar um fragmento do nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|Descreve como transformar um fragmento de nó.|  
+|[Erros recuperáveis XSLT](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)|Lista os comportamentos discricionários permitidos pela recomendação da World Wide Web Consortium (W3C) XSLT 1.0 e descreve como esses comportamentos são tratados pela classe <xref:System.Xml.Xsl.XslCompiledTransform>.|  
+|[Como: Transformar um fragmento de nó](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|Descreve como transformar um fragmento de nó.|  
   
-## <a name="related-sections"></a>Seções Relacionadas  
- [Migrando da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
+## <a name="related-sections"></a>Seções relacionadas  
+ [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  Aborda como migrar o código da classe <xref:System.Xml.Xsl.XslTransform>  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - <xref:System.Xml.Xsl.XsltSettings>
 - <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

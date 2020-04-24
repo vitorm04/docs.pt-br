@@ -25,30 +25,30 @@ Especifica um namespace para todas as declarações de tipo.
 -rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
 |`namespace`|O nome do namespace no qual incluir todas as declarações de tipo para o projeto atual.|  
   
 ## <a name="remarks"></a>Comentários  
- Se você usar o arquivo executável do Visual Studio (devenv. exe) para compilar um projeto criado no ambiente de desenvolvimento integrado do Visual Studio, use `-rootnamespace` para especificar o valor da propriedade <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>. Consulte [Opções de linha de comando do devenv](/visualstudio/ide/reference/devenv-command-line-switches) para obter mais informações.  
+ Se você usar o arquivo executável do Visual Studio (devenv. exe) para compilar um projeto criado no ambiente de desenvolvimento integrado do Visual Studio `-rootnamespace` , use para especificar o valor <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> da propriedade. Consulte [Opções de linha de comando do devenv](/visualstudio/ide/reference/devenv-command-line-switches) para obter mais informações.  
   
- Use o desmontador Common Language Runtime MSIL (`Ildasm.exe`) para exibir os nomes de namespace em seu arquivo de saída.  
+ Use o Common Language Runtime o desmontador MSIL`Ildasm.exe`() para exibir os nomes de namespace em seu arquivo de saída.  
   
 |Para Set-RootNamespace no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Aplicativo**.<br />3.  Modifique o valor na caixa **namespace raiz** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **aplicativo** .<br />3. modifique o valor na caixa **namespace raiz** .|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `In.vb` e inclui todas as declarações de tipo no namespace `mynamespace`.  
+ O código a seguir compila `In.vb` e inclui todas as declarações de tipo no namespace. `mynamespace`  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [ILDASM. exe (desmontador de IL)](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -28,7 +28,7 @@ Especifica como são feitas comparações de cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` para usar comparações de cadeia de caracteres binária e `-optioncompare:text` para usar comparações de cadeia de caracteres de texto. Por padrão, o compilador usa `-optioncompare:binary`.
+Você pode especificar `-optioncompare` em uma das duas formas: `-optioncompare:binary` para usar comparações de cadeia de `-optioncompare:text` caracteres binárias e para usar comparações de cadeia de caracteres de texto. Por padrão, o compilador usa `-optioncompare:binary`o.
 
 No Microsoft Windows, a página de código atual determina a ordem de classificação binária. Uma ordem de classificação binária típica é a seguinte:
 
@@ -40,7 +40,7 @@ As comparações de cadeia de caracteres baseadas em texto são baseadas em uma 
 
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Para Set-optioncompare no IDE do Visual Studio
 
-1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto** , clique em **Propriedades**.
 
 2. Clique na guia **Compilar**.
 
@@ -58,7 +58,7 @@ O código a seguir compila `ProjFile.vb` e usa comparações de cadeia de caract
 vbc -optioncompare:binary projFile.vb
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)

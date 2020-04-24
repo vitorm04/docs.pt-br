@@ -1,5 +1,5 @@
 ---
-title: 'Como: ler a partir de arquivos de texto de largura fixa'
+title: 'Como: ler de arquivos de texto de largura fixa'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -59,7 +59,7 @@ O objeto `TextFieldParser` fornece uma maneira fácil e eficiente de analisar ar
   
 - O usuário não tem permissões suficientes para acessar o arquivo (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - [Como ler a partir de arquivos de texto separados por vírgulas](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)

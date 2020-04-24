@@ -38,9 +38,9 @@ Inicie o Visual Studio e comece o projeto criando um formulário que o usuário 
 
 2. No painel **Novo Projeto**, clique em **Aplicativos do Windows**.
 
-3. No **tipo** `MyDiary` de caixa Nome e clique em **OK**.
+3. Na caixa **nome** , digite `MyDiary` e clique em **OK**.
 
-     O Visual Studio adiciona o projeto ao **Solution Explorer**, e o Windows **Forms Designer** é aberto.
+     O Visual Studio adiciona o projeto a **Gerenciador de soluções**e o **Designer de formulários do Windows** é aberto.
 
 4. Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
@@ -98,7 +98,7 @@ Para esta seção do passo a passo, adicione os controles na tabela a seguir ao 
 |<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Tamanho**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Exibição**|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`GetEntries`<br /><br /> **Obter entradas**|
-|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.ComboBox>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`PickEntries`<br /><br /> **Selecionar uma entrada**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>Para popular a caixa de combinação
 
@@ -124,9 +124,9 @@ Adicione os controles na tabela a seguir ao formulário e defina os valores corr
 
 |Control|Propriedades|Valores|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`SubmitEdit`<br /><br /> **Enviar edição**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitada**|`SubmitEdit`<br /><br /> **Enviar edição**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas
 
@@ -150,10 +150,10 @@ Adicione os controles na tabela a seguir ao formulário e defina os valores corr
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Editar a entrada `Entry` <xref:System.Windows.Forms.TextBox> no e clicar em **Enviar editar**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.
+Para testar seu código, pressione F5 para compilar o aplicativo. Clique em **Obter Entradas**, selecione uma entrada e clique em **Exibir**. A entrada aparece na `DisplayEntry`<xref:System.Windows.Forms.TextBox>. Clique em **Editar entrada**. A entrada aparece na `Entry`<xref:System.Windows.Forms.TextBox>. Edite a entrada no `Entry` <xref:System.Windows.Forms.TextBox> e clique em **Enviar editar**. Abra o arquivo `MyDiary.txt` para confirmar a correção. Agora, selecione uma entrada e clique em **Excluir entrada**. Quando o <xref:System.Windows.Forms.MessageBox> solicita confirmação, clique em **OK**. Feche o aplicativo e abra `MyDiary.txt` para confirmar a exclusão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [Instruções passo a passo](../../../../visual-basic/walkthroughs.md)
+- [Passo a passo](../../../../visual-basic/walkthroughs.md)

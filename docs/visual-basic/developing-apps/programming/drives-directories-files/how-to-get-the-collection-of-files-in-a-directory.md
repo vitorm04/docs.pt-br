@@ -48,7 +48,7 @@ As sobrecargas do método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles
   
 - O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A>
 - [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)

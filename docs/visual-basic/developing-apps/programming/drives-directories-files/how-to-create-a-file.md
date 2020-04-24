@@ -50,7 +50,7 @@ Este exemplo cria um arquivo de texto vazio no caminho especificado usando o mé
   
  Uma <xref:System.UnauthorizedAccessException> será gerada se o usuário não tiver permissão para criar o arquivo.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO>
 - <xref:System.IO.File.Create%2A>

@@ -1,5 +1,5 @@
 ---
-title: Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado
+title: 'Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -22,7 +22,7 @@ ms.locfileid: "74352095"
   
 ### <a name="to-access-the-applications-event-handler-code"></a>Para acessar o código do manipulador de eventos do aplicativo  
   
-1. Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto,** escolha **Propriedades**.  
+1. Selecione um projeto no **Gerenciador de Soluções**. No menu **projeto** , escolha **Propriedades**.  
   
 2. Clique na guia **Aplicativo**.  
   
@@ -60,10 +60,10 @@ ms.locfileid: "74352095"
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Página de Aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Trabalhando com logs de aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Trabalhar com logs do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

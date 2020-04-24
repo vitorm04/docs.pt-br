@@ -18,7 +18,7 @@ O Visual Basic inclui vários novos recursos para ajudar no desenvolvimento de a
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Acessando dados no Visual Studio](/visualstudio/data-tools/)  
+[Acesso a dados no Visual Studio](/visualstudio/data-tools/)  
 Fornece links para páginas que discutem a incorporação da funcionalidade de acesso a dados aos seus aplicativos.
 
 [Ferramentas de dados do Visual Studio para .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
@@ -30,7 +30,7 @@ Fornece links para tópicos que descrevem como usar LINQ com Visual Basic.
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
 Fornece informações sobre [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Inclui exemplos de programação.  
 
-[Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
+[Ferramentas de LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
 Fornece links para tópicos sobre como criar um modelo de objeto [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) em aplicativos.
 
 [Trabalhando com conjuntos de dados em aplicativos de N camadas](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
@@ -39,13 +39,13 @@ Fornece links para tópicos sobre como criar aplicativos de dados multicamadas.
 [Adicionar novas conexões](/visualstudio/data-tools/add-new-connections)  
 Fornece links para páginas sobre como usar o Visual Studio para conectar o aplicativo a dados com ferramentas de tempo de design e objetos de conexão ADO.NET.
 
-[Ferramentas de conjunto de dados no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+[Ferramentas de DataSet no Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
 Fornece links para páginas que descrevem como carregar dados em conjuntos de dados e como executar instruções SQL e procedimentos armazenados.  
 
 [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
 Fornece links para páginas que explicam como exibir dados no Windows Forms através de controles associados a dados.
 
-[Editar dados em conjuntos de dados](/visualstudio/data-tools/edit-data-in-datasets)  
+[Editar dados em DataSets](/visualstudio/data-tools/edit-data-in-datasets)  
 Fornece links para páginas que descrevem como manipular os dados nas tabelas de dados de um conjunto de dados.  
 
 [Validando dados em conjuntos de dados](/visualstudio/data-tools/validate-data-in-datasets)  

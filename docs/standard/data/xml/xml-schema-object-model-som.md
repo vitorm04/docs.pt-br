@@ -16,7 +16,7 @@ Um esquema XML é uma ferramenta poderosa e complexa para criar e validar a estr
  O SOM (Schema Object Model) fornece um conjunto de classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType>, que permite que você leia um esquema de um arquivo ou crie programaticamente um esquema na memória. O esquema pode então ser percorrido, editado, compilado, validado ou gravado em um arquivo.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Visão geral do modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  Descreve o modelo SOM (Schema Object Model) e os recursos e as classes que ele fornece.  
   
  [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
@@ -28,8 +28,8 @@ Um esquema XML é uma ferramenta poderosa e complexa para criar e validar a estr
  [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  Descreve como percorrer um esquema XML para acessar os elementos, os atributos e os tipos armazenados no SOM.  
   
- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
  Descreve como editar um esquema XML.  
   
- [Incluindo ou importando esquemas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Incluindo ou importando um esquema XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
  Descreve como incluir ou importar outros esquemas XML para complementar a estrutura do esquema que os inclui ou os importa.

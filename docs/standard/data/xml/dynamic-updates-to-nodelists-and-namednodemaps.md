@@ -15,4 +15,4 @@ Como **XmlNodeList** e **XmlNamedNodeMap** contêm um conjunto de nós, mas o do
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

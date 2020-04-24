@@ -21,7 +21,7 @@ Esta seção aborda tarefas de programação que você talvez queira saber mais 
  [Acessar recursos de computador](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  Contém documentação sobre como usar o objeto `My.Computer` para acessar informações sobre o computador no qual um aplicativo será executado e como controlar o computador.  
   
- [Registrando informações em log a partir do aplicativo](../../../visual-basic/developing-apps/programming/log-info/index.md)  
+ [Registrar informações em log no aplicativo](../../../visual-basic/developing-apps/programming/log-info/index.md)  
  Contém documentação sobre como registrar informações de seu aplicativo usando os objetos `My.Application.Log` e `My.Log` e como estender recursos de registro em log do aplicativo.  
   
  [Como acessar dados do usuário](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
@@ -33,15 +33,15 @@ Esta seção aborda tarefas de programação que você talvez queira saber mais 
  [Como acessar serviços Web de aplicativo](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Contém documentação sobre como acessar os serviços Web referenciados pelo aplicativo usando o objeto `My.WebServices`.  
   
- [Acessando configurações de aplicativo](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Acessar configurações de aplicativo](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Contém documentação sobre acesso a configurações do aplicativo usando o objeto `My.Settings`.  
   
  [Processando unidades, diretórios e arquivos](drives-directories-files/index.md)  
  Contém documentação sobre como acessar o sistema de arquivos usando o objeto `My.Computer.FileSystem`.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Recursos da linguagem do Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
-- [Conceitos de Programação](../../../visual-basic/programming-guide/concepts/index.md)
+- [Conceitos de programação](../../../visual-basic/programming-guide/concepts/index.md)
 - [Coleções](../../../visual-basic/programming-guide/concepts/collections.md)
 - [Desenvolvendo aplicativos com o Visual Basic](../../../visual-basic/developing-apps/index.md)

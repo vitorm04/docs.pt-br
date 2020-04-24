@@ -1,5 +1,5 @@
 ---
-title: Lendo e gravando no Registro usando o namespace Microsoft.Win32
+title: Ler e gravar no Registro usando o namespace Microsoft.Win32
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
@@ -42,7 +42,7 @@ Embora `My.Computer.Registry` deva suprir suas necessidades básicas ao programa
   
  [!code-vb[VbResourceTasks#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.SystemException>
 - <xref:System.ApplicationException>

@@ -13,9 +13,9 @@ ms.locfileid: "75710083"
 # <a name="types-of-xml-nodes"></a>Tipos de nós XML
 Quando um documento XML é lido na memória como uma árvore de nós, os tipos de nós são decididos quando os nós são criados. A especificação DOM (Document Object Model) XML tem vários tipos de nós, determinados pelo W3C (World Wide Web Consortium) e listados na seção 1.1.1 (The DOM Structure Model). A tabela a seguir lista os tipos de nós, o objeto atribuído ao tipo de nó e uma breve descrição de cada tipo.  
   
-|Tipo de nó DOM|Objeto do|Descrição|  
+|Tipo de nó DOM|Objeto|Descrição|  
 |-------------------|------------|-----------------|  
-|Documento|<xref:System.Xml.XmlDocument>|O contêiner de todos os nós na árvore. Também é conhecido como diretório base, que nem sempre é o mesmo do elemento raiz.|  
+|Document|<xref:System.Xml.XmlDocument>|O contêiner de todos os nós na árvore. Também é conhecido como diretório base, que nem sempre é o mesmo do elemento raiz.|  
 |DocumentFragment|<xref:System.Xml.XmlDocumentFragment>|Um recipiente temporário que contém um ou mais nós sem nenhuma estrutura de árvore.|  
 |DocumentType|<xref:System.Xml.XmlDocumentType>|Representa o nó `<!DOCTYPE…>`.|  
 |EntityReference|<xref:System.Xml.XmlEntityReference>|Representa o texto de referência de entidade não expandido.|  
@@ -37,7 +37,7 @@ Quando um documento XML é lido na memória como uma árvore de nós, os tipos d
 |<xref:System.Xml.XmlDeclaration>|Representa o nó de declaração `<?xml version="1.0"…>`.|  
 |<xref:System.Xml.XmlSignificantWhitespace>|Representa o espaço em branco significativo, que é o espaço em branco com conteúdo misto.|  
 |<xref:System.Xml.XmlWhitespace>|Representa o espaço em branco no conteúdo de um elemento.|  
-|EndElement|Retornado quando **XmlReader** chega ao final de um elemento.<br /><br /> Exemplo de XML: **\</item>**<br /><br /> Para obter mais informações, consulte <xref:System.Xml.XmlNodeType>.|  
+|EndElement|Retornado quando **XmlReader** chega ao final de um elemento.<br /><br /> Exemplo de XML: ** \</item>**<br /><br /> Para obter mais informações, consulte <xref:System.Xml.XmlNodeType>.|  
 |EndEntity|Retornado quando **XmlReader** chega ao final da substituição de entidade como resultado de uma chamada para <xref:System.Xml.XmlReader.ResolveEntity%2A>. Para obter mais informações, consulte <xref:System.Xml.XmlNodeType>.|  
   
  Para exibir um exemplo de código que lê XML e usa um constructo de caso nos tipos de nós para imprimir informações sobre o nó e seu conteúdo, confira <xref:System.Xml.XmlSignificantWhitespace.NodeType%2A>.  
@@ -46,4 +46,4 @@ Quando um documento XML é lido na memória como uma árvore de nós, os tipos d
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

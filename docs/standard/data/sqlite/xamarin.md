@@ -13,7 +13,7 @@ ms.locfileid: "75447163"
 
 O Microsoft. Data. sqlite tem como destino .NET Standard 2,0 e tem suporte no Xamarin. A tabela a seguir mostra quais plataformas o pacote SQLitePCLRaw padrão fornece binários do SQLite nativos para o. Consulte [versões personalizadas do SQLite](custom-versions.md) para obter detalhes sobre como usar um pacote diferente ou fornecer seus próprios binários do SQLite nativos.
 
-| Platform | Binários do SQLite |
+| Plataforma | Binários do SQLite |
 | --- | --- |
 | **Xamarin.Android** | — |
 | &nbsp;&nbsp;&nbsp;&nbsp;`arm64-v8a` | ✔ |

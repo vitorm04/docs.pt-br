@@ -25,21 +25,21 @@ Define as constantes de compilador condicional.
 -define:["]symbol[=value][,symbol[=value]]["]  
 ```
 
-ou
+ou o
 
 ```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`symbol`|Necessária. O símbolo a ser definido.|  
-|`value`|Opcional. O valor para atribuir `symbol`. Se `value` for uma cadeia de caracteres, ela deverá ser cercada por sequências de barra invertida/aspas (\\") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
+|`symbol`|Obrigatórios. O símbolo a ser definido.|  
+|`value`|Opcional. O valor para atribuir `symbol`. Se `value` for uma cadeia de caracteres, ela deverá estar entre as sequências de barra invertida\\/aspas (") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-define` tem um efeito semelhante a usar uma diretiva de pré-processador de `#Const` em seu arquivo de origem, exceto que as constantes definidas com `-define` são públicas e se aplicam a todos os arquivos no projeto.  
+ A `-define` opção tem um efeito semelhante ao uso de `#Const` uma diretiva de pré-processador em seu arquivo de origem, exceto que as constantes `-define` definidas com são públicas e se aplicam a todos os arquivos no projeto.  
   
  Você pode usar símbolos criados por essa opção com a diretiva `#If`...`Then`...`#Else` para compilar os arquivos de origem condicionalmente.  
   
@@ -49,7 +49,7 @@ ou
   
 |Para definir-definir no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. clique em **avançado**.<br />4. modifique o valor na caixa **constantes personalizadas** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. clique em **avançado**.<br />4. modifique o valor na caixa **constantes personalizadas** .|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir define e usa duas constantes de compilador condicional.  

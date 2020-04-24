@@ -1,5 +1,5 @@
 ---
-title: 'Como: Migrar seu código de XslTransform'
+title: 'Como: Migrar o código de XslTransform'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710837"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>Como: Migrar seu código de XslTransform
+# <a name="how-to-migrate-your-xsltransform-code"></a>Como: Migrar o código de XslTransform
 As novas classes XSLT foram criadas para ser muito semelhantes às classes existentes. A classe de <xref:System.Xml.Xsl.XslCompiledTransform> substitui a classe de <xref:System.Xml.Xsl.XslTransform> . As folhas de estilos são criadas usando o método de <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> . Transforms é executado usando o método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> . Os procedimentos a seguir mostram tarefas comuns XSLT, e comparam o código usando a classe de <xref:System.Xml.Xsl.XslTransform> contra a classe de <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>Para transformar um arquivo e uma saída para o URI  
@@ -93,5 +93,5 @@ As novas classes XSLT foram criadas para ser muito semelhantes às classes exist
   
 ## <a name="see-also"></a>Veja também
 
-- [Migrando da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
+- [Migrar da classe XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [Usando a classe XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

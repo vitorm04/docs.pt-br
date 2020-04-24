@@ -65,7 +65,7 @@ document.Load("books.xml");
   
  A tabela a seguir descreve o valor da propriedade <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> para cada classe.  
   
-|Implementação de <xref:System.Xml.XPath.IXPathNavigable>|Valor <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>|  
+|Implementação de <xref:System.Xml.XPath.IXPathNavigable>|<xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> Valor|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
@@ -76,6 +76,6 @@ document.Load("books.xml");
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [Acessando dados XML usando o XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
+- [Acessando dados XML usando XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Editando dados XML usando XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
 - [Validação de esquema usando XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Ler a partir de arquivos de texto'
+title: 'Como: ler de arquivos de texto'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -60,7 +60,7 @@ Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Po
 
 Verifique todas as entradas antes de usar os dados no seu aplicativo. O conteúdo do arquivo pode não ser esperado, e os métodos para ler o arquivo podem falhar.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
@@ -70,4 +70,4 @@ Verifique todas as entradas antes de usar os dados no seu aplicativo. O conteúd
 - [Como ler a partir de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
 - [Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)
-- [Codificações de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+- [Codificações de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)

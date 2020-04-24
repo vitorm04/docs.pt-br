@@ -29,6 +29,6 @@ Descreve o Visual Basic compilador de linha de comando, que é fornecido como um
 [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 Lista as opções de compilador em uma tabela alfabética
 
-[Opções do compilador do Visual Basic listadas por categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+[Opções de compilador do Visual Basic listadas por categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 Apresenta opções de compilador in grupos funcionais.
   

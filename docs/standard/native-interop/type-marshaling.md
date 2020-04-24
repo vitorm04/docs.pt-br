@@ -13,7 +13,7 @@ ms.locfileid: "75706260"
 
 **Marshaling** é o processo de transformar tipos quando precisam atravessar entre código nativo e gerenciado.
 
-O marshaling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`, enquanto nas cadeias de caracteres do mundo não gerenciadas pode ser Unicode ("largo"), não-Unicode, terminação nula, ASCII, etc. Por padrão, o subsistema P/Invoke tenta fazer a coisa certa com base no comportamento padrão, descrito neste artigo. Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se você quiser que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI terminada em nulo, faça o seguinte:
+O marshaling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem um `String`, enquanto nas cadeias de caracteres do mundo não gerenciadas pode ser Unicode ("largo"), não-Unicode, terminação nula, ASCII, etc. Por padrão, o subsistema P/Invoke tenta fazer a coisa certa com base no comportamento padrão, descrito neste artigo. Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se você quiser que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI terminada em nulo, faça o seguinte:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -62,9 +62,9 @@ A tabela a seguir inclui as regras de marshaling padrão que são somente do Win
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
 | `System.Array` | Interface COM | Não é permitida sem um atributo `[MarshalAs]` |
-| `System.ArgIterator` | `va_list` | Não permitida |
-| `System.Collections.IEnumerator` | `IEnumVARIANT*` | Não permitida |
-| `System.Collections.IEnumerable` | `IDispatch*` | Não permitida |
+| `System.ArgIterator` | `va_list` | Não permitido |
+| `System.Collections.IEnumerator` | `IEnumVARIANT*` | Não permitido |
+| `System.Collections.IEnumerable` | `IDispatch*` | Não permitido |
 | `System.DateTimeOffset` | `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 || `int64_t` representando o número de tiques desde a meia-noite de 1º de janeiro de 1601 |
 
 Alguns tipos só podem ter o marshaling realizado como parâmetros e não como campos. Esses tipos estão listados na tabela a seguir:

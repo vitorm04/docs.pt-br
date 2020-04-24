@@ -22,29 +22,29 @@ Especifica o nome do assembly do qual esse módulo fará parte.
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
 |`assembly_name`|O nome do assembly do qual este módulo fará parte.|  
   
 ## <a name="remarks"></a>Comentários  
- O compilador processará a opção `-moduleassemblyname` somente se a opção `-target:module` tiver sido especificada. Isso faz com que o compilador crie um módulo. O módulo criado pelo compilador é válido somente para o assembly especificado com a opção `-moduleassemblyname`. Se você posicionar o módulo em um assembly diferente, ocorrerão erros de tempo de execução.  
+ O compilador processará `-moduleassemblyname` a opção somente se `-target:module` a opção tiver sido especificada. Isso faz com que o compilador crie um módulo. O módulo criado pelo compilador é válido somente para o assembly especificado com a `-moduleassemblyname` opção. Se você posicionar o módulo em um assembly diferente, ocorrerão erros de tempo de execução.  
   
- A opção `-moduleassemblyname` é necessária somente quando as seguintes opções são verdadeiras:  
+ A `-moduleassemblyname` opção é necessária somente quando as seguintes opções são verdadeiras:  
   
-- Um tipo de dados no módulo precisa de acesso a um tipo de `Friend` em um assembly referenciado.  
+- Um tipo de dados no módulo precisa de acesso a `Friend` um tipo em um assembly referenciado.  
   
 - O assembly referenciado concedeu acesso de assembly Friend ao assembly no qual o módulo será compilado.  
   
  Para obter mais informações sobre como criar um módulo, consulte [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Para obter mais informações sobre assemblies Friend, consulte [Friend Assemblies](../../../standard/assembly/friend.md).  
   
 > [!NOTE]
-> A opção `-moduleassemblyname` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir de um prompt de comando.  
+> A `-moduleassemblyname` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir de um prompt de comando.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como Compilar um Assembly de Vários Arquivos](../../../framework/app-domains/build-multifile-assembly.md)
+- [Como compilar um assembly de multiarquivos](../../../framework/app-domains/build-multifile-assembly.md)
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
@@ -52,4 +52,4 @@ Especifica o nome do assembly do qual esse módulo fará parte.
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Assemblies no .NET](../../../standard/assembly/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Assemblies Amigáveis](../../../standard/assembly/friend.md)
+- [Assemblies Friend](../../../standard/assembly/friend.md)

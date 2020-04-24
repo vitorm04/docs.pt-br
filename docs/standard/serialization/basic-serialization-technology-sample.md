@@ -70,13 +70,13 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas por esse exemplo.
 
-- Serialização em tempo de execução
+- Serialização em runtime
 
-  - <xref:System.Runtime.Serialization.IFormatter> usado para fazer referência a um objeto <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>.
+  - <xref:System.Runtime.Serialization.IFormatter>Usado para fazer referência a um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ou a <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> um objeto.
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> usado para serializar uma lista vinculada em um fluxo em um formato binário. O formatador binário usa um formato que somente o tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> entende. No entanto, os dados são concisos.
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Usado para serializar uma lista vinculada em um fluxo em um formato binário. O formatador binário usa um formato que somente o tipo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> entende. No entanto, os dados são concisos.
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> usado para serializar uma lista vinculada em um fluxo no formato SOAP. SOAP é um formato padrão.
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>Usado para serializar uma lista vinculada em um fluxo no formato SOAP. SOAP é um formato padrão.
 
 - E/S de fluxo
 
@@ -86,7 +86,7 @@ Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas 
 
   - <xref:System.IO.FileStream> Usado para serializar e desserializar listas vinculadas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO>
 - <xref:System.IO.File>
@@ -104,4 +104,4 @@ Os seguintes marcadores descrevem brevemente as classes e as tecnologias usadas 
 - [Controlando a serialização XML usando atributos](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Serialização](../../../docs/standard/serialization/index.md)
-- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

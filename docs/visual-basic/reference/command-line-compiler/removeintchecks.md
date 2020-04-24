@@ -25,15 +25,15 @@ Ativa a verificação de erros de estouro para operações de inteiros.
 -removeintchecks[+ | -]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`+` &#124; `-`|Opcional. A opção `-removeintchecks-` faz com que o compilador Verifique todos os cálculos de inteiro para erros de estouro. O padrão é `-removeintchecks-`.<br /><br /> Especificar `-removeintchecks` ou `-removeintchecks+` impede a verificação de erros e pode fazer cálculos de números inteiros mais rapidamente. No entanto, sem a verificação de erros e se as capacidades de tipo de dados estouram, os resultados incorretos podem ser armazenados sem gerar um erro.|  
+|`+` &#124; `-`|Opcional. A `-removeintchecks-` opção faz com que o compilador Verifique todos os cálculos de inteiro para erros de estouro. O padrão é `-removeintchecks-`.<br /><br /> Especificar `-removeintchecks` ou `-removeintchecks+` impedir a verificação de erros e pode fazer cálculos de números inteiros mais rapidamente. No entanto, sem a verificação de erros e se as capacidades de tipo de dados estouram, os resultados incorretos podem ser armazenados sem gerar um erro.|  
   
 |Para Set-removeintchecks no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Clique no botão **Avançado**.<br />4.  Modifique o valor da caixa de **verificações remover estouro de inteiro** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. Clique no botão **avançado** .<br />4. modifique o valor da caixa de **verificações remover estouro de inteiro** .|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `Test.vb` e desativa a verificação de erro de estouro de inteiros.  
@@ -42,7 +42,7 @@ Ativa a verificação de erros de estouro para operações de inteiros.
 vbc -removeintchecks+ test.vb  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

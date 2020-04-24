@@ -26,8 +26,8 @@ O Microsoft .NET Framework inclui três modelos para processar dados XML: as cla
  [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  Discute o uso das classes <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument> e <xref:System.Xml.XPath.XPathNavigator> para processar dados XML.  
   
- [Processar dados XML usando LINQ to XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
+ [Dados XML do processo usando LINQ to XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  Fornece uma visão geral do LINQ to XML e fornece links para a documentação do LINQ to XML.  
   
-## <a name="related-sections"></a>Seções Relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)

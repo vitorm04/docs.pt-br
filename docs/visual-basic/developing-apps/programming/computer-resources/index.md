@@ -1,5 +1,5 @@
 ---
-title: Acessando recursos de computador
+title: Acessando recursos do computador
 ms.date: 07/20/2015
 helpviewer_keywords:
 - computer resources [Visual Basic]

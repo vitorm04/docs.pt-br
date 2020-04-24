@@ -99,9 +99,9 @@ Um esquema XML pode conter os elementos `<xs:import />`, `<xs:include />` e `<xs
   
 ## <a name="see-also"></a>Veja também
 
-- [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [Visão geral do modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [Compilando esquemas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [Percorrer esquemas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Edição de esquemas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Esquemas XML de edição](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [XmlSchemaSet para compilação de esquema](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

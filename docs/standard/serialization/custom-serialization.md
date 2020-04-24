@@ -182,5 +182,5 @@ End Class
 ## <a name="see-also"></a>Veja também
 
 - [Serialização binária](binary-serialization.md)
-- [Serialização XML e SOAP](xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)
 - [Segurança e serialização](../../../docs/framework/misc/security-and-serialization.md)

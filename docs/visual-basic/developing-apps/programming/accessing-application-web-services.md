@@ -26,6 +26,6 @@ A tabela a seguir lista as possíveis maneiras de acessar serviços Web referenc
 |Chamar um serviço Web|[Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
 |Chamar um serviço Web de forma assíncrona e manipular um evento quando ele for concluído|[Como chamar um serviço Web de forma assíncrona](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)

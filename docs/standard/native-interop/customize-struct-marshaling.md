@@ -24,13 +24,13 @@ O .NET fornece o atributo <xref:System.Runtime.InteropServices.StructLayoutAttri
 
 ✔️ USE somente `LayoutKind.Explicit` no marshaling quando seu struct nativo também tiver um layout explícito, como uma união.
 
-❌EVITE `LayoutKind.Explicit` usar estruturas de empacotamento em plataformas não-Windows se você precisar direcionar tempos de execução antes do .NET Core 3.0. O tempo de execução do .NET Core antes do 3.0 não suporta passar estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits não-Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
+❌Evite usar `LayoutKind.Explicit` ao realizar marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalização do marshaling de campo booliano
 
 O código nativo tem muitas representações boolianas diferentes. Somente no Windows, há três formas de representar valores boolianos. O runtime não conhece a definição nativa de sua estrutura, portanto, o melhor que ele pode fazer é estimar como realizar marshal de seus valores boolianos. O runtime do .NET fornece uma maneira de indicar como realizar marshal de seu campo booliano. Os exemplos a seguir mostram como realizar marshal do .NET `bool` para diferentes tipos boolianos nativos.
 
-Valores booleanos padrão para marshaling como um [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) valor nativo de 4 bytes Win32, como mostrado no exemplo a seguir:
+Os valores Boolianos assumem como padrão o marshaling como um [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) valor nativo de 4 bytes do Win32, conforme mostrado no exemplo a seguir:
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalização do marshaling de campo decimal
 
-Se você estiver trabalhando no Windows, você pode [ `CY` encontrar `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) algumas APIs que usam o nativo ou a estrutura. Por padrão, o `decimal` tipo .NET [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) é marshals para a estrutura nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
+Se você estiver trabalhando no Windows, poderá encontrar algumas APIs que usam a estrutura [ `CY` ou `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. Por padrão, o tipo `decimal` .net realiza marshaling na estrutura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. No entanto, você pode usar um <xref:System.Runtime.InteropServices.MarshalAsAttribute> com o valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para instruir o marshaler para converter um valor `decimal` para um valor nativo `CY`.
 
 ```csharp
 public struct Currency

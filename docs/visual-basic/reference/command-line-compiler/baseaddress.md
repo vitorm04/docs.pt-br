@@ -25,26 +25,26 @@ Especifica um endereço base padrão ao criar uma DLL.
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`address`|Necessário. O endereço básico da DLL. Esse endereço deve ser especificado como um número hexadecimal.|  
+|`address`|Obrigatórios. O endereço básico da DLL. Esse endereço deve ser especificado como um número hexadecimal.|  
   
 ## <a name="remarks"></a>Comentários  
  O endereço base padrão de uma DLL é definido pelo .NET Framework.  
   
  Lembre-se de que a palavra de ordem inferior nesse endereço é arredondada. Por exemplo, se você especificar 0x11110001, ele será arredondado para 0x11110000.  
   
- Para concluir o processo de assinatura de uma DLL, use a opção `–R` da ferramenta de nomeação forte (SN. exe).  
+ Para concluir o processo de assinatura de uma DLL, use `–R` a opção da ferramenta de nomeação forte (SN. exe).  
   
  Essa opção será ignorada se o destino não for uma DLL.  
   
 |Para Set-BaseAddress no IDE do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Clique em **Avançadas**.<br />4.  Modifique o valor na caixa **endereço base do dll:** . **Observação:**      A caixa **endereço base de dll:** é somente leitura a menos que o destino seja uma dll.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. clique em **avançado**.<br />4. modifique o valor na caixa **endereço base do dll:** . **Observação:**      A caixa **endereço base de dll:** é somente leitura a menos que o destino seja uma dll.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

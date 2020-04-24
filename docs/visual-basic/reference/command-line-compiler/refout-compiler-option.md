@@ -26,21 +26,21 @@ A opção **-refout** especifica um caminho de arquivo em que o assembly de refe
 -refout:filepath
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `filepath`  
-O caminho e o nome do arquivo do assembly de referência. Em geral, ele deve estar em uma subpasta do assembly primário. A convenção recomendada (usada pelo MSBuild) é colocar o assembly de referência em uma subpasta "ref/" em relação ao assembly principal. Todas as pastas no `filepath` devem existir; o compilador não os cria.
+O caminho e o nome do arquivo do assembly de referência. Em geral, ele deve estar em uma subpasta do assembly primário. A convenção recomendada (usada pelo MSBuild) é colocar o assembly de referência em uma subpasta "ref/" em relação ao assembly principal. Todas as pastas `filepath` no devem existir; o compilador não os cria.
 
 ## <a name="remarks"></a>Comentários
 
-Visual Basic dá suporte à opção de `-refout` a partir da versão 15,3.
+Visual Basic dá suporte `-refout` à opção a partir da versão 15,3.
 
 Os assemblies de referência são um tipo especial de assembly que contém apenas a quantidade mínima de metadados necessários para representar a superfície da API pública da biblioteca. Eles incluem declarações para todos os membros que são significativos ao referenciar um assembly em ferramentas de compilação, mas excluem todas as implementações de membro e declarações de membros privados que não têm impacto observável em seu contrato de API. Para obter mais informações, consulte [Reference Assemblies](../../../standard/assembly/reference-assemblies.md) in .net Guide.
 
-As opções `-refout` e [`-refonly`](refonly-compiler-option.md) são mutualmente exclusivas.
+As `-refout` opções [`-refonly`](refonly-compiler-option.md) e são mutuamente exclusivas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [/refonly](refonly-compiler-option.md)
+- [-refonly](refonly-compiler-option.md)
 - [Compilador de linha de comando do Visual Basic](index.md)
 - [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

@@ -16,7 +16,7 @@ A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocum
 ## <a name="fully-trusted-xmldocument"></a>XmlDocument totalmente confiável  
  A propriedade **XmlResolver** afeta a funcionalidade do método **XmlDocument.Load**. A tabela abaixo mostra como funciona a propriedade **XmlDocument.XmlResolver** quando o objeto **XmlDocument** é totalmente confiável. A tabela a seguir mostra os métodos **XmlDocument.Load** quando a entrada para a carga é **TextReader**, **String**, **Stream** ou **URI**. Esta tabela não se aplicará ao método **Carga** se o **XmlDocument** for carregado do **XmlReader**.  
   
-|Propriedade de XmlResolver|Função|{1&gt;Observações&lt;1}|  
+|Propriedade de XmlResolver|Função|Observações|  
 |--------------------------|--------------|-----------|  
 |A propriedade é definida como classe **XmlResolver** criada previamente e com as propriedades já definidas nela pelo usuário.|O **XmlDocument** usa o **XmlResolver** fornecido para resolver nomes de arquivo e referências a recursos externos, como DTDs, entidades e esquemas.<br /><br /> O **XmlResolver** também é usado para resolver recursos externos necessários ao adicionar ou editar nós no **XmlDocument**.|O **XmlResolver** dado ao **XmlDocument** é o resolvedor usado sempre que recursos externos precisam ser localizados e resolvidos.|  
 |A propriedade é definida como **nula** (**Nothing** no Microsoft Visual Basic .NET).|Os recursos que exigem um recurso externo não são suportados, como localizar um esquema externo, ou o DTD. Nem as entidades externos serão resolvidas, e executar funções de edição, como inserir os nós de entidade que exigem resolução, não é suportado.|O **XmlDocument** carrega arquivos como anônimos e não tenta resolver qualquer outro recurso.|  
@@ -24,22 +24,22 @@ A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocum
   
  A tabela a seguir mostra o método **XmlDocument.Load** quando a entrada à **Carga** é um **XmlReader** e o **XmlDocument** é totalmente confiável.  
   
-|Propriedade de XmlResolver|Função|{1&gt;Observações&lt;1}|  
+|Propriedade de XmlResolver|Função|Observações|  
 |--------------------------|--------------|-----------|  
 |A classe **XmlResolver** usada pelo **XmlDocument** é a mesma que está sendo usada pelo **XmlReader**.|O **XmlDocument** usa o **XmlResolver** atribuído ao **XmlReader**.<br /><br /> A propriedade **XmlDocument.Resolver** não pode ser definida, independentemente do nível de confiança do **XmlDocument**, porque está obtendo um **XmlResolver** do **XmlReader**. Não tente substituir as configurações de **XmlResolver** do **XmlReader** definindo a propriedade do **XmlResolver** do **XmlDocument**.|O **XmlReader** pode ser o **XmlTextReader**, o **XmlValidatingReader** ou um leitor personalizado. Se o leitor usado oferece suporte a resolução de entidade, as entidades externos são resolvidas. Se o leitor passado não oferece suporte a referências a entidades, então as referências a entidades não são resolvidas.|  
   
 ## <a name="semi-trusted-xmldocument"></a>XmlDocument de confiança parcial  
  A tabela a seguir mostra como funciona a propriedade **XmlDocument.XmlResolver** quando o objeto é de confiança parcial. Esta tabela se aplica aos métodos **XmlDocument.Load** quando a entrada à Carga é um **TextReader**, uma **String**, um **Stream** ou **URI**. Esta tabela não se aplicará ao método **Carga** se o **XmlDocument** for carregado do **XmlReader**.  
   
-|Propriedade de XmlResolver|Função|{1&gt;Observações&lt;1}|  
+|Propriedade de XmlResolver|Função|Observações|  
 |--------------------------|--------------|-----------|  
-|No cenário de confiança parcial, a propriedade **XmlResolver** só pode ser definida como nula.|Um **XmlUrlResolver** com credenciais **nulas** será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivo e localizar DTDs, entidades e esquemas externos, e as credenciais **nulas** serão usadas ao editar nós.|Esse comportamento é idêntico ao apresentado quando a propriedade **XmlResolver** não está definida, mas deixada no estado padrão.<br /><br /> O **XmlDocument** usa permissões anônimas para todas as ações.|  
+|No cenário de confiança parcial, a propriedade **XmlResolver** só pode ser definida como nula.|Um **XmlUrlResolver** com credenciais **nulas** será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivo, localizar DTDs, entidades e esquemas externos, e credenciais **nulas** serão usadas ao editar nós.|Esse comportamento é idêntico ao apresentado quando a propriedade **XmlResolver** não está definida, mas deixada no estado padrão.<br /><br /> O **XmlDocument** usa permissões anônimas para todas as ações.|  
 |A propriedade é definida como **nula** (**Nothing** no Microsoft Visual Basic .NET).|Nenhum recurso que requer um recurso externo é suportado, como localizar um esquema externo ou um DTD. Nem as entidades externos serão resolvidas, e executar funções de edição como inserir os nós de entidade que exigem resolução, não é suportado.|Quando a propriedade é **nula**, o comportamento é o mesmo, não importando se o **XmlDocument** é total ou parcialmente confiável.|  
-|A propriedade não está definida, mas esquerda em seu estado padrão.|Um **XmlUrlResolver** com credenciais **nulas** será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivo e localizar DTDs, entidades e esquemas externos, e as credenciais **nulas** serão usadas ao editar nós.|O **XmlDocument** usa permissões anônimas para todas as ações.|  
+|A propriedade não está definida, mas esquerda em seu estado padrão.|Um **XmlUrlResolver** com credenciais **nulas** será instanciado e usado pelo **XmlDocument** ao resolver nomes de arquivo, localizar DTDs, entidades e esquemas externos, e credenciais **nulas** serão usadas ao editar nós.|O **XmlDocument** usa permissões anônimas para todas as ações.|  
   
  Esta tabela se aplica ao método **XmlDocument.Load** quando a entrada à **Carga** é um **XmlReader** e o **XmlDocument** tem confiança parcial.  
   
-|Propriedade de XmlResolver|Função|{1&gt;Observações&lt;1}|  
+|Propriedade de XmlResolver|Função|Observações|  
 |--------------------------|--------------|-----------|  
 |A classe **XmlResolver** usada pelo **XmlDocument** é a mesma que está sendo usada pelo **XmlReader**.|O **XmlDocument** usa o **XmlResolver** atribuído ao **XmlReader**.<br /><br /> A propriedade **XmlDocument.Resolver** não pode ser definida, independentemente do nível de confiança do **XmlDocument**, porque está obtendo um **XmlResolver** do **XmlReader**. Você não pode tentar substituir as configurações do **XmlReader** **XmlResolver** definindo a propriedade **XmlResolver** do **XmlDocument**.|O **XmlReader** pode ser o **XmlTextReader**, o <xref:System.Xml.XmlReader> de validação ou um leitor personalizado. Se o leitor usado oferece suporte a resolução de entidade, as entidades externos são resolvidas. Se o leitor passado não oferece suporte a referências a entidades, então as referências a entidades não são resolvidas.|  
   
@@ -52,4 +52,4 @@ A propriedade **XmlResolver** do **XmlDocument** é usada pela classe **XmlDocum
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

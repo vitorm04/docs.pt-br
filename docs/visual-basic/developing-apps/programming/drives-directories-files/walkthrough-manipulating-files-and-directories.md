@@ -47,8 +47,8 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
     |Control|Propriedade|Valor|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
-    |**Botão**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procurar**|  
-    |**Botão**|**Nome**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examinar**|  
+    |**Button**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procurar**|  
+    |**Button**|**Nome**<br /><br /> **Texto**|`examineButton`<br /><br /> **Examinar**|  
     |**CheckBox**|**Nome**<br /><br /> **Texto**|`saveCheckBox`<br /><br /> **Salvar resultados**|  
     |**FolderBrowserDialog**|**Nome**|`FolderBrowserDialog1`|  
   
@@ -162,7 +162,7 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

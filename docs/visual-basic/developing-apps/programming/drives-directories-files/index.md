@@ -36,7 +36,7 @@ Você pode usar o Visual Basic para processar unidades, pastas e arquivos com o 
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
- [Estrutura do Programa e Convenções de Código](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ [Estrutura do programa e convenções de código](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Fornece diretrizes para a estrutura física e a aparência dos programas.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  

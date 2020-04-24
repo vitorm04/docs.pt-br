@@ -21,7 +21,7 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
   
 - As classes devem implementar interfaces explicitamente.  
   
-     Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas. A interface gerada automaticamente é chamada de interface de classe. Para obter diretrizes, confira [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
+     Embora a interoperabilidade COM forneça um mecanismo para gerar automaticamente uma interface contendo todos os membros da classe e os membros da respectiva classe base, é muito melhor fornecer interfaces explícitas. A interface gerada automaticamente é chamada de interface de classe. Para obter diretrizes, consulte [introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Você pode usar Visual Basic, C# e C++ para incorporar as definições de interface no código, em vez de usar a linguagem IDL ou uma equivalente. Para obter detalhes da sintaxe, consulte a documentação da linguagem.  
   
@@ -45,10 +45,10 @@ Se você pretende expor os tipos em um assembly para aplicativos COM, considere 
   
  Quando exportados para COM, a hierarquia de herança de um tipo gerenciado é nivelada. O controle de versão também difere entre ambientes gerenciados e não gerenciados. Os tipos expostos ao COM não têm as mesmas características de controle de versão de outros tipos gerenciados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
-- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [Apresentando a interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
+- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Introdução à interface de classe](com-callable-wrapper.md#introducing-the-class-interface)
 - [Aplicando atributos de interoperabilidade](../../../docs/standard/native-interop/apply-interop-attributes.md)
 - [Como empacotar um assembly .NET Framework para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

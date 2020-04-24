@@ -1,5 +1,5 @@
 ---
-title: Como baixar um arquivo
+title: 'Como: baixar um arquivo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -55,9 +55,9 @@ As seguintes condições podem causar uma exceção:
   > [!IMPORTANT]
   > O protocolo FTP usado pelo método `DownLoadFile` envia informações, incluindo senhas, em texto sem formatação e não deve ser usado para transmitir informações confidenciais.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
-- [Como: Carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Como: carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
 - [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

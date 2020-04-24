@@ -42,16 +42,16 @@ Uma entidade é uma declaração que indica um nome ser usado em XML no lugar do
   
  Há muitos tipos das entidades. O diagrama a seguir mostra a divisão dos tipos de entidade e da terminologia.  
   
- ![Fluxograma da hierarquia de tipo de entidade](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![fluxograma da hierarquia do tipo de entidade](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
  O padrão para a implementação do Microsoft .NET Framework o modelo de objeto (DOM) de documento XML é preservar as referências de entidades e não expandir quando as entidades XML é carregado. A implicação disso é como um documento é carregado em DOM, um nó de **XmlEntityReference** que contém a referência `&publisher;` variável é criado, com os nós filhos que representam o conteúdo no entidade declarada no DTD.  
   
  Usando a declaração de entidade de `<!ENTITY publisher "Microsoft Press">`, o diagrama a seguir mostra os nós **XmlEntity** e **XmlText** criados dessa declaração.  
   
- ![nós criados a partir de declaração de entidade](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
+ ![nós criados da declaração de entidade](../../../../docs/standard/data/xml/media/xml-entitydeclaration-node2.png "xml_entitydeclaration_node2")  
   
  As diferenças quando as referências a entidades são expandidos e quando não são faz uma diferença no qual nós são gerados na árvore DOM, na memória. A diferença em nós que são gerados é explicado nos tópicos [Referências a entidades são preservadas](../../../../docs/standard/data/xml/entity-references-are-preserved.md) e [Referências a entidades são expandidos e não preservadas](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md).  
   
 ## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

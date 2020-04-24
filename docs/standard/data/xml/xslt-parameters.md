@@ -24,17 +24,17 @@ Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> us
   
 3. Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
   
-## <a name="parameter-types"></a>Tipos de parâmetros  
+## <a name="parameter-types"></a>Tipos de parâmetro  
  O objeto de parâmetro deve corresponder a um tipo W3C. A tabela seguinte mostra tipos correspondentes W3C, as classes equivalentes do Microsoft.NET (tipo), e se o tipo W3C é um tipo XPath ou tipo de fonte.  
   
 |Tipo W3C|Classe. NET equivalente (tipo)|XPath ou tipo XSLT|  
 |--------------|------------------------------------|------------------------|  
-|`String`|<xref:System.String?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Number`|<xref:System.Double?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`String`|<xref:System.String?displayProperty=nameWithType>|XPath|  
+|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|XPath|  
+|`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
-|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|{1&gt;XPath&lt;1}|  
+|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator []**|XPath|  
   
  os *This são equivalentes a um nó definida que contém um único nó.  
   
