@@ -4,19 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 0500e11d2897cfa7392cc8280a0b69c5e2fc515f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 665c7843fc4a46348619bde46a8d527dfed321e4
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181626"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645991"
 ---
-# <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
+# <a name="net-framework-development-guide"></a>.NET Framework development guide
+
 Esta seção explica como criar, configurar, depurar, proteger e implantar aplicativos .NET Framework. Esta seção também fornece informações sobre áreas de tecnologia como programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Fundamentos do aplicativo](../standard/application-essentials.md)  
- Fornece informações sobre tarefas básicas de desenvolvimento de aplicativo como programação com domínios e assemblies de aplicativo, uso de atributos, tipos base de formatação e análise, uso de coleções, manipulação de eventos e exceções, uso de fluxos de arquivos e dados e uso de genéricos.  
+## <a name="in-this-section"></a>Nesta seção
   
  [Dados e Modelagem](./data/index.md)  
  Fornece informações sobre como acessar dados usando ADO.NET, Language Integrated Query (LINQ), WCF Data Services e XML.  
@@ -49,7 +48,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  [Segurança](../standard/security/index.md)  
  Fornece informações sobre as classes e serviços no .NET Framework que facilitam o desenvolvimento de aplicativos seguros.  
   
- [Depuração, rastreamento e criação de perfil](./debug-trace-profile/index.md)  
+ [Depuração, Rastreamento e Criação de Perfil](./debug-trace-profile/index.md)  
  Explica como testar, otimizar e criar perfis de aplicativos .NET Framework e do ambiente de aplicativo. Esta seção inclui informações para administradores e para desenvolvedores.  
   
  [Desenvolvimento para várias plataformas](../standard/cross-platform/index.md)  

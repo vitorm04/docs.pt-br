@@ -4,12 +4,12 @@ description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tem
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: a0a6cedb6dbf572750fcc238aff59b7f66edf44f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 3f338832185ed626289141f48cec88c1bf2e3a33
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134140"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645597"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19.04 Package Manager - Instalar .NET Core
 
@@ -19,12 +19,12 @@ Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Co
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adicione a chave e o feed do repositório da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
-- Registre a chave da Microsoft.
-- Registre o repositório do produto.
+- Adicione a chave de assinatura do pacote da Microsoft à lista de chaves confiáveis.
+- Adicione o repositório ao gerenciador de pacotes.
 - Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
@@ -36,7 +36,7 @@ wget https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
+## <a name="install-the-net-core-sdk"></a>Instale o .NET Core SDK
 
 Atualize os produtos disponíveis para instalação e instale o .NET Core SDK. Em seu terminal, execute os seguintes comandos.
 

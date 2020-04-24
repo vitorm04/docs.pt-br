@@ -15,18 +15,18 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5a4068d0bf6f6f158ea9b2880785e227f96243d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180409"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645580"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Ferramenta de Política de Segurança de Acesso de Código)
 A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que usuários e administradores modifiquem a política de segurança para o nível de política do computador, o nível de política do usuário e o nível de política da empresa.  
   
 > [!IMPORTANT]
-> Começando com o Quadro .NET 4, caspol.exe não afeta a política `true`CAS, a menos que o [ \<elemento legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como . Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](../security/security-changes.md).  
+> Começando com o Quadro .NET 4, caspol.exe não afeta a política `true`CAS, a menos que o [ \<elemento legacyCasPolicy>](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) seja definido como . Todas as configurações mostradas ou modificadas por CasPol.exe só afetarão aplicativos que optarem por usar a política de CAS. Para saber mais, confira [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
 > [!NOTE]
 > Os computadores 64 bits incluem versões 64 e 32 bits da política de segurança. Para verificar se as alterações na política se aplicam a aplicativos 32 e 64 bits, execute as versões 32 e 64 bits de Caspol.exe.  
@@ -41,7 +41,7 @@ A ferramenta de política (Caspol.exe) CAS (Code Access Security) permite que us
 caspol [options]  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -54,7 +54,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> ou<br /><br /> **-ca**  *path*|Indica que todas as opções depois dessa se aplicam a esse computador, empresa e políticas de usuário personalizadas especificadas. Você deve especificar o local do arquivo de configuração de segurança do usuário personalizado com o argumento *path*.|  
 |**-cu**[**stomuser**] *path*|Permite a administração de uma política de usuário personalizada que não pertence ao usuário em nome do qual Caspol.exe está em execução no momento. Você deve especificar o local do arquivo de configuração de segurança do usuário personalizado com o argumento *path*.|  
 |**-empresa**<br /><br /> ou<br /><br /> **-en**|Indica que todas as opções depois dessa se aplicam a essa política de nível empresarial. Usuários que não são administradores de empresa não têm direitos suficientes para modificar a política da empresa, embora possam exibi-la. Em cenários não empresariais, essa política, por padrão, não interfere na política de computador e usuário.|  
-|**-e**[**xecution**] {**on** &#124; **off**}|Ativa ou desativa o mecanismo que verifica a permissão para execução antes do código iniciar a execução. **Nota:**  Este switch é removido nas versões .NET Framework 4 e posteriores. Para saber mais, confira [Alterações de segurança](../security/security-changes.md).|  
+|**-e**[**xecution**] {**on** &#124; **off**}|Ativa ou desativa o mecanismo que verifica a permissão para execução antes do código iniciar a execução. **Nota:**  Este switch é removido nas versões .NET Framework 4 e posteriores. Para saber mais, confira [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).|  
 |**-f**[**orce**]|Suprime o teste de autodestruição da ferramenta e altera a política conforme especificado pelo usuário. Normalmente, Caspol.exe verifica se alguma alteração da política impediria que Caspol.exe fosse executado corretamente; assim, Caspol.exe não salva a alteração da política e imprime uma mensagem de erro. Para forçar Caspol.exe a alterar a política, mesmo que isso evite a execução de Caspol.exe, use a opção **–force**.|  
 |**-h**[**elp**]|Exibe sintaxe de comando e opções de Caspol.exe.|  
 |**-l****ist**|Lista a hierarquia do grupo de códigos e os conjuntos de permissões para o computador especificado, o usuário, a empresa ou todos os níveis de política. Caspol.exe exibe o rótulo do grupo de códigos primeiro, seguido do nome, se não for nulo.|  
@@ -73,7 +73,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> ou<br /><br /> **-rsld**|Restaura uma versão mais restritiva do estado padrão e a mantém no disco; cria um backup da política do computador anterior e o mantém em um arquivo chamado `security.config.bac`.  A política bloqueada é semelhante à política padrão, exceto pela política não conceder permissões ao código nas zonas `Local Intranet`, `Trusted Sites` e `Internet` e os grupos de códigos correspondentes não terem grupos de códigos filho.|  
 |**-resolvegroup** *assembly_file*<br /><br /> ou<br /><br /> **-rsg**  *assembly_file*|Mostra os grupos de códigos a que um assembly específico (*assembly_file*) pertence. Por padrão, essa opção exibe o computador, o usuário e os níveis de política empresarial a que o assembly pertence. Para exibir apenas um nível de política, use essa opção com a opção **-machine**, **-user** ou **-enterprise**.|  
 |**-resolveperm** *assembly_file*<br /><br /> ou<br /><br /> **-rsp** *assembly_file*|Exibe todas as permissões que o nível especificado (ou padrão) da política de segurança concederia ao assembly se o assembly tivesse permissão para executar. O argumento *assembly_file* especifica o assembly. Se você especificar a opção **-all**, Caspol.exe calculará as permissões do assembly com base no usuário, no computador e na política corporativa, do contrário, as regras de comportamento padrão se aplicam.|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|Ativa ou desativa a segurança de acesso ao código. A especificação da opção **-s off** não desabilita a segurança com base na função. **Nota:**  Este switch é removido nas versões .NET Framework 4 e posteriores. Para saber mais, confira [Alterações de segurança](../security/security-changes.md). **Cuidado:** quando a segurança de acesso do código é desabilitada, todas as demandas de acesso ao código são bem-sucedidas. A desabilitação da segurança de acesso ao código deixa o sistema vulnerável a ataques pelo código mal-intencionado, como vírus e worms. A desativação da segurança oferece alguns ganhos de desempenho extra, mas só deve ser feita quando outras medidas de segurança foram tomadas para ajudar a garantir que não haja violação da segurança do sistema em geral. Entre os exemplos de outras precauções de segurança estão a desconexão de redes públicas, protegendo fisicamente computadores e assim por diante.|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|Ativa ou desativa a segurança de acesso ao código. A especificação da opção **-s off** não desabilita a segurança com base na função. **Nota:**  Este switch é removido nas versões .NET Framework 4 e posteriores. Para saber mais, confira [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes). **Cuidado:** quando a segurança de acesso do código é desabilitada, todas as demandas de acesso ao código são bem-sucedidas. A desabilitação da segurança de acesso ao código deixa o sistema vulnerável a ataques pelo código mal-intencionado, como vírus e worms. A desativação da segurança oferece alguns ganhos de desempenho extra, mas só deve ser feita quando outras medidas de segurança foram tomadas para ajudar a garantir que não haja violação da segurança do sistema em geral. Entre os exemplos de outras precauções de segurança estão a desconexão de redes públicas, protegendo fisicamente computadores e assim por diante.|  
 |**-u**[**ser**]|Indica que todas as opções depois dessa se aplicam à política no nível do usuário em cujo nome Caspol.exe está em execução. Para usuários não administrativos, o padrão é **-user**.|  
 |**-?**|Exibe sintaxe de comando e opções de Caspol.exe.|  
   
@@ -86,8 +86,8 @@ caspol [options]
 |**-custom**  *xmlfile*|Adiciona uma condição de associação personalizada. O argumento *xmlfile* obrigatório especifica o arquivo .xml que contém a serialização XML da condição de associação personalizada.|  
 |**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Especifica o código que tem o hash de assembly indicado. Para usar um hash como uma condição de associação do grupo de códigos, você deve especificar o valor de hash ou o arquivo de assembly. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica o código que tem o editor de software indicado, conforme mostrado por um arquivo de certificado, uma assinatura em um arquivo ou pela representação hexadecimal de um certificado X509. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
-|**-site** *website*|Especifica o código que tem o site de origem indicado. Por exemplo: <br /><br /> `-site** www.proseware.com`<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica o código que tem um nome forte específico, conforme designado pelo nome do arquivo, o nome do assembly como uma cadeia de caracteres e a versão do assembly no formato *major*.*minor*.*build*.*revision*. Por exemplo: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Especifica o código que tem o site de origem indicado. Por exemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica o código que tem um nome forte específico, conforme designado pelo nome do arquivo, o nome do assembly como uma cadeia de caracteres e a versão do assembly no formato *major*.*minor*.*build*.*revision*. Por exemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
 |**-url** *URL*|Especifica o código originado da URL indicada. A URL deve incluir um protocolo, como `http://` ou `ftp://`. Além disso, um caractere curinga (\*) pode ser usado para especificar vários assemblies de uma URL específica. **Observação:** como uma URL pode ser identificada usando vários nomes, o uso de uma URL como uma condição de associação não é uma maneira segura de verificar a identidade do código. Sempre que possível, use uma condição de associação de nome forte, uma condição de associação de publicador ou a condição de associação de hash. <br /><br /> Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Especifica o código com a zona de origem indicada. O argumento *zonename* pode ter um dos seguintes valores: **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Para obter mais informações sobre essa condição de associação, consulte <xref:System.Security.Policy.ZoneMembershipCondition> Classe.|  
   
@@ -247,4 +247,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>Confira também
 
 - [Ferramentas](index.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [Comandos](developer-command-prompt-for-vs.md)

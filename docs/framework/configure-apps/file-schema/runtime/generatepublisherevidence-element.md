@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 24a5ea02992a5bce681b5bab4fb7f75505bd225d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79154095"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645353"
 ---
 # <a name="generatepublisherevidence-element"></a>\<Elemento generatePublisherEvidence >
 Especifica se o tempo <xref:System.Security.Policy.Publisher> de execução cria evidências para o segurança de acesso ao código (CAS).  
@@ -55,7 +55,7 @@ Especifica se o tempo <xref:System.Security.Policy.Publisher> de execução cria
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> No Quadro .NET 4 e posterior, este elemento não tem efeito nos tempos de carga de montagem. Para obter mais informações, consulte a seção "Simplificação de políticas de segurança" em [Alterações de Segurança](../../../security/security-changes.md).  
+> No Quadro .NET 4 e posterior, este elemento não tem efeito nos tempos de carga de montagem. Para obter mais informações, consulte a seção "Simplificação de políticas de segurança" em [Alterações de Segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
   
  O tempo de execução do idioma comum (CLR) tenta <xref:System.Security.Policy.Publisher> verificar a assinatura Authenticode na hora da carga para criar evidências para a montagem. No entanto, por padrão, <xref:System.Security.Policy.Publisher> a maioria dos aplicativos não precisa de provas. A política CAS padrão <xref:System.Security.Policy.PublisherMembershipCondition>não depende do . Você deve evitar o custo de inicialização desnecessário associado à verificação da assinatura do editor, a <xref:System.Security.Permissions.PublisherIdentityPermission> menos que seu aplicativo seja executado em um computador com política CAS personalizada ou esteja pretendendo satisfazer demandas em um ambiente de confiança parcial. (Demandas por permissões de identidade sempre têm sucesso em um ambiente de confiança total.)  
   
@@ -78,5 +78,5 @@ Especifica se o tempo <xref:System.Security.Policy.Publisher> de execução cria
   
 ## <a name="see-also"></a>Confira também
 
-- [Esquema de configurações do runtime](index.md)
+- [Esquema de configurações em tempo de execução](index.md)
 - [Esquema de arquivo de configuração](../index.md)

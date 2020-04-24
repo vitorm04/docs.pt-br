@@ -9,35 +9,35 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204510"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644353"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opções do compilador C#)
 A opção de compilador **de destino** pode ser especificada em uma das quatro formas:  
   
- [-alvo:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
+ [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
  Para criar um arquivo .exe para aplicativos windows 8.x Store.  
   
- [-alvo:exe](./target-exe-compiler-option.md)  
+ [-target:exe](./target-exe-compiler-option.md)  
  Para criar um arquivo .exe.  
   
- [-alvo:biblioteca](./target-library-compiler-option.md)  
+ [-target:library](./target-library-compiler-option.md)  
  Para criar uma biblioteca de códigos.  
   
- [-destino:módulo](./target-module-compiler-option.md)  
+ [-target:module](./target-module-compiler-option.md)  
  Para criar um módulo.  
   
- [-alvo:winexe](./target-winexe-compiler-option.md)  
+ [-target:winexe](./target-winexe-compiler-option.md)  
  Para criar um programa do Windows.  
   
- [-alvo:winmdobj](./target-winmdobj-compiler-option.md)  
+ [-target:winmdobj](./target-winmdobj-compiler-option.md)  
  Para criar um arquivo .winmdobj intermediário.  
   
- A menos que você especifique **-target:module**, **-target** faz com que um manifesto de montagem .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [Assembléias em .NET](../../../standard/assembly/index.md) e [Atributos Comuns](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que você especifique **-target:module**, **-target** faz com que um manifesto de montagem .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [Assembléias em .NET](../../../standard/assembly/index.md) e [Atributos Comuns](../attributes/global.md).  
   
  O manifesto do assembly é colocado no primeiro arquivo de saída .exe na compilação ou na primeira DLL, se não houver nenhum arquivo de saída .exe. Por exemplo, na linha de comando a seguir, o manifesto será colocado em `1.exe`:  
   

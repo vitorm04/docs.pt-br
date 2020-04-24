@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636025"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644050"
 ---
 # <a name="dependency-properties-overview"></a>Visão geral das propriedades de dependência
 
@@ -87,7 +87,7 @@ Uma propriedade de dependência fornece uma funcionalidade que estende a funcion
 
 - [Recursos](#resources)
 
-- [Vinculação de dados](#data-binding)
+- [Associação de dados](#data-binding)
 
 - [Estilos](#styles)
 
@@ -123,7 +123,7 @@ O exemplo a seguir define a propriedade <xref:System.Windows.Controls.ContentCon
 > [!NOTE]
 > As associações serão tratadas como um valor local, o que significa que, se você definir outro valor local, eliminará a associação. Para obter mais detalhes, consulte [Precedência do valor da propriedade da dependência](dependency-property-value-precedence.md).
 
-As propriedades de dependência, ou a classe <xref:System.Windows.DependencyObject>, não dão suporte nativo a <xref:System.ComponentModel.INotifyPropertyChanged> para fins de produção de notificações de alterações no valor da propriedade de origem <xref:System.Windows.DependencyObject> em operações de associação de dados. Para obter mais informações sobre como criar propriedades para uso na vinculação de dados que podem relatar alterações para um destino de vinculação de dados, consulte [Visão geral da vinculação de dados](../data/data-binding-overview.md).
+As propriedades de dependência, ou a classe <xref:System.Windows.DependencyObject>, não dão suporte nativo a <xref:System.ComponentModel.INotifyPropertyChanged> para fins de produção de notificações de alterações no valor da propriedade de origem <xref:System.Windows.DependencyObject> em operações de associação de dados. Para obter mais informações sobre como criar propriedades para uso na vinculação de dados que podem relatar alterações para um destino de vinculação de dados, consulte [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md).
 
 ### <a name="styles"></a>Estilos
 Estilos e modelos são dois dos principais cenários que motivam o uso de propriedades de dependência. Os estilos são particularmente úteis para a configuração de propriedades que definem a [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] do aplicativo. Normalmente, os estilos são definidos como recursos no XAML. Os estilos interagem com o sistema de propriedades porque geralmente contêm “setters” para propriedades específicas, bem como “gatilhos” que alteram um valor da propriedade com base no valor em tempo real de outra propriedade.
@@ -134,7 +134,7 @@ O exemplo a seguir cria um estilo <xref:System.Windows.FrameworkElement.Resource
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-Para obter mais informações, consulte [Styling e Templating](../controls/styling-and-templating.md).
+Para obter mais informações, consulte [Styling e Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ### <a name="animations"></a>Animations
 As propriedades de dependência podem ser animadas. Quando uma animação é aplicada e está em execução, o valor animado opera com uma precedência maior do que qualquer valor (como um valor local) que a propriedade, de outro modo, tem.

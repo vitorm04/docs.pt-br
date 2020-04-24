@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460292"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646443"
 ---
 # <a name="data"></a>Dados
-A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados a dados de uma variedade de fontes de dados na forma de objetos Common Language Runtime (CLR) e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.  
+A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser vinculados a dados de uma variedade de fontes de dados na forma de objetos CLR (Common Language runtime) e XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também fornece um mecanismo para a transferência de dados por meio de operações do tipo arrastar e soltar.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Associação de dados](data-binding-wpf.md)  
+ [Vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)  
  [Arrastar e soltar](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Referência  
@@ -36,9 +36,9 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
  [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
- [Associação de dados](../advanced/optimizing-performance-data-binding.md)  
+ [Vinculação de dados](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Passo a passo: Meu primeiro aplicativo da área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Passo a passo: armazenar dados de aplicativo em cache em um aplicativo WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

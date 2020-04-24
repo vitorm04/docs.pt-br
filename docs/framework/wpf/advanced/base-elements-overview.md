@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 7d52d951d4fa4df83bbcca6b4cb479e18e532d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6519675ebf3624152e1077e7582f04e38b1dce9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141622"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644046"
 ---
 # <a name="base-elements-overview"></a>Visão geral de elementos base
 Uma alta porcentagem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de classes são derivadas de quatro classes que são comumente referidas na documentação SDK como as classes de elemento base. Essas aulas <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement>são, <xref:System.Windows.ContentElement> <xref:System.Windows.FrameworkContentElement>e . A <xref:System.Windows.DependencyObject> classe também está relacionada, porque é <xref:System.Windows.UIElement> uma classe de base comum de ambos e<xref:System.Windows.ContentElement>  
@@ -47,7 +47,7 @@ Uma alta porcentagem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharpt
   
 - Suporte a estilos e storyboards. Para obter mais <xref:System.Windows.Style> informações, consulte e [Storyboards Overview](../graphics-multimedia/storyboards-overview.md).  
   
-- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
+- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -67,7 +67,7 @@ Uma alta porcentagem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharpt
   
 - Suporte a estilos e storyboards. Para obter mais <xref:System.Windows.Style> informações, consulte e [visão geral da animação](../graphics-multimedia/animation-overview.md).  
   
-- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../data/data-binding-overview.md).  
+- Suporte para a vinculação de dados. Para obter mais informações, consulte [Visão geral de vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md).  
   
 - Suporte para referências a recursos dinâmicos. Para obter mais informações, consulte [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md).  
   
@@ -99,6 +99,6 @@ Uma alta porcentagem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharpt
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Windows.Controls.Control>
-- [Visão geral das propriedades de dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [Visão geral da criação de controle](../controls/control-authoring-overview.md)
 - [Arquitetura do WPF](wpf-architecture.md)

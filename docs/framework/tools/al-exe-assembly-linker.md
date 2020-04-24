@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 8e60bdaedb403237383c4655e728443747af29e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9877c1a4e86d035b614bf421364e3281878f0d8f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400088"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645587"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -31,7 +31,7 @@ No prompt de comando, digite o seguinte:
 al sources options
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
 É possível especificar um ou mais dos seguintes `sources`.
 
@@ -73,7 +73,7 @@ al sources options
 |**/trade[mark]:**`text`|Especifica uma cadeia de caracteres para o campo **Trademark** no assembly. Coloque a cadeia de caracteres entre aspas duplas (" "), se `text` contiver um espaço. Essa cadeia de caracteres é um atributo personalizado no assembly e está disponível para exibição com reflexão.<br /><br /> Se você não especificar **/win32res**, **/trademark** aparecerá no Gerenciador de Arquivos como o recurso **Trademark** do Win32.<br /><br /> Se o texto for uma cadeia de caracteres vazia, o recurso **Trademark** do Win32 aparecerá como um único espaço.<br /><br /> Se você especificar **/win32res**, **/trademark** não afetará as informações dos recursos do Win32.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyTrademarkAttribute>) no código-fonte de qualquer módulo MSIL.|
 |**/v[ersion]:**`version`|Especifica informações da versão para o assembly. O formato da seqüência de versão é `major`. `minor`. `build`. `revision`. O valor padrão é 0.<br /><br /> Se você especificar **/version**, deverá especificar `major`. Se especificar `major` e `minor`, poderá especificar um asterisco (\*) para `build`. Isso faz `build` ser igual ao número de dias desde 1º de janeiro de 2000, hora local, e `revision` ser igual ao número de segundos desde a meia-noite do dia atual, hora local, dividido por 2.<br /><br /> Se especificar `major`, `minor` e `build`, você poderá especificar um asterisco para `revision`. Isso faz `revision` ser igual ao número de segundos desde a meia-noite do dia atual, hora local, dividido por 2.<br /><br /> Para resumir, as cadeias de caracteres de versão válida são os seguintes:<br /><br /> X<br /><br /> X.X<br /><br /> X.X.\*<br /><br /> X.X.X<br /><br /> X.X.X.\*<br /><br /> X.X.X.X<br /><br /> em que X é qualquer constante curta não assinada, exceto 65535 (0-65534).<br /><br /> Se você não especificar **/win32res**, **/version** será usado como o recurso **Assembly Version** do Win32.<br /><br /> Se não especificar **/win32res**, **/productversion** e **/fileversion**, **/version** será usado para os recursos **Assembly Version**, File Version e **Product Version** do Win32.<br /><br /> Se você especificar **/win32res**, **/version** não afetará as informações dos recursos do Win32.<br /><br /> Também é possível especificar essa opção como um atributo personalizado (<xref:System.Reflection.AssemblyVersionAttribute>) no código-fonte de qualquer módulo MSIL.|
 |**/win32icon:**`filename`|Insere um arquivo .ico no assembly. O arquivo .ico dá ao arquivo de saída a aparência desejada no Explorador de Arquivos.|
-|**/win32res:** `filename`|Insere um recurso Win32 (arquivo .res) no arquivo de saída. Um arquivo de recurso Win32 pode ser criado usando-se o Compilador de Recursos. O Compilador de Recursos é invocado quando você compila um programa do Visual C++; um arquivo .res é criado com base no arquivo .rc.|
+|**/win32res:**`filename`|Insere um recurso Win32 (arquivo .res) no arquivo de saída. Um arquivo de recurso Win32 pode ser criado usando-se o Compilador de Recursos. O Compilador de Recursos é invocado quando você compila um programa do Visual C++; um arquivo .res é criado com base no arquivo .rc.|
 |`@filename`|Especifica um arquivo de resposta que contém comandos do *Al.exe*.<br /><br /> Os comandos no arquivo de resposta podem ser exibidos um por linha ou na mesma linha, separados por um ou mais espaços.|
 |**/?**|Exibe sintaxe de comando e opções para a ferramenta.|
 
@@ -175,6 +175,6 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 
 - [Ferramentas](index.md)
 - [*Sn.exe* (Ferramenta de Nome Forte)](sn-exe-strong-name-tool.md)
-- [*Gacutil.exe* (Ferramenta do Cache de Assembly Global)](gacutil-exe-gac-tool.md)
-- [Programação com assemblies](../../standard/assembly/program.md)
-- [Prompts de Comando](developer-command-prompt-for-vs.md)
+- [*Gacutil.exe* (Ferramenta global de cache de montagem)](gacutil-exe-gac-tool.md)
+- [Programação com assemblies](../../standard/assembly/index.md)
+- [Comandos](developer-command-prompt-for-vs.md)

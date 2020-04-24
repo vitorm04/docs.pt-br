@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398863"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644377"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novidades do .NET Core 2.1
 
@@ -67,7 +67,7 @@ Várias ferramentas que estavam disponíveis apenas por projeto usando `DotnetCl
 
 O .NET Core 2.1 oferece suporte a *Ferramentas Globais*, ou seja, ferramentas personalizadas que estão disponíveis globalmente a partir da linha de comando. O modelo de extensibilidade em versões anteriores do .NET Core disponibilizava ferramentas personalizadas apenas por projeto usando `DotnetCliToolReference`.
 
-Para instalar uma Ferramenta Global, use o comando [dotnet tool install](../tools/dotnet-tool-install.md). Por exemplo: 
+Para instalar uma Ferramenta Global, use o comando [dotnet tool install](../tools/dotnet-tool-install.md). Por exemplo:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -251,6 +251,6 @@ Para obter informações sobre como quebrar alterações, consulte [Alterações
 
 ## <a name="see-also"></a>Confira também
 
-- [Novidades do .NET Core](index.md)
+- [Novidades do .NET Core 3.1](dotnet-core-3-1.md)
 - [Novos recursos no EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
 - [Novidades do ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

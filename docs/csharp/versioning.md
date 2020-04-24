@@ -4,12 +4,12 @@ description: Compreender o funcionamento do controle de versão em C# e .NET
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc192337e4eaa5f9f1d6509ea8c15deeac34a48c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156461"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645463"
 ---
 # <a name="versioning-in-c"></a>Controle de versão em C\#
 
@@ -43,7 +43,7 @@ Aqui estão algumas coisas a serem consideradas ao tentar manter a compatibilida
 - Métodos virtuais: quando você torna um método em virtual não virtual na nova versão, significa que projetos que substituem esse método precisarão ser atualizados. Essa é uma alteração muito grande e significativa que é altamente desaconselhável.
 - Assinaturas do método: Ao atualizar um comportamento de método requer que você altere sua assinatura também, você deve, em vez disso, criar uma sobrecarga para que a chamada de código para esse método ainda funcione.
 Você sempre pode manipular a assinatura de método antiga para chamar a nova assinatura de método para que a implementação permaneça consistente.
-- [Atributo obsoleto](programming-guide/concepts/attributes/common-attributes.md#Obsolete): você pode usar esse atributo no seu código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
+- [Atributo obsoleto](language-reference/attributes/general.md#obsolete-attribute): você pode usar esse atributo no seu código para especificar classes ou membros da classe que foram preteridos e provavelmente serão removidos em versões futuras. Isso garante que os desenvolvedores que utilizam sua biblioteca estarão melhor preparados para alterações significativas.
 - Argumentos de método opcionais: quando você tornar argumentos de método que antes eram opcionais em compulsórios ou alterar seu valor padrão, todo código que não fornece esses argumentos precisará ser atualizado.
 
 > [!NOTE]

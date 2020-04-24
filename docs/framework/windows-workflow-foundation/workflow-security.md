@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 36d03a2fca8f143b98338050fc9da4490960bda9
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2a9b26f8da7616480f69a6c4580b8d351833c9ee
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837513"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646310"
 ---
 # <a name="workflow-security"></a>Segurança de fluxo de trabalho
-O Windows Workflow Foundation (WF) é integrado a várias tecnologias diferentes, como Microsoft SQL Server e Windows Communication Foundation (WCF). Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.
+O Windows Workflow Foundation (WF) é integrado com várias tecnologias diferentes, como o Microsoft SQL Server e o Windows Communication Foundation (WCF). Interagir com essas tecnologias pode gerar problemas de segurança no fluxo de trabalho se feito de modo inadequado.
 
 ## <a name="persistence-security-concerns"></a>Problemas de segurança de persistência
 
@@ -38,14 +38,14 @@ O Windows Workflow Foundation (WF) é integrado a várias tecnologias diferentes
 
 ## <a name="considerations-for-workflowservicehost"></a>Considerações para WorkflowServiceHost
 
-- Os pontos de extremidade do Windows Communication Foundation (WCF) usados em fluxos de trabalho devem ser protegidos. Para obter mais informações, consulte [visão geral da segurança do WCF](../wcf/feature-details/security-overview.md).
+- Os pontos finais da Windows Communication Foundation (WCF) usados em fluxos de trabalho devem ser protegidos. Para obter mais informações, consulte [Visão geral de segurança do WCF](../wcf/feature-details/security-overview.md).
 
-- Autorização do nível pode ser implementada usando <xref:System.ServiceModel.ServiceAuthorizationManager>. Consulte [como: criar um Gerenciador de autorização personalizado para um serviço](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) para obter detalhes.
+- Autorização do nível pode ser implementada usando <xref:System.ServiceModel.ServiceAuthorizationManager>. [Veja como: Criar um gerenciador de autorização personalizado para um serviço](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md) para obter detalhes.
 
 - O ServiceSecurityContext para a mensagem de entrada também está disponível no fluxo de trabalho acessando OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>Bloco CTP de segurança de WF
- O Microsoft WF Security Pack CTP 1 é a primeira versão CTP (Community Technology Preview) de um conjunto de atividades e sua implementação com base em [Windows Workflow Foundation](index.md) no [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) e no [Windows Identity Foundation (WIF)](../security/index.md).  O bloco CTP 1 de segurança do Microsoft WF contém ambas as atividades e seus designers que ilustram como facilmente ative vários cenários relacionados a segurança usando o fluxo de trabalho, incluindo:
+ O Microsoft WF Security Pack community Technology preview (CTP) 1 é um conjunto de atividades e sua implementação baseada no [Windows Workflow Foundation](index.md) no [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) e na Windows Identity Foundation [(WIF)](https://docs.microsoft.com/previous-versions/dotnet/framework/security/index). O bloco CTP 1 de segurança do Microsoft WF contém ambas as atividades e seus designers que ilustram como facilmente ative vários cenários relacionados a segurança usando o fluxo de trabalho, incluindo:
 
 1. Representando uma identidade de cliente no fluxo de trabalho
 
@@ -55,4 +55,4 @@ O Windows Workflow Foundation (WF) é integrado a várias tecnologias diferentes
 
 4. Fluxo um símbolo de segurança de cliente a um serviço back-end (delegação reivindicação- base) usando a ws-trust Ata
 
-Para obter mais informações e baixar o WF Security Pack CTP, consulte: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)
+Para obter mais informações e baixar o CTP do Wf Security Pack, consulte: [WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

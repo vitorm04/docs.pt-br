@@ -2,12 +2,12 @@
 title: Como controlar a versão do SDK e do Runtime do .NET Core
 description: Este artigo ensina como controlar a versão do SDK do .NET Core (semelhante ao controle de versão semântico).
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777323"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644389"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
@@ -99,15 +99,15 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 | .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | até 1.6     |
-| 2,0       | até 2.0     |
+| 2.0       | até 2.0     |
 | 2.1       | até 2.0     |
 | 2.2       | até 2.0     |
 | 3.0       | até 2,1     |
 
 ## <a name="see-also"></a>Confira também
 
-- [Estruturas de destino](../../standard/frameworks.md)
-- [Pacote de distribuição do .NET Core](../build/distribution-packaging.md)
+- [Frameworks de destino](../../standard/frameworks.md)
+- [Pacote de distribuição do .NET Core](../distribution-packaging.md)
 - [Folha informativa sobre o ciclo de vida do suporte ao .NET Core](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Associação de versão](https://github.com/dotnet/designs/issues/3)
 - [Imagens do Docker para .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

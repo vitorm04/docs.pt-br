@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 696772da1ebee405493f2ff0e1481daf93d08ec7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed4350f1a7084b7894a70ac9d6d00cf25b39e34
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187029"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646193"
 ---
 # <a name="trees-in-wpf"></a>Árvores no WPF
 Em muitas tecnologias, elementos e componentes são organizados em uma estrutura de árvore em que os desenvolvedores manipulam diretamente os nós de objeto na árvore para afetar a renderização ou o comportamento de um aplicativo. O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] também usa várias metáforas de estrutura de árvore para definir relações entre elementos do programa. Em geral, os desenvolvedores de WPF conseguem criar um aplicativo em código ou definir partes do aplicativo em XAML enquanto pensam conceitualmente sobre a metáfora da árvore de objeto, mas chamarão uma API específica ou usarão marcação específica para fazer isso em vez de alguma API geral de manipulação de árvore de objeto, como a que poderia ser usada em XML DOM. O WPF expõe duas classes auxiliares que <xref:System.Windows.LogicalTreeHelper> <xref:System.Windows.Media.VisualTreeHelper>fornecem uma visão de metáfora de árvore, e . Os termos “árvore visual” e “árvore lógica” também são utilizados na documentação do WPF porque essas mesmas árvores são úteis para entender o comportamento de alguns recursos principais do WPF. Este tópico define o que a árvore visual e a árvore lógica representam, discute <xref:System.Windows.LogicalTreeHelper> como <xref:System.Windows.Media.VisualTreeHelper>essas árvores se relacionam com um conceito geral de árvore de objetos, e introduz e s.  
@@ -37,7 +37,7 @@ Em muitas tecnologias, elementos e componentes são organizados em uma estrutura
   
  No entanto, a árvore lógica não é o gráfico de objeto inteiro que existe para a interface do motorista da sua aplicação em tempo de execução, mesmo com os itens de sintaxe implícita XAML fatorados. A principal razão para isso são visuais e modelos. Por exemplo, <xref:System.Windows.Controls.Button>considere o . A árvore lógica <xref:System.Windows.Controls.Button> relata o `Content`objeto e também sua corda . Porém, esse botão contém mais recursos na árvore de objetos de tempo de execução. Em particular, o botão só aparece na tela <xref:System.Windows.Controls.Button> do jeito que aparece porque um modelo de controle específico foi aplicado. Os visuais que vêm de um modelo aplicado (como o modelo definido <xref:System.Windows.Controls.Border> de cinza escuro ao redor do botão visual) não são relatados na árvore lógica, mesmo se você estiver olhando para a árvore lógica durante o tempo de execução (como manusear um evento de entrada da ui visível e, em seguida, ler a árvore lógica). Para encontrar os visuais do modelo, seria necessário examinar a árvore visual.  
   
- Para obter mais informações a respeito de como a sintaxe do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é mapeada para o grafo de objeto criado, bem como sobre a sintaxe implícita em XAML, consulte [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md) ou [Visão geral de XAML (WPF)](xaml-overview-wpf.md).  
+ Para obter mais informações a respeito de como a sintaxe do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é mapeada para o grafo de objeto criado, bem como sobre a sintaxe implícita em XAML, consulte [Sintaxe XAML em detalhes](xaml-syntax-in-detail.md) ou [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
   
 <a name="tree_property_inheritance_event_routing"></a>
 ### <a name="the-purpose-of-the-logical-tree"></a>A finalidade da árvore lógica  
@@ -89,5 +89,5 @@ Em muitas tecnologias, elementos e componentes são organizados em uma estrutura
 - [Visão geral da entrada](input-overview.md)
 - [Visão geral de renderização de gráficos do WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Visão geral de eventos roteados](routed-events-overview.md)
-- [Inicialização de elementos de objeto que não estão em uma árvore de objetos](initialization-for-object-elements-not-in-an-object-tree.md)
+- [Inicialização de elementos de objeto que não estejam em uma árvore de objetos](initialization-for-object-elements-not-in-an-object-tree.md)
 - [Arquitetura do WPF](wpf-architecture.md)

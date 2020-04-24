@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 08d708e8f98bd2fe06757df3033a512e2fe1f3c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 352fa41cb9d3136f853b068d0101a6dcab5dfd7c
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400053"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645767"
 ---
 # <a name="code-access-security-basics"></a>Noções básicas da segurança de acesso do código
 
@@ -53,7 +53,7 @@ A segurança de acesso ao código não elimina a possibilidade de erro humano na
 A sintaxe declarativa de segurança usa [atributos](../../standard/attributes/index.md) para colocar informações de segurança nos [metadados](../../standard/metadata-and-self-describing-components.md) do seu código. Os atributos podem ser colocados no nível de montagem, classe ou membro, para indicar o tipo de solicitação, demanda ou substituição que você deseja usar. As solicitações são usadas em aplicativos que visam o tempo de execução do idioma comum para informar o sistema de segurança em tempo de execução sobre as permissões que seu aplicativo precisa ou não deseja. Demandas e substituições são usadas em bibliotecas para ajudar a proteger os recursos dos chamadores ou para substituir o comportamento de segurança padrão.
 
 > [!NOTE]
-> No Quadro .NET 4, houve mudanças importantes no modelo de segurança e terminologia do Quadro .NET. Para obter mais informações sobre essas alterações, consulte [Alterações de segurança](../security/security-changes.md).
+> No Quadro .NET 4, houve mudanças importantes no modelo de segurança e terminologia do Quadro .NET. Para obter mais informações sobre essas alterações, consulte [Alterações de segurança](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
 
 Para usar chamadas de segurança declarativas, você deve inicializar os dados do estado do objeto de permissão para que ele represente a forma específica de permissão que você precisa. Cada permissão incorporada tem um atributo que é passado uma <xref:System.Security.Permissions.SecurityAction> enumeração para descrever o tipo de operação de segurança que você deseja executar. No entanto, as permissões também aceitam seus próprios parâmetros que são exclusivos para eles.
 
@@ -166,4 +166,4 @@ Se você quiser que seu aplicativo execute uma operação que requer acesso a c�
 - [Segurança de acesso a código](code-access-security.md)
 - [Noções básicas da segurança de acesso do código](code-access-security-basics.md)
 - [Atributos](../../standard/attributes/index.md)
-- [Metadados e componentes autodescritivos](../../standard/metadata-and-self-describing-components.md)
+- [Metadados e componentes auto-descritos](../../standard/metadata-and-self-describing-components.md)

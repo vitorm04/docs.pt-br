@@ -1,16 +1,16 @@
 ---
-title: Caminho do registro especificado não começa com um nome válido de hive
+title: O caminho do Registro especificado não começa com um nome do hive válido
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-ms.openlocfilehash: 9686ade2043e48bebceb53fadc647b9229aeb660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fcd7fe76a76eec2f31f5cada92f6ef6dcd2a3c1
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660976"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646088"
 ---
-# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>Caminho do registro especificado não começa com um nome válido de hive
-O caminho do registro especificado não começa com um nome válido de hive. Nomes de hive válidos são:  
+# <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>O caminho do Registro especificado não começa com um nome do hive válido
+O caminho de registro especificado não começa com um nome de colmeia válido. Os nomes da colmeia válida são:  
   
 - `HKEY_CLASSES_ROOT`  
   
@@ -28,10 +28,10 @@ O caminho do registro especificado não começa com um nome válido de hive. Nom
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Verifique se você está fornecendo um nome válido de hive.  
+- Verifique se você está fornecendo um nome de colmeia válido.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-- [Manipulando cadeias de caracteres](../../standard/base-types/manipulating-strings.md)
-- [Lendo e gravando no registro (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [Manipular cadeias de caracteres](../../standard/base-types/best-practices-strings.md)
+- [Lendo e gravando a partir do Registro (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Meu.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

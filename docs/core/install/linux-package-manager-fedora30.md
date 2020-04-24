@@ -4,12 +4,12 @@ description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tem
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 41ea47a8f473d69df6ca9823623646968e895de7
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: d4c39f271ee224a51101231cd5c50bdae58b0a26
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134263"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645397"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30 Package Manager - Instalar .NET Core
 
@@ -19,12 +19,12 @@ Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Co
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adicione a chave e o feed do repositório da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
-- Registre a chave da Microsoft.
-- Registre o repositório do produto.
+- Adicione a chave de assinatura do pacote da Microsoft à lista de chaves confiáveis.
+- Adicione o repositório ao gerenciador de pacotes.
 - Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
@@ -36,7 +36,7 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/30/prod.repo
 ```
 
-## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
+## <a name="install-the-net-core-sdk"></a>Instale o .NET Core SDK
 
 Atualize os produtos disponíveis para instalação e instale o .NET Core SDK. Em seu terminal, execute o seguinte comando.
 

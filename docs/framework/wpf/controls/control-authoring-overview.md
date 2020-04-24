@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243265"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646130"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da autoria de controle
 
@@ -38,7 +38,7 @@ Historicamente, se você quisesse obter uma experiência personalizada de um con
 
 - **Gatilhos.** A <xref:System.Windows.Trigger> permite que você altere dinamicamente a aparência e o comportamento de um controle sem criar um novo controle. Por exemplo, suponha que você tenha vários <xref:System.Windows.Controls.ListBox> controles em <xref:System.Windows.Controls.ListBox> seu aplicativo e queira que os itens em cada um sejam ousados e vermelhos quando forem selecionados. Seu primeiro instinto pode ser criar uma <xref:System.Windows.Controls.ListBox> classe que <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> herde e anular o método para alterar a aparência do item <xref:System.Windows.Controls.ListBoxItem> selecionado, mas uma abordagem melhor é adicionar um gatilho a um estilo de um que altera a aparência do item selecionado. Um gatilho permite que você altere os valores da propriedade ou execute ações com base no valor de uma propriedade. Um <xref:System.Windows.EventTrigger> permite que você tome ações quando um evento ocorre.
 
-Para obter mais informações sobre estilos, modelos e gatilhos, consulte [Estilo e modelagem](styling-and-templating.md).
+Para obter mais informações sobre estilos, modelos e gatilhos, consulte [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 Em geral, se o seu controle espelha a funcionalidade de um controle existente mas você deseja que seu controle tenha uma aparência diferente, você deve primeiro considerar se você pode ou não usar qualquer um dos métodos abordados nesta seção para alterar a aparência do controle existente.
 

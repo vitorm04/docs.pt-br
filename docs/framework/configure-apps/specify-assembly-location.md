@@ -6,26 +6,26 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971545"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646026"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificando o local de um assembly
-Há duas maneiras de especificar o local de um assembly:  
+Existem duas maneiras de especificar a localização de uma montagem:  
   
-- Usando o [ \<elemento > codebase](./file-schema/runtime/codebase-element.md) .  
+- Usando [ \<](./file-schema/runtime/codebase-element.md) o elemento codeBase>.  
   
-- Usando o elemento de [ \<> de investigação](./file-schema/runtime/probing-element.md) .  
+- Usando [ \<](./file-schema/runtime/probing-element.md) o elemento>sondagem.  
   
- Você também pode usar a [ferramenta de configuração de .NET Framework (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar locais de assembly ou especificar locais para o Common Language Runtime investigar para assemblies.  
+ Você também pode usar a [Ferramenta de Configuração do Framework .NET (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar locais de montagem ou especificar locais para o tempo de execução do idioma comum para sondar para conjuntos.  
   
-## <a name="using-the-codebase-element"></a>Usando o \<elemento > codebase  
- Você pode usar o  **\<elemento > codebase** somente em configuração do computador ou em arquivos de política do Publicador que também redirecionem a versão do assembly. Quando o tempo de execução determina qual versão de assembly usar, ele aplica a configuração de base do código do arquivo que determina a versão. Se nenhuma base de código for indicada, o tempo de execução investigará o assembly da maneira normal. Para obter detalhes, consulte [como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-codebase-element"></a>Usando \<o elemento codeBase>  
+ Você pode ** \<** usar o elemento codeBase>apenas em arquivos de configuração de máquina ou diretiva de editor que também redirecionam a versão de montagem. Quando o tempo de execução determina qual versão de montagem deve ser usada, ele aplica a configuração base de código do arquivo que determina a versão. Se nenhuma base de código for indicada, os testes de tempo de execução para a montagem da maneira normal. Para obter detalhes, [consulte Como o Runtime localiza montagens](../deployment/how-the-runtime-locates-assemblies.md).  
   
- O exemplo a seguir mostra como especificar o local de um assembly.  
+ O exemplo a seguir mostra como especificar a localização de um conjunto.  
   
 ```xml  
 <configuration>  
@@ -43,15 +43,15 @@ Há duas maneiras de especificar o local de um assembly:
 </configuration>  
 ```  
   
- O atributo **version** é necessário para todos os assemblies de nome forte, mas deve ser omitido para assemblies que não são de nome forte. **O\<elemento > codebase** requer o atributo **href** . Você não pode especificar intervalos de versão no  **\<elemento > codebase** .  
+ O atributo de **versão** é necessário para todos os conjuntos com nome forte, mas deve ser omitido para conjuntos que não são fortes. O ** \<** elemento codeBase>requer o atributo **href.** Não é possível especificar ** \<** faixas de versão no elemento codeBase>.  
   
 > [!NOTE]
-> Se você estiver fornecendo uma dica de base de código para um assembly que não seja de nome forte, a dica deverá apontar para a base do aplicativo ou um subdiretório do diretório base do aplicativo.  
+> Se você estiver fornecendo uma dica de base de código para um conjunto que não tenha um nome forte, a dica deve apontar para a base de aplicativos ou um subdiretório do diretório base de aplicativos.  
   
-## <a name="using-the-probing-element"></a>Usando o \<elemento de > de investigação  
- O tempo de execução localiza assemblies que não têm uma base de código por investigação. Para obter mais informações sobre investigação, consulte [como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
+## <a name="using-the-probing-element"></a>Usando \<o elemento> sondagem  
+ O tempo de execução localiza conjuntos que não possuem uma base de código por sondagem. Para obter mais informações sobre a sondagem, consulte [Como o Runtime Localiza Montagens](../deployment/how-the-runtime-locates-assemblies.md).  
   
- Você pode usar o [ \<](./file-schema/runtime/probing-element.md) elemento de > de investigação no arquivo de configuração do aplicativo para especificar subdiretórios que o tempo de execução deve pesquisar ao localizar um assembly. O exemplo a seguir mostra como especificar diretórios que o tempo de execução deve pesquisar.  
+ Você pode [ \<](./file-schema/runtime/probing-element.md) usar o elemento de>de sondagem no arquivo de configuração do aplicativo para especificar subdiretórios que o tempo de execução deve pesquisar ao localizar um conjunto. O exemplo a seguir mostra como especificar diretórios que o tempo de execução deve ser pesquisado.  
   
 ```xml  
 <configuration>  
@@ -63,11 +63,11 @@ Há duas maneiras de especificar o local de um assembly:
 </configuration>  
 ```  
   
- O atributo **privatePath** contém os diretórios em que o tempo de execução deve pesquisar assemblies. Se o aplicativo estiver localizado em C:\Program MyApp, o tempo de execução procurará assemblies que não especificam uma base de código em C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin e C:\Program Files\MyApp\Bin3. Os diretórios especificados em **privatePath** devem ser subdiretórios do diretório base do aplicativo.  
+ O atributo **privatePath** contém os diretórios que o tempo de execução deve procurar montagens. Se o aplicativo estiver localizado em C:\Program Files\MyApp, o tempo de execução procurará conjuntos que não especifiquem uma base de código em C:\Program Files\MyApp\Bin, C:\Program Files\MyApp\Bin2\Subbin e C:\Program Files\MyApp\Bin3. Os diretórios especificados no **privatePath** devem ser subdiretórios do diretório base de aplicativos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
 - [Assemblies no .NET](../../standard/assembly/index.md)
-- [Programação com assemblies](../../standard/assembly/program.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Configurando aplicativos usando arquivos de configuração](index.md)
+- [Programação com assemblies](../../standard/assembly/index.md)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Configurando aplicativos usando arquivos de configuração ](index.md)

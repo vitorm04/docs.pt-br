@@ -2,12 +2,12 @@
 title: Coleções
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: ba16d04e781bcf69356b1f603d92e104816a0860
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400823"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646338"
 ---
 # <a name="collections-visual-basic"></a>Coleções (Visual Basic)
 
@@ -574,7 +574,7 @@ End Function
 - [Conceitos de Programação (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [PLINQ (LINQ paralelo)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [LINQ paralelo (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [Coleções e Estruturas de Dados](../../../standard/collections/index.md)
 - [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)
 - [Comparações e classificações dentro de coleções](../../../standard/collections/comparisons-and-sorts-within-collections.md)

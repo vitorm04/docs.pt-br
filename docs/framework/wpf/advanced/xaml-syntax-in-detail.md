@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: dbff4bed59c8d1e861555676578b52528e2aebbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f8bb862ce443fd7397036b10f69cda65a6960bc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186182"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646150"
 ---
 # <a name="xaml-syntax-in-detail"></a>Sintaxe XAML em detalhes
 Este tópico define os termos que são usados para descrever os elementos da sintaxe XAML. Esses termos são usados com frequência durante o restante desta documentação, tanto especificamente para a documentação do WPF quanto para as outras estruturas que usam XAML ou os conceitos básicos do XAML habilitados pelo suporte à linguagem XAML no nível de System.Xaml. Este tópico trata mais a fundo da terminologia básica introduzida no tópico [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -130,7 +130,7 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
  Você também pode nomear qualquer evento de qualquer objeto que possa ser acessado através do namespace padrão usando um nome parcialmente qualificado *typeName*.*evento*; essa sintaxe dá suporte à anexação de manipuladores para eventos roteados em que o manipulador destina-se a manipular o roteamento de eventos de elementos filho, mas o elemento pai também não tem esse evento em sua tabela de membros. Essa sintaxe é semelhante a uma sintaxe de evento anexado, mas o evento aqui não é um evento anexado verdadeiro. Em vez disso, você está referenciando um evento com um nome qualificado. Para obter mais informações, consulte [Visão geral de eventos roteados](routed-events-overview.md).  
   
- Em alguns cenários, os nomes de propriedade às vezes são fornecidos como o valor de um atributo, em vez do nome do atributo. Esse nome de propriedade também pode incluir qualificadores como a propriedade especificada no formato *ownerType*.*dependencyPropertyName*. Esse cenário é comum ao escrever estilos ou modelos em XAML. As regras de processamento para nomes de propriedade fornecidos como um valor de atributo são diferentes e são regidas pelo tipo da propriedade sendo definida ou os comportamentos de subsistemas do WPF específicos. Para obter detalhes, consulte [Estilo e modelagem](../controls/styling-and-templating.md).  
+ Em alguns cenários, os nomes de propriedade às vezes são fornecidos como o valor de um atributo, em vez do nome do atributo. Esse nome de propriedade também pode incluir qualificadores como a propriedade especificada no formato *ownerType*.*dependencyPropertyName*. Esse cenário é comum ao escrever estilos ou modelos em XAML. As regras de processamento para nomes de propriedade fornecidos como um valor de atributo são diferentes e são regidas pelo tipo da propriedade sendo definida ou os comportamentos de subsistemas do WPF específicos. Para obter detalhes, consulte [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
  Outro uso para nomes de propriedade é quando um valor de atributo descreve uma relação propriedade-propriedade. Esse recurso é usado para vinculação de dados e para <xref:System.Windows.PropertyPath> alvos de storyboard, e é habilitado pela classe e seu conversor de tipo. Para obter uma descrição mais completa da semântica de pesquisa, consulte [Sintaxe XAML PropertyPath](propertypath-xaml-syntax.md).  
   
@@ -315,9 +315,9 @@ Este tópico define os termos que são usados para descrever os elementos da sin
   
 ## <a name="see-also"></a>Confira também
 
-- [Visão geral xaml (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Recursos da linguagem (x:) do namespace de XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)
+- [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
+- [Namespace XAML (x:) Funcionalidades de linguagem](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Extensões XAML WPF](wpf-xaml-extensions.md)
-- [Visão geral das propriedades de dependência](dependency-properties-overview.md)
+- [Visão geral de propriedades da dependência](dependency-properties-overview.md)
 - [TypeConverters e XAML](typeconverters-and-xaml.md)
 - [XAML e classes personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)

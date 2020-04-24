@@ -4,12 +4,12 @@ description: Use um gerenciador de pacotes para instalar o .NET Core SDK e o tem
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 314688d60fb77e1b569dd037fb1d78c3f1f94dbc
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134214"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645655"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 Package Manager - Instalar .NET Core
 
@@ -19,12 +19,12 @@ Este artigo descreve como usar um gerenciador de pacotes para instalar o .NET Co
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
+## <a name="add-microsoft-repository-key-and-feed"></a>Adicione a chave e o feed do repositório da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
-- Registre a chave da Microsoft.
-- Registre o repositório do produto.
+- Adicione a chave de assinatura do pacote da Microsoft à lista de chaves confiáveis.
+- Adicione o repositório ao gerenciador de pacotes.
 - Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
@@ -35,7 +35,7 @@ Abra um terminal e execute o seguinte comando.
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 ```
 
-## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
+## <a name="install-the-net-core-sdk"></a>Instale o .NET Core SDK
 
 Atualize os produtos disponíveis para instalação e instale o .NET Core SDK. Em seu terminal, execute o seguinte comando.
 

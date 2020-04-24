@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 2ec8c0a99f4e2431aed0d8c24168b7329de669f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2aab0fc8adaf17a8e9820a6269a740ef09540cda
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187527"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646481"
 ---
 # <a name="controls"></a>Controles
 <a name="introduction"></a>
@@ -54,7 +54,7 @@ ms.locfileid: "79187527"
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- Você também pode aplicar um estilo a apenas certos controles de um tipo específico, atribuindo uma chave ao estilo e especificando essa chave na propriedade do `Style` seu controle.  Para obter mais informações sobre estilos, consulte [Styling e Templating](styling-and-templating.md).  
+ Você também pode aplicar um estilo a apenas certos controles de um tipo específico, atribuindo uma chave ao estilo e especificando essa chave na propriedade do `Style` seu controle.  Para obter mais informações sobre estilos, consulte [Styling e Templating](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
 ### <a name="creating-a-controltemplate"></a>Criando um ControlTemplate  
  A <xref:System.Windows.Style> permite definir propriedades em vários controles de cada vez, mas às <xref:System.Windows.Controls.Control> vezes você pode querer <xref:System.Windows.Style>personalizar a aparência de um além do que você pode fazer criando um . As classes que <xref:System.Windows.Controls.Control> herdam da classe têm um <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.Control>, que define a estrutura e aparência de um . A <xref:System.Windows.Controls.Control.Template%2A> propriedade <xref:System.Windows.Controls.Control> de um é pública, <xref:System.Windows.Controls.Control> então <xref:System.Windows.Controls.ControlTemplate> você pode dar um que é diferente do seu padrão. Muitas vezes você <xref:System.Windows.Controls.ControlTemplate> pode <xref:System.Windows.Controls.Control> especificar um novo para um em <xref:System.Windows.Controls.Control>vez de herdar de um controle para personalizar a aparência de um .  
@@ -99,7 +99,7 @@ ms.locfileid: "79187527"
   
 ## <a name="see-also"></a>Confira também
 
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Controles por categoria](controls-by-category.md)
 - [Biblioteca de controles](control-library.md)
 - [Visão geral de modelagem dos dados](../data/data-templating-overview.md)

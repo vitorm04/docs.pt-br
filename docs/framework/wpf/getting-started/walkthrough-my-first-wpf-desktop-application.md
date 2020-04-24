@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463920"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646423"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: Crie seu primeiro aplicativo WPF no Visual Studio 2019
 
@@ -358,7 +358,7 @@ A ilustração a seguir mostra os elementos de IA adicionados ao *ExpenseReportP
 
 ## <a name="style-controls"></a>Controles de estilo
 
-O aparecimento de vários elementos é muitas vezes o mesmo para todos os elementos do mesmo tipo em uma ui. A ui usa [estilos](../controls/styling-and-templating.md) para tornar as aparências reutilizáveis em vários elementos. A reutilização dos estilos ajuda a simplificar a criação e o gerenciamento do XAML. Esta seção substitui os atributos por elemento que foram definidos nas etapas anteriores com estilos.
+O aparecimento de vários elementos é muitas vezes o mesmo para todos os elementos do mesmo tipo em uma ui. A ui usa [estilos](../../../desktop-wpf/fundamentals/styles-templates-overview.md) para tornar as aparências reutilizáveis em vários elementos. A reutilização dos estilos ajuda a simplificar a criação e o gerenciamento do XAML. Esta seção substitui os atributos por elemento que foram definidos nas etapas anteriores com estilos.
 
 1. *Abra o Application.xaml* ou *app.xaml*.
 
@@ -481,7 +481,7 @@ A ilustração a `ExpenseIt` seguir mostra ambas as páginas do aplicativo com c
 Neste passo a passo você aprendeu uma série de técnicas para criar uma UI usando o Windows Presentation Foundation (WPF). Agora você deve ter uma compreensão básica dos blocos de construção de um aplicativo .NET vinculado a dados. Para obter mais informações sobre os modelos de arquitetura e programação do WPF, consulte os seguintes tópicos:
 
 - [Arquitetura WPF](../advanced/wpf-architecture.md)
-- [Visão geral xaml (WPF)](../advanced/xaml-overview-wpf.md)
+- [Visão geral xaml (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Visão geral das propriedades de dependência](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 

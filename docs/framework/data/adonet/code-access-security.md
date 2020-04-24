@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b0f269bd4dce8ddaaaa72c3760a4d7a0e3eb8b9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151735"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646023"
 ---
 # <a name="code-access-security-and-adonet"></a>Segurança de acesso do código e o ADO.NET
 O .NET Framework oferece segurança baseada em função e segurança de acesso de código (CAS), ambas são implementadas por meio de uma infraestrutura comum fornecida pelo CLR (Common Language Runtime). No mundo do código não gerenciado, a maioria dos aplicativos é executada com as permissões do usuário ou da entidade de segurança. Como resultado, é possível que os sistemas de computador sejam danificados e os dados particulares sejam comprometidos quando um software mal-intencionado ou com erro for executado por um usuário com privilégios elevados.  
@@ -50,7 +50,7 @@ O .NET Framework oferece segurança baseada em função e segurança de acesso d
  Dependendo do tipo de aplicativo que você está criando, você também deve considerar implementar as permissões baseadas em função no banco de dados. Para obter mais informações sobre segurança baseada em papéis no SQL Server, consulte [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Assemblies  
- Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre a criação e implantação de montagens, consulte [Programação com Montagens](../../../standard/assembly/program.md).  
+ Os assemblies formam a unidade fundamental de implantação, controle de versão, reutilização, escopo de ativação e permissões de segurança para um aplicativo .NET Framework. Um assembly fornece uma coleção de tipos e recursos que são criados para trabalhar em conjunto e formar uma unidade lógica de funcionalidade. Para o CLR, um tipo não existe fora do contexto de um assembly. Para obter mais informações sobre a criação e implantação de montagens, consulte [Programação com Montagens](../../../standard/assembly/index.md).  
   
 ### <a name="strong-naming-assemblies"></a>Assemblies de nomes fortes  
  Um nome forte, ou assinatura digital, consiste na identidade do assembly, que inclui seu nome de texto simples, número de versão e informações de cultura (se fornecidas), além de uma chave pública e uma assinatura digital. A assinatura digital é gerada a partir de um arquivo de assembly usando a chave privada correspondente. O arquivo do assembly inclui o manifesto do assembly, o qual contém os nomes e os hashes de todos os arquivos que compõem o assembly.  
