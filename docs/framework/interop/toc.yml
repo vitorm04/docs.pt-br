@@ -6,9 +6,9 @@
       items:
         - name: Importando uma biblioteca de tipos como um assembly
           href: importing-a-type-library-as-an-assembly.md
-        - name: Como adicionar referências a bibliotecas de tipos
+        - name: 'Como: Adicionar referências a bibliotecas de tipos'
           href: how-to-add-references-to-type-libraries.md
-        - name: Como gerar assemblies de interoperabilidade a partir de bibliotecas de tipos
+        - name: 'Como: Gerar assemblies de interoperabilidade com base em bibliotecas de tipos'
           href: how-to-generate-interop-assemblies-from-type-libraries.md
         - name: Compilando um projeto de interoperabilidade
           href: compiling-an-interop-project.md
@@ -23,9 +23,9 @@
           href: packaging-an-assembly-for-com.md
         - name: Registrando assemblies com o COM
           href: registering-assemblies-with-com.md
-        - name: Como referenciar tipos do .NET com base no COM
+        - name: 'Como: Referenciar tipos .NET por meio do COM'
           href: how-to-reference-net-types-from-com.md
-        - name: 'Exemplo de interoperabilidade COM: cliente COM e servidor .NET'
+        - name: 'Amostra de interoperabilidade COM: Cliente COM e servidor .NET'
           href: com-interop-sample-com-client-and-net-server.md
     - name: Consumindo funções de DLL não gerenciadas
       href: consuming-unmanaged-dll-functions.md
@@ -50,7 +50,7 @@
               href: passing-structures.md
             - name: Funções de retorno de chamada
               href: callback-functions.md
-            - name: Como implementar funções de retorno de chamada
+            - name: 'Como: Implementar funções de retorno de chamada'
               href: how-to-implement-callback-functions.md
     - name: Realizando marshaling de interoperabilidade
       href: interop-marshaling.md
@@ -84,21 +84,21 @@
         - name: Realizando marshaling em dados com interoperabilidade COM
           href: marshaling-data-with-com-interop.md
           items:
-            - name: Como criar wrappers manualmente
+            - name: 'Como: Criar wrappers manualmente'
               href: how-to-create-wrappers-manually.md
-            - name: 'Como: migrar código gerenciador do DCOM para o WCF'
+            - name: 'Como: Migrar código DCOM gerenciado para o WCF'
               href: how-to-migrate-managed-code-dcom-to-wcf.md
-    - name: Como mapear HRESULTs e exceções
+    - name: 'Como: Mapear HRESULTs e exceções'
       href: how-to-map-hresults-and-exceptions.md
-    - name: Como criar wrappers COM
+    - name: 'Como: Criar wrappers COM'
       href: how-to-create-com-wrappers.md
     - name: Equivalência de tipo e tipos de interoperabilidade inseridos
       href: type-equivalence-and-embedded-interop-types.md
-    - name: Como gerar assemblies de interoperabilidade primários usando Tlbimp.exe
+    - name: 'Como: Gerar assemblies de interoperabilidade primários usando Tlbimp.exe'
       href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-    - name: Como registrar assemblies de interoperabilidade primários
+    - name: 'Como: Registrar assemblies de interoperabilidade primários'
       href: how-to-register-primary-interop-assemblies.md
     - name: Interoperabilidade COM sem registro
       href: registration-free-com-interop.md
-    - name: Como configurar componentes do COM baseados no .NET Framework para ativação sem registro
+    - name: 'Como: Configurar componentes COM baseados no .NET Framework para ativação sem registro'
       href: configure-net-framework-based-com-components-for-reg.md
