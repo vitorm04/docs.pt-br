@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: Tipos de referência anuláveis
       href: nullable-references.md
-    - name: Atualizar assinaturas de API para referências que permitem valor nulo
-      href: nullable-attributes.md
+    - name: Escolha uma estratégia para habilitar tipos de referência anuláveis
+      href: nullable-migration-strategies.md
     - name: Namespaces
       href: programming-guide/namespaces/index.md
     - name: Tipos Básicos
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
