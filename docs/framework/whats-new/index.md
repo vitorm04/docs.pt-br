@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249689"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644222"
 ---
 # <a name="whats-new-in-net-framework"></a>O que há de novo no .NET Framework
 
@@ -102,7 +102,7 @@ O **ServiceHealthBehavior** é um comportamento de serviço de aplicativo do Win
 
 Há duas maneiras de expor o ponto de extremidade da integridade e publicar informações de integridade do serviço WCF:
 
-- Percorrer o código. Por exemplo: 
+- Percorrer o código. Por exemplo:
 
   ```csharp
   ServiceHost host = new ServiceHost(typeof(Service1),
@@ -124,7 +124,7 @@ Há duas maneiras de expor o ponto de extremidade da integridade e publicar info
   host.Description.Behaviors.Add(healthBehavior)
   ```
 
-- Usando um arquivo de configuração. Por exemplo: 
+- Usando um arquivo de configuração. Por exemplo:
 
   ```xml
   <behaviors>
@@ -136,7 +136,7 @@ Há duas maneiras de expor o ponto de extremidade da integridade e publicar info
   </behaviors>
   ```
 
-O status de integridade de um serviço pode ser consultado usando parâmetros de consulta como `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`, e um código de resposta HTTP pode ser especificado para cada parâmetro de consulta. Se o código de resposta HTTP for omitido para um parâmetro de consulta, será usado um código de resposta HTTP 503 por padrão. Por exemplo: 
+O status de integridade de um serviço pode ser consultado usando parâmetros de consulta como `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`, e um código de resposta HTTP pode ser especificado para cada parâmetro de consulta. Se o código de resposta HTTP for omitido para um parâmetro de consulta, será usado um código de resposta HTTP 503 por padrão. Por exemplo:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -202,7 +202,7 @@ O .NET Framework 4.7.2 inclui novos recursos nas seguintes áreas:
 - [Classes básicas](#core-472)
 - [ASP.NET](#asp-net472)
 - [Rede](#net472)
-- [SQL](#sql472)
+- [Sql](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
 
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Os métodos <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> permitem gerar chaves <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA> novas, com um tamanho específico. Por exemplo: 
+Os métodos <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> e <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> permitem gerar chaves <xref:System.Security.Cryptography.DSA> ou <xref:System.Security.Cryptography.RSA> novas, com um tamanho específico. Por exemplo:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -467,7 +467,7 @@ O NET Framework 4.7.2 acrescenta suporte para o Always Encrypted com base em enc
 
 - <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>, que fornece os parâmetros de atestado usados pelo SQL Server para obter as informações necessárias para executar um determinado Protocolo de Atestado.
 
-O arquivo de configuração de aplicativo, em seguida, especifica uma implementação concreta da classe abstrata <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> que fornece a funcionalidade para o provedor de enclave. Por exemplo: 
+O arquivo de configuração de aplicativo, em seguida, especifica uma implementação concreta da classe abstrata <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> que fornece a funcionalidade para o provedor de enclave. Por exemplo:
 
 ```xml
 <configuration>
@@ -650,7 +650,7 @@ O .NET Framework 4.7.1 inclui um novo método, <xref:System.Web.HttpCookie.TryPa
 
 **Opções de hash SHA-2 para credenciais de autenticação de formulários do ASP.NET**
 
-No .NET Framework 4.7 e versões anteriores, o ASP.NET permitia aos desenvolvedores armazenar credenciais de usuário com as senhas com hash nos arquivos de configuração usando MD5 ou SHA1. A partir do .NET Framework 4.7.1, o ASP.NET também dá suporte a novas opções de hash SHA-2 seguras como SHA256, SHA384 e SHA512. O SHA1 continua sendo o padrão e um algoritmo de hash não padrão pode ser definido no arquivo de configuração da Web. Por exemplo: 
+No .NET Framework 4.7 e versões anteriores, o ASP.NET permitia aos desenvolvedores armazenar credenciais de usuário com as senhas com hash nos arquivos de configuração usando MD5 ou SHA1. A partir do .NET Framework 4.7.1, o ASP.NET também dá suporte a novas opções de hash SHA-2 seguras como SHA256, SHA384 e SHA512. O SHA1 continua sendo o padrão e um algoritmo de hash não padrão pode ser definido no arquivo de configuração da Web. Por exemplo:
 
 ```xml
 <system.web>
@@ -695,7 +695,7 @@ Veja um [exemplo dos aprimoramentos de criptografia do .NET Framework 4.7](https
 
 **Suporte aprimorado para caracteres de controle do DataContractJsonSerializer**
 
-No Framework .NET 4.7, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializa os caracteres de controle de acordo com o padrão ECMAScript 6. Esse comportamento está habilitado por padrão para aplicativos direcionados ao .NET Framework 4.7 e é uma escolha de recurso para aplicativos que são executados no .NET Framework 4.7, mas que são direcionados a uma versão anterior do .NET Framework. Para saber mais, confira [Alterações de redirecionamento no .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+No .NET Framework 4.7, a <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> classe serializa caracteres de controle em conformidade com o padrão ECMAScript 6. Esse comportamento é habilitado por padrão para aplicativos que visam o .NET Framework 4.7 e é um recurso de opt-in para aplicativos que estão sendo executados no .NET Framework 4.7, mas têm como alvo uma versão anterior do .NET Framework. Para obter mais informações, consulte a seção [de compatibilidade do aplicativo.](../migration-guide/application-compatibility.md)
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ No .NET Framework 4.7, o WPF inclui os seguintes aprimoramentos:
 
 **Suporte para uma pilha de toque/caneta com base em mensagens WM_POINTER do Windows**
 
-Agora você tem a opção de usar uma pilha de toque/caneta com base em [mensagens WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) em vez de WISP (Plataforma de Serviços do Windows Ink). Esse é um recurso do .NET Framework baseado no consentimento. Para saber mais, confira [Alterações de redirecionamento no .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Agora você tem a opção de usar uma pilha de toque/caneta com base em [mensagens WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) em vez de WISP (Plataforma de Serviços do Windows Ink). Este é um recurso de opt-in no .NET Framework. Para obter mais informações, consulte a seção [de compatibilidade do aplicativo.](../migration-guide/application-compatibility.md)
 
 **Nova implementação para APIs de impressão do WPF**
 
-As APIs de impressão do WPF na classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> chamam a [Print Document Package API (API de Impressão pacote de documentos)](/windows/desktop/printdocs/tailored-app-printing-api) do Windows em vez da [XPS Print API (API de impressão XPS)](/windows/desktop/printdocs/xps-printing), que foi preterida. Para saber o impacto dessa alteração na compatibilidade do aplicativo, consulte [Alterações de redirecionamento do .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+As APIs de impressão do WPF na classe <xref:System.Printing.PrintQueue?displayProperty=nameWithType> chamam a [Print Document Package API (API de Impressão pacote de documentos)](/windows/desktop/printdocs/tailored-app-printing-api) do Windows em vez da [XPS Print API (API de impressão XPS)](/windows/desktop/printdocs/xps-printing), que foi preterida. Para obter o impacto dessa alteração na compatibilidade do aplicativo, consulte a seção [de compatibilidade do aplicativo.](../migration-guide/application-compatibility.md)
 
 <a name="v462" />
 
@@ -965,7 +965,7 @@ Para lidar com isso no .NET Framework 4.6.2, os três métodos a seguir foram ad
 
 A biblioteca de criptografia do Windows (CNG) adicionou suporte para o armazenamento de chaves simétricas persistidas e para o uso de chaves simétricas armazenadas em hardware, e o .NET Framework 4.6.2 possibilita aos desenvolvedores o uso desse recurso.  Como a noção de nomes e provedores de chave é específica à implementação, o uso desse recurso exige a utilização do construtor dos tipos de implementação concreta em vez da abordagem preferencial de fábrica (por exemplo, chamar `Aes.Create`).
 
-O suporte à criptografia simétrica de chave persistente existe para os algoritmos AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Por exemplo: 
+O suporte à criptografia simétrica de chave persistente existe para os algoritmos AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Por exemplo:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -1180,7 +1180,7 @@ Para dar suporte à recente proliferação de ambientes com alto DPI e DPI híbr
 
 Nas versões anteriores do .NET Framework, os aplicativos WPF tinha reconhecimento de DPI do sistema. Em outras palavras, a interface do usuário do aplicativo é dimensionado adequadamente pelo sistema operacional, dependendo do DPI do monitor no qual o aplicativo é renderizado.
 
-Para aplicativos executados o .NET Framework 4.6.2, você pode desativar as alterações de DPI por monitor em aplicativos WPF adicionando uma declaração de configuração à seção de>em [ \<tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo, da seguinte forma:
+Para aplicativos executados sob o .NET Framework 4.6.2, você pode desativar as alterações de DPI por monitor em aplicativos WPF adicionando uma declaração de configuração à seção de>em [ \<tempo de execução](../configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo, da seguinte forma:
 
 ```xml
 <runtime>
@@ -1308,7 +1308,7 @@ Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um AG 
 
 Windows Presentation Foundation inclui diversos aprimoramentos e alterações.
 
-**Desempenho melhorado**
+**desempenho aprimorado**
 
 O atraso em disparar eventos de toque foi corrigido no .NET Framework 4.6.1. Além disso, a digitação de controle <xref:System.Windows.Controls.RichTextBox> não ocupa mais o thread de renderização durante a entrada rápida.
 
@@ -1699,7 +1699,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
   Se o valor do elemento `FilterResumeTimeoutInSeconds` for diferente de zero, houver indicadores de não protocolo e o intervalo de tempo limite expirar, a operação falhará com uma mensagem de tempo limite.
 
-- **Transações**
+- **Transactions**
 
   Agora você pode incluir o identificador de transação distribuída para a transação que causou uma exceção derivada de <xref:System.Transactions.TransactionException>. Faça isso adicionando a seguinte chave à seção `appSettings` do arquivo app.config:
 
@@ -2129,6 +2129,6 @@ O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões p
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novidades na acessibilidade do .NET Framework](whats-new-in-accessibility.md)
 - [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
-- [Novidades no Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Novidades do Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Novidades para C++ no Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

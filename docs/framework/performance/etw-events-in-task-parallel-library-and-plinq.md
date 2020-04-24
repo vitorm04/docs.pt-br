@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716090"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644254"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW na biblioteca de tarefas paralelas e em PLINQ
 
-A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de criar o perfil de código de aplicativo paralelo é usar o [Visualizador de simultaneidade](/visualstudio/profiling/concurrency-visualizer) no Visual Studio.
+A Biblioteca de Paralelismo de Tarefas e o PLINQ geram eventos ETW (Rastreamento de Eventos para Windows) que podem ser usados para criar o perfil e solucionar problemas de aplicativos usando ferramentas como o Windows Performance Analyzer. No entanto, na maioria dos cenários, a melhor maneira de perfilar o código de aplicativo paralelo é usar o [Visualizador de Moedas](/visualstudio/profiling/concurrency-visualizer) no Visual Studio.
 
 ## <a name="task-parallel-library-etw-events"></a>Eventos ETW da Biblioteca de Paralelismo de Tarefas
 
@@ -27,7 +27,7 @@ EVENT_DESCRIPTOR.Task = 1
 
 EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -43,7 +43,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -57,7 +57,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 3
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -73,7 +73,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 4
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -91,7 +91,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -104,7 +104,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Dados do usuário
+#### <a name="user-data"></a>Dados de usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -112,8 +112,8 @@ EVENT_DESCRIPTOR.Id = 1
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|A ID da tarefa que iniciou o loop.|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Um identificador exclusivo de consulta.|
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Eventos ETW no .NET Framework](etw-events.md)
-- [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [PLINQ (LINQ paralelo)](../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Biblioteca de tarefas paralelas (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [LINQ paralelo (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)
