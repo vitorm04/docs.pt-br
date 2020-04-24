@@ -1,25 +1,25 @@
 - name: Registrar informações em log no aplicativo
   href: index.md
   items:
-    - name: Como gravar mensagens de log
+    - name: 'Como: gravar mensagens de log'
       href: how-to-write-log-messages.md
-    - name: Como registrar em log as exceções
+    - name: 'Como: registrar exceções em log'
       href: how-to-log-exceptions.md
-    - name: Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado
+    - name: 'Como: registrar mensagens em log quando o aplicativo é iniciado ou encerrado'
       href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
-    - name: Como gravar em um log de eventos do aplicativo
+    - name: 'Como: gravar em um Log de Eventos do Aplicativo'
       href: how-to-write-to-an-application-event-log.md
-    - name: Como gravar informações de evento em um arquivo de texto
+    - name: 'Como: gravar informações de evento em um arquivo de texto'
       href: how-to-write-event-information-to-a-text-file.md
     - name: Trabalhar com logs do aplicativo
       href: working-with-application-logs.md
-    - name: 'Instruções passo a passo: determinando onde My.Application.Log grava informações'
+    - name: 'Passo a passo: determinar o local no qual My.Application.Log grava informações'
       href: walkthrough-determining-where-my-application-log-writes-information.md
-    - name: 'Instruções passo a passo: alterando onde My.Application.Log grava informações'
+    - name: 'Passo a passo: alterar o local no qual My.Application.Log grava informações'
       href: walkthrough-changing-where-my-application-log-writes-information.md
-    - name: 'Instruções passo a passo: filtrando a saída de My.Application.Log'
+    - name: 'Passo a passo: filtrar a saída de My.Application.Log'
       href: walkthrough-filtering-my-application-log-output.md
-    - name: 'Instruções passo a passo: criando ouvintes de log personalizados'
+    - name: 'Passo a passo: criar ouvintes de log personalizados'
       href: walkthrough-creating-custom-log-listeners.md
-    - name: 'Solucionando problemas: ouvintes de Log'
+    - name: 'Solução de problemas: ouvintes de log'
       href: troubleshooting-log-listeners.md

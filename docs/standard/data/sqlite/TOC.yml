@@ -1,4 +1,4 @@
-- name: Visão Geral
+- name: Visão geral
   href: index.md
 - name: Cadeias de conexão
   href: connection-strings.md
