@@ -7,4 +7,4 @@ ms.lasthandoff: 10/31/2019
 ms.locfileid: "73198344"
 ---
 
-<span data-ttu-id="b4897-101">Todas as opções do compilador estão disponíveis em duas formas: **-option** e **/option**.</span><span class="sxs-lookup"><span data-stu-id="b4897-101">Every compiler option is available in two forms: **-option** and **/option**.</span></span> <span data-ttu-id="b4897-102">A documentação mostra apenas o formulário -option.</span><span class="sxs-lookup"><span data-stu-id="b4897-102">The documentation only shows the -option form.</span></span>
+<span data-ttu-id="68b5a-101">Todas as opções do compilador estão disponíveis em duas formas: **-option** e **/option**.</span><span class="sxs-lookup"><span data-stu-id="68b5a-101">Every compiler option is available in two forms: **-option** and **/option**.</span></span> <span data-ttu-id="68b5a-102">A documentação mostra apenas o formulário -option.</span><span class="sxs-lookup"><span data-stu-id="68b5a-102">The documentation only shows the -option form.</span></span>
