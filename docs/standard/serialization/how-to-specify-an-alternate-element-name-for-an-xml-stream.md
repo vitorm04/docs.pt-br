@@ -91,12 +91,12 @@ public void SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Serialization.XmlElementAttribute>
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
-- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -1,5 +1,5 @@
 ---
-title: Migrar Newtonsoft.Json de System.Text.Json - .NET
+title: Migrar Newtonsoft.Json do System.Text.Json para o .net
 author: tdykstra
 ms.author: tdykstra
 no-loc:
@@ -18,120 +18,120 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/21/2020
 ms.locfileid: "81739245"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Como migrar de Newtonsoft.Json para System.Text.Json
+# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Como migrar de Newtonsoft. JSON para System. Text. JSON
 
-Este artigo mostra como migrar de [Newtonsoft.Json](https://www.newtonsoft.com/json) para <xref:System.Text.Json>.
+Este artigo mostra como migrar do [Newtonsoft. JSON](https://www.newtonsoft.com/json) para <xref:System.Text.Json>o.
 
-O `System.Text.Json` namespace fornece funcionalidade para serializar e desserializar a partir de JavaScript Object Notation (JSON). A `System.Text.Json` biblioteca está incluída no quadro compartilhado [.NET Core 3.0.](https://aka.ms/netcore3download) Para outras frameworks de destino, instale o pacote [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) NuGet. O pacote suporta:
+O `System.Text.Json` namespace fornece a funcionalidade para serializar e desserializar de JavaScript Object Notation (JSON). A `System.Text.Json` biblioteca está incluída na estrutura compartilhada do [.NET Core 3,0](https://aka.ms/netcore3download) . Para outras estruturas de destino, instale o pacote NuGet [System. Text. JSON](https://www.nuget.org/packages/System.Text.Json) . O pacote dá suporte a:
 
-* .NET Standard 2.0 e versões posteriores
+* .NET Standard 2,0 e versões posteriores
 * .NET Framework 4.7.2 e versões posteriores
-* .NET Core 2.0, 2.1 e 2.2
+* .NET Core 2,0, 2,1 e 2,2
 
-`System.Text.Json`foca principalmente no desempenho, segurança e conformidade com os padrões. Ele tem algumas diferenças importantes no comportamento padrão e não `Newtonsoft.Json`visa ter paridade de recursos com . Para alguns `System.Text.Json` cenários, não tem funcionalidade incorporada, mas existem soluçãorecomendada. Para outros cenários, as soluções são impraticáveis. Se sua aplicação depender de um recurso ausente, considere [arquivar um problema](https://github.com/dotnet/runtime/issues/new) para descobrir se o suporte ao seu cenário pode ser adicionado.
+`System.Text.Json`concentra-se principalmente em desempenho, segurança e conformidade de padrões. Ele tem algumas diferenças importantes no comportamento padrão e não tem como objetivo ter paridade de `Newtonsoft.Json`recursos com o. Para alguns cenários, `System.Text.Json` o não tem funcionalidade interna, mas há soluções alternativas recomendadas. Para outros cenários, as soluções alternativas são impraticável. Se seu aplicativo depende de um recurso ausente, considere o [arquivamento de um problema](https://github.com/dotnet/runtime/issues/new) para descobrir se o suporte para seu cenário pode ser adicionado.
 
 <!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
-A maior parte deste artigo <xref:System.Text.Json.JsonSerializer> é sobre como usar a API, <xref:System.Text.Json.JsonDocument> mas também inclui orientações sobre como <xref:System.Text.Json.Utf8JsonReader>usar <xref:System.Text.Json.Utf8JsonWriter> o (que representa o Modelo de Objeto de Documento ou DOM), e tipos.
+A maior parte deste artigo é sobre como usar a <xref:System.Text.Json.JsonSerializer> API, mas também inclui orientação sobre como usar o <xref:System.Text.Json.JsonDocument> (que representa os tipos modelo de objeto do documento ou dom), <xref:System.Text.Json.Utf8JsonReader>e. <xref:System.Text.Json.Utf8JsonWriter>
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Tabela de diferenças entre Newtonsoft.Json e System.Text.Json
+## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Tabela de diferenças entre Newtonsoft. JSON e System. Text. JSON
 
-A tabela `Newtonsoft.Json` a `System.Text.Json` seguir lista características e equivalentes. Os equivalentes se enquadram nas seguintes categorias:
+A tabela a seguir `Newtonsoft.Json` lista os `System.Text.Json` recursos e equivalentes. Os equivalentes se enquadram nas seguintes categorias:
 
-* Suportado pela funcionalidade incorporada. Obter comportamento `System.Text.Json` semelhante pode exigir o uso de um atributo ou opção global.
-* Não suportado, a solução é possível. As soluçãos são [conversores personalizados,](system-text-json-converters-how-to.md)que `Newtonsoft.Json` podem não fornecer paridade completa com funcionalidade. Para alguns destes, o código de amostra é fornecido como exemplos. Se você confiar `Newtonsoft.Json` nesses recursos, a migração exigirá modificações em seus modelos de objeto .NET ou outras alterações de código.
-* Não suportado, a solução não é prática ou possível. Se você confiar `Newtonsoft.Json` nesses recursos, a migração não será possível sem mudanças significativas.
+* Com suporte pela funcionalidade interna. Obter comportamento semelhante do `System.Text.Json` pode exigir o uso de um atributo ou uma opção global.
+* Sem suporte, a solução alternativa é possível. As soluções alternativas são [conversores personalizados](system-text-json-converters-how-to.md), que podem não fornecer paridade completa com `Newtonsoft.Json` funcionalidade. Para alguns deles, o código de exemplo é fornecido como exemplos. Se você depender desses `Newtonsoft.Json` recursos, a migração exigirá modificações em seus modelos de objeto .net ou em outras alterações de código.
+* Sem suporte, a solução alternativa não é prática ou possível. Se você depender desses `Newtonsoft.Json` recursos, a migração não será possível sem alterações significativas.
 
-| Newtonsoft.Json                               | System.Text.Json equivalente |
+| Recurso Newtonsoft. JSON                               | Equivalente de System. Text. JSON |
 |-------------------------------------------------------|-----------------------------|
-| Desserialização insensível a casos por padrão           | ✔️ [configuração global PropertyNameInsensitive](#case-insensitive-deserialization) |
-| Nomes de propriedade de camelos                             | ✔️ [configuração global PropertyNamingPolicy](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
-| Personagem mínimo escapando                            | ✔️ [caráter rigoroso escapando, configurável](#minimal-character-escaping) |
-| `NullValueHandling.Ignore`configuração global             | ✔️ [ignorarnullValues opção global](system-text-json-how-to.md#exclude-all-null-value-properties) |
-| Permitir comentários                                        | ✔️ [configuração global ReadCommentHandling](#comments) |
-| Permitir commas de arrasto                                 | ✔️ [allowTrailingCommas configuração global](#trailing-commas) |
-| Registro de conversor personalizado                         | ✔️ [Ordem de precedência difere](#converter-registration-precedence) |
+| Desserialização não diferencia maiúsculas de minúsculas por padrão           | [configuração global](#case-insensitive-deserialization) do ✔️ PropertyNameCaseInsensitive |
+| Nomes de Propriedade do camel case                             | [configuração global](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) do ✔️ PropertyNamingPolicy |
+| Escape de caractere mínimo                            | ✔️ [escape de caractere estrito, configurável](#minimal-character-escaping) |
+| `NullValueHandling.Ignore`configuração global             | ✔️ [opção global IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) |
+| Permitir comentários                                        | [configuração global](#comments) do ✔️ ReadCommentHandling |
+| Permitir vírgulas à direita                                 | [configuração global](#trailing-commas) do ✔️ AllowTrailingCommas |
+| Registro do conversor personalizado                         | ✔️ [ordem de precedência difere](#converter-registration-precedence) |
 | Sem profundidade máxima por padrão                           | ✔️ [profundidade máxima padrão 64, configurável](#maximum-depth) |
-| Suporte para uma ampla gama de tipos                    | ⚠️[Alguns tipos exigem conversores personalizados](#types-without-built-in-support) |
-| Desserializar strings como números                        | ⚠️[Não suportado, solução, amostra](#quoted-numbers) |
-| Desserializar `Dictionary` com tecla não-string          | ⚠️[Não suportado, solução, amostra](#dictionary-with-non-string-key) |
-| Serialização polimórfica                             | ⚠️[Não suportado, solução, amostra](#polymorphic-serialization) |
-| Desserialização polimórfica                           | ⚠️[Não suportado, solução, amostra](#polymorphic-deserialization) |
-| Desserializar o `object` tipo inferido para propriedades      | ⚠️[Não suportado, solução, amostra](#deserialization-of-object-properties) |
-| Desserializar JSON `null` literal para tipos de valor não anulados | ⚠️[Não suportado, solução, amostra](#deserialize-null-to-non-nullable-type) |
-| Desserializar para classes imutáveis e estruturas          | ⚠️[Não suportado, solução, amostra](#deserialize-to-immutable-classes-and-structs) |
-| Atributo `[JsonConstructor]`                         | ⚠️[Não suportado, solução, amostra](#specify-constructor-to-use) |
-| `Required`configuração `[JsonProperty]` no atributo        | ⚠️[Não suportado, solução, amostra](#required-properties) |
-| `NullValueHandling`configuração `[JsonProperty]` no atributo | ⚠️[Não suportado, solução, amostra](#conditionally-ignore-a-property)  |
-| `DefaultValueHandling`configuração `[JsonProperty]` no atributo | ⚠️[Não suportado, solução, amostra](#conditionally-ignore-a-property)  |
-| `DefaultValueHandling`configuração global                 | ⚠️[Não suportado, solução, amostra](#conditionally-ignore-a-property) |
-| `DefaultContractResolver`para excluir propriedades       | ⚠️[Não suportado, solução, amostra](#conditionally-ignore-a-property) |
-| `DateTimeZoneHandling`, `DateFormatString` configurações   | ⚠️[Não suportado, solução, amostra](#specify-date-format) |
-| Retornos de chamada                                             | ⚠️[Não suportado, solução, amostra](#callbacks) |
-| Apoio a áreas públicas e não públicas              | ⚠️[Não suportado, solução](#public-and-non-public-fields) |
-| Suporte para setters e getters de propriedades internas e privadas | ⚠️[Não suportado, solução](#internal-and-private-property-setters-and-getters) |
-| Método `JsonConvert.PopulateObject`                   | ⚠️[Não suportado, solução](#populate-existing-objects) |
-| `ObjectCreationHandling`configuração global               | ⚠️[Não suportado, solução](#reuse-rather-than-replace-properties) |
-| Adicionar às coleções sem setters                    | ⚠️[Não suportado, solução](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`configuração global           | ❌ [Sem suporte](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`configuração global                | ❌ [Sem suporte](#preserve-object-references-and-handle-loops) |
-| Suporte `System.Runtime.Serialization` para atributos | ❌ [Sem suporte](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`configuração global                | ❌ [Sem suporte](#missingmemberhandling) |
-| Permitir nomes de propriedades sem aspas                   | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
-| Permitir aspas únicas em torno de valores de seqüência              | ❌ [Sem suporte](#json-strings-property-names-and-string-values) |
-| Permitir valores JSON não-string para propriedades de string    | ❌ [Sem suporte](#non-string-values-for-string-properties) |
+| Suporte para uma ampla variedade de tipos                    | ⚠️[Alguns tipos exigem conversores personalizados](#types-without-built-in-support) |
+| Desserializar cadeias de caracteres como números                        | ⚠️[Sem suporte, solução alternativa, exemplo](#quoted-numbers) |
+| Desserializar `Dictionary` com chave não cadeia de caracteres          | ⚠️[Sem suporte, solução alternativa, exemplo](#dictionary-with-non-string-key) |
+| Serialização polimórfica                             | ⚠️[Sem suporte, solução alternativa, exemplo](#polymorphic-serialization) |
+| Desserialização polimórfica                           | ⚠️[Sem suporte, solução alternativa, exemplo](#polymorphic-deserialization) |
+| Desserializar tipo inferido para `object` Propriedades      | ⚠️[Sem suporte, solução alternativa, exemplo](#deserialization-of-object-properties) |
+| Desserializar literal `null` JSON para tipos de valores não anuláveis | ⚠️[Sem suporte, solução alternativa, exemplo](#deserialize-null-to-non-nullable-type) |
+| Desserializar para classes e structs imutáveis          | ⚠️[Sem suporte, solução alternativa, exemplo](#deserialize-to-immutable-classes-and-structs) |
+| Atributo `[JsonConstructor]`                         | ⚠️[Sem suporte, solução alternativa, exemplo](#specify-constructor-to-use) |
+| `Required`Configurando no `[JsonProperty]` atributo        | ⚠️[Sem suporte, solução alternativa, exemplo](#required-properties) |
+| `NullValueHandling`Configurando no `[JsonProperty]` atributo | ⚠️[Sem suporte, solução alternativa, exemplo](#conditionally-ignore-a-property)  |
+| `DefaultValueHandling`Configurando no `[JsonProperty]` atributo | ⚠️[Sem suporte, solução alternativa, exemplo](#conditionally-ignore-a-property)  |
+| `DefaultValueHandling`configuração global                 | ⚠️[Sem suporte, solução alternativa, exemplo](#conditionally-ignore-a-property) |
+| `DefaultContractResolver`para excluir propriedades       | ⚠️[Sem suporte, solução alternativa, exemplo](#conditionally-ignore-a-property) |
+| `DateTimeZoneHandling`, `DateFormatString` configurações   | ⚠️[Sem suporte, solução alternativa, exemplo](#specify-date-format) |
+| Retornos de chamada                                             | ⚠️[Sem suporte, solução alternativa, exemplo](#callbacks) |
+| Suporte para campos públicos e não públicos              | ⚠️[Sem suporte, solução alternativa](#public-and-non-public-fields) |
+| Suporte para setters e getters de propriedade interna e privada | ⚠️[Sem suporte, solução alternativa](#internal-and-private-property-setters-and-getters) |
+| Método `JsonConvert.PopulateObject`                   | ⚠️[Sem suporte, solução alternativa](#populate-existing-objects) |
+| `ObjectCreationHandling`configuração global               | ⚠️[Sem suporte, solução alternativa](#reuse-rather-than-replace-properties) |
+| Adicionar a coleções sem setters                    | ⚠️[Sem suporte, solução alternativa](#add-to-collections-without-setters) |
+| `PreserveReferencesHandling`configuração global           | ❌[Sem suporte](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`configuração global                | ❌[Sem suporte](#preserve-object-references-and-handle-loops) |
+| Suporte para `System.Runtime.Serialization` atributos | ❌[Sem suporte](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`configuração global                | ❌[Sem suporte](#missingmemberhandling) |
+| Permitir nomes de propriedade sem aspas                   | ❌[Sem suporte](#json-strings-property-names-and-string-values) |
+| Permitir aspas simples em vez de valores de cadeia de caracteres              | ❌[Sem suporte](#json-strings-property-names-and-string-values) |
+| Permitir valores JSON que não são de cadeia de caracteres para propriedades de cadeia de caracteres    | ❌[Sem suporte](#non-string-values-for-string-properties) |
 
-Esta não é uma lista `Newtonsoft.Json` exaustiva de recursos. A lista inclui muitos dos cenários que foram solicitados em problemas do [GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) ou postagens [stackoverflow.](https://stackoverflow.com/questions/tagged/system.text.json) Se você implementar uma solução para um dos cenários listados aqui que não possui código de amostra no momento e, se quiser compartilhar sua solução, selecione **Esta página** na seção **Feedback** na parte inferior desta página. Isso cria um problema no repo gitHub desta documentação e lista-o na seção **Feedback** nesta página também.
+Esta não é uma lista completa de `Newtonsoft.Json` recursos. A lista inclui muitos dos cenários que foram solicitados em [problemas do GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) ou postagens do [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) . Se você implementar uma solução alternativa para um dos cenários listados aqui que não tem um código de exemplo, e se você quiser compartilhar sua solução, selecione **esta página** na seção de **comentários** na parte inferior desta página. Isso cria um problema no repositório GitHub da documentação e o lista na seção de **comentários** nesta página também.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Diferenças no comportamento padrão do JsonSerializer em comparação com Newtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Diferenças no comportamento padrão de JsonSerializer em comparação com Newtonsoft. JSON
 
-<xref:System.Text.Json>é rigoroso por padrão e evita qualquer suposição ou interpretação em nome do chamador, enfatizando o comportamento determinístico. A biblioteca é intencionalmente projetada desta forma para desempenho e segurança. `Newtonsoft.Json`é flexível por padrão. Essa diferença fundamental no design está por trás de muitas das seguintes diferenças específicas no comportamento padrão.
+<xref:System.Text.Json>é estrito por padrão e evita qualquer adivinhação ou interpretação em nome do chamador, enfatizando o comportamento determinístico. A biblioteca foi projetada intencionalmente dessa forma para desempenho e segurança. `Newtonsoft.Json`é flexível por padrão. Essa diferença fundamental no design está por trás de muitas das diferenças específicas a seguir no comportamento padrão.
 
-### <a name="case-insensitive-deserialization"></a>Desserialização insensível a casos
+### <a name="case-insensitive-deserialization"></a>Desserialização não diferencia maiúsculas de minúsculas
 
-Durante a desserialização, `Newtonsoft.Json` o nome da propriedade insensível ao caso é correspondente por padrão. O <xref:System.Text.Json> padrão é sensível a maiúsculas e minúsculas, o que dá melhor desempenho, já que está fazendo uma correspondência exata. Para obter informações sobre como fazer a correspondência insensível a casos, consulte [a correspondência de propriedade insensível a casos](system-text-json-how-to.md#case-insensitive-property-matching).
+Durante a desserialização `Newtonsoft.Json` , o nome da propriedade que não diferencia maiúsculas de minúsculas corresponde por padrão. O <xref:System.Text.Json> padrão diferencia maiúsculas de minúsculas, o que proporciona melhor desempenho, pois está fazendo uma correspondência exata. Para obter informações sobre como fazer a correspondência que não diferencia maiúsculas de minúsculas, consulte [correspondência de propriedade](system-text-json-how-to.md#case-insensitive-property-matching)que não diferencia maiúsculas de minúsculas.
 
-Se você está `System.Text.Json` usando indiretamente usando ASP.NET Core, você não precisa `Newtonsoft.Json`fazer nada para obter comportamentos como . ASP.NET Core especifica as configurações para [nomes de propriedade de invólucro de camelo](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) e correspondência insensível a casos quando ele usa `System.Text.Json`.
+Se você estiver usando `System.Text.Json` indiretamente usando ASP.NET Core, não precisará fazer nada para obter o comportamento como `Newtonsoft.Json`. ASP.NET Core especifica as configurações para os [nomes de Propriedade do Camel](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) case e a correspondência que não diferencia maiúsculas de minúsculas quando ela usa. `System.Text.Json`
 
-### <a name="minimal-character-escaping"></a>Personagem mínimo escapando
+### <a name="minimal-character-escaping"></a>Escape de caractere mínimo
 
-Durante a `Newtonsoft.Json` serialização, é relativamente permissivo deixar os personagens passarem sem escapar deles. Ou seja, não os substitui `\uxxxx` `xxxx` por onde está o ponto de código do personagem. Onde ele escapa deles, ele faz isso `\` emitindo um antes `"` `\"`que o personagem (por exemplo, se torne ). <xref:System.Text.Json>escapa de mais caracteres por padrão para fornecer proteções de defesa em profundidade contra scripts entre sites (XSS) ou ataques de divulgação de informações e faz isso usando a seqüência de seis caracteres. `System.Text.Json`escapa de todos os caracteres não-ASCII por padrão, então você não `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json`precisa fazer nada se estiver usando em . `System.Text.Json`também escapa de caracteres sensíveis a HTML, por padrão. Para obter informações sobre como `System.Text.Json` substituir o comportamento padrão, consulte [Personalizar a codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
+Durante a serialização `Newtonsoft.Json` , é relativamente permissivo de permitir caracteres sem escape. Ou seja, ele não os substitui por `\uxxxx` Where `xxxx` é o ponto de código do caractere. Em que ele faz escape, ele faz isso emitindo um `\` antes do caractere (por exemplo, `"` se torna `\"`). <xref:System.Text.Json>escapa mais caracteres por padrão para fornecer proteções de defesa profunda contra XSS (script entre sites) ou ataques de divulgação de informações e faz isso usando a sequência de seis caracteres. `System.Text.Json`escapa todos os caracteres não ASCII por padrão, portanto, você não precisa fazer nada se estiver usando `StringEscapeHandling.EscapeNonAscii` o no. `Newtonsoft.Json` `System.Text.Json`também escapa caracteres com distinção de HTML, por padrão. Para obter informações sobre como substituir o comportamento `System.Text.Json` padrão, consulte [Personalizar codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
 
 ### <a name="comments"></a>Comentários
 
-Durante a desserialização, `Newtonsoft.Json` ignora os comentários no JSON por padrão. O <xref:System.Text.Json> padrão é lançar exceções para comentários porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não as inclui. Para obter informações sobre como permitir comentários, consulte [Permitir comentários e commas de trilha](system-text-json-how-to.md#allow-comments-and-trailing-commas).
+Durante a desserialização `Newtonsoft.Json` , o ignora comentários no JSON por padrão. O <xref:System.Text.Json> padrão é gerar exceções para comentários porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não os inclui. Para obter informações sobre como permitir comentários, consulte [permitir comentários e vírgulas à direita](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
-### <a name="trailing-commas"></a>Commas de arrasto
+### <a name="trailing-commas"></a>Vírgula à direita
 
-Durante a desserialização, `Newtonsoft.Json` ignora as commas de arrasto por padrão. Ele também ignora várias commas `[{"Color":"Red"},{"Color":"Green"},,]`de trilha (por exemplo, ). O <xref:System.Text.Json> padrão é lançar exceções para as commas de arrasto porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não permite. Para obter informações `System.Text.Json` sobre como aceitá-los, consulte [Permitir comentários e commas de trilha](system-text-json-how-to.md#allow-comments-and-trailing-commas). Não há como permitir várias commas.
+Durante a desserialização `Newtonsoft.Json` , o ignora vírgulas à direita por padrão. Ele também ignora várias vírgulas à direita (por exemplo, `[{"Color":"Red"},{"Color":"Green"},,]`). O <xref:System.Text.Json> padrão é lançar exceções para vírgulas à direita porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não as permite. Para obter informações sobre como fazer `System.Text.Json` com que sejam aceitas, consulte [permitir comentários e vírgulas à direita](system-text-json-how-to.md#allow-comments-and-trailing-commas). Não há como permitir várias vírgulas à direita.
 
-### <a name="converter-registration-precedence"></a>Precedência do registro de conversor
+### <a name="converter-registration-precedence"></a>Precedência de registro do conversor
 
 A `Newtonsoft.Json` precedência de registro para conversores personalizados é a seguinte:
 
 * Atributo na propriedade
 * Atributo no tipo
-* [Coleção de conversores](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializerSettings_Converters.htm)
+* Coleção de [conversores](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonSerializerSettings_Converters.htm)
 
-Esta ordem significa que um `Converters` conversor personalizado na coleção é substituído por um conversor que é registrado aplicando um atributo no nível do tipo. Ambos os registros são substituídos por um atributo no nível da propriedade.
+Essa ordem significa que um conversor personalizado na `Converters` coleção é substituído por um conversor registrado pela aplicação de um atributo no nível de tipo. Ambos os registros são substituídos por um atributo no nível de propriedade.
 
 A <xref:System.Text.Json> precedência de registro para conversores personalizados é diferente:
 
 * Atributo na propriedade
-* <xref:System.Text.Json.JsonSerializerOptions.Converters>Coleção
+* <xref:System.Text.Json.JsonSerializerOptions.Converters>Cole
 * Atributo no tipo
 
-A diferença aqui é que `Converters` um conversor personalizado na coleção substitui um atributo no nível do tipo. A intenção por trás dessa ordem de precedência é fazer alterações no tempo de execução sobrepor as escolhas de tempo de design. Não há como mudar a precedência.
+A diferença aqui é que um conversor personalizado na `Converters` coleção substitui um atributo no nível de tipo. A intenção por trás dessa ordem de precedência é fazer com que as alterações em tempo de execução substituam as opções de tempo de design. Não há como alterar a precedência.
 
-Para obter mais informações sobre o registro do conversor personalizado, consulte [Registrar um conversor personalizado](system-text-json-converters-how-to.md#register-a-custom-converter).
+Para obter mais informações sobre o registro de conversor personalizado, consulte [registrar um conversor personalizado](system-text-json-converters-how-to.md#register-a-custom-converter).
 
 ### <a name="maximum-depth"></a>Profundidade máxima
 
-`Newtonsoft.Json`não tem um limite máximo de profundidade por padrão. Pois <xref:System.Text.Json> há um limite padrão de 64, e é <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>configurável por configuração .
+`Newtonsoft.Json`Não tem um limite de profundidade máximo por padrão. <xref:System.Text.Json> Há um limite padrão de 64 e é configurável pela configuração <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
 
-### <a name="json-strings-property-names-and-string-values"></a>Strings JSON (nomes de propriedades e valores de string)
+### <a name="json-strings-property-names-and-string-values"></a>Cadeias JSON (nomes de propriedade e valores de cadeia de caracteres)
 
-Durante a desserialização, `Newtonsoft.Json` aceita nomes de propriedades cercados por aspas duplas, aspas individuais ou sem aspas. Ele aceita valores de seqüência cercados por aspas duplas ou aspas simples. Por exemplo, `Newtonsoft.Json` aceita o seguinte JSON:
+Durante a desserialização `Newtonsoft.Json` , o aceita nomes de propriedade entre aspas duplas, aspas simples ou sem aspas. Ele aceita valores de cadeia de caracteres entre aspas duplas ou aspas simples. Por exemplo, `Newtonsoft.Json` aceita o seguinte JSON:
 
 ```json
 {
@@ -141,17 +141,17 @@ Durante a desserialização, `Newtonsoft.Json` aceita nomes de propriedades cerc
 }
 ```
 
-`System.Text.Json`só aceita nomes de propriedade e valores de seqüência em cotações duplas porque esse formato é exigido pela especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) e é o único formato considerado JSON válido.
+`System.Text.Json`aceita somente nomes de propriedade e valores de cadeia de caracteres entre aspas duplas porque esse formato é exigido pela especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) e é o único formato considerado JSON válido.
 
-Um valor incluído em cotações únicas resulta em uma [JsonException](xref:System.Text.Json.JsonException) com a seguinte mensagem:
+Um valor entre aspas simples resulta em uma [jsonexception](xref:System.Text.Json.JsonException) com a seguinte mensagem:
 
 ```
 ''' is an invalid start of a value.
 ```
 
-### <a name="non-string-values-for-string-properties"></a>Valores não-string para propriedades de string
+### <a name="non-string-values-for-string-properties"></a>Valores que não são de cadeia de caracteres para propriedades de cadeia de caracteres
 
-`Newtonsoft.Json`aceita valores não-string, como um número `true` `false`ou os literais e, para desserialização para propriedades de string tipo. Aqui está um exemplo de `Newtonsoft.Json` JSON que desserializa com sucesso para a seguinte classe:
+`Newtonsoft.Json`aceita valores que não são de cadeia de caracteres, como um número ou `true` literais e `false`, para desserialização para propriedades do tipo cadeia de caracteres. Aqui está um exemplo de JSON que `Newtonsoft.Json` é desserializado com êxito para a seguinte classe:
 
 ```json
 {
@@ -170,22 +170,22 @@ public class ExampleClass
 }
 ```
 
-`System.Text.Json`não desserializar valores não-string em propriedades de seqüência. Um valor não-string recebido para um campo de string resulta em uma [JsonException](xref:System.Text.Json.JsonException) com a seguinte mensagem:
+`System.Text.Json`Não desserializa os valores que não são de cadeia de caracteres em Propriedades de cadeia de caracteres. Um valor de não cadeia de caracteres recebido para um campo de cadeia de caracteres resulta em uma [jsonexception](xref:System.Text.Json.JsonException) com a seguinte mensagem:
 
 ```
 The JSON value could not be converted to System.String.
 ```
 
-## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>Cenários usando JsonSerializer que requerem soluçãos
+## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>Cenários que usam JsonSerializer que exigem soluções alternativas
 
-Os seguintes cenários não são suportados pela funcionalidade incorporada, mas as soluções são possíveis. As soluçãos são [conversores personalizados,](system-text-json-converters-how-to.md)que `Newtonsoft.Json` podem não fornecer paridade completa com funcionalidade. Para alguns destes, o código de amostra é fornecido como exemplos. Se você confiar `Newtonsoft.Json` nesses recursos, a migração exigirá modificações em seus modelos de objeto .NET ou outras alterações de código.
+Os cenários a seguir não têm suporte da funcionalidade interna, mas as soluções alternativas são possíveis. As soluções alternativas são [conversores personalizados](system-text-json-converters-how-to.md), que podem não fornecer paridade completa com `Newtonsoft.Json` funcionalidade. Para alguns deles, o código de exemplo é fornecido como exemplos. Se você depender desses `Newtonsoft.Json` recursos, a migração exigirá modificações em seus modelos de objeto .net ou em outras alterações de código.
 
-### <a name="types-without-built-in-support"></a>Tipos sem suporte embutido
+### <a name="types-without-built-in-support"></a>Tipos sem suporte interno
 
-<xref:System.Text.Json>não fornece suporte integrado para os seguintes tipos:
+<xref:System.Text.Json>o não fornece suporte interno para os seguintes tipos:
 
 * <xref:System.Data.DataTable>e tipos relacionados
-* Tipos f#, como [sindicatos discriminados,](../../fsharp/language-reference/discriminated-unions.md) [tipos de registros](../../fsharp/language-reference/records.md)e tipos de registros [anônimos.](../../fsharp/language-reference/anonymous-records.md)
+* Tipos F #, como [uniões discriminadas](../../fsharp/language-reference/discriminated-unions.md), [tipos de registro](../../fsharp/language-reference/records.md)e [tipos de registros anônimos](../../fsharp/language-reference/anonymous-records.md).
 * <xref:System.Dynamic.ExpandoObject>
 * <xref:System.TimeZoneInfo>
 * <xref:System.Numerics.BigInteger>
@@ -194,78 +194,78 @@ Os seguintes cenários não são suportados pela funcionalidade incorporada, mas
 * <xref:System.Type>
 * <xref:System.ValueTuple>e seus tipos genéricos associados
 
-Conversores personalizados podem ser implementados para tipos que não têm suporte integrado.
+Conversores personalizados podem ser implementados para tipos que não têm suporte interno.
 
-### <a name="quoted-numbers"></a>Números citados
+### <a name="quoted-numbers"></a>Números entre aspas
 
-`Newtonsoft.Json`pode serializar ou desserializar números representados por strings JSON (cercados por citações). Por exemplo, ele `{"DegreesCelsius":"23"}` pode `{"DegreesCelsius":23}`aceitar: em vez de . Para habilitar <xref:System.Text.Json>esse comportamento em , implemente um conversor personalizado como o exemplo a seguir. O conversor lida `long`com propriedades definidas como:
+`Newtonsoft.Json`pode serializar ou desserializar números representados por cadeias de caracteres JSON (entre aspas). Por exemplo, ele pode aceitar: `{"DegreesCelsius":"23"}` em vez `{"DegreesCelsius":23}`de. Para habilitar esse comportamento no <xref:System.Text.Json>, implemente um conversor personalizado como o exemplo a seguir. O conversor manipula as propriedades definidas `long`como:
 
-* Ele serializa-os como strings JSON.
-* Ele aceita números e números JSON dentro das cotações enquanto desserializa.
+* Ele os serializa como cadeias de caracteres JSON.
+* Ele aceita números JSON e números entre aspas durante a desserialização.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
 
-Registre este conversor personalizado [usando um atributo](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) em <xref:System.Text.Json.JsonSerializerOptions.Converters> propriedades individuais `long` ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à coleção.
+Registre esse conversor personalizado [usando um atributo](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) em propriedades individuais `long` ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-### <a name="dictionary-with-non-string-key"></a>Dicionário com tecla não-string
+### <a name="dictionary-with-non-string-key"></a>Dicionário com chave não cadeia de caracteres
 
-`Newtonsoft.Json`suporta coleções de `Dictionary<TKey, TValue>`tipo . O suporte incorporado para coleções <xref:System.Text.Json> de dicionários é limitado a `Dictionary<string, TValue>`. Ou seja, a chave deve ser uma corda.
+`Newtonsoft.Json`dá suporte a coleções `Dictionary<TKey, TValue>`do tipo. O suporte interno para coleções de dicionário no <xref:System.Text.Json> é limitado ao. `Dictionary<string, TValue>` Ou seja, a chave deve ser uma cadeia de caracteres.
 
-Para suportar um dicionário com um inteiro ou algum outro tipo como chave, crie um conversor como o exemplo em [Como escrever conversores personalizados](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key).
+Para dar suporte a um dicionário com um inteiro ou algum outro tipo como a chave, crie um conversor como o exemplo em [como escrever conversores personalizados](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key).
 
 ### <a name="polymorphic-serialization"></a>Serialização polimórfica
 
-`Newtonsoft.Json`automaticamente faz serialização polimórfica. Para obter informações sobre as capacidades limitadas de serialização polimórfica de <xref:System.Text.Json>, consulte [Serialize propriedades de classes derivadas](system-text-json-how-to.md#serialize-properties-of-derived-classes).
+`Newtonsoft.Json`automaticamente a serialização polimórfica. Para obter informações sobre os recursos limitados de serialização polimórfico do <xref:System.Text.Json>, consulte [serializar Propriedades de classes derivadas](system-text-json-how-to.md#serialize-properties-of-derived-classes).
 
-A solução de solução descrita lá é para definir `object`propriedades que podem conter classes derivadas como tipo . Se isso não for possível, outra opção é `Write` criar um conversor com um método para toda a hierarquia do tipo de herança, como o exemplo em [Como escrever conversores personalizados](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
+A solução alternativa descrita aqui é definir as propriedades que podem conter classes derivadas como `object`tipo. Se isso não for possível, outra opção é criar um conversor com um `Write` método para a hierarquia de tipo de herança inteira, como o exemplo em [como escrever conversores personalizados](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
 
 ### <a name="polymorphic-deserialization"></a>Desserialização polimórfica
 
-`Newtonsoft.Json`tem `TypeNameHandling` uma configuração que adiciona metadados de nome de tipo ao JSON durante a serialização. Ele usa os metadados enquanto desserializa para fazer desserialização polimórfica. <xref:System.Text.Json>pode fazer uma gama limitada de [serialização polimórfica,](system-text-json-how-to.md#serialize-properties-of-derived-classes) mas não desserialização polimórfica.
+`Newtonsoft.Json`tem uma `TypeNameHandling` configuração que adiciona metadados de nome de tipo ao JSON durante a serialização. Ele usa os metadados durante a desserialização para fazer a desserialização polimórfica. <xref:System.Text.Json>pode fazer um intervalo limitado de [serialização polimórfica](system-text-json-how-to.md#serialize-properties-of-derived-classes) , mas não desserialização polimórfica.
 
-Para suportar a desserialização polimórfica, crie um conversor como o exemplo em [Como escrever conversores personalizados](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
+Para dar suporte à desserialização polimórfica, crie um conversor como o exemplo em [como escrever conversores personalizados](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
 
-### <a name="deserialization-of-object-properties"></a>Desserialização de propriedades de objetos
+### <a name="deserialization-of-object-properties"></a>Desserialização de propriedades de objeto
 
-Quando `Newtonsoft.Json` desserializa <xref:System.Object>para, é:
+Quando `Newtonsoft.Json` o desserializa para <xref:System.Object>, ele:
 
-* Infere o tipo de valores primitivos na `null`carga útil JSON (diferente `DateTime` de ) e retorna o armazenado, `string` `long` `double`ou `boolean`como um objeto em caixa. *Valores primitivos* são valores únicos de JSON, `false`como `null`um número JSON, string, `true`, ou .
-* Retorna `JObject` a `JArray` ou para valores complexos na carga útil JSON. *Valores complexos* são coleções de pares de valores-chave JSON dentro de chaves ()`{}`ou listas de valores dentro de parênteses ().`[]` As propriedades e valores dentro dos suportes ou suportes podem ter propriedades ou valores adicionais.
-* Retorna uma referência nula quando `null` a carga tem o json literal.
+* Infere o tipo de valores primitivos no conteúdo JSON (diferente de `null`) e retorna o armazenado `string`, `long`, `double`, `boolean`ou `DateTime` como um objeto em caixa. *Os valores primitivos* são valores JSON únicos, como um número JSON, `true`cadeia `false`de caracteres `null`,, ou.
+* Retorna um `JObject` ou `JArray` para valores complexos na carga JSON. *Valores complexos* são coleções de pares chave-valor JSON entre chaves (`{}`) ou listas de valores entre colchetes (`[]`). As propriedades e os valores dentro das chaves ou colchetes podem ter propriedades ou valores adicionais.
+* Retorna uma referência nula quando a carga tem o `null` literal JSON.
 
-<xref:System.Text.Json>armazena uma `JsonElement` caixa para valores primitivos e <xref:System.Object>complexos sempre que desserializar para, por exemplo:
+<xref:System.Text.Json>Armazena um Boxed `JsonElement` para valores primitivos e complexos sempre que a desserialização para <xref:System.Object>, por exemplo:
 
 * Uma `object` propriedade.
 * Um `object` valor de dicionário.
 * Um `object` valor de matriz.
-* Uma `object`raiz.
+* Uma raiz `object`.
 
-No `System.Text.Json` entanto, trata `null` o mesmo `Newtonsoft.Json` que e retorna `null` uma referência nula quando a carga tem o JSON literal nele.
+`System.Text.Json` No entanto `null` , o trata `Newtonsoft.Json` o mesmo que e retorna uma referência nula quando a `null` carga tem o literal JSON nela.
 
-Para implementar inferência `object` de tipo para propriedades, crie um conversor como o exemplo em [Como escrever conversores personalizados](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
+Para implementar a inferência `object` de tipos para propriedades, crie um conversor como o exemplo em [como escrever conversores personalizados](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties).
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Desserializar nulo para tipo não anulado
+### <a name="deserialize-null-to-non-nullable-type"></a>Desserializar NULL para tipo não anulável
 
-`Newtonsoft.Json`não lança uma exceção no seguinte cenário:
+`Newtonsoft.Json`o não gera uma exceção no cenário a seguir:
 
-* `NullValueHandling`está definido `Ignore`para , e
-* Durante a desserialização, o JSON contém um valor nulo para um tipo de valor não anulado.
+* `NullValueHandling`é definido como `Ignore`e
+* Durante a desserialização, o JSON contém um valor nulo para um tipo de valor não anulável.
 
-No mesmo cenário, <xref:System.Text.Json> é uma exceção. (A configuração de <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>manuseio nulo correspondente é .)
+No mesmo cenário, <xref:System.Text.Json> o gera uma exceção. (A configuração de manipulação nula correspondente <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>é.)
 
-Se você possui o tipo de destino, a melhor solução é tornar `int` a `int?`propriedade em questão anulada (por exemplo, mudar para ).
+Se você possui o tipo de destino, a melhor solução alternativa é tornar a propriedade em questão anulável (por exemplo, `int` alterar `int?`para).
 
-Outra solução é fazer um conversor para o tipo, como o `DateTimeOffset` seguinte exemplo que lida com valores nulos para tipos:
+Outra solução alternativa é criar um conversor para o tipo, como o exemplo a seguir, que manipula valores nulos para `DateTimeOffset` tipos:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetNullHandlingConverter.cs)]
 
-Registre este conversor personalizado [usando um atributo na propriedade](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [usando um atributo na propriedade](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-**Nota:** O conversor anterior **lida com valores nulos de forma diferente** do `Newtonsoft.Json` que para POCOs que especificam valores padrão. Por exemplo, suponha que o seguinte código represente seu objeto de destino:
+**Observação:** O conversor anterior **manipula valores nulos** de `Newtonsoft.Json` forma diferente do que o faz para POCOs que especificam valores padrão. Por exemplo, suponha que o código a seguir represente o objeto de destino:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
-E suponha que o Seguinte JSON seja desserializado usando o conversor anterior:
+E suponha que o JSON a seguir seja desserializado usando o conversor anterior:
 
 ```json
 {
@@ -275,33 +275,33 @@ E suponha que o Seguinte JSON seja desserializado usando o conversor anterior:
 }
 ```
 
-Após a desserialização, o `Date` imóvel possui 1/1/0001 (`default(DateTimeOffset)`), ou seja, o valor definido na construtora é substituído. Dado o mesmo POCO `Newtonsoft.Json` e JSON, a desserialização deixaria `Date` 1/1/2001 na propriedade.
+Após a desserialização, `Date` a propriedade tem 1/1/0001`default(DateTimeOffset)`(), ou seja, o valor definido no construtor é substituído. Considerando o mesmo POCO e JSON, `Newtonsoft.Json` a desserialização deixaria 1/1/2001 na `Date` propriedade.
 
-### <a name="deserialize-to-immutable-classes-and-structs"></a>Desserializar para classes imutáveis e estruturas
+### <a name="deserialize-to-immutable-classes-and-structs"></a>Desserializar para classes e structs imutáveis
 
-`Newtonsoft.Json`pode desserializar para classes imutáveis e estruturas porque pode usar construtores que têm parâmetros. <xref:System.Text.Json>suporta apenas construtores públicos sem parâmetros. Como solução de solução, você pode chamar um construtor com parâmetros em um conversor personalizado.
+`Newtonsoft.Json`pode desserializar para classes e structs imutáveis porque pode usar construtores com parâmetros. <xref:System.Text.Json>dá suporte apenas a construtores públicos sem parâmetros. Como alternativa, você pode chamar um construtor com parâmetros em um conversor personalizado.
 
-Aqui está uma estrutura imutável com múltiplos parâmetros de construção:
+Aqui está um struct imutável com vários parâmetros de construtor:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePoint.cs#ImmutablePoint)]
 
-E aqui está um conversor que serializa e desserializa esta estrutura:
+E aqui está um conversor que serializa e desserializa essa estrutura:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePointConverter.cs)]
 
-Registre este conversor personalizado [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-Para um exemplo de conversor semelhante que lida com propriedades genéricas abertas, consulte o [conversor incorporado para pares de valor-chave](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs).
+Para obter um exemplo de um conversor semelhante que manipula propriedades genéricas abertas, consulte o [conversor interno para pares de chave-valor](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs).
 
-### <a name="specify-constructor-to-use"></a>Especificar construtor para usar
+### <a name="specify-constructor-to-use"></a>Especificar o Construtor a ser usado
 
-O `Newtonsoft.Json` `[JsonConstructor]` atributo permite especificar qual construtor chamar ao desserializar para um POCO. <xref:System.Text.Json>suporta apenas construtores sem parâmetros. Como solução, você pode chamar qualquer construtor que você precisar em um conversor personalizado. Veja o exemplo [de Deserialize para classes e estruturas imutáveis](#deserialize-to-immutable-classes-and-structs).
+O `Newtonsoft.Json` `[JsonConstructor]` atributo permite que você especifique qual Construtor chamar ao desserializar para um poco. <xref:System.Text.Json>dá suporte apenas a construtores sem parâmetros. Como alternativa, você pode chamar qualquer Construtor necessário em um conversor personalizado. Consulte o exemplo para [desserializar classes e structs imutáveis](#deserialize-to-immutable-classes-and-structs).
 
 ### <a name="required-properties"></a>Propriedades obrigatórias
 
-Em `Newtonsoft.Json`, você especifica que uma `Required` propriedade `[JsonProperty]` é necessária definindo no atributo. `Newtonsoft.Json`lança uma exceção se nenhum valor for recebido no JSON para uma propriedade marcada conforme necessário.
+No `Newtonsoft.Json`, você especifica que uma propriedade é exigida pela `Required` configuração no `[JsonProperty]` atributo. `Newtonsoft.Json`gera uma exceção se nenhum valor for recebido no JSON para uma propriedade marcada como necessária.
 
-<xref:System.Text.Json>não lança uma exceção se nenhum valor for recebido para uma das propriedades do tipo de destino. Por exemplo, se `WeatherForecast` você tem uma classe:
+<xref:System.Text.Json>Não lançará uma exceção se nenhum valor for recebido para uma das propriedades do tipo de destino. Por exemplo, se você tiver uma `WeatherForecast` classe:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -314,149 +314,149 @@ O JSON a seguir é desserializado sem erro:
 }
 ```
 
-Para que a desserialização falhe se nenhuma `Date` propriedade estiver no JSON, implemente um conversor personalizado. O código do conversor de `Date` amostra a seguir abre uma exceção se a propriedade não for definida após a desserialização estar concluída:
+Para fazer a desserialização falhar se `Date` nenhuma propriedade estiver no JSON, implemente um conversor personalizado. O código de conversor de exemplo a seguir gera uma `Date` exceção se a propriedade não estiver definida após a desserialização ser concluída:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-Registre este conversor personalizado [usando um atributo na classe POCO](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [usando um atributo na classe poco](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-Se você seguir esse padrão, não passe no objeto opções <xref:System.Text.Json.JsonSerializer.Serialize%2A> ao <xref:System.Text.Json.JsonSerializer.Deserialize%2A>ligar recursivamente ou . O objeto opções contém a <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> coleção. Se você passá-lo para `Serialize` ou `Deserialize`, o conversor personalizado chama para si mesmo, fazendo um loop infinito que resulta em uma exceção de estouro de pilha. Se as opções padrão não forem viáveis, crie uma nova instância das opções com as configurações necessárias. Essa abordagem será lenta, uma vez que cada nova instância armazena caches independentemente.
+Se você seguir esse padrão, não passe o objeto Options ao chamar <xref:System.Text.Json.JsonSerializer.Serialize%2A> de forma recursiva ou <xref:System.Text.Json.JsonSerializer.Deserialize%2A>. O objeto Options contém a <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> coleção. Se você passá-lo para `Serialize` ou `Deserialize`, o conversor personalizado chamará a si mesmo, fazendo um loop infinito que resulta em uma exceção de estouro de pilha. Se as opções padrão não forem viáveis, crie uma nova instância das opções com as configurações necessárias. Essa abordagem será lenta, pois cada nova instância armazena em cache de forma independente.
 
-O código de conversor anterior é um exemplo simplificado. Uma lógica adicional seria necessária se você precisasse lidar com atributos (como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ou diferentes opções (como codificadores personalizados). Além disso, o código de exemplo não lida com propriedades para as quais um valor padrão é definido no construtor. E essa abordagem não diferencia entre os seguintes cenários:
+O código do conversor anterior é um exemplo simplificado. Será necessária uma lógica adicional se você precisar manipular atributos (como [[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) ou opções diferentes (como codificadores personalizados). Além disso, o código de exemplo não manipula Propriedades para as quais um valor padrão é definido no construtor. E essa abordagem não diferencia os seguintes cenários:
 
-* Uma propriedade está faltando no JSON.
-* Uma propriedade para um tipo não anulado está presente no JSON, mas o valor é `int`o padrão para o tipo, como zero para um .
-* Uma propriedade para um tipo de valor anulado está presente no JSON, mas o valor é nulo.
+* Uma propriedade está ausente no JSON.
+* Uma propriedade para um tipo não anulável está presente no JSON, mas o valor é o padrão para o tipo, como zero para um `int`.
+* Uma propriedade para um tipo de valor anulável está presente no JSON, mas o valor é NULL.
 
 ### <a name="conditionally-ignore-a-property"></a>Ignorar condicionalmente uma propriedade
 
-`Newtonsoft.Json`tem várias maneiras de ignorar condicionalmente uma propriedade sobre serialização ou desserialização:
+`Newtonsoft.Json`o tem várias maneiras de ignorar condicionalmente uma propriedade na serialização ou desserialização:
 
-* `DefaultContractResolver`permite selecionar propriedades para incluir ou excluir, com base em critérios arbitrários.
-* As `NullValueHandling` `DefaultValueHandling` configurações `JsonSerializerSettings` em que você especificar que todas as propriedades de valor nulo ou de valor padrão devem ser ignoradas.
-* As `NullValueHandling` `DefaultValueHandling` configurações do `[JsonProperty]` atributo permitem especificar propriedades individuais que devem ser ignoradas quando definidas como nulas ou o valor padrão.
+* `DefaultContractResolver`permite selecionar propriedades a serem incluídas ou excluídas, com base em critérios arbitrários.
+* As `NullValueHandling` configurações `DefaultValueHandling` e em `JsonSerializerSettings` permitem que você especifique que todas as propriedades de valor nulo ou valor padrão devem ser ignoradas.
+* As `NullValueHandling` configurações `DefaultValueHandling` e no `[JsonProperty]` atributo permitem especificar propriedades individuais que devem ser ignoradas quando definidas como NULL ou o valor padrão.
 
-<xref:System.Text.Json>fornece as seguintes maneiras de omitir propriedades durante a serialização:
+<xref:System.Text.Json>fornece as seguintes maneiras de omitir Propriedades ao serializar:
 
 * O atributo [[JsonIgnore]](system-text-json-how-to.md#exclude-individual-properties) em uma propriedade faz com que a propriedade seja omitida do JSON durante a serialização.
 * A opção global [IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) permite que você exclua todas as propriedades de valor nulo.
-* A opção global [IgnoreReadOnlyProperties](system-text-json-how-to.md#exclude-all-read-only-properties) permite excluir todas as propriedades somente leitura.
+* A opção global [IgnoreReadOnlyProperties](system-text-json-how-to.md#exclude-all-read-only-properties) permite que você exclua todas as propriedades somente leitura.
 
-Essas opções **não** permitem:
+Essas opções **não** permitem que você:
 
-* Ignore todas as propriedades que possuem o valor padrão para o tipo.
+* Ignore todas as propriedades que têm o valor padrão para o tipo.
 * Ignore as propriedades selecionadas que têm o valor padrão para o tipo.
-* Ignore as propriedades selecionadas se seu valor for nulo.
-* Ignore as propriedades selecionadas com base em critérios arbitrários avaliados no tempo de execução.
+* Ignorar propriedades selecionadas se seu valor for nulo.
+* Ignorar as propriedades selecionadas com base em critérios arbitrários avaliados em tempo de execução.
 
-Para essa funcionalidade, você pode escrever um conversor personalizado. Aqui está uma amostra POCO e um conversor personalizado para ele que ilustra esta abordagem:
+Para essa funcionalidade, você pode escrever um conversor personalizado. Aqui está um exemplo de POCO e um conversor personalizado para ele que ilustra essa abordagem:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-O conversor `Summary` faz com que a propriedade seja omitida da serialização se seu valor for nulo, uma string vazia ou "N/A".
+O conversor faz com `Summary` que a propriedade seja omitida da serialização se seu valor for NULL, uma cadeia de caracteres vazia ou "N/A".
 
-Registre este conversor personalizado [usando um atributo na classe](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [usando um atributo na classe](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-Esta abordagem requer uma lógica adicional se:
+Essa abordagem requer lógica adicional se:
 
 * O POCO inclui propriedades complexas.
-* Você precisa lidar com `[JsonIgnore]` atributos como ou opções como codificadores personalizados.
+* Você precisa manipular atributos como, por `[JsonIgnore]` exemplo, ou opções como codificadores personalizados.
 
-### <a name="specify-date-format"></a>Especificar o formato da data
+### <a name="specify-date-format"></a>Especificar formato de data
 
-`Newtonsoft.Json`fornece várias maneiras `DateTime` de `DateTimeOffset` controlar como propriedades e tipos são serializados e desserializados:
+`Newtonsoft.Json`fornece várias maneiras de controlar como as propriedades `DateTime` de `DateTimeOffset` tipos e são serializadas e desserializadas:
 
-* A `DateTimeZoneHandling` configuração pode ser `DateTime` usada para serializar todos os valores como datas UTC.
-* A `DateFormatString` configuração e `DateTime` os conversores podem ser usados para personalizar o formato das strings de data.
+* A `DateTimeZoneHandling` configuração pode ser usada para serializar `DateTime` todos os valores como datas UTC.
+* A `DateFormatString` configuração e `DateTime` os conversores podem ser usados para personalizar o formato de cadeias de caracteres de data.
 
-Em <xref:System.Text.Json>, o único formato que tem suporte embutido é iso 8601-1:2019 desde que é amplamente adotado, inequívoco, e faz viagens de ida e volta precisamente. Para usar qualquer outro formato, crie um conversor personalizado. Para obter mais informações, consulte [o suporte datetime e datetimeOffset no System.Text.Json](../datetime/system-text-json-support.md).
+No <xref:System.Text.Json>, o único formato com suporte interno é ISO 8601-1:2019, pois ele é amplamente adotado, não ambíguo e faz viagens de ida e volta com precisão. Para usar qualquer outro formato, crie um conversor personalizado. Para obter mais informações, consulte [suporte a DateTime e DateTimeOffset em System. Text. JSON](../datetime/system-text-json-support.md).
 
 ### <a name="callbacks"></a>Retornos de chamada
 
-`Newtonsoft.Json`permite executar código personalizado em vários pontos do processo de serialização ou desserialização:
+`Newtonsoft.Json`permite executar código personalizado em vários pontos no processo de serialização ou desserialização:
 
-* OnDesserialização (quando começa a desserializar um objeto)
-* OnDeserializado (quando terminado desserializando um objeto)
-* OnSerializing (ao começar a serializar um objeto)
-* OnSerialized (quando concluído serializando um objeto)
+* OnDeserializing (ao começar a desserializar um objeto)
+* OnDeserialized (quando terminar de desserializar um objeto)
+* Onserializando (ao começar a serializar um objeto)
+* OnSerialized (ao concluir a serialização de um objeto)
 
-Em <xref:System.Text.Json>, você pode simular retornos de chamadas escrevendo um conversor personalizado. O exemplo a seguir mostra um conversor personalizado para um POCO. O conversor inclui código que exibe uma mensagem `Newtonsoft.Json` em cada ponto que corresponde a um retorno de chamada.
+No <xref:System.Text.Json>, você pode simular retornos de chamada escrevendo um conversor personalizado. O exemplo a seguir mostra um conversor personalizado para um POCO. O conversor inclui um código que exibe uma mensagem em cada ponto correspondente a um `Newtonsoft.Json` retorno de chamada.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastCallbacksConverter.cs)]
 
-Registre este conversor personalizado [usando um atributo na classe](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
+Registre esse conversor personalizado [usando um atributo na classe](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) ou [adicionando o conversor](system-text-json-converters-how-to.md#registration-sample---converters-collection) à <xref:System.Text.Json.JsonSerializerOptions.Converters> coleção.
 
-Se você usar um conversor personalizado que segue a amostra anterior:
+Se você usar um conversor personalizado que segue o exemplo anterior:
 
-* O `OnDeserializing` código não tem acesso à nova instância POCO. Para manipular a nova instância POCO no início da desserialização, coloque esse código no construtor POCO.
-* Não passe no objeto opções quando ligar `Serialize` recursivamente ou `Deserialize`. O objeto opções contém a `Converters` coleção. Se você passar `Serialize` para `Deserialize`ou , o conversor será usado, fazendo um loop infinito que resulta em uma exceção de estouro de pilha.
+* O `OnDeserializing` código não tem acesso à nova instância poco. Para manipular a nova instância POCO no início da desserialização, coloque esse código no Construtor POCO.
+* Não passe o objeto Options ao chamar `Serialize` de forma recursiva ou `Deserialize`. O objeto Options contém a `Converters` coleção. Se você passá-lo para `Serialize` ou `Deserialize`, o conversor será usado, fazendo um loop infinito que resulta em uma exceção de estouro de pilha.
 
 ### <a name="public-and-non-public-fields"></a>Campos públicos e não públicos
 
-`Newtonsoft.Json`pode serializar e desserializar campos, bem como propriedades. <xref:System.Text.Json>só funciona com propriedades públicas. Conversores personalizados podem fornecer essa funcionalidade.
+`Newtonsoft.Json`pode serializar e desserializar campos, bem como propriedades. <xref:System.Text.Json>funciona apenas com propriedades públicas. Conversores personalizados podem fornecer essa funcionalidade.
 
-### <a name="internal-and-private-property-setters-and-getters"></a>Setters e getters de propriedades internas e privadas
+### <a name="internal-and-private-property-setters-and-getters"></a>Setters e getters de propriedade interna e privada
 
-`Newtonsoft.Json`pode usar setters de propriedade privadas `JsonProperty` e internas e getters através do atributo. <xref:System.Text.Json>suporta apenas setters públicos. Conversores personalizados podem fornecer essa funcionalidade.
+`Newtonsoft.Json`pode usar setters e propriedades de propriedade privada e interna por meio `JsonProperty` do atributo. <xref:System.Text.Json>dá suporte apenas a setters públicos. Conversores personalizados podem fornecer essa funcionalidade.
 
-### <a name="populate-existing-objects"></a>Preencher objetos existentes
+### <a name="populate-existing-objects"></a>Popular objetos existentes
 
-O `JsonConvert.PopulateObject` método `Newtonsoft.Json` em desserializa um documento JSON para uma instância existente de uma classe, em vez de criar uma nova instância. <xref:System.Text.Json>sempre cria uma nova instância do tipo de destino usando o construtor sem parâmetros públicos padrão. Conversores personalizados podem desserializar para uma instância existente.
+O `JsonConvert.PopulateObject` método em `Newtonsoft.Json` desserializa um documento JSON para uma instância existente de uma classe, em vez de criar uma nova instância. <xref:System.Text.Json>sempre cria uma nova instância do tipo de destino usando o construtor público sem parâmetros padrão. Conversores personalizados podem desserializar em uma instância existente.
 
-### <a name="reuse-rather-than-replace-properties"></a>Reutilizar em vez de substituir propriedades
+### <a name="reuse-rather-than-replace-properties"></a>Reutilização em vez de substituir Propriedades
 
-A `Newtonsoft.Json` `ObjectCreationHandling` configuração permite especificar que os objetos nas propriedades devem ser reutilizados em vez de substituídos durante a desserialização. <xref:System.Text.Json>sempre substitui objetos em propriedades.  Conversores personalizados podem fornecer essa funcionalidade.
+A `Newtonsoft.Json` `ObjectCreationHandling` configuração permite especificar que os objetos nas propriedades devem ser reutilizados em vez de substituídos durante a desserialização. <xref:System.Text.Json>sempre substitui objetos em Propriedades.  Conversores personalizados podem fornecer essa funcionalidade.
 
-### <a name="add-to-collections-without-setters"></a>Adicionar às coleções sem setters
+### <a name="add-to-collections-without-setters"></a>Adicionar a coleções sem setters
 
-Durante a desserialização, `Newtonsoft.Json` adiciona objetos a uma coleção mesmo que a propriedade não tenha setter. <xref:System.Text.Json>ignora propriedades que não têm setters. Conversores personalizados podem fornecer essa funcionalidade.
+Durante a desserialização `Newtonsoft.Json` , o adiciona objetos a uma coleção, mesmo que a propriedade não tenha nenhum setter. <xref:System.Text.Json>ignora as propriedades que não têm setters. Conversores personalizados podem fornecer essa funcionalidade.
 
-## <a name="scenarios-that-jsonserializer-currently-doesnt-support"></a>Cenários que jsonSerializer atualmente não suporta
+## <a name="scenarios-that-jsonserializer-currently-doesnt-support"></a>Cenários para os quais o JsonSerializer atualmente não dá suporte
 
-Para os seguintes cenários, as soluções não são práticas ou possíveis. Se você confiar `Newtonsoft.Json` nesses recursos, a migração não será possível sem mudanças significativas.
+Para os cenários a seguir, as soluções alternativas não são práticas ou possíveis. Se você depender desses `Newtonsoft.Json` recursos, a migração não será possível sem alterações significativas.
 
-### <a name="preserve-object-references-and-handle-loops"></a>Preservar referências de objeto e alças de punho
+### <a name="preserve-object-references-and-handle-loops"></a>Preservar referências de objeto e manipular loops
 
-Por padrão, `Newtonsoft.Json` serializa por valor. Por exemplo, se um objeto contém duas propriedades `Person` que contêm `Person` uma referência ao mesmo objeto, os valores das propriedades desse objeto são duplicados no JSON.
+Por padrão, `Newtonsoft.Json` o serializa por valor. Por exemplo, se um objeto contiver duas propriedades que contêm uma referência ao mesmo `Person` objeto, os valores das propriedades `Person` desse objeto serão duplicados no JSON.
 
-`Newtonsoft.Json`tem `PreserveReferencesHandling` uma `JsonSerializerSettings` configuração que permite serializar por referência:
+`Newtonsoft.Json`tem uma `PreserveReferencesHandling` configuração no `JsonSerializerSettings` que permite serializar por referência:
 
-* Um metadados identificador é adicionado ao JSON `Person` criado para o primeiro objeto.
-* O JSON criado para o `Person` segundo objeto contém uma referência a esse identificador em vez de valores de propriedade.
+* Um identificador de metadados é adicionado ao JSON criado para o primeiro `Person` objeto.
+* O JSON que é criado para o segundo `Person` objeto contém uma referência a esse identificador em vez de valores de propriedade.
 
-`Newtonsoft.Json`também tem `ReferenceLoopHandling` uma configuração que permite ignorar referências circulares em vez de lançar uma exceção.
+`Newtonsoft.Json`também tem uma `ReferenceLoopHandling` configuração que permite ignorar referências circulares em vez de gerar uma exceção.
 
-<xref:System.Text.Json>só suporta serialização por valor e lança uma exceção para referências circulares.
+<xref:System.Text.Json>dá suporte apenas à serialização por valor e gera uma exceção para referências circulares.
 
-### <a name="systemruntimeserialization-attributes"></a>Atribuições do System.Runtime.Serialization
+### <a name="systemruntimeserialization-attributes"></a>Atributos System. Runtime. Serialization
 
-<xref:System.Text.Json>não suporta atributos `System.Runtime.Serialization` do namespace, `DataMemberAttribute` `IgnoreDataMemberAttribute`como e .
+<xref:System.Text.Json>Não dá suporte a `System.Runtime.Serialization` atributos do namespace, como `DataMemberAttribute` e `IgnoreDataMemberAttribute`.
 
 ### <a name="octal-numbers"></a>Números octais
 
-`Newtonsoft.Json`trata números com um zero líder como números octais. <xref:System.Text.Json>não permite zeros de liderança porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não permite.
+`Newtonsoft.Json`Trata os números com um zero à esquerda como números octais. <xref:System.Text.Json>Não permite zeros à esquerda porque a especificação [RFC 8259](https://tools.ietf.org/html/rfc8259) não permite.
 
-### <a name="missingmemberhandling"></a>Tratamento de membros ausentes
+### <a name="missingmemberhandling"></a>MissingMemberHandling
 
-`Newtonsoft.Json`pode ser configurado para lançar exceções durante a desserialização se o JSON incluir propriedades que estão faltando no tipo de destino. <xref:System.Text.Json>ignora propriedades extras no JSON, exceto quando você usa o [atributo [JsonExtensionData].](system-text-json-how-to.md#handle-overflow-json) Não há solução para o recurso de membro desaparecido.
+`Newtonsoft.Json`pode ser configurado para gerar exceções durante a desserialização se o JSON incluir propriedades que estão ausentes no tipo de destino. <xref:System.Text.Json>ignora propriedades extras no JSON, exceto quando você usa o [atributo [JsonExtensionData]](system-text-json-how-to.md#handle-overflow-json). Não há nenhuma solução alternativa para o recurso de membro ausente.
 
 ### <a name="tracewriter"></a>TraceWriter
 
-`Newtonsoft.Json`permite depurar usando `TraceWriter` um registro para exibir que são gerados por serialização ou desserialização. <xref:System.Text.Json>não faz registro.
+`Newtonsoft.Json`permite que você depure usando `TraceWriter` um para exibir logs gerados pela serialização ou desserialização. <xref:System.Text.Json>Não faz registro em log.
 
-## <a name="jsondocument-and-jsonelement-compared-to-jtoken-like-jobject-jarray"></a>JsonDocument e JsonElement comparados ao JToken (como JObject, JArray)
+## <a name="jsondocument-and-jsonelement-compared-to-jtoken-like-jobject-jarray"></a>JsonDocument e Jsonelement em comparação com JToken (como JObject, JArray)
 
-<xref:System.Text.Json.JsonDocument?displayProperty=fullName>fornece a capacidade de analisar e construir um DOM (Document Object Model, modelo de objeto **de** documento) somente leitura a partir de cargas JSON existentes. O DOM fornece acesso aleatório aos dados em uma carga útil JSON. Os elementos JSON que compõem a <xref:System.Text.Json.JsonElement> carga útil podem ser acessados através do tipo. O `JsonElement` tipo fornece APIs para converter texto JSON para tipos comuns .NET. `JsonDocument`expõe uma <xref:System.Text.Json.JsonDocument.RootElement> propriedade.
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName>fornece a capacidade de analisar e criar um Modelo de Objeto do Documento **somente leitura** (dom) de cargas JSON existentes. O DOM fornece acesso aleatório aos dados em uma carga JSON. Os elementos JSON que compõem a carga podem ser acessados <xref:System.Text.Json.JsonElement> por meio do tipo. O `JsonElement` tipo fornece APIs para converter texto JSON em tipos .net comuns. `JsonDocument`expõe uma <xref:System.Text.Json.JsonDocument.RootElement> propriedade.
 
-### <a name="jsondocument-is-idisposable"></a>JsonDocument é iDescartável
+### <a name="jsondocument-is-idisposable"></a>JsonDocument é IDisposable
 
-`JsonDocument`constrói uma exibição na memória dos dados em um buffer agrupado. Portanto, ao `JObject` `JArray` contrário `Newtonsoft.Json`ou `JsonDocument` de `IDisposable` , o tipo implementa e precisa ser usado dentro de um bloco de uso.
+`JsonDocument`Cria uma exibição na memória dos dados em um buffer em pool. Portanto, ao `JObject` contrário `JArray` de `Newtonsoft.Json`ou de `JsonDocument` , o `IDisposable` tipo implementa e precisa ser usado dentro de um bloco Using.
 
-Só devolva um `JsonDocument` de sua API se você quiser transferir a propriedade vitalícia e descartar a responsabilidade para o chamador. Na maioria dos cenários, isso não é necessário. Se o chamador precisar trabalhar com todo o <xref:System.Text.Json.JsonElement.Clone%2A> documento <xref:System.Text.Json.JsonDocument.RootElement%2A>JSON, devolva o do , que é um <xref:System.Text.Json.JsonElement>. Se o chamador precisar trabalhar com um elemento específico <xref:System.Text.Json.JsonElement.Clone%2A> dentro <xref:System.Text.Json.JsonElement>do documento JSON, retorne o que . Se você `RootElement` devolver o ou um subelemento diretamente sem fazer um `Clone`, `JsonElement` o `JsonDocument` chamador não poderá acessar o retornado após o que possui ser descartado.
+Retorne apenas `JsonDocument` uma da sua API se você quiser transferir a propriedade de tempo de vida e descartar a responsabilidade para o chamador. Na maioria dos cenários, isso não é necessário. Se o chamador precisar trabalhar com o documento JSON inteiro, retorne o <xref:System.Text.Json.JsonElement.Clone%2A> do <xref:System.Text.Json.JsonDocument.RootElement%2A>, que é um <xref:System.Text.Json.JsonElement>. Se o chamador precisar trabalhar com um elemento específico dentro do documento JSON, retorne o <xref:System.Text.Json.JsonElement.Clone%2A> <xref:System.Text.Json.JsonElement>. Se você retornar o `RootElement` ou um subelemento diretamente sem fazer um `Clone`, o chamador não poderá acessar o retornado `JsonElement` depois que o `JsonDocument` proprietário for descartado.
 
-Aqui está um exemplo que exige `Clone`que você faça um:
+Aqui está um exemplo que exige que você faça um `Clone`:
 
 ```csharp
 public JsonElement LookAndLoad(JsonElement source)
@@ -470,9 +470,9 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-O código anterior `JsonElement` espera `fileName` um que contenha uma propriedade. Ele abre o arquivo JSON e cria um `JsonDocument`. O método pressupõe que o chamador quer trabalhar com `Clone` todo `RootElement`o documento, por isso retorna o do .
+O código anterior espera um `JsonElement` que contém uma `fileName` propriedade. Ele abre o arquivo JSON e cria um `JsonDocument`. O método pressupõe que o chamador deseja trabalhar com o documento inteiro e, portanto, retorna o `Clone` do `RootElement`.
 
-Se você `JsonElement` receber um e estiver retornando um subelemento, `Clone` não é necessário devolver um subelemento. O interlocutor é responsável `JsonDocument` por manter vivo `JsonElement` o que o falecido pertence. Por exemplo:
+Se você receber um `JsonElement` e estiver retornando um subelemento, não será necessário retornar um `Clone` do subelemento. O chamador é responsável por manter a vida `JsonDocument` o que o passado `JsonElement` pertence. Por exemplo:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -483,52 +483,52 @@ public JsonElement ReturnFileName(JsonElement source)
 
 ### <a name="jsondocument-is-read-only"></a>JsonDocument é somente leitura
 
-O <xref:System.Text.Json> DOM não pode adicionar, remover ou modificar elementos JSON. Ele foi projetado desta forma para o desempenho e para reduzir as alocações para analisar tamanhos comuns de carga JSON (ou seja, < 1 MB). Se o seu cenário atualmente usa um DOM modificável, uma das seguintes soluçãos pode ser viável:
+O <xref:System.Text.Json> dom não pode adicionar, remover ou modificar elementos JSON. Ele foi projetado dessa forma para o desempenho e para reduzir as alocações para a análise de tamanhos de carga JSON comuns (ou seja, < 1 MB). Se seu cenário usa atualmente um DOM modificável, uma das seguintes soluções alternativas pode ser viável:
 
-* Para construir `JsonDocument` um a partir do zero (ou seja, sem `Parse` passar uma carga JSON `Utf8JsonWriter` existente para o método), escreva `JsonDocument`o texto JSON usando a saída e analise a saída a partir disso para fazer uma nova .
-* Para modificar um `JsonDocument`existente, use-o para escrever texto JSON, fazendo alterações enquanto `JsonDocument`você escreve e analise a saída a partir disso para fazer um novo .
-* Para mesclar documentos JSON existentes, `JContainer.Merge` equivalentes `Newtonsoft.Json`às `JObject.Merge` OU APIs de , consulte [este problema do GitHub](https://github.com/dotnet/corefx/issues/42466#issuecomment-570475853).
+* Para criar um `JsonDocument` do zero (ou seja, sem passar um conteúdo JSON existente para o `Parse` método), grave o texto JSON usando o `Utf8JsonWriter` e analise a saída de para criar um novo. `JsonDocument`
+* Para modificar um existente `JsonDocument`, use-o para gravar texto JSON, fazer alterações enquanto você escreve e analisar a saída do para criar um novo `JsonDocument`.
+* Para mesclar documentos JSON existentes, equivalentes `JObject.Merge` às `JContainer.Merge` APIs ou `Newtonsoft.Json`do, consulte [este problema do GitHub](https://github.com/dotnet/corefx/issues/42466#issuecomment-570475853).
 
-### <a name="jsonelement-is-a-union-struct"></a>JsonElement é uma estrutura sindical
+### <a name="jsonelement-is-a-union-struct"></a>Jsonelement é uma struct Union
 
-`JsonDocument`expõe o `RootElement` como uma <xref:System.Text.Json.JsonElement>propriedade do tipo , que é um tipo de união, estrutura que abrange qualquer elemento JSON. `Newtonsoft.Json`usa tipos hierárquicos dedicados como `JObject`,`JArray`, `JToken`e assim por diante. `JsonElement`é o que você pode pesquisar e enumerar mais, e você pode usar `JsonElement` para materializar elementos JSON em tipos .NET.
+`JsonDocument`expõe o `RootElement` como uma propriedade do tipo <xref:System.Text.Json.JsonElement>, que é um tipo Union, struct que abrange qualquer elemento JSON. `Newtonsoft.Json`usa tipos hierárquicos dedicados `JObject`como`JArray`, `JToken`, e assim por diante. `JsonElement`é o que você pode pesquisar e enumerar e pode usar `JsonElement` para materializar elementos JSON em tipos .net.
 
-### <a name="how-to-search-a-jsondocument-and-jsonelement-for-sub-elements"></a>Como pesquisar um JsonDocument e JsonElement para obter subelementos
+### <a name="how-to-search-a-jsondocument-and-jsonelement-for-sub-elements"></a>Como pesquisar um JsonDocument e um Jsonelement para subelementos
 
-Pesquisas de tokens JSON usando `JObject` ou `JArray` de `Newtonsoft.Json` acordo tendem a ser relativamente rápidas porque são pesquisas em algum dicionário. Em comparação, `JsonElement` as pesquisas em que requerem uma busca seqüencial das `TryGetProperty`propriedades e, portanto, são relativamente lentas (por exemplo, ao usar ). <xref:System.Text.Json>é projetado para minimizar o tempo inicial de análise em vez do tempo de análise. Portanto, use as seguintes abordagens para `JsonDocument` otimizar o desempenho ao pesquisar através de um objeto:
+Procura tokens JSON usando `JObject` ou `JArray` de `Newtonsoft.Json` tendem a ser relativamente rápidos, pois são pesquisas em algum dicionário. Por comparação, as pesquisas `JsonElement` em exigem uma pesquisa sequencial das propriedades e, portanto, são relativamente lentas ( `TryGetProperty`por exemplo, ao usar). <xref:System.Text.Json>foi projetado para minimizar o tempo de análise inicial em vez da hora de pesquisa. Portanto, use as seguintes abordagens para otimizar o desempenho ao pesquisar por `JsonDocument` um objeto:
 
-* Use os enumeradores embutidos<xref:System.Text.Json.JsonElement.EnumerateArray%2A> (e) <xref:System.Text.Json.JsonElement.EnumerateObject%2A>em vez de fazer sua própria indexação ou loops.
-* Não faça uma busca sequencial em `JsonDocument` todo o todo `RootElement`através de cada propriedade usando . Em vez disso, pesquise em objetos JSON aninhados com base na estrutura conhecida dos dados JSON. Por exemplo, se você está `Grade` procurando `Student` uma propriedade `Student` em objetos, `Grade` faça loop através dos `JsonElement` objetos `Grade` e obtenha o valor de cada um, em vez de pesquisar todos os objetos que procuram por propriedades. Fazer este último resultará em repasses desnecessários sobre os mesmos dados.
+* Use os enumeradores internos (<xref:System.Text.Json.JsonElement.EnumerateArray%2A> e <xref:System.Text.Json.JsonElement.EnumerateObject%2A>) em vez de fazer sua própria indexação ou loops.
+* Não faça uma pesquisa seqüencial no todo `JsonDocument` por meio de cada propriedade usando `RootElement`. Em vez disso, pesquise objetos JSON aninhados com base na estrutura conhecida dos dados JSON. Por exemplo, se você estiver procurando uma propriedade `Grade` em `Student` objetos, faça um loop pelos `Student` objetos e obtenha o valor de `Grade` para cada um, em vez de Pesquisar `JsonElement` por todos os `Grade` objetos procurando por propriedades. Fazer o último resultará em passagens desnecessárias nos mesmos dados.
 
-Para um exemplo de código, consulte [Usar JsonDocument para acessar dados](system-text-json-how-to.md#use-jsondocument-for-access-to-data).
+Para obter um exemplo de código, consulte [usar JsonDocument para acessar dados](system-text-json-how-to.md#use-jsondocument-for-access-to-data).
 
-## <a name="utf8jsonreader-compared-to-jsontextreader"></a>Utf8JsonReader comparado com JsonTextReader
+## <a name="utf8jsonreader-compared-to-jsontextreader"></a>Utf8JsonReader em comparação com JsonTextReader
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>é um leitor json codificado de alto desempenho e baixa alocação para texto JSON codificado utf-8, lido a partir de um [byte\<ReadOnlySpan>](xref:System.ReadOnlySpan%601) ou [\<ReadOnlySequence byte>](xref:System.Buffers.ReadOnlySequence%601). O `Utf8JsonReader` é um tipo de baixo nível que pode ser usado para construir analisadores personalizados e desumificadores.
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName>é um leitor de alto desempenho, de baixa alocação e somente de encaminhamento para texto JSON codificado em UTF-8, lido de um [\<ReadOnlySpan byte>](xref:System.ReadOnlySpan%601) ou [\<ReadOnlySequence byte>](xref:System.Buffers.ReadOnlySequence%601). O `Utf8JsonReader` é um tipo de baixo nível que pode ser usado para criar analisadores e desserializadores personalizados.
 
-As seções a seguir explicam `Utf8JsonReader`os padrões de programação recomendados para o uso .
+As seções a seguir explicam os padrões de `Utf8JsonReader`programação recomendados para o uso do.
 
-### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader é um ref struct
+### <a name="utf8jsonreader-is-a-ref-struct"></a>Utf8JsonReader é um struct de referência
 
-Como `Utf8JsonReader` o tipo é uma *estrutura de ref,* ele tem [certas limitações.](../../csharp/language-reference/builtin-types/struct.md#ref-struct) Por exemplo, ele não pode ser armazenado como um campo em uma classe ou estrutura além de uma estrutura de ref. Para obter alto desempenho, este `ref struct` tipo deve ser um, pois ele precisa fazer cache da entrada [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601), que por si só é uma estrutura de ref. Além disso, este tipo é mutável, uma vez que mantém o estado. Portanto, **passá-lo por árbitro** e não por valor. Passá-lo por valor resultaria em uma cópia de estrutura e as alterações de estado não seriam visíveis para o chamador. Isso difere `Newtonsoft.Json` de `Newtonsoft.Json` `JsonTextReader` uma classe. Para obter mais informações sobre como usar os structs de ref, consulte [Escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
+Como o `Utf8JsonReader` tipo é uma *struct de referência*, ele tem [determinadas limitações](../../csharp/language-reference/builtin-types/struct.md#ref-struct). Por exemplo, ele não pode ser armazenado como um campo em uma classe ou struct diferente de um struct de referência. Para obter alto desempenho, esse tipo deve ser um `ref struct` , uma vez que ele precisa armazenar em cache o [byte ReadOnlySpan\< ](xref:System.ReadOnlySpan%601)de entrada>, que é um struct de referência. Além disso, esse tipo é mutável, pois mantém o estado. Portanto, **passe-o por ref** em vez de por valor. Passá-lo por valor resultaria em uma cópia de struct e as alterações de estado não seriam visíveis para o chamador. Isso é diferente `Newtonsoft.Json` desde que o `Newtonsoft.Json` `JsonTextReader` é uma classe. Para obter mais informações sobre como usar structs de referência, consulte [escrever código C# seguro e eficiente](../../csharp/write-safe-efficient-code.md).
 
-### <a name="read-utf-8-text"></a>Leia o texto utf-8
+### <a name="read-utf-8-text"></a>Ler texto UTF-8
 
-Para obter o melhor desempenho `Utf8JsonReader`possível ao usar as cargas JSON já codificadas como texto UTF-8 em vez de como strings UTF-16. Para um exemplo de código, consulte [Filtrar dados usando Utf8JsonReader](system-text-json-how-to.md#filter-data-using-utf8jsonreader).
+Para obter o melhor desempenho possível ao usar o `Utf8JsonReader`, leia as cargas JSON já codificadas como texto UTF-8, e não como cadeias de caracteres UTF-16. Para obter um exemplo de código, consulte [filtrar dados usando Utf8JsonReader](system-text-json-how-to.md#filter-data-using-utf8jsonreader).
 
-### <a name="read-with-a-stream-or-pipereader"></a>Leia com um Stream ou PipeReader
+### <a name="read-with-a-stream-or-pipereader"></a>Ler com um fluxo ou PipeReader
 
-O `Utf8JsonReader` suporte é a leitura de um utf-8 codificado [ReadOnlySpan\<byte>](xref:System.ReadOnlySpan%601) ou [\<ReadOnlySequence byte>](xref:System.Buffers.ReadOnlySequence%601) (que é o resultado da leitura de a <xref:System.IO.Pipelines.PipeReader>).
+O `Utf8JsonReader` oferece suporte à leitura de um [byte READONLYSPAN\<](xref:System.ReadOnlySpan%601) codificado em UTF-8>ou [>de byte de ReadOnlySequence\<](xref:System.Buffers.ReadOnlySequence%601) (que é o resultado da leitura de um <xref:System.IO.Pipelines.PipeReader>).
 
-Para leitura síncrona, você pode ler a carga útil JSON até o final do fluxo em uma matriz de bytes e passá-la para o leitor. Para ler a partir de uma seqüência (que <xref:System.Text.Encoding.UTF8>está codificada como UTF-16), ligue .<xref:System.Text.Encoding.GetBytes%2A> para primeiro transcodificar a seqüência para uma matriz de byte codificada UTF-8. Então passe isso `Utf8JsonReader`para o.
+Para leitura síncrona, você pode ler a carga JSON até o final do fluxo em uma matriz de bytes e passá-la para o leitor. Para ler de uma cadeia de caracteres (que é codificada como UTF-16 <xref:System.Text.Encoding.UTF8>), chame.<xref:System.Text.Encoding.GetBytes%2A> para primeiro transcodificar a cadeia de caracteres em uma matriz de bytes codificada em UTF-8. Em seguida, passe- `Utf8JsonReader`o para o.
 
-Uma `Utf8JsonReader` vez que a entrada considera o texto JSON como texto JSON, uma marca de ordem de byte UTF-8 (BOM) é considerada JSON inválida. O interlocutor precisa filtrar isso antes de passar os dados para o leitor.
+Como o `Utf8JsonReader` considera a entrada como texto JSON, uma bom (marca de ordem de byte) UTF-8 é considerada JSON inválido. O chamador precisa filtrar isso antes de passar os dados para o leitor.
 
-Para exemplos de código, consulte [Use Utf8JsonReader](system-text-json-how-to.md#use-utf8jsonreader).
+Para obter exemplos de código, consulte [usar Utf8JsonReader](system-text-json-how-to.md#use-utf8jsonreader).
 
-### <a name="read-with-multi-segment-readonlysequence"></a>Leia com readonlysequence de vários segmentos
+### <a name="read-with-multi-segment-readonlysequence"></a>Ler com ReadOnlySequence de vários segmentos
 
-Se a sua entrada JSON for um [byte\<ReadOnlySpan>, ](xref:System.ReadOnlySpan%601) `ValueSpan` cada elemento JSON pode ser acessado a partir da propriedade no leitor à medida que você passar pelo loop de leitura. No entanto, se a sua entrada for um [byte\<ReadOnlySequence>](xref:System.Buffers.ReadOnlySequence%601) (que é o resultado da leitura de um), <xref:System.IO.Pipelines.PipeReader>alguns elementos JSON podem abranger vários segmentos do `ReadOnlySequence<byte>` objeto. Esses elementos não <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> seriam acessíveis a partir de um bloco de memória contíguo. Em vez disso, sempre `ReadOnlySequence<byte>` que você tiver <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> um multisegmento como entrada, pesquise a propriedade no leitor para descobrir como acessar o elemento JSON atual. Aqui está um padrão recomendado:
+Se a entrada JSON for uma [>\<de bytes ReadOnlySpan ](xref:System.ReadOnlySpan%601), cada elemento JSON poderá ser acessado a `ValueSpan` partir da propriedade no leitor à medida que você passar pelo loop de leitura. No entanto, se sua entrada for uma [>de bytes de ReadOnlySequence\<](xref:System.Buffers.ReadOnlySequence%601) (que é o resultado <xref:System.IO.Pipelines.PipeReader>da leitura de um), alguns elementos JSON poderão se ampliar `ReadOnlySequence<byte>` de vários segmentos do objeto. Esses elementos não podem ser acessados <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> em um bloco de memória contíguo. Em vez disso, sempre que você tiver um `ReadOnlySequence<byte>` multithread como entrada, <xref:System.Text.Json.Utf8JsonReader.HasValueSequence%2A> pesquise a propriedade no leitor para descobrir como acessar o elemento JSON atual. Aqui está um padrão recomendado:
 
 ```csharp
 while (reader.Read())
@@ -544,17 +544,17 @@ while (reader.Read())
 }
 ```
 
-### <a name="use-valuetextequals-for-property-name-lookups"></a>Use ValueTextEquals para pesquisas de nomes de propriedades
+### <a name="use-valuetextequals-for-property-name-lookups"></a>Usar ValueTextEquals para pesquisas de nome de propriedade
 
-Não use <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> para fazer comparações byte-by-byte, pedindo <xref:System.MemoryExtensions.SequenceEqual%2A> para pesquisas de nome de propriedade. Em <xref:System.Text.Json.Utf8JsonReader.ValueTextEquals%2A> vez disso, porque esse método escapa de todos os personagens que escapam no JSON. Aqui está um exemplo que mostra como procurar uma propriedade chamada "nome":
+Não use <xref:System.Text.Json.Utf8JsonReader.ValueSpan%2A> para fazer comparações de byte por byte chamando <xref:System.MemoryExtensions.SequenceEqual%2A> pesquisas de nome de propriedade. Chame <xref:System.Text.Json.Utf8JsonReader.ValueTextEquals%2A> em vez disso, porque esse método desescapa quaisquer caracteres que tenham escape no JSON. Aqui está um exemplo que mostra como procurar uma propriedade denominada "Name":
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ValueTextEqualsExample.cs?name=SnippetDefineUtf8Var)]
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ValueTextEqualsExample.cs?name=SnippetUseUtf8Var&highlight=11)]
 
-### <a name="read-null-values-into-nullable-value-types"></a>Leia valores nulos em tipos de valores anulados
+### <a name="read-null-values-into-nullable-value-types"></a>Ler valores nulos em tipos de valores anuláveis
 
-`Newtonsoft.Json`fornece APIs <xref:System.Nullable%601>que retornam, `ReadAsBoolean`como, `Null` `TokenType` que lida com `bool?`um para você retornando um . As APIs `System.Text.Json` incorporadas retornam apenas tipos de valor não anulados. Por exemplo, <xref:System.Text.Json.Utf8JsonReader.GetBoolean%2A?displayProperty=nameWithType> `bool`retorna um . Ele abre uma exceção se encontrar `Null` no JSON. Os exemplos a seguir mostram duas maneiras de lidar com nulos, uma devolvendo um tipo de valor anulado e outra devolvendo o valor padrão:
+`Newtonsoft.Json`fornece APIs que <xref:System.Nullable%601>retornam, como `ReadAsBoolean`, que lidam `Null` `TokenType` com a para você retornando um `bool?`. As `System.Text.Json` APIs internas retornam apenas tipos de valores não anuláveis. Por exemplo, <xref:System.Text.Json.Utf8JsonReader.GetBoolean%2A?displayProperty=nameWithType> retorna um `bool`. Ele lançará uma exceção se encontrar `Null` no JSON. Os exemplos a seguir mostram duas maneiras de lidar com nulos, um retornando um tipo de valor anulável e um retornando o valor padrão:
 
 ```csharp
 public bool? ReadAsNullableBoolean()
@@ -590,63 +590,63 @@ public bool ReadAsBoolean(bool defaultValue)
 
 ### <a name="multi-targeting"></a>Multiplataforma
 
-Se você precisar continuar `Newtonsoft.Json` a usar para determinadas estruturas de destino, você pode fazer várias metas e ter duas implementações. No entanto, isso não `#ifdefs` é trivial e exigiria algumas e duplicação de origem. Uma maneira de compartilhar o máximo de `ref struct` código `Utf8JsonReader` possível `Newtonsoft.Json` `JsonTextReader`é criar um invólucro ao redor e . Este invólucro unificaria a área da superfície pública enquanto isolava as diferenças comportamentais. Isso permite isolar as alterações principalmente para a construção do tipo, juntamente com a passagem do novo tipo por referência. Este é o padrão que a biblioteca [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) segue:
+Se você precisar continuar a usar `Newtonsoft.Json` para determinadas estruturas de destino, você pode ter vários destinos e ter duas implementações. No entanto, isso não é trivial e exigiria uma `#ifdefs` duplicação de origem. Uma maneira de compartilhar o máximo de código possível `ref struct` é criar um wrapper em volta `Utf8JsonReader` de `Newtonsoft.Json` `JsonTextReader`e. Esse wrapper unificaria a área de superfície pública ao isolar as diferenças comportamentais. Isso permite isolar as alterações principalmente na construção do tipo, juntamente com a passagem do novo tipo por referência. Esse é o padrão que a biblioteca [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) segue:
 
 * [UnifiedJsonReader.JsonTextReader.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.JsonTextReader.cs)
 * [UnifiedJsonReader.Utf8JsonReader.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonReader.Utf8JsonReader.cs)
 
-## <a name="utf8jsonwriter-compared-to-jsontextwriter"></a>Utf8JsonWriter comparado com JsonTextWriter
+## <a name="utf8jsonwriter-compared-to-jsontextwriter"></a>Utf8JsonWriter em comparação com JsonTextWriter
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName>é uma maneira de alto desempenho de escrever texto JSON codificado `String`UTF-8 de tipos comuns .NET como , `Int32`e `DateTime`. O escritor é um tipo de baixo nível que pode ser usado para construir serializadores personalizados.
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName>é uma maneira de alto desempenho para escrever texto JSON codificado em UTF-8 de tipos comuns do `String`.NET `Int32`como, `DateTime`e. O gravador é um tipo de baixo nível que pode ser usado para criar serializadores personalizados.
 
-As seções a seguir explicam `Utf8JsonWriter`os padrões de programação recomendados para o uso .
+As seções a seguir explicam os padrões de `Utf8JsonWriter`programação recomendados para o uso do.
 
-### <a name="write-with-utf-8-text"></a>Escreva com o texto UTF-8
+### <a name="write-with-utf-8-text"></a>Gravar com texto UTF-8
 
-Para obter o melhor desempenho `Utf8JsonWriter`possível ao usar as cargas JSON, escreva as cargas JSON já codificadas como texto UTF-8 em vez de como strings UTF-16. Use <xref:System.Text.Json.JsonEncodedText> para cache e pré-codificar nomes e valores conhecidos de propriedade de string sáis como estáticas, e passá-los para o escritor, em vez de usar literais de seqüência UTF-16. Isso é mais rápido do que cache e usando matrizes de bytes UTF-8.
+Para obter o melhor desempenho possível ao usar o `Utf8JsonWriter`, grave as cargas JSON já codificadas como texto UTF-8, e não como cadeias de caracteres UTF-16. Use <xref:System.Text.Json.JsonEncodedText> para armazenar em cache e codificar previamente nomes de propriedade de cadeia de caracteres e valores como estáticos e passá-los para o gravador, em vez de usar literais de cadeia de caracteres UTF-16. Isso é mais rápido do que armazenar em cache e usar matrizes de bytes UTF-8.
 
-Essa abordagem também funciona se você precisar fazer fugas personalizadas. `System.Text.Json`não permite que você desabilite a fuga enquanto escreve uma string. No entanto, você pode <xref:System.Text.Encodings.Web.JavaScriptEncoder> passar em seu próprio costume `JsonEncodedText` como uma `JavascriptEncoder` opção para o escritor, `JsonEncodedText` ou criar o seu próprio que usa o seu para fazer a fuga, e, em seguida, escrever o em vez da string. Para obter mais informações, consulte [Personalizar a codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
+Essa abordagem também funcionará se você precisar fazer escapes personalizados. `System.Text.Json`Não permite desabilitar o escape durante a gravação de uma cadeia de caracteres. No entanto, você pode passar seu próprio <xref:System.Text.Encodings.Web.JavaScriptEncoder> personalizado como uma opção para o gravador, ou criar seu `JsonEncodedText` próprio que usa `JavascriptEncoder` o para fazer a saída e, em seguida, `JsonEncodedText` escrever o em vez da cadeia de caracteres. Para obter mais informações, consulte [Personalizar codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
 
-### <a name="write-raw-values"></a>Escreva valores brutos
+### <a name="write-raw-values"></a>Gravar valores brutos
 
-O `Newtonsoft.Json` `WriteRawValue` método escreve JSON bruto onde um valor é esperado. <xref:System.Text.Json>não tem equivalente direto, mas aqui está uma solução alternativa que garante que apenas json válido seja escrito:
+O `Newtonsoft.Json` `WriteRawValue` método grava JSON bruto onde um valor é esperado. <xref:System.Text.Json>Não tem equivalente direto, mas aqui está uma solução alternativa que garante que apenas JSON válido seja gravado:
 
 ```csharp
 using JsonDocument doc = JsonDocument.Parse(string);
 doc.WriteTo(writer);
 ```
 
-### <a name="customize-character-escaping"></a>Personalizar a fuga de caracteres
+### <a name="customize-character-escaping"></a>Personalizar a saída de caracteres
 
-A [configuração StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) oferece opções para escapar de `JsonTextWriter` todos os caracteres **ou** caracteres HTML não-ASCII. Por padrão, `Utf8JsonWriter` escapa de todos os caracteres não-ASCII **e** HTML. Essa fuga é feita por razões de segurança aprofundadas. Para especificar uma política de <xref:System.Text.Encodings.Web.JavaScriptEncoder> fuga <xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType>diferente, crie um e um conjunto . Para obter mais informações, consulte [Personalizar a codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
+A configuração [StringEscapeHandling](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_StringEscapeHandling.htm) de `JsonTextWriter` oferece opções para escapar de todos os caracteres não ASCII **ou** caracteres HTML. Por padrão, `Utf8JsonWriter` o escapa todos os caracteres não ASCII **e** HTML. Essa saída é feita para motivos de segurança de defesa intensa. Para especificar uma política de saída diferente, crie um <xref:System.Text.Encodings.Web.JavaScriptEncoder> e defina <xref:System.Text.Json.JsonWriterOptions.Encoder?displayProperty=nameWithType>. Para obter mais informações, consulte [Personalizar codificação de caracteres](system-text-json-how-to.md#customize-character-encoding).
 
 ### <a name="customize-json-format"></a>Personalizar o formato JSON
 
-`JsonTextWriter`inclui as seguintes configurações, para as quais `Utf8JsonWriter` não tem equivalente:
+`JsonTextWriter`inclui as seguintes configurações, para as `Utf8JsonWriter` quais não tem equivalente:
 
-* [Recuo](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_Indentation.htm) - Especifica quantos caracteres fazer. `Utf8JsonWriter`sempre faz recuo de 2 caracteres.
-* [Recuo](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_IndentChar.htm) - Especifica o caractere a ser usado para recuo.  `Utf8JsonWriter`sempre usa espaço em branco.
-* [QuoteChar](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_QuoteChar.htm) - Especifica o caractere a ser usado para cercar valores de seqüência de caracteres.  `Utf8JsonWriter`sempre usa aspas duplas.
-* [QuoteName](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_QuoteName.htm) - Especifica se deve ou não cercar nomes de propriedades com aspas.  `Utf8JsonWriter`sempre os cerca com citações.
+* [Recuo](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_Indentation.htm) – especifica o número de caracteres a serem recuados. `Utf8JsonWriter`sempre faz recuo de 2 caracteres.
+* [IndentChar](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_IndentChar.htm) -especifica o caractere a ser usado para recuo.  `Utf8JsonWriter`sempre usa espaço em branco.
+* [QuoteChar](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_QuoteChar.htm) -especifica o caractere a ser usado para envolver valores de cadeia de caracteres.  `Utf8JsonWriter`sempre usa aspas duplas.
+* [QUOTENAME](https://www.newtonsoft.com/json/help/html/P_Newtonsoft_Json_JsonTextWriter_QuoteName.htm) – especifica se os nomes de propriedade devem ser circundados com aspas.  `Utf8JsonWriter`sempre circunda-os com aspas.
 
-Não há solução que lhe faça personalizar o JSON produzido por `Utf8JsonWriter` esses caminhos.
+Não há soluções alternativas que permitam personalizar o JSON produzido por `Utf8JsonWriter` essas maneiras.
 
-### <a name="write-null-values"></a>Escreva valores nulos
+### <a name="write-null-values"></a>Gravar valores nulos
 
-Para escrever valores `Utf8JsonWriter`nulos usando , chamada:
+Para gravar valores nulos usando `Utf8JsonWriter`, chame:
 
-* <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A>para escrever um par de valor-chave com nulo como o valor.
-* <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue%2A>para escrever nulo como um elemento de uma matriz JSON.
+* <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A>para gravar um par chave-valor com NULL como o valor.
+* <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue%2A>para gravar NULL como um elemento de uma matriz JSON.
 
-Para uma propriedade de string, <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A> se <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A> a `WriteNull` seqüência é nula, e são equivalentes a e `WriteNullValue`.
+Para uma propriedade de cadeia de caracteres, se a cadeia <xref:System.Text.Json.Utf8JsonWriter.WriteString%2A> de <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A> caracteres for nula `WriteNull` e `WriteNullValue`for equivalente a e.
 
-### <a name="write-timespan-uri-or-char-values"></a>Escreva valores de Timespan, Uri ou char
+### <a name="write-timespan-uri-or-char-values"></a>Gravar valores de TimeSpan, URI ou Char
 
-`JsonTextWriter`fornece `WriteValue` métodos para valores [timespan,](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_18.htm) [uri](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_22.htm)e [char.](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_3.htm) `Utf8JsonWriter`não tem métodos equivalentes. Em vez disso, formatar esses `ToString()`valores como <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A>strings (chamando, por exemplo) e chamar .
+`JsonTextWriter`fornece `WriteValue` métodos para valores de [TimeSpan](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_18.htm), [URI](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_22.htm)e [Char](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonTextWriter_WriteValue_3.htm) . `Utf8JsonWriter`Não tem métodos equivalentes. Em vez disso, formate esses valores como cadeias de caracteres (chamando `ToString()`, <xref:System.Text.Json.Utf8JsonWriter.WriteStringValue%2A>por exemplo) e chame.
 
 ### <a name="multi-targeting"></a>Multiplataforma
 
-Se você precisar continuar `Newtonsoft.Json` a usar para determinadas estruturas de destino, você pode fazer várias metas e ter duas implementações. No entanto, isso não `#ifdefs` é trivial e exigiria algumas e duplicação de origem. Uma maneira de compartilhar o máximo de código `Utf8JsonWriter` possível `Newtonsoft` `JsonTextWriter`é criar um invólucro ao redor e . Este invólucro unificaria a área da superfície pública enquanto isolava as diferenças comportamentais. Isso permite isolar as alterações principalmente para a construção do tipo. [Microsoft.Extensions.DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) biblioteca segue:
+Se você precisar continuar a usar `Newtonsoft.Json` para determinadas estruturas de destino, você pode ter vários destinos e ter duas implementações. No entanto, isso não é trivial e exigiria uma `#ifdefs` duplicação de origem. Uma maneira de compartilhar o máximo de código possível é criar um wrapper em volta `Utf8JsonWriter` de `Newtonsoft` `JsonTextWriter`e. Esse wrapper unificaria a área de superfície pública ao isolar as diferenças comportamentais. Isso permite isolar as alterações principalmente na construção do tipo. A biblioteca [Microsoft. Extensions. DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/3.1.0/) segue:
 
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
@@ -654,9 +654,9 @@ Se você precisar continuar `Newtonsoft.Json` a usar para determinadas estrutura
 ## <a name="additional-resources"></a>Recursos adicionais
 
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
-* [System.Text.JsonVisão geral](system-text-json-overview.md)
+* [System.Text.Jsonsobre](system-text-json-overview.md)
 * [Como usarSystem.Text.Json](system-text-json-how-to.md)
 * [Como gravar conversores personalizados](system-text-json-converters-how-to.md)
-* [Datahora e dateTimeOffset suporte emSystem.Text.Json](../datetime/system-text-json-support.md)
+* [Suporte a DateTime e DateTimeOffset emSystem.Text.Json](../datetime/system-text-json-support.md)
 * [System.Text.JsonReferência de API](xref:System.Text.Json)
 * [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)

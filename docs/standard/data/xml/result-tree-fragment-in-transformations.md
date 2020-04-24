@@ -190,8 +190,8 @@ O seguinte é o resultado de transformar XML com essa folha de estilos:
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)
-- [A classe XslTransform implementa o processador XSLT](xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

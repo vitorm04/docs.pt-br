@@ -65,7 +65,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
   
  Aqui estão algumas das tarefas de gerenciamento e de pesquisa podem ser executadas com a classe <xref:System.Xml.XmlNamespaceManager>. Para saber mais e exemplos, siga os links para a página de referência para cada método ou propriedade.  
   
-|Para|Use|  
+|Para|Uso|  
 |--------|---------|  
 |Adicionar um namespace|Método <xref:System.Xml.XmlNamespaceManager.AddNamespace%2A>|  
 |Remover um namespace|Método <xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A>|  
@@ -77,7 +77,7 @@ Namespaces XML e nomes de elementos e atributos em um documento XML com o URIs p
 |Verificar se um prefixo é definido no escopo atual|Método <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Obter a tabela de nomes usada para pesquisar URIs e prefixos|Propriedade <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)

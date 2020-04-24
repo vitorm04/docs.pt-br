@@ -16,9 +16,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/02/2020
 ms.locfileid: "80588372"
 ---
-# <a name="xml-and-soap-serialization"></a>Serialização de XML e SOAP
+# <a name="xml-and-soap-serialization"></a>serialização XML e SOAP
 
-A serialização XML converte (serializa) os campos e propriedades públicas de um objeto, e os parâmetros e valores de retorno dos métodos, em um fluxo XML que está em conformidade com um documento específico de linguagem de definição xml schema (XSD). A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em um formato serial (neste caso, em XML) para armazenamento ou transporte.
+A serialização de XML converte (serializa) os campos públicos e as propriedades de um objeto e os parâmetros e valores de retorno de métodos, em um fluxo XML que está de acordo com um documento XSD (linguagem de definição de esquema XML) específico. A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em um formato serial (neste caso, em XML) para armazenamento ou transporte.
 
 Como XML é um padrão aberto, o fluxo XML pode ser processado por qualquer aplicativo, quando necessário, independentemente da plataforma. Por exemplo, serviços Web XML criados com ASP.NET usam a classe <xref:System.Xml.Serialization.XmlSerializer> para criar fluxos XML que passam dados entre aplicativos de serviço Web XML por toda a Internet ou entre intranets. Por outro lado, a desserialização obtém esse fluxo XML e reconstrói o objeto.
 
@@ -26,7 +26,7 @@ A serialização XML também pode ser usada para serializar objetos em fluxos XM
 
 Para serializar e desserializar objetos, use a classe <xref:System.Xml.Serialization.XmlSerializer>. Para criar as classes a serem serializadas, use a ferramenta de definição de esquema XML.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Serialização binária](binary-serialization.md)
-- [XML Web Services criado usando clientes ASP.NET e XML Web Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))
+- [Serviços Web XML criados usando ASP.NET e clientes de serviço Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

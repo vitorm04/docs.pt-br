@@ -16,21 +16,21 @@ ms.locfileid: "80588383"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>A ferramenta de definição de esquema XML e a serialização XML
 
-A ferramenta XML Schema Definition[(XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)é instalada juntamente&reg; com as ferramentas .NET Framework como parte do Windows Software Development Kit (SDK). A ferramenta é criada principalmente para duas finalidades:  
+A ferramenta de definição de esquema XML ([XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)é instalada junto com as ferramentas de .NET Framework como parte do SDK (Software Development Kit&reg; ) do Windows. A ferramenta é criada principalmente para duas finalidades:  
   
 - Para gerar arquivos de classe C# ou Visual Basic que estejam em conformidade com um esquema específico de linguagem XSD. A ferramenta usa um esquema XML como um argumento e gera um arquivo que contém um número de classes que, quando serializadas com o <xref:System.Xml.Serialization.XmlSerializer>, estão em conformidade com o esquema. Para obter informações sobre como usar a ferramenta para gerar classes em conformidade com um esquema específico, consulte [Como usar a Ferramenta de Definição de Esquema XML para gerar classes e XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
 - Para gerar um documento de esquema XML de um arquivo .dll ou .exe. Para ver o esquema de um conjunto de arquivos que você criou ou um que tenha sido alterado com atributos, passe o DLL ou EXE como um argumento para a ferramenta para gerar o esquema XML. Para obter informações sobre como usar a ferramenta para gerar um XML Schema Document com base em um conjunto de classes, consulte [Como usar a Ferramenta de Definição de Esquema XML para gerar classes e XML Schema Documents](../../../docs/standard/serialization/xml-schema-def-tool-gen.md).  
   
-Para obter mais informações sobre o uso da ferramenta, consulte [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
+Para obter mais informações sobre como usar a ferramenta, consulte [ferramenta de definição de esquema XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md).  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Data.DataSet>
 - [Apresentando a serialização XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Ferramenta de Definição de Esquema XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [Ferramenta de definição de esquema XML (XSD. exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Como serializar um objeto](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Como desserializar um objeto](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
 - [Como usar a ferramenta de definição de esquema XML para gerar classes e documentos de esquema XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)
-- [Suporte de vinculação do esquema XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))
+- [Suporte à associação de esquema XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

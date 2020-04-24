@@ -19,7 +19,7 @@ O SQLitePCLRaw fornece pacotes de pacote que facilitam a disponibilização das 
 
 O pacote principal Microsoft. Data. sqlite traz SQLitePCLRaw. bundle_e_sqlite3 por padrão.
 
-Para usar um pacote diferente, instale o pacote de `Microsoft.Data.Sqlite.Core`, juntamente com o pacote de pacotes que você deseja usar. Os grupos são inicializados automaticamente pelo Microsoft. Data. sqlite.
+Para usar um pacote diferente, instale o `Microsoft.Data.Sqlite.Core` pacote, juntamente com o pacote de pacotes que você deseja usar. Os grupos são inicializados automaticamente pelo Microsoft. Data. sqlite.
 
 | Pacote | Descrição |
 | --- | --- |
@@ -31,14 +31,14 @@ Para usar um pacote diferente, instale o pacote de `Microsoft.Data.Sqlite.Core`,
 
 Por exemplo, para usar a compilação de código aberto não oficial de sqlcipher, use os comandos a seguir.
 
-### <a name="net-core-clitabnetcore-cli"></a>[CLI do .NET Core](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[CLI do .NET Core](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite.Core
@@ -49,7 +49,7 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="sqlitepclraw-providers"></a>Provedores de SQLitePCLRaw
 
-Você pode usar sua própria compilação do SQLite aproveitando o pacote `SQLitePCLRaw.provider.dynamic_cdecl`. Nesse caso, você é responsável por implantar a biblioteca nativa com seu aplicativo. Observe que os detalhes da implantação de bibliotecas nativas com seu aplicativo variam consideravelmente dependendo da plataforma .NET e do tempo de execução que você está usando.
+Você pode usar sua própria compilação do SQLite aproveitando o `SQLitePCLRaw.provider.dynamic_cdecl` pacote. Nesse caso, você é responsável por implantar a biblioteca nativa com seu aplicativo. Observe que os detalhes da implantação de bibliotecas nativas com seu aplicativo variam consideravelmente dependendo da plataforma .NET e do tempo de execução que você está usando.
 
 Primeiro, você precisará implementar IGetFunctionPointer. A implementação é bem trivial no .NET Core.
 

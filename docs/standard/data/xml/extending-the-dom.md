@@ -250,6 +250,6 @@ Para saber mais sobre a manipulação de eventos do nó, confira [Eventos](../..
 
 Se você está substituindo o método de <xref:System.Xml.XmlDocument.CreateElement%2A> em uma classe derivada, os atributos padrão não são adicionados quando você está criando novos elementos ao editar o documento. Este é apenas um problema ao editar. Porque o método de <xref:System.Xml.XmlDocument.CreateElement%2A> é responsável para adicionar atributos padrão para <xref:System.Xml.XmlDocument>, você deve codificar essa funcionalidade no método de <xref:System.Xml.XmlDocument.CreateElement%2A> . Se você está carregando <xref:System.Xml.XmlDocument> que inclui atributos padrão, serão tratados corretamente. Para saber mais sobre os atributos padrão, confira [Criando novos atributos para os elementos em DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](xml-document-object-model-dom.md)

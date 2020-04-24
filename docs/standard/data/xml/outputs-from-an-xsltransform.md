@@ -33,7 +33,7 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
   
 - omit-xml-declaration  
   
-- {1&gt;standalone&lt;1}  
+- autônomos  
   
 - doctype-public  
   
@@ -55,6 +55,6 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
 ## <a name="escaping-special-characters"></a>Caracteres de escape especiais  
  A marca de `<xsl:text disable-output-escaping>` é usada para indicar se os caracteres especiais precisam ser escapados em um formulário XML (por exemplo, usando `<&lt>` no lugar do símbolo de `"<"` ) ou esquerdo em condição atual. O atributo de `disable-output-escaping` é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos e não tem efeito em caracteres especiais.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

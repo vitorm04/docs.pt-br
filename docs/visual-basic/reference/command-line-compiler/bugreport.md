@@ -23,15 +23,15 @@ Cria um arquivo que você pode usar ao arquivar um relatório de bug.
 -bugreport:file
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 |Termo|Definição|
 |---|---|
-|`file`|Necessária. O nome do arquivo que conterá seu relatório de bugs. Coloque o nome do arquivo entre aspas ("") se o nome contiver um espaço.|
+|`file`|Obrigatórios. O nome do arquivo que conterá seu relatório de bugs. Coloque o nome do arquivo entre aspas ("") se o nome contiver um espaço.|
 
 ## <a name="remarks"></a>Comentários
 
-As informações a seguir são adicionadas ao `file`:
+As informações a seguir são adicionadas a `file`:
 
 - Uma cópia de todos os arquivos de código-fonte na compilação.
 
@@ -45,15 +45,15 @@ As informações a seguir são adicionadas ao `file`:
 
 - Uma descrição de como você acredita que o problema deve ser corrigido, para o qual você será solicitado.
 
-Como uma cópia de todos os arquivos de código-fonte está incluída no `file`, talvez você queira reproduzir o defeito do código (suspeito) no programa mais curto possível.
+Como uma cópia de todos os arquivos de código-fonte está `file`incluída no, talvez você queira reproduzir o defeito do código (suspeito) no programa mais curto possível.
 
 > [!IMPORTANT]
-> A opção `-bugreport` produz um arquivo que contém informações potencialmente confidenciais. Isso inclui a hora atual, a versão do compilador, a versão .NET Framework, a versão do sistema operacional, o nome de usuário, os argumentos de linha de comando com os quais o compilador foi executado, todo o código-fonte e a forma binária de qualquer assembly referenciado. Essa opção pode ser acessada especificando opções de linha de comando no arquivo Web. config para uma compilação do lado do servidor de um aplicativo ASP.NET. Para evitar isso, modifique o arquivo Machine. config para impedir que os usuários sejam compilados no servidor.
+> A `-bugreport` opção produz um arquivo que contém informações potencialmente confidenciais. Isso inclui a hora atual, a versão do compilador, a versão .NET Framework, a versão do sistema operacional, o nome de usuário, os argumentos de linha de comando com os quais o compilador foi executado, todo o código-fonte e a forma binária de qualquer assembly referenciado. Essa opção pode ser acessada especificando opções de linha de comando no arquivo Web. config para uma compilação do lado do servidor de um aplicativo ASP.NET. Para evitar isso, modifique o arquivo Machine. config para impedir que os usuários sejam compilados no servidor.
 
-Se essa opção for usada com `-errorreport:prompt`, `-errorreport:queue`ou `-errorreport:send`e o aplicativo encontrar um erro de compilador interno, as informações em `file` serão enviadas para a Microsoft Corporation. Essas informações ajudarão os engenheiros da Microsoft a identificar a causa do erro e poderão ajudar a melhorar a próxima versão do Visual Basic. Por padrão, nenhuma informação é enviada à Microsoft. No entanto, quando você compila um aplicativo usando `-errorreport:queue`, que é habilitado por padrão, o aplicativo coleta seus relatórios de erros. Em seguida, quando o administrador do computador fizer logon, o sistema de relatórios de erros exibirá uma janela pop-up que permite ao administrador encaminhar à Microsoft quaisquer relatórios de erros ocorridos desde o logon.
+Se essa opção for usada com `-errorreport:prompt`, `-errorreport:queue`ou `-errorreport:send`, e seu aplicativo encontrar um erro de compilador interno, as informações em `file` serão enviadas para a Microsoft Corporation. Essas informações ajudarão os engenheiros da Microsoft a identificar a causa do erro e poderão ajudar a melhorar a próxima versão do Visual Basic. Por padrão, nenhuma informação é enviada à Microsoft. No entanto, quando você compila um aplicativo `-errorreport:queue`usando o, que é habilitado por padrão, o aplicativo coleta seus relatórios de erros. Em seguida, quando o administrador do computador fizer logon, o sistema de relatórios de erros exibirá uma janela pop-up que permite ao administrador encaminhar à Microsoft quaisquer relatórios de erros ocorridos desde o logon.
 
 > [!NOTE]
-> A opção `-bugreport` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir da linha de comando.
+> A `-bugreport` opção não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente quando você compila a partir da linha de comando.
 
 ## <a name="example"></a>Exemplo
 

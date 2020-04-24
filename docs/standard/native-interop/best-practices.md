@@ -13,7 +13,7 @@ ms.locfileid: "80391215"
 
 .NET oferece uma variedade maneiras de personalizar seu código de interoperabilidade nativa. Este artigo inclui as diretrizes que as equipes .NET da Microsoft seguem para a interoperabilidade nativa.
 
-## <a name="general-guidance"></a>Diretrizes gerais
+## <a name="general-guidance"></a>Orientação geral
 
 As diretrizes nesta seção se aplicam a todos os cenários de interoperabilidade.
 
@@ -40,18 +40,18 @@ Quando o CharSet é Unicode ou o argumento é explicitamente marcado como `[Mars
 
 Lembre-se de marcar `[DllImport]` como `Charset.Unicode`, a menos que você queira explicitamente o tratamento ANSI de suas cadeias de caracteres.
 
-❌NÃO use `[Out] string` parâmetros. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o runtime se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+❌Não use `[Out] string` parâmetros. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o runtime se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-❌EVITE `StringBuilder` parâmetros. Marshaling de `StringBuilder`*sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
+❌Evite `StringBuilder` parâmetros. Marshaling de `StringBuilder`*sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
 
-1. Criar um SB da capacidade desejada (aloca capacidade gerenciada)**{1}**
+1. Criar uma SB da capacidade desejada (aloca capacidade gerenciada)**{1}**
 2. Invoke
    1. Aloca um buffer nativo**{2}**
    2. Copia o conteúdo se `[In]` _(o padrão para um parâmetro `StringBuilder`)_
    3. Copia o buffer nativo em uma matriz gerenciada recém-alocada se `[Out]` **{3}** _(também é o padrão para `StringBuilder`)_
 3. `ToString()`aloca ainda outra matriz gerenciada**{4}**
 
-Isso *{4}* são alocações para obter uma seqüência fora do código nativo. O melhor que você pode fazer para limitar isso é reutilizar o `StringBuilder` em outra chamada, mas isso economiza apenas *1* alocação. É muito melhor usar e armazenar em cache um buffer de caractere de `ArrayPool` - você pode então reduzir para apenas a alocação para `ToString()` nas chamadas subsequentes.
+São *{4}* as alocações para obter uma cadeia de caracteres de código nativo. O melhor que você pode fazer para limitar isso é reutilizar o `StringBuilder` em outra chamada, mas isso economiza apenas *1* alocação. É muito melhor usar e armazenar em cache um buffer de caractere de `ArrayPool` - você pode então reduzir para apenas a alocação para `ToString()` nas chamadas subsequentes.
 
 O outro problema com `StringBuilder` é que esta configuração sempre copia o buffer de retorno de volta para o primeiro nulo. Se a cadeia de caracteres transmitida não estiver terminada, ou terminar por dois caracteres nulos, na melhor das hipóteses, o recurso P/Invoke estará incorreto.
 
@@ -61,11 +61,11 @@ Se você *usar* o `StringBuilder`, uma última pegadinha é que a capacidade **n
 
 Para obter mais informações sobre o marshaling de cadeia de caracteres, veja [Marshaling padrão para cadeias de caracteres](../../framework/interop/default-marshaling-for-strings.md) e [Personalizando marshaling de cadeia de caracteres](customize-parameter-marshaling.md#customizing-string-parameters).
 
-> __Específico do Windows__ Para `[Out]` strings, a `CoTaskMemFree` CLR usará por `SysStringFree` padrão para liberar strings ou para strings marcadas como `UnmanagedType.BSTR`.
-> **Para a maioria das APIs com um buffer de seqüência de saída:** A contagem de caracteres aprovada deve incluir o nulo. Se o valor retornado for menor que a contagem de caracteres transmitidos, a chamada foi bem-sucedida e o valor consiste no número de caracteres *sem* o nulo à direita. Caso contrário, a contagem consiste no tamanho necessário do buffer *incluindo* o caractere nulo.
+> __Específico do Windows__ Para `[Out]` cadeias de caracteres, `CoTaskMemFree` o CLR usará por padrão `SysStringFree` para cadeias de caracteres livres `UnmanagedType.BSTR`ou para cadeias de caracteres marcadas como.
+> **Para a maioria das APIs com um buffer de cadeia de caracteres de saída:** A contagem de caracteres transmitida deve incluir o nulo. Se o valor retornado for menor que a contagem de caracteres transmitidos, a chamada foi bem-sucedida e o valor consiste no número de caracteres *sem* o nulo à direita. Caso contrário, a contagem consiste no tamanho necessário do buffer *incluindo* o caractere nulo.
 >
-> - Passe em 5, pegue 4: A seqüência tem 4 caracteres longos com um nulo.
-> - Passe em 5, obtenha 6: A seqüência tem 5 caracteres de comprimento, precisa de um buffer de 6 caracteres para segurar o nulo.
+> - Pass em 5, Get 4: a cadeia de caracteres tem 4 caracteres de comprimento com um nulo à direita.
+> - Passar em 5, obter 6: a cadeia de caracteres tem 5 caracteres de comprimento, precisa de um buffer de 6 caracteres para manter o valor nulo.
 > [Tipos de dados do Windows para cadeias de caracteres](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parâmetros e campos boolianos
@@ -80,7 +80,7 @@ Os GUIDs podem ser usados diretamente em assinaturas. Muitas APIs do Windows usa
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌NÃO Use `[MarshalAs(UnmanagedType.LPStruct)]` para nada `ref` além de parâmetros GUID.
+❌Não use `[MarshalAs(UnmanagedType.LPStruct)]` para nada além dos parâmetros `ref` de GUID.
 
 ## <a name="blittable-types"></a>Tipos blittable
 
@@ -123,13 +123,13 @@ Você pode verificar se um tipo é blittable pela tentativa de criar um `GCHandl
 Para obter mais informações, consulte:
 
 - [Tipos blittable e não blittable](../../framework/interop/blittable-and-non-blittable-types.md)
-- [Marshaling de Tipo](type-marshaling.md)
+- [Empacotamento de tipo](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Manter objetos gerenciados ativos
 
 `GC.KeepAlive()` garantirá que um objeto permaneça no escopo até que o método KeepAlive seja alcançado.
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)permite que o marshaller mantenha um objeto vivo durante a duração de um P/Invoke. Ele pode ser usado em vez de `IntPtr` em assinaturas de métodos. `SafeHandle` substitui efetivamente essa classe e deve ser usado em seu lugar.
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)permite que o Marshaller mantenha um objeto ativo pela duração de um P/Invoke. Ele pode ser usado em vez de `IntPtr` em assinaturas de métodos. `SafeHandle` substitui efetivamente essa classe e deve ser usado em seu lugar.
 
 [`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)permite fixar um objeto gerenciado e obter o ponteiro nativo para ele. O padrão básico é:
 
@@ -217,9 +217,9 @@ Os ponteiros para structs nas definições devem ser transmitidos por `ref` ou u
 
 ✔️ USE`sizeof()` C# em vez de `Marshal.SizeOf<MyStruct>()` para estruturas blittable a fim de melhorar o desempenho.
 
-❌EVITE `System.Delegate` usar `System.MulticastDelegate` ou campos para representar campos de ponteiro de função em estruturas.
+❌Evite usar `System.Delegate` campos `System.MulticastDelegate` ou para representar campos de ponteiro de função em estruturas.
 
-Uma <xref:System.Delegate?displayProperty=fullName> <xref:System.MulticastDelegate?displayProperty=fullName> vez que e não tem uma assinatura necessária, eles não garantem que o delegado aprovado corresponderá à assinatura que o código nativo espera. Além disso, no .NET Framework e no .NET Core, `System.Delegate` `System.MulticastDelegate` o marshaling de uma estrutura contendo uma ou de sua representação nativa para um objeto gerenciado pode desestabilizar o tempo de execução se o valor do campo na representação nativa não for um ponteiro de função que envolva um delegado gerenciado. Nas versões .NET 5 `System.Delegate` e `System.MulticastDelegate` posteriores, não é suportado o empacotamento de um ou campo de uma representação nativa para um objeto gerenciado. Use um tipo de `System.Delegate` `System.MulticastDelegate`delegado específico em vez de ou .
+Como <xref:System.Delegate?displayProperty=fullName> e <xref:System.MulticastDelegate?displayProperty=fullName> não têm uma assinatura necessária, elas não garantem que o delegado passado corresponda à assinatura esperada pelo código nativo. Além disso, no .NET Framework e no .NET Core, o marshaling de `System.Delegate` um `System.MulticastDelegate` struct contendo uma ou de sua representação nativa para um objeto gerenciado pode desestabilizar o tempo de execução se o valor do campo na representação nativa não for um ponteiro de função que encapsula um delegado gerenciado. No .NET 5 e versões posteriores, não há `System.Delegate` suporte `System.MulticastDelegate` para o marshaling de um campo ou de uma representação nativa para um objeto gerenciado. Use um tipo delegado específico em vez `System.Delegate` de `System.MulticastDelegate`ou.
 
 ### <a name="fixed-buffers"></a>Buffers fixos
 

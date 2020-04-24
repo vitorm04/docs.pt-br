@@ -22,23 +22,23 @@ Importa namespaces de um assembly especificado.
 -imports:namespaceList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`namespaceList`|Necessária. Lista delimitada por vírgulas de namespaces a serem importados.|  
+|`namespaceList`|Obrigatórios. Lista delimitada por vírgulas de namespaces a serem importados.|  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-imports` importa qualquer namespace definido dentro do conjunto atual de arquivos de origem ou de qualquer assembly referenciado.  
+ A `-imports` opção importa qualquer namespace definido dentro do conjunto atual de arquivos de origem ou de qualquer assembly referenciado.  
   
  Os membros em um namespace especificado com `-imports` estão disponíveis para todos os arquivos de código-fonte na compilação. Use a [instrução Imports (namespace e tipo do .net)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar um namespace em um único arquivo de código-fonte.  
   
 |Para Set-Imports no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **referências** .<br />3. Insira o nome do namespace na caixa ao lado do botão **Adicionar importação de usuário** .<br />4. Clique no botão **Adicionar importação de usuário** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **referências** .<br />3. Insira o nome do namespace na caixa ao lado do botão **Adicionar importação de usuário** .<br />4. Clique no botão **Adicionar importação de usuário** .|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir é compilado quando `-imports:system.globalization` é especificado. Sem ele, a compilação bem-sucedida requer que uma instrução `Imports System.Globalization` seja incluída no início do arquivo de código-fonte ou que a propriedade seja totalmente qualificada como `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ O código a seguir é compilado quando `-imports:system.globalization` é especificado. Sem ele, a compilação bem-sucedida requer que uma `Imports System.Globalization` instrução seja incluída no início do arquivo de código-fonte ou que a propriedade seja totalmente qualificada como `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

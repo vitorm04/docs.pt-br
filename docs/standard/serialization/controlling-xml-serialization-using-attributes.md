@@ -27,7 +27,7 @@ ms.locfileid: "80248037"
 Os atributos podem ser usados para controlar a serialização XML de um objeto ou criar um fluxo XML alternativo do mesmo conjunto de classes. Para obter mais detalhes sobre como criar um fluxo XML alternativo, consulte [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Se o XML gerado estiver em conformidade com a seção 5 do documento W3C (World Wide Web Consortium, [protocolo de acesso ao objeto simples) 1.1,](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)use os atributos listados em [Atributos que controlam a serialização de SABÃO ENcodificada.](attributes-that-control-encoded-soap-serialization.md)
+> Se o XML gerado precisar estar de acordo com a seção 5 do documento World Wide Web Consortium (W3C) intitulado [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), use os atributos listados em [atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md).
 
 Por padrão, um nome de elemento XML é determinado pela classe ou nome do membro. Em uma classe simples chamada `Book`, um campo chamado `ISBN` produzirá uma marcação de elemento XML \<ISBN>, conforme mostrado no exemplo a seguir.
 
@@ -241,7 +241,7 @@ Uma instância serializada pode parecer com o seguinte.
 </Group>
 ```
 
-Outra maneira para diferenciar os dois fluxos XML é usar a Ferramenta de Definição de Esquema XML para gerar os arquivos de documento de esquema XSD de código compilado. (Para obter mais detalhes sobre o uso da ferramenta, consulte [a ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Quando nenhum atributo é aplicado ao campo, o esquema descreve o elemento da seguinte maneira.
+Outra maneira para diferenciar os dois fluxos XML é usar a Ferramenta de Definição de Esquema XML para gerar os arquivos de documento de esquema XSD de código compilado. (Para obter mais detalhes sobre como usar a ferramenta, consulte [a ferramenta de definição de esquema XML e a SERIALIZAÇÃO XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Quando nenhum atributo é aplicado ao campo, o esquema descreve o elemento da seguinte maneira.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -315,9 +315,9 @@ Por outro lado, se você quisesse serializar uma instância da classe, somente `
 
 Pode haver situações quando uma propriedade pública ou um campo não precisam ser serializados. Por exemplo, um campo ou propriedade podem ser usados para conter metadados. Nesses casos, aplicar o <xref:System.Xml.Serialization.XmlIgnoreAttribute> ao campo ou propriedade e o <xref:System.Xml.Serialization.XmlSerializer> o ignorarão.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
+- [Atributos que controlam a serialização de XML](attributes-that-control-xml-serialization.md)
 - [Atributos que controlam a serialização SOAP codificada](attributes-that-control-encoded-soap-serialization.md)
 - [Apresentando a serialização XML](introducing-xml-serialization.md)
 - [Exemplos de serialização XML](examples-of-xml-serialization.md)

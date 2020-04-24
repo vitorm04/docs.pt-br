@@ -23,7 +23,7 @@ A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em
 > [!NOTE]
 > Esse código não funciona em aplicativos Web, pois o ASP.NET não oferece suporte ao objeto `My.WebServices`.
 
-## <a name="call-a-web-service-asynchronously"></a>Chame um serviço web assíncronamente
+## <a name="call-a-web-service-asynchronously"></a>Chamar um serviço Web de forma assíncrona
 
 1. Consulte o serviço Web DemoTemperatureService em `http://www.xmethods.net`. O endereço é
 
@@ -66,7 +66,7 @@ A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em
 
     Para chamar o método Web `getTemp` de forma assíncrona, chame o método `CallGetTempAsync`. Quando o método Web for concluído, seu valor retornado será transmitido ao manipulador de eventos `getTempCompletedHandler`.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Como acessar serviços Web de aplicativo](accessing-application-web-services.md)
 - [Objeto My.WebServices](../../language-reference/objects/my-webservices-object.md)

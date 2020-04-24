@@ -28,7 +28,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 ## <a name="design-time-attributes"></a>Atributos em tempo de design  
  Ajuste o resultado do processo de conversão executado pelas APIs e pelas ferramentas de interoperabilidade COM usando atributos em tempo de design. A tabela a seguir descreve os atributos que podem ser aplicados ao código-fonte gerenciado. Às vezes, as ferramentas de interoperabilidade COM também podem aplicar os atributos descritos nesta tabela.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Especifica se o tipo deve ter o marshaling realizado usando o marshaler de Automação ou um proxy e stub personalizados.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Controla o tipo de interface gerado para uma classe.|  
@@ -47,7 +47,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 |<xref:System.Runtime.InteropServices.InterfaceTypeAttribute>|Controla como uma interface gerenciada é exposta aos clientes COM (Dupla, derivada de IUnknown ou somente IDispatch).<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.LCIDConversionAttribute>|Indica que uma assinatura de método não gerenciado espera um parâmetro LCID.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.MarshalAsAttribute>|Indica como os dados em campos ou parâmetros devem ter o marshaling realizado entre o código gerenciado e não gerenciado. O atributo sempre é opcional, porque cada tipo de dados tem um comportamento de marshaling padrão.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
-|<xref:System.Runtime.InteropServices.OptionalAttribute>|{1&gt;Indica que um parâmetro é opcional.&lt;1}<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
+|<xref:System.Runtime.InteropServices.OptionalAttribute>|Indica que um parâmetro é opcional.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.OutAttribute>|Indica se os dados em um campo ou parâmetro devem ter o marshaling realizado de um objeto chamado novamente para seu chamador.|  
 |<xref:System.Runtime.InteropServices.PreserveSigAttribute>|Suprime a transformação de assinatura HRESULT ou retval que normalmente ocorre durante chamadas de interoperação. O atributo afeta o marshaling, bem como a exportação da biblioteca de tipos.<br /><br /> Ferramentas de interoperabilidade COM podem aplicar esse atributo.|  
 |<xref:System.Runtime.InteropServices.ProgIdAttribute>|Especifica o ProgID de uma classe do .NET Framework. Pode ser usado para classes de atributos.|  
@@ -56,7 +56,7 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 ## <a name="conversion-tool-attributes"></a>Atributos da ferramenta de conversão  
  A tabela a seguir descreve os atributos que as ferramentas de interoperabilidade COM aplicam durante o processo de conversão. Esses atributos não são aplicados em tempo de design.  
   
-|Atributo|DESCRIÇÃO|  
+|Atributo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Indica o alias COM de um parâmetro ou tipo de campo. Pode ser usado para parâmetros de atributo, campos ou valores retornados.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Indica que as informações sobre uma classe ou interface foram perdidas quando foram importadas de uma biblioteca de tipos para um assembly.|  
@@ -66,10 +66,10 @@ O namespace <xref:System.Runtime.InteropServices> fornece três categorias de at
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Contém o **TYPEFLAGS** que foi originalmente importado para esse tipo da biblioteca de tipos COM.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Contém o **VARFLAGS** que foi originalmente importado para essa variável da biblioteca de tipos COM.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.InteropServices>
-- [Expondo componentes do .NET Framework ao COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Expondo componentes do .NET Framework para COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Atributos](../../../docs/standard/attributes/index.md)
-- [Qualificando tipos .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Qualificando tipos do .NET para interoperação](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
 - [Como empacotar um assembly .NET Framework para o COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

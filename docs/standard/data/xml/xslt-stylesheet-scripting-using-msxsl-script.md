@@ -29,7 +29,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  onde `msxsl` é um prefixo associado ao namespace `urn:schemas-microsoft-com:xslt`.  
   
- O atributo `language` não é obrigatório, mas, se especificado, seu valor deve ser um dos seguintes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`ou `CSharp`. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
+ O `language` atributo não é obrigatório, mas, se especificado, seu valor deve ser um dos seguintes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`ou `CSharp`. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
   
  O atributo `implements-prefix` é obrigatório. Esse atributo é usado para declarar um namespace e associá-lo ao bloco de script. O valor desse atributo é o prefixo que representa o namespace. Este namespace pode ser definido em qualquer lugar em uma folha de estilos.  
   
@@ -47,12 +47,12 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  As funções podem ser declaradas no elemento `msxsl:script`. A tabela a seguir mostra os namespaces que têm suporte por padrão. Você pode usar as classes fora dos namespaces listados. No entanto, essas classes devem ser totalmente qualificadas.  
   
-|Namespaces padrão|DESCRIÇÃO|  
+|Namespaces padrão|Descrição|  
 |------------------------|-----------------|  
 |Sistema|Classe do sistema.|  
 |System.Collection|Classes de coleção.|  
-|{1&gt;{2&gt;System.Text&lt;2}&lt;1}|Classes de texto.|  
-|{1&gt;{2&gt;System.Text.RegularExpressions&lt;2}&lt;1}|Classes de expressão regular.|  
+|System.Text|Classes de texto.|  
+|System.Text.RegularExpressions|Classes de expressão regular.|  
 |System.Xml|Classes XML principais.|  
 |System.Xml.Xsl|Classes XSLT.|  
 |System.Xml.XPath|Classes da linguagem XPath.|  
@@ -62,7 +62,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  Os argumentos fornecidos e os valores de retorno definidos pelas funções de script devem ser do tipo XPath do W3C (World Wide Web Consortium) ou XSLT. A tabela a seguir mostra os tipos correspondentes de W3C, as classes equivalentes do .NET Framework (tipo) e se o tipo do W3C é XPath ou XSLT.  
   
-|Type|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
+|Tipo|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
@@ -229,6 +229,6 @@ public class Sample
 </circles>
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
-- [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [A classe XslTransform implementa do processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

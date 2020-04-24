@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249533"
 ---
-# <a name="xmlserializer-element"></a>\<elemento> xmlSerializer
+# <a name="xmlserializer-element"></a>\<Elemento de> XmlSerializer
 Especifica se uma verificação adicional de progresso do <xref:System.Xml.Serialization.XmlSerializer> é feita.  
   
  \<configuration>  
@@ -33,7 +33,7 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |**checkDeserializeAdvances**|Especifica se o progresso do <xref:System.Xml.Serialization.XmlSerializer> é verificado. Defina o atributo como "true" ou "false". O padrão é "true".|  
-|**useLegacySerializationGeneration**|Especifica se o <xref:System.Xml.Serialization.XmlSerializer> usa a geração de serialização herdada que gera assemblies escrevendo código C# em um arquivo e, em seguida, compilando-o em um assembly. O padrão é **falso.**|  
+|**useLegacySerializationGeneration**|Especifica se o <xref:System.Xml.Serialization.XmlSerializer> usa a geração de serialização herdada que gera assemblies escrevendo código C# em um arquivo e, em seguida, compilando-o em um assembly. O padrão é **false**.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum.  
@@ -42,7 +42,7 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<system.xml.serialização> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)|Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
+|[\<Elemento de> System. xml. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)|Contém definições de configuração para as classes <xref:System.Xml.Serialization.XmlSerializer> e <xref:System.Xml.Serialization.XmlSchemaImporter>.|  
   
 ## <a name="remarks"></a>Comentários  
  Por padrão, o <xref:System.Xml.Serialization.XmlSerializer> fornece uma camada adicional de segurança contra potenciais ataques de negação de serviço ao desserializar dados não confiáveis. Ele faz isso tentando detectar loops infinitos durante a desserialização. Se uma condição desse tipo for detectada, uma exceção será gerada com a seguinte mensagem: “Erro interno: a desserialização não pôde avançar sobre o fluxo subjacente”.  
@@ -60,8 +60,8 @@ Especifica se uma verificação adicional de progresso do <xref:System.Xml.Seria
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<system.xml.serialização> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [Serialização XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [\<Elemento de> System. xml. Serialization](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [Serialização de XML e SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

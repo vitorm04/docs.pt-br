@@ -18,7 +18,7 @@ ms.locfileid: "78159865"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Como qualificar o elemento XML e os nomes de atributo XML
 
-Os namespaces XML contidos em instâncias da classe <xref:System.Xml.Serialization.XmlSerializerNamespaces> devem estar de acordo com a especificação do World Wide Web Consortium (W3C) chamada [namespaces em XML](https://www.w3.org/TR/REC-xml-names/).
+Os namespaces XML contidos por instâncias da <xref:System.Xml.Serialization.XmlSerializerNamespaces> classe devem estar em conformidade com a especificação do World Wide Web CONSORTIUM (W3C) chamada [namespaces em XML](https://www.w3.org/TR/REC-xml-names/).
 
 Os namespaces em XML fornecem um método para qualificar os nomes de elementos XML e atributos XML em documentos XML. Um nome qualificado é composto por um prefixo e por um nome local separados por dois-pontos. O prefixo funciona somente como espaço reservado; é mapeado para um URI que especifica um namespace. A combinação do namespace de URI gerenciado universalmente e o nome local produz um nome que é garantido para ser exclusivo universalmente.
 
@@ -162,13 +162,13 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [A ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Apresentando a serialização XML](introducing-xml-serialization.md)
 - [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
-- [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
+- [Atributos que controlam a serialização de XML](attributes-that-control-xml-serialization.md)
 - [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Como serializar um objeto](how-to-serialize-an-object.md)
 - [Como desserializar um objeto](how-to-deserialize-an-object.md)

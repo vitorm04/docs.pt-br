@@ -27,17 +27,17 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
 -link:fileList  
 ```
 
-ou  
+ou o  
 
 ```console
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`fileList`|Necessária. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.|  
+|`fileList`|Obrigatórios. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.|  
   
 ## <a name="remarks"></a>Comentários  
  A opção `-link` permite que você implante um aplicativo que inseriu informações de tipo. O aplicativo pode usar tipos em um assembly de runtime que implementa as informações de tipo inseridas sem a necessidade de uma referência ao assembly de runtime. Se forem publicadas várias versões do assembly de runtime, o aplicativo que contém as informações de tipo inseridas poderá trabalhar com as várias versões sem precisar ser recompilado. Para obter um exemplo, consulte [Instruções passo a passo: Inserindo tipos de assemblies gerenciado](../../../standard/assembly/embed-types-visual-studio.md).  
@@ -59,7 +59,7 @@ ou
   
  Use [-LIBPATH](libpath.md) para especificar o diretório no qual uma ou mais das suas referências de assembly estão localizadas.  
   
- Assim como a opção [-Reference](reference.md) Compiler, a opção de compilador `-link` usa o arquivo de resposta Vbc. rsp, que faz referência a assemblies de .NET Framework usados com frequência. Use a opção [-noconfig](noconfig.md) do compilador se você não quiser que o compilador use o arquivo Vbc. rsp.  
+ Assim como a opção [-Reference](reference.md) do compilador `-link` , a opção do compilador usa o arquivo de resposta Vbc. rsp, que faz referência a assemblies de .NET Framework usados com frequência. Use a opção [-noconfig](noconfig.md) do compilador se você não quiser que o compilador use o arquivo Vbc. rsp.  
   
  A forma abreviada de `-link` é `-l`.  
   
@@ -83,7 +83,7 @@ ou
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
- A linha de comando a seguir compila o arquivo de origem `OfficeApp.vb` e os assemblies de referência de `COMData1.dll` e `COMData2.dll` para produzir `OfficeApp.exe`.  
+ A linha de comando a seguir compila o arquivo `OfficeApp.vb` de origem e os `COMData1.dll` assemblies `COMData2.dll` de referência `OfficeApp.exe`de e para produzir.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
@@ -92,9 +92,9 @@ vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb
 ## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](index.md)
-- [Instruções passo a passo: inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)
+- [Instruções passo a passo: Inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)
 - [-referência (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
-- [-libpath](libpath.md)
+- [-LIBPATH](libpath.md)
 - [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)
 - [Introdução à Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)

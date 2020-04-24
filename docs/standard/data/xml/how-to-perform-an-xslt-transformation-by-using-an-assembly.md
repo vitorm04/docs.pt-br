@@ -1,5 +1,5 @@
 ---
-title: Como executar uma transformação XSLT usando um assembly
+title: 'Como: Executar uma transformação XSLT usando um assembly'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155969"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como executar uma transformação XSLT usando um assembly
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Como: Executar uma transformação XSLT usando um assembly
 O compilador XSLT (xsltc.exe) compila folhas de estilos XSLT e gera um assembly. O assembly pode ser passado diretamente no método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>Para copiar os arquivos XML e XSLT para seu computador local  
@@ -177,11 +177,11 @@ por
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-no exemplo anterior. Para obter mais informações sobre o método assembly. Load, consulte <xref:System.Reflection.Assembly.Load%2A>.  
+no exemplo anterior. Para obter mais informações sobre o método assembly. Load, <xref:System.Reflection.Assembly.Load%2A>consulte.  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [Compilador de XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [Build pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Compilando pela linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

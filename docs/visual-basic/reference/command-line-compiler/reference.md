@@ -25,17 +25,17 @@ Faz com que o compilador transforme informações de tipo nos assemblies especif
 -reference:fileList  
 ```
 
-ou
+ou o
 
 ```console
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`fileList`|Necessária. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.|  
+|`fileList`|Obrigatórios. Lista delimitada por vírgulas de nomes de arquivo do assembly. Se o nome do arquivo contém um espaço, coloque o nome entre aspas.|  
   
 ## <a name="remarks"></a>Comentários  
  Os arquivos que você importar devem conter metadados de assembly. Somente tipos públicos são visíveis fora do assembly. A opção [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa os metadados de um módulo.  
@@ -55,7 +55,7 @@ ou
  A forma abreviada de `-reference` é `-r`.  
   
 ## <a name="example"></a>Exemplo  
- O comando a seguir compila o arquivo de origem `Input.vb` e os assemblies de referência de `Metad1.dll` e `Metad2.dll` para produzir `Out.exe`.  
+ O comando a seguir compila `Input.vb` o arquivo de origem e os assemblies `Metad1.dll` de `Metad2.dll` referência de `Out.exe`e para produzir.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
@@ -66,5 +66,5 @@ vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Público](../../../visual-basic/language-reference/modifiers/public.md)
+- [Pública](../../../visual-basic/language-reference/modifiers/public.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -20,7 +20,7 @@ A interoperabilidade de exceção de código não gerenciado tem suporte apenas 
 
 ## <a name="setjmplongjmp-behaviors"></a>Comportamentos de setjmp/longjmp
 
-Não há suporte para a interoperabilidade com funções `setjmp` e `longjmp` C. Você não pode usar `longjmp` para ignorar os quadros gerenciados.
+Não há `setjmp` suporte `longjmp` para as funções Interop com e C. Não é possível `longjmp` usar o para ignorar os quadros gerenciados.
 
 Para obter mais informações, consulte a [documentação do longjmp](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp).
 

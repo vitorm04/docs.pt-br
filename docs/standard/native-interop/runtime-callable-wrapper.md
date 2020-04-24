@@ -41,7 +41,7 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
   
  O RCW consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|DESCRIÇÃO|  
+|Interface|Descrição|  
 |---------------|-----------------|  
 |**IDispatch**|Para associação tardia a objetos COM por meio de reflexão.|  
 |**IErrorInfo**|Fornece uma descrição textual do erro, sua origem, um arquivo de Ajuda, um contexto de Ajuda e o GUID da interface que definiu o erro (sempre **GUID_NULL** para classes do .NET).|  
@@ -50,13 +50,13 @@ A seguinte imagem mostra o processo para acessar objetos COM por meio do RCW (Ru
   
  O RCW, opcionalmente, consome as interfaces listadas na tabela a seguir, as quais são expostas pelo objeto que ele encapsula.  
   
-|Interface|DESCRIÇÃO|  
+|Interface|Descrição|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|O RCW converte objetos que expõem o estilo do evento de ponto de conexão para eventos com base em delegado.|  
 |**IDispatchEx** (somente .NET Framework) |Se a classe implementa **IDispatchEx**, o RCW implementa **IExpando**. A interface **IDispatchEx** é uma extensão da interface **IDispatch** que, ao contrário de **IDispatch**, permite a enumeração, adição, exclusão e chamada de membros que diferencia maiúsculas de minúsculas.|  
 |**IEnumVARIANT**|Permite que os tipos COM que dão suporte a enumerações sejam tratados como coleções.|  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Veja também
 
 - [Wrappers COM](com-wrappers.md)
 - [COM Callable Wrapper](com-callable-wrapper.md)

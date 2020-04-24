@@ -28,4 +28,4 @@ Quando o método <xref:System.Runtime.Serialization.Formatter.Serialize%2A> é c
 ## <a name="see-also"></a>Veja também
 
 - [Serialização binária](binary-serialization.md)
-- [Serialização XML e SOAP](xml-and-soap-serialization.md)
+- [Serialização de XML e SOAP](xml-and-soap-serialization.md)

@@ -22,13 +22,13 @@ Processa comentários de documentação para um arquivo XML.
 -doc[+ | -]  
 ```
 
-ou  
+ou o  
 
 ```console
 -doc:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
@@ -52,7 +52,7 @@ ou
   
 |Para configurar -doc no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. defina o valor na caixa **gerar arquivo de documentação XML** .|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto** , clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. defina o valor na caixa **gerar arquivo de documentação XML** .|  
   
 ## <a name="example"></a>Exemplo  
  Veja [Como documentar o código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obter um exemplo.  
@@ -60,4 +60,4 @@ ou
 ## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Documentando o Código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Documentando o código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
