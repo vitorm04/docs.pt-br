@@ -98,7 +98,7 @@
               href: icordebug-setunmanagedhandler-method.md
             - name: Método Terminate
               href: icordebug-terminate-method.md
-        - name: Interface ICorDebugAppDomain
+        - name: Método ICorDebugAppDomain
           href: icordebugappdomain-interface.md
           items:
             - name: Método Attach
@@ -357,7 +357,7 @@
               href: icordebugdatatarget2-enumeratethreadids-method.md
             - name: Método GetImageFromPointer
               href: icordebugdatatarget2-getimagefrompointer-method.md
-            - name: Método de GetImageLocation
+            - name: Método GetImageLocation
               href: icordebugdatatarget2-getimagelocation-method.md
             - name: Método GetSymbolProviderForImage
               href: icordebugdatatarget2-getsymbolproviderforimage-method.md
@@ -1608,6 +1608,11 @@
           href: cordebugexceptionobjectstackframe-structure.md
         - name: Estrutura CorDebugGuidToTypeMapping
           href: cordebugguidtotypemapping-structure.md
+        - name: Estrutura DacpGetModuleAddress
+          href: dacpgetmoduleaddress-structure.md
+          items:
+            - name: 'Método DacpGetModuleAddress::Request'
+              href: dacpgetmoduleaddress-request-method.md
         - name: Estrutura DacpMethodDescData
           href: dacpmethoddescdata-structure.md
         - name: Estrutura DacpModuleData
