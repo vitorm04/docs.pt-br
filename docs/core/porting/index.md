@@ -3,12 +3,12 @@ title: Porte do .NET Framework para o .NET Core
 description: Entenda o processo de compatibilidade e descubra ferramentas que podem ser úteis ao realizar a portabilidade de um projeto do .NET Framework para o .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 499632791e85f4ede87668775ad48407c6988095
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135575"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158275"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Visão geral da portabilidade do .NET Framework para o .NET Core
 
@@ -33,7 +33,7 @@ As ferramentas a seguir serão usadas em todo o processo:
 
 ## <a name="porting-a-solution"></a>Portando uma solução
 
-Quando há vários projetos em uma solução, a portabilidade pode parecer mais complicada, pois você deve tratar projetos em uma ordem específica. O processo de conversão deve ser uma abordagem de baixo para cima, em que os projetos sem dependências em outros projetos na solução são convertidos primeiro e continuam em toda a solução.
+Quando há vários projetos em uma solução, a portabilidade pode parecer mais complicada porque você deve tratar projetos em uma ordem específica. O processo de conversão deve ser uma abordagem de baixo para cima, em que os projetos sem dependências em outros projetos na solução são convertidos primeiro e continuam em toda a solução.
 
 Para identificar a ordem em que os projetos devem ser migrados, você pode usar as seguintes ferramentas:
 
@@ -46,7 +46,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
 1. Converta todas as `packages.config` suas dependências para o formato [PackageReference](/nuget/consume-packages/package-references-in-project-files) com a [ferramenta de conversão no Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
-   Esta etapa envolve a conversão de suas dependências `packages.config` do formato herdado. `packages.config`Não funciona no .NET Core, portanto, essa conversão será necessária se você tiver dependências de pacote. Ele também requer apenas as dependências que você está usando diretamente em um projeto que facilitará as etapas mais tarde, reduzindo a quantidade de dependências que você deve gerenciar.
+   Esta etapa envolve a conversão de suas dependências `packages.config` do formato herdado. `packages.config`Não funciona no .NET Core, portanto, essa conversão será necessária se você tiver dependências de pacote. Ele também requer apenas as dependências que você está usando diretamente em um projeto, o que facilita mais as etapas, reduzindo o número de dependências que você deve gerenciar.
 
 1. Converta o arquivo de projeto para a nova estrutura de arquivos em estilo SDK. Você pode criar novos projetos para o .NET Core e copiar sobre os arquivos de origem, ou tentar converter o arquivo de projeto existente com uma ferramenta.
 
@@ -66,7 +66,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
    Ao ler os relatórios gerados pelo analisador, as informações importantes são as APIs reais que estão sendo usadas e não necessariamente a porcentagem de suporte para a plataforma de destino. Muitas APIs têm opções equivalentes no .NET Standard/Core e, portanto, entender os cenários de que sua biblioteca ou aplicativo precisa para a API ajudará a determinar a implicação da portabilidade.
 
-   Há alguns casos em que as APIs não são equivalentes e você precisará fazer algumas diretivas de pré-processador do compilador (ou `#if NET45`seja,) para casos especiais das plataformas. Neste ponto, o projeto ainda será direcionado .NET Framework. Para cada um desses casos de destino, é recomendável usar condicionais bem conhecidos que podem ser compreendidos como um cenário.  Por exemplo, o suporte a AppDomain no .NET Core é limitado, mas para o cenário de carregamento e descarregamento de assemblies, há uma nova API que não está disponível no .NET Core. Uma maneira comum de lidar com isso no código seria algo assim:
+   Há alguns casos em que as APIs não são equivalentes e você precisará fazer algumas diretivas de pré-processador do compilador (ou seja `#if NET45`,) para o caso especial das plataformas. Neste ponto, seu projeto ainda será direcionado .NET Framework. Para cada um desses casos de destino, é recomendável usar condicionais bem conhecidos que podem ser compreendidos como um cenário.  Por exemplo, o suporte a AppDomain no .NET Core é limitado, mas para o cenário de carregamento e descarregamento de assemblies, há uma nova API que não está disponível no .NET Core. Uma maneira comum de lidar com isso no código seria algo assim:
 
    ```csharp
    #if FEATURE_APPDOMAIN_LOADING
@@ -84,7 +84,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
 1. Neste ponto, você pode mudar para direcionar o .NET Core (geralmente para aplicativos) ou .NET Standard (para bibliotecas).
 
-   A escolha entre o .NET Core e o .NET Standard é amplamente dependente de onde o projeto será executado. Se for uma biblioteca que será consumida por outros aplicativos ou distribuída via NuGet, a preferência geralmente será direcionada .NET Standard. No entanto, pode haver APIs que só estão disponíveis no .NET Core para fins de desempenho ou outros motivos; Se esse for o caso, o .NET Core deve ser direcionado com uma compilação potencialmente .NET Standard disponível, bem como desempenho reduzido ou funcionalidade. Ao direcionar .NET Standard, o projeto estará pronto para ser executado em novas plataformas (como Webassembly). Se o projeto tiver dependências em estruturas de aplicativo específicas (como ASP.NET Core), o destino será limitado pelo que as dependências dão suporte.
+   A escolha entre o .NET Core e o .NET Standard é amplamente dependente de onde o projeto será executado. Se for uma biblioteca que será consumida por outros aplicativos ou distribuída via NuGet, a preferência geralmente será direcionada .NET Standard. No entanto, pode haver APIs que só estão disponíveis no .NET Core para fins de desempenho ou outros motivos; Se esse for o caso, o .NET Core deve ser direcionado com uma compilação potencialmente .NET Standard disponível, bem como desempenho ou funcionalidade reduzidos. Ao direcionar .NET Standard, o projeto estará pronto para ser executado em novas plataformas (como Webassembly). Se o projeto tiver dependências em estruturas de aplicativo específicas (como ASP.NET Core), o destino será limitado pelo que as dependências dão suporte.
 
    Se não houver diretivas de pré-processador para o código de compilação condicional para .NET Framework ou .NET Standard, isso será tão simples quanto encontrar o seguinte no arquivo de projeto:
 
@@ -98,7 +98,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
    <TargetFramework>netcoreapp3.1</TargetFramework>
    ```
 
-   No entanto, se essa for uma biblioteca que você deseja continuar oferecendo suporte a .NET Framework compilações específicas por algum motivo, você pode fazer [vários destinos](../../standard/library-guidance/cross-platform-targeting.md) substituindo-o pelo seguinte:
+   No entanto, se esta for uma biblioteca para a qual você deseja continuar a dar suporte a compilações específicas de .NET Framework, você pode fazer [vários destinos](../../standard/library-guidance/cross-platform-targeting.md) substituindo-o pelo seguinte:
 
    ```xml
    <TargetFrameworks>net472;netstandard2.0</TargetFrameworks>
@@ -108,7 +108,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
 ## <a name="next-steps"></a>Próximas etapas
 
->[!div class="nextstepaction"]
->[Analisar dependências](third-party-deps.md)
->[pacote NuGet Package](../deploying/creating-nuget-packages.md)
->[ASP.net para ASP.NET Core migração](/aspnet/core/migration/proper-to-2x)
+> [!div class="nextstepaction"]
+> [Analisar dependências](third-party-deps.md)
+> [pacote NuGet Package](../deploying/creating-nuget-packages.md)
+> [ASP.net para ASP.NET Core migração](/aspnet/core/migration/proper-to-2x)

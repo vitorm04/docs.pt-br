@@ -1,16 +1,16 @@
 ---
 title: Buffers de tamanho fixo – Guia de Programação em C#
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157020"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140550"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -24,7 +24,7 @@ private fixed char name[30];
 
 No código de seguro, um struct C# que contém uma matriz não contém os elementos da matriz. Em vez disso, o struct contém uma referência aos elementos. Você pode inserir uma matriz de tamanho fixo em um [struct](../../language-reference/builtin-types/struct.md) quando ele é usado em um bloco de código [não seguro](../../language-reference/keywords/unsafe.md).
 
-O tamanho `struct` do seguinte não depende do número de `pathName` elementos na matriz, uma vez que é uma referência:
+O tamanho dos itens `struct` a seguir não depende do número de elementos na matriz, pois `pathName` é uma referência:
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
@@ -38,19 +38,43 @@ O exemplo anterior demonstra o acesso a campos `fixed` sem fixação, que estão
 
 Outra matriz de tamanho fixo comum é a matriz [bool](../../language-reference/builtin-types/bool.md). Os elementos em uma matriz `bool` sempre têm um byte de tamanho. Matrizes `bool` não são adequadas para criar buffers ou matrizes de bits.
 
-> [!NOTE]
-> Exceto pela memória criada usando [stackalloc](../../language-reference/operators/stackalloc.md), o compilador C# e o CLR (Common Language Runtime) não executam nenhuma verificação de estouro de buffer de segurança. Assim como acontece com qualquer código não seguro, tenha cuidado.
+Buffers de tamanho fixo são compilados <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>com o, que instrui o Common Language Runtime (CLR) de que um tipo contém uma matriz não gerenciada que potencialmente pode exceder. Isso é semelhante à memória criada usando [stackalloc](../../language-reference/operators/stackalloc.md), que habilita automaticamente os recursos de detecção de saturação de buffer no CLR. O exemplo anterior mostra como um buffer de tamanho fixo pode existir em `unsafe struct`um.
 
-Buffers não seguros diferem de matrizes regulares das seguintes maneiras:
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- Você só pode usar buffers não seguros em um contexto não seguro.
-- Buffers não seguros sempre são vetores ou matrizes unidimensionais.
-- A declaração de matriz deve incluir uma contagem, como `char id[8]`. Não é possível usar `char id[]`.
-- Buffers não seguros só podem ser structs ou campos de instância em um contexto não seguro.
+O compilador gerou C# para `Buffer`, é atribuído da seguinte maneira:
 
-## <a name="see-also"></a>Confira também
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
 
-- [C# Guia de Programação](../index.md)
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+Buffers de tamanho fixo diferem de matrizes regulares das seguintes maneiras:
+
+- Só pode ser usado em um contexto sem [segurança](../../language-reference/keywords/unsafe.md) .
+- Só podem ser campos de instância de structs.
+- Eles são sempre vetores ou matrizes unidimensionais.
+- A declaração deve incluir o comprimento, como `fixed char id[8]`. Não é possível usar `fixed char id[]`.
+
+## <a name="see-also"></a>Veja também
+
+- [Guia de programação C#](../index.md)
 - [Código não seguro e ponteiros](index.md)
-- [Declaração fixa](../../language-reference/keywords/fixed-statement.md)
+- [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
 - [Interoperabilidade](../interop/index.md)

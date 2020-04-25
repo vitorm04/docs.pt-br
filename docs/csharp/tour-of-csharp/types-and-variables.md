@@ -1,20 +1,20 @@
 ---
 title: Tipos e variáveis do C# - um tour pela linguagem C#
 description: Saiba mais sobre como definir tipos e declarar variáveis em C#
-ms.date: 02/25/2020
+ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: dc80a7ea80790ef5af5218f5a608e5829d2970cc
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135952"
+ms.locfileid: "82141004"
 ---
 # <a name="types-and-variables"></a>Tipos e variáveis
 
 Há dois tipos em C#: *tipos de referência* e *tipos de valor*. As variáveis de tipos de valor contêm diretamente seus dados enquanto variáveis de tipos de referência armazenam referências a seus dados, o último sendo conhecido como objetos. Com os tipos de referência, é possível que duas variáveis referenciem o mesmo objeto e, assim, possíveis para operações em uma variável afetem o objeto referenciado pela outra variável. Com os tipos de valor, as variáveis têm sua própria cópia dos dados, e não é possível que as operações em um afetem a outra (exceto `ref` para `out` variáveis de parâmetro e).
 
-Os tipos de valor do C# são divididos em *tipos simples*, *tipos de enum*, *tipos struct* e *tipos de valor anulável*. Os tipos de referência do C# são divididos em *tipos de classe*, *tipos de interface*, *tipos de matriz* e *tipos delegados*.
+Os tipos de valor do C# são divididos em *tipos simples*, *tipos de enumeração*, *tipos de struct*e *tipos de valor anulável*. Os tipos de referência do C# são divididos em *tipos de classe*, *tipos de interface*, *tipos de matriz*e *tipos delegados*.
 
 A seguinte estrutura de tópicos fornece uma visão geral do sistema de tipos do C#.
 
@@ -30,8 +30,10 @@ A seguinte estrutura de tópicos fornece uma visão geral do sistema de tipos do
     - Tipos definidos pelo usuário do formulário `enum E {...}`
   - [Tipos struct][StructTypes]
     - Tipos definidos pelo usuário do formulário `struct S {...}`
-  - [Tipos de valor anuláveis][NullableTypes]
+  - [Tipos de valor anulável][NullableTypes]
     - Extensões de todos os outros tipos de valor com um valor `null`
+  - [Tipos de valor de tupla][TupleTypes]
+    - Tipos definidos pelo usuário do formulário `(T1, T2, ...)`
 - [Tipos de referência][ReferenceTypes]
   - [Tipos de aula][ClassTypes]
     - Classe base definitiva de todos os outros tipos: `object`
@@ -49,6 +51,7 @@ A seguinte estrutura de tópicos fornece uma visão geral do sistema de tipos do
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
+[TupleTypes]: ../tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
@@ -57,17 +60,17 @@ A seguinte estrutura de tópicos fornece uma visão geral do sistema de tipos do
 
 Para obter mais informações sobre tipos numéricos, veja a tabela [Tipos integrais](../language-reference/builtin-types/integral-numeric-types.md) e [Tipos de ponto flutuante](../language-reference/builtin-types/floating-point-numeric-types.md).
 
-O tipo `bool` do C# é usado para representar valores boolianos — valores que são `true` ou `false`.
+O `bool` `true` tipo do C# é usado para representar valores Boolianos — valores que são `false`ou.
 
 O processamento de cadeia de caracteres e caracteres em C# usa codificação Unicode. O tipo `char` representa uma unidade de código UTF-16 e o tipo `string` representa uma sequência de unidades de código UTF-16.
 
-Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias do C# de tipos são tipos definidos pelo usuário: tipos de classe, tipos struct, tipos de interface, tipos enum e tipos delegados.
+Os programas em C# usam *declarações de tipos* para criar novos tipos. Uma declaração de tipo especifica o nome e os membros do novo tipo. Cinco das categorias de tipos do C# são definíveis pelo usuário: tipos de classe, tipos de struct, tipos de interface, tipos de enumeração e tipos delegados.
 
 Um tipo `class` define uma estrutura de dados que contém membros de dados (campos) e membros de função (métodos, propriedades e outros). Os tipos de classe dão suporte à herança única e ao polimorfismo, mecanismos nos quais as classes derivadas podem estender e especializar as classes base.
 
 Um tipo `struct` é semelhante a um tipo de classe que representa uma estrutura com membros de dados e membros da função. No entanto, ao contrário das classes, as structs são tipos de valor e normalmente não exigem alocação de heap. Tipos de struct não dão suporte à herança especificada pelo usuário e todos os tipos de struct herdam implicitamente do tipo `object`.
 
-Um tipo `interface` define um contrato como um conjunto nomeado de membros da função pública. Um `class` ou `struct` que implementa um `interface` deve fornecer implementações de membros da função da interface. Um `interface` pode herdar de várias interfaces base e um `class` ou `struct` pode implementar várias interfaces.
+Um tipo `interface` define um contrato como um conjunto nomeado de membros da função pública. Um `class` ou `struct` que implementa um `interface` deve fornecer implementações dos membros da função da interface. Um `interface` pode herdar de várias interfaces base e um `class` ou `struct` pode implementar várias interfaces.
 
 Um tipo `delegate` representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são análogos aos tipos de função fornecidos pelas linguagens funcionais. Eles também são semelhantes ao conceito de ponteiros de função encontrados em algumas outras linguagens. Diferentemente de ponteiros de função, os delegados são orientados a objeto e são de tipo seguro.
 
@@ -79,7 +82,7 @@ O C# dá suporte a matrizes uni e multidimensionais de qualquer tipo. Ao contrá
 
 Os tipos de valor anulável também não precisam ser declarados antes que possam ser usados. Para cada tipo `T`de valor não anulável, há um tipo `T?`de valor anulável correspondente, que pode conter um valor adicional, `null`. Por exemplo, `int?` é um tipo que pode conter qualquer número inteiro de 32 bits ou o valor `null`.
 
-O sistema de tipos do C# é unificado, de modo que um valor de qualquer tipo pode ser tratado como um `object`. Cada tipo no C#, direta ou indiretamente, deriva do tipo de classe `object`, e `object` é a classe base definitiva de todos os tipos. Os valores de tipos de referência são tratados como objetos simplesmente exibindo os valores como tipo `object`. Os valores de tipos de valor são tratados como objetos, executando *conversão boxing* e *operações de conversão unboxing*. No exemplo a seguir, um valor `int` é convertido em `object` e volta novamente ao `int`.
+O sistema de tipos do C# é unificado, de modo que um valor de qualquer `object`tipo pode ser tratado como um. Cada tipo no C#, direta ou indiretamente, deriva do tipo de classe `object`, e `object` é a classe base definitiva de todos os tipos. Os valores de tipos de referência são tratados como objetos simplesmente exibindo os valores como tipo `object`. Os valores de tipos de valor são tratados como objetos, executando *conversão boxing* e *operações de conversão unboxing*. No exemplo a seguir, um valor `int` é convertido em `object` e volta novamente ao `int`.
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 

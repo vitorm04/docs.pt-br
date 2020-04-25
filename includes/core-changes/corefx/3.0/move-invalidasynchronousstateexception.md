@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: ace0a4a60ad4d3f3a13cf4bdb2431e61d04ad8e7
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021619"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158458"
 ---
-### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException mudou-se para outro conjunto
+### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException movido para outro assembly
 
 A <xref:System.ComponentModel.InvalidAsynchronousStateException> classe foi movida.
 
 #### <a name="change-description"></a>Descrição da alteração
 
-Nas versões .NET Core 2.2 e anteriores, a <xref:System.ComponentModel.InvalidAsynchronousStateException> classe é encontrada no conjunto *System.ComponentModel.TypeConverter.*
+No .NET Core 2,2 e versões anteriores, a <xref:System.ComponentModel.InvalidAsynchronousStateException> classe é encontrada no assembly *System. ComponentModel. TypeConverter* .
 
-A partir do .NET Core 3.0, ele é encontrado no conjunto *System.ComponentModel.Primitives.*
+A partir do .NET Core 3,0, ele é encontrado no assembly *System. ComponentModel. primitivas* .
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -22,11 +22,11 @@ A partir do .NET Core 3.0, ele é encontrado no conjunto *System.ComponentModel.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Essa alteração afeta apenas aplicativos que usam <xref:System.ComponentModel.InvalidAsynchronousStateException> reflexão para <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> carregar o <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> chamado de um método como ou uma sobrecarga que pressupõe que o tipo esteja em um conjunto específico. Se esse for o caso, a montagem da montagem referenciada na chamada do método deve ser atualizada para refletir o novo local de montagem do tipo.
+Essa alteração afeta apenas os aplicativos que usam a reflexão para <xref:System.ComponentModel.InvalidAsynchronousStateException> carregar o chamando um método como <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> ou uma sobrecarga de <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> que assume que o tipo está em um assembly específico. Se esse for o caso, atualize o assembly referenciado na chamada de método para refletir o novo local do assembly do tipo.
 
 #### <a name="category"></a>Categoria
 
-Bibliotecas Core .NET
+Bibliotecas principais do .NET
 
 #### <a name="affected-apis"></a>APIs afetadas
 

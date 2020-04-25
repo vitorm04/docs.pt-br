@@ -2,15 +2,15 @@
 title: Mensagens sem quebra de texto
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 81592910d8530cea2df5ec1fd8a8b1145350ef78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f10dd8b6b7f822e5e0055de00667d78202f97342
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143727"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141085"
 ---
 # <a name="unwrapped-messages"></a>Mensagens sem quebra de texto
-Esta amostra demonstra mensagens desembrulhadas. Por padrão, o corpo da mensagem é formatado de modo que os parâmetros de uma operação de serviço sejam embrulhados. A amostra a `Add` seguir mostra `ICalculator` uma mensagem de solicitação para o serviço no modo embrulhado.  
+Este exemplo demonstra mensagens não encapsuladas. Por padrão, o corpo da mensagem é formatado de modo que os parâmetros para uma operação de serviço sejam encapsulados. O exemplo a seguir mostra `Add` uma mensagem de solicitação `ICalculator` para o serviço no modo encapsulado.  
   
 ```xml  
 <s:Envelope
@@ -28,7 +28,7 @@ Esta amostra demonstra mensagens desembrulhadas. Por padrão, o corpo da mensage
 </s:Envelope>  
 ```  
   
- O `<Add>` elemento no corpo da `n1` `n2` mensagem envolve os parâmetros. Em contraste, a amostra a seguir mostra a mensagem equivalente no modo desembrulhado.  
+ O `<Add>` elemento no corpo da mensagem encapsula os `n1` parâmetros e `n2` . Por outro lado, o exemplo a seguir mostra a mensagem equivalente no modo não encapsulado.  
   
 ```xml  
 <s:Envelope
@@ -42,15 +42,14 @@ Esta amostra demonstra mensagens desembrulhadas. Por padrão, o corpo da mensage
       <n2 xmlns="http://Microsoft.ServiceModel.Samples">15.99</n2>  
     </s:Body>  
   </s:Envelope>  
-</MessageLogTraceRecord>  
 ```  
   
- A mensagem desembrulhada não envolve os `n1` parâmetros e `n2` parâmetros em um elemento contendo, eles são filhos diretos do elemento corpo sabão.  
+ A mensagem desencapsulada não encapsula os `n1` parâmetros `n2` e em um elemento contentor, eles são filhos diretos do elemento body do SOAP.  
   
 > [!NOTE]
-> O procedimento de configuração e as instruções de construção desta amostra estão localizados no final deste tópico.  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Nesta amostra, uma mensagem desembrulhada <xref:System.ServiceModel.MessageContractAttribute> é criada aplicando-se o tipo de parâmetro de operação de serviço e o tipo de valor de retorno, conforme mostrado no código de amostra a seguir.  
+ Neste exemplo, uma mensagem desencapsulada é criada aplicando o <xref:System.ServiceModel.MessageContractAttribute> ao tipo de parâmetro de operação de serviço e o tipo de valor de retorno, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,25 +88,25 @@ public class ResponseMessage
 }  
 ```  
   
- Para permitir que você veja as mensagens que estão sendo enviadas e recebidas, esta amostra usa rastreamento. Além disso, <xref:System.ServiceModel.WSHttpBinding> o foi configurado sem segurança, para reduzir o número de mensagens que registra.  
+ Para permitir que você veja as mensagens que estão sendo enviadas e recebidas, este exemplo usa o rastreamento. Além disso, o <xref:System.ServiceModel.WSHttpBinding> foi configurado sem segurança, para reduzir o número de mensagens que ele registra.  
   
- O registro de rastreamento resultante (c:\logs\Message.log) pode ser visualizado usando a [Ferramenta de Visualização de Rastreamento de Serviço (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Para exibir o conteúdo da mensagem, selecione **Mensagens** nos painéis esquerdo e direito da ferramenta Visualizador de rastreamento de serviço. Os registros de rastreamento nesta amostra são configurados para serem gerados na pasta C:\LOGS. Crie esta pasta antes de executar a amostra e dê ao usuário permissões de gravação do Serviço de Rede para este diretório.  
+ O log de rastreamento resultante (c:\logs\Message.log) pode ser exibido usando a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Para exibir o conteúdo da mensagem, selecione **mensagens** nos painéis esquerdo e direito da ferramenta Visualizador de rastreamento de serviço. Os logs de rastreamento neste exemplo são configurados para serem gerados na pasta C:\LOGS. Crie essa pasta antes de executar o exemplo e conceda ao serviço de rede do usuário permissões de gravação para esse diretório.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
-1. Certifique-se de que você tenha realizado o [procedimento de configuração única para as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Crie um diretório C:\LOGS para registrar mensagens. Dê ao usuário permissões de gravação do Serviço de Rede para este diretório.  
+2. Crie um diretório do C:\LOGS para mensagens de log. Conceda permissões de gravação ao serviço de rede do usuário para esse diretório.  
   
-3. Para construir a edição C# ou Visual Basic .NET da solução, siga as instruções em [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para criar a edição C# ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para executar a amostra em uma configuração de máquina única ou cruzada, siga as instruções em [Executar as amostras da Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Se esse diretório não existir, vá para [a Windows Communication Foundation (WCF) e para o Windows Workflow Foundation (WF) Amostras para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Amostras e amostras da [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (Windows Communication Foundation). Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

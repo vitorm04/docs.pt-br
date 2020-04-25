@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135770"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158587"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Diretrizes de uso de Memory\<T> e Span\<T>
 
@@ -86,7 +86,7 @@ Neste código:
 
 - Os métodos `WriteInt32ToBuffer` e `DisplayBufferToConsole` aceitam <xref:System.Memory%601> como uma API pública. Portanto, eles são consumidores do buffer, e o consomem somente um de cada vez.
 
-Embora o método `WriteInt32ToBuffer` seja destinado a gravar um valor no buffer, isso não se aplica ao método `DisplayBufferToConsole`. Para refletir isso, ele poderia aceitar um argumento de tipo <xref:System.ReadOnlyMemory%601>. Para obter informações adicionais <xref:System.ReadOnlyMemory%601>sobre o, consulte [#2 de regras\<: Use ReadOnlySpan t\<> ou ReadOnlyMemory t> se o buffer deve ser somente leitura](#rule-2).
+Embora o método `WriteInt32ToBuffer` seja destinado a gravar um valor no buffer, isso não se aplica ao método `DisplayBufferToConsole`. Para refletir isso, ele poderia aceitar um argumento de tipo <xref:System.ReadOnlyMemory%601>. Para obter mais informações <xref:System.ReadOnlyMemory%601>sobre o, consulte [#2 de regras\<: Use ReadOnlySpan t\<> ou ReadOnlyMemory t> se o buffer deve ser somente leitura](#rule-2).
 
 ### <a name="ownerless-memoryt-instances"></a>Instâncias de Memory\<T> "sem proprietário"
 
@@ -110,7 +110,7 @@ Como um bloco de memória pertence, mas se destina a ser passado para vários co
 
 - Embora a natureza alocada na pilha do <xref:System.Span%601> otimize o desempenho e torne <xref:System.Span%601> o tipo preferencial para a operação em um bloco de memória, ele também submete <xref:System.Span%601> para algumas restrições importantes. É importante saber quando usar <xref:System.Span%601> e quando usar <xref:System.Memory%601>.
 
-A seguir estão nossas recomendações para usar com êxito o <xref:System.Memory%601> e os tipos relacionados. A orientação que se aplica a <xref:System.Memory%601> e a <xref:System.Span%601> também se aplica a <xref:System.ReadOnlyMemory%601> e a <xref:System.ReadOnlySpan%601>, a menos que seja explicitamente definido de outra forma.
+A seguir estão nossas recomendações para usar com êxito o <xref:System.Memory%601> e os tipos relacionados. Diretrizes que <xref:System.Memory%601> se aplicam <xref:System.Span%601> a e também <xref:System.ReadOnlyMemory%601> se <xref:System.ReadOnlySpan%601> aplicam a e, a menos que Notemos explicitamente o contrário.
 
 **Regra #1: para uma API síncrona, use o\<Span T> em vez\<da memória t> como um parâmetro, se possível.**
 

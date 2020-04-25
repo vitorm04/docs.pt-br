@@ -2,16 +2,16 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: cc8f374468ba95baccf058ac0b0a0175672cdf01
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102782"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158301"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -32,22 +32,32 @@ dotnet restore -h|--help
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto. Por padrão, a restauração das dependências e as ferramentas são executadas em paralelo.
+O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferramentas específicas de projeto especificadas no arquivo de projeto.  Na maioria dos casos, você não precisa usar o `dotnet restore` comando explicitamente, uma vez que uma restauração do NuGet é executada implicitamente, se necessário, quando você executa os seguintes comandos:
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet build-server`](dotnet-build-server.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+Às vezes, pode ser inconveniente executar a restauração implícita do NuGet com estes comandos. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar a restauração implícita do NuGet, você pode usar `--no-restore` o sinalizador com qualquer um desses comandos para desabilitar a restauração implícita.
 
 ### <a name="specify-feeds"></a>Especificar feeds
 
-Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o .NET Core SDK é instalado. Para especificar feeds adicionais, faça um dos seguintes:
+Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando o SDK do .NET Core é instalado. Para especificar Feeds adicionais, siga um destes procedimentos:
 
-- Crie seu próprio arquivo *nuget.config* no diretório do projeto. Para obter mais informações, consulte [configurações comuns do NuGet](/nuget/consume-packages/configuring-nuget-behavior) e [diferenças de nuget.config](#nugetconfig-differences) mais tarde neste artigo.
-- Use `dotnet nuget` comandos [`dotnet nuget add source`](dotnet-nuget-add-source.md)como .
+- Crie seu próprio arquivo *NuGet. config* no diretório do projeto. Para obter mais informações, consulte [as configurações comuns do NuGet e as](/nuget/consume-packages/configuring-nuget-behavior) diferenças de [NuGet. config](#nugetconfig-differences) mais adiante neste artigo.
+- Use `dotnet nuget` comandos como [`dotnet nuget add source`](dotnet-nuget-add-source.md).
 
-Você pode substituir os feeds *nuget.config* com a `-s` opção.
+Você pode substituir os feeds *NuGet. config* pela `-s` opção.
 
-Para obter informações sobre como usar feeds autenticados, consulte [Consumir pacotes de feeds autenticados](/nuget/consume-packages/consuming-packages-authenticated-feeds).
+Para obter informações sobre como usar feeds autenticados, consulte [consumindo pacotes de feeds autenticados](/nuget/consume-packages/consuming-packages-authenticated-feeds).
 
-### <a name="package-cache"></a>Cache do pacote
+### <a name="global-packages-folder"></a>Pasta de pacotes globais
 
-Para dependências, especifique onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
+Para dependências, você pode especificar onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
 
 ### <a name="project-specific-tooling"></a>Ferramentas específicas do projeto
 
@@ -63,29 +73,13 @@ Há três configurações específicas que são ignoradas por `dotnet restore`:
 
   Os redirecionamentos de associação não funcionam com elementos `<PackageReference>` e o .NET Core só dá suporte a elementos `<PackageReference>` em pacotes NuGet.
 
-- [Solução](/nuget/schema/nuget-config-file#solution-section)
+- [soluções](/nuget/schema/nuget-config-file#solution-section)
 
   Essa configuração é específica do Visual Studio e não se aplica ao .NET Core. O .NET Core não usa um arquivo `packages.config` e, em vez disso, usa elementos `<PackageReference>` para pacotes NuGet.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   Essa configuração não é aplicável, pois o [NuGet ainda não dá suporte à verificação de multiplataforma](https://github.com/NuGet/Home/issues/7939) de pacotes confiáveis.
-
-## <a name="implicit-restore"></a>Restauração implícita
-
-O `dotnet restore` comando é executado implicitamente se necessário quando você executa os seguintes comandos:
-
-- [`dotnet new`](dotnet-new.md)
-- [`dotnet build`](dotnet-build.md)
-- [`dotnet build-server`](dotnet-build-server.md)
-- [`dotnet run`](dotnet-run.md)
-- [`dotnet test`](dotnet-test.md)
-- [`dotnet publish`](dotnet-publish.md)
-- [`dotnet pack`](dotnet-pack.md)
-
-Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o comando.
-
-Às vezes, pode ser inconveniente executar `dotnet restore` implicitamente. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar que o `dotnet restore` seja executado implicitamente, use o sinalizador `--no-restore` com um desses comandos para desabilitar a restauração implícita.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -109,7 +103,7 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
 - **`--force-evaluate`**
 
-  As forças restauram para reavaliar todas as dependências, mesmo que um arquivo de bloqueio já exista.
+  Força a restauração a reavaliar todas as dependências mesmo se um arquivo de bloqueio já existir.
 
 - **`-h|--help`**
 
@@ -125,15 +119,15 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Local de saída onde o arquivo de bloqueio do projeto é gravado. Por padrão, isso é *PROJECT_ROOT\packages.lock.json*.
+  Local de saída onde o arquivo de bloqueio do projeto é gravado. Por padrão, isso é *PROJECT_ROOT \Packages.Lock.JSON*.
 
 - **`--locked-mode`**
 
-  Não permita atualizar o arquivo de bloqueio do projeto.
+  Não permitir atualização do arquivo de bloqueio do projeto.
 
 - **`--no-cache`**
 
-  Especifica para não armazenar solicitações HTTP.
+  Especifica para não armazenar em cache solicitações HTTP.
 
 - **`--no-dependencies`**
 
@@ -153,7 +147,7 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
 
 - **`--use-lockfile`**
 
-  Permite que o arquivo de bloqueio do projeto seja gerado e usado com restauração.
+  Habilita o arquivo de bloqueio do projeto a ser gerado e usado com a restauração.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -167,25 +161,25 @@ Na maioria dos casos, você não precisa `dotnet restore` usar explicitamente o 
   dotnet restore
   ```
 
-- Restaurar dependências e `app1` ferramentas para o projeto encontrado no caminho dado:
+- Restaure as dependências e as `app1` ferramentas do projeto encontradas no caminho fornecido:
 
   ```dotnetcli
   dotnet restore ~/projects/app1/app1.csproj
   ```
 
-- Restaurar as dependências e ferramentas para o projeto no diretório atual usando o caminho do arquivo fornecido como fonte:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a origem:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages
   ```
 
-- Restaurar as dependências e ferramentas para o projeto no diretório atual usando os dois caminhos de arquivo fornecidos como fontes:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual usando os dois caminhos de arquivo fornecidos como fontes:
 
   ```dotnetcli
   dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages
   ```
 
-- Restaurar dependências e ferramentas para o projeto no diretório atual mostrando saída detalhada:
+- Restaure as dependências e as ferramentas para o projeto no diretório atual mostrando a saída detalhada:
 
   ```dotnetcli
   dotnet restore --verbosity detailed

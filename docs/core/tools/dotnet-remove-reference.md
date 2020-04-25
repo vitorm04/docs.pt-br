@@ -2,25 +2,26 @@
 title: Comando dotnet remove reference
 description: O comando dotnet remove reference fornece uma opção conveniente para remover referências projeto a projeto.
 ms.date: 02/14/2020
-ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a45153376d7d6eb764c1d2c6b473d04a273a2de1
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463439"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158327"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 ## <a name="name"></a>Nome
 
-`dotnet remove reference` – Remove as referências projeto a projeto.
+`dotnet remove reference`-Remove referências ponto a projeto (P2P).
 
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     <PROJECT_REFERENCES>
 
 dotnet remove reference -h|--help
 ```
@@ -47,7 +48,7 @@ Referências P2P (projeto a projeto) a serem removidas. É possível especificar
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Remove a referência somente quando houver uma [estrutura](../../standard/frameworks.md) específica como destino.
+  Remove a referência somente ao direcionar a uma [estrutura](../../standard/frameworks.md) específica usando o formato TFM.
 
 ## <a name="examples"></a>Exemplos
 

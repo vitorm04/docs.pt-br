@@ -4,12 +4,12 @@ description: Aprenda sem servidor com uma abordagem prática acessando exemplos 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/17/2020
-ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135653"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158444"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Casos de uso e cenários de negócios sem servidor
 
@@ -93,13 +93,13 @@ Este exemplo é uma função genérica (`.csx` arquivo) que pode ser usada para 
 
 ## <a name="serverless-for-mobile"></a>Sem servidor para dispositivos móveis
 
-Azure Functions são fáceis de implementar e manter e podem ser acessadas por meio de HTTP. Eles são uma ótima maneira de implementar uma API para um aplicativo móvel. A Microsoft oferece excelentes ferramentas de plataforma cruzada para iOS, Android e Windows com o Xamarin. Como tal, o Xamarin e o Azure Functions estão trabalhando muito juntos. Este artigo mostra como implementar uma função do Azure no portal da Web do Azure ou no Visual Studio primeiro e criar um cliente de plataforma cruzada com Xamarin. Forms, em execução no Android, iOS e Windows.
+Azure Functions são fáceis de implementar e manter e podem ser acessadas por meio de HTTP. Eles são uma ótima maneira de implementar uma API para um aplicativo móvel. A Microsoft oferece excelentes ferramentas de plataforma cruzada para iOS, Android e Windows com o Xamarin. Como tal, o Xamarin e o Azure Functions estão trabalhando muito juntos. Este artigo mostra como implementar uma função do Azure no portal do Azure ou no Visual Studio primeiro e criar um cliente de plataforma cruzada com Xamarin. Forms em execução no Android, iOS e Windows.
 
 [Implementando uma função simples do Azure com um cliente Xamarin. Forms](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 
 ## <a name="serverless-messaging"></a>Mensagens sem servidor
 
-Este exemplo mostra como utilizar Durable Functions padrão "Fan out" para carregar um número arbitrário de mensagens em qualquer número de sessões/partições. Ele visa o barramento de serviço, hubs de eventos ou filas de armazenamento. O exemplo também adiciona a capacidade de consumir essas mensagens com outra função do Azure e carregar os dados de tempo resultantes em outro hub de eventos. Os dados são então ingeridos em serviços de análise, como o Azure Data Explorer.
+Este exemplo mostra como utilizar Durable Functions padrão de Fan-out para carregar um número arbitrário de mensagens em qualquer número de sessões/partições. Ele visa o barramento de serviço, hubs de eventos ou filas de armazenamento. O exemplo também adiciona a capacidade de consumir essas mensagens com outra função do Azure e carregar os dados de tempo resultantes em outro hub de eventos. Os dados são então ingeridos em serviços de análise, como o Azure Data Explorer.
 
 [Produzir e consumir mensagens por meio do barramento de serviço, dos hubs de eventos e das filas de armazenamento com Azure Functions](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 
