@@ -52,13 +52,13 @@
           items:
             - name: Teclado padrão e comportamento do mouse no controle DataGrid
               href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-            - name: Como adicionar detalhes de linha a um controle DataGrid
+            - name: 'Como: adicionar detalhes de linha a um controle DataGrid'
               href: how-to-add-row-details-to-a-datagrid-control.md
-            - name: 'Como agrupar, classificar e filtrar dados no controle DataGrid'
+            - name: 'Como: agrupar, classificar e filtrar dados no controle DataGrid'
               href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-            - name: Como implementar validação com o controle DataGrid
+            - name: 'Como: implementar validação com o controle DataGrid'
               href: how-to-implement-validation-with-the-datagrid-control.md
-            - name: 'Instruções passo a passo: exibir dados a partir de um banco de dados do SQL Server em um controle DataGrid'
+            - name: 'Passo a passo: exibir dados de um banco de dados do SQL Server em um controle DataGrid'
               href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
             - name: Opções de dimensionamento no controle DataGrid
               href: sizing-options-in-the-datagrid-control.md
@@ -112,7 +112,7 @@
                   href: how-to-create-and-use-a-gridlengthconverter-object.md
                 - name: Manipular colunas e linhas usando ColumnDefinitionsCollections e RowDefinitionsCollections
                   href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
-                - name: Posicionar os elementos filhos de uma grade
+                - name: Posicionar os elementos filho de uma grade
                   href: how-to-position-the-child-elements-of-a-grid.md
                 - name: Compartilhar propriedades de dimensionamento entre grades
                   href: how-to-share-sizing-properties-between-grids.md
@@ -150,7 +150,7 @@
         - name: Rotular
           href: label.md
           items:
-            - name: Criar um controle que tenha uma tecla de acesso e disposição do texto
+            - name: Criar um controle que tenha uma chave de acesso e disposição do texto
               href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
         - name: ListBox
           href: listbox.md
@@ -183,13 +183,13 @@
                   href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
                 - name: Criar um modo de exibição personalizado para um ListView
                   href: how-to-create-a-custom-view-mode-for-a-listview.md
-                - name: Usar modelos para criar um ListView que use GridView
+                - name: Usar modelos para moldar um ListView que use GridView
                   href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
                 - name: Criar um estilo para um cabeçalho de coluna GridView arrastado
                   href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
                 - name: Exibir conteúdo de ListView usando um GridView
                   href: how-to-display-listview-contents-by-using-a-gridview.md
-                - name: Usar gatilhos para criar itens selecionados em um ListView
+                - name: Usar gatilhos para moldar itens selecionados em um ListView
                   href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
                 - name: Criar ListViewItems com um CheckBox
                   href: how-to-create-listviewitems-with-a-checkbox.md
@@ -201,7 +201,7 @@
                   href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
                 - name: Alterar o alinhamento horizontal de uma coluna em um ListView
                   href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
-                - name: Identificar o evento MouseDoubleClick para cada item em um ListView
+                - name: Tratar o evento MouseDoubleClick para cada item em um ListView
                   href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
         - name: Menu
           href: menu.md
@@ -262,12 +262,12 @@
                   href: change-selection-in-a-richtextbox-programmatically.md
                 - name: 'Salvar, carregar e imprimir conteúdo RichTextBox'
                   href: how-to-save-load-and-print-richtextbox-content.md
-                - name: Posicionar um menu contextual em um RichTextBox
+                - name: Posicionar um menu de contexto personalizado em um RichTextBox
                   href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
         - name: ScrollBar
           href: scrollbar.md
           items:
-            - name: Personalizar o tamanho de elevador em um ScrollBar
+            - name: Personalizar o tamanho do elevador em um ScrollBar
               href: how-to-customize-the-thumb-size-on-a-scrollbar.md
         - name: ScrollViewer
           href: scrollviewer.md
@@ -300,7 +300,7 @@
                   href: how-to-choose-between-stackpanel-and-dockpanel.md
                 - name: Criar um StackPanel
                   href: how-to-create-a-stackpanel.md
-                - name: Alinhar horizontal e verticalmente o conteúdo em um StackPanel
+                - name: Alinhar horizontal ou verticalmente o conteúdo em um StackPanel
                   href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
         - name: StatusBar
           href: statusbar.md
@@ -329,7 +329,7 @@
                   href: how-to-get-a-collection-of-lines-from-a-textbox.md
                 - name: Tornar um controle TextBox somente leitura
                   href: how-to-make-a-textbox-control-read-only.md
-                - name: Posicionar o cursor no início ou no término do texto em um controle TextBox
+                - name: Posicionar o cursor no início ou no fim do texto em um controle TextBox
                   href: position-the-cursor-at-the-beginning-or-end-of-text.md
                 - name: Recuperar uma seleção de texto
                   href: how-to-retrieve-a-text-selection.md
@@ -339,18 +339,18 @@
                   href: how-to-set-the-text-content-of-a-textbox-control.md
                 - name: Habilitar verificação ortográfica em um controle de edição de texto
                   href: how-to-enable-spell-checking-in-a-text-editing-control.md
-                - name: Usar um menu contextual personalizado com um TextBox
+                - name: Usar um menu de contexto personalizado com um TextBox
                   href: how-to-use-a-custom-context-menu-with-a-textbox.md
                 - name: Usar verificação ortográfica com um menu de contexto
                   href: how-to-use-spell-checking-with-a-context-menu.md
-                - name: Adicionar uma marca d'água a um TextBox
+                - name: Adicionar uma marca-d'água a um TextBox
                   href: how-to-add-a-watermark-to-a-textbox.md
         - name: ToolBar
           href: toolbar.md
           items:
             - name: Visão geral de ToolBar
               href: toolbar-overview.md
-            - name: Criar controles em um ToolBar
+            - name: Moldar os controles em um ToolBar
               href: how-to-style-controls-on-a-toolbar.md
         - name: ToolTip
           href: tooltip.md
@@ -393,10 +393,10 @@
       href: styles-and-templates.md
       items:
         - name: Estilo e modelagem
-          href: styling-and-templating.md
+          href: ../../../desktop-wpf/fundamentals/styles-templates-overview.md
         - name: Personalizar um controle existente com um ControlTemplate
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
-        - name: Como localizar elementos gerados por ControlTemplate
+        - name: 'Como: localizar elementos gerados por ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Personalização do controle
       href: control-customization.md
