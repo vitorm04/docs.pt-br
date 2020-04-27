@@ -10,15 +10,18 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 12/19/2019
-  ms.openlocfilehash: 466059d4fb685a04e55cd43c75debbe24099c86e
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/21/2020
+  ms.openlocfilehash: 31d7e3e916971e605e814f36f412b46210c533b6
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80635756"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135562"
 highlightedContent:
   items:
+  - title: Baixar o .NET
+    itemType: download
+    url: https://dotnet.microsoft.com/download
   - title: Introdução ao C#. Um início interativo rápido.
     itemType: get-started
     url: csharp/tutorials/intro-to-csharp/hello-world.yml
@@ -56,6 +59,12 @@ conceptualContent:
     - url: core/tutorials/index.md
       itemType: tutorial
       text: Tutoriais
+    - url: https://dotnet.microsoft.com/platform/community
+      itemType: whats-new
+      text: Comunidade
+    - url: https://dotnetfoundation.org/
+      itemType: overview
+      text: .NET Foundation
   - title: Conceitos do .NET
     summary: Conheça os conceitos fundamentais do .NET
     links:
@@ -89,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: Baixar o SDK do .NET Core
-    - url: core/tools/index.md
+    - url: https://dotnet.microsoft.com/download
       itemType: overview
       text: Visão geral da CLI do .NET Core
     - url: core/porting/index.md
