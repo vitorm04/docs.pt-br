@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846227"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199723"
 ---
 # <a name="new-operator-c-reference"></a>operador new (Referência em C#)
 
@@ -47,9 +47,9 @@ Para criar uma instância de um [tipo anônimo](../../programming-guide/classes-
 
 ## <a name="destruction-of-type-instances"></a>Destruição de instâncias do tipo
 
-Você não precisa destruir as instâncias do tipo criadas anteriormente. As instâncias dos tipos de referência e de valor são destruídas automaticamente. As instâncias dos tipos de valor serão destruídas assim que o contexto que as contém for destruído. As instâncias dos tipos de referência serão destruídas pelo [coletor de lixo](../../../standard/garbage-collection/index.md) em um momento não especificado depois que a última referência a eles for removida.
+Você não precisa destruir as instâncias do tipo criadas anteriormente. As instâncias dos tipos de referência e de valor são destruídas automaticamente. As instâncias dos tipos de valor serão destruídas assim que o contexto que as contém for destruído. Instâncias de tipos de referência são destruídas pelo [coletor de lixo](../../../standard/garbage-collection/index.md) em algum momento não especificado depois que a última referência a eles é removida.
 
-Para casos de tipo que contêm recursos não gerenciados, por exemplo, uma alça de arquivo, recomenda-se empregar limpeza determinística para garantir que os recursos que eles contêm sejam liberados o mais rápido possível. Para obter mais informações, veja o artigo <xref:System.IDisposable?displayProperty=nameWithType> Referência da API e a [instrução de uso](../keywords/using-statement.md).
+Para instâncias de tipo que contêm recursos não gerenciados, por exemplo, um identificador de arquivo, é recomendável empregar uma limpeza determinística para garantir que os recursos que eles contêm sejam liberados assim que possível. Para obter mais informações, veja o artigo <xref:System.IDisposable?displayProperty=nameWithType> Referência da API e a [instrução de uso](../keywords/using-statement.md).
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -63,4 +63,4 @@ Para saber mais, confira a seção [O operador new](~/_csharplang/spec/expressio
 
 - [Referência do C#](../index.md)
 - [Operadores do C#](index.md)
-- [Iniciadores de objetos e coleções](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inicializadores de objeto e coleção](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)

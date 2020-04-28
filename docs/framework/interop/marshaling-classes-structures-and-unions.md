@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960011"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200009"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling de classes, estruturas e uniões
 
@@ -42,6 +42,7 @@ A tabela a seguir lista as opções de marshaling de classes, estruturas e uniõ
 |Matriz de estruturas com inteiros e cadeias de caracteres por referência.|Passa uma matriz de estruturas que contêm inteiros e cadeias de caracteres como um parâmetro Out. A função chamada aloca memória para a matriz.|[Exemplo de OutArrayOfStructs](#outarrayofstructs-sample)|
 |Uniões com tipos de valor.|Passa uniões com tipos de valor (integer e double).|[Exemplo de uniões](#unions-sample)|
 |Uniões com tipos mistos.|Passa uniões com tipos mistos (integer e string).|[Exemplo de uniões](#unions-sample)|
+|Struct com layout específico da plataforma.|Passa um tipo com definições de embalagens nativas.|[Exemplo de plataforma](#platform-sample)|
 |Valores nulos na estrutura.|Passa uma referência nula (**Nothing** no Visual Basic) em vez de uma referência a um tipo de valor.|[Exemplo HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Amostra de estruturas
@@ -221,6 +222,85 @@ A classe `NativeMethods` contém os protótipos para os métodos `TestUnion` e `
 [!code-cpp[Conceptual.Interop.Marshaling#29](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#29)]
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
+
+## <a name="platform-sample"></a>Exemplo de plataforma
+
+Em alguns cenários, `struct` e `union` os layouts podem diferir dependendo da plataforma de destino. Por exemplo, considere o [`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret) tipo quando definido em um cenário com:
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+O acima `struct` é declarado com cabeçalhos do Windows que influenciam o layout de memória do tipo. Quando definido em um ambiente gerenciado, esses detalhes de layout são necessários para interoperar corretamente com o código nativo.
+
+A definição correta gerenciada desse tipo em um processo de 32 bits é:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+Em um processo de 64 bits, os deslocamentos de tamanho *e* campo são diferentes. O layout correto é:
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+A falha em considerar corretamente o layout nativo em um cenário de interoperabilidade pode resultar em falhas aleatórias ou em piores cálculos incorretos.
+
+Por padrão, os assemblies do .NET podem ser executados em uma versão de 32 bits e 64 bits do tempo de execução do .NET. O aplicativo deve aguardar até que o tempo de execução decida qual das definições anteriores usar.
+
+O trecho de código a seguir mostra um exemplo de como escolher entre a definição de 32 bits e de 64 bits em tempo de execução.
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
 
 ## <a name="systime-sample"></a>Exemplo SysTime
 

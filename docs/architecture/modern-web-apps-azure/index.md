@@ -4,18 +4,18 @@ description: Um guia que fornece diretrizes de ponta a ponta para a criação de
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987888"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199957"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Arquitetar Aplicativos Web Modernos com o ASP.NET Core e o Azure
 
-![Imagem da capa do guia Architect Modern Web Applications.](./media/index/web-application-guide-cover-image.png)
+![Livro de folhas de rosto do guia de aplicativos Web do arquiteto moderno.](./media/index/web-application-guide-cover-image.png)
 
-**EDITION v3.1** - Atualizado para ASP.NET Núcleo 3.1
+**Edição v 3.1** -atualizado para ASP.NET Core 3,1
 
 PUBLICADO POR
 
@@ -27,11 +27,11 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 pela Microsoft Corporation
+Copyright © 2020 da Microsoft Corporation
 
 Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser reproduzida ou transmitida de nenhuma forma nem por nenhum meio sem a permissão por escrito do publicador.
 
-Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste guia, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
+Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste livro, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
  Alguns exemplos aqui representados são fornecidos somente para fins de ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser inferida.
 
@@ -39,7 +39,7 @@ A Microsoft e as marcas listadas em https://www.microsoft.com na página da Web 
 
 Mac e macOS são marcas comerciais da Apple Inc.
 
-O logotipo da baleia Docker é uma marca registrada da Docker, Inc. Usada por permissão.
+O logotipo de redistribuição do Docker é uma marca registrada do Docker, Inc. usada pela permissão.
 
 Todas as outras marcas e logotipos são propriedade de seus respectivos proprietários.
 
@@ -83,15 +83,15 @@ A criação de aplicativos Web com o ASP.NET Core, hospedados no Azure, oferece 
 
 ## <a name="purpose"></a>Finalidade
 
-Este guia fornece orientação de ponta a ponta sobre a construção de aplicações web *monolíticas* usando ASP.NET Core e Azure. Nesse contexto, "monolítico" refere-se ao fato de que esses aplicativos são implantados como uma única unidade, não como uma coleção de serviços e aplicativos em interação.
+Este guia fornece orientação de ponta a ponta sobre a criação de aplicativos Web *monolíticos* usando o ASP.NET Core e o Azure. Nesse contexto, "monolítico" refere-se ao fato de que esses aplicativos são implantados como uma única unidade, não como uma coleção de serviços e aplicativos em interação.
 
-Este guia é complementar ao [_" .NET Microservices. Arquitetura para aplicativos .NET contêiner_"](../microservices/index.md) que se concentra mais no Docker, Microservices e Deployment of Containers para hospedar aplicativos corporativos.
+Este guia é complementar aos ["_microserviços .net. Arquitetura para aplicativos .NET em contêineres_"](../microservices/index.md), que se concentram mais no Docker, em microservices e na implantação de contêineres para hospedar aplicativos corporativos.
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microsserviços do .NET. Arquitetura de aplicativos .NET em contêineres
 
-- **e-book**  
+- **livro eletrônico**  
   <https://aka.ms/MicroservicesEbook>
-- **Aplicação de amostra**  
+- **Aplicativo de exemplo**  
   <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
@@ -102,7 +102,7 @@ Um público-alvo secundário são os tomadores de decisões técnicas que já es
 
 ## <a name="how-you-can-use-this-guide"></a>Como você pode usar este guia
 
-Este guia foi condensado em um documento relativamente pequeno que se concentra na compilação de aplicativos Web com tecnologias .NET modernas e o Microsoft Azure. Como tal, ele pode ser lido em sua totalidade para fornecer uma base de compreensão desses aplicativos e suas considerações técnicas. O guia, junto com seu aplicativo de exemplo, também pode servir como um ponto de partida ou de referência. Use o aplicativo de exemplo associado como um modelo para seus próprios aplicativos ou para ver como você poderia organizar os blocos do aplicativo. Confira os princípios do guia, a cobertura das opções de arquitetura e de tecnologia e as considerações de decisões ao ponderar essas opções para seu próprio aplicativo.
+Este guia foi condensado em um documento relativamente pequeno que se concentra na criação de aplicativos Web com as tecnologias modernas do .NET e o Azure. Como tal, ele pode ser lido em sua totalidade para fornecer uma base de compreensão desses aplicativos e suas considerações técnicas. O guia, junto com seu aplicativo de exemplo, também pode servir como um ponto de partida ou de referência. Use o aplicativo de exemplo associado como um modelo para seus próprios aplicativos ou para ver como você poderia organizar os blocos do aplicativo. Confira os princípios do guia, a cobertura das opções de arquitetura e de tecnologia e as considerações de decisões ao ponderar essas opções para seu próprio aplicativo.
 
 Fique à vontade para encaminhar este guia para sua equipe para ajudar a garantir um entendimento comum dessas considerações e oportunidades. Quando todas as pessoas trabalham com um conjunto comum de terminologia e de princípios subjacentes é mais fácil garantir a aplicação consistente dos padrões e das práticas de arquitetura.
 

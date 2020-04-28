@@ -2,12 +2,12 @@
 title: Padrões de resiliência de aplicativo
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de resiliência do aplicativo
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087755"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199684"
 ---
 # <a name="application-resiliency-patterns"></a>Padrões de resiliência de aplicativo
 
@@ -54,9 +54,9 @@ Na figura anterior, um padrão de repetição foi implementado para uma operaç�
 
 ## <a name="circuit-breaker-pattern"></a>Padrão de disjuntor
 
-Embora o padrão de repetição possa ajudar a recuperar uma solicitação confusas em uma falha parcial, há situações em que as falhas podem ser causadas por eventos inesperados que exigirão períodos de tempo mais longos para resolver. Essas falhas podem variar em termos de gravidade de uma perda parcial de conectividade até a falha completa de um serviço. Nessas situações, é inútil que um aplicativo repita continuamente uma operação que provavelmente não terá sucesso.
+Embora o padrão de repetição possa ajudar a recuperar uma solicitação confusas em uma falha parcial, há situações em que as falhas podem ser causadas por eventos inesperados que exigirão períodos de tempo mais longos para resolver. Essas falhas podem variar de gravidade de uma perda parcial de conectividade até a falha completa de um serviço. Nessas situações, é inútil que um aplicativo repita continuamente uma operação que provavelmente não terá sucesso.
 
-Para piorar as coisas, a execução de operações contínuas de repetição em um serviço não responsivo pode movê-lo para um cenário de negação de serviço autoimposto, no qual você inunda o serviço com chamadas contínuas esgotando recursos como memória, threads e banco de dados conexões, causando falha em partes não relacionadas do sistema que usam os mesmos recursos.
+Para piorar as coisas, a execução de operações contínuas de repetição em um serviço não responsivo pode movê-lo para um cenário de negação de serviço autoimposto, no qual você inunda o serviço com chamadas contínuas esgotando recursos como memória, threads e conexões de banco de dados, causando falhas em partes não relacionadas do sistema que usam os mesmos recursos.
 
 Nessas situações, seria preferível para a operação falhar imediatamente e tentar invocar o serviço apenas se for provável que tenha êxito.
 
@@ -74,4 +74,4 @@ A resiliência do aplicativo é necessária para lidar com operações solicitad
 
 >[!div class="step-by-step"]
 >[Anterior](resiliency.md)
->[Próximo](infrastructure-resiliency-azure.md)
+>[próximo](infrastructure-resiliency-azure.md)

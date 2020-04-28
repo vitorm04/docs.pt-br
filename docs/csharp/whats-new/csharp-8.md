@@ -1,17 +1,17 @@
 ---
-title: O que há de novo em C# 8.0 - C# Guide
+title: O que há de novo no C# 8,0 – Guia C#
 description: Obtenha uma visão geral dos novos recursos disponíveis no C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: fcba0526fbcbe46a02cef167822c219f9db2eb63
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: c29041972bf7ff608b73ddc9ea3cfcd253905a49
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738160"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200074"
 ---
 # <a name="whats-new-in-c-80"></a>Novidades no C# 8.0
 
-C# 8.0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
+O c# 8,0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 
 - [Membros somente leitura](#readonly-members)
 - [Métodos de interface padrão](#default-interface-methods)
@@ -27,12 +27,12 @@ C# 8.0 adiciona os seguintes recursos e aprimoramentos à linguagem C#:
 - [Fluxos assíncronos](#asynchronous-streams)
 - [Descartável assíncrono](#asynchronous-disposable)
 - [Índices e intervalos](#indices-and-ranges)
-- [Atribuição de coalizão nula](#null-coalescing-assignment)
+- [Atribuição de União nula](#null-coalescing-assignment)
 - [Tipos construídos não gerenciados](#unmanaged-constructed-types)
 - [Stackalloc em expressões aninhadas](#stackalloc-in-nested-expressions)
-- [Aprimoramento de cordas verbatim interpoladas](#enhancement-of-interpolated-verbatim-strings)
+- [Aprimoramento de cadeias de caracteres idênticas interpoladas](#enhancement-of-interpolated-verbatim-strings)
 
-C# 8.0 é suportado em **.NET Core 3.x** e **.NET Standard 2.1**. Para obter mais informações, consulte [a versão do idioma C#](../language-reference/configure-language-version.md).
+O C# 8,0 tem suporte no **.NET Core 3. x** e **.net Standard 2,1**. Para obter mais informações, consulte [controle de versão da linguagem C#](../language-reference/configure-language-version.md).
 
 O restante deste artigo descreve rapidamente esses recursos. Quando houver artigos detalhados disponíveis, forneceremos links para esses tutoriais e visões gerais. Você pode explorar esses recursos em seu ambiente usando a ferramenta global `dotnet try`:
 
@@ -43,7 +43,7 @@ O restante deste artigo descreve rapidamente esses recursos. Quando houver artig
 
 ## <a name="readonly-members"></a>Membros somente leitura
 
-Você pode `readonly` aplicar o modificador a membros de uma estrutura. Indica que o membro não modifica o estado. É mais granular do que aplicar o modificador `readonly` a uma declaração `struct`.  Considere o seguinte struct mutável:
+Você pode aplicar o `readonly` modificador a membros de um struct. Indica que o membro não modifica o estado. É mais granular do que aplicar o modificador `readonly` a uma declaração `struct`.  Considere o seguinte struct mutável:
 
 ```csharp
 public struct Point
@@ -57,28 +57,28 @@ public struct Point
 }
 ```
 
-Como a maioria das `ToString()` estruturas, o método não modifica o estado. É possível indicar isso adicionando o modificador `readonly` à declaração de `ToString()`:
+Como a maioria das structs `ToString()` , o método não modifica o estado. É possível indicar isso adicionando o modificador `readonly` à declaração de `ToString()`:
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-A alteração anterior gera um aviso `ToString` de `Distance` compilador, porque acessa a propriedade, que não está marcada: `readonly`
+A alteração anterior gera um aviso do compilador, `ToString` pois acessa a `Distance` Propriedade, que não está `readonly`marcada:
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A `Distance` propriedade não muda de estado, então você pode `readonly` corrigir este aviso adicionando o modificador à declaração:
+O compilador avisa quando há a necessidade de criar uma cópia de defesa.  A `Distance` propriedade não muda de estado, portanto você pode corrigir esse aviso adicionando o `readonly` modificador à declaração:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Observe que `readonly` o modificador é necessário em uma propriedade somente leitura. O compilador não assume `get` que os acessórios não modificam o estado; você deve `readonly` declarar explicitamente. As propriedades autoimplementadas são uma exceção; o compilador tratará todos os getters auto-implementados `readonly`como , então `readonly` aqui não `X` `Y` há necessidade de adicionar o modificador às propriedades e.
+Observe que o `readonly` modificador é necessário em uma propriedade somente leitura. O compilador não pressupõe `get` que os acessadores não modifiquem o estado; Você deve declarar `readonly` explicitamente. As propriedades implementadas automaticamente são uma exceção; o compilador tratará todos os getters autoimplementados `readonly`como, portanto, aqui não há necessidade de adicionar `readonly` o modificador `X` às `Y` Propriedades e.
 
-O compilador impõe a `readonly` regra de que os membros não modificam o estado. O seguinte método não será compilado `readonly` a menos que você remova o modificador:
+O compilador impõe a regra que `readonly` os membros não modificam o estado. O método a seguir não será compilado, a `readonly` menos que você remova o modificador:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -90,17 +90,17 @@ public readonly void Translate(int xOffset, int yOffset)
 
 Esse recurso permite que você especifique sua intenção de design para que o compilador possa impô-la e faça otimizações com base nessa intenção.
 
-Para obter mais [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) informações, consulte a seção de membros de instância do artigo [Tipos de Estrutura.](../language-reference/builtin-types/struct.md)
+Para obter mais informações, consulte [ `readonly` ](../language-reference/builtin-types/struct.md#readonly-instance-members) a seção Membros da instância do artigo [tipos de estrutura](../language-reference/builtin-types/struct.md) .
 
 ## <a name="default-interface-methods"></a>Métodos de interface padrão
 
-Agora é possível adicionar membros a interfaces e fornecer uma implementação para esses membros. Esse recurso de linguagem permite que os autores de API adicionem métodos a uma interface em versões posteriores sem interromper a fonte ou a compatibilidade binária com implementações existentes dessa interface. As implementações existentes *herdam* a implementação padrão. Esse recurso também permite que o C# interopere com APIs que direcionam o Android ou o Swift, que dão suporte a recursos semelhantes. Os métodos de interface padrão também permitem cenários semelhantes a um recurso de linguagem "traits".
+Agora é possível adicionar membros a interfaces e fornecer uma implementação para esses membros. Esse recurso de linguagem permite que os autores de API adicionem métodos a uma interface em versões posteriores sem interromper a fonte ou a compatibilidade binária com implementações existentes dessa interface. As implementações existentes *herdam* a implementação padrão. Esse recurso também permite que o C# interopere com APIs que direcionam o Android ou o Swift, que dão suporte a recursos semelhantes. Os métodos de interface padrão também habilitam cenários semelhantes a um recurso de linguagem de "características".
 
 Os métodos de interface padrão afetam muitos cenários e elementos de linguagem. Nosso primeiro tutorial aborda [como atualizar uma interface com implementações padrão](../tutorials/default-interface-methods-versions.md). Outros tutoriais e atualizações de referência chegarão a tempo para a versão geral.
 
 ## <a name="more-patterns-in-more-places"></a>Mais padrões em mais partes
 
-Com a **correspondência de padrões**, você recebe ferramentas para fornecer funcionalidades dependentes da forma em tipos de dados relacionados, mas diferentes. C# 7.0 introduziu sintaxe para padrões [`is`](../language-reference/keywords/is.md) de [`switch`](../language-reference/keywords/switch.md) tipo e padrões constantes usando a expressão e a declaração. Esses recursos representaram os primeiros passos em direção ao suporte a paradigmas de programação, em que os dados e a funcionalidade vivem separados. À medida que o setor se aproxima mais de microsserviços e de outras arquiteturas baseadas em nuvem, outras ferramentas de linguagem de tornam necessárias.
+Com a **correspondência de padrões**, você recebe ferramentas para fornecer funcionalidades dependentes da forma em tipos de dados relacionados, mas diferentes. O C# 7,0 introduziu a sintaxe para padrões de tipo e padrões [`is`](../language-reference/keywords/is.md) constantes usando a [`switch`](../language-reference/keywords/switch.md) expressão e a instrução. Esses recursos representaram os primeiros passos em direção ao suporte a paradigmas de programação, em que os dados e a funcionalidade vivem separados. À medida que o setor se aproxima mais de microsserviços e de outras arquiteturas baseadas em nuvem, outras ferramentas de linguagem de tornam necessárias.
 
 O C# 8.0 expande esse vocabulário, para que você possa usar mais expressões de padrão em mais partes do seu código. Considere esses recursos quando seus dados e funcionalidades estiverem separados. Considere a correspondência de padrões quando seus algoritmos dependerem de um fato diferente do tipo de runtime de um objeto. Essas técnicas fornecem outra maneira de expressar designs.
 
@@ -108,7 +108,7 @@ Além dos novos padrões em novas partes, o C# 8.0 adiciona **padrões recursivo
 
 ### <a name="switch-expressions"></a>Expressões switch
 
-Muitas vezes, uma [`switch`](../language-reference/keywords/switch.md) declaração produz `case` um valor em cada um de seus blocos. As **expressões switch** permitem que você use a sintaxe de expressão mais concisa. Há menos palavras-chave `case` e `break` repetidas, e menos chaves.  Por exemplo, considere a enumeração a seguir que lista as cores do arco-íris:
+Geralmente, uma [`switch`](../language-reference/keywords/switch.md) instrução produz um valor em cada um de `case` seus blocos. As **expressões switch** permitem que você use a sintaxe de expressão mais concisa. Há menos palavras-chave `case` e `break` repetidas, e menos chaves.  Por exemplo, considere a enumeração a seguir que lista as cores do arco-íris:
 
 ```csharp
 public enum Rainbow
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Padrões da propriedade
 
-O **padrão da propriedade** permite que você compare as propriedades do objeto examinado. Considere um site de comércio eletrônico que deve calcular o imposto da venda com base no endereço do comprador. Essa computação não é uma `Address` responsabilidade central de uma classe. Ele mudará ao longo do tempo, provavelmente com mais frequência do que as alterações de formato de endereço. O valor do imposto depende da propriedade `State` do endereço. O método a seguir usa o padrão de propriedade para calcular o imposto da venda de acordo com o endereço e o preço:
+O **padrão da propriedade** permite que você compare as propriedades do objeto examinado. Considere um site de comércio eletrônico que deve calcular o imposto da venda com base no endereço do comprador. Essa computação não é uma responsabilidade principal de `Address` uma classe. Ele mudará ao longo do tempo, provavelmente com mais frequência do que as alterações de formato de endereço. O valor do imposto depende da propriedade `State` do endereço. O método a seguir usa o padrão de propriedade para calcular o imposto da venda de acordo com o endereço e o preço:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -259,7 +259,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-O padrão de discard na opção anterior encontra a correspondência quando `x` ou `y` é 0, mas não ambos. Uma expressão switch deve produzir um valor ou lançar uma exceção. Se não houver correspondência em nenhum dos casos, a expressão switch gerará uma exceção. O compilador gera um aviso para você se você não cobrir todos os casos possíveis na sua expressão de switch.
+O padrão de discard na opção anterior encontra a correspondência quando `x` ou `y` é 0, mas não ambos. Uma expressão switch deve produzir um valor ou lançar uma exceção. Se não houver correspondência em nenhum dos casos, a expressão switch gerará uma exceção. O compilador gerará um aviso para você se você não cobrir todos os casos possíveis em sua expressão de comutador.
 
 Explore técnicas de correspondência de padrões neste [tutorial avançado sobre correspondência de padrões](../tutorials/pattern-matching.md).
 
@@ -318,7 +318,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 No exemplo anterior, o arquivo é descartado quando a chave de fechamento associada à instrução `using` é atingida.
 
-Em ambos os casos, o compilador gera a chamada para `Dispose()`. O compilador gera um erro se `using` a expressão na declaração não for descartável.
+Em ambos os casos, o compilador gera a chamada para `Dispose()`. O compilador gerará um erro se a expressão na `using` instrução não for descartável.
 
 ## <a name="static-local-functions"></a>Funções locais estáticas
 
@@ -352,13 +352,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Estruturas ref descartáveis
 
-Um `struct` declarado com `ref` o modificador não pode implementar nenhuma interface <xref:System.IDisposable>e, portanto, não pode implementar . Portanto, para permitir que uma `ref struct` seja descartada, ela deve ter um método `void Dispose()` acessível. Esse recurso também `readonly ref struct` se aplica às declarações.
+Um `struct` declarado com o `ref` modificador não pode implementar nenhuma interface e, portanto <xref:System.IDisposable>, não pode implementar. Portanto, para permitir que uma `ref struct` seja descartada, ela deve ter um método `void Dispose()` acessível. Esse recurso também se aplica `readonly ref struct` a declarações.
 
 ## <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
 Dentro de um contexto de anotação anulável, qualquer variável de um tipo de referência é considerado um **tipo de referência não anulável**. Se você quiser indicar que uma variável pode ser nula, acrescente o nome do tipo com o `?` para declarar a variável como um **tipo de referência anulável**.
 
-Para tipos de referência não anuláveis, o compilador usa a análise de fluxo para garantir que as variáveis locais sejam inicializadas como um valor não nulo quando declaradas. Os campos devem ser inicializados durante a construção. O compilador gera um aviso se a variável não for definida por uma chamada para qualquer um dos construtores disponíveis ou por um inicializador. Além disso, os tipos de referência não anuláveis não podem receber um valor que possa ser nulo.
+Para tipos de referência não anuláveis, o compilador usa a análise de fluxo para garantir que as variáveis locais sejam inicializadas como um valor não nulo quando declaradas. Os campos devem ser inicializados durante a construção. O compilador gerará um aviso se a variável não for definida por uma chamada para qualquer um dos construtores disponíveis ou por um inicializador. Além disso, os tipos de referência não anuláveis não podem receber um valor que possa ser nulo.
 
 Os tipos de referência anuláveis não são verificados para garantir que não tenham sido atribuídos ou inicializados como nulos. No entanto, o compilador usa a análise de fluxo para garantir que qualquer variável de um tipo de referência anulável passe por verificação com relação a um nulo antes de ser acessada ou atribuída a um tipo de referência não anulável.
 
@@ -394,26 +394,26 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [criar e consumir fluxos assíncronos](../tutorials/generate-consume-asynchronous-stream.md). Por padrão, os elementos de fluxo são processados no contexto capturado. Se você quiser desativar a captura do <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> contexto, use o método de extensão. Para obter mais informações sobre contextos de sincronização e captura do contexto atual, consulte o artigo sobre [o consumo do padrão assíncrono baseado em tarefas](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
+Experimente você mesmo os fluxos assíncronos em nosso tutorial sobre como [criar e consumir fluxos assíncronos](../tutorials/generate-consume-asynchronous-stream.md). Por padrão, os elementos de fluxo são processados no contexto capturado. Se você quiser desabilitar a captura do contexto, use o <xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> método de extensão. Para obter mais informações sobre contextos de sincronização e como capturar o contexto atual, consulte o artigo sobre como [consumir o padrão assíncrono baseado em tarefa](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="asynchronous-disposable"></a>Descartável assíncrono
 
-Começando com C# 8.0, o idioma suporta tipos descartáveis assíncronos que implementam a <xref:System.IAsyncDisposable?displayProperty=nameWithType> interface. O operand `using` de uma <xref:System.IDisposable> expressão <xref:System.IAsyncDisposable>pode implementar qualquer um ou . No caso `IAsyncDisposable`de , o compilador `await` <xref:System.Threading.Tasks.Task> gera código <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>para o retornado de . Para obter mais informações, consulte a [ `using` declaração](../language-reference/keywords/using-statement.md).
+A partir do C# 8,0, a linguagem dá suporte a tipos descartáveis <xref:System.IAsyncDisposable?displayProperty=nameWithType> assíncronos que implementam a interface. O operando de uma `using` expressão pode implementar um <xref:System.IDisposable> ou <xref:System.IAsyncDisposable>. No caso `IAsyncDisposable`do, o compilador gera código `await` para o <xref:System.Threading.Tasks.Task> retornado de. <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> Para obter mais informações, consulte a [ `using` instrução](../language-reference/keywords/using-statement.md).
 
 ## <a name="indices-and-ranges"></a>Índices e intervalos
 
-Índices e intervalos fornecem uma sintaxe sucinta para acessar elementos únicos ou intervalos em uma seqüência.
+Índices e intervalos fornecem uma sintaxe sucinta para acessar elementos únicos ou intervalos em uma sequência.
 
-Este suporte ao idioma conta com dois novos tipos e dois novos operadores:
+Esse suporte a idioma depende de dois novos tipos e de dois novos operadores:
 
 - <xref:System.Index?displayProperty=nameWithType> representa um índice em uma sequência.
-- O índice do `^`operador final , que especifica que um índice é relativo ao final da seqüência.
+- O índice do operador `^`end, que especifica que um índice é relativo ao final da sequência.
 - <xref:System.Range?displayProperty=nameWithType> representa um subintervalo de uma sequência.
-- O operador `..`de alcance , que especifica o início e o fim de uma faixa como seus operadores.
+- O operador `..`Range, que especifica o início e o término de um intervalo como seus operandos.
 
 Vamos começar com as regras para índices. Considere uma matriz `sequence`. O índice `0` é o mesmo que `sequence[0]`. O índice `^0` é o mesmo que `sequence[sequence.Length]`. Observe que `sequence[^0]` gera uma exceção, assim como `sequence[sequence.Length]` faz. Para qualquer número `n`, o índice `^n` é o mesmo que `sequence.Length - n`.
 
-Um intervalo especifica o *início* e o *final* de um intervalo. O início da gama é inclusivo, mas o final da gama é exclusivo, o que significa que a *partida* está incluída na faixa, mas o *final* não está incluído na faixa. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo.
+Um intervalo especifica o *início* e o *final* de um intervalo. O início do intervalo é inclusivo, mas o final do intervalo é exclusivo, o que significa que o *início* é incluído no intervalo, mas o *final* não é incluído no intervalo. O intervalo `[0..^0]` representa todo o intervalo, assim como `[0..sequence.Length]` representa todo o intervalo.
 
 Vamos analisar alguns exemplos. Considere a matriz a seguir, anotada com seu índice do início e do final:
 
@@ -472,13 +472,13 @@ Em seguida, o intervalo pode ser usado dentro dos caracteres `[` e `]`:
 var text = words[phrase];
 ```
 
-Não apenas os arrays suportam índices e intervalos. Você também pode usar índices [string](../language-reference/builtin-types/reference-types.md#the-string-type)e <xref:System.Span%601>intervalos com string , ou <xref:System.ReadOnlySpan%601>. Para obter mais informações, consulte [Tipo de suporte para índices e faixas](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Não apenas as matrizes dão suporte a índices e intervalos. Você também pode usar índices e intervalos com [cadeia](../language-reference/builtin-types/reference-types.md#the-string-type)de <xref:System.Span%601>caracteres, <xref:System.ReadOnlySpan%601>ou. Para obter mais informações, consulte [suporte de tipo para índices e intervalos](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Você pode explorar mais sobre índices e intervalos do tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).
 
-## <a name="null-coalescing-assignment"></a>Atribuição de coalizão nula
+## <a name="null-coalescing-assignment"></a>Atribuição de União nula
 
-C# 8.0 introduz o operador `??=`de atribuição de coalizão nula . Você pode `??=` usar o operador para atribuir o valor de seu oper e para o seu oper esquerdo `null`e somente se o oper esquerdo avaliar para .
+O C# 8,0 apresenta o operador `??=`de atribuição de União nula. Você pode usar o `??=` operador para atribuir o valor do seu operando à direita para seu operando à esquerda somente se o operando esquerdo for avaliado como `null`.
 
 ```csharp
 List<int> numbers = null;
@@ -492,13 +492,13 @@ Console.WriteLine(string.Join(" ", numbers));  // output: 17 17
 Console.WriteLine(i);  // output: 17
 ```
 
-Para mais informações, veja o [?? e ?? = operadores](../language-reference/operators/null-coalescing-operator.md) de artigo.
+Para obter mais informações, consulte [?? e?? =](../language-reference/operators/null-coalescing-operator.md) artigo de operadores.
 
 ## <a name="unmanaged-constructed-types"></a>Tipos construídos não gerenciados
 
-Em C# 7.3 e anteriormente, um tipo construído (um tipo que inclui pelo menos um tipo de argumento) não pode ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md). Começando com C# 8.0, um tipo de valor construído não é gerenciado se contiver apenas campos de tipos não gerenciados.
+No C# 7,3 e anterior, um tipo construído (um tipo que inclui pelo menos um argumento de tipo) não pode ser um [tipo não gerenciado](../language-reference/builtin-types/unmanaged-types.md). A partir do C# 8,0, um tipo de valor construído não será gerenciado se ele contiver campos apenas de tipos não gerenciados.
 
-Por exemplo, dada a `Coords<T>` seguinte definição do tipo genérico:
+Por exemplo, dada a seguinte definição do tipo genérico `Coords<T>` :
 
 ```csharp
 public struct Coords<T>
@@ -508,7 +508,7 @@ public struct Coords<T>
 }
 ```
 
-o `Coords<int>` tipo é um tipo não gerenciado em C# 8.0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável deste tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias deste tipo:
+o `Coords<int>` tipo é um tipo não gerenciado em C# 8,0 e posterior. Como para qualquer tipo não gerenciado, você pode criar um ponteiro para uma variável desse tipo ou [alocar um bloco de memória na pilha](../language-reference/operators/stackalloc.md) para instâncias desse tipo:
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -523,14 +523,14 @@ Para obter mais informações, consulte [tipos não gerenciados](../language-ref
 
 ## <a name="stackalloc-in-nested-expressions"></a>Stackalloc em expressões aninhadas
 
-Começando com C# 8.0, se o resultado de uma <xref:System.Span%601?displayProperty=nameWithType> <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> expressão [stackalloc](../language-reference/operators/stackalloc.md) for do ou tipo, você pode usar a `stackalloc` expressão em outras expressões:
+A partir do C# 8,0, se o resultado de uma expressão [stackalloc](../language-reference/operators/stackalloc.md) for do <xref:System.Span%601?displayProperty=nameWithType> tipo <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> ou, você poderá usar a `stackalloc` expressão em outras expressões:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
-var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
+var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6, 8 });
 Console.WriteLine(ind);  // output: 1
 ```
 
-## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cordas verbatim interpoladas
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Aprimoramento de cadeias de caracteres idênticas interpoladas
 
-A ordem `$` `@` dos tokens em cadeias verbais [interpoladas](../language-reference/tokens/interpolated.md) pode ser qualquer: ambas `$@"..."` e `@$"..."` são cadeias verbatim interpoladas válidas. Nas versões C# anteriores, `$` `@` o token deve aparecer antes do token.
+`$` A ordem dos tokens `@` e nas cadeias de caracteres idênticas [interpoladas](../language-reference/tokens/interpolated.md) pode ser any: `$@"..."` e `@$"..."` são cadeias de caracteres idênticas interpoladas válidas. Em versões anteriores do C#, `$` o token deve aparecer antes `@` do token.

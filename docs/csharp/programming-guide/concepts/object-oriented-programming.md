@@ -2,14 +2,14 @@
 title: Programação orientada a objeto (C#)
 ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627884"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200087"
 ---
-# <a name="object-oriented-programming-c"></a>Programação orientada a objetos (C#)
+# <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
 O C# dá suporte completo à programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.
 
@@ -19,7 +19,7 @@ O C# dá suporte completo à programação orientada a objeto, incluindo encapsu
 
 ## <a name="classes-and-objects"></a>Classes e objetos
 
-Os termos *classe* e *objeto* descrevem o *tipo* de objetos e as *instâncias* das classes, respectivamente. Sendo assim, o ato de criar um objeto é chamado de *instanciação*. Usando a analogia da uma planta, uma classe é a planta e um objeto é a construção feita com base naquela planta.
+A *classe* de termos e o *objeto* descrevem o *tipo* de objetos e as *instâncias* de classes, respectivamente. Sendo assim, o ato de criar um objeto é chamado de *instanciação*. Usando a analogia da uma planta, uma classe é a planta e um objeto é a construção feita com base naquela planta.
 
 Para definir uma classe:
 
@@ -29,7 +29,7 @@ class SampleClass
 }
 ```
 
-C# também fornece tipos chamados *estruturas* que são úteis quando você não precisa de suporte para herança ou polimorfismo.
+O C# também fornece tipos chamados de *estruturas* que são úteis quando você não precisa de suporte para herança ou polimorfismo.
 
 Para definir uma estrutura:
 
@@ -39,7 +39,7 @@ struct SampleStruct
 }
 ```
 
-Para obter mais informações, consulte os artigos sobre a [classe](../../language-reference/keywords/class.md) e [struct](../../language-reference/builtin-types/struct.md) palavras-chave.
+Para obter mais informações, consulte os artigos sobre as palavras-chave [Class](../../language-reference/keywords/class.md) e [struct](../../language-reference/builtin-types/struct.md) .
 
 ### <a name="class-members"></a>Membros de classe
 
@@ -47,9 +47,9 @@ Cada classe tem diferentes *membros de classe* que incluem propriedades que desc
 
 #### <a name="properties-and-fields"></a>Propriedades e campos
 
-Os campos e as propriedades representam as informações que um objeto contém. Os campos são como variáveis porque podem ser lidos ou definidos diretamente, sujeitos aos modificadores de acesso aplicáveis.
+Os campos e as propriedades representam as informações que um objeto contém. Os campos são como variáveis porque podem ser lidos ou definidos diretamente, sujeitos a modificadores de acesso aplicáveis.
 
-Para definir um campo que pode ser acessado a partir de instâncias da classe:
+Para definir um campo que pode ser acessado de dentro de instâncias da classe:
 
 ```csharp
 public class SampleClass
@@ -58,9 +58,9 @@ public class SampleClass
 }
 ```
 
-As `get` propriedades `set` possuem e acessórios, que fornecem mais controle sobre como os valores são definidos ou devolvidos.
+As propriedades `get` têm `set` e acessadores, que fornecem mais controle sobre como os valores são definidos ou retornados.
 
-C# permite que você crie um campo privado para armazenar o valor da propriedade ou use propriedades auto-implementadas que criam esse campo automaticamente nos bastidores e forneçam a lógica básica para os procedimentos de propriedade.
+O C# permite criar um campo particular para armazenar o valor da propriedade ou usar Propriedades autoimplementadas que criam esse campo automaticamente nos bastidores e fornecer a lógica básica para os procedimentos de propriedade.
 
 Para definir uma propriedade autoimplementada:
 
@@ -87,13 +87,13 @@ class SampleClass
 }
 ```
 
-A maioria das propriedades têm métodos ou procedimentos para definir e obter o valor da propriedade. No entanto, você pode criar propriedades somente leitura ou somente gravação para impedir que elas sejam modificadas ou lidas. No C#, é possível omitir o método de propriedade `get` ou `set`. No entanto, as propriedades implementadas automaticamente não podem ser somente gravação. As propriedades auto-implementadas somente leitura podem ser definidas em construtores da classe de contenção.
+A maioria das propriedades têm métodos ou procedimentos para definir e obter o valor da propriedade. No entanto, você pode criar propriedades somente leitura ou somente gravação para impedir que elas sejam modificadas ou lidas. No C#, é possível omitir o método de propriedade `get` ou `set`. No entanto, as propriedades implementadas automaticamente não podem ser somente gravação. Propriedades implementadas automaticamente de somente leitura podem ser definidas em construtores da classe que a contém.
 
 Para obter mais informações, consulte:
 
 - [get](../../language-reference/keywords/get.md)
 
-- [Definir](../../language-reference/keywords/set.md)
+- [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Métodos
 
@@ -147,13 +147,13 @@ Para saber mais, veja [Construtores](../classes-and-structs/constructors.md).
 
 #### <a name="finalizers"></a>Finalizadores
 
-Finalizadores são usados para destruir instâncias de classes. No .NET Framework, o coletor de lixo gerencia automaticamente a alocação e a liberação de memória para os objetos gerenciados em seu aplicativo. No entanto, talvez ainda seja necessário usar os finalizadores para limpar recursos não gerenciados que seu aplicativo criar. Pode haver apenas um finalizador para uma classe.
+Um finalizador é usado para destruir instâncias de classes. No .NET Framework, o coletor de lixo gerencia automaticamente a alocação e a liberação de memória para os objetos gerenciados em seu aplicativo. No entanto, talvez ainda seja necessário usar os finalizadores para limpar recursos não gerenciados que seu aplicativo criar. Pode haver apenas um finalizador para uma classe.
 
 Para obter mais informações sobre os finalizadores e a coleta de lixo no .NET Framework, consulte [Coleta de lixo](../../../standard/garbage-collection/index.md).
 
 #### <a name="events"></a>Eventos
 
-Eventos permitem que uma classe ou objeto notifique outras classes ou objetos quando algo interessante ocorrer. A classe que envia (ou levanta) o evento é chamada *de editora* e as classes que recebem (ou lidam) com o evento são chamadas *de assinantes*. Para obter mais informações sobre os eventos e como eles são gerados e manipulados, consulte [Eventos](../../../standard/events/index.md).
+Eventos permitem que uma classe ou objeto notifique outras classes ou objetos quando algo interessante ocorrer. A classe que envia (ou gera) o evento é chamada de *Editor* e as classes que recebem (ou manipulam) o evento são chamadas de *assinantes*. Para obter mais informações sobre os eventos e como eles são gerados e manipulados, consulte [Eventos](../../../standard/events/index.md).
 
 - Para declarar um evento em uma classe, use a palavra-chave [event](../../language-reference/keywords/event.md).
 
@@ -161,7 +161,7 @@ Eventos permitem que uma classe ou objeto notifique outras classes ou objetos qu
 
 - Para assinar um evento, use o operador `+=`; para cancelar a assinatura de um evento, use o operador `-=`.
 
-#### <a name="nested-classes"></a>Aulas aninhadas
+#### <a name="nested-classes"></a>Classes aninhadas
 
 Uma classe definida dentro de outra classe é chamada de *aninhada*. Por padrão, a classe aninhada é particular.
 
@@ -189,16 +189,16 @@ Os modificadores de acesso a seguir estão disponíveis:
 
 |Modificador de C#|Definição|
 |------------------|----------------|
-|[público](../../language-reference/keywords/public.md)|O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele.|
-|[Privada](../../language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|
-|[Protegido](../../language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|
-|[Interno](../../language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
-|[private protected](../../language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|
+|[publicada](../../language-reference/keywords/public.md)|O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele.|
+|[pessoal](../../language-reference/keywords/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|
+|[Protected](../../language-reference/keywords/protected.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe ou em uma classe derivada.|
+|[interno](../../language-reference/keywords/internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|
+|[internos protegidos](../../language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
+|[particular protegido](../../language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|
 
 Para obter mais informações, consulte [Modificadores de Acesso](../classes-and-structs/access-modifiers.md).
 
-### <a name="instantiating-classes"></a>Aulas de instantiva
+### <a name="instantiating-classes"></a>Instanciando classes
 
 Para criar um objeto, você precisa instanciar uma classe ou criar uma instância da classe.
 
@@ -225,7 +225,7 @@ SampleClass sampleObject = new SampleClass
 
 Para obter mais informações, consulte:
 
-- [novo Operador](../../language-reference/operators/new-operator.md)
+- [novo operador](../../language-reference/operators/new-operator.md)
 - [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
 
 ### <a name="static-classes-and-members"></a>Classes e membros estáticos
@@ -263,7 +263,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Para obter mais informações, consulte: [Tipos Anônimos](../classes-and-structs/anonymous-types.md).
+Para obter mais informações, consulte: [tipos anônimos](../classes-and-structs/anonymous-types.md).
 
 ## <a name="inheritance"></a>Herança
 
@@ -296,7 +296,7 @@ Para obter mais informações, consulte:
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
-- [Abstrata](../../language-reference/keywords/abstract.md)
+- [resume](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>Substituindo membros
 
@@ -306,9 +306,9 @@ Os seguintes modificadores são usados para controlar como as propriedades e mé
 
 |Modificador de C#|Definição|
 |------------------|----------------|
-|[Virtual](../../language-reference/keywords/virtual.md)|Permite que um membro de classe seja substituído em uma classe derivada.|
-|[Substituir](../../language-reference/keywords/override.md)|Substitui um membro virtual (substituível) definido na classe base.|
-|[Abstrata](../../language-reference/keywords/abstract.md)|Requer que um membro de classe seja substituído na classe derivada.|
+|[virtual](../../language-reference/keywords/virtual.md)|Permite que um membro de classe seja substituído em uma classe derivada.|
+|[override](../../language-reference/keywords/override.md)|Substitui um membro virtual (substituível) definido na classe base.|
+|[resume](../../language-reference/keywords/abstract.md)|Requer que um membro de classe seja substituído na classe derivada.|
 |[Modificador new](../../language-reference/keywords/new-modifier.md)|Oculta um membro herdado de uma classe base|
 
 ## <a name="interfaces"></a>Interfaces
@@ -336,7 +336,7 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Para obter mais informações, consulte o artigo do guia de programação sobre [Interfaces](../interfaces/index.md) e o artigo de referência de idioma sobre a palavra-chave da [interface.](../../language-reference/keywords/interface.md)
+Para obter mais informações, consulte o artigo guia de programação em [interfaces](../interfaces/index.md) e o artigo referência de idioma na palavra-chave [interface](../../language-reference/keywords/interface.md) .
 
 ## <a name="generics"></a>Genéricos
 
@@ -364,7 +364,7 @@ Para obter mais informações, consulte:
 
 - [Genéricos](../generics/index.md)
 
-## <a name="delegates"></a>Delega
+## <a name="delegates"></a>Delegados
 
 Um *delegado* é um tipo que define uma assinatura de método e pode fornecer uma referência a qualquer método com uma assinatura compatível. Você pode invocar (ou chamar) o método através do delegado. Delegados são usados para passar métodos como argumentos a outros métodos.
 
@@ -396,8 +396,8 @@ class SampleClass
 }
 ```
 
-Para obter mais informações, consulte o artigo do guia de programação sobre [Delegados](../delegates/index.md) e o artigo de referência da linguagem sobre a palavra-chave [delegado.](../../language-reference/builtin-types/reference-types.md)
+Para obter mais informações, consulte o artigo guia de programação em [delegados](../delegates/index.md) e o artigo referência de idioma na palavra-chave [delegate](../../language-reference/builtin-types/reference-types.md) .
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
+- [Guia de programação C#](../index.md)

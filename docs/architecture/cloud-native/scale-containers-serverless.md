@@ -1,30 +1,33 @@
 ---
 title: Escala de contêineres e aplicativos sem servidor
-description: Dimensionamento de aplicativos nativos de nuvem com o serviço kubernetes do Azure para atender à demanda do usuário, aumentando os recursos individuais da máquina ou aumentando o número de computadores em um cluster de aplicativos.
-ms.date: 09/23/2019
-ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+description: Dimensionamento de aplicativos nativos de nuvem com o serviço kubernetes do Azure para atender à demanda do usuário.
+ms.date: 04/13/2020
+ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184795"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199918"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>Escala de contêineres e aplicativos sem servidor
 
-Há duas maneiras típicas de dimensionar um aplicativo: escalar verticalmente e escalar horizontalmente. O primeiro se refere à adição de recursos a um host, enquanto o último se refere à adição ao número total de hosts. Uma analogia comum a ser usada para pensar nisso é como se familiarizar com alguns amigos em toda a cidade. Se for apenas um amigo, você poderá entrar no carro de corrida de duas estações. Mas se for três ou quatro, talvez seja necessário pegar um de seus SUVs ou minivan, aumentando verticalmente para aumentar a capacidade. No entanto, quando o número total vai até uma dúzia ou mais, você provavelmente precisará realizar vários veículos (a menos que alguém retenha um barramento), que demonstra o conceito de expansão adicionando mais instâncias (neste caso, mais veículos). Vamos ver como isso se aplica aos nossos aplicativos.
+Há duas maneiras de dimensionar um aplicativo: para cima ou para fora. O primeiro se refere à adição de capacidade a um único recurso, enquanto o último se refere à adição de mais recursos para aumentar a capacidade.
 
 ## <a name="the-simple-solution-scaling-up"></a>A solução simples: escalar verticalmente
 
-O processo de atualização de servidores existentes para fornecer a eles mais recursos (CPU, memória, velocidade de e/s de disco, velocidade de e/s de rede) é conhecido como *escalar verticalmente*. Em aplicativos nativos de nuvem, o dimensionamento normalmente não se refere à compra e à instalação de hardware real em máquinas físicas, tanto quanto a escolha de um plano mais compatível de uma lista de opções disponíveis. Os aplicativos nativos de nuvem normalmente aumentam modificando o tamanho da VM (máquina virtual) usado para hospedar os nós individuais em seu pool de nós kubernetes. Conceitos de kubernetes como nós, clusters e pods são descritos mais detalhadamente na [próxima seção](leverage-containers-orchestrators.md). O Azure dá suporte a uma ampla variedade de tamanhos de VM que executam o [Windows](https://docs.microsoft.com/azure/virtual-machines/windows/sizes?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json) e o [Linux](https://docs.microsoft.com/azure/virtual-machines/linux/sizes). Para dimensionar verticalmente seu aplicativo, crie um novo pool de nós com um tamanho de VM de nó maior e, em seguida, migre as cargas de trabalho para o novo pool. Isso requer [vários pools de nó para o cluster AKs](https://docs.microsoft.com/azure/aks/use-multiple-node-pools), um recurso que está atualmente em visualização. Aplicativos sem servidor expandem verticalmente, escolhendo um [plano Premium](https://docs.microsoft.com/azure/azure-functions/functions-scale) e tamanhos de instância Premium ou escolhendo um plano de serviço de aplicativo dedicado diferente.
+A atualização de um servidor de host existente com CPU, memória, velocidade de e/s de disco aumentada e velocidade de e/s de rede é conhecida como *escalar verticalmente*. Escalar verticalmente um aplicativo nativo de nuvem envolve a escolha de recursos mais capacitados do fornecedor de nuvem. Por exemplo, você pode um novo pool de nós com VMs maiores em seu cluster kubernetes. Em seguida, migre seus serviços em contêineres para o novo pool.
+
+Aplicativos sem servidor expandem verticalmente, escolhendo o [plano de funções Premium](https://docs.microsoft.com/azure/azure-functions/functions-scale) ou os tamanhos de instância Premium de um plano do serviço de aplicativo dedicado.
 
 ## <a name="scaling-out-cloud-native-apps"></a>Expandindo aplicativos nativos de nuvem
 
-Os aplicativos nativos de nuvem dão suporte à expansão adicionando mais nós ou pods a solicitações de serviço. Isso pode ser feito manualmente ajustando as definições de configuração para o aplicativo (por exemplo, [dimensionando um pool de nós](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) ou por meio de *dimensionamento*automático. O dimensionamento automático ajusta os recursos usados por um aplicativo para responder à demanda, semelhante a como um termostato responde à temperatura chamando para aquecimento ou resfriamento adicional. Ao usar o dimensionamento automático, o dimensionamento manual é desabilitado.
+Aplicativos nativos de nuvem geralmente experimentam flutuações grandes na demanda e exigem escala em um momento. Eles favorecem a expansão. A expansão é feita horizontalmente com a adição de computadores adicionais (chamados nós) ou instâncias de aplicativo a um cluster existente. No kubernetes, você pode dimensionar manualmente ajustando as definições de configuração para o aplicativo (por exemplo, [dimensionando um pool de nós](https://docs.microsoft.com/azure/aks/use-multiple-node-pools#scale-a-node-pool-manually)) ou por meio do dimensionamento automático.
 
-Os clusters AKS podem ser dimensionados de uma das duas maneiras:
+Os clusters AKS podem ser dimensionados automaticamente de uma das duas maneiras:
 
-- O [autodimensionador do cluster](https://docs.microsoft.com/azure/aks/cluster-autoscaler) observa os pods que não podem ser agendados em nós devido a restrições de recursos. Ele adiciona nós adicionais conforme necessário.
-- O **pod de dimensionamento horizontal** usa o servidor de métricas em um cluster kubernetes para monitorar as demandas de recursos de pods. Se um serviço precisar de mais recursos, o dimensionador automática aumentará o número de pods.
+Primeiro, a [escala automática de Pod horizontal](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale#autoscale-pods) monitora a demanda de recursos e dimensiona automaticamente suas réplicas de pod para atendê-las. Quando o tráfego aumenta, as réplicas adicionais são provisionadas automaticamente para escalar horizontalmente seus serviços. Da mesma forma, quando a demanda diminui, elas são removidas para reduzir seus serviços. Você define a métrica na qual dimensionar, por exemplo, o uso da CPU. Você também pode especificar o número mínimo e máximo de réplicas a serem executadas. O AKS monitora essa métrica e dimensiona de acordo.
+
+Em seguida, o recurso de [dimensionamento automático do cluster AKs](https://docs.microsoft.com/azure/aks/cluster-autoscaler) permite que você dimensione automaticamente os nós de computação em um cluster kubernetes para atender à demanda. Com ele, você pode adicionar automaticamente novas VMs ao conjunto de dimensionamento de máquinas virtuais do Azure subjacente sempre que mais capacidade de computação do for necessária. Ele também remove nós quando não é mais necessário.
 
 A Figura 3-13 mostra a relação entre esses dois serviços de dimensionamento.
 
@@ -32,19 +35,14 @@ A Figura 3-13 mostra a relação entre esses dois serviços de dimensionamento.
 
 **Figura 3-13**. Dimensionando um plano do serviço de aplicativo.
 
-Esses serviços também podem reduzir o número de pods ou nós conforme necessário. Esses dois serviços podem trabalhar juntos e geralmente são implantados juntos em um cluster. Quando combinado, a escala automática de Pod horizontal concentra-se na execução do número de pods necessário para atender à demanda do aplicativo. O dimensionador automática do cluster concentra-se na execução do número de nós necessários para dar suporte ao pods agendado.
+Trabalhando juntos, ambos garantem um número ideal de instâncias de contêiner e nós de computação para dar suporte à demanda flutuante. A escala automática de Pod horizontal otimiza o número de pods necessário. O dimensionador automática de cluster otimiza o número de nós necessários.
 
-### <a name="scaling-azure-functions"></a>Dimensionamento Azure Functions
+### <a name="scaling-azure-functions"></a>Dimensionamento do Azure Functions
 
-O Azure Functions dá suporte automaticamente ao dimensionamento. O plano de consumo padrão adiciona (e remove) recursos dinamicamente com base no número de eventos de disparo de entrada. Você é cobrado apenas pelos recursos de computação que estão sendo usados quando suas funções estão sendo executadas com base no número de execuções, no tempo de execução e na memória usada. Usando o plano Premium, você obtém esses mesmos recursos, mas também pode controlar os tamanhos de instância que são usados, ter instâncias já ativadas (para evitar atrasos de inicialização a frio) e configurar VMs dedicadas nas quais executar suas funções. Embora a configuração padrão deva fornecer uma solução econômica e escalonável para a maioria dos aplicativos, a opção Premium permite aos desenvolvedores flexibilidade para requisitos de Azure Functions personalizados.
+Azure Functions escalar horizontalmente automaticamente sob demanda. Os recursos do servidor são alocados e removidos dinamicamente com base no número de eventos disparados. Você é cobrado apenas pelos recursos de computação consumidos quando suas funções são executadas. A cobrança é baseada no número de execuções, no tempo de execução e na memória usada.
 
-## <a name="references"></a>Referências
-
-- [AKS vários pools de nós](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
-- [Autoescalar do cluster AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Tutorial: dimensionar aplicativos em AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
-- [Escala e Hospedagem de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-scale)
+Embora o plano de consumo padrão forneça uma solução econômica e escalonável para a maioria dos aplicativos, a opção Premium permite que os desenvolvedores tenham flexibilidade para requisitos de Azure Functions personalizados. A atualização para o plano Premium fornece controle sobre os tamanhos de instância, instâncias pré-configuradas (para evitar atrasos de inicialização a frio) e VMs dedicadas.
 
 >[!div class="step-by-step"]
 >[Anterior](deploy-containers-azure.md)
->[Próximo](other-deployment-options.md)
+>[próximo](other-deployment-options.md)
