@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: 27766c10d0624b5eda8256a3211662036a1b16b3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139942"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507540"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL e programação assíncrona do .NET Framework
 O .NET Framework fornece os dois padrões a seguir para executar operações assíncronas vinculadas a E/S e a computação:  
@@ -115,7 +115,7 @@ O .NET Framework fornece os dois padrões a seguir para executar operações ass
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>Usando o Código de Exemplo StreamExtensions  
- O arquivo Streamextensions.cs, em [Amostras para programação paralela com o .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples), contém várias implementações de referência que usam objetos de Tarefa para arquivos assíncronos e E/S de rede.  
+ O arquivo *StreamExtensions.cs* , no repositório de [extras .net Standard extensões paralelas](/samples/dotnet/samples/parallel-programming-extensions-extras-cs/) , contém várias implementações de referência `Task` que usam objetos para e/s de rede e de arquivo assíncrono.
   
 ## <a name="see-also"></a>Confira também
 

@@ -1,13 +1,13 @@
 ---
 title: Terminologia do Docker
 description: Aprenda a terminologia básica usada todos os dias ao trabalhar com o Docker.
-ms.date: 02/15/2019
-ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68673533"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507319"
 ---
 # <a name="docker-terminology"></a>Terminologia do Docker
 
@@ -15,9 +15,13 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Imagem de contêiner**: um pacote com todas as dependências e informações necessárias para criar um contêiner. Uma imagem inclui todas as dependências (como estruturas), além da configuração de implantação e execução a ser usada por um runtime de contêiner. Geralmente, uma imagem deriva de várias imagens base que são camadas empilhadas umas sobre as outras para formar o sistema de arquivos do contêiner. Uma imagem é imutável depois de ser criada.
 
-**Arquivo Docker**: Um arquivo de texto que contém instruções sobre como construir uma imagem Docker. É como um script em lotes, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para instalar os programas necessários, copiar os arquivos e assim por diante, até obter o ambiente de trabalho que precisa.
+**Dockerfile**: um arquivo de texto que contém instruções para criar uma imagem do Docker. É como um script em lotes, a primeira linha declara a imagem base com a qual começar e, em seguida, siga as instruções para instalar os programas necessários, copiar os arquivos e assim por diante, até obter o ambiente de trabalho que precisa.
 
-**Build**: a ação de criar de uma imagem de contêiner com base nas informações e no contexto fornecido pelo Dockerfile, além de arquivos adicionais na pasta em que a imagem é criada. Você pode construir imagens com o comando Docker. **`docker build`**
+**Build**: a ação de criar de uma imagem de contêiner com base nas informações e no contexto fornecido pelo Dockerfile, além de arquivos adicionais na pasta em que a imagem é criada. Você pode criar imagens com o seguinte comando do Docker:
+
+```bash
+docker build
+```
 
 **Contêiner**: uma instância de uma imagem do Docker. Um contêiner representa a execução de um único aplicativo, processo ou serviço. Consiste no conteúdo de uma imagem do Docker, um ambiente de execução e um conjunto padrão de instruções. Ao dimensionar um serviço, você cria várias instâncias de um contêiner da mesma imagem. Ou um trabalho em lotes pode criar vários contêineres da mesma imagem, passando parâmetros diferentes para cada instância.
 
@@ -25,13 +29,13 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Marcação**: uma marca ou um rótulo pode ser aplicado a imagens para que imagens ou versões diferentes da mesma imagem (dependendo do número de versão ou do ambiente de destino) possam ser identificadas.
 
-**Build de vários estágios**: é um recurso disponível no Docker 17.05 e posteriores que ajuda a reduzir o tamanho das imagens finais. Em algumas frases, com o build de vários estágios você pode usar, por exemplo, uma imagem base grande contendo o SDK para compilar e publicar o aplicativo e, em seguida, usar a pasta de publicação com uma pequena imagem base somente de runtime para produzir uma imagem final muito menor
+**Build de vários estágios**: é um recurso disponível no Docker 17.05 e posteriores que ajuda a reduzir o tamanho das imagens finais. Em algumas frases, com a compilação de vários estágios, você pode usar, por exemplo, uma grande imagem de base, que contém o SDK, para compilar e publicar o aplicativo e, em seguida, usar a pasta de publicação com uma única imagem base somente de tempo de execução, para produzir uma imagem final muito menor.
 
-**Repositório**: uma coleção de imagens do Docker relacionadas, rotulada com uma marcação que indica a versão da imagem. Alguns repositórios contêm várias variantes de uma imagem específica, como uma imagem contendo SDKs (mais pesadas), uma imagem contendo apenas tempos de execução (mais leve), etc. Essas variantes podem ser marcadas com tags. Um único repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows.
+**Repositório**: uma coleção de imagens do Docker relacionadas, rotulada com uma marcação que indica a versão da imagem. Alguns repositórios contêm várias variantes de uma imagem específica, como uma imagem que contém SDKs (mais pesado), uma imagem contendo apenas tempos de execução (mais leves), etc. Essas variantes podem ser marcadas com marcas. Um único repositório pode conter variantes de plataforma, como uma imagem do Linux e uma imagem do Windows.
 
 **Registro**: um serviço que dá acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem multi-arco**: Para multiarquitetura, é um recurso que simplifica a seleção da imagem apropriada, de acordo com **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** a plataforma onde **`2.2-nanoserver-1709`** o **`2.2-nanoserver-1803`** **`2.2-nanoserver-1809`** Docker **`2.2-stretch`** está sendo executado, por exemplo, quando um arquivo Docker solicita uma imagem base do registro que realmente obtém , ou , dependendo do sistema operacional e da versão onde o Docker está sendo executado.
+**Imagem de vários arcos**: para várias arquiteturas, trata-se de um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução. Por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:3.1** a partir do registro, ele realmente Obtém **3,1-SDK-** los-1909, **3,1-sdk-los Server-1809** ou **3,1-SDK-Buster-Slim**, dependendo do sistema operacional e da versão em que o Docker está em execução.
 
 **Docker Hub**: um registro público para carregar imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 
@@ -50,5 +54,5 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 **Orquestrador**: uma ferramenta que simplifica o gerenciamento de clusters e hosts do Docker. Os orquestradores permitem gerenciar imagens, contêineres e hosts por meio de uma CLI (interface de linha de comando) ou uma interface do usuário gráfica. É possível gerenciar a rede de contêiner, configurações, balanceamento de carga, descoberta de serviço, alta disponibilidade, configuração de host do Docker e muito mais. Um orquestrador é responsável por executar, distribuir, dimensionar e reparar de cargas de trabalho em uma coleção de nós. Normalmente, produtos de orquestrador são os mesmos que fornecem infraestrutura de cluster, como Kubernetes e Azure Service Fabric, além de outras ofertas no mercado.
 
 >[!div class="step-by-step"]
->[Próximo](what-is-docker.md)
->[anterior](docker-containers-images-and-registries.md)
+>[Anterior](what-is-docker.md)
+>[próximo](docker-containers-images-and-registries.md)

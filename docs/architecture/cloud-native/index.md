@@ -3,12 +3,12 @@ title: Arquitetando aplicativos .NET nativos de nuvem para o Azure
 description: Um guia para a criação de aplicativos nativos de nuvem que aproveitam contêineres, microservices e recursos sem servidor do Azure.
 author: ardalis
 ms.date: 04/23/2020
-ms.openlocfilehash: ebef97fb355cbf682b37ee441a19fbbfdd2d0dc3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199814"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507384"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Arquitetando aplicativos .NET nativos de nuvem para o Azure
 
@@ -54,7 +54,7 @@ Participantes e revisores:
 >
 > **Nish Anil**, gerente de programas sênior, equipe do .net, Microsoft
 >
-> **Jeremy semelhança**, gerente de programas sênior, equipe do .net, Microsoft
+> **Jeremy Likness**, gerente de programas sênior, equipe do .net, Microsoft
 >
 > **Cecil Phillip**, defensora da nuvem sênior, Microsoft
 

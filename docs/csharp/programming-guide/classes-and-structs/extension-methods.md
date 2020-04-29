@@ -6,28 +6,28 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 0b35ad523fc7f0949cb5243edbdc50cd3e927999
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249214"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506812"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 
-Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de ocorrência no tipo estendido. Para o código do cliente escrito em C#, F# e Visual Basic, não há diferença aparente entre chamar um método de extensão e os métodos definidos em um tipo.
+Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são métodos estáticos, mas são chamados como se fossem métodos de instância no tipo estendido. Para o código de cliente escrito em C#, F # e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos definidos em um tipo.
 
-Os métodos de extensão mais comuns são os operadores de consulta <xref:System.Collections.IEnumerable?displayProperty=nameWithType> <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> padrão LINQ que adicionam funcionalidade de consulta aos tipos e tipos existentes. Para usar os operadores de consulta padrão, traga-os primeiro ao escopo com uma diretiva `using System.Linq`. Em seguida, qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parece ter métodos de instância como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar "ponto" após uma instância de um tipo <xref:System.Collections.Generic.IEnumerable%601> como <xref:System.Collections.Generic.List%601> ou <xref:System.Array>.
+Os métodos de extensão mais comuns são os operadores de consulta padrão do LINQ que adicionam a <xref:System.Collections.IEnumerable?displayProperty=nameWithType> funcionalidade <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> de consulta aos tipos existentes e. Para usar os operadores de consulta padrão, traga-os primeiro ao escopo com uma diretiva `using System.Linq`. Em seguida, qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parece ter métodos de instância como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar "ponto" após uma instância de um tipo <xref:System.Collections.Generic.IEnumerable%601> como <xref:System.Collections.Generic.List%601> ou <xref:System.Array>.
 
-### <a name="orderby-example"></a>Exemplo de ordem
+### <a name="orderby-example"></a>Exemplo de OrderBy
 
-O exemplo a seguir mostra como chamar o método de consulta padrão `OrderBy` em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Muitos operadores de consulta padrão tomam expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte [Expressões Lambda](../statements-expressions-operators/lambda-expressions.md).
+O exemplo a seguir mostra como chamar o método de consulta padrão `OrderBy` em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Muitos operadores de consulta padrão usam expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte [Expressões Lambda](../statements-expressions-operators/lambda-expressions.md).
 
 [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]
 
-Os métodos de extensão são definidos como estáticos, mas são chamados usando a sintaxe do método de instância. Seu primeiro parâmetro especifica em qual tipo o método opera. O parâmetro é precedido [this](../../language-reference/keywords/this.md) pelo modificador. Os métodos de extensão só estarão no escopo quando você importar explicitamente o namespace para seu código-fonte com uma diretiva `using`.
+Os métodos de extensão são definidos como estáticos, mas são chamados usando a sintaxe do método de instância. Seu primeiro parâmetro especifica em qual tipo o método opera. O parâmetro é precedido por [este](../../language-reference/keywords/this.md) modificador. Os métodos de extensão só estarão no escopo quando você importar explicitamente o namespace para seu código-fonte com uma diretiva `using`.
 
-O exemplo a seguir mostra um método de extensão definido para a classe <xref:System.String?displayProperty=nameWithType>. É definido dentro de uma classe estática não aninhada e não genérica:
+O exemplo a seguir mostra um método de extensão definido para a classe <xref:System.String?displayProperty=nameWithType>. Ele é definido dentro de uma classe estática não aninhada não genérica:
 
 [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]
 
@@ -44,17 +44,17 @@ string s = "Hello Extension Methods";
 int i = s.WordCount();
 ```
 
-Você invoca o método de extensão em seu código com sintaxe de método de instância. A linguagem intermediária (IL) gerada pelo compilador traduz seu código em uma chamada no método estático. O princípio do encapsulamento não está sendo violado. Os métodos de extensão não podem acessar variáveis privadas no tipo que estão estendendo.
+Você invoca o método de extensão em seu código com a sintaxe do método de instância. A IL (linguagem intermediária) gerada pelo compilador converte seu código em uma chamada no método estático. O princípio do encapsulamento não está realmente violado. Os métodos de extensão não podem acessar variáveis privadas no tipo que estão sendo estendidas.
 
-Para obter mais informações, consulte [Como implementar e chamar um método de extensão personalizado](./how-to-implement-and-call-a-custom-extension-method.md).
+Para obter mais informações, consulte [como implementar e chamar um método de extensão personalizado](./how-to-implement-and-call-a-custom-extension-method.md).
 
-Em geral, você provavelmente estará chamando métodos de extensão muito mais frequentemente do que implementando o seu próprio. Como os métodos de extensão são chamados com a sintaxe do método de instância, nenhum conhecimento especial é necessário para usá-los no código do cliente. Para habilitar métodos de extensão para um tipo específico, apenas adicione uma diretiva `using` para o namespace no qual os métodos estão definidos. Por exemplo, para usar os operadores de consulta padrão, adicione esta diretiva `using` ao seu código:
+Em geral, você provavelmente estará chamando métodos de extensão muito mais frequentemente do que implementar seus próprios. Como os métodos de extensão são chamados com a sintaxe do método de instância, nenhum conhecimento especial é necessário para usá-los no código do cliente. Para habilitar métodos de extensão para um tipo específico, apenas adicione uma diretiva `using` para o namespace no qual os métodos estão definidos. Por exemplo, para usar os operadores de consulta padrão, adicione esta diretiva `using` ao seu código:
 
 ```csharp
 using System.Linq;
 ```
 
-(Você também pode ter que adicionar uma referência ao System.Core.dll.) Você notará que os operadores de consulta padrão agora aparecem no IntelliSense como métodos adicionais disponíveis para a maioria dos <xref:System.Collections.Generic.IEnumerable%601> tipos.
+(Você também pode precisar adicionar uma referência a System. Core. dll.) Você observará que os operadores de consulta padrão agora aparecem no IntelliSense como métodos adicionais disponíveis para <xref:System.Collections.Generic.IEnumerable%601> a maioria dos tipos.
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Associando Métodos de Extensão no Momento da Compilação
 
@@ -66,7 +66,7 @@ O exemplo a seguir demonstra as regras que o compilador C# segue ao determinar s
 
 O método de extensão `MethodB` nunca é chamado porque seu nome e assinatura são exatamente iguais aos métodos já implementados pelas classes.
 
-Quando o compilador não consegue encontrar um método de ocorrência com uma assinatura correspondente, ele se ligará a um método de extensão correspondente se existir.
+Quando o compilador não consegue localizar um método de instância com uma assinatura correspondente, ele se associará a um método de extensão correspondente, se houver.
 
 [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]
 
@@ -74,11 +74,11 @@ Quando o compilador não consegue encontrar um método de ocorrência com uma as
 
 ### <a name="collection-functionality"></a>Funcionalidade de coleção
 
-No passado, era comum criar "Classes de <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> Coleção" que implementassem a interface para um determinado tipo e contivessem funcionalidades que atuavam em coleções desse tipo. Embora não haja nada de errado em criar esse tipo de objeto de coleta, a mesma funcionalidade pode ser alcançada usando uma extensão no <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. As extensões têm a vantagem de permitir que a <xref:System.Array?displayProperty=nameWithType> funcionalidade <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> seja <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> chamada de qualquer coleção, como uma ou que implementa nesse tipo. Um exemplo disso usando uma Matriz de Int32 pode ser encontrado [anteriormente neste artigo](#orderby-example).
+No passado, era comum criar "classes de coleção" que implementavam a <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> interface para um determinado tipo e uma funcionalidade contida que atuava em coleções desse tipo. Embora não haja nada de errado ao criar esse tipo de objeto de coleção, a mesma funcionalidade pode ser obtida usando uma extensão no <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. As extensões têm a vantagem de permitir que a funcionalidade seja chamada de qualquer coleção, como <xref:System.Array?displayProperty=nameWithType> uma <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ou implementada <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> nesse tipo. Um exemplo disso é usar uma matriz de Int32, que pode ser encontrada [anteriormente neste artigo](#orderby-example).
 
-### <a name="layer-specific-functionality"></a>Funcionalidade específica da camada
+### <a name="layer-specific-functionality"></a>Funcionalidade específica de camada
 
-Ao usar uma arquitetura onion ou outro design de aplicativo em camadas, é comum ter um conjunto de Entidades de Domínio ou Objetos de Transferência de Dados que podem ser usados para se comunicar através dos limites do aplicativo. Esses objetos geralmente não contêm funcionalidade, ou apenas funcionalidade mínima que se aplica a todas as camadas do aplicativo. Os métodos de extensão podem ser usados para adicionar funcionalidade específica a cada camada de aplicativo sem carregar o objeto para baixo com métodos não necessários ou desejados em outras camadas.
+Ao usar uma arquitetura de cebola ou outro design de aplicativo em camadas, é comum ter um conjunto de entidades de domínio ou Transferência de Dados objetos que podem ser usados para se comunicar entre os limites do aplicativo. Esses objetos geralmente não contêm nenhuma funcionalidade ou apenas funcionalidade mínima que se aplica a todas as camadas do aplicativo. Os métodos de extensão podem ser usados para adicionar funcionalidade específica a cada camada de aplicativo sem carregar o objeto com métodos não necessários ou desejados em outras camadas.
 
 ```aspx-csharp
 public class DomainEntity
@@ -97,31 +97,31 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>Estendendo tipos predefinidos
 
-Em vez de criar novos objetos quando a funcionalidade reutilizável precisa ser criada, muitas vezes podemos estender um tipo existente, como um tipo .NET Framework ou CLR. Como exemplo, se não usarmos métodos de extensão, podemos criar uma `Engine` ou `Query` classe para fazer o trabalho de executar uma consulta em um Servidor SQL que pode ser chamado de vários lugares em nosso código. No entanto, <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> podemos, em vez disso, estender a classe usando métodos de extensão para executar essa consulta de qualquer lugar que tenhamos uma conexão com um Servidor SQL. Outros exemplos podem ser adicionar funcionalidade <xref:System.String?displayProperty=nameWithType> comum à classe, estender os <xref:System.IO.File?displayProperty=nameWithType> <xref:System.IO.Stream?displayProperty=nameWithType> recursos de <xref:System.Exception?displayProperty=nameWithType> processamento de dados dos objetos e objetos para a funcionalidade específica de manipulação de erros. Esses tipos de casos de uso são limitados apenas pela sua imaginação e bom senso.
+Em vez de criar novos objetos quando a funcionalidade reutilizável precisa ser criada, muitas vezes podemos estender um tipo existente, como um .NET Framework ou um tipo CLR. Por exemplo, se não usarmos métodos de extensão, podemos criar uma `Engine` classe or `Query` para fazer o trabalho de executar uma consulta em um SQL Server que pode ser chamado de vários locais em nosso código. No entanto, podemos estender <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> a classe usando métodos de extensão para executar essa consulta em qualquer lugar em que tenhamos uma conexão com um SQL Server. Outros exemplos <xref:System.String?displayProperty=nameWithType> podem ser adicionar funcionalidade comum à classe, estender os recursos de processamento de dados dos objetos <xref:System.IO.File?displayProperty=nameWithType> e <xref:System.IO.Stream?displayProperty=nameWithType> e <xref:System.Exception?displayProperty=nameWithType> objetos para a funcionalidade de tratamento de erros específica. Esses tipos de casos de uso são limitados apenas por sua imaginação e bom sentido.
 
-Estender tipos predefinidos pode `struct` ser difícil com os tipos porque eles são passados por valor para métodos. Isso significa que qualquer alteração na estrutura é feita para uma cópia da estrutura. Essas alterações não são visíveis quando o método de extensão sai. Começando com C# 7.2, `ref` você pode adicionar o modificador ao primeiro argumento de um método de extensão. Adicionar `ref` o modificador significa que o primeiro argumento é aprovado por referência. Isso permite que você escreva métodos de extensão que alteram o estado da estrutura sendo estendida.
+A extensão de tipos predefinidos `struct` pode ser difícil com tipos porque eles são passados por valor para métodos. Isso significa que qualquer alteração na estrutura é feita em uma cópia da estrutura. Essas alterações não serão visíveis depois que o método de extensão sair. A partir do C# 7,2, você pode adicionar `ref` o modificador ao primeiro argumento de um método de extensão. Adicionar o `ref` modificador significa que o primeiro argumento é passado por referência. Isso permite que você escreva métodos de extensão que alteram o estado da estrutura que está sendo estendida.
 
 ## <a name="general-guidelines"></a>Diretrizes gerais
 
-Embora ainda seja considerado preferível adicionar funcionalidade modificando o código de um objeto ou derivando um novo tipo sempre que for razoável e possível, os métodos de extensão tornaram-se uma opção crucial para criar funcionalidades reutilizáveis em todo o .NET Ecossistema. Para aquelas ocasiões em que a fonte original não está seu controle, quando um objeto derivado é inapropriado ou impossível, ou quando a funcionalidade não deve ser exposta além de seu escopo aplicável, os métodos de extensão são uma excelente escolha.
+Embora ainda seja considerado preferível adicionar funcionalidade modificando o código de um objeto ou derivando um novo tipo sempre que for razoável e possível fazer isso, os métodos de extensão se tornaram uma opção crucial para a criação de funcionalidade reutilizável em todo o ecossistema do .NET. Para as ocasiões em que a fonte original não está sob seu controle, quando um objeto derivado é inadequado ou impossível, ou quando a funcionalidade não deve ser exposta além do escopo aplicável, os métodos de extensão são uma opção excelente.
 
-Para obter mais informações sobre os tipos derivados, consulte [Herança](./inheritance.md).
+Para obter mais informações sobre tipos derivados, consulte [herança](./inheritance.md).
 
-Ao usar um método de extensão para estender um tipo cujo código-fonte você não está no controle, você corre o risco de que uma alteração na implementação do tipo faça com que seu método de extensão se quebre.
+Ao usar um método de extensão para estender um tipo cujo código-fonte você não está controlando, você corre o risco de que uma alteração na implementação do tipo cause a interrupção do método de extensão.
 
 Se você implementar métodos de extensão para um determinado tipo, lembre-se das seguintes considerações:
 
 - Um método de extensão nunca será chamado se possuir a mesma assinatura que um método definido no tipo.
-- Os métodos de extensão são trazidos para o escopo no nível do namespace. Por exemplo, se você tiver várias classes estáticas `Extensions`que contenham métodos de extensão em um único namespace chamado, todos eles serão colocados em escopo pela `using Extensions;` diretiva.
+- Os métodos de extensão são trazidos para o escopo no nível do namespace. Por exemplo, se você tiver várias classes estáticas que contêm métodos de extensão em um único `Extensions`namespace chamado, elas serão colocadas no escopo pela `using Extensions;` diretiva.
 
 Para uma biblioteca de classes que você implemente, não use métodos de extensão para evitar incrementar o número de versão de um assembly. Se desejar adicionar funcionalidade significativa a uma biblioteca da qual você possua o código-fonte, siga as diretrizes padrão do .NET Framework para controle de versão do assembly. Para obter mais informações, consulte [Controle de versão do assembly](../../../standard/assembly/versioning.md).
 
 ## <a name="see-also"></a>Confira também
 
-- [C# Guia de Programação](../index.md)
-- [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
-- [Expressões Lambda](../statements-expressions-operators/lambda-expressions.md)
-- [Visão geral dos operadores de consulta padrão](../concepts/linq/standard-query-operators-overview.md)
+- [Guia de programação C#](../index.md)
+- [Exemplos de programação paralela (incluem vários métodos de extensão de exemplo)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
+- [Expressões lambda](../statements-expressions-operators/lambda-expressions.md)
+- [Visão geral de operadores de consulta padrão](../concepts/linq/standard-query-operators-overview.md)
 - [Regras de conversão para parâmetros de instância e seu impacto](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
 - [Interoperabilidade de métodos de extensão entre linguagens](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
 - [Métodos de extensão e representantes via currying](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)

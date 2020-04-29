@@ -1,23 +1,23 @@
 ---
-title: Propriedades MSBuild para Microsoft.NET.Sdk
-description: Referência para as propriedades MSBuild que são compreendidas pelo .NET Core SDK.
+title: Propriedades do MSBuild para Microsoft. NET. Sdk
+description: Referência para as propriedades do MSBuild que são compreendidas pelo SDK do .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: d4a204a1e0216313418d278ec3bd333f72db8751
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 105b7d67ea24515ea88481cb4a4fe42d2a03cfd0
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399178"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506774"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>Propriedades MSBuild para projetos .NET Core SDK
+# <a name="msbuild-properties-for-net-core-sdk-projects"></a>Propriedades do MSBuild para projetos SDK do .NET Core
 
-Esta página descreve as propriedades mSBuild para configurar projetos .NET Core.
+Esta página descreve as propriedades do MSBuild para configurar projetos do .NET Core.
 
 > [!NOTE]
-> Esta página é um trabalho em andamento e não lista todas as propriedades úteis do MSBuild para o .NET Core SDK. Para obter uma lista de propriedades comuns do MSBuild, consulte [Propriedades Comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+> Esta página é um trabalho em andamento e não lista todas as propriedades de MSBuild úteis para o SDK do .NET Core. Para obter uma lista de propriedades comuns do MSBuild, consulte [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
-## <a name="framework-properties"></a>Propriedades do framework
+## <a name="framework-properties"></a>Propriedades da estrutura
 
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
@@ -25,7 +25,7 @@ Esta página descreve as propriedades mSBuild para configurar projetos .NET Core
 
 ### <a name="targetframework"></a>TargetFramework
 
-A `TargetFramework` propriedade especifica a versão de quadro de destino para o aplicativo, que faz referência implícita a um [metapacote](../packages.md#metapackages). Para obter uma lista de apelidos de quadro de destino válidos, consulte [Frameworks target em projetos estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo, que referencia implicitamente um [metapacote](../packages.md#metapackages). Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -35,14 +35,14 @@ A `TargetFramework` propriedade especifica a versão de quadro de destino para o
 </Project>
 ```
 
-Para obter mais informações, consulte [Frameworks target em projetos no estilo SDK](../../standard/frameworks.md).
+Para obter mais informações, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md).
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Use `TargetFrameworks` a propriedade quando quiser que seu aplicativo tenha como alvo várias plataformas. Para obter uma lista de apelidos de quadro de destino válidos, consulte [Frameworks target em projetos estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+Use a `TargetFrameworks` Propriedade quando desejar que seu aplicativo direcione várias plataformas. Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 > [!NOTE]
-> Esta propriedade é `TargetFramework` ignorada se (singular) for especificado.
+> Essa propriedade será ignorada `TargetFramework` se (singular) for especificado.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -52,14 +52,14 @@ Use `TargetFrameworks` a propriedade quando quiser que seu aplicativo tenha como
 </Project>
 ```
 
-Para obter mais informações, consulte [Frameworks target em projetos no estilo SDK](../../standard/frameworks.md).
+Para obter mais informações, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md).
 
 ### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
 
 > [!NOTE]
-> Esta propriedade só se `netstandard1.x`aplica a projetos usando . Não se aplica a projetos `netstandard2.x`que usam.
+> Essa propriedade só se aplica a projetos `netstandard1.x`que usam o. Ele não se aplica a projetos que `netstandard2.x`usam o.
 
-Use `NetStandardImplicitPackageVersion` a propriedade quando quiser especificar uma versão de framework menor que a versão [metapacote.](../packages.md#metapackages) O arquivo do projeto no `netstandard1.3` exemplo a seguir é alvo, mas usa a versão 1.6.0 de `NETStandard.Library`.
+Use a `NetStandardImplicitPackageVersion` Propriedade quando desejar especificar uma versão de estrutura inferior à versão do [metapacote](../packages.md#metapackages) . O arquivo de projeto no exemplo a seguir `netstandard1.3` tem como destino, mas usa `NETStandard.Library`a versão 1.6.0 do.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -74,11 +74,12 @@ Use `NetStandardImplicitPackageVersion` a propriedade quando quiser especificar 
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
+- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
-A `RuntimeIdentifier` propriedade permite especificar um único [identificador de tempo de execução (RID)](../rid-catalog.md) para o projeto. O RID permite a publicação de uma implantação autossuficiente.
+A `RuntimeIdentifier` propriedade permite que você especifique um único [identificador de tempo de execução (RID)](../rid-catalog.md) para o projeto. O RID permite a publicação de uma implantação autossuficiente.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -90,7 +91,7 @@ A `RuntimeIdentifier` propriedade permite especificar um único [identificador d
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
-A `RuntimeIdentifiers` propriedade permite especificar uma lista delimitada de [rids (runtime) deponto e](../rid-catalog.md) ponto e vírgula para o projeto. Use esta propriedade se você precisar publicar para vários tempos de execução. `RuntimeIdentifiers`é usado no momento de restauração para garantir que os ativos certos estejam no gráfico.
+A `RuntimeIdentifiers` propriedade permite que você especifique uma lista delimitada por ponto-e-vírgula de [RIDs (identificadores de tempo de execução)](../rid-catalog.md) para o projeto. Use essa propriedade se você precisar publicar para vários tempos de execução. `RuntimeIdentifiers`é usado no momento da restauração para garantir que os ativos corretos estejam no grafo.
 
 > [!TIP]
 > `RuntimeIdentifier`(singular) pode fornecer compilações mais rápidas quando apenas um único tempo de execução é necessário.
@@ -103,11 +104,25 @@ A `RuntimeIdentifiers` propriedade permite especificar uma lista delimitada de [
 </Project>
 ```
 
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+O `TrimmerRootAssembly` item permite que você exclua um assembly de [*corte*](../deploying/trim-self-contained.md). O corte é o processo de remover partes não usadas do tempo de execução de um aplicativo empacotado. Em alguns casos, a remoção pode remover incorretamente as referências necessárias.
+
+O XML a seguir exclui o `System.Security` assembly de corte.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+</Project>
+```
+
 ### <a name="useapphost"></a>UseAppHost
 
-A `UseAppHost` propriedade foi introduzida na versão 2.1.400 do .NET Core SDK. Ele controla se um executável nativo é criado ou não para uma implantação. Um executável nativo é necessário para implantações independentes.
+A `UseAppHost` Propriedade foi introduzida na versão 2.1.400 do SDK do .NET Core. Ele controla se um executável nativo é criado para uma implantação ou não. Um executável nativo é necessário para implantações independentes.
 
-Nas versões .NET Core 3.0 e posteriores, um executável dependente de estrutura é criado por padrão. Defina `UseAppHost` a `false` propriedade para desativar a geração do executável.
+No .NET Core 3,0 e versões posteriores, um executável dependente da estrutura é criado por padrão. Defina a `UseAppHost` Propriedade como `false` para desabilitar a geração do executável.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -117,13 +132,15 @@ Nas versões .NET Core 3.0 e posteriores, um executável dependente de estrutura
 </Project>
 ```
 
-Para obter mais informações sobre a implantação, consulte [a implantação do aplicativo .NET Core](../deploying/index.md).
+Para obter mais informações sobre a implantação, consulte [implantação de aplicativos do .NET Core](../deploying/index.md).
 
 ## <a name="compile-properties"></a>Compilar propriedades
 
+- [LangVersion](#langversion)
+
 ### <a name="langversion"></a>LangVersion
 
-A `LangVersion` propriedade permite especificar uma versão específica do idioma de programação. Por exemplo, se você quiser acessar os `LangVersion` `preview`recursos de visualização C#, definido como .
+A `LangVersion` propriedade permite especificar uma versão de linguagem de programação específica. Por exemplo, se você quiser acessar os recursos do C# Preview, `LangVersion` defina `preview`como.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -133,7 +150,129 @@ A `LangVersion` propriedade permite especificar uma versão específica do idiom
 </Project>
 ```
 
-Para obter mais informações, consulte [a versão do idioma C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
+Para obter mais informações, consulte [controle de versão da linguagem C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
+
+## <a name="run-time-configuration-properties"></a>Propriedades de configuração de tempo de execução
+
+Você pode configurar alguns comportamentos de tempo de execução especificando as propriedades do MSBuild no arquivo de projeto do aplicativo. Para obter informações sobre outras maneiras de configurar o comportamento de tempo de execução, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md).
+
+- [ConcurrentGarbageCollection](#concurrentgarbagecollection)
+- [InvariantGlobalization](#invariantglobalization)
+- [RetainVMGarbageCollection](#retainvmgarbagecollection)
+- [ServerGarbageCollection](#servergarbagecollection)
+- [ThreadPoolMaxThreads](#threadpoolmaxthreads)
+- [ThreadPoolMinThreads](#threadpoolminthreads)
+- [TieredCompilation](#tieredcompilation)
+- [TieredCompilationQuickJit](#tieredcompilationquickjit)
+- [TieredCompilationQuickJitForLoops](#tieredcompilationquickjitforloops)
+
+### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
+
+A `ConcurrentGarbageCollection` propriedade define se a [coleta de lixo em segundo plano (simultânea)](../../standard/garbage-collection/background-gc.md) está habilitada. Defina o valor como `false` para desabilitar a coleta de lixo em segundo plano. Para obter mais informações, consulte [System. GC. simultaneamente/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="invariantglobalization"></a>InvariantGlobalization
+
+A `InvariantGlobalization` propriedade define se o aplicativo é executado no modo *invariável-globalização* , o que significa que ele não tem acesso a dados específicos de cultura. Defina o valor a `true` ser executado no modo invariável-Globally. Para obter mais informações, consulte [modo invariável](../run-time-config/globalization.md#invariant-mode).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
+
+A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para colocar os segmentos de memória excluídos em uma lista em espera para uso futuro ou liberá-los. Definir o valor para `true` instruir o coletor de lixo a colocar os segmentos em uma lista de espera. Para obter mais informações, consulte [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="servergarbagecollection"></a>ServerGarbageCollection
+
+A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como `true` para usar a coleta de lixo do servidor. Para obter mais informações, consulte [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
+
+A `ThreadPoolMaxThreads` Propriedade configura o número máximo de threads para o pool de threads de trabalho. Para obter mais informações, consulte [Maximum threads](../run-time-config/threading.md#maximum-threads).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
+
+A `ThreadPoolMinThreads` Propriedade configura o número mínimo de threads para o pool de threads de trabalho. Para obter mais informações, consulte [mínimo de threads](../run-time-config/threading.md#minimum-threads).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilation"></a>TieredCompilation
+
+A `TieredCompilation` propriedade define se o compilador JIT (just-in-time) usa compilação em [camadas](../whats-new/dotnet-core-3-0.md#tiered-compilation). Defina o valor como `false` para desabilitar a compilação em camadas. Para obter mais informações, consulte [compilação em camadas](../run-time-config/compilation.md#tiered-compilation).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
+
+A `TieredCompilationQuickJit` propriedade define se o compilador JIT usa o JIT rápido. Defina o valor como `false` para desabilitar o JIT rápido. Para obter mais informações, consulte [Quick JIT](../run-time-config/compilation.md#quick-jit).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
+
+A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa o JIT rápido em métodos que contêm loops. Defina o valor como `true` para habilitar o JIT rápido em métodos que contêm loops. Para obter mais informações, consulte [Quick JIT for loops](../run-time-config/compilation.md#quick-jit-for-loops).
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="nuget-packages"></a>Pacotes NuGet
 
@@ -142,7 +281,7 @@ Para obter mais informações, consulte [a versão do idioma C#](../../csharp/la
 
 ### <a name="packagereference"></a>PackageReference
 
-O `PackageReference` item permite especificar uma dependência nuGet. Por exemplo, você pode querer referenciar um único pacote em vez de um [metapacote](../packages.md#metapackages). O atributo `Include` especifica a ID do pacote. O trecho do arquivo do projeto no exemplo a seguir faz referência ao pacote [System.Runtime.](https://www.nuget.org/packages/System.Runtime/)
+O `PackageReference` item permite que você especifique uma dependência do NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages). O atributo `Include` especifica a ID do pacote. O trecho do arquivo de projeto no exemplo a seguir faz referência ao pacote [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -157,9 +296,9 @@ Para obter mais informações, consulte [referências de pacote em arquivos de p
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para projetos que seu projeto faz referência sustais e pacotes NuGet que seu projeto consome. Por exemplo, se você especificar `PackageReference` uma dependência de pacote usando, mas esse `TargetFramework`pacote `AssetTargetFallback` não contiver ativos compatíveis com os de seus projetos, a propriedade entra em jogo. A compatibilidade do pacote referenciado é recontrolada usando cada estrutura `AssetTargetFallback`de destino especificada em .
+A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para projetos que seu projeto faz referência e pacotes NuGet que seu projeto consome. Por exemplo, se você especificar uma dependência de pacote `PackageReference` usando, mas esse pacote não contiver ativos que são compatíveis com `TargetFramework`seus projetos `AssetTargetFallback` , a propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback`.
 
-Você pode `AssetTargetFallback` definir a propriedade como uma ou mais [versões de quadro-alvo](../../standard/frameworks.md#supported-target-framework-versions).
+Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versões da estrutura de destino](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -170,14 +309,14 @@ Você pode `AssetTargetFallback` definir a propriedade como uma ou mais [versõe
 </Project>
 ```
 
-### <a name="pack-and-restore-targets"></a>Embalar e restaurar alvos
+### <a name="pack-and-restore-targets"></a>Empacotar e restaurar destinos
 
-O MSBuild 15.1 introduziu `pack` e `restore` tem como objetivos criar e restaurar pacotes NuGet como parte de uma compilação. Para obter informações sobre as propriedades MSBuild para esses alvos, incluindo `PackageTargetFallback`, consulte [NuGet pack e restore como alvos MSBuild](/nuget/reference/msbuild-targets).
+O MSBuild 15,1 `pack` introduziu e `restore` tem como destino a criação e a restauração de pacotes NuGet como parte de uma compilação. Para obter informações sobre as propriedades do MSBuild para esses destinos `PackageTargetFallback`, incluindo, consulte [NuGet Pack e restaurar como destinos do MSBuild](/nuget/reference/msbuild-targets).
 
 ## <a name="see-also"></a>Confira também
 
-- [Referência de esquema MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
-- [Propriedades Comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)
-- [Propriedades MSBuild para pacote NuGet](/nuget/reference/msbuild-targets#pack-target)
-- [Propriedades mSBuild para restauração NuGet](/nuget/reference/msbuild-targets#restore-properties)
-- [Personalize uma compilação](/visualstudio/msbuild/customize-your-build)
+- [Referência de esquema do MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
+- [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)
+- [Propriedades do MSBuild para o pacote NuGet](/nuget/reference/msbuild-targets#pack-target)
+- [Propriedades do MSBuild para restauração do NuGet](/nuget/reference/msbuild-targets#restore-properties)
+- [Personalizar uma compilação](/visualstudio/msbuild/customize-your-build)

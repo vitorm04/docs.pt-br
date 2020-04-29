@@ -1,19 +1,19 @@
 ---
 title: Contêineres de base para colaboração de DevOps
 description: Entenda o papel fundamental dos contêineres para simplificar DevOps.
-ms.date: 02/15/2019
-ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73094496"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507332"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contêineres de base para colaboração de DevOps
 
 Pela própria natureza dos contêineres e da tecnologia do Docker, os desenvolvedores podem compartilhar o software e as dependências facilmente com as operações de TI e os ambientes de produção e, ao mesmo tempo, eliminar a desculpa comum de que "funciona no meu computador". Os contêineres resolvem conflitos de aplicativo entre ambientes diferentes. Indiretamente, os contêineres e o Docker estreitam a relação entre os desenvolvedores e as operações de TI, facilitando uma colaboração eficiente. Adotar o fluxo de trabalho de contêiner oferece a vários clientes a continuidade de DevOps que eles buscam, mas tiveram que implantar anteriormente por meio de uma configuração mais complexa para versão e pipelines de build. Os contêineres simplificam os pipelines de build/teste/implantação no DevOps.
 
-![Diagrama mostrando a propriedade do ciclo de vida de um aplicativo Docker.](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
+![Diagrama que mostra a propriedade do ciclo de vida de um aplicativo do Docker.](./media/containers-foundation-for-devops-collaboration/persona-workloads-docker-container-lifecycle.png)
 
 **Figura 2-1.** Principais cargas de trabalho por "persona" no ciclo de vida dos aplicativos do Docker em contêineres
 
@@ -23,7 +23,7 @@ No pilar do lado esquerdo da Figura 2-1, os desenvolvedores escrevem e executam 
 
 O pilar de DevOps define o build – pipelines de CI (integração contínua) usando o Dockerfile fornecido no repositório de código. O sistema de CI efetua pull das imagens de contêiner de base do Registro do Docker selecionado e cria as imagens personalizadas do Docker para o aplicativo. Em seguida, as imagens são validadas e efetua-se o push delas para o Registro do Docker usado para as implantações em vários ambientes.
 
-No pilar à direita, as equipes de operações gerenciam os aplicativos e a infraestrutura implantados na produção e monitoram o ambiente e os aplicativos. Desse modo, é possível oferecer feedback e insights à equipe de desenvolvimento sobre como o aplicativo pode ser aprimorado. Os aplicativos de contêiner são normalmente executados na produção por meio de orquestradores de contêineres.
+No pilar à direita, as equipes de operações gerenciam os aplicativos e a infraestrutura implantados na produção e monitoram o ambiente e os aplicativos. Desse modo, é possível oferecer feedback e insights à equipe de desenvolvimento sobre como o aplicativo pode ser aprimorado. Os aplicativos de contêiner são normalmente executados em produção usando orquestradores de contêiner como [kubernetes](https://kubernetes.io/), em que geralmente os [gráficos Helm](https://helm.sh/) são usados para configurar unidades de implantação, em vez de arquivos Docker-Compose.
 
 Ambas as equipes colaboram por meio de uma plataforma fundamental (os contêineres do Docker) que oferece a separação de preocupações como um contrato, além de melhorar muito a colaboração entre as duas equipes no ciclo de vida do aplicativo. Os desenvolvedores são proprietários do conteúdo do contêiner, do ambiente operacional e das interdependências do contêiner, ao passo que as equipes de operações usam as imagens criadas junto com o manifesto e as executam no sistema de orquestração.
 
@@ -57,7 +57,7 @@ Se você conseguir responder a todas essas perguntas, estará mais bem preparado
 
 A Figura 2-2 apresenta um fluxo de trabalho mais detalhado do ciclo de vida de um aplicativo do Docker, concentrando-se nessa instância em atividades e ativos específicos de DevOps.
 
-![Diagrama mostrando o ciclo de vida genérico de um aplicativo Docker.](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
+![Diagrama mostrando o ciclo de vida de ponta a ponta genérico de um aplicativo do Docker.](./media/containers-foundation-for-devops-collaboration/generic-end-to-enddpcker-app-life-cycle.png)
 
 **Figura 2-2.** Fluxo de trabalho de alto nível para o ciclo de vida do aplicativo em contêineres do Docker
 
@@ -92,5 +92,5 @@ Confira alguns dos mais importantes benefícios oferecidos por um fluxo de traba
 - Bom plug and play com vários investimentos existentes de DevOps, incluindo os investimentos open-source.
 
 >[!div class="step-by-step"]
->[Próximo](index.md)
->[anterior](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Anterior](index.md)
+>[próximo](../Microsoft-platform-tools-containerized-apps/index.md)

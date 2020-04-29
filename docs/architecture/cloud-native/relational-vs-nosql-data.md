@@ -3,12 +3,12 @@ title: Relacional versus Dados NoSQL
 description: Saiba mais sobre dados relacionais e NoSQL em aplicativos nativos de nuvem
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199971"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507358"
 ---
 # <a name="relational-vs-nosql-data"></a>Relacional versus Dados NoSQL
 
@@ -226,7 +226,7 @@ O Azure Cosmos DB oferece cinco modelos de [consistência](https://docs.microsof
 
 **Figura 5-16**: Cosmos DB descrição do nível de consistência
 
-No artigo que está nos [deparando com o 9-Ball: Cosmos DB níveis de consistência explicados](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), Microsoft Cloud a defensora do desenvolvedor de Jeremy semelhança fornece uma excelente explicação dos cinco modelos.
+No artigo que está nos [deparando com o 9-Ball: Cosmos DB níveis de consistência explicados](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), o gerente de programas da Microsoft Jeremy Likness fornece uma excelente explicação dos cinco modelos.
 
 ### <a name="partitioning"></a>Particionamento
 

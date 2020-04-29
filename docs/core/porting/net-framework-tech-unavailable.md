@@ -4,32 +4,32 @@ titleSuffix: ''
 description: Saiba mais sobre as tecnologias do .NET Framework que não estão disponíveis no .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 65e465f78b55270b42532eb7e8803f48c048ec3c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739134"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506824"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologias do .NET Framework não disponíveis no .NET Core
 
-Várias tecnologias disponíveis para bibliotecas .NET Framework não estão disponíveis para uso com o .NET Core, como AppDomains, Remoting, Code Access Security (CAS), Security Transparency e System.EnterpriseServices. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Para obter mais informações sobre compatibilidade com a API, consulte [as alterações de quebra do .NET Core](../compatibility/breaking-changes.md).
+Várias tecnologias disponíveis para .NET Framework bibliotecas não estão disponíveis para uso com o .NET Core, como AppDomains, comunicação remota, CAS (segurança de acesso a código), transparência de segurança e System. EnterpriseServices. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Para obter mais informações sobre compatibilidade de API, consulte [alterações significativas no .NET Core](../compatibility/breaking-changes.md).
 
-Só porque uma API ou tecnologia não está implementada no momento, não significa que ela não tem suporte intencionalmente. Procure nos repositórios do GitHub o .NET Core para ver se um problema específico que você encontra é por design. Se você não encontrar tal indicador, faça um problema no [repositório dotnet/runtime](https://github.com/dotnet/runtime/issues) para solicitar APIs e tecnologias específicas. Os problemas que estão portando solicitações são marcados com o rótulo [porta-a-núcleo.](https://github.com/dotnet/runtime/labels/port-to-core)
+Só porque uma API ou tecnologia não está implementada no momento, não significa que ela não tem suporte intencionalmente. Pesquise os repositórios do GitHub para .NET Core para ver se um problema específico encontrado é por design. Se você não encontrar esse indicador, execute um problema no [repositório dotnet/tempo de execução](https://github.com/dotnet/runtime/issues) para solicitar APIs e tecnologias específicas.
 
 ## <a name="appdomains"></a>AppDomains
 
-Os domínios do aplicativo (AppDomains) isolam os aplicativos uns dos outros. AppDomains exigem suporte em tempo de execução e geralmente são caros. A criação de domínios adicionais de aplicativos não é suportada e não há planos para adicionar esse recurso no futuro. Para o isolamento de código, use processos separados ou recipientes como uma alternativa. Para carregar dinamicamente <xref:System.Runtime.Loader.AssemblyLoadContext> os conjuntos, use a classe.
+Os domínios do aplicativo (AppDomains) isolam os aplicativos uns dos outros. Os AppDomains exigem suporte em tempo de execução e são geralmente caros. Não há suporte para a criação de domínios de aplicativo adicionais, e não há planos para adicionar esse recurso no futuro. Para o isolamento de código, use processos ou contêineres separados como alternativa. Para carregar dinamicamente os assemblies, use <xref:System.Runtime.Loader.AssemblyLoadContext> a classe.
 
-Para facilitar a migração do código do .NET Framework, o .NET Core expõe parte da superfície da API <xref:System.AppDomain>. Algumas das APIs funcionam normalmente (por exemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alguns membros não fazem nada (por exemplo, <xref:System.AppDomain.SetCachePath%2A>) e alguns geram <xref:System.PlatformNotSupportedException> (por exemplo, <xref:System.AppDomain.CreateDomain%2A>). Verifique os tipos que [ `System.AppDomain` ](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) você usa contra a fonte de referência no [repositório GitHub dotnet/runtime](https://github.com/dotnet/runtime). Certifique-se de selecionar o ramo que corresponde à sua versão implementada.
+Para facilitar a migração do código do .NET Framework, o .NET Core expõe parte da superfície da API <xref:System.AppDomain>. Algumas das APIs funcionam normalmente (por exemplo, <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), alguns membros não fazem nada (por exemplo, <xref:System.AppDomain.SetCachePath%2A>) e alguns geram <xref:System.PlatformNotSupportedException> (por exemplo, <xref:System.AppDomain.CreateDomain%2A>). Verifique os tipos usados em relação à [ `System.AppDomain` origem de referência](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs) no [repositório do GitHub dotnet/tempo de execução](https://github.com/dotnet/runtime). Certifique-se de selecionar a ramificação que corresponde à sua versão implementada.
 
 ## <a name="remoting"></a>Comunicação remota
 
 A Comunicação Remota do .NET foi identificada como uma arquitetura problemática. Ela é usada para comunicação entre AppDomains, o que não tem mais suporte. Além disso, a Comunicação Remota exige suporte de runtime, o que é caro para manter. Por esses motivos, a Comunicação Remota do .NET não tem suporte no .NET Core, e não planejamos adicionar suporte para ela no futuro.
 
-Para a comunicação entre processos, considere os mecanismos de comunicação interprocesso <xref:System.IO.Pipes> (IPC) como uma alternativa ao Remoting, como a classe ou a <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> classe.
+Para a comunicação entre processos, considere os mecanismos IPC (comunicação entre processos) como uma alternativa à comunicação remota, como <xref:System.IO.Pipes> a classe ou <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> a classe.
 
-Entre computadores, use uma solução baseada em rede como alternativa. De preferência, use um protocolo de texto sem formatação de sobrecarga baixa, como HTTP. O [servidor Web Kestrel](/aspnet/core/fundamentals/servers/kestrel), o servidor Web usado pelo ASP.NET Core, é uma opção. Além disso, <xref:System.Net.Sockets> considere usar para cenários de máquinas cruzadas baseadas em rede. Para ter mais opções, veja [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
+Entre computadores, use uma solução baseada em rede como alternativa. De preferência, use um protocolo de texto sem formatação de sobrecarga baixa, como HTTP. O [servidor Web Kestrel](/aspnet/core/fundamentals/servers/kestrel), o servidor Web usado pelo ASP.NET Core, é uma opção. Além disso, considere <xref:System.Net.Sockets> o uso de cenários de máquina cruzada e baseados em rede. Para ter mais opções, veja [.NET Open Source Developer Projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
 
 ## <a name="code-access-security-cas"></a>CAS (segurança de acesso ao código)
 
@@ -49,4 +49,4 @@ O System.EnterpriseServices (COM+) não é compatível com o .NET Core.
 
 ## <a name="see-also"></a>Confira também
 
-- [Visão geral da portação do .NET Framework para .NET Core](../porting/index.md)
+- [Visão geral da portabilidade do .NET Framework para o .NET Core](../porting/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242758"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507410"
 ---
 # <a name="numerics-in-net"></a>Numéricos no .NET
 
@@ -30,7 +30,7 @@ O .NET dá suporte a tipos inteiros tanto com sinal quanto sem sinal de 8, 16, 3
 |----------|----------------------|--------------------|-------------------|-------------------|  
 |<xref:System.Byte?displayProperty=nameWithType>|Não assinado|1|0|255|  
 |<xref:System.Int16?displayProperty=nameWithType>|Com sinal|2|-32,768|32.767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Com sinal|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int32?displayProperty=nameWithType>|Com sinal|4|-2,147,483,648|2\.147.483.647|  
 |<xref:System.Int64?displayProperty=nameWithType>|Com sinal|8|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
 |<xref:System.SByte?displayProperty=nameWithType>|Com sinal|1|-128|127|  
 |<xref:System.UInt16?displayProperty=nameWithType>|Não assinado|2|0|65.535|  
@@ -60,11 +60,11 @@ O .NET inclui três primitivos tipos de ponto flutuante, que estão listados na 
   
 Os tipos <xref:System.Single> e <xref:System.Double> dão suporte a valores especiais que representam não é um número e infinito. Por exemplo, o tipo <xref:System.Double> fornece os seguintes valores: <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> e <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Você usa os métodos <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> e <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> para testar esses valores especiais.
 
-Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. .NET Core 2.0 e <xref:System.MathF?displayProperty=nameWithType> posteriormente inclui a classe, que <xref:System.Single> fornece métodos que aceitam argumentos do tipo.
+Cada tipo de ponto flutuante dá suporte a um conjunto de operadores aritméticos padrão. A classe <xref:System.Math?displayProperty=nameWithType> fornece métodos para um conjunto mais amplo de funções matemáticas. O .NET Core 2,0 e posterior inclui <xref:System.MathF?displayProperty=nameWithType> a classe, que fornece métodos que aceitam argumentos <xref:System.Single> do tipo.
 
 Você também pode trabalhar com os bits individuais nos valores <xref:System.Double> e <xref:System.Single> usando a classe <xref:System.BitConverter?displayProperty=nameWithType>. A estrutura <xref:System.Decimal?displayProperty=nameWithType> tem seus próprios métodos <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> e <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>, para trabalhar com os bits individuais de um valor decimal, assim como seu próprio conjunto de métodos para executar algumas operações matemáticas adicionais.
   
-Os <xref:System.Double> <xref:System.Single> e tipos destinam-se a ser utilizados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicações em que um alto grau de precisão e pequeno erro de arredondamento não é necessário. Use <xref:System.Decimal?displayProperty=nameWithType> o tipo para casos em que maior precisão seja necessária e erros de arredondamento devem ser minimizados.
+Os <xref:System.Double> tipos <xref:System.Single> e devem ser usados para valores que, por sua natureza, são imprecisos (por exemplo, a distância entre duas estrelas) e para aplicativos nos quais um alto grau de precisão e erro de arredondamento pequeno não é necessário. Use o <xref:System.Decimal?displayProperty=nameWithType> tipo para casos em que maior precisão é necessária e os erros de arredondamento devem ser minimizados.
 
 > [!NOTE]
 > O tipo <xref:System.Decimal> não elimina a necessidade de arredondamento. Em vez disso, ele minimiza erros devido a arredondamento.
@@ -93,6 +93,8 @@ Os tipos habilitados para SIMD do .NET incluem o seguinte:
   
 Os tipos habilitados para SIMD são implementados de modo que possam ser usados com hardware não habilitados para SIMD ou compiladores JIT. Para aproveitar instruções SIMD, seus aplicativos de 64 bits devem ser executados pelo runtime que usa o compilador RyuJIT, que está incluído no .NET Core e no .NET Framework 4.6 e versões posteriores. Ele adiciona suporte a SIMD quando tem processadores de 64 bits como destino.
 
+Para obter mais informações, consulte [usar tipos numéricos acelerados por SIMD](simd.md).
+
 ## <a name="see-also"></a>Confira também
 
-- [Strings de formato numérico padrão](base-types/standard-numeric-format-strings.md)
+- [Cadeias de caracteres de formato numérico padrão](base-types/standard-numeric-format-strings.md)

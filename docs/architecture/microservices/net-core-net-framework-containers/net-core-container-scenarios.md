@@ -2,12 +2,12 @@
 title: Quando escolher o .NET Core para os contêineres do Docker
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Quando escolher o .NET Core para os contêineres do Docker
 ms.date: 01/30/2020
-ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d25cf58c48aac137ba91300515bdb72a7eb648d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147369"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507267"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quando escolher o .NET Core para os contêineres do Docker
 
@@ -27,9 +27,9 @@ O [Visual Studio](https://www.visualstudio.com/vs/) fornece um IDE (ambiente de 
 
 O [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) é um IDE, a evolução do Xamarin Studio, que é executada em macOS e dá suporte ao desenvolvimento de aplicativos baseados em Docker. Essa deve ser a opção preferencial para desenvolvedores que trabalham em computadores Mac que queiram usar um IDE avançado.
 
-Você também pode usar [o Visual Studio Code](https://code.visualstudio.com/) no macOS, Linux e Windows. O Visual Studio Code suporta totalmente o .NET Core, incluindo o IntelliSense e a depuração. Como o VS Code é um editor leve, você pode usá-lo para desenvolver aplicativos contêiner no Mac em conjunto com o Cli Docker e o [.NET Core CLI](../../../core/tools/index.md). Também é possível direcionar o .NET Core com a maioria dos editores de terceiros, como Sublime, Emacs, vi e o projeto OmniSharp de software livre, que também fornece suporte ao IntelliSense.
+Você também pode usar [Visual Studio Code](https://code.visualstudio.com/) no MacOS, Linux e Windows. Visual Studio Code oferece suporte total ao .NET Core, incluindo IntelliSense e depuração. Como VS Code é um editor leve, você pode usá-lo para desenvolver aplicativos em contêineres no computador em conjunto com a CLI do Docker e o [CLI do .NET Core](../../../core/tools/index.md). Também é possível direcionar o .NET Core com a maioria dos editores de terceiros, como Sublime, Emacs, vi e o projeto OmniSharp de software livre, que também fornece suporte ao IntelliSense.
 
-Além dos IDEs e editores, você pode usar o [.NET Core CLI](../../../core/tools/index.md) para todas as plataformas suportadas.
+Além dos IDEs e editores, você pode usar o [CLI do .NET Core](../../../core/tools/index.md) para todas as plataformas com suporte.
 
 ## <a name="using-containers-for-new-green-field-projects"></a>Usando contêineres para novos projetos ("campo verde")
 
@@ -37,9 +37,9 @@ Contêineres são comumente usados em conjunto com uma arquitetura de microsserv
 
 ## <a name="create-and-deploy-microservices-on-containers"></a>Criar e implantar microserviços em contêineres
 
-É possível usar o .NET Framework tradicional para criar aplicativos baseados em microsserviços (sem contêineres) usando processos simples. Dessa forma, como o .NET Framework já está instalado e já é compartilhado entre processos, os processos são leves inicializam rapidamente. No entanto, se você estiver usando contêineres, a imagem do .NET Framework tradicional também será baseada no Windows Server Core e isso a tornará muito pesada para uma abordagem de microsserviços em contêineres. No entanto, as equipes têm procurado oportunidades para melhorar a experiência dos usuários do .NET Framework também. Recentemente, o tamanho das imagens do [contêiner Windows Server Core foram reduzidos a >40% menores](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller).
+É possível usar o .NET Framework tradicional para criar aplicativos baseados em microsserviços (sem contêineres) usando processos simples. Dessa forma, como o .NET Framework já está instalado e já é compartilhado entre processos, os processos são leves inicializam rapidamente. No entanto, se você estiver usando contêineres, a imagem do .NET Framework tradicional também será baseada no Windows Server Core e isso a tornará muito pesada para uma abordagem de microsserviços em contêineres. No entanto, as equipes têm busca de oportunidades para melhorar a experiência de .NET Framework usuários também. Recentemente, o tamanho das [imagens de contêiner do Windows Server Core foi reduzido para >40% menor](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller).
 
-Por outro lado, o .NET Core é o melhor candidato se você estiver adotando um sistema orientado a microsserviços baseado em contêineres, porque o .NET Core é leve. Além disso, suas imagens de contêiner relacionadas, tanto para Linux quanto para Windows Nano Server, são magras e pequenas, tornando os contêineres leves e rápidos para iniciar.
+Por outro lado, o .NET Core é o melhor candidato se você estiver adotando um sistema orientado a microserviços baseado em contêineres, pois o .NET Core é leve. Além disso, suas imagens de contêiner relacionadas, para Linux ou Windows nano Server, são de baixo e pequeno, tornando os contêineres claros e rápidos para começar.
 
 Um microsserviço deve ser o menor possível: ser leve ao iniciar, ocupar um pequeno espaço, ter um Contexto limitado pequeno (confira DDD, [Design Voltado a Domínio](https://en.wikipedia.org/wiki/Domain-driven_design)), para representar uma pequena área de preocupações e ser capaz de ser iniciado e interrompido rapidamente. Para esses requisitos, você desejará usar imagens de contêiner pequenas e cuja instância é fácil de criar, como a imagem de contêiner do .NET Core.
 
@@ -52,5 +52,5 @@ Quando seu sistema baseado em contêiner precisar da melhor densidade, granulari
 Isso é especialmente relevante para arquiteturas de microsserviços, em que você poderia ter centenas de microsserviços (contêineres) em execução. Com imagens do ASP.NET Core (baseadas no runtime do .NET Core) no Linux ou Windows Nano, é possível executar seu sistema com um número muito menor de servidores ou VMs, economizando custos em infraestrutura e hospedagem.
 
 >[!div class="step-by-step"]
->[Próximo](general-guidance.md)
->[anterior](net-framework-container-scenarios.md)
+>[Anterior](general-guidance.md)
+>[próximo](net-framework-container-scenarios.md)
