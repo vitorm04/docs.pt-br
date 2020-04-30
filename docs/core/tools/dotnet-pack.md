@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
-ms.date: 02/14/2020
-ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/28/2020
+ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102808"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595748"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.x SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 2. x e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -32,19 +32,19 @@ dotnet pack -h|--help
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado deste comando é um pacote NuGet (ou seja, um arquivo *.nupkg).*
+O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote NuGet (ou seja, um arquivo *. nupkg* ).
 
-Se você quiser gerar um pacote que contenha os símbolos de depuração, você tem duas opções disponíveis:
+Se você quiser gerar um pacote que contém os símbolos de depuração, terá duas opções disponíveis:
 
-- `--include-symbols`- cria o pacote de símbolos.
-- `--include-source`- ele cria o pacote `src` de símbolos com uma pasta dentro contendo os arquivos de origem.
+- `--include-symbols`-Ele cria o pacote de símbolos.
+- `--include-source`-Ele cria o pacote de símbolos com `src` uma pasta dentro de contendo os arquivos de origem.
 
 As dependências do NuGet do projeto empacotado são adicionadas ao arquivo *.nuspec* para que possam ser resolvidas apropriadamente quando o pacote for instalado. As referências de projeto a projeto não são empacotadas dentro do projeto. No momento, você precisa ter um pacote por projeto se tiver dependências de projeto a projeto.
 
 Por padrão, `dotnet pack` compila primeiro o projeto. Se você quiser evitar esse comportamento, passe a opção `--no-build`. Com frequência, essa opção é útil em cenários de build de CI (integração contínua) nos quais você sabe que o código foi compilado anteriormente.
 
 > [!NOTE]
-> Em alguns casos, a construção implícita não pode ser realizada. Isso pode `GeneratePackageOnBuild` ocorrer quando estiver definido, para evitar uma dependência cíclica entre metas de construção e embalagem. A compilação também pode falhar se houver um arquivo bloqueado ou outro problema.
+> Em alguns casos, a compilação implícita não pode ser executada. Isso pode ocorrer quando `GeneratePackageOnBuild` é definido, para evitar uma dependência cíclica entre destinos de compilação e de pacote. A compilação também pode falhar se houver um arquivo bloqueado ou outro problema.
 
 Você pode fornecer as propriedades de MSBuild para o comando `dotnet pack` para o processo de empacotamento. Para obter mais informações, consulte [Propriedades de metadados do NuGet](csproj.md#nuget-metadata-properties) e a [Referência de linha de comando MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). A seção [Exemplos](#examples) mostra como usar a opção -p do MSBuild para alguns cenários diferentes.
 
@@ -64,13 +64,13 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 `PROJECT | SOLUTION`
 
-  O projeto ou solução para embalar. Ou é um caminho para um [arquivo csproj,](csproj.md)um arquivo de solução ou para um diretório. Se não for especificado, o comando pesquisa o diretório atual para um arquivo de projeto ou solução.
+  O projeto ou a solução a ser empacotada. É um caminho para um [arquivo csproj](csproj.md), um arquivo de solução ou um diretório. Se não for especificado, o comando pesquisará o diretório atual em busca de um arquivo de projeto ou de solução.
 
 ## <a name="options"></a>Opções
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  Define a configuração da compilação. O padrão para `Debug`a maioria dos projetos é, mas você pode substituir as configurações de configuração de compilação em seu projeto.
+  Define a configuração da compilação. O padrão para a maioria dos `Debug`projetos é, mas você pode substituir as definições de configuração de compilação em seu projeto.
 
 - **`--force`**
 
@@ -82,11 +82,11 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--include-source`**
 
-  Inclui os símbolos de depuração pacotes NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de fontes `src` estão incluídos na pasta dentro do pacote de símbolos.
+  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de origem são incluídos na `src` pasta dentro do pacote de símbolos.
 
 - **`--include-symbols`**
 
-  Inclui os símbolos de depuração pacotes NuGet, além dos pacotes NuGet regulares no diretório de saída.
+  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída.
 
 - **`--interactive`**
 
@@ -172,14 +172,20 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Embale o projeto e use um tempo de execução específico (Windows 10) para a operação de restauração:
+- Empacotar o projeto e usar um tempo de execução específico (Windows 10) para a operação de restauração:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
-- Empacotar o projeto, usando um [arquivo .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+- Empacotar o projeto usando um arquivo *. nuspec* :
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
+
+  Para obter informações sobre como usar `NuspecFile`o `NuspecBasePath`, o `NuspecProperties`e o, consulte os seguintes recursos:
+  
+  - [Empacotamento usando um .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Pontos de extensão avançados para criar pacote personalizado](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Propriedades globais](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
