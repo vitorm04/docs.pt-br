@@ -1,17 +1,17 @@
 ---
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
-ms.date: 02/27/2020
-ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102731"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624885"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
 
 ## <a name="name"></a>Nome
 
@@ -37,7 +37,7 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
+O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. Para projetos de vários destinos, os testes são executados para cada estrutura de destino. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
 Os projetos de teste especificam o executor de teste usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
@@ -51,7 +51,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`PROJECT | SOLUTION`**
 
-  Caminho para o projeto ou solução de teste. Se não é especificado, usa como padrão o diretório atual.
+  Caminho para o projeto de teste ou solução. Se não é especificado, usa como padrão o diretório atual.
 
 ## <a name="options"></a>Opções
 
@@ -61,7 +61,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`--blame`**
 
-  Executa os testes no modo blame. Esta opção é útil para isolar testes problemáticos que causam a falha do hospedeiro de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
+  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,7 +73,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico para o arquivo especificado.
+  Habilita o modo de diagnóstico para a plataforma de teste e grava as mensagens de diagnóstico no arquivo especificado.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -93,15 +93,15 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não `-l "console;v=d"` aceita `-l "console;verbosity=detailed"`abreviaturas: em vez de usar .
+  Especifica um agente para resultados do teste. Ao contrário do MSBuild, o teste dotnet não aceita abreviações `-l "console;v=d"` : `-l "console;verbosity=detailed"`em vez de usar.
 
 - **`--no-build`**
 
-  Não compila o projeto de teste antes de sua execução. Ele também define implicitamente a `--no-restore` bandeira.
+  Não compila o projeto de teste antes de sua execução. Ele também define implicitamente o- `--no-restore` Flag.
 
 - **`--nologo`**
 
-  Execute testes sem exibir o banner microsoft testplatform. Disponível desde o SDK do .NET Core 3.0.
+  Executar testes sem exibir o banner do Microsoft TestPlatform. Disponível desde o SDK do .NET Core 3.0.
 
 - **`--no-restore`**
 
@@ -109,19 +109,22 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com vários frameworks `TargetFrameworks` de destino (via `--framework` propriedade), você também precisa definir quando você especifica essa opção.
+  Diretório no qual encontram-se os binários para execução. Se não for especificado, o caminho padrão será `./bin/<configuration>/<framework>/`.  Para projetos com várias estruturas de destino (por meio `TargetFrameworks` da propriedade), também é necessário definir `--framework` quando você especifica essa opção. `dotnet test`sempre execute testes do diretório de saída. Você pode usar <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> para consumir ativos de teste no diretório de saída.
 
 - **`-r|--results-directory <PATH>`**
 
-  O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado. O padrão `TestResults` está no diretório que contém o arquivo do projeto.
+  O diretório em que os resultados de teste serão colocados. Se o diretório especificado não existir, ele será criado. O padrão é `TestResults` o diretório que contém o arquivo de projeto.
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  O tempo de execução do alvo para testar.
+  O tempo de execução de destino para o qual testar.
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito `dotnet test`para. Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. para obter mais informações, consulte os seguintes recursos:
+
+  - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -131,13 +134,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O padrão é `minimal`. Para obter mais informações, consulte <xref:Microsoft.Build.Framework.LoggerVerbosity>.
 
-- **`RunSettings`** Argumentos
+- **`RunSettings`** argumentos
 
-  Os argumentos `RunSettings` são passados como configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
+  Os argumentos são passados `RunSettings` como configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
 
   Exemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  Para obter mais informações, consulte ['''Configurações de execução' argumentos através da linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
+  Para obter mais informações, consulte [passando argumentos RunSettings por meio da linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).
 
 ## <a name="examples"></a>Exemplos
 
@@ -153,13 +156,13 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- Execute os testes no projeto no diretório atual e gere um arquivo de resultados de teste no formato trx:
+- Execute os testes no projeto no diretório atual e gere um arquivo de resultados de teste no formato TRX:
 
   ```dotnetcli
   dotnet test --logger trx
   ```
 
-- Execute os testes no projeto no diretório atual e registre com verbosidade detalhada para o console:
+- Execute os testes no projeto no diretório atual e faça logon com detalhes detalhados no console:
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
@@ -204,6 +207,6 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 
 ## <a name="see-also"></a>Confira também
 
-- [Frameworks e Metas](../../standard/frameworks.md)
+- [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)
-- [Passando argumentos de runsettings através da linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)
+- [Passando argumentos RunSettings por meio de linha de comando](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

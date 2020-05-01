@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595943"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624872"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! operador (NULL-tolerante) (referência C#)
 
@@ -20,7 +20,7 @@ Disponível em C# 8,0 e posterior, o operador de `!` sufixo unário é o operado
 O operador NULL-tolerante não tem nenhum efeito no tempo de execução. Ele afeta apenas a análise de fluxo estático do compilador, alterando o estado nulo da expressão. Em tempo de execução, `x!` a expressão é avaliada como o resultado da `x`expressão subjacente.
 
 > [!NOTE]
-> No C# 8, o operador NULL-tolerante interage com os [operadores condicionais nulos](member-access-operators.md#null-conditional-operators--and-) de forma inesperada. A expressão `x?.y!.z` é analisada como `(x?.y)!.z`. Devido a essa interpretação `z` ser avaliada mesmo `x` se `null`for, o que pode resultar <xref:System.NullReferenceException>em um.
+> No C# 8, o operador NULL-tolerante encerra a lista de operações [condicionais nulas](member-access-operators.md#null-conditional-operators--and-) anteriores. Por exemplo, a expressão `x?.y!.z` é analisada como `(x?.y)!.z`. Devido a essa interpretação, `z` é avaliada mesmo `x` se `null`for, o que pode resultar <xref:System.NullReferenceException>em um.
 
 Para obter mais informações sobre o recurso de tipos de referência anulável, consulte [tipos de referência anuláveis](../builtin-types/nullable-reference-types.md).
 
