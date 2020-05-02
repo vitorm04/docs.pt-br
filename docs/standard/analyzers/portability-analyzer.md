@@ -4,12 +4,12 @@ description: Saiba como usar a ferramenta .NET Portability Analyzer para avaliar
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507527"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728441"
 ---
 # <a name="the-net-portability-analyzer"></a>O .NET Portability Analyzer
 
@@ -27,14 +27,14 @@ Depois de converter seu projeto para direcionar a nova plataforma, como o .NET C
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Como usar o Analisador de Portabilidade do .NET
 
-Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, primeiro é necessário baixar e instalar a extensão do [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Ele funciona no Visual Studio 2017 e versões posteriores. Você pode configurá-lo no Visual Studio **usando** > **as configurações** do analisador de portabilidade e selecionando suas plataformas de destino, que são as plataformas .net/versões que você deseja avaliar as lacunas de portabilidade que são comparadas com a plataforma/versão com a qual seu assembly atual foi criado.
+Para começar a usar o Analisador de Portabilidade do .NET no Visual Studio, primeiro é necessário baixar e instalar a extensão do [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Ele funciona no Visual Studio 2017 e versões posteriores. Configure-o no Visual Studio **usando** > **as configurações** do analisador de portabilidade e selecione suas plataformas de destino, que são as plataformas .net/versões que você deseja avaliar as lacunas de portabilidade que são comparadas com a plataforma/versão com a qual seu assembly atual foi criado.
 
 ![Captura de tela do analisador de portabilidade.](./media/portability-analyzer/portability-screenshot.png)
 
 Também é possível usar o aplicativo de console ApiPort, baixando-o do [repositório ApiPort](https://aka.ms/apiportdownload). É possível usar a opção de comando `listTargets` para exibir a lista de destino disponível e escolher as plataformas de destino especificando a opção de comando `-t` ou `--target`.
 
 ### <a name="analyze-portability"></a>Analisar portabilidade
-Para analisar todo o projeto no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Analisar Portabilidade do Assembly**. Caso contrário, acesse o menu **Analyze** e selecione **Analisar Portabilidade do Assembly**. Em seguida, selecione o executável do seu projeto ou DLL.
+Para analisar todo o projeto no Visual Studio, clique com o botão direito do mouse no projeto no **Gerenciador de Soluções** e selecione **Analisar Portabilidade do Assembly**. Caso contrário, acesse o menu **Analyze** e selecione **Analisar Portabilidade do Assembly**. A partir daí, selecione o executável ou a DLL do seu projeto.
 
 ![Captura de tela do analisador de portabilidade do Gerenciador de Soluções.](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -67,7 +67,7 @@ A seção de **detalhes** do relatório lista as APIs ausentes em qualquer uma d
 - Membro de destino: o método está ausente de uma Plataforma de Destino
 - Nome do assembly: o assembly do .NET Framework no qual a API ausente reside.
 - Cada uma das plataformas de destino selecionadas é uma coluna, como ".NET Core": o valor "sem suporte" significa que a API não tem suporte nesta plataforma de destino.
-- Alterações recomendadas: a API ou a tecnologia recomendada para a qual alterar. No momento, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, é um grande desafio mantê-las em funcionamento. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
+- Alterações recomendadas: a API ou a tecnologia recomendada para alterar. Atualmente, esse campo está vazio ou desatualizado para muitas APIs. Devido ao grande número de APIs, temos um desafio significativo para mantê-la atualizada. Estamos examinando soluções alternativas para fornecer informações úteis aos clientes.
 
 #### <a name="missing-assemblies"></a>Assemblies Ausentes
 

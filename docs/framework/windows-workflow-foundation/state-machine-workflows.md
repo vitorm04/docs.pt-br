@@ -2,12 +2,12 @@
 title: Fluxos de trabalho do computador de estado
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 12f6383a52c7eaf0d66ce6680f66a5df0b314dfd
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 349d7e00616a1c12dac45f24b1c39c1899d8f824
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595930"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728207"
 ---
 # <a name="state-machine-workflows"></a>Fluxos de trabalho do computador de estado
 Um computador de estado é um paradigma conhecido para programas desenvolvimento. A atividade de <xref:System.Activities.Statements.StateMachine> , juntamente com <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, e outras atividades pode ser usada para criar programas de fluxo de trabalho do computador de estado. Este tópico fornece uma visão geral de criar fluxos de trabalho do computador de estado.  
@@ -37,22 +37,22 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
  Um estado que representa um estado de terminação em um computador de estado é chamado um estado final. Um estado final é um estado que tem sua propriedade de <xref:System.Activities.Statements.State.IsFinal%2A> definida como `true`, não tem nenhuma atividade de <xref:System.Activities.Statements.State.Exit%2A> , e nenhuma transição que se origina delas. Para adicionar um estado final a um fluxo de trabalho, arraste um designer de atividades **FinalState** da seção **máquina de estado** da **caixa de ferramentas** e <xref:System.Activities.Statements.StateMachine> solte-o em uma atividade na superfície de designer de fluxo de trabalho do Windows. Um fluxo de trabalho do computador de estado deve ter pelo menos um estado final.  
   
 ### <a name="configuring-entry-and-exit-actions"></a>Configurando ações de entrada e de saída  
- Um estado pode ter <xref:System.Activities.Statements.State.Entry%2A> e uma ação de <xref:System.Activities.Statements.State.Exit%2A> . (O estado de configurado como um estado final pode ter apenas uma ação de entrada). Quando uma instância de fluxo de trabalho entra em um estado, todas as atividades em ação de entrada são executadas. Quando a ação de entrada estiver concluída, disparadores para as transições de estado estão agendados. Quando uma transição para outro estado é confirmada, as atividades em ação de saída são executadas, mesmo se o estado faz a transição de volta ao mesmo estado. Depois que a ação de saída for concluída, as atividades em ação de transição, e executam o novo estado é feito à transição, e suas ações de entrada são agendadas.  
+ Um estado pode ter <xref:System.Activities.Statements.State.Entry%2A> e uma ação de <xref:System.Activities.Statements.State.Exit%2A> . (O estado de configurado como um estado final pode ter apenas uma ação de entrada). Quando uma instância de fluxo de trabalho entra em um estado, todas as atividades em ação de entrada são executadas. Quando a ação de entrada for concluída, os gatilhos para as transições do estado serão agendados. Quando uma transição para outro estado é confirmada, as atividades em ação de saída são executadas, mesmo se o estado faz a transição de volta ao mesmo estado. Após a conclusão da ação de saída, as atividades na ação da transição são executadas e, em seguida, o novo estado é transferido para, e suas ações de entrada são agendadas.  
   
 > [!NOTE]
 > Para depurar um fluxo de trabalho do computador de estado, pontos de interrupção podem ser colocados na atividade e os estados do computador de estado da raiz no fluxo de trabalho do computador de estado. Os pontos de interrupção não podem ser colocados diretamente nas transições, mas podem ser colocados em todas as atividades contidas nos estados e as transições.  
   
 ## <a name="creating-and-configuring-transitions"></a>Criando e configurando as transições  
- Todos os estados devem ter pelo menos uma transição, exceto para um estado final que não tenha nenhuma transições. Transições podem ser adicionadas após um estado é adicionado a um fluxo de trabalho do computador de estado, ou podem ser criadas como o estado são soltas.  
+ Todos os Estados devem ter pelo menos uma transição, exceto para um estado final, que pode não ter transições. Transições podem ser adicionadas após um estado é adicionado a um fluxo de trabalho do computador de estado, ou podem ser criadas como o estado são soltas.  
   
  Para adicionar um <xref:System.Activities.Statements.State> e criar uma transição em uma única etapa, arraste uma atividade de **estado** da seção **máquina de estado** da **caixa de ferramentas** e passe o mouse sobre outro Estado no designer de fluxo de trabalho. Quando <xref:System.Activities.Statements.State> arrastado está sobre um outro <xref:System.Activities.Statements.State>, quatro triângulos aparecerão em torno do outro <xref:System.Activities.Statements.State>. Se <xref:System.Activities.Statements.State> é solto em um dos quatro triângulos, é adicionado ao computador de estado e uma transição é criada de origem <xref:System.Activities.Statements.State> ao destino solto <xref:System.Activities.Statements.State>. Para obter mais informações, consulte o [Designer de atividade de transição](/visualstudio/workflow-designer/transition-activity-designer).  
   
- Para criar uma transição após um estado é adicionado, existem duas opções. A primeira opção é arraste o estado da superfície do designer de fluxo de trabalho e focalizar-lo sobre um estado existente e solte-o em um dos pontos da operação. Isso é muito semelhante ao método descrito na seção anterior. Você pode também passa o mouse sobre o estado desejado de origem, e arraste uma linha para o estado desejado de destino.  
+ Para criar uma transição após um estado é adicionado, existem duas opções. A primeira opção é arraste o estado da superfície do designer de fluxo de trabalho e focalizar-lo sobre um estado existente e solte-o em um dos pontos da operação. Isso é semelhante ao método descrito na seção anterior. Você pode também passa o mouse sobre o estado desejado de origem, e arraste uma linha para o estado desejado de destino.  
   
 > [!NOTE]
 > Um único estado em um computador de estado pode ter até 76 transições criadas utilizando o designer de fluxo de trabalho. O limite nas transições para um estado para fluxos de trabalho criados fora de designer é delimitado somente por recursos do sistema.  
   
- Uma transição pode ter <xref:System.Activities.Statements.Transition.Trigger%2A>, <xref:System.Activities.Statements.Transition.Condition%2A>, e <xref:System.Activities.Statements.Transition.Action%2A>. <xref:System.Activities.Statements.Transition.Trigger%2A> de uma transição é agendada quando a ação de <xref:System.Activities.Statements.State.Entry%2A> de estado da fonte de transição é concluída. Normalmente <xref:System.Activities.Statements.Transition.Trigger%2A> é uma atividade que espera qualquer tipo de evento ocorra, mas pode ser qualquer atividade, ou nenhuma atividade de todo. Uma vez que a atividade de <xref:System.Activities.Statements.Transition.Trigger%2A> estiver concluída, <xref:System.Activities.Statements.Transition.Condition%2A>, se presentes, é avaliada. Se não houver nenhuma atividade de <xref:System.Activities.Statements.Transition.Trigger%2A> em <xref:System.Activities.Statements.Transition.Condition%2A> é avaliado imediatamente. Se a condição for avaliada como `false`, a transição é cancelada, e quaisquer atividades de <xref:System.Activities.Statements.Transition.Trigger%2A> para faz a transição de estado é reprogramada. Se existem outras transições que compartilham o mesmo estado de origem que a transição atual, essas ações de <xref:System.Activities.Statements.Transition.Trigger%2A> são canceladas e reprogramadas também. Se <xref:System.Activities.Statements.Transition.Condition%2A> avalia a `true`, ou não há nenhuma condição, então a ação de <xref:System.Activities.Statements.State.Exit%2A> de estado de origem é executada, e <xref:System.Activities.Statements.Transition.Action%2A> de transição é executado em seguida. Quando o <xref:System.Activities.Statements.Transition.Action%2A> é concluído, o controle passa para o estado de **destino**  
+ Uma transição pode ter <xref:System.Activities.Statements.Transition.Trigger%2A>, <xref:System.Activities.Statements.Transition.Condition%2A>, e <xref:System.Activities.Statements.Transition.Action%2A>. Uma transição <xref:System.Activities.Statements.Transition.Trigger%2A> é agendada quando a <xref:System.Activities.Statements.State.Entry%2A> ação do estado de origem da transição é concluída. Normalmente <xref:System.Activities.Statements.Transition.Trigger%2A> é uma atividade que espera qualquer tipo de evento ocorra, mas pode ser qualquer atividade, ou nenhuma atividade de todo. Uma vez que a atividade de <xref:System.Activities.Statements.Transition.Trigger%2A> estiver concluída, <xref:System.Activities.Statements.Transition.Condition%2A>, se presentes, é avaliada. Se não houver nenhuma <xref:System.Activities.Statements.Transition.Trigger%2A> atividade, o <xref:System.Activities.Statements.Transition.Condition%2A> será avaliado imediatamente. Se a condição for avaliada `false`como, a transição será cancelada <xref:System.Activities.Statements.Transition.Trigger%2A> e a atividade de todas as transições do estado será reagendada. Se houver outras transições que compartilham o mesmo estado de origem da transição atual, essas <xref:System.Activities.Statements.Transition.Trigger%2A> ações serão canceladas e reagendadas também. Se <xref:System.Activities.Statements.Transition.Condition%2A> avalia a `true`, ou não há nenhuma condição, então a ação de <xref:System.Activities.Statements.State.Exit%2A> de estado de origem é executada, e <xref:System.Activities.Statements.Transition.Action%2A> de transição é executado em seguida. Quando o <xref:System.Activities.Statements.Transition.Action%2A> é concluído, o controle passa para o estado de **destino**  
   
  Faz a transição que compartilham um disparador comum é conhecido como o disparador compartilhado transições. Cada transição em um grupo de transições compartilhadas do disparador tem o mesmo disparador, mas <xref:System.Activities.Statements.Transition.Condition%2A> e uma ação exclusivos. Para adicionar ações adicionais para uma transição e criar uma transição compartilhada, clique no círculo que indica o início de transição desejada e arraste-o para estado desejado. A nova transição compartilhar um disparador mesmo que a transição inicial, mas terá uma condição e uma ação exclusivos. As transições compartilhadas também podem ser criadas de dentro do designer de transição clicando em **Adicionar transição de gatilho compartilhado** na parte inferior do designer de transição e, em seguida, selecionando o estado de destino desejado na lista suspensa **Estados disponíveis para conexão** .  
   
@@ -74,7 +74,7 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
  Uma atividade executada quando deixar o estado  
   
  Transição  
- Direcionada uma relação entre dois estados que representa a resposta completo de um computador de estado para uma ocorrência de um evento de um tipo específico.  
+ Uma relação direcionada entre dois Estados que representa a resposta completa de um computador de estado para uma ocorrência de um evento de um tipo específico.  
   
  Transição compartilhada  
  Uma transição que compartilhar um estado de origem e o disparador com um ou mais faz a transição, mas tem uma condição e uma ação exclusivos.  
@@ -83,22 +83,22 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
  Uma atividade disparando que faz com que uma transição ocorre.  
   
  Condição  
- Uma restrição que deve ser avaliada como `true` após o disparador ocorre a transição para que ela seja concluída.  
+ Uma restrição que deve ser `true` avaliada após o gatilho ocorrer para que a transição seja concluída.  
   
  Ação de transição  
- Uma atividade que é executada ao executar alguma transição.  
+ Uma atividade que é executada durante a execução de uma determinada transição.  
   
  Transição condicional  
  Uma transição com uma condição explícita.  
   
  Dica transição  
- Uma transição que transite por de um estado para se.  
+ Uma transição que está em trânsito de um estado para si mesmo.  
   
  Estado Inicial  
- Um estado que representa o ponto de partida do computador de estado.  
+ Um estado que representa o ponto inicial da máquina de estado.  
   
  Estado final  
- Um estado que representa a conclusão do computador de estado.  
+ Um estado que representa a conclusão da máquina de estado.  
   
 ## <a name="see-also"></a>Confira também
 

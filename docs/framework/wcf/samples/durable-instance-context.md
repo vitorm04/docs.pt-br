@@ -2,12 +2,12 @@
 title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141181"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728404"
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 
@@ -28,7 +28,7 @@ Pela descrição anterior, duas etapas podem ser facilmente diferenciadas para a
 
 2. Altere o comportamento local do serviço para implementar a lógica de instanciação personalizada.
 
-Como o primeiro na lista afeta as mensagens na transmissão, ela deve ser implementada como um canal personalizado e ser conectada à camada de canal. O último afeta apenas o comportamento local do serviço e, portanto, pode ser implementado estendendo vários pontos de extensibilidade do serviço. Nas próximas seções, cada uma dessas extensões é discutida.
+Como a primeira na lista afeta as mensagens na conexão, ela deve ser implementada como um canal personalizado e ser conectada à camada de canal. O último afeta apenas o comportamento local do serviço e, portanto, pode ser implementado estendendo vários pontos de extensibilidade do serviço. Nas próximas seções, cada uma dessas extensões é discutida.
 
 ## <a name="durable-instancecontext-channel"></a>Canal de InstanceContext durável
 
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-Por outro lado, `DurableInstanceContextInputChannel` -que implementa a `IInputChannel` interface – chama o `ReadContextId` método em cada método que recebe as mensagens.
+Por outro lado, `DurableInstanceContextInputChannel` -que implementa a `IInputChannel` interface – chama o `ReadContextId` método em cada método, que recebe as mensagens.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 Conforme descrito anteriormente, a ID de contexto é lida `Properties` da coleção da `Message` classe e passada para o construtor da classe de extensão. Isso demonstra como as informações podem ser trocadas entre as camadas de maneira consistente.
 
-A próxima etapa importante é substituir o processo de criação da instância de serviço. O WCF permite implementar comportamentos de instanciação personalizados e conectá-los ao tempo de execução usando a interface IInstanceProvider. A nova `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor, o tipo de serviço esperado do provedor de instância é aceito. Posteriormente, isso é usado para criar novas instâncias. Na `GetInstance` implementação, uma instância de um Gerenciador de armazenamento é criada procurando por uma instância persistente. Se ele retornar `null` , uma nova instância do tipo de serviço será instanciada e retornada ao chamador.
+A próxima etapa importante é substituir o processo de criação da instância de serviço. O WCF permite implementar comportamentos de instanciação personalizados e conectá-los ao tempo de execução usando a interface IInstanceProvider. A nova `InstanceProvider` classe é implementada para fazer esse trabalho. O tipo de serviço esperado do provedor de instância é aceito no construtor. Posteriormente, isso é usado para criar novas instâncias. Na `GetInstance` implementação, uma instância de um Gerenciador de armazenamento é criada procurando por uma instância persistente. Se retornar `null`, uma nova instância do tipo de serviço será instanciada e retornada ao chamador.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,9 +302,9 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-A próxima etapa importante é instalar o `InstanceContextExtension` `InstanceContextInitializer` e `InstanceProvider` as classes no tempo de execução do modelo de serviço. Um atributo personalizado pode ser usado para marcar as classes de implementação de serviço para instalar o comportamento. O `DurableInstanceContextAttribute` contém a implementação para esse atributo e implementa a `IServiceBehavior` interface para estender o tempo de execução do serviço inteiro.
+A próxima etapa importante é instalar as `InstanceContextExtension`classes, `InstanceContextInitializer`e `InstanceProvider` no tempo de execução do modelo de serviço. Um atributo personalizado pode ser usado para marcar as classes de implementação de serviço para instalar o comportamento. O `DurableInstanceContextAttribute` contém a implementação para esse atributo e implementa a `IServiceBehavior` interface para estender o tempo de execução do serviço inteiro.
 
-Essa classe tem uma propriedade que aceita o tipo do Gerenciador de armazenamento a ser usado. Dessa forma, a implementação permite que os usuários especifiquem sua `IStorageManager` própria implementação como parâmetro deste atributo.
+Essa classe tem uma propriedade que aceita o tipo do Gerenciador de armazenamento a ser usado. Dessa forma, a implementação permite que os usuários especifiquem sua própria `IStorageManager` implementação como parâmetro deste atributo.
 
 Na `ApplyDispatchBehavior` implementação, o `InstanceContextMode` do atributo atual `ServiceBehavior` está sendo verificado. Se essa propriedade for definida como singleton, a habilitação da instanciação durável não será `InvalidOperationException` possível e uma será gerada para notificar o host.
 
@@ -351,13 +351,13 @@ No Resumo até agora, este exemplo produziu um canal que habilitou o protocolo d
 
 O que resta é uma maneira de salvar a instância do serviço no armazenamento persistente. Conforme discutido anteriormente, já existe a funcionalidade necessária para salvar o estado em uma `IStorageManager` implementação. Agora, devemos integrar isso ao tempo de execução do WCF. É necessário outro atributo que seja aplicável aos métodos na classe de implementação de serviço. Esse atributo deve ser aplicado aos métodos que alteram o estado da instância do serviço.
 
-A `SaveStateAttribute` classe implementa essa funcionalidade. Ele também implementa `IOperationBehavior` a classe para modificar o tempo de execução do WCF para cada operação. Quando um método é marcado com esse atributo, o tempo de execução do WCF `ApplyBehavior` invoca o método enquanto `DispatchOperation` o apropriado está sendo construído. Nessa implementação de método há uma linha de código única:
+A `SaveStateAttribute` classe implementa essa funcionalidade. Ele também implementa `IOperationBehavior` a classe para modificar o tempo de execução do WCF para cada operação. Quando um método é marcado com esse atributo, o tempo de execução do WCF `ApplyBehavior` invoca o método enquanto `DispatchOperation` o apropriado está sendo construído. Há uma única linha de código nesta implementação de método:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Essa instrução cria uma instância do `OperationInvoker` tipo e a atribui à `Invoker` propriedade de `DispatchOperation` que está sendo construída. A `OperationInvoker` classe é um wrapper para o chamador de operação padrão criado para o `DispatchOperation`. Essa classe implementa a interface `IOperationInvoker`. `Invoke` Na implementação do método, a invocação do método real é delegada para o chamador da operação interna. No entanto, antes de retornar os resultados, o `InstanceContext` Gerenciador de armazenamento no é usado para salvar a instância do serviço.
+Essa instrução cria uma instância do `OperationInvoker` tipo e a atribui à `Invoker` propriedade de `DispatchOperation` que está sendo construída. A `OperationInvoker` classe é um wrapper para o chamador de operação padrão criado para o `DispatchOperation`. Essa classe implementa a interface `IOperationInvoker`. Na implementação `Invoke` do método, a invocação do método real é delegada para o chamador da operação interna. No entanto, antes de retornar os resultados, o `InstanceContext` Gerenciador de armazenamento no é usado para salvar a instância do serviço.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>Usando a extensão
 
-A camada de canal e as extensões de camada de modelo de serviço são feitas e agora podem ser usadas em aplicativos WCF. Os serviços precisam adicionar o canal à pilha de canais usando uma associação personalizada e, em seguida, marcar as classes de implementação de serviço com os atributos apropriados.
+A camada de canal e as extensões de camada de modelo de serviço são feitas e agora podem ser usadas em aplicativos WCF. Os serviços devem adicionar o canal à pilha de canais usando uma associação personalizada e, em seguida, marcar as classes de implementação de serviço com os atributos apropriados.
 
 ```csharp
 [DurableInstanceContext]

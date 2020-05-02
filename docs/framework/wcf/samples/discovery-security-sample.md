@@ -2,12 +2,12 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141165"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728413"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 
@@ -16,7 +16,7 @@ A especificação de descoberta não exige que os pontos de extremidade que part
  O canal personalizado é aplicado na parte superior da pilha de canais existente para pontos de extremidade de descoberta e anúncio. Dessa forma, um cabeçalho de assinatura é aplicado a cada mensagem enviada. A assinatura é verificada em mensagens recebidas e quando não corresponde ou quando as mensagens não têm uma assinatura, as mensagens são descartadas. Para assinar e verificar mensagens, o exemplo usa certificados.  
   
 ## <a name="discussion"></a>Discussão  
- O WCF é muito extensível e permite aos usuários a possibilidade de personalizar os canais conforme desejado. O exemplo implementa um elemento de associação segura de descoberta que cria canais seguros. Os canais seguros se aplicam e verificam as assinaturas de mensagens e são aplicadas sobre a pilha atual.  
+ O WCF é extensível e permite aos usuários a possibilidade de personalizar os canais conforme desejado. O exemplo implementa um elemento de associação segura de descoberta que cria canais seguros. Os canais seguros se aplicam e verificam as assinaturas de mensagens e são aplicadas sobre a pilha atual.  
   
  O elemento de associação segura cria fábricas de canal e ouvintes de canal seguros.  
   
