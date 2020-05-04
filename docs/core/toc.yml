@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: Sistemas operacionais compatíveis e dependências
       href: install/dependencies.md
+    - name: Remover SDKs e runtimes desatualizados
+      href: install/remove-runtime-sdk-versions.md
     - name: Gerenciar modelos .NET
       href: install/templates.md
     - name: Problemas de notarização do macOS
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: Seleção de versão do .NET Core
       href: versions/selection.md
-    - name: Remover SDKs e runtimes desatualizados
-      href: versions/remove-runtime-sdk-versions.md
 - name: Catálogo de RID (Identificador de Runtime)
   href: rid-catalog.md
 - name: Gerenciamento e carregamento de dependência

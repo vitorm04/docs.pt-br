@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 04/21/2020
-  ms.openlocfilehash: 7680641385e013711e62a8585149ea204e327c95
-  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
+  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "82507488"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82624924"
 highlightedContent:
   items:
   - title: Baixar o .NET
@@ -98,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: Baixar o SDK do .NET Core
-    - url: https://dotnet.microsoft.com/download
+    - url: core/tools/index.md
       itemType: overview
       text: Visão geral da CLI do .NET Core
     - url: core/porting/index.md
@@ -225,8 +225,8 @@ additionalContent:
         text: Bibliotecas de IoT do .NET Core
       - url: https://www.nuget.org/packages/System.Device.Gpio
         text: Pacote NuGet System.Device.Gpio
-  - title: Seções de Referência da API
-    summary: Pesquise a documentação de referência da API .NET, no escopo do seu interesse.
+  - title: Referência de API e de linguagem
+    summary: Pesquise a documentação de referência da API do .NET e de linguagens.
     items:
     - title: Referência da API do .NET Core
       summary: Documentação de referência da API do .NET Core
