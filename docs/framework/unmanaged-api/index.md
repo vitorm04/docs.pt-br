@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73092022"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795606"
 ---
 # <a name="unmanaged-api-reference"></a>Referência de API não gerenciada
 Esta seção inclui informações sobre APIs não gerenciadas que podem ser usadas por aplicativos relacionados a código gerenciado, como hosts de runtime, compiladores, desmontadores, ofuscadores, depuradores e criadores de perfis.  
@@ -39,10 +39,10 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  [Repositório de símbolos de diagnóstico](./diagnostics/index.md)  
  Descreve a API de armazenamento de código de diagnóstico, que permite a um compilador gerar informações de símbolo para uso por um depurador.  
   
- [Fusão](./fusion/index.md)  
+ [Flores](./fusion/index.md)  
  Descreve a API de fusão, que permite a um host de runtime acessar as propriedades dos recursos de um aplicativo para localizar as versões corretas desses recursos para o aplicativo.  
   
- [Hospedagem](./hosting/index.md)  
+ [Hosting](./hosting/index.md)  
  Descreve a API de hospedagem, que permite a hosts não gerenciados integrar o CLR em seus aplicativos.  
   
  [Metadados](./metadata/index.md)  
@@ -61,4 +61,4 @@ Esta seção inclui informações sobre APIs não gerenciadas que podem ser usad
  Descreve as duas funções auxiliares e a interface usada pelo Exportador da Biblioteca de Tipos (Tlbexp.exe) durante o processo de conversão de assembly para biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Guia de desenvolvimento](../../../docs/framework/development-guide.md)  
+ [Guia de desenvolvimento](../development-guide.md)  

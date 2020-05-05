@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173530"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795151"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restrições ao uso de níveis de acessibilidade (Referência em C#)
 
@@ -26,9 +26,9 @@ A tabela a seguir resume as restrições nos níveis de acessibilidade declarada
 |-------------|-------------|
 |[Classes](../../programming-guide/classes-and-structs/classes.md)|A classe base direta de um tipo de classe deve ser, pelo menos, tão acessível quanto o próprio tipo de classe.|
 |[Interfaces](../../programming-guide/interfaces/index.md)|As interfaces base explícitas de um tipo de interface devem ser, pelo menos, tão acessíveis quanto o próprio tipo de interface.|
-|[Delega](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
+|[Delegados](../../programming-guide/delegates/index.md)|O tipo de retorno e os tipos de parâmetro de um tipo delegado devem ser, pelo menos, tão acessíveis quanto o próprio tipo delegado.|
 |[Constantes](../../programming-guide/classes-and-structs/constants.md)|O tipo de uma constante deve ser, pelo menos, tão acessível quanto a própria constante.|
-|[Campos](../../programming-guide/classes-and-structs/fields.md)|O tipo de um campo deve ser, pelo menos, tão acessível quanto o próprio campo.|
+|[Fields](../../programming-guide/classes-and-structs/fields.md)|O tipo de um campo deve ser, pelo menos, tão acessível quanto o próprio campo.|
 |[Métodos](../../programming-guide/classes-and-structs/methods.md)|O tipo de retorno e os tipos de parâmetro de um método devem ser, pelo menos, tão acessíveis quanto o próprio método.|
 |[Propriedades](../../programming-guide/classes-and-structs/properties.md)|O tipo de uma propriedade deve ser, pelo menos, tão acessível quanto a propriedade em si.|
 |[Eventos](../../programming-guide/events/index.md)|O tipo de um evento deve ser, pelo menos, tão acessível quanto o próprio evento.|
@@ -107,16 +107,16 @@ public class A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../../language-reference/index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
-- [Palavras-chave do C#](../../language-reference/keywords/index.md)
-- [Modificadores de acesso](../../language-reference/keywords/access-modifiers.md)
-- [Domínio de acessibilidade](../../language-reference/keywords/accessibility-domain.md)
-- [Níveis de acessibilidade](../../language-reference/keywords/accessibility-levels.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
+- [Palavras-chave do C#](index.md)
+- [Modificadores de acesso](access-modifiers.md)
+- [Domínio de acessibilidade](accessibility-domain.md)
+- [Níveis de acessibilidade](accessibility-levels.md)
 - [Modificadores de acesso](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [público](../../language-reference/keywords/public.md)
-- [Privada](../../language-reference/keywords/private.md)
-- [Protegido](../../language-reference/keywords/protected.md)
-- [Interno](../../language-reference/keywords/internal.md)
+- [publicada](public.md)
+- [pessoal](private.md)
+- [protected](protected.md)
+- [interno](internal.md)

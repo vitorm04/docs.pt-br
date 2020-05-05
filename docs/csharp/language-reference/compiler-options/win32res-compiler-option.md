@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606201"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794371"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (opções do compilador C#)
 A opção **-win32res** insere um recurso do Win32 no arquivo de saída.  
@@ -30,7 +30,7 @@ A opção **-win32res** insere um recurso do Win32 no arquivo de saída.
  O arquivo de recurso que você deseja adicionar ao seu arquivo de saída.  
   
 ## <a name="remarks"></a>Comentários  
- Um arquivo de recurso do Win32 pode ser criado com o [Compilador de Recursos](../../language-reference/compiler-options/resource-compiler-option.md). O Compilador de Recursos é invocado quando você compila um programa do Visual C++; um arquivo .res é criado com base no arquivo .rc.  
+ Um arquivo de recurso do Win32 pode ser criado com o [Compilador de Recursos](resource-compiler-option.md). O Compilador de Recursos é invocado quando você compila um programa do Visual C++; um arquivo .res é criado com base no arquivo .rc.  
   
  Um recurso do Win32 pode conter informações de versão ou de bitmap (ícone) que ajudariam a identificar seu aplicativo no Explorador de Arquivos. Se você não especificar a **-win32res**, o compilador gerará informações de versão com base na versão do assembly.  
   
@@ -51,7 +51,7 @@ A opção **-win32res** insere um recurso do Win32 no arquivo de saída.
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Opções de compilador](./index.md)
+- [Opções do compilador C#](./index.md)
 - [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)

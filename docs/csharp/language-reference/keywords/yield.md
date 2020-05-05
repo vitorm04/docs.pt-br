@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3fe4cf92ca17457bd541f092f5d146ba6c1c095
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712774"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794410"
 ---
 # <a name="yield-c-reference"></a>yield (Referência de C#)
 
@@ -51,7 +51,7 @@ Você não pode incluir uma instrução `yield return` ou `yield break` em:
 
 - Métodos que contêm blocos inseguros. Para obter mais informações, consulte [unsafe](unsafe.md).
 
-## <a name="exception-handling"></a>Manipulação de exceção
+## <a name="exception-handling"></a>Tratamento de exceções
 
 Uma instrução `yield return` não pode estar localizada em um bloco try-catch. Uma instrução `yield return` pode estar localizada no bloco try de uma instrução try-finally.
 
@@ -95,9 +95,9 @@ O exemplo a seguir demonstra um acessador `get` que é um iterador. No exemplo, 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../../language-reference/index.md)
-- [C# Guia de Programação](../../programming-guide/index.md)
+- [Referência do C#](../index.md)
+- [Guia de programação C#](../../programming-guide/index.md)
 - [foreach, in](foreach-in.md)
 - [Iterators](../../iterators.md)

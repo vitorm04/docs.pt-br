@@ -1,30 +1,30 @@
 ---
 title: Tutorial Números em C# – introdução ao C#
-description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
+description: Aprenda C# explorando tipos numéricos, seus usos, propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3dc2a5afc6321da45351525a632f586cb84bf7fe
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156539"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794605"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
 Este tutorial ensina sobre os tipos numéricos em C# de maneira interativa. Você escreverá pequenas quantidades de código, depois compilará e executará esse código. O tutorial contém uma série de lições que exploram números e operações matemáticas em C#. Estas lições ensinam os princípios básicos da linguagem C#.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS. Uma visão geral dos comandos que você usará está em [Familiarize-se com as ferramentas de desenvolvimento](local-environment.md), com links para obter mais detalhes.
 
 ## <a name="explore-integer-math"></a>Explorar a matemática de inteiros
 
-Crie um diretório chamado *numbers-quickstart*. Faça disso o diretório atual e execute o seguinte comando:
+Crie um diretório chamado *numbers-quickstart*. Faça com que o diretório atual e execute o seguinte comando:
 
 ```dotnetcli
 dotnet new console -n NumbersInCSharp -o .
 ```
 
-Abra *Program.cs* em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte:
+Abra *Program.cs* em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte código:
 
 ```csharp
 int a = 18;
@@ -35,7 +35,7 @@ Console.WriteLine(c);
 
 Execute este código digitando `dotnet run` na janela de comando.
 
-Você viu apenas uma das operações matemáticas fundamentais com números inteiros. O `int` tipo representa um **inteiro**, um número inteiro zero, positivo ou negativo. Você usa o símbolo `+` para adição. Outras operações matemáticas comuns para inteiros incluem:
+Você viu uma das operações matemáticas fundamentais com números inteiros. O `int` tipo representa um número **inteiro**, zero, positivo ou inteiro negativo. Você usa o símbolo `+` para adição. Outras operações matemáticas comuns para inteiros incluem:
 
 - `-` para subtração
 - `*` para multiplicação
@@ -60,13 +60,13 @@ Console.WriteLine(c);
 
 Execute este código digitando `dotnet run` na janela de comando.
 
-Você também pode experimentar, executando várias operações matemáticas na mesma linha, se quiser. Experimente `c = a + b - 12 * 17;`, por exemplo. É permitido misturar variáveis e números constantes.
+Você também pode experimentar escrevendo várias operações matemáticas na mesma linha, se desejar. Experimente `c = a + b - 12 * 17;`, por exemplo. É permitido misturar variáveis e números constantes.
 
 > [!TIP]
 > À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O **compilador** encontrará esses erros e os reportará a você. Quando a saída contiver mensagens de erro, analise atentamente o código de exemplo e o código em sua janela para ver o que deve ser corrigido.
 > Esse exercício ajudará você a conhecer a estrutura do código C#.
 
-Você terminou a primeira etapa. Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `WorkingWithIntegers` e escreva um novo método `Main` que chama `WorkingWithIntegers`. Quando você terminar, seu código deve ficar assim:
+Você terminou a primeira etapa. Antes de iniciar a próxima seção, vamos passar o código atual para um método separado. Isso facilita o começo do trabalho com um exemplo novo. Renomeie seu método `Main` como `WorkingWithIntegers` e escreva um novo método `Main` que chama `WorkingWithIntegers`. Quando você terminar, seu código deverá ter a seguinte aparência:
 
 ```csharp
 using System;
@@ -113,7 +113,7 @@ Comente a chamada para `WorkingWithIntegers()`. Isso tornará a saída menos con
 //WorkingWithIntegers();
 ```
 
-O `//` inicia um **comentário** em C#. Os comentários são qualquer texto que você queira manter em seu código-fonte, mas não queria executar como código. O compilador não gera qualquer código executável a partir dos comentários.
+O `//` inicia um **comentário** em C#. Os comentários são qualquer texto que você queira manter em seu código-fonte, mas não queria executar como código. O compilador não gera nenhum código executável de comentários.
 
 A linguagem C# define a precedência de operações matemáticas diferentes com regras consistentes às regras que você aprendeu em matemática.
 Multiplicação e divisão têm precedência sobre adição e subtração.
@@ -158,7 +158,7 @@ Console.WriteLine(h);
 Digite `dotnet run` novamente para ver os resultados.
 
 Antes de avançarmos, pegue todo código que você escreveu nesta seção e coloque-o em um novo método. Chame esse novo método de `OrderPrecedence`.
-O resultado final será algo semelhante a isto:
+Você deve escrever algo assim:
 
 ```csharp
 using System;
@@ -224,7 +224,7 @@ namespace NumbersInCSharp
 ## <a name="explore-integer-precision-and-limits"></a>Explorar a precisão de inteiros e limites
 
 Esse último exemplo mostrou que uma divisão de inteiros trunca o resultado.
-Você pode obter o **restante** usando o `%` operador de **módulo,** o personagem. Experimente o seguinte código em seu método `Main`:
+Você pode obter o **resto** usando o operador de **módulo** , o `%` caractere. Experimente o seguinte código em seu método `Main`:
 
 ```csharp
 int a = 7;
@@ -255,13 +255,13 @@ Observe que a resposta é muito próxima do mínimo inteiro (negativo). É o mes
 A operação de adição **estourou** os valores permitidos para números inteiros.
 A resposta é um número negativo muito grande, pois um estouro "envolve" do maior valor de inteiro possível para o menor.
 
-Há outros tipos numéricos com limites e precisão diferentes que você usaria quando o tipo `int` não atendesse às suas necessidades. Vamos explorá-los na sequência.
+Há outros tipos numéricos com limites e precisão diferentes que você usaria quando o tipo `int` não atendesse às suas necessidades. Vamos explorar os outros tipos a seguir.
 
 Novamente, vamos passar o código que você escreveu nesta seção para um método separado. Nomeie-o `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Trabalhar com o tipo Double
 
-O tipo numérico `double` representa um número de ponto flutuante de precisão dupla. Esses termos podem ser novidade para você. Um número **de ponto flutuante** é útil para representar números não integrais que podem ser muito grandes ou pequenos em magnitude. **Precisão dupla** significa que esses números são armazenados usando uma precisão maior do que a **precisão única**. Em computadores modernos, é mais comum usar precisão dupla que números de precisão única.
+O tipo numérico `double` representa um número de ponto flutuante de precisão dupla. Esses termos podem ser novidade para você. Um número de **ponto flutuante** é útil para representar números não integrais que podem ser muito grandes ou pequenos em magnitude. A **precisão dupla** é um termo relativo que descreve o número de dígitos binários usados para armazenar o valor. Números de **precisão dupla** têm duas vezes o número de dígitos binários como **uma única precisão**. Em computadores modernos, é mais comum usar precisão dupla do que números de precisão única. Números de **precisão única** são declarados usando a `float` palavra-chave.
 Vamos explorar. Adicione o seguinte código e veja o resultado:
 
 ```csharp
@@ -299,17 +299,17 @@ double third = 1.0 / 3.0;
 Console.WriteLine(third);
 ```
 
-Você sabe que a repetição de `0.3` não é exatamente o mesmo que `1/3`.
+Você sabe que `0.3` repetir não é exatamente o mesmo `1/3`que.
 
 ***Desafio***
 
-Experimente outros cálculos com números grandes, números pequenos, multiplicação e divisão usando o tipo `double`. Experimente cálculos mais complicados.
+Tente outros cálculos com números grandes, números pequenos, multiplicação e divisão usando o `double` tipo. Experimente cálculos mais complicados.
 
 Após algum tempo no desafio, pegue o código que você escreveu e coloque-o em um novo método. Chame esse novo método de `WorkWithDoubles`.
 
-## <a name="work-with-fixed-point-types"></a>Trabalhar com tipos de ponto fixo
+## <a name="work-with-decimal-types"></a>Trabalhar com tipos decimais
 
-Você viu os tipos numéricos básicos em C#: inteiros e duplos.  Ainda há outro tipo : o tipo `decimal`. O tipo `decimal` tem um intervalo menor, mas precisão maior do que `double`. O termo **ponto fixo** significa que a virgula decimal (ou ponto binário) não muda. Vamos analisar:
+Você viu os tipos numéricos básicos em C#: inteiros e duplos.  Há um outro tipo para aprender: o `decimal` tipo. O tipo `decimal` tem um intervalo menor, mas precisão maior do que `double`. Vamos analisar:
 
 ```csharp
 decimal min = decimal.MinValue;
@@ -329,22 +329,25 @@ decimal d = 3.0M;
 Console.WriteLine(c / d);
 ```
 
-O sufixo `M` nos números é o modo como você indica que uma constante deve usar o tipo `decimal`.
+O sufixo `M` nos números é o modo como você indica que uma constante deve usar o tipo `decimal`. Caso contrário, o compilador assume `double` o tipo.
+
+> [!NOTE]
+> A letra `M` foi escolhida como a letra mais visualmente distinta entre `double` as `decimal` palavras-chave e.
 
 Observe que o cálculo usando o tipo decimal tem mais dígitos à direita da vírgula decimal.
 
 ***Desafio***
 
-Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor.
+Agora que você viu os diferentes tipos numéricos, escreva um código que calcula a área de um círculo cujo raio é de 2,50 centímetros. Lembre-se de que a área de um círculo é o quadrado do raio multiplicado por PI. Uma dica: o .NET contém uma constante para PI, <xref:System.Math.PI?displayProperty=nameWithType>, que você pode usar para esse valor. <xref:System.Math.PI?displayProperty=nameWithType>, como todas as constantes declaradas no `System.Math` namespace, `double` é um valor. Por esse motivo, você deve usar `double` valores instead of `decimal` para esse desafio.
 
 Você deve obter uma resposta entre 19 e 20.
-Você pode verificar sua resposta [olhando para o código de amostra acabado no GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
+Você pode verificar sua resposta [examinando o código de exemplo concluído no GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106).
 
 Experimente outras fórmulas, se quiser.
 
 Você concluiu o início rápido "Números em C#". Continue com o início rápido [Branches e loops](branches-and-loops-local.md) em seu próprio ambiente de desenvolvimento.
 
-Saiba mais sobre os números em C# nos tópicos a seguir:
+Você pode saber mais sobre os números em C# nos seguintes artigos:
 
 - [Tipos numéricos integrais](../../language-reference/builtin-types/integral-numeric-types.md)
 - [Tipos numéricos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md)
