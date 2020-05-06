@@ -8,12 +8,12 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c83bdcca4fab75b4ae94500ceb785b6000cd802a
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793834"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860871"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>Função CreateDebuggingInterfaceFromVersion para Silverlight
 Aceita uma cadeia de caracteres de versão Common Language Runtime (CLR) retornada da [função CreateVersionStringFromModule](createversionstringfrommodule-function.md)e retorna uma interface de depurador correspondente (normalmente, [ICorDebug](icordebug-interface.md)).  
@@ -34,12 +34,12 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  `ppCordb`  
  fora Ponteiro para um ponteiro para um objeto COM (`IUnknown`). Esse objeto será convertido em um objeto [ICorDebug](icordebug-interface.md) antes de ser retornado.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  S_OK  
- `ppCordb` faz referência a um objeto válido que implementa a interface de [interface ICorDebug](icordebug-interface.md) .  
+ `ppCordb`faz referência a um objeto válido que implementa a interface de [interface ICorDebug](icordebug-interface.md) .  
   
- {1&gt;E_INVALIDARG&lt;1}  
- O `szDebuggeeVersion` ou `ppCordb` é nulo.  
+ E_INVALIDARG  
+ `szDebuggeeVersion` Ou `ppCordb` é nulo.  
   
  CORDBG_E_DEBUG_COMPONENT_MISSING  
  Não é possível localizar um componente necessário para a depuração CLR. Isso significa que o MSCorDbi. dll ou o mscordaccore. dll não foi encontrado no mesmo diretório que o CoreCLR. dll de destino.  
@@ -53,8 +53,8 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="remarks"></a>Comentários  
  A interface retornada fornece os recursos para anexar a um CLR em um processo de destino e depurar o código gerenciado que o CLR está executando.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** dbgshim. h  
   

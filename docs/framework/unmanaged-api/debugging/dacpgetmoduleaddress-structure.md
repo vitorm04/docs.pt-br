@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789204"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860831"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>Estrutura DacpGetModuleAddress
 
@@ -39,11 +39,11 @@ struct DacpGetModuleAddress
 
 ## <a name="members"></a>Membros
 
-| {1&gt;Membro&lt;1}      | Descrição                |
+| Membro      | Descrição                |
 | ----------- | -------------------------- |
 | `ModulePtr` | O ponteiro para o módulo. |
 
-## <a name="methods"></a>{1&gt;Métodos&lt;1}
+## <a name="methods"></a>Métodos
 
 | Método                                                                                               | Descrição                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
@@ -51,15 +51,15 @@ struct DacpGetModuleAddress
 
 ## <a name="remarks"></a>Comentários
 
-Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima, em que `CLRDATA_ADDRESS` é um inteiro sem sinal de 64 bits.
+Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, defina a estrutura conforme especificado acima, `CLRDATA_ADDRESS` em que é um inteiro sem sinal de 64 bits.
 
-## <a name="requirements"></a>Requisitos do
-**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos
+**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
 **Cabeçalho:** None  
 **Biblioteca:** None  
-**Versões do .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depuração](index.md)
 - [Estruturas de depuração](debugging-structures.md)

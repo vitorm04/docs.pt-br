@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-ms.openlocfilehash: bd2f67c2d7230d3873b4dc0df73ac1be778a0828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a7a7736837f7e6bbf1ad4982e78a75550abbeab
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179105"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860509"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>Método ICLRDataTarget::WriteVirtual
 Grava dados do buffer especificado para o endereço de memória virtual especificado.  
@@ -37,27 +37,27 @@ HRESULT WriteVirtual (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
- [em] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
+ no Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
   
  `buffer`  
- [em] Um ponteiro para um buffer que armazena os dados a serem gravados.  
+ no Um ponteiro para um buffer que armazena os dados a serem gravados.  
   
  `bytesRequested`  
- [em] O número de bytes a serem escritos.  
+ no O número de bytes a serem gravados.  
   
  `bytesWritten`  
- [fora] Um ponteiro para o número real de bytes que foram escritos.  
+ fora Um ponteiro para o número real de bytes que foram gravados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

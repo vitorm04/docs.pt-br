@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
-  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 04/30/2020
-  ms.locfileid: "82595904"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860972"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     Vamos continuar e explorar mais. O restante desta lição explora como trabalhar com o tipo `string`, que representa o texto em C#. Como o tipo `Console`, o tipo `string` tem métodos. Os métodos `string` funcionam com texto.
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Declarar e usar variáveis
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     Selecione **executar** novamente para ver os resultados. Em vez de "Olá {aFriend}", a mensagem deve ser "Olá, Maira".
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Trabalhar com cadeias de caracteres
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > Este é um bom momento para explorar por conta própria. Você aprendeu que `Console.WriteLine()` escreve um texto na tela. Você aprendeu como declarar variáveis e concatenar cadeias de caracteres. Experimente com a janela interativa. A janela tem um recurso chamado **IntelliSense**, que faz sugestões sobre o que você pode fazer. Digite um `.` depois do `d` em `firstFriend`. Você verá uma lista de sugestões para propriedades e métodos que você pode usar.
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Faça mais com as cadeias de caractere
   durationInMinutes: 5
   content: >
@@ -231,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Pesquisar cadeias de caracteres
   durationInMinutes: 10
   content: >
@@ -268,11 +248,6 @@ items:
 
 
     Você deve obter `true` para iniciar com "You" e terminar com "hello" e false para iniciar ou terminar com "goodbye".
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - title: Desafio concluído
   durationInMinutes: 3
   content: >
@@ -293,11 +268,6 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
     Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Você pode selecionar os **números no link C#** abaixo para iniciar o próximo tutorial interativo, ou pode visitar o [site do .net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
 

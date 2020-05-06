@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 50ea9caf08b2ffb689760da95af4e5c3fdd77301
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9d86b23b91702929a86334f557a8d647e19861a4
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793734"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860595"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>Método ICLRDataTarget::GetMachineType
 Obtém o identificador da espécie de conjunto de instruções que o processo de destino está usando.  
@@ -35,17 +35,17 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>Parâmetros  
  `machineType`  
- fora Um ponteiro para um valor que indica o conjunto de instruções que o processo de destino está usando. O `machineType` retornado é uma das constantes IMAGE_FILE_MACHINE, que são definidas no arquivo de cabeçalho WinNT. h.  
+ fora Um ponteiro para um valor que indica o conjunto de instruções que o processo de destino está usando. O retornado `machineType` é uma das constantes IMAGE_FILE_MACHINE, que são definidas no arquivo de cabeçalho WinNT. h.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICLRDataTarget](iclrdatatarget-interface.md)

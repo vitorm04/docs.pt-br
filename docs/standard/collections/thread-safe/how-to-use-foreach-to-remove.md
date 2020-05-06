@@ -1,6 +1,6 @@
 ---
-title: Como usar ForEach para remover itens de uma BlockingCollection
-ms.date: 03/30/2017
+title: Usar ForEach para remover itens de um BlockingCollection
+ms.date: 05/04/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,16 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1255fcda89396ea8ff9abf6cf111e6dd9ea5a87d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711227"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861007"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Como usar ForEach para remover itens de uma BlockingCollection
+# <a name="use-foreach-to-remove-items-in-a-blockingcollection"></a>Usar ForEach para remover itens de um BlockingCollection
 
-Além de extrair itens de uma <xref:System.Collections.Concurrent.BlockingCollection%601> usando o método <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, também é possível usar um [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) em Visual Basic), para remover itens até que a adição seja concluída e a coleção esteja vazia. Isso é chamado de *enumeração de mutação* ou de *mutação consumidora* porque, ao contrário de um loop típico `foreach` (`For Each`), esse enumerador modifica a coleção de origem, removendo itens.
+Além de levar itens de <xref:System.Collections.Concurrent.BlockingCollection%601> um usando o <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> método e <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> , você também pode usar um [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([para cada](../../../visual-basic/language-reference/statements/for-each-next-statement.md) em Visual Basic) com o <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> para remover itens até que a adição seja concluída e a coleção esteja vazia. Isso é chamado de *enumeração de mutação* ou de *mutação consumidora* porque, ao contrário de um loop típico `foreach` (`For Each`), esse enumerador modifica a coleção de origem, removendo itens.
 
 ## <a name="example"></a>Exemplo
 
@@ -28,11 +28,11 @@ O exemplo a seguir mostra como remover todos os itens em um <xref:System.Collect
 
 Este exemplo usa um loop `foreach` com o método <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> no thread consumidor, que faz com que cada item seja removido da coleção ao ser enumerado. <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> limita o número máximo de itens que estão na coleção a qualquer momento. Enumerar a coleção dessa maneira bloqueará o thread consumidor se nenhum item estiver disponível ou se a coleção estiver vazia. Neste exemplo, o bloqueio não é um problema porque o thread produtor adiciona itens mais rápido do que eles podem ser consumidos.
 
-Não há nenhuma garantia de que os itens sejam enumerados na mesma ordem em que são adicionados por threads de produtor.
+O <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> retorna um `IEnumerable<T>`, portanto, a ordem não pode ser garantida. No entanto, <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> internamente um é usado como o tipo de coleção subjacente, que removerá os objetos após a ordenação PEPS (primeiro a entrar, primeiro a sair). Se <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A?displayProperty=nameWithType> forem feitas chamadas simultâneas, elas serão concorrentes. Um item consumido (removido da fila) em uma enumeração não pode ser observado no outro.
 
 Para enumerar a coleção sem modificá-la, basta usar `foreach` (`For Each`) sem o método <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A>. No entanto, é importante compreender que esse tipo de enumeração representa um instantâneo da coleção em um ponto preciso no tempo. Se outros threads estiverem adicionando ou removendo itens simultaneamente enquanto você estiver executando o loop, o loop poderá não representar o estado real da coleção.
 
 ## <a name="see-also"></a>Confira também
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [Programação Paralela](../../../../docs/standard/parallel-programming/index.md)
+- [Programação paralela](../../../../docs/standard/parallel-programming/index.md)

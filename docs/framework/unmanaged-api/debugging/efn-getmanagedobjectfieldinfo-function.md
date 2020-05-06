@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 42f7020212dd2db793b7c7d20a15c129157e7261
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793767"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860758"
 ---
-# <a name="_efn_getmanagedobjectfieldinfo-function"></a>Função \_EFN\_GetManagedObjectFieldInfo
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_Função\_EFN GetManagedObjectFieldInfo
 Obtém o deslocamento do início de um objeto para um campo e o valor do campo, usando o ponteiro do objeto fornecido e o nome do campo.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -57,13 +57,13 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
  Se não houver nenhum código gerenciado no thread atualmente no contexto, a função retornará HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0XA0 e um código de erro de 0x1000.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** SOS_Stacktrace. h  
   
- **Versão do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versão do .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando funções estáticas globais](debugging-global-static-functions.md)

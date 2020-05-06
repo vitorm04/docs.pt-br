@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179152"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860559"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>Método ICLRDataTarget::ReadVirtual
 Lê dados do endereço de memória virtual especificado no buffer especificado.  
@@ -37,27 +37,27 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `address`  
- [em] Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
+ no Um CLRDATA_ADDRESS que armazena o endereço de memória virtual.  
   
  `buffer`  
- [fora] Um ponteiro para um buffer que recebe os dados.  
+ fora Um ponteiro para um buffer que recebe os dados.  
   
  `bytesRequested`  
- [em] O comprimento do tampão.  
+ no O comprimento do buffer.  
   
  `bytesRead`  
- [fora] Um ponteiro para o número de bytes devolvido.  
+ fora Um ponteiro para o número de bytes retornados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b9ae2b36bff9b4a6c048a8de99fa7d09350b1401
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789004"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859716"
 ---
 # <a name="icordebugcreateprocess-method"></a>Método ICorDebug::CreateProcess
 Inicia um processo e seu thread principal sob o controle do depurador.  
@@ -52,10 +52,10 @@ HRESULT CreateProcess (
  no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a linha de comando a ser executada pelo processo iniciado. O nome do aplicativo (por exemplo, "SomeApp. exe") deve ser o primeiro argumento.  
   
  `lpProcessAttributes`  
- no Ponteiro para uma estrutura de `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o processo. Se `lpProcessAttributes` for NULL, o processo obterá um descritor de segurança padrão.  
+ no Ponteiro para uma estrutura `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o processo. Se `lpProcessAttributes` for NULL, o processo obterá um descritor de segurança padrão.  
   
  `lpThreadAttributes`  
- no Ponteiro para uma estrutura de `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o thread principal do processo. Se `lpThreadAttributes` for NULL, o thread obterá um descritor de segurança padrão.  
+ no Ponteiro para uma estrutura `SECURITY_ATTRIBUTES` Win32 que especifica o descritor de segurança para o thread principal do processo. Se `lpThreadAttributes` for NULL, o thread obterá um descritor de segurança padrão.  
   
  `bInheritHandles`  
  no Defina como `true` para indicar que cada identificador herdável no processo de chamada é herdado pelo processo iniciado ou `false` para indicar que os identificadores não são herdados. Os identificadores herdados têm o mesmo valor e direitos de acesso que os identificadores originais.  
@@ -70,10 +70,10 @@ HRESULT CreateProcess (
  no Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o caminho completo para o diretório atual para o processo. Se esse parâmetro for nulo, o novo processo terá a mesma unidade e diretório atuais que o processo de chamada.  
   
  `lpStartupInfo`  
- no Ponteiro para uma estrutura de `STARTUPINFOW` Win32 que especifica a estação de janela, a área de trabalho, os identificadores padrão e a aparência da janela principal para o processo iniciado.  
+ no Ponteiro para uma estrutura `STARTUPINFOW` Win32 que especifica a estação da janela, a área de trabalho, os identificadores padrão e a aparência da janela principal para o processo iniciado.  
   
  `lpProcessInformation`  
- no Ponteiro para uma estrutura de `PROCESS_INFORMATION` Win32 que especifica as informações de identificação sobre o processo a ser iniciado.  
+ no Ponteiro para uma estrutura `PROCESS_INFORMATION` Win32 que especifica as informações de identificação sobre o processo a ser iniciado.  
   
  `debuggingFlags`  
  no Um valor da Enumeração CorDebugCreateProcessFlags que especifica as opções de depuração.  
@@ -82,23 +82,23 @@ HRESULT CreateProcess (
  fora Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo.  
   
 ## <a name="remarks"></a>Comentários  
- Os parâmetros desse método são os mesmos do método de `CreateProcess` do Win32.  
+ Os parâmetros desse método são os mesmos que os do método Win32 `CreateProcess` .  
   
  Para habilitar a depuração de modo misto não gerenciado, defina `dwCreationFlags` como DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Se você quiser usar apenas a depuração gerenciada, não defina esses sinalizadores.  
   
- Se o depurador e o processo a serem depurados (o processo anexado) compartilharem um único console e se a depuração de interoperabilidade for usada, é possível que o processo anexado Mantenha os bloqueios do console e pare em um evento de depuração. O depurador bloqueará qualquer tentativa de usar o console. Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE no parâmetro `dwCreationFlags`.  
+ Se o depurador e o processo a serem depurados (o processo anexado) compartilharem um único console e se a depuração de interoperabilidade for usada, é possível que o processo anexado Mantenha os bloqueios do console e pare em um evento de depuração. O depurador bloqueará qualquer tentativa de usar o console. Para evitar esse problema, defina o sinalizador CREATE_NEW_CONSOLE no `dwCreationFlags` parâmetro.  
   
  Não há suporte para depuração de interoperabilidade em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e AMD64.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebug](icordebug-interface.md)

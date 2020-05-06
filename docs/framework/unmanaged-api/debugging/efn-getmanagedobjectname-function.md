@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-ms.openlocfilehash: 9230e1fcba7c0492e50773e7ca13fb16f07238a2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 708ac2e407bf6f87dbe314a0e87cdd16f45b2bcf
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789142"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860750"
 ---
-# <a name="_efn_getmanagedobjectname-function"></a>Função \_EFN\_GetManagedObjectName
+# <a name="_efn_getmanagedobjectname-function"></a>\_Função\_EFN GetManagedObjectName
 Obtém o nome de um tipo usando o ponteiro de objeto gerenciado fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -51,13 +51,13 @@ HRESULT _EFN_GetManagedObjectName(
 ## <a name="remarks"></a>Comentários  
  Se não houver nenhum código gerenciado no thread atualmente no contexto, a função retornará HRESULT SOS_E_NOMANAGEDCODE com um valor de recurso de 0XA0 e um código de erro de 0x1000.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** SOS_Stacktrace. h  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando funções estáticas globais](debugging-global-static-functions.md)

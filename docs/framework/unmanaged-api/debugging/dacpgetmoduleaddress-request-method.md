@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress::Método de solicitação
+title: Método DacpGetModuleAddress::Request
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4dbe6a2c295e5afae1b6761f0c7b695fdb906428
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 1755526636bed6d78663112e4c2ad5ab7c3f731c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102901"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860843"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Método de solicitação
+# <a name="dacpgetmoduleaddressrequest-method"></a>Método DacpGetModuleAddress::Request
 
-Realiza uma solicitação para preencher a estrutura a partir da estrutura de tempo de execução dada.
+Executa uma solicitação para popular a estrutura da estrutura de tempo de execução fornecida.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,22 +39,22 @@ HRESULT Request(
 ## <a name="parameters"></a>Parâmetros
 
 `pDataModule`\
-[em] Um ponteiro para o módulo de dados de sementes.
+no Um ponteiro para o módulo de dados de semente.
 
 ## <a name="remarks"></a>Comentários
 
-Esta estrutura vive dentro do tempo de execução e não é exposta através de nenhum cabeçalho ou arquivos de biblioteca. Para usá-lo, a maneira mais fácil é imitar a implementação:
+Essa estrutura reside dentro do tempo de execução e não é exposta por nenhum cabeçalho ou arquivo de biblioteca. Para usá-lo, a maneira mais fácil é imitar a implementação:
 
-- Devolva o valor `Request` obtido ao `IXCLRDataModule*` ligar para o método no parâmetro com os seguintes parâmetros:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- Retorne o valor obtido da chamada `Request` do método no `IXCLRDataModule*` parâmetro com os seguintes parâmetros:`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Ver [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md)\
-**Cabeçalho:** Nenhum.
-**Biblioteca:** Nenhum.
-**.NET Framework Versions:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**Plataformas:** Consulte [os requisitos do sistema](../../get-started/system-requirements.md)\
+**Cabeçalho:** None
+**Biblioteca:** None
+**.NET Framework versões:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Confira também
 
 - [Depuração](index.md)
-- [Estrutura de endereço sinuosa](dacpgetmoduleaddress-structure.md)
+- [Estrutura DacpGetModuleAddress](dacpgetmoduleaddress-structure.md)

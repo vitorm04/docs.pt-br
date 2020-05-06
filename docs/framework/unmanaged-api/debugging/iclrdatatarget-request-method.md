@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: 336ba38bc80fcb2649a12c78691e52c5e4d70bfe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b913affb4728dc80ba67438384cbeac87265f76d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179108"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860546"
 ---
 # <a name="iclrdatatargetrequest-method"></a>Método ICLRDataTarget::Request
-Chamado pelos serviços de acesso a dados (CLR) de tempo de execução de idioma comum (CLR) para solicitar uma operação, conforme definido pela implementação.  
+Chamado pelos serviços de acesso a dados do Common Language Runtime (CLR) para solicitar uma operação, conforme definido pela implementação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,35 +39,35 @@ HRESULT Request (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `reqCode`  
- [em] Definido pelo usuário.  
+ no Definido pelo usuário.  
   
  `inBufferSize`  
- [em] O tamanho do buffer de entrada, que é usado para a solicitação de entrada.  
+ no O tamanho do buffer de entrada, que é usado para a solicitação de entrada.  
   
  `inBuffer`  
- [em] Um buffer contendo a solicitação.  
+ no Um buffer que contém a solicitação.  
   
  `outBufferSize`  
- [em] O tamanho do buffer de saída, que é usado para a resposta.  
+ no O tamanho do buffer de saída, que é usado para a resposta.  
   
  `outBuffer`  
- [fora] Um Buffer contendo a resposta.  
+ fora Um buffer que contém a resposta.  
   
 ## <a name="remarks"></a>Comentários  
- O `Request` método facilita a adição de operações personalizadas não especificadas. Ou seja, este método proporciona extensibilidade sem exigir revisão da definição da interface.  
+ O `Request` método facilita a adição de operações personalizadas não especificadas. Ou seja, esse método fornece extensibilidade sem exigir a revisão da definição da interface.  
   
  Este método é implementado pelo autor do aplicativo de depuração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** ClrData.idl, ClrData.h  
+ **Cabeçalho:** ClrData. idl, ClrData. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 
