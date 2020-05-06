@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794631"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Usando o Microsoft XML Serializer Generator no .NET Core
 
@@ -30,7 +30,7 @@ Como o [XML Serializer Generator (sgen.exe)](../../standard/serialization/xml-se
 
 Para concluir este tutorial:
 
-- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) ou posterior.
+- [SDK do .NET Core 2,1](https://dotnet.microsoft.com/download) ou posterior.
 - Seu editor de códigos favorito.
 
 > [!TIP]
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>Adicionar uma referência ao pacote Microsoft.XmlSerializer.Generator no projeto MyApp
 
-Use [`dotnet add package`](../tools//dotnet-add-package.md) o comando para adicionar a referência em seu projeto.
+Use o [`dotnet add package`](../tools/dotnet-add-package.md) comando para adicionar a referência em seu projeto.
 
 Tipo:
 
@@ -64,7 +64,7 @@ Abra o editor de código e vamos começar! Ainda estamos trabalhando no diretór
 
 Abra o *MyApp.csproj* em seu editor de texto.
 
-Após executar [`dotnet add package`](../tools//dotnet-add-package.md) o comando, as seguintes linhas são adicionadas ao seu arquivo de projeto *MyApp.csproj:*
+Depois de executar [`dotnet add package`](../tools/dotnet-add-package.md) o comando, as seguintes linhas são adicionadas ao seu arquivo de projeto *MyApp. csproj* :
 
  ```xml
  <ItemGroup>
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)chamadas [`dotnet build`](../tools/dotnet-build.md) para garantir que os alvos de compilação foram construídos e, em seguida, chamadas `dotnet <assembly.dll>` para executar o aplicativo de destino.
+> [`dotnet run`](../tools/dotnet-run.md)chama [`dotnet build`](../tools/dotnet-build.md) para garantir que os destinos de compilação foram criados e, em seguida `dotnet <assembly.dll>` , chama para executar o aplicativo de destino.
 
 > [!IMPORTANT]
 > Os comandos e as etapas mostradas neste tutorial para executar o aplicativo são usadas somente durante o tempo de desenvolvimento. Quando estiver pronto para implantar o aplicativo, dê uma olhada nas diferentes [estratégias de implantação](../deploying/index.md) para aplicativos do .NET Core e no comando [`dotnet publish`](../tools/dotnet-publish.md).

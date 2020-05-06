@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-ms.openlocfilehash: 65d7e830b82cc1780826517fe8cff1da0a7d6188
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8be8ce36b557831bc0997dd1c69abb924390d051
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795812"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>Enumeração CorDebugJITCompilerFlags
 Contém valores que influenciam o comportamento do compilador just-in-time (JIT) gerenciado.  
@@ -38,21 +38,21 @@ typedef enum CorDebugJITCompilerFlags {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_DEFAULT`|Especifica que o compilador deve controlar os dados de compilação e permite otimizações.|  
 |`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Especifica que o compilador deve controlar os dados de compilação, mas desabilita otimizações.|  
 |`CORDEBUG_JIT_ENABLE_ENC`|Especifica que o compilador deve controlar os dados de compilação, desabilitar otimizações e habilitar as tecnologias editar e continuar.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Declarando enumerações](debugging-enumerations.md)

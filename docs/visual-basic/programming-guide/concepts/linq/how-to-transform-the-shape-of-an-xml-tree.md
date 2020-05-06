@@ -1,13 +1,13 @@
 ---
-title: 'Como: Transformar a forma de uma árvore XML'
+title: 'Como: transformar a forma de uma árvore XML'
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332413"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796100"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>Como transformar a forma de uma árvore XML (Visual Basic)
 A *forma* de um documento XML refere-se aos seus nomes de elemento, nomes de atributo e às características de sua hierarquia.  
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  Esse código gera a seguinte saída:  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,7 +86,8 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>Exemplo  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-ms.openlocfilehash: a443332e4f2b0351e99754fae610af39268bb105
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a3214fc4e52918716f183720c7c616b1fff74bdb
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789263"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795671"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>Enumeração CorDebugSetContextFlag
 Indica se o contexto é do quadro ativo (ou folha) na pilha ou se foi computado pelo desenrolamento de outro quadro.  
@@ -36,24 +36,24 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|O contexto é o contexto ativo do thread.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|O contexto foi calculado com o desenrolamento de outro quadro.|  
   
 ## <a name="remarks"></a>Comentários  
- `CorDebugSetContextFlag` fornece valores que são usados pelo método [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) .  
+ `CorDebugSetContextFlag`Fornece valores que são usados pelo método [ICorDebugStackWalk:: SetContext](icordebugstackwalk-setcontext-method.md) .  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Declarando enumerações](debugging-enumerations.md)
 - [Depuração](index.md)

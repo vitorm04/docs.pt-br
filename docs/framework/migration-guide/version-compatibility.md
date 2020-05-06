@@ -7,22 +7,22 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102977"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795996"
 ---
 # <a name="version-compatibility"></a>Compatibilidade de versões
 
-Compatibilidade com versões anteriores significa que um aplicativo desenvolvido para uma versão específica de uma plataforma será executado em versões posteriores dessa plataforma. .NET Framework tenta maximizar a compatibilidade retrógrada: o código-fonte escrito para uma versão do .NET Framework deve ser compilado em versões posteriores do .NET Framework, e binários executados em uma versão do .NET Framework devem se comportar de forma idêntica em versões posteriores do .NET Framework.
+Compatibilidade com versões anteriores significa que um aplicativo desenvolvido para uma versão específica de uma plataforma será executado em versões posteriores dessa plataforma. .NET Framework tenta maximizar a compatibilidade com versões anteriores: o código-fonte escrito para uma versão do .NET Framework deve ser compilado em versões posteriores do .NET Framework, e os binários executados em uma versão do .NET Framework devem se comportar de forma idêntica em versões posteriores do .NET Framework.
 
 ## <a name="version-compatibility-for-apps"></a><a name="Apps"></a> Compatibilidade de versão para aplicativos
 
-Por padrão, um aplicativo é executado na versão do .NET Framework para o que foi construído. Se essa versão não estiver presente e o arquivo de configuração de aplicativos não definir versões compatíveis, um erro de inicialização do .NET Framework poderá ocorrer. Nesse caso, a tentativa de executar o aplicativo falhará.
+Por padrão, um aplicativo é executado na versão do .NET Framework para o qual foi criado. Se essa versão não estiver presente e o arquivo de configuração de aplicativos não definir versões compatíveis, um erro de inicialização do .NET Framework poderá ocorrer. Nesse caso, a tentativa de executar o aplicativo falhará.
 
-Para definir as versões específicas em que [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) o aplicativo é executado, adicione um ou mais elementos de>de runtime suportados ao arquivo de configuração do aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do runtime, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
+Para definir as versões específicas nas quais seu aplicativo é executado, adicione um ou [ \<](../configure-apps/file-schema/startup/supportedruntime-element.md) mais elementos de>do supportedRuntime ao arquivo de configuração do aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do runtime, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
 
 ```xml
 <configuration>
@@ -33,7 +33,7 @@ Para definir as versões específicas em que [ \<](../configure-apps/file-schema
 </configuration>
 ```
 
-Para saber mais, confira [How to: Configure an App to Support .NET Framework 4 or 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md) (Como configurar um aplicativo para dar suporte ao .NET Framework 4 ou 4.x).
+Para saber mais, confira [How to: Configure an App to Support .NET Framework 4 or 4.x](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md) (Como configurar um aplicativo para dar suporte ao .NET Framework 4 ou 4.x).
 
 ## <a name="version-compatibility-for-components"></a>Compatibilidade de versão para componentes
 
@@ -49,9 +49,9 @@ Na prática, essa compatibilidade pode ser desfeita por alterações aparentemen
 
 Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framework 4.5 (incluindo suas versões de ponto, o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8), use as seguintes listas de verificação:
 
-- Se o seu aplicativo foi desenvolvido para ser executado em qualquer versão do .NET Framework a partir do .NET Framework 4.0, consulte [compatibilidade de aplicativos](application-compatibility.md) para gerar listas de alterações entre a versão .NET Framework direcionada e a versão em que o aplicativo está sendo executado.
+- Se seu aplicativo foi desenvolvido para ser executado em qualquer versão do .NET Framework a partir do .NET Framework 4,0, consulte [compatibilidade de aplicativos](application-compatibility.md) para gerar listas de alterações entre sua versão de .NET Framework de destino e a versão na qual seu aplicativo está sendo executado.
 
-- Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
+- Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](net-framework-4-migration-issues.md).
 
 - Se você tiver um aplicativo .NET Framework 2.0, consulte também [Alterações no .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
@@ -65,12 +65,12 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 ## <a name="side-by-side-execution"></a>Execução lado a lado
 
-Se você não conseguir encontrar uma solução adequada para o seu problema, lembre-se que o .NET Framework 4.5 (ou uma de suas versões de ponto) é executado lado a lado com as versões 1.1, 2.0 e 3.5, e é uma atualização no local que substitui a versão 4. Para aplicativos que visam as versões 1.1, 2.0 e 3.5, você pode instalar a versão apropriada do .NET Framework na máquina de destino para executar o aplicativo em seu melhor ambiente. Para saber mais sobre a execução lado a lado, confira [Side-by-Side Execution](../deployment/side-by-side-execution.md) (Execução lado a lado).
+Se você não encontrar uma solução alternativa adequada para seu problema, lembre-se de que o .NET Framework 4,5 (ou uma de suas versões de ponto) é executado lado a lado com as versões 1,1, 2,0 e 3,5, e é uma atualização in-loco que substitui a versão 4. Para aplicativos direcionados às versões 1,1, 2,0 e 3,5, você pode instalar a versão apropriada do .NET Framework no computador de destino para executar o aplicativo em seu melhor ambiente. Para saber mais sobre a execução lado a lado, confira [Side-by-Side Execution](../deployment/side-by-side-execution.md) (Execução lado a lado).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Novidades](../whats-new/index.md)
 - [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md)
-- [Compatibilidade de aplicativos](../migration-guide/application-compatibility.md)
-- [.NET Framework política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
-- [Problemas de migração do Quadro .NET 4](../migration-guide/net-framework-4-migration-issues.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)
+- [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [.NET Framework 4 problemas de migração](net-framework-4-migration-issues.md)

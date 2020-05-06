@@ -2,26 +2,26 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399318"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794696"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
-Na seção Como fazer o Guia C#, você pode encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções. Queremos facilitar que sejam localizados por vários caminhos de pesquisa.
+Na seção como do guia do C#, você pode encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções. Queremos facilitar que sejam localizados por vários caminhos de pesquisa.
 
 ## <a name="general-c-concepts"></a>Conceitos gerais de C#
 
-Existem várias dicas e truques que são práticas comuns de desenvolvedor C#:
+Há várias dicas e truques que são práticas de desenvolvedor C# comuns:
 
 - [Inicializar objetos usando um inicializador de objeto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Aprenda as diferenças entre passar um struct e uma classe para um método](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Use a sobrecarga de operador](../language-reference/operators/operator-overloading.md).
-- [Implementar e chamar um método de extensão personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Mesmo os programadores C# podem querer [usar o `My` namespace do Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- [Implemente e chame um método de extensão personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
+- Até mesmo os programadores C# podem querer [usar `My` o namespace de Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Crie um novo método para um tipo `enum` usando métodos de extensão](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Membros de classe e struct
@@ -35,19 +35,19 @@ As classes e os structs são criados para implementar seu programa. Essas técni
 - [Definir propriedades abstratas](../programming-guide/classes-and-structs/how-to-define-abstract-properties.md).
 - [Use os recursos de documentação para documentar seu código](../programming-guide/xmldoc/how-to-use-the-xml-documentation-features.md).
 - [Implemente membros de interface explicitamente](../programming-guide/interfaces/how-to-explicitly-implement-interface-members.md) para manter a interface pública concisa.
-- [Implementar explicitamente membros de duas interfaces](../programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md).
+- [Implemente explicitamente membros de duas interfaces](../programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md).
 
 ### <a name="working-with-collections"></a>Trabalhando com coleções
 
 Esses artigos ajudam você a trabalhar com coleções de dados.
 
-- [Inicialize um dicionário com um inicializador de coleção](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
+- [Inicializar um dicionário com um inicializador de coleção](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md).
 
 ## <a name="working-with-strings"></a>Trabalhando com cadeias de caracteres
 
 As cadeias de caracteres são o tipo de dados fundamental usado para exibir ou manipular texto. Esses artigos demonstram práticas comuns com cadeias de caracteres.
 
-- [Compare strings](compare-strings.md).
+- [Comparar cadeias de caracteres](compare-strings.md).
 - [Modifique o conteúdo da cadeia de caracteres](modify-string-contents.md).
 - [Determine se uma cadeia de caracteres representa um número](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Use `String.Split` para separar as cadeias de caracteres](parse-strings-using-split.md).
@@ -62,8 +62,8 @@ Talvez seja necessário converter um objeto em um tipo diferente.
 - [Converta entre cadeias de caracteres que representam números hexadecimais e o número](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
 - [Converta uma cadeia de caracteres para um `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Converta uma matriz de bytes em um int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
-- [Converta uma string em um número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Use a correspondência de padrões, os operadores `as` e `is` para converter para um tipo diferente com segurança](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
+- [Converta uma cadeia de caracteres em um número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
+- [Use a correspondência de padrões, os operadores `as` e `is` para converter para um tipo diferente com segurança](safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Define as conversões de tipo personalizado](../language-reference/operators/user-defined-conversion-operators.md).
 - [Determine se um tipo é um tipo de valor anulável](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
 - [Converta entre tipos de valor anuláveis e não anuláveis](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
@@ -75,7 +75,7 @@ Talvez seja necessário converter um objeto em um tipo diferente.
 - [Testar a igualdade com base em referência](../programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).
 - [Defina a igualdade com base em valor para um tipo](../programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).
 
-## <a name="exception-handling"></a>Manipulação de exceção
+## <a name="exception-handling"></a>Tratamento de exceções
 
 Programas .NET relatam que os métodos não concluíram seu trabalho com sucesso ao lançar exceções. Nesses artigos, você aprenderá a trabalhar com exceções.
 

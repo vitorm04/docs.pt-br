@@ -2,18 +2,18 @@
 title: Interpolação de cadeia de caracteres – tutorial de C#
 description: Este tutorial mostra como usar o recurso de interpolação de cadeias de caracteres em C# para incluir resultados de expressão formatada em uma cadeia de caracteres maior.
 ms.date: 10/23/2018
-ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796048"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usar interpolação de cadeia de caracteres para construir cadeia de caracteres formatadas
 
 Este tutorial ensina como usar a [interpolação de cadeias de caracteres](../../language-reference/tokens/interpolated.md) em C# para inserir valores em uma única cadeia de caracteres de resultado. Escreva o código em C# e veja os resultados da compilação e da execução. O tutorial contém uma série de lições que mostram como inserir valores em uma cadeia de caracteres e formatar esses valores de diferentes maneiras.
 
-Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial .NET [Hello World em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou macOS. Você também pode completar a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
+Este tutorial espera que você tenha um computador que possa usar para desenvolvimento. O tutorial do .NET [Olá, mundo em 10 minutos](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) tem instruções para configurar seu ambiente de desenvolvimento local no Windows, Linux ou MacOS. Você também pode concluir a [versão interativa](interpolated-strings.yml) deste tutorial em seu navegador.
 
 ## <a name="create-an-interpolated-string"></a>Criar uma cadeia de caracteres interpolada
 
@@ -46,13 +46,13 @@ Vamos testar mais alguns exemplos de interpolação de cadeias de caracteres com
 
 Na seção anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Entretanto, o resultado de uma expressão de interpolação pode ser de qualquer tipo de dados. Vamos incluir valores de vários tipos de dados em uma cadeia de caracteres interpolada.
 
-No exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md)`Vegetable` que tem uma `Name` [propriedade](../../properties.md) e um `ToString` [método](../../methods.md), que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [ `public` modificador de acesso](../../language-reference/keywords/public.md) disponibiliza esse método a qualquer `Vegetable` código cliente para obter a representação de seqüência de uma instância. No exemplo, `Vegetable.ToString` o método retorna `Name` o valor da `Vegetable` propriedade que é inicializada na [construtora:](../../programming-guide/classes-and-structs/constructors.md)
+No exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md)`Vegetable` que tem uma `Name` [propriedade](../../properties.md) e um `ToString` [método](../../methods.md), que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [ `public` modificador de acesso](../../language-reference/keywords/public.md) torna esse método disponível para qualquer código de cliente para obter a representação `Vegetable` de cadeia de caracteres de uma instância. No exemplo, o `Vegetable.ToString` método retorna o valor da `Name` propriedade que é inicializada no `Vegetable` [Construtor](../../programming-guide/classes-and-structs/constructors.md):
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-Em seguida, criamos `Vegetable` uma `item` instância da classe nomeada usando o [ `new` ](../../language-reference/operators/new-operator.md) `Vegetable`operador e fornecendo um nome para o construtor :
+Em seguida, criamos uma instância `Vegetable` da classe `item` chamada usando o [ `new` operador](../../language-reference/operators/new-operator.md) e fornecendo um nome para o construtor `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -165,4 +165,4 @@ A saída é semelhante ao seguinte:
 
 Você concluiu o tutorial de interpolação de cadeias de caracteres.
 
-Para obter mais informações, confira o tópico [Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres no C#](../../tutorials/string-interpolation.md).
+Para obter mais informações, confira o tópico [Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md) e o tutorial [Interpolação de cadeia de caracteres no C#](../string-interpolation.md).

@@ -1,12 +1,12 @@
 ---
 title: 'Passo a passo: Persistindo um objeto usando o C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167564"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796061"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Passo a passo: persistir um objeto usando o C\#
 
@@ -37,7 +37,7 @@ Examine o código de exemplo online [no repositório GitHub de amostras do .NET]
 
 A primeira etapa é criar uma classe `Loan` e um aplicativo de console que usa a classe:
 
-1. Crie um aplicativo novo. Digite `dotnet new console -o serialization` para criar um novo aplicativo de console em um subdiretório chamado `serialization`.
+1. Crie um novo aplicativo. Digite `dotnet new console -o serialization` para criar um novo aplicativo de console em um subdiretório chamado `serialization`.
 1. Abra o aplicativo no editor e adicione uma nova classe chamada `Loan.cs`.
 1. Adicione o seguinte código à classe `Loan`:
 
@@ -99,7 +99,7 @@ Em seguida, é necessário adicionar um código para serializar a classe em um a
 
 Neste ponto, você pode compilar e executar o aplicativo novamente. Na primeira vez em que ele é executado, observe que as taxas de juros começam em 7,5 e, em seguida, são alteradas para 7,1. Feche o aplicativo e execute-o novamente. Agora, o aplicativo imprime a mensagem indicando que ele leu o arquivo salvo e a taxa de juros é 7,1, mesmo antes do código que a altera.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Serialização (C#)](index.md)
-- [C# Guia de Programação](../..//index.md)
+- [Guia de programação C#](../../index.md)

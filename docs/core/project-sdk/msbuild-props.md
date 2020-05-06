@@ -3,16 +3,16 @@ title: Propriedades do MSBuild para Microsoft. NET. Sdk
 description: Referência para as propriedades do MSBuild que são compreendidas pelo SDK do .NET Core.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 105b7d67ea24515ea88481cb4a4fe42d2a03cfd0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506774"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795567"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>Propriedades do MSBuild para projetos SDK do .NET Core
 
-Esta página descreve as propriedades do MSBuild para configurar projetos do .NET Core.
+Esta página descreve as propriedades do MSBuild para configurar projetos do .NET Core. Você pode especificar *metadados* para cada propriedade como elementos filho da propriedade.
 
 > [!NOTE]
 > Esta página é um trabalho em andamento e não lista todas as propriedades de MSBuild úteis para o SDK do .NET Core. Para obter uma lista de propriedades comuns do MSBuild, consulte [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
@@ -28,11 +28,9 @@ Esta página descreve as propriedades do MSBuild para configurar projetos do .NE
 A `TargetFramework` propriedade especifica a versão do Framework de destino para o aplicativo, que referencia implicitamente um [metapacote](../packages.md#metapackages). Para obter uma lista de monikers de estrutura de destino válidos, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
 ```
 
 Para obter mais informações, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md).
@@ -45,11 +43,9 @@ Use a `TargetFrameworks` Propriedade quando desejar que seu aplicativo direcione
 > Essa propriedade será ignorada `TargetFramework` se (singular) for especificado.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
+</PropertyGroup>
 ```
 
 Para obter mais informações, consulte [estruturas de destino em projetos em estilo SDK](../../standard/frameworks.md).
@@ -62,12 +58,24 @@ Para obter mais informações, consulte [estruturas de destino em projetos em es
 Use a `NetStandardImplicitPackageVersion` Propriedade quando desejar especificar uma versão de estrutura inferior à versão do [metapacote](../packages.md#metapackages) . O arquivo de projeto no exemplo a seguir `netstandard1.3` tem como destino, mas usa `NETStandard.Library`a versão 1.6.0 do.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netstandard1.3</TargetFramework>
+  <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="package-properties"></a>Propriedades do pacote
+
+Você `PackageId`pode especificar propriedades como, `PackageVersion` `PackageIcon` `Title`,, e `Description` para descrever o pacote que é criado a partir do seu projeto. Para obter informações sobre essas e outras propriedades, consulte [pacote de destino](/nuget/reference/msbuild-targets#pack-target).
+
+```xml
+<PropertyGroup>
+  ...
+  <PackageId>ClassLibDotNetStandard</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>John Doe</Authors>
+  <Company>Contoso</Company>
+</PropertyGroup>
 ```
 
 ## <a name="publish-properties"></a>Publicar propriedades
@@ -82,11 +90,9 @@ Use a `NetStandardImplicitPackageVersion` Propriedade quando desejar especificar
 A `RuntimeIdentifier` propriedade permite que você especifique um único [identificador de tempo de execução (RID)](../rid-catalog.md) para o projeto. O RID permite a publicação de uma implantação autossuficiente.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
+</PropertyGroup>
 ```
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
@@ -97,11 +103,9 @@ A `RuntimeIdentifiers` propriedade permite que você especifique uma lista delim
 > `RuntimeIdentifier`(singular) pode fornecer compilações mais rápidas quando apenas um único tempo de execução é necessário.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+</PropertyGroup>
 ```
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
@@ -111,11 +115,9 @@ O `TrimmerRootAssembly` item permite que você exclua um assembly de [*corte*](.
 O XML a seguir exclui o `System.Security` assembly de corte.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <TrimmerRootAssembly Include="System.Security" />
-  </ItemGroup>
-</Project>
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
 ```
 
 ### <a name="useapphost"></a>UseAppHost
@@ -125,11 +127,9 @@ A `UseAppHost` Propriedade foi introduzida na versão 2.1.400 do SDK do .NET Cor
 No .NET Core 3,0 e versões posteriores, um executável dependente da estrutura é criado por padrão. Defina a `UseAppHost` Propriedade como `false` para desabilitar a geração do executável.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <UseAppHost>false</UseAppHost>
+</PropertyGroup>
 ```
 
 Para obter mais informações sobre a implantação, consulte [implantação de aplicativos do .NET Core](../deploying/index.md).
@@ -143,11 +143,9 @@ Para obter mais informações sobre a implantação, consulte [implantação de 
 A `LangVersion` propriedade permite especificar uma versão de linguagem de programação específica. Por exemplo, se você quiser acessar os recursos do C# Preview, `LangVersion` defina `preview`como.
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <LangVersion>preview</LangVersion>
+</PropertyGroup>
 ```
 
 Para obter mais informações, consulte [controle de versão da linguagem C#](../../csharp/language-reference/configure-language-version.md#override-a-default).
@@ -171,11 +169,9 @@ Você pode configurar alguns comportamentos de tempo de execução especificando
 A `ConcurrentGarbageCollection` propriedade define se a [coleta de lixo em segundo plano (simultânea)](../../standard/garbage-collection/background-gc.md) está habilitada. Defina o valor como `false` para desabilitar a coleta de lixo em segundo plano. Para obter mais informações, consulte [System. GC. simultaneamente/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
@@ -183,11 +179,9 @@ A `ConcurrentGarbageCollection` propriedade define se a [coleta de lixo em segun
 A `InvariantGlobalization` propriedade define se o aplicativo é executado no modo *invariável-globalização* , o que significa que ele não tem acesso a dados específicos de cultura. Defina o valor a `true` ser executado no modo invariável-Globally. Para obter mais informações, consulte [modo invariável](../run-time-config/globalization.md#invariant-mode).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <InvariantGlobalization>true</InvariantGlobalization>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <InvariantGlobalization>true</InvariantGlobalization>
+</PropertyGroup>
 ```
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
@@ -195,11 +189,9 @@ A `InvariantGlobalization` propriedade define se o aplicativo é executado no mo
 A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para colocar os segmentos de memória excluídos em uma lista em espera para uso futuro ou liberá-los. Definir o valor para `true` instruir o coletor de lixo a colocar os segmentos em uma lista de espera. Para obter mais informações, consulte [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
@@ -207,11 +199,9 @@ A `RetainVMGarbageCollection` Propriedade configura o coletor de lixo para coloc
 A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de lixo da [estação de trabalho ou a coleta de lixo do servidor](../../standard/garbage-collection/workstation-server-gc.md). Defina o valor como `true` para usar a coleta de lixo do servidor. Para obter mais informações, consulte [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ServerGarbageCollection>true</ServerGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ServerGarbageCollection>true</ServerGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
@@ -219,11 +209,9 @@ A `ServerGarbageCollection` propriedade define se o aplicativo usa a coleta de l
 A `ThreadPoolMaxThreads` Propriedade configura o número máximo de threads para o pool de threads de trabalho. Para obter mais informações, consulte [Maximum threads](../run-time-config/threading.md#maximum-threads).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
@@ -231,11 +219,9 @@ A `ThreadPoolMaxThreads` Propriedade configura o número máximo de threads para
 A `ThreadPoolMinThreads` Propriedade configura o número mínimo de threads para o pool de threads de trabalho. Para obter mais informações, consulte [mínimo de threads](../run-time-config/threading.md#minimum-threads).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilation"></a>TieredCompilation
@@ -243,11 +229,9 @@ A `ThreadPoolMinThreads` Propriedade configura o número mínimo de threads para
 A `TieredCompilation` propriedade define se o compilador JIT (just-in-time) usa compilação em [camadas](../whats-new/dotnet-core-3-0.md#tiered-compilation). Defina o valor como `false` para desabilitar a compilação em camadas. Para obter mais informações, consulte [compilação em camadas](../run-time-config/compilation.md#tiered-compilation).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilation>false</TieredCompilation>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
@@ -255,11 +239,9 @@ A `TieredCompilation` propriedade define se o compilador JIT (just-in-time) usa 
 A `TieredCompilationQuickJit` propriedade define se o compilador JIT usa o JIT rápido. Defina o valor como `false` para desabilitar o JIT rápido. Para obter mais informações, consulte [Quick JIT](../run-time-config/compilation.md#quick-jit).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
@@ -267,53 +249,86 @@ A `TieredCompilationQuickJit` propriedade define se o compilador JIT usa o JIT r
 A `TieredCompilationQuickJitForLoops` propriedade define se o compilador JIT usa o JIT rápido em métodos que contêm loops. Defina o valor como `true` para habilitar o JIT rápido em métodos que contêm loops. Para obter mais informações, consulte [Quick JIT for loops](../run-time-config/compilation.md#quick-jit-for-loops).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+</PropertyGroup>
 ```
 
-## <a name="nuget-packages"></a>Pacotes NuGet
+## <a name="reference-properties"></a>Propriedades de referência
 
-- [PackageReference](#packagereference)
 - [AssetTargetFallback](#assettargetfallback)
-
-### <a name="packagereference"></a>PackageReference
-
-O `PackageReference` item permite que você especifique uma dependência do NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages). O atributo `Include` especifica a ID do pacote. O trecho do arquivo de projeto no exemplo a seguir faz referência ao pacote [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-  </ItemGroup>
-</Project>
-```
-
-Para obter mais informações, consulte [referências de pacote em arquivos de projeto](/nuget/consume-packages/package-references-in-project-files).
+- [PackageReference](#packagereference)
+- [ProjectReference](#projectreference)
+- [Referência](#reference)
+- [Restaurar propriedades](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para projetos que seu projeto faz referência e pacotes NuGet que seu projeto consome. Por exemplo, se você especificar uma dependência de pacote `PackageReference` usando, mas esse pacote não contiver ativos que são compatíveis com `TargetFramework`seus projetos `AssetTargetFallback` , a propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback`.
+A `AssetTargetFallback` propriedade permite que você especifique versões de estrutura compatíveis adicionais para referências de projeto e pacotes NuGet. Por exemplo, se você especificar uma dependência de pacote `PackageReference` usando, mas esse pacote não contiver ativos que são compatíveis com `TargetFramework`seus projetos `AssetTargetFallback` , a propriedade entrará em cena. A compatibilidade do pacote referenciado é verificada novamente usando cada estrutura de destino especificada em `AssetTargetFallback`.
 
 Você pode definir a `AssetTargetFallback` propriedade para uma ou mais [versões da estrutura de destino](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <PropertyGroup>
-    <AssetTargetFallback>net461</AssetTargetFallback>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
 ```
 
-### <a name="pack-and-restore-targets"></a>Empacotar e restaurar destinos
+### <a name="packagereference"></a>PackageReference
 
-O MSBuild 15,1 `pack` introduziu e `restore` tem como destino a criação e a restauração de pacotes NuGet como parte de uma compilação. Para obter informações sobre as propriedades do MSBuild para esses destinos `PackageTargetFallback`, incluindo, consulte [NuGet Pack e restaurar como destinos do MSBuild](/nuget/reference/msbuild-targets).
+O `PackageReference` define uma referência a um pacote NuGet. Por exemplo, talvez você queira fazer referência a um único pacote em vez de um [metapacote](../packages.md#metapackages).
 
-## <a name="see-also"></a>Confira também
+O atributo `Include` especifica a ID do pacote. O `Version` atributo especifica a versão ou o intervalo de versão. Para obter informações sobre como especificar uma versão mínima, a versão máxima, o intervalo ou a correspondência exata, consulte [intervalos de versão](/nuget/concepts/package-versioning#version-ranges). Você também pode adicionar os seguintes metadados a uma referência de projeto `IncludeAssets`: `ExcludeAssets`, e `PrivateAssets`.
+
+O trecho do arquivo de projeto no exemplo a seguir faz referência ao pacote [System. Runtime](https://www.nuget.org/packages/System.Runtime/) .
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+Para obter mais informações, consulte [referências de pacote em arquivos de projeto](/nuget/consume-packages/package-references-in-project-files).
+
+### <a name="projectreference"></a>ProjectReference
+
+O `ProjectReference` item define uma referência a outro projeto. O projeto referenciado é adicionado como uma dependência de pacote NuGet, ou seja, é tratado da mesma forma `PackageReference`que um.
+
+O `Include` atributo especifica o caminho para o projeto. Você também pode adicionar os seguintes metadados a uma referência de projeto `IncludeAssets`: `ExcludeAssets`, e `PrivateAssets`.
+
+O trecho do arquivo de projeto no exemplo a seguir faz referência `Project2`a um projeto chamado.
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\Project2.csproj" />
+</ItemGroup>
+```
+
+### <a name="reference"></a>Referência
+
+O `Reference` item define uma referência a um arquivo de assembly.
+
+O `Include` atributo especifica o nome do arquivo e o `HintPath` elemento filho especifica o caminho para o assembly.
+
+```xml
+<ItemGroup>
+  <Reference Include="MyAssembly">
+    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+### <a name="restore-properties"></a>Restaurar propriedades
+
+A restauração de um pacote referenciado instala todas as suas dependências diretas e todas as dependências dessas dependências. Você pode personalizar a restauração do pacote especificando propriedades como `RestorePackagesPath` e `RestoreIgnoreFailedSources`. Para obter mais informações sobre essas e outras propriedades, consulte [Restore Target](/nuget/reference/msbuild-targets#restore-target).
+
+```xml
+<PropertyGroup>
+  <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="see-also"></a>Consulte também
 
 - [Referência de esquema do MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference)
 - [Propriedades comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties)

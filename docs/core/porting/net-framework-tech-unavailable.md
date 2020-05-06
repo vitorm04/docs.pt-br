@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Saiba mais sobre as tecnologias do .NET Framework que não estão disponíveis no .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: f95205330837551085b8f58dfbdfcd702356c98f
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: b75d946b9436b1075a068494b941fbdea5970e42
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506824"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795593"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologias do .NET Framework não disponíveis no .NET Core
 
@@ -47,6 +47,6 @@ Use limites de segurança fornecidos pelo sistema operacional, como virtualizaç
 
 O System.EnterpriseServices (COM+) não é compatível com o .NET Core.
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Visão geral da portabilidade do .NET Framework para o .NET Core](../porting/index.md)
+- [Visão geral da portabilidade do .NET Framework para o .NET Core](index.md)

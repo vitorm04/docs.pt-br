@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6eee9a23fa28b78343e6479106eaa24ecf4caa6
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173582"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795359"
 ---
 # <a name="let-clause-c-reference"></a>Cláusula let (Referência de C#)
 
@@ -29,10 +29,10 @@ No exemplo a seguir, `let` é usado de duas maneiras:
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [C# Referência](../../language-reference/index.md)
+- [Referência do C#](../index.md)
 - [Palavras-chave de consulta (LINQ)](query-keywords.md)
 - [LINQ em C#](../../linq/index.md)
-- [Consulta Integrada ao Idioma (LINQ)](../../programming-guide/concepts/linq/index.md)
-- [Manipular exceções em expressões de consultas](../../linq/handle-exceptions-in-query-expressions.md)
+- [LINQ (consulta integrada à linguagem)](../../programming-guide/concepts/linq/index.md)
+- [Tratar exceções em expressões de consulta](../../linq/handle-exceptions-in-query-expressions.md)

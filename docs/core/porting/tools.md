@@ -2,24 +2,20 @@
 title: Ferramentas de portabilidade para o .NET Core
 description: Conheça algumas das ferramentas que você pode usar para portar para o .NET Core
 author: cartermp
-ms.date: 12/07/2018
-ms.openlocfilehash: 64bad7600d8e17ada83d4bd8bc56762fd1789f43
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 05/03/2020
+ms.openlocfilehash: d0cf0abf206950beb34556ca3ba7243d8cad241e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989123"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795580"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>Ferramentas para ajudar com a portabilidade para o .NET Core
 
 As ferramentas listadas neste artigo podem ser úteis para portar:
 
-- [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) - Uma cadeia de ferramentas que pode gerar um relatório de quão portátil seu código é entre .NET Framework e .NET Core:
+- [Analisador de portabilidade .net](../../standard/analyzers/portability-analyzer.md) – um ferramentas que pode gerar um relatório de quão portátil seu código está entre .NET Framework e .NET Core:
   - Como uma [ferramenta de linha de comando](https://github.com/Microsoft/dotnet-apiport/releases)
   - Como uma [extensão do Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
 - [Analisador de API do .NET](../../standard/analyzers/api-analyzer.md) – um analisador Roslyn que descobre possíveis riscos de compatibilidade para APIs C# em diferentes plataformas e detecta chamadas a APIs preteridas.
-
-Além disso, você pode tentar fazer a portabilidade de soluções menores ou projetos individuais para o formato de arquivo de projeto do .NET Core com a ferramenta [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
-
-> [!WARNING]
-> CsprojToVs2017 é uma ferramenta de terceiros. Não há nenhuma garantia de que ela funcionará para todos os seus projetos, e isso pode causar alterações sutis no comportamento que dependem de você. CsprojToVs2017 deve ser usada como um _ponto de partida_ que automatize as funções básicas que podem ser automatizadas. Não é uma solução garantida para a migração de formatos de arquivo de projeto.
+- [try – Convert](https://www.nuget.org/packages/try-convert/) – uma ferramenta global do .NET Core que pode converter um projeto ou uma solução completa para o SDK do .net, incluindo a movimentação de aplicativos da área de trabalho para o .NET Core. Não é recomendável se você tiver uma compilação mais complicada estabelecida (como tarefas personalizadas, destinos ou importações) e rejeitar muitos tipos de projeto que são incompatíveis com o .NET Core.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795822"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>Enumeração CorDebugInternalFrameType
 Identifica o tipo de quadro de pilha. Essa enumeração é usada pelo método [ICorDebugInternalFrame:: GetFrameType](icordebuginternalframe-getframetype-method.md) .  
@@ -45,9 +45,9 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="members"></a>Membros  
   
-|{1&gt;Membro&lt;1}|Descrição|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Um valor nulo. O método `ICorDebugInternalFrame::GetFrameType` nunca retorna esse valor.|  
+|`STUBFRAME_NONE`|Um valor null. O `ICorDebugInternalFrame::GetFrameType` método nunca retorna esse valor.|  
 |`STUBFRAME_M2U`|Um quadro de stub gerenciado para não gerenciado.|  
 |`STUBFRAME_U2M`|Um quadro de stub não gerenciado para gerenciamento.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Uma transição entre domínios de aplicativo.|  
@@ -59,15 +59,15 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_SECURITY`|Um quadro usado para segurança de acesso ao código.|  
 |`STUBFRAME_JIT_COMPILATION`|O tempo de execução é a compilação JIT de um método.|  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Declarando enumerações](debugging-enumerations.md)

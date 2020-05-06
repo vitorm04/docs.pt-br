@@ -3,12 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451099"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794615"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -52,7 +52,7 @@ Por padrão, o nome de arquivo do projeto também especifica o valor das proprie
 O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json.
 Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
 
-### <a name="version"></a>version
+### <a name="version"></a>Versão
 
 ```json
 {
@@ -486,7 +486,7 @@ Consulte também [Arquivos](#files).
 ```
 
 Não há nenhum equivalente do elemento `owners` no MSBuild.
-Para `summary`, você pode usar `<Description>` a propriedade MSBuild, mesmo que o valor de `summary` não seja migrado automaticamente para essa propriedade, uma vez que essa propriedade é mapeada para o [`description`](#other-common-root-level-options) elemento.
+Para `summary`o, você pode usar a `<Description>` Propriedade MSBuild, embora o valor de `summary` não seja migrado automaticamente para essa propriedade, já que essa propriedade é mapeada para [`description`](#other-common-root-level-options) o elemento.
 
 ## <a name="scripts"></a>scripts
 
@@ -673,6 +673,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
-- [Visão geral de alto nível das alterações na CLI](../tools/cli-msbuild-architecture.md)
+- [Visão geral de alto nível das alterações na CLI](cli-msbuild-architecture.md)
