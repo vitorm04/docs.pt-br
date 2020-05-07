@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed71961e-ae9b-4dfc-9554-06637696d697
 topic_type:
 - apiref
-ms.openlocfilehash: d4de3405f84bfc08f7e1519bc7f9604eb1f5a14e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b5a6f4447730ebc6e4b23d3cd06df85b2d7fee6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088297"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895001"
 ---
 # <a name="icordebugarrayvaluegetelementtype-method"></a>Método ICorDebugArrayValue::GetElementType
 Obtém um valor que indica o tipo simples dos elementos na matriz.  
@@ -38,10 +38,10 @@ HRESULT GetElementType (
  fora Um ponteiro para um valor da enumeração CorElementType que indica o tipo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

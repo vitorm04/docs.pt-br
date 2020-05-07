@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178994"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893647"
 ---
 # <a name="icordebugcodegetcode-method"></a>Método ICorDebugCode::GetCode
-Obtém todo o código para a função especificada, formatado para desmontagem. Este método foi preterido na versão 2.0 do .NET Framework. Use [ICorDebugCode2::GetCodeChunks](icordebugcode2-getcodechunks-method.md) em vez disso.  
+Obtém todo o código para a função especificada, formatado para desmontagem. Esse método foi preterido no .NET Framework versão 2,0. Use [ICorDebugCode2:: GetCodeChunks](icordebugcode2-getcodechunks-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ HRESULT GetCode (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `startOffset`  
- [em] O deslocamento do início da função.  
+ no O deslocamento do início da função.  
   
  `endOffset`  
- [em] O deslocamento do fim da função.  
+ no O deslocamento do fim da função.  
   
  `cBufferAlloc`  
- [em] O tamanho `buffer` da matriz para a qual o código será devolvido.  
+ no O tamanho da `buffer` matriz na qual o código será retornado.  
   
  `buffer`  
- [fora] A matriz na qual o código será devolvido.  
+ fora A matriz na qual o código será retornado.  
   
  `pcBufferSize`  
- [fora] O número de bytes retornou.  
+ fora O número de bytes retornados.  
   
 ## <a name="remarks"></a>Comentários  
- Se o código da função foi dividido em vários pedaços, eles são concatenados para aumentar o deslocamento nativo. Os limites da instrução não são verificados.  
+ Se o código da função tiver sido dividido em várias partes, eles serão concatenados na ordem de aumento do deslocamento nativo. Os limites de instrução não são verificados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versões:** 1.1, 1.0  
+ **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)

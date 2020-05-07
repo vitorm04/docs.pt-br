@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777884"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893536"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>Método ICorDebugCode::GetILToNativeMapping
 Obtém uma matriz de instâncias "COR_DEBUG_IL_TO_NATIVE_MAP" que representam mapeamentos de deslocamentos de MSIL (Microsoft Intermediate Language) para deslocamentos nativos.  
@@ -38,28 +38,28 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="parameters"></a>Parâmetros  
  `cMap`  
- no O tamanho da matriz de `map`.  
+ no O tamanho da `map` matriz.  
   
  `pcMap`  
- fora Um ponteiro para o número real de elementos retornados na matriz de `map`.  
+ fora Um ponteiro para o número real de elementos retornados na `map` matriz.  
   
  `map`  
- fora Uma matriz de estruturas `COR_DEBUG_IL_TO_NATIVE_MAP`, cada uma representando um mapeamento de um deslocamento MSIL para um deslocamento nativo.  
+ fora Uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas, cada uma representando um mapeamento de um deslocamento de MSIL para um deslocamento nativo.  
   
  Não há nenhuma ordem para a matriz de elementos retornada.  
   
 ## <a name="remarks"></a>Comentários  
- O método `GetILToNativeMapping` retorna resultados significativos somente se essa instância "ICorDebugCode" representa o código nativo que era JIT (just-in-time) compilado do código MSIL.  
+ O `GetILToNativeMapping` método retornará resultados significativos somente se essa instância "ICorDebugCode" representar o código nativo que era JIT (just-in-time) compilado do código MSIL.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Interface ICorDebugCode](icordebugcode-interface1.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: 873dd5a1eb2c9356049d2d0c0cb495b963c2ae46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d4a254853256e1a1440f5588418b94e39eabcc9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784187"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894104"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>Método ICorDebugClass::GetStaticFieldValue
 Obtém o valor do campo estático especificado.  
@@ -37,7 +37,7 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `fieldDef`  
- no Um campo `Def` token que faz referência ao campo a ser recuperado.  
+ no Um token `Def` de campo que faz referência ao campo a ser recuperado.  
   
  `pFrame`  
  no Um ponteiro para um objeto ICorDebugFrame que representa o quadro a ser usado para ambiguidade entre os estáticos de thread, contexto ou domínio de aplicativo.  
@@ -48,13 +48,13 @@ HRESULT GetStaticFieldValue (
  fora Um ponteiro para o endereço de um objeto ICorDebugValue que representa o valor do campo estático.  
   
 ## <a name="remarks"></a>Comentários  
- Para tipos com parâmetros, o valor de um campo estático é relativo à instanciação específica. Portanto, se o construtor de classe usar parâmetros do tipo <xref:System.Type>, chame [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) em vez de `ICorDebugClass::GetStaticFieldValue`.  
+ Para tipos com parâmetros, o valor de um campo estático é relativo à instanciação específica. Portanto, se o construtor de classe usar parâmetros do <xref:System.Type>tipo, chame [ICorDebugType:: GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) em `ICorDebugClass::GetStaticFieldValue`vez de.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

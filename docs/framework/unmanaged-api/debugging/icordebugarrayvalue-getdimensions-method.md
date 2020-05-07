@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa2be894af6e44d09c25a736f45acba56052f9fa
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179024"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895046"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>Método ICorDebugArrayValue::GetDimensions
-Obtém o número de elementos em cada dimensão desta matriz.  
+Obtém o número de elementos em cada dimensão dessa matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,20 +35,20 @@ HRESULT GetDimensions (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cdim`  
- [em] O número de dimensões deste objeto ICorDebugArrayValue.  
+ no O número de dimensões deste objeto ICorDebugArrayValue.  
   
- Este valor também é `dims` o tamanho da matriz porque seu tamanho `ICorDebugArrayValue` é igual ao número de dimensões do objeto.  
+ Esse valor também é o tamanho da `dims` matriz porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
   
  `dims`  
- [fora] Uma matriz de inteiros, cada um dos quais especifica o `ICorDebugArrayValue` número de elementos em uma dimensão neste objeto.  
+ fora Uma matriz de inteiros, cada um dos quais Especifica o número de elementos em uma dimensão neste `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

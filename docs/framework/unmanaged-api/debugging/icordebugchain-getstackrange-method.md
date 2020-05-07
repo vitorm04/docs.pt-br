@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-ms.openlocfilehash: 64e697323377d664b7b1e36bbf5931a44465cc51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40ecc183c32500ad9e88ceb1bfc0528d717430e8
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178953"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894461"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>Método ICorDebugChain::GetStackRange
-Obtém o intervalo de endereços do segmento stack para esta cadeia.  
+Obtém o intervalo de endereços do segmento da pilha para esta cadeia.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,21 +34,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `pStart`  
- [fora] Um ponteiro `CORDB_ADDRESS` para um valor que é o endereço inicial do segmento stack.  
+ fora Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço inicial do segmento da pilha.  
   
  `pEnd`  
- [fora] Um ponteiro `CORDB_ADDRESS` para um valor que é o endereço final do segmento stack.  
+ fora Um ponteiro para um `CORDB_ADDRESS` valor que é o endereço final do segmento da pilha.  
   
 ## <a name="remarks"></a>Comentários  
- O intervalo numérico é significativo apenas para comparação de locais de quadro sumário. Você não pode fazer nenhuma suposição sobre o que é realmente armazenado na pilha.  
+ O intervalo numérico é significativo apenas para comparação de locais de quadros de pilha. Você não pode fazer suposições sobre o que realmente está armazenado na pilha.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
