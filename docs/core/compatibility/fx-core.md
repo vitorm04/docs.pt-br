@@ -2,13 +2,13 @@
 title: Alterações recentes – .NET Framework para o .NET Core
 titleSuffix: ''
 description: Lista as alterações significativas de .NET Framework para o .NET Core.
-ms.date: 12/18/2019
-ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/05/2020
+ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595696"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859946"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Alterações recentes de migração do .NET Framework para o .NET Core
 
@@ -51,6 +51,16 @@ Se você estiver migrando um aplicativo do .NET Framework para o .NET Core, as a
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="networking"></a>Rede
+
+- [WebClient. CancelAsync nem sempre cancela imediatamente](#webclientcancelasync-doesnt-always-cancel-immediately)
+
+### <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
 
 ***
 

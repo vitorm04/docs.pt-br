@@ -1,75 +1,77 @@
 ---
-title: Sondagem padrão - .NET Core
-description: Visão geral do Sistema.Runtime.Loader.AssemblyLoadContext.Default do .NET Core para localizar dependências.
+title: Investigação padrão-.NET Core
+description: Visão geral da lógica de investigação System. Runtime. Loader. AssemblyLoadContext. padrão do .NET Core para localizar dependências.
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399087"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859518"
 ---
-# <a name="default-probing"></a>Sondagem padrão
+# <a name="default-probing"></a>Investigação padrão
 
-A <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> instância é responsável por localizar as dependências de um conjunto. Este artigo descreve <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> a lógica de sondagem da instância.
+A <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> instância é responsável por localizar as dependências de um assembly. Este artigo descreve a <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> lógica de investigação da instância.
 
-## <a name="host-configured-probing-properties"></a>Propriedades de sondagem configuradas pelo host
+## <a name="host-configured-probing-properties"></a>Propriedades de investigação configuradas pelo host
 
-Quando o tempo de execução é iniciado, o host de <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> tempo de execução fornece um conjunto de propriedades de sondagem nomeadas que configuram os caminhos do teste.
+Quando o tempo de execução é iniciado, o host de tempo de execução fornece um conjunto de propriedades <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> de investigação nomeadas que configuram caminhos de investigação.
 
-Cada propriedade de sondagem é opcional. Se presente, cada propriedade é um valor de string que contém uma lista delimitada de caminhos absolutos. O delimitador é ';' no Windows e ':' em todas as outras plataformas.
+Cada propriedade de investigação é opcional. Se houver, cada propriedade será um valor de cadeia de caracteres que contém uma lista delimitada de caminhos absolutos. O delimitador é '; ' no Windows e ': ' em todas as outras plataformas.
 
 |Nome da propriedade                 |Descrição  |
 |------------------------------|---------|
-|`TRUSTED_PLATFORM_ASSEMBLIES`   | Lista de caminhos de arquivos de montagem de plataformas e aplicativos. |
-|`PLATFORM_RESOURCE_ROOTS`       | Lista de caminhos de diretório para procurar por conjuntos de recursos de satélite. |
-|`NATIVE_DLL_SEARCH_DIRECTORIES` | Lista de caminhos de diretório para procurar bibliotecas não gerenciadas (nativas).        |
-|`APP_PATHS`                     | Lista de caminhos de diretório para procurar montagens gerenciadas. |
-|`APP_NI_PATHS`                  | Lista de caminhos de diretório para procurar imagens nativas de conjuntos gerenciados. |
+|`TRUSTED_PLATFORM_ASSEMBLIES`   | Lista de caminhos de arquivo de assembly de aplicativo e plataforma. |
+|`PLATFORM_RESOURCE_ROOTS`       | Lista de caminhos de diretório para pesquisar por assemblies de recurso satélite. |
+|`NATIVE_DLL_SEARCH_DIRECTORIES` | Lista de caminhos de diretório para pesquisar bibliotecas não gerenciadas (nativas).        |
+|`APP_PATHS`                     | Lista de caminhos de diretório para pesquisar assemblies gerenciados. |
+|`APP_NI_PATHS`                  | Lista de caminhos de diretório para pesquisar imagens nativas de assemblies gerenciados. |
 
-### <a name="how-are-the-properties-populated"></a>Como as propriedades são preenchidas?
+### <a name="how-are-the-properties-populated"></a>Como as propriedades são populadas?
 
-Existem dois cenários principais para povoar as propriedades, dependendo se o * \<arquivo myapp>.deps.json* existe.
+Há dois cenários principais para popular as propriedades dependendo se o * \<arquivo MyApp>. deps. JSON* existe.
 
-- Quando o * \*arquivo .deps.json* está presente, ele é analisado para preencher as propriedades de sondagem.
-- Quando o * \*arquivo .deps.json* não está presente, o diretório do aplicativo é assumido para conter todas as dependências. O conteúdo do diretório é usado para preencher as propriedades de sondagem.
+- Quando o * \*arquivo. deps. JSON* estiver presente, ele será analisado para preencher as propriedades de investigação.
+- Quando o * \*arquivo. deps. JSON* não está presente, supõe-se que o diretório do aplicativo contenha todas as dependências. O conteúdo do diretório é usado para preencher as propriedades de investigação.
 
-Além disso, os * \*arquivos .deps.json* para quaisquer frameworks referenciados são analisados da mesma forma.
+Além disso, os * \*arquivos. deps. JSON* para todas as estruturas referenciadas são analisados de forma semelhante.
 
-Finalmente, a `ADDITIONAL_DEPS` variável ambiente pode ser usada para adicionar dependências adicionais.
+Por fim, a `ADDITIONAL_DEPS` variável de ambiente pode ser usada para adicionar outras dependências.
 
-### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Como vejo as propriedades de sondagem do código gerenciado?
+As `APP_PATHS` propriedades `APP_NI_PATHS` e não são populadas por padrão e são omitidas para a maioria dos aplicativos.
 
-Cada propriedade está disponível ligando para a <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> função com o nome da propriedade na tabela acima.
+### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>Como fazer ver as propriedades de investigação do código gerenciado?
 
-### <a name="how-do-i-debug-the-probing-properties-construction"></a>Como depurar a construção das propriedades de sondagem?
+Cada propriedade está disponível chamando a <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> função com o nome da propriedade da tabela acima.
 
-O host de tempo de execução .NET Core produzirá mensagens de rastreamento úteis quando determinadas variáveis de ambiente estiverem habilitadas:
+### <a name="how-do-i-debug-the-probing-properties-construction"></a>Como fazer depurar a construção das propriedades de investigação?
+
+O host de tempo de execução do .NET Core produzirá mensagens de rastreamento úteis quando determinadas variáveis de ambiente estiverem habilitadas:
 
 |Variável de ambiente        |Descrição  |
 |----------------------------|---------|
-|`COREHOST_TRACE=1`          |Permite o rastreamento.|
-|`COREHOST_TRACEFILE=<path>` |Traça para um caminho de `stderr`arquivo em vez do padrão .|
-|`COREHOST_TRACE_VERBOSITY`  |Define a verbosidade de 1 (mais baixo) para 4 (mais alto).|
+|`COREHOST_TRACE=1`          |Habilita o rastreamento.|
+|`COREHOST_TRACEFILE=<path>` |Rastreia um caminho de arquivo em vez do padrão `stderr`.|
+|`COREHOST_TRACE_VERBOSITY`  |Define o detalhamento de 1 (menor) para 4 (mais alto).|
 
-## <a name="managed-assembly-default-probing"></a>Sondagem padrão de montagem gerenciada
+## <a name="managed-assembly-default-probing"></a>Investigação padrão do assembly gerenciado
 
-Ao sondar para localizar um <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> conjunto gerenciado, os olhares em ordem:
+Ao investigar para localizar um assembly gerenciado, o <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> procura na ordem em:
 
-- Arquivos correspondentes a <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> in `TRUSTED_PLATFORM_ASSEMBLIES` (após a remoção de extensões de arquivo).
-- Arquivos nativos de `APP_NI_PATHS` montagem de imagens com extensões de arquivo comuns.
-- Arquivos de `APP_PATHS` montagem com extensões de arquivo comuns.
+- Arquivos que correspondem <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> ao `TRUSTED_PLATFORM_ASSEMBLIES` (após a remoção de extensões de arquivo).
+- Arquivos de assembly de imagem `APP_NI_PATHS` nativa no com extensões de arquivo comuns.
+- Arquivos de assembly `APP_PATHS` no com extensões de arquivo comuns.
 
-## <a name="satellite-resource-assembly-probing"></a>Sondagem de montagem de satélite (recurso)
+## <a name="satellite-resource-assembly-probing"></a>Investigação de assembly satélite (recurso)
 
-Para encontrar um conjunto de satélites para uma cultura específica, construa um conjunto de caminhos de arquivos.
+Para localizar um assembly satélite para uma cultura específica, construa um conjunto de caminhos de arquivo.
 
-Para cada `PLATFORM_RESOURCE_ROOTS` caminho `APP_PATHS`dentro e <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> depois, anexar a seqüência, um separador de diretório, a <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> seqüência e a extensão '.dll'.
+Para cada caminho no `PLATFORM_RESOURCE_ROOTS` e, `APP_PATHS`em seguida, <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> acrescente a cadeia de caracteres, um <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> separador de diretório, a cadeia de caracteres e a extensão '. dll '.
 
-Se houver algum arquivo correspondente, tente carregá-lo e devolvê-lo.
+Se existir algum arquivo correspondente, tente carregá-lo e retorná-lo.
 
-## <a name="unmanaged-native-library-probing"></a>Sondagem de biblioteca não gerenciada (nativa)
+## <a name="unmanaged-native-library-probing"></a>Investigação de biblioteca não gerenciada (nativa)
 
-Ao pesquisar para localizar uma biblioteca `NATIVE_DLL_SEARCH_DIRECTORIES` não gerenciada, os são pesquisados à procura de uma biblioteca correspondente.
+Ao investigar para localizar uma biblioteca não gerenciada, o `NATIVE_DLL_SEARCH_DIRECTORIES` é pesquisado procurando por uma biblioteca correspondente.

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2271611b5cbbfe487e5798be0429ed94c227a67f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179213"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860875"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>Função CreateCoreClrDebugTarget
-Cria uma conexão com um proxy dede-depurador que está sendo executado em uma máquina remota e retorna um objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que pode ser usado para consultar processos em execução e tempos de execução carregados na máquina remota.  
+Cria uma conexão com um proxy de depurador que está sendo executado em um computador remoto e retorna um objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que pode ser usado para consultar processos em execução e os tempos de execução carregados no computador remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,28 +35,28 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `dwAddress`  
- [em] Endereço IPv4 de uma máquina alvo remota.  
+ no Endereço IPv4 de um computador de destino remoto.  
   
  `ppTarget`  
- [fora] Ponteiro para um ponteiro para um objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que será criado.  
+ fora Ponteiro para um ponteiro para um objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que será criado.  
   
 ## <a name="return-value"></a>Valor retornado  
  S_OK  
- O número de CLRs no processo foi determinado com sucesso, e as matrizes de cabo e caminho correspondentes foram devidamente preenchidas.  
+ O número de CLRs no processo foi determinado com êxito e as matrizes de identificador e caminho correspondentes foram preenchidas corretamente.  
   
  E_OUTOFMEMORY  
- Não é possível `ppTarget`alocar memória suficiente para .  
+ Não é possível alocar memória `ppTarget`suficiente para.  
   
- E_FAIL (ou outros códigos de retorno E_)  
+ E_FAIL (ou outros códigos de retorno de E_)  
  Outras falhas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
- **Cabeçalho:** CoreClrRemoteDebuggingInterfaces.h  
+ **Cabeçalho:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86.dll  
+ **Biblioteca:** mscordbi_macx86. dll  
   
- **.NET Framework Versões:** 3.5 SP1
+ **Versões do .NET Framework:** 3,5 SP1
