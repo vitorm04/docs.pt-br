@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3de85626be6ae8e4769ac261f4de1479461417ec
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777884"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893536"
 ---
-# <a name="icordebugcodegetiltonativemapping-method"></a><span data-ttu-id="bc9f8-102">Método ICorDebugCode::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="bc9f8-102">ICorDebugCode::GetILToNativeMapping Method</span></span>
-<span data-ttu-id="bc9f8-103">Obtém uma matriz de instâncias "COR_DEBUG_IL_TO_NATIVE_MAP" que representam mapeamentos de deslocamentos de MSIL (Microsoft Intermediate Language) para deslocamentos nativos.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-103">Gets an array of "COR_DEBUG_IL_TO_NATIVE_MAP" instances that represent mappings from Microsoft intermediate language (MSIL) offsets to native offsets.</span></span>  
+# <a name="icordebugcodegetiltonativemapping-method"></a><span data-ttu-id="f1c21-102">Método ICorDebugCode::GetILToNativeMapping</span><span class="sxs-lookup"><span data-stu-id="f1c21-102">ICorDebugCode::GetILToNativeMapping Method</span></span>
+<span data-ttu-id="f1c21-103">Obtém uma matriz de instâncias "COR_DEBUG_IL_TO_NATIVE_MAP" que representam mapeamentos de deslocamentos de MSIL (Microsoft Intermediate Language) para deslocamentos nativos.</span><span class="sxs-lookup"><span data-stu-id="f1c21-103">Gets an array of "COR_DEBUG_IL_TO_NATIVE_MAP" instances that represent mappings from Microsoft intermediate language (MSIL) offsets to native offsets.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bc9f8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bc9f8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1c21-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f1c21-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetILToNativeMapping (  
@@ -36,30 +36,30 @@ HRESULT GetILToNativeMapping (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bc9f8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="bc9f8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f1c21-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f1c21-105">Parameters</span></span>  
  `cMap`  
- <span data-ttu-id="bc9f8-106">no O tamanho da matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-106">[in] The size of the `map` array.</span></span>  
+ <span data-ttu-id="f1c21-106">no O tamanho da `map` matriz.</span><span class="sxs-lookup"><span data-stu-id="f1c21-106">[in] The size of the `map` array.</span></span>  
   
  `pcMap`  
- <span data-ttu-id="bc9f8-107">fora Um ponteiro para o número real de elementos retornados na matriz de `map`.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-107">[out] A pointer to the actual number of elements returned in the `map` array.</span></span>  
+ <span data-ttu-id="f1c21-107">fora Um ponteiro para o número real de elementos retornados na `map` matriz.</span><span class="sxs-lookup"><span data-stu-id="f1c21-107">[out] A pointer to the actual number of elements returned in the `map` array.</span></span>  
   
  `map`  
- <span data-ttu-id="bc9f8-108">fora Uma matriz de estruturas `COR_DEBUG_IL_TO_NATIVE_MAP`, cada uma representando um mapeamento de um deslocamento MSIL para um deslocamento nativo.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-108">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which represents a mapping from an MSIL offset to a native offset.</span></span>  
+ <span data-ttu-id="f1c21-108">fora Uma matriz de `COR_DEBUG_IL_TO_NATIVE_MAP` estruturas, cada uma representando um mapeamento de um deslocamento de MSIL para um deslocamento nativo.</span><span class="sxs-lookup"><span data-stu-id="f1c21-108">[out] An array of `COR_DEBUG_IL_TO_NATIVE_MAP` structures, each of which represents a mapping from an MSIL offset to a native offset.</span></span>  
   
- <span data-ttu-id="bc9f8-109">Não há nenhuma ordem para a matriz de elementos retornada.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-109">There is no ordering to the array of elements returned.</span></span>  
+ <span data-ttu-id="f1c21-109">Não há nenhuma ordem para a matriz de elementos retornada.</span><span class="sxs-lookup"><span data-stu-id="f1c21-109">There is no ordering to the array of elements returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bc9f8-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="bc9f8-110">Remarks</span></span>  
- <span data-ttu-id="bc9f8-111">O método `GetILToNativeMapping` retorna resultados significativos somente se essa instância "ICorDebugCode" representa o código nativo que era JIT (just-in-time) compilado do código MSIL.</span><span class="sxs-lookup"><span data-stu-id="bc9f8-111">The `GetILToNativeMapping` method returns meaningful results only if this "ICorDebugCode" instance represents native code that was just-in-time (JIT) compiled from MSIL code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f1c21-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="f1c21-110">Remarks</span></span>  
+ <span data-ttu-id="f1c21-111">O `GetILToNativeMapping` método retornará resultados significativos somente se essa instância "ICorDebugCode" representar o código nativo que era JIT (just-in-time) compilado do código MSIL.</span><span class="sxs-lookup"><span data-stu-id="f1c21-111">The `GetILToNativeMapping` method returns meaningful results only if this "ICorDebugCode" instance represents native code that was just-in-time (JIT) compiled from MSIL code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bc9f8-112">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="bc9f8-112">Requirements</span></span>  
- <span data-ttu-id="bc9f8-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bc9f8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1c21-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f1c21-112">Requirements</span></span>  
+ <span data-ttu-id="f1c21-113">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1c21-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bc9f8-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc9f8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f1c21-114">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f1c21-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="bc9f8-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc9f8-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f1c21-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1c21-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bc9f8-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc9f8-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f1c21-116">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1c21-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bc9f8-117">Veja também</span><span class="sxs-lookup"><span data-stu-id="bc9f8-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f1c21-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f1c21-117">See also</span></span>
 
-- [<span data-ttu-id="bc9f8-118">Interface ICorDebugCode</span><span class="sxs-lookup"><span data-stu-id="bc9f8-118">ICorDebugCode Interface</span></span>](icordebugcode-interface1.md)
+- [<span data-ttu-id="f1c21-118">Interface ICorDebugCode</span><span class="sxs-lookup"><span data-stu-id="f1c21-118">ICorDebugCode Interface</span></span>](icordebugcode-interface1.md)
