@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-ms.openlocfilehash: 3611684a17d51fc4fdba31dd4049540039b43e8b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb994ae32c9e0e61c06c60521361a5c6c78d12fa
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110514"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895272"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>Método ICorDebugAppDomain::EnumerateBreakpoints
 Obtém um enumerador para todos os pontos de interrupção ativos no domínio do aplicativo.  
@@ -41,10 +41,10 @@ HRESULT EnumerateBreakpoints (
  O enumerador inclui todos os tipos de pontos de interrupção, incluindo pontos de interrupção de função e pontos de interrupção de dados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

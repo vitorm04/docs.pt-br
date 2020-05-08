@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba9a4e32216fd6fad285397bfc48fbc54f602b88
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73196332"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894659"
 ---
 # <a name="icordebugchaingetcallee-method"></a>Método ICorDebugChain::GetCallee
 Obtém a cadeia que foi chamada por essa cadeia.  
@@ -35,16 +35,16 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppChain`  
- fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia chamada. Se essa cadeia estiver em execução no momento (ou seja, se essa cadeia não estiver esperando uma cadeia chamada retornar), `ppChain` será NULL.  
+ fora Um ponteiro para o endereço de um objeto ICorDebugChain que representa a cadeia chamada. Se essa cadeia estiver em execução no momento (ou seja, se essa cadeia não estiver aguardando que uma cadeia chamada retorne), `ppChain` será NULL.  
   
 ## <a name="remarks"></a>Comentários  
  Essa cadeia aguardará que a cadeia chamada seja retornada antes de retomar a execução. A cadeia chamada pode estar em outro thread no caso de chamadas empacotadas entre threads.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

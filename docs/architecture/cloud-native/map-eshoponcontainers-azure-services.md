@@ -1,13 +1,13 @@
 ---
 title: Como mapear o eShopOnContainers para os Serviços do Azure
 description: Mapeamento de eShopOnContainers para serviços do Azure, como o serviço kubernetes do Azure, o gateway de API e o barramento de serviço do Azure.
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781211"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895508"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Como mapear o eShopOnContainers para os Serviços do Azure
 
@@ -17,8 +17,8 @@ Embora não seja necessário, o Azure é bem adequado para dar suporte ao eShopO
 
 A arquitetura do aplicativo é mostrada na Figura 2-5. À esquerda estão os aplicativos cliente, divididos em tipos móveis, da Web tradicional e de SPA (aplicativo de página única) da Web. À direita estão os componentes do lado do servidor que compõem o sistema, cada um deles pode ser hospedado em contêineres e clusters kubernetes do Docker. O aplicativo Web tradicional é fornecido pela plataforma de ASP.NET Core aplicativos MVC mostrados em amarelo. Esse aplicativo e os aplicativos de SPA móveis e da Web se comunicam com os microserviços individuais por meio de um ou mais gateways de API. Os gateways de API seguem o padrão de "back-ends para front-ends" (BFF), o que significa que cada gateway é projetado para dar suporte a um determinado cliente front-end. Os microserviços individuais são listados à direita dos gateways de API e incluem a lógica de negócios e algum tipo de armazenamento de persistência. Os diferentes serviços fazem uso de bancos de dados SQL Server, instâncias de cache Redis e armazenamentos MongoDB/CosmosDB. Na extrema direita, está o barramento de evento do sistema, que é usado para a comunicação entre os microserviços.
 
-![arquitetura eShopOnContainers](./media/eshoponcontainers-architecture.png)
-**figura 2-5**. A arquitetura eShopOnContainers.
+![arquitetura](./media/eshoponcontainers-architecture.png)
+eShopOnContainers**Figura 2-5**. A arquitetura eShopOnContainers.
 
 Todos os componentes do lado do servidor dessa arquitetura são mapeados facilmente para os serviços do Azure.
 
@@ -54,7 +54,7 @@ O aplicativo eShopOnContainers armazena a cesta de compras atual do usuário ent
 
 O microserviço de locais usa um banco de dados NoSQL do MongoDB para sua persistência. Durante o desenvolvimento, o banco de dados pode ser implantado em seu próprio contêiner, enquanto em produção o serviço pode aproveitar a [API do Azure Cosmos DB para MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). Um dos benefícios da Azure Cosmos DB é sua capacidade de aproveitar vários protocolos de comunicação diferentes, incluindo uma API do SQL e APIs NoSQL comuns, incluindo MongoDB, Cassandra, Gremlin e armazenamento de tabelas do Azure. O Azure Cosmos DB oferece um banco de dados totalmente gerenciado e globalmente distribuído como um serviço que pode ser dimensionado para atender às necessidades dos serviços que o utilizam.
 
-Os dados distribuídos em aplicativos nativos de nuvem são abordados em mais detalhes no [capítulo 5](database-per-microservice.md).
+Os dados distribuídos em aplicativos nativos de nuvem são abordados em mais detalhes no [capítulo 5](distributed-data.md).
 
 ## <a name="event-bus"></a>Barramento de evento
 
@@ -64,17 +64,6 @@ O aplicativo usa eventos para comunicar alterações entre diferentes serviços.
 
 Depois de implantado em produção, o aplicativo eShopOnContainers seria capaz de aproveitar vários serviços do Azure disponíveis para melhorar sua resiliência. O aplicativo publica verificações de integridade, que podem ser integradas com Application Insights para fornecer relatórios e alertas com base na disponibilidade do aplicativo. Os recursos do Azure também fornecem logs de diagnóstico que podem ser usados para identificar e corrigir erros e problemas de desempenho. Os logs de recursos fornecem informações detalhadas sobre quando e como os diferentes recursos do Azure são usados pelo aplicativo. Você aprenderá mais sobre os recursos de resiliência nativa de nuvem no [capítulo 6](resiliency.md).
 
-## <a name="references"></a>Referências
-
-- [A arquitetura eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Orquestrando microsserviços e aplicativos de vários contêineres para alta escalabilidade e disponibilidade](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Gerenciamento de API do Azure](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Visão geral do banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Cache do Azure para Redis](https://azure.microsoft.com/services/cache/)
-- [API do Azure Cosmos DB para MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Barramento de Serviço do Azure](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Visão geral de Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-
 >[!div class="step-by-step"]
 >[Anterior](introduce-eshoponcontainers-reference-app.md)
->[Próximo](deploy-eshoponcontainers-azure.md)
+>[próximo](deploy-eshoponcontainers-azure.md)
