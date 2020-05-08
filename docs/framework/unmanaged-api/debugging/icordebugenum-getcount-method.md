@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-ms.openlocfilehash: 208d5d2e3ca571a1c23a9322c05e784bd2238d61
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90ba690897abced2d4f6282eedef91712d8ceeca
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124692"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976337"
 ---
-# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="f58c8-102">Método ICorDebugEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="f58c8-102">ICorDebugEnum::GetCount Method</span></span>
-<span data-ttu-id="f58c8-103">Obtém o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="f58c8-103">Gets the number of items in the enumeration.</span></span>  
+# <a name="icordebugenumgetcount-method"></a><span data-ttu-id="fd8c4-102">Método ICorDebugEnum::GetCount</span><span class="sxs-lookup"><span data-stu-id="fd8c4-102">ICorDebugEnum::GetCount Method</span></span>
+<span data-ttu-id="fd8c4-103">Obtém o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="fd8c4-103">Gets the number of items in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f58c8-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f58c8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fd8c4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fd8c4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCount (  
@@ -33,15 +33,15 @@ HRESULT GetCount (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f58c8-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f58c8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fd8c4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fd8c4-105">Parameters</span></span>  
  `pcelt`  
- <span data-ttu-id="f58c8-106">fora Um ponteiro para o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="f58c8-106">[out] A pointer to the number of items in the enumeration.</span></span>  
+ <span data-ttu-id="fd8c4-106">fora Um ponteiro para o número de itens na enumeração.</span><span class="sxs-lookup"><span data-stu-id="fd8c4-106">[out] A pointer to the number of items in the enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f58c8-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f58c8-107">Requirements</span></span>  
- <span data-ttu-id="f58c8-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f58c8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fd8c4-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd8c4-107">Requirements</span></span>  
+ <span data-ttu-id="fd8c4-108">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd8c4-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f58c8-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f58c8-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fd8c4-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fd8c4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f58c8-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f58c8-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fd8c4-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fd8c4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f58c8-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f58c8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="fd8c4-111">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd8c4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

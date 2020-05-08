@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 57eefaf3-75cf-4496-bc94-88c0706861b7
 topic_type:
 - apiref
-ms.openlocfilehash: 2ec769c343ad055132c6d84e64600fc459357a85
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f0fda803ba3a1ce35017d85e84b3bf6f567eda0
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124706"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976363"
 ---
-# <a name="icordebugenumclone-method"></a><span data-ttu-id="e477d-102">Método ICorDebugEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="e477d-102">ICorDebugEnum::Clone Method</span></span>
-<span data-ttu-id="e477d-103">Cria uma cópia deste objeto ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="e477d-103">Creates a copy of this ICorDebugEnum object.</span></span>  
+# <a name="icordebugenumclone-method"></a><span data-ttu-id="3b3f2-102">Método ICorDebugEnum::Clone</span><span class="sxs-lookup"><span data-stu-id="3b3f2-102">ICorDebugEnum::Clone Method</span></span>
+<span data-ttu-id="3b3f2-103">Cria uma cópia deste objeto ICorDebugEnum.</span><span class="sxs-lookup"><span data-stu-id="3b3f2-103">Creates a copy of this ICorDebugEnum object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e477d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e477d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b3f2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3b3f2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Clone (  
@@ -33,15 +33,15 @@ HRESULT Clone (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e477d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e477d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b3f2-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3b3f2-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="e477d-106">fora Um ponteiro para o endereço de um objeto de `ICorDebugEnum` que é uma cópia desse objeto `ICorDebugEnum`.</span><span class="sxs-lookup"><span data-stu-id="e477d-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
+ <span data-ttu-id="3b3f2-106">fora Um ponteiro para o endereço de um `ICorDebugEnum` objeto que é uma cópia desse `ICorDebugEnum` objeto.</span><span class="sxs-lookup"><span data-stu-id="3b3f2-106">[out] A pointer to the address of an `ICorDebugEnum` object that is a copy of this `ICorDebugEnum` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e477d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e477d-107">Requirements</span></span>  
- <span data-ttu-id="e477d-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e477d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b3f2-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3b3f2-107">Requirements</span></span>  
+ <span data-ttu-id="3b3f2-108">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b3f2-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e477d-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e477d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="3b3f2-109">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3b3f2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e477d-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e477d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3b3f2-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b3f2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e477d-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e477d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="3b3f2-111">**.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b3f2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
