@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8a74304-1cb2-4977-a21d-e1af48c563ff
 topic_type:
 - apiref
-ms.openlocfilehash: 208d5d2e3ca571a1c23a9322c05e784bd2238d61
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90ba690897abced2d4f6282eedef91712d8ceeca
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124692"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976337"
 ---
 # <a name="icordebugenumgetcount-method"></a>Método ICorDebugEnum::GetCount
 Obtém o número de itens na enumeração.  
@@ -38,10 +38,10 @@ HRESULT GetCount (
  fora Um ponteiro para o número de itens na enumeração.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

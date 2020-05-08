@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450265"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975401"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -34,29 +34,29 @@ Nas classes, o encapsulamento é obtido por meio da limitação do acesso extern
 
 ### <a name="dependency-inversion"></a>Inversão de dependência
 
-A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em runtime. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, então na hora da compilação A dependerá de B, o que dependerá de C, como mostrado na Figura 4-1.
+A direção da dependência dentro do aplicativo deve ser na direção de abstração, não os detalhes de implementação. A maioria dos aplicativos é escrita de modo que a dependência em tempo de compilação flua na direção da execução em runtime. Isso produz um grafo de dependência direta. Ou seja, se o módulo A chamar uma função no módulo B, que chama uma função no módulo C, em seguida, no momento da compilação, um dependerá de B, que dependerá de C, como mostra a Figura 4-1.
 
-![Gráfico de dependência direta](./media/image4-1.png)
+![Grafo de dependência direta](./media/image4-1.png)
 
 **Figura 4-1.** Grafo de dependência direta.
 
 A aplicação do princípio da inversão de dependência permite que A chame métodos em uma abstração implementada por B, possibilitando que A chame B em runtime, mas que B dependa de uma interface controlada por A em tempo de compilação (*invertendo*, portanto, a dependência típica em tempo de compilação). Em tempo de execução, o fluxo da execução do programa permanece inalterado, mas a introdução de interfaces significa que diferentes implementações dessas interfaces podem ser conectadas com facilidade.
 
-![Gráfico de dependência invertida](./media/image4-2.png)
+![Grafo de dependência invertido](./media/image4-2.png)
 
 **Figura 4-2.** Grafo de dependência invertida.
 
-**A inversão de dependência** é uma parte fundamental da construção de aplicativos vagamente acoplados, uma vez que os detalhes de implementação podem ser escritos para depender e implementar abstrações de nível mais alto, em vez do contrário. Como resultado, os aplicativos resultantes são mais testáveis, modulares e de manutenção mais fácil. A prática da *injeção de dependência* se tornou possível pela observância do princípio da inversão de dependência.
+A **inversão de dependência** é uma parte fundamental da criação de aplicativos menos rígidos, já que os detalhes da implementação podem ser escritos para depender e implementar abstrações de nível superior, em vez do contrário. Como resultado, os aplicativos resultantes são mais testáveis, modulares e de manutenção mais fácil. A prática da *injeção de dependência* se tornou possível pela observância do princípio da inversão de dependência.
 
 ### <a name="explicit-dependencies"></a>Dependências explícitas
 
-**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se certos componentes globais ou de infra-estrutura estiverem em vigor, essas classes estão sendo *desonestas* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em runtime, acontece que o objeto realmente precisou de outra coisa.
+**Métodos e classes devem exigir explicitamente os objetos de colaboração de que precisam para funcionarem corretamente.** Os construtores de classe oferecem uma oportunidade para que as classes identifiquem os itens necessários para que estejam em um estado válido e funcionem corretamente. Se você definir classes que podem ser construídas e chamadas, mas que só funcionarão corretamente se determinados componentes globais ou de infraestrutura estiverem em vigor, essas classes serão *desonestos* com seus clientes. O contrato do construtor informa o cliente de que ele precisa apenas dos itens especificados (possivelmente nada se a classe estiver usando apenas um construtor sem parâmetros), mas, em seguida, em runtime, acontece que o objeto realmente precisou de outra coisa.
 
 Seguindo o princípio da dependência explícita, os métodos e as classes estão sendo honestos com seus clientes sobre o que precisam para funcionar. Isso torna o código mais autodocumentado e os contratos de codificação mais amigáveis, pois os usuários confiarão que, desde que eles forneçam o que é necessário na forma de método ou de parâmetros do construtor, os objetos com os quais eles estão trabalhando se comportarão corretamente em runtime.
 
 ### <a name="single-responsibility"></a>Responsabilidade única
 
-O princípio da responsabilidade única se aplica ao design orientado a objeto, mas também pode ser considerado um princípio de arquitetura semelhante à separação de interesses. Ele informa que os objetos devem ter apenas uma responsabilidade e que devem ter apenas uma única razão para serem alterados. Especificamente, a única situação na qual o objeto deve ser alterado é se a maneira na qual ele executa sua responsabilidade única precisa ser atualizada. Seguir esse princípio ajuda a produzir sistemas mais acoplados e modulares, uma vez que muitos tipos de novos comportamentos podem ser implementados como novas classes, em vez de adicionar responsabilidade adicional às classes existentes. A adição de novas classes sempre é mais segura do que a alteração das classes existentes, pois nenhum código ainda depende das novas classes.
+O princípio da responsabilidade única se aplica ao design orientado a objeto, mas também pode ser considerado um princípio de arquitetura semelhante à separação de interesses. Ele informa que os objetos devem ter apenas uma responsabilidade e que devem ter apenas uma única razão para serem alterados. Especificamente, a única situação na qual o objeto deve ser alterado é se a maneira na qual ele executa sua responsabilidade única precisa ser atualizada. Seguir esse princípio ajuda a produzir sistemas mais rígidos e modulares, já que muitos tipos de novo comportamento podem ser implementados como novas classes, em vez de adicionar responsabilidade adicional às classes existentes. A adição de novas classes sempre é mais segura do que a alteração das classes existentes, pois nenhum código ainda depende das novas classes.
 
 Em um aplicativo monolítico, podemos aplicar o princípio da responsabilidade única em um alto nível às camadas do aplicativo. A responsabilidade de apresentação deve permanecer no projeto de interface do usuário, enquanto a responsabilidade de acesso a dados deve ser mantida em um projeto de infraestrutura. A lógica de negócios deve ser mantida no projeto de núcleo do aplicativo, no qual ela pode ser testada com facilidade e pode evoluir de maneira independente das outras responsabilidades.
 
@@ -66,7 +66,7 @@ Quando esse princípio é aplicado à arquitetura do aplicativo e levado para se
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY (Don't Repeat Yourself)
 
-O aplicativo deve evitar especificar o comportamento relacionado a determinado conceito em vários locais, pois essa é uma fonte frequente de erros. Em algum momento, uma alteração nos requisitos exigirá a alteração desse comportamento e a probabilidade de que, pelo menos, uma instância do comportamento não conseguirá ser atualizada resultará em um comportamento inconsistente do sistema.
+O aplicativo deve evitar especificar o comportamento relacionado a determinado conceito em vários locais, pois essa é uma fonte frequente de erros. Em algum momento, uma alteração nos requisitos exigirá a alteração desse comportamento. É provável que pelo menos uma instância do comportamento não seja atualizada e isso resultará em um comportamento inconsistente do sistema.
 
 Em vez de duplicar a lógica, encapsule-a em um constructo de programação. Torne esse constructo a autoridade única sobre esse comportamento e imponha o uso desse novo constructo a qualquer outra parte do aplicativo que exija esse comportamento.
 
@@ -75,7 +75,7 @@ Em vez de duplicar a lógica, encapsule-a em um constructo de programação. Tor
 
 ### <a name="persistence-ignorance"></a>Ignorância de persistência
 
-A **PI** (ignorância de persistência) refere-se aos tipos que precisam ser persistidos, mas cujo código não é afetado pela opção de tecnologia de persistência. Esses tipos no .NET são, às vezes, chamados de POCOs (Objetos CRL Básicos), pois não precisam herdar de uma classe base específica nem implementar uma interface específica. A ignorância de persistência é importante porque permite que o mesmo modelo de negócios seja persistente de várias maneiras, oferecendo flexibilidade adicional ao aplicativo. As escolhas de persistência podem mudar ao longo do tempo, de uma tecnologia de banco de dados para outra, ou formas adicionais de persistência podem ser necessárias, além de qualquer que seja o aplicativo iniciado (por exemplo, usando um cache Redis ou Azure Cosmos DB, além de um banco de dados relacional).
+A **PI** (ignorância de persistência) refere-se aos tipos que precisam ser persistidos, mas cujo código não é afetado pela opção de tecnologia de persistência. Esses tipos no .NET são, às vezes, chamados de POCOs (Objetos CRL Básicos), pois não precisam herdar de uma classe base específica nem implementar uma interface específica. A ignorância de persistência é importante porque permite que o mesmo modelo de negócios seja persistente de várias maneiras, oferecendo flexibilidade adicional ao aplicativo. As opções de persistência podem mudar ao longo do tempo, de uma tecnologia de banco de dados para outra, ou outras formas de persistência podem ser necessárias além de qualquer coisa com que o aplicativo foi iniciado (por exemplo, usando um cache Redis ou Azure Cosmos DB além de um banco de dados relacional).
 
 Alguns exemplos de violações desse princípio incluem:
 
@@ -95,15 +95,15 @@ O requisito de que as classes tenham um dos recursos ou comportamentos acima adi
 
 ### <a name="bounded-contexts"></a>Contextos limitados
 
-**Contextos limitados** são um padrão central no Design Controlado por Domínio. Eles fornecem uma maneira de lidar com a complexidade de aplicativos ou organizações grandes dividindo-os em módulos conceituais separados. Cada módulo conceitual representa então um contexto que é separado de outros contextos (portanto, limitado), e pode evoluir independentemente. Cada contexto limitado deve ser, de preferência, livre para escolher seus próprios nomes para conceitos dentro dele e deve ter acesso exclusivo ao seu próprio repositório de persistência.
+**Contextos limitados** são um padrão central no Design Controlado por Domínio. Eles fornecem uma maneira de lidar com a complexidade de aplicativos ou organizações grandes dividindo-os em módulos conceituais separados. Cada módulo conceitual representa um contexto que é separado de outros contextos (portanto, limitado) e pode evoluir de forma independente. Cada contexto limitado deve ser, de preferência, livre para escolher seus próprios nomes para conceitos dentro dele e deve ter acesso exclusivo ao seu próprio repositório de persistência.
 
 No mínimo, os aplicativos Web individuais devem tentar ser seu próprio contexto limitado, com seu próprio repositório de persistência para seu modelo de negócios, em vez de compartilhar um banco de dados com outros aplicativos. A comunicação entre contextos limitados ocorre por meio de interfaces programáticas, em vez de por meio de um banco de dados compartilhado, o que permite que a lógica de negócios e os eventos ocorram em resposta às alterações feitas. Os contextos limitados são mapeados estreitamente aos microsserviços, que também são idealmente implementados como seus próprios contextos limitados individuais.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Padrões de design JAVA: Princípios](https://java-design-patterns.com/principles/)
+- [Padrões de design JAVA: princípios](https://java-design-patterns.com/principles/)
 - [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Próximo](choose-between-traditional-web-and-single-page-apps.md)
->[anterior](common-web-application-architectures.md)
+>[Anterior](choose-between-traditional-web-and-single-page-apps.md)
+>[próximo](common-web-application-architectures.md)

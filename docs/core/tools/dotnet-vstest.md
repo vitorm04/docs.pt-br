@@ -2,20 +2,23 @@
 title: Comando dotnet vstest
 description: O comando dotnet vstest compila um projeto e todas as suas dependências.
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463280"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975388"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**Este artigo se aplica a:** ✔️ .NET Core 2.1 SDK e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 2,1 e versões posteriores
+
+> [!IMPORTANT]
+> O `dotnet vstest` comando é substituído por `dotnet test`, que agora pode ser usado para executar assemblies. Confira [`dotnet test`](dotnet-test.md).
 
 ## <a name="name"></a>Nome
 
-`dotnet-vstest` - Executa testes a partir de arquivos especificados.
+`dotnet-vstest`– Executa testes a partir dos assemblies especificados.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -35,7 +38,7 @@ dotnet vstest -?|--Help
 
 O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Console` para executar testes automatizados de unidade.
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
 - **`TEST_FILE_NAMES`**
 
@@ -87,7 +90,7 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 - **`--Parallel`**
 
-  Executar testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número `MaxCpuCount` explícito de `RunConfiguration` núcleos definindo a propriedade sob o nó no arquivo *de configurações* de execução.
+  Execute testes em paralelo. Por padrão, todos os núcleos disponíveis no computador estão disponíveis para uso. Especifique um número explícito de núcleos definindo a `MaxCpuCount` Propriedade sob o `RunConfiguration` nó no arquivo *RunSettings* .
 
 - **`--ParentProcessId <PROCESS_ID>`**
 
@@ -115,11 +118,11 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 - **`--TestCaseFilter <EXPRESSION>`**
 
-  Execute testes que correspondam à expressão fornecida. `<EXPRESSION>` está no formato `<property>Operator<value>[|&<EXPRESSION>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Parênteses são usados `()` para agrupar subexpressões. Para obter mais informações, consulte [o filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
+  Execute testes que correspondam à expressão fornecida. `<EXPRESSION>` está no formato `<property>Operator<value>[|&<EXPRESSION>]`, onde Operator pode ser `=`, `!=` ou `~`. O operador `~` tem a semântica 'contains' e é aplicável para propriedades de cadeia de caracteres como `DisplayName`. Os parênteses `()` são usados para agrupar subexpressões. Para obter mais informações, consulte [filtro TestCase](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md).
 
 - **`--Tests <TEST_NAMES>`**
 
-  Execute testes com nomes que correspondam aos valores fornecidos. Separe vários valores com vírgulas.
+  Execute testes com nomes que correspondam aos valores fornecidos. Separar vários valores com vírgulas.
 
 - **`-?|--Help`**
 
@@ -135,19 +138,19 @@ O comando `dotnet-vstest` executa o aplicativo de linha de comando `VSTest.Conso
 
 ## <a name="examples"></a>Exemplos
 
-Executar testes em *mytestproject.dll*:
+Executar testes em *MyTestProject. dll*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-Executar testes em *mytestproject.dll,* exportando para pasta personalizada com nome personalizado:
+Execute testes em *MyTestProject. dll*, exportando para a pasta personalizada com o nome personalizado:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-Executar testes em *mytestproject.dll* e *myothertestproject.exe*:
+Execute testes em *MyTestProject. dll* e *myothertestproject. exe*:
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe
@@ -165,6 +168,6 @@ Execute testes `TestMethod1` e `TestMethod2`:
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Opções da linha de comando de VSTest.Console.exe](/visualstudio/test/vstest-console-options)

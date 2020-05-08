@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 72bcc2479f7b6f41b384fc2517f0b04694663398
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782981"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976142"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>Método ICorDebugEval2::CallParameterizedFunction
-Define uma chamada para o ICorDebugFunction especificado, que pode ser aninhado dentro de uma classe cujo construtor usa <xref:System.Type> parâmetros ou pode levar <xref:System.Type> parâmetros.  
+Define uma chamada para o ICorDebugFunction especificado, que pode ser aninhado dentro de uma classe cujo construtor <xref:System.Type> usa parâmetros ou pode usar <xref:System.Type> parâmetros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>Parâmetros  
  `pFunction`  
- no Um ponteiro para um objeto `ICorDebugFunction` que representa a função a ser chamada.  
+ no Um ponteiro para um `ICorDebugFunction` objeto que representa a função a ser chamada.  
   
  `nTypeArgs`  
  no O número de argumentos que a função usa.  
@@ -54,17 +54,17 @@ HRESULT CallParameterizedFunction (
  no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugValue que representa um valor passado em um argumento de função.  
   
 ## <a name="remarks"></a>Comentários  
- `CallParameterizedFunction` é como [ICorDebugEval:: CallFunction](icordebugeval-callfunction-method.md) , exceto que a função pode estar dentro de uma classe com parâmetros de tipo, ela própria pode pegar parâmetros de tipo ou ambos. Os argumentos de tipo devem ser fornecidos primeiro para a classe e, em seguida, para a função.  
+ `CallParameterizedFunction`é como [ICorDebugEval:: CallFunction](icordebugeval-callfunction-method.md) , exceto que a função pode estar dentro de uma classe com parâmetros de tipo, ela própria pode pegar parâmetros de tipo ou ambos. Os argumentos de tipo devem ser fornecidos primeiro para a classe e, em seguida, para a função.  
   
  Se a função estiver em um domínio de aplicativo diferente, ocorrerá uma transição. No entanto, todos os argumentos Type e Value devem estar no domínio do aplicativo de destino.  
   
  A avaliação de função pode ser executada somente em cenários limitados. Se `CallParameterizedFunction` ou `ICorDebugEval::CallFunction` falhar, o HRESULT retornado indicará o motivo mais geral possível para a falha.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

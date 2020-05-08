@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e9570d3c916123093f69e7f26d3778f1c7184b1f
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793465"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976181"
 ---
 # <a name="icordebugevalnewobject-method"></a>Método ICorDebugEval::NewObject
 Aloca uma nova instância de objeto e chama o método de Construtor especificado.  
@@ -42,13 +42,13 @@ HRESULT NewObject (
  no O Construtor a ser chamado.  
   
  `nArgs`  
- no O tamanho da matriz de `ppArgs`.  
+ no O tamanho da `ppArgs` matriz.  
   
  `ppArgs`  
  no Uma matriz de objetos ICorDebugValue, cada um dos quais representa um argumento a ser passado para o construtor.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
@@ -56,6 +56,6 @@ HRESULT NewObject (
   
  **Versões do .NET Framework:** 1,1, 1,0  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Método NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md)

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: O comando dotnet test é usado para executar testes de unidade em um determinado projeto.
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624885"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975427"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624885"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,31 +37,40 @@ dotnet test -h|--help
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. O comando `dotnet test` inicia o aplicativo de console executor de teste especificado para um projeto. O executor de teste realiza os testes definidos para uma estrutura de teste de unidade (por exemplo, MSTest, NUnit ou xUnit) e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1. Para projetos de vários destinos, os testes são executados para cada estrutura de destino. O executor de teste e a biblioteca de teste de unidade são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
+O `dotnet test` comando é usado para executar testes de unidade em uma determinada solução. O `dotnet test` comando cria a solução e executa um aplicativo de host de teste para cada projeto de teste na solução. O host de teste executa testes no projeto fornecido usando uma estrutura de teste, por exemplo: MSTest, NUnit ou xUnit, e relata o êxito ou a falha de cada teste. Se todos os testes forem bem-sucedidos, o executor de testes retornará 0 como um código de saída; caso contrário, se algum teste falhar, retornará 1.
+
+Para projetos de vários destinos, os testes são executados para cada estrutura de destino. O host de teste e a estrutura de teste de unidade são empacotados como pacotes NuGet e restaurados como dependências comuns para o projeto.
 
 Os projetos de teste especificam o executor de teste usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+Onde `Microsoft.NET.Test.Sdk` é o host de teste `xunit` , é a estrutura de teste. E `xunit.runner.visualstudio` é um adaptador de teste, que permite que a estrutura xUnit funcione com o host de teste.
+
 ### <a name="implicit-restore"></a>Restauração implícita
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  Caminho para o projeto de teste ou solução. Se não é especificado, usa como padrão o diretório atual.
+  - Caminho para o projeto de teste.
+  - Caminho para a solução.
+  - Caminho para um diretório que contém um projeto ou uma solução.
+  - Caminho para um arquivo *. dll* do projeto de teste.
+
+  Se não for especificado, ele pesquisará um projeto ou uma solução no diretório atual.
 
 ## <a name="options"></a>Opções
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  Usa os adaptadores de teste personalizado do caminho especificado na execução de teste.
+  Caminho para um diretório a ser procurado para os adaptadores de teste adicionais. Somente arquivos *. dll* com sufixo `.TestAdapter.dll` são inspecionados. Se não for especificado, o diretório do test *. dll* será pesquisado.
 
 - **`--blame`**
 
-  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Ela cria um arquivo de saída no diretório atual como *Sequence.xml* que captura a ordem de execução dos testes antes da falha.
+  Executa os testes no modo blame. Essa opção é útil para isolar testes problemáticos que causam falha no host de teste. Quando uma falha é detectada, ela cria um arquivo de `TestResults/<Guid>/<Guid>_Sequence.xml` sequência no que captura a ordem dos testes que foram executados antes da falha.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  Habilita o modo de diagnóstico para a plataforma de teste e grava as mensagens de diagnóstico no arquivo especificado.
+  Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico no arquivo especificado e nos arquivos ao lado dele. O processo que está registrando as mensagens determina quais arquivos são criados, como `*.host_<date>.txt` para o log do host de `*.datacollector_<date>.txt` teste e para o log do coletor de dados.
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Procura os binários de teste para uma [estrutura](../../standard/frameworks.md) específica.
+  Força o uso de `dotnet` ou .NET Framework host de teste para os binários de teste. Essa opção determina apenas o tipo de host a ser usado. A versão real do Framework a ser usada é determinada pelo *runtimeconfig. JSON* do projeto de teste. Quando não especificado, o [atributo de assembly TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) é usado para determinar o tipo de host. Quando esse atributo é removido do *. dll*, o host de .NET Framework é usado.
 
 - **`--filter <EXPRESSION>`**
 
@@ -121,7 +130,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito `dotnet test`para. Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. para obter mais informações, consulte os seguintes recursos:
+  O arquivo `.runsettings` a ser usado para executar os testes. Observe que o `TargetPlatform` elemento (x86 | x64) não tem nenhum efeito `dotnet test`para. Para executar testes direcionados para x86, instale a versão x86 do .NET Core. O bit de bits do *dotnet. exe* que está no caminho é o que será usado para executar testes. Para saber mais, consulte os recursos a seguir:
 
   - [Configurar testes de unidade usando um arquivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Configurar uma execução de teste](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -136,7 +145,7 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
 - **`RunSettings`** argumentos
 
-  Os argumentos são passados `RunSettings` como configurações para o teste. Os argumentos são especificados como pares `[name]=[value]` após "-- " (observe o espaço após --). Um espaço é usado para separar vários pares `[name]=[value]`.
+ Inline `RunSettings` são passados como os últimos argumentos na linha de comando após "--" (Observe o espaço após--). Inline `RunSettings` são especificados como `[name]=[value]` pares. Um espaço é usado para separar vários pares `[name]=[value]`.
 
   Exemplo: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
@@ -166,6 +175,12 @@ Os projetos de teste especificam o executor de teste usando um elemento comum `<
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - Execute os testes no projeto no diretório atual e relate os testes que estavam em andamento quando o host de teste falhou:
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>Filtrar detalhes da opção
@@ -205,7 +220,7 @@ Inclua expressões em parênteses ao usar operadores condicionais (por exemplo, 
 
 Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executando testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Confira também
+## <a name="see-also"></a>Consulte também
 
 - [Estruturas e destinos](../../standard/frameworks.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

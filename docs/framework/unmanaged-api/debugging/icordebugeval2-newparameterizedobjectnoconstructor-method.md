@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084802"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976077"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>Método ICorDebugEval2::NewParameterizedObjectNoConstructor
 Cria uma instância de um novo objeto de tipo com parâmetros da classe especificada sem tentar chamar um método de construtor.  
@@ -46,13 +46,13 @@ HRESULT NewParameterizedObjectNoConstructor (
  no Uma matriz de ponteiros, cada um dos quais aponta para um objeto ICorDebugType que representa um argumento de tipo para o objeto que está sendo instanciado.  
   
 ## <a name="remarks"></a>Comentários  
- O método `NewParameterizedObjectNoConstructor` falhará se um número incorreto de argumentos de tipo ou os tipos incorretos de argumentos de tipo forem passados.  
+ O `NewParameterizedObjectNoConstructor` método falhará se um número incorreto de argumentos de tipo ou os tipos incorretos de argumentos de tipo forem passados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

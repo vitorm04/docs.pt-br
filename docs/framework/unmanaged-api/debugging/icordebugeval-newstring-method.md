@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b263fed7db5cb2ef687da45f8cbc99a02e1e3ea2
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137650"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976129"
 ---
 # <a name="icordebugevalnewstring-method"></a>Método ICorDebugEval::NewString
 Aloca uma nova instância de cadeia de caracteres com o conteúdo especificado.  
@@ -41,10 +41,10 @@ HRESULT NewString (
  A cadeia de caracteres é sempre criada no domínio do aplicativo no qual o thread está sendo executado no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

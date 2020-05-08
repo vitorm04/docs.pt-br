@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a2b76cb59a95082e0cf9c0884b8277cca3c8fe8d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084776"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976064"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>Método ICorDebugEval2::NewStringWithLength
 Cria uma cadeia de caracteres do comprimento especificado, com o conteúdo especificado.  
@@ -42,15 +42,15 @@ HRESULT NewStringWithLength (
  no Comprimento da cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários  
- Se espera-se que o caractere nulo à direita da cadeia de caracteres esteja na cadeia de caracteres gerenciada, o chamador do método `NewStringWithLength` deve garantir que o comprimento da cadeia de caracteres inclua o caractere nulo à direita.  
+ Se espera-se que o caractere nulo à direita da cadeia de caracteres esteja na cadeia de caracteres gerenciada `NewStringWithLength` , o chamador do método deve garantir que o comprimento da cadeia de caracteres inclua o caractere nulo à direita.  
   
  A cadeia de caracteres é sempre criada no domínio do aplicativo no qual o thread está sendo executado no momento.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

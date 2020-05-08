@@ -2,17 +2,17 @@
 title: Interface ICorDebugExceptionDebugEvent
 ms.date: 03/30/2017
 ms.assetid: f9ba60d8-b54d-417e-bb3e-fde4b41ca44c
-ms.openlocfilehash: 168ba2945608a5b26432c5a0f583e5d406f6ce9b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dfa65aa1b63c996068e75ff1165111d5fcfe77eb
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782823"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975999"
 ---
 # <a name="icordebugexceptiondebugevent-interface"></a>Interface ICorDebugExceptionDebugEvent
 Estende a interface [ICorDebugDebugEvent](icordebugdebugevent-interface.md) para dar suporte a eventos de exceção.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -21,7 +21,7 @@ Estende a interface [ICorDebugDebugEvent](icordebugdebugevent-interface.md) para
 |[Método GetStackPointer](icordebugexceptiondebugevent-getstackpointer-method.md)|Obtém o ponteiro de pilha para este evento de depuração de exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- A interface `ICorDebugExceptionDebugEvent` é implementada pelos seguintes tipos de evento:  
+ A `ICorDebugExceptionDebugEvent` interface é implementada pelos seguintes tipos de evento:  
   
 - [MANAGED_EXCEPTION_FIRST_CHANCE](cordebugrecordformat-enumeration.md)  
   
@@ -32,18 +32,18 @@ Estende a interface [ICorDebugDebugEvent](icordebugdebugevent-interface.md) para
 - [MANAGED_EXCEPTION_UNHANDLED](cordebugrecordformat-enumeration.md)  
   
 > [!NOTE]
-> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários ICorDebug fora do .NET Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)
