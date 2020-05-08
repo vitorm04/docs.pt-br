@@ -2,12 +2,12 @@
 title: Como implantar contêineres no Azure
 description: Implantando contêineres no Azure com o registro de contêiner do Azure, o serviço kubernetes do Azure e o Azure Dev Spaces.
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199554"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895596"
 ---
 # <a name="deploying-containers-in-azure"></a>Como implantar contêineres no Azure
 
@@ -108,8 +108,8 @@ Os desenvolvedores compartilham uma instância em execução (desenvolvimento) e
 
 Para entender o valor de Azure Dev Spaces, deixe-me compartilhar essa citação de Gabe Monroy, PM Lead dos contêineres em Microsoft Azure:
 
-> Imagine que você seja um novo funcionário tentando corrigir um bug em um aplicativo de microserviços complexos que consiste em dezenas de componentes, cada um com sua própria configuração e serviços de apoio. Para começar, você deve configurar seu ambiente de desenvolvimento local para que ele possa imitar a produção, incluindo a configuração de seu IDE, criação de cadeia de ferramentas, dependências de serviço em contêineres, um ambiente kubernetes local, simulações para fazer backup de serviços e muito mais. Com o tempo todo envolvido na configuração de seu ambiente de desenvolvimento, corrigir esse primeiro bug pode levar dias.
-> Ou você pode usar espaços de desenvolvimento e AKS.
+> "Imagine que você seja um novo funcionário tentando corrigir um bug em um aplicativo de microserviços complexos que consiste em dezenas de componentes, cada um com sua própria configuração e serviços de apoio. Para começar, você deve configurar seu ambiente de desenvolvimento local para que ele possa imitar a produção, incluindo a configuração de seu IDE, criação de cadeia de ferramentas, dependências de serviço em contêineres, um ambiente kubernetes local, simulações para fazer backup de serviços e muito mais. Com o tempo todo envolvido na configuração de seu ambiente de desenvolvimento, corrigir esse primeiro bug pode levar dias.
+> Ou você pode usar espaços de desenvolvimento e AKS. "
 
 O processo para trabalhar com Azure Dev Spaces envolve as seguintes etapas:
 

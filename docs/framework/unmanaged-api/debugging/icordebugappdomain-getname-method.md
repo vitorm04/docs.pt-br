@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3db37576f5da7b26e7bd9d3343f8bb8b97f2ba82
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179083"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895240"
 ---
 # <a name="icordebugappdomaingetname-method"></a>Método ICorDebugAppDomain::GetName
 Obtém o nome do domínio do aplicativo.  
@@ -36,24 +36,24 @@ HRESULT GetName (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cchName`  
- [em] O tamanho `szName` da matriz. Defina esse valor como zero para colocar este método no modo de consulta.  
+ no O tamanho da `szName` matriz. Defina esse valor como zero para colocar esse método no modo de consulta.  
   
  `pcchName`  
- [fora] Um ponteiro para o tamanho do nome ou o `szName`número de caracteres realmente retornado em . No modo de consulta, este valor permite que o chamador saiba o tamanho de um buffer para alocar para o nome.  
+ fora Um ponteiro para o tamanho do nome ou o número de caracteres realmente retornados em `szName`. No modo de consulta, esse valor permite que o chamador saiba quanto tamanho um buffer deve ser alocado para o nome.  
   
  `szName`  
- [fora] Uma matriz que armazena o nome do domínio do aplicativo.  
+ fora Uma matriz que armazena o nome do domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- Um depurador `GetName` chama o método uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada, para obter o tamanho do nome, é referida como *modo de consulta*.  
+ Um depurador chama o `GetName` método uma vez para obter o tamanho de um buffer necessário para o nome. O depurador aloca o buffer e, em seguida, chama o método uma segunda vez para preencher o buffer. A primeira chamada, para obter o tamanho do nome, é referida como modo de *consulta*.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

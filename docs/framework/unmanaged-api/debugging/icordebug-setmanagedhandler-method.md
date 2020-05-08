@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 54ef1cab27a39de39b39996729be6b8160570745
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a197d260c55d24f906da7d7f2768bb7ba1ad751f
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788965"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895340"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>Método ICorDebug::SetManagedHandler
 Especifica o objeto manipulador de eventos para eventos gerenciados.  
@@ -38,19 +38,19 @@ HRESULT SetManagedHandler (
  no Um ponteiro para um objeto [ICorDebugManagedCallback](icordebugmanagedcallback-interface.md) , que é o objeto manipulador de eventos.  
   
 ## <a name="remarks"></a>Comentários  
- `SetManagedHandler` deve ser chamado no momento da criação.  
+ `SetManagedHandler`deve ser chamado no momento da criação.  
   
- Se a implementação de `ICorDebugManagedCallback` não contiver interfaces suficientes para lidar com eventos de depuração para o aplicativo que está sendo depurado, `SetManagedHandler` retornará um HRESULT de E_NOINTERFACE.  
+ Se a `ICorDebugManagedCallback` implementação não contiver interfaces suficientes para lidar com eventos de depuração para o aplicativo que está sendo depurado, `SetManagedHandler` o retornará um HRESULT de E_NOINTERFACE.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Interface ICorDebug](icordebug-interface.md)

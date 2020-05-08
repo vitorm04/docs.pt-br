@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f317eb1b3d91fc005d59d6a06bad329a5f68aa11
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110352"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895223"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>Método ICorDebugAppDomain::GetModuleFromMetaDataInterface
 Obtém o módulo que corresponde à interface de metadados fornecida.  
@@ -36,16 +36,16 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Parâmetros  
  `pIMetaData`  
- no Um ponteiro para um objeto que é uma das [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ no Um ponteiro para um objeto que é uma das [interfaces de metadados](../metadata/metadata-interfaces.md).  
   
  `ppModule`  
  fora Um ponteiro para o endereço de um objeto ICorDebugModule que representa o módulo correspondente à interface de metadados fornecida.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

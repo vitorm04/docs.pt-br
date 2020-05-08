@@ -2,12 +2,12 @@
 title: Pacotes de aplicativos nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Pacotes de aplicativos nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895678"
 ---
 # <a name="cloud-native-application-bundles"></a>Pacotes de aplicativos nativos de nuvem
 
@@ -78,7 +78,8 @@ O formato CNAB também é flexível, permitindo que ele seja usado em qualquer n
 
 ## <a name="devops-decisions"></a>Decisões DevOpss
 
-Há tantas ferramentas incríveis no DevOps de espaço em dia e até mesmo livros e artigos fantásticos sobre como obter sucesso. Um livro favorito para começar a usar o DevOps Journey é [o projeto Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), que segue a transformação de uma empresa fictícia da NoOps para a DevOps. Uma coisa é para determinados: A DevOps não é mais uma "boa para ter" ao implantar aplicativos complexos de nuvem nativos. É um requisito e deve ser planejado e reoriginado no início de qualquer projeto.
+Há tantas ferramentas incríveis no DevOps de espaço em dia e até mesmo livros e artigos fantásticos sobre como obter sucesso. Um livro favorito para começar a usar o DevOps Journey é [o projeto Phoenix](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/), que segue a transformação de uma empresa fictícia da NoOps para a DevOps. Uma coisa é para determinados: o DevOps não é mais um "bom para ter" ao implantar aplicativos complexos e nativos de nuvem. É um requisito e deve ser planejado e reoriginado no início de qualquer projeto.
 
 >[!div class="step-by-step"]
 >[Anterior](infrastructure-as-code.md)
+>[próximo](summary.md)

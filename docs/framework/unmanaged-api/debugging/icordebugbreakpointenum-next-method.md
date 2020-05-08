@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: af90886390b59932d3ae146a70fc2901ec1c378d
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122741"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894666"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>Método ICorDebugBreakpointEnum::Next
 Obtém o número especificado de instâncias de ICorDebugBreakpoint da enumeração, começando na posição atual.  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- no O número de instâncias de `ICorDebugBreakpoint` a serem recuperadas.  
+ no O número de `ICorDebugBreakpoint` instâncias a serem recuperadas.  
   
  `breakpoints`  
- fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto `ICorDebugBreakpoint` que representa um ponto de interrupção.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta `ICorDebugBreakpoint` para um objeto que representa um ponto de interrupção.  
   
  `pceltFetched`  
- fora Um ponteiro para o número de instâncias de `ICorDebugBreakpoint` retornadas na verdade. Esse valor pode ser nulo se `celt` for um.  
+ fora Um ponteiro para o número de `ICorDebugBreakpoint` instâncias retornadas de fato. Esse valor pode ser nulo se `celt` for um.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

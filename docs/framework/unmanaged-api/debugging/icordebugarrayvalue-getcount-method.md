@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98cf-2127-4d46-8c6a-da4e857bb6b0
 topic_type:
 - apiref
-ms.openlocfilehash: f33225eae4b62f2d5f0793212ae7dcc70e97f508
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82f282630a2e31b8c67d43fa0f0b30431a0d6ee4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088526"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895056"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>Método ICorDebugArrayValue::GetCount
 Obtém o número total de elementos na matriz.  
@@ -38,10 +38,10 @@ HRESULT GetCount (
  fora Um ponteiro para o número total de elementos na matriz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777989"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894207"
 ---
 # <a name="icordebugchain-interface"></a>Interface ICorDebugChain
 
 Representa um segmento de uma pilha de chamadas física ou lógica.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -43,20 +43,20 @@ Representa um segmento de uma pilha de chamadas física ou lógica.
 |[Método IsManaged](icordebugchain-ismanaged-method.md)|Obtém um valor que indica se esta cadeia está executando código gerenciado.|  
   
 ## <a name="remarks"></a>Comentários  
- Os quadros de pilha em uma cadeia ocupam um espaço de pilha contíguo e compartilham o mesmo thread e contexto. Uma cadeia pode representar cadeias de código gerenciados ou não-gerenciadas. Uma instância de `ICorDebugChain` vazia representa uma cadeia de código não gerenciada.  
+ Os quadros de pilha em uma cadeia ocupam um espaço de pilha contíguo e compartilham o mesmo thread e contexto. Uma cadeia pode representar cadeias de código gerenciados ou não-gerenciadas. Uma instância `ICorDebugChain` vazia representa uma cadeia de código não gerenciada.  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Depurando interfaces](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-ms.openlocfilehash: 418ebb51df3f2d86011ee2e77022c3ee5c7ac0b0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e6e8eb91bbc41faf0dcea010da9aa54995058653
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088230"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894973"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>Método ICorDebugArrayValue::HasBaseIndicies
 Obtém um valor que indica se qualquer dimensão dessa matriz tem um índice base diferente de zero.  
@@ -35,13 +35,13 @@ HRESULT HasBaseIndicies (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbHasBaseIndicies`  
- fora Um ponteiro para um valor booliano `true` se uma ou mais dimensões desse objeto `ICorDebugArrayValue` tiverem um índice base diferente de zero; caso contrário, o valor booliano será `false`.  
+ fora Um ponteiro para um valor booliano que `true` se uma ou mais dimensões desse `ICorDebugArrayValue` objeto têm um índice base diferente de zero; caso contrário, o valor booliano é `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]

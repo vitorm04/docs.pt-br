@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-ms.openlocfilehash: 66ec64b1a855a3d31f14f3ef29dde0b82361f5d7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92cc6c3ce15d8391a43ff130a82476a4363ff5bd
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133982"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895306"
 ---
 # <a name="icordebugappdomainattach-method"></a>Método ICorDebugAppDomain::Attach
 Anexa o depurador ao domínio do aplicativo.  
@@ -35,10 +35,10 @@ HRESULT Attach ();
  O depurador deve ser anexado ao domínio do aplicativo para receber eventos e habilitar a depuração do domínio do aplicativo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

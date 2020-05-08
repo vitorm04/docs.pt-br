@@ -14,37 +14,37 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e391a02571481d75ce88ae3f3b2b6421705d661c
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784352"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894709"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>Interface ICorDebugBreakpointEnum
 
 Implementa métodos ICorDebugEnum e enumera matrizes ICorDebugBreakpoint.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Next](icordebugbreakpointenum-next-method.md)|Obtém o número especificado de instâncias de `ICorDebugBreakpoint` da enumeração, começando na posição atual.|  
+|[Método Next](icordebugbreakpointenum-next-method.md)|Obtém o número especificado de `ICorDebugBreakpoint` instâncias da enumeração, começando na posição atual.|  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Depurando interfaces](debugging-interfaces.md)

@@ -3,20 +3,20 @@ title: Dependências de SDK do .NET Core e tempo de execução-.NET Core
 description: Detalha o sistema operacional e os pré-requisitos de arquitetura de CPU para instalar o SDK do .NET Core e o tempo de execução no Windows, Linux e macOS.
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140986"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895482"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>Dependências e requisitos do .NET Core
 
 Este artigo detalha quais sistemas operacionais e arquitetura de CPU têm suporte no .NET Core.
 
-## <a name="supported-operating-systems"></a>Sistemas operacionais compatíveis
+## <a name="supported-operating-systems"></a>Sistemas operacionais com suporte
 
 ::: zone pivot="os-windows"
 
@@ -290,6 +290,24 @@ Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você
 
 > [!WARNING]
 > A maioria das versões do CentOS e do Fedora inclui uma versão anterior do libgdiplus. Você pode instalar uma versão recente do libgdiplus adicionando o repositório do mono ao seu sistema. Para obter mais informações, consulte <https://www.mono-project.com/download/stable/>.
+
+### <a name="alpine"></a>Alpine
+
+As distribuições alpineáveis exigem que as seguintes bibliotecas sejam instaladas:
+
+- ICU-bibliotecas (isso não é necessário se a globalização estiver desabilitada)
+- krb5-libs
+- libcurl
+- libintl
+- libssl 1.1 (para Alpine 3,9 ou posterior) ou libssl 1.0 (para aqueles mais antigos)
+- libstdc++
+- lttng-ust
+- numactl (opcional, útil somente para dispositivos com NUMA habilitado)
+- zlib
+
+Para aplicativos .NET Core que usam o assembly *System. Drawing. Common* , você também precisa da seguinte dependência:
+
+- libgdiplus (está disponível somente no repositório de borda/teste)
 
 ::: zone-end
 

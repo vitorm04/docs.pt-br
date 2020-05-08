@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-ms.openlocfilehash: 7c6d1905cdbd12b960014e687034ea9d163b68d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9aadbe7c6f18c6b15350267d1f9ecaa3a23cdd20
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179032"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895063"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>Método ICorDebugArrayValue::GetBaseIndicies
 Obtém o índice base de cada dimensão na matriz.  
@@ -35,18 +35,18 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cdim`  
- [em] O número de dimensões deste `ICorDebugArrayValue` objeto. Este valor também é `indicies` o tamanho da matriz porque seu tamanho `ICorDebugArrayValue` é igual ao número de dimensões do objeto.  
+ no O número de dimensões deste `ICorDebugArrayValue` objeto. Esse valor também é o tamanho da `indicies` matriz porque seu tamanho é igual ao número de dimensões do `ICorDebugArrayValue` objeto.  
   
  `indicies`  
- [fora] Uma matriz de inteiros, cada um dos quais é o índice base (ou `ICorDebugArrayValue` seja, o índice inicial) de uma dimensão deste objeto.  
+ fora Uma matriz de inteiros, cada um dos quais é o índice base (ou seja, o índice inicial) de uma dimensão desse `ICorDebugArrayValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

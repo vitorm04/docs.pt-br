@@ -3,12 +3,12 @@ title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240544"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895445"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
@@ -21,7 +21,7 @@ Neste tutorial, você explorará a criação de um **analisador** e uma **corre�
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Você precisará instalar o **SDK da plataforma do compilador .NET** através do Visual Studio Installer:
+Você precisará instalar o **SDK do .net Compiler Platform** por meio do instalador do Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -60,7 +60,7 @@ O analisador com modelo de correção de código cria três projetos: um contém
 > [!TIP]
 > Quando você executa seu analisador, você pode iniciar uma segunda cópia do Visual Studio. Essa segunda cópia usa um hive do Registro diferente para armazenar configurações. Isso lhe permite diferenciar as configurações visuais em duas cópias do Visual Studio. Você pode escolher um tema diferente para a execução experimental do Visual Studio. Além disso, não use perfil móvel de suas configurações nem faça logon na conta do Visual Studio usando a execução experimental do Visual Studio. Isso mantém as diferenças entre as configurações.
 
-Na segunda instância do Visual Studio que você acabou de iniciar, crie um novo projeto de aplicativo de console C# (o projeto .NET Core ou o .NET Framework funcionarão -- os analisadores funcionam no nível de origem.) Passar o tempo sobre o token com um sublinhado ondulado, e o texto de aviso fornecido por um analisador aparece.
+Na segunda instância do Visual Studio que você acabou de iniciar, crie um novo projeto de aplicativo de console em C# (o .NET Core ou .NET Framework projeto funcionará, os analisadores funcionam no nível de origem). Passe o mouse sobre o token com um sublinhado ondulado e o texto de aviso fornecido por um analisador é exibido.
 
 O modelo cria um analisador que relata um aviso em cada declaração de tipo em que o nome do tipo contém letras minúsculas, conforme mostrado na figura a seguir:
 
@@ -148,7 +148,7 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 
 Por fim, você precisa verificar que a variável pode ser `const`. Isso significa assegurar que ela nunca seja atribuída após ser inicializada.
 
-Você executará alguma análise semântica usando o <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Você usa o argumento `context` para determinar se a declaração de variável local pode ser tornada `const`. Um <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> representa de todas as informações semânticas em um único arquivo de origem. Você pode aprender mais no artigo que aborda [modelos semânticos](../work-with-semantics.md). Você usará o <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> para realizar a análise de fluxo de dados na instrução de declaração local. Em seguida, você usa os resultados dessa análise de fluxo de dados para garantir que a variável local não seja escrita com um novo valor em nenhum outro lugar. Chame o método de extensão <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> para recuperar o <xref:Microsoft.CodeAnalysis.ILocalSymbol> para a variável e verifique se ele não está contido na coleção <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> da análise de fluxo de dados. Adicione o código a seguir ao final do método `AnalyzeNode`:
+Você executará alguma análise semântica usando o <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext>. Você usa o argumento `context` para determinar se a declaração de variável local pode ser tornada `const`. Um <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> representa todas as informações semânticas em um único arquivo de origem. Você pode aprender mais no artigo que aborda [modelos semânticos](../work-with-semantics.md). Você usará o <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> para realizar a análise de fluxo de dados na instrução de declaração local. Em seguida, você usa os resultados dessa análise de fluxo de dados para garantir que a variável local não seja escrita com um novo valor em nenhum outro lugar. Chame o método de extensão <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> para recuperar o <xref:Microsoft.CodeAnalysis.ILocalSymbol> para a variável e verifique se ele não está contido na coleção <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> da análise de fluxo de dados. Adicione o código a seguir ao final do método `AnalyzeNode`:
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -265,7 +265,7 @@ Abra o arquivo **MakeConstUnitTests.cs** no projeto de teste de unidade. O model
 
 O código para quase todos os testes para o seu analisador segue um destes dois padrões. Para a primeira etapa, você pode refazer esses testes como testes controlados por dados. Em seguida, será fácil criar novos testes adicionando novas constantes de cadeia de caracteres para representar diferentes entradas de teste.
 
-Para obter eficiência, a primeira etapa é refatorar os dois testes em testes controlados por dados. Em seguida, você só precisa definir algumas constantes de cadeia de caracteres para cada novo teste. Durante a refatoração, renomeie os dois métodos com nomes melhores. Substitua `TestMethod1` com este teste, que garante que nenhum diagnóstico seja gerado:
+Para obter eficiência, a primeira etapa é refatorar os dois testes em testes controlados por dados. Em seguida, você só precisa definir algumas constantes de cadeia de caracteres para cada novo teste. Enquanto você estiver Refatorando, renomeie os dois métodos para melhores nomes. Substitua `TestMethod1` com este teste, que garante que nenhum diagnóstico seja gerado:
 
 ```csharp
 [DataTestMethod]

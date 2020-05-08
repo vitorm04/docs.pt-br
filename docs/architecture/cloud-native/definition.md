@@ -3,12 +3,12 @@ title: Como definir o que é nativo de nuvem
 description: Saiba mais sobre os pilares básicos que fornecem o Fundação para sistemas nativos de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199775"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895611"
 ---
 # <a name="defining-cloud-native"></a>Definindo a nuvem nativa
 
@@ -34,9 +34,9 @@ Aqui estão algumas empresas que implementaram essas técnicas. Pense na velocid
 
 | Empresa | Experiência |
 | :-------- | :-------- |
-| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tem mais de 600 serviços em produção. Implanta uma centena de vezes por dia. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Tem mais de 1.000 serviços armazenados em produção. Implanta vários milhares de compilações por semana. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tem mais de 300 serviços em produção. Faz quase 1.000 alterações por dia. |
+| [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Tem mais de 600 serviços em produção. Implanta centenas de vezes por dia. |
+| [Uber](https://eng.uber.com/micro-deploy/) | Tem mais de 1.000 serviços em produção. Implanta vários milhares de vezes por semana. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Tem mais de 300 serviços em produção. Implanta 1.000 vezes por dia. |
 
 Como você pode ver, Netflix, Uber e WeChat expõem sistemas que consistem em centenas de microservices independentes. Esse estilo de arquitetura permite que eles respondam rapidamente às condições do mercado. Eles podem atualizar de forma instantânea áreas pequenas de um aplicativo dinâmico e complexo e dimensionar individualmente essas áreas conforme necessário.
 
@@ -95,7 +95,7 @@ No livro, [além do aplicativo de doze fatores](https://content.pivotal.io/blog
 
 |    |  Novo fator | Explicação  |
 | :-------- | :-------- | :-------- |
-| 13 | Primeiro API | Tornar tudo um serviço. Suponha que seu código será consumido por um cliente front-end, um gateway ou outro serviço. |
+| 13 | API em primeiro lugar | Tornar tudo um serviço. Suponha que seu código será consumido por um cliente front-end, um gateway ou outro serviço. |
 | 14 | Telemetria | Em uma estação de trabalho, você tem visibilidade profunda do seu aplicativo e seu comportamento. Na nuvem, você não tem. Verifique se o design inclui a coleção de dados de monitoramento, específicos do domínio e de integridade/sistema. |
 | 15 | Autenticação/autorização  | Implemente a identidade desde o início. Considere os recursos de [RBAC (controle de acesso baseado em função)](https://docs.microsoft.com/azure/role-based-access-control/overview) disponíveis em nuvens públicas.  |
 
@@ -167,7 +167,7 @@ No início do capítulo, comparamos um aplicativo de comércio eletrônico criad
 
 - Cada microserviço pode ser dimensionado de forma independente. Em vez de dimensionar todo o aplicativo como uma única unidade, você dimensiona apenas os serviços que exigem mais capacidade de processamento ou largura de banda de rede. Essa abordagem refinada para o dimensionamento oferece maior controle do seu sistema e ajuda a reduzir os custos gerais à medida que você dimensiona partes do seu sistema, não tudo.
 
-Um excelente guia de referência para entender os microserviços é o [.net microservices: arquitetura para aplicativos .net em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
+Um excelente guia de referência para entender os microserviços é o [.net microservices: arquitetura para aplicativos .net em contêineres](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook). O livro se aprofunda no design e na arquitetura de microserviços. É um complemento para uma [arquitetura de referência de microatendimento de pilha completa](https://github.com/dotnet-architecture/eShopOnContainers) disponível como um download gratuito da Microsoft.
 
 ### <a name="developing-microservices"></a>Desenvolvendo microserviços
 

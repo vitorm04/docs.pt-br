@@ -2,17 +2,17 @@
 title: Interface ICorDebugAssembly3
 ms.date: 03/30/2017
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-ms.openlocfilehash: deb300ced2ff7a116bd443c9a7b10dcc0b7955ac
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 67707092c80b0e07aa284336c426aba09ff991af
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784527"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894820"
 ---
 # <a name="icordebugassembly3-interface"></a>Interface ICorDebugAssembly3
 Estende logicamente a interface ICorDebugAssembly para oferecer suporte a assemblies de contêiner e seus assemblies contidos.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -22,18 +22,18 @@ Estende logicamente a interface ICorDebugAssembly para oferecer suporte a assemb
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface retorna `E_NOINTERFACE` para cenários ICorDebug fora do .NET Native.  
+> A interface está disponível somente com .NET Native. A tentativa de chamar `QueryInterface` para recuperar um ponteiro de interface `E_NOINTERFACE` retorna para cenários ICorDebug fora do .net Native.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Consulte também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)

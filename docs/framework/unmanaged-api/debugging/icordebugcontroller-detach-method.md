@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06fae364-f2c6-4a50-aa7e-3da9f2684dc3
 topic_type:
 - apiref
-ms.openlocfilehash: b98077914d680c908587649fdd517aca9c8dcd40
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 480fec4897dac73594515ba8bc0f0e96ceb79ace
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125438"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892908"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>Método ICorDebugController::Detach
 Desanexa o depurador do domínio do processo ou do aplicativo.  
@@ -37,12 +37,12 @@ HRESULT Detach ();
  No .NET Framework versão 2,0, se a depuração não gerenciada estiver habilitada, esse método falhará devido a limitações do sistema operacional.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
