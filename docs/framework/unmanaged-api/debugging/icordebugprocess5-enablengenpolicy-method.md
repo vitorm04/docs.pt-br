@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: 9497bea9b7cc5eb98876c923858dbcbc6adf9d07
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792457"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212796"
 ---
-# <a name="icordebugprocess5enablengenpolicy-method"></a><span data-ttu-id="57c01-102">Método ICorDebugProcess5::EnableNGENPolicy</span><span class="sxs-lookup"><span data-stu-id="57c01-102">ICorDebugProcess5::EnableNGENPolicy Method</span></span>
-<span data-ttu-id="57c01-103">Define um valor que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.</span><span class="sxs-lookup"><span data-stu-id="57c01-103">Sets a value that determines how an application loads native images while running under a managed debugger.</span></span>  
+# <a name="icordebugprocess5enablengenpolicy-method"></a><span data-ttu-id="925e0-102">Método ICorDebugProcess5::EnableNGENPolicy</span><span class="sxs-lookup"><span data-stu-id="925e0-102">ICorDebugProcess5::EnableNGENPolicy Method</span></span>
+<span data-ttu-id="925e0-103">Define um valor que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.</span><span class="sxs-lookup"><span data-stu-id="925e0-103">Sets a value that determines how an application loads native images while running under a managed debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57c01-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="57c01-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="925e0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="925e0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnableNGENPolicy(  
@@ -33,26 +33,26 @@ HRESULT EnableNGENPolicy(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57c01-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="57c01-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="925e0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="925e0-105">Parameters</span></span>  
  `ePolicy`  
- <span data-ttu-id="57c01-106">no Uma constante [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.</span><span class="sxs-lookup"><span data-stu-id="57c01-106">[in] A [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) constant that determines how an application loads native images while running under a managed debugger.</span></span>  
+ <span data-ttu-id="925e0-106">no Uma constante [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) que determina como um aplicativo carrega imagens nativas durante a execução em um depurador gerenciado.</span><span class="sxs-lookup"><span data-stu-id="925e0-106">[in] A [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md) constant that determines how an application loads native images while running under a managed debugger.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="57c01-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="57c01-107">Remarks</span></span>  
- <span data-ttu-id="57c01-108">Se a política for definida com êxito, o método retornará `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="57c01-108">If the policy is set successfully, the method returns `S_OK`.</span></span> <span data-ttu-id="57c01-109">Se `ePolicy` estiver fora do intervalo dos valores enumerados definidos por [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), o método retornará `E_INVALIDARG` e a chamada do método não terá efeito.</span><span class="sxs-lookup"><span data-stu-id="57c01-109">If `ePolicy` is outside the range of the enumerated values defined by [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), the method returns `E_INVALIDARG` and the method call has no effect.</span></span> <span data-ttu-id="57c01-110">Se a política do gerador de imagem nativa (NGen. exe) não puder ser atualizada, o método retornará `E_FAIL`.</span><span class="sxs-lookup"><span data-stu-id="57c01-110">If the policy of the Native Image Generator (Ngen.exe) cannot be updated, the method returns `E_FAIL`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="925e0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="925e0-107">Remarks</span></span>  
+ <span data-ttu-id="925e0-108">Se a política for definida com êxito, o método retornará `S_OK` .</span><span class="sxs-lookup"><span data-stu-id="925e0-108">If the policy is set successfully, the method returns `S_OK`.</span></span> <span data-ttu-id="925e0-109">Se `ePolicy` estiver fora do intervalo dos valores enumerados definidos por [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), o método retornará `E_INVALIDARG` e a chamada do método não terá nenhum efeito.</span><span class="sxs-lookup"><span data-stu-id="925e0-109">If `ePolicy` is outside the range of the enumerated values defined by [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md), the method returns `E_INVALIDARG` and the method call has no effect.</span></span> <span data-ttu-id="925e0-110">Se a política do gerador de imagem nativa (NGen. exe) não puder ser atualizada, o método retornará `E_FAIL` .</span><span class="sxs-lookup"><span data-stu-id="925e0-110">If the policy of the Native Image Generator (Ngen.exe) cannot be updated, the method returns `E_FAIL`.</span></span>  
   
- <span data-ttu-id="57c01-111">O método `ICorDebugProcess5::EnableNGenPolicy` pode ser chamado a qualquer momento durante o tempo de vida do processo.</span><span class="sxs-lookup"><span data-stu-id="57c01-111">The `ICorDebugProcess5::EnableNGenPolicy` method can be called at any time during the lifetime of the process.</span></span> <span data-ttu-id="57c01-112">A política está em vigor para todos os módulos que são carregados depois que a política é definida.</span><span class="sxs-lookup"><span data-stu-id="57c01-112">The policy is in effect for any modules that are loaded after the policy is set.</span></span>  
+ <span data-ttu-id="925e0-111">O `ICorDebugProcess5::EnableNGenPolicy` método pode ser chamado a qualquer momento durante o tempo de vida do processo.</span><span class="sxs-lookup"><span data-stu-id="925e0-111">The `ICorDebugProcess5::EnableNGenPolicy` method can be called at any time during the lifetime of the process.</span></span> <span data-ttu-id="925e0-112">A política está em vigor para todos os módulos que são carregados depois que a política é definida.</span><span class="sxs-lookup"><span data-stu-id="925e0-112">The policy is in effect for any modules that are loaded after the policy is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57c01-113">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="57c01-113">Requirements</span></span>  
- <span data-ttu-id="57c01-114">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="57c01-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="925e0-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="925e0-113">Requirements</span></span>  
+ <span data-ttu-id="925e0-114">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="925e0-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="57c01-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="57c01-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="925e0-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="925e0-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="57c01-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="57c01-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="925e0-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="925e0-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="57c01-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="57c01-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="925e0-117">**.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="925e0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57c01-118">Veja também</span><span class="sxs-lookup"><span data-stu-id="57c01-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="925e0-118">Confira também</span><span class="sxs-lookup"><span data-stu-id="925e0-118">See also</span></span>
 
-- [<span data-ttu-id="57c01-119">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="57c01-119">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
-- [<span data-ttu-id="57c01-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="57c01-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
-- [<span data-ttu-id="57c01-121">Depuração</span><span class="sxs-lookup"><span data-stu-id="57c01-121">Debugging</span></span>](index.md)
+- [<span data-ttu-id="925e0-119">Interface ICorDebugProcess5</span><span class="sxs-lookup"><span data-stu-id="925e0-119">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="925e0-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="925e0-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="925e0-121">Depuração</span><span class="sxs-lookup"><span data-stu-id="925e0-121">Debugging</span></span>](index.md)
