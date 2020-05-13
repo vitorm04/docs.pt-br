@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e13446c-0271-446c-924a-9072c0e6eeae
 topic_type:
 - apiref
-ms.openlocfilehash: 50722bb855c8bc8bcfdc1b405a5bbc2fa057c52c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c10c45c4450e02d633ebeeca15da95b7c95ff0b4
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129527"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212523"
 ---
 # <a name="icordebugmodulegetprocess-method"></a>Método ICorDebugModule::GetProcess
 Obtém o processo de contenção deste módulo.  
@@ -38,10 +38,10 @@ HRESULT GetProcess (
  fora Um ponteiro para o endereço de um objeto ICorDebugProcess que representa o processo que contém este módulo.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -10,19 +10,19 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 7ef983c2f0785cb97baf8ba1ad3483b46c08af9a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 71aa482cc2268da17f1376d8c305dd6a818d92d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788651"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213160"
 ---
 # <a name="icordebugfunction3-interface"></a>Interface ICorDebugFunction3
 [Com suporte no .NET Framework 4.5.2 e versões posteriores]  
   
  Estende a interface de ICorDebugFunction logicamente para fornecer acesso ao código a partir de uma solicitação ReJIT.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
@@ -30,16 +30,16 @@ ms.locfileid: "76788651"
   
 ## <a name="remarks"></a>Comentários  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Depurando interfaces](debugging-interfaces.md)
 - [Depuração](index.md)

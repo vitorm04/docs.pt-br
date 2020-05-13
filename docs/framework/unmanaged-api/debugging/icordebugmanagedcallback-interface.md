@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: b47f1d61-c7dc-4196-b926-0b08c94f7041
 topic_type:
 - apiref
-ms.openlocfilehash: 9a33b90bf39103756ab4fd07157739633997fb61
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: cb2b69c5e6dfed4e0cb4e4e324c4ec6ad664f3e7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788395"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212744"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>Interface ICorDebugManagedCallback
 Fornece métodos para processar retornos de chamada do depurador.  
   
-## <a name="methods"></a>{1&gt;Métodos&lt;1}  
+## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Break](icordebugmanagedcallback-break-method.md)|Notifica o depurador quando uma instrução <xref:System.Reflection.Emit.OpCodes.Break> no fluxo de código é executada.|  
+|[Método Break](icordebugmanagedcallback-break-method.md)|Notifica o depurador quando uma <xref:System.Reflection.Emit.OpCodes.Break> instrução no fluxo de código é executada.|  
 |[Método Breakpoint](icordebugmanagedcallback-breakpoint-method.md)|Notifica o depurador quando um ponto de interrupção é encontrado.|  
 |[Método BreakpointSetError](icordebugmanagedcallback-breakpointseterror-method.md)|Notifica o depurador de que o Common Language Runtime (CLR) não pôde associar com precisão um ponto de interrupção que foi definido antes de uma função ser compilada por JIT (just-in-time).|  
 |[Método ControlCTrap](icordebugmanagedcallback-controlctrap-method.md)|Notifica o depurador de que um CTRL + C é interceptado no processo que está sendo depurado.|  
@@ -46,8 +46,8 @@ Fornece métodos para processar retornos de chamada do depurador.
 |[Método LoadAssembly](icordebugmanagedcallback-loadassembly-method.md)|Notifica o depurador de que um assembly CLR foi carregado com êxito.|  
 |[Método LoadClass](icordebugmanagedcallback-loadclass-method.md)|Notifica o depurador de que uma classe foi carregada.|  
 |[Método LoadModule](icordebugmanagedcallback-loadmodule-method.md)|Notifica o depurador de que um módulo CLR foi carregado com êxito.|  
-|[Método LogMessage](icordebugmanagedcallback-logmessage-method.md)|Notifica o depurador de que um thread gerenciado pelo CLR chamou um método na classe <xref:System.Diagnostics.EventLog> para registrar um evento.|  
-|[Método LogSwitch](icordebugmanagedcallback-logswitch-method.md)|Notifica o depurador de que um thread gerenciado pelo CLR chamou um método na classe <xref:System.Diagnostics.Switch> para criar, modificar ou excluir uma opção de depuração/rastreamento.|  
+|[Método LogMessage](icordebugmanagedcallback-logmessage-method.md)|Notifica o depurador de que um thread gerenciado pelo CLR chamou um método na <xref:System.Diagnostics.EventLog> classe para registrar um evento.|  
+|[Método LogSwitch](icordebugmanagedcallback-logswitch-method.md)|Notifica o depurador de que um thread gerenciado pelo CLR chamou um método na <xref:System.Diagnostics.Switch> classe para criar, modificar ou excluir uma opção de depuração/rastreamento.|  
 |[Método NameChange](icordebugmanagedcallback-namechange-method.md)|Notifica o depurador de que o nome de um domínio de aplicativo ou thread foi alterado.|  
 |[Método StepComplete](icordebugmanagedcallback-stepcomplete-method.md)|Notifica o depurador de que uma etapa foi concluída.|  
 |[Método UnloadAssembly](icordebugmanagedcallback-unloadassembly-method.md)|Notifica o depurador de que um assembly CLR foi descarregado.|  
@@ -60,21 +60,21 @@ Fornece métodos para processar retornos de chamada do depurador.
   
  Cada implementação de retorno de chamada deve chamar [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para retomar a execução. Se `ICorDebugController::Continue` não for chamado antes que o retorno de chamada seja retornado, o processo permanecerá parado e nenhum mais retornos de chamada de evento ocorrerá até que `ICorDebugController::Continue` seja chamado.  
   
- Um depurador deve implementar [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) se estiver depurando .NET Framework aplicativos da versão 2,0. Uma instância de `ICorDebugManagedCallback` ou `ICorDebugManagedCallback2` é passada como o objeto de retorno de chamada para [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
+ Um depurador deve implementar [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) se estiver depurando .NET Framework aplicativos da versão 2,0. Uma instância do `ICorDebugManagedCallback` ou `ICorDebugManagedCallback2` é passada como o objeto de retorno de chamada para [ICorDebug:: SetManagedHandler](icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
 > Esta interface não dá suporte para chamada remota, seja entre computadores ou processos cruzados.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebug](icordebug-interface.md)
 - [Interface ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)

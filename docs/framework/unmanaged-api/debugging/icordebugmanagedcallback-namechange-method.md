@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7018a0e-880e-4b68-b52a-1cd22c7aad62
 topic_type:
 - apiref
-ms.openlocfilehash: 2d8fa00a1a998430a55b913cfa25624246eab967
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 48bfce9966ff12fe1b425fbcd9a81860628a54e6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788355"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212666"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>Método ICorDebugManagedCallback::NameChange
 Notifica o depurador de que o nome de um domínio de aplicativo ou de um thread foi alterado.  
@@ -41,15 +41,15 @@ HRESULT NameChange (
  `pThread`  
  no Um ponteiro para um objeto ICorDebugThread que representa o thread que tinha um nome alterado.  
   
-## <a name="requirements"></a>Requisitos do  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Veja também
+## <a name="see-also"></a>Confira também
 
 - [Interface ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)

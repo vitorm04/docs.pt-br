@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7da12554ba1db9a467aa03c01bfb3b584125b129
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137788"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213186"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>Método ICorDebugFunction2::SetJMCStatus
 Marca a função representada por este ICorDebugFunction2 para Apenas Meu Código stepping.  
@@ -35,9 +35,9 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parâmetros  
  `bIsJustMyCode`  
- no Defina como `true` para marcar a função como código de usuário; caso contrário, defina como `false`.  
+ no Defina como `true` para marcar a função como código do usuário; caso contrário, defina como `false` .  
   
-## <a name="return-values"></a>Valores de Retorno  
+## <a name="return-values"></a>Valores de retorno  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
@@ -48,10 +48,10 @@ HRESULT SetJMCStatus (
  Um Apenas Meu Código stepper ignorará o código que não é do usuário. O código do usuário deve ser um subconjunto de código depurável.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

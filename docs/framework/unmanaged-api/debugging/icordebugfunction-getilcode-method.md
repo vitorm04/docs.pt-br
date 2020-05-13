@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-ms.openlocfilehash: c2ce4b95de75bef3928e144656b565676568caa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8c7be2d48a30a9f649c6d86e4edbc10085195b68
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137908"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213615"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>Método ICorDebugFunction::GetILCode
 Obtém a instância ICorDebugCode que representa o código MSIL (Microsoft Intermediate Language) associado a este objeto ICorDebugFunction.  
@@ -35,16 +35,16 @@ HRESULT GetILCode (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppCode`  
- fora Um ponteiro para a instância de `ICorDebugCode`, ou NULL, se a função não foi compilada em MSIL.  
+ fora Um ponteiro para a `ICorDebugCode` instância, ou NULL, se a função não foi compilada em MSIL.  
   
 ## <a name="remarks"></a>Comentários  
- Se editar e continuar tiver sido permitido nessa função, o método `GetILCode` obterá o código MSIL correspondente à versão editada da função do código no Common Language Runtime (CLR).  
+ Se editar e continuar tiver sido permitido nessa função, o `GetILCode` método obterá o código MSIL correspondente à versão editada da função do código no Common Language Runtime (CLR).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

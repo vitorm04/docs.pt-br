@@ -1,16 +1,16 @@
 ---
-title: ICorDebugMergeDRecord::GetPublicKey Method
+title: 'Método ICorDebugMergedAssemblyRecord:: GetPublicKey'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-ms.openlocfilehash: 632e990899346493d5a7df08d293e25b83ed7ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 51724aa1ee6101c50c7cdb4b6071fb458814f483
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178735"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213537"
 ---
-# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergeDRecord::GetPublicKey Method
-Fica com a chave pública da assembléia.  
+# <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Método ICorDebugMergedAssemblyRecord:: GetPublicKey
+Obtém a chave pública do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -21,29 +21,29 @@ HRESULT GetPublicKey(
    [out, size_is(cbPublicKey), length_is(*pcbPublicKey)] BYTE pbPublicKey[]);  
 ```  
   
-## <a name="parameters"></a>parâmetros  
+## <a name="parameters"></a>Parâmetros  
  `cbPublicKey`  
- [em] O número máximo de bytes na `pbPublicKey` matriz.  
+ no O número máximo de bytes na `pbPublicKey` matriz.  
   
  `pcbPublicKey`  
- [fora] Um ponteiro para o número real de `pbPublicKey` bytes escritos para a matriz.  
+ fora Um ponteiro para o número real de bytes gravados na `pbPublicKey` matriz.  
   
  `pbPublicKey`  
- [fora] Um ponteiro para uma matriz de bytes que contém a chave pública da assembléia.  
+ fora Um ponteiro para uma matriz de bytes que contém a chave pública do assembly.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!NOTE]
-> Este método está disponível apenas com .NET Native.  
+> Esse método está disponível somente com .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Confira também
 

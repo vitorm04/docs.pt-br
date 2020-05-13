@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess4::ProcessStateChanged Method
+title: 'ICorDebugProcess4: método rocessStateChanged de:P'
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178637"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213563"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged Method
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4: método rocessStateChanged de:P
 
-Notifica o pipeline ICorDebug de que o depurador fora de processo continua a execução do depurador.
+Notifica o pipeline ICorDebug que o depurador fora do processo está continuando a execução do depurador.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,24 +34,24 @@ HRESULT ProcessStateChanged(
 );
 ```
 
-## <a name="parameters"></a>parâmetros
+## <a name="parameters"></a>Parâmetros
 
  `eChange`\
-[em] Um membro da [enumeração CorDebugStateChange](cordebugstatechange-enumeration.md) descrevendo uma mudança no estado de execução do processo.
+no Um membro da [Enumeração CorDebugStateChange](cordebugstatechange-enumeration.md) que descreve uma alteração no estado de execução do processo.
 
 ## <a name="remarks"></a>Comentários
 
-O método fornecido faz `ICorDebugProcess4` parte da interface e corresponde ao quarto slot da tabela de métodos virtuais.
+O método fornecido faz parte da `ICorDebugProcess4` interface e corresponde ao quarto slot da tabela de métodos virtuais.
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).
 
- **Cabeçalho:** Nenhum
+ **Cabeçalho:** None
 
- **Biblioteca:** Nenhum
+ **Biblioteca:** None
 
- **.NET Framework Versions:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework versões:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Confira também
 
