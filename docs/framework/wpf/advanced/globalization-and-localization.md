@@ -11,31 +11,31 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: d5e51e86c4c37c882c8a061e60d2d21587d0d3d0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559416"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212198"
 ---
-# <a name="globalization-and-localization"></a><span data-ttu-id="284be-102">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="284be-102">Globalization and Localization</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="284be-103">fornece amplo suporte para o desenvolvimento de aplicativos preparados para o mundo.</span><span class="sxs-lookup"><span data-stu-id="284be-103">provides extensive support for the development of world-ready applications.</span></span>  
+# <a name="globalization-and-localization"></a><span data-ttu-id="71b01-102">Globalização e localização</span><span class="sxs-lookup"><span data-stu-id="71b01-102">Globalization and Localization</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="71b01-103">fornece amplo suporte para o desenvolvimento de aplicativos preparados para o mundo.</span><span class="sxs-lookup"><span data-stu-id="71b01-103">provides extensive support for the development of world-ready applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="284be-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="284be-104">In This Section</span></span>  
- [<span data-ttu-id="284be-105">Visão geral de globalização e localização do WPF</span><span class="sxs-lookup"><span data-stu-id="284be-105">WPF Globalization and Localization Overview</span></span>](wpf-globalization-and-localization-overview.md)  
- [<span data-ttu-id="284be-106">Globalização para WPF</span><span class="sxs-lookup"><span data-stu-id="284be-106">Globalization for WPF</span></span>](globalization-for-wpf.md)  
- [<span data-ttu-id="284be-107">Visão geral do uso de layout automático</span><span class="sxs-lookup"><span data-stu-id="284be-107">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)  
- [<span data-ttu-id="284be-108">Atributos de localização e comentários</span><span class="sxs-lookup"><span data-stu-id="284be-108">Localization Attributes and Comments</span></span>](localization-attributes-and-comments.md)  
- [<span data-ttu-id="284be-109">Visão geral dos recursos bidirecionais no WPF</span><span class="sxs-lookup"><span data-stu-id="284be-109">Bidirectional Features in WPF Overview</span></span>](bidirectional-features-in-wpf-overview.md)  
- [<span data-ttu-id="284be-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="284be-110">How-to Topics</span></span>](globalization-and-localization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="71b01-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="71b01-104">In This Section</span></span>  
+ [<span data-ttu-id="71b01-105">Visão geral de globalização e localização do WPF</span><span class="sxs-lookup"><span data-stu-id="71b01-105">WPF Globalization and Localization Overview</span></span>](wpf-globalization-and-localization-overview.md)  
+ [<span data-ttu-id="71b01-106">Globalização do WPF</span><span class="sxs-lookup"><span data-stu-id="71b01-106">Globalization for WPF</span></span>](globalization-for-wpf.md)  
+ [<span data-ttu-id="71b01-107">Visão geral do uso de layout automático</span><span class="sxs-lookup"><span data-stu-id="71b01-107">Use Automatic Layout Overview</span></span>](use-automatic-layout-overview.md)  
+ [<span data-ttu-id="71b01-108">Atributos de localização e comentários</span><span class="sxs-lookup"><span data-stu-id="71b01-108">Localization Attributes and Comments</span></span>](localization-attributes-and-comments.md)  
+ [<span data-ttu-id="71b01-109">Visão geral dos recursos bidirecionais no WPF</span><span class="sxs-lookup"><span data-stu-id="71b01-109">Bidirectional Features in WPF Overview</span></span>](bidirectional-features-in-wpf-overview.md)  
+ [<span data-ttu-id="71b01-110">Tópicos de instruções</span><span class="sxs-lookup"><span data-stu-id="71b01-110">How-to Topics</span></span>](how-to-localize-an-application.md)  
   
-## <a name="reference"></a><span data-ttu-id="284be-111">Referência</span><span class="sxs-lookup"><span data-stu-id="284be-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="71b01-111">Referência</span><span class="sxs-lookup"><span data-stu-id="71b01-111">Reference</span></span>  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [<span data-ttu-id="284be-112">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="284be-112">xml:lang Handling in XAML</span></span>](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
+ [<span data-ttu-id="71b01-112">Tratamento de xml:lang em XAML</span><span class="sxs-lookup"><span data-stu-id="71b01-112">xml:lang Handling in XAML</span></span>](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="284be-113">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="284be-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="71b01-113">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="71b01-113">Related Sections</span></span>

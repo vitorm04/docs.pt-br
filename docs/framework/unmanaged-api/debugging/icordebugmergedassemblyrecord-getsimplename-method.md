@@ -1,18 +1,18 @@
 ---
-title: ICorDebugMergeDRecord::GetSimpleName Method
+title: 'Método ICorDebugMergedAssemblyRecord:: getsimplesname'
 ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
-ms.openlocfilehash: 99ba27171e129e8725c3e0555a6991ef08b893da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f6c6682c8bb23143d308aa4f1a6887b28ea82fcd
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178713"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209702"
 ---
-# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a><span data-ttu-id="f429f-102">ICorDebugMergeDRecord::GetSimpleName Method</span><span class="sxs-lookup"><span data-stu-id="f429f-102">ICorDebugMergedAssemblyRecord::GetSimpleName Method</span></span>
-<span data-ttu-id="f429f-103">Fica com o nome simples da assembléia.</span><span class="sxs-lookup"><span data-stu-id="f429f-103">Gets the simple name of the assembly.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetsimplename-method"></a><span data-ttu-id="8bfe9-102">Método ICorDebugMergedAssemblyRecord:: getsimplesname</span><span class="sxs-lookup"><span data-stu-id="8bfe9-102">ICorDebugMergedAssemblyRecord::GetSimpleName Method</span></span>
+<span data-ttu-id="8bfe9-103">Obtém o nome simples do assembly.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-103">Gets the simple name of the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f429f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f429f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8bfe9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8bfe9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSimpleName(  
@@ -22,32 +22,32 @@ HRESULT GetSimpleName(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f429f-105">parâmetros</span><span class="sxs-lookup"><span data-stu-id="f429f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8bfe9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8bfe9-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="f429f-106">[em] O número de `szName` caracteres no buffer.</span><span class="sxs-lookup"><span data-stu-id="f429f-106">[in] The number of characters in the `szName` buffer.</span></span>  
+ <span data-ttu-id="8bfe9-106">no O número de caracteres no `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-106">[in] The number of characters in the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="f429f-107">[fora] Um ponteiro para o número de `szName` caracteres realmente escrito no buffer.</span><span class="sxs-lookup"><span data-stu-id="f429f-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
+ <span data-ttu-id="8bfe9-107">fora Um ponteiro para o número de caracteres realmente gravados no `szName` buffer.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-107">[out] A pointer to the number of characters actually written to the `szName` buffer.</span></span>  
   
  `szName`  
- <span data-ttu-id="f429f-108">Um ponteiro para uma matriz de caracteres.</span><span class="sxs-lookup"><span data-stu-id="f429f-108">A pointer to a character array.</span></span>  
+ <span data-ttu-id="8bfe9-108">Um ponteiro para uma matriz de caracteres.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-108">A pointer to a character array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f429f-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="f429f-109">Remarks</span></span>  
- <span data-ttu-id="f429f-110">Este método recupera o nome simples de um conjunto (como "System.Collections"), sem uma extensão de arquivo, versão, cultura ou token de chave pública.</span><span class="sxs-lookup"><span data-stu-id="f429f-110">This method retrieves the simple name of an assembly (such as "System.Collections"), without a file extension, version, culture, or public key token.</span></span> <span data-ttu-id="f429f-111">Corresponde à <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> propriedade em código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="f429f-111">It corresponds to the <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> property in managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8bfe9-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="8bfe9-109">Remarks</span></span>  
+ <span data-ttu-id="8bfe9-110">Esse método recupera o nome simples de um assembly (como "System. Collections"), sem uma extensão de arquivo, versão, cultura ou token de chave pública.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-110">This method retrieves the simple name of an assembly (such as "System.Collections"), without a file extension, version, culture, or public key token.</span></span> <span data-ttu-id="8bfe9-111">Ele corresponde à <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> propriedade no código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-111">It corresponds to the <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> property in managed code.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="f429f-112">Este método está disponível apenas com .NET Native.</span><span class="sxs-lookup"><span data-stu-id="f429f-112">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="8bfe9-112">Esse método está disponível somente com .NET Native.</span><span class="sxs-lookup"><span data-stu-id="8bfe9-112">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f429f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f429f-113">Requirements</span></span>  
- <span data-ttu-id="f429f-114">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f429f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8bfe9-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8bfe9-113">Requirements</span></span>  
+ <span data-ttu-id="8bfe9-114">**Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bfe9-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f429f-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f429f-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8bfe9-115">**Cabeçalho:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8bfe9-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f429f-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f429f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8bfe9-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8bfe9-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f429f-117">**.NET Framework Versions:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f429f-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="8bfe9-117">**.NET Framework versões:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bfe9-117">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f429f-118">Confira também</span><span class="sxs-lookup"><span data-stu-id="f429f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8bfe9-118">Confira também</span><span class="sxs-lookup"><span data-stu-id="8bfe9-118">See also</span></span>
 
-- [<span data-ttu-id="f429f-119">Interface ICorDebugMergedAssemblyRecord</span><span class="sxs-lookup"><span data-stu-id="f429f-119">ICorDebugMergedAssemblyRecord Interface</span></span>](icordebugmergedassemblyrecord-interface.md)
-- [<span data-ttu-id="f429f-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="f429f-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="8bfe9-119">Interface ICorDebugMergedAssemblyRecord</span><span class="sxs-lookup"><span data-stu-id="8bfe9-119">ICorDebugMergedAssemblyRecord Interface</span></span>](icordebugmergedassemblyrecord-interface.md)
+- [<span data-ttu-id="8bfe9-120">Depurando interfaces</span><span class="sxs-lookup"><span data-stu-id="8bfe9-120">Debugging Interfaces</span></span>](debugging-interfaces.md)
